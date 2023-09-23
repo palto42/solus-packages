@@ -1,0 +1,23 @@
+name       : tlpui
+version    : 1.6.0
+release    : 1
+source     :
+   - https://github.com/d4nj1/TLPUI/archive/refs/tags/tlpui-1.6.0.tar.gz : f1b2cd69cb25f59ce973ee8411e51ded45032d289ec8f6f62ccbb45919d16b86
+homepage   : https://github.com/d4nj1/TLPUI
+license    : GPL-2.0-or-later
+component  : system.utils
+summary    : GTK-UI to change TLP configuration files easily
+description: |
+    The Python scripts in this project generate a GTK-UI to change TLP configuration files easily.
+    It has the aim to protect users from setting bad configuration and to deliver a basic overview of all the valid configuration values.
+builddeps  :
+    - pkgconfig(python3)
+rundeps    :
+    - python3
+    - python-gobject
+build      : |
+    %python3_setup
+install    : |
+    %python3_install
+    # Add tlpui icon
+    install -Dm00644 tlpui/icons/themeable/hicolor/scalable/apps/tlpui.svg $installdir/usr/share/icons/hicolor/scalable/apps/tlpui.svg
