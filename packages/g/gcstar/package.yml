@@ -1,8 +1,9 @@
 name       : gcstar
-version    : 1.8.0
+version    : 1.8.0.20230814
 release    : 3
 source     :
-    - https://gitlab.com/GCstar/GCstar/-/archive/v1.8.0/GCstar-v1.8.0.tar.gz : 6e62db6f7a4ca0b2c1bd06c9cff57dae620819dd74f7c1ce5a8d21099f352c1a
+    # - https://gitlab.com/GCstar/GCstar/-/archive/v1.8.0/GCstar-v1.8.0.tar.gz : 6e62db6f7a4ca0b2c1bd06c9cff57dae620819dd74f7c1ce5a8d21099f352c1a
+    - git|https://gitlab.com/GCstar/GCstar.git: 475693008c74ad9471dac4ff41b640f6749bfa7d
 homepage   : https://gcstar.gitlab.io/
 license    : GPL-2.0-or-later
 component  : office
@@ -25,6 +26,9 @@ rundeps    :
     - perl-json
     - perl-xmlsimple
 install    : |
+    # If an interim version is used from git commit, patch the version shown in GCstar according to this YAML version definition
+    sed -i 's/\(\$VERSION = .\)[0-9\.]*/\1%version%/g' gcstar/bin/gcstar
+
     ./gcstar/install --text --prefix $installdir/usr
     find $installdir/usr -type d -empty -delete
     find $installdir/usr/share/mime ! -name "*gcstar*" ! -type d -delete
