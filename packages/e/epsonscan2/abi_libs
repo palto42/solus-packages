@@ -1,0 +1,8 @@
+detectalert
+epsonscan2
+libcommonutility.so
+libepsonscan2.so
+libepsonscansdk.so
+libes2command.so
+libes2fileformat.so
+libsane-epsonscan2.so
