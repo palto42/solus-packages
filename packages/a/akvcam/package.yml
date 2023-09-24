@@ -1,0 +1,34 @@
+name       : akvcam
+version    : 1.2.4
+release    : 1
+source     :
+    - https://github.com/webcamoid/akvcam/archive/refs/tags/1.2.4.tar.gz : 5df2fe04f3cc0f5dfd2bec1facc6efd777311848cd5feca9c3973156bad34fae
+homepage   : https://github.com/webcamoid/akvcam
+license    : GPL-2-or-later
+summary    :
+    - akvcam is a fully compliant V4L2 virtual camera driver for Linux.
+description: |
+    akvcam is a fully compliant V4L2 virtual camera driver for Linux.
+permanent  :
+    - /lib/modules
+patterns   :
+    - current : /lib/modules/*.current
+builddeps  :
+    - pkgconfig(libelf)
+    - linux-lts
+    - linux-lts-headers
+    - linux-current
+    - linux-current-headers
+setup      : |
+    cp -a src lts-build
+    cp -a src current-build
+build      : |
+    pushd lts-build
+    KERNELRELEASE="%kernel_version_lts%" %make
+    pushd ../current-build
+    KERNELRELEASE="%kernel_version_current%" %make
+install    : |
+    KVERSION_LTS="%kernel_version_lts%"
+    KVERSION_CURRENT="%kernel_version_current%"
+    install -D -m 00755 lts-build/akvcam.ko $installdir/lib/modules/${KVERSION_LTS}/misc/akvcam.ko
+    install -D -m 00755 current-build/akvcam.ko $installdir/lib/modules/${KVERSION_CURRENT}/misc/akvcam.ko
