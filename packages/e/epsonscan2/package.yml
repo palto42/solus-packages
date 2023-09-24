@@ -1,0 +1,48 @@
+name       : epsonscan2
+version    : 6.7.61
+release    : 1
+source     :
+    - https://download3.ebz.epson.net/dsc/f/03/00/14/53/67/1a6447b4acc5568dfd970feba0518fabea35bca2/epsonscan2-6.7.61.0-1.src.tar.gz : 7ec2026c724ab6961206eb6fc4cad061763db4ddfc6d5003fc2d0b829056afd4
+homepage   : https://support.epson.net/linux/en/epsonscan2.php
+license    : GPL-2.1-or-later
+component  : office
+summary    : Epson Scan 2
+description: |
+    Software for Epson scanners & multifunction printer
+builddeps  :
+    - pkgconfig(libusb-1.0)
+    - pkgconfig(sane-backends)
+
+    - pkgconfig(zlib)
+    - pkgconfig(libtiff-4)
+    - pkgconfig(libpng)
+    - rapidjson
+    - pkgconfig(Qt5Core)
+    - libharu-devel
+    - libboost-devel
+    - libjpeg-turbo-devel
+setup      : |
+    # ls -l
+    # ls -l src
+    # echo "*** CMakeLists.txt ***"
+    # cat CMakeLists.txt
+    # echo "*** DbgLog.cpp ***"
+    sed -i '1 i #include "zlib.h"' "src/CommonUtility/DbgLog.cpp"
+    # cat src/CommonUtility/DbgLog.cpp
+
+    %cmake_ninja \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DQT_VERSION_MAJOR=5
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install
+
+    install -Dm644 "$workdir/desktop/rpm/i686/epsonscan2.desktop" \
+                    "$installdir/usr/share/applications/epsonscan2.desktop"
+
+    install -d $installdir/usr/lib/sane
+    cd $installdir/usr/lib/sane
+    ln -s ../epsonscan2/libsane-epsonscan2.so libsane-epsonscan2.so.1
+    ln -s ../epsonscan2/libsane-epsonscan2.so libsane-epsonscan2.so.1.0.0
