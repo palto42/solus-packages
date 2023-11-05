@@ -1,0 +1,79 @@
+name       : budni-fotowelt
+version    : 7.4.2
+release    : 1
+source     :
+    - https://dls.photoprintit.com/api/getClient/1773-de_DE/hps/rp_specialofferpage_square-cal-okt_x_1773_x_01773-FjKVmE1jwmcTk/linux : 71a1a53d5c150487231f0857e37fb461248692e2f1b0dd5cb75157261e75b102
+homepage   : https://foto.budni.de/
+license    : proprietary
+component  : office
+summary    : Budni Fotowelt
+description: |
+    Budni Fotowelt
+networking : yes
+builddeps  :
+    - pkgconfig(gstreamer-base-1.0)
+    - pkgconfig(opencv4)
+    - glibc
+    - gstreamer-1.0-plugins-opencv-devel
+    - gstreamer-1.0-libav
+    - libav
+    - libboost
+    - libevent
+    - libglvnd
+    - libheif
+    - libxcb
+    - libxcomposite
+    - libxcrypt-compat
+    - snappy
+    - wayland
+    - wget
+    - xdg-utils
+setup: |
+    %patch -p1 < $pkgfiles/install.patch
+install    : |
+    # cd /usr/lib64
+    # ln -s libopencv_calib3d.so.4.5.3 libopencv_calib3d.so.4.5.2
+    # ln -s libopencv_core.so.4.5.3 libopencv_core.so.4.5.2
+    # ln -s libopencv_dnn.so.4.5.3 libopencv_dnn.so.4.5.2
+    # ln -s libopencv_features2d.so.4.5.3 libopencv_features2d.so.4.5.2
+    # ln -s libopencv_flann.so.4.5.3 libopencv_flann.so.4.5.2
+    # ln -s libopencv_imgcodecs.so.4.5.3 libopencv_imgcodecs.so.4.5.2
+    # ln -s libopencv_imgproc.so.4.5.3 libopencv_imgproc.so.4.5.2
+    # ln -s libopencv_ml.so.4.5.3 libopencv_ml.so.4.5.2
+    # cd -
+    ls -l /usr/lib64/libopencv*.so.*
+    perl install.pl --install $installdir/usr/lib/budni_fotowelt
+    ls -l $installdir/usr/lib/budni_fotowelt
+    ls -l $installdir/usr/lib/budni_fotowelt/Resources
+    ls -l $installdir/usr/lib/budni_fotowelt/Resources/icons
+    mv $installdir/usr/lib/budni_fotowelt/BUDNI\ Fotowelt $installdir/usr/lib/budni_fotowelt/budni_fotowelt
+    mv $installdir/usr/lib/budni_fotowelt/CEWE\ Fotoschau $installdir/usr/lib/budni_fotowelt/cewe_fotoschau
+    # cat $installdir/usr/lib/budni_fotowelt/cewe-fotoschau-1773-7.4.2.desktop
+    ls -l /usr/lib/libopencv*.*
+    ls -l /usr/lib/libboost*.*
+
+
+# Fatal: Unknown symbol: libopencv_dnn.so.4.5.2
+# Fatal: Unknown symbol: libopencv_ml.so.4.5.2
+# Fatal: Unknown symbol: libopencv_calib3d.so.4.5.2
+# Fatal: Unknown symbol: libopencv_imgcodecs.so.4.5.2
+# Fatal: Unknown symbol: libopencv_imgproc.so.4.5.2
+# Fatal: Unknown symbol: libopencv_core.so.4.5.2
+
+# sudo ln -s libopencv_calib3d.so.4.5.3 libopencv_calib3d.so.4.5.2
+# sudo ln -s libopencv_core.so.4.5.3 libopencv_core.so.4.5.2
+# sudo ln -s libopencv_dnn.so.4.5.3 libopencv_dnn.so.4.5.2
+# sudo ln -s libopencv_features2d.so.4.5.3 libopencv_features2d.so.4.5.2
+# sudo ln -s libopencv_flann.so.4.5.3 libopencv_flann.so.4.5.2
+# sudo ln -s libopencv_imgcodecs.so.4.5.3 libopencv_imgcodecs.so.4.5.2
+# sudo ln -s libopencv_imgproc.so.4.5.3 libopencv_imgproc.so.4.5.2
+# sudo ln -s libopencv_ml.so.4.5.3 libopencv_ml.so.4.5.2
+
+# sudo rm libopencv_calib3d.so.4.5.2
+# sudo rm libopencv_core.so.4.5.2
+# sudo rm libopencv_dnn.so.4.5.2
+# sudo rm libopencv_features2d.so.4.5.2
+# sudo rm libopencv_flann.so.4.5.2
+# sudo rm libopencv_imgcodecs.so.4.5.2
+# sudo rm libopencv_imgproc.so.4.5.2
+# sudo rm libopencv_ml.so.4.5.2

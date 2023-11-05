@@ -1,0 +1,210 @@
+diff --git a/install.pl b/install_patch.pl
+old mode 100755
+new mode 100644
+index ab9082f..08e54d1
+--- a/install.pl
++++ b/install_patch.pl
+@@ -26,14 +26,14 @@ my $KEYACCID                  = '1773';
+ my $FULL_LOCALE               = 'de_DE';
+ my $CLIENTID                  = '38';
+ my $HPS_VER                   = '7.4.2';
+-my $VENDOR_NAME               = 'BUDNI Fotowelt';
+-my $APPLICATION_NAME          = 'BUDNI Fotowelt';
+-my $INSTALL_DIR_DEFAULT       = 'BUDNI Fotowelt';
++my $VENDOR_NAME               = 'budni_fotowelt';
++my $APPLICATION_NAME          = 'budni_fotowelt';
++my $INSTALL_DIR_DEFAULT       = 'budni_fotowelt';
+ my $AFFILIATE_ID = "rp_specialofferpage_square-cal-okt_x_1773_x_01773-FjKVmE1jwmcTk ";
+ my $LEGACYVERSION_X32         = '7.3.3';
+ 
+-my $PROGRAM_NAME_HPS          = 'BUDNI Fotowelt';
+-my $PROGRAM_NAME_FOTOSHOW     = 'CEWE Fotoschau';
++my $PROGRAM_NAME_HPS          = 'budni_fotowelt';
++my $PROGRAM_NAME_FOTOSHOW     = 'cewe_fotoshau';
+ my $PROGRAM_NAME_FACEDETECTION		= "facedetection";
+ my $PROGRAM_NAME_GPUPROBE			= "gpuprobe";
+ my $PROGRAM_NAME_ICONEXTRACTOR		= "IconExtractor";
+@@ -357,23 +357,23 @@ sub yesNoAnswer {
+ 	my $default = $_[1];
+ 	my $choice;
+ 
+-	if ($default == 1) {
+-		$choice = sprintf("[\033[1m%1\$s\033[0m/%2\$s]", uc($TRANSLATABLE[0]), $TRANSLATABLE[2]);
+-	} else {
+-		$choice = sprintf("[%1\$s/\033[1m%2\$s\033[0m]", $TRANSLATABLE[0], uc($TRANSLATABLE[2]));
+-	}
++	# if ($default == 1) {
++	# 	$choice = sprintf("[\033[1m%1\$s\033[0m/%2\$s]", uc($TRANSLATABLE[0]), $TRANSLATABLE[2]);
++	# } else {
++	# 	$choice = sprintf("[%1\$s/\033[1m%2\$s\033[0m]", $TRANSLATABLE[0], uc($TRANSLATABLE[2]));
++	# }
+ 
+-	printf("$text $choice ");
++	# printf("$text $choice ");
+ 
+-	my $answer = <STDIN>;
+-	chomp($answer);
+-	$answer = lc($answer);
++	# my $answer = <STDIN>;
++	# chomp($answer);
++	# $answer = lc($answer);
+ 
+-	if ($answer ~~ @ANSWER_YES_LIST) {
+-		return 1;
+-	} elsif ($answer ~~ @ANSWER_NO_LIST) {
+-		return 0;
+-	}
++	# if ($answer ~~ @ANSWER_YES_LIST) {
++	# 	return 1;
++	# } elsif ($answer ~~ @ANSWER_NO_LIST) {
++	# 	return 0;
++	# }
+ 
+ 	return $default;
+ }
+@@ -434,20 +434,20 @@ sub checkProgramms {
+ #
+ ################################################################################
+ sub showEula {
+-	if ($FILE_EULA ne "" && $update == 0) {
+-		if (!open(EULA, "<", $FILE_EULA)) {
+-			abort($TRANSLATABLE_ERRORS[5], $FILE_EULA);
+-		}
+-		close EULA;
+-		printf($TRANSLATABLE[5]);
+-		my $answer = <STDIN>;
+-
+-		system("less '$FILE_EULA'");
+-
+-		if (yesNoAnswer($TRANSLATABLE[6], 0) == 0) {
+-			abort($TRANSLATABLE_ERRORS[6], sprintf($TRANSLATABLE[7], $APPLICATION_NAME));
+-		}
+-	}
++	# if ($FILE_EULA ne "" && $update == 0) {
++	# 	if (!open(EULA, "<", $FILE_EULA)) {
++	# 		abort($TRANSLATABLE_ERRORS[5], $FILE_EULA);
++	# 	}
++	# 	close EULA;
++	# 	printf($TRANSLATABLE[5]);
++	# 	my $answer = <STDIN>;
++
++	# 	system("less '$FILE_EULA'");
++
++	# 	if (yesNoAnswer($TRANSLATABLE[6], 0) == 0) {
++	# 		abort($TRANSLATABLE_ERRORS[6], sprintf($TRANSLATABLE[7], $APPLICATION_NAME));
++	# 	}
++	# }
+ }
+ 
+ 
+@@ -460,18 +460,18 @@ sub getInstallDir {
+ 	if ($update == 0 && $changeInstallDir == 1) {
+ 		while (1) {
+ 			if ($> == 0) {	# Root User
+-				$installDir = "/opt/$INSTALL_DIR_DEF";
++				$installDir = "/usr/bin/$INSTALL_DIR_DEF";
+ 			} else {		# Normaler Benutzer
+ 				$installDir = "$ENV{'HOME'}/$INSTALL_DIR_DEF";
+ 			}
+ 
+ 			printf($TRANSLATABLE[8], $APPLICATION_NAME, $HPS_VER, $installDir);
+-			my $answer = <STDIN>;
+-			chomp($answer);
++			# my $answer = <STDIN>;
++			# chomp($answer);
+ 
+-			if ($answer ne "") {
+-				$installDir = $answer;
+-			}
++			# if ($answer ne "") {
++			# 	$installDir = $answer;
++			# }
+ 
+ 			# vorne und hinten Leerzeichen abschneiden
+ 			$installDir =~ s/^\s+//;
+@@ -720,7 +720,7 @@ sub removePackage {
+ sub downloadFiles {
+ 	if (scalar(@filesToDownload) != 0) {
+ 
+-		triggerCountPixel($DOWNLOAD_START_URL);
++		# triggerCountPixel($DOWNLOAD_START_URL);
+ 
+ 		# Herunterladen der Dateien
+ 		foreach (@filesToDownload) {
+@@ -793,7 +793,7 @@ sub downloadFiles {
+ 			}
+ 		}
+ 
+-		triggerCountPixel($DOWNLOAD_COMPLETE_URL);
++		# triggerCountPixel($DOWNLOAD_COMPLETE_URL);
+ 	}
+ }
+ 
+@@ -869,23 +869,23 @@ sub createIcon {
+ 
+ 	system("\"$installDir/$PROGRAM_NAME_ICONEXTRACTOR\" \"$installDir$iconPath\" @sizes $appIconName > /dev/null 2>&1");
+ 
+-	foreach (@sizes) {
+-		my $size = $_;
+-		my $iconFileName = $appIconName."_".$size.".png";
++	# foreach (@sizes) {
++	# 	my $size = $_;
++	# 	my $iconFileName = $appIconName."_".$size.".png";
+ 
+-		system("xdg-icon-resource install --noupdate --theme hicolor --context apps --size $size $iconFileName $appIconName");
+-		push(@uninstallCommands, "xdg-icon-resource uninstall --noupdate --theme hicolor --context apps --size $size $appIconName");
++	# 	system("xdg-icon-resource install --noupdate --theme hicolor --context apps --size $size $iconFileName $appIconName");
++	# 	push(@uninstallCommands, "xdg-icon-resource uninstall --noupdate --theme hicolor --context apps --size $size $appIconName");
+ 
+-		if ($mimeType ne "") {
+-			system("xdg-icon-resource install --noupdate --theme hicolor --context mimetypes --size $size $iconFileName $mimeType");
+-			push(@uninstallCommands, "xdg-icon-resource uninstall --noupdate --theme hicolor --context mimetypes --size $size $mimeType");
+-		}
++	# 	if ($mimeType ne "") {
++	# 		system("xdg-icon-resource install --noupdate --theme hicolor --context mimetypes --size $size $iconFileName $mimeType");
++	# 		push(@uninstallCommands, "xdg-icon-resource uninstall --noupdate --theme hicolor --context mimetypes --size $size $mimeType");
++	# 	}
+ 
+-		push(@filesToRemove, $iconFileName);
+-	}
++	# 	push(@filesToRemove, $iconFileName);
++	# }
+ 
+-	system("xdg-icon-resource forceupdate");
+-	push(@uninstallCommands, "xdg-icon-resource forceupdate");
++	# system("xdg-icon-resource forceupdate");
++	# push(@uninstallCommands, "xdg-icon-resource forceupdate");
+ }
+ 
+ 
+@@ -1370,17 +1370,17 @@ sub checkForLegacyVersion {
+ # Erzwinge eine Leerung der Puffer nach jeder print()-Operation
+ $| = 1;
+ 
+-system("clear");
++# system("clear");
+ 
+ if (basename($0) eq $PROGRAM_NAME_UNINSTALLER) {
+ 	getOptions();
+ 	uninstall();
+ 
+ } else {
+-	loadTranslations();
++	# loadTranslations();
+ 	getOptions();
+-	checkForLegacyVersion();
+-	printf($TRANSLATABLE[4], $APPLICATION_NAME, $HPS_VER);
++	# checkForLegacyVersion();
++	# printf($TRANSLATABLE[4], $APPLICATION_NAME, $HPS_VER);
+ 	checkWorkingDir();
+ 	checkProgramms();
+ 	showEula();
+@@ -1399,7 +1399,7 @@ if (basename($0) eq $PROGRAM_NAME_UNINSTALLER) {
+ 	writeInstallLog();
+ 	startAutoBookService();
+ 	cleanup();
+-	triggerCountPixel($INSTALLATION_COMPLETE_URL);
++	# triggerCountPixel($INSTALLATION_COMPLETE_URL);
+ 
+ 	my $executablePath = $installDir . "/" . $APPLICATION_NAME;
+ 	$executablePath =~ s/\/+/\//g;
