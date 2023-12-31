@@ -1,0 +1,35 @@
+<PISI>
+    <Source>
+        <Name>lapce</Name>
+        <Homepage>https://github.com/lapce/lapce</Homepage>
+        <Packager>
+            <Name>Matthias Homann</Name>
+            <Email>palto@mailbox.org</Email>
+        </Packager>
+        <License>Apache-2.0</License>
+        <PartOf>system.utils</PartOf>
+        <Summary xml:lang="en">Lightning-fast And Powerful Code Editor</Summary>
+        <Description xml:lang="en">A modern open source code editor in Rust
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>lapce</Name>
+        <Summary xml:lang="en">Lightning-fast And Powerful Code Editor</Summary>
+        <Description xml:lang="en">A modern open source code editor in Rust
+</Description>
+        <PartOf>system.utils</PartOf>
+        <Files>
+            <Path fileType="executable">/usr/bin/lapce</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2023-12-31</Date>
+            <Version>0.3.1</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Matthias Homann</Name>
+            <Email>palto@mailbox.org</Email>
+        </Update>
+    </History>
+</PISI>
