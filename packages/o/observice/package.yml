@@ -1,0 +1,30 @@
+name: observice
+version: 0.6.0
+release: 1
+source:
+   - https://hp250.fritz.box/git/Python/-/packages/pypi/observice/0.6.0/files/68 : bd14c4a115f6256417303be170cb9041571a0df1c315072d3c1089e993b7b153
+homepage: https://hp250.fritz.box/git/Python/observice
+license: GPL3
+component: system.utils
+summary: Observice indicator tray app for showing the activity status of multiple services.
+description: |
+    Observice indicator tray app for showing the activity status of multiple services. One use case is to show the status of backup services so that the user is aware of running backup jobs.
+# networking: yes # required for check
+rundeps:
+    - libayatana-appindicator
+    - python3
+    - python-cairo
+    - python-gobject
+    - python-dbus-next # local
+builddeps:
+    - pkgconfig(python3)
+build: |
+    %python3_setup
+install: |
+    %python3_install
+    install -Dm00644 src/applications/observice_indicator.desktop $installdir/usr/share/applications/observice_indicator.desktop
+    mkdir -p $installdir/usr/share/icons/hicolor/scalable/apps/
+    install -Dm00644 src/observice/icons/observice*.svg $installdir/usr/share/icons/hicolor/scalable/apps/
+
+# check: |
+#   %python3_test python3 -m pytest
