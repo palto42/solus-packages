@@ -1,0 +1,21 @@
+name: python-dbus-next
+version: 0.2.3
+release: 1
+source:
+    - https://files.pythonhosted.org/packages/ce/45/6a40fbe886d60a8c26f480e7d12535502b5ba123814b3b9a0b002ebca198/dbus_next-0.2.3.tar.gz: f4eae26909332ada528c0a3549dda8d4f088f9b365153952a408e28023a626a5
+homepage: https://github.com/altdesktop/python-dbus-next
+component: programming.python
+license: MIT
+summary: The next great DBus library for Python.
+description: |
+    python-dbus-next is a Python library for DBus that aims to be a fully featured high level library primarily geared towards integration of applications into Linux desktop and mobile environments.
+# builddeps  :
+#     - pkgconfig(python3)
+#     - python-setuptools
+#     # - python-ruamel-yaml-clib
+# rundeps    :
+#     - python-ruamel.yaml.clib
+build: |
+    %python3_setup
+install: |-
+    %python3_install --single-version-externally-managed
