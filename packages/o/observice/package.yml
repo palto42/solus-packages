@@ -13,9 +13,9 @@ description: |
 rundeps:
     - libayatana-appindicator
     - python3
-    - python-cairo
-    - python-gobject
     - python-dbus-next # local
+    - python-gobject
+    - python-tomli
 builddeps:
     - pkgconfig(python3)
 build: |
