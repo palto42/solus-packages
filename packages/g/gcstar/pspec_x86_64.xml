@@ -11,7 +11,7 @@
         <Summary xml:lang="en">GCstar is a free open source application for managing your collections.</Summary>
         <Description xml:lang="en">Collection manager for films, music, games, books, etc.
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>gcstar</Name>
@@ -927,6 +927,7 @@
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCTVepisodes/GCTvdbES.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCTVepisodes/GCTvdbFR.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCTVepisodes/GCTvdbIT.pm</Path>
+            <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCTVseries/GCAllocine.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCTVseries/GCImdb.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCTVseries/GCTVseriesCommon.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCTVseries/GCThemoviedb.pm</Path>
@@ -937,20 +938,19 @@
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCTVseries/GCTvdbES.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCTVseries/GCTvdbFR.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCTVseries/GCTvdbIT.pm</Path>
-            <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCboardgames/GCReservoirJeux.pm_archive</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCboardgames/GCboardgamegeek.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCboardgames/GCboardgamesCommon.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCboardgames/GCtrictrac.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCbooks/GCAdlibrisFI.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCbooks/GCAdlibrisSV.pm</Path>
-            <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCbooks/GCAlapage.pm_archive</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCbooks/GCAmazon.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCbooks/GCAmazonBR.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCbooks/GCAmazonCA.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCbooks/GCAmazonDE.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCbooks/GCAmazonFR.pm</Path>
+            <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCbooks/GCAmazonPL.pm</Path>
+            <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCbooks/GCAmazonQC.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCbooks/GCAmazonUK.pm</Path>
-            <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCbooks/GCBDGest.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCbooks/GCBdphile.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCbooks/GCBibliotekaNarodowa.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCbooks/GCBokkilden.pm</Path>
@@ -963,16 +963,14 @@
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCbooks/GCFnacPT.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCbooks/GCGBooks.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCbooks/GCISBNdb.pm</Path>
-            <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCbooks/GCInternetBokHandeln.pm_archive</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCbooks/GCInternetBookShop.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCbooks/GCLeLivre.pm</Path>
-            <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCbooks/GCLiberOnWeb.pm_archive</Path>
-            <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCbooks/GCMareno.pm_archive</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCbooks/GCMediabooks.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCbooks/GCMerlin.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCbooks/GCNUKat.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCbooks/GCNooSFere.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCbooks/GCSaraiva.pm</Path>
+            <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCbooks/GCbedetheque.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCbooks/GCbooksAdlibrisCommon.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCbooks/GCbooksCommon.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCbuildingtoys/GCBrickset.pm</Path>
@@ -981,15 +979,21 @@
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCcoins/GCNumistaExonumia.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCcoins/GCNumistaExonumiaEN.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCcoins/GCcoinsCommon.pm</Path>
+            <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCcomics/GCAmazonBR.pm</Path>
+            <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCcomics/GCAmazonCA.pm</Path>
+            <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCcomics/GCAmazonDE.pm</Path>
+            <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCcomics/GCAmazonFR.pm</Path>
+            <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCcomics/GCAmazonPL.pm</Path>
+            <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCcomics/GCAmazonQC.pm</Path>
+            <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCcomics/GCAmazonUK.pm</Path>
+            <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCcomics/GCAmazonUS.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCcomics/GCBdphile.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCcomics/GCSanctuary.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCcomics/GCbedetheque.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCcomics/GCcomicsCommon.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCcomics/GCmangasanctuary.pm</Path>
-            <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCfilms/GCAlapage.pm_archive</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCfilms/GCAllmovie.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCfilms/GCAllocine.pm</Path>
-            <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCfilms/GCAlpacineES.pm_archive</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCfilms/GCAmazonDE.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCfilms/GCAmazonFR.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCfilms/GCAmazonUK.pm</Path>
@@ -1000,14 +1004,11 @@
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCfilms/GCAnimeNfoA.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCfilms/GCAnimeka.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCfilms/GCBeyazPerde.pm</Path>
-            <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCfilms/GCCartelesPeliculasES.pm_archive</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCfilms/GCCinemaClock.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCfilms/GCCinemotions.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCfilms/GCCsfd.pm</Path>
-            <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCfilms/GCCulturalia.pm_archive</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCfilms/GCDVDEmpire.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCfilms/GCDVDFr.pm</Path>
-            <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCfilms/GCDVDPost.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCfilms/GCDicshop.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCfilms/GCDoubanfilm.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCfilms/GCFilmAffinityCommon.pm</Path>
@@ -1018,9 +1019,6 @@
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCfilms/GCIbs.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCfilms/GCImdb.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCfilms/GCKinopoisk.pm</Path>
-            <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCfilms/GCMediadis.pm_archive</Path>
-            <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCfilms/GCMetropoliES.pm_archive</Path>
-            <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCfilms/GCMonsieurCinema.pm_archive</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCfilms/GCMovieMeter.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCfilms/GCMoviecovers.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCfilms/GCNasheKino.pm</Path>
@@ -1035,29 +1033,32 @@
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCfilms/GCThemoviedbFR.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCfilms/GCfilmsAmazonCommon.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCfilms/GCfilmsCommon.pm</Path>
+            <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCgadgets/GCAmazonBR.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCgadgets/GCAmazonCA.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCgadgets/GCAmazonDE.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCgadgets/GCAmazonFR.pm</Path>
+            <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCgadgets/GCAmazonPL.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCgadgets/GCAmazonQC.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCgadgets/GCAmazonUK.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCgadgets/GCAmazonUS.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCgadgets/GCUPCitemDB.pm</Path>
-            <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCgames/GCAlapage.pm_archive</Path>
-            <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCgames/GCAmazon.pm</Path>
+            <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCgadgets/GCgadgetsCommon.pm</Path>
+            <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCgames/GCAmazonBR.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCgames/GCAmazonCA.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCgames/GCAmazonDE.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCgames/GCAmazonFR.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCgames/GCAmazonJP.pm</Path>
+            <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCgames/GCAmazonPL.pm</Path>
+            <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCgames/GCAmazonQC.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCgames/GCAmazonUK.pm</Path>
-            <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCgames/GCDicoDuNet.pm_archive</Path>
+            <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCgames/GCAmazonUS.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCgames/GCGameSpot.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCgames/GCJeuxVideoCom.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCgames/GCJeuxVideoFr.pm</Path>
-            <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCgames/GCLudus.pm_archive</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCgames/GCMobyGames.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCgames/GCNextGame.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCgames/GCTheLegacy.pm</Path>
-            <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCgames/GCgamesAmazonCommon.pm</Path>
+            <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCgames/GCVGCollect.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCgames/GCgamesCommon.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCmusiccourses/GCAlfred.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCmusiccourses/GCMusicCoursesCommon.pm</Path>
@@ -1066,12 +1067,12 @@
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCmusics/GCMusicBrainz.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCmusics/GCmusicsCommon.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCstar/GCAmazonCommon.pm</Path>
+            <Path fileType="library">/usr/lib/gcstar/GCPlugins/GCstar/GCThemoviedbCommon.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCSplash.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCStats.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCStyle.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCUpdater.pm</Path>
             <Path fileType="library">/usr/lib/gcstar/GCUtils.pm</Path>
-            <Path fileType="library">/usr/lib/gcstar/list_modified_files.txt</Path>
             <Path fileType="data">/usr/share/applications/gcstar.desktop</Path>
             <Path fileType="data">/usr/share/gcstar/LICENSE</Path>
             <Path fileType="data">/usr/share/gcstar/fonts/AUTHORS</Path>
@@ -1447,9 +1448,9 @@
         </Files>
     </Package>
     <History>
-        <Update release="2">
-            <Date>2023-04-28</Date>
-            <Version>1.8.0</Version>
+        <Update release="4">
+            <Date>2024-05-01</Date>
+            <Version>1.8.0.2024.04.25</Version>
             <Comment>Packaging update</Comment>
             <Name>Matthias Homann</Name>
             <Email>palto@mailbox.org</Email>
