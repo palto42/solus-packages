@@ -9,7 +9,7 @@
         <License>GPL-3.0-or-later</License>
         <Summary xml:lang="en">Webcamoid is a full featured and multiplatform webcam suite.</Summary>
         <Description xml:lang="en">Webcamoid is a full featured and multiplatform webcam suite.</Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>webcamoid</Name>
@@ -161,7 +161,7 @@
     </Package>
     <History>
         <Update release="1">
-            <Date>2023-09-24</Date>
+            <Date>2024-02-04</Date>
             <Version>9.1.1</Version>
             <Comment>Packaging update</Comment>
             <Name>Matthias Homann</Name>
