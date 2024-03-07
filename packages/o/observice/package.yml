@@ -1,8 +1,8 @@
 name: observice
-version: 0.6.0
-release: 1
+version: 0.7.0
+release: 2
 source:
-   - https://hp250.fritz.box/git/Python/-/packages/pypi/observice/0.6.0/files/68 : bd14c4a115f6256417303be170cb9041571a0df1c315072d3c1089e993b7b153
+   - https://hp250.fritz.box/git/Python/-/packages/pypi/observice/0.7.0/files/76 : 468b6d44744e0e192d65a7f329064f57d25495ef7814b5d839601882a66a58fe
 homepage: https://hp250.fritz.box/git/Python/observice
 license: GPL3
 component: system.utils
