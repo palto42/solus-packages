@@ -13,7 +13,6 @@ description: |
 rundeps:
     - libayatana-appindicator
     - python3
-    - python-dbus-next # local
     - python-gobject
     - python-tomli
 builddeps:
