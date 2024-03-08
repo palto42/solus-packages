@@ -1,6 +1,6 @@
 name       : tlpui
 version    : 1.6.0
-release    : 1
+release    : 2
 source     :
    - https://github.com/d4nj1/TLPUI/archive/refs/tags/tlpui-1.6.0.tar.gz : f1b2cd69cb25f59ce973ee8411e51ded45032d289ec8f6f62ccbb45919d16b86
 homepage   : https://github.com/d4nj1/TLPUI
