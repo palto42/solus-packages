@@ -20,64 +20,64 @@
 </Description>
         <PartOf>programming.python</PartOf>
         <Files>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/dbus_next-0.2.3-py3.10.egg-info/PKG-INFO</Path>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/dbus_next-0.2.3-py3.10.egg-info/SOURCES.txt</Path>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/dbus_next-0.2.3-py3.10.egg-info/dependency_links.txt</Path>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/dbus_next-0.2.3-py3.10.egg-info/top_level.txt</Path>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/dbus_next/__init__.py</Path>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/dbus_next/__pycache__/__init__.cpython-310.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/dbus_next/__pycache__/__version__.cpython-310.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/dbus_next/__pycache__/auth.cpython-310.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/dbus_next/__pycache__/constants.cpython-310.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/dbus_next/__pycache__/errors.cpython-310.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/dbus_next/__pycache__/introspection.cpython-310.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/dbus_next/__pycache__/message.cpython-310.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/dbus_next/__pycache__/message_bus.cpython-310.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/dbus_next/__pycache__/proxy_object.cpython-310.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/dbus_next/__pycache__/service.cpython-310.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/dbus_next/__pycache__/signature.cpython-310.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/dbus_next/__pycache__/validators.cpython-310.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/dbus_next/__version__.py</Path>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/dbus_next/_private/__init__.py</Path>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/dbus_next/_private/__pycache__/__init__.cpython-310.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/dbus_next/_private/__pycache__/address.cpython-310.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/dbus_next/_private/__pycache__/constants.cpython-310.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/dbus_next/_private/__pycache__/marshaller.cpython-310.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/dbus_next/_private/__pycache__/unmarshaller.cpython-310.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/dbus_next/_private/__pycache__/util.cpython-310.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/dbus_next/_private/address.py</Path>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/dbus_next/_private/constants.py</Path>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/dbus_next/_private/marshaller.py</Path>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/dbus_next/_private/unmarshaller.py</Path>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/dbus_next/_private/util.py</Path>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/dbus_next/aio/__init__.py</Path>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/dbus_next/aio/__pycache__/__init__.cpython-310.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/dbus_next/aio/__pycache__/message_bus.cpython-310.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/dbus_next/aio/__pycache__/proxy_object.cpython-310.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/dbus_next/aio/message_bus.py</Path>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/dbus_next/aio/proxy_object.py</Path>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/dbus_next/auth.py</Path>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/dbus_next/constants.py</Path>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/dbus_next/errors.py</Path>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/dbus_next/glib/__init__.py</Path>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/dbus_next/glib/__pycache__/__init__.cpython-310.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/dbus_next/glib/__pycache__/message_bus.cpython-310.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/dbus_next/glib/__pycache__/proxy_object.cpython-310.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/dbus_next/glib/message_bus.py</Path>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/dbus_next/glib/proxy_object.py</Path>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/dbus_next/introspection.py</Path>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/dbus_next/message.py</Path>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/dbus_next/message_bus.py</Path>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/dbus_next/proxy_object.py</Path>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/dbus_next/py.typed</Path>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/dbus_next/service.py</Path>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/dbus_next/signature.py</Path>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/dbus_next/validators.py</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/dbus_next-0.2.3-py3.11.egg-info/PKG-INFO</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/dbus_next-0.2.3-py3.11.egg-info/SOURCES.txt</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/dbus_next-0.2.3-py3.11.egg-info/dependency_links.txt</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/dbus_next-0.2.3-py3.11.egg-info/top_level.txt</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/dbus_next/__init__.py</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/dbus_next/__pycache__/__init__.cpython-311.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/dbus_next/__pycache__/__version__.cpython-311.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/dbus_next/__pycache__/auth.cpython-311.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/dbus_next/__pycache__/constants.cpython-311.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/dbus_next/__pycache__/errors.cpython-311.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/dbus_next/__pycache__/introspection.cpython-311.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/dbus_next/__pycache__/message.cpython-311.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/dbus_next/__pycache__/message_bus.cpython-311.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/dbus_next/__pycache__/proxy_object.cpython-311.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/dbus_next/__pycache__/service.cpython-311.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/dbus_next/__pycache__/signature.cpython-311.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/dbus_next/__pycache__/validators.cpython-311.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/dbus_next/__version__.py</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/dbus_next/_private/__init__.py</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/dbus_next/_private/__pycache__/__init__.cpython-311.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/dbus_next/_private/__pycache__/address.cpython-311.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/dbus_next/_private/__pycache__/constants.cpython-311.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/dbus_next/_private/__pycache__/marshaller.cpython-311.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/dbus_next/_private/__pycache__/unmarshaller.cpython-311.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/dbus_next/_private/__pycache__/util.cpython-311.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/dbus_next/_private/address.py</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/dbus_next/_private/constants.py</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/dbus_next/_private/marshaller.py</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/dbus_next/_private/unmarshaller.py</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/dbus_next/_private/util.py</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/dbus_next/aio/__init__.py</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/dbus_next/aio/__pycache__/__init__.cpython-311.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/dbus_next/aio/__pycache__/message_bus.cpython-311.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/dbus_next/aio/__pycache__/proxy_object.cpython-311.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/dbus_next/aio/message_bus.py</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/dbus_next/aio/proxy_object.py</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/dbus_next/auth.py</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/dbus_next/constants.py</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/dbus_next/errors.py</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/dbus_next/glib/__init__.py</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/dbus_next/glib/__pycache__/__init__.cpython-311.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/dbus_next/glib/__pycache__/message_bus.cpython-311.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/dbus_next/glib/__pycache__/proxy_object.cpython-311.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/dbus_next/glib/message_bus.py</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/dbus_next/glib/proxy_object.py</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/dbus_next/introspection.py</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/dbus_next/message.py</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/dbus_next/message_bus.py</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/dbus_next/proxy_object.py</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/dbus_next/py.typed</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/dbus_next/service.py</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/dbus_next/signature.py</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/dbus_next/validators.py</Path>
         </Files>
     </Package>
     <History>
-        <Update release="1">
-            <Date>2024-01-27</Date>
+        <Update release="2">
+            <Date>2024-03-08</Date>
             <Version>0.2.3</Version>
             <Comment>Packaging update</Comment>
             <Name>Matthias Homann</Name>
