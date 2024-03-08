@@ -101,7 +101,7 @@ find_free_servernum() {
 
 # Parse the command line.
 ARGS=$(getopt --options +ade:f:hn:lp:s:w: \
-       --long auto-servernum,error-file:auth-file:,help,server-num:,listen-tcp,xauth-protocol:,server-args:,wait: \
+       --long auto-servernum,error-file:,auth-file:,help,server-num:,listen-tcp,xauth-protocol:,server-args:,wait: \
        --name "$PROGNAME" -- "$@")
 GETOPT_STATUS=$?
 
@@ -120,7 +120,7 @@ while :; do
         -f|--auth-file) AUTHFILE="$2"; shift ;;
         -h|--help) SHOWHELP="yes" ;;
         -n|--server-num) SERVERNUM="$2"; shift ;;
-        -l|--listen-tcp) LISTENTCP="" ;;
+        -l|--listen-tcp) LISTENTCP="-listen tcp" ;;
         -p|--xauth-protocol) XAUTHPROTO="$2"; shift ;;
         -s|--server-args) XVFBARGS="$2"; shift ;;
         -w|--wait) STARTWAIT="$2"; shift ;;

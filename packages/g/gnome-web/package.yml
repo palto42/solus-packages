@@ -1,8 +1,9 @@
 name       : gnome-web
-version    : '44.6'
-release    : 58
+version    : '45.2'
+release    : 62
 source     :
-    - https://download.gnome.org/sources/epiphany/44/epiphany-44.6.tar.xz : 5335dd573581db61e126d854dc16ae519657a5b8790789a47d25e43e17cd3a43
+    - https://download.gnome.org/sources/epiphany/45/epiphany-45.2.tar.xz : 79c71460bffefccef5e67be3fb5fca657853e8216cb626399d2b950ce0320ddc
+homepage   : https://wiki.gnome.org/Apps/Web
 license    : GPL-3.0-or-later
 summary    : GNOME web browser based on the WebKit rendering engine.
 description: |
@@ -26,11 +27,11 @@ builddeps  :
     - pkgconfig(libsoup-3.0)
     - pkgconfig(libxslt)
     - pkgconfig(sqlite3)
-    - pkgconfig(webkitgtk-6.0)
+    - libwebkit-gtk6-devel # FIXME: change this back to pkconfig
     - desktop-file-utils
     - itstool
 setup      : |
-    %patch -p1 < $pkgfiles/0001-Set-Solus-blog-as-default-homepage.patch
+    %patch -p1 -i $pkgfiles/0001-Set-Solus-blog-as-default-homepage.patch
     %meson_configure
 build      : |
     %ninja_build

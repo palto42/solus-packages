@@ -1,8 +1,8 @@
 name       : docker
-version    : 24.0.6
-release    : 47
+version    : 25.0.4
+release    : 52
 source     :
-    - https://github.com/docker/cli/archive/refs/tags/v24.0.6.tar.gz : c1a4a580ced3633e489c5c9869a20198415da44df7023fdc200d425cdf5fa652
+    - https://github.com/docker/cli/archive/refs/tags/v25.0.4.tar.gz : e29bcd588142981f0a8f7955628863441099cead1c860dc5040f5af0156de71a
 license    : Apache-2.0
 component  : virt
 summary    : Open source application container engine
@@ -13,14 +13,13 @@ description: |
 strip      : no
 networking : yes
 builddeps  :
+    - git
     - go-md2man
     - golang
 rundeps    :
     - docker-buildx
     - moby
 environment: |
-    export GITCOMMIT="ed223bc820ee9bb7005a333013b86203a9e1bc23"
-    export DOCKER_GITCOMMIT=$GITCOMMIT
     export DISABLE_WARN_OUTSIDE_CONTAINER=1
 
     export GOFLAGS="-buildmode=pie -trimpath -mod=readonly -modcacherw -ldflags=-linkmode=external"
@@ -32,6 +31,9 @@ setup      : |
 build      : |
     cd src/github.com/docker/cli
     export GOPATH=`pwd`
+
+    export GITCOMMIT="$(git ls-remote https://github.com/docker/cli.git refs/tags/v$version^{} | awk '{print $1}')"
+    export DOCKER_GITCOMMIT=$GITCOMMIT
 
     # Build CLI
     PLATFORM="Docker Engine - Community" \

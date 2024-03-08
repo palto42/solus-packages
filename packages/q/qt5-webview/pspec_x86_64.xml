@@ -13,7 +13,7 @@
         <Summary xml:lang="en">Provides a way to display web content in a QML application</Summary>
         <Description xml:lang="en">Provides a way to display web content in a QML application
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>qt5-webview</Name>
@@ -22,12 +22,9 @@
 </Description>
         <PartOf>desktop.qt</PartOf>
         <Files>
-            <Path fileType="library">/usr/lib64/libQt5WebView.prl</Path>
             <Path fileType="library">/usr/lib64/libQt5WebView.so.5</Path>
             <Path fileType="library">/usr/lib64/libQt5WebView.so.5.15</Path>
-            <Path fileType="library">/usr/lib64/libQt5WebView.so.5.15.10</Path>
-            <Path fileType="library">/usr/lib64/qt5/mkspecs/modules/qt_lib_webview.pri</Path>
-            <Path fileType="library">/usr/lib64/qt5/mkspecs/modules/qt_lib_webview_private.pri</Path>
+            <Path fileType="library">/usr/lib64/libQt5WebView.so.5.15.12</Path>
             <Path fileType="library">/usr/lib64/qt5/plugins/webview/libqtwebview_webengine.so</Path>
             <Path fileType="library">/usr/lib64/qt5/qml/QtWebView/libdeclarative_webview.so</Path>
             <Path fileType="library">/usr/lib64/qt5/qml/QtWebView/plugins.qmltypes</Path>
@@ -41,11 +38,13 @@
 </Description>
         <PartOf>programming.library</PartOf>
         <RuntimeDependencies>
-            <Dependency release="14">qt5-webview</Dependency>
+            <Dependency release="17">qt5-webview</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib64/qt5/examples/webview/minibrowser/+android/LoadProgressStyle.qml</Path>
+            <Path fileType="library">/usr/lib64/qt5/examples/webview/minibrowser/+android/LoadProgressStyle.qmlc</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/webview/minibrowser/LoadProgressStyle.qml</Path>
+            <Path fileType="library">/usr/lib64/qt5/examples/webview/minibrowser/LoadProgressStyle.qmlc</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/webview/minibrowser/doc/images/webview-example.jpg</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/webview/minibrowser/doc/src/minibrowser.qdoc</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/webview/minibrowser/images/left-32.png</Path>
@@ -54,6 +53,7 @@
             <Path fileType="library">/usr/lib64/qt5/examples/webview/minibrowser/images/stop-32.png</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/webview/minibrowser/main.cpp</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/webview/minibrowser/main.qml</Path>
+            <Path fileType="library">/usr/lib64/qt5/examples/webview/minibrowser/main.qmlc</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/webview/minibrowser/minibrowser</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/webview/minibrowser/minibrowser.pro</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/webview/minibrowser/qml.qrc</Path>
@@ -67,19 +67,19 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="14">qt5-webview</Dependency>
+            <Dependency release="17">qt5-webview</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="header">/usr/include/QtWebView/5.15.10/QtWebView/private/qabstractwebview_p.h</Path>
-            <Path fileType="header">/usr/include/QtWebView/5.15.10/QtWebView/private/qnativeviewcontroller_p.h</Path>
-            <Path fileType="header">/usr/include/QtWebView/5.15.10/QtWebView/private/qquickviewcontroller_p.h</Path>
-            <Path fileType="header">/usr/include/QtWebView/5.15.10/QtWebView/private/qquickwebview_p.h</Path>
-            <Path fileType="header">/usr/include/QtWebView/5.15.10/QtWebView/private/qquickwebviewloadrequest_p.h</Path>
-            <Path fileType="header">/usr/include/QtWebView/5.15.10/QtWebView/private/qwebview_p.h</Path>
-            <Path fileType="header">/usr/include/QtWebView/5.15.10/QtWebView/private/qwebviewfactory_p.h</Path>
-            <Path fileType="header">/usr/include/QtWebView/5.15.10/QtWebView/private/qwebviewinterface_p.h</Path>
-            <Path fileType="header">/usr/include/QtWebView/5.15.10/QtWebView/private/qwebviewloadrequest_p.h</Path>
-            <Path fileType="header">/usr/include/QtWebView/5.15.10/QtWebView/private/qwebviewplugin_p.h</Path>
+            <Path fileType="header">/usr/include/QtWebView/5.15.12/QtWebView/private/qabstractwebview_p.h</Path>
+            <Path fileType="header">/usr/include/QtWebView/5.15.12/QtWebView/private/qnativeviewcontroller_p.h</Path>
+            <Path fileType="header">/usr/include/QtWebView/5.15.12/QtWebView/private/qquickviewcontroller_p.h</Path>
+            <Path fileType="header">/usr/include/QtWebView/5.15.12/QtWebView/private/qquickwebview_p.h</Path>
+            <Path fileType="header">/usr/include/QtWebView/5.15.12/QtWebView/private/qquickwebviewloadrequest_p.h</Path>
+            <Path fileType="header">/usr/include/QtWebView/5.15.12/QtWebView/private/qwebview_p.h</Path>
+            <Path fileType="header">/usr/include/QtWebView/5.15.12/QtWebView/private/qwebviewfactory_p.h</Path>
+            <Path fileType="header">/usr/include/QtWebView/5.15.12/QtWebView/private/qwebviewinterface_p.h</Path>
+            <Path fileType="header">/usr/include/QtWebView/5.15.12/QtWebView/private/qwebviewloadrequest_p.h</Path>
+            <Path fileType="header">/usr/include/QtWebView/5.15.12/QtWebView/private/qwebviewplugin_p.h</Path>
             <Path fileType="header">/usr/include/QtWebView/QtWebView</Path>
             <Path fileType="header">/usr/include/QtWebView/QtWebViewDepends</Path>
             <Path fileType="header">/usr/include/QtWebView/QtWebViewVersion</Path>
@@ -89,14 +89,17 @@
             <Path fileType="library">/usr/lib64/cmake/Qt5WebView/Qt5WebViewConfig.cmake</Path>
             <Path fileType="library">/usr/lib64/cmake/Qt5WebView/Qt5WebViewConfigVersion.cmake</Path>
             <Path fileType="library">/usr/lib64/cmake/Qt5WebView/Qt5WebView_QWebEngineWebViewPlugin.cmake</Path>
+            <Path fileType="library">/usr/lib64/libQt5WebView.prl</Path>
             <Path fileType="library">/usr/lib64/libQt5WebView.so</Path>
             <Path fileType="data">/usr/lib64/pkgconfig/Qt5WebView.pc</Path>
+            <Path fileType="library">/usr/lib64/qt5/mkspecs/modules/qt_lib_webview.pri</Path>
+            <Path fileType="library">/usr/lib64/qt5/mkspecs/modules/qt_lib_webview_private.pri</Path>
         </Files>
     </Package>
     <History>
-        <Update release="14">
-            <Date>2023-07-15</Date>
-            <Version>5.15.10</Version>
+        <Update release="17">
+            <Date>2024-03-06</Date>
+            <Version>5.15.12</Version>
             <Comment>Packaging update</Comment>
             <Name>Reilly Brogan</Name>
             <Email>solus@reillybrogan.com</Email>

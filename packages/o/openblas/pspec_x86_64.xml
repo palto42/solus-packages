@@ -1,16 +1,17 @@
 <PISI>
     <Source>
         <Name>openblas</Name>
+        <Homepage>https://www.openblas.net/</Homepage>
         <Packager>
-            <Name>Gavin Zhao</Name>
-            <Email>me@gzgz.dev</Email>
+            <Name>Joey Riches</Name>
+            <Email>josephriches@gmail.com</Email>
         </Packager>
         <License>BSD-3-Clause</License>
         <PartOf>programming.library</PartOf>
         <Summary xml:lang="en">OpenBLAS is an optimized BLAS library based on GotoBLAS2 1.13 BSD version</Summary>
         <Description xml:lang="en">OpenBLAS is an optimized BLAS library based on GotoBLAS2 1.13 BSD version
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>openblas</Name>
@@ -19,10 +20,10 @@
 </Description>
         <PartOf>programming.library</PartOf>
         <Files>
-            <Path fileType="library">/usr/lib64/haswell/libopenblas.so.0</Path>
-            <Path fileType="library">/usr/lib64/haswell/libopenblas_haswellp-r0.3.20.so</Path>
+            <Path fileType="library">/usr/lib64/glibc-hwcaps/x86-64-v3/libopenblas.so.0</Path>
+            <Path fileType="library">/usr/lib64/glibc-hwcaps/x86-64-v3/libopenblas_haswellp-r0.3.26.so</Path>
             <Path fileType="library">/usr/lib64/libopenblas.so.0</Path>
-            <Path fileType="library">/usr/lib64/libopenblas_core2p-r0.3.20.so</Path>
+            <Path fileType="library">/usr/lib64/libopenblas_core2p-r0.3.26.so</Path>
         </Files>
     </Package>
     <Package>
@@ -32,7 +33,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="24">openblas</Dependency>
+            <Dependency release="27">openblas</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/cblas.h</Path>
@@ -45,12 +46,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="24">
-            <Date>2022-06-21</Date>
-            <Version>0.3.20</Version>
+        <Update release="27">
+            <Date>2024-02-13</Date>
+            <Version>0.3.26</Version>
             <Comment>Packaging update</Comment>
-            <Name>Gavin Zhao</Name>
-            <Email>me@gzgz.dev</Email>
+            <Name>Joey Riches</Name>
+            <Email>josephriches@gmail.com</Email>
         </Update>
     </History>
 </PISI>

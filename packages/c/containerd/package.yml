@@ -1,10 +1,11 @@
 name       : containerd
-version    : 1.7.6
-release    : 47
+version    : 1.7.13
+release    : 55
 source     :
-    - git|https://github.com/containerd/containerd.git : v1.7.6
+    - git|https://github.com/containerd/containerd.git : v1.7.13
 license    : Apache-2.0
 component  : virt
+homepage   : https://containerd.io/
 summary    : A daemon to control OCI container runtimes
 description: |
     A daemon to control OCI container runtimes
@@ -29,7 +30,7 @@ build      : |
     mkdir -p src/github.com/containerd
     ln -s `pwd` src/github.com/containerd/containerd
     pushd src/github.com/containerd/containerd
-    %make GO_BUILD_FLAGS="$GOFLAGS" REVISION=$(git rev-parse HEAD) binaries man
+    %make GO_BUILD_FLAGS="$GOFLAGS" REVISION=$(git rev-parse HEAD) BUILDTAGS=no_aufs binaries man
 install    : |
     %make_install PREFIX=/usr/
 

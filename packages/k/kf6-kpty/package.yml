@@ -1,0 +1,29 @@
+name       : kf6-kpty
+version    : 6.0.0
+release    : 3
+source     :
+    - https://cdn.download.kde.org/stable/frameworks/6.0/kpty-6.0.0.tar.xz : c5df357adfc1733593f6ceb3cd95ff7a3e587701f990b631dfaee0278e0df171
+homepage   : https://community.kde.org/Frameworks
+license    :
+    - BSD-3-Clause
+    - GPL-2.0-or-later
+    - LGPL-2.0-or-later
+component  : desktop.library
+summary    : Interfacing with pseudo terminal devices
+description: |
+    Interfacing with pseudo terminal devices
+builddeps  :
+    - kf6-kcoreaddons-devel
+    - kf6-ki18n-devel
+    - libutempter-devel
+rundeps    :
+    - devel :
+        - kf6-kcoreaddons-devel
+clang      : yes
+optimize   : thin-lto
+setup      : |
+    %cmake_kf6
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install

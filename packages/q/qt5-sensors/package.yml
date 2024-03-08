@@ -1,8 +1,8 @@
 name       : qt5-sensors
-version    : 5.15.10
-release    : 30
+version    : 5.15.12
+release    : 33
 source     :
-    - git|https://invent.kde.org/qt/qt/qtsensors.git : 45c04582b15a9bb4be01ae99aa7fda1bbba7d0df
+    - git|https://invent.kde.org/qt/qt/qtsensors.git : 3011b16d63cadbb473b6aa3a535b9f0e33170c09
 homepage   : https://www.qt.io
 license    :
     - GFDL-1.3-or-later
@@ -18,6 +18,7 @@ description: |
     The Qt Sensors API provides access to sensor hardware via QML and C++ interfaces. The Qt Sensors API also provides a motion gesture recognition API for devices.
 builddeps  :
     - pkgconfig(Qt5Qml)
+clang      : yes
 patterns   :
     - demos : /usr/lib64/qt5/examples
 setup      : |
@@ -26,3 +27,4 @@ build      : |
     %make
 install    : |
     %make_install INSTALL_ROOT=$installdir
+    %qml_cache

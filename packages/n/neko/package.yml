@@ -1,6 +1,6 @@
 name       : neko
 version    : 2.3.0
-release    : 15
+release    : 16
 source     :
     - https://github.com/HaxeFoundation/neko/archive/refs/tags/v2-3-0.tar.gz : 850e7e317bdaf24ed652efeff89c1cb21380ca19f20e68a296c84f6bad4ee995
 homepage   : https://nekovm.org/
@@ -26,8 +26,8 @@ builddeps  :
     - httpd-devel
     - mbedtls-devel
 setup      : |
-    %patch -p1 < $pkgfiles/neko-discard-xlocale.patch
-    %patch -p1 < $pkgfiles/neko-gtk3.patch
+    %patch -p1 -i $pkgfiles/neko-discard-xlocale.patch
+    %patch -p1 -i $pkgfiles/neko-gtk3.patch
     %cmake_ninja -DRUN_LDCONFIG=OFF
 build      : |
     %ninja_build

@@ -1,8 +1,8 @@
 name       : kactivities-stats
-version    : 5.109.0
-release    : 67
+version    : 5.115.0
+release    : 71
 source     :
-    - https://cdn.download.kde.org/stable/frameworks/5.109/kactivities-stats-5.109.0.tar.xz : dbd016c619035abce1c678fe237d273e1f961d6a969f4537212f5b397b32d270
+    - https://cdn.download.kde.org/stable/frameworks/5.115/kactivities-stats-5.115.0.tar.xz : a4e942c0ba521ef393f4b2c12fbf33fea3bb2f4a0a6a388993b178922d91e666
 homepage   : https://community.kde.org/Frameworks
 license    :
     - GPL-2.0-or-later

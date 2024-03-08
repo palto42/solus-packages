@@ -1,8 +1,8 @@
 name       : sddm-kcm
-version    : 5.27.7
-release    : 84
+version    : 5.27.10
+release    : 86
 source     :
-    - https://cdn.download.kde.org/stable/plasma/5.27.7/sddm-kcm-5.27.7.tar.xz : 0645f5511c99cd2f01963cf0e01ccfe248bbca33daf349c729f0fe0ca3103c43
+    - https://cdn.download.kde.org/stable/plasma/5.27.10/sddm-kcm-5.27.10.tar.xz : 83e43177bf83d7b2c5d617349bb913dbdb80b0354aecbcc47febd4e50d95f4ad
 homepage   : https://www.kde.org/workspaces/plasmadesktop/
 license    : GPL-2.0-or-later
 component  : desktop.kde.core

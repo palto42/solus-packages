@@ -1,9 +1,10 @@
 name       : dnsmasq
-version    : '2.84'
-release    : 14
+version    : '2.90'
+release    : 17
 source     :
-    - https://thekelleys.org.uk/dnsmasq/dnsmasq-2.84.tar.xz : 603195c64b73137609b07e1024ae0b37f652b2f5fe467dce66985b3d1850050c
+    - https://thekelleys.org.uk/dnsmasq/dnsmasq-2.90.tar.xz : 8e50309bd837bfec9649a812e066c09b6988b73d749b7d293c06c57d46a109e4
 license    : GPL-2.0-or-later
+homepage   : https://thekelleys.org.uk/dnsmasq/doc.html
 summary    : DNS cache and forwarder
 component  : network.base
 description: |
@@ -12,10 +13,10 @@ builddeps  :
     - pkgconfig(nettle)
 setup      : |
     # Causes severe delays otherwise
-    %patch -p1 < $pkgfiles/Disable-ICMP-echo-address-checking.patch
+    %patch -p1 -i $pkgfiles/Disable-ICMP-echo-address-checking.patch
 
-    %patch -p1 < $pkgfiles/Do-not-rebuild-when-installing.patch
-    %patch -p1 < $pkgfiles/Make-it-stateless.patch
+    %patch -p1 -i $pkgfiles/Do-not-rebuild-when-installing.patch
+    %patch -p1 -i $pkgfiles/Make-it-stateless.patch
 
     sed -e 's|#define CHUSER "nobody"|#define CHUSER "dnsmasq"|' \
         -e 's|#define CHGRP "dip"|#define CHGRP "dnsmasq"|' -i src/config.h

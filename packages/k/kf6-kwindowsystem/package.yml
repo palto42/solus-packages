@@ -1,0 +1,37 @@
+name       : kf6-kwindowsystem
+version    : 6.0.0
+release    : 5
+source     :
+    - https://cdn.download.kde.org/stable/frameworks/6.0/kwindowsystem-6.0.0.tar.xz : 1906caa53b7d58fc0c4d78a3c8d99f25aa056fc6d09c5fc121ed5e1f80396a94
+homepage   : https://community.kde.org/Frameworks
+license    :
+    - LGPL-2.0-only
+    - LGPL-2.1-only
+    - LGPL-2.1-or-later
+    - MIT
+component  : programming.library
+summary    : Access to the windowing system.
+description: |
+    Access to the windowing system.
+builddeps  :
+    - pkgconfig(Qt6Designer)
+    - pkgconfig(Qt6WaylandClient)
+    - pkgconfig(x11)
+    - pkgconfig(xcb)
+    - pkgconfig(xcb-icccm)
+    - pkgconfig(xcb-keysyms)
+    - extra-cmake-modules
+    - plasma-wayland-protocols-devel
+rundeps    :
+    - devel :
+        - extra-cmake-modules
+        - libx11-devel
+        - qt6-tools-devel
+clang      : yes
+optimize   : thin-lto
+setup      : |
+    %cmake_kf6
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install

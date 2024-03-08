@@ -1,8 +1,8 @@
 name       : rymdport
-version    : 3.5.0
-release    : 7
+version    : 3.5.2
+release    : 9
 source     :
-    - https://github.com/Jacalz/rymdport/releases/download/v3.5.0/rymdport-v3.5.0-vendored.tar.xz : 5d6b62964987a6acefa84be5ca02d0303d86f0e812a86a6622d3c56a86d9c43f
+    - https://github.com/Jacalz/rymdport/releases/download/v3.5.2/rymdport-v3.5.2-vendored.tar.xz : 917d16aa9a4f9047e8171c1cb46c84f70c7c6d506358cda083155e6f1490aacd
 license    : GPL-3.0-or-later
 homepage   : https://github.com/Jacalz/rymdport
 component  : network.clients
@@ -17,8 +17,6 @@ builddeps  :
     - pkgconfig(xrandr)
     - pkgconfig(xxf86vm)
     - golang
-setup      : |
-    %patch -p1 -i $pkgfiles/dont-update-icon-cache.patch
 build      : |
     go build -tags no_emoji -trimpath -ldflags="-s -w" -buildvcs=false -o rymdport
 install    : |

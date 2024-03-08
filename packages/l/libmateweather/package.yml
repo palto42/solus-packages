@@ -1,8 +1,9 @@
 name       : libmateweather
-version    : 1.27.0
-release    : 23
+version    : 1.28.0
+release    : 25
 source     :
-    - https://github.com/mate-desktop/libmateweather/releases/download/v1.27.0/libmateweather-1.27.0.tar.xz : c4d3b47e327e2d1196e933695e930167e15b4f7e2f271e98bc708bcf0a809926
+    - https://github.com/mate-desktop/libmateweather/releases/download/v1.28.0/libmateweather-1.28.0.tar.xz : 2094a4ba78da7a4b75536ea8e45ccdc00691adfe1c13a557c8a77dcd76450a8b
+homepage   : https://mate-desktop.org/
 license    :
     - GPL-2.0-or-later
     - LGPL-2.1-or-later

@@ -1,8 +1,9 @@
 name       : kpmcore
-version    : 23.04.3
-release    : 35
+version    : 23.08.5
+release    : 39
 source     :
-    - https://cdn.download.kde.org/stable/release-service/23.04.3/src/kpmcore-23.04.3.tar.xz : 89068cbec609a2ed2e48ec609dfe35eff4f3cb39456c84e7a647754dd0bfe033
+    - https://cdn.download.kde.org/stable/release-service/23.08.5/src/kpmcore-23.08.5.tar.xz : b44a40712de593ddfe4cc5799912eb53f9c3e383544306a17279f051de85417a
+homepage   : https://invent.kde.org/system/kpmcore
 license    : GPL-3.0-or-later
 component  : programming.library
 summary    : Library for managing partitions

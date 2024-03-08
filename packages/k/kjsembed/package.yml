@@ -1,8 +1,8 @@
 name       : kjsembed
-version    : 5.109.0
-release    : 67
+version    : 5.115.0
+release    : 71
 source     :
-    - https://cdn.download.kde.org/stable/frameworks/5.109/portingAids/kjsembed-5.109.0.tar.xz : 39ad0b51b57adef1780b256f4d44078d50718eae60e40faf2fb7b6e52dc078dd
+    - https://cdn.download.kde.org/stable/frameworks/5.115/portingAids/kjsembed-5.115.0.tar.xz : f6aeac1dcc7e1ce4219ef3a0a8a22c5eb2ab377a9587d5d9fa94b625653e3151
 homepage   : https://community.kde.org/Frameworks
 license    : LGPL-2.1-or-later
 component  : programming.java

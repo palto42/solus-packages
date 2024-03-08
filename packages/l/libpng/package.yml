@@ -1,21 +1,18 @@
 name       : libpng
-version    : 1.6.39
-release    : 23
+version    : 1.6.43
+release    : 27
 source     :
-    - https://kumisystems.dl.sourceforge.net/project/libpng/libpng16/1.6.39/libpng-1.6.39.tar.xz : 1f4696ce70b4ee5f85f1e1623dc1229b210029fa4b7aee573df3e2ba7b036937
+    - https://sourceforge.net/projects/libpng/files/libpng16/1.6.43/libpng-1.6.43.tar.gz : e804e465d4b109b5ad285a8fb71f0dd3f74f0068f91ce3cdfde618180c174925
 homepage   : http://www.libpng.org/pub/png/
 license    : Libpng
 component  : multimedia.library
 summary    : libpng (Official PNG reference library)
 description: |
     libpng is the official PNG reference library, supporting almost all PNG features and has been extensively tested.
+emul32     : yes
+avx2       : yes
 builddeps  :
     - pkgconfig32(zlib)
-patterns   :
-    - devel :
-        - /usr/share/man
-        - /usr/bin/libpng*-config
-emul32     : yes
 setup      : |
     %configure --disable-static --enable-intel-sse
 build      : |
@@ -25,3 +22,6 @@ install    : |
     rm $installdir/%libdir%/*.la
 check      : |
     %make check
+patterns   :
+    - devel :
+        - /usr/bin/libpng*-config

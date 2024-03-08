@@ -1,8 +1,9 @@
 name       : blender
-version    : 3.6.1
-release    : 71
+version    : 4.0.2
+release    : 82
 source     :
-    - https://download.blender.org/source/blender-3.6.1.tar.xz : 24917e71bcb26b4900257054d9da38b62316c7427d7323533b41ca9b3b45ac4d
+    - https://download.blender.org/source/blender-4.0.2.tar.xz : aaa0e729da7591cfbf45772af76345977daaa7b11a0af35d98f9313e246077a3
+    - https://download.blender.org/demo/test/BMW27.blend.zip : 08170de260488c14855a13db81c8d5ad844bc6162c3db13e1d9ba8094f55fe2b
 license    : GPL-2.0-or-later
 homepage   : https://blender.org/
 component  : multimedia.graphics
@@ -19,21 +20,25 @@ builddeps  :
     - pkgconfig(jack)
     - pkgconfig(jemalloc)
     - pkgconfig(libavcodec)
+    - pkgconfig(libdecor-0)
     - pkgconfig(libopenjp2)
+    - pkgconfig(libpcre)
     - pkgconfig(libpulse)
     - pkgconfig(libtiff-4)
     - pkgconfig(libturbojpeg)
+    - pkgconfig(libwebp)
     - pkgconfig(libzstd)
     - pkgconfig(lzo2)
     - pkgconfig(openal)
     - pkgconfig(oslcomp)
-    - pkgconfig(libpcre)
     - pkgconfig(pugixml)
     - pkgconfig(python3)
     - pkgconfig(sdl2)
     - pkgconfig(sndfile)
     - pkgconfig(tbb)
+    - pkgconfig(wayland-protocols)
     - pkgconfig(xi)
+    - pkgconfig(xkbcommon)
     - pkgconfig(xrender)
     - pkgconfig(xxf86vm)
     - alembic-devel
@@ -42,14 +47,20 @@ builddeps  :
     - libharu-devel
     - llvm-devel
     - numpy
-    - potrace-devel
     - opencollada-devel
     - openimagedenoise-devel
     - opensubdiv-devel
     - openvdb-devel
+    - potrace-devel
+    - rocm-hip-devel
 rundeps    :
     - opencollada
-clang      : no
+    - rocm-runtime
+clang      : yes
+environment: |
+    export ROCM_PATH=/usr
+    export HIP_PATH=/usr
+    export DEVICE_LIB_PATH=/usr/lib64/amdgcn/bitcode
 setup      : |
     %cmake_ninja \
         -DPYTHON_VERSION=%python3_version% \
@@ -61,6 +72,7 @@ setup      : |
         -DWITH_CODEC_SNDFILE=ON \
         -DWITH_CYCLES_EMBREE=ON \
         -DWITH_CYCLES_OSL=ON \
+        -DWITH_CYCLES_HIP_BINARIES=ON \
         -DWITH_FFTW3=ON \
         -DWITH_HARU=ON \
         -DWITH_IMAGE_OPENJPEG=ON \
@@ -78,7 +90,8 @@ setup      : |
         -DWITH_SYSTEM_GLEW=ON \
         -DWITH_SYSTEM_LZO=ON \
         -DWITH_USD=ON \
-        -DWITH_X11_XINPUT=ON
+        -DWITH_X11_XINPUT=ON \
+        -DCYCLES_HIP_BINARIES_ARCH="%AMDGPUTARGETS%;gfx90c;gfx902;gfx1011;gfx1012;gfx1031;gfx1032;gfx1033;gfx1034;gfx1035;gfx1036;gfx1103"
 build      : |
     %ninja_build
 install    : |
@@ -86,3 +99,11 @@ install    : |
     %python3_compile $installdir/usr/share/blender
     install -Dm00644 $pkgfiles/blender.thumbnailer -t $installdir/usr/share/thumbnailers
     rm -r $installdir/usr/share/doc/blender/license/
+# TODO(GZGavinZhao): enable headless blender testing; currently it can't
+# find Python scripts needed at runtime
+# check      : |
+#     unzip $sources/BMW27.blend.zip
+# 
+#     if [ -e /dev/kfd ]; then
+#         # ./solusBuildDir/bin/blender -b BMW27.blend -f 0 -- --cycles-device HIP
+#     fi

@@ -1,8 +1,8 @@
 name       : drkonqi
-version    : 5.27.7
-release    : 86
+version    : 5.27.10
+release    : 88
 source     :
-    - https://cdn.download.kde.org/stable/plasma/5.27.7/drkonqi-5.27.7.tar.xz : e82716415c22a3d6cf90e2380a64cbf5d7d171ab32d02cd29056bced0b9221d2
+    - https://cdn.download.kde.org/stable/plasma/5.27.10/drkonqi-5.27.10.tar.xz : a3ea4794ca1d8e31cacfe78301884419cfd9daaf939c5d843718372b65657fd0
 homepage   : https://www.kde.org/workspaces/plasmadesktop/
 license    :
     - GPL-2.0-or-later

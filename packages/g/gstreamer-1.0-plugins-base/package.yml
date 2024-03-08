@@ -1,11 +1,11 @@
 name       : gstreamer-1.0-plugins-base
-version    : 1.22.5
-release    : 49
+version    : 1.22.10
+release    : 54
 source     :
-    - https://gstreamer.freedesktop.org/src/gst-plugins-base/gst-plugins-base-1.22.5.tar.xz : edd4338b45c26a9af28c0d35aab964a024c3884ba6f520d8428df04212c8c93a
+    - https://gstreamer.freedesktop.org/src/gst-plugins-base/gst-plugins-base-1.22.10.tar.xz : 843a3a2da28e1ee6aeea56dd2be9bffcc3b4bbcd0f974eba4abfc3aa31f0399c
 license    : LGPL-2.0-or-later
 component  : multimedia.gstreamer
-homepage   : https://gitlab.freedesktop.org/gstreamer/gst-plugins-base
+homepage   : https://gstreamer.freedesktop.org
 summary    : GStreamer base plug-ins and elements
 description: |
     The GStreamer Base Plug-ins is a well-groomed and well-maintained collection of GStreamer plug-ins and elements, spanning the range of possible types of elements one would want to write for GStreamer. You will need at least one of Good, Bad, Ugly or Libav plugins for GStreamer applications to function properly.
@@ -29,6 +29,8 @@ builddeps  :
     - pkgconfig32(xv)
     - pkgconfig(gobject-introspection-1.0)
     - pkgconfig(wayland-protocols)
+checkdeps  :
+    - xorg-server-xvfb
 setup      : |
     if [[ -n "${EMUL32BUILD}" ]]; then
         CONFIGURE_OPTIONS="-Dintrospection=disabled"
@@ -45,4 +47,5 @@ build      : |
 install    : |
     %ninja_install
 check      : |
-    %ninja_check || :
+    export XDG_RUNTIME_DIR=="$(mktemp -p $(pwd) -d xdg-runtime-XXXXXX)"
+    GST_GL_WINDOW=x11 xvfb-run %ninja_check || cat solusBuildDir/meson-logs/testlog.txt

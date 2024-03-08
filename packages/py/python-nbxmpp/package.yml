@@ -1,8 +1,8 @@
 name       : python-nbxmpp
-version    : 4.3.2
-release    : 18
+version    : 4.5.3
+release    : 21
 source     :
-    - https://files.pythonhosted.org/packages/source/n/nbxmpp/nbxmpp-4.3.2.tar.gz : ec3104504d5e90a10dc0ae3f11b0b50ec2e596d7e70d220676e0e390f1d006ac
+    - https://files.pythonhosted.org/packages/source/n/nbxmpp/nbxmpp-4.5.3.tar.gz : 6e620e6da8ec9f9bc4fad4b1f7ff8467c3ae9efee8ea0593ce4258ac03e00b9e
 homepage   : https://python-nbxmpp.gajim.org
 license    : GPL-3.0-or-later
 component  : programming.python

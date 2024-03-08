@@ -1,8 +1,8 @@
 name       : plasma-sdk
-version    : 5.27.7.1
-release    : 72
+version    : 5.27.10
+release    : 74
 source     :
-    - https://download.kde.org/stable/plasma/5.27.7/plasma-sdk-5.27.7.1.tar.xz : d310a81eed68334886a7e7767bce9066c6ccb07087aa77d04b73acf41a5426a4
+    - https://cdn.download.kde.org/stable/plasma/5.27.10/plasma-sdk-5.27.10.tar.xz : eea9ea1d0eca8a0126edb3040701331e29421fb867ee7d8352e74d1cc9690123
 homepage   : https://www.kde.org/workspaces/plasmadesktop/
 license    :
     - GPL-2.0

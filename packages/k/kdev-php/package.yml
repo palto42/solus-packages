@@ -1,8 +1,9 @@
 name       : kdev-php
-version    : 23.04.3
-release    : 28
+version    : 23.08.5
+release    : 31
 source     :
-    - https://cdn.download.kde.org/stable/release-service/23.04.3/src/kdev-php-23.04.3.tar.xz : 37e839fa90643d4bcefda97d2cf6f9c38e6f802f062bebdd39de31e863712ddb
+    - https://cdn.download.kde.org/stable/release-service/23.08.5/src/kdev-php-23.08.5.tar.xz : 2663298ffaa479791d3600e82046069867d8fbcc1aa449f86c075712747e2e77
+homepage   : https://apps.kde.org/kdev-php/
 license    : GPL-2.0-or-later
 component  : programming.tools
 summary    : PHP support for KDevelop

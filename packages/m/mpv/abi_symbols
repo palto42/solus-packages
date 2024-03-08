@@ -1,6 +1,3 @@
-libmpv.so.2:__bss_start
-libmpv.so.2:_edata
-libmpv.so.2:_end
 libmpv.so.2:mpv_abort_async_command
 libmpv.so.2:mpv_client_api_version
 libmpv.so.2:mpv_client_id
@@ -25,6 +22,7 @@ libmpv.so.2:mpv_get_property
 libmpv.so.2:mpv_get_property_async
 libmpv.so.2:mpv_get_property_osd_string
 libmpv.so.2:mpv_get_property_string
+libmpv.so.2:mpv_get_time_ns
 libmpv.so.2:mpv_get_time_us
 libmpv.so.2:mpv_get_wakeup_pipe
 libmpv.so.2:mpv_hook_add
@@ -84,6 +82,7 @@ mpv:mpv_get_property
 mpv:mpv_get_property_async
 mpv:mpv_get_property_osd_string
 mpv:mpv_get_property_string
+mpv:mpv_get_time_ns
 mpv:mpv_get_time_us
 mpv:mpv_get_wakeup_pipe
 mpv:mpv_hook_add

@@ -1,8 +1,8 @@
 name       : verilator
-version    : '5.016'
-release    : 39
+version    : '5.020'
+release    : 41
 source     :
-    - https://github.com/verilator/verilator/archive/refs/tags/v5.016.tar.gz : 66fc36f65033e5ec904481dd3d0df56500e90c0bfca23b2ae21b4a8d39e05ef1
+    - https://github.com/verilator/verilator/archive/refs/tags/v5.020.tar.gz : 41ca9abfadf8d2413efbff7f8277379733d0095957fe7769dc38f8fd1bc899a6
 license    :
     - LGPL-3.0-only
     - Artistic-2.0

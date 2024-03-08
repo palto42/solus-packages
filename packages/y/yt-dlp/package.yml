@@ -1,8 +1,8 @@
 name       : yt-dlp
-version    : 2023.07.06
-release    : 205
+version    : 2023.12.30
+release    : 212
 source     :
-    - https://github.com/yt-dlp/yt-dlp/archive/refs/tags/2023.07.06.tar.gz : dcb9dd73745b647756d3b23b705514affe456253e482f0f0a1b5be84e9e29208
+    - https://github.com/yt-dlp/yt-dlp/archive/refs/tags/2023.12.30.tar.gz : 2878501990f3ab6aa8eabb7346c16d4b4cbc01984372a1f0b3a6be8d260c7aff
 license    : Unlicense
 component  : network.download
 homepage   : https://github.com/yt-dlp/yt-dlp

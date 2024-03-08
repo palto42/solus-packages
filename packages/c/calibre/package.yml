@@ -1,8 +1,8 @@
 name       : calibre
-version    : 6.26.0
-release    : 175
+version    : 7.6.0
+release    : 188
 source     :
-    - https://download.calibre-ebook.com/6.26.0/calibre-6.26.0.tar.xz : ed45270ed4d17f5eb6c4a314b99a0a87ecb8ee8794b6b3ac14751302fb4eaf23
+    - https://download.calibre-ebook.com/7.6.0/calibre-7.6.0.tar.xz : 7c3da44f01faf76c7a366f7736b510be66dc5e25fd847069a38c2f52f06a2c03
 homepage   : https://calibre-ebook.com/
 license    : GPL-3.0-only
 component  : office.viewers
@@ -54,6 +54,7 @@ builddeps  :
     - python-pyzstd
     - python-regex
     - python-sip
+    - python-xxhash
     - python-zeroconf
     - speech-dispatcher
     - xdg-utils
@@ -84,9 +85,12 @@ rundeps    :
     - python-pyqt6-webengine
     - python-pyzstd
     - python-regex
+    - python-xxhash
     - python-zeroconf
     - python3-dbus
     - speech-dispatcher
+# Needs to be built with the same toolchain that's used to build qt6-base
+clang      : yes
 environment: |
     #Set XDG directories in fakeroot, add read privileges to /usr/share
     export CALIBRE_PY3_PORT=1

@@ -1,0 +1,19 @@
+name       : waycheck
+version    : 1.1.0
+release    : 3
+source     :
+    - https://gitlab.freedesktop.org/serebit/waycheck/-/archive/v1.1.0/waycheck-v1.1.0.tar.gz : 503d8c1d08edd67e726b202f42c8bfe9fec7b0249808fbbdd41eacbb0f33645d
+homepage   : https://gitlab.freedesktop.org/serebit/waycheck
+license    : Apache-2.0
+component  : desktop
+summary    : Waycheck displays all protocols implemented by a wayland compositor.
+description: |
+    Waycheck is a simple Qt6 application that displays all protocols implemented by the compositor that it's running in.
+builddeps  :
+    - pkgconfig(Qt6WaylandClient)
+setup      : |
+    %meson_configure
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install

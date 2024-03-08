@@ -3,8 +3,8 @@
         <Name>messagelib</Name>
         <Homepage>https://kde.org/</Homepage>
         <Packager>
-            <Name>Joey Riches</Name>
-            <Email>josephriches@gmail.com</Email>
+            <Name>Justin Zobel</Name>
+            <Email>justin@1707.io</Email>
         </Packager>
         <License>GPL-2.0-only</License>
         <License>LGPL-2.1-or-later</License>
@@ -12,7 +12,7 @@
         <Summary xml:lang="en">KDE PIM messaging library</Summary>
         <Description xml:lang="en">KDE PIM messaging library.
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>messagelib</Name>
@@ -22,25 +22,19 @@
         <PartOf>desktop.library</PartOf>
         <Files>
             <Path fileType="library">/usr/lib64/libKPim5MessageComposer.so.5</Path>
-            <Path fileType="library">/usr/lib64/libKPim5MessageComposer.so.5.23.3</Path>
+            <Path fileType="library">/usr/lib64/libKPim5MessageComposer.so.5.24.5</Path>
             <Path fileType="library">/usr/lib64/libKPim5MessageCore.so.5</Path>
-            <Path fileType="library">/usr/lib64/libKPim5MessageCore.so.5.23.3</Path>
+            <Path fileType="library">/usr/lib64/libKPim5MessageCore.so.5.24.5</Path>
             <Path fileType="library">/usr/lib64/libKPim5MessageList.so.5</Path>
-            <Path fileType="library">/usr/lib64/libKPim5MessageList.so.5.23.3</Path>
+            <Path fileType="library">/usr/lib64/libKPim5MessageList.so.5.24.5</Path>
             <Path fileType="library">/usr/lib64/libKPim5MessageViewer.so.5</Path>
-            <Path fileType="library">/usr/lib64/libKPim5MessageViewer.so.5.23.3</Path>
+            <Path fileType="library">/usr/lib64/libKPim5MessageViewer.so.5.24.5</Path>
             <Path fileType="library">/usr/lib64/libKPim5MimeTreeParser.so.5</Path>
-            <Path fileType="library">/usr/lib64/libKPim5MimeTreeParser.so.5.23.3</Path>
+            <Path fileType="library">/usr/lib64/libKPim5MimeTreeParser.so.5.24.5</Path>
             <Path fileType="library">/usr/lib64/libKPim5TemplateParser.so.5</Path>
-            <Path fileType="library">/usr/lib64/libKPim5TemplateParser.so.5.23.3</Path>
+            <Path fileType="library">/usr/lib64/libKPim5TemplateParser.so.5.24.5</Path>
             <Path fileType="library">/usr/lib64/libKPim5WebEngineViewer.so.5</Path>
-            <Path fileType="library">/usr/lib64/libKPim5WebEngineViewer.so.5.23.3</Path>
-            <Path fileType="library">/usr/lib64/qt5/mkspecs/modules/qt_MessageComposer.pri</Path>
-            <Path fileType="library">/usr/lib64/qt5/mkspecs/modules/qt_MessageCore.pri</Path>
-            <Path fileType="library">/usr/lib64/qt5/mkspecs/modules/qt_MessageList.pri</Path>
-            <Path fileType="library">/usr/lib64/qt5/mkspecs/modules/qt_MessageViewer.pri</Path>
-            <Path fileType="library">/usr/lib64/qt5/mkspecs/modules/qt_TemplateParser.pri</Path>
-            <Path fileType="library">/usr/lib64/qt5/mkspecs/modules/qt_WebEngineViewer.pri</Path>
+            <Path fileType="library">/usr/lib64/libKPim5WebEngineViewer.so.5.24.5</Path>
             <Path fileType="library">/usr/lib64/qt5/plugins/pim5/messageviewer/grantlee/5.0/messageviewer_grantlee_extension.so</Path>
             <Path fileType="library">/usr/lib64/qt5/plugins/pim5/messageviewer/headerstyle/messageviewer_defaultgrantleeheaderstyleplugin.so</Path>
             <Path fileType="data">/usr/share/config.kcfg/customtemplates_kfg.kcfg</Path>
@@ -171,9 +165,12 @@
             <Path fileType="localedata">/usr/share/locale/et/LC_MESSAGES/libtemplateparser.mo</Path>
             <Path fileType="localedata">/usr/share/locale/et/LC_MESSAGES/libwebengineviewer.mo</Path>
             <Path fileType="localedata">/usr/share/locale/eu/LC_MESSAGES/libmessagecomposer.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/eu/LC_MESSAGES/libmessagecore.mo</Path>
             <Path fileType="localedata">/usr/share/locale/eu/LC_MESSAGES/libmessagelist.mo</Path>
             <Path fileType="localedata">/usr/share/locale/eu/LC_MESSAGES/libmessageviewer.mo</Path>
             <Path fileType="localedata">/usr/share/locale/eu/LC_MESSAGES/libmimetreeparser.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/eu/LC_MESSAGES/libtemplateparser.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/eu/LC_MESSAGES/libwebengineviewer.mo</Path>
             <Path fileType="localedata">/usr/share/locale/fa/LC_MESSAGES/libmessagelist.mo</Path>
             <Path fileType="localedata">/usr/share/locale/fa/LC_MESSAGES/libmessageviewer.mo</Path>
             <Path fileType="localedata">/usr/share/locale/fa/LC_MESSAGES/libmimetreeparser.mo</Path>
@@ -508,7 +505,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="76">messagelib</Dependency>
+            <Dependency release="82">messagelib</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/KPim5/MessageComposer/MessageComposer/AbstractEncryptJob</Path>
@@ -532,6 +529,7 @@
             <Path fileType="header">/usr/include/KPim5/MessageComposer/MessageComposer/ConvertSnippetVariablesJob</Path>
             <Path fileType="header">/usr/include/KPim5/MessageComposer/MessageComposer/ConvertSnippetVariablesUtil</Path>
             <Path fileType="header">/usr/include/KPim5/MessageComposer/MessageComposer/DraftStatus</Path>
+            <Path fileType="header">/usr/include/KPim5/MessageComposer/MessageComposer/EditorWatcher</Path>
             <Path fileType="header">/usr/include/KPim5/MessageComposer/MessageComposer/EncryptJob</Path>
             <Path fileType="header">/usr/include/KPim5/MessageComposer/MessageComposer/FollowUpReminderSelectDateDialog</Path>
             <Path fileType="header">/usr/include/KPim5/MessageComposer/MessageComposer/FollowupReminder</Path>
@@ -540,7 +538,10 @@
             <Path fileType="header">/usr/include/KPim5/MessageComposer/MessageComposer/ImageScalingWidget</Path>
             <Path fileType="header">/usr/include/KPim5/MessageComposer/MessageComposer/InfoPart</Path>
             <Path fileType="header">/usr/include/KPim5/MessageComposer/MessageComposer/InsertTextFileJob</Path>
+            <Path fileType="header">/usr/include/KPim5/MessageComposer/MessageComposer/ItipJob</Path>
+            <Path fileType="header">/usr/include/KPim5/MessageComposer/MessageComposer/ItipPart</Path>
             <Path fileType="header">/usr/include/KPim5/MessageComposer/MessageComposer/JobBase</Path>
+            <Path fileType="header">/usr/include/KPim5/MessageComposer/MessageComposer/KeyResolver</Path>
             <Path fileType="header">/usr/include/KPim5/MessageComposer/MessageComposer/Kleo_Util</Path>
             <Path fileType="header">/usr/include/KPim5/MessageComposer/MessageComposer/MDNAdviceDialog</Path>
             <Path fileType="header">/usr/include/KPim5/MessageComposer/MessageComposer/MDNAdviceHelper</Path>
@@ -552,7 +553,6 @@
             <Path fileType="header">/usr/include/KPim5/MessageComposer/MessageComposer/MessagePart</Path>
             <Path fileType="header">/usr/include/KPim5/MessageComposer/MessageComposer/MessageSender</Path>
             <Path fileType="header">/usr/include/KPim5/MessageComposer/MessageComposer/MultipartJob</Path>
-            <Path fileType="header">/usr/include/KPim5/MessageComposer/MessageComposer/NearExpiryChecker</Path>
             <Path fileType="header">/usr/include/KPim5/MessageComposer/MessageComposer/PluginActionType</Path>
             <Path fileType="header">/usr/include/KPim5/MessageComposer/MessageComposer/PluginComposerInterface</Path>
             <Path fileType="header">/usr/include/KPim5/MessageComposer/MessageComposer/PluginEditor</Path>
@@ -618,6 +618,7 @@
             <Path fileType="header">/usr/include/KPim5/MessageComposer/messagecomposer/convertsnippetvariablesjob.h</Path>
             <Path fileType="header">/usr/include/KPim5/MessageComposer/messagecomposer/convertsnippetvariablesutil.h</Path>
             <Path fileType="header">/usr/include/KPim5/MessageComposer/messagecomposer/draftstatus.h</Path>
+            <Path fileType="header">/usr/include/KPim5/MessageComposer/messagecomposer/editorwatcher.h</Path>
             <Path fileType="header">/usr/include/KPim5/MessageComposer/messagecomposer/encryptjob.h</Path>
             <Path fileType="header">/usr/include/KPim5/MessageComposer/messagecomposer/followupreminder.h</Path>
             <Path fileType="header">/usr/include/KPim5/MessageComposer/messagecomposer/followupremindercreatejob.h</Path>
@@ -626,7 +627,10 @@
             <Path fileType="header">/usr/include/KPim5/MessageComposer/messagecomposer/imagescalingwidget.h</Path>
             <Path fileType="header">/usr/include/KPim5/MessageComposer/messagecomposer/infopart.h</Path>
             <Path fileType="header">/usr/include/KPim5/MessageComposer/messagecomposer/inserttextfilejob.h</Path>
+            <Path fileType="header">/usr/include/KPim5/MessageComposer/messagecomposer/itipjob.h</Path>
+            <Path fileType="header">/usr/include/KPim5/MessageComposer/messagecomposer/itippart.h</Path>
             <Path fileType="header">/usr/include/KPim5/MessageComposer/messagecomposer/jobbase.h</Path>
+            <Path fileType="header">/usr/include/KPim5/MessageComposer/messagecomposer/keyresolver.h</Path>
             <Path fileType="header">/usr/include/KPim5/MessageComposer/messagecomposer/kleo_util.h</Path>
             <Path fileType="header">/usr/include/KPim5/MessageComposer/messagecomposer/maintextjob.h</Path>
             <Path fileType="header">/usr/include/KPim5/MessageComposer/messagecomposer/mdnadvicedialog.h</Path>
@@ -641,7 +645,6 @@
             <Path fileType="header">/usr/include/KPim5/MessageComposer/messagecomposer/messagepart.h</Path>
             <Path fileType="header">/usr/include/KPim5/MessageComposer/messagecomposer/messagesender.h</Path>
             <Path fileType="header">/usr/include/KPim5/MessageComposer/messagecomposer/multipartjob.h</Path>
-            <Path fileType="header">/usr/include/KPim5/MessageComposer/messagecomposer/nearexpirychecker.h</Path>
             <Path fileType="header">/usr/include/KPim5/MessageComposer/messagecomposer/pluginactiontype.h</Path>
             <Path fileType="header">/usr/include/KPim5/MessageComposer/messagecomposer/plugincomposerinterface.h</Path>
             <Path fileType="header">/usr/include/KPim5/MessageComposer/messagecomposer/plugineditor.h</Path>
@@ -772,7 +775,6 @@
             <Path fileType="header">/usr/include/KPim5/MessageViewer/MessageViewer/DKIMRule</Path>
             <Path fileType="header">/usr/include/KPim5/MessageViewer/MessageViewer/DKIMViewerMenu</Path>
             <Path fileType="header">/usr/include/KPim5/MessageViewer/MessageViewer/DKIMWidgetInfo</Path>
-            <Path fileType="header">/usr/include/KPim5/MessageViewer/MessageViewer/EditorWatcher</Path>
             <Path fileType="header">/usr/include/KPim5/MessageViewer/MessageViewer/FileHtmlWriter</Path>
             <Path fileType="header">/usr/include/KPim5/MessageViewer/MessageViewer/GrantleeHeaderStyle</Path>
             <Path fileType="header">/usr/include/KPim5/MessageViewer/MessageViewer/GrantleeHeaderTestStyle</Path>
@@ -830,7 +832,6 @@
             <Path fileType="header">/usr/include/KPim5/MessageViewer/messageviewer/attachmentstrategy.h</Path>
             <Path fileType="header">/usr/include/KPim5/MessageViewer/messageviewer/bodyparturlhandler.h</Path>
             <Path fileType="header">/usr/include/KPim5/MessageViewer/messageviewer/bufferedhtmlwriter.h</Path>
-            <Path fileType="header">/usr/include/KPim5/MessageViewer/messageviewer/config-messageviewer.h</Path>
             <Path fileType="header">/usr/include/KPim5/MessageViewer/messageviewer/configurewidget.h</Path>
             <Path fileType="header">/usr/include/KPim5/MessageViewer/messageviewer/csshelper.h</Path>
             <Path fileType="header">/usr/include/KPim5/MessageViewer/messageviewer/csshelperbase.h</Path>
@@ -850,7 +851,6 @@
             <Path fileType="header">/usr/include/KPim5/MessageViewer/messageviewer/dkimrule.h</Path>
             <Path fileType="header">/usr/include/KPim5/MessageViewer/messageviewer/dkimviewermenu.h</Path>
             <Path fileType="header">/usr/include/KPim5/MessageViewer/messageviewer/dkimwidgetinfo.h</Path>
-            <Path fileType="header">/usr/include/KPim5/MessageViewer/messageviewer/editorwatcher.h</Path>
             <Path fileType="header">/usr/include/KPim5/MessageViewer/messageviewer/filehtmlwriter.h</Path>
             <Path fileType="header">/usr/include/KPim5/MessageViewer/messageviewer/globalsettings_messageviewer.h</Path>
             <Path fileType="header">/usr/include/KPim5/MessageViewer/messageviewer/grantleeheaderstyle.h</Path>
@@ -1070,15 +1070,21 @@
             <Path fileType="library">/usr/lib64/libKPim5MimeTreeParser.so</Path>
             <Path fileType="library">/usr/lib64/libKPim5TemplateParser.so</Path>
             <Path fileType="library">/usr/lib64/libKPim5WebEngineViewer.so</Path>
+            <Path fileType="library">/usr/lib64/qt5/mkspecs/modules/qt_MessageComposer.pri</Path>
+            <Path fileType="library">/usr/lib64/qt5/mkspecs/modules/qt_MessageCore.pri</Path>
+            <Path fileType="library">/usr/lib64/qt5/mkspecs/modules/qt_MessageList.pri</Path>
+            <Path fileType="library">/usr/lib64/qt5/mkspecs/modules/qt_MessageViewer.pri</Path>
+            <Path fileType="library">/usr/lib64/qt5/mkspecs/modules/qt_TemplateParser.pri</Path>
+            <Path fileType="library">/usr/lib64/qt5/mkspecs/modules/qt_WebEngineViewer.pri</Path>
         </Files>
     </Package>
     <History>
-        <Update release="76">
-            <Date>2023-08-22</Date>
-            <Version>23.04.3</Version>
+        <Update release="82">
+            <Date>2024-02-16</Date>
+            <Version>23.08.5</Version>
             <Comment>Packaging update</Comment>
-            <Name>Joey Riches</Name>
-            <Email>josephriches@gmail.com</Email>
+            <Name>Justin Zobel</Name>
+            <Email>justin@1707.io</Email>
         </Update>
     </History>
 </PISI>

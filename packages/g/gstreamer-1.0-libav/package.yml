@@ -1,12 +1,13 @@
 name       : gstreamer-1.0-libav
-version    : 1.22.5
-release    : 27
+version    : 1.22.10
+release    : 31
 source     :
-    - https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-1.22.5.tar.xz : 8583f0c1f4fcb01eed11fa1e3c21126543a8bd739ed4fc1db31f756a5ab01d9a
+    - https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-1.22.10.tar.xz : d6dda7aa38a44173278de675ccd92acff0abf473f7bc02e7d1cdd4ce0f3b7642
 license    :
     - GPL-2.0-or-later
     - LGPL-2.0-or-later
 component  : multimedia.gstreamer
+homepage   : https://gstreamer.freedesktop.org/
 summary    : GStreamer libav based plugin
 description: |
     GStreamer libav based plugin providing H264, AVI support, amongst others
@@ -26,4 +27,4 @@ build      : |
 install    : |
     %ninja_install
 check      : |
-    %ninja_check || :
+    %ninja_check

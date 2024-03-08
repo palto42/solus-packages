@@ -1,8 +1,8 @@
 name       : gstreamer-1.0-plugins-good
-version    : 1.22.5
-release    : 50
+version    : 1.22.10
+release    : 55
 source     :
-    - https://gstreamer.freedesktop.org/src/gst-plugins-good/gst-plugins-good-1.22.5.tar.xz : b67b31313a54c6929b82969d41d3cfdf2f58db573fb5f491e6bba5d84aea0778
+    - https://gstreamer.freedesktop.org/src/gst-plugins-good/gst-plugins-good-1.22.10.tar.xz : f748feae922cad62f20102a84ade8f42b78e1e44a34866aa3ea766f9172e1c7f
 homepage   : https://gitlab.freedesktop.org/gstreamer/gst-plugins-good
 license    : LGPL-2.1-or-later
 component  : multimedia.gstreamer
@@ -25,8 +25,10 @@ builddeps  :
     - pkgconfig(libpulse)
     - pkgconfig(libraw1394)
     - pkgconfig(libsoup-2.4)
+    - pkgconfig(libsoup-3.0)
     - pkgconfig(libturbojpeg)
     - pkgconfig(libv4l2)
+    - pkgconfig(nettle)
     - pkgconfig(orc-0.4)
     - pkgconfig(shout)
     - pkgconfig(speex)
@@ -39,6 +41,8 @@ builddeps  :
     - aalib-devel
     - lame-devel
     - wavpack-utils
+checkdeps  :
+    - xorg-server-xvfb
 setup      : |
     %meson_configure -Dpackage-name="GStreamer Good Plugins ${version} Solus" \
         -Dpackage-origin="https://getsol.us" \
@@ -49,3 +53,6 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+check      : |
+    export XDG_CACHE_HOME="$(mktemp -p $workdir -d xdg-cache-XXXXXX)"
+    GST_GL_WINDOW=x11 xvfb-run -d %ninja_check || cat solusBuildDir/meson-logs/testlog.txt

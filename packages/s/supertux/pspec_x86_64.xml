@@ -11,7 +11,7 @@
         <Summary xml:lang="en">SuperTux is a jump&apos;n&apos;run game with strong inspiration from the Super Mario Bros</Summary>
         <Description xml:lang="en">SuperTux is a jump&apos;n&apos;run game with strong inspiration from the Super Mario Bros.
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>supertux</Name>
@@ -4088,8 +4088,8 @@
         </Files>
     </Package>
     <History>
-        <Update release="18">
-            <Date>2022-11-23</Date>
+        <Update release="20">
+            <Date>2023-11-29</Date>
             <Version>0.6.3</Version>
             <Comment>Packaging update</Comment>
             <Name>Joey Riches</Name>

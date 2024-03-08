@@ -1,8 +1,8 @@
 name       : kwidgetsaddons
-version    : 5.109.0
-release    : 71
+version    : 5.115.0
+release    : 75
 source     :
-    - https://cdn.download.kde.org/stable/frameworks/5.109/kwidgetsaddons-5.109.0.tar.xz : d68072f9f351b71a09c86f2856aaa6b6883e4681e542111c42faa1219692e2e2
+    - https://cdn.download.kde.org/stable/frameworks/5.115/kwidgetsaddons-5.115.0.tar.xz : e359844567ce2e21d0eba257a1857e65123f8a796309bcf8ccb88a1d4bb8ae55
 homepage   : https://community.kde.org/Frameworks
 license    :
     - BSD-3-Clause

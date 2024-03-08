@@ -1361,7 +1361,7 @@ libMagick++-7.Q16HDRI.so.5:_ZN6Magick5Image4readERKNS_8GeometryERKNSt7__cxx1112b
 libMagick++-7.Q16HDRI.so.5:_ZN6Magick5Image4readERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
 libMagick++-7.Q16HDRI.so.5:_ZN6Magick5Image4readEmmRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEN10MagickCore11StorageTypeEPKv
 libMagick++-7.Q16HDRI.so.5:_ZN6Magick5Image4rollERKNS_8GeometryE
-libMagick++-7.Q16HDRI.so.5:_ZN6Magick5Image4rollEmm
+libMagick++-7.Q16HDRI.so.5:_ZN6Magick5Image4rollEll
 libMagick++-7.Q16HDRI.so.5:_ZN6Magick5Image4sizeERKNS_8GeometryE
 libMagick++-7.Q16HDRI.so.5:_ZN6Magick5Image4tintENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
 libMagick++-7.Q16HDRI.so.5:_ZN6Magick5Image4trimEv
@@ -3390,6 +3390,7 @@ libMagickCore-7.Q16HDRI.so.10:RegisterJNXImage
 libMagickCore-7.Q16HDRI.so.10:RegisterJP2Image
 libMagickCore-7.Q16HDRI.so.10:RegisterJPEGImage
 libMagickCore-7.Q16HDRI.so.10:RegisterJSONImage
+libMagickCore-7.Q16HDRI.so.10:RegisterJXLImage
 libMagickCore-7.Q16HDRI.so.10:RegisterKERNELImage
 libMagickCore-7.Q16HDRI.so.10:RegisterLABELImage
 libMagickCore-7.Q16HDRI.so.10:RegisterMACImage
@@ -3743,6 +3744,7 @@ libMagickCore-7.Q16HDRI.so.10:UnregisterJNXImage
 libMagickCore-7.Q16HDRI.so.10:UnregisterJP2Image
 libMagickCore-7.Q16HDRI.so.10:UnregisterJPEGImage
 libMagickCore-7.Q16HDRI.so.10:UnregisterJSONImage
+libMagickCore-7.Q16HDRI.so.10:UnregisterJXLImage
 libMagickCore-7.Q16HDRI.so.10:UnregisterKERNELImage
 libMagickCore-7.Q16HDRI.so.10:UnregisterLABELImage
 libMagickCore-7.Q16HDRI.so.10:UnregisterMACImage

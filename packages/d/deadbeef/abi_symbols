@@ -2924,6 +2924,7 @@ ddb_gui_GTK3.so:on_cli_add_to_playlist_toggled
 ddb_gui_GTK3.so:on_cli_playlist_name_changed
 ddb_gui_GTK3.so:on_closebtn_clicked
 ddb_gui_GTK3.so:on_column_id_changed
+ddb_gui_GTK3.so:on_combo_bit_override_changed
 ddb_gui_GTK3.so:on_comboboxentry_direct_sr_changed
 ddb_gui_GTK3.so:on_comboboxentry_sr_mult_44_changed
 ddb_gui_GTK3.so:on_comboboxentry_sr_mult_48_changed
@@ -3390,6 +3391,10 @@ ddb_mono2stereo.so:m2s_open
 ddb_mono2stereo.so:m2s_process
 ddb_mono2stereo.so:m2s_reset
 ddb_mono2stereo.so:m2s_set_param
+ddb_out_pw.so:core_event_done
+ddb_out_pw.so:data
+ddb_out_pw.so:ddb_out_pw_load
+ddb_out_pw.so:deadbeef
 ddb_shn.so:Salaw2lineartab
 ddb_shn.so:Slinear2alaw
 ddb_shn.so:Slinear2ulaw
@@ -3722,6 +3727,7 @@ ffap.so:ffap_load
 ffap.so:mm_support
 ffmpeg.so:ffmpeg_load
 ffmpeg.so:ffmpeg_read_metadata
+ffmpeg.so:is_codec_dsd
 flac.so:flac_load
 gme.so:AR_TAB
 gme.so:C352_fetch_sample
@@ -9071,6 +9077,19 @@ vfs_curl.so:vfs_curl_free_file
 vfs_curl.so:vfs_curl_handle_icy_headers
 vfs_curl.so:vfs_curl_load
 vfs_curl.so:vfs_curl_set_meta
+vfs_zip.so:vfs_zip_close
+vfs_zip.so:vfs_zip_get_scheme_for_name
+vfs_zip.so:vfs_zip_get_schemes
+vfs_zip.so:vfs_zip_getlength
+vfs_zip.so:vfs_zip_is_container
+vfs_zip.so:vfs_zip_is_streaming
+vfs_zip.so:vfs_zip_load
+vfs_zip.so:vfs_zip_open
+vfs_zip.so:vfs_zip_read
+vfs_zip.so:vfs_zip_rewind
+vfs_zip.so:vfs_zip_scandir
+vfs_zip.so:vfs_zip_seek
+vfs_zip.so:vfs_zip_tell
 vorbis.so:vorbis_load
 vtx.so:MAGIC1
 vtx.so:ayemu_err

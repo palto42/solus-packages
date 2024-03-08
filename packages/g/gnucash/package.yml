@@ -1,8 +1,8 @@
 name       : gnucash
-version    : '4.10'
-release    : 46
+version    : '5.5'
+release    : 51
 source     :
-    - https://github.com/Gnucash/gnucash/releases/download/4.10/gnucash-4.10.tar.bz2 : 7fd4bb919f6e39388ab47bfa11af6fa3f59e9b9bd695c7d4e9208af85cb9c93b
+    - https://github.com/Gnucash/gnucash/releases/download/5.5/gnucash-5.5.tar.bz2 : b4daf67bb892b706323f62e9fa97242039d7dd0a2e1e10771e0c25817dd0ed3b
 homepage   : https://www.gnucash.org/
 license    : GPL-2.0-or-later
 component  : office.finance
@@ -14,19 +14,19 @@ builddeps  :
     - pkgconfig(aqbanking)
     - pkgconfig(bdw-gc)
     - pkgconfig(dbi)
+    - pkgconfig(gtest)
     - pkgconfig(guile-2.0)
     - pkgconfig(gwenhywfar)
     - pkgconfig(libofx)
     - pkgconfig(libxslt)
     - pkgconfig(webkit2gtk-4.0)
-    - gtest-devel
     - libboost-devel
     - libdbi-drivers
     - swig
 setup      : |
-    %patch -p1 < $pkgfiles/0001-fix-actions-icons.patch
-    %cmake -DCOMPILE_GSCHEMAS=NO .
+    %patch -p1 -i $pkgfiles/0001-fix-actions-icons.patch
+    %cmake_ninja -DCOMPILE_GSCHEMAS=NO .
 build      : |
-    %make
+    %ninja_build
 install    : |
-    %make_install
+    %ninja_install

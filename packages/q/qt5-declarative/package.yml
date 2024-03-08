@@ -1,8 +1,8 @@
 name       : qt5-declarative
-version    : 5.15.10
-release    : 44
+version    : 5.15.12
+release    : 48
 source     :
-    - git|https://invent.kde.org/qt/qt/qtdeclarative.git : f803fcd25c068cf0f78cc9f75c0e2f565f3fefde
+    - git|https://invent.kde.org/qt/qt/qtdeclarative.git : eba6e1615d2f1b1a5235c93422e02c3a6a852bab
 homepage   : https://www.qt.io
 license    :
     - LGPL-3.0-or-later
@@ -16,15 +16,28 @@ summary    : Qt 5 Declarative Library
 description: |
     Qt is a set of libraries for developing applications. This package contains base tools, like string, xml, and network handling.
 builddeps  :
-    - pkgconfig(gl)
     - pkgconfig(Qt5Network)
+    - pkgconfig(gl)
     - vulkan-headers
+clang      : yes
 patterns   :
     - demos :
         - /usr/lib64/qt5/examples
+    - devel :
+        - /usr/bin/qml*
+        - /usr/lib64/metatypes/qt5*_metatypes.json
+        - /usr/lib64/qt5/mkspecs/features/*.prf
 setup      : |
     %qmake CONFIG+=release qtdeclarative.pro
 build      : |
     %make
 install    : |
     %make_install INSTALL_ROOT=$installdir
+
+    # Can't use the macro for this because this package provides qmlcachegen itself
+    pushd $installdir
+    find . -type f -name "*.qml" -print0 | while IFS= read -r -d '' i; do
+        if ! [ -a "${i}"c ]; then
+            $installdir/usr/bin/qmlcachegen -o "${i}"c "${i}" $*
+        fi
+    done

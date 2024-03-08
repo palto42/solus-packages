@@ -1,8 +1,8 @@
 name       : budgie-desktop
-version    : '10.8'
-release    : 262
+version    : 10.9.1
+release    : 269
 source     :
-    - https://github.com/BuddiesOfBudgie/budgie-desktop/releases/download/v10.8/budgie-desktop-v10.8.tar.xz : b8406a60a74390421278486b242369017806716e87ea911424091e63febd2619
+    - https://github.com/BuddiesOfBudgie/budgie-desktop/releases/download/v10.9.1/budgie-desktop-v10.9.1.tar.xz : 6971be6e64612e63f460cbd4d37cde8cfa201ebb3b21a4230ffaea1a7abf075a
 homepage   : https://blog.buddiesofbudgie.org
 license    :
     - GPL-2.0-only
@@ -15,7 +15,6 @@ builddeps  :
     - pkgconfig(accountsservice)
     - pkgconfig(alsa)
     - pkgconfig(gee-0.8)
-    - pkgconfig(gnome-bluetooth-1.0)
     - pkgconfig(gnome-desktop-3.0)
     - pkgconfig(gnome-settings-daemon)
     - pkgconfig(gstreamer-1.0)
@@ -28,21 +27,22 @@ builddeps  :
     - pkgconfig(libpeas-1.0)
     - pkgconfig(libpulse-mainloop-glib)
     - pkgconfig(libwnck-3.0)
+    - pkgconfig(libxfce4windowing-0)
     - pkgconfig(upower-glib)
     - budgie-screensaver # Required at configure time to ensure we have a proper configuration of budgie-desktop
-    - vala
     - sassc
+    - vala
 rundeps    :
     - budgie-control-center
     - budgie-screensaver
-    - gnome-bluetooth-1-common
-    - gnome-session
+    - budgie-session
     - gnome-settings-daemon
     - network-manager-applet
+    - pipewire
     - switcheroo-control
+    - xdg-desktop-portal-gtk
     - xdotool
 setup      : |
-    %patch -p1 -i $pkgfiles/0001-Work-around-more-SN-dbusmenu-quirks.patch
     %meson_configure -Dwith-stateless=true -Duse-old-zenity=true
 build      : |
     %ninja_build

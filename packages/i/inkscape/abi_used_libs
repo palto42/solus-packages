@@ -3,7 +3,7 @@ ld-linux-x86-64.so.2
 lib2geom.so.1
 libX11.so.6
 libatkmm-1.6.so.1
-libboost_filesystem.so.1.80.0
+libboost_filesystem.so.1.83.0
 libc.so.6
 libcairo-gobject.so.2
 libcairo.so.2
@@ -38,7 +38,7 @@ libpangoft2-1.0.so.0
 libpangomm-1.4.so.1
 libpng16.so.16
 libpoppler-glib.so.8
-libpoppler.so.122
+libpoppler.so.134
 libpotrace.so.0
 librevenge-0.0.so.0
 librevenge-stream-0.0.so.0

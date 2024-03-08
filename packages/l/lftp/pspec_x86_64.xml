@@ -1,16 +1,17 @@
 <PISI>
     <Source>
         <Name>lftp</Name>
+        <Homepage>https://lftp.yar.ru</Homepage>
         <Packager>
-            <Name>Reilly Brogan</Name>
-            <Email>solus@reillybrogan.com</Email>
+            <Name>Jakob Gezelius</Name>
+            <Email>jakob@knugen.nu</Email>
         </Packager>
         <License>GPL-3.0-or-later</License>
         <PartOf>network.clients</PartOf>
         <Summary xml:lang="en">Terminal based FTP Client</Summary>
         <Description xml:lang="en">LFTP is a sophisticated ftp/http client, and a file transfer program supporting a number of network protocols.
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>lftp</Name>
@@ -49,12 +50,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="20">
-            <Date>2023-08-21</Date>
+        <Update release="22">
+            <Date>2024-02-25</Date>
             <Version>4.9.2</Version>
             <Comment>Packaging update</Comment>
-            <Name>Reilly Brogan</Name>
-            <Email>solus@reillybrogan.com</Email>
+            <Name>Jakob Gezelius</Name>
+            <Email>jakob@knugen.nu</Email>
         </Update>
     </History>
 </PISI>

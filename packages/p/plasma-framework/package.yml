@@ -1,8 +1,8 @@
 name       : plasma-framework
-version    : 5.109.0
-release    : 83
+version    : 5.115.0
+release    : 88
 source     :
-    - https://cdn.download.kde.org/stable/frameworks/5.109/plasma-framework-5.109.0.tar.xz : 610ed1c136ed9b9a403c09821cbc886a8a1103aece23119f47b6a0a43c00198d
+    - https://cdn.download.kde.org/stable/frameworks/5.115/plasma-framework-5.115.0.tar.xz : 2c6f30bb11a6476b706f34d2f5af1c9e4c98177dc885f9c95d4a24752c9611f7
 homepage   : https://community.kde.org/Frameworks
 license    :
     - BSD-3-Clause
@@ -16,6 +16,7 @@ description: |
     Foundational libraries, components, and tools of the Plasma workspaces.
 optimize   : lto
 builddeps  :
+    - pkgconfig(KF5WaylandClient)
     - pkgconfig(Qt5QuickControls2)
     - pkgconfig(Qt5Svg)
     - pkgconfig(Qt5X11Extras)
@@ -31,13 +32,12 @@ builddeps  :
     - kirigami2-devel
     - knotifications-devel
     - kpackage-devel
-    - kwayland-devel
 rundeps    :
-    - qt5-quickcontrols2
     - devel :
         - kpackage-devel
         - kservice-devel
         - kwindowsystem-devel
+    - qt5-quickcontrols2
 setup      : |
     %cmake_ninja -DBUILD_QCH=OFF \
                 -DBUILD_TESTING=OFF

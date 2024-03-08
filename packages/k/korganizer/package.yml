@@ -1,8 +1,8 @@
 name       : korganizer
-version    : 23.04.3
-release    : 70
+version    : 23.08.5
+release    : 73
 source     :
-    - https://cdn.download.kde.org/stable/release-service/23.04.3/src/korganizer-23.04.3.tar.xz : 7f2bf6adf16f54bedcfc0cde0b66fa146008a14b52f523dddea90065ab96e1ee
+    - https://cdn.download.kde.org/stable/release-service/23.08.5/src/korganizer-23.08.5.tar.xz : c4a6be6aa61301e8d72187feb94ce98d0dac44eeba338ca07cb6d4d395cdedc1
 homepage   : https://kde.org/applications/office/org.kde.korganizer
 license    :
     - GFDL-1.2-or-later

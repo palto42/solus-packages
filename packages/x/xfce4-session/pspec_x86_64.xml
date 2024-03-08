@@ -1,16 +1,17 @@
 <PISI>
     <Source>
         <Name>xfce4-session</Name>
+        <Homepage>https://docs.xfce.org/xfce/xfce4-session/start</Homepage>
         <Packager>
-            <Name>Zach Bacon</Name>
-            <Email>zachbacon@vba-m.com</Email>
+            <Name>Reilly Brogan</Name>
+            <Email>solus@reillybrogan.com</Email>
         </Packager>
         <License>GPL-2.0-or-later</License>
         <PartOf>desktop.xfce</PartOf>
         <Summary xml:lang="en">Xfce&apos;s session manager.</Summary>
         <Description xml:lang="en">Xfce&apos;s session manager.
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>xfce4-session</Name>
@@ -117,6 +118,7 @@
             <Path fileType="man">/usr/share/man/man1/xfce4-session-logout.1</Path>
             <Path fileType="man">/usr/share/man/man1/xfce4-session.1</Path>
             <Path fileType="data">/usr/share/polkit-1/actions/org.xfce.session.policy</Path>
+            <Path fileType="data">/usr/share/xdg-desktop-portal/xfce-portals.conf</Path>
             <Path fileType="data">/usr/share/xdg/autostart/xfce-polkit-gnome-authentication-agent-1.desktop</Path>
             <Path fileType="data">/usr/share/xdg/autostart/xscreensaver.desktop</Path>
             <Path fileType="data">/usr/share/xdg/xfce4/Xft.xrdb</Path>
@@ -126,12 +128,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="4">
-            <Date>2023-08-24</Date>
+        <Update release="11">
+            <Date>2024-02-26</Date>
             <Version>4.18.3</Version>
             <Comment>Packaging update</Comment>
-            <Name>Zach Bacon</Name>
-            <Email>zachbacon@vba-m.com</Email>
+            <Name>Reilly Brogan</Name>
+            <Email>solus@reillybrogan.com</Email>
         </Update>
     </History>
 </PISI>

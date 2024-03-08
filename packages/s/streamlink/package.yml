@@ -1,8 +1,9 @@
 name       : streamlink
-version    : 6.2.0
-release    : 52
+version    : 6.6.2
+release    : 61
 source     :
-    - https://github.com/streamlink/streamlink/releases/download/6.2.0/streamlink-6.2.0.tar.gz : aeae1b7848446f90998c62324e7107c8f41f8c08266dbc419b81e1cc1b35559a
+    - https://github.com/streamlink/streamlink/releases/download/6.6.2/streamlink-6.6.2.tar.gz : d1417c7c5986dc143bc711c8a99f7b884b10d2583f44b1c3dadea7df0a75e4d5
+homepage   : https://streamlink.github.io/
 license    : BSD-2-Clause
 component  : network.clients
 summary    : Extracts streams from various services and pipes them into a video player of choice
@@ -13,20 +14,21 @@ replaces   :
     - livestreamer
 builddeps  :
     - python3-pycryptodome
-    - python-freezegun # check
     - python-isodate
     - python-lxml
     - python-mock
     - python-pycountry
     - python-pysocks
-    - python-pytest-asyncio # check
-    - python-pytest-mock # check
-    - python-requests # check
-    - python-requests-mock # check
     - python-tomli
     - python-trio-websocket
     - python-typing-extensions
     - python-websocket-client
+checkdeps  :
+    - python-freezegun
+    - python-pytest-asyncio
+    - python-pytest-mock
+    - python-requests
+    - python-requests-mock
 rundeps    :
     - ffmpeg
     - python3-pycryptodome
@@ -47,5 +49,5 @@ build      : |
 install    : |
     python3 -m pip install --root=%installroot% --no-deps *.whl
 #check      : |
-#    Most of tests/webbrowser/ failing
-#    %python3_test pytest3
+#    # Most of tests/webbrowser/ failing
+#    %python3_test pytest3 || :

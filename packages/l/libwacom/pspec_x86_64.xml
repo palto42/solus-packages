@@ -3,15 +3,15 @@
         <Name>libwacom</Name>
         <Homepage>https://github.com/linuxwacom/libwacom/</Homepage>
         <Packager>
-            <Name>Joey Riches</Name>
-            <Email>josephriches@gmail.com</Email>
+            <Name>Reilly Brogan</Name>
+            <Email>solus@reillybrogan.com</Email>
         </Packager>
         <License>MIT</License>
         <PartOf>desktop.core</PartOf>
         <Summary xml:lang="en">A library used to identify wacom tablets and their model-specific features</Summary>
         <Description xml:lang="en">libwacom is a library to identify Wacom tablets and their model-specific features. It provides easy access to information such as &quot;is this a built-in on-screen tablet&quot;, &quot;what is the size of this model&quot;, etc.
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>libwacom</Name>
@@ -73,13 +73,17 @@
             <Path fileType="data">/usr/share/libwacom/cintiq-pro-13.tablet</Path>
             <Path fileType="data">/usr/share/libwacom/cintiq-pro-16-2.tablet</Path>
             <Path fileType="data">/usr/share/libwacom/cintiq-pro-16.tablet</Path>
+            <Path fileType="data">/usr/share/libwacom/cintiq-pro-17.tablet</Path>
+            <Path fileType="data">/usr/share/libwacom/cintiq-pro-22.tablet</Path>
             <Path fileType="data">/usr/share/libwacom/cintiq-pro-24-p.tablet</Path>
             <Path fileType="data">/usr/share/libwacom/cintiq-pro-24-pt.tablet</Path>
             <Path fileType="data">/usr/share/libwacom/cintiq-pro-27.tablet</Path>
             <Path fileType="data">/usr/share/libwacom/cintiq-pro-32.tablet</Path>
             <Path fileType="data">/usr/share/libwacom/dell-canvas-27.tablet</Path>
+            <Path fileType="data">/usr/share/libwacom/dtc-121.tablet</Path>
             <Path fileType="data">/usr/share/libwacom/dtf-720.tablet</Path>
             <Path fileType="data">/usr/share/libwacom/dth-1152.tablet</Path>
+            <Path fileType="data">/usr/share/libwacom/dth-134.tablet</Path>
             <Path fileType="data">/usr/share/libwacom/dth-2242.tablet</Path>
             <Path fileType="data">/usr/share/libwacom/dth-2452.tablet</Path>
             <Path fileType="data">/usr/share/libwacom/dti-520.tablet</Path>
@@ -140,6 +144,7 @@
             <Path fileType="data">/usr/share/libwacom/huion-hs611.tablet</Path>
             <Path fileType="data">/usr/share/libwacom/huion-kamvas-13.tablet</Path>
             <Path fileType="data">/usr/share/libwacom/huion-new-1060-plus.tablet</Path>
+            <Path fileType="data">/usr/share/libwacom/ingenic-6161.tablet</Path>
             <Path fileType="data">/usr/share/libwacom/intuos-12x12.tablet</Path>
             <Path fileType="data">/usr/share/libwacom/intuos-12x18.tablet</Path>
             <Path fileType="data">/usr/share/libwacom/intuos-4x5.tablet</Path>
@@ -238,6 +243,7 @@
             <Path fileType="data">/usr/share/libwacom/isdv4-4875.tablet</Path>
             <Path fileType="data">/usr/share/libwacom/isdv4-488f.tablet</Path>
             <Path fileType="data">/usr/share/libwacom/isdv4-4898.tablet</Path>
+            <Path fileType="data">/usr/share/libwacom/isdv4-48b7.tablet</Path>
             <Path fileType="data">/usr/share/libwacom/isdv4-48c9.tablet</Path>
             <Path fileType="data">/usr/share/libwacom/isdv4-48ca.tablet</Path>
             <Path fileType="data">/usr/share/libwacom/isdv4-48ce.tablet</Path>
@@ -276,6 +282,7 @@
             <Path fileType="data">/usr/share/libwacom/isdv4-5099.tablet</Path>
             <Path fileType="data">/usr/share/libwacom/isdv4-509d.tablet</Path>
             <Path fileType="data">/usr/share/libwacom/isdv4-509f.tablet</Path>
+            <Path fileType="data">/usr/share/libwacom/isdv4-50a0.tablet</Path>
             <Path fileType="data">/usr/share/libwacom/isdv4-50a9.tablet</Path>
             <Path fileType="data">/usr/share/libwacom/isdv4-50b4.tablet</Path>
             <Path fileType="data">/usr/share/libwacom/isdv4-50b6.tablet</Path>
@@ -361,6 +368,7 @@
             <Path fileType="data">/usr/share/libwacom/isdv4-52b0.tablet</Path>
             <Path fileType="data">/usr/share/libwacom/isdv4-52d3.tablet</Path>
             <Path fileType="data">/usr/share/libwacom/isdv4-52d5.tablet</Path>
+            <Path fileType="data">/usr/share/libwacom/isdv4-5309.tablet</Path>
             <Path fileType="data">/usr/share/libwacom/isdv4-90.tablet</Path>
             <Path fileType="data">/usr/share/libwacom/isdv4-93.tablet</Path>
             <Path fileType="data">/usr/share/libwacom/isdv4-e2.tablet</Path>
@@ -398,6 +406,8 @@
             <Path fileType="data">/usr/share/libwacom/layouts/cintiq-companion-hybrid.svg</Path>
             <Path fileType="data">/usr/share/libwacom/layouts/cintiq-companion.svg</Path>
             <Path fileType="data">/usr/share/libwacom/layouts/cintiq-pro-16-2.svg</Path>
+            <Path fileType="data">/usr/share/libwacom/layouts/cintiq-pro-17.svg</Path>
+            <Path fileType="data">/usr/share/libwacom/layouts/cintiq-pro-22.svg</Path>
             <Path fileType="data">/usr/share/libwacom/layouts/cintiq-pro-27.svg</Path>
             <Path fileType="data">/usr/share/libwacom/layouts/dth-2242.svg</Path>
             <Path fileType="data">/usr/share/libwacom/layouts/dth-2452.svg</Path>
@@ -454,7 +464,9 @@
             <Path fileType="data">/usr/share/libwacom/layouts/kamvas-pro-13.svg</Path>
             <Path fileType="data">/usr/share/libwacom/layouts/mobilestudio-pro-13.svg</Path>
             <Path fileType="data">/usr/share/libwacom/layouts/mobilestudio-pro-16.svg</Path>
+            <Path fileType="data">/usr/share/libwacom/layouts/xp-pen-artist10s.svg</Path>
             <Path fileType="data">/usr/share/libwacom/layouts/xp-pen-artist12.svg</Path>
+            <Path fileType="data">/usr/share/libwacom/layouts/xp-pen-artist13-3-pro.svg</Path>
             <Path fileType="data">/usr/share/libwacom/layouts/xp-pen-deco-l.svg</Path>
             <Path fileType="data">/usr/share/libwacom/layouts/xp-pen-deco-mw.svg</Path>
             <Path fileType="data">/usr/share/libwacom/layouts/xp-pen-deco-pro-s-m-sw-mw.svg</Path>
@@ -473,17 +485,34 @@
             <Path fileType="data">/usr/share/libwacom/one-by-wacom-s-p.tablet</Path>
             <Path fileType="data">/usr/share/libwacom/one-by-wacom-s-p2.tablet</Path>
             <Path fileType="data">/usr/share/libwacom/serial-wacf004.tablet</Path>
+            <Path fileType="data">/usr/share/libwacom/surface-book.tablet</Path>
+            <Path fileType="data">/usr/share/libwacom/surface-book2-13.tablet</Path>
+            <Path fileType="data">/usr/share/libwacom/surface-book2-15.tablet</Path>
+            <Path fileType="data">/usr/share/libwacom/surface-book3-13.tablet</Path>
+            <Path fileType="data">/usr/share/libwacom/surface-book3-15.tablet</Path>
             <Path fileType="data">/usr/share/libwacom/surface-go-2.tablet</Path>
             <Path fileType="data">/usr/share/libwacom/surface-go.tablet</Path>
+            <Path fileType="data">/usr/share/libwacom/surface-laptop-studio.tablet</Path>
+            <Path fileType="data">/usr/share/libwacom/surface-pro3.tablet</Path>
+            <Path fileType="data">/usr/share/libwacom/surface-pro4.tablet</Path>
+            <Path fileType="data">/usr/share/libwacom/surface-pro5.tablet</Path>
+            <Path fileType="data">/usr/share/libwacom/surface-pro6.tablet</Path>
+            <Path fileType="data">/usr/share/libwacom/surface-pro7-plus.tablet</Path>
+            <Path fileType="data">/usr/share/libwacom/surface-pro7.tablet</Path>
+            <Path fileType="data">/usr/share/libwacom/surface-pro8.tablet</Path>
+            <Path fileType="data">/usr/share/libwacom/surface-pro9.tablet</Path>
             <Path fileType="data">/usr/share/libwacom/volito-4x5.tablet</Path>
             <Path fileType="data">/usr/share/libwacom/wacom-hid-52fa-pen.tablet</Path>
+            <Path fileType="data">/usr/share/libwacom/wacom-hid-5362.tablet</Path>
             <Path fileType="data">/usr/share/libwacom/wacom-one-12.tablet</Path>
             <Path fileType="data">/usr/share/libwacom/wacom-one-13.tablet</Path>
             <Path fileType="data">/usr/share/libwacom/wacom-one-pen-m.tablet</Path>
             <Path fileType="data">/usr/share/libwacom/wacom-one-pen-s.tablet</Path>
             <Path fileType="data">/usr/share/libwacom/wacom-one.tablet</Path>
             <Path fileType="data">/usr/share/libwacom/waltop-slim-tablet-12-1.tablet</Path>
+            <Path fileType="data">/usr/share/libwacom/xp-pen-artist10s.tablet</Path>
             <Path fileType="data">/usr/share/libwacom/xp-pen-artist12.tablet</Path>
+            <Path fileType="data">/usr/share/libwacom/xp-pen-artist13-3-pro.tablet</Path>
             <Path fileType="data">/usr/share/libwacom/xp-pen-deco-l.tablet</Path>
             <Path fileType="data">/usr/share/libwacom/xp-pen-deco-mini7.tablet</Path>
             <Path fileType="data">/usr/share/libwacom/xp-pen-deco-mw.tablet</Path>
@@ -491,6 +520,7 @@
             <Path fileType="data">/usr/share/libwacom/xp-pen-deco-pro-sw.tablet</Path>
             <Path fileType="data">/usr/share/libwacom/xp-pen-deco01-v2.tablet</Path>
             <Path fileType="data">/usr/share/libwacom/xp-pen-g430.tablet</Path>
+            <Path fileType="data">/usr/share/libwacom/xp-pen-g430s.tablet</Path>
             <Path fileType="data">/usr/share/libwacom/xp-pen-g640.tablet</Path>
             <Path fileType="data">/usr/share/libwacom/xp-pen-star03.tablet</Path>
             <Path fileType="man">/usr/share/man/man1/libwacom-list-devices.1</Path>
@@ -504,7 +534,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="33">libwacom</Dependency>
+            <Dependency release="37">libwacom</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/libwacom-1.0/libwacom/libwacom.h</Path>
@@ -513,12 +543,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="33">
-            <Date>2023-09-02</Date>
-            <Version>2.8.0</Version>
+        <Update release="37">
+            <Date>2024-02-24</Date>
+            <Version>2.10.0</Version>
             <Comment>Packaging update</Comment>
-            <Name>Joey Riches</Name>
-            <Email>josephriches@gmail.com</Email>
+            <Name>Reilly Brogan</Name>
+            <Email>solus@reillybrogan.com</Email>
         </Update>
     </History>
 </PISI>

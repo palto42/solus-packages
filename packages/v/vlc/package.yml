@@ -1,8 +1,8 @@
 name       : vlc
-version    : 3.0.18
-release    : 167
+version    : 3.0.20
+release    : 176
 source     :
-    - https://download.videolan.org/pub/videolan/vlc/3.0.18/vlc-3.0.18.tar.xz : 57094439c365d8aa8b9b41fa3080cc0eef2befe6025bb5cef722accc625aedec
+    - https://download.videolan.org/pub/videolan/vlc/3.0.20/vlc-3.0.20.tar.xz : adc7285b4d2721cddf40eb5270cada2aaa10a334cb546fd55a06353447ba29b5
 homepage   : https://www.videolan.org/
 license    :
     - GPL-2.0-or-later
@@ -16,6 +16,7 @@ builddeps  :
     - pkgconfig(Qt5X11Extras)
     - pkgconfig(SDL_image)
     - pkgconfig(alsa)
+    - pkgconfig(aom)
     - pkgconfig(avahi-client)
     - pkgconfig(dav1d)
     - pkgconfig(dvdnav)
@@ -28,14 +29,16 @@ builddeps  :
     - pkgconfig(libaacs)
     - pkgconfig(libarchive)
     - pkgconfig(libass)
-    - pkgconfig(libavcodec)
+    - pkgconfig(libavc1394)
+    # VLC 3.x VA-API hardware acceleration doesn't work with newer versions of FFmpeg
+    - pkgconfig(libavcodec-4.4)
     - pkgconfig(libbluray)
     - pkgconfig(libcddb)
     - pkgconfig(libchromaprint)
     - pkgconfig(libdc1394-2)
     - pkgconfig(libdvbpsi)
     - pkgconfig(libgcrypt)
-    - pkgconfig(libidn2)
+    - pkgconfig(libidn)
     - pkgconfig(libmatroska)
     - pkgconfig(libmodplug)
     - pkgconfig(libmpeg2)
@@ -43,6 +46,7 @@ builddeps  :
     - pkgconfig(libmtp)
     - pkgconfig(libnotify)
     - pkgconfig(libpulse)
+    - pkgconfig(libraw1394)
     - pkgconfig(librsvg-2.0)
     - pkgconfig(libsecret-1)
     - pkgconfig(libssh2)
@@ -51,6 +55,7 @@ builddeps  :
     - pkgconfig(libva-drm)
     - pkgconfig(lua-5.3)
     - pkgconfig(microdns)
+    - pkgconfig(minizip)
     - pkgconfig(protobuf-lite)
     - pkgconfig(samplerate)
     - pkgconfig(shout)
@@ -61,6 +66,7 @@ builddeps  :
     - pkgconfig(taglib)
     - pkgconfig(twolame)
     - pkgconfig(vdpau)
+    - pkgconfig(vpl)
     - pkgconfig(vpx)
     - pkgconfig(wayland-protocols)
     - pkgconfig(x264)
@@ -70,11 +76,16 @@ builddeps  :
     - pkgconfig(xproto)
     - liba52dec-devel
     - live-media-devel
+clang      : yes
 setup      : |
     export BUILDCC="$CC"
     %apply_patches
-    %configure \
+
+    %reconfigure \
+        --disable-rpath \
         --enable-a52 \
+        --enable-avcodec \
+        --enable-avformat \
         --enable-bluray \
         --enable-dvbpsi \
         --enable-dvdnav \
@@ -90,12 +101,12 @@ setup      : |
         --enable-realrtsp \
         --enable-sftp \
         --enable-shout \
+        --enable-swscale \
         --enable-twolame \
         --enable-vpx \
         --enable-wayland \
         --enable-x264 \
-        --enable-x265 \
-        --disable-rpath
+        --enable-x265
 build      : |
     %make
 install    : |

@@ -1,8 +1,8 @@
 name       : librsvg
-version    : 2.56.3
-release    : 53
+version    : 2.57.1
+release    : 55
 source     :
-    - https://download.gnome.org/sources/librsvg/2.56/librsvg-2.56.3.tar.xz : 5a328048a02d014645cd27f61140f4e0b11280fb2c7f2a21864fe0c59ac1ce88
+    - https://download.gnome.org/sources/librsvg/2.57/librsvg-2.57.1.tar.xz : 074671a3ed6fbcd67cae2a40e539107f4f097ca8a4ab1a894c05e2524ff340ef
 homepage   : https://wiki.gnome.org/Projects/LibRsvg
 license    :
     - GPL-2.0-or-later

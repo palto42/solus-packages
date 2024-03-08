@@ -1,8 +1,8 @@
 name       : vim
-version    : 9.0.1892
-release    : 141
+version    : 9.1.0016
+release    : 145
 source     :
-    - https://github.com/vim/vim/archive/refs/tags/v9.0.1892.tar.gz : a495b60ff561fd7a0d086039a8d124bc94711ceca6b8f1cdce300ef8ff3d87f7
+    - https://github.com/vim/vim/archive/refs/tags/v9.1.0016.tar.gz : abe876bb18554bb1eb69d23eaabe89caabeef182737e9e8bfa4cc298dee061df
 homepage   : https://www.vim.org
 license    : Vim
 component  : editor

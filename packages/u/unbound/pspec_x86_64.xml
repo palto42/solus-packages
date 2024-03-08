@@ -1,6 +1,7 @@
 <PISI>
     <Source>
         <Name>unbound</Name>
+        <Homepage>https://nlnetlabs.nl/projects/unbound/about/</Homepage>
         <Packager>
             <Name>Reilly Brogan</Name>
             <Email>solus@reillybrogan.com</Email>
@@ -10,7 +11,7 @@
         <Summary xml:lang="en">Unbound is a validating, recursive, and caching DNS resolver.</Summary>
         <Description xml:lang="en">Unbound is a validating, recursive, and caching DNS resolver.
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>unbound</Name>
@@ -20,7 +21,7 @@
         <PartOf>network.util</PartOf>
         <Files>
             <Path fileType="library">/usr/lib64/libunbound.so.8</Path>
-            <Path fileType="library">/usr/lib64/libunbound.so.8.1.21</Path>
+            <Path fileType="library">/usr/lib64/libunbound.so.8.1.24</Path>
             <Path fileType="library">/usr/lib64/systemd/system/unbound.service</Path>
             <Path fileType="library">/usr/lib64/systemd/system/unbound.socket</Path>
             <Path fileType="library">/usr/lib64/sysusers.d/unbound.conf</Path>
@@ -48,7 +49,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="12">unbound</Dependency>
+            <Dependency release="14">unbound</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/unbound-event.h</Path>
@@ -89,9 +90,9 @@
         </Files>
     </Package>
     <History>
-        <Update release="12">
-            <Date>2023-08-22</Date>
-            <Version>1.17.1</Version>
+        <Update release="14">
+            <Date>2024-02-14</Date>
+            <Version>1.19.1</Version>
             <Comment>Packaging update</Comment>
             <Name>Reilly Brogan</Name>
             <Email>solus@reillybrogan.com</Email>

@@ -1,15 +1,15 @@
 name       : librime
 version    : 1.8.5
-release    : 7
+release    : 8
 source     :
     - https://github.com/rime/librime/archive/refs/tags/1.8.5.tar.gz : 046f3cadae862f94b542864df77531cdbe0f9f6f08cdecc58fd02d20be609a71
+homepage   : https://rime.im/
 license    : BSD-3-Clause
 component  : desktop.library
 summary    : Rime Input Method Engine, the core library.
 description: |
     Rime Input Method Engine, the core library.
 builddeps  :
-    - pkgconfig(benchmark) # For leveldb
     - pkgconfig(capnp)
     - pkgconfig(gflags)
     - pkgconfig(gtest)
@@ -17,6 +17,7 @@ builddeps  :
     - pkgconfig(marisa)
     - pkgconfig(opencc)
     - pkgconfig(yaml-cpp)
+    - leveldb-devel
     - libboost-devel
 rundeps    :
     - capnproto # capnproto cannot be detected

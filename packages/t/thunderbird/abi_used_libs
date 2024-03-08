@@ -1,3 +1,4 @@
+UNKNOWN
 ld-linux-x86-64.so.2
 libX11-xcb.so.1
 libX11.so.6
@@ -8,6 +9,8 @@ libXfixes.so.3
 libXrandr.so.2
 libasound.so.2
 libatk-1.0.so.0
+libbotan-2.so.19
+libbz2.so.1.0
 libc.so.6
 libcairo-gobject.so.2
 libcairo.so.2
@@ -24,10 +27,23 @@ libgio-2.0.so.0
 libglib-2.0.so.0
 libgobject-2.0.so.0
 libgtk-3.so.0
+libicui18n.so.74
+libicuuc.so.74
+libjson-c.so.5
 libm.so.6
+libnspr4.so
+libnss3.so
+libnssutil3.so
 libpango-1.0.so.0
 libpixman-1.so.0
+libplc4.so
+libplds4.so
+libsmime3.so
+libssl3.so
 libstdc++.so.6
+libvpx.so.8
+libwebp.so.7
+libwebpdemux.so.2
 libxcb-shm.so.0
 libxcb.so.1
 libz.so.1

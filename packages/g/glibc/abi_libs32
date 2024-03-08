@@ -252,7 +252,6 @@ VISCII.so
 XBS5_ILP32_OFF32
 XBS5_ILP32_OFFBIG
 ld-linux.so.2
-lddlibc4
 libBrokenLocale.so.1
 libCNS.so
 libGB.so
@@ -263,16 +262,13 @@ libKSC.so
 libanl.so.1
 libc.so.6
 libc_malloc_debug.so.0
-libcrypt.so.1
 libdl.so.2
 libm.so.6
 libmemusage.so
 libnsl.so.1
 libnss_compat.so.2
-libnss_db.so.2
 libnss_dns.so.2
 libnss_files.so.2
-libnss_hesiod.so.2
 libpcprofile.so
 libpthread.so.0
 libresolv.so.2

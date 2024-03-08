@@ -1,8 +1,8 @@
 name       : python-typing-extensions
-version    : 4.4.0
-release    : 7
+version    : 4.9.0
+release    : 10
 source     :
-    - https://pypi.io/packages/source/t/typing-extensions/typing_extensions-4.4.0.tar.gz : 1511434bb92bf8dd198c12b1cc812e800d4181cfcb867674e0f8279cc93087aa
+    - https://pypi.io/packages/source/t/typing-extensions/typing_extensions-4.9.0.tar.gz : 23478f88c37f27d76ac8aee6c905017a143b0b1b886c3c9f66bc2fd94f9f5783
 homepage   : https://github.com/python/typing_extensions
 license    : Python-2.0
 component  : programming.python

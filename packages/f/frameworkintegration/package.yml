@@ -1,8 +1,8 @@
 name       : frameworkintegration
-version    : 5.109.0
-release    : 71
+version    : 5.115.0
+release    : 75
 source     :
-    - https://cdn.download.kde.org/stable/frameworks/5.109/frameworkintegration-5.109.0.tar.xz : 9d4d1f1b6f18110d8f11542f7aaa8a60397fdefcb1b7ca9f0a79a125e4624427
+    - https://cdn.download.kde.org/stable/frameworks/5.115/frameworkintegration-5.115.0.tar.xz : 6e299a572cf123a2d2492a5e957d3a21b15039515d9232a34c5e4cbea391636e
 homepage   : https://community.kde.org/Frameworks
 license    :
     - LGPL-2.0-only

@@ -23,7 +23,7 @@ libgio-2.0.so.0:g_static_resource_get_resource
 libgio-2.0.so.0:g_static_resource_init
 libglib-2.0.so.0:g_ascii_strcasecmp
 libglib-2.0.so.0:g_ascii_strncasecmp
-libglib-2.0.so.0:g_assertion_message_cmpnum
+libglib-2.0.so.0:g_assertion_message_cmpint
 libglib-2.0.so.0:g_assertion_message_expr
 libglib-2.0.so.0:g_build_filename
 libglib-2.0.so.0:g_clear_error
@@ -281,9 +281,9 @@ libgtk-3.so.0:gtk_window_get_type
 libgtk-3.so.0:gtk_window_present
 libgtk-3.so.0:gtk_window_set_default_size
 libgtk-3.so.0:gtk_window_set_modal
-libicuuc.so.72:u_strToUTF8_72
-libicuuc.so.72:uloc_canonicalize_72
-libicuuc.so.72:uloc_getDisplayName_72
+libicuuc.so.74:u_strToUTF8_74
+libicuuc.so.74:uloc_canonicalize_74
+libicuuc.so.74:uloc_getDisplayName_74
 libpango-1.0.so.0:pango_attr_list_filter
 libpango-1.0.so.0:pango_attr_list_insert
 libpango-1.0.so.0:pango_attr_list_new

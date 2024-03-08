@@ -1,8 +1,8 @@
 name       : kdelibs4support
-version    : 5.109.0
-release    : 73
+version    : 5.115.0
+release    : 77
 source     :
-    - https://cdn.download.kde.org/stable/frameworks/5.109/portingAids/kdelibs4support-5.109.0.tar.xz : 209a82c63231cf9dbe4e0616afc2e68c2610bf5840a3e3b97fde4caf2329ea1b
+    - https://cdn.download.kde.org/stable/frameworks/5.115/portingAids/kdelibs4support-5.115.0.tar.xz : 72a2fa16c9044fffa7548f349e5e19f16996787673e6bd978fdca260e5512f14
 homepage   : https://community.kde.org/Frameworks
 license    :
     - GPL-2.0-or-later
@@ -32,8 +32,6 @@ builddeps  :
     - kunitconversion-devel
     - perl-uri
 rundeps    :
-    - kdesignerplugin
-    - kemoticons
     - devel :
         - karchive-devel
         - kcrash-devel
@@ -50,6 +48,8 @@ rundeps    :
         - kparts-devel
         - ktextwidgets-devel
         - kunitconversion-devel
+    - kdesignerplugin
+    - kemoticons
 setup      : |
     %cmake_ninja -DBUILD_TESTING=OFF
 build      : |

@@ -1,8 +1,8 @@
 name       : opera-stable
-version    : 102.0.4880.56
-release    : 252
+version    : 108.0.5067.20
+release    : 277
 source     :
-    - https://get.geo.opera.com/pub/opera/desktop/102.0.4880.56/linux/opera-stable_102.0.4880.56_amd64.deb : 27628ca39a3ce760ff737fe16b8b3d5c20e92ad70cc62fcc97d0aa0dfa6c8a19
+    - https://get.geo.opera.com/pub/opera/desktop/108.0.5067.20/linux/opera-stable_108.0.5067.20_amd64.deb : 94e0e672a445051c54694fae45ccccb3058d4bc85355cf3b46586b6c6e055a81
 license    : Distributable
 homepage   : https://www.opera.com
 extract    : no

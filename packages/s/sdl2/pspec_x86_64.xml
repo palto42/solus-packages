@@ -1,6 +1,7 @@
 <PISI>
     <Source>
         <Name>sdl2</Name>
+        <Homepage>https://libsdl.org/</Homepage>
         <Packager>
             <Name>Reilly Brogan</Name>
             <Email>solus@reillybrogan.com</Email>
@@ -10,7 +11,7 @@
         <Summary xml:lang="en">Simple DirectMedia Layer</Summary>
         <Description xml:lang="en">Simple DirectMedia Layer is a cross-platform development library designed to provide low level access to audio, keyboard, mouse, joystick, and graphics hardware via OpenGL and Direct3D. It is used by video playback software, emulators, and popular games including Valve&apos;s award winning catalog and many Humble Bundle games.
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>sdl2</Name>
@@ -20,7 +21,8 @@
         <PartOf>multimedia.library</PartOf>
         <Files>
             <Path fileType="library">/usr/lib64/libSDL2-2.0.so.0</Path>
-            <Path fileType="library">/usr/lib64/libSDL2-2.0.so.0.2800.3</Path>
+            <Path fileType="library">/usr/lib64/libSDL2-2.0.so.0.3000.1</Path>
+            <Path fileType="data">/usr/share/licenses/SDL2/LICENSE.txt</Path>
         </Files>
     </Package>
     <Package>
@@ -30,11 +32,11 @@
 </Description>
         <PartOf>emul32</PartOf>
         <RuntimeDependencies>
-            <Dependency release="39">sdl2</Dependency>
+            <Dependency release="44">sdl2</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib32/libSDL2-2.0.so.0</Path>
-            <Path fileType="library">/usr/lib32/libSDL2-2.0.so.0.2800.3</Path>
+            <Path fileType="library">/usr/lib32/libSDL2-2.0.so.0.3000.1</Path>
         </Files>
     </Package>
     <Package>
@@ -44,12 +46,20 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="39">sdl2-32bit</Dependency>
-            <Dependency release="39">sdl2-devel</Dependency>
+            <Dependency release="44">sdl2-32bit</Dependency>
+            <Dependency release="44">sdl2-devel</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="library">/usr/lib32/cmake/SDL2/sdl2-config-version.cmake</Path>
-            <Path fileType="library">/usr/lib32/cmake/SDL2/sdl2-config.cmake</Path>
+            <Path fileType="library">/usr/lib32/cmake/SDL2/SDL2Config.cmake</Path>
+            <Path fileType="library">/usr/lib32/cmake/SDL2/SDL2ConfigVersion.cmake</Path>
+            <Path fileType="library">/usr/lib32/cmake/SDL2/SDL2Targets-relwithdebinfo.cmake</Path>
+            <Path fileType="library">/usr/lib32/cmake/SDL2/SDL2Targets.cmake</Path>
+            <Path fileType="library">/usr/lib32/cmake/SDL2/SDL2mainTargets-relwithdebinfo.cmake</Path>
+            <Path fileType="library">/usr/lib32/cmake/SDL2/SDL2mainTargets.cmake</Path>
+            <Path fileType="library">/usr/lib32/cmake/SDL2/SDL2testTargets-relwithdebinfo.cmake</Path>
+            <Path fileType="library">/usr/lib32/cmake/SDL2/SDL2testTargets.cmake</Path>
+            <Path fileType="library">/usr/lib32/cmake/SDL2/sdlfind.cmake</Path>
+            <Path fileType="library">/usr/lib32/libSDL2-2.0.so</Path>
             <Path fileType="library">/usr/lib32/libSDL2.so</Path>
             <Path fileType="library">/usr/lib32/libSDL2_test.a</Path>
             <Path fileType="library">/usr/lib32/libSDL2main.a</Path>
@@ -63,7 +73,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="39">sdl2</Dependency>
+            <Dependency release="44">sdl2</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin/sdl2-config</Path>
@@ -75,6 +85,7 @@
             <Path fileType="header">/usr/include/SDL2/SDL_blendmode.h</Path>
             <Path fileType="header">/usr/include/SDL2/SDL_clipboard.h</Path>
             <Path fileType="header">/usr/include/SDL2/SDL_config.h</Path>
+            <Path fileType="header">/usr/include/SDL2/SDL_copying.h</Path>
             <Path fileType="header">/usr/include/SDL2/SDL_cpuinfo.h</Path>
             <Path fileType="header">/usr/include/SDL2/SDL_egl.h</Path>
             <Path fileType="header">/usr/include/SDL2/SDL_endian.h</Path>
@@ -145,8 +156,16 @@
             <Path fileType="header">/usr/include/SDL2/SDL_vulkan.h</Path>
             <Path fileType="header">/usr/include/SDL2/begin_code.h</Path>
             <Path fileType="header">/usr/include/SDL2/close_code.h</Path>
-            <Path fileType="library">/usr/lib64/cmake/SDL2/sdl2-config-version.cmake</Path>
-            <Path fileType="library">/usr/lib64/cmake/SDL2/sdl2-config.cmake</Path>
+            <Path fileType="library">/usr/lib64/cmake/SDL2/SDL2Config.cmake</Path>
+            <Path fileType="library">/usr/lib64/cmake/SDL2/SDL2ConfigVersion.cmake</Path>
+            <Path fileType="library">/usr/lib64/cmake/SDL2/SDL2Targets-relwithdebinfo.cmake</Path>
+            <Path fileType="library">/usr/lib64/cmake/SDL2/SDL2Targets.cmake</Path>
+            <Path fileType="library">/usr/lib64/cmake/SDL2/SDL2mainTargets-relwithdebinfo.cmake</Path>
+            <Path fileType="library">/usr/lib64/cmake/SDL2/SDL2mainTargets.cmake</Path>
+            <Path fileType="library">/usr/lib64/cmake/SDL2/SDL2testTargets-relwithdebinfo.cmake</Path>
+            <Path fileType="library">/usr/lib64/cmake/SDL2/SDL2testTargets.cmake</Path>
+            <Path fileType="library">/usr/lib64/cmake/SDL2/sdlfind.cmake</Path>
+            <Path fileType="library">/usr/lib64/libSDL2-2.0.so</Path>
             <Path fileType="library">/usr/lib64/libSDL2.so</Path>
             <Path fileType="library">/usr/lib64/libSDL2_test.a</Path>
             <Path fileType="library">/usr/lib64/libSDL2main.a</Path>
@@ -155,9 +174,9 @@
         </Files>
     </Package>
     <History>
-        <Update release="39">
-            <Date>2023-09-12</Date>
-            <Version>2.28.3</Version>
+        <Update release="44">
+            <Date>2024-03-06</Date>
+            <Version>2.30.1</Version>
             <Comment>Packaging update</Comment>
             <Name>Reilly Brogan</Name>
             <Email>solus@reillybrogan.com</Email>

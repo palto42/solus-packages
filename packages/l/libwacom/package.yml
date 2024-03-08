@@ -1,8 +1,9 @@
+# Updating this package? Check https://github.com/linux-surface/libwacom-surface to see if there are any new/updated patches
 name       : libwacom
-version    : 2.8.0
-release    : 33
+version    : 2.10.0
+release    : 37
 source     :
-    - https://github.com/linuxwacom/libwacom/releases/download/libwacom-2.8.0/libwacom-2.8.0.tar.xz : bb04b12c8688d0ff6a108d47a38d2057d572c4d7227d78138abd5fd0ba59f215
+    - https://github.com/linuxwacom/libwacom/releases/download/libwacom-2.10.0/libwacom-2.10.0.tar.xz : 3f8ef37de78ac3d08af1bdcb5d5828ec8284dcb7154bbec4995238728914aa0e
 license    : MIT
 component  : desktop.core
 homepage   : https://github.com/linuxwacom/libwacom/
@@ -10,13 +11,16 @@ summary    : A library used to identify wacom tablets and their model-specific f
 description: |
     libwacom is a library to identify Wacom tablets and their model-specific features. It provides easy access to information such as "is this a built-in on-screen tablet", "what is the size of this model", etc.
 builddeps  :
+    - pkgconfig(libevdev)
     - python-libevdev
-    - python-pytest
     - python3-pyudev
+checkdeps  :
+    - python-pytest
 rundeps    :
     - python-libevdev
     - python3-pyudev
 setup      : |
+    %apply_patches
     sed -i "s|pytest-3|pytest3|g" meson.build
     rm -f test/test_udev_rules.py
 

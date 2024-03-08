@@ -1,8 +1,9 @@
+# Updating this package? Make sure to update the bundled xorg-server in tigervnc too
 name       : xorg-server
-version    : 1.20.14
-release    : 90
+version    : 21.1.11
+release    : 99
 source     :
-    - https://xorg.freedesktop.org/archive/individual/xserver/xorg-server-1.20.14.tar.xz : 5cc5b70b9be89443e2594b93656c60bd5e82cd7f01deb4ce4faf81dcf546a16b
+    - https://www.x.org/releases/individual/xserver/xorg-server-21.1.11.tar.xz : 1d3dadbd57fb86b16a018e9f5f957aeeadf744f56c0553f55737628d06d326ef
 homepage   : https://xorg.freedesktop.org/wiki/
 license    : MIT
 component  :
@@ -11,27 +12,6 @@ component  :
 summary    : The Xorg Server is the core of the X Window system
 description: |
     The Xorg Server is the core of the X Window system.
-optimize   :
-    - no-bind-now
-    - no-symbolic
-patterns   :
-    - xvfb :
-        - /usr/bin/Xvfb
-        - /usr/bin/xvfb-run
-        - /usr/share/man/man1/Xvfb.1
-rundeps    :
-    - dbus-launch
-    - linux-driver-management
-    - xorg-xwayland
-    - xvfb :
-        - xauth
-        - xkbcomp
-        - xkeyboard-config
-    # This can be removed on 21.1.x update.
-    - libxcvt
-replaces   :
-    - glamor-egl
-    - xorg-driver-video-modesetting
 builddeps  :
     - pkgconfig(dri)
     - pkgconfig(epoxy)
@@ -53,15 +33,26 @@ builddeps  :
     - pkgconfig(xcb-image)
     - pkgconfig(xcb-keysyms)
     - pkgconfig(xcb-renderutil)
-    - pkgconfig(xkbcomp)
     - pkgconfig(xfont2)
     - pkgconfig(xi)
+    - pkgconfig(xkbcomp)
     - pkgconfig(xkbfile)
     - pkgconfig(xorg-macros)
     - pkgconfig(xproto)
     - pkgconfig(xrender)
     - pkgconfig(xshmfence)
     - pkgconfig(xtrans)
+rundeps    :
+    - dbus-launch
+    - linux-driver-management
+    - xorg-xwayland
+    - xvfb :
+        - xauth
+        - xkbcomp
+        - xkeyboard-config
+optimize   :
+    - no-bind-now
+    - no-symbolic
 setup      : |
     %apply_patches
     %meson_configure \
@@ -80,8 +71,7 @@ setup      : |
       -Dxorg=true \
       -Dxephyr=true \
       -Dxkb_dir=/usr/share/X11/xkb \
-      -Dxkb_output_dir=/var/lib/xkb \
-      -Dxwayland=true
+      -Dxkb_output_dir=/var/lib/xkb
 build      : |
     %ninja_build
 install    : |
@@ -93,10 +83,11 @@ install    : |
     # tmpfiles
     rm -rf $installdir/var
     install -Dm00644 $pkgfiles/xorg-server.tmpfiles $installdir/%libdir%/tmpfiles.d/xorg-server.conf
-
-    ## This can be removed on 21.1.x update
-    # Replaced by xorg-xwayland
-    rm $installdir/usr/bin/Xwayland
-    # replaced by libxcvt
-    rm $installdir/usr/bin/cvt
-    rm $installdir/usr/share/man/man1/cvt.1
+patterns   :
+    - xvfb :
+        - /usr/bin/Xvfb
+        - /usr/bin/xvfb-run
+        - /usr/share/man/man1/Xvfb.1
+replaces   :
+    - glamor-egl
+    - xorg-driver-video-modesetting

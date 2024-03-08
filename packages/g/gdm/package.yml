@@ -1,8 +1,8 @@
 name       : gdm
-version    : '44.1'
-release    : 68
+version    : 45.0.1
+release    : 76
 source     :
-    - https://download.gnome.org/sources/gdm/44/gdm-44.1.tar.xz : 68266b3abe7d28fc469d0067aac9c5dabb0ca7952cc1f7c238a04951f3dc5b0d
+    - https://download.gnome.org/sources/gdm/45/gdm-45.0.1.tar.xz : 6572578c05e3c6569d6ed269f7de2aaf3a035657654586d8243907bb7a6ffa85
 homepage   : https://projects.gnome.org/gdm/
 license    : GPL-2.0-or-later
 component  : desktop.gnome
@@ -29,11 +29,12 @@ rundeps    :
     - xkbcomp
     - xkeyboard-config
 setup      : |
-    %patch -p1 < $pkgfiles/0001-Source-usr-share-defaults-etc-xprofile.patch
+    %patch -p1 -i $pkgfiles/0001-Source-usr-share-defaults-etc-xprofile.patch
+    %patch -p1 -i $pkgfiles/0001-Support-stateless-dir-for-xinitrc.d-files.patch
 
     # Backpedal on overly aggressive nvidia wayland checks
-    %patch -p1 < $pkgfiles/0001-data-Remove-borked-nvidia-checks-in-udev-rules-file.patch
-    %patch -p1 < $pkgfiles/0001-udev-Stick-with-wayland-on-hybrid-nvidia-with-vendor.patch
+    %patch -p1 -i $pkgfiles/0001-data-Remove-borked-nvidia-checks-in-udev-rules-file.patch
+    %patch -p1 -i $pkgfiles/0001-udev-Stick-with-wayland-on-hybrid-nvidia-with-vendor.patch
 
     %meson_configure \
         -Dat-spi-registryd-dir=%libdir%/at-spi2/core \
@@ -54,16 +55,13 @@ install    : |
     install -D -m 00644 $pkgfiles/gdm.sysusers $installdir/%libdir%/sysusers.d/gdm.conf
     install -D -m 00644 $pkgfiles/gdm.tmpfiles $installdir/%libdir%/tmpfiles.d/gdm.conf
 
-    # Pre-enable gdm (gdm forces "lib")
-    install -D -d -m 00755 $installdir/usr/lib/systemd/system/graphical.target.wants
-    ln -sv ../gdm.service $installdir/usr/lib/systemd/system/graphical.target.wants/gdm.service
-    ln -sv gdm.service $installdir/usr/lib/systemd/system/displaymanager.service
-
-    # systemd handled
-    rm -rf $installdir/{var,run}
+    # Pre-enable gdm
+    ln -sv gdm.service $installdir/usr/lib/systemd/system/display-manager.service
 
     # fix PAM
-    rm -rf $installdir/etc/pam.d
-    install -d $installdir/usr/share/defaults/etc/pam.d
-    cp $pkgfiles/pam/* $installdir/usr/share/defaults/etc/pam.d/
-    chmod 00644 $installdir/usr/share/defaults/etc/pam.d/*
+    rm -rfv $installdir/etc/pam.d
+    install -dm00755 $installdir/usr/share/defaults/etc/pam.d
+    install -m00644 $pkgfiles/pam.d/* -t $installdir/usr/share/defaults/etc/pam.d
+
+    # Cleanup
+    find $installdir -type d -empty -print -delete

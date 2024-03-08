@@ -1,8 +1,8 @@
 name       : homebank
-version    : 5.6.5
-release    : 29
+version    : 5.7.4
+release    : 31
 source     :
-    - http://homebank.free.fr/public/sources/homebank-5.6.5.tar.gz : b5494dfcf87d7a8572696a2afa2a04496ba79e3857cd3e3b18ac03bd1b6d2ca8
+    - http://homebank.free.fr/public/sources/homebank-5.7.4.tar.gz : 42ce7146c875ea0ca3c93391b6a9bf4714db4621c63f4a094dcc6f8985bb54e4
 homepage   : http://homebank.free.fr/en/index.php
 license    : GPL-2.0-or-later
 component  : office.finance
@@ -12,7 +12,7 @@ description: |
 builddeps  :
     - pkgconfig(gtk+-3.0)
     - pkgconfig(libofx)
-    - pkgconfig(libsoup-2.4)
+    - pkgconfig(libsoup-3.0)
 setup      : |
     %configure
 build      : |

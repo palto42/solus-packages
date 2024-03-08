@@ -1,8 +1,9 @@
 name       : nvme-cli
-version    : '2.5'
-release    : 17
+version    : '2.8'
+release    : 20
 source     :
-    - https://github.com/linux-nvme/nvme-cli/archive/refs/tags/v2.5.tar.gz : e84bdba276aadcddda8cf5d412e934cc5673af15132ea02180deb5d06af73146
+    - https://github.com/linux-nvme/nvme-cli/archive/refs/tags/v2.8.tar.gz : 0743d9188792a87d39187ae5e5cb31e8f46cca8c6f100547c50ec0dd659d2531
+homepage   : https://github.com/linux-nvme/nvme-cli
 license    : GPL-2.0-only
 component  : system.utils
 summary    : NVM-Express user space tooling for Linux.

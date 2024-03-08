@@ -1,21 +1,24 @@
 name       : qt6-languageserver
-version    : 6.5.1
-release    : 2
+version    : 6.6.2
+release    : 5
 source     :
-    - https://download.qt.io/official_releases/qt/6.5/6.5.1/submodules/qtlanguageserver-everywhere-src-6.5.1.tar.xz : 99a6cc6aca124626a2085077dc7f4bb9dbb20da518df6b115056813149832bc9
+    - https://download.qt.io/official_releases/qt/6.6/6.6.2/submodules/qtlanguageserver-everywhere-src-6.6.2.tar.xz : c31f4c45e0abffe7b444b224d1e49948f1c76210172e1f17104cf14a48fceaad
 license    : GPL-3.0-or-later
 component  : desktop.qt
+homepage   : https://www.qt.io
 summary    : An implementation of the Language Server Protocol
 description: |
     An implementation of the Language Server Protocol
 builddeps  :
     - pkgconfig(Qt6Core)
+clang      : yes
+optimize   :
+    - speed
+    - thin-lto
 setup      : |
-    %cmake_ninja
+    %cmake_ninja \
+                 -DCMAKE_MESSAGE_LOG_LEVEL=STATUS
 build      : |
     %ninja_build
 install    : |
     %ninja_install
-patterns   :
-    - devel :
-        - /usr/lib64/qt6/mkspecs

@@ -1,8 +1,8 @@
 name       : qt6-base
-version    : 6.5.1
-release    : 11
+version    : 6.6.2
+release    : 21
 source     :
-    - https://download.qt.io/official_releases/qt/6.5/6.5.1/submodules/qtbase-everywhere-src-6.5.1.tar.xz : db56fa1f4303a1189fe33418d25d1924931c7aef237f89eea9de58e858eebfed
+    - https://download.qt.io/official_releases/qt/6.6/6.6.2/submodules/qtbase-everywhere-src-6.6.2.tar.xz : b89b426b9852a17d3e96230ab0871346574d635c7914480a2a27f98ff942677b
 homepage   : https://www.qt.io
 license    :
     - GFDL-1.3-or-later
@@ -23,16 +23,18 @@ builddeps  :
     - pkgconfig(krb5)
     - pkgconfig(libb2)
     - pkgconfig(libinput)
-    - pkgconfig(libpcre2-32)
+    - pkgconfig(libpcre2-16)
     - pkgconfig(libpq)
     - pkgconfig(libproxy-1.0)
     - pkgconfig(libpulse)
     - pkgconfig(libturbojpeg)
     - pkgconfig(libzstd)
+    - pkgconfig(lttng-ust)
     - pkgconfig(mariadb)
     - pkgconfig(md4c)
     - pkgconfig(mtdev)
     - pkgconfig(odbc)
+    - pkgconfig(shared-mime-info)
     - pkgconfig(sm)
     - pkgconfig(sqlite3)
     - pkgconfig(tslib)
@@ -50,36 +52,59 @@ builddeps  :
     - xdg-utils
 rundeps    :
     - devel :
+        - cups-devel
         - libxkbcommon-devel
         - mesalib-devel
-        - vulkan
-        - vulkan-headers
+        - vulkan-devel
+    - shared-mime-info
+clang      : yes
+optimize   :
+    - speed
+    - thin-lto
 setup      : |
     %apply_patches
+
+    ccache=OFF
+    if [[ " ${PATH[*]} " =~ "ccache" ]]; then
+        ccache=ON
+    fi
+
+    ## 2024-01-18 Note
+    # Enabling -DQT_FEATURE_openssl_hash=ON with Qt 6.6.1 seems to break some applications use of TLS.
+    # This can be reproduced in rssguard by starting it and trying to pull some feeds. You'll see the following message right before a ton of SSL errors:
+    # "Random number generator not seeded, disabling SSL support"
+
     %cmake_ninja \
-        -DINSTALL_LIBDIR=%libdir% \
-        -DINSTALL_BINDIR=%libdir%/qt6/bin \
-        -DINSTALL_PUBLICBINDIR=usr/bin \
-        -DINSTALL_LIBEXECDIR=%libdir%/qt6 \
-        -DINSTALL_DOCDIR=share/doc/qt6 \
-        -DINSTALL_ARCHDATADIR=%libdir%/qt6 \
-        -DINSTALL_DATADIR=share/qt6 \
-        -DINSTALL_INCLUDEDIR=include/qt6 \
-        -DINSTALL_MKSPECSDIR=%libdir%/qt6/mkspecs \
-        -DINSTALL_EXAMPLESDIR=%libdir%/qt6/examples \
-        -DQT_BUILD_EXAMPLES=ON \
-        -DQT_FEATURE_brotli=ON \
-        -DQT_FEATURE_gssapi=ON \
-        -DQT_FEATURE_harfbuzz=ON \
-        -DQT_FEATURE_journald=ON \
-        -DQT_FEATURE_libproxy=ON \
-        -DQT_FEATURE_mtdev=ON \
-        -DQT_FEATURE_openssl_linked=ON \
-        -DQT_FEATURE_pcre2=ON \
-        -DQT_FEATURE_system_harfbuzz=ON \
-        -DQT_FEATURE_system_sqlite=ON \
-        -DQT_FEATURE_system_xcb_xinput=ON \
-        -DQT_FEATURE_zstd=ON
+                 -DCMAKE_INTERPROCEDURAL_OPTIMIZATION=ON \
+                 -DCMAKE_MESSAGE_LOG_LEVEL=STATUS \
+                 -DINSTALL_LIBDIR=%libdir% \
+                 -DINSTALL_BINDIR=%libdir%/qt6/bin \
+                 -DINSTALL_PUBLICBINDIR=usr/bin \
+                 -DINSTALL_LIBEXECDIR=%libdir%/qt6 \
+                 -DINSTALL_DOCDIR=share/doc/qt6 \
+                 -DINSTALL_ARCHDATADIR=%libdir%/qt6 \
+                 -DINSTALL_DATADIR=share/qt6 \
+                 -DINSTALL_INCLUDEDIR=include/qt6 \
+                 -DINSTALL_MKSPECSDIR=%libdir%/qt6/mkspecs \
+                 -DINSTALL_EXAMPLESDIR=%libdir%/qt6/examples \
+                 -DBUILD_SHARED_LIBS=ON \
+                 -DQT_BUILD_EXAMPLES=ON \
+                 -DQT_USE_CCACHE=$ccache \
+                 -DQT_FEATURE_accessibility=ON \
+                 -DQT_FEATURE_brotli=ON \
+                 -DQT_FEATURE_dbus_linked=ON \
+                 -DQT_FEATURE_gssapi=ON \
+                 -DQT_FEATURE_harfbuzz=ON \
+                 -DQT_FEATURE_journald=ON \
+                 -DQT_FEATURE_libproxy=ON \
+                 -DQT_FEATURE_mtdev=ON \
+                 -DQT_FEATURE_openssl_linked=ON \
+                 -DQT_FEATURE_optimize_full=ON \
+                 -DQT_FEATURE_pcre2=ON \
+                 -DQT_FEATURE_system_harfbuzz=ON \
+                 -DQT_FEATURE_system_sqlite=ON \
+                 -DQT_FEATURE_system_xcb_xinput=ON \
+                 -DQT_FEATURE_zstd=ON
 build      : |
     %ninja_build
 install    : |
@@ -90,10 +115,34 @@ install    : |
     while read _line; do
         ln -s $_line
     done < %workdir%/solusBuildDir/user_facing_tool_links.txt
+
+    # Better location for it
+    mv $installdir/usr/lib64/qt6/ensure_pro_file.cmake $installdir/usr/lib64/cmake/Qt6/ensure_pro_file.cmake
+
+    # Logging configuration
+    install -Dm00644 $pkgfiles/qtlogging.ini $installdir/usr/share/qt6/qtlogging.ini
 patterns   :
     - devel :
         - /usr/bin
+        - /usr/lib64/libQt6*.prl
+        - /usr/lib64/objects-RelWithDebInfo
+        - /usr/lib64/qt6/android_emulator_launcher.sh
         - /usr/lib64/qt6/bin
+        - /usr/lib64/qt6/cmake_automoc_parser
         - /usr/lib64/qt6/mkspecs
+        - /usr/lib64/qt6/moc
+        - /usr/lib64/qt6/qlalr
+        - /usr/lib64/qt6/qt-cmake-private*
+        - /usr/lib64/qt6/qt-cmake-standalone-test
+        - /usr/lib64/qt6/qt-internal-configure-tests
+        - /usr/lib64/qt6/qt-testrunner.py
+        - /usr/lib64/qt6/rcc
+        - /usr/lib64/qt6/qvkgen
+        - /usr/lib64/qt6/sanitizer-testrunner.py
+        - /usr/lib64/qt6/syncqt
+        - /usr/lib64/qt6/tracegen
+        - /usr/lib64/qt6/tracepointgen
+        - /usr/lib64/qt6/uic
+        - /usr/share/doc/qt6
     - demos :
         - /usr/lib64/qt6/examples

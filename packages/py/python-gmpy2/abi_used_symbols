@@ -61,6 +61,8 @@ UNKNOWN:PyObject_HasAttrString
 UNKNOWN:PyObject_IsTrue
 UNKNOWN:PyObject_SelfIter
 UNKNOWN:PyRun_StringFlags
+UNKNOWN:PySequence_Check
+UNKNOWN:PySequence_Fast
 UNKNOWN:PySequence_List
 UNKNOWN:PySlice_AdjustIndices
 UNKNOWN:PySlice_Type
@@ -95,8 +97,8 @@ UNKNOWN:_Py_NewReference
 UNKNOWN:_Py_NoneStruct
 UNKNOWN:_Py_NotImplementedStruct
 UNKNOWN:_Py_TrueStruct
-UNKNOWN:log
 libc.so.6:__ctype_b_loc
+libc.so.6:__isoc23_strtol
 libc.so.6:__sprintf_chk
 libc.so.6:__stack_chk_fail
 libc.so.6:free
@@ -109,7 +111,6 @@ libc.so.6:strcmp
 libc.so.6:strcpy
 libc.so.6:strlen
 libc.so.6:strspn
-libc.so.6:strtol
 libgmp.so.10:__gmp_bits_per_limb
 libgmp.so.10:__gmp_randclear
 libgmp.so.10:__gmp_randinit_default
@@ -205,6 +206,7 @@ libgmp.so.10:__gmpz_nextprime
 libgmp.so.10:__gmpz_perfect_power_p
 libgmp.so.10:__gmpz_pow_ui
 libgmp.so.10:__gmpz_powm
+libgmp.so.10:__gmpz_powm_sec
 libgmp.so.10:__gmpz_primorial_ui
 libgmp.so.10:__gmpz_probab_prime_p
 libgmp.so.10:__gmpz_remove
@@ -236,6 +238,7 @@ libgmp.so.10:__gmpz_ui_sub
 libgmp.so.10:__gmpz_urandomb
 libgmp.so.10:__gmpz_urandomm
 libgmp.so.10:__gmpz_xor
+libm.so.6:log
 libmpc.so.3:mpc_abs
 libmpc.so.3:mpc_acos
 libmpc.so.3:mpc_acosh

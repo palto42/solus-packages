@@ -3,15 +3,15 @@
         <Name>kdepim-runtime</Name>
         <Homepage>https://community.kde.org/PIM</Homepage>
         <Packager>
-            <Name>Joey Riches</Name>
-            <Email>josephriches@gmail.com</Email>
+            <Name>Justin Zobel</Name>
+            <Email>justin@1707.io</Email>
         </Packager>
         <License>GPL-2.0-or-later</License>
         <PartOf>desktop.kde</PartOf>
         <Summary xml:lang="en">Runtime components for Akonadi</Summary>
         <Description xml:lang="en">Contains the Akonadi resources from kdepim which can be used without the applications in kdepim.
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>kdepim-runtime</Name>
@@ -45,19 +45,20 @@
             <Path fileType="executable">/usr/bin/akonadi_vcarddir_resource</Path>
             <Path fileType="executable">/usr/bin/gidmigrator</Path>
             <Path fileType="library">/usr/lib64/libakonadi-filestore.so.5</Path>
-            <Path fileType="library">/usr/lib64/libakonadi-filestore.so.5.23.3</Path>
+            <Path fileType="library">/usr/lib64/libakonadi-filestore.so.5.24.5</Path>
             <Path fileType="library">/usr/lib64/libakonadi-singlefileresource.so.5</Path>
-            <Path fileType="library">/usr/lib64/libakonadi-singlefileresource.so.5.23.3</Path>
+            <Path fileType="library">/usr/lib64/libakonadi-singlefileresource.so.5.24.5</Path>
             <Path fileType="library">/usr/lib64/libfolderarchivesettings.so.5</Path>
-            <Path fileType="library">/usr/lib64/libfolderarchivesettings.so.5.23.3</Path>
+            <Path fileType="library">/usr/lib64/libfolderarchivesettings.so.5.24.5</Path>
             <Path fileType="library">/usr/lib64/libkmindexreader.so.5</Path>
-            <Path fileType="library">/usr/lib64/libkmindexreader.so.5.23.3</Path>
+            <Path fileType="library">/usr/lib64/libkmindexreader.so.5.24.5</Path>
             <Path fileType="library">/usr/lib64/libmaildir.so.5</Path>
-            <Path fileType="library">/usr/lib64/libmaildir.so.5.23.3</Path>
+            <Path fileType="library">/usr/lib64/libmaildir.so.5.24.5</Path>
             <Path fileType="library">/usr/lib64/qt5/plugins/kf5/kio/akonadi.so</Path>
             <Path fileType="library">/usr/lib64/qt5/plugins/pim5/akonadi/config/akonotesconfig.so</Path>
             <Path fileType="library">/usr/lib64/qt5/plugins/pim5/akonadi/config/birthdaysconfig.so</Path>
             <Path fileType="library">/usr/lib64/qt5/plugins/pim5/akonadi/config/contactsconfig.so</Path>
+            <Path fileType="library">/usr/lib64/qt5/plugins/pim5/akonadi/config/googleconfig.so</Path>
             <Path fileType="library">/usr/lib64/qt5/plugins/pim5/akonadi/config/icalconfig.so</Path>
             <Path fileType="library">/usr/lib64/qt5/plugins/pim5/akonadi/config/icaldirconfig.so</Path>
             <Path fileType="library">/usr/lib64/qt5/plugins/pim5/akonadi/config/maildirconfig.so</Path>
@@ -72,6 +73,7 @@
             <Path fileType="library">/usr/lib64/qt5/plugins/pim5/akonadi/config/vcardconfig.so</Path>
             <Path fileType="library">/usr/lib64/qt5/plugins/pim5/akonadi/config/vcarddirconfig.so</Path>
             <Path fileType="library">/usr/lib64/qt5/plugins/pim5/kcms/kaddressbook/kcm_ldap.so</Path>
+            <Path fileType="library">/usr/lib64/qt5/plugins/pim5/mailtransport/mailtransport_akonadiplugin.so</Path>
             <Path fileType="data">/usr/share/akonadi/accountwizard/contacts/contactswizard.desktop</Path>
             <Path fileType="data">/usr/share/akonadi/accountwizard/contacts/contactswizard.es</Path>
             <Path fileType="data">/usr/share/akonadi/accountwizard/contacts/contactswizard.ui</Path>
@@ -127,10 +129,15 @@
             <Path fileType="data">/usr/share/akonadi/firstrun/defaultaddressbook</Path>
             <Path fileType="data">/usr/share/akonadi/firstrun/defaultcalendar</Path>
             <Path fileType="data">/usr/share/akonadi/firstrun/defaultnotebook</Path>
+            <Path fileType="data">/usr/share/applications/org.kde.akonadi_contacts_resource.desktop</Path>
             <Path fileType="data">/usr/share/applications/org.kde.akonadi_davgroupware_resource.desktop</Path>
+            <Path fileType="data">/usr/share/applications/org.kde.akonadi_ews_resource.desktop</Path>
             <Path fileType="data">/usr/share/applications/org.kde.akonadi_google_resource.desktop</Path>
             <Path fileType="data">/usr/share/applications/org.kde.akonadi_imap_resource.desktop</Path>
             <Path fileType="data">/usr/share/applications/org.kde.akonadi_kolab_resource.desktop</Path>
+            <Path fileType="data">/usr/share/applications/org.kde.akonadi_openxchange_resource.desktop</Path>
+            <Path fileType="data">/usr/share/applications/org.kde.akonadi_vcard_resource.desktop</Path>
+            <Path fileType="data">/usr/share/applications/org.kde.akonadi_vcarddir_resource.desktop</Path>
             <Path fileType="data">/usr/share/dbus-1/interfaces/org.kde.Akonadi.Maildir.Settings.xml</Path>
             <Path fileType="data">/usr/share/dbus-1/interfaces/org.kde.Akonadi.MixedMaildir.Settings.xml</Path>
             <Path fileType="data">/usr/share/icons/hicolor/128x128/apps/akonadi-ews.png</Path>
@@ -182,7 +189,6 @@
             <Path fileType="localedata">/usr/share/locale/ar/LC_MESSAGES/akonadi_davgroupware_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ar/LC_MESSAGES/akonadi_etesync_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ar/LC_MESSAGES/akonadi_ews_resource.mo</Path>
-            <Path fileType="localedata">/usr/share/locale/ar/LC_MESSAGES/akonadi_facebook_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ar/LC_MESSAGES/akonadi_google_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ar/LC_MESSAGES/akonadi_ical_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ar/LC_MESSAGES/akonadi_icaldir_resource.mo</Path>
@@ -218,7 +224,6 @@
             <Path fileType="localedata">/usr/share/locale/bg/LC_MESSAGES/akonadi_davgroupware_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/bg/LC_MESSAGES/akonadi_etesync_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/bg/LC_MESSAGES/akonadi_ews_resource.mo</Path>
-            <Path fileType="localedata">/usr/share/locale/bg/LC_MESSAGES/akonadi_facebook_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/bg/LC_MESSAGES/akonadi_google_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/bg/LC_MESSAGES/akonadi_ical_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/bg/LC_MESSAGES/akonadi_icaldir_resource.mo</Path>
@@ -284,7 +289,6 @@
             <Path fileType="localedata">/usr/share/locale/ca/LC_MESSAGES/akonadi_davgroupware_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ca/LC_MESSAGES/akonadi_etesync_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ca/LC_MESSAGES/akonadi_ews_resource.mo</Path>
-            <Path fileType="localedata">/usr/share/locale/ca/LC_MESSAGES/akonadi_facebook_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ca/LC_MESSAGES/akonadi_google_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ca/LC_MESSAGES/akonadi_ical_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ca/LC_MESSAGES/akonadi_icaldir_resource.mo</Path>
@@ -320,7 +324,6 @@
             <Path fileType="localedata">/usr/share/locale/ca@valencia/LC_MESSAGES/akonadi_davgroupware_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ca@valencia/LC_MESSAGES/akonadi_etesync_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ca@valencia/LC_MESSAGES/akonadi_ews_resource.mo</Path>
-            <Path fileType="localedata">/usr/share/locale/ca@valencia/LC_MESSAGES/akonadi_facebook_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ca@valencia/LC_MESSAGES/akonadi_google_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ca@valencia/LC_MESSAGES/akonadi_ical_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ca@valencia/LC_MESSAGES/akonadi_icaldir_resource.mo</Path>
@@ -356,7 +359,6 @@
             <Path fileType="localedata">/usr/share/locale/cs/LC_MESSAGES/akonadi_davgroupware_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/cs/LC_MESSAGES/akonadi_etesync_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/cs/LC_MESSAGES/akonadi_ews_resource.mo</Path>
-            <Path fileType="localedata">/usr/share/locale/cs/LC_MESSAGES/akonadi_facebook_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/cs/LC_MESSAGES/akonadi_google_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/cs/LC_MESSAGES/akonadi_ical_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/cs/LC_MESSAGES/akonadi_icaldir_resource.mo</Path>
@@ -391,7 +393,6 @@
             <Path fileType="localedata">/usr/share/locale/da/LC_MESSAGES/akonadi_contacts_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/da/LC_MESSAGES/akonadi_davgroupware_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/da/LC_MESSAGES/akonadi_ews_resource.mo</Path>
-            <Path fileType="localedata">/usr/share/locale/da/LC_MESSAGES/akonadi_facebook_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/da/LC_MESSAGES/akonadi_google_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/da/LC_MESSAGES/akonadi_ical_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/da/LC_MESSAGES/akonadi_icaldir_resource.mo</Path>
@@ -427,7 +428,6 @@
             <Path fileType="localedata">/usr/share/locale/de/LC_MESSAGES/akonadi_davgroupware_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/de/LC_MESSAGES/akonadi_etesync_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/de/LC_MESSAGES/akonadi_ews_resource.mo</Path>
-            <Path fileType="localedata">/usr/share/locale/de/LC_MESSAGES/akonadi_facebook_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/de/LC_MESSAGES/akonadi_google_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/de/LC_MESSAGES/akonadi_ical_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/de/LC_MESSAGES/akonadi_icaldir_resource.mo</Path>
@@ -495,7 +495,6 @@
             <Path fileType="localedata">/usr/share/locale/en_GB/LC_MESSAGES/akonadi_davgroupware_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/en_GB/LC_MESSAGES/akonadi_etesync_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/en_GB/LC_MESSAGES/akonadi_ews_resource.mo</Path>
-            <Path fileType="localedata">/usr/share/locale/en_GB/LC_MESSAGES/akonadi_facebook_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/en_GB/LC_MESSAGES/akonadi_google_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/en_GB/LC_MESSAGES/akonadi_ical_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/en_GB/LC_MESSAGES/akonadi_icaldir_resource.mo</Path>
@@ -515,26 +514,41 @@
             <Path fileType="localedata">/usr/share/locale/en_GB/LC_MESSAGES/gid-migrator.mo</Path>
             <Path fileType="localedata">/usr/share/locale/en_GB/LC_MESSAGES/kio_akonadi.mo</Path>
             <Path fileType="localedata">/usr/share/locale/en_GB/LC_MESSAGES/libfolderarchivesettings.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/accountwizard_contacts.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/accountwizard_ews.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/accountwizard_ical.mo</Path>
             <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/accountwizard_imap.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/accountwizard_kolab.mo</Path>
             <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/accountwizard_mailbox.mo</Path>
             <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/accountwizard_maildir.mo</Path>
             <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/accountwizard_pop3.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/accountwizard_vcard.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/accountwizard_vcarddir.mo</Path>
             <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/akonadi-filestore.mo</Path>
             <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/akonadi_birthdays_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/akonadi_contacts_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/akonadi_davgroupware_resource.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/akonadi_etesync_resource.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/akonadi_ews_resource.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/akonadi_google_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/akonadi_ical_resource.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/akonadi_icaldir_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/akonadi_imap_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/akonadi_maildir_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/akonadi_maildispatcher_agent.mo</Path>
             <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/akonadi_mbox_resource.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/akonadi_migration_agent.mo</Path>
             <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/akonadi_mixedmaildir_resource.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/akonadi_newmailnotifier_agent.mo</Path>
             <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/akonadi_openxchange_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/akonadi_pop3_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/akonadi_singlefile_resource.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/akonadi_tomboynotes_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/akonadi_vcard_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/akonadi_vcarddir_resource.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/gid-migrator.mo</Path>
             <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/kio_akonadi.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/libfolderarchivesettings.mo</Path>
             <Path fileType="localedata">/usr/share/locale/es/LC_MESSAGES/accountwizard_contacts.mo</Path>
             <Path fileType="localedata">/usr/share/locale/es/LC_MESSAGES/accountwizard_ews.mo</Path>
             <Path fileType="localedata">/usr/share/locale/es/LC_MESSAGES/accountwizard_ical.mo</Path>
@@ -551,7 +565,6 @@
             <Path fileType="localedata">/usr/share/locale/es/LC_MESSAGES/akonadi_davgroupware_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/es/LC_MESSAGES/akonadi_etesync_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/es/LC_MESSAGES/akonadi_ews_resource.mo</Path>
-            <Path fileType="localedata">/usr/share/locale/es/LC_MESSAGES/akonadi_facebook_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/es/LC_MESSAGES/akonadi_google_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/es/LC_MESSAGES/akonadi_ical_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/es/LC_MESSAGES/akonadi_icaldir_resource.mo</Path>
@@ -586,7 +599,6 @@
             <Path fileType="localedata">/usr/share/locale/et/LC_MESSAGES/akonadi_contacts_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/et/LC_MESSAGES/akonadi_davgroupware_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/et/LC_MESSAGES/akonadi_ews_resource.mo</Path>
-            <Path fileType="localedata">/usr/share/locale/et/LC_MESSAGES/akonadi_facebook_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/et/LC_MESSAGES/akonadi_google_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/et/LC_MESSAGES/akonadi_ical_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/et/LC_MESSAGES/akonadi_icaldir_resource.mo</Path>
@@ -622,7 +634,6 @@
             <Path fileType="localedata">/usr/share/locale/eu/LC_MESSAGES/akonadi_davgroupware_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/eu/LC_MESSAGES/akonadi_etesync_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/eu/LC_MESSAGES/akonadi_ews_resource.mo</Path>
-            <Path fileType="localedata">/usr/share/locale/eu/LC_MESSAGES/akonadi_facebook_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/eu/LC_MESSAGES/akonadi_google_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/eu/LC_MESSAGES/akonadi_ical_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/eu/LC_MESSAGES/akonadi_icaldir_resource.mo</Path>
@@ -658,7 +669,6 @@
             <Path fileType="localedata">/usr/share/locale/fi/LC_MESSAGES/akonadi_davgroupware_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/fi/LC_MESSAGES/akonadi_etesync_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/fi/LC_MESSAGES/akonadi_ews_resource.mo</Path>
-            <Path fileType="localedata">/usr/share/locale/fi/LC_MESSAGES/akonadi_facebook_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/fi/LC_MESSAGES/akonadi_google_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/fi/LC_MESSAGES/akonadi_ical_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/fi/LC_MESSAGES/akonadi_icaldir_resource.mo</Path>
@@ -694,7 +704,6 @@
             <Path fileType="localedata">/usr/share/locale/fr/LC_MESSAGES/akonadi_davgroupware_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/fr/LC_MESSAGES/akonadi_etesync_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/fr/LC_MESSAGES/akonadi_ews_resource.mo</Path>
-            <Path fileType="localedata">/usr/share/locale/fr/LC_MESSAGES/akonadi_facebook_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/fr/LC_MESSAGES/akonadi_google_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/fr/LC_MESSAGES/akonadi_ical_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/fr/LC_MESSAGES/akonadi_icaldir_resource.mo</Path>
@@ -753,7 +762,6 @@
             <Path fileType="localedata">/usr/share/locale/gl/LC_MESSAGES/akonadi_contacts_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/gl/LC_MESSAGES/akonadi_davgroupware_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/gl/LC_MESSAGES/akonadi_ews_resource.mo</Path>
-            <Path fileType="localedata">/usr/share/locale/gl/LC_MESSAGES/akonadi_facebook_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/gl/LC_MESSAGES/akonadi_google_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/gl/LC_MESSAGES/akonadi_ical_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/gl/LC_MESSAGES/akonadi_icaldir_resource.mo</Path>
@@ -824,7 +832,6 @@
             <Path fileType="localedata">/usr/share/locale/ia/LC_MESSAGES/akonadi_davgroupware_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ia/LC_MESSAGES/akonadi_etesync_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ia/LC_MESSAGES/akonadi_ews_resource.mo</Path>
-            <Path fileType="localedata">/usr/share/locale/ia/LC_MESSAGES/akonadi_facebook_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ia/LC_MESSAGES/akonadi_google_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ia/LC_MESSAGES/akonadi_ical_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ia/LC_MESSAGES/akonadi_icaldir_resource.mo</Path>
@@ -861,7 +868,6 @@
             <Path fileType="localedata">/usr/share/locale/it/LC_MESSAGES/akonadi_davgroupware_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/it/LC_MESSAGES/akonadi_etesync_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/it/LC_MESSAGES/akonadi_ews_resource.mo</Path>
-            <Path fileType="localedata">/usr/share/locale/it/LC_MESSAGES/akonadi_facebook_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/it/LC_MESSAGES/akonadi_google_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/it/LC_MESSAGES/akonadi_ical_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/it/LC_MESSAGES/akonadi_icaldir_resource.mo</Path>
@@ -897,7 +903,6 @@
             <Path fileType="localedata">/usr/share/locale/ja/LC_MESSAGES/akonadi_davgroupware_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ja/LC_MESSAGES/akonadi_etesync_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ja/LC_MESSAGES/akonadi_ews_resource.mo</Path>
-            <Path fileType="localedata">/usr/share/locale/ja/LC_MESSAGES/akonadi_facebook_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ja/LC_MESSAGES/akonadi_google_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ja/LC_MESSAGES/akonadi_ical_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ja/LC_MESSAGES/akonadi_icaldir_resource.mo</Path>
@@ -933,7 +938,6 @@
             <Path fileType="localedata">/usr/share/locale/ka/LC_MESSAGES/akonadi_davgroupware_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ka/LC_MESSAGES/akonadi_etesync_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ka/LC_MESSAGES/akonadi_ews_resource.mo</Path>
-            <Path fileType="localedata">/usr/share/locale/ka/LC_MESSAGES/akonadi_facebook_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ka/LC_MESSAGES/akonadi_google_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ka/LC_MESSAGES/akonadi_ical_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ka/LC_MESSAGES/akonadi_icaldir_resource.mo</Path>
@@ -1017,7 +1021,6 @@
             <Path fileType="localedata">/usr/share/locale/ko/LC_MESSAGES/akonadi_davgroupware_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ko/LC_MESSAGES/akonadi_etesync_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ko/LC_MESSAGES/akonadi_ews_resource.mo</Path>
-            <Path fileType="localedata">/usr/share/locale/ko/LC_MESSAGES/akonadi_facebook_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ko/LC_MESSAGES/akonadi_google_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ko/LC_MESSAGES/akonadi_ical_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ko/LC_MESSAGES/akonadi_icaldir_resource.mo</Path>
@@ -1053,7 +1056,6 @@
             <Path fileType="localedata">/usr/share/locale/lt/LC_MESSAGES/akonadi_davgroupware_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/lt/LC_MESSAGES/akonadi_etesync_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/lt/LC_MESSAGES/akonadi_ews_resource.mo</Path>
-            <Path fileType="localedata">/usr/share/locale/lt/LC_MESSAGES/akonadi_facebook_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/lt/LC_MESSAGES/akonadi_google_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/lt/LC_MESSAGES/akonadi_ical_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/lt/LC_MESSAGES/akonadi_icaldir_resource.mo</Path>
@@ -1201,7 +1203,6 @@
             <Path fileType="localedata">/usr/share/locale/nl/LC_MESSAGES/akonadi_davgroupware_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/nl/LC_MESSAGES/akonadi_etesync_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/nl/LC_MESSAGES/akonadi_ews_resource.mo</Path>
-            <Path fileType="localedata">/usr/share/locale/nl/LC_MESSAGES/akonadi_facebook_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/nl/LC_MESSAGES/akonadi_google_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/nl/LC_MESSAGES/akonadi_ical_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/nl/LC_MESSAGES/akonadi_icaldir_resource.mo</Path>
@@ -1277,7 +1278,6 @@
             <Path fileType="localedata">/usr/share/locale/pl/LC_MESSAGES/akonadi_davgroupware_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/pl/LC_MESSAGES/akonadi_etesync_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/pl/LC_MESSAGES/akonadi_ews_resource.mo</Path>
-            <Path fileType="localedata">/usr/share/locale/pl/LC_MESSAGES/akonadi_facebook_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/pl/LC_MESSAGES/akonadi_google_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/pl/LC_MESSAGES/akonadi_ical_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/pl/LC_MESSAGES/akonadi_icaldir_resource.mo</Path>
@@ -1313,7 +1313,6 @@
             <Path fileType="localedata">/usr/share/locale/pt/LC_MESSAGES/akonadi_davgroupware_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/pt/LC_MESSAGES/akonadi_etesync_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/pt/LC_MESSAGES/akonadi_ews_resource.mo</Path>
-            <Path fileType="localedata">/usr/share/locale/pt/LC_MESSAGES/akonadi_facebook_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/pt/LC_MESSAGES/akonadi_google_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/pt/LC_MESSAGES/akonadi_ical_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/pt/LC_MESSAGES/akonadi_icaldir_resource.mo</Path>
@@ -1349,7 +1348,6 @@
             <Path fileType="localedata">/usr/share/locale/pt_BR/LC_MESSAGES/akonadi_davgroupware_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/pt_BR/LC_MESSAGES/akonadi_etesync_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/pt_BR/LC_MESSAGES/akonadi_ews_resource.mo</Path>
-            <Path fileType="localedata">/usr/share/locale/pt_BR/LC_MESSAGES/akonadi_facebook_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/pt_BR/LC_MESSAGES/akonadi_google_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/pt_BR/LC_MESSAGES/akonadi_ical_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/pt_BR/LC_MESSAGES/akonadi_icaldir_resource.mo</Path>
@@ -1410,7 +1408,6 @@
             <Path fileType="localedata">/usr/share/locale/ru/LC_MESSAGES/akonadi_davgroupware_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ru/LC_MESSAGES/akonadi_etesync_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ru/LC_MESSAGES/akonadi_ews_resource.mo</Path>
-            <Path fileType="localedata">/usr/share/locale/ru/LC_MESSAGES/akonadi_facebook_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ru/LC_MESSAGES/akonadi_google_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ru/LC_MESSAGES/akonadi_ical_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ru/LC_MESSAGES/akonadi_icaldir_resource.mo</Path>
@@ -1451,7 +1448,6 @@
             <Path fileType="localedata">/usr/share/locale/sk/LC_MESSAGES/akonadi_davgroupware_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/sk/LC_MESSAGES/akonadi_etesync_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/sk/LC_MESSAGES/akonadi_ews_resource.mo</Path>
-            <Path fileType="localedata">/usr/share/locale/sk/LC_MESSAGES/akonadi_facebook_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/sk/LC_MESSAGES/akonadi_google_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/sk/LC_MESSAGES/akonadi_ical_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/sk/LC_MESSAGES/akonadi_icaldir_resource.mo</Path>
@@ -1487,7 +1483,6 @@
             <Path fileType="localedata">/usr/share/locale/sl/LC_MESSAGES/akonadi_davgroupware_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/sl/LC_MESSAGES/akonadi_etesync_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/sl/LC_MESSAGES/akonadi_ews_resource.mo</Path>
-            <Path fileType="localedata">/usr/share/locale/sl/LC_MESSAGES/akonadi_facebook_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/sl/LC_MESSAGES/akonadi_google_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/sl/LC_MESSAGES/akonadi_ical_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/sl/LC_MESSAGES/akonadi_icaldir_resource.mo</Path>
@@ -1529,7 +1524,6 @@
             <Path fileType="localedata">/usr/share/locale/sr/LC_MESSAGES/akonadi_birthdays_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/sr/LC_MESSAGES/akonadi_contacts_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/sr/LC_MESSAGES/akonadi_davgroupware_resource.mo</Path>
-            <Path fileType="localedata">/usr/share/locale/sr/LC_MESSAGES/akonadi_facebook_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/sr/LC_MESSAGES/akonadi_google_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/sr/LC_MESSAGES/akonadi_ical_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/sr/LC_MESSAGES/akonadi_icaldir_resource.mo</Path>
@@ -1563,7 +1557,6 @@
             <Path fileType="localedata">/usr/share/locale/sr@ijekavian/LC_MESSAGES/akonadi_birthdays_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/sr@ijekavian/LC_MESSAGES/akonadi_contacts_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/sr@ijekavian/LC_MESSAGES/akonadi_davgroupware_resource.mo</Path>
-            <Path fileType="localedata">/usr/share/locale/sr@ijekavian/LC_MESSAGES/akonadi_facebook_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/sr@ijekavian/LC_MESSAGES/akonadi_google_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/sr@ijekavian/LC_MESSAGES/akonadi_ical_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/sr@ijekavian/LC_MESSAGES/akonadi_icaldir_resource.mo</Path>
@@ -1597,7 +1590,6 @@
             <Path fileType="localedata">/usr/share/locale/sr@ijekavianlatin/LC_MESSAGES/akonadi_birthdays_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/sr@ijekavianlatin/LC_MESSAGES/akonadi_contacts_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/sr@ijekavianlatin/LC_MESSAGES/akonadi_davgroupware_resource.mo</Path>
-            <Path fileType="localedata">/usr/share/locale/sr@ijekavianlatin/LC_MESSAGES/akonadi_facebook_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/sr@ijekavianlatin/LC_MESSAGES/akonadi_google_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/sr@ijekavianlatin/LC_MESSAGES/akonadi_ical_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/sr@ijekavianlatin/LC_MESSAGES/akonadi_icaldir_resource.mo</Path>
@@ -1631,7 +1623,6 @@
             <Path fileType="localedata">/usr/share/locale/sr@latin/LC_MESSAGES/akonadi_birthdays_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/sr@latin/LC_MESSAGES/akonadi_contacts_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/sr@latin/LC_MESSAGES/akonadi_davgroupware_resource.mo</Path>
-            <Path fileType="localedata">/usr/share/locale/sr@latin/LC_MESSAGES/akonadi_facebook_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/sr@latin/LC_MESSAGES/akonadi_google_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/sr@latin/LC_MESSAGES/akonadi_ical_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/sr@latin/LC_MESSAGES/akonadi_icaldir_resource.mo</Path>
@@ -1667,7 +1658,6 @@
             <Path fileType="localedata">/usr/share/locale/sv/LC_MESSAGES/akonadi_davgroupware_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/sv/LC_MESSAGES/akonadi_etesync_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/sv/LC_MESSAGES/akonadi_ews_resource.mo</Path>
-            <Path fileType="localedata">/usr/share/locale/sv/LC_MESSAGES/akonadi_facebook_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/sv/LC_MESSAGES/akonadi_google_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/sv/LC_MESSAGES/akonadi_ical_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/sv/LC_MESSAGES/akonadi_icaldir_resource.mo</Path>
@@ -1710,7 +1700,6 @@
             <Path fileType="localedata">/usr/share/locale/tr/LC_MESSAGES/akonadi_davgroupware_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/tr/LC_MESSAGES/akonadi_etesync_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/tr/LC_MESSAGES/akonadi_ews_resource.mo</Path>
-            <Path fileType="localedata">/usr/share/locale/tr/LC_MESSAGES/akonadi_facebook_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/tr/LC_MESSAGES/akonadi_google_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/tr/LC_MESSAGES/akonadi_ical_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/tr/LC_MESSAGES/akonadi_icaldir_resource.mo</Path>
@@ -1770,7 +1759,6 @@
             <Path fileType="localedata">/usr/share/locale/uk/LC_MESSAGES/akonadi_davgroupware_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/uk/LC_MESSAGES/akonadi_etesync_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/uk/LC_MESSAGES/akonadi_ews_resource.mo</Path>
-            <Path fileType="localedata">/usr/share/locale/uk/LC_MESSAGES/akonadi_facebook_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/uk/LC_MESSAGES/akonadi_google_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/uk/LC_MESSAGES/akonadi_ical_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/uk/LC_MESSAGES/akonadi_icaldir_resource.mo</Path>
@@ -1806,7 +1794,6 @@
             <Path fileType="localedata">/usr/share/locale/zh_CN/LC_MESSAGES/akonadi_davgroupware_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_CN/LC_MESSAGES/akonadi_etesync_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_CN/LC_MESSAGES/akonadi_ews_resource.mo</Path>
-            <Path fileType="localedata">/usr/share/locale/zh_CN/LC_MESSAGES/akonadi_facebook_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_CN/LC_MESSAGES/akonadi_google_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_CN/LC_MESSAGES/akonadi_ical_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_CN/LC_MESSAGES/akonadi_icaldir_resource.mo</Path>
@@ -1842,7 +1829,6 @@
             <Path fileType="localedata">/usr/share/locale/zh_TW/LC_MESSAGES/akonadi_davgroupware_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_TW/LC_MESSAGES/akonadi_etesync_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_TW/LC_MESSAGES/akonadi_ews_resource.mo</Path>
-            <Path fileType="localedata">/usr/share/locale/zh_TW/LC_MESSAGES/akonadi_facebook_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_TW/LC_MESSAGES/akonadi_google_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_TW/LC_MESSAGES/akonadi_ical_resource.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_TW/LC_MESSAGES/akonadi_icaldir_resource.mo</Path>
@@ -1868,12 +1854,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="72">
-            <Date>2023-08-22</Date>
-            <Version>23.04.3</Version>
+        <Update release="77">
+            <Date>2024-02-16</Date>
+            <Version>23.08.5</Version>
             <Comment>Packaging update</Comment>
-            <Name>Joey Riches</Name>
-            <Email>josephriches@gmail.com</Email>
+            <Name>Justin Zobel</Name>
+            <Email>justin@1707.io</Email>
         </Update>
     </History>
 </PISI>

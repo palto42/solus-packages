@@ -1,0 +1,36 @@
+name       : prism-launcher
+version    : '8.2'
+release    : 5
+source     :
+    - https://github.com/PrismLauncher/PrismLauncher/releases/download/8.2/PrismLauncher-8.2.tar.gz : 80bc2f7657d9432c11039799fe85a31c284affa84a41cafb758ac32a96bd10fe
+license    : GPL-3.0-or-later
+homepage   : https://prismlauncher.org/
+component  : games
+summary    : Minecraft launcher with ability to manage multiple instances.
+description: |
+    Minecraft launcher with ability to manage multiple instances.
+builddeps  :
+    - pkgconfig(Qt6Core)
+    - pkgconfig(Qt6Core5Compat)
+    - pkgconfig(libcmark)
+    - pkgconfig(quazip1-qt6)
+    - pkgconfig(scdoc)
+    - extra-cmake-modules
+    - openjdk-17
+rundeps    :
+    - openjdk-17
+clang      : yes
+optimize   : thin-lto
+environment: |
+    export JAVA_HOME=/usr/lib64/openjdk-17
+    export PATH=$JAVA_HOME/bin:$PATH
+setup      : |
+    %cmake_ninja \
+                 -DLauncher_BUILD_PLATFORM="solus" \
+                 -DLauncher_QT_VERSION_MAJOR="6"
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install
+check      : |
+    %ninja_check

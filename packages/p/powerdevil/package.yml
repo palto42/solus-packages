@@ -1,8 +1,8 @@
 name       : powerdevil
-version    : 5.27.7
-release    : 94
+version    : 5.27.10
+release    : 98
 source     :
-    - https://cdn.download.kde.org/stable/plasma/5.27.7/powerdevil-5.27.7.tar.xz : c08084238b8e2225dcaf36226e69476e7ce0d427597708e598720c59dc853894
+    - https://cdn.download.kde.org/stable/plasma/5.27.10/powerdevil-5.27.10.tar.xz : 06c1a3c09880dd2060e3c8026189d8568d8a0f166ea33c2584669f85a04ec8f1
 homepage   : https://www.kde.org/workspaces/plasmadesktop/
 license    : GPL-2.0-or-later
 component  : desktop.kde.core
@@ -11,10 +11,11 @@ description: |
     Manages the power settings of KDE Plasma.
 optimize   : lto
 builddeps  :
+    - pkgconfig(KF5WaylandClient)
+    - pkgconfig(Qt5X11Extras)
     - pkgconfig(ddcutil)
     - pkgconfig(libcap)
     - pkgconfig(libnm)
-    - pkgconfig(Qt5X11Extras)
     - pkgconfig(upower-glib)
     - pkgconfig(xcb-util)
     - bluez-qt-devel
@@ -28,7 +29,6 @@ builddeps  :
     - kio-devel
     - kirigami2-devel
     - knotifyconfig-devel
-    - kwayland-devel
     - libkscreen-devel
     - networkmanager-qt-devel
     - plasma-workspace-devel

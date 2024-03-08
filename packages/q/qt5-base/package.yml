@@ -1,8 +1,8 @@
 name       : qt5-base
-version    : 5.15.10
-release    : 84
+version    : 5.15.12
+release    : 98
 source     :
-    - git|https://invent.kde.org/qt/qt/qtbase.git : 74917690e8cded41b087acfe6c58fcd3674864a4
+    - git|https://invent.kde.org/qt/qt/qtbase.git : a43df98d037ad07cf096ef2f775958ceba743613
 homepage   : https://www.qt.io
 license    :
     - GPL-2.0
@@ -17,44 +17,44 @@ description: |
 builddeps  :
     - pkgconfig(alsa)
     - pkgconfig(gbm)
-    - pkgconfig(gtk+-3.0)
     - pkgconfig(gstreamer-1.0)
     - pkgconfig(gstreamer-plugins-base-1.0)
+    - pkgconfig(gtk+-3.0)
     - pkgconfig(icu-uc)
     - pkgconfig(libinput)
-    - pkgconfig(libturbojpeg)
     - pkgconfig(libpcre2-32)
     - pkgconfig(libproxy-1.0)
     - pkgconfig(libpulse)
+    - pkgconfig(libturbojpeg)
     - pkgconfig(mariadb)
+    - pkgconfig(shared-mime-info)
     - pkgconfig(sm)
     - pkgconfig(sqlite3)
     - pkgconfig(vulkan)
+    - pkgconfig(xcb-cursor)
     - pkgconfig(xcb-icccm)
     - pkgconfig(xcb-image)
     - pkgconfig(xcb-keysyms)
     - pkgconfig(xcb-renderutil)
+    - pkgconfig(xcb-util)
     - pkgconfig(xcomposite)
     - pkgconfig(xcursor)
     - pkgconfig(xext)
     - pkgconfig(xi)
-    - pkgconfig(xcb-cursor)
-    - pkgconfig(xcb-icccm)
-    - pkgconfig(xcb-keysyms)
-    - pkgconfig(xcb-util)
-    - pkgconfig(xcursor)
     - pkgconfig(xkbcommon-x11)
-    - pkgconfig(xrender)
     - pkgconfig(xrandr)
+    - pkgconfig(xrender)
     - pkgconfig(xtst)
     - cups-devel
     - vulkan-headers
 rundeps    :
     - devel :
         - mesalib-devel
+    - shared-mime-info
 patterns   :
     - devel :
         - /usr/bin
+        - /usr/lib64/metatypes/qt5*_metatypes.json
         - /usr/lib64/qt5/mkspecs
     - demos :
         - /usr/lib64/qt5/examples
@@ -62,11 +62,11 @@ replaces   :
     - qt5
     - demos : qt5-demos
     - devel : qt5-devel
-environment: |
-    unset LD_AS_NEEDED
+clang      : yes
 setup      : |
-    %patch -p1 -i $pkgfiles/0001-Support-stateless-config-directories.patch
-    sed -i -e 's|^\(QMAKE_STRIP.*=\).*$|\1|g' mkspecs/common/linux.conf
+    %apply_patches
+    sed -i -e 's/^gcc:ltcg/gcc/' src/corelib/global/global.pri
+
     ./configure -prefix /usr \
                 -libdir %libdir% \
                 -archdatadir %libdir%/qt5 \
@@ -75,18 +75,20 @@ setup      : |
                 -examplesdir %libdir%/qt5/examples \
                 -headerdir /usr/include \
                 -sysconfdir /etc/xdg \
+                -platform linux-clang \
                 -accessibility \
                 -dbus-linked \
-                -DUSE_X11 \
+                -ltcg \
                 -no-pch \
                 -no-rpath \
                 -no-strip \
-                -no-feature-statx \
+                -no-feature-relocatable \
+                -no-mimetype-database \
+                -no-reduce-relocations \
                 -opensource \
                 -openssl-linked \
-                -reduce-relocations \
+                -optimized-qmake \
                 -shared \
-                -sm \
                 -system-freetype \
                 -system-harfbuzz \
                 -system-libjpeg \
@@ -108,7 +110,6 @@ setup      : |
                 -plugin-sql-mysql \
                 -widgets \
                 -no-warnings-are-errors \
-                -no-use-gold-linker \
                 -nomake tests \
                 -release \
                 -confirm-license \
@@ -127,3 +128,6 @@ install    : |
     # We have the dedicated qt5-docs package for that.
     rm -rf $installdir/usr/share/qt5/doc
     rmdir -p $installdir/usr/share/qt5 || :
+
+    # Avoid debug logging unless overridden by user
+    install -Dm00644 $pkgfiles/qtlogging.ini $installdir/usr/share/qt5/qtlogging.ini

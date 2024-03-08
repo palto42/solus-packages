@@ -1,9 +1,10 @@
 name       : cni-plugins
-version    : 1.1.1
-release    : 14
+version    : 1.4.0
+release    : 16
 source     :
-    - https://github.com/containernetworking/plugins/archive/v1.1.1.tar.gz : c86c44877c47f69cd23611e22029ab26b613f620195b76b3ec20f589367a7962
+    - https://github.com/containernetworking/plugins/archive/v1.4.0.tar.gz : 890e00a8ffc71c860e4f09ab4e1c452d85ec18cc4ac8ee3da11bbfc113355f5e
 license    : Apache-2.0
+homepage   : https://www.cni.dev/plugins/current/
 component  : virt
 summary    : Some standard networking plugins, maintained by the CNI (containernetworking) team.
 description: |

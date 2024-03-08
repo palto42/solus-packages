@@ -1,0 +1,33 @@
+name       : kf6-prison
+version    : 6.0.0
+release    : 3
+source     :
+    - https://cdn.download.kde.org/stable/frameworks/6.0/prison-6.0.0.tar.xz : 6ff5fbc6fc38581072ee45904e022d5bf2e7b3b1f49ac9d1d0c6024d7ca3ec5a
+homepage   : https://community.kde.org/Frameworks
+license    :
+    - BSD-3-Clause
+    - MIT
+component  : desktop.library
+summary    : Qt api to produce QRCode barcode
+description: |
+    Prison is a barcode api currently offering a nice Qt api to produce QRCode barcodes and DataMatrix barcodes, and can easily be made support more.
+builddeps  :
+    - pkgconfig(Qt6Designer)
+    - pkgconfig(Qt6Multimedia)
+    - pkgconfig(Qt6Quick)
+    - pkgconfig(libdmtx)
+    - pkgconfig(libqrencode)
+    - extra-cmake-modules
+    # TODO maybe add ZXing
+rundeps    :
+    - devel :
+        - extra-cmake-modules
+        - qt6-base-devel
+clang      : yes
+optimize   : thin-lto
+setup      : |
+    %cmake_kf6
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install

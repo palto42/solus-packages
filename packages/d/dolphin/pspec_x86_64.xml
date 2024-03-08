@@ -3,8 +3,8 @@
         <Name>dolphin</Name>
         <Homepage>https://kde.org/applications/system/org.kde.dolphin</Homepage>
         <Packager>
-            <Name>Joey Riches</Name>
-            <Email>josephriches@gmail.com</Email>
+            <Name>Justin Zobel</Name>
+            <Email>justin@1707.io</Email>
         </Packager>
         <License>GFDL-1.2-or-later</License>
         <License>GPL-2.0-or-later</License>
@@ -12,7 +12,7 @@
         <Summary xml:lang="en">KDE file manager focusing on usability</Summary>
         <Description xml:lang="en">Dolphin is a file manager focusing on usability. Focusing on usability means that features are discoverable and efficient to use.
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>dolphin</Name>
@@ -34,6 +34,7 @@
             <Path fileType="library">/usr/lib64/qt5/plugins/kf5/parts/dolphinpart.so</Path>
             <Path fileType="data">/usr/share/applications/org.kde.dolphin.desktop</Path>
             <Path fileType="data">/usr/share/config.kcfg/dolphin_compactmodesettings.kcfg</Path>
+            <Path fileType="data">/usr/share/config.kcfg/dolphin_contentdisplaysettings.kcfg</Path>
             <Path fileType="data">/usr/share/config.kcfg/dolphin_contextmenusettings.kcfg</Path>
             <Path fileType="data">/usr/share/config.kcfg/dolphin_detailsmodesettings.kcfg</Path>
             <Path fileType="data">/usr/share/config.kcfg/dolphin_directoryviewpropertysettings.kcfg</Path>
@@ -198,7 +199,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="79">dolphin</Dependency>
+            <Dependency release="84">dolphin</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/Dolphin/KVersionControlPlugin</Path>
@@ -214,12 +215,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="79">
-            <Date>2023-08-22</Date>
-            <Version>23.04.3</Version>
+        <Update release="84">
+            <Date>2024-02-16</Date>
+            <Version>23.08.5</Version>
             <Comment>Packaging update</Comment>
-            <Name>Joey Riches</Name>
-            <Email>josephriches@gmail.com</Email>
+            <Name>Justin Zobel</Name>
+            <Email>justin@1707.io</Email>
         </Update>
     </History>
 </PISI>

@@ -1,8 +1,9 @@
 name       : virtualbox
-version    : 7.0.10
-release    : 278
+version    : 7.0.14
+release    : 306
 source     :
-    - https://download.virtualbox.org/virtualbox/7.0.10/VirtualBox-7.0.10.tar.bz2 : 0b1e6d8b7f87d017c7fae37f80586acff04f799ffc1d51e995954d6415dee371
+    - https://download.virtualbox.org/virtualbox/7.0.14/VirtualBox-7.0.14.tar.bz2 : 45860d834804a24a163c1bb264a6b1cb802a5bc7ce7e01128072f8d6a4617ca9
+    - https://download.virtualbox.org/virtualbox/7.0.14/VBoxGuestAdditions_7.0.14.iso : 0efbcb9bf4722cb19292ae00eba29587432e918d3b1f70905deb70f7cf78e8ce
 license    : GPL-2.0-only
 homepage   : https://www.virtualbox.org
 component  :
@@ -11,6 +12,8 @@ component  :
     - current : virt
     - guest : virt
     - guest-common : virt
+    - guest-current : virt
+    - guest-additions-iso : virt
 summary    :
     - VirtualBox host modules for the linux-lts kernel
     - common : Common components for VirtualBox host packages
@@ -18,6 +21,8 @@ summary    :
     - devel : Development components for VirtualBox
     - guest : VirtualBox guest additions for the linux-lts kernel
     - guest-common : Common components for the VirtualBox guest packages
+    - guest-current : VirtualBox guest additions for the linux-current kernel
+    - guest-additions-iso : The official VirtualBox Guest Additions ISO image
 description: |
     VirtualBox is a free powerful open source solution for running other x86 and x86_64 operating systems virtually on your computer.
 
@@ -29,10 +34,11 @@ builddeps  :
     - pkgconfig(alsa)
     - pkgconfig(devmapper)
     - pkgconfig(glu)
+    - pkgconfig(libIDL-2.0)
     - pkgconfig(libcap)
     - pkgconfig(libcurl)
     - pkgconfig(libelf)
-    - pkgconfig(libIDL-2.0)
+    - pkgconfig(liblzma)
     - pkgconfig(libpng)
     - pkgconfig(libpulse)
     - pkgconfig(libtpms)
@@ -63,8 +69,6 @@ permanent  :
     - /lib/modules
 autodep    : no
 rundeps    :
-    - linux-lts
-    - virtualbox-common
     - common :
         - libtpms
         - libxcursor
@@ -88,6 +92,11 @@ rundeps    :
         - libxmu
         - libxrandr
         - pam
+    - guest-current :
+        - linux-current
+        - virtualbox-guest-common
+    - linux-lts
+    - virtualbox-common
 patterns   :
     - common : /usr
     - devel :
@@ -96,7 +105,8 @@ patterns   :
     - current : /lib/modules/*.current/extra
     - guest :
         - /lib/modules/*.lts/misc
-        - /sbin
+    - guest-current :
+        - /lib/modules/*.current/misc
     - guest-common :
         - /usr/sbin
         - /usr/bin/VBoxClient
@@ -110,12 +120,14 @@ patterns   :
         - /usr/lib64/systemd/system/vboxservice.service
         - /usr/lib64/systemd/system/multi-user.target.wants/vboxservice.service
         - /usr/share/xdg
+    - guest-additions-iso :
+        - /usr/share/virtualbox/VBoxGuestAdditions.iso
 setup      : |
     # Apply patches before we go off changing the tree
     %apply_patches
 
     # Ensure we don't ever use bundled libraries
-    rm -rf src/libs/{libpng-*,libxml2-*,libxslt-*,zlib-*,boost-*}
+    rm -rvf src/libs/{libpng-*,libxml2-*,libxslt-*,zlib-*,boost-*}
 
     cp $pkgfiles/LocalConfig.kmk .
     echo "VBOX_GCC_OPT=$CXXFLAGS" >> LocalConfig.kmk
@@ -139,10 +151,12 @@ build      : |
 
     ##### guest modules #####
     cd additions
-    cp -a src "%kernel_version_lts%"
-    pushd "%kernel_version_lts%"
-        %make all KERN_VER=%kernel_version_lts%
-    popd
+    for kern in "%kernel_version_lts%" "%kernel_version_current%"; do
+        cp -a src ${kern}
+        pushd  ${kern}
+            %make all KERN_VER=${kern}
+        popd
+    done
 install    : |
     ##### Host #####
     cd out/linux.amd64/release/bin
@@ -215,7 +229,7 @@ install    : |
 
     ##### Guest #####
     cd additions
-    install -Dm00755 mount.vboxsf -t $installdir/sbin
+    install -Dm00755 mount.vboxsf -t $installdir/usr/sbin
     install -Dm00755 VBoxService -t $installdir/usr/sbin
     install -m00755 VBoxClient VBoxControl -t $installdir/usr/bin
     install -Dm00755 $workdir/src/VBox/Additions/x11/Installer/98vboxadd-xclient $installdir/usr/bin/VBoxClient-all
@@ -223,6 +237,12 @@ install    : |
     install -Dm00644 $workdir/src/VBox/Additions/x11/Installer/vboxclient.desktop $installdir/usr/share/xdg/autostart/vboxclient.desktop
 
     install -Dm00755 pam_vbox.so -t $installdir/%libdir%/security
+
+    # current kernel modules
+    pushd %kernel_version_current%
+        install -dm00755 $installdir/lib/modules/%kernel_version_current%/misc
+        install -m00644 *.ko $installdir/lib/modules/%kernel_version_current%/misc
+    popd
 
     # lts kernel modules
     pushd %kernel_version_lts%
@@ -239,3 +259,6 @@ install    : |
 
     # Compress modules with zstd
     find "$installdir" -name '*.ko' -exec strip --strip-debug {} \; -exec zstd {} \; -exec rm -v {} \;
+
+    # Install Guest Additons ISO
+    install -Dm00644 $sources/VBoxGuestAdditions_*.iso $installdir/usr/share/virtualbox/VBoxGuestAdditions.iso

@@ -1,8 +1,8 @@
 name       : kiconthemes
-version    : 5.109.0
-release    : 71
+version    : 5.115.0
+release    : 75
 source     :
-    - https://cdn.download.kde.org/stable/frameworks/5.109/kiconthemes-5.109.0.tar.xz : d319fbb3dbe8e08022690683b7fe27359dd2b036ea52e10f767a63354f68e66c
+    - https://cdn.download.kde.org/stable/frameworks/5.115/kiconthemes-5.115.0.tar.xz : 6925134bf76bb8bf6b3dabada008ded8f60fa196aa7a00c0c720c29008719d2f
 homepage   : https://community.kde.org/Frameworks
 license    :
     - GPL-2.0-only
@@ -16,8 +16,8 @@ description: |
 optimize   : lto
 builddeps  :
     - pkgconfig(Qt5Svg)
-    - kconfig-devel
     - karchive-devel
+    - kconfig-devel
     - kconfigwidgets-devel
     - ki18n-devel
     - kitemviews-devel

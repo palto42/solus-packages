@@ -1,0 +1,4 @@
+libQt6TextToSpeech.so.6
+libqtexttospeech_mock.so
+libqtexttospeech_speechd.so
+libtexttospeechqmlplugin.so

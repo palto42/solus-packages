@@ -1,8 +1,8 @@
 name       : libvdpau
-version    : '1.4'
-release    : 17
+version    : '1.5'
+release    : 19
 source     :
-    - https://gitlab.freedesktop.org/vdpau/libvdpau/-/archive/1.4/libvdpau-1.4.tar.bz2 : 4258824c5a4555ef31de0a7d82b3caf19e75a16a13949f1edafc5f6fb2d33f30
+    - https://gitlab.freedesktop.org/vdpau/libvdpau/-/archive/1.5/libvdpau-1.5.tar.bz2 : a5d50a42b8c288febc07151ab643ac8de06a18446965c7241f89b4e810821913
 homepage   : http://people.freedesktop.org/~aplattner/vdpau
 license    : MIT
 component  : xorg.display
@@ -15,10 +15,10 @@ builddeps  :
     - pkgconfig32(xext)
     - pkgconfig(xproto)
 setup      : |
-    %patch -p1 < $pkgfiles/0001-Set-default-configuration-in-absence-of-config-file.patch
+    %patch -p1 -i $pkgfiles/0001-Set-default-configuration-in-absence-of-config-file.patch
     %meson_configure
 build      : |
     %ninja_build
 install    : |
     %ninja_install
-    rm -fr $installdir/etc/
+    rm -rvf $installdir/etc/

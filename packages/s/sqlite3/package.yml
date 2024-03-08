@@ -1,12 +1,13 @@
 name       : sqlite3
-version    : 3.43.0
-release    : 46
+version    : 3.45.1
+release    : 52
 source     :
-    - https://www.sqlite.org/2023/sqlite-autoconf-3430000.tar.gz : 49008dbf3afc04d4edc8ecfc34e4ead196973034293c997adad2f63f01762ae1
+    - https://www.sqlite.org/2024/sqlite-autoconf-3450100.tar.gz : cd9c27841b7a5932c9897651e20b86c701dd740556989b01ca596fcfa3d49a0a
 license    : Public-Domain
 component  : system.base
 optimize   : speed
 emul32     : yes
+homepage   : https://www.sqlite.org
 summary    : Self contained SQL package
 description: |
     The SQLite package is a software library that implements a self-contained, serverless, zero-configuration, transactional SQL database engine.

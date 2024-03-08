@@ -1,8 +1,8 @@
 name       : breeze-gtk-theme
-version    : 5.27.7
-release    : 93
+version    : 5.27.10
+release    : 95
 source     :
-    - https://cdn.download.kde.org/stable/plasma/5.27.7/breeze-gtk-5.27.7.tar.xz : 293294ed0b51c07496fe8c2ede841eb6e2ef41926725e11658c7208543d958e8
+    - https://cdn.download.kde.org/stable/plasma/5.27.10/breeze-gtk-5.27.10.tar.xz : 1da3f98cce2761bb2c9c72d0156b93cf7bf50f08d59fd64bfeb06149a87069b6
 homepage   : https://www.kde.org/workspaces/plasmadesktop/
 license    :
     - BSD-3-Clause

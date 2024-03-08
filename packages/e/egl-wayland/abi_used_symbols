@@ -7,6 +7,7 @@ libc.so.6:bind
 libc.so.6:calloc
 libc.so.6:close
 libc.so.6:connect
+libc.so.6:dlsym
 libc.so.6:fcntl64
 libc.so.6:free
 libc.so.6:getenv
@@ -48,6 +49,10 @@ libc.so.6:strstr
 libc.so.6:strtol
 libc.so.6:usleep
 libc.so.6:write
+libdrm.so.2:drmFreeDevice
+libdrm.so.2:drmFreeVersion
+libdrm.so.2:drmGetDevice
+libdrm.so.2:drmGetVersion
 libwayland-client.so.0:wl_array_add
 libwayland-client.so.0:wl_array_init
 libwayland-client.so.0:wl_array_release
@@ -80,11 +85,12 @@ libwayland-client.so.0:wl_proxy_set_queue
 libwayland-client.so.0:wl_proxy_wrapper_destroy
 libwayland-client.so.0:wl_registry_interface
 libwayland-client.so.0:wl_surface_interface
-libwayland-server.so.0:wl_array_release
+libwayland-server.so.0:wl_array_init
 libwayland-server.so.0:wl_client_post_no_memory
 libwayland-server.so.0:wl_global_create
 libwayland-server.so.0:wl_global_destroy
-libwayland-server.so.0:wl_output_interface
+libwayland-server.so.0:wl_list_init
+libwayland-server.so.0:wl_list_insert
 libwayland-server.so.0:wl_resource_create
 libwayland-server.so.0:wl_resource_destroy
 libwayland-server.so.0:wl_resource_get_user_data
@@ -93,3 +99,4 @@ libwayland-server.so.0:wl_resource_post_error
 libwayland-server.so.0:wl_resource_post_event
 libwayland-server.so.0:wl_resource_post_no_memory
 libwayland-server.so.0:wl_resource_set_implementation
+libwayland-server.so.0:wl_surface_interface

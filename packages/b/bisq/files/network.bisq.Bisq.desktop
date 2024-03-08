@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Bisq
+GenericName=P2P Bitcoin Exchange
+Comment=Bisq is an open-source desktop application that allows you to buy and sell bitcoins in exchange for national currencies, or alternative crypto currencies.
+Exec=bisq-desktop
+Icon=network.bisq.Bisq
+Terminal=false
+StartupWMClass=bisq.desktop.app.BisqApp
+Type=Application
+Categories=Finance;Utility:Java;

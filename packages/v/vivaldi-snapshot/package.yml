@@ -1,8 +1,8 @@
 name       : vivaldi-snapshot
-version    : 6.3.3134.3
-release    : 389
+version    : 6.6.3271.44
+release    : 413
 source     :
-    - https://downloads.vivaldi.com/snapshot/vivaldi-snapshot_6.3.3134.3-1_amd64.deb : 55a5da1c72b8a955b9e96c85c7424afaadc41e921ff7375edbcad8fc755c297f
+    - https://downloads.vivaldi.com/snapshot/vivaldi-snapshot_6.6.3271.44-1_amd64.deb : 5f6700bbe16ce6a3d7e0d22c4d56de28cc94f1501c01a78fde4bd70c7cf5f91b
 license    : Distributable
 homepage   : https://vivaldi.com
 component  : network.web.browser

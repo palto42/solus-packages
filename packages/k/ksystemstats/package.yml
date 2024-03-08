@@ -1,8 +1,8 @@
 name       : ksystemstats
-version    : 5.27.7
-release    : 24
+version    : 5.27.10
+release    : 26
 source     :
-    - https://cdn.download.kde.org/stable/plasma/5.27.7/ksystemstats-5.27.7.tar.xz : 7c3f8998e6f5abd1adfd22fe6272b9f178bb4db716a3d8dfc162f46e4c59a5bb
+    - https://cdn.download.kde.org/stable/plasma/5.27.10/ksystemstats-5.27.10.tar.xz : 5a5eda2ded432b380882ede9fbe9a30b090cfbbe6c84ce9274dd795eb01fe238
 license    :
     - GPL-2.0-only
     - GPL-2.0-or-later

@@ -1,8 +1,9 @@
 name       : lsp-plugins
-version    : 1.2.10
-release    : 8
+version    : 1.2.14
+release    : 11
 source     :
-    - https://github.com/sadko4u/lsp-plugins/releases/download/1.2.10/lsp-plugins-src-1.2.10.tar.gz : d987fee13606585fc0308d6436f54ec7d83a092228799298eb7a82ff324d8a57
+    - https://github.com/sadko4u/lsp-plugins/releases/download/1.2.14/lsp-plugins-src-1.2.14.tar.gz : 1a3359ee8b8a82971bd7e9eeabe43f58ce6b4a4793d85fb16f97b100e4edee9a
+homepage   : https://lsp-plug.in
 license    : LGPL-3.0-only
 component  : multimedia.audio
 summary    : Linux Studio Plugins Project

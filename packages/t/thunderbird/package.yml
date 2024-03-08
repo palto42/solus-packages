@@ -1,9 +1,9 @@
 name       : thunderbird
-version    : 115.2.3
-release    : 165
+version    : 115.8.1
+release    : 185
 source     :
-    - https://ftp.mozilla.org/pub/thunderbird/releases/115.2.3/source/thunderbird-115.2.3.source.tar.xz : a158da0283b7f8de8d20cb2d71ad0c8abdf407507ba2b59b8a397f616955cdff
-    - https://sources.getsol.us/mozilla/thunderbird/thunderbird-115.2.3-langpacks.tar.xz : ee5cf21d77b3ff6b60b2d7762d2ab3a0775559268f66976f7d39495af64808c2
+    - https://ftp.mozilla.org/pub/thunderbird/releases/115.8.1/source/thunderbird-115.8.1.source.tar.xz : 80d75ae91b7cbd60bcbaf134fc3f11290bd542a8a7ff965eaa4a0d95bb0d4d51
+    - https://sources.getsol.us/mozilla/thunderbird/thunderbird-115.8.1-langpacks.tar.zst : a8671e3fc477e3e7fd981b196ba1a71b70c84f1100d7cd46ec84ac1208255866
 license    :
     - GPL-2.0-or-later
     - LGPL-2.1-or-later
@@ -17,18 +17,22 @@ description: |
     Thunderbird is a free email application that’s easy to set up and customize - and it’s loaded with great features!
 builddeps  :
     - pkgconfig(alsa)
-    - at-spi2-devel
+    - pkgconfig(botan-2)
     - pkgconfig(dbus-glib-1)
     - pkgconfig(gconf-2.0)
     - pkgconfig(gstreamer-plugins-base-1.0)
     - pkgconfig(gtk+-2.0)
     - pkgconfig(gtk+-3.0)
+    - pkgconfig(json-c)
     - pkgconfig(libevent)
     - pkgconfig(libnotify)
     - pkgconfig(libpulse)
     - pkgconfig(libstartup-notification-1.0)
+    - pkgconfig(libwebpdemux)
     - pkgconfig(nss)
+    - pkgconfig(vpx)
     - pkgconfig(xt)
+    - at-spi2-devel
     - autoconf213
     - cargo
     - cbindgen
@@ -44,8 +48,9 @@ setup      : |
     cp $pkgfiles/config mozconfig
     sed -e 's|##JOBCOUNT##|%JOBS%|' -e 's|##LIBDIR##|%libdir%|' -e 's|##WORKDIR##|%workdir%|' -i mozconfig
 
-    %patch -p1 < $pkgfiles/thunderbird-enable-addons.patch
-    %patch -p1 < $pkgfiles/0001-Hardcode-Solus-.desktop-filename.patch
+    %patch -p1 -i $pkgfiles/0001-Hardcode-Solus-.desktop-filename.patch
+    %patch -p1 -i $pkgfiles/icu74.patch
+
     ./mach configure
     ./mach busted
 build      : |
@@ -53,25 +58,26 @@ build      : |
     ./mach buildsymbols
 install    : |
     # Install locales first
-    langpackdir="$installdir/%libdir%/thunderbird/extensions"
+    langpackdir="$installdir/%libdir%/thunderbird/langpacks"
     install -dm00755 "${langpackdir}"
 
-    mkdir lang_pack && pushd lang_pack
-    tar xf "${sources}/thunderbird-${version}-langpacks.tar.xz"
+    tar xf "${sources}/thunderbird-${version}-langpacks.tar.zst"
 
-    for i in *.xpi; do
+    for i in thunderbird_langpacks/*.xpi; do
         lname="$(basename ${i})"
-        install -m00644 "${lname}" "${langpackdir}/${lname}"
+        install -m00644 "thunderbird_langpacks/${lname}" "${langpackdir}/${lname}"
     done
-    popd
 
     DESTDIR=$installdir ./mach install
 
+    # NOTE: For appstream-builder, it can't handle symlinks.
+    #       Don't remove me without running `appstream-builder --packages-dir=. --include-failed -v` first and checking example-failed.xml.gz
     install -Dm00644 $installdir/%libdir%/thunderbird/chrome/icons/default/default256.png $installdir/usr/share/pixmaps/thunderbird.png
     for i in 16 22 24 32 48 128 256; do
         install -dm00755 $installdir/usr/share/icons/hicolor/${i}x${i}/apps
         ln -s %libdir%/thunderbird/chrome/icons/default/default${i}.png $installdir/usr/share/icons/hicolor/${i}x${i}/apps/thunderbird.png
     done
+    install -Dm00644 $pkgfiles/thunderbird-symbolic.svg $installdir/usr/share/icons/hicolor/symbolic/apps/thunderbird-symbolic.svg
     install -Dm00644 $pkgfiles/thunderbird.desktop $installdir/usr/share/applications/net.thunderbird.Thunderbird.desktop
 
     # set up defaults and install appdata.xml
@@ -80,3 +86,8 @@ install    : |
 
     # Don't specify logo manually in the appdata, find it naturally through the desktop file. Fixes appstream generation
     sed -i 's|<icon type="remote" width="256" height="256">https://www.thunderbird.net/media/img/thunderbird/thunderbird-256.png</icon>||g' $installdir/usr/share/metainfo/net.thunderbird.Thunderbird.appdata.xml
+
+    # Use a wrapper script to launch in Wayland
+    install build/unix/run-mozilla.sh -t $installdir/%libdir%/thunderbird/
+    rm -v $installdir/usr/bin/thunderbird
+    install -D -m 00755 $pkgfiles/thunderbird-wrapper.sh $installdir/usr/bin/thunderbird

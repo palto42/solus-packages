@@ -1,8 +1,9 @@
 name       : eog
-version    : '44.3'
-release    : 54
+version    : '45.2'
+release    : 57
 source     :
-    - https://download.gnome.org/sources/eog/44/eog-44.3.tar.xz : d6b2d70f4b432ff8cf494c8f9029b2621d08e7817938317d64063ae6c4da9d8c
+    - https://download.gnome.org/sources/eog/45/eog-45.2.tar.xz : d94cc39d82c80cee7281b82ace42c8225976ad5d0c3ef995c7e030f6bab2219c
+homepage   : https://wiki.gnome.org/Apps/EyeOfGnome
 license    : GPL-2.0-only
 component  : multimedia.graphics
 summary    : The Eye of GNOME image viewer is the official image viewer for the GNOME Desktop environment. With it, you can view single image files, as well as large image collections.
@@ -22,6 +23,8 @@ builddeps  :
     - pkgconfig(shared-mime-info)
     - libjpeg-turbo-devel
     - itstool
+rundeps    :
+    - webp-pixbuf-loader
 setup      : |
     %meson_configure
 build      : |

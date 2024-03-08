@@ -1,8 +1,9 @@
 name       : VisualBoyAdvance-M
-version    : 2.1.6
-release    : 26
+version    : 2.1.9
+release    : 31
 source     :
-    - https://github.com/visualboyadvance-m/visualboyadvance-m/archive/refs/tags/v2.1.6.tar.gz : 056d4482bdd297445a63d496079e0b0cf381951cd5ef8ce308750c7738946fca
+    - https://github.com/visualboyadvance-m/visualboyadvance-m/archive/refs/tags/v2.1.9.tar.gz : 70acde8013705ed6e4e615654c24cee64cd0dd98acebd2e78a0d39e635b11ea4
+homepage   : https://github.com/visualboyadvance-m/visualboyadvance-m/
 license    : GPL-2.0-or-later
 component  : games.emulator
 summary    : Nintendo Game Boy Advance Emulator
@@ -20,8 +21,13 @@ builddeps  :
     - pkgconfig(sfml-network)
     - wxwidgets-devel
 setup      : |
-    %cmake . -DCMAKE_BUILD_TYPE=Release -DENABLE_FFMPEG=ON -DENABLE_LINK=TRUE -DCMAKE_SKIP_RPATH=TRUE -DENABLE_LTO=OFF
+    %cmake_ninja \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DENABLE_FFMPEG=ON \
+        -DENABLE_LINK=TRUE \
+        -DCMAKE_SKIP_RPATH=TRUE \
+        -DENABLE_LTO=OFF
 build      : |
-    %make
+    %ninja_build
 install    : |
-    %make_install
+    %ninja_install

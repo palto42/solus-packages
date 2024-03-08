@@ -12,7 +12,7 @@
         <Summary xml:lang="en">Mozilla&apos;s JavaScript engine written in C/C++. This is a compatibility package for 0 A.D.</Summary>
         <Description xml:lang="en">JS is Mozilla&apos;s JavaScript engine written in C/C++. This is a compatibility package for 0 A.D.
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>mozjs-78</Name>
@@ -33,7 +33,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="3">mozjs-78</Dependency>
+            <Dependency release="5">mozjs-78</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/mozjs-78/BaseProfiler.h</Path>
@@ -282,8 +282,8 @@
         </Files>
     </Package>
     <History>
-        <Update release="3">
-            <Date>2022-12-28</Date>
+        <Update release="5">
+            <Date>2024-02-07</Date>
             <Version>78.6.1</Version>
             <Comment>Packaging update</Comment>
             <Name>Joey Riches</Name>

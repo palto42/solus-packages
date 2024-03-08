@@ -1,8 +1,8 @@
 name       : akregator
-version    : 23.04.3
-release    : 66
+version    : 23.08.5
+release    : 70
 source     :
-    - https://cdn.download.kde.org/stable/release-service/23.04.3/src/akregator-23.04.3.tar.xz : 899701bacf2c6c5db95d908618725d0e4787cc8ac8dd605e89e8c63f0a31213d
+    - https://cdn.download.kde.org/stable/release-service/23.08.5/src/akregator-23.08.5.tar.xz : 52371f872a56d4fb98b54f80ee5659c59ba6ab6ca8ffa5e8fbd54c49f868028b
 homepage   : https://kde.org/applications/internet/org.kde.akregator
 license    :
     - GFDL-1.2-or-later
@@ -24,9 +24,9 @@ builddeps  :
     - knotifyconfig-devel
     - kontactinterface-devel
     - kpimtextedit-devel
+    - ktextaddons-devel
     - ktexteditor-devel
     - kuserfeedback-devel
-    - ktextaddons-devel
     - libkdepim-devel
     - libkleo-devel
     - mailimporter-devel

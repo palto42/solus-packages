@@ -1,8 +1,8 @@
 name       : kgamma5
-version    : 5.27.7
-release    : 87
+version    : 5.27.10
+release    : 89
 source     :
-    - https://cdn.download.kde.org/stable/plasma/5.27.7/kgamma5-5.27.7.tar.xz : d45e88d4ee1c6cffa0b5ef085c4a7d028ade37e2daa72253e74941d9bcf5ae6c
+    - https://cdn.download.kde.org/stable/plasma/5.27.10/kgamma5-5.27.10.tar.xz : dd81bb62a35ce4fce4482ed498e4072a50f9ec1190ba2a9246139ba1e24ef570
 homepage   : https://www.kde.org/workspaces/plasmadesktop/
 license    : GPL-2.0-or-later
 component  : desktop.kde.core

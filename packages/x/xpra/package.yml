@@ -1,8 +1,8 @@
 name       : xpra
-version    : 5.0.1
-release    : 6
+version    : 5.0.6
+release    : 10
 source     :
-    - https://github.com/Xpra-org/xpra/archive/refs/tags/v5.0.1.tar.gz : bf7b112e6518a000ac974149f6e71f8f4eb7918f87b049f0c7a59ba3841752de
+    - https://github.com/Xpra-org/xpra/archive/refs/tags/v5.0.6.tar.gz : b4246ddbe7e43d0035e4d9274d70b96cfd56b0cf2d3e71bd4ec0f307f56b6d8e
 homepage   : https://xpra.org
 license    : GPL-2.0-or-later
 component  : desktop
@@ -11,8 +11,8 @@ description: |
     Xpra is a multi platform persistent remote display server and client for forwarding applications and desktop screens. Also known as 'screen for X11'.
 builddeps  :
     - pkgconfig(gtk+-3.0)
-    - pkgconfig(liblz4)
     - pkgconfig(libavutil)
+    - pkgconfig(liblz4)
     - pkgconfig(py3cairo)
     - pkgconfig(pygobject-3.0)
     - pkgconfig(xkbfile)

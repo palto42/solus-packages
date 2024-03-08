@@ -11,7 +11,7 @@
         <Summary xml:lang="en">Broadcoms IEEE 802.11a/b/g/n hybrid Linux device driver</Summary>
         <Description xml:lang="en">Broadcoms IEEE 802.11a/b/g/n hybrid Linux device driver
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>broadcom-sta</Name>
@@ -20,10 +20,11 @@
 </Description>
         <PartOf>kernel.drivers</PartOf>
         <RuntimeDependencies>
-            <Dependency releaseFrom="367">broadcom-sta-common</Dependency>
+            <Dependency releaseFrom="392">broadcom-sta-common</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="data">/lib/modules/5.15.131-216.lts/kernel/drivers/net/wireless/wl.ko</Path>
+            <Path fileType="data">/lib/modules/6.6.20-236.lts/kernel/drivers/net/wireless/wl.ko.zst</Path>
+            <Path fileType="data">/usr/share/metainfo/broadcom-sta-lts.metainfo.xml</Path>
         </Files>
     </Package>
     <Package>
@@ -43,10 +44,11 @@
 </Description>
         <PartOf>kernel.drivers</PartOf>
         <RuntimeDependencies>
-            <Dependency releaseFrom="367">broadcom-sta-common</Dependency>
+            <Dependency releaseFrom="392">broadcom-sta-common</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="data">/lib/modules/6.5.3-256.current/kernel/drivers/net/wireless/wl.ko</Path>
+            <Path fileType="data">/lib/modules/6.6.20-279.current/kernel/drivers/net/wireless/wl.ko.zst</Path>
+            <Path fileType="data">/usr/share/metainfo/broadcom-sta-current.metainfo.xml</Path>
         </Files>
     </Package>
     <Package>
@@ -60,8 +62,8 @@
         </Files>
     </Package>
     <History>
-        <Update release="367">
-            <Date>2023-09-16</Date>
+        <Update release="392">
+            <Date>2024-03-05</Date>
             <Version>6.30.223.271</Version>
             <Comment>Packaging update</Comment>
             <Name>Reilly Brogan</Name>

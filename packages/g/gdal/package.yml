@@ -1,8 +1,8 @@
 name       : gdal
-version    : 3.4.2
-release    : 33
+version    : 3.8.3
+release    : 39
 source     :
-    - https://github.com/OSGeo/gdal/releases/download/v3.4.2/gdal-3.4.2.tar.gz : 7edef6de47c67da806b74eb8d3a20550933392a295c707682ea21b72123e34ce
+    - https://github.com/OSGeo/gdal/releases/download/v3.8.3/gdal-3.8.3.tar.gz : f7a30387a8239e9da26200f787a02136df2ee6473e86b36d05ad682761a049ea
 homepage   : https://www.gdal.org/
 license    : MIT
 component  : programming
@@ -18,6 +18,7 @@ builddeps  :
     - pkgconfig(json-c)
     - pkgconfig(libcurl)
     - pkgconfig(libheif)
+    - pkgconfig(libjxl)
     - pkgconfig(liblzma)
     - pkgconfig(libmariadb)
     - pkgconfig(libopenjp2)
@@ -42,27 +43,8 @@ builddeps  :
 rundeps    :
     - numpy
 setup      : |
-    %reconfigure \
-        --with-cpp14 \
-        --with-bash-completion=/usr/share/bash-completion/completions \
-        --with-liblzma \
-        --with-mysql \
-        --with-poppler \
-        --with-python3 \
-        --with-qhull \
-        --with-spatialite \
-        --with-zstd
+    %cmake_ninja
 build      : |
-    %make
-
-    pushd swig/python
-        python3 setup.py build
-    popd
+    %ninja_build
 install    : |
-    # do it first so executables are Python 2
-    pushd swig/python
-        python3 setup.py install --skip-build --root="%installroot%"
-    popd
-
-    %make_install
-    rm -f $installdir/usr/lib*/*.a
+    %ninja_install

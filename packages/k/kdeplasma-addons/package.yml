@@ -1,8 +1,8 @@
 name       : kdeplasma-addons
-version    : 5.27.7
-release    : 92
+version    : 5.27.10
+release    : 96
 source     :
-    - https://cdn.download.kde.org/stable/plasma/5.27.7/kdeplasma-addons-5.27.7.tar.xz : 51c73d8872fce7f3bc54a8fbf480a40c0178d63f703fe696721d046f3a25ef50
+    - https://cdn.download.kde.org/stable/plasma/5.27.10/kdeplasma-addons-5.27.10.tar.xz : 9e64ef3dd88aa355f49f8d2d11be3ef158431ceda6a6fe570a1288c3f50f3e8d
 homepage   : https://www.kde.org/workspaces/plasmadesktop/
 license    :
     - GPL-2.0-or-later

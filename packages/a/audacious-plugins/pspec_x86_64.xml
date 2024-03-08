@@ -3,15 +3,15 @@
         <Name>audacious-plugins</Name>
         <Homepage>https://audacious-media-player.org/</Homepage>
         <Packager>
-            <Name>Algent Albrahimi</Name>
-            <Email>algent@protonmail.com</Email>
+            <Name>Reilly Brogan</Name>
+            <Email>solus@reillybrogan.com</Email>
         </Packager>
         <License>GPL-3.0-or-later</License>
         <PartOf>multimedia.audio</PartOf>
         <Summary xml:lang="en">Plugins for Audacious music player</Summary>
         <Description xml:lang="en">Plugins for Audacious music player.
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>audacious-plugins</Name>
@@ -267,12 +267,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="51">
-            <Date>2023-08-27</Date>
+        <Update release="53">
+            <Date>2024-01-16</Date>
             <Version>4.3.1</Version>
             <Comment>Packaging update</Comment>
-            <Name>Algent Albrahimi</Name>
-            <Email>algent@protonmail.com</Email>
+            <Name>Reilly Brogan</Name>
+            <Email>solus@reillybrogan.com</Email>
         </Update>
     </History>
 </PISI>

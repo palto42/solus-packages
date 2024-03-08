@@ -3,15 +3,15 @@
         <Name>ktnef</Name>
         <Homepage>https://kde.org/</Homepage>
         <Packager>
-            <Name>Joey Riches</Name>
-            <Email>josephriches@gmail.com</Email>
+            <Name>Justin Zobel</Name>
+            <Email>justin@1707.io</Email>
         </Packager>
         <License>LGPL-2.1-or-later</License>
         <PartOf>programming.library</PartOf>
         <Summary xml:lang="en">API for handling TNEF data</Summary>
         <Description xml:lang="en">API for handling TNEF data.
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>ktnef</Name>
@@ -21,8 +21,7 @@
         <PartOf>programming.library</PartOf>
         <Files>
             <Path fileType="library">/usr/lib64/libKPim5Tnef.so.5</Path>
-            <Path fileType="library">/usr/lib64/libKPim5Tnef.so.5.23.3</Path>
-            <Path fileType="library">/usr/lib64/qt5/mkspecs/modules/qt_KTNef.pri</Path>
+            <Path fileType="library">/usr/lib64/libKPim5Tnef.so.5.24.5</Path>
             <Path fileType="localedata">/usr/share/locale/ar/LC_MESSAGES/libktnef5.mo</Path>
             <Path fileType="localedata">/usr/share/locale/be/LC_MESSAGES/libktnef5.mo</Path>
             <Path fileType="localedata">/usr/share/locale/bs/LC_MESSAGES/libktnef5.mo</Path>
@@ -36,6 +35,7 @@
             <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/libktnef5.mo</Path>
             <Path fileType="localedata">/usr/share/locale/es/LC_MESSAGES/libktnef5.mo</Path>
             <Path fileType="localedata">/usr/share/locale/et/LC_MESSAGES/libktnef5.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/eu/LC_MESSAGES/libktnef5.mo</Path>
             <Path fileType="localedata">/usr/share/locale/fi/LC_MESSAGES/libktnef5.mo</Path>
             <Path fileType="localedata">/usr/share/locale/fr/LC_MESSAGES/libktnef5.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ga/LC_MESSAGES/libktnef5.mo</Path>
@@ -89,7 +89,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="65">ktnef</Dependency>
+            <Dependency release="68">ktnef</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/KPim5/KTNEF/KTNEF/Formatter</Path>
@@ -110,24 +110,21 @@
             <Path fileType="header">/usr/include/KPim5/KTNEF/ktnef/ktnefpropertyset.h</Path>
             <Path fileType="header">/usr/include/KPim5/KTNEF/ktnef/ktnefwriter.h</Path>
             <Path fileType="header">/usr/include/KPim5/KTNEF/ktnef_version.h</Path>
-            <Path fileType="library">/usr/lib64/cmake/KF5Tnef/KF5TnefConfig.cmake</Path>
-            <Path fileType="library">/usr/lib64/cmake/KF5Tnef/KF5TnefConfigVersion.cmake</Path>
-            <Path fileType="library">/usr/lib64/cmake/KF5Tnef/KPim5TnefTargets-relwithdebinfo.cmake</Path>
-            <Path fileType="library">/usr/lib64/cmake/KF5Tnef/KPim5TnefTargets.cmake</Path>
             <Path fileType="library">/usr/lib64/cmake/KPim5Tnef/KPim5TnefConfig.cmake</Path>
             <Path fileType="library">/usr/lib64/cmake/KPim5Tnef/KPim5TnefConfigVersion.cmake</Path>
             <Path fileType="library">/usr/lib64/cmake/KPim5Tnef/KPim5TnefTargets-relwithdebinfo.cmake</Path>
             <Path fileType="library">/usr/lib64/cmake/KPim5Tnef/KPim5TnefTargets.cmake</Path>
             <Path fileType="library">/usr/lib64/libKPim5Tnef.so</Path>
+            <Path fileType="library">/usr/lib64/qt5/mkspecs/modules/qt_KTNef.pri</Path>
         </Files>
     </Package>
     <History>
-        <Update release="65">
-            <Date>2023-08-22</Date>
-            <Version>23.04.3</Version>
+        <Update release="68">
+            <Date>2024-02-16</Date>
+            <Version>23.08.5</Version>
             <Comment>Packaging update</Comment>
-            <Name>Joey Riches</Name>
-            <Email>josephriches@gmail.com</Email>
+            <Name>Justin Zobel</Name>
+            <Email>justin@1707.io</Email>
         </Update>
     </History>
 </PISI>

@@ -1,10 +1,10 @@
 name       : python-moddb
-version    : 0.8.1
-release    : 2
+version    : 0.10.0
+release    : 5
 source     :
-    - https://pypi.io/packages/source/m/moddb/moddb-0.8.1.tar.gz : cf103b4cb1d43e4fcf2cd9e64ca030767e946fdce2ddb091ab8808ea04781ab8
-license    : MIT
+    - https://pypi.io/packages/source/m/moddb/moddb-0.10.0.tar.gz : 42784e1b34328a87113ad2a51e8ba5c99e6169657a4117d2be37d61b26aaadb5
 homepage   : https://github.com/ClementJ18/moddb
+license    : MIT
 component  : programming.python
 summary    : A scrapper for ModDB Mod and Game pages
 description: |
@@ -14,8 +14,6 @@ rundeps    :
     - python-pyrate-limiter
     - python-requests
     - python-toolz
-setup      : |
-    %apply_patches
 build      : |
     %python3_setup
 install    : |

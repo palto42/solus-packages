@@ -73,6 +73,7 @@ libdrm.so.2:drmGetLibVersion
 libdrm.so.2:drmGetLock
 libdrm.so.2:drmGetMagic
 libdrm.so.2:drmGetMap
+libdrm.so.2:drmGetNodeTypeFromDevId
 libdrm.so.2:drmGetNodeTypeFromFd
 libdrm.so.2:drmGetPrimaryDeviceNameFromFd
 libdrm.so.2:drmGetRenderDeviceNameFromFd
@@ -106,6 +107,7 @@ libdrm.so.2:drmModeAtomicGetCursor
 libdrm.so.2:drmModeAtomicMerge
 libdrm.so.2:drmModeAtomicSetCursor
 libdrm.so.2:drmModeAttachMode
+libdrm.so.2:drmModeCloseFB
 libdrm.so.2:drmModeConnectorGetPossibleCrtcs
 libdrm.so.2:drmModeConnectorSetProperty
 libdrm.so.2:drmModeCreateDumbBuffer
@@ -190,6 +192,7 @@ libdrm.so.2:drmSetServerInfo
 libdrm.so.2:drmSwitchToContext
 libdrm.so.2:drmSyncobjCreate
 libdrm.so.2:drmSyncobjDestroy
+libdrm.so.2:drmSyncobjEventfd
 libdrm.so.2:drmSyncobjExportSyncFile
 libdrm.so.2:drmSyncobjFDToHandle
 libdrm.so.2:drmSyncobjHandleToFD
@@ -271,6 +274,7 @@ libdrm_amdgpu.so.1:amdgpu_query_crtc_from_id
 libdrm_amdgpu.so.1:amdgpu_query_firmware_version
 libdrm_amdgpu.so.1:amdgpu_query_gds_info
 libdrm_amdgpu.so.1:amdgpu_query_gpu_info
+libdrm_amdgpu.so.1:amdgpu_query_gpuvm_fault_info
 libdrm_amdgpu.so.1:amdgpu_query_heap_info
 libdrm_amdgpu.so.1:amdgpu_query_hw_ip_count
 libdrm_amdgpu.so.1:amdgpu_query_hw_ip_info
@@ -279,6 +283,7 @@ libdrm_amdgpu.so.1:amdgpu_query_sensor_info
 libdrm_amdgpu.so.1:amdgpu_query_sw_info
 libdrm_amdgpu.so.1:amdgpu_query_video_caps_info
 libdrm_amdgpu.so.1:amdgpu_read_mm_registers
+libdrm_amdgpu.so.1:amdgpu_va_get_start_addr
 libdrm_amdgpu.so.1:amdgpu_va_range_alloc
 libdrm_amdgpu.so.1:amdgpu_va_range_free
 libdrm_amdgpu.so.1:amdgpu_va_range_query
@@ -367,6 +372,7 @@ libdrm_intel.so.1:drm_intel_get_pooled_eu
 libdrm_intel.so.1:drm_intel_get_reset_stats
 libdrm_intel.so.1:drm_intel_get_subslice_total
 libdrm_intel.so.1:drm_intel_reg_read
+libdrm_nouveau.so.2:nouveau_bo_make_global
 libdrm_nouveau.so.2:nouveau_bo_map
 libdrm_nouveau.so.2:nouveau_bo_name_get
 libdrm_nouveau.so.2:nouveau_bo_name_ref

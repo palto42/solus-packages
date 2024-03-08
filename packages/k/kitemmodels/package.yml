@@ -1,8 +1,8 @@
 name       : kitemmodels
-version    : 5.109.0
-release    : 71
+version    : 5.115.0
+release    : 75
 source     :
-    - https://cdn.download.kde.org/stable/frameworks/5.109/kitemmodels-5.109.0.tar.xz : 16f0e59a76368524ebdc90cce62e4cead41142953889312aab0ee157b53ab0f0
+    - https://cdn.download.kde.org/stable/frameworks/5.115/kitemmodels-5.115.0.tar.xz : fffad18b40bb81cde41968459fcdf354bd3a68f1241bd625cba48ee44b68ef0c
 homepage   : https://community.kde.org/Frameworks
 license    :
     - LGPL-2.0-or-later
@@ -14,8 +14,8 @@ description: |
     Set of item models extending the Qt model-view framework.
 optimize   : lto
 builddeps  :
-    - pkgconfig(Qt5Quick)
     - pkgconfig(Qt5Designer)
+    - pkgconfig(Qt5Quick)
     - extra-cmake-modules
 rundeps    :
     - devel :

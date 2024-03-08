@@ -1,10 +1,11 @@
 name       : xkeyboard-config
-version    : '2.39'
-release    : 13
+version    : '2.41'
+release    : 15
 source     :
-    - https://www.x.org/releases/individual/data/xkeyboard-config/xkeyboard-config-2.39.tar.xz : 5ac5f533eff7b0c116805fe254fd79b2c9882700a4f9f2c070f8c4eae5aaa682
+    - https://www.x.org/releases/individual/data/xkeyboard-config/xkeyboard-config-2.41.tar.xz : f02cd6b957295e0d50236a3db15825256c92f67ef1f73bf1c77a4b179edf728f
 license    : MIT
 component  : xorg.base
+homepage   : https://www.x.org/
 summary    : Keyboard configuration database
 description: |
     The XKeyboardConfig package contains the keyboard configuration database for the X Window System.

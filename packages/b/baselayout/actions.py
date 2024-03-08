@@ -11,7 +11,7 @@ def install():
         shelltools.chmod(path, mode=mode)
 
     # Install everything
-    pisitools.insinto("/", "root/*")
+    pisitools.insinto("/", "*")
 
     for dire in ["/tmp", "/var/tmp", "/dev", "/usr/lib64", "/lib64", "/proc", "/sys", "/run/lock", "/root", "/home", "/run", "/media"]:
         pisitools.dodir(dire)
@@ -38,7 +38,6 @@ def install():
     # Write out a default .profile.. temporary
     shelltools.echo("%s/etc/skel/.profile" % get.installDIR(), "source /usr/share/defaults/etc/profile")
     shelltools.echo("%s/etc/skel/.bashrc" % get.installDIR(), "source /usr/share/defaults/etc/profile")
-    shelltools.echo("%s/etc/nsswitch.conf" % get.installDIR(), "hosts: files dns")
 
     # Remove legacy boot link
     pisitools.remove("/boot/boot")

@@ -1,8 +1,9 @@
 name       : db5
 version    : 5.3.28
-release    : 9
+release    : 10
 source     :
     - http://download.oracle.com/berkeley-db/db-5.3.28.tar.gz : e0a992d740709892e81f9d93f06daf305cf73fb81b545afe72478043172c3628
+homepage   : https://www.oracle.com/technology/software/products/berkeley-db/index.html
 license    : BSD-3-Clause
 component  : system.base
 libsplit   : no
@@ -14,7 +15,7 @@ patterns   :
     - docs : /usr/share/doc
     - 32bit-devel : /usr/share/doc/db-*/db5-32bit-devel
 setup      : |
-    %patch -p0 < $pkgfiles/atomic.patch
+    %patch -p0 -i $pkgfiles/atomic.patch
     dist/configure --prefix=%PREFIX% \
                --build=%HOST% \
                --libdir=%libdir% \

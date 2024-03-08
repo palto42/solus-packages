@@ -1,8 +1,8 @@
 name       : k3b
-version    : 23.04.3
-release    : 74
+version    : 23.08.5
+release    : 79
 source     :
-    - https://cdn.download.kde.org/stable/release-service/23.04.3/src/k3b-23.04.3.tar.xz : abd2db6a9553a20956623b440e31703804dbb4172ff3ecf9ff07697e098721cf
+    - https://cdn.download.kde.org/stable/release-service/23.08.5/src/k3b-23.08.5.tar.xz : c789518b45c8505710fd2b66706c4826f251c5487d9b381df76cc96ffb59309a
 homepage   : https://kde.org/applications/multimedia/org.kde.k3b
 license    :
     - GFDL-1.2-or-later
@@ -12,10 +12,11 @@ summary    : K3b - The CD Kreator
 description: |
     Full-featured CD/DVD/Blu-ray burning and ripping application.
 builddeps  :
+    - pkgconfig(Qt5WebEngineWidgets)
     - pkgconfig(dvdread)
     - pkgconfig(flac)
+    - pkgconfig(libavformat)
     - pkgconfig(libmusicbrainz5)
-    - pkgconfig(Qt5WebKitWidgets)
     - pkgconfig(samplerate)
     - pkgconfig(sndfile)
     - pkgconfig(taglib)

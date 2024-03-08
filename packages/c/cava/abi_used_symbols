@@ -60,6 +60,7 @@ libc.so.6:optarg
 libc.so.6:pthread_create
 libc.so.6:pthread_exit
 libc.so.6:pthread_join
+libc.so.6:pthread_mutex_init
 libc.so.6:pthread_mutex_lock
 libc.so.6:pthread_mutex_unlock
 libc.so.6:raise
@@ -71,6 +72,7 @@ libc.so.6:signal
 libc.so.6:snprintf
 libc.so.6:stderr
 libc.so.6:stdout
+libc.so.6:strcat
 libc.so.6:strcmp
 libc.so.6:strcpy
 libc.so.6:strdup
@@ -109,6 +111,8 @@ libncursesw.so.6:can_change_color
 libncursesw.so.6:curs_set
 libncursesw.so.6:echo
 libncursesw.so.6:endwin
+libncursesw.so.6:getmaxx
+libncursesw.so.6:getmaxy
 libncursesw.so.6:init_color
 libncursesw.so.6:init_pair
 libncursesw.so.6:initscr
@@ -120,6 +124,7 @@ libncursesw.so.6:use_default_colors
 libncursesw.so.6:waddch
 libncursesw.so.6:waddnwstr
 libncursesw.so.6:wattr_on
+libncursesw.so.6:wattrset
 libncursesw.so.6:wbkgd
 libncursesw.so.6:wclear
 libncursesw.so.6:wgetch

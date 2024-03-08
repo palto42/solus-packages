@@ -1,3 +1,4 @@
+UNKNOWN
 ld-linux-x86-64.so.2
 libQt5Core.so.5
 libQt5Gui.so.5
@@ -17,10 +18,11 @@ libXdamage.so.1
 libXext.so.6
 libXfixes.so.3
 libXrandr.so.2
+libXtst.so.6
 libasound.so.2
-libavcodec.so.58
-libavformat.so.58
-libavutil.so.56
+libavcodec.so.60
+libavformat.so.60
+libavutil.so.58
 libc.so.6
 libdbus-1.so.3
 libevent-2.1.so.7
@@ -33,6 +35,8 @@ libglib-2.0.so.0
 libgobject-2.0.so.0
 libharfbuzz-subset.so.0
 libharfbuzz.so.0
+libicui18n.so.74
+libicuuc.so.74
 libjpeg.so.8
 liblcms2.so.2
 libm.so.6
@@ -45,9 +49,11 @@ libpng16.so.16
 libre2.so.9
 libsnappy.so.1
 libstdc++.so.6
-libvpx.so.7
+libvpx.so.8
 libwebp.so.7
 libwebpdemux.so.2
 libwebpmux.so.3
 libxcb.so.1
+libxml2.so.2
+libxslt.so.1
 libz.so.1

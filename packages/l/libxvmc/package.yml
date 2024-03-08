@@ -1,10 +1,11 @@
 name       : libxvmc
-version    : 1.0.11
-release    : 15
+version    : 1.0.14
+release    : 17
 source     :
-    - https://www.x.org/releases/individual/lib/libXvMC-1.0.11.tar.gz : 0b931d216b23b95df87cc65f7bb7acef4120d9263adb0a4d90856ba1f7a390da
+    - https://www.x.org/releases/individual/lib/libXvMC-1.0.14.tar.gz : 3ad5d2b991219e2bf9b2f85d40b12c16f1afec038715e462f6058af73a9b5ef8
 license    : MIT
 component  : xorg.library
+homepage   : https://www.x.org/
 summary    : X11 Video extension library - MotionCompensation
 description: |
     libXvMC provides an X Window System client interface to the XVideo-MotionCompensation extension to the X protocol.

@@ -1,6 +1,6 @@
 name       : libcanberra
 version    : '0.30'
-release    : 19
+release    : 20
 source     :
     - git|git://git.0pointer.net/libcanberra.git : c0620e432650e81062c1967cc669829dbd29b310
 homepage   : http://0pointer.de/lennart/projects/libcanberra/
@@ -20,7 +20,7 @@ builddeps  :
 patterns   :
     - docs : /usr/share/doc
 setup      : |
-    %patch -p1 < $pkgfiles/0001-Use-the-correct-freedesktop-sound-name.patch
+    %patch -p1 -i $pkgfiles/0001-Use-the-correct-freedesktop-sound-name.patch
     %autogen --disable-static \
                --enable-alsa \
                --enable-gtk2 \

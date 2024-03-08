@@ -1,16 +1,17 @@
 <PISI>
     <Source>
         <Name>cemu</Name>
+        <Homepage>https://cemu.info/</Homepage>
         <Packager>
-            <Name>Marcus Mellor</Name>
-            <Email>infinitymdm@gmail.com</Email>
+            <Name>Reilly Brogan</Name>
+            <Email>solus@reillybrogan.com</Email>
         </Packager>
         <License>MPL-2.0</License>
         <PartOf>games.emulator</PartOf>
         <Summary xml:lang="en">An emulator for the Nintendo Wii U</Summary>
         <Description xml:lang="en">Cemu is an emulator for the Nintendo Wii U console. It is capable of running and debugging homebrew applications, as well as many commercial games.
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>cemu</Name>
@@ -20,7 +21,7 @@
         <PartOf>games.emulator</PartOf>
         <Files>
             <Path fileType="executable">/usr/bin/cemu</Path>
-            <Path fileType="data">/usr/share/applications/cemu.desktop</Path>
+            <Path fileType="data">/usr/share/applications/info.cemu.Cemu.desktop</Path>
             <Path fileType="data">/usr/share/cemu/cemu</Path>
             <Path fileType="data">/usr/share/cemu/gameProfiles/default/0005000010101a00.ini</Path>
             <Path fileType="data">/usr/share/cemu/gameProfiles/default/0005000010101b00.ini</Path>
@@ -262,6 +263,7 @@
             <Path fileType="data">/usr/share/cemu/resources/de/cemu.mo</Path>
             <Path fileType="data">/usr/share/cemu/resources/es/cemu.mo</Path>
             <Path fileType="data">/usr/share/cemu/resources/fr/cemu.mo</Path>
+            <Path fileType="data">/usr/share/cemu/resources/he/cemu.mo</Path>
             <Path fileType="data">/usr/share/cemu/resources/hu/cemu.mo</Path>
             <Path fileType="data">/usr/share/cemu/resources/it/cemu.mo</Path>
             <Path fileType="data">/usr/share/cemu/resources/ja/cemu.mo</Path>
@@ -280,16 +282,17 @@
             <Path fileType="data">/usr/share/cemu/resources/uk/cemu.mo</Path>
             <Path fileType="data">/usr/share/cemu/resources/zh/cemu.mo</Path>
             <Path fileType="data">/usr/share/cemu/shaderCache/info.txt</Path>
-            <Path fileType="data">/usr/share/icons/hicolor/128x128/apps/cemu.png</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/128x128/apps/info.cemu.Cemu.png</Path>
+            <Path fileType="data">/usr/share/metainfo/info.cemu.Cemu.metainfo.xml</Path>
         </Files>
     </Package>
     <History>
-        <Update release="1">
-            <Date>2023-08-09</Date>
-            <Version>2.0</Version>
+        <Update release="6">
+            <Date>2024-02-17</Date>
+            <Version>2.0.64</Version>
             <Comment>Packaging update</Comment>
-            <Name>Marcus Mellor</Name>
-            <Email>infinitymdm@gmail.com</Email>
+            <Name>Reilly Brogan</Name>
+            <Email>solus@reillybrogan.com</Email>
         </Update>
     </History>
 </PISI>

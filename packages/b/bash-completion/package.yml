@@ -1,8 +1,9 @@
 name       : bash-completion
 version    : '2.11'
-release    : 19
+release    : 21
 source     :
     - https://github.com/scop/bash-completion/archive/2.11.tar.gz : 16adefabf43ec8ffb473704f5724d775c2f47e9f750d7d608f0251ec21fe8813
+homepage   : https://github.com/scop/bash-completion
 license    : GPL-2.0-or-later
 component  :
     - system.base
@@ -14,7 +15,7 @@ description: |
 patterns   :
     - devel : /usr/share/pkgconfig
 setup      : |
-    %patch -p1 < $pkgfiles/0001-Use-a-stateless-configuration.patch
+    %patch -p1 -i $pkgfiles/0001-Use-a-stateless-configuration.patch
     %reconfigure
 build      : |
     %make

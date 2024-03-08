@@ -470,6 +470,7 @@ libQt5Core.so.5:_ZNK7QString7indexOfE5QChariN2Qt15CaseSensitivityE
 libQt5Core.so.5:_ZNK7QStringeqE13QLatin1String
 libQt5Core.so.5:_ZNK8QVariant3cmpERKS_
 libQt5Core.so.5:_ZNK8QVariant5toIntEPb
+libQt5Core.so.5:_ZNK8QVariant6isNullEv
 libQt5Core.so.5:_ZNK8QVariant6toBoolEv
 libQt5Core.so.5:_ZNK8QVariant6toUIntEPb
 libQt5Core.so.5:_ZNK8QVariant7convertEiPv
@@ -742,7 +743,6 @@ libQt5Widgets.so.5:_ZN7QWidget9dropEventEP10QDropEvent
 libQt5Widgets.so.5:_ZN7QWidget9hideEventEP10QHideEvent
 libQt5Widgets.so.5:_ZN7QWidget9moveEventEP10QMoveEvent
 libQt5Widgets.so.5:_ZN7QWidget9setLayoutEP7QLayout
-libQt5Widgets.so.5:_ZN7QWidget9setParentEPS_
 libQt5Widgets.so.5:_ZN7QWidget9showEventEP10QShowEvent
 libQt5Widgets.so.5:_ZN7QWidgetC1EPS_6QFlagsIN2Qt10WindowTypeEE
 libQt5Widgets.so.5:_ZN7QWidgetC2EPS_6QFlagsIN2Qt10WindowTypeEE
@@ -819,12 +819,12 @@ libc.so.6:strcmp
 libc.so.6:strlen
 libc.so.6:timerfd_create
 libc.so.6:timerfd_settime
-libddcutil.so.4:ddca_close_display
-libddcutil.so.4:ddca_get_display_info_list2
-libddcutil.so.4:ddca_get_feature_list_by_dref
-libddcutil.so.4:ddca_get_non_table_vcp_value
-libddcutil.so.4:ddca_open_display2
-libddcutil.so.4:ddca_set_non_table_vcp_value
+libddcutil.so.5:ddca_close_display
+libddcutil.so.5:ddca_get_display_info_list2
+libddcutil.so.5:ddca_get_feature_list_by_dref
+libddcutil.so.5:ddca_get_non_table_vcp_value
+libddcutil.so.5:ddca_open_display2
+libddcutil.so.5:ddca_set_non_table_vcp_value
 libkworkspace5.so.5:_ZN10KWorkSpace14detectPlatformEiPPc
 libkworkspace5.so.5:_ZN10KWorkSpace14isShuttingDownEv
 libkworkspace5.so.5:_ZN10KWorkSpace15requestShutDownENS_15ShutdownConfirmENS_12ShutdownTypeENS_12ShutdownModeE

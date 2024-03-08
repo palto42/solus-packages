@@ -1,8 +1,8 @@
 name       : threadweaver
-version    : 5.109.0
-release    : 69
+version    : 5.115.0
+release    : 73
 source     :
-    - https://cdn.download.kde.org/stable/frameworks/5.109/threadweaver-5.109.0.tar.xz : 7274529540c4f478519271655a409e4d89c297683eab531a764cf2e5b8c2d2e0
+    - https://cdn.download.kde.org/stable/frameworks/5.115/threadweaver-5.115.0.tar.xz : 9fd08658f5b5bf3879217834ed392da245f16ae1199795f72423336d48d24eb8
 homepage   : https://community.kde.org/Frameworks
 license    : LGPL-2.0-or-later
 component  : programming.tools

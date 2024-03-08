@@ -1,9 +1,9 @@
 name       : iproute2
 homepage   : https://github.com/shemminger/iproute2
-version    : 6.4.0
-release    : 17
+version    : 6.7.0
+release    : 20
 source     :
-    - https://www.kernel.org/pub/linux/utils/net/iproute2/iproute2-6.4.0.tar.gz : 5ed1650933cf7fec532026f0e0b9574ef2694aed0e76be61d29ad17188316446
+    - https://www.kernel.org/pub/linux/utils/net/iproute2/iproute2-6.7.0.tar.gz : 182fbb0f4328c58b7199fb2abaade15cb47507f4e69bdae566252ff26e063d09
 license    : GPL-2.0-only
 summary    : Utilities for controlling TCP / IP networking
 component  : network.base
@@ -17,7 +17,6 @@ builddeps  :
     - pkgconfig(xtables)
     - db5-devel
 setup      : |
-    %apply_patches
     %configure
 build      : |
     %make

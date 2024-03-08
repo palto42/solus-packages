@@ -1,9 +1,9 @@
 name       : syncthing
-version    : 1.24.0
-release    : 85
+version    : 1.27.4
+release    : 94
 homepage   : https://syncthing.net
 source     :
-    - https://github.com/syncthing/syncthing/releases/download/v1.24.0/syncthing-source-v1.24.0.tar.gz : 4a9459667f9b70a7d1e7d572c7c9d02431ef8f055679eef368300ce1a826608f
+    - https://github.com/syncthing/syncthing/archive/refs/tags/v1.27.4.tar.gz : 65542335212f10703a8ace949b811744f96c1adaea6deed6d3d7399b9f398ecd
 license    : MPL-2.0
 component  : network.util
 networking : yes
@@ -12,11 +12,7 @@ description: |
     Syncthing is an open-source file synchronization client/server application, written in Go, implementing its own, equally free Block Exchange Protocol. All transit communications between syncthing nodes are encrypted, and all nodes are uniquely identified with cryptographic certificates.
 builddeps  :
     - git
-    # - golang # re-add for build after 1.23.7
-# remove for build after 1.23.7
-setup      : |
-    curl -sSL https://go.dev/dl/go1.20.7.linux-amd64.tar.gz | tar xz
-# remove for build after 1.23.7
+    - golang
 environment: |
     export PATH="$PATH:$PWD/go/bin"
 build      : |
@@ -26,7 +22,7 @@ install    : |
     install -Dm00755 syncthing $installdir/usr/bin/syncthing
     install -Dm00644 etc/linux-systemd/system/syncthing@.service $installdir/%libdir%/systemd/system/syncthing@.service
     install -Dm00644 etc/linux-systemd/user/syncthing.service $installdir/%libdir%/systemd/user/syncthing.service
-    install -Dm00644 etc/linux-desktop/syncthing-ui.desktop $installdir/usr/share/applications/syncthing-ui.desktop
+    install -Dm00644 etc/linux-desktop/syncthing-ui.desktop $installdir/usr/share/applications/syncthing.desktop
     install -Dm00644 etc/linux-desktop/syncthing-start.desktop $installdir/usr/share/applications/syncthing-start.desktop
     install -Dm00644 assets/logo-only.svg $installdir/usr/share/icons/hicolor/scalable/apps/syncthing.svg
     for sz in 32 64 128 256 512; do
@@ -42,3 +38,5 @@ install    : |
     for file in $(find . -name '*.7' -print); do
         install -Dm00644 $file $installdir/usr/share/man/man7/$file
     done
+
+    install -Dm00644 $pkgfiles/syncthing.metainfo.xml $installdir/usr/share/metainfo/syncthing.metainfo.xml

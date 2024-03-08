@@ -1,0 +1,37 @@
+name       : skanpage
+version    : 23.08.5
+release    : 3
+source     :
+    - https://cdn.download.kde.org/stable/release-service/23.08.5/src/skanpage-23.08.5.tar.xz : 38e2300e1466c43bb531989c29d11221ebcaa2e3e8bb062a814c1f03270b72bb
+homepage   : https://apps.kde.org/skanpage
+license    : GPL-2.0-or-later
+component  : desktop.kde
+summary    : PDF Scanner for the KDE Plasma Desktop
+description: |
+    Skanpage is a simple scanning application optimized for multi-page document scanning. It can also scan and save single-page documents and images.
+builddeps  :
+    - pkgconfig(Qt5Concurrent)
+    - pkgconfig(Qt5Core)
+    - pkgconfig(Qt5PrintSupport)
+    - pkgconfig(Qt5Qml)
+    - pkgconfig(Qt5Quick)
+    - pkgconfig(Qt5QuickControls2)
+    - pkgconfig(Qt5Widgets)
+    - extra-cmake-modules
+    - kconfig-devel
+    - kcoreaddons-devel
+    - kcrash-devel
+    - ki18n-devel
+    - kirigami2-devel
+    - kquickimageeditor-devel
+    - ksanecore-devel
+    - kxmlgui-devel
+    - purpose-devel
+rundeps    :
+    - kquickimageeditor
+setup      : |
+    %cmake_ninja
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install

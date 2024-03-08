@@ -1,9 +1,10 @@
 <PISI>
     <Source>
         <Name>kdevelop</Name>
+        <Homepage>https://kdevelop.org/</Homepage>
         <Packager>
-            <Name>Joey Riches</Name>
-            <Email>josephriches@gmail.com</Email>
+            <Name>Justin Zobel</Name>
+            <Email>justin@1707.io</Email>
         </Packager>
         <License>GFDL-1.2-or-later</License>
         <License>GPL-2.0-or-later</License>
@@ -12,7 +13,7 @@
         <Summary xml:lang="en">KDevelop IDE and Platform</Summary>
         <Description xml:lang="en">C++ IDE using KDE technologies based on KDevelop Platform.
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>kdevelop</Name>
@@ -27,106 +28,106 @@
             <Path fileType="executable">/usr/bin/kdevelop</Path>
             <Path fileType="executable">/usr/bin/kdevelop!</Path>
             <Path fileType="executable">/usr/bin/kdevplatform_shell_environment.sh</Path>
-            <Path fileType="library">/usr/lib64/libKDevCMakeCommon.so.511</Path>
-            <Path fileType="library">/usr/lib64/libKDevClangPrivate.so.511</Path>
-            <Path fileType="library">/usr/lib64/libKDevCompileAnalyzerCommon.so.511</Path>
+            <Path fileType="library">/usr/lib64/libKDevCMakeCommon.so.512</Path>
+            <Path fileType="library">/usr/lib64/libKDevClangPrivate.so.512</Path>
+            <Path fileType="library">/usr/lib64/libKDevCompileAnalyzerCommon.so.512</Path>
             <Path fileType="library">/usr/lib64/libKDevPlatformDebugger.so</Path>
-            <Path fileType="library">/usr/lib64/libKDevPlatformDebugger.so.5.11.230403</Path>
-            <Path fileType="library">/usr/lib64/libKDevPlatformDebugger.so.511</Path>
+            <Path fileType="library">/usr/lib64/libKDevPlatformDebugger.so.5.12.230805</Path>
+            <Path fileType="library">/usr/lib64/libKDevPlatformDebugger.so.512</Path>
             <Path fileType="library">/usr/lib64/libKDevPlatformDocumentation.so</Path>
-            <Path fileType="library">/usr/lib64/libKDevPlatformDocumentation.so.5.11.230403</Path>
-            <Path fileType="library">/usr/lib64/libKDevPlatformDocumentation.so.511</Path>
+            <Path fileType="library">/usr/lib64/libKDevPlatformDocumentation.so.5.12.230805</Path>
+            <Path fileType="library">/usr/lib64/libKDevPlatformDocumentation.so.512</Path>
             <Path fileType="library">/usr/lib64/libKDevPlatformInterfaces.so</Path>
-            <Path fileType="library">/usr/lib64/libKDevPlatformInterfaces.so.5.11.230403</Path>
-            <Path fileType="library">/usr/lib64/libKDevPlatformInterfaces.so.511</Path>
+            <Path fileType="library">/usr/lib64/libKDevPlatformInterfaces.so.5.12.230805</Path>
+            <Path fileType="library">/usr/lib64/libKDevPlatformInterfaces.so.512</Path>
             <Path fileType="library">/usr/lib64/libKDevPlatformLanguage.so</Path>
-            <Path fileType="library">/usr/lib64/libKDevPlatformLanguage.so.5.11.230403</Path>
-            <Path fileType="library">/usr/lib64/libKDevPlatformLanguage.so.511</Path>
+            <Path fileType="library">/usr/lib64/libKDevPlatformLanguage.so.5.12.230805</Path>
+            <Path fileType="library">/usr/lib64/libKDevPlatformLanguage.so.512</Path>
             <Path fileType="library">/usr/lib64/libKDevPlatformOutputView.so</Path>
-            <Path fileType="library">/usr/lib64/libKDevPlatformOutputView.so.5.11.230403</Path>
-            <Path fileType="library">/usr/lib64/libKDevPlatformOutputView.so.511</Path>
+            <Path fileType="library">/usr/lib64/libKDevPlatformOutputView.so.5.12.230805</Path>
+            <Path fileType="library">/usr/lib64/libKDevPlatformOutputView.so.512</Path>
             <Path fileType="library">/usr/lib64/libKDevPlatformProject.so</Path>
-            <Path fileType="library">/usr/lib64/libKDevPlatformProject.so.5.11.230403</Path>
-            <Path fileType="library">/usr/lib64/libKDevPlatformProject.so.511</Path>
+            <Path fileType="library">/usr/lib64/libKDevPlatformProject.so.5.12.230805</Path>
+            <Path fileType="library">/usr/lib64/libKDevPlatformProject.so.512</Path>
             <Path fileType="library">/usr/lib64/libKDevPlatformSerialization.so</Path>
-            <Path fileType="library">/usr/lib64/libKDevPlatformSerialization.so.5.11.230403</Path>
-            <Path fileType="library">/usr/lib64/libKDevPlatformSerialization.so.511</Path>
+            <Path fileType="library">/usr/lib64/libKDevPlatformSerialization.so.5.12.230805</Path>
+            <Path fileType="library">/usr/lib64/libKDevPlatformSerialization.so.512</Path>
             <Path fileType="library">/usr/lib64/libKDevPlatformShell.so</Path>
-            <Path fileType="library">/usr/lib64/libKDevPlatformShell.so.5.11.230403</Path>
-            <Path fileType="library">/usr/lib64/libKDevPlatformShell.so.511</Path>
+            <Path fileType="library">/usr/lib64/libKDevPlatformShell.so.5.12.230805</Path>
+            <Path fileType="library">/usr/lib64/libKDevPlatformShell.so.512</Path>
             <Path fileType="library">/usr/lib64/libKDevPlatformSublime.so</Path>
-            <Path fileType="library">/usr/lib64/libKDevPlatformSublime.so.5.11.230403</Path>
-            <Path fileType="library">/usr/lib64/libKDevPlatformSublime.so.511</Path>
+            <Path fileType="library">/usr/lib64/libKDevPlatformSublime.so.5.12.230805</Path>
+            <Path fileType="library">/usr/lib64/libKDevPlatformSublime.so.512</Path>
             <Path fileType="library">/usr/lib64/libKDevPlatformUtil.so</Path>
-            <Path fileType="library">/usr/lib64/libKDevPlatformUtil.so.5.11.230403</Path>
-            <Path fileType="library">/usr/lib64/libKDevPlatformUtil.so.511</Path>
+            <Path fileType="library">/usr/lib64/libKDevPlatformUtil.so.5.12.230805</Path>
+            <Path fileType="library">/usr/lib64/libKDevPlatformUtil.so.512</Path>
             <Path fileType="library">/usr/lib64/libKDevPlatformVcs.so</Path>
-            <Path fileType="library">/usr/lib64/libKDevPlatformVcs.so.5.11.230403</Path>
-            <Path fileType="library">/usr/lib64/libKDevPlatformVcs.so.511</Path>
+            <Path fileType="library">/usr/lib64/libKDevPlatformVcs.so.5.12.230805</Path>
+            <Path fileType="library">/usr/lib64/libKDevPlatformVcs.so.512</Path>
             <Path fileType="library">/usr/lib64/libKDevelopSessionsWatch.so</Path>
             <Path fileType="library">/usr/lib64/qt5/plugins/grantlee/5.3/kdev_filters.so</Path>
-            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/511/kdevandroid.so</Path>
-            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/511/kdevappwizard.so</Path>
-            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/511/kdevastyle.so</Path>
-            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/511/kdevbazaar.so</Path>
-            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/511/kdevclangsupport.so</Path>
-            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/511/kdevclangtidy.so</Path>
-            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/511/kdevclassbrowser.so</Path>
-            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/511/kdevclazy.so</Path>
-            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/511/kdevcmakebuilder.so</Path>
-            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/511/kdevcmakedocumentation.so</Path>
-            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/511/kdevcmakemanager.so</Path>
-            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/511/kdevcodeutils.so</Path>
-            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/511/kdevcontextbrowser.so</Path>
-            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/511/kdevcppcheck.so</Path>
-            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/511/kdevcraft.so</Path>
-            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/511/kdevcustombuildsystem.so</Path>
-            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/511/kdevcustommakemanager.so</Path>
-            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/511/kdevcustomscript.so</Path>
-            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/511/kdevdefinesandincludesmanager.so</Path>
-            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/511/kdevdocker.so</Path>
-            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/511/kdevdocumentswitcher.so</Path>
-            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/511/kdevdocumentview.so</Path>
-            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/511/kdevexecute.so</Path>
-            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/511/kdevexecuteplasmoid.so</Path>
-            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/511/kdevexecutescript.so</Path>
-            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/511/kdevexternalscript.so</Path>
-            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/511/kdevfilemanager.so</Path>
-            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/511/kdevfiletemplates.so</Path>
-            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/511/kdevflatpak.so</Path>
-            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/511/kdevgdb.so</Path>
-            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/511/kdevgenericmanager.so</Path>
-            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/511/kdevghprovider.so</Path>
-            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/511/kdevgit.so</Path>
-            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/511/kdevgrepview.so</Path>
-            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/511/kdevheaptrack.so</Path>
-            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/511/kdevkonsoleview.so</Path>
-            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/511/kdevlldb.so</Path>
-            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/511/kdevmakebuilder.so</Path>
-            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/511/kdevmanpage.so</Path>
-            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/511/kdevmesonmanager.so</Path>
-            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/511/kdevninja.so</Path>
-            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/511/kdevokteta.so</Path>
-            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/511/kdevopenwith.so</Path>
-            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/511/kdevoutlineview.so</Path>
-            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/511/kdevpatchreview.so</Path>
-            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/511/kdevperforce.so</Path>
-            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/511/kdevproblemreporter.so</Path>
-            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/511/kdevprojectfilter.so</Path>
-            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/511/kdevprojectmanagerview.so</Path>
-            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/511/kdevqmakebuilder.so</Path>
-            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/511/kdevqmakemanager.so</Path>
-            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/511/kdevqmljslanguagesupport.so</Path>
-            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/511/kdevqthelp.so</Path>
-            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/511/kdevquickopen.so</Path>
-            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/511/kdevscratchpad.so</Path>
-            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/511/kdevsourceformatter.so</Path>
-            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/511/kdevstandardoutputview.so</Path>
-            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/511/kdevsubversion.so</Path>
-            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/511/kdevswitchtobuddy.so</Path>
-            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/511/kdevtestview.so</Path>
-            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/511/kdevvcschangesviewplugin.so</Path>
-            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/511/kdevwelcomepage.so</Path>
+            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/512/kdevandroid.so</Path>
+            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/512/kdevappwizard.so</Path>
+            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/512/kdevastyle.so</Path>
+            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/512/kdevbazaar.so</Path>
+            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/512/kdevclangsupport.so</Path>
+            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/512/kdevclangtidy.so</Path>
+            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/512/kdevclassbrowser.so</Path>
+            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/512/kdevclazy.so</Path>
+            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/512/kdevcmakebuilder.so</Path>
+            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/512/kdevcmakedocumentation.so</Path>
+            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/512/kdevcmakemanager.so</Path>
+            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/512/kdevcodeutils.so</Path>
+            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/512/kdevcontextbrowser.so</Path>
+            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/512/kdevcppcheck.so</Path>
+            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/512/kdevcraft.so</Path>
+            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/512/kdevcustombuildsystem.so</Path>
+            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/512/kdevcustommakemanager.so</Path>
+            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/512/kdevcustomscript.so</Path>
+            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/512/kdevdefinesandincludesmanager.so</Path>
+            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/512/kdevdocker.so</Path>
+            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/512/kdevdocumentswitcher.so</Path>
+            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/512/kdevdocumentview.so</Path>
+            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/512/kdevexecute.so</Path>
+            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/512/kdevexecuteplasmoid.so</Path>
+            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/512/kdevexecutescript.so</Path>
+            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/512/kdevexternalscript.so</Path>
+            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/512/kdevfilemanager.so</Path>
+            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/512/kdevfiletemplates.so</Path>
+            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/512/kdevflatpak.so</Path>
+            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/512/kdevgdb.so</Path>
+            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/512/kdevgenericmanager.so</Path>
+            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/512/kdevghprovider.so</Path>
+            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/512/kdevgit.so</Path>
+            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/512/kdevgrepview.so</Path>
+            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/512/kdevheaptrack.so</Path>
+            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/512/kdevkonsoleview.so</Path>
+            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/512/kdevlldb.so</Path>
+            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/512/kdevmakebuilder.so</Path>
+            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/512/kdevmanpage.so</Path>
+            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/512/kdevmesonmanager.so</Path>
+            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/512/kdevninja.so</Path>
+            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/512/kdevokteta.so</Path>
+            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/512/kdevopenwith.so</Path>
+            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/512/kdevoutlineview.so</Path>
+            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/512/kdevpatchreview.so</Path>
+            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/512/kdevperforce.so</Path>
+            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/512/kdevproblemreporter.so</Path>
+            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/512/kdevprojectfilter.so</Path>
+            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/512/kdevprojectmanagerview.so</Path>
+            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/512/kdevqmakebuilder.so</Path>
+            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/512/kdevqmakemanager.so</Path>
+            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/512/kdevqmljslanguagesupport.so</Path>
+            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/512/kdevqthelp.so</Path>
+            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/512/kdevquickopen.so</Path>
+            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/512/kdevscratchpad.so</Path>
+            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/512/kdevsourceformatter.so</Path>
+            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/512/kdevstandardoutputview.so</Path>
+            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/512/kdevsubversion.so</Path>
+            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/512/kdevswitchtobuddy.so</Path>
+            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/512/kdevtestview.so</Path>
+            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/512/kdevvcschangesviewplugin.so</Path>
+            <Path fileType="library">/usr/lib64/qt5/plugins/kdevplatform/512/kdevwelcomepage.so</Path>
             <Path fileType="library">/usr/lib64/qt5/plugins/kf5/krunner/krunner_kdevelopsessions.so</Path>
             <Path fileType="library">/usr/lib64/qt5/qml/org/kde/kdevplatform/libkdevelopdashboarddeclarativeplugin.so</Path>
             <Path fileType="library">/usr/lib64/qt5/qml/org/kde/kdevplatform/qmldir</Path>
@@ -919,36 +920,71 @@
             <Path fileType="localedata">/usr/share/locale/en_GB/LC_MESSAGES/kdevwelcomepage.mo</Path>
             <Path fileType="localedata">/usr/share/locale/en_GB/LC_MESSAGES/plasma_applet_kdevelopsessions.mo</Path>
             <Path fileType="localedata">/usr/share/locale/en_GB/LC_MESSAGES/plasma_runner_kdevelopsessions.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/kdevandroid.mo</Path>
             <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/kdevappwizard.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/kdevastyle.mo</Path>
             <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/kdevbazaar.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/kdevclang.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/kdevclangtidy.mo</Path>
             <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/kdevclassbrowser.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/kdevclazy.mo</Path>
             <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/kdevcmake.mo</Path>
             <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/kdevcmakebuilder.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/kdevcodeutils.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/kdevcompileanalyzercommon.mo</Path>
             <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/kdevcontextbrowser.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/kdevcppcheck.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/kdevcustombuildsystem.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/kdevcustomdefinesandincludes.mo</Path>
             <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/kdevcustommake.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/kdevcustomscript.mo</Path>
             <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/kdevdebuggercommon.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/kdevdocker.mo</Path>
             <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/kdevdocumentswitcher.mo</Path>
             <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/kdevdocumentview.mo</Path>
             <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/kdevelop.mo</Path>
             <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/kdevexecute.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/kdevexecuteplasmoid.mo</Path>
             <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/kdevexecutescript.mo</Path>
             <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/kdevexternalscript.mo</Path>
             <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/kdevfilemanager.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/kdevfiletemplates.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/kdevflatpak.mo</Path>
             <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/kdevgdb.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/kdevghprovider.mo</Path>
             <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/kdevgit.mo</Path>
             <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/kdevgrepview.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/kdevheaptrack.mo</Path>
             <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/kdevkonsole.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/kdevlldb.mo</Path>
             <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/kdevmakebuilder.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/kdevmanpage.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/kdevmesonmanager.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/kdevninja.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/kdevokteta.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/kdevopenwith.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/kdevoutlineview.mo</Path>
             <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/kdevpatchreview.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/kdevperforce.mo</Path>
             <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/kdevplatform.mo</Path>
             <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/kdevproblemreporter.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/kdevprojectfilter.mo</Path>
             <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/kdevprojectmanagerview.mo</Path>
             <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/kdevqmakebuilder.mo</Path>
             <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/kdevqmakemanager.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/kdevqmljs.mo</Path>
             <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/kdevqthelp.mo</Path>
             <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/kdevquickopen.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/kdevscratchpad.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/kdevsourceformatter.mo</Path>
             <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/kdevstandardoutputview.mo</Path>
             <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/kdevsubversion.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/kdevswitchtobuddy.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/kdevtestview.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/kdevvcsprojectintegration.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/kdevwelcomepage.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/plasma_applet_kdevelopsessions.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/plasma_runner_kdevelopsessions.mo</Path>
             <Path fileType="localedata">/usr/share/locale/es/LC_MESSAGES/kdevandroid.mo</Path>
             <Path fileType="localedata">/usr/share/locale/es/LC_MESSAGES/kdevappwizard.mo</Path>
             <Path fileType="localedata">/usr/share/locale/es/LC_MESSAGES/kdevastyle.mo</Path>
@@ -1099,6 +1135,7 @@
             <Path fileType="localedata">/usr/share/locale/eu/LC_MESSAGES/kdevopenwith.mo</Path>
             <Path fileType="localedata">/usr/share/locale/eu/LC_MESSAGES/kdevoutlineview.mo</Path>
             <Path fileType="localedata">/usr/share/locale/eu/LC_MESSAGES/kdevplatform.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/eu/LC_MESSAGES/kdevprojectfilter.mo</Path>
             <Path fileType="localedata">/usr/share/locale/eu/LC_MESSAGES/kdevqmakebuilder.mo</Path>
             <Path fileType="localedata">/usr/share/locale/eu/LC_MESSAGES/kdevsourceformatter.mo</Path>
             <Path fileType="localedata">/usr/share/locale/eu/LC_MESSAGES/kdevswitchtobuddy.mo</Path>
@@ -1120,6 +1157,7 @@
             <Path fileType="localedata">/usr/share/locale/fi/LC_MESSAGES/kdevcodeutils.mo</Path>
             <Path fileType="localedata">/usr/share/locale/fi/LC_MESSAGES/kdevcompileanalyzercommon.mo</Path>
             <Path fileType="localedata">/usr/share/locale/fi/LC_MESSAGES/kdevcontextbrowser.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/fi/LC_MESSAGES/kdevcppcheck.mo</Path>
             <Path fileType="localedata">/usr/share/locale/fi/LC_MESSAGES/kdevcustombuildsystem.mo</Path>
             <Path fileType="localedata">/usr/share/locale/fi/LC_MESSAGES/kdevcustomdefinesandincludes.mo</Path>
             <Path fileType="localedata">/usr/share/locale/fi/LC_MESSAGES/kdevcustommake.mo</Path>
@@ -2284,7 +2322,6 @@
             <Path fileType="localedata">/usr/share/locale/ru/LC_MESSAGES/kdevcustommake.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ru/LC_MESSAGES/kdevcustomscript.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ru/LC_MESSAGES/kdevdebuggercommon.mo</Path>
-            <Path fileType="localedata">/usr/share/locale/ru/LC_MESSAGES/kdevdocker.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ru/LC_MESSAGES/kdevdocumentswitcher.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ru/LC_MESSAGES/kdevdocumentview.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ru/LC_MESSAGES/kdevelop.mo</Path>
@@ -2294,7 +2331,6 @@
             <Path fileType="localedata">/usr/share/locale/ru/LC_MESSAGES/kdevexternalscript.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ru/LC_MESSAGES/kdevfilemanager.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ru/LC_MESSAGES/kdevfiletemplates.mo</Path>
-            <Path fileType="localedata">/usr/share/locale/ru/LC_MESSAGES/kdevflatpak.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ru/LC_MESSAGES/kdevgdb.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ru/LC_MESSAGES/kdevghprovider.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ru/LC_MESSAGES/kdevgit.mo</Path>
@@ -2321,7 +2357,6 @@
             <Path fileType="localedata">/usr/share/locale/ru/LC_MESSAGES/kdevqthelp.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ru/LC_MESSAGES/kdevquickopen.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ru/LC_MESSAGES/kdevscratchpad.mo</Path>
-            <Path fileType="localedata">/usr/share/locale/ru/LC_MESSAGES/kdevsourceformatter.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ru/LC_MESSAGES/kdevstandardoutputview.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ru/LC_MESSAGES/kdevsubversion.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ru/LC_MESSAGES/kdevswitchtobuddy.mo</Path>
@@ -2527,6 +2562,7 @@
             <Path fileType="localedata">/usr/share/locale/sv/LC_MESSAGES/plasma_applet_kdevelopsessions.mo</Path>
             <Path fileType="localedata">/usr/share/locale/sv/LC_MESSAGES/plasma_runner_kdevelopsessions.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ta/LC_MESSAGES/kdevelop.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/ta/LC_MESSAGES/kdevkonsole.mo</Path>
             <Path fileType="localedata">/usr/share/locale/tg/LC_MESSAGES/kdevelop.mo</Path>
             <Path fileType="localedata">/usr/share/locale/tg/LC_MESSAGES/kdevplatform.mo</Path>
             <Path fileType="localedata">/usr/share/locale/th/LC_MESSAGES/kdevappwizard.mo</Path>
@@ -2859,7 +2895,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="53">kdevelop</Dependency>
+            <Dependency release="58">kdevelop</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/kdevelop/custom-definesandincludes/idefinesandincludesmanager.h</Path>
@@ -3240,12 +3276,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="53">
-            <Date>2023-08-21</Date>
-            <Version>23.04.3</Version>
+        <Update release="58">
+            <Date>2024-02-16</Date>
+            <Version>23.08.5</Version>
             <Comment>Packaging update</Comment>
-            <Name>Joey Riches</Name>
-            <Email>josephriches@gmail.com</Email>
+            <Name>Justin Zobel</Name>
+            <Email>justin@1707.io</Email>
         </Update>
     </History>
 </PISI>

@@ -3,6 +3,14 @@ description: Request a package that isn't in the Solus repository yet.
 labels: ["Package Request", "Priority: Wishlist"]
 title: "What's the package name?"
 body:
+    - type: checkboxes
+      id: search
+      attributes:
+        label: Please confirm there isn't an existing package request
+        description: Before opening a new package request, please search [existing package requests](https://github.com/getsolus/packages/labels/Package%20Request) to ensure there is not an existing one.
+        options:
+          - label: I have searched through package requests
+            required: true
     - type: input
       id: homepage
       attributes:
@@ -11,25 +19,31 @@ body:
           placeholder: https://www.example.com
       validations:
           required: true
+    - type: checkboxes
+      id: maintainer
+      attributes:
+        label: Maintainer
+        options:
+          - label: Would you like to be the maintainer for this package?
     - type: textarea
       id: reason
       attributes:
           label: Why should this be included in the repository?
-          description: If we already offer similar software in our repository or third party, please provide information on what your proposed software does that our existing offerings don't (*differentiators*).
+          description: If we already offer similar packages in our repository **or third party repository**, please tell us what your new package does that our existing packages do not (*How is it different or better*)
       validations:
           required: true
     - type: input
       id: license
       attributes:
           label: Are we allowed to redistribute it?
-          description: If you know the main license(s) the software is shipped under, state here.
+          description: If you know the license(s) the package uses, include them here. Use identifiers from the [SPX License List](https://spdx.org/licenses/)
           placeholder: MIT, BSD-3-Clause…
       validations:
           required: false
     - type: textarea
       id: users
       attributes:
-          label: Who and how many users do you anticipate will use this software?
+          label: What kind of user will use this package, and how many users do you think will use this package?
           placeholder: Civil engineers or power users.
       validations:
           required: true
@@ -37,7 +51,7 @@ body:
       id: source
       attributes:
           label: Link to source archive file
-          description: 'This must point to a stable versioned source, for example: "1.2.3.tar.gz" or "packagename-1.2.3". Nightlies, snapshots and pre-releases are not allowed.'
+          description: 'This must point to a stable, versioned source, for example: `1.2.3.tar.gz` or `packagename-1.2.3`. Nightlies, snapshots and pre-releases are not allowed.'
           placeholder: https://www.example.com/releases/v1.2.3.tar.gz
       validations:
           required: true

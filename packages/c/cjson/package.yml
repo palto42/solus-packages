@@ -1,0 +1,20 @@
+name       : cjson
+version    : 1.7.17
+release    : 2
+source     :
+    - https://github.com/DaveGamble/cJSON/archive/refs/tags/v1.7.17.tar.gz : c91d1eeb7175c50d49f6ba2a25e69b46bd05cffb798382c19bfb202e467ec51c
+license    : MIT
+homepage   : https://github.com/DaveGamble/cJSON/
+component  : programming.library
+summary    : Ultralightweight JSON parser in ANSI C
+description: |
+    Ultralightweight JSON parser in ANSI C
+clang      : yes
+setup      : |
+    %cmake_ninja
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install
+check      : |
+    %ninja_check

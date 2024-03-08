@@ -1,6 +1,7 @@
 <PISI>
     <Source>
         <Name>libqalculate</Name>
+        <Homepage>https://qalculate.github.io/</Homepage>
         <Packager>
             <Name>Joey Riches</Name>
             <Email>josephriches@gmail.com</Email>
@@ -10,7 +11,7 @@
         <Summary xml:lang="en">Qalculate! library and CLI</Summary>
         <Description xml:lang="en">Qalculate! is a multi-purpose cross-platform desktop calculator. It is simple to use but provides power and versatility normally reserved for complicated math packages, as well as useful tools for everyday needs (such as currency conversion and percent calculation). Features include a large library of customizable functions, unit calculations and conversion, symbolic calculations (including integrals and equations), arbitrary precision, interval arithmetic, plotting, and a user-friendly interface.
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>libqalculate</Name>
@@ -21,11 +22,12 @@
         <Files>
             <Path fileType="executable">/usr/bin/qalc</Path>
             <Path fileType="library">/usr/lib64/libqalculate.so.22</Path>
-            <Path fileType="library">/usr/lib64/libqalculate.so.22.15.0</Path>
+            <Path fileType="library">/usr/lib64/libqalculate.so.22.20.1</Path>
             <Path fileType="localedata">/usr/share/locale/ca/LC_MESSAGES/libqalculate.mo</Path>
             <Path fileType="localedata">/usr/share/locale/de/LC_MESSAGES/libqalculate.mo</Path>
             <Path fileType="localedata">/usr/share/locale/es/LC_MESSAGES/libqalculate.mo</Path>
             <Path fileType="localedata">/usr/share/locale/fr/LC_MESSAGES/libqalculate.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/ka/LC_MESSAGES/libqalculate.mo</Path>
             <Path fileType="localedata">/usr/share/locale/nl/LC_MESSAGES/libqalculate.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ru/LC_MESSAGES/libqalculate.mo</Path>
             <Path fileType="localedata">/usr/share/locale/sv/LC_MESSAGES/libqalculate.mo</Path>
@@ -50,7 +52,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="23">libqalculate</Dependency>
+            <Dependency release="26">libqalculate</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/libqalculate/BuiltinFunctions.h</Path>
@@ -72,9 +74,9 @@
         </Files>
     </Package>
     <History>
-        <Update release="23">
-            <Date>2022-12-28</Date>
-            <Version>3.22.0</Version>
+        <Update release="26">
+            <Date>2024-02-07</Date>
+            <Version>4.8.1</Version>
             <Comment>Packaging update</Comment>
             <Name>Joey Riches</Name>
             <Email>josephriches@gmail.com</Email>

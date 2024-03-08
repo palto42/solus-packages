@@ -1,9 +1,3 @@
-UNKNOWN:gtk_printer_option_allocate_choices
-UNKNOWN:gtk_printer_option_choices_from_array
-UNKNOWN:gtk_printer_option_new
-UNKNOWN:gtk_printer_option_set
-UNKNOWN:gtk_printer_option_set_activates_default
-UNKNOWN:gtk_printer_option_set_has_conflict
 libX11.so.6:XAddConnectionWatch
 libX11.so.6:XAllocClassHint
 libX11.so.6:XAllocSizeHints
@@ -162,7 +156,10 @@ libc.so.6:__assert_fail
 libc.so.6:__ctype_b_loc
 libc.so.6:__errno_location
 libc.so.6:__fprintf_chk
-libc.so.6:__isoc99_sscanf
+libc.so.6:__isoc23_sscanf
+libc.so.6:__isoc23_strtol
+libc.so.6:__isoc23_strtoll
+libc.so.6:__isoc23_strtoul
 libc.so.6:__libc_start_main
 libc.so.6:__longjmp_chk
 libc.so.6:__printf_chk
@@ -265,9 +262,6 @@ libc.so.6:strrchr
 libc.so.6:strsep
 libc.so.6:strstr
 libc.so.6:strtod
-libc.so.6:strtol
-libc.so.6:strtoll
-libc.so.6:strtoul
 libc.so.6:syscall
 libc.so.6:textdomain
 libc.so.6:time
@@ -305,6 +299,7 @@ libcairo.so.2:cairo_font_options_set_subpixel_order
 libcairo.so.2:cairo_format_stride_for_width
 libcairo.so.2:cairo_get_current_point
 libcairo.so.2:cairo_get_matrix
+libcairo.so.2:cairo_get_source
 libcairo.so.2:cairo_get_target
 libcairo.so.2:cairo_get_user_data
 libcairo.so.2:cairo_has_current_point
@@ -1283,7 +1278,7 @@ libglib-2.0.so.0:g_ascii_tolower
 libglib-2.0.so.0:g_ascii_toupper
 libglib-2.0.so.0:g_ascii_xdigit_value
 libglib-2.0.so.0:g_assertion_message
-libglib-2.0.so.0:g_assertion_message_cmpnum
+libglib-2.0.so.0:g_assertion_message_cmpint
 libglib-2.0.so.0:g_assertion_message_error
 libglib-2.0.so.0:g_assertion_message_expr
 libglib-2.0.so.0:g_async_queue_length
@@ -2453,7 +2448,6 @@ libm.so.6:sin
 libm.so.6:sincos
 libm.so.6:sincosf
 libm.so.6:sqrt
-libm.so.6:sqrtf
 libm.so.6:tan
 libm.so.6:tanf
 libpango-1.0.so.0:pango_alignment_get_type
@@ -2590,6 +2584,7 @@ libpango-1.0.so.0:pango_font_metrics_get_descent
 libpango-1.0.so.0:pango_font_metrics_unref
 libpango-1.0.so.0:pango_font_scale_get_type
 libpango-1.0.so.0:pango_get_log_attrs
+libpango-1.0.so.0:pango_glyph_string_copy
 libpango-1.0.so.0:pango_glyph_string_extents
 libpango-1.0.so.0:pango_glyph_string_free
 libpango-1.0.so.0:pango_glyph_string_new

@@ -1,8 +1,8 @@
 name       : kde-gtk-config
-version    : 5.27.7
-release    : 89
+version    : 5.27.10
+release    : 91
 source     :
-    - https://cdn.download.kde.org/stable/plasma/5.27.7/kde-gtk-config-5.27.7.tar.xz : ae2a1e468f4132a8efcf61818847d453e73f8b7010d900a6a1406fd7de901c8f
+    - https://cdn.download.kde.org/stable/plasma/5.27.10/kde-gtk-config-5.27.10.tar.xz : 6f3b3150b138b5c309ef2c47eee2ab15b0908cacf1487cbc9d561d64f0f68e6b
 homepage   : https://www.kde.org/workspaces/plasmadesktop/
 license    :
     - BSD-2-Clause

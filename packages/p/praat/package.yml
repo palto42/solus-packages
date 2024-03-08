@@ -1,9 +1,9 @@
 name       : praat
-version    : 6.2.10
-release    : 10
+version    : 6.4.04
+release    : 12
 source     :
-    - https://github.com/praat/praat/archive/refs/tags/v6.2.10.tar.gz : f6358b2c6a967afe89882720d503c74221b364c563e1e4316a2d73c9f0c22bcd
-homepage   : http://www.praat.org/
+    - https://github.com/praat/praat/archive/refs/tags/v6.4.04.tar.gz : ed70efaa23d649bb49d859e372b2e94cd364fbc5e5c3ea34d173849f46867cac
+homepage   : www.praat.org
 license    : GPL-3.0-or-later
 component  : office.scientific
 summary    : A software package for the scientific analysis of speech in phonetics
@@ -21,4 +21,4 @@ build      : |
 install    : |
     install -Dm00755 praat $installdir/usr/bin/praat
     install -Dm00644 main/praat.desktop $installdir/usr/share/applications/praat.desktop
-    install -Dm00644 main/praat.svg $installdir/usr/share/pixmaps/praat.svg
+    install -Dm00644 main/praat-480.svg $installdir/usr/share/pixmaps/praat.svg

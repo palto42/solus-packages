@@ -1,0 +1,40 @@
+name       : kasts
+version    : 23.08.5
+release    : 3
+source     :
+    - https://cdn.download.kde.org/stable/release-service/23.08.5/src/kasts-23.08.5.tar.xz : 90677828acc841c455d7d6abd22a4270f8c754dd9a55ddc9b08e5ced6816b6d8
+homepage   : https://apps.kde.org/kasts/
+license    : GPL-2.0-or-later
+component  : desktop.kde
+summary    : Kasts is a convergent podcast application that looks good on desktop and mobile.
+description: |
+    Kasts is a convergent podcast application that looks good on desktop and mobile. Its main features are:
+    - Episode management through play queue
+    - Sync playback positions with other clients through gpodder.net or gpodder-nextcloud
+    - Variable playback speed
+    - Search for podcasts
+    - Full system integration: e.g. inhibit system suspend while listening
+libsplit   : no
+builddeps  :
+    - pkgconfig(Qt5Multimedia)
+    - pkgconfig(Qt5Quick)
+    - pkgconfig(Qt5QuickControls2)
+    - pkgconfig(Qt5Svg)
+    - pkgconfig(gstreamer-1.0)
+    - pkgconfig(taglib)
+    - pkgconfig(vlc-plugin)
+    - kconfig-devel
+    - kcoreaddons-devel
+    - ki18n-devel
+    - kirigami-addons-devel
+    - kirigami2-devel
+    - networkmanager-qt-devel
+    - qtkeychain-qt5-devel
+    - syndication-devel
+    - threadweaver-devel
+setup      : |
+    %cmake_ninja
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install

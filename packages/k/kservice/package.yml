@@ -1,8 +1,8 @@
 name       : kservice
-version    : 5.109.0
-release    : 75
+version    : 5.115.0
+release    : 79
 source     :
-    - https://cdn.download.kde.org/stable/frameworks/5.109/kservice-5.109.0.tar.xz : 5eefe87a080d88d2e8d60bc19e49ef925ab4c2c3cdffb29edb63eb91db3a6995
+    - https://cdn.download.kde.org/stable/frameworks/5.115/kservice-5.115.0.tar.xz : 9bcb83fb5eaa58877130f63e203471a766547fd2b0068a88555f95e482dc5efd
 homepage   : https://community.kde.org/Frameworks
 license    :
     - GPL-2.0-only
@@ -25,7 +25,7 @@ rundeps    :
         - kconfig-devel
         - kcoreaddons-devel
 setup      : |
-    %patch -p1 < $pkgfiles/0001-Use-stateless-directory-for-menu.patch
+    %patch -p1 -i $pkgfiles/0001-Use-stateless-directory-for-menu.patch
     %cmake_ninja -DBUILD_QCH=ON -DAPPLICATIONS_MENU_NAME="kde-applications.menu" \
            -DBUILD_TESTING=OFF
 build      : |

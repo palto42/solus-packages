@@ -1,13 +1,14 @@
 name       : gnome-shell-extensions
-version    : '44.0'
-release    : 41
+version    : '45.2'
+release    : 46
 source     :
-    - https://download.gnome.org/sources/gnome-shell-extensions/44/gnome-shell-extensions-44.0.tar.xz : 8c345e72f31a1e37f55063e0b15997301b01194ed698772fd87aeb50cbb101ab
+    - https://download.gnome.org/sources/gnome-shell-extensions/45/gnome-shell-extensions-45.2.tar.xz : ee32f6387a2d18adbff7a956689bc747866b4a8712d73790c002abeae4ccaaaf
+homepage   : https://wiki.gnome.org/Projects/GnomeShell/Extensions
 license    : GPL-2.0-or-later
 component  : desktop.gnome
 summary    : Extensions for GNOME Shell
 description: |
-    Extensions for GNOME Shell
+    The GNOME Shell extension design is designed to give a high degree of power to the parts of the GNOME interface managed by the shell, such as window management and application launching. It simply loads arbitrary JavaScript and CSS. This gives developers a way to make many kinds of changes and share those changes with others, without having to patch the original source code and recompile it, and somehow distribute the patched code.
 builddeps  :
     - pkgconfig(gtk4)
 rundeps    :
@@ -19,3 +20,23 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+patterns   :
+    # NOTE: remember to subpackage any new extensions
+    - ^gnome-shell-extension-apps-menu :
+        - /usr/share/glib-2.0/schemas/org.gnome.shell.extensions.apps-menu.gschema.xml
+        - /usr/share/gnome-shell/extensions/apps-menu@gnome-shell-extensions.gcampax.github.com/*
+    - ^gnome-shell-extension-auto-move-windows :
+        - /usr/share/glib-2.0/schemas/org.gnome.shell.extensions.auto-move-windows.gschema.xml
+        - /usr/share/gnome-shell/extensions/auto-move-windows@gnome-shell-extensions.gcampax.github.com/*
+    - ^gnome-shell-extension-native-window-placement :
+        - /usr/share/glib-2.0/schemas/org.gnome.shell.extensions.native-window-placement.gschema.xml
+        - /usr/share/gnome-shell/extensions/native-window-placement@gnome-shell-extensions.gcampax.github.com/*
+    - ^gnome-shell-extension-screenshot-window-sizer :
+        - /usr/share/glib-2.0/schemas/org.gnome.shell.extensions.screenshot-window-sizer.gschema.xml
+        - /usr/share/gnome-shell/extensions/screenshot-window-sizer@gnome-shell-extensions.gcampax.github.com/*
+    - ^gnome-shell-extension-user-theme :
+        - /usr/share/glib-2.0/schemas/org.gnome.shell.extensions.user-theme.gschema.xml
+        - /usr/share/gnome-shell/extensions/user-theme@gnome-shell-extensions.gcampax.github.com/*
+    - ^gnome-shell-extension-window-list :
+        - /usr/share/glib-2.0/schemas/org.gnome.shell.extensions.window-list.gschema.xml
+        - /usr/share/gnome-shell/extensions/window-list@gnome-shell-extensions.gcampax.github.com/*

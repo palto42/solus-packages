@@ -1,8 +1,9 @@
 name       : flatpak-builder
-version    : 1.2.3
-release    : 20
+version    : 1.4.2
+release    : 25
 source     :
-    - https://github.com/flatpak/flatpak-builder/releases/download/1.2.3/flatpak-builder-1.2.3.tar.xz : e257825a47f7a3e71e30fb0f80f2d9ac6e4801f746f552dfaf0e564e3ee351c8
+    - https://github.com/flatpak/flatpak-builder/releases/download/1.4.2/flatpak-builder-1.4.2-fixed-libglnx.tar.xz : c041b974e03a2c2d3cda88a0efe1ecf69f9adf42a1758eac341d555e779d0596
+homepage   : https://flatpak.org
 license    : LGPL-2.1-or-later
 component  : desktop
 summary    : Tool to build flatpaks from source
@@ -16,19 +17,25 @@ builddeps  :
     - pkgconfig(libelf)
     - pkgconfig(libsoup-2.4)
     - pkgconfig(yaml-0.1)
-    - elfutils-devel
+    - debugedit
     - docbook-xml
     - xmlto
 rundeps    :
     - ccache
     - bzr
+    - debugedit
     - elfutils
     - flatpak
+    - fuse
     - git
     - patch
 setup      : |
-    %configure --disable-static
+    %patch -p1 -i $pkgfiles/0001-Use-fusermount3-to-work-with-fuse3.patch
+    %meson_configure
 build      : |
-    %make
+    %ninja_build
 install    : |
-    %make_install
+    %ninja_install
+check      : |
+    # Needs unprivileged userns enabled
+    %ninja_check || true

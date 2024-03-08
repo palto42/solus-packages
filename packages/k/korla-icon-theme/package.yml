@@ -1,8 +1,8 @@
 name       : korla-icon-theme
-version    : 1.5.8
-release    : 34
+version    : 1.6.0
+release    : 36
 source     :
-    - https://github.com/bikass/kora/archive/refs/tags/v1.5.8.tar.gz : 241fb5a806f70db88fc1d9417e66c3030d5b8f365a8efe0c13b620a1ad26268c
+    - https://github.com/bikass/kora/archive/refs/tags/v1.6.0.tar.gz : c07e550ff231419832eccc3281ef7b232cdd6df12c2f534ff22c530158162c33
 homepage   : https://github.com/bikass/kora
 license    : GPL-3.0-or-later
 component  : desktop.theme

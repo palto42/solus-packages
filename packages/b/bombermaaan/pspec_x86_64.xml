@@ -3,15 +3,15 @@
         <Name>bombermaaan</Name>
         <Homepage>https://github.com/bjaraujo/Bombermaaan</Homepage>
         <Packager>
-            <Name>Joey Riches</Name>
-            <Email>josephriches@gmail.com</Email>
+            <Name>Muhammad Alfi Syahrin</Name>
+            <Email>malfisya.dev@hotmail.com</Email>
         </Packager>
         <License>GPL-3.0-or-later</License>
         <PartOf>games.arcade</PartOf>
         <Summary xml:lang="en">Bombermaaan is a clone of the classic Bomberman game</Summary>
         <Description xml:lang="en">Bombermaaan is a clone of the classic Bomberman game.
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>bombermaaan</Name>
@@ -353,17 +353,19 @@
             <Path fileType="data">/usr/share/Bombermaaan/sounds/wall_clap_1.ogg</Path>
             <Path fileType="data">/usr/share/Bombermaaan/sounds/wall_clap_2.ogg</Path>
             <Path fileType="data">/usr/share/Bombermaaan/sounds/winner.ogg</Path>
-            <Path fileType="data">/usr/share/applications/bombermaaan.desktop</Path>
-            <Path fileType="data">/usr/share/pixmaps/bombermaaan.png</Path>
+            <Path fileType="data">/usr/share/applications/com.github.bjaraujo.Bombermaaan.desktop</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/32x32/apps/bombermaaan.png</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/bombermaaan.svg</Path>
+            <Path fileType="data">/usr/share/metainfo/bombermaaan.appdata.xml</Path>
         </Files>
     </Package>
     <History>
-        <Update release="5">
-            <Date>2022-03-30</Date>
-            <Version>2.2.5.2226</Version>
+        <Update release="7">
+            <Date>2024-01-22</Date>
+            <Version>2.2.8.2275</Version>
             <Comment>Packaging update</Comment>
-            <Name>Joey Riches</Name>
-            <Email>josephriches@gmail.com</Email>
+            <Name>Muhammad Alfi Syahrin</Name>
+            <Email>malfisya.dev@hotmail.com</Email>
         </Update>
     </History>
 </PISI>

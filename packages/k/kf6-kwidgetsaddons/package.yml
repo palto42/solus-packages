@@ -1,0 +1,33 @@
+name       : kf6-kwidgetsaddons
+version    : 6.0.0
+release    : 4
+source     :
+    - https://cdn.download.kde.org/stable/frameworks/6.0/kwidgetsaddons-6.0.0.tar.xz : a7771c92310a21a8105ba64dd61c065ba74723899c7ccfc4de2b57b17e6a6b63
+homepage   : https://community.kde.org/Frameworks
+license    :
+    - BSD-3-Clause
+    - GPL-2.0-or-later
+    - LGPL-2.0-only
+    - LGPL-2.0-or-later
+    - LGPL-2.1-only
+    - LGPL-2.1-or-later
+    - LGPL-3.0-or-later
+component  : desktop.library
+summary    : Large set of desktop widgets.
+description: |
+    Large set of desktop widgets.
+builddeps  :
+    - pkgconfig(Qt6Designer)
+    - extra-cmake-modules
+rundeps    :
+    - devel :
+        - extra-cmake-modules
+        - qt6-tools-devel
+clang      : yes
+optimize   : thin-lto
+setup      : |
+    %cmake_kf6
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install

@@ -1,6 +1,6 @@
 name       : glances
 version    : 3.4.0.3
-release    : 42
+release    : 43
 source     :
     - https://github.com/nicolargo/glances/archive/refs/tags/v3.4.0.3.tar.gz : fc66089237b3a6a6cdd1868a296f16d35d97e8229b7efe369430abd140d07eb2
 homepage   : https://nicolargo.github.io/glances/
@@ -21,7 +21,7 @@ rundeps    :
     - python-psutil
     - python-ujson
 setup      : |
-    %patch -p1 < $pkgfiles/no-check-update.patch
+    %patch -p1 -i $pkgfiles/no-check-update.patch
 install    : |
     %python3_install
     rm -rf $installdir/usr/share/doc/glances/{AUTHORS,CONTRIBUTING.md,COPYING,NEWS.rst,README.rst}

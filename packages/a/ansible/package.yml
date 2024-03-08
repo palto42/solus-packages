@@ -1,9 +1,10 @@
 name       : ansible
-version    : 2.15.3
-release    : 39
+version    : 2.16.4
+release    : 46
 source     :
-    - https://github.com/ansible/ansible/archive/refs/tags/v2.15.3.tar.gz : 1ce23850aefcee176931d3f4f190af8c87461e63b90d0a84a3188d30a83343c2
+    - https://github.com/ansible/ansible/archive/refs/tags/v2.16.4.tar.gz : 05485159e5d9d1d4a7d60ee5bd1cdfa89927983ff16cd847ab4576b032a569ae
 license    : GPL-3.0-or-later
+homepage   : https://www.ansible.com/
 component  : system.utils
 summary    : Ansible is a radically simple IT automation system
 description: |
@@ -15,6 +16,7 @@ builddeps  :
     - python-jinja
 rundeps    :
     - python-jinja
+    - python-jmespath
     - python-paramiko
     - python-resolvelib
     - pyyaml

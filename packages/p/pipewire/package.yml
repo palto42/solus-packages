@@ -1,8 +1,8 @@
 name       : pipewire
-version    : 0.3.79
-release    : 80
+version    : 1.0.3
+release    : 95
 source     :
-    - https://gitlab.freedesktop.org/pipewire/pipewire/-/archive/0.3.79/pipewire-0.3.79.tar.gz : d5808abaf6e56b1f268a468dafc2fe9ca9efcc7cfea19f6d47ad5769271afce9
+    - https://gitlab.freedesktop.org/pipewire/pipewire/-/archive/1.0.3/pipewire-1.0.3.tar.gz : bddb29b9310c344ca069df410f6f02b7f3d8c518811c0505c7fe62d8428fd767
 homepage   : https://pipewire.org/
 license    :
     - MIT
@@ -34,7 +34,7 @@ builddeps  :
     - pkgconfig32(ncursesw)
     - pkgconfig32(sdl2)
     - pkgconfig32(sndfile)
-    - pkgconfig32(webrtc-audio-processing)
+    - pkgconfig32(webrtc-audio-processing-1)
     - pkgconfig32(x11)
     - pkgconfig(avahi-client)
     - pkgconfig(bluez)
@@ -47,6 +47,8 @@ builddeps  :
     - pkgconfig(libusb-1.0)
     - pkgconfig(readline)
     - pkgconfig(sbc)
+    - pkgconfig(vulkan)
+    - vulkan-headers
 rundeps    :
     - rtkit
     - wireplumber
@@ -80,7 +82,7 @@ setup      : |
                                            -Djack=disabled \
                                            -Draop=disabled"
     else
-        CONFIGURE_OPTIONS="$COMMON_OPTIONS -Dffmpeg=enabled"
+        CONFIGURE_OPTIONS="$COMMON_OPTIONS -Dffmpeg=enabled -Dvulkan=enabled"
     fi
 
     %meson_configure $CONFIGURE_OPTIONS
@@ -93,10 +95,8 @@ install    : |
     # Enable user service by default
     if [[ -z "${EMUL32BUILD}" ]]; then
         install -dm0644 $installdir/usr/lib/systemd/user/sockets.target.wants
-        ln -s /usr/lib/systemd/user/pipewire.socket \
-             $installdir/usr/lib/systemd/user/sockets.target.wants/
-        ln -s /usr/lib/systemd/user/pipewire-pulse.socket \
-             $installdir/usr/lib/systemd/user/sockets.target.wants/
+        ln -s ../pipewire.socket $installdir/usr/lib/systemd/user/sockets.target.wants/
+        ln -s ../pipewire-pulse.socket $installdir/usr/lib/systemd/user/sockets.target.wants/
     fi
 
     # Remove unnecessary udev rules file from the 32-bit package

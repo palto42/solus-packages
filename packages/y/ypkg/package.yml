@@ -1,8 +1,9 @@
 name       : ypkg
 version    : '31'
-release    : 164
+release    : 174
 source     :
-    - git|https://github.com/getsolus/ypkg.git : 666339ee9bab4e227ebfe210c081b8bc1717cc0d
+    - git|https://github.com/getsolus/ypkg.git : e676667ad54dd1aa21fad804225c9a791fd77813
+homepage   : https://github.com/getsolus/ypkg
 license    : GPL-3.0-or-later
 component  : system.devel
 summary    : Modern, declarative, structured build format
@@ -15,6 +16,8 @@ rundeps    :
     - fakeroot
     - pyyaml
     - ruamel_yaml
+setup      : |
+    %patch -p1 -i $pkgfiles/0001-Call-out-to-sha256sum-instead-of-using-hashlib-which.patch
 build      : |
     %python_setup
 install    : |

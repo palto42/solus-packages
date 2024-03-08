@@ -1,8 +1,8 @@
 name       : qt5-connectivity
-version    : 5.15.10
-release    : 34
+version    : 5.15.12
+release    : 37
 source     :
-    - git|https://invent.kde.org/qt/qt/qtconnectivity.git : 9a4e6f887f35b8018c30afdeaaef152a875c9a2b
+    - git|https://invent.kde.org/qt/qt/qtconnectivity.git : 70020cb64f71dcf2fd65a8a167cb785d2127e159
 homepage   : https://www.qt.io
 license    :
     - GPL-2.0-or-later
@@ -16,8 +16,9 @@ summary    : Qt5 Connectivity components
 description: |
     Qt5 Connectivity Components
 builddeps  :
-    - pkgconfig(bluez)
     - pkgconfig(Qt5Qml)
+    - pkgconfig(bluez)
+clang      : yes
 patterns   :
     - demos :
         - /usr/lib64/qt5/examples
@@ -27,3 +28,4 @@ build      : |
     %make
 install    : |
     %make_install INSTALL_ROOT=$installdir
+    %qml_cache

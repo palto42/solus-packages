@@ -1,0 +1,34 @@
+name       : kf6-kconfig
+version    : 6.0.0
+release    : 4
+source     :
+    - https://cdn.download.kde.org/stable/frameworks/6.0/kconfig-6.0.0.tar.xz : 3f7c1e6b048df4ab3d67fbef01a5ad1dd0289c9b158644668fba0225c050c050
+homepage   : https://community.kde.org/Frameworks
+license    :
+    - BSD-2-Clause
+    - BSD-3-Clause
+    - GPL-2.0-or-later
+    - LGPL-2.0-only
+    - LGPL-2.0-or-later
+    - LGPL-2.1-only
+    - MIT
+component  : desktop.library
+summary    : Persistent platform-independent application settings.
+description: |
+    Persistent platform-independent application settings.
+builddeps  :
+    - pkgconfig(Qt6Designer)
+    - pkgconfig(Qt6Qml)
+    - extra-cmake-modules
+rundeps    :
+    - devel :
+        - extra-cmake-modules
+        - qt6-tools-devel
+clang      : yes
+optimize   : thin-lto
+setup      : |
+    %cmake_kf6
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install

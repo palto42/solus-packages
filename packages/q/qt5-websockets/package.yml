@@ -1,8 +1,8 @@
 name       : qt5-websockets
-version    : 5.15.10
-release    : 31
+version    : 5.15.12
+release    : 34
 source     :
-    - git|https://invent.kde.org/qt/qt/qtwebsockets.git : 89fbe461e7091ae6a4689b7791293a06c9167776
+    - git|https://invent.kde.org/qt/qt/qtwebsockets.git : 9a7b9972a54137d5f2e0d49559fe58d07c90662e
 homepage   : https://www.qt.io
 license    :
     - GPL-3.0-or-later
@@ -17,6 +17,7 @@ description: |
     The Qt WebSockets module provides C++ and QML interfaces that enable Qt applications to act as a server that can process WebSocket requests, or a client that can consume data received from the server, or both.
 builddeps  :
     - pkgconfig(Qt5Qml)
+clang      : yes
 patterns   :
     - demos : /usr/lib64/qt5/examples
 setup      : |
@@ -25,3 +26,4 @@ build      : |
     %make
 install    : |
     %make_install INSTALL_ROOT=$installdir
+    %qml_cache

@@ -1,16 +1,18 @@
 name       : retroarch
-version    : 1.16.0
-release    : 76
+version    : 1.17.0
+release    : 79
 source     :
-    - https://github.com/libretro/RetroArch/archive/v1.16.0.tar.gz : 36d5abbbcb4a3c6ff387ee1a336b6bb310a42d3968bdf00a88e207d85f663abd
-    - git|https://github.com/libretro/retroarch-assets.git : 7b735ef18bcc6508b1c9a626eb237779ff787179
+    - https://github.com/libretro/RetroArch/archive/v1.17.0.tar.gz : f4182c5118629d96d502df9e8dc781847ba73c6787cbebf0745f22e8a6637437
+    - git|https://github.com/libretro/retroarch-assets.git : 923b711dc6772a168d83dc8915e9260730fcf3a1
 license    : GPL-3.0-or-later
 component  : games.emulator
+homepage   : https://retroarch.com
 summary    : RetroArch is the official reference frontend for the libretro API
 description: |
     RetroArch is the reference frontend for the libretro API. Popular examples of implementations for this API includes videogame system emulators and game engines, but also more generalized 3D programs.
 clang      : yes
 builddeps  :
+    - pkgconfig(Qt5Gui)
     - pkgconfig(alsa)
     - pkgconfig(flac)
     - pkgconfig(fontconfig)
@@ -21,7 +23,6 @@ builddeps  :
     - pkgconfig(libpulse)
     - pkgconfig(libv4l2)
     - pkgconfig(openal)
-    - pkgconfig(Qt5Gui)
     - pkgconfig(sdl2)
     - pkgconfig(vulkan)
     - pkgconfig(wayland-egl)
@@ -35,7 +36,7 @@ builddeps  :
 rundeps    :
     - libdecor
 setup      : |
-    %patch -p1 < $pkgfiles/0001-Set-Solus-Defaults.patch
+    %patch -p1 -i $pkgfiles/0001-Set-Solus-Defaults.patch
 
     # Fix appstream generation due to desktop file rename
     sed -i "s|retroarch.desktop|org.libretro.RetroArch.desktop|" com.libretro.RetroArch.appdata.xml

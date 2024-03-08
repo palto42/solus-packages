@@ -1,8 +1,8 @@
 name       : gdb
-version    : '13.2'
-release    : 23
+version    : '14.2'
+release    : 26
 source     :
-    - https://ftp.gnu.org/gnu/gdb/gdb-13.2.tar.xz : fd5bebb7be1833abdb6e023c2f498a354498281df9d05523d8915babeb893f0a
+    - https://ftp.gnu.org/gnu/gdb/gdb-14.2.tar.xz : 2d4dd8061d8ded12b6c63f55e45344881e8226105f4d2a9b234040efa5ce7772
 homepage   : https://www.gnu.org/software/gdb/
 license    : GPL-3.0-or-later
 component  : programming.tools
@@ -18,7 +18,7 @@ builddeps  :
     - pkgconfig(libzstd)
     - pkgconfig(python3)
 setup      : |
-    %configure \
+    %configure_no_runstatedir \
         --with-python=/usr/bin/python3 \
         --with-system-zlib
 build      : |

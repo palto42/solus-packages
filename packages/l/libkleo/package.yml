@@ -1,8 +1,8 @@
 name       : libkleo
-version    : 23.04.3
-release    : 66
+version    : 23.08.5
+release    : 70
 source     :
-    - https://cdn.download.kde.org/stable/release-service/23.04.3/src/libkleo-23.04.3.tar.xz : 4538152adbfa4f696dd72a76affc71f18014e56f3319b83f6530ed451bb1e750
+    - https://cdn.download.kde.org/stable/release-service/23.08.5/src/libkleo-23.08.5.tar.xz : 4330d3e4b70cf5f8d7b341b665a63b47f02e12270946ce6991971315298c4625
 homepage   : https://kde.org/
 license    : GPL-2.0-or-later
 component  : desktop.library

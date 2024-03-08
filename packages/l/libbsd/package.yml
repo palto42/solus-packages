@@ -1,14 +1,20 @@
 name       : libbsd
-version    : 0.10.0
-release    : 5
+version    : 0.11.8
+release    : 7
 source     :
-    - https://libbsd.freedesktop.org/releases/libbsd-0.10.0.tar.xz : 34b8adc726883d0e85b3118fa13605e179a62b31ba51f676136ecb2d0bc1a887
+    - https://libbsd.freedesktop.org/releases/libbsd-0.11.8.tar.xz : 55fdfa2696fb4d55a592fa9ad14a9df897c7b0008ddb3b30c419914841f85f33
+homepage   : https://libbsd.freedesktop.org/wiki/
 license    :
     - BSD-2-Clause
     - BSD-3-Clause
     - BSD-4-Clause
 summary    : BSD functionality library
 component  : system.utils
+builddeps  :
+    - pkgconfig(libmd)
+rundeps    :
+    - devel :
+        - libmd-devel
 description: |
     This library provides useful functions commonly found on BSD systems, and lacking on others like GNU systems, thus making it easier to port projects with strong BSD origins, without needing to embed the same code over and over again on each project.
 setup      : |
@@ -17,3 +23,5 @@ build      : |
     %make
 install    : |
     %make_install
+check      : |
+    %make check

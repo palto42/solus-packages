@@ -1,8 +1,8 @@
 name       : palapeli
-version    : 23.04.3
-release    : 53
+version    : 23.08.5
+release    : 56
 source     :
-    - https://cdn.download.kde.org/stable/release-service/23.04.3/src/palapeli-23.04.3.tar.xz : 3bff4ecb83377c94ae4814be43c0c34f1919b122eadddad622159105f300b0a7
+    - https://cdn.download.kde.org/stable/release-service/23.08.5/src/palapeli-23.08.5.tar.xz : faea7b9a18a4fc8fa4af2cca7994609bdb79039a9bd319cdc74fad55046b89d1
 homepage   : https://kde.org/applications/games/org.kde.palapeli
 license    :
     - GFDL-1.2-or-later

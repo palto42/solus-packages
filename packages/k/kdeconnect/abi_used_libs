@@ -14,7 +14,7 @@ libKF5KIOWidgets.so.5
 libKF5ModemManagerQt.so.6
 libKF5Notifications.so.5
 libKF5People.so.5
-libKF5PulseAudioQt.so.3
+libKF5PulseAudioQt.so.4
 libKF5Service.so.5
 libKF5Solid.so.5
 libKF5WidgetsAddons.so.5
@@ -34,6 +34,9 @@ libX11.so.6
 libXtst.so.6
 libc.so.6
 libfakekey.so.0
+libgio-2.0.so.0
+libglib-2.0.so.0
+libgobject-2.0.so.0
 libqca-qt5.so.2
 libstdc++.so.6
 libwayland-client.so.0

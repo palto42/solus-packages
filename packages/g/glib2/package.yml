@@ -1,8 +1,9 @@
 name       : glib2
-version    : 2.76.4
-release    : 96
+version    : 2.78.4
+release    : 102
 source     :
-    - https://download.gnome.org/sources/glib/2.76/glib-2.76.4.tar.xz : 5a5a191c96836e166a7771f7ea6ca2b0069c603c7da3cba1cd38d1694a395dda
+    - https://download.gnome.org/sources/glib/2.78/glib-2.78.4.tar.xz : 24b8e0672dca120cc32d394bccb85844e732e04fe75d18bb0573b2dbc7548f63
+homepage   : https://wiki.gnome.org/Projects/GLib
 license    : LGPL-2.1-or-later
 summary    : Low level C library containing data structure handling and interfaces
 description: |
@@ -20,7 +21,12 @@ builddeps  :
     - pkgconfig32(zlib)
 setup      : |
     %apply_patches
-    %meson_configure -Dgtk_doc=false -Dtests=false
+    export CFLAGS+=" -g3"
+    export CXXFLAGS+=" -g3"
+    %meson_configure \
+                    -Dglib_debug=disabled \
+                    -Dgtk_doc=false \
+                    -Dtests=false
 build      : |
     %ninja_build
 install    : |

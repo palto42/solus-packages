@@ -1,8 +1,8 @@
 name       : libvpx
-version    : 1.12.0
-release    : 16
+version    : 1.13.1
+release    : 18
 source     :
-    - https://github.com/webmproject/libvpx/archive/refs/tags/v1.12.0.tar.gz : f1acc15d0fd0cb431f4bf6eac32d5e932e40ea1186fe78e074254d6d003957bb
+    - https://github.com/webmproject/libvpx/archive/refs/tags/v1.13.1.tar.gz : 00dae80465567272abd077f59355f95ac91d7809a2d3006f9ace2637dd429d14
 homepage   : http://www.webmproject.org/
 license    : MIT
 component  : multimedia.codecs
@@ -10,6 +10,7 @@ summary    : Reference implementation of the VP8 & VP9 codec
 description: |
     Reference implementation of the VP8 & VP9 codec
 emul32     : yes
+avx2       : yes
 optimize   : lto
 builddeps  :
     - yasm

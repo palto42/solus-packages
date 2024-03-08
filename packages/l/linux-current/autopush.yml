@@ -9,13 +9,13 @@ tiers:
   dirs:
   - bbswitch
   - broadcom-sta
-  - nvidia-390-glx-driver
   - nvidia-470-glx-driver
   - nvidia-beta-driver
   - nvidia-developer-driver
   - nvidia-glx-driver
   - open-vm-tools
   - openrazer
+  - rtl8852bu
   - v4l2loopback
   - vhba-module
   - virtualbox

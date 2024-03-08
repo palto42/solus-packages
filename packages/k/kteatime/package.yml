@@ -1,8 +1,8 @@
 name       : kteatime
-version    : 23.04.3
-release    : 68
+version    : 23.08.5
+release    : 71
 source     :
-    - https://cdn.download.kde.org/stable/release-service/23.04.3/src/kteatime-23.04.3.tar.xz : a7fa5e68345333bb246600dc5cdb1e03129cd7ac1708eff9a6b129e082908309
+    - https://cdn.download.kde.org/stable/release-service/23.08.5/src/kteatime-23.08.5.tar.xz : 4e855767dd50d09a394f249a97417ba35ed4754b4cc0597a96f9256b291cc2e6
 homepage   : https://kde.org/applications/utilities/org.kde.kteatime
 license    :
     - GFDL-1.2-or-later
@@ -14,6 +14,7 @@ description: |
 builddeps  :
     - kcrash-devel
     - kdoctools-devel
+    - kguiaddons-devel
     - kiconthemes-devel
     - knotifyconfig-devel
     - ktextwidgets-devel

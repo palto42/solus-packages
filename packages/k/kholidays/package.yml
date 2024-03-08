@@ -1,8 +1,8 @@
 name       : kholidays
-version    : 5.109.0
-release    : 65
+version    : 5.115.0
+release    : 69
 source     :
-    - https://cdn.download.kde.org/stable/frameworks/5.109/kholidays-5.109.0.tar.xz : 025a1aa3653c787e317b6cd737793bcf2340e4fd3f07239afc1f9006c33b6f4d
+    - https://cdn.download.kde.org/stable/frameworks/5.115/kholidays-5.115.0.tar.xz : cdf0d732cf0fa85971961803f0d1be5a78f3f45536fc7c22231b953349b641a4
 homepage   : https://community.kde.org/Frameworks
 license    :
     - BSD-2-Clause

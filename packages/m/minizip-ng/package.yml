@@ -1,0 +1,39 @@
+name       : minizip-ng
+version    : 4.0.5
+release    : 6
+source     :
+    - https://github.com/zlib-ng/minizip-ng/archive/refs/tags/4.0.5.tar.gz : 9bb636474b8a4269280d32aca7de4501f5c24cc642c9b4225b4ed7b327f4ee73
+license    : Zlib
+homepage   : https://github.com/zlib-ng/minizip-ng
+component  : system.utils
+summary    : Fork of the zlib zip library
+description: |
+    Fork of the popular zip manipulation library found in the zlib distribution
+clang      : yes
+optimize   :
+    - speed
+builddeps  :
+    - pkgconfig(bzip2)
+    - pkgconfig(libcrypto)
+    - pkgconfig(liblzma)
+    - pkgconfig(libzstd)
+replaces   :
+    - zlib-minizip
+    - devel : zlib-minizip-devel
+setup      : |
+    %cmake_ninja -B compat \
+                 -DBUILD_SHARED_LIBS=ON \
+                 -DMZ_LIBBSD=OFF \
+                 -DMZ_COMPAT=ON
+
+    %cmake_ninja -B regular \
+                 -DBUILD_SHARED_LIBS=ON \
+                 -DMZ_LIBBSD=OFF \
+                 -DMZ_COMPAT=OFF
+build      : |
+    %ninja_build -C compat
+    %ninja_build -C regular
+install    : |
+    %ninja_install -C compat
+    %ninja_install -C regular
+# TODO Split the compat library out to a different package.

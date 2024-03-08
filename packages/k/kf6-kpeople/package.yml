@@ -1,0 +1,31 @@
+name       : kf6-kpeople
+version    : 6.0.0
+release    : 3
+source     :
+    - https://cdn.download.kde.org/stable/frameworks/6.0/kpeople-6.0.0.tar.xz : 2119ac9dfa80f4d90d6cd044d544ed5e500e9ae487ce616f2475c58eaa906ec3
+homepage   : https://community.kde.org/Frameworks
+license    : LGPL-2.1-or-later
+component  : programming.tools
+summary    : Provides access to all contacts and aggregates them by person
+description: |
+    KPeople offers unified access to our contacts from different sources, grouping them by person while still exposing all the data. Furthermore, KPeople will also provide facilities to integrate the data provided in user interfaces by providing QML and Qt Widgets components.
+builddeps  :
+    - pkgconfig(Qt6Quick)
+    - kf6-kcodecs-devel
+    - kf6-kconfig-devel
+    - kf6-kcontacts-devel
+    - kf6-kcoreaddons-devel
+    - kf6-ki18n-devel
+    - kf6-kitemviews-devel
+    - kf6-kwidgetsaddons-devel
+rundeps    :
+    - devel :
+        - qt6-base-devel
+clang      : yes
+optimize   : thin-lto
+setup      : |
+    %cmake_kf6
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install

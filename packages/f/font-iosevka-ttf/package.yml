@@ -1,13 +1,14 @@
 name       : font-iosevka-ttf
-version    : 26.3.3
-release    : 42
+version    : 28.1.0
+release    : 54
 source     :
-    - https://github.com/be5invis/Iosevka/releases/download/v26.3.3/ttf-iosevka-26.3.3.zip : 8722ba67202d684fefbac873b5dd49af4a0f9edfab424d1ecf3113d123c58f3a
+    - https://github.com/be5invis/Iosevka/releases/download/v28.1.0/PkgTTF-Iosevka-28.1.0.zip : 3ba0a89dfb29231a2669b78e2684351fffde30d1d96b3f2e93a39704d0b4b7bc
 homepage   : https://typeof.net/Iosevka
 license    : OFL-1.1
 component  : desktop.font
-summary    : Slender typeface for code, from code (default shape)
+summary    : Versatile typeface for code, from code.
 description: |
-    Iosevka is a slender monospace sans-serif and slab-serif typeface inspired by Pragmata Pro, M+ and PF DIN Mono, designed to be the ideal font for programming.
+    Iosevka is an open-source, sans-serif + slab-serif, monospace + quasi-proportional typeface family, designed for writing code, using in terminals, and preparing technical documents.
 install    : |
-    install -D -m00644 *.ttf -t $installdir/usr/share/fonts/truetype/iosevka/
+    install -Dm00644 *.ttf -t $installdir/usr/share/fonts/truetype/iosevka/
+    install -Dm00644 $pkgfiles/iosevka.metainfo.xml $installdir/usr/share/metainfo/iosevka.metainfo.xml

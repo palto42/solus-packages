@@ -1,8 +1,9 @@
 name       : wireless-regdb
-version    : 2020.04.29
-release    : 2
+version    : 2024.01.23
+release    : 4
 source     :
-    - https://mirrors.edge.kernel.org/pub/software/network/wireless-regdb/wireless-regdb-2020.04.29.tar.xz : 89fd031aed5977c219a71501e144375a10e7c90d1005d5d086ea7972886a2c7a
+    - https://mirrors.edge.kernel.org/pub/software/network/wireless-regdb/wireless-regdb-2024.01.23.tar.xz : c8a61c9acf76fa7eb4239e89f640dee3e87098d9f69b4d3518c9c60fc6d20c55
+homepage   : https://wireless.wiki.kernel.org/en/developers/regulatory/wireless-regdb
 license    : ISC
 component  : system.base
 summary    : This package contains the wireless regulatory database used by all cfg80211 based Linux wireless drivers.

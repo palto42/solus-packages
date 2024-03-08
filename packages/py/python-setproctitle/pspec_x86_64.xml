@@ -11,7 +11,7 @@
         <Summary xml:lang="en">A Python module to customize the process title</Summary>
         <Description xml:lang="en">The setproctitle module allows a process to change its title (as displayed by system tools such as ps and top). Changing the title is mostly useful in multi-process systems, for example when a master process is forked: changing the children’s title allows to identify the task each process is busy with. The technique is used by PostgreSQL and the OpenSSH Server for example.
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>python-setproctitle</Name>
@@ -20,18 +20,22 @@
 </Description>
         <PartOf>programming.python</PartOf>
         <Files>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/setproctitle-1.2.3-py3.10.egg-info/PKG-INFO</Path>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/setproctitle-1.2.3-py3.10.egg-info/SOURCES.txt</Path>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/setproctitle-1.2.3-py3.10.egg-info/dependency_links.txt</Path>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/setproctitle-1.2.3-py3.10.egg-info/requires.txt</Path>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/setproctitle-1.2.3-py3.10.egg-info/top_level.txt</Path>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/setproctitle.cpython-310-x86_64-linux-gnu.so</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/setproctitle-1.3.3-py3.11.egg-info/PKG-INFO</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/setproctitle-1.3.3-py3.11.egg-info/SOURCES.txt</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/setproctitle-1.3.3-py3.11.egg-info/dependency_links.txt</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/setproctitle-1.3.3-py3.11.egg-info/not-zip-safe</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/setproctitle-1.3.3-py3.11.egg-info/requires.txt</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/setproctitle-1.3.3-py3.11.egg-info/top_level.txt</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/setproctitle/__init__.py</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/setproctitle/__pycache__/__init__.cpython-311.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/setproctitle/_setproctitle.cpython-311-x86_64-linux-gnu.so</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/setproctitle/py.typed</Path>
         </Files>
     </Package>
     <History>
-        <Update release="10">
-            <Date>2022-04-21</Date>
-            <Version>1.2.3</Version>
+        <Update release="12">
+            <Date>2024-02-15</Date>
+            <Version>1.3.3</Version>
             <Comment>Packaging update</Comment>
             <Name>Joey Riches</Name>
             <Email>josephriches@gmail.com</Email>

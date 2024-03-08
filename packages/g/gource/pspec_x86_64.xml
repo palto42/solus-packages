@@ -11,7 +11,7 @@
         <Summary xml:lang="en">Software version control visualization</Summary>
         <Description xml:lang="en">OpenGL-based 3D visualisation tool for source control repositories.
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>gource</Name>
@@ -37,8 +37,8 @@
         </Files>
     </Package>
     <History>
-        <Update release="20">
-            <Date>2022-11-23</Date>
+        <Update release="22">
+            <Date>2023-11-29</Date>
             <Version>0.51</Version>
             <Comment>Packaging update</Comment>
             <Name>Joey Riches</Name>

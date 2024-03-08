@@ -1,8 +1,8 @@
 name       : kdbusaddons
-version    : 5.109.0
-release    : 71
+version    : 5.115.0
+release    : 75
 source     :
-    - https://cdn.download.kde.org/stable/frameworks/5.109/kdbusaddons-5.109.0.tar.xz : 251876bc1a0006741a32406bf52d4f0034f69c4dec9842a47353f5221965f035
+    - https://cdn.download.kde.org/stable/frameworks/5.115/kdbusaddons-5.115.0.tar.xz : ecc71d8c9b3f23255a6ae6d7b8de0e3adbd10054f3a8b62b00bee73808d79b74
 homepage   : https://community.kde.org/Frameworks
 license    :
     - LGPL-2.0-only

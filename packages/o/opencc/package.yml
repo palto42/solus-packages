@@ -9,13 +9,13 @@ summary    : A project for conversion between Traditional and Simplified Chinese
 description: |
     A project for conversion between Traditional and Simplified Chinese
 builddeps  :
-    - pkgconfig(marisa)
     - pkgconfig(RapidJSON)
-    - gtest-devel
+    - pkgconfig(gtest)
+    - pkgconfig(marisa)
 rundeps    :
     - rapidjson
 setup      : |
-    %patch -p1 < $pkgfiles/Set-Soversion-Number-to-Project-Version.patch
+    %patch -p1 -i $pkgfiles/Set-Soversion-Number-to-Project-Version.patch
     %cmake_ninja -DUSE_SYSTEM_MARISA=ON \
                  -DUSE_SYSTEM_RAPIDJSON=ON \
                  -DENABLE_GTEST=ON \

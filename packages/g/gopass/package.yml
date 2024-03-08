@@ -1,12 +1,13 @@
 name       : gopass
-version    : 1.15.7
-release    : 30
+version    : 1.15.11
+release    : 35
 source     :
-    - https://github.com/gopasspw/gopass/archive/refs/tags/v1.15.7.tar.gz#gopass.tar.gz : 35d1af333de479e429da31427b70b2043e20ef9a7ab0f8b816867ffc6f44927b
-    - https://github.com/gopasspw/git-credential-gopass/archive/refs/tags/v1.15.7.tar.gz#git-credential-gopass.tar.gz : ac561ca0b726adeed6f69a4c2bedf4c9c1b8e9ba389eaa3335c6d7277586bcb1
-    - https://github.com/gopasspw/gopass-hibp/archive/refs/tags/v1.15.7.tar.gz#gopass-hibp.tar.gz : 450b93d310f25e8e248d2f5218cba94a0b8e3966671e16c37c2c402ae7589580
-    - https://github.com/gopasspw/gopass-jsonapi/archive/refs/tags/v1.15.7.tar.gz#gopass-jsonapi.tar.gz : 08ec445cc6929c7887caa3c631ab1aa73def89ca35f16160e5ff2ce535a0370b
-    - https://github.com/gopasspw/gopass-summon-provider/archive/refs/tags/v1.15.7.tar.gz#gopass-summon-provider.tar.gz : 3f1cb63306ef3e3c5fefbd2a1eead10d790a39ab0b42d33560d922427fd1dcf3
+    - https://github.com/gopasspw/gopass/archive/refs/tags/v1.15.11.tar.gz#gopass.tar.gz : f85610a4f114125bd21e1100d6a2970c7ab76f09a7e094aa6be378018979eb56
+    - https://github.com/gopasspw/git-credential-gopass/archive/refs/tags/v1.15.11.tar.gz#git-credential-gopass.tar.gz : b757672d283ee67371022ad68a0060eb798f5f89a1285bba6f4532ad71c8bda0
+    - https://github.com/gopasspw/gopass-hibp/archive/refs/tags/v1.15.11.tar.gz#gopass-hibp.tar.gz : e8067f1b98b7539294538b036051e8058b2362fb66ebf026473c95188f864990
+    - https://github.com/gopasspw/gopass-jsonapi/archive/refs/tags/v1.15.11.tar.gz#gopass-jsonapi.tar.gz : f72b1c691fa41d7e9a3008d2536255bc7677d4f869f98487be00b82e5f76f3c0
+    - https://github.com/gopasspw/gopass-summon-provider/archive/refs/tags/v1.15.11.tar.gz#gopass-summon-provider.tar.gz : 30019254e62920299f2606c6c3966b39e3f745430e50770f5d12a947e302ed0a
+homepage   : https://www.gopass.pw
 license    : MIT
 component  : security
 networking : yes

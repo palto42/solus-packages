@@ -1,8 +1,8 @@
 name       : mu
-version    : 1.10.7
-release    : 18
+version    : 1.12.0
+release    : 21
 source     :
-    - https://github.com/djcb/mu/releases/download/v1.10.7/mu-1.10.7.tar.xz : eaaac9ba515da232295b03f2797eed13552fdd29a30122134dd382a64d0d3c21
+    - https://github.com/djcb/mu/releases/download/v1.12.0/mu-1.12.0.tar.xz : 55072bea9fe378c14728bd0c0d199f6ed62847b0031bd908eb277c6d3621e7cd
 license    : GPL-3.0-only
 homepage   : https://www.djcbsoftware.nl/code/mu/
 component  : editor

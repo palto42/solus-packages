@@ -11,7 +11,7 @@
         <Summary xml:lang="en">Launcher for the Steam software distribution service</Summary>
         <Description xml:lang="en">Launcher for the Steam software distribution service
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>steam</Name>
@@ -45,9 +45,9 @@
         </Files>
     </Package>
     <History>
-        <Update release="88">
-            <Date>2023-05-09</Date>
-            <Version>1.0.0.78</Version>
+        <Update release="92">
+            <Date>2024-02-09</Date>
+            <Version>1.0.0.79</Version>
             <Comment>Packaging update</Comment>
             <Name>Thomas Staudinger</Name>
             <Email>Staudi.Kaos@gmail.com</Email>

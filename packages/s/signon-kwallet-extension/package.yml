@@ -1,8 +1,8 @@
 name       : signon-kwallet-extension
-version    : 23.04.3
-release    : 57
+version    : 23.08.5
+release    : 65
 source     :
-    - https://cdn.download.kde.org/stable/release-service/23.04.3/src/signon-kwallet-extension-23.04.3.tar.xz : 74735f639497ae5aa11d18f3037d293d18acf817b19770b7b82167bd6ba3f418
+    - https://cdn.download.kde.org/stable/release-service/23.08.5/src/signon-kwallet-extension-23.08.5.tar.xz : e556caad3efde683c6a626c2aaec5ec2cb157aba1a10c7d4ea5280005fe59bfc
 homepage   : https://kde.org/
 license    : GPL-2.0-or-later
 component  : programming

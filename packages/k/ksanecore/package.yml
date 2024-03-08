@@ -1,8 +1,8 @@
 name       : ksanecore
-version    : 23.04.3
-release    : 58
+version    : 23.08.5
+release    : 61
 source     :
-    - https://cdn.download.kde.org/stable/release-service/23.04.3/src/ksanecore-23.04.3.tar.xz : f10c41e012f8f36ed5754951d1eaf0f325fcb6ad9ba3cf7ba568cd9a3c29ada5
+    - https://cdn.download.kde.org/stable/release-service/23.08.5/src/ksanecore-23.08.5.tar.xz : 3d19c4caf13799b4bc835d18d77668ebb86771ba5128de3497a43302371d9ba2
 homepage   : https://kde.org/
 license    :
     - LGPL-2.1-only

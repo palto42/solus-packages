@@ -1,6 +1,3 @@
-_ecodes.cpython-310-x86_64-linux-gnu.so
-_ecodes.so
-_input.cpython-310-x86_64-linux-gnu.so
-_input.so
-_uinput.cpython-310-x86_64-linux-gnu.so
-_uinput.so
+_ecodes.cpython-311-x86_64-linux-gnu.so
+_input.cpython-311-x86_64-linux-gnu.so
+_uinput.cpython-311-x86_64-linux-gnu.so

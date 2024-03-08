@@ -1,8 +1,8 @@
 name       : ark
-version    : 23.04.3
-release    : 74
+version    : 23.08.5
+release    : 79
 source     :
-    - https://cdn.download.kde.org/stable/release-service/23.04.3/src/ark-23.04.3.tar.xz : 81f87fb5bfbb28f74f1a360a40e0251864f83524b1d0d61b79dd1fe412e63a20
+    - https://cdn.download.kde.org/stable/release-service/23.08.5/src/ark-23.08.5.tar.xz : 6081c564e2d4e25113691483d2cf3843461a9db6c726e1e547fa9a9697aecfeb
 homepage   : https://kde.org/applications/utilities/org.kde.ark
 license    : GPL-2.0-or-later
 component  : desktop.kde.core

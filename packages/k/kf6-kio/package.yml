@@ -1,0 +1,72 @@
+name       : kf6-kio
+version    : 6.0.0
+release    : 5
+source     :
+    - https://cdn.download.kde.org/stable/frameworks/6.0/kio-6.0.0.tar.xz : 4951adf043299e463803cc63ed33d5261b81bff969eb189dc13350f495cb4b42
+homepage   : https://community.kde.org/Frameworks
+license    :
+    - GPL-2.0-only
+    - LGPL-2.0-only
+    - LGPL-2.0-or-later
+    - LGPL-2.1-only
+component  : desktop.library
+summary    : Network transparent access to files and data.
+description: |
+    Network transparent access to files and data.
+builddeps  :
+    - pkgconfig(Qt6Core5Compat)
+    - pkgconfig(libacl)
+    - pkgconfig(libattr)
+    - kf6-karchive-devel
+    - kf6-kauth-devel
+    - kf6-kbookmarks-devel
+    - kf6-kcolorscheme-devel
+    - kf6-kcompletion-devel
+    - kf6-kconfig-devel
+    - kf6-kconfigwidgets-devel
+    - kf6-kcoreaddons-devel
+    - kf6-kcrash-devel
+    - kf6-kdbusaddons-devel
+    - kf6-kded-devel
+    - kf6-kdoctools-devel
+    - kf6-kguiaddons-devel
+    - kf6-ki18n-devel
+    - kf6-kiconthemes-devel
+    - kf6-kitemviews-devel
+    - kf6-kjobwidgets-devel
+    - kf6-kservice-devel
+    - kf6-kwallet-devel
+    - kf6-kwidgetsaddons-devel
+    - kf6-kwindowsystem-devel
+    - kf6-solid-devel
+    - switcheroo-control
+rundeps    :
+    - devel :
+        - kf6-kbookmarks-devel
+        - kf6-kcompletion-devel
+        - kf6-kconfigwidgets-devel
+        - kf6-kcrash-devel
+        - kf6-kdbusaddons-devel
+        - kf6-kguiaddons-devel
+        - kf6-kiconthemes-devel
+        - kf6-kitemviews-devel
+        - kf6-kjobwidgets-devel
+        - kf6-kservice-devel
+        - kf6-kwidgetsaddons-devel
+        - kf6-kwindowsystem-devel
+        - kf6-solid-devel
+        - qt6-base-devel
+    - kf6-kded
+    - switcheroo-control
+clang      : yes
+optimize   : thin-lto
+setup      : |
+    %cmake_kf6
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install
+    rm -rfv $installdir/usr/share/doc/HTML
+patterns   :
+    - main :
+        - /usr/lib64/libkuriikwsfiltereng_private.so

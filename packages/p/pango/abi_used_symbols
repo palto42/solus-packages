@@ -44,7 +44,8 @@ libXrender.so.1:XRenderCompositeTrapezoids
 libXrender.so.1:XRenderFindStandardFormat
 libc.so.6:__errno_location
 libc.so.6:__fprintf_chk
-libc.so.6:__isoc99_sscanf
+libc.so.6:__isoc23_sscanf
+libc.so.6:__isoc23_strtol
 libc.so.6:__libc_start_main
 libc.so.6:__memcpy_chk
 libc.so.6:__stack_chk_fail
@@ -73,7 +74,6 @@ libc.so.6:strpbrk
 libc.so.6:strrchr
 libc.so.6:strspn
 libc.so.6:strstr
-libc.so.6:strtol
 libc.so.6:ungetc
 libc.so.6:waitpid
 libcairo.so.2:cairo_arc
@@ -257,6 +257,11 @@ libglib-2.0.so.0:g_ascii_tolower
 libglib-2.0.so.0:g_ascii_xdigit_value
 libglib-2.0.so.0:g_assertion_message_error
 libglib-2.0.so.0:g_assertion_message_expr
+libglib-2.0.so.0:g_async_queue_new
+libglib-2.0.so.0:g_async_queue_pop
+libglib-2.0.so.0:g_async_queue_push
+libglib-2.0.so.0:g_async_queue_ref
+libglib-2.0.so.0:g_async_queue_unref
 libglib-2.0.so.0:g_atomic_rc_box_acquire
 libglib-2.0.so.0:g_atomic_rc_box_alloc0
 libglib-2.0.so.0:g_atomic_rc_box_release_full
@@ -449,10 +454,12 @@ libgobject-2.0.so.0:g_object_set_data_full
 libgobject-2.0.so.0:g_object_set_qdata
 libgobject-2.0.so.0:g_object_set_qdata_full
 libgobject-2.0.so.0:g_object_unref
+libgobject-2.0.so.0:g_param_spec_boolean
 libgobject-2.0.so.0:g_param_spec_gtype
 libgobject-2.0.so.0:g_param_spec_int
 libgobject-2.0.so.0:g_param_spec_object
 libgobject-2.0.so.0:g_param_spec_pointer
+libgobject-2.0.so.0:g_param_spec_string
 libgobject-2.0.so.0:g_param_spec_uint
 libgobject-2.0.so.0:g_type_add_class_private
 libgobject-2.0.so.0:g_type_add_instance_private
@@ -470,8 +477,10 @@ libgobject-2.0.so.0:g_type_register_static_simple
 libgobject-2.0.so.0:g_value_get_int
 libgobject-2.0.so.0:g_value_get_object
 libgobject-2.0.so.0:g_value_get_pointer
+libgobject-2.0.so.0:g_value_set_boolean
 libgobject-2.0.so.0:g_value_set_gtype
 libgobject-2.0.so.0:g_value_set_pointer
+libgobject-2.0.so.0:g_value_set_string
 libgobject-2.0.so.0:g_value_set_uint
 libgobject-2.0.so.0:g_value_take_object
 libgobject-2.0.so.0:g_weak_ref_clear
@@ -572,5 +581,4 @@ libharfbuzz.so.0:hb_variation_from_string
 libm.so.6:atan2
 libm.so.6:cos
 libm.so.6:sincos
-libm.so.6:sqrt
 libm.so.6:tan

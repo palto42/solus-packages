@@ -1,8 +1,9 @@
 name       : python-pillow
-version    : 9.5.0
-release    : 36
+version    : 10.2.0
+release    : 40
 source     :
-    - https://github.com/python-pillow/Pillow/archive/refs/tags/9.5.0.tar.gz : dca5045b139c65eda32895e743b51c0a697984c34b385d84576275d57b36027f
+    - https://github.com/python-pillow/Pillow/archive/refs/tags/10.2.0.tar.gz : fe695f6fa8bbc341b9044b6553a32d84cf6d6ea0de104396aece85e454c7cbc2
+homepage   : https://python-pillow.org
 license    : MIT
 component  : programming.python
 summary    : The friendly PIL fork (Python Imaging Library)

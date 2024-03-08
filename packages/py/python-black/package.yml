@@ -1,8 +1,8 @@
 name       : python-black
-version    : 22.12.0
-release    : 11
+version    : 24.2.0
+release    : 14
 source     :
-    - https://files.pythonhosted.org/packages/source/b/black/black-22.12.0.tar.gz : 229351e5a18ca30f447bf724d007f890f97e13af070bb6ad4c0a441cd7596a2f
+    - https://files.pythonhosted.org/packages/source/b/black/black-24.2.0.tar.gz : bce4f25c27c3435e4dace4815bcb2008b87e167e3bf4ee47ccdc5ce906eb4894
 homepage   : https://github.com/psf/black
 license    : MIT
 component  : programming.python
@@ -17,9 +17,9 @@ builddeps  :
 rundeps    :
     - python-click
     - python-mypy_extensions
+    - python-packaging
     - python-pathspec
     - python-platformdirs
-    - python-tomli
     - python-typing-extensions
 build      : |
     %python3_setup

@@ -1,9 +1,10 @@
 name       : yubico-authenticator
-version    : 6.2.0
-release    : 3
+version    : 6.4.0
+release    : 7
 source     :
-    - https://github.com/Yubico/yubioath-flutter/archive/refs/tags/6.2.0.tar.gz : 3138c82286410006dc5a953bfa2f25c2236e2bb9d0c671b64f560152f1470f4e
-    - https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_3.7.11-stable.tar.xz#flutter.tar.xz : fefb63a0f0781e7f11b4fd3db8c75462d0d2ee5cd0bec91dacdb331189693817
+    - https://github.com/Yubico/yubioath-flutter/archive/refs/tags/6.4.0.tar.gz : cd0d4794205e386866872b945efdfb00fe514e1ff027f6f8c1c87d33dbb53c79
+    - https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_3.16.5-stable.tar.xz#flutter.tar.xz : 57e59fa3a31be7e87b3847cdf782f1323578bbf70a0cd35f3615f01ab429ac29
+homepage   : https://www.yubico.com/products/yubico-authenticator/
 license    : BSD-2-Clause
 component  : security
 summary    : Yubico Authenticator for Desktop

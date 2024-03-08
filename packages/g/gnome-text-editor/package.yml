@@ -1,0 +1,25 @@
+name       : gnome-text-editor
+version    : '45.3'
+release    : 4
+source     :
+    - https://download.gnome.org/sources/gnome-text-editor/45/gnome-text-editor-45.3.tar.xz : f3ffcb11a92dfd04ba3c3b3d0e667847d4449a21e012ae36f07dda05ac7d3a52
+homepage   : https://apps.gnome.org/TextEditor/
+license    : GPL-3.0-or-later
+component  : desktop.gnome
+summary    : A simple text editor for the GNOME desktop.
+description: |
+    A simple text editor for the GNOME desktop.
+builddeps  :
+    - pkgconfig(editorconfig)
+    - pkgconfig(enchant-2)
+    - pkgconfig(gtk4)
+    - pkgconfig(gtksourceview-5)
+    - pkgconfig(libadwaita-1)
+    - desktop-file-utils
+    - itstool
+setup      : |
+    %meson_configure
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install

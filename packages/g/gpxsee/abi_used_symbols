@@ -51,7 +51,7 @@ libQt5Core.so.5:_ZN10QEventLoopD1Ev
 libQt5Core.so.5:_ZN10QJsonArrayD1Ev
 libQt5Core.so.5:_ZN10QJsonValueC1ENS_4TypeE
 libQt5Core.so.5:_ZN10QJsonValueD1Ev
-libQt5Core.so.5:_ZN10QTextCodec12codecForNameERK10QByteArray
+libQt5Core.so.5:_ZN10QTextCodec11codecForMibEi
 libQt5Core.so.5:_ZN11QBasicTimer4stopEv
 libQt5Core.so.5:_ZN11QBasicTimer5startEiP7QObject
 libQt5Core.so.5:_ZN11QDataStream11readRawDataEPci
@@ -208,6 +208,7 @@ libQt5Core.so.5:_ZN7QObjectD2Ev
 libQt5Core.so.5:_ZN7QString11reallocDataEjb
 libQt5Core.so.5:_ZN7QString13toUtf8_helperERKS_
 libQt5Core.so.5:_ZN7QString14compare_helperEPK5QChariPKciN2Qt15CaseSensitivityE
+libQt5Core.so.5:_ZN7QString14compare_helperEPK5QChariS2_iN2Qt15CaseSensitivityE
 libQt5Core.so.5:_ZN7QString14toLower_helperERS_
 libQt5Core.so.5:_ZN7QString14toUpper_helperERS_
 libQt5Core.so.5:_ZN7QString14trimmed_helperERKS_
@@ -457,6 +458,7 @@ libQt5Core.so.5:_ZNK7QString3midEii
 libQt5Core.so.5:_ZNK7QString4leftEi
 libQt5Core.so.5:_ZNK7QString5rightEi
 libQt5Core.so.5:_ZNK7QString5splitE5QChar6QFlagsIN2Qt18SplitBehaviorFlagsEENS2_15CaseSensitivityE
+libQt5Core.so.5:_ZNK7QString5splitERK18QRegularExpression6QFlagsIN2Qt18SplitBehaviorFlagsEE
 libQt5Core.so.5:_ZNK7QString5splitERKS_6QFlagsIN2Qt18SplitBehaviorFlagsEENS3_15CaseSensitivityE
 libQt5Core.so.5:_ZNK7QString5toIntEPbi
 libQt5Core.so.5:_ZNK7QString6toUIntEPbi
@@ -464,11 +466,13 @@ libQt5Core.so.5:_ZNK7QString7compareERKS_N2Qt15CaseSensitivityE
 libQt5Core.so.5:_ZNK7QString7indexOfE5QChariN2Qt15CaseSensitivityE
 libQt5Core.so.5:_ZNK7QString7indexOfERKS_iN2Qt15CaseSensitivityE
 libQt5Core.so.5:_ZNK7QString8containsERK18QRegularExpression
+libQt5Core.so.5:_ZNK7QString8endsWithERKS_N2Qt15CaseSensitivityE
 libQt5Core.so.5:_ZNK7QString8toDoubleEPb
 libQt5Core.so.5:_ZNK7QStringeqE13QLatin1String
 libQt5Core.so.5:_ZNK8QVariant10toLongLongEPb
 libQt5Core.so.5:_ZNK8QVariant11toByteArrayEv
 libQt5Core.so.5:_ZNK8QVariant3cmpERKS_
+libQt5Core.so.5:_ZNK8QVariant4typeEv
 libQt5Core.so.5:_ZNK8QVariant5toIntEPb
 libQt5Core.so.5:_ZNK8QVariant5toMapEv
 libQt5Core.so.5:_ZNK8QVariant6toBoolEv
@@ -501,6 +505,7 @@ libQt5Core.so.5:_ZNK9QFileInfo13canonicalPathEv
 libQt5Core.so.5:_ZNK9QFileInfo14completeSuffixEv
 libQt5Core.so.5:_ZNK9QFileInfo16absoluteFilePathEv
 libQt5Core.so.5:_ZNK9QFileInfo16completeBaseNameEv
+libQt5Core.so.5:_ZNK9QFileInfo17canonicalFilePathEv
 libQt5Core.so.5:_ZNK9QFileInfo3dirEv
 libQt5Core.so.5:_ZNK9QFileInfo4pathEv
 libQt5Core.so.5:_ZNK9QFileInfo4sizeEv
@@ -530,7 +535,6 @@ libQt5Core.so.5:_ZTI18QFutureWatcherBase
 libQt5Core.so.5:_ZTI20QFutureInterfaceBase
 libQt5Core.so.5:_ZTI7QObject
 libQt5Core.so.5:_ZTI9QIODevice
-libQt5Core.so.5:_ZTV18QFutureWatcherBase
 libQt5Core.so.5:_Zeq13QLatin1StringRK10QStringRef
 libQt5Core.so.5:_ZeqRK7QStringS1_
 libQt5Core.so.5:_ZlsR11QDataStreamRK9QTimeZone
@@ -561,7 +565,6 @@ libQt5Gui.so.5:_ZN12QFontMetricsD1Ev
 libQt5Gui.so.5:_ZN12QImageReader13setScaledSizeERK5QSize
 libQt5Gui.so.5:_ZN12QImageReader16setAutoTransformEb
 libQt5Gui.so.5:_ZN12QImageReader21supportedImageFormatsEv
-libQt5Gui.so.5:_ZN12QImageReader4readEP6QImage
 libQt5Gui.so.5:_ZN12QImageReader4readEv
 libQt5Gui.so.5:_ZN12QImageReaderC1EP9QIODeviceRK10QByteArray
 libQt5Gui.so.5:_ZN12QImageReaderC1ERK7QStringRK10QByteArray
@@ -572,7 +575,6 @@ libQt5Gui.so.5:_ZN12QKeySequenceD1Ev
 libQt5Gui.so.5:_ZN12QPaintDeviceC2Ev
 libQt5Gui.so.5:_ZN12QPainterPath10addPolygonERK9QPolygonF
 libQt5Gui.so.5:_ZN12QPainterPath12closeSubpathEv
-libQt5Gui.so.5:_ZN12QPainterPath20setElementPositionAtEidd
 libQt5Gui.so.5:_ZN12QPainterPath6lineToERK7QPointF
 libQt5Gui.so.5:_ZN12QPainterPath6moveToERK7QPointF
 libQt5Gui.so.5:_ZN12QPainterPath6quadToERK7QPointFS2_
@@ -588,8 +590,12 @@ libQt5Gui.so.5:_ZN12QPixmapCache13setCacheLimitEi
 libQt5Gui.so.5:_ZN12QPixmapCache4findERK7QStringP7QPixmap
 libQt5Gui.so.5:_ZN12QPixmapCache5clearEv
 libQt5Gui.so.5:_ZN12QPixmapCache6insertERK7QStringRK7QPixmap
+libQt5Gui.so.5:_ZN14QSurfaceFormat10setProfileENS_20OpenGLContextProfileE
 libQt5Gui.so.5:_ZN14QSurfaceFormat10setSamplesEi
+libQt5Gui.so.5:_ZN14QSurfaceFormat10setVersionEii
 libQt5Gui.so.5:_ZN14QSurfaceFormat16setDefaultFormatERKS_
+libQt5Gui.so.5:_ZN14QSurfaceFormat17setRenderableTypeENS_14RenderableTypeE
+libQt5Gui.so.5:_ZN14QSurfaceFormat18setDepthBufferSizeEi
 libQt5Gui.so.5:_ZN14QSurfaceFormat20setStencilBufferSizeEi
 libQt5Gui.so.5:_ZN14QSurfaceFormatC1Ev
 libQt5Gui.so.5:_ZN14QSurfaceFormatD1Ev
@@ -621,6 +627,9 @@ libQt5Gui.so.5:_ZN5QFont9setWeightEi
 libQt5Gui.so.5:_ZN5QFontC1ERKS_
 libQt5Gui.so.5:_ZN5QFontC1Ev
 libQt5Gui.so.5:_ZN5QFontD1Ev
+libQt5Gui.so.5:_ZN5QIcon20setFallbackThemeNameERK7QString
+libQt5Gui.so.5:_ZN5QIcon9fromThemeERK7QString
+libQt5Gui.so.5:_ZN5QIcon9fromThemeERK7QStringRKS_
 libQt5Gui.so.5:_ZN5QIconC1ERK7QPixmap
 libQt5Gui.so.5:_ZN5QIconC1ERK7QString
 libQt5Gui.so.5:_ZN5QIconC1Ev
@@ -633,7 +642,6 @@ libQt5Gui.so.5:_ZN6QBrushC1ERKS_
 libQt5Gui.so.5:_ZN6QBrushC1Ev
 libQt5Gui.so.5:_ZN6QBrushD1Ev
 libQt5Gui.so.5:_ZN6QBrushaSERKS_
-libQt5Gui.so.5:_ZN6QColor13setNamedColorE13QLatin1String
 libQt5Gui.so.5:_ZN6QColor13setNamedColorERK7QString
 libQt5Gui.so.5:_ZN6QColor8fromHsvFEdddd
 libQt5Gui.so.5:_ZN6QColor8setAlphaEi
@@ -667,10 +675,10 @@ libQt5Gui.so.5:_ZN7QCursorC1EN2Qt11CursorShapeE
 libQt5Gui.so.5:_ZN7QCursorC1Ev
 libQt5Gui.so.5:_ZN7QCursorD1Ev
 libQt5Gui.so.5:_ZN7QPixmap12loadFromDataEPKhjPKc6QFlagsIN2Qt19ImageConversionFlagEE
-libQt5Gui.so.5:_ZN7QPixmap16convertFromImageERK6QImage6QFlagsIN2Qt19ImageConversionFlagEE
 libQt5Gui.so.5:_ZN7QPixmap16fromImageInPlaceER6QImage6QFlagsIN2Qt19ImageConversionFlagEE
 libQt5Gui.so.5:_ZN7QPixmap19setDevicePixelRatioEd
 libQt5Gui.so.5:_ZN7QPixmap4fillERK6QColor
+libQt5Gui.so.5:_ZN7QPixmap4loadERK7QStringPKc6QFlagsIN2Qt19ImageConversionFlagEE
 libQt5Gui.so.5:_ZN7QPixmap9fromImageERK6QImage6QFlagsIN2Qt19ImageConversionFlagEE
 libQt5Gui.so.5:_ZN7QPixmapC1ERK5QSize
 libQt5Gui.so.5:_ZN7QPixmapC1ERK7QStringPKc6QFlagsIN2Qt19ImageConversionFlagEE
@@ -783,6 +791,7 @@ libQt5Gui.so.5:_ZNK6QImage11sizeInBytesEv
 libQt5Gui.so.5:_ZNK6QImage11transformedERK10QTransformN2Qt18TransformationModeE
 libQt5Gui.so.5:_ZNK6QImage12bytesPerLineEv
 libQt5Gui.so.5:_ZNK6QImage15mirrored_helperEbb
+libQt5Gui.so.5:_ZNK6QImage16devicePixelRatioEv
 libQt5Gui.so.5:_ZNK6QImage22convertToFormat_helperENS_6FormatE6QFlagsIN2Qt19ImageConversionFlagEE
 libQt5Gui.so.5:_ZNK6QImage4bitsEv
 libQt5Gui.so.5:_ZNK6QImage4copyERK5QRect
@@ -791,7 +800,6 @@ libQt5Gui.so.5:_ZNK6QImage4sizeEv
 libQt5Gui.so.5:_ZNK6QImage5widthEv
 libQt5Gui.so.5:_ZNK6QImage6heightEv
 libQt5Gui.so.5:_ZNK6QImage6isNullEv
-libQt5Gui.so.5:_ZNK6QImage6metricEN12QPaintDevice17PaintDeviceMetricE
 libQt5Gui.so.5:_ZNK7QCursor5shapeEv
 libQt5Gui.so.5:_ZNK7QPixmap5widthEv
 libQt5Gui.so.5:_ZNK7QPixmap6heightEv
@@ -813,6 +821,7 @@ libQt5Network.so.5:_ZN13QNetworkReply16staticMetaObjectE
 libQt5Network.so.5:_ZN13QNetworkReply8finishedEv
 libQt5Network.so.5:_ZN15QNetworkRequest12setAttributeENS_9AttributeERK8QVariant
 libQt5Network.so.5:_ZN15QNetworkRequest12setRawHeaderERK10QByteArrayS2_
+libQt5Network.so.5:_ZN15QNetworkRequest18setTransferTimeoutEi
 libQt5Network.so.5:_ZN15QNetworkRequest26setMaximumRedirectsAllowedEi
 libQt5Network.so.5:_ZN15QNetworkRequestC1ERK4QUrl
 libQt5Network.so.5:_ZN15QNetworkRequestD1Ev
@@ -860,7 +869,6 @@ libQt5Sql.so.5:_ZN12QSqlDatabaseaSERKS_
 libQt5Sql.so.5:_ZN9QSqlErrorD1Ev
 libQt5Sql.so.5:_ZN9QSqlFieldD1Ev
 libQt5Sql.so.5:_ZN9QSqlQuery4execEv
-libQt5Sql.so.5:_ZN9QSqlQuery4nextEv
 libQt5Sql.so.5:_ZN9QSqlQuery5firstEv
 libQt5Sql.so.5:_ZN9QSqlQuery7prepareERK7QString
 libQt5Sql.so.5:_ZN9QSqlQuery9bindValueERK7QStringRK8QVariant6QFlagsIN4QSql13ParamTypeFlagEE
@@ -894,6 +902,10 @@ libQt5Widgets.so.5:_ZN11QFileDialog15getSaveFileNameEP7QWidgetRK7QStringS4_S4_PS
 libQt5Widgets.so.5:_ZN11QFileDialog16getOpenFileNamesEP7QWidgetRK7QStringS4_S4_PS2_6QFlagsINS_6OptionEE
 libQt5Widgets.so.5:_ZN11QFileDialog20getExistingDirectoryEP7QWidgetRK7QStringS4_6QFlagsINS_6OptionEE
 libQt5Widgets.so.5:_ZN11QFormLayout16staticMetaObjectE
+libQt5Widgets.so.5:_ZN11QFormLayout17setLabelAlignmentE6QFlagsIN2Qt13AlignmentFlagEE
+libQt5Widgets.so.5:_ZN11QFormLayout18setVerticalSpacingEi
+libQt5Widgets.so.5:_ZN11QFormLayout20setHorizontalSpacingEi
+libQt5Widgets.so.5:_ZN11QFormLayout6addRowEP7QWidgetS1_
 libQt5Widgets.so.5:_ZN11QFormLayout6addRowERK7QStringP7QLayout
 libQt5Widgets.so.5:_ZN11QFormLayout6addRowERK7QStringP7QWidget
 libQt5Widgets.so.5:_ZN11QFormLayoutC1EP7QWidget
@@ -1127,6 +1139,7 @@ libQt5Widgets.so.5:_ZN5QMenu10insertMenuEP7QActionPS_
 libQt5Widgets.so.5:_ZN5QMenu12addSeparatorEv
 libQt5Widgets.so.5:_ZN5QMenu7addMenuEPS_
 libQt5Widgets.so.5:_ZN5QMenu7addMenuERK7QString
+libQt5Widgets.so.5:_ZN5QMenu7setIconERK5QIcon
 libQt5Widgets.so.5:_ZN5QMenuC1ERK7QStringP7QWidget
 libQt5Widgets.so.5:_ZN6QFrame10paintEventEP11QPaintEvent
 libQt5Widgets.so.5:_ZN6QFrame11changeEventEP6QEvent
@@ -1145,6 +1158,7 @@ libQt5Widgets.so.5:_ZN6QLabel12focusInEventEP11QFocusEvent
 libQt5Widgets.so.5:_ZN6QLabel12setAlignmentE6QFlagsIN2Qt13AlignmentFlagEE
 libQt5Widgets.so.5:_ZN6QLabel13focusOutEventEP11QFocusEvent
 libQt5Widgets.so.5:_ZN6QLabel13keyPressEventEP9QKeyEvent
+libQt5Widgets.so.5:_ZN6QLabel13setTextFormatEN2Qt10TextFormatE
 libQt5Widgets.so.5:_ZN6QLabel14mouseMoveEventEP11QMouseEvent
 libQt5Widgets.so.5:_ZN6QLabel15mousePressEventEP11QMouseEvent
 libQt5Widgets.so.5:_ZN6QLabel16contextMenuEventEP17QContextMenuEvent
@@ -1155,7 +1169,6 @@ libQt5Widgets.so.5:_ZN6QLabel23setTextInteractionFlagsE6QFlagsIN2Qt19TextInterac
 libQt5Widgets.so.5:_ZN6QLabel5clearEv
 libQt5Widgets.so.5:_ZN6QLabel5eventEP6QEvent
 libQt5Widgets.so.5:_ZN6QLabel7setTextERK7QString
-libQt5Widgets.so.5:_ZN6QLabel9setIndentEi
 libQt5Widgets.so.5:_ZN6QLabel9setPixmapERK7QPixmap
 libQt5Widgets.so.5:_ZN6QLabelC1EP7QWidget6QFlagsIN2Qt10WindowTypeEE
 libQt5Widgets.so.5:_ZN6QLabelC1ERK7QStringP7QWidget6QFlagsIN2Qt10WindowTypeEE
@@ -1236,6 +1249,7 @@ libQt5Widgets.so.5:_ZN7QWidget13focusOutEventEP11QFocusEvent
 libQt5Widgets.so.5:_ZN7QWidget13keyPressEventEP9QKeyEvent
 libQt5Widgets.so.5:_ZN7QWidget13setFixedWidthEi
 libQt5Widgets.so.5:_ZN7QWidget13setSizePolicyE11QSizePolicy
+libQt5Widgets.so.5:_ZN7QWidget13setStyleSheetERK7QString
 libQt5Widgets.so.5:_ZN7QWidget13setWindowIconERK5QIcon
 libQt5Widgets.so.5:_ZN7QWidget14dragEnterEventEP15QDragEnterEvent
 libQt5Widgets.so.5:_ZN7QWidget14dragLeaveEventEP15QDragLeaveEvent
@@ -1428,6 +1442,7 @@ libQt5Widgets.so.5:_ZNK19QGraphicsSceneEvent6widgetEv
 libQt5Widgets.so.5:_ZNK23QGraphicsSceneHelpEvent8scenePosEv
 libQt5Widgets.so.5:_ZNK23QGraphicsSceneHelpEvent9screenPosEv
 libQt5Widgets.so.5:_ZNK24QGraphicsSceneMouseEvent9screenPosEv
+libQt5Widgets.so.5:_ZNK5QMenu10menuActionEv
 libQt5Widgets.so.5:_ZNK5QMenu7isEmptyEv
 libQt5Widgets.so.5:_ZNK6QFrame10frameStyleEv
 libQt5Widgets.so.5:_ZNK6QFrame10frameWidthEv
@@ -1438,6 +1453,7 @@ libQt5Widgets.so.5:_ZNK6QLabel14heightForWidthEi
 libQt5Widgets.so.5:_ZNK6QLabel15minimumSizeHintEv
 libQt5Widgets.so.5:_ZNK6QLabel8sizeHintEv
 libQt5Widgets.so.5:_ZNK7QAction4dataEv
+libQt5Widgets.so.5:_ZNK7QAction4textEv
 libQt5Widgets.so.5:_ZNK7QAction9isCheckedEv
 libQt5Widgets.so.5:_ZNK7QAction9isEnabledEv
 libQt5Widgets.so.5:_ZNK7QDialog15minimumSizeHintEv
@@ -1541,9 +1557,13 @@ libgcc_s.so.1:_Unwind_Resume
 libm.so.6:asin
 libm.so.6:atan
 libm.so.6:atan2
+libm.so.6:ceil
 libm.so.6:cos
 libm.so.6:exp
+libm.so.6:exp2
+libm.so.6:floor
 libm.so.6:hypot
+libm.so.6:ldexp
 libm.so.6:log
 libm.so.6:log10
 libm.so.6:log2
@@ -1551,16 +1571,16 @@ libm.so.6:pow
 libm.so.6:remainder
 libm.so.6:round
 libm.so.6:sin
-libm.so.6:sincos
 libm.so.6:sqrt
 libm.so.6:tan
 libstdc++.so.6:_ZSt7nothrow
+libstdc++.so.6:_ZSt9terminatev
 libstdc++.so.6:_ZTISt9bad_alloc
 libstdc++.so.6:_ZTVN10__cxxabiv117__class_type_infoE
 libstdc++.so.6:_ZTVN10__cxxabiv120__si_class_type_infoE
 libstdc++.so.6:_ZTVN10__cxxabiv121__vmi_class_type_infoE
 libstdc++.so.6:_ZdaPv
-libstdc++.so.6:_ZdlPvm
+libstdc++.so.6:_ZdlPv
 libstdc++.so.6:_Znam
 libstdc++.so.6:_Znwm
 libstdc++.so.6:_ZnwmRKSt9nothrow_t
@@ -1569,7 +1589,7 @@ libstdc++.so.6:__cxa_end_catch
 libstdc++.so.6:__cxa_guard_abort
 libstdc++.so.6:__cxa_guard_acquire
 libstdc++.so.6:__cxa_guard_release
+libstdc++.so.6:__cxa_pure_virtual
 libstdc++.so.6:__cxa_rethrow
-libstdc++.so.6:__cxa_throw_bad_array_new_length
 libstdc++.so.6:__dynamic_cast
 libstdc++.so.6:__gxx_personality_v0

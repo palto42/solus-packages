@@ -1,8 +1,8 @@
 name       : kitty
-version    : 0.29.2
-release    : 55
+version    : 0.32.2
+release    : 62
 source     :
-    - https://github.com/kovidgoyal/kitty/releases/download/v0.29.2/kitty-0.29.2.tar.xz : 6995fbc142657ad62dadbd3b4ccd51d9d44aac7de0cc3e8ea4d6a657dda611f6
+    - https://github.com/kovidgoyal/kitty/releases/download/v0.32.2/kitty-0.32.2.tar.xz : d4bb54f7bfc16e274d60326323555b63733915c3e32d2ef711fd9860404bd6f2
 license    : GPL-3.0-only
 component  : system.utils
 homepage   : https://sw.kovidgoyal.net/kitty/
@@ -16,6 +16,7 @@ builddeps  :
     - pkgconfig(fontconfig)
     - pkgconfig(gl)
     - pkgconfig(lcms2)
+    - pkgconfig(libxxhash)
     - pkgconfig(python3)
     - pkgconfig(wayland-protocols)
     - pkgconfig(wayland-scanner)
@@ -24,7 +25,6 @@ builddeps  :
     - pkgconfig(xinerama)
     - pkgconfig(xkbcommon)
     - pkgconfig(xrandr)
-    - librsync-devel
     - golang
 rundeps    :
     - libcanberra

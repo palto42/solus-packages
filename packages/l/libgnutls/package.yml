@@ -1,12 +1,13 @@
 name       : libgnutls
-version    : 3.8.1
-release    : 42
+version    : 3.8.3
+release    : 46
 source     :
-    - https://www.gnupg.org/ftp/gcrypt/gnutls/v3.8/gnutls-3.8.1.tar.xz : ba8b9e15ae20aba88f44661978f5b5863494316fe7e722ede9d069fe6294829c
+    - https://www.gnupg.org/ftp/gcrypt/gnutls/v3.8/gnutls-3.8.3.tar.xz : f74fc5954b27d4ec6dfbb11dea987888b5b124289a3703afcada0ee520f4173e
 license    : LGPL-2.1-or-later
 component  :
     - security
     - utils : security
+homepage   : https://www.gnutls.org/
 summary    :
     - The GnuTLS package contains libraries and userspace tools which provide a secure layer over a reliable transport layer
     - docs : API Documentation for libgnutls
@@ -28,8 +29,10 @@ builddeps  :
     - pkgconfig32(autoopts)
     - pkgconfig32(guile-2.0)
     - pkgconfig32(libtasn1)
+    - pkgconfig32(libzstd)
     - pkgconfig32(nettle)
     - pkgconfig32(p11-kit-1)
+    - pkgconfig32(zlib)
     - pkgconfig(gtk-doc)
     - libunistring-32bit-devel
 rundeps    :

@@ -1,8 +1,9 @@
 name       : libsoup3
-version    : 3.4.2
-release    : 8
+version    : 3.4.4
+release    : 10
 source     :
-    - https://download.gnome.org/sources/libsoup/3.4/libsoup-3.4.2.tar.xz : 78c8fa37cb152d40ec8c4a148d6155e2f6947f3f1602a7cda3a31ad40f5ee2f3
+    - https://download.gnome.org/sources/libsoup/3.4/libsoup-3.4.4.tar.xz : 291c67725f36ed90ea43efff25064b69c5a2d1981488477c05c481a3b4b0c5aa
+homepage   : https://wiki.gnome.org/Projects/libsoup
 license    : LGPL-2.1-only
 component  : desktop.gnome.core
 emul32     : yes
@@ -11,7 +12,6 @@ description: |
     The libsoup is HTTP client/server library for GNOME. It uses GObject and the GLib main loop to integrate with GNOME applications and it also has asynchronous API for use in threaded applications.
 builddeps  :
     - pkgconfig32(gio-2.0)
-    - pkgconfig32(gnutls)
     - pkgconfig32(krb5)
     - pkgconfig32(libbrotlicommon)
     - pkgconfig32(libnghttp2)
@@ -26,9 +26,6 @@ rundeps    :
     - 32bit :
         - glib-networking-32bit
 setup      : |
-    %patch -p1 -i $pkgfiles/0001-connection-manager-don-t-crash-if-connection-outlive.patch
-    %patch -p1 -i $pkgfiles/0002-connection-auth-don-t-crash-if-connection-outlives-t.patch
-
     if [[ ! -z "${EMUL32BUILD}" ]]; then
         build_gobject="disabled"
     else

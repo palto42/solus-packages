@@ -1,8 +1,9 @@
 name       : xfce4-session
 version    : 4.18.3
-release    : 4
+release    : 11
 source     :
     - https://archive.xfce.org/src/xfce/xfce4-session/4.18/xfce4-session-4.18.3.tar.bz2 : 382f93e096ec6493098719cab8cc31b93ad9bb469c0715c0c5117d75fe7394ec
+homepage   : https://docs.xfce.org/xfce/xfce4-session/start
 license    : GPL-2.0-or-later
 component  : desktop.xfce
 summary    : Xfce's session manager.
@@ -13,11 +14,30 @@ builddeps  :
     - pkgconfig(libwnck-3.0)
     - pkgconfig(sm)
     - iceauth
+    # Both needed due to reconfigure
+    - gettext-devel
+    - xfce4-dev-tools-devel
+rundeps    :
+    - gnome-keyring
+    - hicolor-icon-theme
+    - iceauth
+    - pipewire
+    - polkit-gnome
+    - xdg-desktop-portal-gtk
+    - xdg-desktop-portal-xapp
+    - xdg-user-dirs-gtk
+    - xdg-utils
+    - xfce4-screensaver
+    - xrdb
 setup      : |
-    %patch -p1 -i $pkgfiles/Ensure-all-various-XDG_-etc-env-vars-are-passed-by-DBus-and-systemd.patch
-    %configure \
-        --disable-debug \
-        --sysconfdir=/usr/share
+    %patch -p1 -i $pkgfiles/0001-xinitrc.in.in-Ensure-all-various-XDG_-etc.-env-vars-.patch
+    %patch -p1 -i $pkgfiles/xfce-session-4.10-startxfce4.patch
+    %patch -p1 -i $pkgfiles/0001-Add-minimal-xdg-desktop-portal-conf-file-for-Xfce-Fi.patch
+    %patch -p1 -i $pkgfiles/0002-Add-xapp-for-Wallpaper-and-Screenshot-in-xfce-portal.patch
+    %reconfigure \
+                 --disable-debug \
+                 --disable-legacy-sm \
+                 --sysconfdir=/usr/share
 build      : |
     %make
 install    : |

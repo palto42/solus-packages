@@ -1,8 +1,8 @@
 name       : kparts
-version    : 5.109.0
-release    : 70
+version    : 5.115.0
+release    : 74
 source     :
-    - https://cdn.download.kde.org/stable/frameworks/5.109/kparts-5.109.0.tar.xz : 6b1da5f8c00c2204e9da1eb6767e00f72a966d1152073515bb677f0e7734f79e
+    - https://cdn.download.kde.org/stable/frameworks/5.115/kparts-5.115.0.tar.xz : a2ad3379d71843d3efeac3e98b6416509c024eff1135e45724fe5c1722cb7d94
 homepage   : https://community.kde.org/Frameworks
 license    :
     - LGPL-2.0-only

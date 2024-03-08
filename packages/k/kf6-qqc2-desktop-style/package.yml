@@ -1,0 +1,31 @@
+name       : kf6-qqc2-desktop-style
+version    : 6.0.0
+release    : 3
+source     :
+    - https://cdn.download.kde.org/stable/frameworks/6.0/qqc2-desktop-style-6.0.0.tar.xz : 848305ff8880fdbad19bf57ed9f128e59cd71ecb8a36fbf920a55b60f68a2c93
+homepage   : https://community.kde.org/Frameworks
+license    :
+    - LGPL-2.0-or-later
+    - LGPL-3.0-only
+component  : desktop.theme
+summary    : QtQuickControls 2 style that integrates with the desktop
+description: |
+    This is a style for QtQuickControls 2 that uses QWidget's QStyle for painting, making possible to achieve an higher deree of consistency between QWidget-based and QML-based apps.
+builddeps  :
+    - pkgconfig(Qt6QuickControls2)
+    - pkgconfig(x11)
+    - kf6-kconfigwidgets-devel
+    - kf6-kiconthemes-devel
+    - kf6-kirigami-devel
+    - kf6-sonnet-devel
+rundeps    :
+    - kf6-sonnet
+clang      : yes
+optimize   : thin-lto
+setup      : |
+    %cmake_kf6
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install
+    %qml6_cache

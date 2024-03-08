@@ -1,0 +1,7 @@
+releases:
+  id: 1705
+  rss: https://github.com/pnggroup/libpng/tags.atom
+security:
+  cpe:
+  - vendor: libpng
+    product: libpng

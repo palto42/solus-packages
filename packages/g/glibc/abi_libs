@@ -542,6 +542,8 @@ bench-fmax
 bench-fmaxf
 bench-fmin
 bench-fminf
+bench-fmod
+bench-fmodf
 bench-hypot
 bench-hypotf
 bench-ilogb
@@ -590,7 +592,10 @@ bench-pow
 bench-powf
 bench-powf128
 bench-pthread-locks
-bench-pthread-mutex-locks
+bench-pthread-mutex-lock
+bench-pthread-mutex-trylock
+bench-pthread-spin-lock
+bench-pthread-spin-trylock
 bench-pthread_once
 bench-rawmemchr
 bench-rint
@@ -674,17 +679,14 @@ libKSC.so
 libanl.so.1
 libc.so.6
 libc_malloc_debug.so.0
-libcrypt.so.1
 libdl.so.2
 libm.so.6
 libmemusage.so
 libmvec.so.1
 libnsl.so.1
 libnss_compat.so.2
-libnss_db.so.2
 libnss_dns.so.2
 libnss_files.so.2
-libnss_hesiod.so.2
 libpcprofile.so
 libpthread.so.0
 libresolv.so.2
@@ -693,8 +695,6 @@ libthread_db.so.1
 libutil.so.1
 locale
 localedef
-makedb
-nscd
 pcprofiledump
 pldd
 sotruss-lib.so

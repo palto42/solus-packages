@@ -1,11 +1,12 @@
 name       : harfbuzz
-version    : 8.2.0
-release    : 63
+version    : 8.3.0
+release    : 69
 source     :
-    - https://github.com/harfbuzz/harfbuzz/releases/download/8.2.0/harfbuzz-8.2.0.tar.xz : 8cb7117a62f42d5ad25d4a697e1bbfc65933b3eed2ee7f247203c79c9f1b514c
+    - https://github.com/harfbuzz/harfbuzz/releases/download/8.3.0/harfbuzz-8.3.0.tar.xz : 109501eaeb8bde3eadb25fab4164e993fbace29c3d775bcaa1c1e58e2f15f847
 license    :
     - MIT
     - HPND
+homepage   : https://harfbuzz.github.io/
 component  : xorg.fonts
 summary    : HarfBuzz is a text shaping library
 description: |
@@ -19,10 +20,6 @@ builddeps  :
     - pkgconfig32(graphite2)
     - pkgconfig32(icu-io)
 rundeps    :
-    - glib2
-    - glibc
-    - graphite2
-    - libicu
     - 32bit :
         - glib2-32bit
         - glibc-32bit
@@ -38,6 +35,10 @@ rundeps    :
         - glib2-devel
         - graphite2-devel
         - libicu-devel
+    - glib2
+    - glibc
+    - graphite2
+    - libicu
 setup      : |
     if [[ ! -z "${EMUL32BUILD}" ]]; then
         build_gobject="disabled"
@@ -51,4 +52,4 @@ build      : |
 install    : |
     %ninja_install
 check      : |
-    %ninja_check || :
+    %ninja_check

@@ -1,9 +1,10 @@
 name       : papirus-icon-theme
-version    : '20230801'
-release    : 82
+version    : '20240201'
+release    : 87
 source     :
-    - https://github.com/PapirusDevelopmentTeam/papirus-icon-theme/archive/refs/tags/20230801.tar.gz : b5c35d451358cc170c2f9498e5b37b2303191725f8cb35560fa89c46382df71d
+    - https://github.com/PapirusDevelopmentTeam/papirus-icon-theme/archive/refs/tags/20240201.tar.gz : 8ff3caded7862e5e6f531dbae54b213ff1cd3666d26f23357c6183173856f380
 license    : GPL-3.0-or-later
+homepage   : https://git.io/papirus-icon-theme
 component  :
     - desktop.theme
     - ^solus-sc-icons : desktop.theme
@@ -20,10 +21,10 @@ rundeps    :
 replaces   :
     - papirus-adapta-icon-theme
 setup      : |
-    %patch -p1 < $pkgfiles/0001-Revert-redesign-System-Software-Install.patch
-    rm -r ePapirus*
+    %patch -p1 -i $pkgfiles/0001-Revert-redesign-System-Software-Install.patch
+    %patch -p1 -i $pkgfiles/fix-plasma-6.patch
 install    : |
-    %make_install
+    EXCLUDE="ePapirus ePapirus-Dark" %make_install
     scDir=$installdir/usr/share/icons/solus-sc
     thirdPartyIcons=(
         "android-studio"
@@ -43,7 +44,6 @@ install    : |
         "pycharm"
         "rider"
         "rubymine"
-        "skype"
         "slack"
         "spotify"
         "sublime-text"
@@ -70,10 +70,7 @@ install    : |
             install -Dm00644 $installdir/$appsLoc/${icon}.svg $scDir/${i}x${i}/apps/${icon}.svg
         done
     done
-    for i in 16 22 24; do # im-google-talk is special. It's in actions and only a small range of sizes
-        actionsDir=/usr/share/icons/Papirus/${i}x${i}/actions
-        install -Dm00644 $installdir/$actionsDir/im-google-talk.svg $scDir/${i}x${i}/actions/im-google-talk.svg
-    done
+
     install -Dm00644 $pkgfiles/index.theme $scDir/index.theme
     install -Dm00644 $pkgfiles/Papirus-Adapta@index.theme $installdir/usr/share/icons/Papirus-Adapta/index.theme
     install -Dm00644 $pkgfiles/Papirus-Adapta-Nokto@index.theme $installdir/usr/share/icons/Papirus-Adapta-Nokto/index.theme

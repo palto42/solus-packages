@@ -1,8 +1,11 @@
 name       : dbeaver
-version    : 23.2.0
-release    : 60
+version    : 23.3.5
+release    : 62
 source     :
-    - https://github.com/dbeaver/dbeaver/archive/refs/tags/23.2.0.tar.gz : ef30d5c233dfa2dca653c8bb3d9a13f7e44c54505115142971ebcb4be393f167
+    - https://github.com/dbeaver/dbeaver/archive/refs/tags/23.3.5.tar.gz#dbeaver.tar.gz : 70da8b1f6046185f0ad6ccf878b1bd66914774e30b80ef475160fd421d6c5f48
+    # I wish they'd create a tag instead of a branch but whatever I guess
+    - https://github.com/dbeaver/dbeaver-common/archive/refs/heads/release_23_3_5.tar.gz#dbeaver-common.tar.gz : c0d15e5f109e05bba8d7856ba1a9591087302f4c7d08d1a254c5b3a58059c970
+extract    : no
 license    : Apache-2.0
 component  : database
 homepage   : https://dbeaver.io/
@@ -19,14 +22,23 @@ environment: |
     export JAVA_HOME=/usr/lib64/openjdk-17
     export PATH=$JAVA_HOME/bin:$PATH
 setup      : |
-    %patch -Np1 < $pkgfiles/0001-Disable-auto-update-check-by-default.patch
-    %patch -p1 < $pkgfiles/0001-Change-default-theme-to-dark.patch
+    mkdir dbeaver dbeaver-common
+    tar --strip-components=1 -xf $sources/dbeaver.tar.gz -C dbeaver
+    tar --strip-components=1 -xf $sources/dbeaver-common.tar.gz -C dbeaver-common
 
-    sed -i "s|<target>11</target>|<target>17</target>|" pom.xml
-    sed -i "s|<compilerVersion>1.8</compilerVersion>|<compilerVersion>17</compilerVersion>|" pom.xml
+    cd dbeaver
+    %patch -Np1 -i $pkgfiles/0001-Disable-auto-update-check-by-default.patch
+    %patch -p1 -i $pkgfiles/0001-Change-default-theme-to-dark.patch
+
+    # Skip broken test.platform
+    sed -i '/org.jkiss.dbeaver.test.platform/d' test/pom.xml
+
+    export MAVEN_OPTS="-Xmx2048m"
+    mvn --batch-mode validate
 build      : |
-    export MAVEN_OPTS="-Xmx1024m"
-    mvn -Dmaven.repo.local=$workdir/.m2 package
+    cd product/aggregate
+    export MAVEN_OPTS="-Xmx2048m"
+    mvn -Dmaven.repo.local=$workdir/.m2 --batch-mode package
 install    : |
     export _target_dir=product/community/target/products/org.jkiss.dbeaver.core.product/linux/gtk/x86_64/dbeaver
 

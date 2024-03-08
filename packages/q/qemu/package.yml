@@ -1,12 +1,16 @@
 name       : qemu
-version    : 7.2.5
-release    : 59
+version    : 8.2.2
+release    : 64
 source     :
-    - https://download.qemu.org/qemu-7.2.5.tar.xz : 172042aa37609240130fe03f5925001e717d74dbd0799adf15b15dc038aef9d1
+    - https://download.qemu.org/qemu-8.2.2.tar.xz : 847346c1b82c1a54b2c38f6edbd85549edeb17430b7d4d3da12620e2962bc4f3
 license    : GPL-2.0-only
 homepage   : https://wiki.qemu.org/Main_Page
-component  : virt
-summary    : QEMU is a generic and open source machine emulator and virtualizer.
+component  :
+    - virt
+    - guest-agent : virt
+summary    :
+    - QEMU is a generic and open source machine emulator and virtualizer.
+    - guest-agent : Guest agent for KVM guests
 description: |
     QEMU is a generic and open source machine emulator and virtualizer.
 
@@ -17,23 +21,27 @@ builddeps  :
     - pkgconfig(SDL2_image)
     - pkgconfig(alsa)
     - pkgconfig(bzip2)
+    - pkgconfig(capstone)
     - pkgconfig(fuse3)
     - pkgconfig(epoxy)
     - pkgconfig(gbm)
-    - pkgconfig(glu)
     - pkgconfig(gnutls)
     - pkgconfig(gtk+-3.0)
+    - pkgconfig(keyutils)
     - pkgconfig(libattr)
     - pkgconfig(libcacard)
     - pkgconfig(libcap-ng)
     - pkgconfig(libcurl)
     - pkgconfig(libdrm)
+    - pkgconfig(libdw)
+    - pkgconfig(libfdt)
+    - pkgconfig(libjpeg)
     - pkgconfig(libnfs)
+    - pkgconfig(libpipewire-0.3)
     - pkgconfig(libpng)
     - pkgconfig(libpulse)
     - pkgconfig(libsasl2)
     - pkgconfig(libseccomp)
-    - pkgconfig(libturbojpeg)
     - pkgconfig(libusb-1.0)
     - pkgconfig(libusbredirhost)
     - pkgconfig(liburing)
@@ -42,19 +50,25 @@ builddeps  :
     - pkgconfig(slirp)
     - pkgconfig(spice-protocol)
     - pkgconfig(spice-server)
+    - pkgconfig(valgrind)
     - pkgconfig(virglrenderer)
+    - pkgconfig(vte-2.91)
     - pkgconfig(x11)
+    - acpica-unix
     - libaio-devel
+    - python-sphinx
+    - python-sphinx-rtd-theme
 rundeps    :
+    - capstone
     - edk2-ovmf
+    - virtiofsd
 setup      : |
-    %apply_patches
     ./configure --prefix=/usr \
                 --libdir=%libdir% \
                 --sysconfdir=/etc \
                 --libexecdir=%libdir%/qemu \
                 --localstatedir=/var \
-                --audio-drv-list=pa,alsa \
+                --audio-drv-list=pipewire,pa,alsa \
                 --disable-strip \
                 --enable-attr \
                 --enable-curl \
@@ -64,6 +78,7 @@ setup      : |
                 --enable-libnfs \
                 --enable-libusb \
                 --enable-linux-aio \
+                --enable-lto \
                 --enable-opengl \
                 --enable-pie \
                 --enable-png \
@@ -76,17 +91,34 @@ setup      : |
                 --enable-vnc-jpeg \
                 --enable-zstd \
                 --target-list='aarch64-softmmu arm-linux-user arm-softmmu i386-linux-user i386-softmmu mips-linux-user mips-softmmu mipsel-linux-user mipsel-softmmu x86_64-linux-user x86_64-softmmu'
+clang      : yes
 build      : |
     %make
 install    : |
     %make_install
     # Qemu installs this during build..
-    rm -rf $installdir/{var,usr/include}
+    rm -rfv $installdir/{var,usr/include}
+
+    # Qemu-guest-agent
+    install -Dm00644 $pkgfiles/qemu-guest-agent.tmpfiles $installdir/usr/lib/tmpfiles.d/qemu-guest-agent.conf
+    install -Dm00644 $pkgfiles/qemu-guest-agent.service $installdir/usr/lib/systemd/system/qemu-guest-agent.service
+    install -Dm00644 $pkgfiles/99-qemu-guest-agent.rules $installdir/usr/lib/udev/rules.d/99-qemu-guest-agent.rules
 
     # Provided by the edk2-ovmf package
-    rm -rf $installdir/usr/share/qemu/edk2*
-    rm -rf $installdir/usr/share/qemu/firmware
+    rm -rfv $installdir/usr/share/qemu/edk2*
+    rm -rfv $installdir/usr/share/qemu/firmware
+
+    find $installdir -type d -empty -print -delete
 check      : |
     unset LD_PRELOAD
     # Currently flaking on aarch64
     %make check V=1 || :
+patterns   :
+    - docs :
+        - /usr/share/doc
+    - guest-agent :
+        - /usr/bin/qemu-ga
+        - /usr/lib/systemd/system/qemu-guest-agent.service
+        - /usr/lib/tmpfiles.d/qemu-guest-agent.conf
+        - /usr/lib/udev/rules.d/99-qemu-guest-agent.rules
+        - /usr/share/man/man8/qemu-ga.8

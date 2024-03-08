@@ -1,10 +1,11 @@
 name       : libavif
-version    : 0.11.1
-release    : 13
+version    : 1.0.4
+release    : 17
 source     :
-    - https://github.com/AOMediaCodec/libavif/archive/refs/tags/v0.11.1.tar.gz : 0eb49965562a0e5e5de58389650d434cff32af84c34185b6c9b7b2fccae06d4e
+    - https://github.com/AOMediaCodec/libavif/archive/refs/tags/v1.0.4.tar.gz : dc56708c83a4b934a8af2b78f67f866ba2fb568605c7cf94312acf51ee57d146
 license    : BSD-2-Clause
 component  : multimedia.library
+homepage   : https://github.com/AOMediaCodec/libavif
 summary    : Library for encoding and decoding .avif files
 description: |
     libavif aims to be a friendly and portable C implementation of the AV1 Image File Format, capable of both encoding and decoding.
@@ -12,18 +13,23 @@ builddeps  :
     - pkgconfig(SvtAv1Enc)
     - pkgconfig(aom)
     - pkgconfig(dav1d)
+    - pkgconfig(gdk-pixbuf-2.0)
+    - pkgconfig(gtest)
     - pkgconfig(libjpeg)
     - pkgconfig(libpng)
     - pkgconfig(libsharpyuv)
     - pkgconfig(rav1e)
-    - gtest-devel
 setup      : |
+    # Fix a segfault during tests
+    %patch -p1 -i $pkgfiles/Fix-SVT-encoding.patch
     %cmake_ninja \
-        -DAVIF_BUILD_TESTS=ON \
-        -DAVIF_CODEC_AOM=ON \
-        -DAVIF_CODEC_DAV1D=ON \
-        -DAVIF_CODEC_RAV1E=ON \
-        -DAVIF_CODEC_SVT=ON
+                 -DAVIF_BUILD_APPS=ON \
+                 -DAVIF_BUILD_TESTS=ON \
+                 -DAVIF_CODEC_AOM=ON \
+                 -DAVIF_CODEC_DAV1D=ON \
+                 -DAVIF_CODEC_RAV1E=ON \
+                 -DAVIF_CODEC_SVT=ON \
+                 -DAVIF_BUILD_GDK_PIXBUF=ON
 build      : |
     %ninja_build
 install    : |

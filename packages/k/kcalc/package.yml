@@ -1,8 +1,8 @@
 name       : kcalc
-version    : 23.04.3
-release    : 65
+version    : 23.08.5
+release    : 68
 source     :
-    - https://cdn.download.kde.org/stable/release-service/23.04.3/src/kcalc-23.04.3.tar.xz : c11bec7523c56058be470b61d53fd7b3e5309fe680fe009f4c091a8b398bb812
+    - https://cdn.download.kde.org/stable/release-service/23.08.5/src/kcalc-23.08.5.tar.xz : e545d67389f25b480b4eff2c40617b4e97172717d297d86e5c07ff7a6317437e
 homepage   : https://kde.org/applications/utilities/org.kde.kcalc
 license    : GPL-2.0-or-later
 component  : desktop.kde.core
@@ -12,7 +12,7 @@ description: |
 optimize   : lto
 libsplit   : no
 builddeps  :
-    - gmp-devel
+    - pkgconfig(gmp)
     - kcrash-devel
     - kdoctools-devel
     - kguiaddons-devel

@@ -1,0 +1,29 @@
+name       : kf6-kglobalaccel
+version    : 6.0.0
+release    : 4
+source     :
+    - https://cdn.download.kde.org/stable/frameworks/6.0/kglobalaccel-6.0.0.tar.xz : 58009eb0d0b70c93dc0cb0886ae929f3756e972c841d7a3e465df8307e5b7149
+homepage   : https://community.kde.org/Frameworks
+license    :
+    - LGPL-2.0-only
+    - LGPL-2.0-or-later
+    - LGPL-2.1-only
+component  : desktop.library
+summary    : Global desktop keyboard shortcuts
+description: |
+    KGlobalAccel allows you to have global accelerators that are independent of the focused window. Unlike regular shortcuts, the application's window does not need focus for them to be activated.
+builddeps  :
+    - pkgconfig(Qt6Designer)
+    - extra-cmake-modules
+rundeps    :
+    - devel :
+        - extra-cmake-modules
+        - qt6-tools-devel
+clang      : yes
+optimize   : thin-lto
+setup      : |
+    %cmake_kf6
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install

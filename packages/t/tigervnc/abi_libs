@@ -1,7 +1,3 @@
 Xvnc
 libvnc.so
-vncconfig
-vncpasswd
-vncsession
 vncviewer
-x0vncserver

@@ -25,12 +25,11 @@ libopus.so.0
 libopusfile.so.0
 libpcre2-32.so.0
 libpng16.so.16
-libsharpyuv.so.0
 libtheora.so.0
 libtheoradec.so.1
 libvorbis.so.0
 libvorbisfile.so.3
-libvpx.so.7
+libvpx.so.8
 libwebp.so.7
 libz.so.1
 libzstd.so.1

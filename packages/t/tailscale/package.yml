@@ -1,8 +1,8 @@
 name       : tailscale
-version    : 1.48.2
-release    : 1
+version    : 1.60.1
+release    : 11
 source     :
-    - https://github.com/tailscale/tailscale/archive/refs/tags/v1.48.2.tar.gz : 1c34c5c2c3b78e59ffb824b356418ff828653c62885b126d0d05f300218b36b5
+    - https://github.com/tailscale/tailscale/archive/refs/tags/v1.60.1.tar.gz : 9766336845cef4d8b906145bc863f20ec8b9af71051471de45d7f964539a9817
 homepage   : https://tailscale.com
 license    : BSD-3-Clause
 component  : network.clients
@@ -11,8 +11,8 @@ description: |
     The easiest, most secure way to use WireGuard and 2FA.
 networking : yes
 builddeps  :
-    - golang
     - git
+    - golang
 environment: |
     export VERSION_LONG=%version%
     export VERSION_SHORT=%version%

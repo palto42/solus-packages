@@ -1,33 +1,36 @@
 name       : linux-firmware
-version    : 20230804
-release    : 65
+version    : '20240220'
+release    : 72
 source     :
-    - git|https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git : 20230804
+    - git|https://gitlab.com/kernel-firmware/linux-firmware.git : 20240220
 license    :
     - GPL-2.0-or-later
     - Distributable
 component  : kernel
-summary    : Firmware required for many devices
-description: |
-    Free and non-free firmware required for enablement of many devices and hardware
+homepage   : https://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git;a=summary
+summary    :
+    - Firmware required for many devices
+    - nvidia : Firmware required for many devices, Nvidia GSP firmware (unused)
+description:
+    - Free and non-free firmware required for enablement of many devices and hardware
+    - nvidia : Firmware required for many devices, Nvidia GSP firmware (unused)
 strip      : no
+networking : yes
+builddeps  :
+    - rdfind
 rundeps    :
     - intel-microcode
 setup      : |
     git config --global user.email "solus@getsol.us"
     git config --global user.name "Solus"
 
-    # Fixes a Realtek bluetooth adapter
-    git cherry-pick 7ed62638b50f3954099c6bb23f7121cb2a5b0048
-    git cherry-pick 42d31f8f6ed64f5508f10d09451f60d524107ee0
-
-    # CVE-2023-20569 (AMD Inception)
-    git cherry-pick f2eb058afc57348cde66852272d6bf11da1eef8f
+    # Fixes an issue with vp9 decoding on certain AMD hardware
+    git cherry-pick -n 977332782302476e1c863b09b840f463d0378807
 install    : |
     %make_install
 
     # Remove blacklisted
-    for i in carl9170fw netronome liquidio qed Makefile GPL-3; do
+    for i in airoha carl9170fw netronome liquidio powervr qed; do
         rm -rvf $installdir/lib/firmware/$i
     done
 
@@ -35,3 +38,8 @@ install    : |
     install -dDm00755 $installdir/usr/share/doc/${package}
     install -m00644 LICENSE* $installdir/usr/share/doc/${package}/.
     install -m00644 LICENCE* $installdir/usr/share/doc/${package}/.
+patterns   :
+    - nvidia :
+        - /lib/firmware/nvidia/ad*/gsp
+        - /lib/firmware/nvidia/ga*/gsp
+        - /lib/firmware/nvidia/tu*/gsp

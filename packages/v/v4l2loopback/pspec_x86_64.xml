@@ -1,6 +1,7 @@
 <PISI>
     <Source>
         <Name>v4l2loopback</Name>
+        <Homepage>https://github.com/umlaeute/v4l2loopback</Homepage>
         <Packager>
             <Name>Reilly Brogan</Name>
             <Email>solus@reillybrogan.com</Email>
@@ -10,7 +11,7 @@
         <Summary xml:lang="en">A kernel module to create V4L2 loopback devices</Summary>
         <Description xml:lang="en">A kernel module to create V4L2 loopback devices
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>v4l2loopback</Name>
@@ -19,10 +20,10 @@
 </Description>
         <PartOf>kernel.drivers</PartOf>
         <RuntimeDependencies>
-            <Dependency releaseFrom="264">v4l2loopback-common</Dependency>
+            <Dependency releaseFrom="285">v4l2loopback-common</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="data">/lib/modules/5.15.131-216.lts/extra/v4l2loopback.ko.zst</Path>
+            <Path fileType="data">/lib/modules/6.6.20-236.lts/extra/v4l2loopback.ko.zst</Path>
         </Files>
     </Package>
     <Package>
@@ -43,15 +44,15 @@
 </Description>
         <PartOf>kernel.drivers</PartOf>
         <RuntimeDependencies>
-            <Dependency releaseFrom="264">v4l2loopback-common</Dependency>
+            <Dependency releaseFrom="285">v4l2loopback-common</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="data">/lib/modules/6.5.3-256.current/extra/v4l2loopback.ko.zst</Path>
+            <Path fileType="data">/lib/modules/6.6.20-279.current/extra/v4l2loopback.ko.zst</Path>
         </Files>
     </Package>
     <History>
-        <Update release="264">
-            <Date>2023-09-16</Date>
+        <Update release="285">
+            <Date>2024-03-05</Date>
             <Version>0.12.7</Version>
             <Comment>Packaging update</Comment>
             <Name>Reilly Brogan</Name>

@@ -1,11 +1,11 @@
 name       : kplotting
-version    : 5.109.0
-release    : 68
+version    : 5.115.0
+release    : 72
 source     :
-    - https://cdn.download.kde.org/stable/frameworks/5.109/kplotting-5.109.0.tar.xz : d2115407bc7fffd06b3617d52eb6029e4b44a5fe593d662f37749031a0e20614
+    - https://cdn.download.kde.org/stable/frameworks/5.115/kplotting-5.115.0.tar.xz : 836e5c74a9c4c812e4fce2399cc2c29cb61c7810e7d3f4f992d051e1c5f0e1f3
 homepage   : https://community.kde.org/Frameworks
 license    :
-    - GPL-2.0.or-later
+    - GPL-2.0-or-later
     - LGPL-2.0-or-later
 component  : desktop.library
 summary    : Data plotting

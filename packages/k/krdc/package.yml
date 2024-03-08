@@ -1,8 +1,8 @@
 name       : krdc
-version    : 23.04.3
-release    : 53
+version    : 23.08.5
+release    : 56
 source     :
-    - https://cdn.download.kde.org/stable/release-service/23.04.3/src/krdc-23.04.3.tar.xz : 20cba64113baf0481790ae9dab2c3dc9d3657bf0202e4d7a24f5ba102c396a4b
+    - https://cdn.download.kde.org/stable/release-service/23.08.5/src/krdc-23.08.5.tar.xz : c2c57cebb22a9201ce5d6c305654e485df1d0deaa17496a8d85fe19a80f059f4
 homepage   : https://kde.org/applications/internet/org.kde.krdc
 license    :
     - GFDL-1.2-or-later

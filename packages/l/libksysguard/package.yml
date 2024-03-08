@@ -1,8 +1,8 @@
 name       : libksysguard
-version    : 5.27.7
-release    : 89
+version    : 5.27.10
+release    : 91
 source     :
-    - https://cdn.download.kde.org/stable/plasma/5.27.7/libksysguard-5.27.7.tar.xz : 682a939252e35a52b7f95a6f5bfcc7cb983fa3b5275ae3b377ab8040b292cb18
+    - https://cdn.download.kde.org/stable/plasma/5.27.10/libksysguard-5.27.10.tar.xz : 17fc33b028cb272391b68c46e93b2d806d8254e6af9399d61375d49041ff3ce5
 homepage   : https://www.kde.org/workspaces/plasmadesktop/
 license    :
     - GPL-2.0-or-later

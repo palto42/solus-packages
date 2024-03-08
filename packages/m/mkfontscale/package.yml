@@ -1,10 +1,11 @@
 name       : mkfontscale
-version    : 1.2.1
-release    : 13
+version    : 1.2.3
+release    : 15
 source     :
-    - https://www.x.org/releases/individual/app/mkfontscale-1.2.1.tar.gz : e5b687029e44d0bd3ccd254a4da6a5cbfc40350aa8b43fcca16ef6e9b9bb9f22
+    - https://www.x.org/releases/individual/app/mkfontscale-1.2.3.tar.gz : 3a026b468874eb672a1d0a57dbd3ddeda4f0df09886caf97d30097b70c2df3f8
 license    : MIT
 component  : xorg.apps
+homepage   : https://www.x.org/
 summary    : |
     X.Org Applications: mkfontscale
 description: |

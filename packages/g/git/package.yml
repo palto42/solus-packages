@@ -1,8 +1,8 @@
 name       : git
-version    : 2.42.0
-release    : 122
+version    : 2.44.0
+release    : 125
 source     :
-    - https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.42.0.tar.xz : 3278210e9fd2994b8484dd7e3ddd9ea8b940ef52170cdb606daa94d887c93b0d
+    - https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.44.0.tar.xz : e358738dcb5b5ea340ce900a0015c03ae86e804e7ff64e47aa4631ddee681de3
 license    :
     - GPL-2.0-only
     - LGPL-2.1-or-later

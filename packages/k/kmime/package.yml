@@ -1,8 +1,8 @@
 name       : kmime
-version    : 23.04.3
-release    : 66
+version    : 23.08.5
+release    : 70
 source     :
-    - https://cdn.download.kde.org/stable/release-service/23.04.3/src/kmime-23.04.3.tar.xz : 4de0ec9ca5a252aac90dbb8e05a51b6d7c5b4cf24afa3e0542443494347868c4
+    - https://cdn.download.kde.org/stable/release-service/23.08.5/src/kmime-23.08.5.tar.xz : b6894e733abf3a8fb4fc7de37b7cbf15cbebdc737b80f7fe632bdf61e5da3fda
 homepage   : https://kde.org/
 license    : LGPL-2.1-or-later
 component  : desktop.library

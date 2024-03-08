@@ -1,8 +1,8 @@
 name       : sudo
-version    : 1.9.14_p2
-release    : 50
+version    : 1.9.15_p5
+release    : 53
 source     :
-    - https://www.sudo.ws/dist/sudo-1.9.14p2.tar.gz : 15f6308db0ed4265ec929f2c61e2e13492e551750c203ee001d1fcd8104c9514
+    - https://www.sudo.ws/dist/sudo-1.9.15p5.tar.gz : 558d10b9a1991fb3b9fa7fa7b07ec4405b7aefb5b3cb0b0871dbc81e3a88e558
 homepage   : https://www.sudo.ws/
 license    : ISC
 summary    : Run commands as a privileged user
@@ -10,7 +10,7 @@ component  : system.base
 description: |
     The Sudo package allows a system administrator to give certain users (or groups of users) the ability to run some (or all) commands as root or another user while logging the commands and arguments.
 setup      : |
-    %patch -p1 < $pkgfiles/visudo-stateless.patch
+    %patch -p1 -i $pkgfiles/visudo-stateless.patch
     %configure --with-all-insults \
                --with-env-editor \
                --enable-adminconf=/etc/ \
@@ -36,3 +36,6 @@ install    : |
     install -Dm00644 $pkgfiles/sudoers $installdir/usr/share/defaults/etc/sudo/sudoers
     # sudo pam
     install -Dm00644 $pkgfiles/pam.d/sudo $installdir/usr/share/defaults/etc/pam.d/sudo
+patterns   :
+    - docs :
+        - /usr/share/doc

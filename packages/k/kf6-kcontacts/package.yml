@@ -1,0 +1,34 @@
+name       : kf6-kcontacts
+version    : 6.0.0
+release    : 3
+source     :
+    - https://cdn.download.kde.org/stable/frameworks/6.0/kcontacts-6.0.0.tar.xz : 179c6748e555c5c028b02a4b9b165ede13a09cf5eaf0ea012366c9727d230ec4
+homepage   : https://community.kde.org/Frameworks
+license    :
+    - BSD-3-Clause
+    - LGPL-2.0-or-later
+    - MIT
+component  : desktop.library
+summary    : Address book API for KDE
+description: |
+    Address book API for KDE
+builddeps  :
+    - pkgconfig(Qt6Quick)
+    - kf6-kcodecs-devel
+    - kf6-kconfig-devel
+    - kf6-kcoreaddons-devel
+    - kf6-ki18n-devel
+rundeps    :
+    - devel :
+        - kf6-kcodecs-devel
+        - kf6-kconfig-devel
+        - kf6-kcoreaddons-devel
+        - kf6-ki18n-devel
+clang      : yes
+optimize   : thin-lto
+setup      : |
+    %cmake_kf6
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install

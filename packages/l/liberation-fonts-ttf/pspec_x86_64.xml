@@ -3,15 +3,15 @@
         <Name>liberation-fonts-ttf</Name>
         <Homepage>https://github.com/liberationfonts/liberation-fonts</Homepage>
         <Packager>
-            <Name>Algent Albrahimi</Name>
-            <Email>algent@protonmail.com</Email>
+            <Name>Joey Riches</Name>
+            <Email>josephriches@gmail.com</Email>
         </Packager>
         <License>OFL-1.1</License>
         <PartOf>desktop.font</PartOf>
         <Summary xml:lang="en">Liberation Font Pack</Summary>
         <Description xml:lang="en">The Liberation Fonts is a font family which aims at metric compatibility with Arial, Times New Roman, and Courier New.
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>liberation-fonts-ttf</Name>
@@ -32,15 +32,16 @@
             <Path fileType="data">/usr/share/fonts/truetype/liberation/LiberationSerif-BoldItalic.ttf</Path>
             <Path fileType="data">/usr/share/fonts/truetype/liberation/LiberationSerif-Italic.ttf</Path>
             <Path fileType="data">/usr/share/fonts/truetype/liberation/LiberationSerif-Regular.ttf</Path>
+            <Path fileType="data">/usr/share/metainfo/liberation.metainfo.xml</Path>
         </Files>
     </Package>
     <History>
-        <Update release="9">
-            <Date>2021-11-02</Date>
+        <Update release="11">
+            <Date>2023-10-12</Date>
             <Version>2.1.5</Version>
             <Comment>Packaging update</Comment>
-            <Name>Algent Albrahimi</Name>
-            <Email>algent@protonmail.com</Email>
+            <Name>Joey Riches</Name>
+            <Email>josephriches@gmail.com</Email>
         </Update>
     </History>
 </PISI>

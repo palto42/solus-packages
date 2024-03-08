@@ -1,8 +1,8 @@
 name       : oxygen
-version    : 5.27.7
-release    : 82
+version    : 5.27.10
+release    : 85
 source     :
-    - https://cdn.download.kde.org/stable/plasma/5.27.7/oxygen-5.27.7.tar.xz : a218fc2f2f7b297de56b75f413c5acab0398f8c4a7a043a1b99b99d15256398d
+    - https://cdn.download.kde.org/stable/plasma/5.27.10/oxygen-5.27.10.tar.xz : 5b16f6e3e5ee11bb959fc0e1fd233bbb0231b54ea8eff5e14fd78003ba2d090b
 homepage   : https://www.kde.org/workspaces/plasmadesktop/
 license    :
     - GPL-2.0-or-later
@@ -18,6 +18,7 @@ description:
     - sound-theme : System sounds for the Plasma desktop.
 optimize   : lto
 builddeps  :
+    - pkgconfig(KF5WaylandClient)
     - pkgconfig(Qt5Quick)
     - pkgconfig(Qt5X11Extras)
     - pkgconfig(xcb)
@@ -28,7 +29,6 @@ builddeps  :
     - kguiaddons-devel
     - ki18n-devel
     - kservice-devel
-    - kwayland-devel
     - kwindowsystem-devel
 patterns   :
     - devel : /usr/bin/oxygen-demo5

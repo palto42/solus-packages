@@ -1,0 +1,41 @@
+name       : kclock
+version    : 23.08.5
+release    : 2
+source     :
+    - https://cdn.download.kde.org/stable/release-service/23.08.5/src/kclock-23.08.5.tar.xz : dd1372f096dcab3d824f18ce0aaff53d67bad20596007c5edc2681f72cbbb8b1
+homepage   : https://apps.kde.org/kclock
+license    : GPL-2.0-or-later
+component  : desktop.kde
+summary    : Clock app for KDE Plasma
+description: |
+    A convergent clock for KDE Plasma desktop and mobile
+    Features
+        - Alarms
+        - Stopwatch
+        - World Clocks
+        - Timers
+builddeps  :
+    - pkgconfig(Qt5Core)
+    - pkgconfig(Qt5DBus)
+    - pkgconfig(Qt5Gui)
+    - pkgconfig(Qt5Multimedia)
+    - pkgconfig(Qt5Quick)
+    - pkgconfig(Qt5QuickControls2)
+    - pkgconfig(Qt5Svg)
+    - pkgconfig(Qt5Test)
+    - pkgconfig(Qt5Widgets)
+    - extra-cmake-modules
+    - kconfig-devel
+    - kcoreaddons-devel
+    - kdbusaddons-devel
+    - ki18n-devel
+    - kirigami-addons-devel
+    - kirigami2-devel
+    - knotifications-devel
+    - plasma-framework-devel
+setup      : |
+    %cmake_ninja
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install

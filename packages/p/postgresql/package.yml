@@ -1,9 +1,9 @@
 name       : postgresql
-version    : '15.4'
-release    : 42
+version    : '16.2'
+release    : 48
 homepage   : https://www.postgresql.org/
 source     :
-    - https://ftp.postgresql.org/pub/source/v15.4/postgresql-15.4.tar.gz : 0e11eee723dd7e59a634052bc1bfc9be605e55c1cca3f66e9fc25d3a394fb030
+    - https://ftp.postgresql.org/pub/source/v16.2/postgresql-16.2.tar.gz : 2b8201047ec81acd1bad29dba278d788e7891b9c3e8232eda16bb29dec8131c7
 license    :
     - PostgreSQL
     - TCL
@@ -72,11 +72,12 @@ patterns   :
         - /usr/lib64/postgresql/tsm_system_time.so
         - /usr/lib64/postgresql/unaccent.so
 builddeps  :
+    - pkgconfig(icu-i18n)
     - pkgconfig(libcrypt)
     - pkgconfig(python3)
     - python-distutils-extra
 setup      : |
-    ./configure $(sed 's|--runstatedir=/run||' <<< "%CONFOPTS%") \
+    %configure_no_runstatedir \
         --disable-static \
         --with-pam \
         --with-python \

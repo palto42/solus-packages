@@ -1,0 +1,22 @@
+name       : xdg-desktop-portal-xapp
+version    : 1.0.4
+release    : 3
+source     :
+    - https://github.com/linuxmint/xdg-desktop-portal-xapp/archive/refs/tags/1.0.4.tar.gz : 2ff4e541a23d83ee50b206476164c13ea24d6e8ee9ee0f85fead66a11e136b5f
+license    : LGPL-2.1-or-later
+component  : desktop.util
+homepage   : https://github.com/linuxmint/xdg-desktop-portal-xapp
+summary    : xdg-desktop-portal backend for MATE and XFCE
+description: |
+    xdg-desktop-portal backend for MATE and XFCE
+builddeps  :
+    - pkgconfig(xdg-desktop-portal)
+rundeps    :
+    - xapp
+    - xdg-desktop-portal
+setup      : |
+    %meson_configure
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install

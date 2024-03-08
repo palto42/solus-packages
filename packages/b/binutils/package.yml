@@ -1,9 +1,9 @@
 name       : binutils
-version    : '2.39'
-release    : 64
+version    : '2.42'
+release    : 69
 source     :
-    - https://ftp.gnu.org/gnu/binutils/binutils-2.39.tar.xz : 645c25f563b8adc0a81dbd6a41cffbf4d37083a382e02d5d3df4f65c09516d00
-homepage   : http://gnu.org/
+    - https://ftp.gnu.org/gnu/binutils/binutils-2.42.tar.xz : f6e4d41fd5fc778b06b7891457b3620da5ecea1006c6a4a41ae998109f85a800
+homepage   : https://www.gnu.org/software/binutils
 license    : GPL-3.0-or-later
 component  :
     - system.devel
@@ -22,6 +22,7 @@ patterns   :
     - libs : /usr/lib64/lib*.so*
 mancompress: yes
 builddeps  :
+    - pkgconfig(libzstd)
     - dejagnu
 rundeps    :
     - gold : binutils
@@ -36,6 +37,7 @@ setup      : |
     ../configure --prefix=/usr \
                  --libdir=%libdir% \
                  --with-lib-path="/usr/lib64:/lib64:/usr/lib32:/lib32" \
+                 --enable-deterministic-archives \
                  --enable-lto \
                  --enable-multilib \
                  --enable-shared \

@@ -1,8 +1,8 @@
 name       : gnome-calendar
-version    : '44.1'
-release    : 44
+version    : '45.1'
+release    : 46
 source     :
-    - https://download.gnome.org/sources/gnome-calendar/44/gnome-calendar-44.1.tar.xz : 30a1b738b670bd124e462468e671187fc0dba5b9ee2af6a8ebd9e7874bf3b77e
+    - https://download.gnome.org/sources/gnome-calendar/45/gnome-calendar-45.1.tar.xz : 7fa8507543865aa7432bb5319830c87158b5447ca09cca45b607dc6796c71008
 homepage   : https://wiki.gnome.org/Apps/Calendar
 license    : GPL-2.0-only
 component  : office

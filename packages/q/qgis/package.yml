@@ -1,8 +1,8 @@
 name       : qgis
-version    : 3.32.3
-release    : 97
+version    : 3.34.3
+release    : 104
 source     :
-    - https://github.com/qgis/QGIS/archive/refs/tags/final-3_32_3.tar.gz : 3a84eece787d04468229dede2dfdacaad7be8b47e8c6469e5621cddf1a297639
+    - https://github.com/qgis/QGIS/archive/refs/tags/final-3_34_3.tar.gz : 3e81a20b122d8defa4c48a9570f653033d1208be3a8a4cb4c20ea8c0e0c525fc
 homepage   : https://qgis.org/
 license    : GPL-2.0-or-later
 component  : office.scientific
@@ -11,13 +11,14 @@ description: |
     QGIS is a professional GIS application that is built on top of and proud to be itself Free and Open Source Software (FOSS). Create, edit, visualise, analyse and publish geospatial information on Windows, Mac, Linux, BSD (Android coming soon).
 clang      : yes
 builddeps  :
+    - pkgconfig(Qt53DExtras)
     - pkgconfig(Qt5Multimedia)
     - pkgconfig(Qt5Positioning)
     - pkgconfig(Qt5SerialPort)
     - pkgconfig(Qt5Svg)
     - pkgconfig(Qt5UiTools)
     - pkgconfig(Qt5WebKit)
-    - pkgconfig(Qt53DExtras)
+    - pkgconfig(draco)
     - pkgconfig(exiv2)
     - pkgconfig(geos)
     - pkgconfig(gsl)
@@ -28,6 +29,7 @@ builddeps  :
     - pkgconfig(libssh)
     - pkgconfig(libzip)
     - pkgconfig(libzstd)
+    - pkgconfig(minizip)
     - pkgconfig(netcdf)
     - pkgconfig(ocl-icd)
     - pkgconfig(pdal)
@@ -35,6 +37,7 @@ builddeps  :
     - pkgconfig(protobuf)
     - pkgconfig(python3)
     - pkgconfig(qca2-qt5)
+    - pkgconfig(rttopo)
     - pkgconfig(spatialite)
     - laz-perf-devel
     - libspatialindex-devel
@@ -43,7 +46,7 @@ builddeps  :
     - python-sip
     - python-six
     - qscintilla-devel
-    - qtkeychain-devel
+    - qtkeychain-qt5-devel
     - qwt-devel
 rundeps    :
     - geos
@@ -55,9 +58,6 @@ rundeps    :
     - python-qscintilla
     - pyyaml
 setup      : |
-    %patch -p1 < $pkgfiles/find-gsl-correctly.patch
-    %patch -p1 < $pkgfiles/qgis_proj8.patch
-
     %cmake_ninja \
         -DENABLE_TESTS=FALSE \
         -DQGIS_MANUAL_SUBDIR=share/man \

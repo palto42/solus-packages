@@ -1,8 +1,8 @@
 name       : docker-compose
-version    : 2.21.0
-release    : 38
+version    : 2.24.7
+release    : 44
 source     :
-    - https://github.com/docker/compose/archive/refs/tags/v2.21.0.tar.gz : 0014b23382a50c90f91849e491500568366052882e22011822ca2d8a3b2976f2
+    - https://github.com/docker/compose/archive/refs/tags/v2.24.7.tar.gz : f671c42b2189372e2128a0abf218c04cc92693ef8960c3d26aab60bf7ca4febf
 license    : Apache-2.0
 component  : virt
 summary    : A tool for defining and running multi-container Docker applications.
@@ -24,7 +24,7 @@ environment: |
 
     export _cli_plugins_dir=/usr/lib/docker/cli-plugins
 build      : |
-    CGO_ENABLED=0 go build -trimpath -tags "e2e,kube" -o compose ./cmd
+    go build -trimpath -tags "e2e,kube" -o compose ./cmd
 install    : |
     install -Ddm00755 $installdir/$_cli_plugins_dir
     install -m00755 compose $installdir/$_cli_plugins_dir/docker-compose

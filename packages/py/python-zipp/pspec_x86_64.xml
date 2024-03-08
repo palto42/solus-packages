@@ -11,7 +11,7 @@
         <Summary xml:lang="en">Backport of pathlib-compatible object wrapper for zip files</Summary>
         <Description xml:lang="en">Backport of pathlib-compatible object wrapper for zip files
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>python-zipp</Name>
@@ -20,19 +20,26 @@
 </Description>
         <PartOf>programming.python</PartOf>
         <Files>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/__pycache__/zipp.cpython-310.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/zipp-1.2.0-py3.10.egg-info/PKG-INFO</Path>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/zipp-1.2.0-py3.10.egg-info/SOURCES.txt</Path>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/zipp-1.2.0-py3.10.egg-info/dependency_links.txt</Path>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/zipp-1.2.0-py3.10.egg-info/requires.txt</Path>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/zipp-1.2.0-py3.10.egg-info/top_level.txt</Path>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/zipp.py</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/zipp-3.17.0.dist-info/LICENSE</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/zipp-3.17.0.dist-info/METADATA</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/zipp-3.17.0.dist-info/RECORD</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/zipp-3.17.0.dist-info/WHEEL</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/zipp-3.17.0.dist-info/top_level.txt</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/zipp/__init__.py</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/zipp/__pycache__/__init__.cpython-311.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/zipp/__pycache__/__init__.cpython-311.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/zipp/__pycache__/glob.cpython-311.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/zipp/__pycache__/glob.cpython-311.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/zipp/__pycache__/py310compat.cpython-311.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/zipp/__pycache__/py310compat.cpython-311.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/zipp/glob.py</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/zipp/py310compat.py</Path>
         </Files>
     </Package>
     <History>
-        <Update release="7">
-            <Date>2023-08-07</Date>
-            <Version>1.2.0</Version>
+        <Update release="9">
+            <Date>2024-02-14</Date>
+            <Version>3.17.0</Version>
             <Comment>Packaging update</Comment>
             <Name>Joey Riches</Name>
             <Email>josephriches@gmail.com</Email>

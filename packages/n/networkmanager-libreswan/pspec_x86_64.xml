@@ -1,6 +1,7 @@
 <PISI>
     <Source>
         <Name>networkmanager-libreswan</Name>
+        <Homepage>https://networkmanager.dev</Homepage>
         <Packager>
             <Name>Zach Bacon</Name>
             <Email>zachbacon@vba-m.com</Email>
@@ -10,7 +11,7 @@
         <Summary xml:lang="en">Libreswan VPN client plugin for NetworkManager</Summary>
         <Description xml:lang="en">Libreswan VPN client plugin for NetworkManager
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>networkmanager-libreswan</Name>
@@ -82,10 +83,13 @@
             <Path fileType="man">/usr/share/man/man5/nm-settings-libreswan.5</Path>
             <Path fileType="data">/usr/share/metainfo/network-manager-libreswan.metainfo.xml</Path>
         </Files>
+        <Conflicts>
+            <Package>networkmanager-strongswan</Package>
+        </Conflicts>
     </Package>
     <History>
-        <Update release="14">
-            <Date>2023-07-17</Date>
+        <Update release="16">
+            <Date>2023-10-17</Date>
             <Version>1.2.16</Version>
             <Comment>Packaging update</Comment>
             <Name>Zach Bacon</Name>

@@ -1,9 +1,10 @@
 name       : gnupg
-version    : 2.2.27
-release    : 40
+version    : 2.4.4
+release    : 42
 source     :
-    - https://gnupg.org/ftp/gcrypt/gnupg/gnupg-2.2.27.tar.bz2 : 34e60009014ea16402069136e0a5f63d9b65f90096244975db5cea74b3d02399
+    - https://gnupg.org/ftp/gcrypt/gnupg/gnupg-2.4.4.tar.bz2 : 67ebe016ca90fa7688ce67a387ebd82c6261e95897db7b23df24ff335be85bc6
 license    : GPL-3.0-or-later
+homepage   : https://www.gnupg.org
 summary    : Complete and free implementation of OpenPGP
 component  : security
 description: |
@@ -22,9 +23,9 @@ rundeps    :
     - pinentry
 setup      : |
     %configure \
-    --enable-symcryptrun \
-    --enable-gpgtar \
-    --enable-all-tests
+               --enable-symcryptrun \
+               --enable-gpgtar \
+               --enable-all-tests
 build      : |
     %make
 install    : |

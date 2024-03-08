@@ -1,1 +1,5 @@
-disable-unsupported-ld-flag.patch
+drop-flags-unsupported-by-clang16.patch
+constexpr-equality.patch
+absl-optional.patch
+std-to-address.patch
+undo-internal-alloc.patch

@@ -1,8 +1,8 @@
 name       : kcharselect
-version    : 23.04.3
-release    : 60
+version    : 23.08.5
+release    : 63
 source     :
-    - https://cdn.download.kde.org/stable/release-service/23.04.3/src/kcharselect-23.04.3.tar.xz : 3dbe72377a819f14bec6797b3a94eeebec0546d7cf9ce1affb4166be9004e817
+    - https://cdn.download.kde.org/stable/release-service/23.08.5/src/kcharselect-23.08.5.tar.xz : bf22326c021188261031219c95b507524e3c1f0875de2ca87cf2dc940de86386
 homepage   : https://kde.org/applications/utilities/org.kde.kcharselect
 license    : GPL-2.0-or-later
 component  : desktop.kde.core

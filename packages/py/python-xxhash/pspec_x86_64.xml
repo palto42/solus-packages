@@ -1,0 +1,45 @@
+<PISI>
+    <Source>
+        <Name>python-xxhash</Name>
+        <Homepage>https://github.com/ifduyue/python-xxhash</Homepage>
+        <Packager>
+            <Name>Joey Riches</Name>
+            <Email>josephriches@gmail.com</Email>
+        </Packager>
+        <License>BSD-2-Clause</License>
+        <PartOf>programming.python</PartOf>
+        <Summary xml:lang="en">Python binding for xxHash</Summary>
+        <Description xml:lang="en">xxhash is a Python binding for the xxHash library.
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>python-xxhash</Name>
+        <Summary xml:lang="en">Python binding for xxHash</Summary>
+        <Description xml:lang="en">xxhash is a Python binding for the xxHash library.
+</Description>
+        <PartOf>programming.python</PartOf>
+        <Files>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/xxhash-3.4.1-py3.11.egg-info/PKG-INFO</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/xxhash-3.4.1-py3.11.egg-info/SOURCES.txt</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/xxhash-3.4.1-py3.11.egg-info/dependency_links.txt</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/xxhash-3.4.1-py3.11.egg-info/top_level.txt</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/xxhash/__init__.py</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/xxhash/__init__.pyi</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/xxhash/__pycache__/__init__.cpython-311.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/xxhash/__pycache__/version.cpython-311.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/xxhash/_xxhash.cpython-311-x86_64-linux-gnu.so</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/xxhash/py.typed</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/xxhash/version.py</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="9">
+            <Date>2024-02-15</Date>
+            <Version>3.4.1</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Joey Riches</Name>
+            <Email>josephriches@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

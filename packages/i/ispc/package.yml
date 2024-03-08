@@ -1,8 +1,9 @@
 name       : ispc
-version    : 1.19.0
-release    : 9
+version    : 1.22.0
+release    : 11
 source     :
-    - git|https://github.com/ispc/ispc.git : v1.19.0
+    - git|https://github.com/ispc/ispc.git : v1.22.0
+homepage   : https://github.com/ispc/ispc
 license    : BSD-3-Clause
 component  : programming
 summary    : Intel SPMD Program Compiler
@@ -12,12 +13,15 @@ clang      : yes
 builddeps  :
     - pkgconfig(LLVMSPIRVLib)
     - pkgconfig(libze_loader)
+    - pkgconfig(tbb)
     - vc-intrinsics
+checkdeps  :
+    - intel-compute-runtime-devel
 setup      : |
-    %cmake_ninja \
+    %cmake_ninja -L \
       -DARM_ENABLED=OFF \
-      -DISPC_NO_DUMPS=ON \
       -DISPC_INCLUDE_EXAMPLES=OFF \
+      -DISPC_INCLUDE_TESTS=ON \
       -DISPC_OPAQUE_PTR_MODE=OFF \
       -DXE_ENABLED=ON \
       -DXE_DEPS_DIR=/usr
@@ -25,5 +29,9 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
-    # ???
-    rm -fr $installdir/home
+    # ?!?
+    rm -rf $installdir/home
+check      : |
+    # mixing LLVM versions due to intel-compute-runtime causes some tests to fail.
+    # You should get no more than 2 test failures.
+    ninja -C solusBuildDir %JOBS% check-all || echo "Some tests failed!"

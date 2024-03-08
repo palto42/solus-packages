@@ -17,6 +17,7 @@ btrfs:__btrfs_check_node
 btrfs:__btrfs_handle_fs_error
 btrfs:__btrfs_map_block
 btrfs:__btrfs_panic
+btrfs:__btrfs_print_leaf
 btrfs:__btrfs_printf
 btrfs:__btrfs_remove_free_space_cache
 btrfs:__clear_extent_bit
@@ -42,6 +43,7 @@ btrfs:alloc_dummy_extent_buffer
 btrfs:alloc_extent_buffer
 btrfs:arg_copy_path
 btrfs:arg_strtou64
+btrfs:arg_strtou64_with_suffix
 btrfs:array_append
 btrfs:array_clear
 btrfs:array_free
@@ -50,8 +52,13 @@ btrfs:array_init
 btrfs:array_use_capacity
 btrfs:ask_user
 btrfs:bconf
+btrfs:bconf_add_param
 btrfs:bconf_be_quiet
 btrfs:bconf_be_verbose
+btrfs:bconf_is_dry_run
+btrfs:bconf_param_value
+btrfs:bconf_save_param
+btrfs:bconf_set_dry_run
 btrfs:blake2_init_accel
 btrfs:blake2b_compress_avx2
 btrfs:blake2b_compress_sse2
@@ -132,8 +139,15 @@ btrfs:btrfs_del_inode_ref
 btrfs:btrfs_del_items
 btrfs:btrfs_del_ptr
 btrfs:btrfs_del_root
+btrfs:btrfs_delayed_data_ref_cachep
+btrfs:btrfs_delayed_extent_op_cachep
+btrfs:btrfs_delayed_ref_exit
+btrfs:btrfs_delayed_ref_head_cachep
+btrfs:btrfs_delayed_ref_init
+btrfs:btrfs_delayed_tree_ref_cachep
 btrfs:btrfs_delete_and_free_root
 btrfs:btrfs_delete_one_dir_name
+btrfs:btrfs_delete_ref_head
 btrfs:btrfs_destroy_delayed_refs
 btrfs:btrfs_destroy_workqueue
 btrfs:btrfs_device_already_in_root
@@ -142,7 +156,6 @@ btrfs:btrfs_direct_pwrite
 btrfs:btrfs_dump_free_space
 btrfs:btrfs_extend_item
 btrfs:btrfs_extent_root
-btrfs:btrfs_extref_hash
 btrfs:btrfs_find_all_roots
 btrfs:btrfs_find_allocatable_zones
 btrfs:btrfs_find_and_setup_root
@@ -155,6 +168,7 @@ btrfs:btrfs_find_free_space
 btrfs:btrfs_find_item
 btrfs:btrfs_find_last_root
 btrfs:btrfs_find_one_extref
+btrfs:btrfs_find_space_info
 btrfs:btrfs_find_tree_block
 btrfs:btrfs_finish_extent_commit
 btrfs:btrfs_fix_block_accounting
@@ -192,7 +206,6 @@ btrfs:btrfs_inc_extent_ref
 btrfs:btrfs_inc_ref
 btrfs:btrfs_init_free_space_ctl
 btrfs:btrfs_init_map_token
-btrfs:btrfs_init_path
 btrfs:btrfs_init_work
 btrfs:btrfs_insert_dev_extent
 btrfs:btrfs_insert_dir_item
@@ -232,7 +245,6 @@ btrfs:btrfs_merge_delayed_refs
 btrfs:btrfs_min_dev_size
 btrfs:btrfs_mkdir
 btrfs:btrfs_mksubvol
-btrfs:btrfs_name_hash
 btrfs:btrfs_new_block_group_record
 btrfs:btrfs_new_chunk_record
 btrfs:btrfs_new_device_extent_record
@@ -258,7 +270,6 @@ btrfs:btrfs_prev_leaf
 btrfs:btrfs_previous_extent_item
 btrfs:btrfs_previous_item
 btrfs:btrfs_print_key
-btrfs:btrfs_print_leaf
 btrfs:btrfs_print_send_ops
 btrfs:btrfs_print_superblock
 btrfs:btrfs_print_tree
@@ -281,6 +292,7 @@ btrfs:btrfs_read_file
 btrfs:btrfs_read_fs_root
 btrfs:btrfs_read_fs_root_no_cache
 btrfs:btrfs_read_lock_root_node
+btrfs:btrfs_read_node_slot
 btrfs:btrfs_read_sys_array
 btrfs:btrfs_readahead_node_child
 btrfs:btrfs_record_file_extent
@@ -301,6 +313,7 @@ btrfs:btrfs_reset_dev_zone
 btrfs:btrfs_rmap_block
 btrfs:btrfs_run_delayed_refs
 btrfs:btrfs_sb_io
+btrfs:btrfs_sb_zone_exists
 btrfs:btrfs_scan_argv_devices
 btrfs:btrfs_scan_devices
 btrfs:btrfs_scan_fs_devices
@@ -335,6 +348,7 @@ btrfs:btrfs_super_csum_size
 btrfs:btrfs_test_for_multiple_profiles
 btrfs:btrfs_tree_search2_ioctl_supported
 btrfs:btrfs_truncate_item
+btrfs:btrfs_try_chunk_alloc
 btrfs:btrfs_try_read_lock_root_node
 btrfs:btrfs_unlink
 btrfs:btrfs_unpin_extent
@@ -381,7 +395,6 @@ btrfs:btrfs_util_sync_fd
 btrfs:btrfs_util_wait_sync
 btrfs:btrfs_util_wait_sync_fd
 btrfs:btrfs_uuid_to_key
-btrfs:btrfs_uuid_tree_add
 btrfs:btrfs_uuid_tree_remove
 btrfs:btrfs_verify_level_key
 btrfs:btrfs_warn_experimental
@@ -530,6 +543,7 @@ btrfs:free_seen_fsid
 btrfs:g_task_ctx
 btrfs:get_btrfs_mount
 btrfs:get_df
+btrfs:get_env_bool
 btrfs:get_extent_item_generation
 btrfs:get_fs_exclop
 btrfs:get_fs_exclop_name
@@ -581,6 +595,7 @@ btrfs:lookup_path_rootid
 btrfs:main
 btrfs:make_btrfs
 btrfs:memcmp_extent_buffer
+btrfs:memcpy_extent_buffer
 btrfs:memmove_extent_buffer
 btrfs:memset_extent_buffer
 btrfs:next_cache_extent
@@ -602,8 +617,8 @@ btrfs:parse_qgroupid_or_path
 btrfs:parse_range
 btrfs:parse_range_strict
 btrfs:parse_range_u32
-btrfs:parse_size_from_string
 btrfs:parse_u64
+btrfs:parse_u64_with_suffix
 btrfs:path_canonicalize
 btrfs:path_canonicalize_dm_name
 btrfs:path_cat3_out
@@ -666,7 +681,6 @@ btrfs:rb_replace_node
 btrfs:rb_search
 btrfs:read_data_from_disk
 btrfs:read_extent_buffer
-btrfs:read_node_slot
 btrfs:read_tree_block
 btrfs:read_whole_eb
 btrfs:reada_walk_down
@@ -697,11 +711,16 @@ btrfs:string_is_numerical
 btrfs:subvol_strip_mountpoint
 btrfs:subvol_uuid_search
 btrfs:sysfs_open_file
+btrfs:sysfs_open_file_rw
 btrfs:sysfs_open_fsid_dir
 btrfs:sysfs_open_fsid_file
+btrfs:sysfs_open_fsid_file_rw
 btrfs:sysfs_read_file
 btrfs:sysfs_read_file_u64
 btrfs:sysfs_read_fsid_file_u64
+btrfs:sysfs_write_file
+btrfs:sysfs_write_file_u64
+btrfs:sysfs_write_fsid_file_u64
 btrfs:table_clear_range
 btrfs:table_create
 btrfs:table_dump_range
@@ -782,6 +801,7 @@ btrfs-convert:__btrfs_check_node
 btrfs-convert:__btrfs_handle_fs_error
 btrfs-convert:__btrfs_map_block
 btrfs-convert:__btrfs_panic
+btrfs-convert:__btrfs_print_leaf
 btrfs-convert:__btrfs_printf
 btrfs-convert:__btrfs_remove_free_space_cache
 btrfs-convert:__clear_extent_bit
@@ -807,6 +827,7 @@ btrfs-convert:alloc_dummy_extent_buffer
 btrfs-convert:alloc_extent_buffer
 btrfs-convert:arg_copy_path
 btrfs-convert:arg_strtou64
+btrfs-convert:arg_strtou64_with_suffix
 btrfs-convert:array_append
 btrfs-convert:array_clear
 btrfs-convert:array_free
@@ -815,8 +836,13 @@ btrfs-convert:array_init
 btrfs-convert:array_use_capacity
 btrfs-convert:ask_user
 btrfs-convert:bconf
+btrfs-convert:bconf_add_param
 btrfs-convert:bconf_be_quiet
 btrfs-convert:bconf_be_verbose
+btrfs-convert:bconf_is_dry_run
+btrfs-convert:bconf_param_value
+btrfs-convert:bconf_save_param
+btrfs-convert:bconf_set_dry_run
 btrfs-convert:blake2_init_accel
 btrfs-convert:blake2b_compress_avx2
 btrfs-convert:blake2b_compress_sse2
@@ -897,8 +923,15 @@ btrfs-convert:btrfs_del_inode_ref
 btrfs-convert:btrfs_del_items
 btrfs-convert:btrfs_del_ptr
 btrfs-convert:btrfs_del_root
+btrfs-convert:btrfs_delayed_data_ref_cachep
+btrfs-convert:btrfs_delayed_extent_op_cachep
+btrfs-convert:btrfs_delayed_ref_exit
+btrfs-convert:btrfs_delayed_ref_head_cachep
+btrfs-convert:btrfs_delayed_ref_init
+btrfs-convert:btrfs_delayed_tree_ref_cachep
 btrfs-convert:btrfs_delete_and_free_root
 btrfs-convert:btrfs_delete_one_dir_name
+btrfs-convert:btrfs_delete_ref_head
 btrfs-convert:btrfs_destroy_delayed_refs
 btrfs-convert:btrfs_destroy_workqueue
 btrfs-convert:btrfs_device_already_in_root
@@ -907,7 +940,6 @@ btrfs-convert:btrfs_direct_pwrite
 btrfs-convert:btrfs_dump_free_space
 btrfs-convert:btrfs_extend_item
 btrfs-convert:btrfs_extent_root
-btrfs-convert:btrfs_extref_hash
 btrfs-convert:btrfs_find_all_roots
 btrfs-convert:btrfs_find_allocatable_zones
 btrfs-convert:btrfs_find_and_setup_root
@@ -920,6 +952,7 @@ btrfs-convert:btrfs_find_free_space
 btrfs-convert:btrfs_find_item
 btrfs-convert:btrfs_find_last_root
 btrfs-convert:btrfs_find_one_extref
+btrfs-convert:btrfs_find_space_info
 btrfs-convert:btrfs_find_tree_block
 btrfs-convert:btrfs_finish_extent_commit
 btrfs-convert:btrfs_fix_block_accounting
@@ -957,7 +990,6 @@ btrfs-convert:btrfs_inc_extent_ref
 btrfs-convert:btrfs_inc_ref
 btrfs-convert:btrfs_init_free_space_ctl
 btrfs-convert:btrfs_init_map_token
-btrfs-convert:btrfs_init_path
 btrfs-convert:btrfs_init_work
 btrfs-convert:btrfs_insert_dev_extent
 btrfs-convert:btrfs_insert_dir_item
@@ -997,7 +1029,6 @@ btrfs-convert:btrfs_merge_delayed_refs
 btrfs-convert:btrfs_min_dev_size
 btrfs-convert:btrfs_mkdir
 btrfs-convert:btrfs_mksubvol
-btrfs-convert:btrfs_name_hash
 btrfs-convert:btrfs_new_fs_info
 btrfs-convert:btrfs_new_inode
 btrfs-convert:btrfs_next_bg
@@ -1020,7 +1051,6 @@ btrfs-convert:btrfs_prev_leaf
 btrfs-convert:btrfs_previous_extent_item
 btrfs-convert:btrfs_previous_item
 btrfs-convert:btrfs_print_key
-btrfs-convert:btrfs_print_leaf
 btrfs-convert:btrfs_print_send_ops
 btrfs-convert:btrfs_print_superblock
 btrfs-convert:btrfs_print_tree
@@ -1039,6 +1069,7 @@ btrfs-convert:btrfs_read_file
 btrfs-convert:btrfs_read_fs_root
 btrfs-convert:btrfs_read_fs_root_no_cache
 btrfs-convert:btrfs_read_lock_root_node
+btrfs-convert:btrfs_read_node_slot
 btrfs-convert:btrfs_read_sys_array
 btrfs-convert:btrfs_readahead_node_child
 btrfs-convert:btrfs_record_file_extent
@@ -1058,6 +1089,7 @@ btrfs-convert:btrfs_reset_dev_zone
 btrfs-convert:btrfs_rmap_block
 btrfs-convert:btrfs_run_delayed_refs
 btrfs-convert:btrfs_sb_io
+btrfs-convert:btrfs_sb_zone_exists
 btrfs-convert:btrfs_scan_argv_devices
 btrfs-convert:btrfs_scan_devices
 btrfs-convert:btrfs_scan_fs_devices
@@ -1091,6 +1123,7 @@ btrfs-convert:btrfs_super_csum_size
 btrfs-convert:btrfs_test_for_multiple_profiles
 btrfs-convert:btrfs_tree_search2_ioctl_supported
 btrfs-convert:btrfs_truncate_item
+btrfs-convert:btrfs_try_chunk_alloc
 btrfs-convert:btrfs_try_read_lock_root_node
 btrfs-convert:btrfs_unlink
 btrfs-convert:btrfs_unpin_extent
@@ -1130,7 +1163,6 @@ btrfs-convert:btrfs_util_subvolume_iterator_next_info
 btrfs-convert:btrfs_util_subvolume_path
 btrfs-convert:btrfs_util_subvolume_path_fd
 btrfs-convert:btrfs_uuid_to_key
-btrfs-convert:btrfs_uuid_tree_add
 btrfs-convert:btrfs_uuid_tree_remove
 btrfs-convert:btrfs_verify_level_key
 btrfs-convert:btrfs_warn_experimental
@@ -1235,6 +1267,7 @@ btrfs-convert:free_qgroup_counts
 btrfs-convert:free_seen_fsid
 btrfs-convert:get_btrfs_mount
 btrfs-convert:get_df
+btrfs-convert:get_env_bool
 btrfs-convert:get_fs_exclop
 btrfs-convert:get_fs_exclop_name
 btrfs-convert:get_fs_info
@@ -1281,6 +1314,7 @@ btrfs-convert:main
 btrfs-convert:make_btrfs
 btrfs-convert:make_convert_btrfs
 btrfs-convert:memcmp_extent_buffer
+btrfs-convert:memcpy_extent_buffer
 btrfs-convert:memmove_extent_buffer
 btrfs-convert:memset_extent_buffer
 btrfs-convert:next_cache_extent
@@ -1301,8 +1335,8 @@ btrfs-convert:parse_qgroupid_or_path
 btrfs-convert:parse_range
 btrfs-convert:parse_range_strict
 btrfs-convert:parse_range_u32
-btrfs-convert:parse_size_from_string
 btrfs-convert:parse_u64
+btrfs-convert:parse_u64_with_suffix
 btrfs-convert:path_canonicalize
 btrfs-convert:path_canonicalize_dm_name
 btrfs-convert:path_cat3_out
@@ -1362,7 +1396,6 @@ btrfs-convert:rb_search
 btrfs-convert:read_data_from_disk
 btrfs-convert:read_disk_extent
 btrfs-convert:read_extent_buffer
-btrfs-convert:read_node_slot
 btrfs-convert:read_tree_block
 btrfs-convert:read_whole_eb
 btrfs-convert:readahead_tree_block
@@ -1388,11 +1421,16 @@ btrfs-convert:string_is_numerical
 btrfs-convert:subvol_strip_mountpoint
 btrfs-convert:subvol_uuid_search
 btrfs-convert:sysfs_open_file
+btrfs-convert:sysfs_open_file_rw
 btrfs-convert:sysfs_open_fsid_dir
 btrfs-convert:sysfs_open_fsid_file
+btrfs-convert:sysfs_open_fsid_file_rw
 btrfs-convert:sysfs_read_file
 btrfs-convert:sysfs_read_file_u64
 btrfs-convert:sysfs_read_fsid_file_u64
+btrfs-convert:sysfs_write_file
+btrfs-convert:sysfs_write_file_u64
+btrfs-convert:sysfs_write_fsid_file_u64
 btrfs-convert:table_clear_range
 btrfs-convert:table_create
 btrfs-convert:table_dump_range
@@ -1469,6 +1507,7 @@ btrfs-find-root:__btrfs_check_node
 btrfs-find-root:__btrfs_handle_fs_error
 btrfs-find-root:__btrfs_map_block
 btrfs-find-root:__btrfs_panic
+btrfs-find-root:__btrfs_print_leaf
 btrfs-find-root:__btrfs_printf
 btrfs-find-root:__btrfs_remove_free_space_cache
 btrfs-find-root:__clear_extent_bit
@@ -1494,6 +1533,7 @@ btrfs-find-root:alloc_dummy_extent_buffer
 btrfs-find-root:alloc_extent_buffer
 btrfs-find-root:arg_copy_path
 btrfs-find-root:arg_strtou64
+btrfs-find-root:arg_strtou64_with_suffix
 btrfs-find-root:array_append
 btrfs-find-root:array_clear
 btrfs-find-root:array_free
@@ -1502,8 +1542,13 @@ btrfs-find-root:array_init
 btrfs-find-root:array_use_capacity
 btrfs-find-root:ask_user
 btrfs-find-root:bconf
+btrfs-find-root:bconf_add_param
 btrfs-find-root:bconf_be_quiet
 btrfs-find-root:bconf_be_verbose
+btrfs-find-root:bconf_is_dry_run
+btrfs-find-root:bconf_param_value
+btrfs-find-root:bconf_save_param
+btrfs-find-root:bconf_set_dry_run
 btrfs-find-root:blake2_init_accel
 btrfs-find-root:blake2b_compress_avx2
 btrfs-find-root:blake2b_compress_sse2
@@ -1582,8 +1627,15 @@ btrfs-find-root:btrfs_del_inode_ref
 btrfs-find-root:btrfs_del_items
 btrfs-find-root:btrfs_del_ptr
 btrfs-find-root:btrfs_del_root
+btrfs-find-root:btrfs_delayed_data_ref_cachep
+btrfs-find-root:btrfs_delayed_extent_op_cachep
+btrfs-find-root:btrfs_delayed_ref_exit
+btrfs-find-root:btrfs_delayed_ref_head_cachep
+btrfs-find-root:btrfs_delayed_ref_init
+btrfs-find-root:btrfs_delayed_tree_ref_cachep
 btrfs-find-root:btrfs_delete_and_free_root
 btrfs-find-root:btrfs_delete_one_dir_name
+btrfs-find-root:btrfs_delete_ref_head
 btrfs-find-root:btrfs_destroy_delayed_refs
 btrfs-find-root:btrfs_destroy_workqueue
 btrfs-find-root:btrfs_device_already_in_root
@@ -1592,7 +1644,6 @@ btrfs-find-root:btrfs_direct_pwrite
 btrfs-find-root:btrfs_dump_free_space
 btrfs-find-root:btrfs_extend_item
 btrfs-find-root:btrfs_extent_root
-btrfs-find-root:btrfs_extref_hash
 btrfs-find-root:btrfs_find_all_roots
 btrfs-find-root:btrfs_find_allocatable_zones
 btrfs-find-root:btrfs_find_and_setup_root
@@ -1606,6 +1657,7 @@ btrfs-find-root:btrfs_find_item
 btrfs-find-root:btrfs_find_last_root
 btrfs-find-root:btrfs_find_one_extref
 btrfs-find-root:btrfs_find_root_search
+btrfs-find-root:btrfs_find_space_info
 btrfs-find-root:btrfs_find_tree_block
 btrfs-find-root:btrfs_finish_extent_commit
 btrfs-find-root:btrfs_fix_block_accounting
@@ -1643,7 +1695,6 @@ btrfs-find-root:btrfs_inc_extent_ref
 btrfs-find-root:btrfs_inc_ref
 btrfs-find-root:btrfs_init_free_space_ctl
 btrfs-find-root:btrfs_init_map_token
-btrfs-find-root:btrfs_init_path
 btrfs-find-root:btrfs_init_work
 btrfs-find-root:btrfs_insert_dev_extent
 btrfs-find-root:btrfs_insert_dir_item
@@ -1681,7 +1732,6 @@ btrfs-find-root:btrfs_match_dir_item_name
 btrfs-find-root:btrfs_merge_delayed_refs
 btrfs-find-root:btrfs_mkdir
 btrfs-find-root:btrfs_mksubvol
-btrfs-find-root:btrfs_name_hash
 btrfs-find-root:btrfs_new_fs_info
 btrfs-find-root:btrfs_new_inode
 btrfs-find-root:btrfs_next_bg
@@ -1704,7 +1754,6 @@ btrfs-find-root:btrfs_prev_leaf
 btrfs-find-root:btrfs_previous_extent_item
 btrfs-find-root:btrfs_previous_item
 btrfs-find-root:btrfs_print_key
-btrfs-find-root:btrfs_print_leaf
 btrfs-find-root:btrfs_print_send_ops
 btrfs-find-root:btrfs_print_superblock
 btrfs-find-root:btrfs_print_tree
@@ -1723,6 +1772,7 @@ btrfs-find-root:btrfs_read_file
 btrfs-find-root:btrfs_read_fs_root
 btrfs-find-root:btrfs_read_fs_root_no_cache
 btrfs-find-root:btrfs_read_lock_root_node
+btrfs-find-root:btrfs_read_node_slot
 btrfs-find-root:btrfs_read_sys_array
 btrfs-find-root:btrfs_readahead_node_child
 btrfs-find-root:btrfs_record_file_extent
@@ -1741,6 +1791,7 @@ btrfs-find-root:btrfs_reset_dev_zone
 btrfs-find-root:btrfs_rmap_block
 btrfs-find-root:btrfs_run_delayed_refs
 btrfs-find-root:btrfs_sb_io
+btrfs-find-root:btrfs_sb_zone_exists
 btrfs-find-root:btrfs_scan_argv_devices
 btrfs-find-root:btrfs_scan_devices
 btrfs-find-root:btrfs_scan_fs_devices
@@ -1774,6 +1825,7 @@ btrfs-find-root:btrfs_super_csum_size
 btrfs-find-root:btrfs_test_for_multiple_profiles
 btrfs-find-root:btrfs_tree_search2_ioctl_supported
 btrfs-find-root:btrfs_truncate_item
+btrfs-find-root:btrfs_try_chunk_alloc
 btrfs-find-root:btrfs_try_read_lock_root_node
 btrfs-find-root:btrfs_unlink
 btrfs-find-root:btrfs_unpin_extent
@@ -1813,7 +1865,6 @@ btrfs-find-root:btrfs_util_subvolume_iterator_next_info
 btrfs-find-root:btrfs_util_subvolume_path
 btrfs-find-root:btrfs_util_subvolume_path_fd
 btrfs-find-root:btrfs_uuid_to_key
-btrfs-find-root:btrfs_uuid_tree_add
 btrfs-find-root:btrfs_uuid_tree_remove
 btrfs-find-root:btrfs_verify_level_key
 btrfs-find-root:btrfs_warn_experimental
@@ -1911,6 +1962,7 @@ btrfs-find-root:free_qgroup_counts
 btrfs-find-root:free_seen_fsid
 btrfs-find-root:get_btrfs_mount
 btrfs-find-root:get_df
+btrfs-find-root:get_env_bool
 btrfs-find-root:get_fs_exclop
 btrfs-find-root:get_fs_exclop_name
 btrfs-find-root:get_fs_info
@@ -1951,6 +2003,7 @@ btrfs-find-root:lookup_cache_extent2
 btrfs-find-root:lookup_path_rootid
 btrfs-find-root:main
 btrfs-find-root:memcmp_extent_buffer
+btrfs-find-root:memcpy_extent_buffer
 btrfs-find-root:memmove_extent_buffer
 btrfs-find-root:memset_extent_buffer
 btrfs-find-root:next_cache_extent
@@ -1971,8 +2024,8 @@ btrfs-find-root:parse_qgroupid_or_path
 btrfs-find-root:parse_range
 btrfs-find-root:parse_range_strict
 btrfs-find-root:parse_range_u32
-btrfs-find-root:parse_size_from_string
 btrfs-find-root:parse_u64
+btrfs-find-root:parse_u64_with_suffix
 btrfs-find-root:path_canonicalize
 btrfs-find-root:path_canonicalize_dm_name
 btrfs-find-root:path_cat3_out
@@ -2031,7 +2084,6 @@ btrfs-find-root:rb_replace_node
 btrfs-find-root:rb_search
 btrfs-find-root:read_data_from_disk
 btrfs-find-root:read_extent_buffer
-btrfs-find-root:read_node_slot
 btrfs-find-root:read_tree_block
 btrfs-find-root:read_whole_eb
 btrfs-find-root:readahead_tree_block
@@ -2055,11 +2107,16 @@ btrfs-find-root:string_is_numerical
 btrfs-find-root:subvol_strip_mountpoint
 btrfs-find-root:subvol_uuid_search
 btrfs-find-root:sysfs_open_file
+btrfs-find-root:sysfs_open_file_rw
 btrfs-find-root:sysfs_open_fsid_dir
 btrfs-find-root:sysfs_open_fsid_file
+btrfs-find-root:sysfs_open_fsid_file_rw
 btrfs-find-root:sysfs_read_file
 btrfs-find-root:sysfs_read_file_u64
 btrfs-find-root:sysfs_read_fsid_file_u64
+btrfs-find-root:sysfs_write_file
+btrfs-find-root:sysfs_write_file_u64
+btrfs-find-root:sysfs_write_fsid_file_u64
 btrfs-find-root:table_clear_range
 btrfs-find-root:table_create
 btrfs-find-root:table_dump_range
@@ -2131,6 +2188,7 @@ btrfs-image:__btrfs_check_node
 btrfs-image:__btrfs_handle_fs_error
 btrfs-image:__btrfs_map_block
 btrfs-image:__btrfs_panic
+btrfs-image:__btrfs_print_leaf
 btrfs-image:__btrfs_printf
 btrfs-image:__btrfs_remove_free_space_cache
 btrfs-image:__clear_extent_bit
@@ -2156,6 +2214,7 @@ btrfs-image:alloc_dummy_extent_buffer
 btrfs-image:alloc_extent_buffer
 btrfs-image:arg_copy_path
 btrfs-image:arg_strtou64
+btrfs-image:arg_strtou64_with_suffix
 btrfs-image:array_append
 btrfs-image:array_clear
 btrfs-image:array_free
@@ -2164,8 +2223,13 @@ btrfs-image:array_init
 btrfs-image:array_use_capacity
 btrfs-image:ask_user
 btrfs-image:bconf
+btrfs-image:bconf_add_param
 btrfs-image:bconf_be_quiet
 btrfs-image:bconf_be_verbose
+btrfs-image:bconf_is_dry_run
+btrfs-image:bconf_param_value
+btrfs-image:bconf_save_param
+btrfs-image:bconf_set_dry_run
 btrfs-image:blake2_init_accel
 btrfs-image:blake2b_compress_avx2
 btrfs-image:blake2b_compress_sse2
@@ -2244,8 +2308,15 @@ btrfs-image:btrfs_del_inode_ref
 btrfs-image:btrfs_del_items
 btrfs-image:btrfs_del_ptr
 btrfs-image:btrfs_del_root
+btrfs-image:btrfs_delayed_data_ref_cachep
+btrfs-image:btrfs_delayed_extent_op_cachep
+btrfs-image:btrfs_delayed_ref_exit
+btrfs-image:btrfs_delayed_ref_head_cachep
+btrfs-image:btrfs_delayed_ref_init
+btrfs-image:btrfs_delayed_tree_ref_cachep
 btrfs-image:btrfs_delete_and_free_root
 btrfs-image:btrfs_delete_one_dir_name
+btrfs-image:btrfs_delete_ref_head
 btrfs-image:btrfs_destroy_delayed_refs
 btrfs-image:btrfs_destroy_workqueue
 btrfs-image:btrfs_device_already_in_root
@@ -2254,7 +2325,6 @@ btrfs-image:btrfs_direct_pwrite
 btrfs-image:btrfs_dump_free_space
 btrfs-image:btrfs_extend_item
 btrfs-image:btrfs_extent_root
-btrfs-image:btrfs_extref_hash
 btrfs-image:btrfs_find_all_roots
 btrfs-image:btrfs_find_allocatable_zones
 btrfs-image:btrfs_find_and_setup_root
@@ -2267,6 +2337,7 @@ btrfs-image:btrfs_find_free_space
 btrfs-image:btrfs_find_item
 btrfs-image:btrfs_find_last_root
 btrfs-image:btrfs_find_one_extref
+btrfs-image:btrfs_find_space_info
 btrfs-image:btrfs_find_tree_block
 btrfs-image:btrfs_finish_extent_commit
 btrfs-image:btrfs_fix_block_accounting
@@ -2304,7 +2375,6 @@ btrfs-image:btrfs_inc_extent_ref
 btrfs-image:btrfs_inc_ref
 btrfs-image:btrfs_init_free_space_ctl
 btrfs-image:btrfs_init_map_token
-btrfs-image:btrfs_init_path
 btrfs-image:btrfs_init_work
 btrfs-image:btrfs_insert_dev_extent
 btrfs-image:btrfs_insert_dir_item
@@ -2342,7 +2412,6 @@ btrfs-image:btrfs_match_dir_item_name
 btrfs-image:btrfs_merge_delayed_refs
 btrfs-image:btrfs_mkdir
 btrfs-image:btrfs_mksubvol
-btrfs-image:btrfs_name_hash
 btrfs-image:btrfs_new_fs_info
 btrfs-image:btrfs_new_inode
 btrfs-image:btrfs_next_bg
@@ -2365,7 +2434,6 @@ btrfs-image:btrfs_prev_leaf
 btrfs-image:btrfs_previous_extent_item
 btrfs-image:btrfs_previous_item
 btrfs-image:btrfs_print_key
-btrfs-image:btrfs_print_leaf
 btrfs-image:btrfs_print_send_ops
 btrfs-image:btrfs_print_superblock
 btrfs-image:btrfs_print_tree
@@ -2384,6 +2452,7 @@ btrfs-image:btrfs_read_file
 btrfs-image:btrfs_read_fs_root
 btrfs-image:btrfs_read_fs_root_no_cache
 btrfs-image:btrfs_read_lock_root_node
+btrfs-image:btrfs_read_node_slot
 btrfs-image:btrfs_read_sys_array
 btrfs-image:btrfs_readahead_node_child
 btrfs-image:btrfs_record_file_extent
@@ -2402,6 +2471,7 @@ btrfs-image:btrfs_reset_dev_zone
 btrfs-image:btrfs_rmap_block
 btrfs-image:btrfs_run_delayed_refs
 btrfs-image:btrfs_sb_io
+btrfs-image:btrfs_sb_zone_exists
 btrfs-image:btrfs_scan_argv_devices
 btrfs-image:btrfs_scan_devices
 btrfs-image:btrfs_scan_fs_devices
@@ -2435,6 +2505,7 @@ btrfs-image:btrfs_super_csum_size
 btrfs-image:btrfs_test_for_multiple_profiles
 btrfs-image:btrfs_tree_search2_ioctl_supported
 btrfs-image:btrfs_truncate_item
+btrfs-image:btrfs_try_chunk_alloc
 btrfs-image:btrfs_try_read_lock_root_node
 btrfs-image:btrfs_unlink
 btrfs-image:btrfs_unpin_extent
@@ -2474,7 +2545,6 @@ btrfs-image:btrfs_util_subvolume_iterator_next_info
 btrfs-image:btrfs_util_subvolume_path
 btrfs-image:btrfs_util_subvolume_path_fd
 btrfs-image:btrfs_uuid_to_key
-btrfs-image:btrfs_uuid_tree_add
 btrfs-image:btrfs_uuid_tree_remove
 btrfs-image:btrfs_verify_level_key
 btrfs-image:btrfs_warn_experimental
@@ -2577,6 +2647,7 @@ btrfs-image:free_qgroup_counts
 btrfs-image:free_seen_fsid
 btrfs-image:get_btrfs_mount
 btrfs-image:get_df
+btrfs-image:get_env_bool
 btrfs-image:get_fs_exclop
 btrfs-image:get_fs_exclop_name
 btrfs-image:get_fs_info
@@ -2617,6 +2688,7 @@ btrfs-image:lookup_cache_extent2
 btrfs-image:lookup_path_rootid
 btrfs-image:main
 btrfs-image:memcmp_extent_buffer
+btrfs-image:memcpy_extent_buffer
 btrfs-image:memmove_extent_buffer
 btrfs-image:memset_extent_buffer
 btrfs-image:next_cache_extent
@@ -2637,8 +2709,8 @@ btrfs-image:parse_qgroupid_or_path
 btrfs-image:parse_range
 btrfs-image:parse_range_strict
 btrfs-image:parse_range_u32
-btrfs-image:parse_size_from_string
 btrfs-image:parse_u64
+btrfs-image:parse_u64_with_suffix
 btrfs-image:path_canonicalize
 btrfs-image:path_canonicalize_dm_name
 btrfs-image:path_cat3_out
@@ -2697,7 +2769,6 @@ btrfs-image:rb_replace_node
 btrfs-image:rb_search
 btrfs-image:read_data_from_disk
 btrfs-image:read_extent_buffer
-btrfs-image:read_node_slot
 btrfs-image:read_tree_block
 btrfs-image:read_whole_eb
 btrfs-image:readahead_tree_block
@@ -2723,11 +2794,16 @@ btrfs-image:string_is_numerical
 btrfs-image:subvol_strip_mountpoint
 btrfs-image:subvol_uuid_search
 btrfs-image:sysfs_open_file
+btrfs-image:sysfs_open_file_rw
 btrfs-image:sysfs_open_fsid_dir
 btrfs-image:sysfs_open_fsid_file
+btrfs-image:sysfs_open_fsid_file_rw
 btrfs-image:sysfs_read_file
 btrfs-image:sysfs_read_file_u64
 btrfs-image:sysfs_read_fsid_file_u64
+btrfs-image:sysfs_write_file
+btrfs-image:sysfs_write_file_u64
+btrfs-image:sysfs_write_fsid_file_u64
 btrfs-image:table_clear_range
 btrfs-image:table_create
 btrfs-image:table_dump_range
@@ -2801,6 +2877,7 @@ btrfs-map-logical:__btrfs_check_node
 btrfs-map-logical:__btrfs_handle_fs_error
 btrfs-map-logical:__btrfs_map_block
 btrfs-map-logical:__btrfs_panic
+btrfs-map-logical:__btrfs_print_leaf
 btrfs-map-logical:__btrfs_printf
 btrfs-map-logical:__btrfs_remove_free_space_cache
 btrfs-map-logical:__clear_extent_bit
@@ -2826,6 +2903,7 @@ btrfs-map-logical:alloc_dummy_extent_buffer
 btrfs-map-logical:alloc_extent_buffer
 btrfs-map-logical:arg_copy_path
 btrfs-map-logical:arg_strtou64
+btrfs-map-logical:arg_strtou64_with_suffix
 btrfs-map-logical:array_append
 btrfs-map-logical:array_clear
 btrfs-map-logical:array_free
@@ -2834,8 +2912,13 @@ btrfs-map-logical:array_init
 btrfs-map-logical:array_use_capacity
 btrfs-map-logical:ask_user
 btrfs-map-logical:bconf
+btrfs-map-logical:bconf_add_param
 btrfs-map-logical:bconf_be_quiet
 btrfs-map-logical:bconf_be_verbose
+btrfs-map-logical:bconf_is_dry_run
+btrfs-map-logical:bconf_param_value
+btrfs-map-logical:bconf_save_param
+btrfs-map-logical:bconf_set_dry_run
 btrfs-map-logical:blake2_init_accel
 btrfs-map-logical:blake2b_compress_avx2
 btrfs-map-logical:blake2b_compress_sse2
@@ -2914,8 +2997,15 @@ btrfs-map-logical:btrfs_del_inode_ref
 btrfs-map-logical:btrfs_del_items
 btrfs-map-logical:btrfs_del_ptr
 btrfs-map-logical:btrfs_del_root
+btrfs-map-logical:btrfs_delayed_data_ref_cachep
+btrfs-map-logical:btrfs_delayed_extent_op_cachep
+btrfs-map-logical:btrfs_delayed_ref_exit
+btrfs-map-logical:btrfs_delayed_ref_head_cachep
+btrfs-map-logical:btrfs_delayed_ref_init
+btrfs-map-logical:btrfs_delayed_tree_ref_cachep
 btrfs-map-logical:btrfs_delete_and_free_root
 btrfs-map-logical:btrfs_delete_one_dir_name
+btrfs-map-logical:btrfs_delete_ref_head
 btrfs-map-logical:btrfs_destroy_delayed_refs
 btrfs-map-logical:btrfs_destroy_workqueue
 btrfs-map-logical:btrfs_device_already_in_root
@@ -2924,7 +3014,6 @@ btrfs-map-logical:btrfs_direct_pwrite
 btrfs-map-logical:btrfs_dump_free_space
 btrfs-map-logical:btrfs_extend_item
 btrfs-map-logical:btrfs_extent_root
-btrfs-map-logical:btrfs_extref_hash
 btrfs-map-logical:btrfs_find_all_roots
 btrfs-map-logical:btrfs_find_allocatable_zones
 btrfs-map-logical:btrfs_find_and_setup_root
@@ -2937,6 +3026,7 @@ btrfs-map-logical:btrfs_find_free_space
 btrfs-map-logical:btrfs_find_item
 btrfs-map-logical:btrfs_find_last_root
 btrfs-map-logical:btrfs_find_one_extref
+btrfs-map-logical:btrfs_find_space_info
 btrfs-map-logical:btrfs_find_tree_block
 btrfs-map-logical:btrfs_finish_extent_commit
 btrfs-map-logical:btrfs_fix_block_accounting
@@ -2974,7 +3064,6 @@ btrfs-map-logical:btrfs_inc_extent_ref
 btrfs-map-logical:btrfs_inc_ref
 btrfs-map-logical:btrfs_init_free_space_ctl
 btrfs-map-logical:btrfs_init_map_token
-btrfs-map-logical:btrfs_init_path
 btrfs-map-logical:btrfs_init_work
 btrfs-map-logical:btrfs_insert_dev_extent
 btrfs-map-logical:btrfs_insert_dir_item
@@ -3012,7 +3101,6 @@ btrfs-map-logical:btrfs_match_dir_item_name
 btrfs-map-logical:btrfs_merge_delayed_refs
 btrfs-map-logical:btrfs_mkdir
 btrfs-map-logical:btrfs_mksubvol
-btrfs-map-logical:btrfs_name_hash
 btrfs-map-logical:btrfs_new_fs_info
 btrfs-map-logical:btrfs_new_inode
 btrfs-map-logical:btrfs_next_bg
@@ -3035,7 +3123,6 @@ btrfs-map-logical:btrfs_prev_leaf
 btrfs-map-logical:btrfs_previous_extent_item
 btrfs-map-logical:btrfs_previous_item
 btrfs-map-logical:btrfs_print_key
-btrfs-map-logical:btrfs_print_leaf
 btrfs-map-logical:btrfs_print_send_ops
 btrfs-map-logical:btrfs_print_superblock
 btrfs-map-logical:btrfs_print_tree
@@ -3054,6 +3141,7 @@ btrfs-map-logical:btrfs_read_file
 btrfs-map-logical:btrfs_read_fs_root
 btrfs-map-logical:btrfs_read_fs_root_no_cache
 btrfs-map-logical:btrfs_read_lock_root_node
+btrfs-map-logical:btrfs_read_node_slot
 btrfs-map-logical:btrfs_read_sys_array
 btrfs-map-logical:btrfs_readahead_node_child
 btrfs-map-logical:btrfs_record_file_extent
@@ -3072,6 +3160,7 @@ btrfs-map-logical:btrfs_reset_dev_zone
 btrfs-map-logical:btrfs_rmap_block
 btrfs-map-logical:btrfs_run_delayed_refs
 btrfs-map-logical:btrfs_sb_io
+btrfs-map-logical:btrfs_sb_zone_exists
 btrfs-map-logical:btrfs_scan_argv_devices
 btrfs-map-logical:btrfs_scan_devices
 btrfs-map-logical:btrfs_scan_fs_devices
@@ -3105,6 +3194,7 @@ btrfs-map-logical:btrfs_super_csum_size
 btrfs-map-logical:btrfs_test_for_multiple_profiles
 btrfs-map-logical:btrfs_tree_search2_ioctl_supported
 btrfs-map-logical:btrfs_truncate_item
+btrfs-map-logical:btrfs_try_chunk_alloc
 btrfs-map-logical:btrfs_try_read_lock_root_node
 btrfs-map-logical:btrfs_unlink
 btrfs-map-logical:btrfs_unpin_extent
@@ -3144,7 +3234,6 @@ btrfs-map-logical:btrfs_util_subvolume_iterator_next_info
 btrfs-map-logical:btrfs_util_subvolume_path
 btrfs-map-logical:btrfs_util_subvolume_path_fd
 btrfs-map-logical:btrfs_uuid_to_key
-btrfs-map-logical:btrfs_uuid_tree_add
 btrfs-map-logical:btrfs_uuid_tree_remove
 btrfs-map-logical:btrfs_verify_level_key
 btrfs-map-logical:btrfs_warn_experimental
@@ -3242,6 +3331,7 @@ btrfs-map-logical:free_qgroup_counts
 btrfs-map-logical:free_seen_fsid
 btrfs-map-logical:get_btrfs_mount
 btrfs-map-logical:get_df
+btrfs-map-logical:get_env_bool
 btrfs-map-logical:get_fs_exclop
 btrfs-map-logical:get_fs_exclop_name
 btrfs-map-logical:get_fs_info
@@ -3282,6 +3372,7 @@ btrfs-map-logical:lookup_cache_extent2
 btrfs-map-logical:lookup_path_rootid
 btrfs-map-logical:main
 btrfs-map-logical:memcmp_extent_buffer
+btrfs-map-logical:memcpy_extent_buffer
 btrfs-map-logical:memmove_extent_buffer
 btrfs-map-logical:memset_extent_buffer
 btrfs-map-logical:next_cache_extent
@@ -3302,8 +3393,8 @@ btrfs-map-logical:parse_qgroupid_or_path
 btrfs-map-logical:parse_range
 btrfs-map-logical:parse_range_strict
 btrfs-map-logical:parse_range_u32
-btrfs-map-logical:parse_size_from_string
 btrfs-map-logical:parse_u64
+btrfs-map-logical:parse_u64_with_suffix
 btrfs-map-logical:path_canonicalize
 btrfs-map-logical:path_canonicalize_dm_name
 btrfs-map-logical:path_cat3_out
@@ -3362,7 +3453,6 @@ btrfs-map-logical:rb_replace_node
 btrfs-map-logical:rb_search
 btrfs-map-logical:read_data_from_disk
 btrfs-map-logical:read_extent_buffer
-btrfs-map-logical:read_node_slot
 btrfs-map-logical:read_tree_block
 btrfs-map-logical:read_whole_eb
 btrfs-map-logical:readahead_tree_block
@@ -3386,11 +3476,16 @@ btrfs-map-logical:string_is_numerical
 btrfs-map-logical:subvol_strip_mountpoint
 btrfs-map-logical:subvol_uuid_search
 btrfs-map-logical:sysfs_open_file
+btrfs-map-logical:sysfs_open_file_rw
 btrfs-map-logical:sysfs_open_fsid_dir
 btrfs-map-logical:sysfs_open_fsid_file
+btrfs-map-logical:sysfs_open_fsid_file_rw
 btrfs-map-logical:sysfs_read_file
 btrfs-map-logical:sysfs_read_file_u64
 btrfs-map-logical:sysfs_read_fsid_file_u64
+btrfs-map-logical:sysfs_write_file
+btrfs-map-logical:sysfs_write_file_u64
+btrfs-map-logical:sysfs_write_fsid_file_u64
 btrfs-map-logical:table_clear_range
 btrfs-map-logical:table_create
 btrfs-map-logical:table_dump_range
@@ -3462,6 +3557,7 @@ btrfs-select-super:__btrfs_check_node
 btrfs-select-super:__btrfs_handle_fs_error
 btrfs-select-super:__btrfs_map_block
 btrfs-select-super:__btrfs_panic
+btrfs-select-super:__btrfs_print_leaf
 btrfs-select-super:__btrfs_printf
 btrfs-select-super:__btrfs_remove_free_space_cache
 btrfs-select-super:__clear_extent_bit
@@ -3487,6 +3583,7 @@ btrfs-select-super:alloc_dummy_extent_buffer
 btrfs-select-super:alloc_extent_buffer
 btrfs-select-super:arg_copy_path
 btrfs-select-super:arg_strtou64
+btrfs-select-super:arg_strtou64_with_suffix
 btrfs-select-super:array_append
 btrfs-select-super:array_clear
 btrfs-select-super:array_free
@@ -3495,8 +3592,13 @@ btrfs-select-super:array_init
 btrfs-select-super:array_use_capacity
 btrfs-select-super:ask_user
 btrfs-select-super:bconf
+btrfs-select-super:bconf_add_param
 btrfs-select-super:bconf_be_quiet
 btrfs-select-super:bconf_be_verbose
+btrfs-select-super:bconf_is_dry_run
+btrfs-select-super:bconf_param_value
+btrfs-select-super:bconf_save_param
+btrfs-select-super:bconf_set_dry_run
 btrfs-select-super:blake2_init_accel
 btrfs-select-super:blake2b_compress_avx2
 btrfs-select-super:blake2b_compress_sse2
@@ -3575,8 +3677,15 @@ btrfs-select-super:btrfs_del_inode_ref
 btrfs-select-super:btrfs_del_items
 btrfs-select-super:btrfs_del_ptr
 btrfs-select-super:btrfs_del_root
+btrfs-select-super:btrfs_delayed_data_ref_cachep
+btrfs-select-super:btrfs_delayed_extent_op_cachep
+btrfs-select-super:btrfs_delayed_ref_exit
+btrfs-select-super:btrfs_delayed_ref_head_cachep
+btrfs-select-super:btrfs_delayed_ref_init
+btrfs-select-super:btrfs_delayed_tree_ref_cachep
 btrfs-select-super:btrfs_delete_and_free_root
 btrfs-select-super:btrfs_delete_one_dir_name
+btrfs-select-super:btrfs_delete_ref_head
 btrfs-select-super:btrfs_destroy_delayed_refs
 btrfs-select-super:btrfs_destroy_workqueue
 btrfs-select-super:btrfs_device_already_in_root
@@ -3585,7 +3694,6 @@ btrfs-select-super:btrfs_direct_pwrite
 btrfs-select-super:btrfs_dump_free_space
 btrfs-select-super:btrfs_extend_item
 btrfs-select-super:btrfs_extent_root
-btrfs-select-super:btrfs_extref_hash
 btrfs-select-super:btrfs_find_all_roots
 btrfs-select-super:btrfs_find_allocatable_zones
 btrfs-select-super:btrfs_find_and_setup_root
@@ -3598,6 +3706,7 @@ btrfs-select-super:btrfs_find_free_space
 btrfs-select-super:btrfs_find_item
 btrfs-select-super:btrfs_find_last_root
 btrfs-select-super:btrfs_find_one_extref
+btrfs-select-super:btrfs_find_space_info
 btrfs-select-super:btrfs_find_tree_block
 btrfs-select-super:btrfs_finish_extent_commit
 btrfs-select-super:btrfs_fix_block_accounting
@@ -3635,7 +3744,6 @@ btrfs-select-super:btrfs_inc_extent_ref
 btrfs-select-super:btrfs_inc_ref
 btrfs-select-super:btrfs_init_free_space_ctl
 btrfs-select-super:btrfs_init_map_token
-btrfs-select-super:btrfs_init_path
 btrfs-select-super:btrfs_init_work
 btrfs-select-super:btrfs_insert_dev_extent
 btrfs-select-super:btrfs_insert_dir_item
@@ -3673,7 +3781,6 @@ btrfs-select-super:btrfs_match_dir_item_name
 btrfs-select-super:btrfs_merge_delayed_refs
 btrfs-select-super:btrfs_mkdir
 btrfs-select-super:btrfs_mksubvol
-btrfs-select-super:btrfs_name_hash
 btrfs-select-super:btrfs_new_fs_info
 btrfs-select-super:btrfs_new_inode
 btrfs-select-super:btrfs_next_bg
@@ -3696,7 +3803,6 @@ btrfs-select-super:btrfs_prev_leaf
 btrfs-select-super:btrfs_previous_extent_item
 btrfs-select-super:btrfs_previous_item
 btrfs-select-super:btrfs_print_key
-btrfs-select-super:btrfs_print_leaf
 btrfs-select-super:btrfs_print_send_ops
 btrfs-select-super:btrfs_print_superblock
 btrfs-select-super:btrfs_print_tree
@@ -3715,6 +3821,7 @@ btrfs-select-super:btrfs_read_file
 btrfs-select-super:btrfs_read_fs_root
 btrfs-select-super:btrfs_read_fs_root_no_cache
 btrfs-select-super:btrfs_read_lock_root_node
+btrfs-select-super:btrfs_read_node_slot
 btrfs-select-super:btrfs_read_sys_array
 btrfs-select-super:btrfs_readahead_node_child
 btrfs-select-super:btrfs_record_file_extent
@@ -3733,6 +3840,7 @@ btrfs-select-super:btrfs_reset_dev_zone
 btrfs-select-super:btrfs_rmap_block
 btrfs-select-super:btrfs_run_delayed_refs
 btrfs-select-super:btrfs_sb_io
+btrfs-select-super:btrfs_sb_zone_exists
 btrfs-select-super:btrfs_scan_argv_devices
 btrfs-select-super:btrfs_scan_devices
 btrfs-select-super:btrfs_scan_fs_devices
@@ -3766,6 +3874,7 @@ btrfs-select-super:btrfs_super_csum_size
 btrfs-select-super:btrfs_test_for_multiple_profiles
 btrfs-select-super:btrfs_tree_search2_ioctl_supported
 btrfs-select-super:btrfs_truncate_item
+btrfs-select-super:btrfs_try_chunk_alloc
 btrfs-select-super:btrfs_try_read_lock_root_node
 btrfs-select-super:btrfs_unlink
 btrfs-select-super:btrfs_unpin_extent
@@ -3805,7 +3914,6 @@ btrfs-select-super:btrfs_util_subvolume_iterator_next_info
 btrfs-select-super:btrfs_util_subvolume_path
 btrfs-select-super:btrfs_util_subvolume_path_fd
 btrfs-select-super:btrfs_uuid_to_key
-btrfs-select-super:btrfs_uuid_tree_add
 btrfs-select-super:btrfs_uuid_tree_remove
 btrfs-select-super:btrfs_verify_level_key
 btrfs-select-super:btrfs_warn_experimental
@@ -3903,6 +4011,7 @@ btrfs-select-super:free_qgroup_counts
 btrfs-select-super:free_seen_fsid
 btrfs-select-super:get_btrfs_mount
 btrfs-select-super:get_df
+btrfs-select-super:get_env_bool
 btrfs-select-super:get_fs_exclop
 btrfs-select-super:get_fs_exclop_name
 btrfs-select-super:get_fs_info
@@ -3943,6 +4052,7 @@ btrfs-select-super:lookup_cache_extent2
 btrfs-select-super:lookup_path_rootid
 btrfs-select-super:main
 btrfs-select-super:memcmp_extent_buffer
+btrfs-select-super:memcpy_extent_buffer
 btrfs-select-super:memmove_extent_buffer
 btrfs-select-super:memset_extent_buffer
 btrfs-select-super:next_cache_extent
@@ -3963,8 +4073,8 @@ btrfs-select-super:parse_qgroupid_or_path
 btrfs-select-super:parse_range
 btrfs-select-super:parse_range_strict
 btrfs-select-super:parse_range_u32
-btrfs-select-super:parse_size_from_string
 btrfs-select-super:parse_u64
+btrfs-select-super:parse_u64_with_suffix
 btrfs-select-super:path_canonicalize
 btrfs-select-super:path_canonicalize_dm_name
 btrfs-select-super:path_cat3_out
@@ -4023,7 +4133,6 @@ btrfs-select-super:rb_replace_node
 btrfs-select-super:rb_search
 btrfs-select-super:read_data_from_disk
 btrfs-select-super:read_extent_buffer
-btrfs-select-super:read_node_slot
 btrfs-select-super:read_tree_block
 btrfs-select-super:read_whole_eb
 btrfs-select-super:readahead_tree_block
@@ -4047,11 +4156,16 @@ btrfs-select-super:string_is_numerical
 btrfs-select-super:subvol_strip_mountpoint
 btrfs-select-super:subvol_uuid_search
 btrfs-select-super:sysfs_open_file
+btrfs-select-super:sysfs_open_file_rw
 btrfs-select-super:sysfs_open_fsid_dir
 btrfs-select-super:sysfs_open_fsid_file
+btrfs-select-super:sysfs_open_fsid_file_rw
 btrfs-select-super:sysfs_read_file
 btrfs-select-super:sysfs_read_file_u64
 btrfs-select-super:sysfs_read_fsid_file_u64
+btrfs-select-super:sysfs_write_file
+btrfs-select-super:sysfs_write_file_u64
+btrfs-select-super:sysfs_write_fsid_file_u64
 btrfs-select-super:table_clear_range
 btrfs-select-super:table_create
 btrfs-select-super:table_dump_range
@@ -4123,6 +4237,7 @@ btrfstune:__btrfs_check_node
 btrfstune:__btrfs_handle_fs_error
 btrfstune:__btrfs_map_block
 btrfstune:__btrfs_panic
+btrfstune:__btrfs_print_leaf
 btrfstune:__btrfs_printf
 btrfstune:__btrfs_remove_free_space_cache
 btrfstune:__clear_extent_bit
@@ -4148,6 +4263,7 @@ btrfstune:alloc_dummy_extent_buffer
 btrfstune:alloc_extent_buffer
 btrfstune:arg_copy_path
 btrfstune:arg_strtou64
+btrfstune:arg_strtou64_with_suffix
 btrfstune:array_append
 btrfstune:array_clear
 btrfstune:array_free
@@ -4156,8 +4272,13 @@ btrfstune:array_init
 btrfstune:array_use_capacity
 btrfstune:ask_user
 btrfstune:bconf
+btrfstune:bconf_add_param
 btrfstune:bconf_be_quiet
 btrfstune:bconf_be_verbose
+btrfstune:bconf_is_dry_run
+btrfstune:bconf_param_value
+btrfstune:bconf_save_param
+btrfstune:bconf_set_dry_run
 btrfstune:blake2_init_accel
 btrfstune:blake2b_compress_avx2
 btrfstune:blake2b_compress_sse2
@@ -4238,8 +4359,15 @@ btrfstune:btrfs_del_inode_ref
 btrfstune:btrfs_del_items
 btrfstune:btrfs_del_ptr
 btrfstune:btrfs_del_root
+btrfstune:btrfs_delayed_data_ref_cachep
+btrfstune:btrfs_delayed_extent_op_cachep
+btrfstune:btrfs_delayed_ref_exit
+btrfstune:btrfs_delayed_ref_head_cachep
+btrfstune:btrfs_delayed_ref_init
+btrfstune:btrfs_delayed_tree_ref_cachep
 btrfstune:btrfs_delete_and_free_root
 btrfstune:btrfs_delete_one_dir_name
+btrfstune:btrfs_delete_ref_head
 btrfstune:btrfs_destroy_delayed_refs
 btrfstune:btrfs_destroy_workqueue
 btrfstune:btrfs_device_already_in_root
@@ -4248,7 +4376,6 @@ btrfstune:btrfs_direct_pwrite
 btrfstune:btrfs_dump_free_space
 btrfstune:btrfs_extend_item
 btrfstune:btrfs_extent_root
-btrfstune:btrfs_extref_hash
 btrfstune:btrfs_find_all_roots
 btrfstune:btrfs_find_allocatable_zones
 btrfstune:btrfs_find_and_setup_root
@@ -4261,6 +4388,7 @@ btrfstune:btrfs_find_free_space
 btrfstune:btrfs_find_item
 btrfstune:btrfs_find_last_root
 btrfstune:btrfs_find_one_extref
+btrfstune:btrfs_find_space_info
 btrfstune:btrfs_find_tree_block
 btrfstune:btrfs_finish_extent_commit
 btrfstune:btrfs_fix_block_accounting
@@ -4298,7 +4426,6 @@ btrfstune:btrfs_inc_extent_ref
 btrfstune:btrfs_inc_ref
 btrfstune:btrfs_init_free_space_ctl
 btrfstune:btrfs_init_map_token
-btrfstune:btrfs_init_path
 btrfstune:btrfs_init_work
 btrfstune:btrfs_insert_dev_extent
 btrfstune:btrfs_insert_dir_item
@@ -4336,7 +4463,6 @@ btrfstune:btrfs_match_dir_item_name
 btrfstune:btrfs_merge_delayed_refs
 btrfstune:btrfs_mkdir
 btrfstune:btrfs_mksubvol
-btrfstune:btrfs_name_hash
 btrfstune:btrfs_new_fs_info
 btrfstune:btrfs_new_inode
 btrfstune:btrfs_next_bg
@@ -4359,7 +4485,6 @@ btrfstune:btrfs_prev_leaf
 btrfstune:btrfs_previous_extent_item
 btrfstune:btrfs_previous_item
 btrfstune:btrfs_print_key
-btrfstune:btrfs_print_leaf
 btrfstune:btrfs_print_send_ops
 btrfstune:btrfs_print_superblock
 btrfstune:btrfs_print_tree
@@ -4378,6 +4503,7 @@ btrfstune:btrfs_read_file
 btrfstune:btrfs_read_fs_root
 btrfstune:btrfs_read_fs_root_no_cache
 btrfstune:btrfs_read_lock_root_node
+btrfstune:btrfs_read_node_slot
 btrfstune:btrfs_read_sys_array
 btrfstune:btrfs_readahead_node_child
 btrfstune:btrfs_record_file_extent
@@ -4396,6 +4522,7 @@ btrfstune:btrfs_reset_dev_zone
 btrfstune:btrfs_rmap_block
 btrfstune:btrfs_run_delayed_refs
 btrfstune:btrfs_sb_io
+btrfstune:btrfs_sb_zone_exists
 btrfstune:btrfs_scan_argv_devices
 btrfstune:btrfs_scan_devices
 btrfstune:btrfs_scan_fs_devices
@@ -4429,6 +4556,7 @@ btrfstune:btrfs_super_csum_size
 btrfstune:btrfs_test_for_multiple_profiles
 btrfstune:btrfs_tree_search2_ioctl_supported
 btrfstune:btrfs_truncate_item
+btrfstune:btrfs_try_chunk_alloc
 btrfstune:btrfs_try_read_lock_root_node
 btrfstune:btrfs_unlink
 btrfstune:btrfs_unpin_extent
@@ -4468,7 +4596,6 @@ btrfstune:btrfs_util_subvolume_iterator_next_info
 btrfstune:btrfs_util_subvolume_path
 btrfstune:btrfs_util_subvolume_path_fd
 btrfstune:btrfs_uuid_to_key
-btrfstune:btrfs_uuid_tree_add
 btrfstune:btrfs_uuid_tree_remove
 btrfstune:btrfs_verify_level_key
 btrfstune:btrfs_warn_experimental
@@ -4490,7 +4617,6 @@ btrfstune:check_dir_conflict
 btrfstune:check_mounted
 btrfstune:check_mounted_where
 btrfstune:check_running_fs_exclop
-btrfstune:check_unfinished_fsid_change
 btrfstune:clean_args_no_options
 btrfstune:clean_args_no_options_relaxed
 btrfstune:cleanup_ref_head
@@ -4529,6 +4655,7 @@ btrfstune:device_get_zone_unusable
 btrfstune:device_zero_blocks
 btrfstune:div_factor
 btrfstune:do_clear_free_space_cache
+btrfstune:enable_quota
 btrfstune:error_msg
 btrfstune:exclude_super_stripes
 btrfstune:extent_buffer_bitmap_clear
@@ -4572,6 +4699,7 @@ btrfstune:free_qgroup_counts
 btrfstune:free_seen_fsid
 btrfstune:get_btrfs_mount
 btrfstune:get_df
+btrfstune:get_env_bool
 btrfstune:get_fs_exclop
 btrfstune:get_fs_exclop_name
 btrfstune:get_fs_info
@@ -4612,6 +4740,7 @@ btrfstune:lookup_cache_extent2
 btrfstune:lookup_path_rootid
 btrfstune:main
 btrfstune:memcmp_extent_buffer
+btrfstune:memcpy_extent_buffer
 btrfstune:memmove_extent_buffer
 btrfstune:memset_extent_buffer
 btrfstune:next_cache_extent
@@ -4632,8 +4761,8 @@ btrfstune:parse_qgroupid_or_path
 btrfstune:parse_range
 btrfstune:parse_range_strict
 btrfstune:parse_range_u32
-btrfstune:parse_size_from_string
 btrfstune:parse_u64
+btrfstune:parse_u64_with_suffix
 btrfstune:path_canonicalize
 btrfstune:path_canonicalize_dm_name
 btrfstune:path_cat3_out
@@ -4692,7 +4821,6 @@ btrfstune:rb_replace_node
 btrfstune:rb_search
 btrfstune:read_data_from_disk
 btrfstune:read_extent_buffer
-btrfstune:read_node_slot
 btrfstune:read_tree_block
 btrfstune:read_whole_eb
 btrfstune:readahead_tree_block
@@ -4717,11 +4845,16 @@ btrfstune:string_is_numerical
 btrfstune:subvol_strip_mountpoint
 btrfstune:subvol_uuid_search
 btrfstune:sysfs_open_file
+btrfstune:sysfs_open_file_rw
 btrfstune:sysfs_open_fsid_dir
 btrfstune:sysfs_open_fsid_file
+btrfstune:sysfs_open_fsid_file_rw
 btrfstune:sysfs_read_file
 btrfstune:sysfs_read_file_u64
 btrfstune:sysfs_read_fsid_file_u64
+btrfstune:sysfs_write_file
+btrfstune:sysfs_write_file_u64
+btrfstune:sysfs_write_fsid_file_u64
 btrfstune:table_clear_range
 btrfstune:table_create
 btrfstune:table_dump_range
@@ -4846,6 +4979,7 @@ mkfs.btrfs:__btrfs_check_node
 mkfs.btrfs:__btrfs_handle_fs_error
 mkfs.btrfs:__btrfs_map_block
 mkfs.btrfs:__btrfs_panic
+mkfs.btrfs:__btrfs_print_leaf
 mkfs.btrfs:__btrfs_printf
 mkfs.btrfs:__btrfs_remove_free_space_cache
 mkfs.btrfs:__clear_extent_bit
@@ -4871,6 +5005,7 @@ mkfs.btrfs:alloc_dummy_extent_buffer
 mkfs.btrfs:alloc_extent_buffer
 mkfs.btrfs:arg_copy_path
 mkfs.btrfs:arg_strtou64
+mkfs.btrfs:arg_strtou64_with_suffix
 mkfs.btrfs:array_append
 mkfs.btrfs:array_clear
 mkfs.btrfs:array_free
@@ -4879,8 +5014,13 @@ mkfs.btrfs:array_init
 mkfs.btrfs:array_use_capacity
 mkfs.btrfs:ask_user
 mkfs.btrfs:bconf
+mkfs.btrfs:bconf_add_param
 mkfs.btrfs:bconf_be_quiet
 mkfs.btrfs:bconf_be_verbose
+mkfs.btrfs:bconf_is_dry_run
+mkfs.btrfs:bconf_param_value
+mkfs.btrfs:bconf_save_param
+mkfs.btrfs:bconf_set_dry_run
 mkfs.btrfs:blake2_init_accel
 mkfs.btrfs:blake2b_compress_avx2
 mkfs.btrfs:blake2b_compress_sse2
@@ -4959,8 +5099,15 @@ mkfs.btrfs:btrfs_del_inode_ref
 mkfs.btrfs:btrfs_del_items
 mkfs.btrfs:btrfs_del_ptr
 mkfs.btrfs:btrfs_del_root
+mkfs.btrfs:btrfs_delayed_data_ref_cachep
+mkfs.btrfs:btrfs_delayed_extent_op_cachep
+mkfs.btrfs:btrfs_delayed_ref_exit
+mkfs.btrfs:btrfs_delayed_ref_head_cachep
+mkfs.btrfs:btrfs_delayed_ref_init
+mkfs.btrfs:btrfs_delayed_tree_ref_cachep
 mkfs.btrfs:btrfs_delete_and_free_root
 mkfs.btrfs:btrfs_delete_one_dir_name
+mkfs.btrfs:btrfs_delete_ref_head
 mkfs.btrfs:btrfs_destroy_delayed_refs
 mkfs.btrfs:btrfs_destroy_workqueue
 mkfs.btrfs:btrfs_device_already_in_root
@@ -4969,7 +5116,6 @@ mkfs.btrfs:btrfs_direct_pwrite
 mkfs.btrfs:btrfs_dump_free_space
 mkfs.btrfs:btrfs_extend_item
 mkfs.btrfs:btrfs_extent_root
-mkfs.btrfs:btrfs_extref_hash
 mkfs.btrfs:btrfs_find_all_roots
 mkfs.btrfs:btrfs_find_allocatable_zones
 mkfs.btrfs:btrfs_find_and_setup_root
@@ -4982,6 +5128,7 @@ mkfs.btrfs:btrfs_find_free_space
 mkfs.btrfs:btrfs_find_item
 mkfs.btrfs:btrfs_find_last_root
 mkfs.btrfs:btrfs_find_one_extref
+mkfs.btrfs:btrfs_find_space_info
 mkfs.btrfs:btrfs_find_tree_block
 mkfs.btrfs:btrfs_finish_extent_commit
 mkfs.btrfs:btrfs_fix_block_accounting
@@ -5019,7 +5166,6 @@ mkfs.btrfs:btrfs_inc_extent_ref
 mkfs.btrfs:btrfs_inc_ref
 mkfs.btrfs:btrfs_init_free_space_ctl
 mkfs.btrfs:btrfs_init_map_token
-mkfs.btrfs:btrfs_init_path
 mkfs.btrfs:btrfs_init_work
 mkfs.btrfs:btrfs_insert_dev_extent
 mkfs.btrfs:btrfs_insert_dir_item
@@ -5062,7 +5208,6 @@ mkfs.btrfs:btrfs_mkfs_fill_dir
 mkfs.btrfs:btrfs_mkfs_shrink_fs
 mkfs.btrfs:btrfs_mkfs_size_dir
 mkfs.btrfs:btrfs_mksubvol
-mkfs.btrfs:btrfs_name_hash
 mkfs.btrfs:btrfs_new_fs_info
 mkfs.btrfs:btrfs_new_inode
 mkfs.btrfs:btrfs_next_bg
@@ -5085,7 +5230,6 @@ mkfs.btrfs:btrfs_prev_leaf
 mkfs.btrfs:btrfs_previous_extent_item
 mkfs.btrfs:btrfs_previous_item
 mkfs.btrfs:btrfs_print_key
-mkfs.btrfs:btrfs_print_leaf
 mkfs.btrfs:btrfs_print_send_ops
 mkfs.btrfs:btrfs_print_superblock
 mkfs.btrfs:btrfs_print_tree
@@ -5104,6 +5248,7 @@ mkfs.btrfs:btrfs_read_file
 mkfs.btrfs:btrfs_read_fs_root
 mkfs.btrfs:btrfs_read_fs_root_no_cache
 mkfs.btrfs:btrfs_read_lock_root_node
+mkfs.btrfs:btrfs_read_node_slot
 mkfs.btrfs:btrfs_read_sys_array
 mkfs.btrfs:btrfs_readahead_node_child
 mkfs.btrfs:btrfs_record_file_extent
@@ -5122,6 +5267,7 @@ mkfs.btrfs:btrfs_reset_dev_zone
 mkfs.btrfs:btrfs_rmap_block
 mkfs.btrfs:btrfs_run_delayed_refs
 mkfs.btrfs:btrfs_sb_io
+mkfs.btrfs:btrfs_sb_zone_exists
 mkfs.btrfs:btrfs_scan_argv_devices
 mkfs.btrfs:btrfs_scan_devices
 mkfs.btrfs:btrfs_scan_fs_devices
@@ -5155,6 +5301,7 @@ mkfs.btrfs:btrfs_super_csum_size
 mkfs.btrfs:btrfs_test_for_multiple_profiles
 mkfs.btrfs:btrfs_tree_search2_ioctl_supported
 mkfs.btrfs:btrfs_truncate_item
+mkfs.btrfs:btrfs_try_chunk_alloc
 mkfs.btrfs:btrfs_try_read_lock_root_node
 mkfs.btrfs:btrfs_unlink
 mkfs.btrfs:btrfs_unpin_extent
@@ -5194,7 +5341,6 @@ mkfs.btrfs:btrfs_util_subvolume_iterator_next_info
 mkfs.btrfs:btrfs_util_subvolume_path
 mkfs.btrfs:btrfs_util_subvolume_path_fd
 mkfs.btrfs:btrfs_uuid_to_key
-mkfs.btrfs:btrfs_uuid_tree_add
 mkfs.btrfs:btrfs_uuid_tree_remove
 mkfs.btrfs:btrfs_verify_level_key
 mkfs.btrfs:btrfs_warn_experimental
@@ -5292,6 +5438,7 @@ mkfs.btrfs:free_qgroup_counts
 mkfs.btrfs:free_seen_fsid
 mkfs.btrfs:get_btrfs_mount
 mkfs.btrfs:get_df
+mkfs.btrfs:get_env_bool
 mkfs.btrfs:get_fs_exclop
 mkfs.btrfs:get_fs_exclop_name
 mkfs.btrfs:get_fs_info
@@ -5334,6 +5481,7 @@ mkfs.btrfs:lookup_path_rootid
 mkfs.btrfs:main
 mkfs.btrfs:make_btrfs
 mkfs.btrfs:memcmp_extent_buffer
+mkfs.btrfs:memcpy_extent_buffer
 mkfs.btrfs:memmove_extent_buffer
 mkfs.btrfs:memset_extent_buffer
 mkfs.btrfs:next_cache_extent
@@ -5354,8 +5502,8 @@ mkfs.btrfs:parse_qgroupid_or_path
 mkfs.btrfs:parse_range
 mkfs.btrfs:parse_range_strict
 mkfs.btrfs:parse_range_u32
-mkfs.btrfs:parse_size_from_string
 mkfs.btrfs:parse_u64
+mkfs.btrfs:parse_u64_with_suffix
 mkfs.btrfs:path_canonicalize
 mkfs.btrfs:path_canonicalize_dm_name
 mkfs.btrfs:path_cat3_out
@@ -5414,7 +5562,6 @@ mkfs.btrfs:rb_replace_node
 mkfs.btrfs:rb_search
 mkfs.btrfs:read_data_from_disk
 mkfs.btrfs:read_extent_buffer
-mkfs.btrfs:read_node_slot
 mkfs.btrfs:read_tree_block
 mkfs.btrfs:read_whole_eb
 mkfs.btrfs:readahead_tree_block
@@ -5438,11 +5585,16 @@ mkfs.btrfs:string_is_numerical
 mkfs.btrfs:subvol_strip_mountpoint
 mkfs.btrfs:subvol_uuid_search
 mkfs.btrfs:sysfs_open_file
+mkfs.btrfs:sysfs_open_file_rw
 mkfs.btrfs:sysfs_open_fsid_dir
 mkfs.btrfs:sysfs_open_fsid_file
+mkfs.btrfs:sysfs_open_fsid_file_rw
 mkfs.btrfs:sysfs_read_file
 mkfs.btrfs:sysfs_read_file_u64
 mkfs.btrfs:sysfs_read_fsid_file_u64
+mkfs.btrfs:sysfs_write_file
+mkfs.btrfs:sysfs_write_file_u64
+mkfs.btrfs:sysfs_write_fsid_file_u64
 mkfs.btrfs:table_clear_range
 mkfs.btrfs:table_create
 mkfs.btrfs:table_dump_range

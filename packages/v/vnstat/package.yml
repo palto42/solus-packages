@@ -1,8 +1,9 @@
 name       : vnstat
-version    : '2.8'
-release    : 9
+version    : '2.12'
+release    : 11
 source     :
-    - https://github.com/vergoh/vnstat/releases/download/v2.8/vnstat-2.8.tar.gz : 03f858a7abf6bd85bb8cd595f3541fc3bd31f8f400ec092ef3034825ccb77c25
+    - https://github.com/vergoh/vnstat/releases/download/v2.12/vnstat-2.12.tar.gz : b7386b12fc1fc6f47fab31f208b12eda61862e63e229e84e95a6fa80406d2852
+homepage   : https://humdi.net/vnstat/
 license    : GPL-2.0-or-later
 component  : system.utils
 summary    : A network traffic monitor for Linux and BSD

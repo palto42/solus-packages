@@ -1,8 +1,8 @@
 name       : kcrash
-version    : 5.109.0
-release    : 69
+version    : 5.115.0
+release    : 73
 source     :
-    - https://cdn.download.kde.org/stable/frameworks/5.109/kcrash-5.109.0.tar.xz : 2e96d147803f4fb4f9a3affc9ebf69149d221ab49e78f8561ef80cdcf5b276fb
+    - https://cdn.download.kde.org/stable/frameworks/5.115/kcrash-5.115.0.tar.xz : b2eaf5bc6351faf6531dbfd6535a414f13a80e002b44f325c4516eeaea6e03ad
 homepage   : https://community.kde.org/Frameworks
 license    : LGPL-2.0-or-later
 component  : desktop.library

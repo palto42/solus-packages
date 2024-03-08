@@ -1,8 +1,8 @@
 name       : ffmpeg-chromium-opera
-version    : 114.0.5735.199
-release    : 13
+version    : 122.0.6261.70
+release    : 20
 source     :
-    - https://commondatastorage.googleapis.com/chromium-browser-official/chromium-114.0.5735.199.tar.xz : 587b2e827f83a6fa834773eb53d1ac4fccdc82315b2bb9bead82a162a5e12ca8
+    - https://commondatastorage.googleapis.com/chromium-browser-official/chromium-122.0.6261.70.tar.xz : 479c646db520e559e12d832f61a5128546644f198c3de22c80b5d18df1cd0dc3
 license    :
     - BSD-3-Clause
     - LGPL-3.0-or-later

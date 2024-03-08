@@ -1,8 +1,8 @@
 name       : calendarsupport
-version    : 23.04.3
-release    : 70
+version    : 23.08.5
+release    : 73
 source     :
-    - https://cdn.download.kde.org/stable/release-service/23.04.3/src/calendarsupport-23.04.3.tar.xz : 522f0bbc3097dd53355faf49a88428afe1db414261c04f6951a73168cb9e66fe
+    - https://cdn.download.kde.org/stable/release-service/23.08.5/src/calendarsupport-23.08.5.tar.xz : 65fa5ca77e19515dad579cf96e7cf16025d64a6a9a39c63772691a6bc16f3ef3
 homepage   : https://kde.org/
 license    :
     - GPL-2.0-or-later

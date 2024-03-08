@@ -1,14 +1,21 @@
 name       : python-attrs
-version    : 21.4.0
-release    : 18
+version    : 23.2.0
+release    : 21
 source     :
-    - https://github.com/python-attrs/attrs/archive/refs/tags/21.4.0.tar.gz : 5bd6d2938b7e8019e319b7f451f4ec3a5ef6293b228146387d002311ae9b920d
+    - https://files.pythonhosted.org/packages/source/a/attrs/attrs-23.2.0.tar.gz : 935dc3b529c262f6cf76e50877d35a4bd3c1de194fd41f47a2b7ae8f19971f30
+homepage   : https://www.attrs.org/en/stable/
 license    : MIT
 component  : programming.python
-summary    : Python attributes without boilerplate.
+summary    : Python Classes Without Boilerplate
 description: |
-    Python attributes without boilerplate.
+    attrs is the Python package that will bring back the joy of writing classes by relieving you from the drudgery of implementing object protocols (aka dunder methods).
 builddeps  :
+    - python-build
+    - python-hatch-fancy-pypi-readme
+    - python-hatch-vcs
+    - python-installer
+checkdeps  :
+    - python-cloudpickle
     - python-hypothesis
     - python-pytest
     - python-zope.interface
@@ -17,5 +24,4 @@ build      : |
 install    : |
     %python3_install
 check      : |
-    # py2 testsuite requires hypothesis which doesn't have py2 support
-    %python3_test pytest3
+    %python3_test pytest -v

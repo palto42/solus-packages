@@ -1,8 +1,8 @@
 name       : kimageformats
-version    : 5.109.0
-release    : 44
+version    : 5.115.0
+release    : 52
 source     :
-    - https://cdn.download.kde.org/stable/frameworks/5.109/kimageformats-5.109.0.tar.xz : 15533e1ba0fa187f0da0094b8ea135f38a9cebffd9118a12fcd23003eb591687
+    - https://cdn.download.kde.org/stable/frameworks/5.115/kimageformats-5.115.0.tar.xz : 9f61020d66f86b8b10bce14e42a39c5e8fd8e40ec9e6ca8b9e9b5ce3e1aa7283
 homepage   : https://community.kde.org/Frameworks
 license    :
     - GPL-2.0-only
@@ -17,6 +17,7 @@ builddeps  :
     - pkgconfig(OpenEXR)
     - pkgconfig(libavif)
     - pkgconfig(libheif)
+    - pkgconfig(libjxl)
     - pkgconfig(libraw)
     - karchive-devel
 rundeps    :

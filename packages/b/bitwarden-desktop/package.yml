@@ -1,10 +1,11 @@
 name       : bitwarden-desktop
-version    : 2023.9.0
-release    : 14
+version    : 2024.2.1
+release    : 23
 source     :
-    - https://github.com/bitwarden/clients/archive/refs/tags/desktop-v2023.9.0.tar.gz : 7b6eeec89977a9298fe4330fefc7f171411fd124028f355e3e859b3bb24415e7
+    - https://github.com/bitwarden/clients/archive/refs/tags/desktop-v2024.2.1.tar.gz : c8102f25e93495628ba125eb81af9d5756e8ef605438af3ace39fb9ed3e1b013
 license    : GPL-3.0-only
 component  : security
+homepage   : https://bitwarden.com/
 summary    : A secure and free password manager for all of your devices
 description: A secure and free password manager for all of your devices
 networking : yes
@@ -24,18 +25,25 @@ builddeps  :
 rundeps    :
     - nodejs
 setup      : |
-    export ELECTRON_VERSION=24.8.3
+    export ELECTRON_VERSION=28.2.6
     npm install electron@$ELECTRON_VERSION
 
     pushd apps/desktop
     tmp=$(mktemp)
     jq ".electronVersion = \"${ELECTRON_VERSION}\"" electron-builder.json > "$tmp" && mv "$tmp" electron-builder.json
 
-    %patch --strip=1 src/main/messaging.main.ts < $pkgfiles/messaging.main.ts.patch
-    %patch --strip=1 desktop_native/index.js < $pkgfiles/nativelib.patch
+    # Create an unpacked distribution, allowing us to more easily see changes to shipped files
+    jq ".linux.asar = false" electron-builder.json > "$tmp" && mv "$tmp" electron-builder.json
+
+    # Fix appId on Wayland
+    jq ".productName = \"com.bitwarden.desktop\"" electron-builder.json > "$tmp" && mv "$tmp" electron-builder.json
+    jq ".linux.desktop.Name = \"com.bitwarden.desktop\"" electron-builder.json > "$tmp" && mv "$tmp" electron-builder.json
+
+    %patch --strip=1 src/main/messaging.main.ts -i $pkgfiles/messaging.main.ts.patch
+    %patch --strip=1 desktop_native/index.js -i $pkgfiles/nativelib.patch
     popd
 
-    %patch -p1 < $pkgfiles/fix-argon-simd.patch
+    %patch -p1 -i $pkgfiles/fix-argon-simd.patch
 
     npm ci
 build      : |
@@ -56,9 +64,17 @@ install    : |
     cp -R $workdir/apps/desktop/dist/linux-unpacked/* $installdir/$bwdir/
 
     mv $installdir/$bwdir/bitwarden $installdir/$bwdir/bitwarden-desktop
-    ln -s $bwdir/bitwarden-desktop $installdir/usr/bin/bitwarden-desktop
+    install -Dm00755 $pkgfiles/bitwarden.sh $installdir/usr/bin/bitwarden-desktop
 
-    install -Dm00644 $pkgfiles/Bitwarden.desktop $installdir/usr/share/applications/Bitwarden.desktop
+    install -Dm00644 $pkgfiles/com.bitwarden.desktop.desktop $installdir/usr/share/applications/com.bitwarden.desktop.desktop
+    install -Dm00644 $pkgfiles/com.bitwarden.desktop.metainfo.xml $installdir/usr/share/metainfo/com.bitwarden.desktop.metainfo.xml
+
+    # Fix appid since we can't seem to do this during the build
+    package_json=$installdir/$bwdir/resources/app/package.json
+    tmp=$(mktemp)
+    jq ".productName = \"com.bitwarden.desktop\"" $package_json > "$tmp" && mv "$tmp" $package_json
+    jq ".desktopName = \"com.bitwarden.desktop.desktop\"" $package_json > "$tmp" && mv "$tmp" $package_json
+    chmod 644 $package_json
 
     for i in 16 32 64 128 256 512 1024; do
         install -Dm00644 $workdir/apps/desktop/resources/icons/${i}x${i}.png $installdir/usr/share/icons/hicolor/${i}x${i}/apps/bitwarden.png

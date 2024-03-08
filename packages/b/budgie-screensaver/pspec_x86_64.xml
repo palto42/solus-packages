@@ -3,8 +3,8 @@
         <Name>budgie-screensaver</Name>
         <Homepage>https://github.com/BuddiesOfBudgie/budgie-screensaver</Homepage>
         <Packager>
-            <Name>Evan Maddock</Name>
-            <Email>maddock.evan@vivaldi.net</Email>
+            <Name>Reilly Brogan</Name>
+            <Email>solus@reillybrogan.com</Email>
         </Packager>
         <License>GPL-2.0-only</License>
         <License>LGPL-2.0-only</License>
@@ -12,7 +12,7 @@
         <Summary xml:lang="en">Budgie Screensaver is a fork of gnome-screensaver intended for use with Budgie Desktop and is similar in purpose to other screensavers such as MATE Screensaver.</Summary>
         <Description xml:lang="en">Budgie Screensaver is a fork of gnome-screensaver intended for use with Budgie Desktop and is similar in purpose to other screensavers such as MATE Screensaver.
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>budgie-screensaver</Name>
@@ -125,12 +125,12 @@
         </Replaces>
     </Package>
     <History>
-        <Update release="26">
-            <Date>2023-07-18</Date>
+        <Update release="28">
+            <Date>2023-11-13</Date>
             <Version>5.1.0</Version>
             <Comment>Packaging update</Comment>
-            <Name>Evan Maddock</Name>
-            <Email>maddock.evan@vivaldi.net</Email>
+            <Name>Reilly Brogan</Name>
+            <Email>solus@reillybrogan.com</Email>
         </Update>
     </History>
 </PISI>

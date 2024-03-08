@@ -1,8 +1,9 @@
 name       : evolution-data-server
-version    : 3.48.4
-release    : 84
+version    : 3.50.4
+release    : 93
 source     :
-    - https://gitlab.gnome.org/GNOME/evolution-data-server/-/archive/3.48.4/evolution-data-server-3.48.4.tar.gz : ca8938ab9265c0bb6b246f34d157e8e5d4f9610b1f759965d265f6670a51d329
+    - https://download.gnome.org/sources/evolution-data-server/3.50/evolution-data-server-3.50.4.tar.xz : d7edffbe03a0bbcecbee67393214b831c7b18cd895b84c4dbfe1387776e257c5
+homepage   : https://wiki.gnome.org/Apps/Evolution
 license    : GPL-2.0-only
 component  : desktop.gnome.core
 summary    : Centralized access to appointments and contacts
@@ -14,6 +15,7 @@ builddeps  :
     - pkgconfig(gtk4)
     - pkgconfig(gweather4)
     - pkgconfig(icu-uc)
+    - pkgconfig(ldap)
     - pkgconfig(libcanberra-gtk3)
     - pkgconfig(libgdata)
     - pkgconfig(libical)
@@ -23,12 +25,12 @@ builddeps  :
     - pkgconfig(nss)
     - pkgconfig(sqlite3)
     - pkgconfig(webkit2gtk-4.1)
-    - pkgconfig(webkitgtk-6.0)
+    - libwebkit-gtk6-devel # FIXME: change this back to pkgconfig
     - db5-devel
     - gperf
-    - openldap-devel
     - vala
 setup      : |
+    %patch -p1 -i $pkgfiles/0001-build-Don-t-set-CFLAGS-returned-by-pkg-config-as-CMA.patch
     %cmake \
         -DENABLE_INTROSPECTION=ON \
         -DENABLE_UOA=OFF \

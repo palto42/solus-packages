@@ -1,9 +1,10 @@
 name       : fwupd
-version    : 1.9.3
-release    : 3
+version    : 1.9.14
+release    : 14
 source     :
-    - https://github.com/fwupd/fwupd/releases/download/1.9.3/fwupd-1.9.3.tar.xz : e01c018bc4f391a6875c0fd5434210f3f861e9bd3ef189529c44af64b88ace2f
+    - https://github.com/fwupd/fwupd/releases/download/1.9.14/fwupd-1.9.14.tar.xz : b16cbb9480c9a957735d15cfc1e876198b3c607b08e92958f9fc098e31613279
 license    : LGPL-2.1-or-later
+homepage   : https://fwupd.org/
 component  : system.utils
 summary    : A simple daemon to allow session software to update firmware
 description: |
@@ -44,11 +45,13 @@ builddeps  :
     - git
     - help2man
     - noto-sans-ttf
-    - python3-cairo
     - python-gobject
     - python-pillow
+    - python3-cairo
     - shared-mime-info
     - vala
+rundeps    :
+    - fwupd-efi
 setup      : |
     %apply_patches
     %meson_configure \

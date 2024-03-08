@@ -1,0 +1,27 @@
+name       : kf6-karchive
+version    : 6.0.0
+release    : 4
+source     :
+    - https://cdn.download.kde.org/stable/frameworks/6.0/karchive-6.0.0.tar.xz : 75a591d9648026eb86826974e6f3882e7f620592ecef8fabeb19206e63b04e50
+homepage   : https://community.kde.org/Frameworks
+license    : LGPL-2.0-or-later
+component  : programming.library
+summary    : Reading, creating, and manipulating file archives.
+description: |
+    Reading, creating, and manipulating file archives.
+builddeps  :
+    - pkgconfig(Qt6Designer)
+    - pkgconfig(bzip2)
+    - extra-cmake-modules
+rundeps    :
+    - devel :
+        - extra-cmake-modules
+        - qt6-tools-devel
+clang      : yes
+optimize   : thin-lto
+setup      : |
+    %cmake_kf6
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install

@@ -1,8 +1,8 @@
 name       : kinit
-version    : 5.109.0
-release    : 72
+version    : 5.115.0
+release    : 76
 source     :
-    - https://cdn.download.kde.org/stable/frameworks/5.109/kinit-5.109.0.tar.xz : 5d912d4f9802ca99e0628f4bbc2f8dfae8962ee5c83dadd3d96810db9741e1a2
+    - https://cdn.download.kde.org/stable/frameworks/5.115/kinit-5.115.0.tar.xz : 78c87dfe50387a6e58f513a02054246ae073ecef4784285881508667da627dad
 homepage   : https://community.kde.org/Frameworks
 license    :
     - BSD-3-Clause

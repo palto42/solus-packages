@@ -1,6 +1,6 @@
 name       : powerline
 version    : 2.8.3
-release    : 12
+release    : 14
 source     :
     - https://github.com/powerline/powerline/archive/2.8.3.tar.gz : 45d838dbac94a1363942899708b6ce7c71c1cad9e1b9d048affab4f630c4cb98
 license    : MIT
@@ -11,8 +11,11 @@ description: |
     Powerline is a statusline plugin for vim, and provides statuslines and prompts for several other applications, including zsh, bash, tmux, IPython, Awesome and Qtile.
 builddeps  :
     - python-sphinx
+setup      : |
+    %patch -p1 -i $pkgfiles/fail-on-binary-error.patch
+    %patch -p1 -i $pkgfiles/ftbfs-python-3.11.patch
 build      : |
-    %make -C docs man
+    make -C docs man
     %python3_setup
 install    : |
     # install man-files

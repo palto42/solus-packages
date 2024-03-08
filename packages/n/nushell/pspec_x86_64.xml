@@ -1,0 +1,41 @@
+<PISI>
+    <Source>
+        <Name>nushell</Name>
+        <Homepage>https://www.nushell.sh/</Homepage>
+        <Packager>
+            <Name>Oliver Marks</Name>
+            <Email>oly@digitaloctave.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <PartOf>system.utils</PartOf>
+        <Summary xml:lang="en">A new type of shell.</Summary>
+        <Description xml:lang="en">Nu takes cues from a lot of familiar territory traditional shells like bash, object based shells like PowerShell, gradually typed languages like TypeScript, functional programming, systems programming, and more. But rather than trying to be a jack of all trades, Nu focuses its energy on doing a few things well
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>nushell</Name>
+        <Summary xml:lang="en">A new type of shell.</Summary>
+        <Description xml:lang="en">Nu takes cues from a lot of familiar territory traditional shells like bash, object based shells like PowerShell, gradually typed languages like TypeScript, functional programming, systems programming, and more. But rather than trying to be a jack of all trades, Nu focuses its energy on doing a few things well
+</Description>
+        <PartOf>system.utils</PartOf>
+        <Files>
+            <Path fileType="executable">/usr/bin/nu</Path>
+            <Path fileType="executable">/usr/bin/nu_plugin_custom_values</Path>
+            <Path fileType="executable">/usr/bin/nu_plugin_example</Path>
+            <Path fileType="executable">/usr/bin/nu_plugin_formats</Path>
+            <Path fileType="executable">/usr/bin/nu_plugin_gstat</Path>
+            <Path fileType="executable">/usr/bin/nu_plugin_inc</Path>
+            <Path fileType="executable">/usr/bin/nu_plugin_query</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="2">
+            <Date>2024-01-07</Date>
+            <Version>0.88.1</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Oliver Marks</Name>
+            <Email>oly@digitaloctave.com</Email>
+        </Update>
+    </History>
+</PISI>

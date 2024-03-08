@@ -2,15 +2,15 @@
     <Source>
         <Name>xapp</Name>
         <Packager>
-            <Name>Evan Maddock</Name>
-            <Email>maddock.evan@vivaldi.net</Email>
+            <Name>Reilly Brogan</Name>
+            <Email>solus@reillybrogan.com</Email>
         </Packager>
         <License>LGPL-3.0-or-later</License>
         <PartOf>desktop.library</PartOf>
         <Summary xml:lang="en">Cross-desktop libraries and common resources</Summary>
         <Description xml:lang="en">This project gathers the components which are common to multiple GTK desktop environments (Cinnamon, MATE and Xfce) and required to implement cross-DE solutions.
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>xapp</Name>
@@ -19,13 +19,11 @@
 </Description>
         <PartOf>desktop.library</PartOf>
         <Files>
-            <Path fileType="config">/etc/X11/xinit/xinitrc.d/80xapp-gtk3-module.sh</Path>
-            <Path fileType="config">/etc/xdg/autostart/xapp-sn-watcher.desktop</Path>
             <Path fileType="executable">/usr/bin/pastebin</Path>
             <Path fileType="executable">/usr/bin/upload-system-info</Path>
             <Path fileType="executable">/usr/bin/xapp-gpu-offload</Path>
             <Path fileType="executable">/usr/bin/xfce4-set-wallpaper</Path>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/gi/overrides/XApp.py</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/gi/overrides/XApp.py</Path>
             <Path fileType="library">/usr/lib64/girepository-1.0/XApp-1.0.typelib</Path>
             <Path fileType="library">/usr/lib64/gtk-3.0/modules/libxapp-gtk3-module.so</Path>
             <Path fileType="library">/usr/lib64/libxapp.so.1</Path>
@@ -35,6 +33,7 @@
             <Path fileType="library">/usr/lib64/xapps/xapp-sn-watcher</Path>
             <Path fileType="data">/usr/share/dbus-1/services/org.mate.panel.applet.MateXAppStatusAppletFactory.service</Path>
             <Path fileType="data">/usr/share/dbus-1/services/org.x.StatusNotifierWatcher.service</Path>
+            <Path fileType="data">/usr/share/defaults/etc/X11/xinit/xinitrc.d/80xapp-gtk3-module.sh</Path>
             <Path fileType="data">/usr/share/gir-1.0/XApp-1.0.gir</Path>
             <Path fileType="data">/usr/share/glade/catalogs/xapp-glade-catalog.xml</Path>
             <Path fileType="data">/usr/share/glib-2.0/schemas/org.x.apps.gschema.xml</Path>
@@ -140,6 +139,7 @@
             <Path fileType="localedata">/usr/share/locale/zh_HK/LC_MESSAGES/xapp.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_TW/LC_MESSAGES/xapp.mo</Path>
             <Path fileType="data">/usr/share/mate-panel/applets/org.x.MateXAppStatusApplet.mate-panel-applet</Path>
+            <Path fileType="data">/usr/share/xdg/autostart/xapp-sn-watcher.desktop</Path>
         </Files>
     </Package>
     <Package>
@@ -149,7 +149,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="3">xapp</Dependency>
+            <Dependency release="6">xapp</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/xapp/libxapp/xapp-dark-mode-manager.h</Path>
@@ -175,12 +175,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="3">
-            <Date>2023-06-22</Date>
+        <Update release="6">
+            <Date>2024-02-26</Date>
             <Version>2.6.1</Version>
             <Comment>Packaging update</Comment>
-            <Name>Evan Maddock</Name>
-            <Email>maddock.evan@vivaldi.net</Email>
+            <Name>Reilly Brogan</Name>
+            <Email>solus@reillybrogan.com</Email>
         </Update>
     </History>
 </PISI>

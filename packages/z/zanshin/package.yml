@@ -1,19 +1,21 @@
 name       : zanshin
-version    : 23.04.3
-release    : 22
+version    : 23.08.5
+release    : 32
 source     :
-    - https://cdn.download.kde.org/stable/release-service/23.04.3/src/zanshin-23.04.3.tar.xz : d20bff1e4c2696c41c063c2dabce590d45bf2554cea6fd17c6c7d39d1c17cd38
+    - https://cdn.download.kde.org/stable/release-service/23.08.5/src/zanshin-23.08.5.tar.xz : c0f95e1c07d0d23bfac05474129740b8f0928c038d2b3144344b98316365f56e
+homepage   : https://zanshin.kde.org/
 license    :
-    - GPL-3.0-or-alter
+    - GPL-3.0-or-later
     - LGPL-2.1-only
 component  : office.notes
 summary    : To-do management application for KDE.
 description: |
     A powerful yet simple application to manage your day to day actions.
 builddeps  :
-    - pkgconfig(glu)
-    - pkgconfig(libsasl2)
     - pkgconfig(Qt5Qml)
+    - pkgconfig(glu)
+    - pkgconfig(ldap)
+    - pkgconfig(libsasl2)
     - akonadi-calendar-devel
     - akonadi-contacts-devel
     - akonadi-devel
@@ -35,7 +37,6 @@ builddeps  :
     - kwallet-devel
     - libboost-devel
     - libical-devel
-    - openldap-devel
 rundeps    :
     - kded
     - kdepim-runtime

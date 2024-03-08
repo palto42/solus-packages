@@ -231,7 +231,11 @@ libc.so.6:__cxa_thread_atexit_impl
 libc.so.6:__duplocale
 libc.so.6:__errno_location
 libc.so.6:__freelocale
-libc.so.6:__isoc99_fscanf
+libc.so.6:__isoc23_fscanf
+libc.so.6:__isoc23_sscanf
+libc.so.6:__isoc23_strtol
+libc.so.6:__isoc23_strtoll
+libc.so.6:__isoc23_strtoul
 libc.so.6:__isoc99_sscanf
 libc.so.6:__iswctype_l
 libc.so.6:__libc_single_threaded
@@ -412,6 +416,7 @@ libc.so.6:recvfrom
 libc.so.6:rename
 libc.so.6:rmdir
 libc.so.6:sched_yield
+libc.so.6:secure_getenv
 libc.so.6:select
 libc.so.6:send
 libc.so.6:sendto
@@ -448,7 +453,6 @@ libc.so.6:strtod
 libc.so.6:strtof
 libc.so.6:strtol
 libc.so.6:strtold_l
-libc.so.6:strtoll
 libc.so.6:strtoul
 libc.so.6:strtoull
 libc.so.6:symlink
@@ -881,12 +885,12 @@ libvorbis.so.0:vorbis_synthesis_headerin
 libvorbis.so.0:vorbis_synthesis_init
 libvorbis.so.0:vorbis_synthesis_pcmout
 libvorbis.so.0:vorbis_synthesis_read
-libvpx.so.7:vpx_codec_dec_init_ver
-libvpx.so.7:vpx_codec_decode
-libvpx.so.7:vpx_codec_destroy
-libvpx.so.7:vpx_codec_get_frame
-libvpx.so.7:vpx_codec_vp8_dx
-libvpx.so.7:vpx_codec_vp9_dx
+libvpx.so.8:vpx_codec_dec_init_ver
+libvpx.so.8:vpx_codec_decode
+libvpx.so.8:vpx_codec_destroy
+libvpx.so.8:vpx_codec_get_frame
+libvpx.so.8:vpx_codec_vp8_dx
+libvpx.so.8:vpx_codec_vp9_dx
 libwebp.so.7:WebPConfigInitInternal
 libwebp.so.7:WebPConfigLosslessPreset
 libwebp.so.7:WebPDecodeRGBAInto

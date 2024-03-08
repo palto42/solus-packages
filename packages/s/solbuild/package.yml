@@ -1,9 +1,9 @@
 name       : solbuild
-homepage   : https://github.com/solus-project/solbuild
-version    : 1.5.4
-release    : 45
+version    : 1.6.1
+release    : 52
 source     :
-    - https://github.com/getsolus/solbuild/releases/download/v1.5.4/solbuild-1.5.4.tar.xz : fc1c19055ac01a1c40413a5496edbf30c304282a31c2a8c7b2388d2fc72b5405
+    - https://github.com/getsolus/solbuild/archive/refs/tags/v1.6.1.tar.gz : 712aa9a3394040819ba5705b07d4b2f71a97dd541ddb26d8518427bc9838f716
+homepage   : https://github.com/getsolus/solbuild
 license    : Apache-2.0
 component  :
     - programming.tools
@@ -21,14 +21,11 @@ patterns   :
 networking : yes
 builddeps  :
     - pkgconfig(libcurl)
-    - pkgconfig(libgit2)
     - golang
 rundeps    :
-    - git
-    - config-unstable : solbuild
     - config-local-unstable : solbuild
-setup      : |
-    %apply_patches
+    - config-unstable : solbuild
+    - git
 build      : |
     %make
 install    : |

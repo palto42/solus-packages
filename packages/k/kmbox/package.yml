@@ -1,8 +1,8 @@
 name       : kmbox
-version    : 23.04.3
-release    : 66
+version    : 23.08.5
+release    : 69
 source     :
-    - https://cdn.download.kde.org/stable/release-service/23.04.3/src/kmbox-23.04.3.tar.xz : e6d8ff2b7ddac750a04bbb9117639fc771eedd98a5dc9e4d90c22b73b9740d16
+    - https://cdn.download.kde.org/stable/release-service/23.08.5/src/kmbox-23.08.5.tar.xz : e583b87b0eb995ebfafa67817748c23cbd872108451e6bc8cd9590ba7ecdf400
 homepage   : https://kde.org/
 license    : LGPL-2.1-or-later
 component  : desktop.library

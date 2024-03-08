@@ -8,7 +8,6 @@ UNKNOWN:PyCFunction_Type
 UNKNOWN:PyCMethod_New
 UNKNOWN:PyCapsule_New
 UNKNOWN:PyClassMethod_New
-UNKNOWN:PyCode_New
 UNKNOWN:PyCode_NewEmpty
 UNKNOWN:PyDescr_NewClassMethod
 UNKNOWN:PyDict_Copy
@@ -24,11 +23,13 @@ UNKNOWN:PyErr_Clear
 UNKNOWN:PyErr_ExceptionMatches
 UNKNOWN:PyErr_Fetch
 UNKNOWN:PyErr_Format
+UNKNOWN:PyErr_GetExcInfo
 UNKNOWN:PyErr_GivenExceptionMatches
 UNKNOWN:PyErr_NormalizeException
 UNKNOWN:PyErr_Occurred
 UNKNOWN:PyErr_PrintEx
 UNKNOWN:PyErr_Restore
+UNKNOWN:PyErr_SetExcInfo
 UNKNOWN:PyErr_SetObject
 UNKNOWN:PyErr_SetString
 UNKNOWN:PyErr_WarnEx
@@ -40,7 +41,6 @@ UNKNOWN:PyExc_AttributeError
 UNKNOWN:PyExc_DeprecationWarning
 UNKNOWN:PyExc_Exception
 UNKNOWN:PyExc_ImportError
-UNKNOWN:PyExc_KeyError
 UNKNOWN:PyExc_NameError
 UNKNOWN:PyExc_OverflowError
 UNKNOWN:PyExc_RuntimeError
@@ -125,16 +125,19 @@ UNKNOWN:PyType_Modified
 UNKNOWN:PyType_Ready
 UNKNOWN:PyType_Type
 UNKNOWN:PyUnicode_AsUTF8
+UNKNOWN:PyUnicode_AsUTF8AndSize
 UNKNOWN:PyUnicode_AsUTF8String
 UNKNOWN:PyUnicode_Compare
 UNKNOWN:PyUnicode_Decode
 UNKNOWN:PyUnicode_DecodeUTF8
 UNKNOWN:PyUnicode_Format
 UNKNOWN:PyUnicode_FromFormat
+UNKNOWN:PyUnicode_FromOrdinal
 UNKNOWN:PyUnicode_FromString
 UNKNOWN:PyUnicode_FromStringAndSize
 UNKNOWN:PyUnicode_InternFromString
 UNKNOWN:PyUnicode_Join
+UNKNOWN:PyUnicode_New
 UNKNOWN:PyUnicode_Split
 UNKNOWN:PyUnicode_Type
 UNKNOWN:Py_EnterRecursiveCall
@@ -146,8 +149,8 @@ UNKNOWN:_PyDict_SetItem_KnownHash
 UNKNOWN:_PyObject_GC_New
 UNKNOWN:_PyObject_GenericGetAttrWithDict
 UNKNOWN:_PyObject_GetDictPtr
-UNKNOWN:_PyThreadState_UncheckedGet
 UNKNOWN:_PyType_Lookup
+UNKNOWN:_PyUnicode_FastCopyCharacters
 UNKNOWN:_PyUnicode_Ready
 UNKNOWN:_Py_Dealloc
 UNKNOWN:_Py_FalseStruct
@@ -160,6 +163,7 @@ libc.so.6:free
 libc.so.6:malloc
 libc.so.6:memcmp
 libc.so.6:memcpy
+libc.so.6:memset
 libc.so.6:rand
 libc.so.6:strlen
 libm.so.6:log

@@ -1,8 +1,8 @@
 name       : thin-provisioning-tools
-version    : 1.0.6
-release    : 3
+version    : 1.0.12
+release    : 8
 source     :
-    - https://github.com/jthornber/thin-provisioning-tools/archive/refs/tags/v1.0.6.tar.gz : bb64481c2bef330004b12cdae7cdc68a4790e55e4c0b7a3061dfb718e8396962
+    - https://github.com/jthornber/thin-provisioning-tools/archive/refs/tags/v1.0.12.tar.gz : 55f3423c22d3a5716be88d0ae9155c95d8145cb3ee65f89ff96d2d6a9ede6ad5
 license    : GPL-3.0-or-later
 component  : system.utils
 summary    : A suite of tools for manipulating the metadata of the dm-thin, dm-cache and dm-era device-mapper targets
@@ -11,7 +11,12 @@ description: |
 networking : yes
 builddeps  :
     - cargo
+setup      : |
+    cargo fetch \
+                --locked
 build      : |
-    cargo build --release
+    cargo build \
+                --frozen \
+                --release
 install    : |
     %make_install

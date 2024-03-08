@@ -1,20 +1,30 @@
 name       : lmdb
-version    : 0.9.29
-release    : 8
+version    : 0.9.32
+release    : 10
 source     :
-    - https://github.com/LMDB/lmdb/archive/LMDB_0.9.29.tar.gz : 22054926b426c66d8f2bc22071365df6e35f3aacf19ad943bc6167d4cae3bebb
+    - https://git.openldap.org/openldap/openldap/-/archive/LMDB_0.9.32/openldap-LMDB_0.9.32.tar.gz : 70d553f80968f5117f2f3d4d7f0b89cb8fb69dadc35131263a2499bb58f7d015
 license    : OLDAP-2.8
 component  : programming.library
 libsplit   : no
+homepage   : https://symas.com/lmdb
 summary    : Lightning memory-mapped database library from Symas
 description: |
     Lightning memory-mapped database library from Symas.
 setup      : |
-    %patch -p1 < $pkgfiles/0001-Use-Solus-flags.patch
+    %patch -p1 -i $pkgfiles/0001-Use-Solus-flags.patch
 build      : |
     %make prefix=/usr libdir=%libdir% -C libraries/liblmdb
 install    : |
     %make_install prefix=/usr libdir=%libdir% -C libraries/liblmdb
     rm $installdir%libdir%/*.a
+
+    # Install pkgconfig file
+    sed -e 's:@PREFIX@:/usr:g' \
+        -e 's:@EXEC_PREFIX@:/usr:g' \
+        -e 's:@LIBDIR@:%libdir%:g' \
+        -e 's:@INCLUDEDIR@:/usr/include:g' \
+        -e 's:@PACKAGE_VERSION@:%version%:g' \
+    $pkgfiles/lmdb.pc.in > lmdb.pc
+    install -Dpm 00644 -t $installdir/%libdir%/pkgconfig lmdb.pc
 check      : |
     %make test -C libraries/liblmdb

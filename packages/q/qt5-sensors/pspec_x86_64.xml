@@ -15,7 +15,7 @@
         <Summary xml:lang="en">Qt5 Sensors Module</Summary>
         <Description xml:lang="en">The Qt Sensors API provides access to sensor hardware via QML and C++ interfaces. The Qt Sensors API also provides a motion gesture recognition API for devices.
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>qt5-sensors</Name>
@@ -24,12 +24,9 @@
 </Description>
         <PartOf>desktop.qt</PartOf>
         <Files>
-            <Path fileType="library">/usr/lib64/libQt5Sensors.prl</Path>
             <Path fileType="library">/usr/lib64/libQt5Sensors.so.5</Path>
             <Path fileType="library">/usr/lib64/libQt5Sensors.so.5.15</Path>
-            <Path fileType="library">/usr/lib64/libQt5Sensors.so.5.15.10</Path>
-            <Path fileType="library">/usr/lib64/qt5/mkspecs/modules/qt_lib_sensors.pri</Path>
-            <Path fileType="library">/usr/lib64/qt5/mkspecs/modules/qt_lib_sensors_private.pri</Path>
+            <Path fileType="library">/usr/lib64/libQt5Sensors.so.5.15.12</Path>
             <Path fileType="library">/usr/lib64/qt5/plugins/sensorgestures/libqtsensorgestures_counterplugin.so</Path>
             <Path fileType="library">/usr/lib64/qt5/plugins/sensorgestures/libqtsensorgestures_plugin.so</Path>
             <Path fileType="library">/usr/lib64/qt5/plugins/sensorgestures/libqtsensorgestures_shakeplugin.so</Path>
@@ -48,7 +45,7 @@
 </Description>
         <PartOf>programming.library</PartOf>
         <RuntimeDependencies>
-            <Dependency release="30">qt5-sensors</Dependency>
+            <Dependency release="33">qt5-sensors</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib64/qt5/examples/sensors/grue/Grue/libdeclarative_grue.so</Path>
@@ -59,6 +56,7 @@
             <Path fileType="library">/usr/lib64/qt5/examples/sensors/grue/grue.png</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/sensors/grue/grue.pro</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/sensors/grue/grue.qml</Path>
+            <Path fileType="library">/usr/lib64/qt5/examples/sensors/grue/grue.qmlc</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/sensors/grue/grue.xcf</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/sensors/grue/grue_app</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/sensors/grue/icon.xcf</Path>
@@ -86,11 +84,16 @@
             <Path fileType="library">/usr/lib64/qt5/examples/sensors/grue/qml.qrc</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/sensors/grue/sensors/libqtsensors_grue.so</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/sensors/maze/Congratulation.qml</Path>
+            <Path fileType="library">/usr/lib64/qt5/examples/sensors/maze/Congratulation.qmlc</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/sensors/maze/LabyrinthSquare.qml</Path>
+            <Path fileType="library">/usr/lib64/qt5/examples/sensors/maze/LabyrinthSquare.qmlc</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/sensors/maze/Mouse.qml</Path>
+            <Path fileType="library">/usr/lib64/qt5/examples/sensors/maze/Mouse.qmlc</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/sensors/maze/android/AndroidManifest.xml</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/sensors/maze/components/ApplicationWindow.qml</Path>
+            <Path fileType="library">/usr/lib64/qt5/examples/sensors/maze/components/ApplicationWindow.qmlc</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/sensors/maze/components/Button.qml</Path>
+            <Path fileType="library">/usr/lib64/qt5/examples/sensors/maze/components/Button.qmlc</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/sensors/maze/components/images/button_background_disabled.png</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/sensors/maze/components/images/button_background_normal.png</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/sensors/maze/components/images/button_background_pressed.png</Path>
@@ -106,10 +109,14 @@
             <Path fileType="library">/usr/lib64/qt5/examples/sensors/maze/maze</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/sensors/maze/maze.pro</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/sensors/maze/maze.qml</Path>
+            <Path fileType="library">/usr/lib64/qt5/examples/sensors/maze/maze.qmlc</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/sensors/maze/maze.qrc</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/sensors/qmlqtsensors/components/ApplicationWindow.qml</Path>
+            <Path fileType="library">/usr/lib64/qt5/examples/sensors/qmlqtsensors/components/ApplicationWindow.qmlc</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/sensors/qmlqtsensors/components/Button.qml</Path>
+            <Path fileType="library">/usr/lib64/qt5/examples/sensors/qmlqtsensors/components/Button.qmlc</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/sensors/qmlqtsensors/components/Divider.qml</Path>
+            <Path fileType="library">/usr/lib64/qt5/examples/sensors/qmlqtsensors/components/Divider.qmlc</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/sensors/qmlqtsensors/components/images/button_background_disabled.png</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/sensors/qmlqtsensors/components/images/button_background_normal.png</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/sensors/qmlqtsensors/components/images/button_background_pressed.png</Path>
@@ -117,11 +124,16 @@
             <Path fileType="library">/usr/lib64/qt5/examples/sensors/qmlqtsensors/qmlqtsensors</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/sensors/qmlqtsensors/qmlqtsensors.pro</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/sensors/qmlqtsensors/qmlqtsensors.qml</Path>
+            <Path fileType="library">/usr/lib64/qt5/examples/sensors/qmlqtsensors/qmlqtsensors.qmlc</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/sensors/qmlqtsensors/qmlqtsensors.qrc</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/sensors/qmlsensorgestures/Button.qml</Path>
+            <Path fileType="library">/usr/lib64/qt5/examples/sensors/qmlsensorgestures/Button.qmlc</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/sensors/qmlsensorgestures/GestureList.qml</Path>
+            <Path fileType="library">/usr/lib64/qt5/examples/sensors/qmlsensorgestures/GestureList.qmlc</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/sensors/qmlsensorgestures/GestureView.qml</Path>
+            <Path fileType="library">/usr/lib64/qt5/examples/sensors/qmlsensorgestures/GestureView.qmlc</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/sensors/qmlsensorgestures/GesturesView.qml</Path>
+            <Path fileType="library">/usr/lib64/qt5/examples/sensors/qmlsensorgestures/GesturesView.qmlc</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/sensors/qmlsensorgestures/main.cpp</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/sensors/qmlsensorgestures/plugin/plugin.pro</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/sensors/qmlsensorgestures/plugin/qcountergestureplugin.cpp</Path>
@@ -133,6 +145,7 @@
             <Path fileType="library">/usr/lib64/qt5/examples/sensors/qmlsensorgestures/qmlsensorgestures</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/sensors/qmlsensorgestures/qmlsensorgestures.pro</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/sensors/qmlsensorgestures/qmlsensorgestures.qml</Path>
+            <Path fileType="library">/usr/lib64/qt5/examples/sensors/qmlsensorgestures/qmlsensorgestures.qmlc</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/sensors/sensor_explorer/Explorer/libdeclarative_explorer.so</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/sensors/sensor_explorer/Explorer/qmldir</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/sensors/sensor_explorer/import/explorer.cpp</Path>
@@ -152,6 +165,7 @@
             <Path fileType="library">/usr/lib64/qt5/examples/sensors/sensor_explorer/sensor_explorer</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/sensors/sensor_explorer/sensor_explorer.pro</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/sensors/sensor_explorer/sensor_explorer.qml</Path>
+            <Path fileType="library">/usr/lib64/qt5/examples/sensors/sensor_explorer/sensor_explorer.qmlc</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/sensors/sensorgestures/gesture</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/sensors/sensorgestures/main.cpp</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/sensors/sensorgestures/mainwindow.cpp</Path>
@@ -168,6 +182,7 @@
             <Path fileType="library">/usr/lib64/qt5/examples/sensors/shakeit/shakeit</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/sensors/shakeit/shakeit.pro</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/sensors/shakeit/shakeit.qml</Path>
+            <Path fileType="library">/usr/lib64/qt5/examples/sensors/shakeit/shakeit.qmlc</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/sensors/shakeit/shakeit.qrc</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/sensors/stub.h</Path>
         </Files>
@@ -179,35 +194,35 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="30">qt5-sensors</Dependency>
+            <Dependency release="33">qt5-sensors</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="header">/usr/include/QtSensors/5.15.10/QtSensors/private/qaccelerometer_p.h</Path>
-            <Path fileType="header">/usr/include/QtSensors/5.15.10/QtSensors/private/qaltimeter_p.h</Path>
-            <Path fileType="header">/usr/include/QtSensors/5.15.10/QtSensors/private/qambientlightsensor_p.h</Path>
-            <Path fileType="header">/usr/include/QtSensors/5.15.10/QtSensors/private/qambienttemperaturesensor_p.h</Path>
-            <Path fileType="header">/usr/include/QtSensors/5.15.10/QtSensors/private/qcompass_p.h</Path>
-            <Path fileType="header">/usr/include/QtSensors/5.15.10/QtSensors/private/qdistancesensor_p.h</Path>
-            <Path fileType="header">/usr/include/QtSensors/5.15.10/QtSensors/private/qgyroscope_p.h</Path>
-            <Path fileType="header">/usr/include/QtSensors/5.15.10/QtSensors/private/qholstersensor_p.h</Path>
-            <Path fileType="header">/usr/include/QtSensors/5.15.10/QtSensors/private/qhumiditysensor_p.h</Path>
-            <Path fileType="header">/usr/include/QtSensors/5.15.10/QtSensors/private/qirproximitysensor_p.h</Path>
-            <Path fileType="header">/usr/include/QtSensors/5.15.10/QtSensors/private/qlidsensor_p.h</Path>
-            <Path fileType="header">/usr/include/QtSensors/5.15.10/QtSensors/private/qlightsensor_p.h</Path>
-            <Path fileType="header">/usr/include/QtSensors/5.15.10/QtSensors/private/qmagnetometer_p.h</Path>
-            <Path fileType="header">/usr/include/QtSensors/5.15.10/QtSensors/private/qorientationsensor_p.h</Path>
-            <Path fileType="header">/usr/include/QtSensors/5.15.10/QtSensors/private/qpressuresensor_p.h</Path>
-            <Path fileType="header">/usr/include/QtSensors/5.15.10/QtSensors/private/qproximitysensor_p.h</Path>
-            <Path fileType="header">/usr/include/QtSensors/5.15.10/QtSensors/private/qrotationsensor_p.h</Path>
-            <Path fileType="header">/usr/include/QtSensors/5.15.10/QtSensors/private/qsensor_p.h</Path>
-            <Path fileType="header">/usr/include/QtSensors/5.15.10/QtSensors/private/qsensorbackend_p.h</Path>
-            <Path fileType="header">/usr/include/QtSensors/5.15.10/QtSensors/private/qsensorgesture_p.h</Path>
-            <Path fileType="header">/usr/include/QtSensors/5.15.10/QtSensors/private/qsensorgesturemanagerprivate_p.h</Path>
-            <Path fileType="header">/usr/include/QtSensors/5.15.10/QtSensors/private/qtapsensor_p.h</Path>
-            <Path fileType="header">/usr/include/QtSensors/5.15.10/QtSensors/private/qtiltsensor_p.h</Path>
-            <Path fileType="header">/usr/include/QtSensors/5.15.10/QtSensors/private/qtsensors-config_p.h</Path>
-            <Path fileType="header">/usr/include/QtSensors/5.15.10/QtSensors/private/sensorlog_p.h</Path>
-            <Path fileType="header">/usr/include/QtSensors/5.15.10/QtSensors/private/simulatorgesturescommon_p.h</Path>
+            <Path fileType="header">/usr/include/QtSensors/5.15.12/QtSensors/private/qaccelerometer_p.h</Path>
+            <Path fileType="header">/usr/include/QtSensors/5.15.12/QtSensors/private/qaltimeter_p.h</Path>
+            <Path fileType="header">/usr/include/QtSensors/5.15.12/QtSensors/private/qambientlightsensor_p.h</Path>
+            <Path fileType="header">/usr/include/QtSensors/5.15.12/QtSensors/private/qambienttemperaturesensor_p.h</Path>
+            <Path fileType="header">/usr/include/QtSensors/5.15.12/QtSensors/private/qcompass_p.h</Path>
+            <Path fileType="header">/usr/include/QtSensors/5.15.12/QtSensors/private/qdistancesensor_p.h</Path>
+            <Path fileType="header">/usr/include/QtSensors/5.15.12/QtSensors/private/qgyroscope_p.h</Path>
+            <Path fileType="header">/usr/include/QtSensors/5.15.12/QtSensors/private/qholstersensor_p.h</Path>
+            <Path fileType="header">/usr/include/QtSensors/5.15.12/QtSensors/private/qhumiditysensor_p.h</Path>
+            <Path fileType="header">/usr/include/QtSensors/5.15.12/QtSensors/private/qirproximitysensor_p.h</Path>
+            <Path fileType="header">/usr/include/QtSensors/5.15.12/QtSensors/private/qlidsensor_p.h</Path>
+            <Path fileType="header">/usr/include/QtSensors/5.15.12/QtSensors/private/qlightsensor_p.h</Path>
+            <Path fileType="header">/usr/include/QtSensors/5.15.12/QtSensors/private/qmagnetometer_p.h</Path>
+            <Path fileType="header">/usr/include/QtSensors/5.15.12/QtSensors/private/qorientationsensor_p.h</Path>
+            <Path fileType="header">/usr/include/QtSensors/5.15.12/QtSensors/private/qpressuresensor_p.h</Path>
+            <Path fileType="header">/usr/include/QtSensors/5.15.12/QtSensors/private/qproximitysensor_p.h</Path>
+            <Path fileType="header">/usr/include/QtSensors/5.15.12/QtSensors/private/qrotationsensor_p.h</Path>
+            <Path fileType="header">/usr/include/QtSensors/5.15.12/QtSensors/private/qsensor_p.h</Path>
+            <Path fileType="header">/usr/include/QtSensors/5.15.12/QtSensors/private/qsensorbackend_p.h</Path>
+            <Path fileType="header">/usr/include/QtSensors/5.15.12/QtSensors/private/qsensorgesture_p.h</Path>
+            <Path fileType="header">/usr/include/QtSensors/5.15.12/QtSensors/private/qsensorgesturemanagerprivate_p.h</Path>
+            <Path fileType="header">/usr/include/QtSensors/5.15.12/QtSensors/private/qtapsensor_p.h</Path>
+            <Path fileType="header">/usr/include/QtSensors/5.15.12/QtSensors/private/qtiltsensor_p.h</Path>
+            <Path fileType="header">/usr/include/QtSensors/5.15.12/QtSensors/private/qtsensors-config_p.h</Path>
+            <Path fileType="header">/usr/include/QtSensors/5.15.12/QtSensors/private/sensorlog_p.h</Path>
+            <Path fileType="header">/usr/include/QtSensors/5.15.12/QtSensors/private/simulatorgesturescommon_p.h</Path>
             <Path fileType="header">/usr/include/QtSensors/QAccelerometer</Path>
             <Path fileType="header">/usr/include/QtSensors/QAccelerometerFilter</Path>
             <Path fileType="header">/usr/include/QtSensors/QAccelerometerReading</Path>
@@ -318,14 +333,17 @@
             <Path fileType="library">/usr/lib64/cmake/Qt5Sensors/Qt5Sensors_QShakeSensorGesturePlugin.cmake</Path>
             <Path fileType="library">/usr/lib64/cmake/Qt5Sensors/Qt5Sensors_QtSensorGesturePlugin.cmake</Path>
             <Path fileType="library">/usr/lib64/cmake/Qt5Sensors/Qt5Sensors_genericSensorPlugin.cmake</Path>
+            <Path fileType="library">/usr/lib64/libQt5Sensors.prl</Path>
             <Path fileType="library">/usr/lib64/libQt5Sensors.so</Path>
             <Path fileType="data">/usr/lib64/pkgconfig/Qt5Sensors.pc</Path>
+            <Path fileType="library">/usr/lib64/qt5/mkspecs/modules/qt_lib_sensors.pri</Path>
+            <Path fileType="library">/usr/lib64/qt5/mkspecs/modules/qt_lib_sensors_private.pri</Path>
         </Files>
     </Package>
     <History>
-        <Update release="30">
-            <Date>2023-07-15</Date>
-            <Version>5.15.10</Version>
+        <Update release="33">
+            <Date>2024-03-06</Date>
+            <Version>5.15.12</Version>
             <Comment>Packaging update</Comment>
             <Name>Reilly Brogan</Name>
             <Email>solus@reillybrogan.com</Email>

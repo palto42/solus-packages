@@ -1,8 +1,8 @@
 name       : python-psutil
-version    : 5.9.5
-release    : 29
+version    : 5.9.8
+release    : 32
 source     :
-    - https://github.com/giampaolo/psutil/archive/refs/tags/release-5.9.5.tar.gz : fba07e5d76e129ee1a374ea911e9bfc4161636260e33d055abb2b426ed182429
+    - https://github.com/giampaolo/psutil/archive/refs/tags/release-5.9.8.tar.gz : 962fbb077209fda6416046b704b51ed17a61edde41a4573886640026e2c53bae
 homepage   : https://github.com/giampaolo/psutil
 license    : BSD-3-Clause
 component  : programming.python

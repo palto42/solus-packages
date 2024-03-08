@@ -1,8 +1,8 @@
 name       : adw-gtk3-theme
-version    : '4.9'
-release    : 9
+version    : '5.2'
+release    : 12
 source     :
-    - https://github.com/lassekongo83/adw-gtk3/archive/refs/tags/v4.9.tar.gz : 4ca2082cb5c7fe6ece1a060b9d1952fbae338529ccbcb9fe40bc554bd0a04048
+    - https://github.com/lassekongo83/adw-gtk3/archive/refs/tags/v5.2.tar.gz : 1265b9dbc933bf602da1c419e515752bc8d7b9e6f8a09eafd740315d321501d7
 license    : LGPL-2.1-only
 homepage   : https://github.com/lassekongo83/adw-gtk3
 component  : desktop.theme

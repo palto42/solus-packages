@@ -84,6 +84,7 @@ libQt5Core.so.5:_ZN19QXmlStreamAttributeD1Ev
 libQt5Core.so.5:_ZN4QDirC1ERK7QString
 libQt5Core.so.5:_ZN4QDirD1Ev
 libQt5Core.so.5:_ZN4QUrlC1ERK7QStringNS_11ParsingModeE
+libQt5Core.so.5:_ZN5QChar8categoryEj
 libQt5Core.so.5:_ZN5QFile4openE6QFlagsIN9QIODevice12OpenModeFlagEE
 libQt5Core.so.5:_ZN5QFileC1ERK7QString
 libQt5Core.so.5:_ZN5QFileD1Ev
@@ -290,15 +291,15 @@ libQt5Xml.so.5:_ZNK8QDomNode18nextSiblingElementERK7QString
 libQt5Xml.so.5:_ZNK8QDomNode6isNullEv
 libQt5Xml.so.5:_ZNK8QDomNode9localNameEv
 libQt5Xml.so.5:_ZNK8QDomNode9toElementEv
-libavformat.so.58:av_find_default_stream_index
-libavformat.so.58:av_guess_frame_rate
-libavformat.so.58:av_guess_sample_aspect_ratio
-libavformat.so.58:avformat_alloc_context
-libavformat.so.58:avformat_close_input
-libavformat.so.58:avformat_find_stream_info
-libavformat.so.58:avformat_open_input
-libavutil.so.56:av_dict_get
-libavutil.so.56:av_reduce
+libavformat.so.60:av_find_default_stream_index
+libavformat.so.60:av_guess_frame_rate
+libavformat.so.60:av_guess_sample_aspect_ratio
+libavformat.so.60:avformat_alloc_context
+libavformat.so.60:avformat_close_input
+libavformat.so.60:avformat_find_stream_info
+libavformat.so.60:avformat_open_input
+libavutil.so.58:av_dict_get
+libavutil.so.58:av_reduce
 libc.so.6:__cxa_atexit
 libc.so.6:__errno_location
 libc.so.6:__getdelim
@@ -328,6 +329,7 @@ libepub.so.0:epub_open
 libepub.so.0:epub_tit_curr_valid
 libepub.so.0:epub_tit_get_curr_link
 libepub.so.0:epub_tit_next
+libexiv2.so.27:_ZN5Exiv210enableBMFFEb
 libexiv2.so.27:_ZN5Exiv212ImageFactory4openERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEb
 libexiv2.so.27:_ZN5Exiv27ExifKeyC1ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
 libexiv2.so.27:_ZN5Exiv27ExifKeyD1Ev
@@ -360,8 +362,6 @@ libstdc++.so.6:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_dispose
 libstdc++.so.6:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_createERmm
 libstdc++.so.6:_ZNSt8__detail15_List_node_base7_M_hookEPS0_
 libstdc++.so.6:_ZNSt8__detail15_List_node_base9_M_unhookEv
-libstdc++.so.6:_ZNSt8ios_base4InitC1Ev
-libstdc++.so.6:_ZNSt8ios_base4InitD1Ev
 libstdc++.so.6:_ZNSt8ios_baseC2Ev
 libstdc++.so.6:_ZNSt8ios_baseD2Ev
 libstdc++.so.6:_ZNSt9basic_iosIcSt11char_traitsIcEE4initEPSt15basic_streambufIcS1_E
@@ -371,6 +371,7 @@ libstdc++.so.6:_ZSt18_Rb_tree_decrementPSt18_Rb_tree_node_base
 libstdc++.so.6:_ZSt18_Rb_tree_incrementPSt18_Rb_tree_node_base
 libstdc++.so.6:_ZSt19__throw_logic_errorPKc
 libstdc++.so.6:_ZSt20__throw_length_errorPKc
+libstdc++.so.6:_ZSt21ios_base_library_initv
 libstdc++.so.6:_ZSt29_Rb_tree_insert_and_rebalancebPSt18_Rb_tree_node_baseS0_RS_
 libstdc++.so.6:_ZSt7getlineIcSt11char_traitsIcESaIcEERSt13basic_istreamIT_T0_ES7_RNSt7__cxx1112basic_stringIS4_S5_T1_EES4_
 libstdc++.so.6:_ZTISt9exception
@@ -449,6 +450,8 @@ libtag.so.1:_ZN6TagLib3MPC4FileD1Ev
 libtag.so.1:_ZN6TagLib3Ogg11XiphComment10addPictureEPNS_4FLAC7PictureE
 libtag.so.1:_ZN6TagLib3Ogg11XiphComment11pictureListEv
 libtag.so.1:_ZN6TagLib3Ogg11XiphComment13removePictureEPNS_4FLAC7PictureEb
+libtag.so.1:_ZN6TagLib3Ogg4FLAC4FileC1EPNS_8IOStreamEbNS_15AudioProperties9ReadStyleE
+libtag.so.1:_ZN6TagLib3Ogg4FLAC4FileD1Ev
 libtag.so.1:_ZN6TagLib3Ogg4Opus4File13setPropertiesERKNS_11PropertyMapE
 libtag.so.1:_ZN6TagLib3Ogg4Opus4File4saveEv
 libtag.so.1:_ZN6TagLib3Ogg4Opus4FileC1EPNS_8IOStreamEbNS_15AudioProperties9ReadStyleE
@@ -535,6 +538,8 @@ libtag.so.1:_ZNK6TagLib3MP44Item7isValidEv
 libtag.so.1:_ZNK6TagLib3MP48CoverArt4dataEv
 libtag.so.1:_ZNK6TagLib3MPC4File10propertiesEv
 libtag.so.1:_ZNK6TagLib3MPC4File9hasAPETagEv
+libtag.so.1:_ZNK6TagLib3Ogg4FLAC4File10propertiesEv
+libtag.so.1:_ZNK6TagLib3Ogg4FLAC4File3tagEv
 libtag.so.1:_ZNK6TagLib3Ogg4Opus4File10propertiesEv
 libtag.so.1:_ZNK6TagLib3Ogg4Opus4File3tagEv
 libtag.so.1:_ZNK6TagLib3Ogg5Speex4File10propertiesEv
@@ -547,7 +552,7 @@ libtag.so.1:_ZNK6TagLib4MPEG4File10propertiesEv
 libtag.so.1:_ZNK6TagLib4MPEG4File11hasID3v2TagEv
 libtag.so.1:_ZNK6TagLib4RIFF3WAV4File10propertiesEv
 libtag.so.1:_ZNK6TagLib4RIFF3WAV4File11hasID3v2TagEv
-libtag.so.1:_ZNK6TagLib4RIFF3WAV4File3tagEv
+libtag.so.1:_ZNK6TagLib4RIFF3WAV4File8ID3v2TagEv
 libtag.so.1:_ZNK6TagLib4RIFF4AIFF4File10propertiesEv
 libtag.so.1:_ZNK6TagLib4RIFF4AIFF4File11hasID3v2TagEv
 libtag.so.1:_ZNK6TagLib4RIFF4AIFF4File3tagEv

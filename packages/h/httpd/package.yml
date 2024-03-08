@@ -1,26 +1,31 @@
 name       : httpd
-version    : 2.4.57
-release    : 27
+version    : 2.4.58
+release    : 30
 source     :
-    - http://archive.apache.org/dist/httpd/httpd-2.4.57.tar.bz2 : dbccb84aee95e095edfbb81e5eb926ccd24e6ada55dcd83caecb262e5cf94d2a
+    - https://dlcdn.apache.org/httpd/httpd-2.4.58.tar.bz2 : fa16d72a078210a54c47dd5bef2f8b9b8a01d94909a51453956b3ec6442ea4c5
+homepage   : https://httpd.apache.org/
 license    : Apache-2.0
 component  : programming
-summary    : A secure, efficient and extensible server that provides HTTP services in sync with the current HTTP standards
+summary    : A secure, standards-compliant, efficient and extensible HTTP server.
 description: |
-    A secure, efficient and extensible server that provides HTTP services in sync with the current HTTP standards.
+    Produced via a collaborative software development effort aimed at creating a robust, commercial-grade, featureful,
+    and freely-available source code implementation of an HTTP (Web) server.
+
+    Based on the the public domain HTTP daemon devloped by Rob McCool at the National Center for Supercomputing Applications
+    (NCSA), University of Illonois, Urbana-Champaign.
 builddeps  :
     - pkgconfig(apr-util-1)
+    - pkgconfig(ldap)
     - pkgconfig(libnghttp2)
     - pkgconfig(libpcre)
     - pkgconfig(libxcrypt)
     - pkgconfig(openssl)
     - fcgi-devel
-    - openldap-devel
     - perl
 setup      : |
     %apply_patches
     cat $pkgfiles/solus.layout >> config.layout
-    %configure \
+    %configure_no_runstatedir \
         --datadir=/usr/share/httpd \
         --disable-static \
         --enable-alias \

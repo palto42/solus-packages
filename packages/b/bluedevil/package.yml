@@ -1,8 +1,8 @@
 name       : bluedevil
-version    : 5.27.7
-release    : 89
+version    : 5.27.10
+release    : 91
 source     :
-    - https://cdn.download.kde.org/stable/plasma/5.27.7/bluedevil-5.27.7.tar.xz : cbc1aea8cceefd68a015098101de669df9a4d619a7a7baeb823b1b60b362bf35
+    - https://cdn.download.kde.org/stable/plasma/5.27.10/bluedevil-5.27.10.tar.xz : 771fd58c2e1945e9f375598a5d1120671d9142d95580f08ec22494dd4d7fa180
 homepage   : https://www.kde.org/workspaces/plasmadesktop/
 license    :
     - BSD-3-Clause

@@ -1,0 +1,22 @@
+name       : libei
+version    : 1.2.1
+release    : 3
+source     :
+    - https://gitlab.freedesktop.org/libinput/libei/-/archive/1.2.1/libei-1.2.1.tar.gz : 7e06f06aa4dd1f7d170a0e5194644fe5cc889adc9b7be16bed5f2c39145569a4
+homepage   : https://libinput.pages.freedesktop.org/libei/
+license    : MIT
+component  : desktop.library
+summary    : libei is a library for Emulated Input, primarily aimed at the Wayland stack.
+description: |
+    libei is a library for Emulated Input, primarily aimed at the Wayland stack.
+builddeps  :
+    - pkgconfig(libevdev)
+    - pkgconfig(xkbcommon)
+    - python-attrs
+    - python-jinja
+setup      : |
+    %meson_configure -Dtests=disabled
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install

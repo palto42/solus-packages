@@ -1,0 +1,24 @@
+name       : kf6-kunitconversion
+version    : 6.0.0
+release    : 3
+source     :
+    - https://cdn.download.kde.org/stable/frameworks/6.0/kunitconversion-6.0.0.tar.xz : c88494ac8971c25dc6bc9a1119ea44c0f8eda44e9d2883ade9aca651e9968d5e
+homepage   : https://community.kde.org/Frameworks
+license    : LGPL-2.0-or-later
+component  : desktop.library
+summary    : Converting physical units
+description: |
+    KUnitConversion provides functions to convert values in different physical units. It supports converting different prefixes (e.g. kilo, mega, giga) as well as converting between different unit systems (e.g. liters, gallons).
+builddeps  :
+    - kf6-ki18n-devel
+rundeps    :
+    - devel :
+        - qt6-base-devel
+clang      : yes
+optimize   : thin-lto
+setup      : |
+    %cmake_kf6
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install

@@ -1,8 +1,9 @@
 name       : yuzu
-version    : '1559'
-release    : 25
+version    : '1704'
+release    : 32
 source     :
-    - git|https://github.com/yuzu-emu/yuzu-mainline : mainline-0-1559
+    - git|https://github.com/yuzu-emu/yuzu-mainline.git : mainline-0-1704
+homepage   : https://yuzu-emu.org/
 license    : GPL-3.0-or-later
 component  : games.emulator
 summary    : The world's most popular, open-source, Nintendo Switch emulator.
@@ -11,8 +12,8 @@ description: |
 builddeps  :
     - pkgconfig(Qt5Multimedia)
     - pkgconfig(fmt)
+    - pkgconfig(gamemode)
     - pkgconfig(glu)
-    - pkgconfig(inih)
     - pkgconfig(libavcodec)
     - pkgconfig(libenet)
     - pkgconfig(liblz4)
@@ -22,15 +23,21 @@ builddeps  :
     - pkgconfig(opus)
     - pkgconfig(sdl2)
     - pkgconfig(x11)
-    - glslang
+    - cubeb-devel
+    - glslang-devel
     - libboost-devel
     - llvm-clang
     - llvm-devel
     - nlohmann-json
     - robin-map
+rundeps    :
+    - gamemode
 setup      : |
     %cmake_ninja \
-        -DENABLE_CUBEB=OFF \
+        -DBUILD_REPOSITORY=yuzu-emu/yuzu-mainline \
+        -DBUILD_TAG=$version \
+        -DTITLE_BAR_FORMAT_IDLE="yuzu | $version {}" \
+        -DTITLE_BAR_FORMAT_RUNNING="yuzu | $version | {}" \
         -DYUZU_CHECK_SUBMODULES=OFF \
         -DYUZU_TESTS=OFF \
         -DYUZU_USE_BUNDLED_QT=OFF \

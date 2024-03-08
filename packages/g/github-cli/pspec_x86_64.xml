@@ -1,6 +1,7 @@
 <PISI>
     <Source>
         <Name>github-cli</Name>
+        <Homepage>https://cli.github.com</Homepage>
         <Packager>
             <Name>Evan Maddock</Name>
             <Email>maddock.evan@vivaldi.net</Email>
@@ -10,7 +11,7 @@
         <Summary xml:lang="en">GitHub’s official command line tool</Summary>
         <Description xml:lang="en">github-cli is a tool that allows for GitHub concepts such as pull requests, issues, and gists to be used on the command line.
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>github-cli</Name>
@@ -33,6 +34,7 @@
             <Path fileType="man">/usr/share/man/man1/gh-auth-refresh.1</Path>
             <Path fileType="man">/usr/share/man/man1/gh-auth-setup-git.1</Path>
             <Path fileType="man">/usr/share/man/man1/gh-auth-status.1</Path>
+            <Path fileType="man">/usr/share/man/man1/gh-auth-switch.1</Path>
             <Path fileType="man">/usr/share/man/man1/gh-auth-token.1</Path>
             <Path fileType="man">/usr/share/man/man1/gh-auth.1</Path>
             <Path fileType="man">/usr/share/man/man1/gh-browse.1</Path>
@@ -137,8 +139,10 @@
             <Path fileType="man">/usr/share/man/man1/gh-project-item-delete.1</Path>
             <Path fileType="man">/usr/share/man/man1/gh-project-item-edit.1</Path>
             <Path fileType="man">/usr/share/man/man1/gh-project-item-list.1</Path>
+            <Path fileType="man">/usr/share/man/man1/gh-project-link.1</Path>
             <Path fileType="man">/usr/share/man/man1/gh-project-list.1</Path>
             <Path fileType="man">/usr/share/man/man1/gh-project-mark-template.1</Path>
+            <Path fileType="man">/usr/share/man/man1/gh-project-unlink.1</Path>
             <Path fileType="man">/usr/share/man/man1/gh-project-view.1</Path>
             <Path fileType="man">/usr/share/man/man1/gh-project.1</Path>
             <Path fileType="man">/usr/share/man/man1/gh-release-create.1</Path>
@@ -209,9 +213,9 @@
         </Files>
     </Package>
     <History>
-        <Update release="31">
-            <Date>2023-09-10</Date>
-            <Version>2.34.0</Version>
+        <Update release="42">
+            <Date>2024-03-04</Date>
+            <Version>2.45.0</Version>
             <Comment>Packaging update</Comment>
             <Name>Evan Maddock</Name>
             <Email>maddock.evan@vivaldi.net</Email>

@@ -1,8 +1,8 @@
 name       : colord-kde
-version    : 23.04.3
-release    : 4
+version    : 23.08.5
+release    : 7
 source     :
-    - https://cdn.download.kde.org/stable/release-service/23.04.3/src/colord-kde-23.04.3.tar.xz : e0cf5bf671e07e866c7ca13f2e0ca11a20b7a27608fdb3cca432e85a39ad16a6
+    - https://cdn.download.kde.org/stable/release-service/23.08.5/src/colord-kde-23.08.5.tar.xz : 466b27bc6131a7c0263cb4e9350702c96d2123050d0312487a6472d0156e00b9
 homepage   : https://userbase.kde.org/Color_Management
 license    :
     - GPL-2.0-or-later

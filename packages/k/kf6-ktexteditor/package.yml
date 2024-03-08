@@ -1,0 +1,42 @@
+name       : kf6-ktexteditor
+version    : 6.0.0
+release    : 3
+source     :
+    - https://cdn.download.kde.org/stable/frameworks/6.0/ktexteditor-6.0.0.tar.xz : 620266c1d288d09f7aee4d2bc8b141c73555d5f033c452bcd2e2db2064b8fd42
+homepage   : https://community.kde.org/Frameworks
+license    :
+    - BSD-2-Clause
+    - LGPL-2.0-or-later
+    - LGPL-2.1-only
+    - LGPL-2.1-or-later
+component  : desktop.library
+summary    : Full text editor component.
+description: |
+    Full text editor component.
+builddeps  :
+    - pkgconfig(Qt6Quick)
+    - pkgconfig(Qt6TextToSpeech)
+    - pkgconfig(editorconfig)
+    - kf6-karchive-devel
+    - kf6-kauth-devel
+    - kf6-kconfig-devel
+    - kf6-kguiaddons-devel
+    - kf6-ki18n-devel
+    - kf6-kio-devel
+    - kf6-kparts-devel
+    - kf6-ktextwidgets-devel
+    - kf6-kxmlgui-devel
+    - kf6-sonnet-devel
+    - kf6-syntax-highlighting-devel
+rundeps    :
+    - devel :
+        - kf6-kparts-devel
+        - kf6-syntax-highlighting-devel
+clang      : yes
+optimize   : thin-lto
+setup      : |
+    %cmake_kf6
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install

@@ -1,16 +1,17 @@
 <PISI>
     <Source>
         <Name>libsecret</Name>
+        <Homepage>https://wiki.gnome.org/Projects/Libsecret</Homepage>
         <Packager>
-            <Name>Zach Bacon</Name>
-            <Email>zachbacon@vba-m.com</Email>
+            <Name>Joey Riches</Name>
+            <Email>josephriches@gmail.com</Email>
         </Packager>
         <License>LGPL-2.1-or-later</License>
         <PartOf>desktop.gnome.core</PartOf>
         <Summary xml:lang="en">The libsecret package contains a GObject based library for accessing the Secret Service API.</Summary>
         <Description xml:lang="en">The libsecret package contains a GObject based library for accessing the Secret Service API.
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>libsecret</Name>
@@ -51,8 +52,10 @@
             <Path fileType="localedata">/usr/share/locale/hr/LC_MESSAGES/libsecret.mo</Path>
             <Path fileType="localedata">/usr/share/locale/hu/LC_MESSAGES/libsecret.mo</Path>
             <Path fileType="localedata">/usr/share/locale/id/LC_MESSAGES/libsecret.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/ie/LC_MESSAGES/libsecret.mo</Path>
             <Path fileType="localedata">/usr/share/locale/it/LC_MESSAGES/libsecret.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ja/LC_MESSAGES/libsecret.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/ka/LC_MESSAGES/libsecret.mo</Path>
             <Path fileType="localedata">/usr/share/locale/kk/LC_MESSAGES/libsecret.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ko/LC_MESSAGES/libsecret.mo</Path>
             <Path fileType="localedata">/usr/share/locale/lt/LC_MESSAGES/libsecret.mo</Path>
@@ -90,7 +93,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="20">libsecret</Dependency>
+            <Dependency release="24">libsecret</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/libsecret-1/libsecret/secret-attributes.h</Path>
@@ -117,12 +120,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="20">
-            <Date>2022-04-12</Date>
-            <Version>0.20.5</Version>
+        <Update release="24">
+            <Date>2024-02-13</Date>
+            <Version>0.21.3</Version>
             <Comment>Packaging update</Comment>
-            <Name>Zach Bacon</Name>
-            <Email>zachbacon@vba-m.com</Email>
+            <Name>Joey Riches</Name>
+            <Email>josephriches@gmail.com</Email>
         </Update>
     </History>
 </PISI>

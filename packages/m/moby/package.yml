@@ -1,11 +1,12 @@
 name       : moby
-version    : 24.0.6
-release    : 4
+version    : 25.0.4
+release    : 9
 source     :
-    - https://github.com/moby/moby/archive/v24.0.6.tar.gz : 29a8ee54e9ea008b40eebca42dec8b67ab257eb8ac175f67e79c110e4187d7d2
-    - https://github.com/docker/cli/archive/refs/tags/v24.0.6.tar.gz#docker-cli.tar.gz : c1a4a580ced3633e489c5c9869a20198415da44df7023fdc200d425cdf5fa652
+    - https://github.com/moby/moby/archive/v25.0.4.tar.gz : 3e39ff7e371c1d52cb86d64adb735e5f2edfe307fdf13e29a537d485a0b678b6
+    - https://github.com/docker/cli/archive/refs/tags/v25.0.4.tar.gz#docker-cli.tar.gz : e29bcd588142981f0a8f7955628863441099cead1c860dc5040f5af0156de71a
 license    : Apache-2.0
 component  : virt
+homepage   : https://www.docker.com
 summary    : The open-source application container engine
 description: |
     The open-source application container engine. This package contains the Docker server
@@ -13,6 +14,7 @@ strip      : no
 networking : yes
 builddeps  :
     - pkgconfig(libsystemd)
+    - git
     - go-md2man
     - golang
     - linux-headers
@@ -22,16 +24,15 @@ rundeps    :
     - tini
 environment: |
     export AUTO_GOPATH=1
-    export GITCOMMIT="1a7969545d73537545645f5cd2c79b7a77e7d39f"
-    export DOCKER_GITCOMMIT=$GITCOMMIT
-
     export GOFLAGS="-buildmode=pie -trimpath -mod=readonly -modcacherw -ldflags=-linkmode=external"
-
     export GO111MODULE=auto
 setup      : |
     mkdir docker-cli
     tar -xf $sources/docker-cli.tar.gz -C docker-cli --strip-components 1
 build      : |
+    export GITCOMMIT="$(git ls-remote https://github.com/moby/moby.git refs/tags/v$version^{} | awk '{print $1}')"
+    export DOCKER_GITCOMMIT=$GITCOMMIT
+
     # Build daemon
     PLATFORM="Docker Engine - Community" \
     VERSION=${version} \

@@ -1,8 +1,8 @@
 name       : kleopatra
-version    : 23.04.3
-release    : 64
+version    : 23.08.5
+release    : 68
 source     :
-    - https://cdn.download.kde.org/stable/release-service/23.04.3/src/kleopatra-23.04.3.tar.xz : 20269175dde85b8426e64d4ad96d821b24017eb95311a1016e4869183d109451
+    - https://cdn.download.kde.org/stable/release-service/23.08.5/src/kleopatra-23.08.5.tar.xz : a9c416599ed3763148fe8305d220b5950043b3c7ae12ffd2a960196c65dbf1a6
 homepage   : https://kde.org/applications/utilities/org.kde.kleopatra
 license    :
     - GFDL-1.2-or-later
@@ -14,15 +14,17 @@ description: |
 builddeps  :
     - pkgconfig(libassuan)
     - gpgme-qt-devel
+    - kcmutils-devel
     - kcrash-devel
     - kdbusaddons-devel
     - kiconthemes-devel
+    - kio-devel
     - kitemmodels-devel
+    - kmime-devel
     - knotifications-devel
     - ktextwidgets-devel
     - kwindowsystem-devel
     - kxmlgui-devel
-    - kmime-devel
     - libboost-devel
     - libkleo-devel
 setup      : |

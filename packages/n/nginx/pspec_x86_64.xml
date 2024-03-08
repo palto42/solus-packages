@@ -1,6 +1,7 @@
 <PISI>
     <Source>
         <Name>nginx</Name>
+        <Homepage>https://nginx.org/</Homepage>
         <Packager>
             <Name>Reilly Brogan</Name>
             <Email>solus@reillybrogan.com</Email>
@@ -10,7 +11,7 @@
         <Summary xml:lang="en">Multi-purpose TCP server, mainly a proxy or HTTP server</Summary>
         <Description xml:lang="en">nginx is an HTTP and reverse proxy server, a mail proxy server, and a generic TCP/UDP proxy server.
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>nginx</Name>
@@ -48,9 +49,9 @@
         </Files>
     </Package>
     <History>
-        <Update release="45">
-            <Date>2023-09-22</Date>
-            <Version>1.25.2</Version>
+        <Update release="47">
+            <Date>2024-02-14</Date>
+            <Version>1.25.4</Version>
             <Comment>Packaging update</Comment>
             <Name>Reilly Brogan</Name>
             <Email>solus@reillybrogan.com</Email>

@@ -1,8 +1,8 @@
 name       : python-numba
-version    : 0.56.4
-release    : 12
+version    : 0.59.0
+release    : 15
 source     :
-    - https://github.com/numba/numba/archive/refs/tags/0.56.4.tar.gz : ab96b731fb9dee12b404b42b7c1fb82c119352648906a80526afa73658895b73
+    - https://files.pythonhosted.org/packages/source/n/numba/numba-0.59.0.tar.gz : 12b9b064a3e4ad00e2371fc5212ef0396c80f41caec9b5ec391c8b04b6eaf2a8
 homepage   : http://numba.pydata.org
 license    : BSD-2-Clause
 component  : programming.python

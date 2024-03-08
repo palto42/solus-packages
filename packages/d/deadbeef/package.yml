@@ -1,8 +1,8 @@
 name       : deadbeef
-version    : 1.9.5
-release    : 47
+version    : 1.9.6
+release    : 51
 source     :
-    - git|https://github.com/DeaDBeeF-Player/deadbeef.git : 1.9.5
+    - git|https://github.com/DeaDBeeF-Player/deadbeef.git : 1.9.6
 license    :
     - GPL-2.0-only
     - LGPL-2.1-only
@@ -21,7 +21,9 @@ builddeps  :
     - pkgconfig(libcddb)
     - pkgconfig(libcdio_paranoia)
     - pkgconfig(libcurl)
+    - pkgconfig(libpipewire-0.3)
     - pkgconfig(libpulse-simple)
+    - pkgconfig(libzip)
     - pkgconfig(mad)
     - pkgconfig(opusfile)
     - pkgconfig(samplerate)
@@ -33,10 +35,12 @@ rundeps    :
     - opus-tools
     - vorbis-tools
 setup      : |
-    %patch -p1 < $pkgfiles/0001-Remove-non-functional-fdk-AAC-conversion.patch
+    %patch -p1 -i $pkgfiles/0001-Remove-non-functional-fdk-AAC-conversion.patch
     %autogen --docdir=/usr/share/doc/deadbeef
 build      : |
     %make
 install    : |
     %make_install
     rm -r $installdir/usr/share/doc/deadbeef/README
+    # Install appstream metainfo
+    install -Dm00644 $pkgfiles/io.sourceforge.deadbeef.deadbeef.metainfo.xml -t $installdir/usr/share/metainfo/

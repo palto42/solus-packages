@@ -1,9 +1,10 @@
 name       : scrcpy
-version    : '2.0'
-release    : 22
+version    : 2.3.1
+release    : 25
 source     :
-    - https://github.com/Genymobile/scrcpy/archive/v2.0.tar.gz : a256241dd178ab103e4a119d0387f348c10ac513f25a7ca4859bd53ca5e7d43f
-    - https://github.com/Genymobile/scrcpy/releases/download/v2.0/scrcpy-server-v2.0 : 9e241615f578cd690bb43311000debdecf6a9c50a7082b001952f18f6f21ddc2
+    - https://github.com/Genymobile/scrcpy/archive/v2.3.1.tar.gz : 76f38779f00d91d0b46a399ebca32c82ff1facdbd843871b7e46c2e7cad38a42
+    - https://github.com/Genymobile/scrcpy/releases/download/v2.3.1/scrcpy-server-v2.3.1 : f6814822fc308a7a532f253485c9038183c6296a6c5df470a9e383b4f8e7605b
+homepage   : https://github.com/Genymobile/scrcpy
 license    : Apache-2.0
 component  : network.util
 summary    : Display and control your Android device

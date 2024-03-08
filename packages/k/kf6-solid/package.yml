@@ -1,0 +1,33 @@
+name       : kf6-solid
+version    : 6.0.0
+release    : 4
+source     :
+    - https://cdn.download.kde.org/stable/frameworks/6.0/solid-6.0.0.tar.xz : 75c5d254eeceb917c35cb0e32beff76a2cf1458f773ecd0e7795b47dad5aadd3
+homepage   : https://community.kde.org/Frameworks
+license    :
+    - BSD-3-Clause
+    - LGPL-2.1-only
+    - LGPL-2.1-or-later
+component  : desktop.library
+summary    : Desktop hardware abstraction.
+description: |
+    Desktop hardware abstraction.
+builddeps  :
+    - pkgconfig(Qt6Designer)
+    - pkgconfig(libimobiledevice-1.0)
+    - pkgconfig(libplist-2.0)
+    - extra-cmake-modules
+    - media-player-info
+rundeps    :
+    - devel :
+        - extra-cmake-modules
+        - qt6-tools-devel
+    - media-player-info
+clang      : yes
+optimize   : thin-lto
+setup      : |
+    %cmake_kf6
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install

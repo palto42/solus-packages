@@ -1,8 +1,8 @@
 name       : ulauncher
-version    : 5.15.3
-release    : 14
+version    : 5.15.6
+release    : 18
 source     :
-    - https://github.com/Ulauncher/Ulauncher/releases/download/5.15.3/ulauncher_5.15.3.tar.gz : ba702273a19382f645149c0f111875eb8bdf0e2144d332c45238000d1f78c39c
+    - https://github.com/Ulauncher/Ulauncher/releases/download/5.15.6/ulauncher_5.15.6.tar.gz : 58e5837a487dadc5de88dfde8e2602e0110b849c1df7c1a49b20ce2cddba6b25
 homepage   : https://ulauncher.io/
 license    : GPL-3.0-or-later
 component  : desktop
@@ -13,6 +13,7 @@ builddeps  :
     - python-distutils-extra
 rundeps    :
     - keybinder
+    - libwebkit-gtk
     - python-gobject
     - python-inotify
     - python-levenshtein
@@ -21,7 +22,7 @@ rundeps    :
     - python3-dbus
     - pyxdg
 setup      : |
-    %patch -p1 < $pkgfiles/shutup-distutils.patch
+    %patch -p1 -i $pkgfiles/shutup-distutils.patch
 build      : |
     %python3_setup
 install    : |

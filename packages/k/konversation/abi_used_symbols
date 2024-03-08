@@ -1,5 +1,3 @@
-UNKNOWN:_ZTIN3QCA10PrivateKeyE
-UNKNOWN:_ZTIN3QCA9PublicKeyE
 libKF5Archive.so.5:_ZN4KTarC1ERK7QStringS2_
 libKF5Archive.so.5:_ZN4KZipC1ERK7QString
 libKF5Archive.so.5:_ZNK17KArchiveDirectory5entryERK7QString
@@ -328,12 +326,12 @@ libKF5KIOWidgets.so.5:_ZN10KUriFilter15filterSearchUriER14KUriFilterData6QFlagsI
 libKF5KIOWidgets.so.5:_ZN10KUriFilter4selfEv
 libKF5KIOWidgets.so.5:_ZN13KUrlRequester11setStartDirERK4QUrl
 libKF5KIOWidgets.so.5:_ZN13KUrlRequester11textChangedERK7QString
+libKF5KIOWidgets.so.5:_ZN13KUrlRequester13setNameFilterERK7QString
 libKF5KIOWidgets.so.5:_ZN13KUrlRequester16staticMetaObjectE
 libKF5KIOWidgets.so.5:_ZN13KUrlRequester18setMimeTypeFiltersERK11QStringList
 libKF5KIOWidgets.so.5:_ZN13KUrlRequester5clearEv
 libKF5KIOWidgets.so.5:_ZN13KUrlRequester6setUrlERK4QUrl
 libKF5KIOWidgets.so.5:_ZN13KUrlRequester7setModeE6QFlagsIN5KFile4ModeEE
-libKF5KIOWidgets.so.5:_ZN13KUrlRequester9setFilterERK7QString
 libKF5KIOWidgets.so.5:_ZN13KUrlRequesterC1EP7QWidget
 libKF5KIOWidgets.so.5:_ZN13KUrlRequesterC1ERK4QUrlP7QWidget
 libKF5KIOWidgets.so.5:_ZN14KUriFilterData25setSearchFilteringOptionsE6QFlagsINS_18SearchFilterOptionEE
@@ -2664,6 +2662,8 @@ libqca-qt5.so.2:_ZNK3QCA4PKey11toPublicKeyEv
 libqca-qt5.so.2:_ZNK3QCA4PKey6isNullEv
 libqca-qt5.so.2:_ZNK3QCA6Cipher2okEv
 libqca-qt5.so.2:_ZNK3QCA9PublicKey4toDHEv
+libqca-qt5.so.2:_ZTIN3QCA10PrivateKeyE
+libqca-qt5.so.2:_ZTIN3QCA9PublicKeyE
 libstdc++.so.6:_ZTVN10__cxxabiv117__class_type_infoE
 libstdc++.so.6:_ZTVN10__cxxabiv120__si_class_type_infoE
 libstdc++.so.6:_ZTVN10__cxxabiv121__vmi_class_type_infoE

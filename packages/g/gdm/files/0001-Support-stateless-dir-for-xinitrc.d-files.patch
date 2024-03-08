@@ -1,0 +1,27 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Reilly Brogan <reilly@reillybrogan.com>
+Date: Mon, 26 Feb 2024 12:06:00 -0600
+Subject: [PATCH] Support stateless dir for xinitrc.d files
+
+---
+ data/Xsession.in | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/data/Xsession.in b/data/Xsession.in
+index 2e4de4fe3..bf9b61418 100755
+--- a/data/Xsession.in
++++ b/data/Xsession.in
+@@ -172,10 +172,10 @@ unset XKB_IN_USE
+ xhost +si:localuser:`id -un` || :
+ 
+ # run all system xinitrc shell scripts.
+-if [ -d /usr/etc/X11/xinit/xinitrc.d ]; then
+-    for i in /usr/etc/X11/xinit/xinitrc.d/* ; do
++if [ -d /usr/share/defaults/etc/X11/xinit/xinitrc.d ]; then
++    for i in /usr/share/defaults/etc/X11/xinit/xinitrc.d/* ; do
+ 	sname=$(basename "$i")
+-        test -x "/etc/X11/xinit/xinitrc.d/$sname" && continue
++        test -x "/usr/share/defaults/etc/X11/xinit/xinitrc.d/$sname" && continue
+         if [ -x "$i" -a ! -d "$i" ]; then
+             . "$i"
+         fi

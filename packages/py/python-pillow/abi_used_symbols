@@ -88,6 +88,7 @@ UNKNOWN:_PyArg_ParseTupleAndKeywords_SizeT
 UNKNOWN:_PyArg_ParseTuple_SizeT
 UNKNOWN:_PyBytes_Resize
 UNKNOWN:_PyErr_BadInternalCall
+UNKNOWN:_PyObject_CallFunction_SizeT
 UNKNOWN:_PyObject_CallMethod_SizeT
 UNKNOWN:_PyObject_New
 UNKNOWN:_Py_BuildValue_SizeT
@@ -98,7 +99,6 @@ UNKNOWN:_Py_TrueStruct
 UNKNOWN:floor
 UNKNOWN:fmax
 UNKNOWN:fmin
-UNKNOWN:fmod
 UNKNOWN:lround
 UNKNOWN:round
 UNKNOWN:roundf
@@ -107,6 +107,7 @@ UNKNOWN:sincos
 UNKNOWN:sqrt
 libc.so.6:__errno_location
 libc.so.6:__fprintf_chk
+libc.so.6:__isoc23_strtol
 libc.so.6:__longjmp_chk
 libc.so.6:__memcpy_chk
 libc.so.6:__snprintf_chk
@@ -141,7 +142,6 @@ libc.so.6:strdup
 libc.so.6:strlen
 libc.so.6:strncmp
 libc.so.6:strncpy
-libc.so.6:strtol
 libc.so.6:wcslen
 libc.so.6:write
 libfreetype.so.6:FT_Bitmap_Convert
@@ -165,9 +165,9 @@ libfreetype.so.6:FT_Load_Glyph
 libfreetype.so.6:FT_New_Face
 libfreetype.so.6:FT_New_Memory_Face
 libfreetype.so.6:FT_Palette_Set_Foreground_Color
+libfreetype.so.6:FT_Request_Size
 libfreetype.so.6:FT_Select_Charmap
 libfreetype.so.6:FT_Set_Named_Instance
-libfreetype.so.6:FT_Set_Pixel_Sizes
 libfreetype.so.6:FT_Set_Var_Design_Coordinates
 libfreetype.so.6:FT_Stroker_Done
 libfreetype.so.6:FT_Stroker_New
@@ -182,6 +182,7 @@ libjpeg.so.8:jpeg_finish_decompress
 libjpeg.so.8:jpeg_read_header
 libjpeg.so.8:jpeg_read_scanlines
 libjpeg.so.8:jpeg_resync_to_restart
+libjpeg.so.8:jpeg_set_colorspace
 libjpeg.so.8:jpeg_set_defaults
 libjpeg.so.8:jpeg_set_quality
 libjpeg.so.8:jpeg_simple_progression
@@ -191,6 +192,7 @@ libjpeg.so.8:jpeg_std_error
 libjpeg.so.8:jpeg_suppress_tables
 libjpeg.so.8:jpeg_write_marker
 libjpeg.so.8:jpeg_write_scanlines
+libjpeg.so.8:jpeg_write_tables
 liblcms2.so.2:cmsCloseProfile
 liblcms2.so.2:cmsCreateLab2Profile
 liblcms2.so.2:cmsCreateProofingTransform
@@ -229,6 +231,7 @@ liblcms2.so.2:cmsSaveProfileToMem
 liblcms2.so.2:cmsTempFromWhitePoint
 liblcms2.so.2:cmsWhitePointFromTemp
 liblcms2.so.2:cmsXYZ2xyY
+libm.so.6:fmod
 libm.so.6:hypot
 libm.so.6:log
 libm.so.6:pow
@@ -262,6 +265,7 @@ libopenjp2.so.7:opj_stream_set_user_data_length
 libopenjp2.so.7:opj_stream_set_write_function
 libopenjp2.so.7:opj_version
 libopenjp2.so.7:opj_write_tile
+libtiff.so.6:TIFFCleanup
 libtiff.so.6:TIFFClientOpen
 libtiff.so.6:TIFFClose
 libtiff.so.6:TIFFComputeStrip

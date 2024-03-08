@@ -1,16 +1,17 @@
 <PISI>
     <Source>
         <Name>cinnamon-translations</Name>
+        <Homepage>https://translations.launchpad.net/linuxmint/</Homepage>
         <Packager>
-            <Name>Evan Maddock</Name>
-            <Email>maddock.evan@vivaldi.net</Email>
+            <Name>Muhammad Alfi Syahrin</Name>
+            <Email>malfisya.dev@hotmail.com</Email>
         </Packager>
         <License>GPL-2.0-or-later</License>
         <PartOf>desktop.library</PartOf>
         <Summary xml:lang="en">Translation files for the Cinnamon desktop</Summary>
         <Description xml:lang="en">The package contains the translation files for all the Cinnamon packages.
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>cinnamon-translations</Name>
@@ -144,6 +145,7 @@
             <Path fileType="localedata">/usr/share/locale/ro/LC_MESSAGES/nemo.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ru/LC_MESSAGES/nemo-extensions.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ru/LC_MESSAGES/nemo.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/rue/LC_MESSAGES/nemo.mo</Path>
             <Path fileType="localedata">/usr/share/locale/sc/LC_MESSAGES/nemo.mo</Path>
             <Path fileType="localedata">/usr/share/locale/shn/LC_MESSAGES/nemo.mo</Path>
             <Path fileType="localedata">/usr/share/locale/si/LC_MESSAGES/nemo.mo</Path>
@@ -190,12 +192,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="2">
-            <Date>2023-06-22</Date>
-            <Version>5.8.1</Version>
+        <Update release="4">
+            <Date>2024-01-03</Date>
+            <Version>5.8.2</Version>
             <Comment>Packaging update</Comment>
-            <Name>Evan Maddock</Name>
-            <Email>maddock.evan@vivaldi.net</Email>
+            <Name>Muhammad Alfi Syahrin</Name>
+            <Email>malfisya.dev@hotmail.com</Email>
         </Update>
     </History>
 </PISI>

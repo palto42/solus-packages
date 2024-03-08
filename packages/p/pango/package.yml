@@ -1,8 +1,8 @@
 name       : pango
-version    : 1.50.14
-release    : 54
+version    : 1.51.2
+release    : 57
 source     :
-    - https://download.gnome.org/sources/pango/1.50/pango-1.50.14.tar.xz : 1d67f205bfc318c27a29cfdfb6828568df566795df0cb51d2189cde7f2d581e8
+    - https://gitlab.gnome.org/GNOME/pango/-/archive/1.51.2/pango-1.51.2.tar.gz : 82b4c5232e448865865e595008b6aef2481032c898d8bbfc60fd36b680585d75
 homepage   : http://www.pango.org
 license    : LGPL-2.0-or-later
 component  : desktop.library

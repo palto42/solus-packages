@@ -14,6 +14,7 @@ UNKNOWN:PyDict_SetItemString
 UNKNOWN:PyDict_Size
 UNKNOWN:PyDict_Type
 UNKNOWN:PyErr_Clear
+UNKNOWN:PyErr_ExceptionMatches
 UNKNOWN:PyErr_Format
 UNKNOWN:PyErr_Occurred
 UNKNOWN:PyErr_SetObject
@@ -39,8 +40,9 @@ UNKNOWN:PyModule_AddObject
 UNKNOWN:PyModule_Create2
 UNKNOWN:PyObject_Call
 UNKNOWN:PyObject_CallFunction
-UNKNOWN:PyObject_CallFunctionObjArgs
 UNKNOWN:PyObject_CallMethod
+UNKNOWN:PyObject_CallNoArgs
+UNKNOWN:PyObject_CallOneArg
 UNKNOWN:PyObject_GC_UnTrack
 UNKNOWN:PyObject_GetAttrString
 UNKNOWN:PyObject_GetIter

@@ -1,12 +1,12 @@
 name       : go-task
-version    : 3.30.1
-release    : 7
-homepage   : https://taskfile.dev/
+version    : 3.35.1
+release    : 13
 source     :
-    - https://github.com/go-task/task/archive/refs/tags/v3.30.1.tar.gz : 2ea7ade74a7007766412d905fbbff91676ee2e4fa5af0e615dfa6c8bd843482c
+    - https://github.com/go-task/task/archive/refs/tags/v3.35.1.tar.gz : 09fec550ce19f531ebb94379cea747efff24f6da2465e5a60c53cf8cbae0d9ba
 license    : MIT
 component  : programming.tools
 networking : yes
+homepage   : https://taskfile.dev/
 summary    : A task runner / simpler Make alternative written in Go
 description: |
     A task runner / simpler Make alternative written in Go 
@@ -35,5 +35,5 @@ install    : |
     install -Dm00644 completion/fish/task.fish $installdir/usr/share/fish/vendor_completions.d/go-task.fish
 check      : |
     # Fix a couple of tests that are broken because we're overriding the version
-    sed -i "s|TASK_VERSION=unknown|TASK_VERSION=v$version|g" task_test.go
+    sed -i "s|unknown|v$version|g" task_test.go
     go test ./...

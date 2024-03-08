@@ -1,8 +1,8 @@
 name       : freecad
-version    : '0.20'
-release    : 7
+version    : 0.21.2
+release    : 14
 source     :
-    - https://github.com/FreeCAD/FreeCAD/archive/refs/tags/0.20.tar.gz : c4d9ce782d3da0edfa16d6218db4ce8613e346124ee47b3fe6a6dae40c0a61d9
+    - https://github.com/FreeCAD/FreeCAD/archive/refs/tags/0.21.2.tar.gz : ceaf77cd12e8ad533d1535cc27ae4ca2a6e80778502dc9cdec906415d674b674
 homepage   : https://www.freecadweb.org/
 license    : LGPL-2.0-or-later
 component  : office
@@ -19,11 +19,14 @@ builddeps  :
     - pkgconfig(Qt5XmlPatterns)
     - pkgconfig(SoQt)
     - pkgconfig(eigen3)
+    - pkgconfig(fmt)
     - pkgconfig(fontconfig)
+    - pkgconfig(gtest)
     - pkgconfig(gts)
     - pkgconfig(jsoncpp)
     - pkgconfig(netcdf)
     - pkgconfig(opencv4)
+    - pkgconfig(opengl)
     - pkgconfig(pcl_io)
     - pkgconfig(pyside2)
     - pkgconfig(xerces-c)
@@ -44,7 +47,7 @@ rundeps    :
     - python-cparser
     - python-pivy
 setup      : |
-    %apply_patches
+    %patch -p1 -i $pkgfiles/desktop-file-wmclass.patch
 
     %cmake_ninja \
         -DBUILD_ENABLE_CXX_STD=C++17 \
@@ -57,7 +60,8 @@ setup      : |
         -DBUILD_FLAT_MESH=ON \
         -DBUILD_PLOT=ON \
         -DBUILD_QT5=ON \
-        -DOpenGL_GL_PREFERENCE=LEGACY \
+        -DINSTALL_GTEST=OFF \
+        -DOpenGL_GL_PREFERENCE=GLVND \
         -DFREECAD_USE_EXTERNAL_PIVY=ON \
         -DFREECAD_USE_EXTERNAL_SMESH=OFF \
         -DFREECAD_USE_FREETYPE=ON \

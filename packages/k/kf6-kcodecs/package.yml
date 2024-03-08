@@ -1,0 +1,32 @@
+name       : kf6-kcodecs
+version    : 6.0.0
+release    : 4
+source     :
+    - https://cdn.download.kde.org/stable/frameworks/6.0/kcodecs-6.0.0.tar.xz : ceba44dcdc251d443bbd6cb77d1219d876af8cc2ae4710472aace78122395abe
+homepage   : https://community.kde.org/Frameworks
+license    :
+    - BSD-3-Clause
+    - GPL-2.0-or-later
+    - LGPL-2.0-only
+    - LGPL-2.0-or-later
+    - MIT
+component  : programming.library
+summary    : String encoding library.
+description: |
+    String encoding library.
+builddeps  :
+    - pkgconfig(Qt6Designer)
+    - extra-cmake-modules
+    - gperf
+rundeps    :
+    - devel :
+        - extra-cmake-modules
+        - qt6-tools-devel
+clang      : yes
+optimize   : thin-lto
+setup      : |
+    %cmake_kf6
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install

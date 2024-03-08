@@ -1,0 +1,31 @@
+name       : kf6-kholidays
+version    : 6.0.0
+release    : 3
+source     :
+    - https://cdn.download.kde.org/stable/frameworks/6.0/kholidays-6.0.0.tar.xz : 482f6375fe536a63b67bad45a0ad3880c74d74fc92a3a935ecb78b29830d9b7f
+homepage   : https://community.kde.org/Frameworks
+license    :
+    - BSD-2-Clause
+    - BSD-3-Clause
+    - GPL-3.0-or-later
+    - LGPL-2.0-or-later
+component  : desktop.library
+summary    : KDE library for regional holiday information
+description: |
+    KDE library for regional holiday information
+builddeps  :
+    - pkgconfig(Qt6Designer)
+    - pkgconfig(Qt6Quick)
+    - extra-cmake-modules
+rundeps    :
+    - devel :
+        - extra-cmake-modules
+        - qt6-base-devel
+clang      : yes
+optimize   : thin-lto
+setup      : |
+    %cmake_kf6
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install

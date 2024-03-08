@@ -1,36 +1,38 @@
 name       : shotcut
-version    : 21.10.31
-release    : 33
+version    : 24.01.31
+release    : 37
 source     :
-    - https://github.com/mltframework/shotcut/archive/refs/tags/v21.10.31.tar.gz : 048faf2116c2d6e01c645c648d8e55ff4d22c3b144721c4ce462a32231bb94ca
+    - https://github.com/mltframework/shotcut/archive/refs/tags/v24.01.31.tar.gz : ac03857602b08290c9975480e54b1c12a7e4296671b6e9ceb3b7605cdd751af8
+homepage   : https://www.shotcut.org/
 license    : GPL-3.0-or-later
 component  : multimedia.video
-homepage   : https://www.shotcut.org/
 summary    : A free, open source, and cross-platform video editor
 description: |
     Shotcut is a free and open-source cross-platform video editing application for FreeBSD, Linux, macOS and Windows. It supports video, audio, and image formats via FFmpeg, and uses a timeline for non-linear video editing of multiple tracks that may be composed of various file formats. Scrubbing and transport control are assisted by OpenGL GPU-based processing and a number of video and audio filters are available.
+libsplit   : no
 builddeps  :
+    - pkgconfig(Qt6Charts)
+    - pkgconfig(Qt6Help)
+    - pkgconfig(Qt6Multimedia)
+    - pkgconfig(Qt6Qml)
+    - pkgconfig(Qt6QuickControls2)
+    - pkgconfig(Qt6WebSockets)
+    - pkgconfig(fftw3)
     - pkgconfig(gl)
     - pkgconfig(mlt-framework-7)
-    - pkgconfig(Qt5Help)
-    - pkgconfig(Qt5Multimedia)
-    - pkgconfig(Qt5Qml)
-    - pkgconfig(Qt5QuickControls2)
-    - pkgconfig(Qt5WebSockets)
-    - pkgconfig(Qt5X11Extras)
     - pkgconfig(x11)
 rundeps    :
     - frei0r
+    - qt5-quickcontrols
     - sdl2
     - swh-plugins
-    - qt5-quickcontrols
 setup      : |
-    %qmake \
-        PREFIX=$installdir/usr \
-        SHOTCUT_VERSION=%version% \
-        DEFINES+=SHOTCUT_NOUPGRADE
+    %cmake_ninja \
+        DCMAKE_BUILD_TYPE=Release \
+        DCMAKE_INSTALL_PREFIX=/usr \
+        DSHOTCUT_VERSION=%version%
 build      : |
-    %make
+    %ninja_build
 install    : |
-    %make_install
-    %qml_cache
+    %ninja_install
+    %qml6_cache

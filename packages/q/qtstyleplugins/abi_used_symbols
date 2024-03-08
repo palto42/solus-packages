@@ -166,7 +166,6 @@ libQt5Core.so.5:_ZN9QMetaType25registerConverterFunctionEPKN9QtPrivate25Abstract
 libQt5Core.so.5:_ZN9QMetaType27unregisterConverterFunctionEii
 libQt5Core.so.5:_ZN9QMetaType30hasRegisteredConverterFunctionEii
 libQt5Core.so.5:_ZN9QMetaType8typeNameEi
-libQt5Core.so.5:_ZN9QMetaType9typeFlagsEi
 libQt5Core.so.5:_ZN9QMimeTypeD1Ev
 libQt5Core.so.5:_ZN9QSettings10beginGroupERK7QString
 libQt5Core.so.5:_ZN9QSettingsC1ERK7QStringNS_6FormatEP7QObject
@@ -237,7 +236,6 @@ libQt5Core.so.5:_ZNK9QMimeType15genericIconNameEv
 libQt5Core.so.5:_ZNK9QMimeType7isValidEv
 libQt5Core.so.5:_ZNK9QMimeType8iconNameEv
 libQt5Core.so.5:_ZNK9QSettings5valueERK7QStringRK8QVariant
-libQt5Core.so.5:_ZTI14QObjectPrivate
 libQt5Core.so.5:_ZTI7QObject
 libQt5Core.so.5:_ZeqRK7QStringS1_
 libQt5Core.so.5:_Zls6QDebugPK7QObject
@@ -503,7 +501,6 @@ libQt5Gui.so.5:_ZN7QPixmap9fromImageERK6QImage6QFlagsIN2Qt19ImageConversionFlagE
 libQt5Gui.so.5:_ZN7QPixmapC1EPKPKc
 libQt5Gui.so.5:_ZN7QPixmapC1ERK5QSize
 libQt5Gui.so.5:_ZN7QPixmapC1ERK7QStringPKc6QFlagsIN2Qt19ImageConversionFlagEE
-libQt5Gui.so.5:_ZN7QPixmapC1ERKS_
 libQt5Gui.so.5:_ZN7QPixmapC1Eii
 libQt5Gui.so.5:_ZN7QPixmapC1Ev
 libQt5Gui.so.5:_ZN7QPixmapD1Ev
@@ -725,9 +722,6 @@ libQt5Gui.so.5:_ZTI25QPlatformFileDialogHelper
 libQt5Gui.so.5:_ZTI25QPlatformFontDialogHelper
 libQt5Gui.so.5:_ZTI26QPlatformColorDialogHelper
 libQt5Gui.so.5:_ZTI7QWindow
-libQt5Gui.so.5:_ZTV13QPlatformMenu
-libQt5Gui.so.5:_ZTV16QPlatformMenuBar
-libQt5Gui.so.5:_ZTV17QPlatformMenuItem
 libQt5Gui.so.5:_ZTV25QPlatformFileDialogHelper
 libQt5Gui.so.5:_ZTV25QPlatformFontDialogHelper
 libQt5Gui.so.5:_ZTV26QPlatformColorDialogHelper
@@ -815,7 +809,6 @@ libQt5Widgets.so.5:_ZN16QAbstractSpinBox16staticMetaObjectE
 libQt5Widgets.so.5:_ZN17QAbstractItemView16staticMetaObjectE
 libQt5Widgets.so.5:_ZN17QStyleOptionFrameC1Ev
 libQt5Widgets.so.5:_ZN18QStyleOptionButtonC1Ev
-libQt5Widgets.so.5:_ZN19QAbstractScrollArea16staticMetaObjectE
 libQt5Widgets.so.5:_ZN19QApplicationPrivate13setSystemFontERK5QFont
 libQt5Widgets.so.5:_ZN19QStyleOptionComplexC2Eii
 libQt5Widgets.so.5:_ZN19QStyledItemDelegate16staticMetaObjectE
@@ -926,6 +919,7 @@ libc.so.6:getuid
 libc.so.6:malloc
 libc.so.6:memcmp
 libc.so.6:memcpy
+libc.so.6:memset
 libc.so.6:strchr
 libc.so.6:strcmp
 libc.so.6:strdup
@@ -1081,8 +1075,8 @@ libgtk-x11-2.0.so.0:gtk_window_get_type
 libgtk-x11-2.0.so.0:gtk_window_new
 libgtk-x11-2.0.so.0:gtk_window_set_default
 libgtk-x11-2.0.so.0:gtk_window_set_title
-libm.so.6:atan
-libm.so.6:sincos
+libm.so.6:cos
+libm.so.6:sin
 libpango-1.0.so.0:pango_font_description_free
 libpango-1.0.so.0:pango_font_description_from_string
 libpango-1.0.so.0:pango_font_description_get_family
@@ -1098,7 +1092,7 @@ libpango-1.0.so.0:pango_font_description_to_string
 libstdc++.so.6:_ZTVN10__cxxabiv117__class_type_infoE
 libstdc++.so.6:_ZTVN10__cxxabiv120__si_class_type_infoE
 libstdc++.so.6:_ZdlPv
-libstdc++.so.6:_ZdlPvm
 libstdc++.so.6:_Znwm
 libstdc++.so.6:__cxa_guard_acquire
 libstdc++.so.6:__cxa_guard_release
+libstdc++.so.6:__cxa_pure_virtual

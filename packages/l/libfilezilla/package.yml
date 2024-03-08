@@ -1,8 +1,8 @@
 name       : libfilezilla
-version    : 0.44.0
-release    : 45
+version    : 0.46.0
+release    : 48
 source     :
-    - https://download.filezilla-project.org/libfilezilla/libfilezilla-0.44.0.tar.xz : 2a8f57a06b52f6413b47d6a5dfbe7e9e31c84cc0784076f2f7e395232b0bd461
+    - https://download.filezilla-project.org/libfilezilla/libfilezilla-0.46.0.tar.xz : 387af5c4d4843482a5fbf183d01dd9619b4b85afa0d6895c5eecb3a6012fac21
 license    : GPL-2.0-or-later
 component  : programming
 summary    : libfilezilla

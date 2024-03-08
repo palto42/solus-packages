@@ -1,8 +1,9 @@
 name       : neochat
-version    : 23.04.3
-release    : 9
+version    : 23.08.5
+release    : 16
 source     :
-    - https://cdn.download.kde.org/stable/release-service/23.04.3/src/neochat-23.04.3.tar.xz : 2e7a006e24eea80049a0213897048291d1ddb52d484aae8d2d0f48bbb020af04
+    - https://cdn.download.kde.org/stable/release-service/23.08.5/src/neochat-23.08.5.tar.xz : d300c6d8eb1dcc96b853c61a43e058ae923b939e3991755ddce1d9f210904632
+homepage   : https://apps.kde.org/neochat/
 license    :
     - BSD-2-Clause
     - GPL-2.0-or-later
@@ -13,35 +14,36 @@ summary    : Neochat is a client for Matrix, the decentralized communication pro
 description: |
     Neochat is a client for Matrix, the decentralized communication protocol for instant messaging.
 builddeps  :
+    - pkgconfig(Qt5Multimedia)
     - pkgconfig(Qt5Quick)
     - pkgconfig(Qt5QuickControls2)
-    - pkgconfig(Qt5Multimedia)
-    - pkgconfig(Qt5Svg)
     - pkgconfig(Qt5Sql)
-    - pkgconfig(olm)
+    - pkgconfig(Qt5Svg)
     - pkgconfig(Quotient)
     - pkgconfig(libcmark)
+    - pkgconfig(olm)
     - kconfig-devel
     - kconfigwidgets-devel
     - kcoreaddons-devel
     - kdbusaddons-devel
-    - kirigami2-devel
     - ki18n-devel
     - kio-devel
-    - kitemmodels-devel
     - kirigami-addons-devel
+    - kirigami2-devel
+    - kitemmodels-devel
     - knotifications-devel
     - kquickimageeditor-devel
     - kwindowsystem-devel
-    - qcoro-qt5-devel
-    - qtkeychain-devel
-    - qqc2-desktop-style-devel
-    - sonnet-devel
     - openssl-11-devel
+    - qcoro-qt5-devel
+    - qqc2-desktop-style-devel
+    - qtkeychain-qt5-devel
+    - sonnet-devel
 rundeps    :
-    - kirigami2
     - kirigami-addons
+    - kirigami2
     - kitemmodels
+    - kquickcharts
     - kquickimageeditor
     - syntax-highlighting
 setup      : |

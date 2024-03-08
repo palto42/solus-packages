@@ -1,8 +1,9 @@
 name       : gnome-shell
-version    : '44.3'
-release    : 98
+version    : '45.4'
+release    : 105
 source     :
-    - https://download.gnome.org/sources/gnome-shell/44/gnome-shell-44.3.tar.xz : 55694b71c2ee4eaef60d93428003f2eaa4cf00186848f5e36b45cfe506fc31bf
+    - https://download.gnome.org/sources/gnome-shell/45/gnome-shell-45.4.tar.xz : 5bfea379e120b1c7f237f3ec369ad27ef5c2f5930c7df163b392782d8582090d
+homepage   : https://wiki.gnome.org/Projects/GnomeShell
 license    : GPL-2.0-or-later
 component  : desktop.gnome
 summary    : GNOME Desktop Shell
@@ -24,7 +25,7 @@ builddeps  :
     - pkgconfig(libcroco-0.6)
     - pkgconfig(libedataserver-1.2)
     - pkgconfig(libical)
-    - pkgconfig(libmutter-12)
+    - pkgconfig(libmutter-13)
     - pkgconfig(libnma)
     - pkgconfig(libpipewire-0.3)
     - pkgconfig(libpulse)
@@ -36,14 +37,13 @@ builddeps  :
     - asciidoc
     - sassc
 rundeps    :
-    - caribou
-    - telepathy-logger
     - gnome-session
     - gnome-session-shell
-    - xdg-desktop-portal-gnome
+    - switcheroo-control
+    - telepathy-logger
 setup      : |
-    %patch -p1 < $pkgfiles/0001-Ensure-Extensions-app-is-hidden-under-Budgie.patch
-    %meson_configure -Dtests=false -Dsoup2=false
+    %apply_patches
+    %meson_configure -Dtests=false
 build      : |
     %ninja_build
 install    : |
