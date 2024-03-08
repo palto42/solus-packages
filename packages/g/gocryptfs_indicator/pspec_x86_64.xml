@@ -1,0 +1,47 @@
+<PISI>
+    <Source>
+        <Name>gocryptfs-indicator</Name>
+        <Homepage>https://hp250.fritz.box/git/matthias/gocryptfs</Homepage>
+        <Packager>
+            <Name>Matthias Homann</Name>
+            <Email>palto@mailbox.org</Email>
+        </Packager>
+        <License>undefined</License>
+        <Summary xml:lang="en">GTK Indicator App for mounting gocryptfs volumes.</Summary>
+        <Description xml:lang="en">GTK Indicator App for mounting gocryptfs volumes.</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>gocryptfs-indicator</Name>
+        <Summary xml:lang="en">GTK Indicator App for mounting gocryptfs volumes.</Summary>
+        <Description xml:lang="en">GTK Indicator App for mounting gocryptfs volumes.</Description>
+        <Files>
+            <Path fileType="data">/usr/README.md</Path>
+            <Path fileType="executable">/usr/bin/gocryptfs_indicator</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/gocryptfs_indicator-0.10-py3.11.egg-info/PKG-INFO</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/gocryptfs_indicator-0.10-py3.11.egg-info/SOURCES.txt</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/gocryptfs_indicator-0.10-py3.11.egg-info/dependency_links.txt</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/gocryptfs_indicator-0.10-py3.11.egg-info/entry_points.txt</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/gocryptfs_indicator-0.10-py3.11.egg-info/not-zip-safe</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/gocryptfs_indicator-0.10-py3.11.egg-info/requires.txt</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/gocryptfs_indicator-0.10-py3.11.egg-info/top_level.txt</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/gocryptfs_indicator/__init__.py</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/gocryptfs_indicator/__pycache__/__init__.cpython-311.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/gocryptfs_indicator/icons/folder-blue-locked.svg</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/gocryptfs_indicator/icons/folder-blue-unlocked.svg</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/gocryptfs_indicator/icons/lock-folder-black.svg</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/gocryptfs_indicator/icons/lock-folder-grey.svg</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/gocryptfs_indicator/icons/lock-folder-white.svg</Path>
+            <Path fileType="data">/usr/share/applications/gocryptfs_indicator.desktop</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="3">
+            <Date>2024-03-08</Date>
+            <Version>0.1</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Matthias Homann</Name>
+            <Email>palto@mailbox.org</Email>
+        </Update>
+    </History>
+</PISI>

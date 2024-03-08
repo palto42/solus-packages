@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Exec=gocryptfs_indicator
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name=goCryptFS Indicator
+Icon=folder-locked
+Comment=Mound and unmount GoCryptFS volumes
