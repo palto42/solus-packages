@@ -1,8 +1,8 @@
 name       : bluez-qt
-version    : 5.112.0
-release    : 70
+version    : 5.115.0
+release    : 72
 source     :
-    - https://cdn.download.kde.org/stable/frameworks/5.112/bluez-qt-5.112.0.tar.xz : eb2979251fd039eb585a2e51d38e8e34fdb108a481818202d50426f9e9dc7f0e
+    - https://cdn.download.kde.org/stable/frameworks/5.115/bluez-qt-5.115.0.tar.xz : bd7fd3144175be0c679428f449cbdca57223d101177da67cabcba5fca4bc64a1
 homepage   : https://community.kde.org/Frameworks
 license    : LGPL-2.1-only
 component  : desktop.library

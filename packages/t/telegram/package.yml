@@ -1,8 +1,8 @@
 name       : telegram
-version    : 4.12.2
-release    : 191
+version    : 4.14.16
+release    : 201
 source     :
-    - https://github.com/telegramdesktop/tdesktop/releases/download/v4.12.1/tdesktop-4.12.1-full.tar.gz : 91bf46227ab18b64c69488ce898b9c7dde25e18d99c7380589922e736d6f03f4
+    - https://github.com/telegramdesktop/tdesktop/releases/download/v4.14.16/tdesktop-4.14.16-full.tar.gz : 9ba3c0b7b5724d49c0645c560c5e19c61bec54507c0d594459184c6cb95ad93c
     - git|https://github.com/desktop-app/tg_owt.git : 3bb3d757681e6cc5135aec6529a753dc3dcdcfb9
 homepage   : https://desktop.telegram.org/
 license    : GPL-3.0-or-later
@@ -41,6 +41,7 @@ builddeps  :
     - pkgconfig(protobuf) # For the bundles cdl3 library.
     - pkgconfig(rnnoise)
     - pkgconfig(vpx)
+    - pkgconfig(wayland-protocols)
     - pkgconfig(wayland-server)
     - pkgconfig(xcb-keysyms)
     - pkgconfig(xcomposite)
@@ -48,9 +49,9 @@ builddeps  :
     - pkgconfig(xkbcommon)
     - pkgconfig(xrandr)
     - pkgconfig(xtst)
-    - pkgconfig(wayland-protocols)
     - gobject-introspection
-    - kimageformats
+    - kf6-kcoreaddons-devel
+    - kf6-kimageformats
     - libboost-devel
     - libdispatch-devel
     - plasma-wayland-protocols
@@ -67,12 +68,15 @@ setup      : |
         %ninja_build
     popd
 
-    # For some reason they didn't publish source for 4.12.2
-    %patch -p1 -i $pkgfiles/v4.12.1...v4.12.2.patch
-
     # Building with -O2 and any variant of LTO seems to cause segfaults during notifications. -O2 is the default for RelWithDebInfo so
     # we need to set the cmake build to None and add the flags manually. It's really weird that -O3 works fine and -O2 doesn't...
     export CXXFLAGS="$CXXFLAGS -O3 -DNDEBUG"
+
+    # Force build against minizip-ng
+    # sed -i "s|minizip<2.0.0|minizip|" cmake/external/minizip/CMakeLists.txt
+    # pushd Telegram/lib_base
+    # %patch -p1 -i $pkgfiles/0001-Fix-build-with-minizip-ng.patch
+    # popd
 
     %cmake_ninja \
         -DCMAKE_BUILD_TYPE=None \

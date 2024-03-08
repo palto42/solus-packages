@@ -1,8 +1,9 @@
 name       : cppcheck
-version    : 2.12.1
-release    : 22
+version    : 2.13.4
+release    : 25
 source     :
-    - https://github.com/danmar/cppcheck/archive/refs/tags/2.12.1.tar.gz : 2a3d4ba1179419612183ab3d6aed6d3b18be75e98cd6f138ea8e2020905dced2
+    - https://github.com/danmar/cppcheck/archive/refs/tags/2.13.4.tar.gz : d6ea064ebab76c6aa000795440479767d8d814dd29405918df4c1bbfcd6cb86c
+homepage   : https://cppcheck.sourceforge.io/
 license    : GPL-3.0-or-later
 component  : programming.tools
 summary    : Static source code analysis tool for C and C++ code

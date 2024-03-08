@@ -1,0 +1,44 @@
+name       : kf6-knewstuff
+version    : 6.0.0
+release    : 4
+source     :
+    - https://cdn.download.kde.org/stable/frameworks/6.0/knewstuff-6.0.0.tar.xz : 0299dba980590bd7c74870a74c6bb6ca732af478ab2c9ba414943f62ea0be0fa
+homepage   : https://community.kde.org/Frameworks
+license    :
+    - LGPL-2.0-or-later
+    - LGPL-2.1-only
+    - LGPL-2.1-or-later
+component  : programming.library
+summary    : Framework for downloading and sharing additional application data.
+description: |
+    Framework for downloading and sharing additional application data.
+builddeps  :
+    - kf6-attica-devel
+    - kf6-karchive-devel
+    - kf6-kconfig-devel
+    - kf6-kcoreaddons-devel
+    - kf6-ki18n-devel
+    - kf6-kirigami-devel
+    - kf6-kpackage-devel
+    - kf6-kwidgetsaddons-devel
+    - kf6-syndication-devel
+rundeps    :
+    - devel :
+        - kf6-attica-devel
+        - kf6-karchive-devel
+        - kf6-kconfig-devel
+        - kf6-kcoreaddons-devel
+        - kf6-ki18n-devel
+        - kf6-kpackage-devel
+        - kf6-syndication-devel
+        - qt6-base-devel
+        - qt6-declarative-devel
+clang      : yes
+optimize   : thin-lto
+setup      : |
+    %cmake_kf6
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install
+    %qml6_cache

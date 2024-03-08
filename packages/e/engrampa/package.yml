@@ -1,8 +1,9 @@
 name       : engrampa
-version    : 1.27.0
-release    : 25
+version    : 1.28.1
+release    : 27
 source     :
-    - https://github.com/mate-desktop/engrampa/releases/download/v1.27.0/engrampa-1.27.0.tar.xz : 1bb757d72d03787f2475d85e0741b3cd0f745e956fa55bc66c7921325c50130f
+    - https://github.com/mate-desktop/engrampa/releases/download/v1.28.1/engrampa-1.28.1.tar.xz : 9c5c4c9bcf8b08eeaa8f275538d24b4c955089d58aec0331e89c02b84d85386a
+homepage   : https://www.mate-desktop.org/
 license    : GPL-2.0-or-later
 component  : desktop.mate
 summary    : Archive manager for the MATE Desktop

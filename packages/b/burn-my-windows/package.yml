@@ -1,8 +1,8 @@
 name       : burn-my-windows
-version    : 39
-release    : 4
+version    : 41
+release    : 6
 source     :
-    - https://github.com/Schneegans/Burn-My-Windows/archive/refs/tags/v39.tar.gz : 55c30cddf9f2cfad0e5cf8c3b950fbc1d1c8c9591b713dbe9dc783c3e3f01b47
+    - https://github.com/Schneegans/Burn-My-Windows/archive/refs/tags/v41.tar.gz : d6a78a00c39373b5f2731c70e9353ac1c14c06197b375c440c5397a34cf92aad
 homepage   : https://github.com/Schneegans/Burn-My-Windows
 license    : GPL-3.0-or-later
 component  :

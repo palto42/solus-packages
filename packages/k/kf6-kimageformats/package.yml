@@ -1,0 +1,30 @@
+name       : kf6-kimageformats
+version    : 6.0.0
+release    : 5
+source     :
+    - https://cdn.download.kde.org/stable/frameworks/6.0/kimageformats-6.0.0.tar.xz : 1ddd28f2fb8ac2c95556f792418c2b6190a04050ac31b27aa82ea11c1af0879c
+homepage   : https://community.kde.org/Frameworks
+license    :
+    - GPL-2.0-only
+    - LGPL-2.0-or-later
+    - LGPL-2.1-or-later
+    - LGPL-2.1-only
+component  : desktop.library
+summary    : A fast and easy to use image viewer
+description: |
+    A fast and easy to use image viewer
+builddeps  :
+    - pkgconfig(OpenEXR)
+    - pkgconfig(libavif)
+    - pkgconfig(libheif)
+    - pkgconfig(libjxl)
+    - pkgconfig(libraw)
+    - kf6-karchive-devel
+clang      : yes
+optimize   : thin-lto
+setup      : |
+    %cmake_kf6 -DKIMAGEFORMATS_HEIF=ON
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install

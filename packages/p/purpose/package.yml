@@ -1,8 +1,8 @@
 name       : purpose
-version    : 5.112.0
-release    : 60
+version    : 5.115.0
+release    : 62
 source     :
-    - https://cdn.download.kde.org/stable/frameworks/5.112/purpose-5.112.0.tar.xz : e322baf0050a12c5a112e75bf37f8be9708d3ec8e48f5929bdbe1bb116ac0cb3
+    - https://cdn.download.kde.org/stable/frameworks/5.115/purpose-5.115.0.tar.xz : ba06a5debb1e1e9f403c897075ba8e1ab670e6e472da2075ad84080111dee00f
 homepage   : https://community.kde.org/Frameworks
 license    :
     - GPL-2.0-or-later

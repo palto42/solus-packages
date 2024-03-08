@@ -1,8 +1,8 @@
 name       : amdgpu_top
-version    : 0.5.0
-release    : 7
+version    : 0.7.0
+release    : 10
 source     :
-    - https://github.com/Umio-Yasuno/amdgpu_top/archive/refs/tags/v0.5.0.tar.gz : fd95877c9811f529560a09eb6bd503dbf5f7d82ba39919077e4c49bdab1750c9
+    - https://github.com/Umio-Yasuno/amdgpu_top/archive/refs/tags/v0.7.0.tar.gz : a4050b8e31930099c63b2085894896cedb1e05e8e7462b3a7d7d39132ae090c6
 homepage   : https://github.com/Umio-Yasuno/amdgpu_top
 license    : MIT
 component  : system.utils

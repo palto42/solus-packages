@@ -1,8 +1,8 @@
 name       : discord
-version    : 0.0.39
-release    : 54
+version    : 0.0.44
+release    : 60
 source     :
-    - https://dl.discordapp.net/apps/linux/0.0.39/discord-0.0.39.tar.gz : 2992ca07377d85d390929ee6374ad467c4db32f1f61b4fc07f01cf2c0943a6e8
+    - https://dl.discordapp.net/apps/linux/0.0.44/discord-0.0.44.tar.gz : 9b3a62af926cde90edb8e2b96caa1c77be29d0f7039cca4da71f0fa5c844e851
 license    : Distributable
 component  : network.im
 homepage   : https://discord.com/
@@ -30,8 +30,7 @@ install    : |
 
     # Binary
     install -Dm00755 Discord $installdir/usr/share/discord/Discord
-    install -dm00755 $installdir/usr/bin
-    ln -sv ../share/discord/Discord $installdir/usr/bin/discord
+    install -Dm00755 $pkgfiles/discord.sh $installdir/usr/bin/discord
 
     # Assets
     for i in *.pak *.dat *.bin *.png; do

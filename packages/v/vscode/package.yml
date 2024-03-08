@@ -1,8 +1,8 @@
 name       : vscode
-version    : 1.85.1
-release    : 202
+version    : 1.87.1
+release    : 209
 source     :
-    - git|https://github.com/Microsoft/vscode.git : 1.85.1
+    - git|https://github.com/Microsoft/vscode.git : 1.87.1
 homepage   : https://code.visualstudio.com/
 license    :
     - GPL-3.0-or-later # Icon (from Papirus)
@@ -48,26 +48,15 @@ setup      : |
     # Add icon to MIME
     yq -o=xml '.mime-info.mime-type.icon.+@name = "visual-studio-code"' -i resources/linux/code-workspace.xml
 
-    # Bug in newer npm: https://github.com/npm/cli/issues/6842 
-    yarn global add node-gyp
-
-    # Override Electron version to one that doesn't crash on Wayland
-    export ELECTRON_VERSION=25.9.4
-    sed -i "s|^target.*|target \"$ELECTRON_VERSION\"|" .yarnrc
-    yarn add electron@$ELECTRON_VERSION
-
-    # This file is only needed if you're overriding the Electron version. You can download the files from the Electron github releases and checksum them
-    cat $pkgfiles/electron-override.checksums >> $workdir/build/checksums/electron.txt
-
     yarn install --frozen-lockfile --network-timeout 180000
 build      : |
     yarn run gulp vscode-linux-x64
 install    : |
     export vsdir=/usr/share/vscode
-    install -dm00755 $installdir/usr/bin
     install -dm00755 $installdir/$vsdir
     cp -R $workdir/../VSCode-linux-x64/* $installdir/$vsdir/
-    ln -s $vsdir/bin/code-oss $installdir/usr/bin/code-oss
+    install -Dm00755 $pkgfiles/vscode.sh $installdir/usr/bin/code-oss
+
     install -Dm00644 $pkgfiles/product.json $installdir/$vsdir/resources/app/product.json
     install -Dm00644 $pkgfiles/code-oss.desktop $installdir/usr/share/applications/code-oss.desktop
     install -Dm00644 $pkgfiles/code-oss-url-handler.desktop $installdir/usr/share/applications/code-oss-url-handler.desktop
@@ -78,6 +67,7 @@ install    : |
 
     # Fix Wayland/Xorg window associations
     sed -i 's|Code - OSS|code-oss|g' $installdir/$vsdir/resources/app/package.json
+    sed -i 's|code-oss-url-handler.desktop|code-oss.desktop|g' $installdir/$vsdir/resources/app/package.json
 
     # Appdata/MIME
     install -Dm00644 $workdir/resources/linux/code.appdata.xml $installdir/usr/share/metainfo/com.visualstudio.code.appdata.xml

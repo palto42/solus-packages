@@ -1,0 +1,42 @@
+name       : kf6-kcmutils
+version    : 6.0.0
+release    : 3
+source     :
+    - https://cdn.download.kde.org/stable/frameworks/6.0/kcmutils-6.0.0.tar.xz : 9b09b140c013d568a2ee357f824bfb64145e4dfdd1689da6fbfb4f418c5ba43b
+homepage   : https://community.kde.org/Frameworks
+license    :
+    - LGPL-2.0-only
+    - LGPL-2.0-or-later
+component  : desktop.library
+summary    : Utilities for interacting with KCModules
+description: |
+    Utilities for interacting with KCModules
+builddeps  :
+    - pkgconfig(Qt6Quick)
+    - extra-cmake-modules
+    - kf6-kdeclarative-devel
+    - kf6-kguiaddons-devel
+    - kf6-ki18n-devel
+    - kf6-kio-devel
+    - kf6-kitemviews-devel
+    - kf6-kpackage-devel
+    - kf6-kservice-devel
+    - kf6-kxmlgui-devel
+rundeps    :
+    - devel :
+        - kf6-kconfigwidgets-devel
+        - kf6-kcoreaddons-devel
+        - kf6-kguiaddons-devel
+        - kf6-ki18n-devel
+        - kf6-kitemviews-devel
+        - kf6-kxmlgui-devel
+        - qt6-declarative-devel
+clang      : yes
+optimize   : thin-lto
+setup      : |
+    %cmake_kf6
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install
+    %qml6_cache

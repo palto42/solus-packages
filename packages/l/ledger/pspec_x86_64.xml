@@ -21,7 +21,7 @@
         <PartOf>office.finance</PartOf>
         <Files>
             <Path fileType="executable">/usr/bin/ledger</Path>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/ledger.so</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/ledger.so</Path>
             <Path fileType="library">/usr/lib64/libledger.so.3</Path>
             <Path fileType="data">/usr/share/bash-completion/completions/ledger</Path>
             <Path fileType="man">/usr/share/man/man1/ledger.1</Path>
@@ -34,7 +34,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="16">ledger</Dependency>
+            <Dependency release="18">ledger</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/ledger/account.h</Path>
@@ -57,6 +57,7 @@
             <Path fileType="header">/usr/include/ledger/format.h</Path>
             <Path fileType="header">/usr/include/ledger/generate.h</Path>
             <Path fileType="header">/usr/include/ledger/global.h</Path>
+            <Path fileType="header">/usr/include/ledger/gpgme.h</Path>
             <Path fileType="header">/usr/include/ledger/history.h</Path>
             <Path fileType="header">/usr/include/ledger/item.h</Path>
             <Path fileType="header">/usr/include/ledger/iterators.h</Path>
@@ -74,7 +75,6 @@
             <Path fileType="header">/usr/include/ledger/print.h</Path>
             <Path fileType="header">/usr/include/ledger/pstream.h</Path>
             <Path fileType="header">/usr/include/ledger/ptree.h</Path>
-            <Path fileType="header">/usr/include/ledger/pyfstream.h</Path>
             <Path fileType="header">/usr/include/ledger/pyinterp.h</Path>
             <Path fileType="header">/usr/include/ledger/pyutils.h</Path>
             <Path fileType="header">/usr/include/ledger/query.h</Path>
@@ -99,9 +99,9 @@
         </Files>
     </Package>
     <History>
-        <Update release="16">
-            <Date>2023-11-29</Date>
-            <Version>3.2.1</Version>
+        <Update release="18">
+            <Date>2024-02-16</Date>
+            <Version>3.3.2</Version>
             <Comment>Packaging update</Comment>
             <Name>Joey Riches</Name>
             <Email>josephriches@gmail.com</Email>

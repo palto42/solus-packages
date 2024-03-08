@@ -1,0 +1,30 @@
+name       : kf6-kitemmodels
+version    : 6.0.0
+release    : 3
+source     :
+    - https://cdn.download.kde.org/stable/frameworks/6.0/kitemmodels-6.0.0.tar.xz : 89b879981722821a911bba1765128820217944fa78e5452369158ed97a835b3a
+homepage   : https://community.kde.org/Frameworks
+license    :
+    - LGPL-2.0-or-later
+    - LGPL-2.1-only
+    - LGPL-2.1-or-later
+component  : desktop.library
+summary    : Set of item models extending the Qt model-view framework.
+description: |
+    Set of item models extending the Qt model-view framework.
+builddeps  :
+    - pkgconfig(Qt6Designer)
+    - pkgconfig(Qt6Quick)
+    - extra-cmake-modules
+rundeps    :
+    - devel :
+        - extra-cmake-modules
+        - qt6-base-devel
+clang      : yes
+optimize   : thin-lto
+setup      : |
+    %cmake_kf6
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install

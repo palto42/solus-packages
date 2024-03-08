@@ -1,8 +1,8 @@
 name       : kwindowsystem
-version    : 5.112.0
-release    : 75
+version    : 5.115.0
+release    : 77
 source     :
-    - https://cdn.download.kde.org/stable/frameworks/5.112/kwindowsystem-5.112.0.tar.xz : 418e13e52f66a4030757d8479c787adab1112f40f694c0cc26309d84bf793022
+    - https://cdn.download.kde.org/stable/frameworks/5.115/kwindowsystem-5.115.0.tar.xz : e0a06b19b5fb3ce534b35ddb1db96911c9452e791c0c650eae77bf59fb355f53
 homepage   : https://community.kde.org/Frameworks
 license    :
     - LGPL-2.0-only

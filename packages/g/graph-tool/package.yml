@@ -1,6 +1,6 @@
 name       : graph-tool
 version    : '2.58'
-release    : 19
+release    : 21
 source     :
     - https://downloads.skewed.de/graph-tool/graph-tool-2.58.tar.zst : 258bc7982c11317d3466eb29cfba7192dbdb998798dccad92d12a56ab9496707
 license    : GPL-3.0-or-later

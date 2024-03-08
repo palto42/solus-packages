@@ -1,8 +1,8 @@
 name       : variety
-version    : 0.8.11
-release    : 33
+version    : 0.8.12
+release    : 38
 source     :
-    - https://github.com/varietywalls/variety/archive/refs/tags/0.8.11.tar.gz : de64104cb01e2a2d1f427117293a69041eff0f962010c1813f65c961c0acf28e
+    - https://github.com/varietywalls/variety/archive/refs/tags/0.8.12.tar.gz : 8bf5a6748cf87976cfec3772e27ab53fb2a3dfb5704d66933481ca3e0004e09f
 homepage   : http://peterlevi.com/variety
 license    : GPL-3.0-or-later
 component  : multimedia.graphics

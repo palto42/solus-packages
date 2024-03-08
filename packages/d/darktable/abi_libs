@@ -86,6 +86,7 @@ libinvert.so
 libioporder.so
 libj2k.so
 libjpeg.so
+libjpegxl.so
 libknight.so
 liblatex.so
 liblens.so
@@ -118,6 +119,7 @@ libpfm.so
 libpiwigo.so
 libpng.so
 libppm.so
+libprimaries.so
 libprint.so
 libprint_settings.so
 libprofile_gamma.so

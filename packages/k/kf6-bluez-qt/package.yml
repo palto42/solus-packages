@@ -1,0 +1,30 @@
+name       : kf6-bluez-qt
+version    : 6.0.0
+release    : 5
+source     :
+    - https://cdn.download.kde.org/stable/frameworks/6.0/bluez-qt-6.0.0.tar.xz : 36798f1e7a0a472607435beb2833f6cc77d65cb006decac1ec0b0a3a6f5142eb
+homepage   : https://community.kde.org/Frameworks
+license    : LGPL-2.1-only
+component  : desktop.library
+summary    : Qt wrapper for BlueZ 5 DBus API
+description: |
+    BluezQt is a library for communication with BlueZ system and session daemons.
+    * Manager class is used to communicate with system daemon - org.bluez
+    * ObexManager class is used to communicate with session daemon - org.bluez.obex
+builddeps  :
+    - pkgconfig(Qt6Designer)
+    - extra-cmake-modules
+rundeps    :
+    - bluez
+    - devel :
+        - extra-cmake-modules
+        - qt6-tools-devel
+clang      : yes
+optimize   : thin-lto
+setup      : |
+    %cmake_kf6
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install
+    %qml6_cache

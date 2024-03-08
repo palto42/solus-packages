@@ -1,8 +1,8 @@
 name       : mediainfo
-version    : '23.04'
-release    : 25
+version    : '24.01'
+release    : 28
 source     :
-    - https://mediaarea.net/download/source/mediainfo/23.04/mediainfo_23.04.tar.bz2 : 20397c5d46f30f6d995c6b162b6730599434b7f4693385e75106ef871f80fe62
+    - https://mediaarea.net/download/source/mediainfo/24.01/mediainfo_24.01.tar.bz2 : 3f859b26757051c7bb42d4765be3f7d677ad5260e465dd8338a361bbb91da897
 license    : BSD-2-Clause
 component  : multimedia.video
 homepage   : https://mediaarea.net/en/MediaInfo

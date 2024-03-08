@@ -1,8 +1,8 @@
 name       : fwupd
-version    : 1.9.10
-release    : 9
+version    : 1.9.14
+release    : 14
 source     :
-    - https://github.com/fwupd/fwupd/releases/download/1.9.10/fwupd-1.9.10.tar.xz : 9b3834852393343ae4cd04b4750d0f8cf6b094fcebe5efecdae9ecd5f47ba81b
+    - https://github.com/fwupd/fwupd/releases/download/1.9.14/fwupd-1.9.14.tar.xz : b16cbb9480c9a957735d15cfc1e876198b3c607b08e92958f9fc098e31613279
 license    : LGPL-2.1-or-later
 homepage   : https://fwupd.org/
 component  : system.utils
@@ -45,11 +45,13 @@ builddeps  :
     - git
     - help2man
     - noto-sans-ttf
-    - python3-cairo
     - python-gobject
     - python-pillow
+    - python3-cairo
     - shared-mime-info
     - vala
+rundeps    :
+    - fwupd-efi
 setup      : |
     %apply_patches
     %meson_configure \

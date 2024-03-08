@@ -1,9 +1,9 @@
 name       : syncthing
-version    : 1.27.0
-release    : 91
+version    : 1.27.4
+release    : 94
 homepage   : https://syncthing.net
 source     :
-    - https://github.com/syncthing/syncthing/releases/download/v1.27.0/syncthing-source-v1.27.0.tar.gz : 8675dcf90eabe713e1b570c029f2196c607921f851430ae67745e2216e6bfa0d
+    - https://github.com/syncthing/syncthing/archive/refs/tags/v1.27.4.tar.gz : 65542335212f10703a8ace949b811744f96c1adaea6deed6d3d7399b9f398ecd
 license    : MPL-2.0
 component  : network.util
 networking : yes

@@ -1,8 +1,8 @@
 name       : kfilemetadata
-version    : 5.112.0
-release    : 84
+version    : 5.115.0
+release    : 87
 source     :
-    - https://cdn.download.kde.org/stable/frameworks/5.112/kfilemetadata-5.112.0.tar.xz : c4bfcfaefcc5f52122ab479b052f542e1da33c1809fce433a8e8559906197ffb
+    - https://cdn.download.kde.org/stable/frameworks/5.115/kfilemetadata-5.115.0.tar.xz : fefd0ec7068f28f609948621d02c91ef74a0d99dd1704a93308501ab5123c90c
 homepage   : https://community.kde.org/Frameworks
 license    :
     - BSD-3-Clause
@@ -21,9 +21,9 @@ builddeps  :
     - pkgconfig(taglib)
     - ebook-tools-devel
     - karchive-devel
+    - kconfig-devel
     - kcoreaddons-devel
     - ki18n-devel
-    - kconfig-devel
 setup      : |
     %cmake_ninja -DBUILD_QCH=ON \
                 -DBUILD_TESTING=OFF

@@ -20,13 +20,13 @@
 </Description>
         <PartOf>programming</PartOf>
         <Files>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/libtorrent.cpython-310-x86_64-linux-gnu.so</Path>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/libtorrent.egg-info/PKG-INFO</Path>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/libtorrent.egg-info/SOURCES.txt</Path>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/libtorrent.egg-info/dependency_links.txt</Path>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/libtorrent.egg-info/top_level.txt</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/libtorrent.cpython-311-x86_64-linux-gnu.so</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/libtorrent.egg-info/PKG-INFO</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/libtorrent.egg-info/SOURCES.txt</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/libtorrent.egg-info/dependency_links.txt</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/libtorrent.egg-info/top_level.txt</Path>
             <Path fileType="library">/usr/lib64/libtorrent-rasterbar.so.2.0</Path>
-            <Path fileType="library">/usr/lib64/libtorrent-rasterbar.so.2.0.9</Path>
+            <Path fileType="library">/usr/lib64/libtorrent-rasterbar.so.2.0.10</Path>
         </Files>
     </Package>
     <Package>
@@ -36,7 +36,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="42">libtorrent-rasterbar</Dependency>
+            <Dependency release="44">libtorrent-rasterbar</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/libtorrent/add_torrent_params.hpp</Path>
@@ -323,9 +323,9 @@
         </Files>
     </Package>
     <History>
-        <Update release="42">
-            <Date>2023-11-29</Date>
-            <Version>2.0.9</Version>
+        <Update release="44">
+            <Date>2024-02-23</Date>
+            <Version>2.0.10</Version>
             <Comment>Packaging update</Comment>
             <Name>Joey Riches</Name>
             <Email>josephriches@gmail.com</Email>

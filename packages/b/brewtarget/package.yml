@@ -1,8 +1,8 @@
 name       : brewtarget
-version    : 3.0.9
-release    : 8
+version    : 3.0.11
+release    : 10
 source     :
-    - https://github.com/Brewtarget/brewtarget/archive/refs/tags/v3.0.9.tar.gz : 58a620eb0e61e903e2f42812a6c0c48d3763e37f9676d621544636b210d92997
+    - https://github.com/Brewtarget/brewtarget/archive/refs/tags/v3.0.11.tar.gz : fe797392fbe832b2ee8ee84e154877611a34891f9126e5ca69ea30ebc56b3b46
 homepage   : https://github.com/Brewtarget/brewtarget
 license    :
     - BSD-2-Clause

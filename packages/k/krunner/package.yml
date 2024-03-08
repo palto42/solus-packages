@@ -1,8 +1,8 @@
 name       : krunner
-version    : 5.112.0
-release    : 71
+version    : 5.115.0
+release    : 73
 source     :
-    - https://cdn.download.kde.org/stable/frameworks/5.112/krunner-5.112.0.tar.xz : 762be1ab9c83872ac78abb2b0352b0ff25072e4430c23dbe0d828b7cd7d76e01
+    - https://cdn.download.kde.org/stable/frameworks/5.115/krunner-5.115.0.tar.xz : 15e239bfeedaec305a2d8707db7d4f8982c2c181eb0c116ce51205d187c6fa29
 homepage   : https://community.kde.org/Frameworks
 license    : LGPL-2.0-or-later
 component  : programming.library

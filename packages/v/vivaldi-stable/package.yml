@@ -1,8 +1,8 @@
 name       : vivaldi-stable
-version    : 6.5.3206.48
-release    : 225
+version    : 6.6.3271.48
+release    : 235
 source     :
-    - https://downloads.vivaldi.com/stable/vivaldi-stable_6.5.3206.48-1_amd64.deb : de046f3d24b225aa6a6b2ea778f94c03547fb5f148ef99878be9b1ddffb07e34
+    - https://downloads.vivaldi.com/stable/vivaldi-stable_6.6.3271.48-1_amd64.deb : ff306f1f4210649afc3ca5a42339cf47134b331428c553a70eb030fb40563843
 license    : Distributable
 homepage   : https://vivaldi.com
 component  : network.web.browser

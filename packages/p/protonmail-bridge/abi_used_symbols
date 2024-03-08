@@ -216,7 +216,13 @@ libQt6Core.so.6:_ZN9QLockFile7tryLockENSt6chrono8durationIlSt5ratioILl1ELl1000EE
 libQt6Core.so.6:_ZN9QLockFileC1ERK7QString
 libQt6Core.so.6:_ZN9QLockFileD1Ev
 libQt6Core.so.6:_ZN9QMetaType14registerHelperEPKN9QtPrivate18QMetaTypeInterfaceE
+libQt6Core.so.6:_ZN9QMetaType25registerConverterFunctionERKSt8functionIFbPKvPvEES_S_
 libQt6Core.so.6:_ZN9QMetaType25registerNormalizedTypedefERK10QByteArrayS_
+libQt6Core.so.6:_ZN9QMetaType27registerMutableViewFunctionERKSt8functionIFbPvS1_EES_S_
+libQt6Core.so.6:_ZN9QMetaType27unregisterConverterFunctionES_S_
+libQt6Core.so.6:_ZN9QMetaType29unregisterMutableViewFunctionES_S_
+libQt6Core.so.6:_ZN9QMetaType30hasRegisteredConverterFunctionES_S_
+libQt6Core.so.6:_ZN9QMetaType32hasRegisteredMutableViewFunctionES_S_
 libQt6Core.so.6:_ZN9QSettings8setValueE14QAnyStringViewRK8QVariant
 libQt6Core.so.6:_ZN9QSettingsC1ERK7QStringNS_6FormatEP7QObject
 libQt6Core.so.6:_ZN9QSettingsD1Ev
@@ -230,6 +236,7 @@ libQt6Core.so.6:_ZN9QtPrivate25QMetaTypeInterfaceWrapperI5QListI7QStringEE8metaT
 libQt6Core.so.6:_ZN9QtPrivate25QMetaTypeInterfaceWrapperI5QListI8QVariantEE8metaTypeE
 libQt6Core.so.6:_ZN9QtPrivate25QMetaTypeInterfaceWrapperI6QPointE8metaTypeE
 libQt6Core.so.6:_ZN9QtPrivate25QMetaTypeInterfaceWrapperI7QStringE8metaTypeE
+libQt6Core.so.6:_ZN9QtPrivate25QMetaTypeInterfaceWrapperIaE8metaTypeE
 libQt6Core.so.6:_ZN9QtPrivate25QMetaTypeInterfaceWrapperIbE8metaTypeE
 libQt6Core.so.6:_ZN9QtPrivate25QMetaTypeInterfaceWrapperIdE8metaTypeE
 libQt6Core.so.6:_ZN9QtPrivate25QMetaTypeInterfaceWrapperIfE8metaTypeE
@@ -423,9 +430,9 @@ libQt6Widgets.so.6:_ZN7QWidget9addActionERK5QIconRK7QString
 libQt6Widgets.so.6:_ZN7QWidget9addActionERK7QStringRK12QKeySequence
 libQt6Widgets.so.6:_ZTI12QApplication
 libQt6Widgets.so.6:_ZTI15QSystemTrayIcon
-libabsl_synchronization.so.2206.0.0:_ZN4absl12lts_202206235Mutex4LockEv
-libabsl_synchronization.so.2206.0.0:_ZN4absl12lts_202206235Mutex6UnlockEv
-libabsl_synchronization.so.2206.0.0:_ZN4absl12lts_202206235MutexD1Ev
+libabsl_synchronization.so.2308.0.0:_ZN4absl12lts_202308025Mutex4LockEv
+libabsl_synchronization.so.2308.0.0:_ZN4absl12lts_202308025Mutex6UnlockEv
+libabsl_synchronization.so.2308.0.0:_ZN4absl12lts_202308025MutexD1Ev
 libc.so.6:__cxa_atexit
 libc.so.6:__errno_location
 libc.so.6:__fprintf_chk
@@ -503,7 +510,6 @@ libc.so.6:pthread_mutexattr_settype
 libc.so.6:pthread_self
 libc.so.6:pthread_setspecific
 libc.so.6:pthread_sigmask
-libc.so.6:puts
 libc.so.6:pwrite64
 libc.so.6:qsort
 libc.so.6:read
@@ -542,8 +548,6 @@ libc.so.6:unlink
 libc.so.6:unsetenv
 libc.so.6:utimes
 libc.so.6:write
-libcrypto.so.3:OSSL_PROVIDER_load
-libcrypto.so.3:OSSL_PROVIDER_unload
 libgcc_s.so.1:_Unwind_Resume
 libglib-2.0.so.0:g_error_free
 libglib-2.0.so.0:g_free

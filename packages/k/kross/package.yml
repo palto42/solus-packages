@@ -1,8 +1,8 @@
 name       : kross
-version    : 5.112.0
-release    : 72
+version    : 5.115.0
+release    : 74
 source     :
-    - https://cdn.download.kde.org/stable/frameworks/5.112/portingAids/kross-5.112.0.tar.xz : 4ac324d161c5ec29931a6c5589ed5bd02d532d0f69d6024629d98e46fa3a08ad
+    - https://cdn.download.kde.org/stable/frameworks/5.115/portingAids/kross-5.115.0.tar.xz : e26f27e8421e31ddd3eaeadf6ac2257dc1ad47257faa912c489259dad7240b6f
 homepage   : https://community.kde.org/Frameworks
 license    : LGPL-2.1-or-later
 component  : programming.library

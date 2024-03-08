@@ -1,9 +1,9 @@
 name       : golang
-version    : 1.21.5
-release    : 106
+version    : 1.22.1
+release    : 110
 homepage   : https://golang.org
 source     :
-    - https://golang.org/dl/go1.21.5.src.tar.gz : 285cbbdf4b6e6e62ed58f370f3f6d8c30825d6e56c5853c66d3c23bcdb09db19
+    - https://golang.org/dl/go1.22.1.src.tar.gz : 79c9b91d7f109515a25fc3ecdaad125d67e6bdb54f6d4d98580f46799caea321
 license    : BSD-3-Clause
 summary    : The Go programming language
 description: Go is an open source programming language that makes it easy to build simple, reliable, and efficient software.
@@ -12,8 +12,8 @@ strip      : no
 component  : programming
 builddeps  :
     - binutils-gold # Needed for src/cmd/go/note_test.go
-    - llvm-clang    # Needed for src/cmd/link/cgo_test.go
     - golang
+    - llvm-clang    # Needed for src/cmd/link/cgo_test.go
 rundeps    :
     - glibc
 replaces   :

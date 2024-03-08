@@ -1,8 +1,8 @@
 name       : gstreamer-1.0-libav
-version    : 1.22.7
-release    : 28
+version    : 1.22.10
+release    : 31
 source     :
-    - https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-1.22.7.tar.xz : 1525b917141b895fe5cf618fe8867622b2528278a0286e9f727b5f37317daca1
+    - https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-1.22.10.tar.xz : d6dda7aa38a44173278de675ccd92acff0abf473f7bc02e7d1cdd4ce0f3b7642
 license    :
     - GPL-2.0-or-later
     - LGPL-2.0-or-later

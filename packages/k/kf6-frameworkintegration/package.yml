@@ -1,0 +1,38 @@
+name       : kf6-frameworkintegration
+version    : 6.0.0
+release    : 4
+source     :
+    - https://cdn.download.kde.org/stable/frameworks/6.0/frameworkintegration-6.0.0.tar.xz : 343efa4e4f7d1c804de2cb6a2cac7a980cf7f3787fd4f523fa2c2d2d15f65d9b
+homepage   : https://community.kde.org/Frameworks
+license    :
+    - LGPL-2.0-only
+    - LGPL-2.0-or-later
+    - LGPL-3.0-only
+component  : programming.library
+summary    : Integration of Qt application with KDE workspaces
+description: |
+    Framework Integration is a set of plugins responsible for better integration of Qt applications when running on a KDE Plasma workspace.
+builddeps  :
+    - pkgconfig(packagekitqt6)
+    - appstream-qt6-devel
+    - kf6-kcolorscheme-devel
+    - kf6-kconfig-devel
+    - kf6-ki18n-devel
+    - kf6-kiconthemes-devel
+    - kf6-knewstuff-devel
+    - kf6-knotifications-devel
+    - kf6-kpackage-devel
+    - kf6-kwidgetsaddons-devel
+rundeps    :
+    - devel :
+        - kf6-kcolorscheme-devel
+        - kf6-kiconthemes-devel
+        - kf6-kwidgetsaddons-devel
+clang      : yes
+optimize   : thin-lto
+setup      : |
+    %cmake_kf6
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install

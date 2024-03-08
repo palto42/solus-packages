@@ -1,0 +1,12 @@
+[Desktop Entry]
+Comment=Maelstrom
+Exec=maelstrom
+Icon=maelstrom
+Comment=Space combat game
+Name=Maelstrom
+StartupNotify=false
+Terminal=false
+Type=Application
+Categories=Game;ArcadeGame;
+Keywords=game;arcade;space;shooter;asteroids;
+

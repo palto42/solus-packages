@@ -1,8 +1,8 @@
 name       : streamlink
-version    : 6.4.2
-release    : 58
+version    : 6.6.2
+release    : 61
 source     :
-    - https://github.com/streamlink/streamlink/releases/download/6.4.2/streamlink-6.4.2.tar.gz : b5fb719f4251a692c88788a1d46e2cd0fa2231960c52b281cb8210871c722e76
+    - https://github.com/streamlink/streamlink/releases/download/6.6.2/streamlink-6.6.2.tar.gz : d1417c7c5986dc143bc711c8a99f7b884b10d2583f44b1c3dadea7df0a75e4d5
 homepage   : https://streamlink.github.io/
 license    : BSD-2-Clause
 component  : network.clients

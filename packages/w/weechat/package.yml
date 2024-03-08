@@ -1,8 +1,8 @@
 name       : weechat
-version    : 4.1.1
-release    : 74
+version    : 4.2.0
+release    : 77
 source     :
-    - https://github.com/weechat/weechat/archive/refs/tags/v4.1.1.tar.gz : 1571021731e658d47edb2159a00fa48e6df7272de4f4a57b9e971592433db9a3
+    - https://github.com/weechat/weechat/archive/refs/tags/v4.2.0.tar.gz : f53591a586dcbb5055485bd8ddcff0104b1ce142a7adca7ae7834beb7e1fbb96
 homepage   : https://weechat.org
 license    : GPL-3.0-or-later
 summary    : WeeChat is a fast, light and extensible chat client.

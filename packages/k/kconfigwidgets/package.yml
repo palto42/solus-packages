@@ -1,8 +1,8 @@
 name       : kconfigwidgets
-version    : 5.112.0
-release    : 73
+version    : 5.115.0
+release    : 75
 source     :
-    - https://cdn.download.kde.org/stable/frameworks/5.112/kconfigwidgets-5.112.0.tar.xz : 290f0a472eaeee834f06c9cd799a233feb94850042f117e905c02c7e9323687a
+    - https://cdn.download.kde.org/stable/frameworks/5.115/kconfigwidgets-5.115.0.tar.xz : 8ddb3203d97ad6681e93cad4c9b826105a8214c1f143aacdc8cbf11fd47e955b
 homepage   : https://community.kde.org/Frameworks
 license    :
     - BSD-3-Clause

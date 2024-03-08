@@ -1,8 +1,8 @@
 name       : gpxsee
-version    : '13.13'
-release    : 31
+version    : '13.16'
+release    : 34
 source     :
-    - https://github.com/tumic0/GPXSee/archive/refs/tags/13.13.tar.gz : 83b462d209981cc2449b4479a5e39a8810837c79eb2847f7dc49bc62efd540a0
+    - https://github.com/tumic0/GPXSee/archive/refs/tags/13.16.tar.gz : f027ec5bf62c1ac79274e51867157f86c9d93cc61e722f9c1d34989be79addbd
 homepage   : https://www.gpxsee.org
 license    : GPL-3.0-or-later
 component  : desktop

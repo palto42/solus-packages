@@ -1,8 +1,8 @@
 name       : readline
-version    : 8.1.2
-release    : 11
+version    : '8.2'
+release    : 15
 source     :
-    - https://ftp.gnu.org/gnu/readline/readline-8.1.2.tar.gz : 7589a2381a8419e68654a47623ce7dfcb756815c8fee726b98f90bf668af7bc6
+    - https://ftp.gnu.org/gnu/readline/readline-8.2.tar.gz : 3feb7171f16a84ee82ca18a36d7b9be109a52c04f492a053331d7d1095007c35
 homepage   : https://tiswww.case.edu/php/chet/readline/rltop.html
 license    : GPL-3.0-or-later
 component  :
@@ -13,14 +13,14 @@ description: |
     The GNU Readline library provides a set of functions for use by applications that allow users to edit command lines as they are typed in. Both Emacs and vi editing modes are available. The Readline library includes additional functions to maintain a list of previously-entered command lines, to recall and perhaps reedit those lines, and perform csh-like history expansion on previous commands.
 builddeps  :
     - pkgconfig32(ncursesw)
-patterns   :
-    - devel :
-        - /usr/share/info
-        - /usr/share/man/man3
 emul32     : yes
+optimize   :
+    - speed
+    - lto
 setup      : |
+    %apply_patches
     %configure --disable-static \
-        --with-curses
+               --with-curses
 build      : |
     %make SHLIB_LIBS=-lncurses
 install    : |
@@ -29,4 +29,10 @@ install    : |
     # it's empty
     rmdir $installdir/usr/bin
 
+    # Fix the pkgconfig
+    sed -i "s|Requires.private: ncurses|Requires.private: ncursesw|g" $installdir/%libdir%/pkgconfig/readline.pc
+
     rm -fr $installdir/usr/share/doc/readline
+patterns   :
+    - devel :
+        - /usr/share/info

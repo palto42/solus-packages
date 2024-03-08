@@ -1,0 +1,33 @@
+name       : kf6-kparts
+version    : 6.0.0
+release    : 3
+source     :
+    - https://cdn.download.kde.org/stable/frameworks/6.0/kparts-6.0.0.tar.xz : f08308556eecd6db0be727ec1d27b3bb533880a530d112bb16ec2f08ead1f6e1
+homepage   : https://community.kde.org/Frameworks
+license    :
+    - LGPL-2.0-only
+    - LGPL-2.0-or-later
+    - LGPL-2.1-or-later
+component  : desktop.library
+summary    : Plugin framework for user interface components
+description: |
+    Plugin framework for user interface components
+builddeps  :
+    - kf6-kiconthemes-devel
+    - kf6-kio-devel
+    - kf6-ktextwidgets-devel
+    - kf6-kxmlgui-devel
+    - kf6-sonnet-devel
+rundeps    :
+    - devel :
+        - kf6-kio-devel
+        - kf6-kservice-devel
+        - kf6-kxmlgui-devel
+clang      : yes
+optimize   : thin-lto
+setup      : |
+    %cmake_kf6
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install

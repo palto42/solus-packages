@@ -1,8 +1,8 @@
 name       : kpackage
-version    : 5.112.0
-release    : 73
+version    : 5.115.0
+release    : 75
 source     :
-    - https://cdn.download.kde.org/stable/frameworks/5.112/kpackage-5.112.0.tar.xz : 77022d31074247fc87e8dd2853d44440d0257338a3c68b080c2a55e849c1043d
+    - https://cdn.download.kde.org/stable/frameworks/5.115/kpackage-5.115.0.tar.xz : 7e80873fec64e81161d6b1e865cffc15bcbeb8c402c0459b468f7498a7427c7d
 homepage   : https://community.kde.org/Frameworks
 license    :
     - GPL-2.0-or-later

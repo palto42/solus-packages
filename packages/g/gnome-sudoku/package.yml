@@ -1,8 +1,8 @@
 name       : gnome-sudoku
-version    : '45.1'
-release    : 16
+version    : '45.5'
+release    : 18
 source     :
-    - https://download.gnome.org/sources/gnome-sudoku/45/gnome-sudoku-45.1.tar.xz : fb5437961a33d2ab7ad3081648e5df6b193a1b86224213ef23b973914a9f7c90
+    - https://download.gnome.org/sources/gnome-sudoku/45/gnome-sudoku-45.5.tar.xz : 8e8e2bca6cda49f05d0061c3f9866020b363ef84c3a30f5b7e8ed4e41a57fd0f
 homepage   : https://wiki.gnome.org/Apps/Sudoku/
 license    : GPL-3.0-or-later
 component  : games.puzzle
@@ -12,8 +12,8 @@ description: |
 builddeps  :
     - pkgconfig(gee-0.8)
     - pkgconfig(gtk4)
-    - pkgconfig(libadwaita-1)
     - pkgconfig(json-glib-1.0)
+    - pkgconfig(libadwaita-1)
     - pkgconfig(qqwing)
     - desktop-file-utils
     - itstool

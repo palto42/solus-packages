@@ -1,8 +1,8 @@
 name       : ki18n
-version    : 5.112.0
-release    : 75
+version    : 5.115.0
+release    : 77
 source     :
-    - https://cdn.download.kde.org/stable/frameworks/5.112/ki18n-5.112.0.tar.xz : 33d542e760c2bd5dd2d3511624cac3311c60187d7c7b155a4b968a7c6b7a961b
+    - https://cdn.download.kde.org/stable/frameworks/5.115/ki18n-5.115.0.tar.xz : d4fc34762137b5f90df78294370ffb345b6932552137359d15cdd157dbd7d6fd
 homepage   : https://community.kde.org/Frameworks
 license    :
     - BSD-3-Clause
@@ -23,6 +23,7 @@ rundeps    :
         - extra-cmake-modules
         - qt5-tools-devel
 setup      : |
+    %patch -p1 -i $pkgfiles/iso-codes-4.16.patch
     %cmake_ninja -DBUILD_QCH=ON
 build      : |
     %ninja_build

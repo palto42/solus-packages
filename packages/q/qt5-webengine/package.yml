@@ -1,6 +1,6 @@
 name       : qt5-webengine
 version    : 5.15.16
-release    : 61
+release    : 66
 source     :
     - git|https://code.qt.io/qt/qtwebengine.git : v5.15.16-lts
     # We need to use a catapult git snapshot for Python 3 support. Let's just use the same one SUSE uses
@@ -20,8 +20,8 @@ builddeps  :
     - pkgconfig(Qt5Designer)
     - pkgconfig(Qt5Positioning)
     - pkgconfig(Qt5QuickControls2)
-    - pkgconfig(Qt5XmlPatterns)
     - pkgconfig(Qt5WebChannel)
+    - pkgconfig(Qt5XmlPatterns)
     - pkgconfig(alsa)
     - pkgconfig(fontconfig)
     - pkgconfig(freetype2)
@@ -49,6 +49,7 @@ builddeps  :
     - pkgconfig(opus)
     - pkgconfig(protobuf)
     - pkgconfig(re2)
+    - pkgconfig(snappy)
     - pkgconfig(vpx)
     - pkgconfig(xcb)
     - pkgconfig(xcomposite)
@@ -58,13 +59,12 @@ builddeps  :
     - pkgconfig(xkbcommon)
     - pkgconfig(xkbfile)
     - pkgconfig(xrandr)
-    - pkgconfig(xtst)
     - pkgconfig(xscrnsaver)
+    - pkgconfig(xtst)
     - gperf
     - ninja
     - nodejs
     - python3
-    - snappy-devel
 # 2023-10-31 Reilly:
 # Chromium 87 is just too old for LLVM >=16. Just use GCC so we don't waste a bunch of time trying to track down support patches
 # Symptom: It builds but there's random segfaults in various blink engine code.
@@ -83,14 +83,19 @@ setup      : |
     %patch -p1 -i $pkgfiles/qtwebengine-5.15.15-compile.patch
     %patch -p1 -i $pkgfiles/qtwebengine-5.15.15-clang16.patch
     %patch -p1 -i $pkgfiles/qtwebengine-5.15.15-clang16-2.patch
+    %patch -p1 -d src/3rdparty/chromium -i $pkgfiles/icu74.patch
+    %patch -p1 -d src/3rdparty/chromium -i $pkgfiles/libxml-2.12.patch
 
     # Use Python 3
     %patch -p1 -i $pkgfiles/qt5-webengine-python3.patch
+    %patch -p1 -i $pkgfiles/python311-fixes.patch
 
     # 3rdparty patches
     %patch -p1 -d src/3rdparty -i $pkgfiles/qt5-webengine-pipewire-0.3.patch
     # Fix compat with minizip-ng
     %patch -p1 -d src/3rdparty -i $pkgfiles/0001-minizip-ng-compat.patch
+    # ffmpeg 5+
+    %patch -p1 -d src/3rdparty -i $pkgfiles/qt5-webengine-ffmpeg5.patch
 
     # Replace catapult with git snapshot
     pushd src/3rdparty/chromium/third_party
@@ -116,3 +121,4 @@ build      : |
     %make
 install    : |
     %make_install INSTALL_ROOT=$installdir
+    %qml_cache

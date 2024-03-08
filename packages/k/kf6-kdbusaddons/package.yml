@@ -1,0 +1,29 @@
+name       : kf6-kdbusaddons
+version    : 6.0.0
+release    : 4
+source     :
+    - https://cdn.download.kde.org/stable/frameworks/6.0/kdbusaddons-6.0.0.tar.xz : 11e70d0c7239bd818962d91cdb94aeba94748055c77003a4f64ff14dab0ae989
+homepage   : https://community.kde.org/Frameworks
+license    :
+    - LGPL-2.0-only
+    - LGPL-2.0-or-later
+    - LGPL-2.1-only
+component  : programming.library
+summary    : Convenience classes for DBus.
+description: |
+    Convenience classes for DBus.
+builddeps  :
+    - pkgconfig(Qt6Designer)
+    - extra-cmake-modules
+rundeps    :
+    - devel :
+        - extra-cmake-modules
+        - qt6-tools-devel
+clang      : yes
+optimize   : thin-lto
+setup      : |
+    %cmake_kf6
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install

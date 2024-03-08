@@ -1,8 +1,8 @@
 name       : bibata-cursors
-version    : 2.0.4
-release    : 2
+version    : 2.0.6
+release    : 4
 source     :
-    - https://github.com/ful1e5/Bibata_Cursor/releases/download/v2.0.4/Bibata.tar.xz : af21e99d6bdda372e24ed8734f21e9fd6f09fcf9d6f1f47d0043dcd8c1e00959
+    - https://github.com/ful1e5/Bibata_Cursor/releases/download/v2.0.6/Bibata.tar.xz : 88252b36063a85e8f2123502917c7e64296a94290d08731884625d7436bd24cb
 homepage   : https://github.com/KaizIqbal/Bibata_Cursor
 license    : GPL-3.0-or-later
 component  : desktop.theme

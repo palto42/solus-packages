@@ -1,8 +1,8 @@
 name       : kidletime
-version    : 5.112.0
-release    : 72
+version    : 5.115.0
+release    : 74
 source     :
-    - https://cdn.download.kde.org/stable/frameworks/5.112/kidletime-5.112.0.tar.xz : a60ccd76d0c472ab734628329ca3f9520f2f9eea15a549a9e1c7a0e4d412905d
+    - https://cdn.download.kde.org/stable/frameworks/5.115/kidletime-5.115.0.tar.xz : 9d8029aa6a740dbcdee6988987d097538f369ce7b6f3dee09d502aa29737ae56
 homepage   : https://community.kde.org/Frameworks
 license    :
     - GPL-2.0-or-later
@@ -16,8 +16,8 @@ optimize   : lto
 builddeps  :
     - pkgconfig(Qt5DBus)
     - pkgconfig(Qt5Designer)
-    - pkgconfig(Qt5Widgets)
     - pkgconfig(Qt5WaylandClient)
+    - pkgconfig(Qt5Widgets)
     - pkgconfig(Qt5X11Extras)
     - pkgconfig(wayland-client)
     - pkgconfig(wayland-protocols)

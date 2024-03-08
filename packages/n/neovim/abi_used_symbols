@@ -27,8 +27,10 @@ libc.so.6:__environ
 libc.so.6:__errno_location
 libc.so.6:__fprintf_chk
 libc.so.6:__fread_chk
-libc.so.6:__isoc99_fscanf
-libc.so.6:__isoc99_sscanf
+libc.so.6:__isoc23_fscanf
+libc.so.6:__isoc23_sscanf
+libc.so.6:__isoc23_strtoimax
+libc.so.6:__isoc23_strtol
 libc.so.6:__libc_start_main
 libc.so.6:__memcpy_chk
 libc.so.6:__memmove_chk
@@ -204,6 +206,7 @@ libc.so.6:pthread_condattr_setclock
 libc.so.6:pthread_create
 libc.so.6:pthread_exit
 libc.so.6:pthread_getaffinity_np
+libc.so.6:pthread_getschedparam
 libc.so.6:pthread_getspecific
 libc.so.6:pthread_join
 libc.so.6:pthread_key_create
@@ -226,6 +229,7 @@ libc.so.6:pthread_rwlock_unlock
 libc.so.6:pthread_rwlock_wrlock
 libc.so.6:pthread_self
 libc.so.6:pthread_setaffinity_np
+libc.so.6:pthread_setschedparam
 libc.so.6:pthread_setspecific
 libc.so.6:pthread_sigmask
 libc.so.6:ptsname
@@ -246,6 +250,8 @@ libc.so.6:rename
 libc.so.6:rewind
 libc.so.6:rmdir
 libc.so.6:scandir64
+libc.so.6:sched_get_priority_max
+libc.so.6:sched_get_priority_min
 libc.so.6:sched_getaffinity
 libc.so.6:sched_getcpu
 libc.so.6:sched_yield
@@ -303,9 +309,7 @@ libc.so.6:strptime
 libc.so.6:strrchr
 libc.so.6:strstr
 libc.so.6:strtod
-libc.so.6:strtoimax
 libc.so.6:strtok_r
-libc.so.6:strtol
 libc.so.6:symlink
 libc.so.6:syscall
 libc.so.6:sysconf

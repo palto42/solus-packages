@@ -1,8 +1,8 @@
 name       : github-cli
-version    : 2.39.2
-release    : 36
+version    : 2.45.0
+release    : 42
 source     :
-    - https://github.com/cli/cli/archive/refs/tags/v2.39.2.tar.gz : b08a2839fe1a590c7deccd3e5a9e659c41b550b16d02157bd66b936ea4714c0d
+    - https://github.com/cli/cli/archive/refs/tags/v2.45.0.tar.gz : 61363c109487a17fad44dff3a55f0c7dd36c8d6e4d7b630755705bd3aa34a323
 homepage   : https://cli.github.com
 license    : MIT
 component  : system.utils

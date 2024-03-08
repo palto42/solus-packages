@@ -29,6 +29,7 @@ UNKNOWN:PyErr_Clear
 UNKNOWN:PyErr_ExceptionMatches
 UNKNOWN:PyErr_Fetch
 UNKNOWN:PyErr_Format
+UNKNOWN:PyErr_GetExcInfo
 UNKNOWN:PyErr_NoMemory
 UNKNOWN:PyErr_Occurred
 UNKNOWN:PyErr_Print
@@ -47,7 +48,6 @@ UNKNOWN:PyExc_TypeError
 UNKNOWN:PyExc_ValueError
 UNKNOWN:PyFloat_AsDouble
 UNKNOWN:PyFloat_Type
-UNKNOWN:PyFrame_FastToLocals
 UNKNOWN:PyFrame_LocalsToFast
 UNKNOWN:PyFrame_New
 UNKNOWN:PyGILState_Ensure
@@ -104,7 +104,9 @@ UNKNOWN:PySequence_GetItem
 UNKNOWN:PySequence_Size
 UNKNOWN:PySet_Type
 UNKNOWN:PySlice_Type
+UNKNOWN:PyThreadState_EnterTracing
 UNKNOWN:PyThreadState_Get
+UNKNOWN:PyThreadState_LeaveTracing
 UNKNOWN:PyTraceBack_Here
 UNKNOWN:PyTuple_New
 UNKNOWN:PyTuple_Pack
@@ -123,8 +125,9 @@ UNKNOWN:PyUnicode_InternFromString
 UNKNOWN:Py_BuildValue
 UNKNOWN:_PyArg_ParseTupleAndKeywords_SizeT
 UNKNOWN:_PyArg_ParseTuple_SizeT
-UNKNOWN:_PyCode_CheckLineNumber
 UNKNOWN:_PyErr_ChainExceptions
+UNKNOWN:_PyErr_Fetch
+UNKNOWN:_PyErr_Restore
 UNKNOWN:_PyObject_New
 UNKNOWN:_PySet_NextEntry
 UNKNOWN:_PyUnicode_Ready
@@ -208,8 +211,6 @@ libm.so.6:erfc
 libm.so.6:erfcf
 libm.so.6:erff
 libm.so.6:exp
-libm.so.6:exp2
-libm.so.6:exp2f
 libm.so.6:expf
 libm.so.6:expm1
 libm.so.6:expm1f
@@ -227,8 +228,6 @@ libm.so.6:log10
 libm.so.6:log10f
 libm.so.6:log1p
 libm.so.6:log1pf
-libm.so.6:log2
-libm.so.6:log2f
 libm.so.6:logf
 libm.so.6:nextafter
 libm.so.6:nextafterf

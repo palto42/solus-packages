@@ -1,8 +1,8 @@
 name       : kguiaddons
-version    : 5.112.0
-release    : 74
+version    : 5.115.0
+release    : 77
 source     :
-    - https://cdn.download.kde.org/stable/frameworks/5.112/kguiaddons-5.112.0.tar.xz : abea1b0c3d755858a85d703b4ca994e09cb7bbed8b980cc10f583812d68c847b
+    - https://cdn.download.kde.org/stable/frameworks/5.115/kguiaddons-5.115.0.tar.xz : 4f6dda36ea182c8f9f7a703301cea8258b094d7b9254f42ad70dedbeb73ff262
 homepage   : https://community.kde.org/Frameworks
 license    :
     - GPL-3.0-only
@@ -25,8 +25,10 @@ rundeps    :
         - extra-cmake-modules
         - qt5-tools-devel
 setup      : |
+    # Plasma-6: Set BUILD_GEO_SCHEME_HANDLER=OFF
     %cmake_ninja -DBUILD_QCH=ON \
-                -DBUILD_TESTING=OFF
+                 -DBUILD_TESTING=OFF \
+                 -DBUILD_GEO_SCHEME_HANDLER=ON
 build      : |
     %ninja_build
 install    : |

@@ -1,0 +1,36 @@
+name       : kf6-kidletime
+version    : 6.0.0
+release    : 3
+source     :
+    - https://cdn.download.kde.org/stable/frameworks/6.0/kidletime-6.0.0.tar.xz : aa846b4cfcbc48d084350d1f525638fcf4766b0363bcde40fcefa88a8fbda7b3
+homepage   : https://community.kde.org/Frameworks
+license    :
+    - GPL-2.0-or-later
+    - LGPL-2.0-only
+    - MIT
+component  : desktop.library
+summary    : Reporting of idle time of user and system
+description: |
+    Reporting of idle time of user and system
+builddeps  :
+    - pkgconfig(Qt6DBus)
+    - pkgconfig(Qt6Designer)
+    - pkgconfig(Qt6WaylandClient)
+    - pkgconfig(Qt6Widgets)
+    - pkgconfig(wayland-client)
+    - pkgconfig(wayland-protocols)
+    - pkgconfig(xscrnsaver)
+    - extra-cmake-modules
+    - plasma-wayland-protocols-devel
+rundeps    :
+    - devel :
+        - extra-cmake-modules
+        - qt6-base-devel
+clang      : yes
+optimize   : thin-lto
+setup      : |
+    %cmake_kf6
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install

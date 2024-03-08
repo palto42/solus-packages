@@ -1,5 +1,6 @@
 libMagickCore-7.Q16HDRI.so.10
 libOpenEXR-3_1.so.30
+libarchive.so.13
 libc.so.6
 libcairo.so.2
 libcfitsio.so.9
@@ -12,12 +13,13 @@ libgio-2.0.so.0
 libglib-2.0.so.0
 libgmodule-2.0.so.0
 libgobject-2.0.so.0
-libgsf-1.so.114
 libheif.so.1
+libhwy.so.1
 libjpeg.so.8
+libjxl.so.0.10
+libjxl_threads.so.0.10
 liblcms2.so.2
 libm.so.6
-liborc-0.4.so.0
 libpango-1.0.so.0
 libpangocairo-1.0.so.0
 libpangoft2-1.0.so.0

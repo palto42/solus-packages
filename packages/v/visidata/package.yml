@@ -1,8 +1,8 @@
 name       : visidata
-version    : 2.11.1
-release    : 8
+version    : 3.0.2
+release    : 12
 source     :
-    - https://github.com/saulpw/visidata/archive/refs/tags/v2.11.1.tar.gz : 8d4f3f7453c1914a40eb00edc4196db0b88819d9d4d1ae3a22f603f8b7d5126d
+    - https://github.com/saulpw/visidata/archive/refs/tags/v3.0.2.tar.gz : cc1506b96192de49419a77a3f9606999779ff77d37a7be0806506c32e16d57f7
 homepage   : https://www.visidata.org/
 license    : GPL-3.0-only
 component  : office.viewers

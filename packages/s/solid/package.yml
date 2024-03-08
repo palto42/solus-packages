@@ -1,8 +1,8 @@
 name       : solid
-version    : 5.112.0
-release    : 76
+version    : 5.115.0
+release    : 78
 source     :
-    - https://cdn.download.kde.org/stable/frameworks/5.112/solid-5.112.0.tar.xz : 1e74096b5ccaa9429c54a90c88ac51bd168d52a1d8dc23defa8e8809a72af542
+    - https://cdn.download.kde.org/stable/frameworks/5.115/solid-5.115.0.tar.xz : a7a1c6f6a0ef27b876e3753c67ea17ec5cc1d66cfd3e2c0fbba83e2ce4773d7b
 homepage   : https://community.kde.org/Frameworks
 license    :
     - BSD-3-Clause
@@ -20,10 +20,10 @@ builddeps  :
     - extra-cmake-modules
     - media-player-info
 rundeps    :
-    - media-player-info
     - devel :
         - extra-cmake-modules
         - qt5-tools-devel
+    - media-player-info
 setup      : |
     %cmake_ninja -DBUILD_QCH=ON \
                 -DBUILD_TESTING=OFF

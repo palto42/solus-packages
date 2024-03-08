@@ -1,0 +1,29 @@
+name       : kf6-knotifyconfig
+version    : 6.0.0
+release    : 3
+source     :
+    - https://cdn.download.kde.org/stable/frameworks/6.0/knotifyconfig-6.0.0.tar.xz : 323fe757a01ecb2481d9ad04b0902efd3dde13cb1fc044ee1ac1b7f5a29369e6
+homepage   : https://community.kde.org/Frameworks
+license    : LGPL-2.0-only
+component  : desktop.library
+summary    : Configuration dialog for desktop notifications.
+description: |
+    Configuration dialog for desktop notifications.
+builddeps  :
+    - pkgconfig(libcanberra)
+    - kf6-kcompletion-devel
+    - kf6-kconfig-devel
+    - kf6-ki18n-devel
+    - kf6-kio-devel
+rundeps    :
+    - devel :
+        - extra-cmake-modules
+        - qt6-base-devel
+clang      : yes
+optimize   : thin-lto
+setup      : |
+    %cmake_kf6
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install

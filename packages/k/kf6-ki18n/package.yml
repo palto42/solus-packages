@@ -1,0 +1,30 @@
+name       : kf6-ki18n
+version    : 6.0.0
+release    : 5
+source     :
+    - https://cdn.download.kde.org/stable/frameworks/6.0/ki18n-6.0.0.tar.xz : 15cbfb73ef1d3954d6206755b6e6a9c86ea27be4b4db0c843d38494851bcc354
+homepage   : https://community.kde.org/Frameworks
+license    :
+    - BSD-3-Clause
+    - LGPL-2.0-only
+    - LGPL-2.0-or-later
+    - LGPL-2.1-only
+component  : programming.tools
+summary    : KDE Gettext-based UI text internationalization.
+description: |
+    KDE Gettext-based UI text internationalization.
+builddeps  :
+    - pkgconfig(Qt6Designer)
+    - extra-cmake-modules
+rundeps    :
+    - devel :
+        - extra-cmake-modules
+        - qt6-tools-devel
+clang      : yes
+optimize   : thin-lto
+setup      : |
+    %cmake_kf6
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install

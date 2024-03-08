@@ -1,6 +1,7 @@
 <PISI>
     <Source>
         <Name>libaccounts-glib</Name>
+        <Homepage>https://gitlab.com/accounts-sso/libaccounts-glib</Homepage>
         <Packager>
             <Name>Joey Riches</Name>
             <Email>josephriches@gmail.com</Email>
@@ -10,7 +11,7 @@
         <Summary xml:lang="en">GLib-based client library for the accounts database</Summary>
         <Description xml:lang="en">This project is a library for managing accounts which can be used from GLib applications. It is part of the accounts-sso project.
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>libaccounts-glib</Name>
@@ -21,7 +22,7 @@
         <Files>
             <Path fileType="executable">/usr/bin/ag-backup</Path>
             <Path fileType="executable">/usr/bin/ag-tool</Path>
-            <Path fileType="library">/usr/lib/python3.10/site-packages/gi/overrides/Accounts.py</Path>
+            <Path fileType="library">/usr/lib/python3.11/site-packages/gi/overrides/Accounts.py</Path>
             <Path fileType="library">/usr/lib64/girepository-1.0/Accounts-1.0.typelib</Path>
             <Path fileType="library">/usr/lib64/libaccounts-glib.so.0</Path>
             <Path fileType="library">/usr/lib64/libaccounts-glib.so.1.25</Path>
@@ -48,7 +49,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="4">libaccounts-glib</Dependency>
+            <Dependency release="6">libaccounts-glib</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/libaccounts-glib/accounts-glib.h</Path>
@@ -71,9 +72,9 @@
         </Files>
     </Package>
     <History>
-        <Update release="4">
-            <Date>2022-05-04</Date>
-            <Version>1.25</Version>
+        <Update release="6">
+            <Date>2024-02-16</Date>
+            <Version>1.26</Version>
             <Comment>Packaging update</Comment>
             <Name>Joey Riches</Name>
             <Email>josephriches@gmail.com</Email>

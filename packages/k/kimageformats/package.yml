@@ -1,8 +1,8 @@
 name       : kimageformats
-version    : 5.112.0
-release    : 48
+version    : 5.115.0
+release    : 52
 source     :
-    - https://cdn.download.kde.org/stable/frameworks/5.112/kimageformats-5.112.0.tar.xz : c5c47339398a4bc265015fad9918d4c8729beec08390a080af5e0cb0eade89d3
+    - https://cdn.download.kde.org/stable/frameworks/5.115/kimageformats-5.115.0.tar.xz : 9f61020d66f86b8b10bce14e42a39c5e8fd8e40ec9e6ca8b9e9b5ce3e1aa7283
 homepage   : https://community.kde.org/Frameworks
 license    :
     - GPL-2.0-only

@@ -1,0 +1,43 @@
+name       : kf6-kconfigwidgets
+version    : 6.0.0
+release    : 4
+source     :
+    - https://cdn.download.kde.org/stable/frameworks/6.0/kconfigwidgets-6.0.0.tar.xz : 511bed0d95de186b3cf62c7192bbb6020450d4861f05c1a545356144f17de532
+homepage   : https://community.kde.org/Frameworks
+license    :
+    - BSD-3-Clause
+    - GPL-2.0-or-later
+    - LGPL-2.0-only
+    - LGPL-2.0-or-later
+    - LGPL-2.1-only
+    - MIT
+component  : desktop.library
+summary    : Widgets for configuration dialogs
+description: |
+    Widgets for configuration dialogs
+builddeps  :
+    - extra-cmake-modules
+    - kf6-kcodecs-devel
+    - kf6-kcolorscheme-devel
+    - kf6-kconfig-devel
+    - kf6-kcoreaddons-devel
+    - kf6-kguiaddons-devel
+    - kf6-ki18n-devel
+    - kf6-kwidgetsaddons-devel
+rundeps    :
+    - devel :
+        - kf6-kcodecs-devel
+        - kf6-kcolorscheme-devel
+        - kf6-kconfig-devel
+        - kf6-kcoreaddons-devel
+        - kf6-kguiaddons-devel
+        - kf6-ki18n-devel
+        - kf6-kwidgetsaddons-devel
+clang      : yes
+optimize   : thin-lto
+setup      : |
+    %cmake_kf6
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install

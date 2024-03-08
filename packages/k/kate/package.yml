@@ -1,8 +1,8 @@
 name       : kate
-version    : 23.08.4
-release    : 77
+version    : 23.08.5
+release    : 82
 source     :
-    - https://cdn.download.kde.org/stable/release-service/23.08.4/src/kate-23.08.4.tar.xz : 297facaab205f67f2c61b17650ef27a10b32ea699083577eeece25d0beb3fba2
+    - https://cdn.download.kde.org/stable/release-service/23.08.5/src/kate-23.08.5.tar.xz : 683c49d9c4b2abd4b4660b607b65249a2adfdc48418b0d18ab90810d1a8f4e37
 homepage   : https://apps.kde.org/kate
 license    :
     - GPL-2.0-or-later
@@ -13,9 +13,10 @@ license    :
     - LGPL-3.0-only
     - MIT
 component  : desktop.kde.core
-summary    : KDE advanced text editor
+summary    :
+    - KDE advanced text editor
 description:
-    Kate is a multi-document, multi-view text editor by KDE. It features stuff like codefolding, syntaxhighlighting, dynamic word wrap, an embedded console, an extensive plugin interface and some prelimentary scripting support. This package also contains kwrite, a lightweight editor
+    - Kate is a multi-document, multi-view text editor by KDE. It features stuff like codefolding, syntaxhighlighting, dynamic word wrap, an embedded console, an extensive plugin interface and some prelimentary scripting support.
 optimize   : lto
 builddeps  :
     - pkgconfig(Qt5Script)
@@ -44,3 +45,6 @@ install    : |
 
     # remove docs
     rm -rf $installdir/usr/share/doc
+
+    # causes issues with appstream-builder, subpackage if you want to provide it
+    rm $installdir/usr/share/metainfo/org.kde.kwrite.appdata.xml

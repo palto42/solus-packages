@@ -1,8 +1,8 @@
 name       : ffmpeg
-version    : 4.4.4
-release    : 145
+version    : 6.1.1
+release    : 149
 source     :
-    - https://ffmpeg.org/releases/ffmpeg-4.4.4.tar.xz : e80b380d595c809060f66f96a5d849511ef4a76a26b76eacf5778b94c3570309
+    - https://ffmpeg.org/releases/ffmpeg-6.1.1.tar.gz : b0aee531e4a91fed6bc031445dfc3ad8eb36de1fcb0fa2acdb589ecc9f8dc9cb
 homepage   : https://www.ffmpeg.org/
 license    :
     - GPL-3.0-or-later
@@ -14,7 +14,6 @@ description: |
 libsplit   : no
 mancompress: yes
 builddeps  :
-    - pkgconfig(SPIRV-Tools)
     - pkgconfig(SvtAv1Enc)
     - pkgconfig(alsa)
     - pkgconfig(aom)
@@ -28,9 +27,11 @@ builddeps  :
     - pkgconfig(libcdio_paranoia)
     - pkgconfig(libdrm)
     - pkgconfig(libgcrypt)
+    - pkgconfig(libjxl)
     - pkgconfig(liblzma)
     - pkgconfig(libopenjp2)
     - pkgconfig(libopenmpt)
+    - pkgconfig(libplacebo)
     - pkgconfig(libpulse)
     - pkgconfig(libssh)
     - pkgconfig(libv4l2)
@@ -42,31 +43,27 @@ builddeps  :
     - pkgconfig(rubberband)
     - pkgconfig(sdl2)
     - pkgconfig(smbclient)
+    - pkgconfig(snappy)
     - pkgconfig(soxr)
     - pkgconfig(speex)
     - pkgconfig(srt)
     - pkgconfig(theora)
     - pkgconfig(twolame)
+    - pkgconfig(vapoursynth)
     - pkgconfig(vdpau)
     - pkgconfig(vidstab)
     - pkgconfig(vpx)
-    - pkgconfig(vulkan)
     - pkgconfig(x264)
     - pkgconfig(x265)
     - pkgconfig(xv)
-    - pkgconfig(zimg)
-    - glslang-devel
+    - gsm-devel
     - lame-devel
-    - snappy-devel
     - vulkan-headers
     - xvidcore-devel
-patterns   :
-    - devel : [/usr/share/man/man3*]
 setup      : |
-    %patch -p1 -i $pkgfiles/Remove-compressed-ten-bit-format-usage.patch
-    %patch -p1 -i $pkgfiles/binutils-2.41.patch
+    %patch -p1 -i $pkgfiles/add-av_stream_get_first_dts-for-chromium.patch
+
     ./configure \
-        --enable-avresample \
         --enable-gcrypt \
         --enable-gnutls \
         --enable-gpl \
@@ -79,14 +76,17 @@ setup      : |
         --enable-libfontconfig \
         --enable-libfreetype \
         --enable-libfribidi \
-        --enable-libglslang \
+        --enable-libgsm \
+        --enable-libjxl \
         --enable-libmp3lame \
         --enable-libopenjpeg \
         --enable-libopenmpt \
         --enable-libopus \
+        --enable-libplacebo \
         --enable-libpulse \
         --enable-librav1e \
         --enable-librubberband \
+        --enable-libshaderc \
         --enable-libsmbclient \
         --enable-libsnappy \
         --enable-libsoxr \
@@ -105,12 +105,14 @@ setup      : |
         --enable-libx265 \
         --enable-libxvid \
         --enable-libzimg \
+        --enable-lto \
         --enable-nvdec \
         --enable-nvenc \
         --enable-openal \
         --enable-opengl \
         --enable-sdl2 \
         --enable-shared \
+        --enable-vapoursynth \
         --enable-version3 \
         --enable-vulkan \
         --disable-debug \
@@ -122,3 +124,7 @@ build      : |
     %make
 install    : |
     %make_install
+patterns   :
+    - docs :
+        - /usr/share/doc
+        - /usr/share/ffmpeg/examples

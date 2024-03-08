@@ -3,8 +3,8 @@
         <Name>avahi</Name>
         <Homepage>https://www.avahi.org/</Homepage>
         <Packager>
-            <Name>Muhammad Alfi Syahrin</Name>
-            <Email>ems1000.syahrin@gmail.com</Email>
+            <Name>Reilly Brogan</Name>
+            <Email>solus@reillybrogan.com</Email>
         </Packager>
         <License>LGPL-2.1-or-later</License>
         <PartOf>desktop.core</PartOf>
@@ -29,7 +29,6 @@
             <Path fileType="executable">/usr/bin/avahi-resolve-address</Path>
             <Path fileType="executable">/usr/bin/avahi-resolve-host-name</Path>
             <Path fileType="executable">/usr/bin/avahi-set-host-name</Path>
-            <Path fileType="library">/usr/lib64/avahi</Path>
             <Path fileType="library">/usr/lib64/girepository-1.0/Avahi-0.6.typelib</Path>
             <Path fileType="library">/usr/lib64/girepository-1.0/AvahiCore-0.6.typelib</Path>
             <Path fileType="library">/usr/lib64/libavahi-client.so</Path>
@@ -108,10 +107,12 @@
             <Path fileType="localedata">/usr/share/locale/fr/LC_MESSAGES/avahi.mo</Path>
             <Path fileType="localedata">/usr/share/locale/gl/LC_MESSAGES/avahi.mo</Path>
             <Path fileType="localedata">/usr/share/locale/he/LC_MESSAGES/avahi.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/hr/LC_MESSAGES/avahi.mo</Path>
             <Path fileType="localedata">/usr/share/locale/hu/LC_MESSAGES/avahi.mo</Path>
             <Path fileType="localedata">/usr/share/locale/id/LC_MESSAGES/avahi.mo</Path>
             <Path fileType="localedata">/usr/share/locale/it/LC_MESSAGES/avahi.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ja/LC_MESSAGES/avahi.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/ka/LC_MESSAGES/avahi.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ko/LC_MESSAGES/avahi.mo</Path>
             <Path fileType="localedata">/usr/share/locale/lv/LC_MESSAGES/avahi.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ms/LC_MESSAGES/avahi.mo</Path>
@@ -156,10 +157,9 @@
 </Description>
         <PartOf>emul32</PartOf>
         <RuntimeDependencies>
-            <Dependency release="22">avahi</Dependency>
+            <Dependency release="24">avahi</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="library">/usr/lib32/avahi</Path>
             <Path fileType="library">/usr/lib32/girepository-1.0/Avahi-0.6.typelib</Path>
             <Path fileType="library">/usr/lib32/girepository-1.0/AvahiCore-0.6.typelib</Path>
             <Path fileType="library">/usr/lib32/libavahi-client.so</Path>
@@ -189,8 +189,8 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="22">avahi-devel</Dependency>
-            <Dependency release="22">avahi-32bit</Dependency>
+            <Dependency release="24">avahi-devel</Dependency>
+            <Dependency release="24">avahi-32bit</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="data">/usr/lib32/pkgconfig/avahi-client.pc</Path>
@@ -207,7 +207,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="22">avahi</Dependency>
+            <Dependency release="24">avahi</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/avahi-client/client.h</Path>
@@ -252,12 +252,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="22">
-            <Date>2023-11-27</Date>
+        <Update release="24">
+            <Date>2024-01-30</Date>
             <Version>0.8</Version>
             <Comment>Packaging update</Comment>
-            <Name>Muhammad Alfi Syahrin</Name>
-            <Email>ems1000.syahrin@gmail.com</Email>
+            <Name>Reilly Brogan</Name>
+            <Email>solus@reillybrogan.com</Email>
         </Update>
     </History>
 </PISI>

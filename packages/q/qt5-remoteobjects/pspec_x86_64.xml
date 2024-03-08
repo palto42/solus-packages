@@ -26,7 +26,7 @@
             <Path fileType="executable">/usr/bin/repc</Path>
             <Path fileType="library">/usr/lib64/libQt5RemoteObjects.so.5</Path>
             <Path fileType="library">/usr/lib64/libQt5RemoteObjects.so.5.15</Path>
-            <Path fileType="library">/usr/lib64/libQt5RemoteObjects.so.5.15.11</Path>
+            <Path fileType="library">/usr/lib64/libQt5RemoteObjects.so.5.15.12</Path>
             <Path fileType="library">/usr/lib64/qt5/qml/QtQml/RemoteObjects/libqtqmlremoteobjects.so</Path>
             <Path fileType="library">/usr/lib64/qt5/qml/QtQml/RemoteObjects/plugins.qmltypes</Path>
             <Path fileType="library">/usr/lib64/qt5/qml/QtQml/RemoteObjects/qmldir</Path>
@@ -42,7 +42,7 @@
 </Description>
         <PartOf>programming.library</PartOf>
         <RuntimeDependencies>
-            <Dependency release="6">qt5-remoteobjects</Dependency>
+            <Dependency release="8">qt5-remoteobjects</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib64/qt5/examples/remoteobjects/clientapp/clientapp</Path>
@@ -50,9 +50,13 @@
             <Path fileType="library">/usr/lib64/qt5/examples/remoteobjects/clientapp/clientapp.qrc</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/remoteobjects/clientapp/main.cpp</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/remoteobjects/clientapp/qml/plugins.qml</Path>
+            <Path fileType="library">/usr/lib64/qt5/examples/remoteobjects/clientapp/qml/plugins.qmlc</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/remoteobjects/clientapp/qml/plugins0.qml</Path>
+            <Path fileType="library">/usr/lib64/qt5/examples/remoteobjects/clientapp/qml/plugins0.qmlc</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/remoteobjects/clientapp/qml/plugins1.qml</Path>
+            <Path fileType="library">/usr/lib64/qt5/examples/remoteobjects/clientapp/qml/plugins1.qmlc</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/remoteobjects/clientapp/qml/plugins2.qml</Path>
+            <Path fileType="library">/usr/lib64/qt5/examples/remoteobjects/clientapp/qml/plugins2.qmlc</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/remoteobjects/cppclient/CppClient</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/remoteobjects/cppclient/cppclient.pro</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/remoteobjects/cppclient/main.cpp</Path>
@@ -63,6 +67,7 @@
             <Path fileType="library">/usr/lib64/qt5/examples/remoteobjects/modelviewserver/modelviewserver</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/remoteobjects/modelviewserver/modelviewserver.pro</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/remoteobjects/plugins/imports/TimeExample/Clock.qml</Path>
+            <Path fileType="library">/usr/lib64/qt5/examples/remoteobjects/plugins/imports/TimeExample/Clock.qmlc</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/remoteobjects/plugins/imports/TimeExample/center.png</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/remoteobjects/plugins/imports/TimeExample/clock.png</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/remoteobjects/plugins/imports/TimeExample/hour.png</Path>
@@ -72,8 +77,10 @@
             <Path fileType="library">/usr/lib64/qt5/examples/remoteobjects/plugins/plugin.cpp</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/remoteobjects/plugins/plugins.pro</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/remoteobjects/plugins/plugins.qml</Path>
+            <Path fileType="library">/usr/lib64/qt5/examples/remoteobjects/plugins/plugins.qmlc</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/remoteobjects/qmlmodelviewclient/main.cpp</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/remoteobjects/qmlmodelviewclient/main.qml</Path>
+            <Path fileType="library">/usr/lib64/qt5/examples/remoteobjects/qmlmodelviewclient/main.qmlc</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/remoteobjects/qmlmodelviewclient/qml.qrc</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/remoteobjects/qmlmodelviewclient/qmlmodelviewclient</Path>
             <Path fileType="library">/usr/lib64/qt5/examples/remoteobjects/qmlmodelviewclient/qmlmodelviewclient.pro</Path>
@@ -141,25 +148,25 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="6">qt5-remoteobjects</Dependency>
+            <Dependency release="8">qt5-remoteobjects</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="header">/usr/include/QtRemoteObjects/5.15.11/QtRemoteObjects/private/qconnection_local_backend_p.h</Path>
-            <Path fileType="header">/usr/include/QtRemoteObjects/5.15.11/QtRemoteObjects/private/qconnection_qnx_backend_p.h</Path>
-            <Path fileType="header">/usr/include/QtRemoteObjects/5.15.11/QtRemoteObjects/private/qconnection_qnx_global_p.h</Path>
-            <Path fileType="header">/usr/include/QtRemoteObjects/5.15.11/QtRemoteObjects/private/qconnection_qnx_qiodevices_p.h</Path>
-            <Path fileType="header">/usr/include/QtRemoteObjects/5.15.11/QtRemoteObjects/private/qconnection_qnx_server_p.h</Path>
-            <Path fileType="header">/usr/include/QtRemoteObjects/5.15.11/QtRemoteObjects/private/qconnection_tcpip_backend_p.h</Path>
-            <Path fileType="header">/usr/include/QtRemoteObjects/5.15.11/QtRemoteObjects/private/qconnectionfactories_p.h</Path>
-            <Path fileType="header">/usr/include/QtRemoteObjects/5.15.11/QtRemoteObjects/private/qremoteobjectabstractitemmodeladapter_p.h</Path>
-            <Path fileType="header">/usr/include/QtRemoteObjects/5.15.11/QtRemoteObjects/private/qremoteobjectabstractitemmodelreplica_p.h</Path>
-            <Path fileType="header">/usr/include/QtRemoteObjects/5.15.11/QtRemoteObjects/private/qremoteobjectnode_p.h</Path>
-            <Path fileType="header">/usr/include/QtRemoteObjects/5.15.11/QtRemoteObjects/private/qremoteobjectpacket_p.h</Path>
-            <Path fileType="header">/usr/include/QtRemoteObjects/5.15.11/QtRemoteObjects/private/qremoteobjectpendingcall_p.h</Path>
-            <Path fileType="header">/usr/include/QtRemoteObjects/5.15.11/QtRemoteObjects/private/qremoteobjectregistrysource_p.h</Path>
-            <Path fileType="header">/usr/include/QtRemoteObjects/5.15.11/QtRemoteObjects/private/qremoteobjectreplica_p.h</Path>
-            <Path fileType="header">/usr/include/QtRemoteObjects/5.15.11/QtRemoteObjects/private/qremoteobjectsource_p.h</Path>
-            <Path fileType="header">/usr/include/QtRemoteObjects/5.15.11/QtRemoteObjects/private/qremoteobjectsourceio_p.h</Path>
+            <Path fileType="header">/usr/include/QtRemoteObjects/5.15.12/QtRemoteObjects/private/qconnection_local_backend_p.h</Path>
+            <Path fileType="header">/usr/include/QtRemoteObjects/5.15.12/QtRemoteObjects/private/qconnection_qnx_backend_p.h</Path>
+            <Path fileType="header">/usr/include/QtRemoteObjects/5.15.12/QtRemoteObjects/private/qconnection_qnx_global_p.h</Path>
+            <Path fileType="header">/usr/include/QtRemoteObjects/5.15.12/QtRemoteObjects/private/qconnection_qnx_qiodevices_p.h</Path>
+            <Path fileType="header">/usr/include/QtRemoteObjects/5.15.12/QtRemoteObjects/private/qconnection_qnx_server_p.h</Path>
+            <Path fileType="header">/usr/include/QtRemoteObjects/5.15.12/QtRemoteObjects/private/qconnection_tcpip_backend_p.h</Path>
+            <Path fileType="header">/usr/include/QtRemoteObjects/5.15.12/QtRemoteObjects/private/qconnectionfactories_p.h</Path>
+            <Path fileType="header">/usr/include/QtRemoteObjects/5.15.12/QtRemoteObjects/private/qremoteobjectabstractitemmodeladapter_p.h</Path>
+            <Path fileType="header">/usr/include/QtRemoteObjects/5.15.12/QtRemoteObjects/private/qremoteobjectabstractitemmodelreplica_p.h</Path>
+            <Path fileType="header">/usr/include/QtRemoteObjects/5.15.12/QtRemoteObjects/private/qremoteobjectnode_p.h</Path>
+            <Path fileType="header">/usr/include/QtRemoteObjects/5.15.12/QtRemoteObjects/private/qremoteobjectpacket_p.h</Path>
+            <Path fileType="header">/usr/include/QtRemoteObjects/5.15.12/QtRemoteObjects/private/qremoteobjectpendingcall_p.h</Path>
+            <Path fileType="header">/usr/include/QtRemoteObjects/5.15.12/QtRemoteObjects/private/qremoteobjectregistrysource_p.h</Path>
+            <Path fileType="header">/usr/include/QtRemoteObjects/5.15.12/QtRemoteObjects/private/qremoteobjectreplica_p.h</Path>
+            <Path fileType="header">/usr/include/QtRemoteObjects/5.15.12/QtRemoteObjects/private/qremoteobjectsource_p.h</Path>
+            <Path fileType="header">/usr/include/QtRemoteObjects/5.15.12/QtRemoteObjects/private/qremoteobjectsourceio_p.h</Path>
             <Path fileType="header">/usr/include/QtRemoteObjects/QAbstractItemModelReplica</Path>
             <Path fileType="header">/usr/include/QtRemoteObjects/QIOQnxSource</Path>
             <Path fileType="header">/usr/include/QtRemoteObjects/QIntHash</Path>
@@ -227,9 +234,9 @@
         </Files>
     </Package>
     <History>
-        <Update release="6">
-            <Date>2023-10-31</Date>
-            <Version>5.15.11</Version>
+        <Update release="8">
+            <Date>2024-03-06</Date>
+            <Version>5.15.12</Version>
             <Comment>Packaging update</Comment>
             <Name>Reilly Brogan</Name>
             <Email>solus@reillybrogan.com</Email>

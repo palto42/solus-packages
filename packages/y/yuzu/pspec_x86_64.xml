@@ -30,9 +30,9 @@
         </Files>
     </Package>
     <History>
-        <Update release="28">
-            <Date>2023-12-29</Date>
-            <Version>1656</Version>
+        <Update release="32">
+            <Date>2024-02-18</Date>
+            <Version>1704</Version>
             <Comment>Packaging update</Comment>
             <Name>Reilly Brogan</Name>
             <Email>solus@reillybrogan.com</Email>

@@ -1,0 +1,25 @@
+name       : kf6-kcrash
+version    : 6.0.0
+release    : 4
+source     :
+    - https://cdn.download.kde.org/stable/frameworks/6.0/kcrash-6.0.0.tar.xz : f56f1ed44e494417b7046e4f94791ad4ddd07c6cb8f0f704f2053717a44296f9
+homepage   : https://community.kde.org/Frameworks
+license    : LGPL-2.0-or-later
+component  : desktop.library
+summary    : Graceful handling of application crashes.
+description: |
+    Graceful handling of application crashes.
+builddeps  :
+    - pkgconfig(x11)
+    - kf6-kcoreaddons-devel
+rundeps    :
+    - devel :
+        - kf6-kcoreaddons-devel
+clang      : yes
+optimize   : thin-lto
+setup      : |
+    %cmake_kf6
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install

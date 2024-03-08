@@ -1,8 +1,9 @@
 name       : python-wheel
 version    : 0.37.1
-release    : 17
+release    : 19
 source     :
     - https://github.com/pypa/wheel/archive/refs/tags/0.37.1.tar.gz : a82516a039e521100ecdef137f9e44249bf6903f9aff7d368e84ac31d60597f5
+homepage   : https://github.com/pypa/wheel
 license    : MIT
 component  : programming.python
 summary    : A built-package format for Python
@@ -12,7 +13,6 @@ builddeps  :
     - pkgconfig(python3)
     - python-jsonschema
     - python-keyring
-    - python2-pytest
     - python-pytest
     - python-setuptools
     - pyxdg
@@ -27,5 +27,4 @@ install    : |
     %python_install
     %python3_install
 check      : |
-    %python_test py.test
     %python3_test py.test3

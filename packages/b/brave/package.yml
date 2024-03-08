@@ -1,8 +1,8 @@
 name       : brave
-version    : 1.61.109
-release    : 171
+version    : 1.63.165
+release    : 180
 source     :
-    - https://github.com/brave/brave-browser/releases/download/v1.61.109/brave-browser_1.61.109_amd64.deb : bc88b6d3916a828404642578896085c631f68493561fd1e3454f788edec47bc0
+    - https://github.com/brave/brave-browser/releases/download/v1.63.165/brave-browser_1.63.165_amd64.deb : 532cce57ab14bfb59dc0ddf54c8837e4719c86b5125e7bf393701b6bf77c7497
 homepage   : https://brave.com
 license    :
     - GPL-2.0-or-later # Privacy Badger

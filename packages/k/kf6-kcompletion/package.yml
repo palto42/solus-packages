@@ -1,0 +1,26 @@
+name       : kf6-kcompletion
+version    : 6.0.0
+release    : 4
+source     :
+    - https://cdn.download.kde.org/stable/frameworks/6.0/kcompletion-6.0.0.tar.xz : f6434014e7979b6545906d1ff7a2920cfab65641369921e69f00a818b8eee559
+homepage   : https://community.kde.org/Frameworks
+license    :
+    - BSD-3-Clause
+    - LGPL-2.0-or-later
+    - LGPL-2.1-or-later
+component  : programming.library
+summary    : Powerful completion framework, including completion-enabled lineedit and combobox.
+description: |
+    Powerful completion framework, including completion-enabled lineedit and combobox.
+builddeps  :
+    - kf6-kcodecs-devel
+    - kf6-kconfig-devel
+    - kf6-kwidgetsaddons-devel
+clang      : yes
+optimize   : thin-lto
+setup      : |
+    %cmake_kf6
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install

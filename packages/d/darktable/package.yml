@@ -1,8 +1,8 @@
 name       : darktable
-version    : 4.4.2
-release    : 71
+version    : 4.6.1
+release    : 79
 source     :
-    - https://github.com/darktable-org/darktable/releases/download/release-4.4.2/darktable-4.4.2.tar.xz : c11d28434fdf2e9ce572b9b1f9bc4e64dcebf6148e25080b4c32eb51916cfa98
+    - https://github.com/darktable-org/darktable/releases/download/release-4.6.1/darktable-4.6.1.tar.xz : 16edc0a070293e2d3cda4ea10e49bda9bde932e23f9e62e2fa2e7ac74acf7afd
 homepage   : https://darktable.org/
 license    : GPL-3.0-or-later
 component  : multimedia.graphics
@@ -22,12 +22,13 @@ builddeps  :
     - pkgconfig(libavif)
     - pkgconfig(libgphoto2)
     - pkgconfig(libheif)
+    - pkgconfig(libjxl)
     - pkgconfig(libopenjp2)
     - pkgconfig(librsvg-2.0)
     - pkgconfig(libsecret-1)
     - pkgconfig(libssh)
-    - pkgconfig(libturbojpeg)
     - pkgconfig(libtiff-4)
+    - pkgconfig(libturbojpeg)
     - pkgconfig(libwebp)
     - pkgconfig(lua-5.3)
     - pkgconfig(osmgpsmap-1.0)
@@ -39,11 +40,8 @@ builddeps  :
 rundeps    :
     - gtk-engines
 setup      : |
-    %patch -p1 -i $pkgfiles/libavif-1.patch
-    # %patch -p1 -i $pkgfiles/OpenEXR-instead-of-ilmbase.patch
-    mkdir build && cd build
-    %cmake -DBINARY_PACKAGE_BUILD=ON -DLIB_SUFFIX=%LIBSUFFIX% ..
+    %cmake_ninja -DBINARY_PACKAGE_BUILD=1
 build      : |
-    %make -C build
+    %ninja_build
 install    : |
-    %make_install -C build
+    %ninja_install

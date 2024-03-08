@@ -1,8 +1,8 @@
 name       : gstreamer-1.0-plugins-bad
-version    : 1.22.7
-release    : 91
+version    : 1.22.10
+release    : 96
 source     :
-    - https://gstreamer.freedesktop.org/src/gst-plugins-bad/gst-plugins-bad-1.22.7.tar.xz : c716f8dffa8fac3fb646941af1c6ec72fff05a045131311bf2d049fdc87bce2e
+    - https://gstreamer.freedesktop.org/src/gst-plugins-bad/gst-plugins-bad-1.22.10.tar.xz : dabcd60c762165bb043eba753d599212514c94684e4db9a2e25484cb6508ebbf
 homepage   : https://gstreamer.freedesktop.org
 license    : LGPL-2.0-or-later
 component  :
@@ -49,9 +49,9 @@ builddeps  :
     - pkgconfig(libsoup-3.0)
     - pkgconfig(libturbojpeg)
     - pkgconfig(libusb-1.0)
+    - pkgconfig(libva-drm)
     - pkgconfig(libwebp)
     - pkgconfig(lilv-0)
-    - pkgconfig(libva-drm)
     - pkgconfig(ltc)
     - pkgconfig(microdns)
     - pkgconfig(mjpegtools)
@@ -70,6 +70,7 @@ builddeps  :
     - pkgconfig(srt)
     - pkgconfig(vo-aacenc)
     - pkgconfig(vpx)
+    - pkgconfig(vulkan)
     - pkgconfig(wayland-protocols)
     - pkgconfig(webrtc-audio-processing)
     - pkgconfig(x265)

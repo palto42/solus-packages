@@ -21,7 +21,7 @@
 </Description>
         <PartOf>database</PartOf>
         <RuntimeDependencies>
-            <Dependency release="45">postgresql-libpq</Dependency>
+            <Dependency release="48">postgresql-libpq</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin/clusterdb</Path>
@@ -390,7 +390,7 @@
 </Description>
         <PartOf>database</PartOf>
         <RuntimeDependencies>
-            <Dependency release="45">postgresql-libpq</Dependency>
+            <Dependency release="48">postgresql-libpq</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib64/postgresql/_int.so</Path>
@@ -449,8 +449,8 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="45">postgresql</Dependency>
-            <Dependency release="45">postgresql-libpq</Dependency>
+            <Dependency release="48">postgresql</Dependency>
+            <Dependency release="48">postgresql-libpq</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/ecpg_config.h</Path>
@@ -1017,6 +1017,7 @@
             <Path fileType="header">/usr/include/postgresql/server/plpy_typeio.h</Path>
             <Path fileType="header">/usr/include/postgresql/server/plpy_util.h</Path>
             <Path fileType="header">/usr/include/postgresql/server/plpython.h</Path>
+            <Path fileType="header">/usr/include/postgresql/server/plpython_system.h</Path>
             <Path fileType="header">/usr/include/postgresql/server/port.h</Path>
             <Path fileType="header">/usr/include/postgresql/server/port/aix.h</Path>
             <Path fileType="header">/usr/include/postgresql/server/port/atomics.h</Path>
@@ -1372,9 +1373,9 @@
         </Files>
     </Package>
     <History>
-        <Update release="45">
-            <Date>2023-11-15</Date>
-            <Version>16.1</Version>
+        <Update release="48">
+            <Date>2024-02-28</Date>
+            <Version>16.2</Version>
             <Comment>Packaging update</Comment>
             <Name>Silke Hofstra</Name>
             <Email>silke@slxh.eu</Email>

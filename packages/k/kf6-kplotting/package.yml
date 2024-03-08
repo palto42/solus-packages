@@ -1,0 +1,28 @@
+name       : kf6-kplotting
+version    : 6.0.0
+release    : 3
+source     :
+    - https://cdn.download.kde.org/stable/frameworks/6.0/kplotting-6.0.0.tar.xz : dc43644b7632344bd413d754aa7dd1052a3cde9230193abf5da47de1341a63ff
+homepage   : https://community.kde.org/Frameworks
+license    :
+    - GPL-2.0-or-later
+    - LGPL-2.0-or-later
+component  : desktop.library
+summary    : Data plotting
+description: |
+    KPlotting provides KPlotWidget, a QWidget-derived class that provides a virtual base class for easy data-plotting. The idea behind KPlotWidget is that you only have to specify information in "data units"; i.e., the natural units of the data being plotted. KPlotWidget automatically converts everything to screen pixel units.
+builddeps  :
+    - pkgconfig(Qt6Designer)
+    - extra-cmake-modules
+rundeps    :
+    - devel :
+        - extra-cmake-modules
+        - qt6-base-devel
+clang      : yes
+optimize   : thin-lto
+setup      : |
+    %cmake_kf6
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install

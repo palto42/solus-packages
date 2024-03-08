@@ -1,8 +1,8 @@
 name       : kjobwidgets
-version    : 5.112.0
-release    : 72
+version    : 5.115.0
+release    : 74
 source     :
-    - https://cdn.download.kde.org/stable/frameworks/5.112/kjobwidgets-5.112.0.tar.xz : 1b7f9cd984bb5bd79c3171c44537423730d3a5520f08f3f36ebe9e1d58b831f4
+    - https://cdn.download.kde.org/stable/frameworks/5.115/kjobwidgets-5.115.0.tar.xz : cee37be8d309cc572ecf572214d9138183fd07e6aee2af77fb60f37ebe4e3061
 homepage   : https://community.kde.org/Frameworks
 license    :
     - LGPL-2.0-only

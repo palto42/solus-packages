@@ -1,8 +1,8 @@
 name       : crystal
-version    : 1.8.2
-release    : 9
+version    : 1.11.2
+release    : 12
 source     :
-    - https://github.com/crystal-lang/crystal/archive/refs/tags/1.8.2.tar.gz : 6e722e3239a8c467ba42a8838916788a4795b0ceaa2d1e2e98616cedeb540605
+    - https://github.com/crystal-lang/crystal/archive/refs/tags/1.11.2.tar.gz : 9740f0f52745d399449b11a64b060216c8599ef73712615fe8956a1e8f7c5d9c
 homepage   : https://crystal-lang.org
 license    : Apache-2.0
 component  : programming
@@ -10,6 +10,7 @@ summary    : The Crystal programming language
 description: |
     Crystal is a programming language with similar syntax to Ruby, static type-checking, the ability to call C code, compile-time evaluation and generation of code, and the ability to compile to native code.
 networking : yes  # for tests
+clang      : yes
 builddeps  :
     - pkgconfig(bdw-gc)
     - pkgconfig(libevent)
@@ -17,7 +18,6 @@ builddeps  :
     - pkgconfig(yaml-0.1)
     - crystal
     - git
-    - llvm-devel
 rundeps    :
     - bdwgc-devel
     - libevent-devel

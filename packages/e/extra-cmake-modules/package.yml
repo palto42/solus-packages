@@ -1,8 +1,8 @@
 name       : extra-cmake-modules
-version    : 5.247.0
-release    : 76
+version    : 6.0.0
+release    : 79
 source     :
-    - http://download.kde.org/unstable/frameworks/5.247.0/extra-cmake-modules-5.247.0.tar.xz : 9f3fa7e4e88ecc06f202698d5378bdf10c413d8a8d77b384e4a099d717754d65
+    - https://cdn.download.kde.org/stable/frameworks/6.0/extra-cmake-modules-6.0.0.tar.xz : 23992bf19db717156b7d6dd13118caa79fd57f090beb062e8308db3c09f70d0c
 homepage   : https://community.kde.org/Frameworks
 license    :
     - BSD-2-Clause
@@ -20,10 +20,9 @@ rundeps    :
     - doxygen
 setup      : |
     %apply_patches
-    %cmake_ninja -DBUILD_QTHELP_DOCS=ON \
-                -DBUILD_TESTING=OFF
+    %cmake_kf6 -DBUILD_QTHELP_DOCS=ON
 build      : |
     %ninja_build
 install    : |
     %ninja_install
-    rm -rf $installdir/usr/share/doc/ECM/html
+    rm -rfv $installdir/usr/share/doc/ECM/html

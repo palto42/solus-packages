@@ -1,15 +1,15 @@
 name       : heroic-games-launcher
-version    : 2.11.0
-release    : 22
+version    : 2.13.0
+release    : 26
 source     :
-    - git|https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher.git : v2.11.0
-homepage   : https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher
+    - git|https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher.git : v2.13.0
+homepage   : https://heroicgameslauncher.com/
 license    : GPL-3.0-or-later
 component  : games
 networking : yes
-summary    : An Open Source game launcher with built-in support for Epic and GOG.
+summary    : A game launcher for GOG, Amazon and Epic Games for Linux, Windows and macOS.
 description: |
-    Heroic is an Open Source Game Launcher for Linux, Windows and MacOS (for both Native and Windows Games using Crossover). Right now it supports launching games from the Epic Games Store using Legendary and GOG Games using our custom implementation with gogdl. Heroic is built with Web Technologies like: TypeScript, React, NodeJS and Electron.
+    Heroic is an Open Source Game Launcher for Linux, Windows and macOS. Right now it supports launching games from the Epic Games Store using Legendary, GOG Games using our custom implementation with gogdl and Amazon Games using Nile.
 builddeps  :
     - pkgconfig(alsa)
     - pkgconfig(gbm)
@@ -18,10 +18,7 @@ builddeps  :
     - cups-devel
     - yarn
 setup      : |
-    yarn global add node-gyp
-
-    yarn install
-
+    yarn install --frozen-lockfile
 build      : |
     yarn dist:linux tar.xz
 install    : |
@@ -31,12 +28,17 @@ install    : |
 
     # Copy dist files and link binaries
     cp -R ./dist/linux-unpacked/* $installdir/$heroicdir/
-    ln -s $heroicdir/heroic $installdir/usr/bin/heroic
+    ln -s $heroicdir/heroic $installdir/usr/bin/heroic-run
     ln -s $heroicdir/resources/app.asar.unpacked/build/bin/linux/legendary $installdir/usr/bin/legendary
     ln -s $heroicdir/resources/app.asar.unpacked/build/bin/linux/gogdl $installdir/usr/bin/gogdl
+    ln -s $heroicdir/resources/app.asar.unpacked/build/bin/linux/nile $installdir/usr/bin/nile
 
     # Copy icon
-    install -Dm00644 ./dist/linux-unpacked/resources/app.asar.unpacked/build/icon.png $installdir/usr/share/icons/hicolor/512x512/apps/heroic.png
+    install -Dm00644 ./dist/linux-unpacked/resources/app.asar.unpacked/build/icon.png $installdir/usr/share/icons/hicolor/512x512/apps/com.heroicgameslauncher.hgl.png
 
     # Set up .desktop file
-    install -Dm00644 $pkgfiles/heroic.desktop $installdir/usr/share/applications/heroic.desktop
+    sed -i 's/StartupWMClass.*/StartupWMClass=heroic/' ./flatpak/com.heroicgameslauncher.hgl.desktop
+    install -Dm00644 ./flatpak/com.heroicgameslauncher.hgl.desktop -t $installdir/usr/share/applications
+
+    # Install appstream metadata
+    install -Dm00644 ./flatpak/templates/com.heroicgameslauncher.hgl.metainfo.xml.template $installdir/usr/share/metainfo/com.heroicgameslauncher.hgl.metainfo.xml

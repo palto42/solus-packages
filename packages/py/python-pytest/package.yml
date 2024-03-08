@@ -1,6 +1,6 @@
 name       : python-pytest
 version    : 7.4.3
-release    : 25
+release    : 28
 source     :
     - https://files.pythonhosted.org/packages/source/p/pytest/pytest-7.4.3.tar.gz : d989d136982de4e3b29dabcc838ad581c64e8ed52c11fbe86ddebd9da0818cd5
 homepage   : https://pytest.org/

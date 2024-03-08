@@ -1,0 +1,26 @@
+name       : kf6-ktexttemplate
+version    : 6.0.0
+release    : 3
+source     :
+    - https://cdn.download.kde.org/stable/frameworks/6.0/ktexttemplate-6.0.0.tar.xz : b964e612d2d623bbcf3f5a76ae4ba4408f80de6c588074c67f18834b5e48274c
+homepage   : https://community.kde.org/Frameworks
+license    :
+    - LGPL-2.0-or-later
+    - LGPL-2.1-or-later
+component  : desktop.library
+summary    : Separates the structure of documents from their data
+description: |
+    The goal of KTextTemplate is to make it easier for application developers to separate the structure of documents from the data they contain, opening the door for theming and advanced generation of other text such as code.
+builddeps  :
+    - pkgconfig(Qt6Core)
+    - pkgconfig(Qt6Qml)
+    - pkgconfig(Qt6UiTools)
+    - extra-cmake-modules
+clang      : yes
+optimize   : thin-lto
+setup      : |
+    %cmake_kf6
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install

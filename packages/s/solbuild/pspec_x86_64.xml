@@ -1,10 +1,10 @@
 <PISI>
     <Source>
         <Name>solbuild</Name>
-        <Homepage>https://github.com/solus-project/solbuild</Homepage>
+        <Homepage>https://github.com/getsolus/solbuild</Homepage>
         <Packager>
-            <Name>Reilly Brogan</Name>
-            <Email>solus@reillybrogan.com</Email>
+            <Name>Silke Hofstra</Name>
+            <Email>silke@slxh.eu</Email>
         </Packager>
         <License>Apache-2.0</License>
         <PartOf>programming.tools</PartOf>
@@ -38,7 +38,7 @@
 </Description>
         <PartOf>programming.tools</PartOf>
         <RuntimeDependencies>
-            <Dependency releaseFrom="48">solbuild</Dependency>
+            <Dependency releaseFrom="52">solbuild</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="data">/usr/share/solbuild/local-unstable-x86_64.profile</Path>
@@ -51,19 +51,19 @@
 </Description>
         <PartOf>programming.tools</PartOf>
         <RuntimeDependencies>
-            <Dependency releaseFrom="48">solbuild</Dependency>
+            <Dependency releaseFrom="52">solbuild</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="data">/usr/share/solbuild/99_unstable.conf</Path>
         </Files>
     </Package>
     <History>
-        <Update release="48">
-            <Date>2023-12-19</Date>
-            <Version>1.5.5</Version>
+        <Update release="52">
+            <Date>2024-03-04</Date>
+            <Version>1.6.1</Version>
             <Comment>Packaging update</Comment>
-            <Name>Reilly Brogan</Name>
-            <Email>solus@reillybrogan.com</Email>
+            <Name>Silke Hofstra</Name>
+            <Email>silke@slxh.eu</Email>
         </Update>
     </History>
 </PISI>

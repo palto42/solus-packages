@@ -1,8 +1,8 @@
 name       : kquickcharts
-version    : 5.112.0
-release    : 39
+version    : 5.115.0
+release    : 41
 source     :
-    - https://cdn.download.kde.org/stable/frameworks/5.112/kquickcharts-5.112.0.tar.xz : aaac53d81992465886b47c2c471c0c188136b36a523c9900d815d3a39a24c3b0
+    - https://cdn.download.kde.org/stable/frameworks/5.115/kquickcharts-5.115.0.tar.xz : aa78d81ce4af03671803b50f4a7ee8ffb8e6c687749de1706359176d502566bb
 homepage   : https://community.kde.org/Frameworks
 license    :
     - LGPL-2.1-only

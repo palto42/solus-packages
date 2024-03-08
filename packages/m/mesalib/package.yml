@@ -1,8 +1,8 @@
 name       : mesalib
-version    : 23.3.2
-release    : 213
+version    : 24.0.2
+release    : 225
 source     :
-    - https://archive.mesa3d.org/mesa-23.3.2.tar.xz : 3cfcb81fa16f89c56abe3855d2637d396ee4e03849b659000a6b8e5f57e69adc
+    - https://archive.mesa3d.org/mesa-24.0.2.tar.xz : 94e28a8edad06d8ed2b83eb53f253b9eb5aa62c3080f939702e1b3039b56c9e8
 homepage   : http://mesa3d.org/
 license    :
     - BSL-1.0
@@ -12,8 +12,6 @@ component  : xorg.display
 summary    : Mesa is an OpenGL compatible 3D graphics library.
 description: |
     Mesa is an OpenGL compatible 3D graphics library.
-optimize   :
-    - no-symbolic
 emul32     : yes
 libsplit   : no
 patterns   :
@@ -32,7 +30,6 @@ patterns   :
         - /usr/lib32/libwayland*.so
         - /usr/lib32/libxa*.so
 builddeps  :
-    - pkgconfig(LLVMSPIRVLib)
     - pkgconfig32(SPIRV-Tools)
     - pkgconfig32(expat)
     - pkgconfig32(libdrm)
@@ -47,42 +44,49 @@ builddeps  :
     - pkgconfig32(wayland-client)
     - pkgconfig32(x11)
     - pkgconfig32(xcb-dri3)
+    - pkgconfig32(xcb-keysyms)
     - pkgconfig32(xext)
     - pkgconfig32(xfixes)
     - pkgconfig32(xrandr)
     - pkgconfig32(xshmfence)
     - pkgconfig32(xxf86vm)
     - pkgconfig32(zlib)
+    - pkgconfig(LLVMSPIRVLib)
     - pkgconfig(libclc)
     - pkgconfig(wayland-protocols)
     - pkgconfig(xproto)
     - git
     - glslang-devel
-    - lm_sensors-devel
     - llvm-32bit-devel
     - llvm-clang-devel
     - llvm-devel
+    - lm_sensors-devel
     - mako
     - python-ply
 rundeps    :
-    - libglvnd
-    - linux-driver-management
     - 32bit :
         - libglvnd-32bit
     - 32bit-devel :
         - libglvnd-32bit-devel
     - devel :
         - libglvnd-devel
+    - libglvnd
+    - linux-driver-management
+clang      : yes
+optimize   :
+    - no-symbolic
+    # - thin-lto
 environment: |
     export PYTHON=/usr/bin/python3
 
     export PE_CODECS=0
     if [[ ! -z $PE_CODECS ]]; then
-          export PT_ARGS="-Dvideo-codecs=vc1dec,h264dec,h264enc,h265dec,h265enc"
+          export PT_ARGS="-Dvideo-codecs=all"
     else
           export PT_ARGS=""
     fi
 setup      : |
+    %patch -p1 -i $pkgfiles/fix-vulkan.patch
     if [[ ! -z $EMUL32BUILD ]]; then
           export EXTRA_ARGS="--cross-file $pkgfiles/llvm32.native --libdir=/usr/lib32"
     else

@@ -1,8 +1,8 @@
 name       : qt5-base
-version    : 5.15.11
-release    : 94
+version    : 5.15.12
+release    : 98
 source     :
-    - git|https://invent.kde.org/qt/qt/qtbase.git : 2ddd05e762c1ce382db0bdacfe2bd754ad173815
+    - git|https://invent.kde.org/qt/qt/qtbase.git : a43df98d037ad07cf096ef2f775958ceba743613
 homepage   : https://www.qt.io
 license    :
     - GPL-2.0
@@ -17,43 +17,40 @@ description: |
 builddeps  :
     - pkgconfig(alsa)
     - pkgconfig(gbm)
-    - pkgconfig(gtk+-3.0)
     - pkgconfig(gstreamer-1.0)
     - pkgconfig(gstreamer-plugins-base-1.0)
+    - pkgconfig(gtk+-3.0)
     - pkgconfig(icu-uc)
     - pkgconfig(libinput)
-    - pkgconfig(libturbojpeg)
     - pkgconfig(libpcre2-32)
     - pkgconfig(libproxy-1.0)
     - pkgconfig(libpulse)
+    - pkgconfig(libturbojpeg)
     - pkgconfig(mariadb)
     - pkgconfig(shared-mime-info)
     - pkgconfig(sm)
     - pkgconfig(sqlite3)
     - pkgconfig(vulkan)
+    - pkgconfig(xcb-cursor)
     - pkgconfig(xcb-icccm)
     - pkgconfig(xcb-image)
     - pkgconfig(xcb-keysyms)
     - pkgconfig(xcb-renderutil)
+    - pkgconfig(xcb-util)
     - pkgconfig(xcomposite)
     - pkgconfig(xcursor)
     - pkgconfig(xext)
     - pkgconfig(xi)
-    - pkgconfig(xcb-cursor)
-    - pkgconfig(xcb-icccm)
-    - pkgconfig(xcb-keysyms)
-    - pkgconfig(xcb-util)
-    - pkgconfig(xcursor)
     - pkgconfig(xkbcommon-x11)
-    - pkgconfig(xrender)
     - pkgconfig(xrandr)
+    - pkgconfig(xrender)
     - pkgconfig(xtst)
     - cups-devel
     - vulkan-headers
 rundeps    :
-    - shared-mime-info
     - devel :
         - mesalib-devel
+    - shared-mime-info
 patterns   :
     - devel :
         - /usr/bin

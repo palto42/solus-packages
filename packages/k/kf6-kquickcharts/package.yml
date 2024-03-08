@@ -1,0 +1,30 @@
+name       : kf6-kquickcharts
+version    : 6.0.0
+release    : 3
+source     :
+    - https://cdn.download.kde.org/stable/frameworks/6.0/kquickcharts-6.0.0.tar.xz : ebd9a8f501b80e72a12f50d984847a698f7283be389644f7e24133484076a6a5
+homepage   : https://community.kde.org/Frameworks
+license    :
+    - LGPL-2.1-only
+    - MIT
+component  : desktop.library
+summary    : A QtQuick plugin providing high-performance charts
+description: |
+    A QtQuick plugin providing high-performance charts
+builddeps  :
+    - pkgconfig(Qt6QuickControls2)
+    - pkgconfig(Qt6ShaderTools)
+    - extra-cmake-modules
+rundeps    :
+    - devel :
+        - extra-cmake-modules
+        - qt6-base-devel
+clang      : yes
+optimize   : thin-lto
+setup      : |
+    %cmake_kf6
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install
+    %qml6_cache

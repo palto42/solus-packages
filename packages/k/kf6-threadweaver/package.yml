@@ -1,0 +1,26 @@
+name       : kf6-threadweaver
+version    : 6.0.0
+release    : 3
+source     :
+    - https://cdn.download.kde.org/stable/frameworks/6.0/threadweaver-6.0.0.tar.xz : ba9daec6e0697fdc2accf74a46a6d59403e5e340d280bce916fd6356a668ddb3
+homepage   : https://community.kde.org/Frameworks
+license    : LGPL-2.0-or-later
+component  : desktop.library
+summary    : Helper for multithreaded programming
+description: |
+    Helper for multithreaded programming
+builddeps  :
+    - pkgconfig(Qt6Designer)
+    - extra-cmake-modules
+rundeps    :
+    - devel :
+        - extra-cmake-modules
+        - qt6-base-devel
+clang      : yes
+optimize   : thin-lto
+setup      : |
+    %cmake_kf6
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install

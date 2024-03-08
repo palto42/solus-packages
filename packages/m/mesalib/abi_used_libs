@@ -1,3 +1,4 @@
+ld-linux-x86-64.so.2
 libLLVM-16.so
 libX11-xcb.so.1
 libX11.so.6
@@ -21,6 +22,7 @@ libwayland-server.so.0
 libxcb-dri2.so.0
 libxcb-dri3.so.0
 libxcb-glx.so.0
+libxcb-keysyms.so.1
 libxcb-present.so.0
 libxcb-randr.so.0
 libxcb-shm.so.0

@@ -1,8 +1,8 @@
 name       : kpeople
-version    : 5.112.0
-release    : 69
+version    : 5.115.0
+release    : 71
 source     :
-    - https://cdn.download.kde.org/stable/frameworks/5.112/kpeople-5.112.0.tar.xz : d6589fa2b41a5b3ee4c2194823d41fa9a113426e14495fffffbaf12bfcffcc75
+    - https://cdn.download.kde.org/stable/frameworks/5.115/kpeople-5.115.0.tar.xz : b8c1812ced1b5d58e3728defa1c9eab4376e3fd5684ae9441f2564129a96712f
 homepage   : https://community.kde.org/Frameworks
 license    : LGPL-2.1-or-later
 component  : programming.tools

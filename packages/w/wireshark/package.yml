@@ -1,8 +1,8 @@
 name       : wireshark
-version    : 4.2.0
-release    : 81
+version    : 4.2.3
+release    : 83
 source     :
-    - https://gitlab.com/wireshark/wireshark/-/archive/v4.2.0/wireshark-v4.2.0.tar.gz : a658296790c23c1eaf3a55959ab052a34732e8a8e13c856383afb747e859508a
+    - https://gitlab.com/wireshark/wireshark/-/archive/v4.2.3/wireshark-v4.2.3.tar.gz : 8cb8c85860232f7909068cbd87bca8ab6c1cf7d614be24634ea943df9ea50107
 homepage   : https://www.wireshark.org/
 license    :
     - GPL-2.0-or-later
@@ -34,8 +34,8 @@ builddeps  :
     - pkgconfig(minizip)
     - pkgconfig(opus)
     - pkgconfig(sbc)
+    - pkgconfig(snappy)
     - pkgconfig(speexdsp)
-    - snappy-devel
 rundeps    :
     - qt6-multimedia
     - qt6-svg

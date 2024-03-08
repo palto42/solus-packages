@@ -1,0 +1,134 @@
+name       : ffmpeg-4.4
+version    : 4.4.4
+release    : 2
+source     :
+    - https://ffmpeg.org/releases/ffmpeg-4.4.4.tar.xz : e80b380d595c809060f66f96a5d849511ef4a76a26b76eacf5778b94c3570309
+license    :
+    - GPL-3.0-or-later
+    - LGPL-3.0-or-later
+component  : multimedia.codecs
+homepage   : https://www.ffmpeg.org/
+summary    : A complete, cross-platform solution to record, convert and stream audio and video
+description: |
+    FFmpeg is a multimedia framework, able to decode, encode, transcode, mux, demux, stream, filter and play several formats that humans and machines have created.
+libsplit   : no
+mancompress: yes
+builddeps  :
+    - pkgconfig(SvtAv1Enc)
+    - pkgconfig(aom)
+    - pkgconfig(bzip2)
+    - pkgconfig(dav1d)
+    - pkgconfig(ffnvcodec)
+    - pkgconfig(gnutls)
+    - pkgconfig(libass)
+    - pkgconfig(libbluray)
+    - pkgconfig(libdrm)
+    - pkgconfig(liblzma)
+    - pkgconfig(libmfx)
+    - pkgconfig(libopenjp2)
+    - pkgconfig(libpulse)
+    - pkgconfig(libssh)
+    - pkgconfig(libv4l2)
+    - pkgconfig(libva)
+    - pkgconfig(libwebp)
+    - pkgconfig(opengl)
+    - pkgconfig(opus)
+    - pkgconfig(rav1e)
+    - pkgconfig(soxr)
+    - pkgconfig(speex)
+    - pkgconfig(srt)
+    - pkgconfig(theora)
+    - pkgconfig(vdpau)
+    - pkgconfig(vidstab)
+    - pkgconfig(vorbis)
+    - pkgconfig(vpx)
+    - pkgconfig(x264)
+    - pkgconfig(x265)
+    - pkgconfig(xv)
+    - pkgconfig(zimg)
+    - lame-devel
+    - xvidcore-devel
+clang      : yes
+setup      : |
+    %apply_patches
+
+    ./configure \
+        --prefix=/usr \
+        --incdir=/usr/include/ffmpeg-4.4 \
+        --libdir=%libdir%/ffmpeg-4.4 \
+        --disable-debug \
+        --disable-doc \
+        --disable-programs \
+        --disable-static \
+        --disable-stripping \
+        --enable-fontconfig \
+        --enable-gnutls \
+        --enable-gpl \
+        --enable-libaom \
+        --enable-libass \
+        --enable-libbluray \
+        --enable-libdav1d \
+        --enable-libdrm \
+        --enable-libfreetype \
+        --enable-libfribidi \
+        --enable-libmfx \
+        --enable-libmp3lame \
+        --enable-libopenjpeg \
+        --enable-libopus \
+        --enable-libpulse \
+        --enable-librav1e \
+        --enable-libsoxr \
+        --enable-libspeex \
+        --enable-libsrt \
+        --enable-libssh \
+        --enable-libsvtav1 \
+        --enable-libtheora \
+        --enable-libv4l2 \
+        --enable-libvidstab \
+        --enable-libvorbis \
+        --enable-libvpx \
+        --enable-libwebp \
+        --enable-libx264 \
+        --enable-libx265 \
+        --enable-libxvid \
+        --enable-libzimg \
+        --enable-lto \
+        --enable-nvdec \
+        --enable-nvenc \
+        --enable-opengl \
+        --enable-shared \
+        --enable-version3
+build      : |
+    %make
+install    : |
+    %make_install
+
+    # Move libs to /usr/lib, except the .so symlinks
+    cd $installdir
+    f=""
+    for f in usr/lib64/ffmpeg-4.4/*; do
+        if [[ $f == *.so ]]; then
+          ln -srf -- usr/lib64/"$(readlink "$f")" "$f"
+          mv "$f" "${f%.so}-4.4.so"
+        elif [[ ! -d $f ]]; then
+            mv "$f" usr/lib64
+        fi
+    done
+
+    # Rename pkgconfigs so they don't conflict
+    mv $installdir/usr/lib64/ffmpeg-4.4/pkgconfig $installdir/usr/lib64/pkgconfig
+    cd $installdir/usr/lib64/pkgconfig
+    for i in *.pc; do
+        mv $i ${i%.pc}-4.4.pc
+    done
+
+    # Fixup pkgconfig dependencies
+    for b in avcodec avdevice avfilter avformat avutil postproc swresample swscale; do
+        sed -i "s|lib$b|lib$b-4.4|g" *.pc
+        sed -i "s|-l$b|-l$b-4.4|g" *.pc
+    done
+
+    rm -rfv $installdir/usr/share
+patterns   :
+    - devel :
+        - /usr/lib64/ffmpeg-4.4/*.so
