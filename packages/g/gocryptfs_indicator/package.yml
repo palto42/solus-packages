@@ -1,19 +1,23 @@
 name       : gocryptfs-indicator
-version    : 0.10
-release    : 3
+version    : 0.11.2
+release    : 4
 source     :
-    - https://hp250.fritz.box/git/matthias/gocryptfs/archive/v0.10.tar.gz : 3856c9e2ae34d4965a6c16bdc086ba714dad1400fa6c1f58841b095f7c948a01
+    - https://hp250.fritz.box/git/matthias/-/packages/pypi/gocryptfs-indicator/0.11.2/files/82 : 8ecdc384563a3a8e99a35c3e3f73fe173a85743528dcbc6ef5ac46d64dc166d5
 homepage   : https://hp250.fritz.box/git/matthias/gocryptfs
 license    : undefined
 summary    : GTK Indicator App for mounting gocryptfs volumes.
 description :  GTK Indicator App for mounting gocryptfs volumes.
 builddeps  :
     - pkgconfig(python3)
+    - python-setuptools-scm
 rundeps    :
     - python-distro
     - python-gobject
 build      : |
+    echo $SETUPTOOLS_SCM_PRETEND_VERSION
     %python3_setup
 install    : |
     %python3_install
     install -Dm00644 $pkgfiles/gocryptfs_indicator.desktop $installdir/usr/share/applications/gocryptfs_indicator.desktop
+    mkdir -p $installdir/usr/share/icons/hicolor/scalable/apps/
+    install -Dm00644 src/gocryptfs_indicator/icons/gocryptfs_indicator*.svg $installdir/usr/share/icons/hicolor/scalable/apps/
