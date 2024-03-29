@@ -17,6 +17,7 @@ rundeps:
     - python-tomli
 builddeps:
     - pkgconfig(python3)
+    - python-setuptools-scm
 build: |
     %python3_setup
 install: |
