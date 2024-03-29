@@ -3,8 +3,8 @@
         <Name>pdfsam</Name>
         <Homepage>https://pdfsam.org/</Homepage>
         <Packager>
-            <Name>Clifford Red</Name>
-            <Email>a108384@gmail.com</Email>
+            <Name>Matthias Homann</Name>
+            <Email>palto@mailbox.org</Email>
         </Packager>
         <License>AGPL-3.0-only</License>
         <PartOf>office</PartOf>
@@ -22,70 +22,102 @@
         <Files>
             <Path fileType="executable">/usr/bin/pdfsam</Path>
             <Path fileType="data">/usr/share/applications/pdfsam.desktop</Path>
-            <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/pdfsam.svg</Path>
-            <Path fileType="data">/usr/share/pdfsam/lib/bcmail-jdk15on-1.70.jar</Path>
-            <Path fileType="data">/usr/share/pdfsam/lib/bcpkix-jdk15on-1.70.jar</Path>
-            <Path fileType="data">/usr/share/pdfsam/lib/bcprov-jdk15on-1.70.jar</Path>
-            <Path fileType="data">/usr/share/pdfsam/lib/bcutil-jdk15on-1.70.jar</Path>
-            <Path fileType="data">/usr/share/pdfsam/lib/commons-io-2.11.0.jar</Path>
-            <Path fileType="data">/usr/share/pdfsam/lib/commons-lang3-3.12.0.jar</Path>
-            <Path fileType="data">/usr/share/pdfsam/lib/eventstudio-3.0.4.jar</Path>
-            <Path fileType="data">/usr/share/pdfsam/lib/fontawesomefx-commons-9.1.2.jar</Path>
-            <Path fileType="data">/usr/share/pdfsam/lib/fontawesomefx-fontawesome-4.7.0-9.1.2.jar</Path>
-            <Path fileType="data">/usr/share/pdfsam/lib/fontawesomefx-materialdesignfont-2.0.26-9.1.2.jar</Path>
-            <Path fileType="data">/usr/share/pdfsam/lib/fontbox-2.0.18.jar</Path>
-            <Path fileType="data">/usr/share/pdfsam/lib/gettext-commons-0.9.8.jar</Path>
-            <Path fileType="data">/usr/share/pdfsam/lib/hibernate-validator-4.2.0.Final.jar</Path>
-            <Path fileType="data">/usr/share/pdfsam/lib/jackson-core-2.13.1.jar</Path>
-            <Path fileType="data">/usr/share/pdfsam/lib/jackson-jr-objects-2.13.1.jar</Path>
-            <Path fileType="data">/usr/share/pdfsam/lib/javafx-base-17.0.1-linux.jar</Path>
-            <Path fileType="data">/usr/share/pdfsam/lib/javafx-base-17.0.1.jar</Path>
-            <Path fileType="data">/usr/share/pdfsam/lib/javafx-controls-17.0.1-linux.jar</Path>
-            <Path fileType="data">/usr/share/pdfsam/lib/javafx-controls-17.0.1.jar</Path>
-            <Path fileType="data">/usr/share/pdfsam/lib/javafx-graphics-17.0.1-linux.jar</Path>
-            <Path fileType="data">/usr/share/pdfsam/lib/javafx-graphics-17.0.1.jar</Path>
-            <Path fileType="data">/usr/share/pdfsam/lib/javafx-media-17.0.1-linux.jar</Path>
-            <Path fileType="data">/usr/share/pdfsam/lib/javafx-media-17.0.1.jar</Path>
-            <Path fileType="data">/usr/share/pdfsam/lib/javax.inject-1.jar</Path>
-            <Path fileType="data">/usr/share/pdfsam/lib/jcl-over-slf4j-1.7.33.jar</Path>
-            <Path fileType="data">/usr/share/pdfsam/lib/logback-classic-1.2.10.jar</Path>
-            <Path fileType="data">/usr/share/pdfsam/lib/logback-core-1.2.10.jar</Path>
-            <Path fileType="data">/usr/share/pdfsam/lib/metadata-extractor-2.16.0.jar</Path>
-            <Path fileType="data">/usr/share/pdfsam/lib/pdfsam-alternate-mix-4.2.12.jar</Path>
-            <Path fileType="data">/usr/share/pdfsam/lib/pdfsam-core-4.2.12.jar</Path>
-            <Path fileType="data">/usr/share/pdfsam/lib/pdfsam-extract-4.2.12.jar</Path>
-            <Path fileType="data">/usr/share/pdfsam/lib/pdfsam-fx-4.2.12.jar</Path>
-            <Path fileType="data">/usr/share/pdfsam/lib/pdfsam-gui-4.2.12.jar</Path>
-            <Path fileType="data">/usr/share/pdfsam/lib/pdfsam-i18n-4.2.12.jar</Path>
-            <Path fileType="data">/usr/share/pdfsam/lib/pdfsam-injector-2.0.0.jar</Path>
-            <Path fileType="data">/usr/share/pdfsam/lib/pdfsam-merge-4.2.12.jar</Path>
-            <Path fileType="data">/usr/share/pdfsam/lib/pdfsam-rotate-4.2.12.jar</Path>
-            <Path fileType="data">/usr/share/pdfsam/lib/pdfsam-service-4.2.12.jar</Path>
-            <Path fileType="data">/usr/share/pdfsam/lib/pdfsam-simple-split-4.2.12.jar</Path>
-            <Path fileType="data">/usr/share/pdfsam/lib/pdfsam-split-by-bookmarks-4.2.12.jar</Path>
-            <Path fileType="data">/usr/share/pdfsam/lib/pdfsam-split-by-size-4.2.12.jar</Path>
-            <Path fileType="data">/usr/share/pdfsam/lib/sambox-2.3.4.jar</Path>
-            <Path fileType="data">/usr/share/pdfsam/lib/sejda-commons-1.1.7.jar</Path>
-            <Path fileType="data">/usr/share/pdfsam/lib/sejda-conversion-4.2.11.jar</Path>
-            <Path fileType="data">/usr/share/pdfsam/lib/sejda-core-4.2.11.jar</Path>
-            <Path fileType="data">/usr/share/pdfsam/lib/sejda-fonts-4.2.11.jar</Path>
-            <Path fileType="data">/usr/share/pdfsam/lib/sejda-io-2.1.3.jar</Path>
-            <Path fileType="data">/usr/share/pdfsam/lib/sejda-model-4.2.11.jar</Path>
-            <Path fileType="data">/usr/share/pdfsam/lib/sejda-sambox-4.2.11.jar</Path>
-            <Path fileType="data">/usr/share/pdfsam/lib/slf4j-api-1.7.33.jar</Path>
-            <Path fileType="data">/usr/share/pdfsam/lib/thumbnailator-0.4.15.jar</Path>
-            <Path fileType="data">/usr/share/pdfsam/lib/validation-api-1.0.0.GA.jar</Path>
-            <Path fileType="data">/usr/share/pdfsam/lib/xmpcore-6.1.11.jar</Path>
-            <Path fileType="data">/usr/share/pdfsam/pdfsam.jar</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/128x128/apps/pdfsam.png</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/16x16/apps/pdfsam.png</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/24x24/apps/pdfsam.png</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/256x256/apps/pdfsam.png</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/32x32/apps/pdfsam.png</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/48x48/apps/pdfsam.png</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/512x512/apps/pdfsam.png</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/64x64/apps/pdfsam.png</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/96x96/apps/pdfsam.png</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/bcmail-jdk18on-1.77.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/bcpkix-jdk18on-1.77.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/bcprov-jdk18on-1.77.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/bcutil-jdk18on-1.77.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/classmate-1.5.1.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/common-image-3.9.4.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/common-io-3.9.4.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/common-lang-3.9.4.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/commons-io-2.15.1.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/commons-lang3-3.14.0.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/eventstudio-4.0.0.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/fontbox-2.0.28.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/hibernate-validator-7.0.5.Final.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/icu4j-71.1.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/ikonli-boxicons-pack-12.3.1.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/ikonli-core-12.3.1.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/ikonli-javafx-12.3.1.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/ikonli-unicons-pack-12.3.1.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/imageio-core-3.9.4.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/imageio-jpeg-3.9.4.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/imageio-metadata-3.9.4.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/imageio-tiff-3.9.4.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/jackson-annotations-2.16.1.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/jackson-core-2.16.1.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/jackson-databind-2.16.1.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/jackson-datatype-jdk8-2.16.1.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/jackson-datatype-jsr310-2.16.1.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/jakarta.el-4.0.2.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/jakarta.el-api-4.0.0.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/jakarta.inject-api-2.0.1.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/jakarta.validation-api-3.0.2.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/javafx-base-21.0.2-linux.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/javafx-base-21.0.2.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/javafx-controls-21.0.2-linux.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/javafx-controls-21.0.2.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/javafx-graphics-21.0.2-linux.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/javafx-graphics-21.0.2.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/javafx-media-21.0.2-linux.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/javafx-media-21.0.2.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/jboss-logging-3.4.1.Final.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/jcl-over-slf4j-2.0.11.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/metadata-extractor-2.18.0.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/pdfsam-alternate-mix-5.2.2.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/pdfsam-backpages-5.2.2.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/pdfsam-basic-5.2.2.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/pdfsam-core-5.2.2.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/pdfsam-extract-5.2.2.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/pdfsam-gui-5.2.2.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/pdfsam-i18n-5.2.2.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/pdfsam-injector-5.0.0.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/pdfsam-merge-5.2.2.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/pdfsam-model-5.2.2.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/pdfsam-persistence-5.2.2.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/pdfsam-rotate-5.2.2.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/pdfsam-service-5.2.2.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/pdfsam-simple-split-5.2.2.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/pdfsam-split-by-bookmarks-5.2.2.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/pdfsam-split-by-size-5.2.2.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/pdfsam-themes-5.2.2.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/pdfsam-ui-components-5.2.2.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/reactive-streams-1.0.4.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/rxjava-3.1.8.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/sambox-3.0.6.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/sejda-commons-3.0.0.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/sejda-conversion-5.0.13.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/sejda-core-5.0.13.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/sejda-fonts-5.0.13.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/sejda-image-writers-5.0.13.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/sejda-io-4.0.0.M3.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/sejda-model-5.0.13.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/sejda-sambox-5.0.13.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/slf4j-api-2.0.11.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/slf4j-tinylog-2.7.0.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/thumbnailator-0.4.20.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/tinylog-api-2.7.0.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/tinylog-impl-2.7.0.jar</Path>
+            <Path fileType="data">/usr/share/java/pdfsam/xmpcore-6.1.11.jar</Path>
+            <Path fileType="data">/usr/share/pdfsam/splash.png</Path>
         </Files>
     </Package>
     <History>
         <Update release="9">
-            <Date>2024-07-20</Date>
-            <Version>4.2.12</Version>
+            <Date>2024-04-20</Date>
+            <Version>5.2.2</Version>
             <Comment>Packaging update</Comment>
-            <Name>Clifford Red</Name>
-            <Email>a108384@gmail.com</Email>
+            <Name>Matthias Homann</Name>
+            <Email>palto@mailbox.org</Email>
         </Update>
     </History>
 </PISI>
