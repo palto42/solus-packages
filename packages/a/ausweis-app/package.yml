@@ -1,0 +1,25 @@
+name       : ausweis-app
+version    : 2.1.1
+release    : 1
+source     :
+    - https://github.com/Governikus/AusweisApp/archive/refs/tags/2.1.1.tar.gz : 131b49b8b17fbde2c7c5671721462fff1685725d9b02d244de85a782f3849562
+homepage   : https://www.ausweisapp.bund.de
+license    : EUPL
+component  : office
+summary    : The AusweisApp is a software for identifying yourself online with your German ID card, your electronic residence permit or the eID card for EU citizens.
+description: |
+    The AusweisApp is a software for identifying yourself online with your German ID card, your electronic residence permit or the eID card for EU citizens.
+builddeps  :
+    - pkgconfig(libpcsclite) 
+    - pkgconfig(Qt6Linguist)
+    - pkgconfig(Qt6Scxml)
+    - pkgconfig(Qt6ShaderTools)
+    - pkgconfig(Qt6Svg)
+    - pkgconfig(Qt6WebSockets)
+setup      : |
+    %cmake_ninja
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install
+    install -Dm00644 LICENSE.txt "$installdir/usr/share/licenses/${NAME}/LICENSE.txt"
