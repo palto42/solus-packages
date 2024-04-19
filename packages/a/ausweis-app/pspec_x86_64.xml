@@ -1,0 +1,42 @@
+<PISI>
+    <Source>
+        <Name>ausweis-app</Name>
+        <Homepage>https://www.ausweisapp.bund.de</Homepage>
+        <Packager>
+            <Name>Matthias Homann</Name>
+            <Email>palto@mailbox.org</Email>
+        </Packager>
+        <License>EUPL</License>
+        <PartOf>office</PartOf>
+        <Summary xml:lang="en">The AusweisApp is a software for identifying yourself online with your German ID card, your electronic residence permit or the eID card for EU citizens.</Summary>
+        <Description xml:lang="en">The AusweisApp is a software for identifying yourself online with your German ID card, your electronic residence permit or the eID card for EU citizens.
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>ausweis-app</Name>
+        <Summary xml:lang="en">The AusweisApp is a software for identifying yourself online with your German ID card, your electronic residence permit or the eID card for EU citizens.</Summary>
+        <Description xml:lang="en">The AusweisApp is a software for identifying yourself online with your German ID card, your electronic residence permit or the eID card for EU citizens.
+</Description>
+        <PartOf>office</PartOf>
+        <Files>
+            <Path fileType="executable">/usr/bin/AusweisApp</Path>
+            <Path fileType="data">/usr/share/AusweisApp/AusweisApp.rcc</Path>
+            <Path fileType="data">/usr/share/applications/com.governikus.ausweisapp2.desktop</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/96x96/apps/AusweisApp.png</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/AusweisApp.svg</Path>
+            <Path fileType="data">/usr/share/licenses/LICENSE.txt</Path>
+            <Path fileType="man">/usr/share/man/man1/AusweisApp.1</Path>
+            <Path fileType="data">/usr/share/metainfo/com.governikus.ausweisapp2.metainfo.xml</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2024-04-20</Date>
+            <Version>2.1.1</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Matthias Homann</Name>
+            <Email>palto@mailbox.org</Email>
+        </Update>
+    </History>
+</PISI>
