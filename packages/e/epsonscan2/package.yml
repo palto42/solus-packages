@@ -1,8 +1,8 @@
 name       : epsonscan2
-version    : 6.7.63
-release    : 2
+version    : 6.7.65
+release    : 3
 source     :
-    - https://download3.ebz.epson.net/dsc/f/03/00/15/17/69/0ef02802c476a6564f13cac929859c394f40326a/epsonscan2-6.7.63.0-1.src.tar.gz : 10bc82e951ec5f677e8fcf91660da5e7904c4a67ac195a1119ab6e9d3c2eb9d4
+    - https://download3.ebz.epson.net/dsc/f/03/00/15/87/25/a00d9b45f416c29b5b5cf569e76448b918c0eabd/epsonscan2-6.7.65.0-1.src.tar.gz : a45dfacdd1f4119048cda9f2ba4e12a7fc4b77a5e8ba709c6de0051771926b6d
 homepage   : https://support.epson.net/linux/en/epsonscan2.php
 license    : GPL-2.1-or-later
 component  : office
