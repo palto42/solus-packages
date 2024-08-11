@@ -1,8 +1,8 @@
 name       : pdfsam
-version    : 5.2.2
-release    : 9
+version    : 5.2.4
+release    : 10
 source     :
-    - https://github.com/torakiki/pdfsam/archive/refs/tags/v5.2.2.tar.gz : 4eec571fe9a385ee1977e6ef4671e6dec86183216b4ab48718ed1fbfb282fd44
+    - https://github.com/torakiki/pdfsam/archive/refs/tags/v5.2.4.tar.gz : cb4861b2ada6000ab6201ad320166789782ba175df57a5f11e796da9bd39e436
 homepage   : https://pdfsam.org/
 license    : AGPL-3.0-only
 component  : office
