@@ -12,7 +12,7 @@ Check version on driver page for Epson XP-7100
 Get latest direct download link with the command:
 
 ```console
-curl -s -I 'https://download.ebz.epson.net/dsc/du/02/DriverDownloadInfo.do?LG2=JA&CN2=US&CTI=171&PRN=Linux%20src%20package&OSC=LX&DL' | grep Location | sed -n "s/Location: //p"
+curl -A 'SeaMonkey/2.7.1' -s -I 'https://download.ebz.epson.net/dsc/du/02/DriverDownloadInfo.do?LG2=JA&CN2=US&CTI=171&PRN=Linux%20src%20package&OSC=LX&DL' | grep Location | sed -n "s/Location: //p"
 ```
 
 The output contains the direct link in the "Location" line.
