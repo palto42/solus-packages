@@ -1,8 +1,8 @@
 name       : epsonscan2
-version    : 6.7.65
-release    : 3
+version    : 6.7.70
+release    : 4
 source     :
-    - https://download3.ebz.epson.net/dsc/f/03/00/15/87/25/a00d9b45f416c29b5b5cf569e76448b918c0eabd/epsonscan2-6.7.65.0-1.src.tar.gz : a45dfacdd1f4119048cda9f2ba4e12a7fc4b77a5e8ba709c6de0051771926b6d
+    - https://download3.ebz.epson.net/dsc/f/03/00/16/14/37/7577ee65efdad48ee2d2f38d9eda75418e490552/epsonscan2-6.7.70.0-1.src.tar.gz : e141e66e4cd74c06eef0baa163f4cc498c3be4a5db82851c914a1b7f2c50967e
 homepage   : https://support.epson.net/linux/en/epsonscan2.php
 license    : GPL-2.1-or-later
 component  : office
@@ -23,12 +23,18 @@ builddeps  :
     - libjpeg-turbo-devel
 setup      : |
     # ls -l
-    # ls -l src
-    # echo "*** CMakeLists.txt ***"
-    # cat CMakeLists.txt
-    # echo "*** DbgLog.cpp ***"
+
+    # Remove CMAkeCache due to wrong build dir.
+    rm CMakeCache.txt
+
+    # Patch CMakeLists
+    sed -i 's|/lib/udev|${CMAKE_INSTALL_PREFIX}/lib/udev|' "CMakeLists.txt"
     sed -i '1 i #include "zlib.h"' "src/CommonUtility/DbgLog.cpp"
-    # cat src/CommonUtility/DbgLog.cpp
+    sed -i '/zlib/d' "src/Controller/CMakeLists.txt"
+
+    # Stability improvements from Flatpak maintainers
+    # https://github.com/flathub/net.epson.epsonscan2
+    %apply_patches
 
     %cmake_ninja \
         -DCMAKE_BUILD_TYPE=Release \
@@ -39,10 +45,14 @@ build      : |
 install    : |
     %ninja_install
 
-    install -Dm644 "$workdir/desktop/rpm/i686/epsonscan2.desktop" \
-                    "$installdir/usr/share/applications/epsonscan2.desktop"
-
-    install -d $installdir/usr/lib/sane
-    cd $installdir/usr/lib/sane
+    install -d $installdir/usr/lib64/sane
+    install -Dm644 "$installdir/usr/lib64/epsonscan2/libsane-epsonscan2.so" \
+        "$installdir/usr/lib64/sane/libsane-epsonscan2.so"
+    # Add symlinks
+    cd $installdir/usr/lib64/sane
     ln -s ../epsonscan2/libsane-epsonscan2.so libsane-epsonscan2.so.1
     ln -s ../epsonscan2/libsane-epsonscan2.so libsane-epsonscan2.so.1.0.0
+
+    # Add desktop file
+    install -Dm644 "$workdir/desktop/rpm/i686/epsonscan2.desktop" \
+        "$installdir/usr/share/applications/epsonscan2.desktop"
