@@ -1,3 +1,6 @@
+UNKNOWN:deflate
+UNKNOWN:deflateEnd
+UNKNOWN:deflateInit_
 libQt5Core.so.5:_Z21qRegisterResourceDataiPKhS0_S0_
 libQt5Core.so.5:_Z23qUnregisterResourceDataiPKhS0_S0_
 libQt5Core.so.5:_Z9qBadAllocv
@@ -52,6 +55,7 @@ libQt5Core.so.5:_ZN7QString14compare_helperEPK5QChariPKciN2Qt15CaseSensitivityE
 libQt5Core.so.5:_ZN7QString14trimmed_helperERKS_
 libQt5Core.so.5:_ZN7QString15fromUtf8_helperEPKci
 libQt5Core.so.5:_ZN7QString16fromAscii_helperEPKci
+libQt5Core.so.5:_ZN7QString17fromLatin1_helperEPKci
 libQt5Core.so.5:_ZN7QString18toLocal8Bit_helperEPK5QChari
 libQt5Core.so.5:_ZN7QString20fromLocal8Bit_helperEPKci
 libQt5Core.so.5:_ZN7QString6appendERKS_
@@ -848,9 +852,7 @@ libc.so.6:gettimeofday
 libc.so.6:isspace
 libc.so.6:kill
 libc.so.6:localtime
-libc.so.6:lseek
 libc.so.6:malloc
-libc.so.6:memchr
 libc.so.6:memcmp
 libc.so.6:memcpy
 libc.so.6:memmove
@@ -859,7 +861,6 @@ libc.so.6:mkdir
 libc.so.6:mkstemp
 libc.so.6:nanosleep
 libc.so.6:nftw
-libc.so.6:open
 libc.so.6:opendir
 libc.so.6:pclose
 libc.so.6:perror
@@ -900,7 +901,6 @@ libc.so.6:sigemptyset
 libc.so.6:signal
 libc.so.6:sigprocmask
 libc.so.6:sleep
-libc.so.6:snprintf
 libc.so.6:socket
 libc.so.6:stat
 libc.so.6:stderr
@@ -1042,8 +1042,6 @@ libstdc++.so.6:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_appendEP
 libstdc++.so.6:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_assignERKS4_
 libstdc++.so.6:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_createERmm
 libstdc++.so.6:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm
-libstdc++.so.6:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9push_backEc
-libstdc++.so.6:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC1EOS4_
 libstdc++.so.6:_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEE7_M_syncEPcmm
 libstdc++.so.6:_ZNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEC1Ev
 libstdc++.so.6:_ZNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEED1Ev
