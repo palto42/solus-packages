@@ -1,8 +1,8 @@
 name       : ausweis-app
-version    : 2.2.0
-release    : 1
+version    : 2.2.1
+release    : 2
 source     :
-    - https://github.com/Governikus/AusweisApp/archive/refs/tags/2.2.0.tar.gz : c68c710d4608aa73ff22e513298d7e05462eb6123ea083e029205599828175dd
+    - https://github.com/Governikus/AusweisApp/archive/refs/tags/2.2.1.tar.gz : e2786f4818d77c364eb8a6305b9313411d984b6774d9a49564306f10d663f0fe
 homepage   : https://www.ausweisapp.bund.de
 license    : EUPL
 component  : office
@@ -10,7 +10,7 @@ summary    : The AusweisApp is a software for identifying yourself online with y
 description: |
     The AusweisApp is a software for identifying yourself online with your German ID card, your electronic residence permit or the eID card for EU citizens.
 builddeps  :
-    - pkgconfig(libpcsclite) 
+    - pkgconfig(libpcsclite)
     - pkgconfig(Qt6Linguist)
     - pkgconfig(Qt6Scxml)
     - pkgconfig(Qt6ShaderTools)
