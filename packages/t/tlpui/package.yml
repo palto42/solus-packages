@@ -1,8 +1,8 @@
 name       : tlpui
-version    : 1.6.0
-release    : 2
+version    : 1.6.5
+release    : 3
 source     :
-   - https://github.com/d4nj1/TLPUI/archive/refs/tags/tlpui-1.6.0.tar.gz : f1b2cd69cb25f59ce973ee8411e51ded45032d289ec8f6f62ccbb45919d16b86
+    - https://github.com/d4nj1/TLPUI/archive/refs/tags/tlpui-1.6.5.tar.gz : 7a7405d95b3e26298edb137252e75dfc2f2c76d933ac02d953b1071bdb0d5bec
 homepage   : https://github.com/d4nj1/TLPUI
 license    : GPL-2.0-or-later
 component  : system.utils
@@ -12,6 +12,9 @@ description: |
     It has the aim to protect users from setting bad configuration and to deliver a basic overview of all the valid configuration values.
 builddeps  :
     - pkgconfig(python3)
+    - python-build
+    - python-poetry-core
+    - python-installer
 rundeps    :
     - python3
     - python-gobject
