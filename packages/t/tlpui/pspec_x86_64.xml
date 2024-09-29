@@ -241,6 +241,7 @@ It has the aim to protect users from setting bad configuration and to deliver a 
             <Path fileType="library">/usr/lib/python3.11/site-packages/tlpui/ui_config_objects/gtktoggle.py</Path>
             <Path fileType="library">/usr/lib/python3.11/site-packages/tlpui/ui_config_objects/gtkusblist.py</Path>
             <Path fileType="library">/usr/lib/python3.11/site-packages/tlpui/uihelper.py</Path>
+            <Path fileType="data">/usr/share/applications/tlpui.desktop</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/tlpui.svg</Path>
         </Files>
     </Package>

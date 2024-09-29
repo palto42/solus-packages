@@ -24,3 +24,7 @@ install    : |
     %python3_install
     # Add tlpui icon
     install -Dm00644 tlpui/icons/themeable/hicolor/scalable/apps/tlpui.svg $installdir/usr/share/icons/hicolor/scalable/apps/tlpui.svg
+
+    # Add desktop file
+    install -Dm644 "$workdir/TLPUI-tlpui-1.6.5/tlpui.desktop" \
+        "$installdir/usr/share/applications/tlpui.desktop"
