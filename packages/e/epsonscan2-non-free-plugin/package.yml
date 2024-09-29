@@ -1,0 +1,26 @@
+name       : epsonscan2-non-free-plugin
+version    : 1.0.0.6
+release    : 1
+source     :
+    - https://download3.ebz.epson.net/dsc/f/03/00/15/17/68/050e5a55ed90f4efb4ca3bdd34e5797b149443ca/epsonscan2-bundle-6.7.63.0.x86_64.deb.tar.gz : 6e4caf15625eab2dbdcac7fb160375e8f28fff7457866c824357d7baf93cba42
+homepage   : https://support.epson.net/linux/en/epsonscan2.php
+license    : proprietary
+component  : office
+summary    : Epson Scan 2 non-free plugins for wireless scanners and OCR
+description: |
+    Plugins for Epsonscan2 software for wireless scanners and OCR
+rundeps    :
+    - epsonscan2
+setup      : |
+    cd plugins
+    ar x epsonscan2-non-free-plugin*.deb
+    tar -xJf data.tar.xz 
+install    : |
+    install -dm755 "${installdir}/usr/lib64/"
+    cd "plugins/usr"
+    mv lib/*/epsonscan2* "${installdir}/usr/lib64/"
+    mv libexec/epsonscan2-ocr/ocr-engine-getrotate "${installdir}/usr/lib64/epsonscan2-ocr"
+    mv share "$installdir/usr"
+    install -Dm644 "$installdir/usr/share/doc/epsonscan2-non-free-plugin-%version%-1/copyright" \
+                    "$installdir/usr/share/licenses/epsonscan2-non-free-plugin/LICENSE"
+

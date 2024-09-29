@@ -1,0 +1,142 @@
+<PISI>
+    <Source>
+        <Name>epsonscan2-non-free-plugin</Name>
+        <Homepage>https://support.epson.net/linux/en/epsonscan2.php</Homepage>
+        <Packager>
+            <Name>Matthias Homann</Name>
+            <Email>palto@mailbox.org</Email>
+        </Packager>
+        <License>proprietary</License>
+        <PartOf>office</PartOf>
+        <Summary xml:lang="en">Epson Scan 2 non-free plugins</Summary>
+        <Description xml:lang="en">Plugins for Epsonscan2 software
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>epsonscan2-non-free-plugin</Name>
+        <Summary xml:lang="en">Epson Scan 2 non-free plugins</Summary>
+        <Description xml:lang="en">Plugins for Epsonscan2 software
+</Description>
+        <PartOf>office</PartOf>
+        <Files>
+            <Path fileType="library">/usr/lib64/epsonscan2-ocr/libocr-bmpmem.so</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2-ocr/libocr-bmpmem.so.0</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2-ocr/libocr-bmpmem.so.0.0.0</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2-ocr/libocr-cnvres.so</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2-ocr/libocr-cnvres.so.0</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2-ocr/libocr-cnvres.so.0.0.0</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2-ocr/libocr-colbin.so</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2-ocr/libocr-colbin.so.0</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2-ocr/libocr-colbin.so.0.0.0</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2-ocr/libocr-ijglib.so</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2-ocr/libocr-ijglib.so.0</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2-ocr/libocr-ijglib.so.0.0.0</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2-ocr/libocr-imgmem.so</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2-ocr/libocr-imgmem.so.0</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2-ocr/libocr-imgmem.so.0.0.0</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2-ocr/libocr-jpgmem.so</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2-ocr/libocr-jpgmem.so.0</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2-ocr/libocr-jpgmem.so.0.0.0</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2-ocr/libocr-lngdic.so</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2-ocr/libocr-lngdic.so.0</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2-ocr/libocr-lngdic.so.0.0.0</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2-ocr/libocr-memjpg.so</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2-ocr/libocr-memjpg.so.0</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2-ocr/libocr-memjpg.so.0.0.0</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2-ocr/libocr-ocrsys.so</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2-ocr/libocr-ocrsys.so.0</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2-ocr/libocr-ocrsys.so.0.0.0</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2-ocr/libocr-rotmem.so</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2-ocr/libocr-rotmem.so.0</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2-ocr/libocr-rotmem.so.0.0.0</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2-ocr/libocr-skwmem.so</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2-ocr/libocr-skwmem.so.0</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2-ocr/libocr-skwmem.so.0.0.0</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2-ocr/libocr-usrdic.so</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2-ocr/libocr-usrdic.so.0</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2-ocr/libocr-usrdic.so.0.0.0</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2-ocr/libocr-ydblock.so</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2-ocr/libocr-ydblock.so.0</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2-ocr/libocr-ydblock.so.0.0.0</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2-ocr/libocr-ydcorr.so</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2-ocr/libocr-ydcorr.so.0</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2-ocr/libocr-ydcorr.so.0.0.0</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2-ocr/libocr-ydline.so</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2-ocr/libocr-ydline.so.0</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2-ocr/libocr-ydline.so.0.0.0</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2-ocr/libocr-ydocrd.so</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2-ocr/libocr-ydocrd.so.0</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2-ocr/libocr-ydocrd.so.0.0.0</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2-ocr/libocr-ydprof.so</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2-ocr/libocr-ydprof.so.0</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2-ocr/libocr-ydprof.so.0.0.0</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2-ocr/libocr-ydrecxx.so</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2-ocr/libocr-ydrecxx.so.0</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2-ocr/libocr-ydrecxx.so.0.0.0</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2-ocr/libocr-ydstyle.so</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2-ocr/libocr-ydstyle.so.0</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2-ocr/libocr-ydstyle.so.0.0.0</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2-ocr/libocr-ydtable.so</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2-ocr/libocr-ydtable.so.0</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2-ocr/libocr-ydtable.so.0.0.0</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2-ocr/ocr-engine-getrotate</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/libexec/libcnx-esci-es0282.so</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/libexec/libcnx-esci-es0282.so.0</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/libexec/libcnx-esci-es0282.so.0.0.0</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/libexec/libcnx-esci-gt-s650.so</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/libexec/libcnx-esci-gt-s650.so.0</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/libexec/libcnx-esci-gt-s650.so.0.0.0</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/libexec/libesci-interpreter-perfection-v330.so</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/libexec/libesci-interpreter-perfection-v330.so.0</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/libexec/libesci-interpreter-perfection-v330.so.0.0.0</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/libexec/libesintA1.so</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/libexec/libesintA1.so.2</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/libexec/libesintA1.so.2.0.1</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/libexec/libiscan-plugin-perfection-v370.so</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/libexec/libiscan-plugin-perfection-v370.so.0</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/libexec/libiscan-plugin-perfection-v370.so.0.0.0</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/libexec/libiscan-plugin-perfection-v550.so</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/libexec/libiscan-plugin-perfection-v550.so.0</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/libexec/libiscan-plugin-perfection-v550.so.0.0.0</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/non-free-exec/EsDDE.prm</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/non-free-exec/EsImfl.prm</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/non-free-exec/ddeplugin</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/non-free-exec/dtrplugin</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/non-free-exec/es2intif</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/non-free-exec/es2netif</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/non-free-exec/fitplugin</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/non-free-exec/libdde6.so</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/non-free-exec/libesdtr.so</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/non-free-exec/libesimp2.so</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/non-free-exec/libimf6.so</Path>
+            <Path fileType="doc">/usr/share/doc/epsonscan2-non-free-plugin-1.0.0.6-1/COPYING.EPSON</Path>
+            <Path fileType="doc">/usr/share/doc/epsonscan2-non-free-plugin-1.0.0.6-1/NEWS</Path>
+            <Path fileType="doc">/usr/share/doc/epsonscan2-non-free-plugin-1.0.0.6-1/changelog.Debian</Path>
+            <Path fileType="doc">/usr/share/doc/epsonscan2-non-free-plugin-1.0.0.6-1/copyright</Path>
+            <Path fileType="data">/usr/share/epsonscan2-ocr/ocr/dic/Rotate.ptn</Path>
+            <Path fileType="data">/usr/share/epsonscan2-ocr/ocr/dic/YdrecEN.flt</Path>
+            <Path fileType="data">/usr/share/epsonscan2-ocr/ocr/dic/YdrecEN.ptn</Path>
+            <Path fileType="data">/usr/share/epsonscan2-ocr/ocr/dic/YdrecEN.wrd</Path>
+            <Path fileType="data">/usr/share/epsonscan2-ocr/ocr/dic/YdrecZHS.flt</Path>
+            <Path fileType="data">/usr/share/epsonscan2-ocr/ocr/dic/YdrecZHS.ptn</Path>
+            <Path fileType="data">/usr/share/epsonscan2-ocr/ocr/dic/YdrecZHS.wrd</Path>
+            <Path fileType="data">/usr/share/epsonscan2/esfw010c.bin</Path>
+            <Path fileType="data">/usr/share/epsonscan2/esfw0282.bin</Path>
+            <Path fileType="data">/usr/share/epsonscan2/esfwA1.bin</Path>
+            <Path fileType="data">/usr/share/epsonscan2/esfwad.bin</Path>
+            <Path fileType="data">/usr/share/epsonscan2/esfwdd.bin</Path>
+            <Path fileType="data">/usr/share/epsonscan2/esfweb.bin</Path>
+            <Path fileType="data">/usr/share/licenses/epsonscan2-non-free-plugin/LICENSE</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2024-09-29</Date>
+            <Version>1.0.0.6</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Matthias Homann</Name>
+            <Email>palto@mailbox.org</Email>
+        </Update>
+    </History>
+</PISI>
