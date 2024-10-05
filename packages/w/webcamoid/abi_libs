@@ -6,6 +6,7 @@ libAudioDevice.so
 libAudioDevice_alsa.so
 libAudioDevice_jack.so
 libAudioDevice_pulseaudio.so
+libAudioDevice_qtaudio.so
 libAudioGen.so
 libBlur.so
 libCartoon.so
@@ -13,6 +14,7 @@ libChangeHSL.so
 libCharify.so
 libCinema.so
 libColorFilter.so
+libColorKey.so
 libColorReplace.so
 libColorTap.so
 libColorTransform.so
@@ -25,6 +27,7 @@ libDesktopCapture.so
 libDesktopCapture_ffmpeg.so
 libDesktopCapture_pipewire.so
 libDesktopCapture_qtscreen.so
+libDesktopCapture_xlib.so
 libDice.so
 libDistort.so
 libDizzy.so
@@ -74,6 +77,8 @@ libTemperature.so
 libVideoCapture.so
 libVideoCapture_ffmpeg.so
 libVideoCapture_gstreamer.so
+libVideoCapture_pipewire.so
+libVideoCapture_qtcamera.so
 libVideoCapture_v4l2sys.so
 libVideoCapture_v4lutils.so
 libVignette.so

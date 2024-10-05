@@ -1,8 +1,8 @@
 name       : webcamoid
-version    : 9.1.1
+version    : 9.2.3
 release    : 1
 source     :
-    - https://github.com/webcamoid/webcamoid/archive/refs/tags/9.1.1.tar.gz : 70209d5ff5f3d00b71376171a73a4ce610ecee5e050edca658c484c0cb508e74
+    - https://github.com/webcamoid/webcamoid/archive/refs/tags/9.2.3.tar.gz : b6601647f5787c3222ffa505beda24064cad910e23d6baa90806241cf09ef075
 homepage   : https://webcamoid.github.io
 license    : GPL-3.0-or-later
 summary    :
@@ -11,9 +11,10 @@ description:
     - Webcamoid is a full featured and multiplatform webcam suite.
 builddeps  :
     - pkgconfig(alsa)
-    - pkgconfig(Qt5QuickControls2)
-    - pkgconfig(Qt5Svg)
-    - pkgconfig(Qt5UiTools)
+    - pkgconfig(Qt6QuickControls2)
+    - pkgconfig(Qt6Svg)
+    - pkgconfig(Qt6UiTools)
+    - pkgconfig(Qt6Multimedia)
     - pkgconfig(gstreamer-base-1.0)
     - pkgconfig(gstreamer-plugins-base-0.10)
     - pkgconfig(gstreamer-video-1.0)
@@ -26,13 +27,11 @@ builddeps  :
     - pkgconfig(libvlc)
     - xorg-server-xvfb
     # - libuvc-devel # optional, not in Solus repository
-
 setup      : |
     %cmake_ninja \
         -DCMAKE_BUILD_TYPE=Release \
         -DCMAKE_C_COMPILER=gcc\
         -DCMAKE_CXX_COMPILER=g++
-
 build      : |
     %ninja_build
 install    : |
