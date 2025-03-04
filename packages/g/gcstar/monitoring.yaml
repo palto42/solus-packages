@@ -1,0 +1,6 @@
+releases:
+  id: 358017
+  rss: https://gitlab.com/GCstar/GCstar/-/tags?format=atom
+# No known CPE, checked 2025-03-04
+security:
+  cpe: ~
