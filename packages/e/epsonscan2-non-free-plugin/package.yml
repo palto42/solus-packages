@@ -1,8 +1,8 @@
 name       : epsonscan2-non-free-plugin
 version    : 1.0.0.6
-release    : 1
+release    : 2
 source     :
-    - https://download3.ebz.epson.net/dsc/f/03/00/15/17/68/050e5a55ed90f4efb4ca3bdd34e5797b149443ca/epsonscan2-bundle-6.7.63.0.x86_64.deb.tar.gz : 6e4caf15625eab2dbdcac7fb160375e8f28fff7457866c824357d7baf93cba42
+    - https://download3.ebz.epson.net/dsc/f/03/00/17/08/12/9f3fec0ae80aa5c36f5170377ebcc38c93251e23/epsonscan2-bundle-6.7.80.0.x86_64.deb.tar.gz : e403d8338f4705b28244b8eef6833ae8a29a932f234b15b429798c78b5d70f01
 homepage   : https://support.epson.net/linux/en/epsonscan2.php
 license    : proprietary
 component  : office

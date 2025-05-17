@@ -8,15 +8,15 @@
         </Packager>
         <License>proprietary</License>
         <PartOf>office</PartOf>
-        <Summary xml:lang="en">Epson Scan 2 non-free plugins</Summary>
-        <Description xml:lang="en">Plugins for Epsonscan2 software
+        <Summary xml:lang="en">Epson Scan 2 non-free plugins for wireless scanners and OCR</Summary>
+        <Description xml:lang="en">Plugins for Epsonscan2 software for wireless scanners and OCR
 </Description>
         <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>epsonscan2-non-free-plugin</Name>
-        <Summary xml:lang="en">Epson Scan 2 non-free plugins</Summary>
-        <Description xml:lang="en">Plugins for Epsonscan2 software
+        <Summary xml:lang="en">Epson Scan 2 non-free plugins for wireless scanners and OCR</Summary>
+        <Description xml:lang="en">Plugins for Epsonscan2 software for wireless scanners and OCR
 </Description>
         <PartOf>office</PartOf>
         <Files>
@@ -131,8 +131,8 @@
         </Files>
     </Package>
     <History>
-        <Update release="1">
-            <Date>2024-09-29</Date>
+        <Update release="2">
+            <Date>2025-05-17</Date>
             <Version>1.0.0.6</Version>
             <Comment>Packaging update</Comment>
             <Name>Matthias Homann</Name>
