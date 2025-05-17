@@ -1,3 +1,4 @@
 0002-Fix-crash.patch
 0003-Use-XDG-open-to-open-the-directory.patch
 0004-Fix-a-crash-on-an-OOB-container-access.patch
+0005-Fix-folder-creation-crash.patch

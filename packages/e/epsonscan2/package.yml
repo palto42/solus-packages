@@ -1,8 +1,8 @@
 name       : epsonscan2
-version    : 6.7.70
-release    : 4
+version    : 6.7.80
+release    : 5
 source     :
-    - https://download3.ebz.epson.net/dsc/f/03/00/16/14/37/7577ee65efdad48ee2d2f38d9eda75418e490552/epsonscan2-6.7.70.0-1.src.tar.gz : e141e66e4cd74c06eef0baa163f4cc498c3be4a5db82851c914a1b7f2c50967e
+    - https://download3.ebz.epson.net/dsc/f/03/00/17/08/06/1babf9876ebb16956420a601b92ee28b57cd7db7/epsonscan2-6.7.80.0-1.src.tar.gz : f8d617892e75fb43404824e627a4c5894f7e1283bb9840d7cdecfbcef24b2097
 homepage   : https://support.epson.net/linux/en/epsonscan2.php
 license    : GPL-2.1-or-later
 component  : office
@@ -24,9 +24,6 @@ builddeps  :
 setup      : |
     # ls -l
 
-    # Remove CMAkeCache due to wrong build dir.
-    rm CMakeCache.txt
-
     # Patch CMakeLists
     sed -i 's|/lib/udev|${CMAKE_INSTALL_PREFIX}/lib/udev|' "CMakeLists.txt"
     sed -i '1 i #include "zlib.h"' "src/CommonUtility/DbgLog.cpp"
@@ -35,6 +32,26 @@ setup      : |
     # Stability improvements from Flatpak maintainers
     # https://github.com/flathub/net.epson.epsonscan2
     %apply_patches
+
+    # Remove Boost setting in CMake config that crashes the package build
+    find . -type f -name CMakeLists.txt \
+        -exec sed -i '/BOOST_NO_CXX11_RVALUE_REFERENCES/d' {} \;
+
+    for file in Standalone/lastusedsettings.cpp \
+                Standalone/defaultsettings.cpp \
+                CommonUtility/ESCommonTypedef.h \
+                Controller/Src/KeysValues/Key.hpp \
+                Controller/Src/KeysValues/KeyMgr.hpp
+    do
+        sed -i '/BOOST_NO_CXX11_RVALUE_REFERENCES/d' \
+            "src/$file"
+    done
+
+    # Fix compilation failure caused by GCC 15
+    sed -i '/SET.*FLAGS/ s/")/ -Wno-template-body")/' \
+            "src/ES2Command/Linux/CMakeLists.txt"
+    sed -i '/#include/ i #include <cmath>' \
+            "src/Controller/Src/Filter/GrayToMono.hpp"
 
     %cmake_ninja \
         -DCMAKE_BUILD_TYPE=Release \
@@ -48,11 +65,6 @@ install    : |
     install -d $installdir/usr/lib64/sane
     install -Dm644 "$installdir/usr/lib64/epsonscan2/libsane-epsonscan2.so" \
         "$installdir/usr/lib64/sane/libsane-epsonscan2.so"
-    # Add symlinks
-    cd $installdir/usr/lib64/sane
-    ln -s ../epsonscan2/libsane-epsonscan2.so libsane-epsonscan2.so
-    ln -s ../epsonscan2/libsane-epsonscan2.so libsane-epsonscan2.so.1
-    ln -s ../epsonscan2/libsane-epsonscan2.so libsane-epsonscan2.so.1.0.0
 
     # Add desktop file
     install -Dm644 "$workdir/desktop/rpm/i686/epsonscan2.desktop" \
