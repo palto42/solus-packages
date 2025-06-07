@@ -1,0 +1,27 @@
+name       : katalog
+version    : 2.4
+release    : 1
+source     :
+    - https://github.com/StephaneCouturier/Katalog/archive/refs/tags/v2.4.tar.gz : 064874f50607b74057e84fe15e7d88801905a1a45e009a5209f5e47da40ea0ff
+
+homepage   : https://stephanecouturier.github.io/Katalog/
+license    :
+    - GPL-3.0-or-later
+component  : programming
+summary    : Manage catalogs of disks and files
+description: |
+    Katalog is an application to manage storage devices and catalogs of files to search and get statistics.
+builddeps  :
+    - pkgconfig(Qt6Platform)
+    - pkgconfig(Qt6UiTools)
+    - pkgconfig(Qt6MultimediaWidgets)
+    - pkgconfig(Qt6Charts)
+    - clang-devel
+setup      : |
+    qmake6 Katalog.pro
+build      : |
+    %make
+install    : |
+    install -Dm00755 ./Katalog $installdir/usr/local/bin/katalog
+    install -Dm00644 $workdir/docs/img/Katalog_logo_1.20.png $installdir/usr/local/share/icons/katalog.png
+    install -Dm00644 $pkgfiles/katalog.desktop $installdir/usr/share/applications/katalog.desktop

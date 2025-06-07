@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Katalog
+Comment=Manage catalogs of disks and files
+Exec=katalog
+Terminal=false
+Type=Application
+Icon=katalog
+Categories=Utility;
