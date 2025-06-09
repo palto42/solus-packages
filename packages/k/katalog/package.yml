@@ -1,9 +1,8 @@
 name       : katalog
-version    : 2.4
-release    : 1
+version    : '2.5'
+release    : 2
 source     :
-    - https://github.com/StephaneCouturier/Katalog/archive/refs/tags/v2.4.tar.gz : 064874f50607b74057e84fe15e7d88801905a1a45e009a5209f5e47da40ea0ff
-
+    - https://github.com/StephaneCouturier/Katalog/archive/refs/tags/v2.5.tar.gz : c379611adc646eaecbf8b40e057f220ccf333667e1d776aceb539dfe538d8dbf
 homepage   : https://stephanecouturier.github.io/Katalog/
 license    :
     - GPL-3.0-or-later
