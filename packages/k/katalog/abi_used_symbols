@@ -76,6 +76,8 @@ libQt6Core.so.6:_ZN12QDirIteratorD1Ev
 libQt6Core.so.6:_ZN12QStorageInfo7setPathERK7QString
 libQt6Core.so.6:_ZN12QStorageInfoC1Ev
 libQt6Core.so.6:_ZN12QStorageInfoD1Ev
+libQt6Core.so.6:_ZN13QElapsedTimer5startEv
+libQt6Core.so.6:_ZN13QElapsedTimer7restartEv
 libQt6Core.so.6:_ZN14QStandardPaths17standardLocationsENS_16StandardLocationE
 libQt6Core.so.6:_ZN16QCoreApplication13processEventsE6QFlagsIN10QEventLoop17ProcessEventsFlagEE
 libQt6Core.so.6:_ZN16QCoreApplication17installTranslatorEP11QTranslator
@@ -87,6 +89,8 @@ libQt6Core.so.6:_ZN16QCoreApplication4exitEi
 libQt6Core.so.6:_ZN16QCoreApplication4selfE
 libQt6Core.so.6:_ZN16QCoreApplication9argumentsEv
 libQt6Core.so.6:_ZN16QCoreApplication9translateEPKcS1_S1_i
+libQt6Core.so.6:_ZN16QDebugStateSaverC1ER6QDebug
+libQt6Core.so.6:_ZN16QDebugStateSaverD1Ev
 libQt6Core.so.6:_ZN16QStringListModel13setStringListERK5QListI7QStringE
 libQt6Core.so.6:_ZN16QStringListModelC1EP7QObject
 libQt6Core.so.6:_ZN18QAbstractItemModel10insertRowsEiiRK11QModelIndex
@@ -165,7 +169,6 @@ libQt6Core.so.6:_ZN21QSortFilterProxyModelD2Ev
 libQt6Core.so.6:_ZN23QRegularExpressionMatchC1Ev
 libQt6Core.so.6:_ZN23QRegularExpressionMatchD1Ev
 libQt6Core.so.6:_ZN23QRegularExpressionMatchaSERKS_
-libQt6Core.so.6:_ZN27QOperatingSystemVersionBase7currentEv
 libQt6Core.so.6:_ZN2Qt16staticMetaObjectE
 libQt6Core.so.6:_ZN4QDir9setFilterE6QFlagsINS_6FilterEE
 libQt6Core.so.6:_ZN4QDirC1ERK7QString
@@ -189,6 +192,11 @@ libQt6Core.so.6:_ZN5QFileD1Ev
 libQt6Core.so.6:_ZN5QTime10fromStringE11QStringViewN2Qt10DateFormatE
 libQt6Core.so.6:_ZN6QDebug9putStringEPK5QCharm
 libQt6Core.so.6:_ZN6QDebugD1Ev
+libQt6Core.so.6:_ZN6QTimer13setSingleShotEb
+libQt6Core.so.6:_ZN6QTimer16staticMetaObjectE
+libQt6Core.so.6:_ZN6QTimer5startEi
+libQt6Core.so.6:_ZN6QTimer7timeoutENS_14QPrivateSignalE
+libQt6Core.so.6:_ZN6QTimerC1EP7QObject
 libQt6Core.so.6:_ZN7QLocale6systemEv
 libQt6Core.so.6:_ZN7QLocaleC1ENS_8LanguageENS_7CountryE
 libQt6Core.so.6:_ZN7QLocaleC1Ev
@@ -199,15 +207,20 @@ libQt6Core.so.6:_ZN7QObject11connectImplEPKS_PPvS1_S3_PN9QtPrivate15QSlotObjectB
 libQt6Core.so.6:_ZN7QObject11customEventEP6QEvent
 libQt6Core.so.6:_ZN7QObject11deleteLaterEv
 libQt6Core.so.6:_ZN7QObject11eventFilterEPS_P6QEvent
+libQt6Core.so.6:_ZN7QObject11qt_metacallEN11QMetaObject4CallEiPPv
+libQt6Core.so.6:_ZN7QObject11qt_metacastEPKc
 libQt6Core.so.6:_ZN7QObject13connectNotifyERK11QMetaMethod
 libQt6Core.so.6:_ZN7QObject13setObjectNameE14QAnyStringView
+libQt6Core.so.6:_ZN7QObject14disconnectImplEPKS_PPvS1_S3_PK11QMetaObject
 libQt6Core.so.6:_ZN7QObject16disconnectNotifyERK11QMetaMethod
+libQt6Core.so.6:_ZN7QObject16staticMetaObjectE
 libQt6Core.so.6:_ZN7QObject5eventEP6QEvent
 libQt6Core.so.6:_ZN7QObject7connectEPKS_PKcS1_S3_N2Qt14ConnectionTypeE
+libQt6Core.so.6:_ZN7QObjectC2EPS_
+libQt6Core.so.6:_ZN7QObjectD2Ev
 libQt6Core.so.6:_ZN7QString10fromLatin1E14QByteArrayView
 libQt6Core.so.6:_ZN7QString13toUtf8_helperERKS_
 libQt6Core.so.6:_ZN7QString14compare_helperEPK5QCharxPKcxN2Qt15CaseSensitivityE
-libQt6Core.so.6:_ZN7QString14trimmed_helperERKS_
 libQt6Core.so.6:_ZN7QString14trimmed_helperERS_
 libQt6Core.so.6:_ZN7QString17toIntegral_helperE11QStringViewPbi
 libQt6Core.so.6:_ZN7QString4chopEx
@@ -218,12 +231,10 @@ libQt6Core.so.6:_ZN7QString6appendERKS_
 libQt6Core.so.6:_ZN7QString6assignE14QAnyStringView
 libQt6Core.so.6:_ZN7QString6numberEdci
 libQt6Core.so.6:_ZN7QString6numberEii
-libQt6Core.so.6:_ZN7QString6numberEji
 libQt6Core.so.6:_ZN7QString6numberExi
 libQt6Core.so.6:_ZN7QString6removeERKS_N2Qt15CaseSensitivityE
 libQt6Core.so.6:_ZN7QString6removeExx
 libQt6Core.so.6:_ZN7QString6resizeEx
-libQt6Core.so.6:_ZN7QString7replaceERK18QRegularExpressionRKS_
 libQt6Core.so.6:_ZN7QString7replaceERKS_S1_N2Qt15CaseSensitivityE
 libQt6Core.so.6:_ZN7QString8fromUtf8E14QByteArrayView
 libQt6Core.so.6:_ZN7QString8truncateEx
@@ -231,20 +242,9 @@ libQt6Core.so.6:_ZN7QStringC1E5QChar
 libQt6Core.so.6:_ZN7QStringC1EPK5QCharx
 libQt6Core.so.6:_ZN7QStringaSE13QLatin1String
 libQt6Core.so.6:_ZN7QStringaSERKS_
-libQt6Core.so.6:_ZN7QThread11qt_metacallEN11QMetaObject4CallEiPPv
-libQt6Core.so.6:_ZN7QThread11qt_metacastEPKc
-libQt6Core.so.6:_ZN7QThread16staticMetaObjectE
 libQt6Core.so.6:_ZN7QThread4quitEv
 libQt6Core.so.6:_ZN7QThread4waitE14QDeadlineTimer
-libQt6Core.so.6:_ZN7QThread5eventEP6QEvent
-libQt6Core.so.6:_ZN7QThread5startENS_8PriorityE
-libQt6Core.so.6:_ZN7QThreadC2EP7QObject
-libQt6Core.so.6:_ZN7QThreadD2Ev
 libQt6Core.so.6:_ZN8QProcess13startDetachedERK7QStringRK5QListIS0_ES2_Px
-libQt6Core.so.6:_ZN8QProcess15waitForFinishedEi
-libQt6Core.so.6:_ZN8QProcess20readAllStandardErrorEv
-libQt6Core.so.6:_ZN8QProcess21readAllStandardOutputEv
-libQt6Core.so.6:_ZN8QProcess5startERK7QStringRK5QListIS0_E6QFlagsIN13QIODeviceBase12OpenModeFlagEE
 libQt6Core.so.6:_ZN8QProcessC1EP7QObject
 libQt6Core.so.6:_ZN8QProcessD1Ev
 libQt6Core.so.6:_ZN8QVariantC1E5QChar
@@ -287,8 +287,6 @@ libQt6Core.so.6:_ZN9QtPrivate12argToQStringE13QLatin1StringmPPKNS_7ArgBaseE
 libQt6Core.so.6:_ZN9QtPrivate12equalStringsE11QStringViewS0_
 libQt6Core.so.6:_ZN9QtPrivate14compareStringsE11QStringViewS0_N2Qt15CaseSensitivityE
 libQt6Core.so.6:_ZN9QtPrivate16QStringList_joinEPK5QListI7QStringEPK5QCharx
-libQt6Core.so.6:_ZN9QtPrivate16QStringList_sortEP5QListI7QStringEN2Qt15CaseSensitivityE
-libQt6Core.so.6:_ZN9QtPrivate19QStringList_indexOfERK5QListI7QStringE11QStringViewxN2Qt15CaseSensitivityE
 libQt6Core.so.6:_ZN9QtPrivate20QStringList_containsEPK5QListI7QStringE11QStringViewN2Qt15CaseSensitivityE
 libQt6Core.so.6:_ZN9QtPrivate25QMetaTypeInterfaceWrapperI11QModelIndexE8metaTypeE
 libQt6Core.so.6:_ZN9QtPrivate25QMetaTypeInterfaceWrapperI5QDateE8metaTypeE
@@ -299,6 +297,7 @@ libQt6Core.so.6:_ZN9QtPrivate25QMetaTypeInterfaceWrapperIiE8metaTypeE
 libQt6Core.so.6:_ZN9QtPrivate28QStringList_removeDuplicatesEP5QListI7QStringE
 libQt6Core.so.6:_ZNK10QByteArray11toStdStringB5cxx11Ev
 libQt6Core.so.6:_ZNK11QMetaObject2trEPKcS1_i
+libQt6Core.so.6:_ZNK11QMetaObject4castEPK7QObject
 libQt6Core.so.6:_ZNK11QMetaObject9classNameEv
 libQt6Core.so.6:_ZNK11QObjectData17dynamicMetaObjectEv
 libQt6Core.so.6:_ZNK11QTextStream5atEndEv
@@ -307,6 +306,7 @@ libQt6Core.so.6:_ZNK12QStorageInfo10bytesTotalEv
 libQt6Core.so.6:_ZNK12QStorageInfo14bytesAvailableEv
 libQt6Core.so.6:_ZNK12QStorageInfo14fileSystemTypeEv
 libQt6Core.so.6:_ZNK12QStorageInfo4nameEv
+libQt6Core.so.6:_ZNK13QElapsedTimer7elapsedEv
 libQt6Core.so.6:_ZNK14QMessageLogger5debugEv
 libQt6Core.so.6:_ZNK14QMessageLogger7warningEv
 libQt6Core.so.6:_ZNK16QStringListModel10stringListEv
@@ -364,7 +364,6 @@ libQt6Core.so.6:_ZNK21QSortFilterProxyModel8lessThanERK11QModelIndexS2_
 libQt6Core.so.6:_ZNK21QSortFilterProxyModel8mimeDataERK5QListI11QModelIndexE
 libQt6Core.so.6:_ZNK21QSortFilterProxyModel8rowCountERK11QModelIndex
 libQt6Core.so.6:_ZNK21QSortFilterProxyModel9mimeTypesEv
-libQt6Core.so.6:_ZNK23QRegularExpressionMatch8capturedEi
 libQt6Core.so.6:_ZNK23QRegularExpressionMatch8hasMatchEv
 libQt6Core.so.6:_ZNK4QDir13entryInfoListE6QFlagsINS_6FilterEES0_INS_8SortFlagEE
 libQt6Core.so.6:_ZNK4QDir5mkdirERK7QString
@@ -382,12 +381,12 @@ libQt6Core.so.6:_ZNK7QObject10objectNameEv
 libQt6Core.so.6:_ZNK7QString10startsWithERKS_N2Qt15CaseSensitivityE
 libQt6Core.so.6:_ZNK7QString11lastIndexOfERKS_xN2Qt15CaseSensitivityE
 libQt6Core.so.6:_ZNK7QString3argERKS_i5QChar
+libQt6Core.so.6:_ZNK7QString3argExii5QChar
 libQt6Core.so.6:_ZNK7QString5splitE5QChar6QFlagsIN2Qt18SplitBehaviorFlagsEENS2_15CaseSensitivityE
 libQt6Core.so.6:_ZNK7QString5splitERK18QRegularExpression6QFlagsIN2Qt18SplitBehaviorFlagsEE
 libQt6Core.so.6:_ZNK7QString5splitERKS_6QFlagsIN2Qt18SplitBehaviorFlagsEENS3_15CaseSensitivityE
 libQt6Core.so.6:_ZNK7QString7compareERKS_N2Qt15CaseSensitivityE
 libQt6Core.so.6:_ZNK7QString7indexOfERKS_xN2Qt15CaseSensitivityE
-libQt6Core.so.6:_ZNK7QString8containsERK18QRegularExpressionP23QRegularExpressionMatch
 libQt6Core.so.6:_ZNK7QString8endsWithERKS_N2Qt15CaseSensitivityE
 libQt6Core.so.6:_ZNK8QVariant10toDateTimeEv
 libQt6Core.so.6:_ZNK8QVariant10toLongLongEPb
@@ -425,9 +424,8 @@ libQt6Core.so.6:_ZNK9QSettings5valueE14QAnyStringViewRK8QVariant
 libQt6Core.so.6:_ZTI18QAbstractItemModel
 libQt6Core.so.6:_ZTI19QAbstractTableModel
 libQt6Core.so.6:_ZTI21QSortFilterProxyModel
-libQt6Core.so.6:_ZTI7QThread
+libQt6Core.so.6:_ZTI7QObject
 libQt6Core.so.6:_ZTV16QStringListModel
-libQt6Core.so.6:_Zls6QDebugRK9QDateTime
 libQt6Core.so.6:qt_resourceFeatureZstd
 libQt6Core.so.6:qt_version_tag
 libQt6Gui.so.6:_ZN10QClipboard7setTextERK7QStringNS_4ModeE
@@ -446,6 +444,7 @@ libQt6Gui.so.6:_ZN16QFileSystemModelC1EP7QObject
 libQt6Gui.so.6:_ZN18QStandardItemModel14setColumnCountEi
 libQt6Gui.so.6:_ZN18QStandardItemModel23setHorizontalHeaderItemEiP13QStandardItem
 libQt6Gui.so.6:_ZN18QStandardItemModel25setHorizontalHeaderLabelsERK5QListI7QStringE
+libQt6Gui.so.6:_ZN18QStandardItemModel5clearEv
 libQt6Gui.so.6:_ZN18QStandardItemModel9appendRowERK5QListIP13QStandardItemE
 libQt6Gui.so.6:_ZN18QStandardItemModelC1EP7QObject
 libQt6Gui.so.6:_ZN4QPen8setWidthEi
@@ -488,6 +487,7 @@ libQt6Gui.so.6:_ZNK5QFontcv8QVariantEv
 libQt6Gui.so.6:_ZNK5QIcon4nameEv
 libQt6Gui.so.6:_ZNK5QIconcv8QVariantEv
 libQt6Gui.so.6:_ZNK6QColor5valueEv
+libQt6Gui.so.6:_ZNK6QColor9lightnessEv
 libQt6Gui.so.6:_ZNK7QPixmap6scaledERK5QSizeN2Qt15AspectRatioModeENS3_18TransformationModeE
 libQt6Gui.so.6:_ZNK8QPalette5brushENS_10ColorGroupENS_9ColorRoleE
 libQt6Gui.so.6:_Zls6QDebugRK5QIcon
@@ -513,6 +513,7 @@ libQt6Sql.so.6:_ZN12QSqlDatabase4openEv
 libQt6Sql.so.6:_ZN12QSqlDatabase5closeEv
 libQt6Sql.so.6:_ZN12QSqlDatabase7driversEv
 libQt6Sql.so.6:_ZN12QSqlDatabase7setPortEi
+libQt6Sql.so.6:_ZN12QSqlDatabase8containsERK7QString
 libQt6Sql.so.6:_ZN12QSqlDatabase8databaseERK7QStringb
 libQt6Sql.so.6:_ZN12QSqlDatabaseC1Ev
 libQt6Sql.so.6:_ZN12QSqlDatabaseD1Ev
@@ -545,6 +546,7 @@ libQt6Sql.so.6:_ZNK9QSqlQuery9lastErrorEv
 libQt6Sql.so.6:_Zls6QDebugRK9QSqlError
 libQt6Widgets.so.6:_ZN10QBoxLayout9addLayoutEP7QLayouti
 libQt6Widgets.so.6:_ZN10QBoxLayout9addWidgetEP7QWidgeti6QFlagsIN2Qt13AlignmentFlagEE
+libQt6Widgets.so.6:_ZN10QStatusBar11showMessageERK7QStringi
 libQt6Widgets.so.6:_ZN10QTabWidget10setMovableEb
 libQt6Widgets.so.6:_ZN10QTabWidget10setTabTextEiRK7QString
 libQt6Widgets.so.6:_ZN10QTabWidget11setIconSizeERK5QSize
@@ -592,7 +594,6 @@ libQt6Widgets.so.6:_ZN11QMainWindow5eventEP6QEvent
 libQt6Widgets.so.6:_ZN11QMainWindowC2EP7QWidget6QFlagsIN2Qt10WindowTypeEE
 libQt6Widgets.so.6:_ZN11QMainWindowD2Ev
 libQt6Widgets.so.6:_ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_6QFlagsINS_14StandardButtonEES6_
-libQt6Widgets.so.6:_ZN11QMessageBox13setButtonTextEiRK7QString
 libQt6Widgets.so.6:_ZN11QMessageBox13setTextFormatEN2Qt10TextFormatE
 libQt6Widgets.so.6:_ZN11QMessageBox14setWindowTitleERK7QString
 libQt6Widgets.so.6:_ZN11QMessageBox16setDefaultButtonENS_14StandardButtonE
@@ -602,6 +603,7 @@ libQt6Widgets.so.6:_ZN11QMessageBox7setTextERK7QString
 libQt6Widgets.so.6:_ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_6QFlagsINS_14StandardButtonEES6_
 libQt6Widgets.so.6:_ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_6QFlagsINS_14StandardButtonEES6_
 libQt6Widgets.so.6:_ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_6QFlagsINS_14StandardButtonEES6_
+libQt6Widgets.so.6:_ZN11QMessageBox9addButtonERK7QStringNS_10ButtonRoleE
 libQt6Widgets.so.6:_ZN11QMessageBoxC1EP7QWidget
 libQt6Widgets.so.6:_ZN11QMessageBoxD1Ev
 libQt6Widgets.so.6:_ZN11QPushButton7setFlatEb
@@ -731,6 +733,7 @@ libQt6Widgets.so.6:_ZN9QLineEdit21setClearButtonEnabledEb
 libQt6Widgets.so.6:_ZN9QLineEdit5clearEv
 libQt6Widgets.so.6:_ZN9QLineEdit7setTextERK7QString
 libQt6Widgets.so.6:_ZN9QLineEditC1EP7QWidget
+libQt6Widgets.so.6:_ZN9QListView11setGridSizeERK5QSize
 libQt6Widgets.so.6:_ZN9QListViewC1EP7QWidget
 libQt6Widgets.so.6:_ZN9QSplitter14setHandleWidthEi
 libQt6Widgets.so.6:_ZN9QSplitter14setOrientationEN2Qt11OrientationE
@@ -744,10 +747,12 @@ libQt6Widgets.so.6:_ZN9QTreeView11setAnimatedEb
 libQt6Widgets.so.6:_ZN9QTreeView12sortByColumnEiN2Qt9SortOrderE
 libQt6Widgets.so.6:_ZN9QTreeView13expandToDepthEi
 libQt6Widgets.so.6:_ZN9QTreeView14setColumnWidthEii
+libQt6Widgets.so.6:_ZN9QTreeView14setIndentationEi
 libQt6Widgets.so.6:_ZN9QTreeView15setColumnHiddenEib
 libQt6Widgets.so.6:_ZN9QTreeView15setHeaderHiddenEb
 libQt6Widgets.so.6:_ZN9QTreeView17setSortingEnabledEb
 libQt6Widgets.so.6:_ZN9QTreeView18setRootIsDecoratedEb
+libQt6Widgets.so.6:_ZN9QTreeView20setUniformRowHeightsEb
 libQt6Widgets.so.6:_ZN9QTreeView22resizeColumnToContentsEi
 libQt6Widgets.so.6:_ZN9QTreeView9expandAllEv
 libQt6Widgets.so.6:_ZN9QTreeViewC1EP7QWidget
@@ -756,6 +761,8 @@ libQt6Widgets.so.6:_ZNK10QTabWidget7indexOfEPK7QWidget
 libQt6Widgets.so.6:_ZNK10QTableView16horizontalHeaderEv
 libQt6Widgets.so.6:_ZNK11QHeaderView18sortIndicatorOrderEv
 libQt6Widgets.so.6:_ZNK11QHeaderView20sortIndicatorSectionEv
+libQt6Widgets.so.6:_ZNK11QMainWindow9statusBarEv
+libQt6Widgets.so.6:_ZNK11QMessageBox13clickedButtonEv
 libQt6Widgets.so.6:_ZNK13QDateTimeEdit8dateTimeEv
 libQt6Widgets.so.6:_ZNK15QAbstractButton4iconEv
 libQt6Widgets.so.6:_ZNK15QAbstractButton9isCheckedEv
@@ -774,6 +781,7 @@ libQt6Widgets.so.6:_ZNK7QWidget14heightForWidthEi
 libQt6Widgets.so.6:_ZNK7QWidget15minimumSizeHintEv
 libQt6Widgets.so.6:_ZNK7QWidget16inputMethodQueryEN2Qt16InputMethodQueryE
 libQt6Widgets.so.6:_ZNK7QWidget17hasHeightForWidthEv
+libQt6Widgets.so.6:_ZNK7QWidget5styleEv
 libQt6Widgets.so.6:_ZNK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE
 libQt6Widgets.so.6:_ZNK7QWidget7devTypeEv
 libQt6Widgets.so.6:_ZNK7QWidget8sizeHintEv
@@ -798,7 +806,6 @@ libc.so.6:__cxa_atexit
 libc.so.6:__libc_start_main
 libc.so.6:__stack_chk_fail
 libc.so.6:free
-libc.so.6:getuid
 libc.so.6:memcmp
 libc.so.6:memcpy
 libc.so.6:memmove
@@ -812,6 +819,8 @@ libstdc++.so.6:_ZSt18_Rb_tree_decrementPSt18_Rb_tree_node_base
 libstdc++.so.6:_ZSt18_Rb_tree_incrementPSt18_Rb_tree_node_base
 libstdc++.so.6:_ZSt29_Rb_tree_insert_and_rebalancebPSt18_Rb_tree_node_baseS0_RS_
 libstdc++.so.6:_ZSt9terminatev
+libstdc++.so.6:_ZTISt9exception
+libstdc++.so.6:_ZTVN10__cxxabiv117__class_type_infoE
 libstdc++.so.6:_ZTVN10__cxxabiv120__si_class_type_infoE
 libstdc++.so.6:_ZdaPv
 libstdc++.so.6:_ZdaPvm
@@ -819,5 +828,7 @@ libstdc++.so.6:_ZdlPvm
 libstdc++.so.6:_Znwm
 libstdc++.so.6:__cxa_begin_catch
 libstdc++.so.6:__cxa_end_catch
+libstdc++.so.6:__cxa_pure_virtual
 libstdc++.so.6:__cxa_rethrow
+libstdc++.so.6:__dynamic_cast
 libstdc++.so.6:__gxx_personality_v0
