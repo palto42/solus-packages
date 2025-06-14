@@ -1,9 +1,9 @@
 name       : evolution-data-server
-version    : 3.50.4
-release    : 93
+version    : 3.56.2
+release    : 109
 source     :
-    - https://download.gnome.org/sources/evolution-data-server/3.50/evolution-data-server-3.50.4.tar.xz : d7edffbe03a0bbcecbee67393214b831c7b18cd895b84c4dbfe1387776e257c5
-homepage   : https://wiki.gnome.org/Apps/Evolution
+    - https://download.gnome.org/sources/evolution-data-server/3.56/evolution-data-server-3.56.2.tar.xz : df4ec29950f29a76eac6fbe0f814c48d2cef7d3fdb905002a4a883dd761ce93c
+homepage   : https://gitlab.gnome.org/GNOME/evolution-data-server
 license    : GPL-2.0-only
 component  : desktop.gnome.core
 summary    : Centralized access to appointments and contacts
@@ -25,22 +25,23 @@ builddeps  :
     - pkgconfig(nss)
     - pkgconfig(sqlite3)
     - pkgconfig(webkit2gtk-4.1)
-    - libwebkit-gtk6-devel # FIXME: change this back to pkgconfig
+    - pkgconfig(webkitgtk-6.0)
     - db5-devel
     - gperf
+    - libphonenumber-devel
     - vala
 setup      : |
-    %patch -p1 -i $pkgfiles/0001-build-Don-t-set-CFLAGS-returned-by-pkg-config-as-CMA.patch
-    %cmake \
+    %cmake_ninja \
+        -DENABLE_GTK4=ON \
         -DENABLE_INTROSPECTION=ON \
         -DENABLE_UOA=OFF \
         -DENABLE_VALA_BINDINGS=ON \
+        -DENABLE_WEATHER=ON \
         -DSYSCONF_INSTALL_DIR="/usr/share" \
         -DWITH_KRB5=OFF \
-        -DENABLE_GTK4=ON \
-        -DENABLE_WEATHER=ON .
+        -DWITH_PHONENUMBER=ON
 build      : |
-    make -j1
+    %ninja_build
 install    : |
-    %make_install
+    %ninja_install
 

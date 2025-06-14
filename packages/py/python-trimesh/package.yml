@@ -1,14 +1,19 @@
 name       : python-trimesh
-version    : 3.16.4
-release    : 2
+version    : 4.6.4
+release    : 6
 source     :
-    - https://files.pythonhosted.org/packages/source/t/trimesh/trimesh-3.16.4.tar.gz : 0f239031cab5e1e64c68b503e0df8491ead4c8a3ff7e6340eec9c6b9e1b05f48
+    - https://files.pythonhosted.org/packages/source/t/trimesh/trimesh-4.6.4.tar.gz : bd052cd94650860c4e68f6cbf48a14d43a43ceb4d7a8152f4650ff62b6b9965d
 homepage   : https://github.com/mikedh/trimesh
 license    : MIT
 component  : programming.python
 summary    : Python library for loading and using triangular meshes
 description: |
     Trimesh is a pure Python library for loading and using triangular meshes with an emphasis on watertight surfaces. The goal of the library is to provide a full featured and well tested Trimesh object which allows for easy manipulation and analysis, in the style of the Polygon object in the Shapely library.
+builddeps  :
+    - python-build
+    - python-installer
+    - python-setuptools
+    - python-wheel
 rundeps    :
     - numpy
 build      : |

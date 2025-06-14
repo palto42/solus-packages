@@ -1,9 +1,9 @@
 name       : iproute2
 homepage   : https://github.com/shemminger/iproute2
-version    : 6.7.0
-release    : 20
+version    : 6.15.0
+release    : 31
 source     :
-    - https://www.kernel.org/pub/linux/utils/net/iproute2/iproute2-6.7.0.tar.gz : 182fbb0f4328c58b7199fb2abaade15cb47507f4e69bdae566252ff26e063d09
+    - https://www.kernel.org/pub/linux/utils/net/iproute2/iproute2-6.15.0.tar.gz : 8d53e7c3b0e51fcde318d3564b5b3d410dd221c3497213cd1a91584ae509394b
 license    : GPL-2.0-only
 summary    : Utilities for controlling TCP / IP networking
 component  : network.base
@@ -17,10 +17,24 @@ builddeps  :
     - pkgconfig(xtables)
     - db5-devel
 setup      : |
+    # BBRv3 feature patches
+    %patch -p1 -i $pkgfiles/0001-ss-output-TCP-BBRv3-diag-information.patch
+    %patch -p1 -i $pkgfiles/0002-ip-introduce-the-ecn_low-per-route-feature.patch
+    %patch -p1 -i $pkgfiles/0003-ss-display-ecn_low-if-tcp_info-tcpi_options-TCPI_OPT.patch
+
     %configure
 build      : |
     %make
 install    : |
-    %make_install
+    %make_install SBINDIR="/usr/sbin"
     install -D -m 00644 $pkgfiles/iproute2.tmpfiles $installdir/%libdir%/iproute2.tmpfiles
-    rm -rf $installdir/var
+
+    # usr-merge
+    install -D -d -m 00755 $installdir/sbin
+    pushd $installdir/usr/sbin
+    for FILE in *; do
+        ln -srv $installdir/usr/sbin/$FILE $installdir/sbin/$FILE
+    done
+    popd
+
+    rm -rfv $installdir/var

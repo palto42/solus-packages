@@ -30,6 +30,7 @@ libasound.so.2:snd_hctl_open
 libasound.so.2:snd_strerror
 libc.so.6:__errno_location
 libc.so.6:__fprintf_chk
+libc.so.6:__isoc23_strtol
 libc.so.6:__libc_start_main
 libc.so.6:__snprintf_chk
 libc.so.6:__sprintf_chk
@@ -53,6 +54,7 @@ libc.so.6:free
 libc.so.6:fwrite
 libc.so.6:getenv
 libc.so.6:geteuid
+libc.so.6:getpid
 libc.so.6:getuid
 libc.so.6:ioctl
 libc.so.6:kill
@@ -83,7 +85,6 @@ libc.so.6:strrchr
 libc.so.6:strsep
 libc.so.6:strspn
 libc.so.6:strstr
-libc.so.6:strtol
 libc.so.6:textdomain
 libc.so.6:time
 libc.so.6:timerfd_create
@@ -237,6 +238,11 @@ libgio-2.0.so.0:g_app_info_get_id
 libgio-2.0.so.0:g_app_info_get_name
 libgio-2.0.so.0:g_app_info_launch
 libgio-2.0.so.0:g_app_launch_context_setenv
+libgio-2.0.so.0:g_application_get_dbus_connection
+libgio-2.0.so.0:g_application_get_type
+libgio-2.0.so.0:g_application_hold
+libgio-2.0.so.0:g_application_release
+libgio-2.0.so.0:g_application_run
 libgio-2.0.so.0:g_async_initable_get_type
 libgio-2.0.so.0:g_async_initable_new_async
 libgio-2.0.so.0:g_async_initable_new_finish
@@ -329,6 +335,7 @@ libgio-2.0.so.0:g_dbus_proxy_new_sync
 libgio-2.0.so.0:g_dbus_proxy_set_cached_property
 libgio-2.0.so.0:g_dbus_proxy_set_default_timeout
 libgio-2.0.so.0:g_dbus_proxy_set_interface_info
+libgio-2.0.so.0:g_desktop_app_info_launch_uris_as_manager
 libgio-2.0.so.0:g_desktop_app_info_new
 libgio-2.0.so.0:g_drive_can_eject
 libgio-2.0.so.0:g_drive_eject_with_operation
@@ -348,6 +355,7 @@ libgio-2.0.so.0:g_file_get_child
 libgio-2.0.so.0:g_file_get_parse_name
 libgio-2.0.so.0:g_file_get_path
 libgio-2.0.so.0:g_file_get_uri
+libgio-2.0.so.0:g_file_info_get_access_date_time
 libgio-2.0.so.0:g_file_info_get_attribute_as_string
 libgio-2.0.so.0:g_file_info_get_attribute_boolean
 libgio-2.0.so.0:g_file_info_get_attribute_string
@@ -355,6 +363,7 @@ libgio-2.0.so.0:g_file_info_get_attribute_uint32
 libgio-2.0.so.0:g_file_info_get_attribute_uint64
 libgio-2.0.so.0:g_file_info_get_deletion_date
 libgio-2.0.so.0:g_file_info_get_file_type
+libgio-2.0.so.0:g_file_info_get_modification_date_time
 libgio-2.0.so.0:g_file_info_get_name
 libgio-2.0.so.0:g_file_info_get_size
 libgio-2.0.so.0:g_file_info_has_attribute
@@ -369,6 +378,7 @@ libgio-2.0.so.0:g_file_query_info
 libgio-2.0.so.0:g_file_query_info_async
 libgio-2.0.so.0:g_file_query_info_finish
 libgio-2.0.so.0:g_initable_get_type
+libgio-2.0.so.0:g_initable_init
 libgio-2.0.so.0:g_initable_new
 libgio-2.0.so.0:g_io_error_from_errno
 libgio-2.0.so.0:g_io_error_quark
@@ -408,10 +418,10 @@ libgio-2.0.so.0:g_socket_client_new
 libgio-2.0.so.0:g_static_resource_fini
 libgio-2.0.so.0:g_static_resource_get_resource
 libgio-2.0.so.0:g_static_resource_init
-libgio-2.0.so.0:g_subprocess_get_exit_status
 libgio-2.0.so.0:g_subprocess_new
-libgio-2.0.so.0:g_subprocess_wait_async
-libgio-2.0.so.0:g_subprocess_wait_finish
+libgio-2.0.so.0:g_subprocess_wait_check_async
+libgio-2.0.so.0:g_subprocess_wait_check_finish
+libgio-2.0.so.0:g_task_attach_source
 libgio-2.0.so.0:g_task_get_cancellable
 libgio-2.0.so.0:g_task_get_name
 libgio-2.0.so.0:g_task_get_source_object
@@ -468,6 +478,7 @@ libglib-2.0.so.0:g_base64_decode
 libglib-2.0.so.0:g_base64_encode
 libglib-2.0.so.0:g_build_filename
 libglib-2.0.so.0:g_build_path
+libglib-2.0.so.0:g_child_watch_add
 libglib-2.0.so.0:g_clear_error
 libglib-2.0.so.0:g_datalist_clear
 libglib-2.0.so.0:g_datalist_id_set_data_full
@@ -483,6 +494,7 @@ libglib-2.0.so.0:g_date_time_get_utc_offset
 libglib-2.0.so.0:g_date_time_new_from_unix_local
 libglib-2.0.so.0:g_date_time_new_now
 libglib-2.0.so.0:g_date_time_new_now_local
+libglib-2.0.so.0:g_date_time_new_now_utc
 libglib-2.0.so.0:g_date_time_new_utc
 libglib-2.0.so.0:g_date_time_ref
 libglib-2.0.so.0:g_date_time_to_unix
@@ -505,7 +517,6 @@ libglib-2.0.so.0:g_file_test
 libglib-2.0.so.0:g_find_program_in_path
 libglib-2.0.so.0:g_format_size
 libglib-2.0.so.0:g_free
-libglib-2.0.so.0:g_get_current_time
 libglib-2.0.so.0:g_get_home_dir
 libglib-2.0.so.0:g_get_monotonic_time
 libglib-2.0.so.0:g_get_prgname
@@ -576,7 +587,6 @@ libglib-2.0.so.0:g_log
 libglib-2.0.so.0:g_main_context_default
 libglib-2.0.so.0:g_main_context_ref_thread_default
 libglib-2.0.so.0:g_main_context_unref
-libglib-2.0.so.0:g_main_loop_is_running
 libglib-2.0.so.0:g_main_loop_new
 libglib-2.0.so.0:g_main_loop_quit
 libglib-2.0.so.0:g_main_loop_run
@@ -585,7 +595,7 @@ libglib-2.0.so.0:g_malloc0
 libglib-2.0.so.0:g_malloc0_n
 libglib-2.0.so.0:g_match_info_fetch
 libglib-2.0.so.0:g_match_info_free
-libglib-2.0.so.0:g_memdup
+libglib-2.0.so.0:g_memdup2
 libglib-2.0.so.0:g_mkdir_with_parents
 libglib-2.0.so.0:g_mutex_clear
 libglib-2.0.so.0:g_mutex_init
@@ -593,7 +603,9 @@ libglib-2.0.so.0:g_mutex_lock
 libglib-2.0.so.0:g_mutex_unlock
 libglib-2.0.so.0:g_once_impl
 libglib-2.0.so.0:g_once_init_enter
+libglib-2.0.so.0:g_once_init_enter_pointer
 libglib-2.0.so.0:g_once_init_leave
+libglib-2.0.so.0:g_once_init_leave_pointer
 libglib-2.0.so.0:g_option_context_add_main_entries
 libglib-2.0.so.0:g_option_context_free
 libglib-2.0.so.0:g_option_context_get_help
@@ -602,6 +614,7 @@ libglib-2.0.so.0:g_option_context_parse
 libglib-2.0.so.0:g_option_context_set_summary
 libglib-2.0.so.0:g_path_get_basename
 libglib-2.0.so.0:g_print
+libglib-2.0.so.0:g_printerr
 libglib-2.0.so.0:g_ptr_array_add
 libglib-2.0.so.0:g_ptr_array_find
 libglib-2.0.so.0:g_ptr_array_find_with_equal_func
@@ -656,7 +669,6 @@ libglib-2.0.so.0:g_source_set_name_by_id
 libglib-2.0.so.0:g_source_set_priority
 libglib-2.0.so.0:g_source_unref
 libglib-2.0.so.0:g_spawn_async
-libglib-2.0.so.0:g_spawn_check_exit_status
 libglib-2.0.so.0:g_spawn_close_pid
 libglib-2.0.so.0:g_spawn_command_line_sync
 libglib-2.0.so.0:g_spawn_sync
@@ -693,10 +705,11 @@ libglib-2.0.so.0:g_strtod
 libglib-2.0.so.0:g_strv_contains
 libglib-2.0.so.0:g_strv_length
 libglib-2.0.so.0:g_time_zone_get_identifier
-libglib-2.0.so.0:g_time_zone_new
+libglib-2.0.so.0:g_time_zone_new_identifier
 libglib-2.0.so.0:g_time_zone_unref
 libglib-2.0.so.0:g_timeout_add
 libglib-2.0.so.0:g_timeout_add_seconds
+libglib-2.0.so.0:g_timeout_source_new
 libglib-2.0.so.0:g_timer_destroy
 libglib-2.0.so.0:g_timer_elapsed
 libglib-2.0.so.0:g_timer_new
@@ -712,6 +725,7 @@ libglib-2.0.so.0:g_variant_builder_clear
 libglib-2.0.so.0:g_variant_builder_close
 libglib-2.0.so.0:g_variant_builder_end
 libglib-2.0.so.0:g_variant_builder_init
+libglib-2.0.so.0:g_variant_builder_init_static
 libglib-2.0.so.0:g_variant_builder_new
 libglib-2.0.so.0:g_variant_builder_open
 libglib-2.0.so.0:g_variant_classify
@@ -763,26 +777,11 @@ libgnome-desktop-3.so.20:gnome_idle_monitor_add_idle_watch
 libgnome-desktop-3.so.20:gnome_idle_monitor_add_user_active_watch
 libgnome-desktop-3.so.20:gnome_idle_monitor_new
 libgnome-desktop-3.so.20:gnome_idle_monitor_remove_watch
-libgnome-desktop-3.so.20:gnome_rr_crtc_get_current_mode
-libgnome-desktop-3.so.20:gnome_rr_output_get_backlight
-libgnome-desktop-3.so.20:gnome_rr_output_get_crtc
-libgnome-desktop-3.so.20:gnome_rr_output_get_min_backlight_step
-libgnome-desktop-3.so.20:gnome_rr_output_get_name
-libgnome-desktop-3.so.20:gnome_rr_output_is_builtin_display
-libgnome-desktop-3.so.20:gnome_rr_output_set_backlight
-libgnome-desktop-3.so.20:gnome_rr_screen_get_type
-libgnome-desktop-3.so.20:gnome_rr_screen_list_outputs
-libgnome-desktop-3.so.20:gnome_rr_screen_new_async
-libgnome-desktop-3.so.20:gnome_rr_screen_new_finish
-libgnome-desktop-3.so.20:gnome_rr_screen_refresh
-libgnome-desktop-3.so.20:gnome_rr_screen_set_dpms_mode
 libgnome-desktop-3.so.20:gnome_start_systemd_scope
 libgobject-2.0.so.0:g_boxed_type_register_static
 libgobject-2.0.so.0:g_cclosure_marshal_VOID__BOOLEAN
 libgobject-2.0.so.0:g_cclosure_marshal_VOID__STRING
-libgobject-2.0.so.0:g_cclosure_marshal_VOID__UINT
 libgobject-2.0.so.0:g_cclosure_marshal_VOID__VOID
-libgobject-2.0.so.0:g_cclosure_marshal_generic
 libgobject-2.0.so.0:g_enum_register_static
 libgobject-2.0.so.0:g_enum_to_string
 libgobject-2.0.so.0:g_flags_register_static
@@ -818,11 +817,11 @@ libgobject-2.0.so.0:g_param_spec_pointer
 libgobject-2.0.so.0:g_param_spec_string
 libgobject-2.0.so.0:g_param_spec_uint
 libgobject-2.0.so.0:g_param_spec_ulong
+libgobject-2.0.so.0:g_param_spec_variant
 libgobject-2.0.so.0:g_signal_accumulator_true_handled
 libgobject-2.0.so.0:g_signal_connect_data
 libgobject-2.0.so.0:g_signal_connect_object
 libgobject-2.0.so.0:g_signal_emit
-libgobject-2.0.so.0:g_signal_emit_by_name
 libgobject-2.0.so.0:g_signal_emitv
 libgobject-2.0.so.0:g_signal_handler_disconnect
 libgobject-2.0.so.0:g_signal_handler_is_connected
@@ -877,8 +876,6 @@ libgobject-2.0.so.0:g_value_take_object
 libgobject-2.0.so.0:g_value_take_string
 libgobject-2.0.so.0:g_value_unset
 libgtk-3.so.0:gtk_init_with_args
-libgtk-3.so.0:gtk_main
-libgtk-3.so.0:gtk_main_level
 libgtk-3.so.0:gtk_main_quit
 libgtk-3.so.0:gtk_paper_size_get_default
 libgtk-3.so.0:gtk_settings_get_for_screen
@@ -908,6 +905,7 @@ libgweather-4.so.0:gweather_location_has_coords
 libgweather-4.so.0:gweather_location_next_child
 libm.so.6:acos
 libm.so.6:asin
+libm.so.6:ceil
 libm.so.6:cos
 libm.so.6:fmod
 libm.so.6:pow
@@ -916,6 +914,7 @@ libm.so.6:roundf
 libm.so.6:sin
 libm.so.6:sincos
 libm.so.6:tan
+libm.so.6:trunc
 libmm-glib.so.0:mm_manager_get_type
 libmm-glib.so.0:mm_manager_new
 libmm-glib.so.0:mm_manager_new_finish
@@ -1088,6 +1087,11 @@ libpulse.so.0:pa_proplist_sets
 libpulse.so.0:pa_strerror
 libpulse.so.0:pa_sw_volume_from_dB
 libpulse.so.0:pa_sw_volume_to_dB
+libsystemd.so.0:sd_pid_get_session
+libsystemd.so.0:sd_pid_get_user_unit
+libsystemd.so.0:sd_session_get_class
+libsystemd.so.0:sd_session_is_remote
+libsystemd.so.0:sd_uid_get_display
 libupower-glib.so.3:up_client_get_critical_action
 libupower-glib.so.3:up_client_get_devices2
 libupower-glib.so.3:up_client_get_display_device
@@ -1095,6 +1099,7 @@ libupower-glib.so.3:up_client_get_lid_is_closed
 libupower-glib.so.3:up_client_get_lid_is_present
 libupower-glib.so.3:up_client_get_on_battery
 libupower-glib.so.3:up_client_new
+libupower-glib.so.3:up_client_new_full
 libupower-glib.so.3:up_device_get_object_path
 libwacom.so.9:libwacom_database_destroy
 libwacom.so.9:libwacom_database_new

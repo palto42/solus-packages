@@ -1,8 +1,8 @@
 name       : libkscreen
-version    : 5.27.10
-release    : 89
+version    : 6.3.5
+release    : 118
 source     :
-    - https://cdn.download.kde.org/stable/plasma/5.27.10/libkscreen-5.27.10.tar.xz : 27f59f088929bc7fb560c353fb9da98832dde5b58fde88d9c694c98fdf3aff98
+    - https://download.kde.org/stable/plasma/6.3.5/libkscreen-6.3.5.tar.xz : 5a5d14bacfec9b0591c1e6d6e14f398e694366c1ff2f38f6e0cd752eda91b9e3
 homepage   : https://www.kde.org/workspaces/plasmadesktop/
 license    :
     - GPL-2.0-or-later
@@ -11,17 +11,17 @@ component  : desktop.kde.core
 summary    : KDE's screen management software
 description: |
     KDE's screen management software.
-optimize   : lto
 builddeps  :
-    - pkgconfig(KF5WaylandClient)
-    - pkgconfig(Qt5WaylandClient)
-    - pkgconfig(Qt5X11Extras)
+    - pkgconfig(Qt6WaylandClient)
     - pkgconfig(xrandr)
-    - kconfig-devel
+    - kf6-kconfig-devel
     - plasma-wayland-protocols-devel
+clang      : yes
+optimize   :
+    - speed
+    - thin-lto
 setup      : |
-    %cmake_ninja -DBUILD_QCH=ON \
-                -DBUILD_TESTING=OFF
+    %cmake_kf6
 build      : |
     %ninja_build
 install    : |

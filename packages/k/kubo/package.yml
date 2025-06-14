@@ -1,8 +1,8 @@
 name       : kubo
-version    : 0.26.0
-release    : 27
+version    : 0.35.0
+release    : 35
 source     :
-    - https://github.com/ipfs/kubo/releases/download/v0.26.0/kubo-source.tar.gz : aaf9f956a10f2e47a11566a6b4f191b832c9d3a6dde5b9f5a99469d398cfd806
+    - https://github.com/ipfs/kubo/releases/download/v0.35.0/kubo-source.tar.gz : 3ae6d769ad8959b11a6a40d5ea91319b93e4899e573ddf6e1be4b82b059bd314
 homepage   : https://ipfs.tech/
 license    : MIT
 component  : network.util

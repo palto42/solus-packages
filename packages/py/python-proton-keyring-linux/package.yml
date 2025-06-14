@@ -1,0 +1,24 @@
+name       : python-proton-keyring-linux
+version    : 0.2.0
+release    : 4
+source     :
+    - https://github.com/ProtonVPN/python-proton-keyring-linux/archive/refs/tags/v0.2.0.tar.gz : 5d43942985cabcefd01c15c13d4f366103c901a1fdac9fc525a5fcfabe33c539
+homepage   : https://github.com/ProtonVPN/python-proton-keyring-linux
+license    : GPL-3.0-or-later
+component  : programming.python
+summary    : The python-proton-keyring-linux component
+description: |
+    The python-proton-keyring-linux component
+builddeps  :
+    - python-build
+    - python-installer
+    - python-setuptools
+    - python-wheel
+rundeps    :
+    - python-keyring
+build      : |
+    %python3_setup
+install    : |
+    %python3_install
+replaces   :
+    - python-proton-keyring-linux-secretservice

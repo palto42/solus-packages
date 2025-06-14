@@ -1,8 +1,8 @@
 name       : zellij
-version    : 0.39.2
-release    : 4
+version    : 0.42.2
+release    : 12
 source     :
-    - https://github.com/zellij-org/zellij/archive/refs/tags/v0.39.2.tar.gz : feef552f06898fe06df00f9a590b862607266c087e804fffb638d2c46d9edad1
+    - https://github.com/zellij-org/zellij/archive/refs/tags/v0.42.2.tar.gz : f1cd4b36775dd367b839e394b54e91042b0cd0f2b9e0901b1dec8517ff3929c0
 homepage   : https://zellij.dev
 license    : MIT
 component  : system.utils
@@ -11,12 +11,13 @@ description: |
     Zellij is a terminal workspace. It has the base functionality of a terminal multiplexer (similar to tmux or screen) but includes many built-in features that would allow users to extend it and create their own personalized environment.
 networking : yes
 builddeps  :
-    - cargo
     - mandown
+    - rust
 setup      : |
-    cargo fetch --locked --target "x86_64-unknown-linux-gnu"
+    %cargo_fetch --target "x86_64-unknown-linux-gnu"
 build      : |
-    cargo build --release --frozen
+    # Set features manually to avoid some vendored deps
+    %cargo_build --no-default-features --features plugins_from_target
 
     # Build completions
     ./target/release/zellij setup --generate-completion bash > target/zellij.bash
@@ -26,7 +27,7 @@ build      : |
     # Build manpage
     mandown docs/MANPAGE.md > assets/zellij.1
 install    : |
-    install -Dm755 target/release/zellij -t "$installdir/usr/bin"
+    %cargo_install
 
     # Install completions
     install -Dm644 target/zellij.bash "$installdir/usr/share/bash-completion/completions/zellij"
@@ -38,3 +39,9 @@ install    : |
 
     # Install desktop file
     install -Dm644 assets/zellij.desktop "$installdir/usr/share/applications/zellij.desktop"
+
+    # Install app icon
+    install -Dm644 $pkgfiles/zellij.png "$installdir/usr/share/icons/hicolor/256x256/apps/zellij.png"
+
+    # Install AppStream Metainfo
+    install -Dm644 $pkgfiles/dev.zellij.Zellij.metainfo.xml "$installdir/usr/share/metainfo/dev.zellij.Zellij.metainfo.xml"

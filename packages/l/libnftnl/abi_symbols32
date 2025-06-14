@@ -1,10 +1,3 @@
-libnftnl.so.11:LIBNFTNL_11
-libnftnl.so.11:LIBNFTNL_12
-libnftnl.so.11:LIBNFTNL_13
-libnftnl.so.11:LIBNFTNL_14
-libnftnl.so.11:LIBNFTNL_15
-libnftnl.so.11:LIBNFTNL_16
-libnftnl.so.11:LIBNFTNL_17
 libnftnl.so.11:nftnl_batch_alloc
 libnftnl.so.11:nftnl_batch_begin
 libnftnl.so.11:nftnl_batch_buffer
@@ -156,6 +149,7 @@ libnftnl.so.11:nftnl_obj_set_u32
 libnftnl.so.11:nftnl_obj_set_u64
 libnftnl.so.11:nftnl_obj_set_u8
 libnftnl.so.11:nftnl_obj_snprintf
+libnftnl.so.11:nftnl_obj_unset
 libnftnl.so.11:nftnl_parse_err_alloc
 libnftnl.so.11:nftnl_parse_err_free
 libnftnl.so.11:nftnl_parse_perror

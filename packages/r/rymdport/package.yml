@@ -1,10 +1,10 @@
 name       : rymdport
-version    : 3.5.2
-release    : 9
+version    : 3.8.0
+release    : 15
 source     :
-    - https://github.com/Jacalz/rymdport/releases/download/v3.5.2/rymdport-v3.5.2-vendored.tar.xz : 917d16aa9a4f9047e8171c1cb46c84f70c7c6d506358cda083155e6f1490aacd
+    - https://github.com/Jacalz/rymdport/releases/download/v3.8.0/rymdport-v3.8.0-vendored.tar.xz : 0e2836106764ba3bd2fb526164bfd01be3ab458086ff80bb5f1331aa3dd96249
 license    : GPL-3.0-or-later
-homepage   : https://github.com/Jacalz/rymdport
+homepage   : https://rymdport.github.io/
 component  : network.clients
 summary    : Easy encrypted file, folder, and text sharing between devices.
 description: |
@@ -18,6 +18,11 @@ builddeps  :
     - pkgconfig(xxf86vm)
     - golang
 build      : |
-    go build -tags no_emoji -trimpath -ldflags="-s -w" -buildvcs=false -o rymdport
+    %make
 install    : |
     %make_install
+
+    # Don't install metainfo to obsolete path
+    install -Dm00644 $installdir/usr/share/appdata/io.github.jacalz.rymdport.appdata.xml \
+    $installdir/usr/share/metainfo/io.github.jacalz.rymdport.metainfo.xml
+    rm -rv $installdir/usr/share/appdata

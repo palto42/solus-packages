@@ -1,0 +1,37 @@
+name       : krdp
+version    : 6.3.5
+release    : 20
+source     :
+    - https://download.kde.org/stable/plasma/6.3.5/krdp-6.3.5.tar.xz : 6a575a16dcc53896df0c821de3dd49340f1e23c061cfb528b6bc7e3499ffc2e6
+homepage   : https://www.kde.org/workspaces/plasmadesktop/
+license    : LGPL-2.1-or-later
+component  : desktop.kde
+summary    : Library and examples for creating an RDP server
+description: |-
+    Library and examples for creating an RDP server
+builddeps  :
+    - pkgconfig(Qt6Qml)
+    - pkgconfig(Qt6WaylandClient)
+    - pkgconfig(freerdp2)
+    - pkgconfig(xkbcommon)
+    - extra-cmake-modules
+    - kf6-kcmutils-devel
+    - kf6-kconfig-devel
+    - kf6-kcoreaddons-devel
+    - kf6-kcrash-devel
+    - kf6-kdbusaddons-devel
+    - kf6-ki18n-devel
+    - kf6-kstatusnotifieritem-devel
+    - kpipewire-devel
+    - plasma-wayland-protocols-devel
+    - qtkeychain-qt6-devel
+clang      : yes
+optimize   :
+    - speed
+    - thin-lto
+setup      : |
+    %cmake_kf6
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install

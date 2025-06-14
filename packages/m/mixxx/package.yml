@@ -1,8 +1,8 @@
 name       : mixxx
-version    : 2.4.0
-release    : 34
+version    : 2.5.1
+release    : 44
 source     :
-    - https://github.com/mixxxdj/mixxx/archive/refs/tags/2.4.0.tar.gz : a426bcf6fd9ec517156f524d5236b6929e3e1235af6b6c5240e352309b15db16
+    - https://github.com/mixxxdj/mixxx/archive/refs/tags/2.5.1.tar.gz : 626f7a64292c1ef77d8aace4a746140f455596d44a6984db9d1e4caf4c4ce09d
 homepage   : https://mixxx.org/
 license    : GPL-2.0-or-later
 component  : multimedia.audio
@@ -11,11 +11,11 @@ description: |
     Mixxx is Free DJ software that gives you everything you need to perform live mixes.
 networking : yes   # libkeyfinder submodule
 builddeps  :
-    - pkgconfig(Qt5Designer)
-    - pkgconfig(Qt5Quick)
-    - pkgconfig(Qt5Script)
-    - pkgconfig(Qt5Svg)
-    - pkgconfig(Qt5X11Extras)
+    - pkgconfig(Qt6Core5Compat)
+    - pkgconfig(Qt6Designer)
+    - pkgconfig(Qt6Quick)
+    - pkgconfig(Qt6ShaderTools)
+    - pkgconfig(Qt6Svg)
     - pkgconfig(alsa)
     - pkgconfig(benchmark)
     - pkgconfig(fftw3)
@@ -31,6 +31,7 @@ builddeps  :
     - pkgconfig(mad)
     - pkgconfig(opusfile)
     - pkgconfig(portaudio-2.0)
+    - pkgconfig(portmidi)
     - pkgconfig(protobuf)
     - pkgconfig(rubberband)
     - pkgconfig(shout)
@@ -48,8 +49,7 @@ builddeps  :
     - id3lib-devel
     - lame-devel
     - microsoft-gsl
-    - portmidi-devel
-    - qtkeychain-qt5-devel
+    - qtkeychain-qt6-devel
     - vamp-plugin-sdk
 setup      : |
     %cmake_ninja

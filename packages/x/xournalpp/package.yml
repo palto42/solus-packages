@@ -1,8 +1,8 @@
 name       : xournalpp
-version    : 1.2.3
-release    : 20
+version    : 1.2.7
+release    : 25
 source     :
-    - https://github.com/xournalpp/xournalpp/archive/refs/tags/v1.2.3.tar.gz : 8817abd1794760c2a3be3a35e56a5588a51e517bc591384fa321994d50e14e7c
+    - https://github.com/xournalpp/xournalpp/archive/refs/tags/v1.2.7.tar.gz : cd20608417fef374e5360ec96c9f56c61236d45e0d35d33b48346ed39eaf025d
 homepage   : https://xournalpp.github.io/
 license    : GPL-2.0-or-later
 component  : office.viewers
@@ -14,7 +14,7 @@ builddeps  :
     - pkgconfig(gtk+-3.0)
     - pkgconfig(librsvg-2.0)
     - pkgconfig(libzip)
-    - pkgconfig(lua-5.3)
+    - pkgconfig(lua-5.4)
     - pkgconfig(poppler-glib)
     - pkgconfig(portaudiocpp)
     - pkgconfig(sndfile)

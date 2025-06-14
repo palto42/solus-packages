@@ -1,8 +1,8 @@
 name       : libkdegames
-version    : 23.08.5
-release    : 76
+version    : 25.04.2
+release    : 95
 source     :
-    - https://cdn.download.kde.org/stable/release-service/23.08.5/src/libkdegames-23.08.5.tar.xz : 0ac583f4327d6003782054a9ee3d51c922bcdf04577a3f7f12b3840cabf2efed
+    - https://download.kde.org/stable/release-service/25.04.2/src/libkdegames-25.04.2.tar.xz : 8775c78f76d64be05bab10df4d0c3fa3d5f5442a094c86501d6ec7ada9b30d2b
 homepage   : https://kde.org/
 license    :
     - GFDL-1.2-or-later
@@ -11,26 +11,32 @@ component  : programming
 summary    : General purpose games code for KDE
 description: |
     It is a collection of functions used by some games or which are useful for other games.
-#optimize   : lto
 builddeps  :
-    - pkgconfig(Qt5Svg)
+    - pkgconfig(KF6GuiAddons)
+    - pkgconfig(Qt6Svg)
     - pkgconfig(openal)
     - pkgconfig(sndfile)
-    - karchive-devel
-    - kcrash-devel
-    - kdbusaddons-devel
-    - kdeclarative-devel
-    - kdnssd-devel
-    - kglobalaccel-devel
-    - kguiaddons-devel
-    - kiconthemes-devel
-    - kio-devel
-    - knewstuff-devel
-    - ktextwidgets-devel
+    - kf6-karchive-devel
+    - kf6-kcompletion-devel
+    - kf6-kdeclarative-devel
+    - kf6-kdnssd-devel
+    - kf6-kiconthemes-devel
+    - kf6-knewstuff-devel
+    - kf6-kxmlgui-devel
+rundeps    :
+    - devel :
+        - kf6-kcompletion-devel
+        - kf6-kconfig-devel
+        - kf6-kconfigwidgets-devel
+        - qt6-declarative-devel
+clang      : yes
+optimize   :
+    - speed
+    - thin-lto
 setup      : |
-    %cmake_ninja -DBUILD_TESTING=OFF
+    %cmake_kf6
 build      : |
     %ninja_build
 install    : |
     %ninja_install
-    %qml_cache
+    %qml6_cache

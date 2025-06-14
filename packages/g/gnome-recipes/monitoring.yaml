@@ -1,0 +1,5 @@
+releases:
+  id: 227761
+  rss: https://gitlab.gnome.org/GNOME/recipes/-/tags?format=atom
+security:
+  cpe: ~ # Last checked 2025-03-27

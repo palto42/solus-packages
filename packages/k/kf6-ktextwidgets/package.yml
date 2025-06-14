@@ -1,8 +1,8 @@
 name       : kf6-ktextwidgets
-version    : 6.0.0
-release    : 3
+version    : 6.14.0
+release    : 19
 source     :
-    - https://cdn.download.kde.org/stable/frameworks/6.0/ktextwidgets-6.0.0.tar.xz : b093f570ea3c2d4320e41b575a540fb75acd5b5f818bc6215a5fdb57754b6c40
+    - https://download.kde.org/stable/frameworks/6.14/ktextwidgets-6.14.0.tar.xz : 4e24e6da477e08d0f71552f081206516fcd9ab4a593cf37d77ebd690856b76b5
 homepage   : https://community.kde.org/Frameworks
 license    :
     - LGPL-2.0-only
@@ -16,7 +16,6 @@ builddeps  :
     - pkgconfig(Qt6TextToSpeech)
     - kf6-kcompletion-devel
     - kf6-kconfig-devel
-    - kf6-kconfigwidgets-devel
     - kf6-ki18n-devel
     - kf6-kwidgetsaddons-devel
     - kf6-sonnet-devel

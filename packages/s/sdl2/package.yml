@@ -1,8 +1,8 @@
 name       : sdl2
-version    : 2.30.1
-release    : 44
+version    : 2.32.4
+release    : 58
 source     :
-    - https://www.libsdl.org/release/SDL2-2.30.1.tar.gz : 01215ffbc8cfc4ad165ba7573750f15ddda1f971d5a66e9dcaffd37c587f473a
+    - https://www.libsdl.org/release/SDL2-2.32.4.tar.gz : f15b478253e1ff6dac62257ded225ff4e7d0c5230204ac3450f1144ee806f934
 homepage   : https://libsdl.org/
 license    : Zlib
 component  : multimedia.library
@@ -36,6 +36,7 @@ optimize   :
 patterns   :
     - devel : /usr/bin
 setup      : |
+    # Virtualbox depends on libSDL2Main.a, don't delete that
     %cmake_ninja \
                  -DCMAKE_INSTALL_LIBDIR=%libdir% \
                  -DSDL_STATIC=OFF \
@@ -44,6 +45,7 @@ setup      : |
                  -DSDL_SSE2=ON \
                  -DSDL_SSE3=ON \
                  -DSDL_SSEMATH=ON \
+                 -DSDL_TEST=OFF \
                  -DSDL_ALSA_SHARED=OFF \
                  -DSDL_HIDAPI_LIBUSB=ON \
                  -DSDL_KMSDRM_SHARED=OFF \

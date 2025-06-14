@@ -1,8 +1,8 @@
 name       : rssguard
-version    : 4.6.3
-release    : 7
+version    : 4.8.5
+release    : 18
 source     :
-    - https://github.com/martinrotter/rssguard/archive/refs/tags/4.6.3.tar.gz : 5b710776146f7f642aa04525e0547bbac7125b99a5ca8410cb82627c7f6ede70
+    - https://github.com/martinrotter/rssguard/archive/refs/tags/4.8.5.tar.gz : e3d5cd31d24c92cd4b85eae6e961b19093fb965b6b34bff39dd030089f314598
 license    : GPL-3.0-or-later
 homepage   : https://github.com/martinrotter/rssguard
 component  : network.news
@@ -18,7 +18,6 @@ builddeps  :
     - pkgconfig(dbus-1)
     - pkgconfig(mpv)
     - pkgconfig(sqlite3)
-    - qt5-tools-devel # linguist
 clang      : yes
 optimize   :
     - speed

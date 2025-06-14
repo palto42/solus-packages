@@ -1,8 +1,8 @@
 name       : akonadi-search
-version    : 23.08.5
-release    : 75
+version    : 25.04.2
+release    : 93
 source     :
-    - https://cdn.download.kde.org/stable/release-service/23.08.5/src/akonadi-search-23.08.5.tar.xz : ef21350b7468eea740b949f9f450f07a48b8585e6a83a5000ff4a8606581adb4
+    - https://download.kde.org/stable/release-service/25.04.2/src/akonadi-search-25.04.2.tar.xz : 95f63743d050ccb3a9628dfdc9b5a271658d45e3d5944cb1c131f7d254c29486
 homepage   : https://kde.org/
 license    :
     - GPL-2.0-or-later
@@ -11,24 +11,34 @@ component  : desktop.library
 summary    : Libraries and daemons to implement searching in Akonadi
 description: |
     Libraries and daemons to implement searching in Akonadi.
+networking : yes
 builddeps  :
+    - pkgconfig(KF6CalendarCore)
     - pkgconfig(xapian-core)
     - akonadi-mime-devel
-    - kcalendarcore-devel
-    - kcmutils-devel
-    - kcontacts-devel
-    - kcrash-devel
-    - kdbusaddons-devel
-    - kio-devel
-    - kitemmodels-devel
-    - krunner-devel
-    - libboost-devel
+    - corrosion
+    - kf6-kcmutils-devel
+    - kf6-kcontacts-devel
+    - kf6-kcrash-devel
+    - kf6-kdbusaddons-devel
+    - kf6-kio-devel
+    - kf6-krunner-devel
+    - ktextaddons-devel
 rundeps    :
     - devel :
         - akonadi-devel
-        - kcalendarcore-devel
+        - akonadi-mime-devel
+        - kf6-kcalendarcore-devel
+        - kf6-kcontacts-devel
+        - kf6-kcoreaddons-devel
+        - kmime-devel
+        - qt6-base-devel
+clang      : yes
+optimize   :
+    - speed
+    - thin-lto
 setup      : |
-    %cmake_ninja -DBUILD_TESTING=OFF
+    %cmake_kf6
 build      : |
     %ninja_build
 install    : |

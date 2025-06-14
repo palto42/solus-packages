@@ -1,20 +1,22 @@
 name       : egl-wayland
-version    : 1.1.13
-release    : 20
+version    : 1.1.19
+release    : 29
 source     :
-    - https://github.com/NVIDIA/egl-wayland/archive/refs/tags/1.1.13.tar.gz : 667561d794561d55d85b1273b2fe4def3f360e0ad27833d099e4f100f2244e48
+    - https://github.com/NVIDIA/egl-wayland/archive/refs/tags/1.1.19.tar.gz : b9a63e59eb552ef925b9fda96e466457edfe4b7728dd861ee06152b064edccdf
+homepage   : https://github.com/NVIDIA/egl-wayland
 license    : MIT
 component  : programming.library
 summary    : The EGLStream-based Wayland external platform
 description: |
     This library implements an EGL External Platform interface to work along with EGL drivers that support the external platform mechanism.
+emul32     : yes
 builddeps  :
+    - pkgconfig32(gl)
+    - pkgconfig32(libdrm)
+    - pkgconfig32(wayland-scanner)
+    - pkgconfig32(x11)
     - pkgconfig(eglexternalplatform)
-    - pkgconfig(gl)
-    - pkgconfig(libdrm)
     - pkgconfig(wayland-protocols)
-    - pkgconfig(wayland-scanner)
-    - pkgconfig(x11)
 patterns   :
     - devel : /usr/share/wayland-*/*.xml
 rundeps    :
@@ -22,13 +24,8 @@ rundeps    :
 optimize   :
     - no-symbolic  # We set symbolic-functions usually but they have -Bsymbolic.
 setup      : |
-    %patch -p1 -i $pkgfiles/upstream-dmabuf.patch
-
     %meson_configure
 build      : |
     %ninja_build
 install    : |
     %ninja_install
-
-    # We ship the library in this package, so we should ship the EGL configuration too
-    install -Dm00644 -t $installdir/usr/share/egl/egl_external_platform.d $pkgfiles/10_nvidia_wayland.json

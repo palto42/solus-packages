@@ -1,8 +1,8 @@
 name       : kf6-ksvg
-version    : 6.0.0
-release    : 3
+version    : 6.14.0
+release    : 20
 source     :
-    - https://cdn.download.kde.org/stable/frameworks/6.0/ksvg-6.0.0.tar.xz : d056cb96b06c1f1a8a8f39c134858cf1437c546b9d79a9eb1a92f8933d1e3579
+    - https://download.kde.org/stable/frameworks/6.14/ksvg-6.14.0.tar.xz : 1456649ff2e1397e2a666ce24bbb6f074fda5cb96ada425d122bcc14744a5dce
 homepage   : https://community.kde.org/Frameworks
 license    :
     - GPL-2.0-or-later
@@ -12,6 +12,7 @@ summary    : Components for handling SVGs
 description: |
     Components for handling SVGs
 builddeps  :
+    - pkgconfig(KF6GuiAddons)
     - pkgconfig(Qt6Core)
     - pkgconfig(Qt6Quick)
     - pkgconfig(Qt6Svg)
@@ -19,7 +20,6 @@ builddeps  :
     - kf6-kcolorscheme-devel
     - kf6-kconfig-devel
     - kf6-kcoreaddons-devel
-    - kf6-kguiaddons-devel
     - kf6-kirigami-devel
 rundeps    :
     - devel :

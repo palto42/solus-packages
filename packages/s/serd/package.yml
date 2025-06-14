@@ -1,16 +1,22 @@
 name       : serd
-version    : 0.30.4
-release    : 4
+version    : 0.32.4
+release    : 7
 source     :
-    - git|https://github.com/drobilla/serd.git : v0.30.4
+    - https://gitlab.com/drobilla/serd/-/archive/v0.32.4/serd-v0.32.4.tar.gz : a9b2faf6d0dece28c99cfda7138394c40f136e9e2c0e965c6b6f2df9ee18ba9a
+homepage   : https://gitlab.com/drobilla/serd
 license    : ISC
 component  : programming.library
 summary    : Lightweight RDF parsing library
 description: |
     Serd is a lightweight C library for RDF syntax which supports reading and writing Turtle and NTriples.
+avx2       : yes
+clang      : yes
+optimize   :
+    - speed
+    - thin-lto
 setup      : |
-    %waf_configure --libdir=%libdir%
+    %meson_configure --libdir=%libdir%
 build      : |
-    %waf_build
+    %ninja_build
 install    : |
-    %waf_install
+    %ninja_install

@@ -1,8 +1,8 @@
 name       : python-simplejson
-version    : 3.19.2
-release    : 17
+version    : 3.20.1
+release    : 20
 source     :
-    - https://github.com/simplejson/simplejson/archive/refs/tags/v3.19.2.tar.gz : 836bbd37b340df982ceee87c0653f1c6f17b010f8054c09213ce95456ba86220
+    - https://github.com/simplejson/simplejson/archive/refs/tags/v3.20.1.tar.gz : 892eda48a39017ba1545ff4ed3290f5fa38e5b171944169cfaf7260a51b0076a
 homepage   : https://github.com/simplejson/simplejson
 license    : MIT
 component  : programming.python
@@ -11,6 +11,7 @@ description: |
     simplejson is a simple, fast, complete, correct and extensible JSON encoder and decoder for Python. It is pure Python code with no dependencies, but includes an optional C extension for a serious speed boost.
 builddeps  :
     - pkgconfig(python3)
+    - python-setuptools
 checkdeps  :
     - python-pytest
 build      : |

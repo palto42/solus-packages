@@ -1,8 +1,8 @@
 name       : kf6-threadweaver
-version    : 6.0.0
-release    : 3
+version    : 6.14.0
+release    : 19
 source     :
-    - https://cdn.download.kde.org/stable/frameworks/6.0/threadweaver-6.0.0.tar.xz : ba9daec6e0697fdc2accf74a46a6d59403e5e340d280bce916fd6356a668ddb3
+    - https://download.kde.org/stable/frameworks/6.14/threadweaver-6.14.0.tar.xz : a8f71f7e69751e36dbc7fce9581f55b66844bc68df6af2e8a94c22c8fe9870ae
 homepage   : https://community.kde.org/Frameworks
 license    : LGPL-2.0-or-later
 component  : desktop.library

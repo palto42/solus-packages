@@ -1,8 +1,8 @@
 name       : kdebugsettings
-version    : 23.08.5
-release    : 57
+version    : 25.04.2
+release    : 75
 source     :
-    - https://cdn.download.kde.org/stable/release-service/23.08.5/src/kdebugsettings-23.08.5.tar.xz : 98b1001cfae74749fe4099c06b5b17d99dc6be47cf13b13b872abd5665e14b10
+    - https://download.kde.org/stable/release-service/25.04.2/src/kdebugsettings-25.04.2.tar.xz : 71a4ab5c383f01c14fb6ff12a15702299bbfd59ae26e08b17f9f93b090fcaafe
 homepage   : https://kde.org/applications/development/org.kde.kdebugsettings
 license    : LGPL-2.0-or-later
 component  : desktop.kde
@@ -10,16 +10,22 @@ summary    : Application to enable/disable qCDebug
 description: |
     An application to enable/disable qCDebug.
 builddeps  :
-    - kcompletion-devel
-    - kconfig-devel
-    - kcoreaddons-devel
-    - kdbusaddons-devel
-    - ki18n-devel
-    - kitemviews-devel
-    - kwidgetsaddons-devel
-    - kxmlgui-devel
+    - kf6-kcompletion-devel
+    - kf6-kconfig-devel
+    - kf6-kconfigwidgets-devel
+    - kf6-kcoreaddons-devel
+    - kf6-kcrash-devel
+    - kf6-kdbusaddons-devel
+    - kf6-ki18n-devel
+    - kf6-kiconthemes-devel
+    - kf6-kwidgetsaddons-devel
+    - kf6-kxmlgui-devel
+clang      : yes
+optimize   :
+    - speed
+    - thin-lto
 setup      : |
-    %cmake_ninja -DBUILD_TESTING=OFF
+    %cmake_kf6
 build      : |
     %ninja_build
 install    : |

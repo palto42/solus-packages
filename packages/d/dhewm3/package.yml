@@ -1,9 +1,9 @@
 name       : dhewm3
-version    : 1.5.2
-release    : 10
-homepage   : https://dhewm3.org
+version    : 1.5.4
+release    : 13
 source     :
-    - https://github.com/dhewm/dhewm3/releases/download/1.5.2/dhewm3-1.5.2-src.tar.xz : a6aa31f240e3220fef5e9b80cfe584f9261525f666ed5f513b2b755e7ae0e082
+    - https://github.com/dhewm/dhewm3/archive/refs/tags/1.5.4.tar.gz : d460d55f7912e220f4d209b66f47e31aad6c2a833af6236a3679096a51f21858
+homepage   : https://dhewm3.org
 license    : GPL-3.0-or-later
 component  : games.action
 summary    : dhewm 3 is a Doom 3 GPL source port
@@ -13,6 +13,7 @@ builddeps  :
     - pkgconfig(libcurl)
     - pkgconfig(openal)
     - pkgconfig(sdl2)
+    - pkgconfig(x11)
 setup      : |
     %cmake_ninja \
         -DDEDICATED=ON \
@@ -22,7 +23,9 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
-    install -Dm00644 $pkgfiles/dhewm3.desktop $installdir/usr/share/applications/dhewm3.desktop
-    install -Dm00644 $pkgfiles/dhewm3-roe.desktop $installdir/usr/share/applications/dhewm3-roe.desktop
-    install -Dm00644 neo/sys/linux/setup/image/doom3.png $installdir/usr/share/pixmaps/doom3.png
-    install -Dm00644 neo/sys/aros/ROE.png $installdir/usr/share/pixmaps/doom3-roe.png
+    install -Dm00644 dist/linux/share/applications/org.dhewm3.Dhewm3.desktop -t $installdir/usr/share/applications
+    install -Dm00644 dist/linux/share/applications/org.dhewm3.Dhewm3.d3xp.desktop -t $installdir/usr/share/applications
+    install -Dm00644 dist/linux/share/icons/hicolor/128x128/apps/org.dhewm3.Dhewm3.png -t  $installdir/usr/share/icons/hicolor/128x128/apps
+    install -Dm00644 dist/linux/share/icons/hicolor/256x256/apps/org.dhewm3.Dhewm3.png -t  $installdir/usr/share/icons/hicolor/256x256/apps
+    install -Dm00644 dist/linux/share/icons/hicolor/scalable/apps/org.dhewm3.Dhewm3.svg -t  $installdir/usr/share/icons/hicolor/scalable/apps
+    install -Dm00644 $pkgfiles/org.dhewm3.Dhewm3.metainfo.xml $installdir/usr/share/metainfo/org.dhewm3.Dhewm3.metainfo.xml

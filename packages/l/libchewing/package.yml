@@ -1,19 +1,22 @@
 name       : libchewing
-version    : 0.5.1
-release    : 2
+version    : 0.9.1
+release    : 4
 source     :
-    - https://github.com/chewing/libchewing/releases/download/v0.5.1/libchewing-0.5.1.tar.bz2 : 9708c63415fa6034435c0f38100e7d30d0e1bac927f67bec6dfeb3fef016172b
+    - https://github.com/chewing/libchewing/releases/download/v0.9.1/libchewing-0.9.1.tar.zst : e98b76c306552148b7d85f0e596860751d9eef4bc8f2dfc053177b14f421c31f
+homepage   : https://chewing.im/
 license    : LGPL-2.1-only
 component  : desktop.library
 summary    : Chewing is an intelligent phonetic (Zhuyin/Bopomofo) input method
 description: |
     Chewing is an intelligent phonetic (Zhuyin/Bopomofo) input method
+networking : yes
 builddeps  :
     - pkgconfig(sqlite3)
+    - git
+    - rust
 setup      : |
-    %cmake_ninja
+    %cmake_ninja -DCURSES_HAVE_NCURSES_H=ON
 build      : |
     %ninja_build
 install    : |
     %ninja_install
-    rm $installdir/%libdir%/libchewing.a

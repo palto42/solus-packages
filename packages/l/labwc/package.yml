@@ -1,0 +1,51 @@
+name       : labwc
+version    : 0.8.4
+release    : 9
+source     :
+    - https://github.com/labwc/labwc/archive/refs/tags/0.8.4.tar.gz : 2d3ded90f78efb5060f7057ea802c78a79dc9b2e82ae7a2ad902af957b8b9797
+homepage   : https://labwc.github.io/
+license    : GPL-2.0-or-later
+component  : desktop
+summary    :
+    - Labwc is a window-stacking compositor for wayland
+    - session : Labwc session
+description:
+    - Labwc is a wlroots-based window-stacking compositor for wayland, inspired by openbox.
+    - session : Labwc session
+builddeps  :
+    - pkgconfig(cairo)
+    - pkgconfig(glib-2.0)
+    - pkgconfig(libinput)
+    - pkgconfig(libpng)
+    - pkgconfig(librsvg-2.0)
+    - pkgconfig(libsfdo-basedir)
+    - pkgconfig(libxml-2.0)
+    - pkgconfig(pango)
+    - pkgconfig(scdoc)
+    - pkgconfig(wayland-protocols)
+    - pkgconfig(wayland-server)
+    - pkgconfig(wlroots-0.18)
+    - pkgconfig(xkbcommon)
+    - pkgconfig(xwayland)
+rundeps    :
+    - session :
+        - alacritty
+        - labwc
+        - swaybg
+        - swayidle
+        - swaylock
+        - waybar
+    - xdg-desktop-portal-wlr
+    - xorg-xwayland
+clang      : yes
+optimize   : thin-lto
+setup      : |
+    %meson_configure --wrap-mode=nodownload
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install
+patterns   :
+    - session :
+        - /usr/share/icons
+        - /usr/share/wayland-sessions/labwc.desktop

@@ -1,8 +1,8 @@
 name       : kf6-kwidgetsaddons
-version    : 6.0.0
-release    : 4
+version    : 6.14.0
+release    : 23
 source     :
-    - https://cdn.download.kde.org/stable/frameworks/6.0/kwidgetsaddons-6.0.0.tar.xz : a7771c92310a21a8105ba64dd61c065ba74723899c7ccfc4de2b57b17e6a6b63
+    - https://download.kde.org/stable/frameworks/6.14/kwidgetsaddons-6.14.0.tar.xz : 602720bc3e86cba2384f0f45e16c8524a1974796a3d5b7c5c1ed90e768cf121f
 homepage   : https://community.kde.org/Frameworks
 license    :
     - BSD-3-Clause

@@ -1,0 +1,7 @@
+releases:
+  id: 4967
+  rss: https://www.thunderbird.net/en-US/thunderbird/releases/atom.xml
+security:
+  cpe:
+  - vendor: mozilla
+    product: thunderbird

@@ -1,8 +1,8 @@
 name       : numix-icon-theme-square
-version    : 24.02.05
-release    : 40
+version    : 25.01.31
+release    : 49
 source     :
-    - https://github.com/numixproject/numix-icon-theme-square/archive/refs/tags/24.02.05.tar.gz : 5272a58bc2dce7b0a24554a6a11fadbaf7b43ca5aece5cf15ddc2103efccbb77
+    - https://github.com/numixproject/numix-icon-theme-square/archive/refs/tags/25.01.31.tar.gz : d30e4c44fbc0907b9c04220e9dff8d766d6651b23d066ab95d6417b0026d4369
 homepage   : https://numixproject.github.io/
 license    : GPL-3.0-or-later
 component  : desktop.theme

@@ -1,8 +1,8 @@
 name       : loupe
-version    : '45.3'
-release    : 1
+version    : '48.1'
+release    : 8
 source     :
-    - https://download.gnome.org/sources/loupe/45/loupe-45.3.tar.xz : f65f2d1208d085ab5ffa998dd43c92fe952272d4d59b51cfecc11ebdffca2d86
+    - https://download.gnome.org/sources/loupe/48/loupe-48.1.tar.xz : 10713d3e96789d077ae7d3389452a5f6c397ddf43a50c071cbfe2d12725970de
 homepage   : https://apps.gnome.org/Loupe/
 license    : GPL-3.0-or-later
 component  : desktop.gnome
@@ -13,14 +13,16 @@ description: |
     - Tiled rendering for vector graphics
     - Extendable and sandboxed image decoding
     - Accessible presentation of the most important metadata.
+networking : yes
 builddeps  :
     - pkgconfig(gtk4)
     - pkgconfig(gweather4)
     - pkgconfig(lcms2)
     - pkgconfig(libadwaita-1)
-    - cargo
+    - pkgconfig(libseccomp)
     - desktop-file-utils
     - itstool
+    - rust
 rundeps    :
     - glycin
     - webp-pixbuf-loader

@@ -1,8 +1,8 @@
 name       : libinput
-version    : 1.25.0
-release    : 45
+version    : 1.28.1
+release    : 51
 source     :
-    - https://gitlab.freedesktop.org/libinput/libinput/-/archive/1.25.0/libinput-1.25.0.tar.gz : f7e8425f185cadba5761d0a1dae6be041750d351163ffa04adc5b9a79a13c0ec
+    - https://gitlab.freedesktop.org/libinput/libinput/-/archive/1.28.1/libinput-1.28.1.tar.gz : a13f8c9a7d93df3c85c66afd135f0296701d8d32f911991b7aa4273fdd6a42a3
 license    : MIT
 component  : desktop.library
 homepage   : https://www.freedesktop.org/wiki/Software/libinput/

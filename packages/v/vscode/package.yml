@@ -1,8 +1,8 @@
 name       : vscode
-version    : 1.87.1
-release    : 209
+version    : "1.101.0"
+release    : 224
 source     :
-    - git|https://github.com/Microsoft/vscode.git : 1.87.1
+    - git|https://github.com/Microsoft/vscode.git : 1.101.0
 homepage   : https://code.visualstudio.com/
 license    :
     - GPL-3.0-or-later # Icon (from Papirus)
@@ -26,14 +26,16 @@ builddeps  :
     - pkgconfig(xscrnsaver)
     - pkgconfig(xshmfence)
     - pkgconfig(xtst)
-    - yarn
+    - nodejs-22
     - yq
 rundeps    :
     - git
     - libxscrnsaver
-    - nodejs
 replaces   :
     - vscode-ms
+environment: |
+    # npm is called recursively and we need that to use nodejs-22
+    export PATH=/usr/lib64/nodejs-22/bin:$PATH
 setup      : |
     %patch -p1 -i $pkgfiles/0001-Attempt-to-symlink-.config-Code-to-.config-Code-OSS-.patch
     cp $pkgfiles/code.png $workdir/resources/linux/
@@ -48,9 +50,9 @@ setup      : |
     # Add icon to MIME
     yq -o=xml '.mime-info.mime-type.icon.+@name = "visual-studio-code"' -i resources/linux/code-workspace.xml
 
-    yarn install --frozen-lockfile --network-timeout 180000
+    npm-22 install
 build      : |
-    yarn run gulp vscode-linux-x64
+    npm-22 run gulp vscode-linux-x64
 install    : |
     export vsdir=/usr/share/vscode
     install -dm00755 $installdir/$vsdir
@@ -65,9 +67,9 @@ install    : |
     install -Dm00644 $installdir/$vsdir/resources/completions/bash/code-oss $installdir/usr/share/bash-completion/completions/code-oss
     install -Dm00644 $installdir/$vsdir/resources/completions/zsh/_code-oss $installdir/usr/share/zsh/site-functions/_code-oss
 
-    # Fix Wayland/Xorg window associations
-    sed -i 's|Code - OSS|code-oss|g' $installdir/$vsdir/resources/app/package.json
-    sed -i 's|code-oss-url-handler.desktop|code-oss.desktop|g' $installdir/$vsdir/resources/app/package.json
+    # Increase compatibility with official distribution
+    ln -s code-oss $installdir/usr/bin/code
+    ln -s code-oss $installdir/$vsdir/bin/code
 
     # Appdata/MIME
     install -Dm00644 $workdir/resources/linux/code.appdata.xml $installdir/usr/share/metainfo/com.visualstudio.code.appdata.xml

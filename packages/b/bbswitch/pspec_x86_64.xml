@@ -20,7 +20,8 @@
 </Description>
         <PartOf>kernel.drivers</PartOf>
         <Files>
-            <Path fileType="data">/lib/modules/6.6.20-236.lts/misc/bbswitch.ko.zst</Path>
+            <Path fileType="data">/lib64/modules/6.12.28-269.lts/misc/bbswitch.ko.zst</Path>
+            <Path fileType="library">/usr/lib64/modules/6.12.28-269.lts/misc/bbswitch.ko.zst</Path>
         </Files>
     </Package>
     <Package>
@@ -30,12 +31,13 @@
 </Description>
         <PartOf>kernel.drivers</PartOf>
         <Files>
-            <Path fileType="data">/lib/modules/6.6.20-279.current/misc/bbswitch.ko.zst</Path>
+            <Path fileType="data">/lib64/modules/6.14.6-319.current/misc/bbswitch.ko.zst</Path>
+            <Path fileType="library">/usr/lib64/modules/6.14.6-319.current/misc/bbswitch.ko.zst</Path>
         </Files>
     </Package>
     <History>
-        <Update release="323">
-            <Date>2024-03-05</Date>
+        <Update release="360">
+            <Date>2025-05-13</Date>
             <Version>0.8</Version>
             <Comment>Packaging update</Comment>
             <Name>Reilly Brogan</Name>

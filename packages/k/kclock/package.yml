@@ -1,8 +1,8 @@
 name       : kclock
-version    : 23.08.5
-release    : 2
+version    : 25.04.2
+release    : 21
 source     :
-    - https://cdn.download.kde.org/stable/release-service/23.08.5/src/kclock-23.08.5.tar.xz : dd1372f096dcab3d824f18ce0aaff53d67bad20596007c5edc2681f72cbbb8b1
+    - https://download.kde.org/stable/release-service/25.04.2/src/kclock-25.04.2.tar.xz : 6cfd285162cd7b4e552468184aa1c1ed626c371fbc91a57fdc1e6e9dfe353a6a
 homepage   : https://apps.kde.org/kclock
 license    : GPL-2.0-or-later
 component  : desktop.kde
@@ -15,26 +15,27 @@ description: |
         - World Clocks
         - Timers
 builddeps  :
-    - pkgconfig(Qt5Core)
-    - pkgconfig(Qt5DBus)
-    - pkgconfig(Qt5Gui)
-    - pkgconfig(Qt5Multimedia)
-    - pkgconfig(Qt5Quick)
-    - pkgconfig(Qt5QuickControls2)
-    - pkgconfig(Qt5Svg)
-    - pkgconfig(Qt5Test)
-    - pkgconfig(Qt5Widgets)
-    - extra-cmake-modules
-    - kconfig-devel
-    - kcoreaddons-devel
-    - kdbusaddons-devel
-    - ki18n-devel
+    - pkgconfig(Qt6Multimedia)
+    - pkgconfig(Qt6QuickControls2)
+    - pkgconfig(Qt6Svg)
+    - kf6-kconfig-devel
+    - kf6-kcoreaddons-devel
+    - kf6-kcrash-devel
+    - kf6-kdbusaddons-devel
+    - kf6-ki18n-devel
+    - kf6-kirigami-devel
+    - kf6-knotifications-devel
+    - kf6-kstatusnotifieritem-devel
     - kirigami-addons-devel
-    - kirigami2-devel
-    - knotifications-devel
-    - plasma-framework-devel
+    - libplasma-devel
+rundeps    :
+    - kirigami-addons
+clang      : yes
+optimize   :
+    - speed
+    - thin-lto
 setup      : |
-    %cmake_ninja
+    %cmake_kf6
 build      : |
     %ninja_build
 install    : |

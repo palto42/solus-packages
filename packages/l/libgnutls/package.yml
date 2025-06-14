@@ -1,8 +1,8 @@
 name       : libgnutls
-version    : 3.8.3
-release    : 46
+version    : 3.8.7.1
+release    : 50
 source     :
-    - https://www.gnupg.org/ftp/gcrypt/gnutls/v3.8/gnutls-3.8.3.tar.xz : f74fc5954b27d4ec6dfbb11dea987888b5b124289a3703afcada0ee520f4173e
+    - https://www.gnupg.org/ftp/gcrypt/gnutls/v3.8/gnutls-3.8.7.1.tar.xz : 9ca0ddaccce28a74fa18d738744190afb3b0daebef74e6ad686bf7bef99abd60
 license    : LGPL-2.1-or-later
 component  :
     - security
@@ -18,13 +18,6 @@ replaces   :
     - utils : gnutls
 emul32     : yes
 mancompress: yes
-patterns   :
-    - docs :
-        - /usr/share/gtk-doc
-        - /usr/share/info
-    - utils :
-        - /usr/bin
-        - /usr/share/man/man1
 builddeps  :
     - pkgconfig32(autoopts)
     - pkgconfig32(guile-2.0)
@@ -46,3 +39,10 @@ build      : |
     %make
 install    : |
     %make_install
+patterns   :
+    - docs :
+        - /usr/share/gtk-doc
+        - /usr/share/info
+    - utils :
+        - /usr/bin
+        - /usr/share/man/man1

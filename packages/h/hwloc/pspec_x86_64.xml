@@ -3,15 +3,15 @@
         <Name>hwloc</Name>
         <Homepage>https://www.open-mpi.org/projects/hwloc/</Homepage>
         <Packager>
-            <Name>Algent Albrahimi</Name>
-            <Email>algent@protonmail.com</Email>
+            <Name>Reilly Brogan</Name>
+            <Email>solus@reillybrogan.com</Email>
         </Packager>
         <License>BSD-3-Clause</License>
         <PartOf>programming.tools</PartOf>
         <Summary xml:lang="en">Helps applications gather information about resources on parallel computing platforms</Summary>
         <Description xml:lang="en">The Hardware Locality (hwloc) software project aims at easing the process of discovering hardware resources in parallel architectures. It offers command-line tools and a C API for consulting these resources, their locality, attributes, and interconnection. hwloc primarily aims at helping high-performance computing (HPC) applications, but is also applicable to any project seeking to exploit code and/or data locality on modern computing platforms.
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>hwloc</Name>
@@ -35,7 +35,7 @@
             <Path fileType="executable">/usr/bin/lstopo</Path>
             <Path fileType="executable">/usr/bin/lstopo-no-graphics</Path>
             <Path fileType="library">/usr/lib64/libhwloc.so.15</Path>
-            <Path fileType="library">/usr/lib64/libhwloc.so.15.6.4</Path>
+            <Path fileType="library">/usr/lib64/libhwloc.so.15.8.1</Path>
             <Path fileType="executable">/usr/sbin/hwloc-dump-hwdata</Path>
             <Path fileType="data">/usr/share/applications/lstopo.desktop</Path>
             <Path fileType="data">/usr/share/bash-completion/completions/hwloc</Path>
@@ -73,13 +73,42 @@
         </Files>
     </Package>
     <Package>
+        <Name>hwloc-32bit</Name>
+        <Summary xml:lang="en">32-bit libraries for hwloc</Summary>
+        <Description xml:lang="en">The Hardware Locality (hwloc) software project aims at easing the process of discovering hardware resources in parallel architectures. It offers command-line tools and a C API for consulting these resources, their locality, attributes, and interconnection. hwloc primarily aims at helping high-performance computing (HPC) applications, but is also applicable to any project seeking to exploit code and/or data locality on modern computing platforms.
+</Description>
+        <PartOf>emul32</PartOf>
+        <RuntimeDependencies>
+            <Dependency release="11">hwloc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib32/libhwloc.so.15</Path>
+            <Path fileType="library">/usr/lib32/libhwloc.so.15.8.1</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>hwloc-32bit-devel</Name>
+        <Summary xml:lang="en">Development files for 32-bit hwloc</Summary>
+        <Description xml:lang="en">The Hardware Locality (hwloc) software project aims at easing the process of discovering hardware resources in parallel architectures. It offers command-line tools and a C API for consulting these resources, their locality, attributes, and interconnection. hwloc primarily aims at helping high-performance computing (HPC) applications, but is also applicable to any project seeking to exploit code and/or data locality on modern computing platforms.
+</Description>
+        <PartOf>programming.devel</PartOf>
+        <RuntimeDependencies>
+            <Dependency release="11">hwloc-32bit</Dependency>
+            <Dependency release="11">hwloc-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib32/libhwloc.so</Path>
+            <Path fileType="data">/usr/lib32/pkgconfig/hwloc.pc</Path>
+        </Files>
+    </Package>
+    <Package>
         <Name>hwloc-devel</Name>
         <Summary xml:lang="en">Development files for hwloc</Summary>
         <Description xml:lang="en">The Hardware Locality (hwloc) software project aims at easing the process of discovering hardware resources in parallel architectures. It offers command-line tools and a C API for consulting these resources, their locality, attributes, and interconnection. hwloc primarily aims at helping high-performance computing (HPC) applications, but is also applicable to any project seeking to exploit code and/or data locality on modern computing platforms.
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="8">hwloc</Dependency>
+            <Dependency release="11">hwloc</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/hwloc.h</Path>
@@ -152,6 +181,7 @@
             <Path fileType="man">/usr/share/man/man3/HWLOC_MEMBIND_PROCESS.3</Path>
             <Path fileType="man">/usr/share/man/man3/HWLOC_MEMBIND_STRICT.3</Path>
             <Path fileType="man">/usr/share/man/man3/HWLOC_MEMBIND_THREAD.3</Path>
+            <Path fileType="man">/usr/share/man/man3/HWLOC_MEMBIND_WEIGHTED_INTERLEAVE.3</Path>
             <Path fileType="man">/usr/share/man/man3/HWLOC_OBJ_BRIDGE.3</Path>
             <Path fileType="man">/usr/share/man/man3/HWLOC_OBJ_BRIDGE_HOST.3</Path>
             <Path fileType="man">/usr/share/man/man3/HWLOC_OBJ_BRIDGE_PCI.3</Path>
@@ -434,6 +464,7 @@
             <Path fileType="man">/usr/share/man/man3/hwloc_obj_is_in_subtree.3</Path>
             <Path fileType="man">/usr/share/man/man3/hwloc_obj_osdev_type_e.3</Path>
             <Path fileType="man">/usr/share/man/man3/hwloc_obj_osdev_type_t.3</Path>
+            <Path fileType="man">/usr/share/man/man3/hwloc_obj_set_subtype.3</Path>
             <Path fileType="man">/usr/share/man/man3/hwloc_obj_t.3</Path>
             <Path fileType="man">/usr/share/man/man3/hwloc_obj_type_is_cache.3</Path>
             <Path fileType="man">/usr/share/man/man3/hwloc_obj_type_is_dcache.3</Path>
@@ -486,6 +517,7 @@
             <Path fileType="man">/usr/share/man/man3/hwloc_topology_export_xml.3</Path>
             <Path fileType="man">/usr/share/man/man3/hwloc_topology_export_xmlbuffer.3</Path>
             <Path fileType="man">/usr/share/man/man3/hwloc_topology_flags_e.3</Path>
+            <Path fileType="man">/usr/share/man/man3/hwloc_topology_free_group_object.3</Path>
             <Path fileType="man">/usr/share/man/man3/hwloc_topology_get_allowed_cpuset.3</Path>
             <Path fileType="man">/usr/share/man/man3/hwloc_topology_get_allowed_nodeset.3</Path>
             <Path fileType="man">/usr/share/man/man3/hwloc_topology_get_complete_cpuset.3</Path>
@@ -578,12 +610,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="8">
-            <Date>2023-09-24</Date>
-            <Version>2.9.3</Version>
+        <Update release="11">
+            <Date>2024-10-28</Date>
+            <Version>2.11.2</Version>
             <Comment>Packaging update</Comment>
-            <Name>Algent Albrahimi</Name>
-            <Email>algent@protonmail.com</Email>
+            <Name>Reilly Brogan</Name>
+            <Email>solus@reillybrogan.com</Email>
         </Update>
     </History>
 </PISI>

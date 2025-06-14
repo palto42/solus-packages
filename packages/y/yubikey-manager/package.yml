@@ -1,8 +1,8 @@
 name       : yubikey-manager
-version    : 5.3.0
-release    : 41
+version    : 5.7.1
+release    : 45
 source     :
-    - https://github.com/Yubico/yubikey-manager/releases/download/5.3.0/yubikey_manager-5.3.0.tar.gz : 5492c36a10ce6a5995b8ea1d32cf5bd60db7587201b2aa3e63e0c1da2334b8b6
+    - https://github.com/Yubico/yubikey-manager/releases/download/5.7.1/yubikey_manager-5.7.1.tar.gz : 0200efca86eb310e19b841a2e365812c83c19f8e65f8c6065e14bbb7b4a58ef3
 homepage   : https://developers.yubico.com/yubikey-manager/
 license    : BSD-2-Clause
 component  : security

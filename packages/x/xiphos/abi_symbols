@@ -39,14 +39,14 @@ xiphos:_Z9ModuleMapB5cxx11
 xiphos:_ZN11GTKChapDisp13getVerseAfterERN5sword8SWModuleE
 xiphos:_ZN11GTKChapDisp14getVerseBeforeERN5sword8SWModuleE
 xiphos:_ZN11GTKChapDisp7displayERN5sword8SWModuleE
-xiphos:_ZN12GTKEntryDisp16displayByChapterERN5sword8SWModuleE
+xiphos:_ZN12GTKEntryDisp16displayByChapterERN5sword8SWModuleEi
 xiphos:_ZN12GTKEntryDisp7displayERN5sword8SWModuleE
 xiphos:_ZN13ModuleManagerC1Ev
 xiphos:_ZN13ModuleManagerC2Ev
 xiphos:_ZN13ModuleManagerD1Ev
 xiphos:_ZN13ModuleManagerD2Ev
 xiphos:_ZN14DialogChapDisp7displayERN5sword8SWModuleE
-xiphos:_ZN15DialogEntryDisp16displayByChapterERN5sword8SWModuleE
+xiphos:_ZN15DialogEntryDisp16displayByChapterERN5sword8SWModuleEi
 xiphos:_ZN15DialogEntryDisp7displayERN5sword8SWModuleE
 xiphos:_ZN16GSStatusReporter12statusUpdateEdd
 xiphos:_ZN16GSStatusReporter9preStatusEllPKc
@@ -196,14 +196,11 @@ xiphos:bookmark_dialog
 xiphos:bookmark_tree
 xiphos:bookmarks_changed
 xiphos:button_back_clicked
-xiphos:button_cancel_clicked_cb
 xiphos:button_clean
 xiphos:button_export
 xiphos:button_forward_clicked
-xiphos:button_ok_clicked_cb
 xiphos:button_one
 xiphos:button_save
-xiphos:button_test_clicked_cb
 xiphos:change_tabs_no_redisplay
 xiphos:checkbutton_include_text_toggled_cb
 xiphos:clear_and_hide_progress_bar
@@ -243,15 +240,12 @@ xiphos:do_display
 xiphos:do_display_dict
 xiphos:edata
 xiphos:editor_create_new
-xiphos:editor_link_dialog
 xiphos:editor_load_book
 xiphos:editor_load_note
 xiphos:editor_maybe_save_all
-xiphos:editor_new
 xiphos:editor_save_book
 xiphos:editor_sync_with_main
 xiphos:entryIntLookup
-xiphos:entry_verse_changed_cb
 xiphos:entrycbIntBook
 xiphos:final_pane_sizes
 xiphos:footnote
@@ -331,6 +325,7 @@ xiphos:gui_navbar_versekey_editor_new
 xiphos:gui_navbar_versekey_new
 xiphos:gui_navbar_versekey_parallel_new
 xiphos:gui_new_dialog
+xiphos:gui_notebook_main_page_reordered
 xiphos:gui_notebook_main_setup
 xiphos:gui_notebook_main_shutdown
 xiphos:gui_notebook_main_switch_page
@@ -416,6 +411,7 @@ xiphos:list_of_verses
 xiphos:load_settings_structure
 xiphos:locale_set
 xiphos:main
+xiphos:main_abbrev_to_name
 xiphos:main_add_abbreviation
 xiphos:main_add_mod_to_list
 xiphos:main_add_mod_tree_columns
@@ -430,6 +426,7 @@ xiphos:main_check_for_global_option
 xiphos:main_check_for_option
 xiphos:main_check_parallel_modules
 xiphos:main_check_unlock
+xiphos:main_clear_abbreviations
 xiphos:main_clear_tab_history
 xiphos:main_close_search_dialog
 xiphos:main_comboboxentry2_changed
@@ -474,7 +471,6 @@ xiphos:main_format_number
 xiphos:main_free_on_destroy
 xiphos:main_getShortText
 xiphos:main_getText
-xiphos:main_get_abbreviation
 xiphos:main_get_active_pane_key
 xiphos:main_get_active_pane_module
 xiphos:main_get_book_raw_text
@@ -487,7 +483,6 @@ xiphos:main_get_mod_type
 xiphos:main_get_module_description
 xiphos:main_get_module_language
 xiphos:main_get_module_language_list
-xiphos:main_get_name
 xiphos:main_get_one_option
 xiphos:main_get_osisref_from_key
 xiphos:main_get_path_to_mods
@@ -519,6 +514,7 @@ xiphos:main_mod_treeview_button_one
 xiphos:main_module_mgr_delete_index_mod
 xiphos:main_module_mgr_index_mod
 xiphos:main_module_name_from_description
+xiphos:main_name_to_abbrev
 xiphos:main_navbar_book_dialog_drop_down_new
 xiphos:main_navbar_book_dialog_first_child
 xiphos:main_navbar_book_dialog_next
@@ -678,6 +674,7 @@ xiphos:on_colorbutton4_color_set
 xiphos:on_colorbutton5_color_set
 xiphos:on_colorbutton6_color_set
 xiphos:on_colorbutton7_color_set
+xiphos:on_columncountvalue_changed
 xiphos:on_combobox12_changed
 xiphos:on_combobox13_changed
 xiphos:on_combobox14_changed
@@ -697,6 +694,7 @@ xiphos:on_delete_item_activate
 xiphos:on_dialog_activate
 xiphos:on_dialog_enter
 xiphos:on_dialog_export_passage_response
+xiphos:on_dialog_prefs_close
 xiphos:on_dialog_prefs_response
 xiphos:on_dialog_response
 xiphos:on_display_book_heading_activate
@@ -726,7 +724,9 @@ xiphos:on_index_clicked
 xiphos:on_insert_bookmark_activate
 xiphos:on_install_clicked
 xiphos:on_invert
+xiphos:on_italic_headings_activate
 xiphos:on_journal_activate
+xiphos:on_justifybutton_toggled
 xiphos:on_lemmas_activate
 xiphos:on_linked_tabs_activate
 xiphos:on_live_chat_activate

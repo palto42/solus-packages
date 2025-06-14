@@ -45,7 +45,9 @@
             <Path fileType="library">/usr/lib64/gstreamer-1.0/libgstaudiorate.so</Path>
             <Path fileType="library">/usr/lib64/gstreamer-1.0/libgstaudioresample.so</Path>
             <Path fileType="library">/usr/lib64/gstreamer-1.0/libgstaudiotestsrc.so</Path>
+            <Path fileType="library">/usr/lib64/gstreamer-1.0/libgstbasedebug.so</Path>
             <Path fileType="library">/usr/lib64/gstreamer-1.0/libgstcompositor.so</Path>
+            <Path fileType="library">/usr/lib64/gstreamer-1.0/libgstdsd.so</Path>
             <Path fileType="library">/usr/lib64/gstreamer-1.0/libgstencoding.so</Path>
             <Path fileType="library">/usr/lib64/gstreamer-1.0/libgstgio.so</Path>
             <Path fileType="library">/usr/lib64/gstreamer-1.0/libgstogg.so</Path>
@@ -68,42 +70,29 @@
             <Path fileType="library">/usr/lib64/gstreamer-1.0/libgstximagesink.so</Path>
             <Path fileType="library">/usr/lib64/gstreamer-1.0/libgstxvimagesink.so</Path>
             <Path fileType="library">/usr/lib64/libgstallocators-1.0.so.0</Path>
-            <Path fileType="library">/usr/lib64/libgstallocators-1.0.so.0.2210.0</Path>
+            <Path fileType="library">/usr/lib64/libgstallocators-1.0.so.0.2410.0</Path>
             <Path fileType="library">/usr/lib64/libgstapp-1.0.so.0</Path>
-            <Path fileType="library">/usr/lib64/libgstapp-1.0.so.0.2210.0</Path>
+            <Path fileType="library">/usr/lib64/libgstapp-1.0.so.0.2410.0</Path>
             <Path fileType="library">/usr/lib64/libgstaudio-1.0.so.0</Path>
-            <Path fileType="library">/usr/lib64/libgstaudio-1.0.so.0.2210.0</Path>
+            <Path fileType="library">/usr/lib64/libgstaudio-1.0.so.0.2410.0</Path>
             <Path fileType="library">/usr/lib64/libgstfft-1.0.so.0</Path>
-            <Path fileType="library">/usr/lib64/libgstfft-1.0.so.0.2210.0</Path>
+            <Path fileType="library">/usr/lib64/libgstfft-1.0.so.0.2410.0</Path>
             <Path fileType="library">/usr/lib64/libgstgl-1.0.so.0</Path>
-            <Path fileType="library">/usr/lib64/libgstgl-1.0.so.0.2210.0</Path>
+            <Path fileType="library">/usr/lib64/libgstgl-1.0.so.0.2410.0</Path>
             <Path fileType="library">/usr/lib64/libgstpbutils-1.0.so.0</Path>
-            <Path fileType="library">/usr/lib64/libgstpbutils-1.0.so.0.2210.0</Path>
+            <Path fileType="library">/usr/lib64/libgstpbutils-1.0.so.0.2410.0</Path>
             <Path fileType="library">/usr/lib64/libgstriff-1.0.so.0</Path>
-            <Path fileType="library">/usr/lib64/libgstriff-1.0.so.0.2210.0</Path>
+            <Path fileType="library">/usr/lib64/libgstriff-1.0.so.0.2410.0</Path>
             <Path fileType="library">/usr/lib64/libgstrtp-1.0.so.0</Path>
-            <Path fileType="library">/usr/lib64/libgstrtp-1.0.so.0.2210.0</Path>
+            <Path fileType="library">/usr/lib64/libgstrtp-1.0.so.0.2410.0</Path>
             <Path fileType="library">/usr/lib64/libgstrtsp-1.0.so.0</Path>
-            <Path fileType="library">/usr/lib64/libgstrtsp-1.0.so.0.2210.0</Path>
+            <Path fileType="library">/usr/lib64/libgstrtsp-1.0.so.0.2410.0</Path>
             <Path fileType="library">/usr/lib64/libgstsdp-1.0.so.0</Path>
-            <Path fileType="library">/usr/lib64/libgstsdp-1.0.so.0.2210.0</Path>
+            <Path fileType="library">/usr/lib64/libgstsdp-1.0.so.0.2410.0</Path>
             <Path fileType="library">/usr/lib64/libgsttag-1.0.so.0</Path>
-            <Path fileType="library">/usr/lib64/libgsttag-1.0.so.0.2210.0</Path>
+            <Path fileType="library">/usr/lib64/libgsttag-1.0.so.0.2410.0</Path>
             <Path fileType="library">/usr/lib64/libgstvideo-1.0.so.0</Path>
-            <Path fileType="library">/usr/lib64/libgstvideo-1.0.so.0.2210.0</Path>
-            <Path fileType="data">/usr/share/gir-1.0/GstAllocators-1.0.gir</Path>
-            <Path fileType="data">/usr/share/gir-1.0/GstApp-1.0.gir</Path>
-            <Path fileType="data">/usr/share/gir-1.0/GstAudio-1.0.gir</Path>
-            <Path fileType="data">/usr/share/gir-1.0/GstGL-1.0.gir</Path>
-            <Path fileType="data">/usr/share/gir-1.0/GstGLEGL-1.0.gir</Path>
-            <Path fileType="data">/usr/share/gir-1.0/GstGLWayland-1.0.gir</Path>
-            <Path fileType="data">/usr/share/gir-1.0/GstGLX11-1.0.gir</Path>
-            <Path fileType="data">/usr/share/gir-1.0/GstPbutils-1.0.gir</Path>
-            <Path fileType="data">/usr/share/gir-1.0/GstRtp-1.0.gir</Path>
-            <Path fileType="data">/usr/share/gir-1.0/GstRtsp-1.0.gir</Path>
-            <Path fileType="data">/usr/share/gir-1.0/GstSdp-1.0.gir</Path>
-            <Path fileType="data">/usr/share/gir-1.0/GstTag-1.0.gir</Path>
-            <Path fileType="data">/usr/share/gir-1.0/GstVideo-1.0.gir</Path>
+            <Path fileType="library">/usr/lib64/libgstvideo-1.0.so.0.2410.0</Path>
             <Path fileType="data">/usr/share/gst-plugins-base/1.0/license-translations.dict</Path>
             <Path fileType="localedata">/usr/share/locale/af/LC_MESSAGES/gst-plugins-base-1.0.mo</Path>
             <Path fileType="localedata">/usr/share/locale/az/LC_MESSAGES/gst-plugins-base-1.0.mo</Path>
@@ -157,7 +146,7 @@
 </Description>
         <PartOf>emul32</PartOf>
         <RuntimeDependencies>
-            <Dependency release="54">gstreamer-1.0-plugins-base</Dependency>
+            <Dependency release="66">gstreamer-1.0-plugins-base</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib32/gstreamer-1.0/include/gst/gl/gstglconfig.h</Path>
@@ -169,7 +158,9 @@
             <Path fileType="library">/usr/lib32/gstreamer-1.0/libgstaudiorate.so</Path>
             <Path fileType="library">/usr/lib32/gstreamer-1.0/libgstaudioresample.so</Path>
             <Path fileType="library">/usr/lib32/gstreamer-1.0/libgstaudiotestsrc.so</Path>
+            <Path fileType="library">/usr/lib32/gstreamer-1.0/libgstbasedebug.so</Path>
             <Path fileType="library">/usr/lib32/gstreamer-1.0/libgstcompositor.so</Path>
+            <Path fileType="library">/usr/lib32/gstreamer-1.0/libgstdsd.so</Path>
             <Path fileType="library">/usr/lib32/gstreamer-1.0/libgstencoding.so</Path>
             <Path fileType="library">/usr/lib32/gstreamer-1.0/libgstgio.so</Path>
             <Path fileType="library">/usr/lib32/gstreamer-1.0/libgstogg.so</Path>
@@ -192,29 +183,29 @@
             <Path fileType="library">/usr/lib32/gstreamer-1.0/libgstximagesink.so</Path>
             <Path fileType="library">/usr/lib32/gstreamer-1.0/libgstxvimagesink.so</Path>
             <Path fileType="library">/usr/lib32/libgstallocators-1.0.so.0</Path>
-            <Path fileType="library">/usr/lib32/libgstallocators-1.0.so.0.2210.0</Path>
+            <Path fileType="library">/usr/lib32/libgstallocators-1.0.so.0.2410.0</Path>
             <Path fileType="library">/usr/lib32/libgstapp-1.0.so.0</Path>
-            <Path fileType="library">/usr/lib32/libgstapp-1.0.so.0.2210.0</Path>
+            <Path fileType="library">/usr/lib32/libgstapp-1.0.so.0.2410.0</Path>
             <Path fileType="library">/usr/lib32/libgstaudio-1.0.so.0</Path>
-            <Path fileType="library">/usr/lib32/libgstaudio-1.0.so.0.2210.0</Path>
+            <Path fileType="library">/usr/lib32/libgstaudio-1.0.so.0.2410.0</Path>
             <Path fileType="library">/usr/lib32/libgstfft-1.0.so.0</Path>
-            <Path fileType="library">/usr/lib32/libgstfft-1.0.so.0.2210.0</Path>
+            <Path fileType="library">/usr/lib32/libgstfft-1.0.so.0.2410.0</Path>
             <Path fileType="library">/usr/lib32/libgstgl-1.0.so.0</Path>
-            <Path fileType="library">/usr/lib32/libgstgl-1.0.so.0.2210.0</Path>
+            <Path fileType="library">/usr/lib32/libgstgl-1.0.so.0.2410.0</Path>
             <Path fileType="library">/usr/lib32/libgstpbutils-1.0.so.0</Path>
-            <Path fileType="library">/usr/lib32/libgstpbutils-1.0.so.0.2210.0</Path>
+            <Path fileType="library">/usr/lib32/libgstpbutils-1.0.so.0.2410.0</Path>
             <Path fileType="library">/usr/lib32/libgstriff-1.0.so.0</Path>
-            <Path fileType="library">/usr/lib32/libgstriff-1.0.so.0.2210.0</Path>
+            <Path fileType="library">/usr/lib32/libgstriff-1.0.so.0.2410.0</Path>
             <Path fileType="library">/usr/lib32/libgstrtp-1.0.so.0</Path>
-            <Path fileType="library">/usr/lib32/libgstrtp-1.0.so.0.2210.0</Path>
+            <Path fileType="library">/usr/lib32/libgstrtp-1.0.so.0.2410.0</Path>
             <Path fileType="library">/usr/lib32/libgstrtsp-1.0.so.0</Path>
-            <Path fileType="library">/usr/lib32/libgstrtsp-1.0.so.0.2210.0</Path>
+            <Path fileType="library">/usr/lib32/libgstrtsp-1.0.so.0.2410.0</Path>
             <Path fileType="library">/usr/lib32/libgstsdp-1.0.so.0</Path>
-            <Path fileType="library">/usr/lib32/libgstsdp-1.0.so.0.2210.0</Path>
+            <Path fileType="library">/usr/lib32/libgstsdp-1.0.so.0.2410.0</Path>
             <Path fileType="library">/usr/lib32/libgsttag-1.0.so.0</Path>
-            <Path fileType="library">/usr/lib32/libgsttag-1.0.so.0.2210.0</Path>
+            <Path fileType="library">/usr/lib32/libgsttag-1.0.so.0.2410.0</Path>
             <Path fileType="library">/usr/lib32/libgstvideo-1.0.so.0</Path>
-            <Path fileType="library">/usr/lib32/libgstvideo-1.0.so.0.2210.0</Path>
+            <Path fileType="library">/usr/lib32/libgstvideo-1.0.so.0.2410.0</Path>
         </Files>
     </Package>
     <Package>
@@ -224,8 +215,8 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="54">gstreamer-1.0-plugins-base-32bit</Dependency>
-            <Dependency release="54">gstreamer-1.0-plugins-base-devel</Dependency>
+            <Dependency release="66">gstreamer-1.0-plugins-base-32bit</Dependency>
+            <Dependency release="66">gstreamer-1.0-plugins-base-devel</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib32/libgstallocators-1.0.so</Path>
@@ -266,14 +257,16 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="54">gstreamer-1.0-plugins-base</Dependency>
+            <Dependency release="66">gstreamer-1.0-plugins-base</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/gstreamer-1.0/gst/allocators/allocators-prelude.h</Path>
             <Path fileType="header">/usr/include/gstreamer-1.0/gst/allocators/allocators.h</Path>
             <Path fileType="header">/usr/include/gstreamer-1.0/gst/allocators/gstdmabuf.h</Path>
+            <Path fileType="header">/usr/include/gstreamer-1.0/gst/allocators/gstdrmdumb.h</Path>
             <Path fileType="header">/usr/include/gstreamer-1.0/gst/allocators/gstfdmemory.h</Path>
             <Path fileType="header">/usr/include/gstreamer-1.0/gst/allocators/gstphysmemory.h</Path>
+            <Path fileType="header">/usr/include/gstreamer-1.0/gst/allocators/gstshmallocator.h</Path>
             <Path fileType="header">/usr/include/gstreamer-1.0/gst/app/app-enumtypes.h</Path>
             <Path fileType="header">/usr/include/gstreamer-1.0/gst/app/app-prelude.h</Path>
             <Path fileType="header">/usr/include/gstreamer-1.0/gst/app/app.h</Path>
@@ -304,6 +297,8 @@
             <Path fileType="header">/usr/include/gstreamer-1.0/gst/audio/gstaudiosink.h</Path>
             <Path fileType="header">/usr/include/gstreamer-1.0/gst/audio/gstaudiosrc.h</Path>
             <Path fileType="header">/usr/include/gstreamer-1.0/gst/audio/gstaudiostreamalign.h</Path>
+            <Path fileType="header">/usr/include/gstreamer-1.0/gst/audio/gstdsd.h</Path>
+            <Path fileType="header">/usr/include/gstreamer-1.0/gst/audio/gstdsdformat.h</Path>
             <Path fileType="header">/usr/include/gstreamer-1.0/gst/audio/streamvolume.h</Path>
             <Path fileType="header">/usr/include/gstreamer-1.0/gst/fft/fft-prelude.h</Path>
             <Path fileType="header">/usr/include/gstreamer-1.0/gst/fft/fft.h</Path>
@@ -343,6 +338,7 @@
             <Path fileType="header">/usr/include/gstreamer-1.0/gst/gl/gstglapi.h</Path>
             <Path fileType="header">/usr/include/gstreamer-1.0/gst/gl/gstglbasefilter.h</Path>
             <Path fileType="header">/usr/include/gstreamer-1.0/gst/gl/gstglbasememory.h</Path>
+            <Path fileType="header">/usr/include/gstreamer-1.0/gst/gl/gstglbasemixer.h</Path>
             <Path fileType="header">/usr/include/gstreamer-1.0/gst/gl/gstglbasesrc.h</Path>
             <Path fileType="header">/usr/include/gstreamer-1.0/gst/gl/gstglbuffer.h</Path>
             <Path fileType="header">/usr/include/gstreamer-1.0/gst/gl/gstglbufferpool.h</Path>
@@ -358,6 +354,7 @@
             <Path fileType="header">/usr/include/gstreamer-1.0/gst/gl/gstglfuncs.h</Path>
             <Path fileType="header">/usr/include/gstreamer-1.0/gst/gl/gstglmemory.h</Path>
             <Path fileType="header">/usr/include/gstreamer-1.0/gst/gl/gstglmemorypbo.h</Path>
+            <Path fileType="header">/usr/include/gstreamer-1.0/gst/gl/gstglmixer.h</Path>
             <Path fileType="header">/usr/include/gstreamer-1.0/gst/gl/gstgloverlaycompositor.h</Path>
             <Path fileType="header">/usr/include/gstreamer-1.0/gst/gl/gstglquery.h</Path>
             <Path fileType="header">/usr/include/gstreamer-1.0/gst/gl/gstglrenderbuffer.h</Path>
@@ -450,6 +447,7 @@
             <Path fileType="header">/usr/include/gstreamer-1.0/gst/video/video-format.h</Path>
             <Path fileType="header">/usr/include/gstreamer-1.0/gst/video/video-frame.h</Path>
             <Path fileType="header">/usr/include/gstreamer-1.0/gst/video/video-hdr.h</Path>
+            <Path fileType="header">/usr/include/gstreamer-1.0/gst/video/video-info-dma.h</Path>
             <Path fileType="header">/usr/include/gstreamer-1.0/gst/video/video-info.h</Path>
             <Path fileType="header">/usr/include/gstreamer-1.0/gst/video/video-multiview.h</Path>
             <Path fileType="header">/usr/include/gstreamer-1.0/gst/video/video-overlay-composition.h</Path>
@@ -491,12 +489,25 @@
             <Path fileType="data">/usr/lib64/pkgconfig/gstreamer-sdp-1.0.pc</Path>
             <Path fileType="data">/usr/lib64/pkgconfig/gstreamer-tag-1.0.pc</Path>
             <Path fileType="data">/usr/lib64/pkgconfig/gstreamer-video-1.0.pc</Path>
+            <Path fileType="data">/usr/share/gir-1.0/GstAllocators-1.0.gir</Path>
+            <Path fileType="data">/usr/share/gir-1.0/GstApp-1.0.gir</Path>
+            <Path fileType="data">/usr/share/gir-1.0/GstAudio-1.0.gir</Path>
+            <Path fileType="data">/usr/share/gir-1.0/GstGL-1.0.gir</Path>
+            <Path fileType="data">/usr/share/gir-1.0/GstGLEGL-1.0.gir</Path>
+            <Path fileType="data">/usr/share/gir-1.0/GstGLWayland-1.0.gir</Path>
+            <Path fileType="data">/usr/share/gir-1.0/GstGLX11-1.0.gir</Path>
+            <Path fileType="data">/usr/share/gir-1.0/GstPbutils-1.0.gir</Path>
+            <Path fileType="data">/usr/share/gir-1.0/GstRtp-1.0.gir</Path>
+            <Path fileType="data">/usr/share/gir-1.0/GstRtsp-1.0.gir</Path>
+            <Path fileType="data">/usr/share/gir-1.0/GstSdp-1.0.gir</Path>
+            <Path fileType="data">/usr/share/gir-1.0/GstTag-1.0.gir</Path>
+            <Path fileType="data">/usr/share/gir-1.0/GstVideo-1.0.gir</Path>
         </Files>
     </Package>
     <History>
-        <Update release="54">
-            <Date>2024-02-15</Date>
-            <Version>1.22.10</Version>
+        <Update release="66">
+            <Date>2024-12-04</Date>
+            <Version>1.24.10</Version>
             <Comment>Packaging update</Comment>
             <Name>Reilly Brogan</Name>
             <Email>solus@reillybrogan.com</Email>

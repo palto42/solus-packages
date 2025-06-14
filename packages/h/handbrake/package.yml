@@ -1,8 +1,8 @@
 name       : handbrake
-version    : 1.7.2
-release    : 39
+version    : 1.9.2
+release    : 45
 source     :
-    - https://github.com/HandBrake/HandBrake/releases/download/1.7.2/HandBrake-1.7.2-source.tar.bz2 : 6a0fa23420483a2d74e58f0ad9944931d8f2e65bee63cf17333cbd9cb560ba93
+    - https://github.com/HandBrake/HandBrake/releases/download/1.9.2/HandBrake-1.9.2-source.tar.bz2 : f56696b9863a6c926c0eabdcb980cece9aa222c650278d455ac6873d3220ce49
 license    :
     - GPL-2.0-or-later
     - LGPL-2.1-or-later
@@ -15,8 +15,7 @@ description: |
 builddeps  :
     - pkgconfig(bzip2)
     - pkgconfig(ffnvcodec)
-    - pkgconfig(gstreamer-plugins-base-1.0)
-    - pkgconfig(gtk+-3.0)
+    - pkgconfig(gtk4)
     - pkgconfig(jansson)
     - pkgconfig(libass)
     - pkgconfig(libdrm)
@@ -29,8 +28,9 @@ builddeps  :
     - pkgconfig(vpl)
     - pkgconfig(vpx)
     - pkgconfig(x264)
+    - pkgconfig(x265)
     - cargo-c
-    - git
+    # - git
     - lame-devel
     - llvm-clang
 rundeps    :
@@ -43,6 +43,7 @@ setup      : |
         --enable-nvenc \
         --enable-qsv \
         --enable-vce \
+        --enable-x265 \
         --disable-numa \
         --harden \
         --prefix=/usr

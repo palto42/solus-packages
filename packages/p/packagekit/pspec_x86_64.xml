@@ -3,22 +3,20 @@
         <Name>packagekit</Name>
         <Homepage>https://www.freedesktop.org/software/PackageKit/</Homepage>
         <Packager>
-            <Name>Reilly Brogan</Name>
-            <Email>reilly@reillybrogan.com</Email>
+            <Name>Joey Riches</Name>
+            <Email>josephriches@gmail.com</Email>
         </Packager>
         <License>GPL-2.0-or-later</License>
         <PartOf>programming.library</PartOf>
-        <Summary xml:lang="en">A D-BUS abstraction layer that allows the user to manage packages in a secure way using a cross-distro, cross-architecture API. (NOT SUPPORTED)</Summary>
-        <Description xml:lang="en">This package is experimental and not supported! Help will not currently be provided.
-PackageKit is a DBUS abstraction layer that allows the session user to manage packages in a secure way using a cross-distro, cross-architecture API.
+        <Summary xml:lang="en">A D-BUS abstraction layer that allows the user to manage packages in a secure way using a cross-distro, cross-architecture API.</Summary>
+        <Description xml:lang="en">PackageKit is a DBUS abstraction layer that allows the session user to manage packages in a secure way using a cross-distro, cross-architecture API.
 </Description>
         <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>packagekit</Name>
-        <Summary xml:lang="en">A D-BUS abstraction layer that allows the user to manage packages in a secure way using a cross-distro, cross-architecture API. (NOT SUPPORTED)</Summary>
-        <Description xml:lang="en">This package is experimental and not supported! Help will not currently be provided.
-PackageKit is a DBUS abstraction layer that allows the session user to manage packages in a secure way using a cross-distro, cross-architecture API.
+        <Summary xml:lang="en">A D-BUS abstraction layer that allows the user to manage packages in a secure way using a cross-distro, cross-architecture API.</Summary>
+        <Description xml:lang="en">PackageKit is a DBUS abstraction layer that allows the session user to manage packages in a secure way using a cross-distro, cross-architecture API.
 </Description>
         <PartOf>programming.library</PartOf>
         <Files>
@@ -30,13 +28,13 @@ PackageKit is a DBUS abstraction layer that allows the session user to manage pa
             <Path fileType="executable">/usr/bin/pkcon</Path>
             <Path fileType="executable">/usr/bin/pkmon</Path>
             <Path fileType="library">/usr/lib/python2.7/site-packages/packagekit</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/packagekit/__init__.py</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/packagekit/backend.py</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/packagekit/enums.py</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/packagekit/filter.py</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/packagekit/misc.py</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/packagekit/package.py</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/packagekit/progress.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/packagekit/__init__.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/packagekit/backend.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/packagekit/enums.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/packagekit/filter.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/packagekit/misc.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/packagekit/package.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/packagekit/progress.py</Path>
             <Path fileType="library">/usr/lib/systemd/system/packagekit-offline-update.service</Path>
             <Path fileType="library">/usr/lib/systemd/system/packagekit.service</Path>
             <Path fileType="library">/usr/lib/systemd/system/system-update.target.wants/packagekit-offline-update.service</Path>
@@ -64,7 +62,6 @@ PackageKit is a DBUS abstraction layer that allows the session user to manage pa
             <Path fileType="data">/usr/share/dbus-1/interfaces/org.freedesktop.PackageKit.xml</Path>
             <Path fileType="data">/usr/share/dbus-1/system-services/org.freedesktop.PackageKit.service</Path>
             <Path fileType="data">/usr/share/dbus-1/system.d/org.freedesktop.PackageKit.conf</Path>
-            <Path fileType="data">/usr/share/gir-1.0/PackageKitGlib-1.0.gir</Path>
             <Path fileType="localedata">/usr/share/locale/ar/LC_MESSAGES/PackageKit.mo</Path>
             <Path fileType="localedata">/usr/share/locale/as/LC_MESSAGES/PackageKit.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ast/LC_MESSAGES/PackageKit.mo</Path>
@@ -140,18 +137,16 @@ PackageKit is a DBUS abstraction layer that allows the session user to manage pa
             <Path fileType="data">/usr/share/metainfo/org.freedesktop.packagekit.metainfo.xml</Path>
             <Path fileType="data">/usr/share/polkit-1/actions/org.freedesktop.packagekit.policy</Path>
             <Path fileType="data">/usr/share/polkit-1/rules.d/org.freedesktop.packagekit.rules</Path>
-            <Path fileType="data">/var/lib/PackageKit/transactions.db</Path>
         </Files>
     </Package>
     <Package>
         <Name>packagekit-devel</Name>
         <Summary xml:lang="en">Development files for packagekit</Summary>
-        <Description xml:lang="en">This package is experimental and not supported! Help will not currently be provided.
-PackageKit is a DBUS abstraction layer that allows the session user to manage packages in a secure way using a cross-distro, cross-architecture API.
+        <Description xml:lang="en">PackageKit is a DBUS abstraction layer that allows the session user to manage packages in a secure way using a cross-distro, cross-architecture API.
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="22">packagekit</Dependency>
+            <Dependency release="36">packagekit</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/PackageKit/packagekit-glib2/packagekit.h</Path>
@@ -193,17 +188,18 @@ PackageKit is a DBUS abstraction layer that allows the session user to manage pa
             <Path fileType="header">/usr/include/PackageKit/packagekit-glib2/pk-version.h</Path>
             <Path fileType="library">/usr/lib64/libpackagekit-glib2.so</Path>
             <Path fileType="data">/usr/lib64/pkgconfig/packagekit-glib2.pc</Path>
+            <Path fileType="data">/usr/share/gir-1.0/PackageKitGlib-1.0.gir</Path>
             <Path fileType="data">/usr/share/vala/vapi/packagekit-glib2.deps</Path>
             <Path fileType="data">/usr/share/vala/vapi/packagekit-glib2.vapi</Path>
         </Files>
     </Package>
     <History>
-        <Update release="22">
-            <Date>2024-02-25</Date>
-            <Version>1.2.8</Version>
+        <Update release="36">
+            <Date>2025-06-12</Date>
+            <Version>1.3.1</Version>
             <Comment>Packaging update</Comment>
-            <Name>Reilly Brogan</Name>
-            <Email>reilly@reillybrogan.com</Email>
+            <Name>Joey Riches</Name>
+            <Email>josephriches@gmail.com</Email>
         </Update>
     </History>
 </PISI>

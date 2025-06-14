@@ -1,8 +1,8 @@
 name       : wine
-version    : '9.3'
-release    : 170
+version    : '10.1'
+release    : 199
 source     :
-    - https://dl.winehq.org/wine/source/9.x/wine-9.3.tar.xz : 148b2e34147d1fa148415637c723c99f4376e92c84e90cc1d0e00ad4ed3b1793
+    - https://dl.winehq.org/wine/source/10.x/wine-10.1.tar.xz : 63471e37b1a515795ff3368d26a039261660e1377cb427d1b61b3a7b76091663
 license    : LGPL-2.1-or-later
 component  : virt
 homepage   : https://www.winehq.org/
@@ -12,16 +12,17 @@ description: |
 builddeps  :
     - pkgconfig32(OpenCL)
     - pkgconfig32(alsa)
+    - pkgconfig32(cups)
     - pkgconfig32(d3d)
     - pkgconfig32(dbus-1)
     - pkgconfig32(glu)
+    - pkgconfig32(gnutls)
     - pkgconfig32(gstreamer-plugins-base-1.0)
     - pkgconfig32(gtk+-3.0)
     - pkgconfig32(ice)
     - pkgconfig32(krb5)
     - pkgconfig32(libgphoto2)
     - pkgconfig32(libpcap)
-    - pkgconfig32(libpcsclite)
     - pkgconfig32(libpulse)
     - pkgconfig32(libtiff-4)
     - pkgconfig32(libturbojpeg)
@@ -37,7 +38,10 @@ builddeps  :
     - pkgconfig32(xinerama)
     - pkgconfig32(xshmfence)
     - pkgconfig32(xxf86vm)
-    - cups-32bit-devel
+    - pkgconfig(libavcodec)
+    - pkgconfig(libpcsclite)
+    - pkgconfig(netapi)
+    - pkgconfig(sane-backends)
     - glibc-32bit-devel
     - libpth-32bit-devel
     - mingw-w64-32bit
@@ -62,8 +66,10 @@ rundeps    :
         - mesalib-32bit
         - ncurses-32bit
         - sdl2-32bit
+        - unixodbc-32bit
         - vulkan-32bit
     - libpng15
+    - unixodbc
 environment: |
     export PATH=/usr/share/mingw-w64/bin:$PATH
 setup      : |
@@ -72,16 +78,14 @@ setup      : |
     # Get 64-bit done first.
     mkdir wine64 && pushd wine64
     ../configure %CONFOPTS% \
-        --enable-win64 \
-        --with-x
+        --enable-win64
     popd
 
     # 32-bit now
     mkdir wine32 && pushd wine32
     PKG_CONFIG_PATH=/usr/lib32/pkgconfig:/usr/share/pkgconfig:/usr/lib64/pkgconfig ../configure %CONFOPTS% \
         --with-wine64=../wine64 \
-        --libdir=/usr/lib32 \
-        --with-x
+        --libdir=/usr/lib32
     popd
 build      : |
     %make -C wine64
@@ -96,6 +100,7 @@ install    : |
     x86_64-w64-mingw32-strip $installdir/usr/lib64/wine/x86_64-windows/*
 
     install -Dm00644 $pkgfiles/wine64.desktop $installdir/usr/share/applications/wine64.desktop
+    install -Dm00644 $pkgfiles/org.winehq.Wine.metainfo.xml -t $installdir/usr/share/metainfo/
 
     # Note: systemd-binfmt must be (re)started for this to work
     install -Dm00644 $pkgfiles/wine.binfmt $installdir/%libdir%/binfmt.d/wine.conf

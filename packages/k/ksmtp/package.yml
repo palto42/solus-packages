@@ -1,8 +1,8 @@
 name       : ksmtp
-version    : 23.08.5
-release    : 65
+version    : 25.04.2
+release    : 83
 source     :
-    - https://cdn.download.kde.org/stable/release-service/23.08.5/src/ksmtp-23.08.5.tar.xz : dd0698955b1ec0455246df69d2ff1a12643119702a60fab24294c6cac2ac1bc5
+    - https://download.kde.org/stable/release-service/25.04.2/src/ksmtp-25.04.2.tar.xz : e92aff6382949d82aadc7cc7ba80f5fc4aa0feacdb24fa4d1a60e675a4533056
 homepage   : https://kde.org/
 license    : LGPL-2.1-or-later
 component  : programming.library
@@ -11,9 +11,16 @@ description: |
     Job-based library to send email through an SMTP server.
 builddeps  :
     - pkgconfig(libsasl2)
-    - kio-devel
+    - kf6-kio-devel
+rundeps    :
+    - devel :
+        - kf6-kcoreaddons-devel
+clang      : yes
+optimize   :
+    - speed
+    - thin-lto
 setup      : |
-    %cmake_ninja -DBUILD_TESTING=OFF
+    %cmake_kf6
 build      : |
     %ninja_build
 install    : |

@@ -1,8 +1,8 @@
 name       : rizin
-version    : 0.7.0
-release    : 33
+version    : 0.7.2
+release    : 35
 source     :
-    - https://github.com/rizinorg/rizin/releases/download/v0.7.0/rizin-src-v0.7.0.tar.xz : fc6734320d88b9e2537296aa0364a3c3b955fecc8d64dda26f1f3ede7c8d6c31
+    - https://github.com/rizinorg/rizin/releases/download/v0.7.2/rizin-src-v0.7.2.tar.xz : eaf9e43a5da1784347a746724e59438f4a1694dca1e62a50092009f0172e1f6c
 license    : LGPL-3.0-or-later
 component  : programming.tools
 homepage   : https://rizin.re/

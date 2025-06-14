@@ -1,15 +1,14 @@
 name       : gnome-control-center
-version    : '45.3'
-release    : 152
+version    : '48.2'
+release    : 171
 source     :
-    - https://download.gnome.org/sources/gnome-control-center/45/gnome-control-center-45.3.tar.xz : b1e949c4e86c0624ec6a6ed0df09c9fae2b22983c1dca60ed86aec8ef0b24004
-homepage   : https://gitlab.gnome.org/GNOME/gnome-control-center
-license    : GPL-2.0-only
+    - https://download.gnome.org/sources/gnome-control-center/48/gnome-control-center-48.2.tar.xz : d2ec4a5e27e191d92f98ed4dbc4a861d7f1ac4a5a24b6524b492a12007dd460c
+homepage   : https://apps.gnome.org/Settings/
+license    : GPL-2.0-or-later
 component  : desktop.gnome
-summary    : The GNOME Control Center
+summary    : Utility to configure the GNOME desktop
 description: |
-    The GNOME Control Center
-networking : yes
+    Settings is the primary interface for configuring your system.
 builddeps  :
     - pkgconfig(ModemManager)
     - pkgconfig(accountsservice)
@@ -17,11 +16,13 @@ builddeps  :
     - pkgconfig(clutter-gtk-1.0)
     - pkgconfig(colord-gtk4)
     - pkgconfig(com_err)
+    - pkgconfig(cups)
     - pkgconfig(dbus-glib-1)
-    - pkgconfig(gcr-3)
+    - pkgconfig(gcr-4)
     - pkgconfig(gnome-bluetooth-3.0)
     - pkgconfig(gnome-desktop-3.0)
     - pkgconfig(gnome-settings-daemon)
+    - pkgconfig(gnutls)
     - pkgconfig(goa-backend-1.0)
     - pkgconfig(gsettings-desktop-schemas)
     - pkgconfig(gsound)
@@ -41,7 +42,6 @@ builddeps  :
     - pkgconfig(udisks2)
     - pkgconfig(upower-glib)
     - bluez
-    - cups-devel
     - docbook-xml
     - gnome-common
     - kerberos-devel
@@ -56,14 +56,20 @@ rundeps    :
     - glib-networking
     - gnome-color-manager
     - gnome-keyring
+    - gnome-remote-desktop
     - gvfs-goa
     - libgnomekbd
     - power-profiles-daemon
     - sound-theme-freedesktop
+    - tecla
+environment: |
+    # panels/display/cc-display-settings.c: In function ‘on_scale_fractional_toggled’:
+    # panels/display/cc-display-settings.c:913:43: error: passing argument 1 of ‘adw_switch_row_get_active’ from incompatible pointer type
+    export CFLAGS="${CFLAGS} -Wno-incompatible-pointer-types"
 setup      : |
     %apply_patches
-    cp $pkgfiles/start-here-solus.svg panels/info-overview/gnome-logo-text.svg
-    cp $pkgfiles/start-here-solus.svg panels/info-overview/gnome-logo-text-dark.svg
+    cp $pkgfiles/start-here-solus.svg panels/system/about/gnome-logo-text.svg
+    cp $pkgfiles/start-here-solus.svg panels/system/about/gnome-logo-text-dark.svg
     %meson_configure -Ddocumentation=true -Dprivileged_group=sudo
 build      : |
     %ninja_build

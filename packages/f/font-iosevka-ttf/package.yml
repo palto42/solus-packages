@@ -1,8 +1,8 @@
 name       : font-iosevka-ttf
-version    : 28.1.0
-release    : 54
+version    : 33.2.2
+release    : 86
 source     :
-    - https://github.com/be5invis/Iosevka/releases/download/v28.1.0/PkgTTF-Iosevka-28.1.0.zip : 3ba0a89dfb29231a2669b78e2684351fffde30d1d96b3f2e93a39704d0b4b7bc
+    - https://github.com/be5invis/Iosevka/releases/download/v33.2.2/PkgTTF-Iosevka-33.2.2.zip : 678a1b6af82ee1b1d175d67361e32d13e5949768da4917c24459bbc58b4d7670
 homepage   : https://typeof.net/Iosevka
 license    : OFL-1.1
 component  : desktop.font

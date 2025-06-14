@@ -1,0 +1,54 @@
+name       : localsearch
+version    : 3.9.0
+release    : 5
+source     :
+    - https://download.gnome.org/sources/localsearch/3.9/localsearch-3.9.0.tar.xz : d42f408dc3fb28fe54f5a9abbf5f1decf5818db9c2e9ec51c09464bdfd0c14b9
+homepage   : https://tracker.gnome.org/
+license    :
+    - BSD-3-Clause
+    - GPL-2.0-only
+    - LGPL-2.1-only
+component  : desktop.gnome.core
+summary    : Collection of data extractors for Tracker
+description: |
+    Collection of data extractors for Tracker
+builddeps  :
+    - pkgconfig(dbus-glib-1)
+    - pkgconfig(exempi-2.0)
+    - pkgconfig(flac)
+    - pkgconfig(gexiv2)
+    - pkgconfig(gstreamer-tag-1.0)
+    - pkgconfig(gupnp-dlna-gst-2.0)
+    - pkgconfig(icu-io)
+    - pkgconfig(libavcodec)
+    - pkgconfig(libcue)
+    - pkgconfig(libexif)
+    - pkgconfig(libgsf-1)
+    - pkgconfig(libgxps)
+    - pkgconfig(libiptcdata)
+    - pkgconfig(libosinfo-1.0)
+    - pkgconfig(libseccomp)
+    - pkgconfig(libtiff-4)
+    - pkgconfig(libturbojpeg)
+    - pkgconfig(poppler)
+    - pkgconfig(taglib)
+    - pkgconfig(tinysparql-3.0)
+    - pkgconfig(totem-plparser)
+    - pkgconfig(upower-glib)
+    - pkgconfig(vorbisfile)
+    - asciidoc
+    - giflib-devel
+    - vala
+rundeps    :
+    - network-manager
+setup      : |
+    %meson_configure -Dlandlock=disabled
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install
+    mv $installdir/etc/xdg $installdir/usr/share/.
+    rmdir $installdir/etc
+replaces   :
+    - tracker-miners
+    - dbginfo : tracker-miners-dbginfo

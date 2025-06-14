@@ -1,0 +1,121 @@
+From de3b71c87754f6023957659c51841e9ace3b4485 Mon Sep 17 00:00:00 2001
+From: Reilly Brogan <reilly@reillybrogan.com>
+Date: Thu, 11 Apr 2024 10:25:12 -0500
+Subject: [PATCH 1/3] stateless
+
+Signed-off-by: Reilly Brogan <reilly@reillybrogan.com>
+---
+ .vscode/settings.json      |  6 ++++++
+ configure.ac               |  7 +++++++
+ profiles/input/manager.c   | 10 +++++++++-
+ profiles/network/manager.c |  9 ++++++++-
+ src/main.c                 |  6 +++++-
+ 5 files changed, 35 insertions(+), 3 deletions(-)
+ create mode 100644 .vscode/settings.json
+
+diff --git a/.vscode/settings.json b/.vscode/settings.json
+new file mode 100644
+index 000000000..89257cc3a
+--- /dev/null
++++ b/.vscode/settings.json
+@@ -0,0 +1,6 @@
++{
++    "files.associations": {
++        "system_error": "c",
++        "server.h": "c"
++    }
++}
+\ No newline at end of file
+diff --git a/configure.ac b/configure.ac
+index 2ea727256..84a28b0cf 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -486,6 +486,13 @@ AC_DEFINE_UNQUOTED(CONFIGDIR, "${configdir}",
+ 			[Directory for the configuration files])
+ AC_SUBST(CONFIGDIR, "${configdir}")
+ 
++AC_ARG_WITH([vendordir], AS_HELP_STRING([--with-vendordir=DIR],
++				[Vendor directory for the configuration files]),
++					[path_vendordir=${withval}])
++AC_DEFINE_UNQUOTED(VENDORDIR, "${path_vendordir}",
++			[Vendor directory for the configuration files])
++AC_SUBST(VENDORDIR, "${path_vendordir}")
++
+ AC_DEFINE_UNQUOTED(MESH_STORAGEDIR, "${storagedir}/mesh",
+ 			[Directory for the mesh daemon storage files])
+ AC_SUBST(MESH_STORAGEDIR, "${storagedir}/mesh")
+diff --git a/profiles/input/manager.c b/profiles/input/manager.c
+index d1accc24f..1e004e6a0 100644
+--- a/profiles/input/manager.c
++++ b/profiles/input/manager.c
+@@ -31,6 +31,9 @@
+ #include "device.h"
+ #include "server.h"
+ 
++#define CONFIG_FILE CONFIGDIR "/input.conf"
++#define DEFAULT_CONFIG VENDORDIR "/input.conf"
++
+ static int hid_server_probe(struct btd_profile *p, struct btd_adapter *adapter)
+ {
+ 	return server_start(btd_adapter_get_address(adapter));
+@@ -81,7 +84,12 @@ static int input_init(void)
+ 	GKeyFile *config;
+ 	GError *err = NULL;
+ 
+-	config = load_config_file(CONFIGDIR "/input.conf");
++	if (g_file_test(CONFIG_FILE, G_FILE_TEST_EXISTS)) {
++		config = load_config_file(CONFIG_FILE);
++	} else {
++		config = load_config_file(DEFAULT_CONFIG);
++	}
++
+ 	if (config) {
+ 		int idle_timeout;
+ 		gboolean classic_bonded_only, auto_sec;
+diff --git a/profiles/network/manager.c b/profiles/network/manager.c
+index a2650d6f0..338344124 100644
+--- a/profiles/network/manager.c
++++ b/profiles/network/manager.c
+@@ -33,6 +33,9 @@
+ #include "connection.h"
+ #include "server.h"
+ 
++#define CONFIG_FILE CONFIGDIR "/network.conf"
++#define DEFAULT_CONFIG VENDORDIR "/network.conf"
++
+ static gboolean conf_security = TRUE;
+ 
+ static void read_config(const char *file)
+@@ -158,7 +161,11 @@ static int network_init(void)
+ {
+ 	int err;
+ 
+-	read_config(CONFIGDIR "/network.conf");
++	if (g_file_test(CONFIG_FILE, G_FILE_TEST_EXISTS)) {
++		read_config(CONFIG_FILE);
++	} else {
++		read_config(DEFAULT_CONFIG);
++	}
+ 
+ 	err = bnep_init();
+ 	if (err) {
+diff --git a/src/main.c b/src/main.c
+index 6a682e9b9..323d4ffaa 100644
+--- a/src/main.c
++++ b/src/main.c
+@@ -262,7 +262,11 @@ static GKeyFile *load_config(const char *name)
+ 			else
+ 				len = strlen(configdir);
+ 		} else {
+-			configdir = CONFIGDIR;
++			if (g_file_test(CONFIGDIR, G_FILE_TEST_IS_DIR)) {
++				configdir = CONFIGDIR;
++			} else {
++				configdir = VENDORDIR;
++			}
+ 			len = strlen(configdir);
+ 		}
+ 
+-- 
+2.47.2
+

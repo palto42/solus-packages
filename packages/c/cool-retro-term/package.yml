@@ -1,6 +1,6 @@
 name       : cool-retro-term
 version    : 1.2.0
-release    : 8
+release    : 10
 source     :
     - git|https://github.com/Swordfish90/cool-retro-term : 1.2.0
 homepage   : https://github.com/Swordfish90/cool-retro-term
@@ -18,10 +18,13 @@ rundeps    :
     - qt5-graphicaleffects
     - qt5-quickcontrols
     - qt5-quickcontrols2
+clang      : yes
 setup      : |
+    %patch -p1 -i $pkgfiles/fix-screenshot.patch
     %qmake
 build      : |
     %make
 install    : |
     # -j1 to satisfy qmltermwidget build
     %make_install INSTALL_ROOT=$installdir -j1
+    install -Dm00644 packaging/appdata/cool-retro-term.appdata.xml $installdir/usr/share/metainfo/cool-retro-term.appdata.xml

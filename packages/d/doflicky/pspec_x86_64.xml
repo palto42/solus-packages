@@ -1,16 +1,18 @@
 <PISI>
     <Source>
         <Name>doflicky</Name>
+        <Homepage>https://github.com/getsolus/doflicky</Homepage>
         <Packager>
-            <Name>Thomas Staudinger</Name>
-            <Email>Staudi.Kaos@gmail.com</Email>
+            <Name>Joey Riches</Name>
+            <Email>josephriches@gmail.com</Email>
         </Packager>
-        <License>GPL-2.0-only</License>
+        <License>CC-BY-SA-4.0</License>
+        <License>GPL-2.0-or-later</License>
         <PartOf>system.utils</PartOf>
         <Summary xml:lang="en">Solus Driver Management</Summary>
         <Description xml:lang="en">A tool to provide automated driver detection and management
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>doflicky</Name>
@@ -43,15 +45,20 @@
             <Path fileType="library">/usr/lib/python2.7/site-packages/doflicky/window.pyc</Path>
             <Path fileType="data">/usr/share/applications/doflicky.desktop</Path>
             <Path fileType="data">/usr/share/doflicky/modaliases/broadcom-sta.modaliases</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/32x32/apps/jockey.png</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/48x48/apps/jockey.png</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/512x512/apps/jockey.png</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/64x64/apps/jockey.png</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/96x96/apps/jockey.png</Path>
         </Files>
     </Package>
     <History>
-        <Update release="20">
-            <Date>2023-05-22</Date>
+        <Update release="25">
+            <Date>2025-04-23</Date>
             <Version>6</Version>
             <Comment>Packaging update</Comment>
-            <Name>Thomas Staudinger</Name>
-            <Email>Staudi.Kaos@gmail.com</Email>
+            <Name>Joey Riches</Name>
+            <Email>josephriches@gmail.com</Email>
         </Update>
     </History>
 </PISI>

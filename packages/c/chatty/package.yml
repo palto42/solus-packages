@@ -1,8 +1,8 @@
 name       : chatty
-version    : '0.25'
-release    : 31
+version    : '0.27'
+release    : 33
 source     :
-    - https://github.com/chatty/chatty/archive/refs/tags/v0.25.tar.gz : 44e07701885045e17e6871cb0cc58ff013c561a56b3108d51e770b4cb12c010f
+    - https://github.com/chatty/chatty/archive/refs/tags/v0.27.tar.gz : ac45c594a4229b05765735f75fa4221952f35576cb7f339db58b31b2258de3d7
 homepage   : https://chatty.github.io/
 license    :
     - GPL-3.0-or-later

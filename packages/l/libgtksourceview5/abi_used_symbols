@@ -18,6 +18,7 @@ libc.so.6:strcmp
 libc.so.6:strerror
 libc.so.6:strlen
 libc.so.6:strncmp
+libc.so.6:strnlen
 libc.so.6:strrchr
 libc.so.6:strstr
 libc.so.6:strtol
@@ -45,7 +46,7 @@ libcairo.so.2:cairo_surface_get_type
 libcairo.so.2:cairo_surface_reference
 libcairo.so.2:cairo_translate
 libfontconfig.so.1:FcConfigAppFontAddFile
-libfontconfig.so.1:FcInitLoadConfigAndFonts
+libfontconfig.so.1:FcConfigCreate
 libfribidi.so.0:fribidi_get_bidi_type
 libgdk_pixbuf-2.0.so.0:gdk_pixbuf_copy
 libgdk_pixbuf-2.0.so.0:gdk_pixbuf_get_type
@@ -75,6 +76,7 @@ libgio-2.0.so.0:g_file_info_get_modification_date_time
 libgio-2.0.so.0:g_file_info_has_attribute
 libgio-2.0.so.0:g_file_info_new
 libgio-2.0.so.0:g_file_info_set_attribute_string
+libgio-2.0.so.0:g_file_load_bytes
 libgio-2.0.so.0:g_file_load_contents
 libgio-2.0.so.0:g_file_mount_enclosing_volume
 libgio-2.0.so.0:g_file_mount_enclosing_volume_finish
@@ -193,7 +195,6 @@ libglib-2.0.so.0:g_error_copy
 libglib-2.0.so.0:g_error_free
 libglib-2.0.so.0:g_error_matches
 libglib-2.0.so.0:g_error_new
-libglib-2.0.so.0:g_file_get_contents
 libglib-2.0.so.0:g_file_test
 libglib-2.0.so.0:g_filename_display_name
 libglib-2.0.so.0:g_free
@@ -262,7 +263,9 @@ libglib-2.0.so.0:g_markup_parse_context_push
 libglib-2.0.so.0:g_match_info_fetch
 libglib-2.0.so.0:g_match_info_get_string
 libglib-2.0.so.0:g_once_init_enter
+libglib-2.0.so.0:g_once_init_enter_pointer
 libglib-2.0.so.0:g_once_init_leave
+libglib-2.0.so.0:g_once_init_leave_pointer
 libglib-2.0.so.0:g_pattern_match_simple
 libglib-2.0.so.0:g_propagate_error
 libglib-2.0.so.0:g_ptr_array_add
@@ -362,6 +365,7 @@ libglib-2.0.so.0:g_str_hash
 libglib-2.0.so.0:g_strchomp
 libglib-2.0.so.0:g_strchug
 libglib-2.0.so.0:g_strcmp0
+libglib-2.0.so.0:g_strconcat
 libglib-2.0.so.0:g_strdup
 libglib-2.0.so.0:g_strdup_printf
 libglib-2.0.so.0:g_strdupv
@@ -384,6 +388,8 @@ libglib-2.0.so.0:g_strndup
 libglib-2.0.so.0:g_strnfill
 libglib-2.0.so.0:g_strsplit
 libglib-2.0.so.0:g_strv_length
+libglib-2.0.so.0:g_thread_new
+libglib-2.0.so.0:g_thread_unref
 libglib-2.0.so.0:g_timeout_add_full
 libglib-2.0.so.0:g_timeout_add_seconds_full
 libglib-2.0.so.0:g_timeout_source_new
@@ -405,6 +411,7 @@ libglib-2.0.so.0:g_unichar_type
 libglib-2.0.so.0:g_utf8_casefold
 libglib-2.0.so.0:g_utf8_collate
 libglib-2.0.so.0:g_utf8_collate_key
+libglib-2.0.so.0:g_utf8_collate_key_for_filename
 libglib-2.0.so.0:g_utf8_find_prev_char
 libglib-2.0.so.0:g_utf8_get_char
 libglib-2.0.so.0:g_utf8_get_char_validated
@@ -431,7 +438,6 @@ libglib-2.0.so.0:g_variant_new
 libglib-2.0.so.0:g_variant_new_uint32
 libglib-2.0.so.0:g_variant_parse
 libglib-2.0.so.0:g_variant_ref_sink
-libglib-2.0.so.0:g_variant_type_checked_
 libglib-2.0.so.0:g_variant_unref
 libglib-2.0.so.0:g_warn_message
 libgobject-2.0.so.0:g_binding_unbind
@@ -588,6 +594,7 @@ libgtk-4.so.1:gdk_surface_get_width
 libgtk-4.so.1:gdk_texture_new_for_pixbuf
 libgtk-4.so.1:gsk_render_node_draw
 libgtk-4.so.1:gsk_render_node_unref
+libgtk-4.so.1:gsk_text_node_new
 libgtk-4.so.1:gtk_accelerator_get_default_mod_mask
 libgtk-4.so.1:gtk_actionable_get_type
 libgtk-4.so.1:gtk_actionable_set_action_name
@@ -613,8 +620,8 @@ libgtk-4.so.1:gtk_box_remove
 libgtk-4.so.1:gtk_buildable_get_type
 libgtk-4.so.1:gtk_button_get_type
 libgtk-4.so.1:gtk_button_set_label
-libgtk-4.so.1:gtk_css_provider_load_from_data
 libgtk-4.so.1:gtk_css_provider_load_from_resource
+libgtk-4.so.1:gtk_css_provider_load_from_string
 libgtk-4.so.1:gtk_css_provider_new
 libgtk-4.so.1:gtk_custom_filter_new
 libgtk-4.so.1:gtk_dialog_get_content_area
@@ -622,6 +629,7 @@ libgtk-4.so.1:gtk_dialog_new_with_buttons
 libgtk-4.so.1:gtk_dialog_set_default_response
 libgtk-4.so.1:gtk_drop_target_new
 libgtk-4.so.1:gtk_drop_target_set_preload
+libgtk-4.so.1:gtk_event_controller_focus_new
 libgtk-4.so.1:gtk_event_controller_get_current_event
 libgtk-4.so.1:gtk_event_controller_key_forward
 libgtk-4.so.1:gtk_event_controller_key_new
@@ -728,13 +736,13 @@ libgtk-4.so.1:gtk_snapshot_save
 libgtk-4.so.1:gtk_snapshot_translate
 libgtk-4.so.1:gtk_string_filter_new
 libgtk-4.so.1:gtk_string_filter_set_search
-libgtk-4.so.1:gtk_style_context_add_class
 libgtk-4.so.1:gtk_style_context_add_provider
 libgtk-4.so.1:gtk_style_context_add_provider_for_display
 libgtk-4.so.1:gtk_style_context_get_border
 libgtk-4.so.1:gtk_style_context_get_color
 libgtk-4.so.1:gtk_style_context_get_margin
 libgtk-4.so.1:gtk_style_context_get_padding
+libgtk-4.so.1:gtk_style_context_lookup_color
 libgtk-4.so.1:gtk_style_context_remove_provider
 libgtk-4.so.1:gtk_style_context_restore
 libgtk-4.so.1:gtk_style_context_save
@@ -865,6 +873,7 @@ libgtk-4.so.1:gtk_text_view_get_ltr_context
 libgtk-4.so.1:gtk_text_view_get_overwrite
 libgtk-4.so.1:gtk_text_view_get_rtl_context
 libgtk-4.so.1:gtk_text_view_get_type
+libgtk-4.so.1:gtk_text_view_get_visible_offset
 libgtk-4.so.1:gtk_text_view_get_visible_rect
 libgtk-4.so.1:gtk_text_view_get_wrap_mode
 libgtk-4.so.1:gtk_text_view_im_context_filter_keypress
@@ -901,11 +910,13 @@ libgtk-4.so.1:gtk_widget_class_set_activate_signal
 libgtk-4.so.1:gtk_widget_class_set_css_name
 libgtk-4.so.1:gtk_widget_class_set_layout_manager_type
 libgtk-4.so.1:gtk_widget_class_set_template_from_resource
+libgtk-4.so.1:gtk_widget_compute_point
 libgtk-4.so.1:gtk_widget_create_pango_layout
 libgtk-4.so.1:gtk_widget_error_bell
 libgtk-4.so.1:gtk_widget_get_allocation
 libgtk-4.so.1:gtk_widget_get_ancestor
 libgtk-4.so.1:gtk_widget_get_clipboard
+libgtk-4.so.1:gtk_widget_get_color
 libgtk-4.so.1:gtk_widget_get_default_direction
 libgtk-4.so.1:gtk_widget_get_direction
 libgtk-4.so.1:gtk_widget_get_display
@@ -925,7 +936,6 @@ libgtk-4.so.1:gtk_widget_get_visible
 libgtk-4.so.1:gtk_widget_get_width
 libgtk-4.so.1:gtk_widget_grab_focus
 libgtk-4.so.1:gtk_widget_has_focus
-libgtk-4.so.1:gtk_widget_hide
 libgtk-4.so.1:gtk_widget_init_template
 libgtk-4.so.1:gtk_widget_is_sensitive
 libgtk-4.so.1:gtk_widget_measure
@@ -950,7 +960,6 @@ libgtk-4.so.1:gtk_widget_set_tooltip_text
 libgtk-4.so.1:gtk_widget_set_valign
 libgtk-4.so.1:gtk_widget_set_vexpand
 libgtk-4.so.1:gtk_widget_set_visible
-libgtk-4.so.1:gtk_widget_show
 libgtk-4.so.1:gtk_widget_size_allocate
 libgtk-4.so.1:gtk_widget_snapshot_child
 libgtk-4.so.1:gtk_widget_unparent
@@ -1006,10 +1015,12 @@ libpango-1.0.so.0:pango_font_metrics_get_ascent
 libpango-1.0.so.0:pango_font_metrics_get_descent
 libpango-1.0.so.0:pango_font_metrics_unref
 libpango-1.0.so.0:pango_layout_get_attributes
+libpango-1.0.so.0:pango_layout_get_baseline
 libpango-1.0.so.0:pango_layout_get_extents
 libpango-1.0.so.0:pango_layout_get_iter
 libpango-1.0.so.0:pango_layout_get_line
 libpango-1.0.so.0:pango_layout_get_line_count
+libpango-1.0.so.0:pango_layout_get_line_readonly
 libpango-1.0.so.0:pango_layout_get_pixel_size
 libpango-1.0.so.0:pango_layout_get_size
 libpango-1.0.so.0:pango_layout_iter_free

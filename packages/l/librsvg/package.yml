@@ -1,11 +1,10 @@
 name       : librsvg
-version    : 2.57.1
-release    : 55
+version    : 2.60.0
+release    : 65
 source     :
-    - https://download.gnome.org/sources/librsvg/2.57/librsvg-2.57.1.tar.xz : 074671a3ed6fbcd67cae2a40e539107f4f097ca8a4ab1a894c05e2524ff340ef
-homepage   : https://wiki.gnome.org/Projects/LibRsvg
+    - https://download.gnome.org/sources/librsvg/2.60/librsvg-2.60.0.tar.xz : 0b6ffccdf6e70afc9876882f5d2ce9ffcf2c713cbaaf1ad90170daa752e1eec3
+homepage   : https://gitlab.gnome.org/GNOME/librsvg
 license    :
-    - GPL-2.0-or-later
     - LGPL-2.1-or-later
 component  : desktop.library
 summary    : Library to render SVG files using Cairo
@@ -25,18 +24,18 @@ builddeps  :
     - pkgconfig32(pango)
     - pkgconfig32(xdamage)
     - pkgconfig32(xshmfence)
-    - cargo
-    - gi-docgen
+    - cargo-c
     - python-docutils # man
+    - rust-32bit
     - vala
 setup      : |
-    flags='--disable-static --enable-vala'
+    flags='-Ddocs=disabled '
     if [ ! -z $EMUL32BUILD ]; then
-        flags+=' --host=i686-unknown-linux-gnu'
+        flags+='-Dtriplet=i686-unknown-linux-gnu -Dintrospection=disabled'
     fi
-    %configure $flags
+    %meson_configure $flags
 build      : |
-    %make
+    %ninja_build
 install    : |
-    %make_install
+    %ninja_install
     rm -rf $installdir/usr/share/doc

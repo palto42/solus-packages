@@ -1,8 +1,8 @@
 name       : unison
-version    : 2.53.3
-release    : 6
+version    : 2.53.7
+release    : 9
 source     :
-    - https://github.com/bcpierce00/unison/archive/refs/tags/v2.53.3.tar.gz : aaea04fc5bc76dcfe8627683c9659ee4c194d4f992cc8aaa15bbb2820fc8de46
+    - https://github.com/bcpierce00/unison/archive/refs/tags/v2.53.7.tar.gz : a259537cef465c4806d6c1638c382620db2dd395ae42a0dd2efa3ba92712bed5
 homepage   : https://github.com/bcpierce00/unison
 license    : GPL-3.0-or-later
 component  : network.util

@@ -1,13 +1,13 @@
 ld-linux-x86-64.so.2
-libLLVM-16.so
+libLLVM.so.19.1
 libc.so.6
-libclang-cpp.so.16
+libclang-cpp.so.19.1
 libedit.so.0
 liblzma.so.5
 libm.so.6
 libncursesw.so.6
 libpanelw.so.6
-libpython3.11.so.1.0
+libpython3.12.so.1.0
 libstdc++.so.6
 libxml2.so.2
 libz.so.1

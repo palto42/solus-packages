@@ -1,9 +1,10 @@
 name       : glibc
-version    : '2.39'
-release    : 101
+version    : '2.41'
+release    : 133
 source     :
-    # release/2.39/master
-    - git|git://sourceware.org/git/glibc.git : 1b9c1a0047fb26a65a9b2a7b8cd977243f7d353c
+    # release/2.41/master
+    # Use the bminor mirror since the upstream is unreliable
+    - git|https://github.com/bminor/glibc : 5cf17ebc659c875aff3c49d2a59ce15f46167389
 homepage   : https://www.gnu.org/software/libc/
 license    : GPL-3.0-or-later
 summary    :
@@ -18,10 +19,22 @@ emul32     : yes
 avx2       : yes
 component  : system.base
 patterns   :
-    - 32bit : /lib/ld-linux.so.2
+    - 32bit :
+        - /lib32/ld-linux.so.2
+        - /lib64/ld-linux.so.2
+        - /usr/lib64/ld-linux.so.2
+    - 32bit-devel :
+        - /usr/lib32/*.o
+        - /usr/lib32/libc_malloc_debug.so*
     - benchmarks : /usr/bin/bench-*
+    - devel :
+        - /usr/bin/mtrace
+        - /usr/bin/pcprofiledump
+        - /usr/bin/xtrace
+        - /usr/lib64/*.o
+        - /usr/lib64/libc_malloc_debug.so*
 setup      : |
-    # Solus mutilib integration
+    # Solus multilib integration
 
     # Ensure that ldd can use all interpreters, allowing 64-bit host to run ldd
     # against 32-bit files.
@@ -42,9 +55,9 @@ setup      : |
     # Stateless other modules (/etc/rpc)
     %patch -p1 -i $pkgfiles/stateless/0001-Stateless-NSS.patch
 
-    # Broken 64-bit unity games
-    # https://bugzilla.redhat.com/show_bug.cgi?id=1440287
-    %patch -p1 -i $pkgfiles/fix-x64-abi.patch
+    # Allow Steam users with CPU ISA not supporting AVX2 to add an environmental variable to force ldconfig to ignore hwcaps libs
+    # https://github.com/ValveSoftware/steam-for-linux/issues/10556
+    %patch -p1 -i $pkgfiles/0001-Add-hack-for-steam-users-to-skip-hwcaps-directories.patch
 
     # locale data only exists in /usr/lib64 so hardcode it
     %patch -p1 -i $pkgfiles/0001-Hardcode-usr-lib64-path-for-locale.patch
@@ -52,7 +65,6 @@ setup      : |
     # Clear Linux backports for performance improvements/regression fixes.
     %patch -p1 -i $pkgfiles/perf/0001-Set-vector-width-and-alignment-to-fix-GCC-AVX-issue.patch
     %patch -p1 -i $pkgfiles/perf/disable-vectorization-even-more.patch
-    %patch -p1 -i $pkgfiles/perf/0001-Force-ffsll-to-be-64-bytes-aligned.patch
 
     # Other Clear Linux performance patches
     %patch -p1 -i $pkgfiles/perf/0001-Use-KSM-for-the-BSS-segment-of-shared-libraries.patch
@@ -66,19 +78,17 @@ setup      : |
     %patch -p1 -i $pkgfiles/0001-Compress-charmaps-with-zstd.patch
 
     mkdir glibc-build
-    pushd glibc-build
+    cd glibc-build
 
     extra_conf_args=""
     if [[ ! -z "${EMUL32BUILD}" ]]; then
-        mkdir b32
-        pushd b32
+        mkdir b32 && cd b32
         export CC="gcc -m32"
         export CXX="g++ -m32"
         export BUILDHOST="i686-pc-linux-gnu"
         export CFLAGS="-O3 -g2 -mtune=generic -march=i686 -mstackrealign"
     else
-        mkdir b64
-        pushd b64
+        mkdir b64 && cd b64
         export CC="gcc"
         export CXX="g++"
         export BUILDHOST="x86_64-solus-linux"
@@ -110,7 +120,7 @@ setup      : |
            --disable-build-nscd \
            --disable-nscd \
            --enable-bind-now \
-           --enable-kernel=5.10 \
+           --enable-kernel=5.15 \
            --enable-stack-protector=strong \
            --enable-systemtap \
            --prefix=/usr \
@@ -120,21 +130,19 @@ setup      : |
            --libdir=%libdir% \
            --with-pkgversion='Solus' \
            $extra_conf_args
-    popd
-    popd
 build      : |
-    pushd glibc-build
+    cd glibc-build
     export LANGUAGE="C"
     export LC_ALL="C"
     export LANG="C"
 
     if [[ "${EMUL32BUILD}" ]]; then
-        pushd b32
+        cd b32
         export CC="gcc -m32"
         export CXX="g++ -m32"
         export CFLAGS="-O3 -g2 mtune=generic -march=i686 -Wl,-z,max-page-size=0x1000"
     else
-        pushd b64
+        cd b64
         export CC="gcc"
         export CXX="g++"
         if [[ ! -z "${AVX2BUILD}" ]]; then
@@ -150,23 +158,14 @@ build      : |
     if [[ -z "${AVX2BUILD}" ]]; then
         %make bench-build
     fi
-
-    popd
-    popd
 install    : |
-    pushd glibc-build
+    cd glibc-build
 
     if [[ ! -z "${EMUL32BUILD}" ]]; then
-        pushd b32
+        cd b32
         %make_install install_root=$installdir
-
-        if [[ -z "${AVX2BUILD}" ]]; then
-            install -dm00755 $installdir/lib
-            # Interestingly enough, /lib == /lib64 on Solus.
-            ln -sv /usr/lib32/ld-linux.so.2 $installdir/lib/ld-linux.so.2
-        fi
     else
-        pushd b64
+        cd b64
         %make_install install_root=$installdir
 
         if [[ -z "${AVX2BUILD}" ]]; then
@@ -201,10 +200,10 @@ install    : |
 
             # usr-merge
             install -dm00755 $installdir/lib64
-            ln -sv /usr/lib64/ld-linux-x86-64.so.2 $installdir/lib64/ld-linux-x86-64.so.2
+            ln -srv $installdir/usr/lib64/ld-linux-x86-64.so.2 $installdir/lib64/ld-linux-x86-64.so.2
             install -dm00755 $installdir/sbin
-            ln -sv /usr/sbin/ldconfig $installdir/sbin/ldconfig
-            ln -sv /usr/sbin/sln $installdir/sbin/sln
+            ln -srv $installdir/usr/sbin/ldconfig $installdir/sbin/ldconfig
+            ln -srv $installdir/usr/sbin/sln $installdir/sbin/sln
 
             # This is a vendored copy from the 5.0 systemtap package, it should be kept in sync with the systemtap version
             install -Dm00644 $pkgfiles/systemtap/{sdt.h,sdt-config.h} -t $installdir/usr/include/sys
@@ -220,6 +219,14 @@ install    : |
             # LD_LIBRARY_PATH hacks to get this working, fixed in 2.36.
             LD_LIBRARY_PATH=$installdir/%libdir% $installdir/%libdir%/ld-linux-x86-64.so.2 $installdir/usr/sbin/iconvconfig --prefix=$installdir
 
+            # We need to create these in the 64-bit build otherwise the avx build would mangle them
+            # Test for the existence of the 32-bit dynamic loader so we can tell if an emul32 build was done
+            if test -f $installdir/usr/lib32/ld-linux.so.2; then
+                install -dm00755 $installdir/{,usr/}lib{32,64}
+                ln -srv $installdir/usr/lib32/ld-linux.so.2 $installdir/usr/lib64/ld-linux.so.2
+                ln -srv $installdir/usr/lib32/ld-linux.so.2 $installdir/lib64/ld-linux.so.2
+                ln -srv $installdir/usr/lib32/ld-linux.so.2 $installdir/lib32/ld-linux.so.2
+            fi
         fi
     fi
 

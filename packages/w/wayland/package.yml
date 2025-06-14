@@ -1,8 +1,8 @@
 name       : wayland
-version    : 1.22.0
-release    : 29
+version    : 1.23.1
+release    : 33
 source     :
-    - https://gitlab.freedesktop.org/wayland/wayland/-/archive/1.22.0/wayland-1.22.0.tar.gz : bbca9c906a8fb8992409ebf51812f19e2a784b2c169d4b784cdd753b4bb448ef
+    - https://gitlab.freedesktop.org/wayland/wayland/-/archive/1.23.1/wayland-1.23.1.tar.gz : 158ec49af498f2558c7fbf7e8b070d010d4e270cc6076003a18a6c813f87e244
 homepage   : https://wayland.freedesktop.org/
 license    :
     - MIT
@@ -15,14 +15,16 @@ builddeps  :
     - pkgconfig32(expat)
     - pkgconfig32(libffi)
     - pkgconfig32(libxml-2.0)
-patterns   :
-    - devel :
-        - /usr/bin
-        - /usr/share/wayland
-        - /usr/share/aclocal
+clang      : yes
+optimize   : thin-lto
 setup      : |
     %meson_configure -Ddocumentation=false
 build      : |
     %ninja_build
 install    : |
     %ninja_install
+patterns   :
+    - devel :
+        - /usr/bin
+        - /usr/share/wayland
+        - /usr/share/aclocal

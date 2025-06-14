@@ -53,6 +53,7 @@ QtPositioningPositionProviderPlugin.so
 RoutingPlugin.so
 RoutinoPlugin.so
 SatellitesPlugin.so
+ShpPlugin.so
 Speedometer.so
 StarsPlugin.so
 SunPlugin.so
@@ -60,6 +61,9 @@ Weather.so
 Wikipedia.so
 YoursPlugin.so
 libastro.so.1
+libmarble_part.so
 libmarbledeclarative.so
-libmarblewidget-qt5.so.28
-marble-qt
+libmarbleimageprovider.so
+libmarblewidget-qt6.so.28
+marblethumbnail.so
+plasma_runner_marble.so

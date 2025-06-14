@@ -1,8 +1,8 @@
 name       : kf6-qqc2-desktop-style
-version    : 6.0.0
-release    : 3
+version    : 6.14.0
+release    : 21
 source     :
-    - https://cdn.download.kde.org/stable/frameworks/6.0/qqc2-desktop-style-6.0.0.tar.xz : 848305ff8880fdbad19bf57ed9f128e59cd71ecb8a36fbf920a55b60f68a2c93
+    - https://download.kde.org/stable/frameworks/6.14/qqc2-desktop-style-6.14.0.tar.xz : 9604b35cb553961c4646ddca69e207df42ff7ad9e3e1608387ff923d8d9f3cff
 homepage   : https://community.kde.org/Frameworks
 license    :
     - LGPL-2.0-or-later

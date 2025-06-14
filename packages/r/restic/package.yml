@@ -1,8 +1,9 @@
 name       : restic
-version    : 0.16.4
-release    : 26
+version    : 0.18.0
+release    : 33
 source     :
-    - https://github.com/restic/restic/archive/refs/tags/v0.16.4.tar.gz : d736a57972bb7ee3398cf6b45f30e5455d51266f5305987534b45a4ef505f965
+    - https://github.com/restic/restic/archive/refs/tags/v0.18.0.tar.gz : fc068d7fdd80dd6a968b57128d736b8c6147aa23bcba584c925eb73832f6523e
+homepage   : https://restic.net/
 license    : BSD-2-Clause
 component  : system.utils
 summary    : Fast, secure, efficient backup program

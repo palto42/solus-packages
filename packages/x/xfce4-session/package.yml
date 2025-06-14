@@ -1,23 +1,30 @@
 name       : xfce4-session
-version    : 4.18.3
-release    : 11
+version    : 4.20.2
+release    : 17
 source     :
-    - https://archive.xfce.org/src/xfce/xfce4-session/4.18/xfce4-session-4.18.3.tar.bz2 : 382f93e096ec6493098719cab8cc31b93ad9bb469c0715c0c5117d75fe7394ec
+    - https://archive.xfce.org/src/xfce/xfce4-session/4.20/xfce4-session-4.20.2.tar.bz2 : a0b80b7136515bc3c0c54fa859ad420365e29b715b6da0b58a2d2781bfbe73c3
 homepage   : https://docs.xfce.org/xfce/xfce4-session/start
 license    : GPL-2.0-or-later
-component  : desktop.xfce
-summary    : Xfce's session manager.
-description: |
-    Xfce's session manager.
+component  :
+    - wayland : desktop.xfce
+    - desktop.xfce
+summary    :
+    - wayland : Experimental Wayland session for XFCE4.
+    - Xfce's session manager.
+description:
+    - wayland : Experimental Wayland session for XFCE4. May result in a subpar experience. For advanced users only.
+    - Xfce's session manager.
 builddeps  :
-    - pkgconfig(libxfce4ui-2)
+    - pkgconfig(gtk-layer-shell-0)
     - pkgconfig(libwnck-3.0)
+    - pkgconfig(libxfce4ui-2)
+    - pkgconfig(libxfce4windowing-0)
     - pkgconfig(sm)
     - iceauth
-    # Both needed due to reconfigure
-    - gettext-devel
-    - xfce4-dev-tools-devel
 rundeps    :
+    - wayland :
+        - labwc
+        - xfce4-session
     - gnome-keyring
     - hicolor-icon-theme
     - iceauth
@@ -30,11 +37,13 @@ rundeps    :
     - xfce4-screensaver
     - xrdb
 setup      : |
-    %patch -p1 -i $pkgfiles/0001-xinitrc.in.in-Ensure-all-various-XDG_-etc.-env-vars-.patch
+    %patch -p1 -i $pkgfiles/0001-scripts-xinitrc-Source-vendered-and-system-xinitrc-s.patch
     %patch -p1 -i $pkgfiles/xfce-session-4.10-startxfce4.patch
-    %patch -p1 -i $pkgfiles/0001-Add-minimal-xdg-desktop-portal-conf-file-for-Xfce-Fi.patch
-    %patch -p1 -i $pkgfiles/0002-Add-xapp-for-Wallpaper-and-Screenshot-in-xfce-portal.patch
-    %reconfigure \
+    %patch -p1 -i $pkgfiles/0001-labwc-Set-snapping-range-to-10.patch
+    %patch -p1 -i $pkgfiles/0001-labwc-Use-Breeze-cursors.patch
+    %patch -p1 -i $pkgfiles/0001-scripts-Only-use-dbus-run-session-if-address-is-unse.patch
+
+    %configure \
                  --disable-debug \
                  --disable-legacy-sm \
                  --sysconfdir=/usr/share
@@ -43,3 +52,6 @@ build      : |
 install    : |
     %make_install
     install -Dm00644 $pkgfiles/xfce-polkit-gnome-authentication-agent-1.desktop $installdir/usr/share/xdg/autostart/xfce-polkit-gnome-authentication-agent-1.desktop
+patterns   :
+    - wayland :
+        - /usr/share/wayland-sessions/xfce-wayland.desktop

@@ -1,8 +1,8 @@
 name       : kvirc
-version    : 5.0.0
-release    : 14
+version    : 5.2.6
+release    : 19
 source     :
-    - https://github.com/kvirc/KVIrc/archive/5.0.0.tar.gz : 452e683760221055f117d2ab4359aa432e01ce5d5e3abe80772b7a13a78b594a
+    - https://github.com/kvirc/KVIrc/archive/refs/tags/5.2.6.tar.gz : e8de989b5df8d9286da3e26146682a349fe496864dc2e7d7eae8dc27167fdd25
 homepage   : http://www.kvirc.net/
 license    : GPL-2.0-or-later
 component  : network.irc
@@ -10,30 +10,31 @@ summary    : The KVIrc IRC Client
 description: |
     KVIrc is a free portable IRC client based on the excellent Qt GUI toolkit.
 builddeps  :
-    - pkgconfig(Qt5Multimedia)
-    - pkgconfig(Qt5Svg)
-    - pkgconfig(Qt5WebKit)
-    - pkgconfig(Qt5X11Extras)
+    - pkgconfig(KF6WindowSystem)
+    - pkgconfig(Qt6Core5Compat)
+    - pkgconfig(Qt6Multimedia)
+    - pkgconfig(Qt6Svg)
+    - pkgconfig(Qt6WebEngineWidgets)
     - pkgconfig(enchant-2)
-    - pkgconfig(phonon4qt5)
+    - pkgconfig(phonon4qt6)
     - pkgconfig(python3)
     - pkgconfig(theora)
     - pkgconfig(vorbis)
-    - pkgconfig(xcb)
-    - extra-cmake-modules
-    - ki18n-devel
-    - knotifications-devel
-    - kservice-devel
-    - kwindowsystem-devel
-    - kxmlgui-devel
+    - kf6-kio-devel
+    - kf6-knotifications-devel
+    - kf6-kparts-devel
+    - kf6-kservice-devel
+    - kf6-kstatusnotifieritem-devel
+    - kf6-kxmlgui-devel
 libsplit   : no
 setup      : |
-    %apply_patches
+    %patch -p1 -i $pkgfiles/0001-Force-app_id-to-be-set-in-more-places.patch
+
     %cmake_ninja \
-        -DUSE_ENV_FLAGS=ON \
-        -DWANT_DCC_VIDEO=ON \
-        -DWANT_OGG_THEORA=ON
+                 -DWANT_OGG_THEORA=ON
 build      : |
     %ninja_build
 install    : |
     %ninja_install
+    # Install AppStream metainfo
+    install -Dm00644 $pkgfiles/net.kvirc.KVIrc5.metainfo.xml -t $installdir/usr/share/metainfo

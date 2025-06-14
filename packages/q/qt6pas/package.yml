@@ -1,0 +1,37 @@
+name       : qt6pas
+version    : 3.6.0
+release    : 20
+source     :
+    - https://sourceforge.net/projects/lazarus/files/Lazarus%20Zip%20_%20GZip/Lazarus%203.6/lazarus-3.6-0.tar.gz/download : e65b90367f63bf17cb7bf35f5be69c9ef704ca494e91d8c67d072e3373fab085
+homepage   : https://www.lazarus-ide.org
+license    :
+    - GPL-2.0-or-later
+    - LGPL-2.1-or-later
+    - MPL-1.1
+summary    : Free Pascal Qt6 binding library
+description: |
+    Free Pascal Qt6 binding library
+component  : programming.library
+builddeps  :
+    - pkgconfig(Qt6Core)
+    - fpc-src
+clang      : yes
+setup      : |
+    %patch -p1 -i $pkgfiles/0001-Support-Wayland-appId.patch
+
+    # Remove non-Linux and distro-specific files.
+    rm -rf debian
+    find tools/install -mindepth 1 -maxdepth 1 -type d -not -name linux -exec rm -rf {} +
+build      : |
+    # Build Qt6Pas.
+    pushd lcl/interfaces/qt6/cbindings
+        qmake6 QMAKE_CFLAGS_RELEASE="${CFLAGS}" QMAKE_CXXFLAGS_RELEASE="${CXXFLAGS}" QMAKE_LFLAGS="${LDFLAGS}"
+        %make
+    popd
+install    : |
+    # Install Qt6Pas.
+    %make_install -C lcl/interfaces/qt6/cbindings INSTALL_ROOT=$installdir
+
+    # Fix permissions and respect SOURCE_DATE_EPOCH
+    chown root:root -R $installdir
+    find $installdir -exec touch --date="@$SOURCE_DATE_EPOCH" --no-dereference {} \;

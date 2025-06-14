@@ -1,8 +1,8 @@
 name       : xz
-version    : 5.6.0
-release    : 34
+version    : 5.8.1
+release    : 40
 source     :
-    - https://github.com/tukaani-project/xz/releases/download/v5.6.0/xz-5.6.0.tar.zst : 80c8afc89e842d739c0acc4eb30d4fe2963ce4b28915bee526092213328e92c6
+    - https://github.com/tukaani-project/xz/releases/download/v5.8.1/xz-5.8.1.tar.gz : 507825b599356c10dca1cd720c9d0d0c9d5400b9de300af00e4d1ea150795543
 homepage   : https://tukaani.org/xz/
 license    :
     - 0BSD
@@ -16,14 +16,13 @@ optimize   :
 emul32     : yes
 setup      : |
     export CFLAGS="${CFLAGS} -D_FILE_OFFSET_BITS=64"
-    %configure --disable-rpath
+    %reconfigure --disable-rpath --disable-static
 build      : |
     %make
 install    : |
     %make_install
-# Causes the tests to fail as of 5.6.0
-# profile    : |
-#     %make check
+profile    : |
+    %make check
 check      : |
     %make check
 patterns   :

@@ -26,7 +26,6 @@ libc.so.6:in6addr_any
 libc.so.6:inet_ntop
 libc.so.6:ioctl
 libc.so.6:login_tty
-libc.so.6:memcmp
 libc.so.6:memcpy
 libc.so.6:memmove
 libc.so.6:open
@@ -202,8 +201,8 @@ libglib-2.0.so.0:g_malloc0
 libglib-2.0.so.0:g_malloc0_n
 libglib-2.0.so.0:g_markup_printf_escaped
 libglib-2.0.so.0:g_mkdir_with_parents
-libglib-2.0.so.0:g_once_init_enter
-libglib-2.0.so.0:g_once_init_leave
+libglib-2.0.so.0:g_once_init_enter_pointer
+libglib-2.0.so.0:g_once_init_leave_pointer
 libglib-2.0.so.0:g_option_context_add_group
 libglib-2.0.so.0:g_option_context_add_main_entries
 libglib-2.0.so.0:g_option_context_free

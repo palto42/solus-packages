@@ -1,8 +1,8 @@
 name       : python-pysol-cards
-version    : 0.14.3
-release    : 11
+version    : 0.18.1
+release    : 15
 source     :
-    - https://files.pythonhosted.org/packages/source/p/pysol_cards/pysol_cards-0.14.3.tar.gz : b0fbfd38615bfc6fd755dab58505a9ae162d0da1866c25ca9141938b5823f061
+    - https://files.pythonhosted.org/packages/source/p/pysol_cards/pysol_cards-0.18.1.tar.gz : 103c7c0c319e72e836e099bbb47ff54be729d975e35c11ba74d4ac5e4286b8eb
 homepage   : https://github.com/shlomif/pysol_cards
 license    : MIT
 component  : programming.python
@@ -11,11 +11,9 @@ description: |
     The pysol-cards python modules allow the python developer to generate the initial deals of some PySol FC games. It also supports PySol legacy deals and Microsoft FreeCell/Freecell Pro deals.
 builddeps  :
     - pbr
-    - python-random2
-rundeps    :
-    - pbr
-    - python-random2
-    - python-six
+    - python-build
+    - python-installer
+    - python-setuptools
 build      : |
     %python3_setup
 install    : |

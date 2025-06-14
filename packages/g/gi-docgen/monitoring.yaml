@@ -1,0 +1,6 @@
+releases:
+  id: 178582
+  rss: https://gitlab.gnome.org/GNOME/gi-docgen/-/tags?format=atom
+security:
+  # No known CPE, last checked 2024-02-29
+  cpe: ~

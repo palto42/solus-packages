@@ -1,10 +1,8 @@
 name       : qt5-webengine
-version    : 5.15.16
-release    : 66
+version    : 5.15.19
+release    : 78
 source     :
-    - git|https://code.qt.io/qt/qtwebengine.git : v5.15.16-lts
-    # We need to use a catapult git snapshot for Python 3 support. Let's just use the same one SUSE uses
-    - https://github.com/catapult-project/catapult/archive/2da767c6c13e331107f4c8026fd4584a7a85a214.tar.gz#catapult.tar.gz : 090f45683f7510025c25e425e75261bc7583d78a9973e3478f773836ad8e0739
+    - git|https://code.qt.io/qt/qtwebengine.git : v5.15.19-lts
 homepage   : https://www.qt.io
 license    :
     - GPL-2.0-or-later
@@ -48,7 +46,8 @@ builddeps  :
     - pkgconfig(openssl)
     - pkgconfig(opus)
     - pkgconfig(protobuf)
-    - pkgconfig(re2)
+    # Doesn't build with system re2, let's just not care about that
+    # - pkgconfig(re2)
     - pkgconfig(snappy)
     - pkgconfig(vpx)
     - pkgconfig(xcb)
@@ -64,12 +63,13 @@ builddeps  :
     - gperf
     - ninja
     - nodejs
+    - python-html5lib
     - python3
 # 2023-10-31 Reilly:
 # Chromium 87 is just too old for LLVM >=16. Just use GCC so we don't waste a bunch of time trying to track down support patches
 # Symptom: It builds but there's random segfaults in various blink engine code.
 # Let's try again on a future version, perhaps qt will integrate llvm 16 support patches themselves
-# clang      : yes
+clang      : yes
 patterns   :
     - demos :
         - /usr/lib64/qt5/examples
@@ -83,12 +83,8 @@ setup      : |
     %patch -p1 -i $pkgfiles/qtwebengine-5.15.15-compile.patch
     %patch -p1 -i $pkgfiles/qtwebengine-5.15.15-clang16.patch
     %patch -p1 -i $pkgfiles/qtwebengine-5.15.15-clang16-2.patch
-    %patch -p1 -d src/3rdparty/chromium -i $pkgfiles/icu74.patch
-    %patch -p1 -d src/3rdparty/chromium -i $pkgfiles/libxml-2.12.patch
-
-    # Use Python 3
-    %patch -p1 -i $pkgfiles/qt5-webengine-python3.patch
-    %patch -p1 -i $pkgfiles/python311-fixes.patch
+    %patch -p1 -i $pkgfiles/build-with-c++17.patch # icu 75
+    %patch -p1 -i $pkgfiles/ftbfs-gcc-15.patch
 
     # 3rdparty patches
     %patch -p1 -d src/3rdparty -i $pkgfiles/qt5-webengine-pipewire-0.3.patch
@@ -96,12 +92,14 @@ setup      : |
     %patch -p1 -d src/3rdparty -i $pkgfiles/0001-minizip-ng-compat.patch
     # ffmpeg 5+
     %patch -p1 -d src/3rdparty -i $pkgfiles/qt5-webengine-ffmpeg5.patch
+    # ffmpeg 7+
+    %patch -p1 -d src/3rdparty/chromium -i $pkgfiles/qt5-webengine-ffmpeg7.patch
+    # ninja 1.12
+    %patch -p1 -d src/3rdparty -i $pkgfiles/qt5-webengine-ninja-1.12.patch
 
-    # Replace catapult with git snapshot
-    pushd src/3rdparty/chromium/third_party
-    rm -rf catapult/*
-    tar -xf $sources/catapult.tar.gz --strip-components=1 -C catapult
-    popd
+    # We do patch ffmpeg for it, busted?
+    # https://code.qt.io/cgit/qt/qtwebengine.git/commit/?h=v5.15.18-lts&id=855806fefdd52b29e8b15b6a02e263afc21028c8
+    git revert 855806fefdd52b29e8b15b6a02e263afc21028c8
 
     # Some applications that need qt5-webengine seem to want all of the qt5 libs to be the same version.
     # Work around this by faking that qt5-webengine is the same version as qt5-base
@@ -115,8 +113,9 @@ setup      : |
         -system-webengine-icu \
         -system-webengine-webp \
         -webengine-proprietary-codecs \
+        -webengine-python-version python3 \
         -webengine-spellchecker \
-        -webengine-webrtc-pipewire
+        -webengine-webrtc-pipewire \
 build      : |
     %make
 install    : |

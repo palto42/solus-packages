@@ -1,0 +1,5 @@
+releases:
+  id: 1200
+  rss: https://gitlab.gnome.org/GNOME/gnote/-/releases.atom
+security:
+  cpe: ~ # Last checked 2025-03-27

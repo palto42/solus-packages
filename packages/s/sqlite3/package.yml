@@ -1,30 +1,40 @@
 name       : sqlite3
-version    : 3.45.1
-release    : 52
+version    : 3.49.2
+release    : 63
 source     :
-    - https://www.sqlite.org/2024/sqlite-autoconf-3450100.tar.gz : cd9c27841b7a5932c9897651e20b86c701dd740556989b01ca596fcfa3d49a0a
+    - https://sqlite.org/2025/sqlite-src-3490200.zip : c3101978244669a43bc09f44fa21e47a4e25cdf440f1829e9eff176b9a477862
 license    : Public-Domain
-component  : system.base
-optimize   : speed
+component  :
+    - system.base
+    - lemon : programming.tools
 emul32     : yes
 homepage   : https://www.sqlite.org
-summary    : Self contained SQL package
-description: |
-    The SQLite package is a software library that implements a self-contained, serverless, zero-configuration, transactional SQL database engine.
+summary    :
+    - Self contained SQL package
+    - lemon : A parser generator
+description:
+    - The SQLite package is a software library that implements a self-contained, serverless, zero-configuration, transactional SQL database engine.
+    - lemon : The Lemon program is an LALR(1) parser generator. It takes a context free grammar and converts it into a subroutine that will parse a file using that grammar.
+clang      : yes
+optimize   :
+    - speed
+    - thin-lto
 setup      : |
     ex_opts=""
     if [[ -z "${EMUL32BUILD}" ]]; then
         ex_opts="--enable-readline"
     fi
+    %patch -p1 -i $pkgfiles/sqlite-lemon-system-template.patch
 
     %configure --disable-static \
-        --enable-dynamic-extensions \
         --enable-fts3 \
         --enable-fts4 \
         --enable-fts5 \
         --enable-rtree \
         --enable-threadsafe \
         $ex_opts \
+        --disable-tcl \
+        --soname=legacy \
         CFLAGS="$CFLAGS \
         -DSQLITE_ENABLE_COLUMN_METADATA=1 \
         -DSQLITE_ENABLE_DBPAGE_VTAB=1 \
@@ -32,9 +42,24 @@ setup      : |
         -DSQLITE_ENABLE_FTS3_PARENTHESIS=1 \
         -DSQLITE_ENABLE_STMTVTAB=1 \
         -DSQLITE_ENABLE_UNLOCK_NOTIFY=1 \
-        -DSQLITE_SECURE_DELETE=1"
+        -DSQLITE_SECURE_DELETE=1 \
+        -DSQLITE_ENABLE_SESSION=1 \
+        -DSQLITE_ENABLE_PREUPDATE_HOOK=1 \
+        -DSQLITE_ENABLE_STAT4=1"
 build      : |
     %make
+    pushd tool
+    clang lemon.c -o lemon
+    popd
 install    : |
     %make_install
-    install -D -m00644 sqlite3.1 $installdir/usr/share/man/man1/sqlite3.1
+    install -Dm00644 sqlite3.1 $installdir/usr/share/man/man1/sqlite3.1
+    pushd tool
+    install -Dm00644 lempar.c -t $installdir/usr/share/lemon/
+    install -Dm00755 lemon $installdir/usr/bin
+    popd
+
+patterns   :
+    - lemon :
+        - /usr/bin/lemon
+        - /usr/share/lemon

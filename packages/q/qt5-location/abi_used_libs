@@ -1,4 +1,5 @@
 UNKNOWN
+ld-linux-x86-64.so.2
 libQt5Core.so.5
 libQt5DBus.so.5
 libQt5Gui.so.5
@@ -10,7 +11,7 @@ libQt5Sql.so.5
 libQt5Widgets.so.5
 libc.so.6
 libgcc_s.so.1
-libicuuc.so.74
+libicuuc.so.76
 libm.so.6
 libstdc++.so.6
 libz.so.1

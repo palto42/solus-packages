@@ -1,0 +1,33 @@
+name       : fotocx
+version    : '25.0'
+release    : 7
+source     :
+    - https://kornelix.net/downloads/downloads/fotocx-25.0-source.tar.gz : 1d78106e91fcabfb07343f2d00201a745cb114935fee273b0547e68c794a5f7e
+homepage   : https://kornelix.net/fotocx/fotocx.html
+license    : GPL-3.0-or-later
+component  : multimedia.graphics
+summary    : Fotocx image editing and collection management
+description: |
+    Fotocx (formerly Fotoxx) is a free open source Linux program for photo and image editing and collection management. The goal is to meet the needs of serious photographers while remaining fast and easy to use.
+builddeps  :
+    - pkgconfig(champlain-0.12)
+    - pkgconfig(clutter-gtk-1.0)
+    - pkgconfig(gtk+-3.0)
+    - pkgconfig(lcms2)
+    - pkgconfig(libpng)
+    - pkgconfig(libtiff-4)
+    - pkgconfig(libturbojpeg)
+    - xdg-utils
+rundeps    :
+    - binutils
+    - dcraw
+    - perl-image-exiftool
+replaces   :
+    - fotoxx
+build      : |
+    %make PREFIX=/usr
+install    : |
+    %make_install PREFIX=/usr ICONDIR=/usr/share/pixmaps
+
+    # Fix appstream generation
+    mv $installdir/usr/share/applications/{fotocx.desktop,net.kornelix.fotocx.desktop}

@@ -1,8 +1,8 @@
 name       : wxwidgets
-version    : 3.2.3
-release    : 37
+version    : 3.2.8
+release    : 40
 source     :
-    - https://github.com/wxWidgets/wxWidgets/releases/download/v3.2.3/wxWidgets-3.2.3.tar.bz2 : c170ab67c7e167387162276aea84e055ee58424486404bba692c401730d1a67a
+    - https://github.com/wxWidgets/wxWidgets/releases/download/v3.2.8/wxWidgets-3.2.8.tar.bz2 : c74784904109d7229e6894c85cfa068f1106a4a07c144afd78af41f373ee0fe6
 homepage   : https://wxwidgets.org
 license    : LGPL-2.0-or-later WITH WxWindows-exception-3.1
 component  : desktop.library
@@ -17,9 +17,6 @@ patterns   :
         - /usr/bin
         - /usr/share/wxwidgets/wx-config
 builddeps  :
-    - pkgconfig(gstreamer-plugins-base-1.0)
-    - pkgconfig(libmspack)
-    - pkgconfig(webkit2gtk-4.0)
     - pkgconfig32(atspi-2)
     - pkgconfig32(cairo)
     - pkgconfig32(expat)
@@ -53,6 +50,9 @@ builddeps  :
     - pkgconfig32(xrender)
     - pkgconfig32(xxf86vm)
     - pkgconfig32(zlib)
+    - pkgconfig(gstreamer-plugins-base-1.0)
+    - pkgconfig(libmspack)
+    - pkgconfig(webkit2gtk-4.1)
 setup      : |
     export exOpts=""
     if [ ! -z "${EMUL32BUILD}" ]; then

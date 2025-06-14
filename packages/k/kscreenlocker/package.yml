@@ -1,43 +1,41 @@
 name       : kscreenlocker
-version    : 5.27.10
-release    : 96
+version    : 6.3.5
+release    : 127
 source     :
-    - https://cdn.download.kde.org/stable/plasma/5.27.10/kscreenlocker-5.27.10.tar.xz : d74d80b87fc5b4915d615c288819f9006c0103ee864cadc565141bf468cb3d89
+    - https://download.kde.org/stable/plasma/6.3.5/kscreenlocker-6.3.5.tar.xz : 796ef34e91f97dbeb19002b0ff4400eb732dac91d5184a399bf9e5bde236a8f6
 homepage   : https://www.kde.org/workspaces/plasmadesktop/
 license    : GPL-2.0-or-later
 component  : desktop.kde.core
 summary    : Library and components for secure lock screen architecture
 description: |
     Library and components for secure lock screen architecture.
-optimize   : lto
 builddeps  :
-    - pkgconfig(KF5WaylandClient)
-    - pkgconfig(Qt5X11Extras)
-    - pkgconfig(libseccomp)
+    - pkgconfig(KF6Screen)
+    - pkgconfig(KF6WindowSystem)
     - pkgconfig(pam)
-    - pkgconfig(wayland-scanner)
+    - pkgconfig(wayland-server)
     - pkgconfig(xcb-keysyms)
-    - pkgconfig(xcursor)
     - pkgconfig(xi)
-    - kcmutils-devel
-    - kcrash-devel
-    - kdeclarative-devel
-    - kglobalaccel-devel
-    - ki18n-devel
-    - kidletime-devel
-    - kio-devel
-    - knotifications-devel
-    - kpackage-devel
-    - kwindowsystem-devel
-    - kxmlgui-devel
+    - kf6-kcmutils-devel
+    - kf6-kcrash-devel
+    - kf6-kglobalaccel-devel
+    - kf6-ki18n-devel
+    - kf6-kidletime-devel
+    - kf6-kio-devel
+    - kf6-knotifications-devel
+    - kf6-kpackage-devel
+    - kf6-ksvg-devel
+    - kf6-kxmlgui-devel
     - layer-shell-qt-devel
-    - libkscreen-devel
-    - solid-devel
+    - libplasma-devel
+clang      : yes
+optimize   :
+    - speed
+    - thin-lto
 setup      : |
-    %cmake_ninja -DBUILD_TESTING=OFF
+    %cmake_kf6
 build      : |
     %ninja_build
 install    : |
     %ninja_install
-    install -Dm00644 $pkgfiles/kde $installdir/usr/share/defaults/etc/pam.d/kde
-    %qml_cache
+    install -Dm00644 $pkgfiles/pam.d/* -t $installdir/usr/share/defaults/etc/pam.d/

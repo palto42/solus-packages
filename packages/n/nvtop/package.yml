@@ -1,8 +1,8 @@
 name       : nvtop
-version    : 3.0.2
-release    : 2
+version    : 3.2.0
+release    : 5
 source     :
-    - https://github.com/Syllo/nvtop/archive/refs/tags/3.0.2.tar.gz : 63fa45a2d675fe5320704850c216da6a6bb2edaf09821c26b3800fa7744bae00
+    - https://github.com/Syllo/nvtop/archive/refs/tags/3.2.0.tar.gz : d26df685455023cedc4dda033862dcddb67402fbdb685da70da78492f73c41d0
 homepage   : https://github.com/Syllo/nvtop/
 license    : GPL-3.0-or-later
 component  : system.utils

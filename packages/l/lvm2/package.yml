@@ -1,10 +1,11 @@
 name       : lvm2
-version    : 2.03.23
-release    : 25
+version    : 2.03.30
+release    : 33
 source     :
-    - http://mirrors.kernel.org/sourceware/lvm2/LVM2.2.03.23.tgz : 74e794a9e9dee1bcf8a2065f65b9196c44fdf321e22d63b98ed7de8c9aa17a5d
+    - http://mirrors.kernel.org/sourceware/lvm2/LVM2.2.03.30.tgz : ad76abecb8dc887733e06c449cb9add04a3506f9f0780c128817a6e1a17cec05
 license    : GPL-3.0-or-later
 component  : system.base
+homepage   : https://sourceware.org/lvm2/
 summary    : The LVM2 package is a package that manages logical partitions.
 description: |
     The LVM2 package is a package that manages logical partitions. It allows spanning of file systems across multiple physical disks and disk partitions and provides for dynamic growing or shrinking of logical partitions.
@@ -38,6 +39,12 @@ build      : |
     %make
 install    : |
     %make_install install_systemd_units install_tmpfiles_configuration
+
+    # Enable by default
+    install -dm00755 $installdir/usr/lib/systemd/system/{sockets,sysinit}.target.wants
+    ln -sv ../dm-event.socket $installdir/usr/lib/systemd/system/sockets.target.wants/dm-event.socket
+    ln -sv ../lvm2-lvmpolld.socket $installdir/usr/lib/systemd/system/sysinit.target.wants/lvm2-lvmpolld.socket
+    ln -sv ../lvm2-monitor.service $installdir/usr/lib/systemd/system/sysinit.target.wants/lvm2-monitor.service
 
     # Stateless
     rm -v $installdir/etc/lvm/lvm.conf \

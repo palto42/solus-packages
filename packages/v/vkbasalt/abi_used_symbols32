@@ -51,6 +51,7 @@ libstdc++.so.6:_ZNKRSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEE3strEv
 libstdc++.so.6:_ZNKSt10filesystem7__cxx114path17_M_find_extensionEv
 libstdc++.so.6:_ZNKSt10filesystem7__cxx114path5_List13_Impl_deleterclEPNS2_5_ImplE
 libstdc++.so.6:_ZNKSt10filesystem7__cxx114path5_List3endEv
+libstdc++.so.6:_ZNKSt10filesystem7__cxx114path5_List5beginEv
 libstdc++.so.6:_ZNKSt5ctypeIcE13_M_widen_initEv
 libstdc++.so.6:_ZNKSt8__detail20_Prime_rehash_policy11_M_next_bktEj
 libstdc++.so.6:_ZNKSt8__detail20_Prime_rehash_policy14_M_need_rehashEjjj
@@ -79,7 +80,6 @@ libstdc++.so.6:_ZNSt6chrono3_V212system_clock3nowEv
 libstdc++.so.6:_ZNSt6localeC1EPKc
 libstdc++.so.6:_ZNSt6localeC1Ev
 libstdc++.so.6:_ZNSt6localeD1Ev
-libstdc++.so.6:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE15_M_replace_coldEPcjPKcjj
 libstdc++.so.6:_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEE7_M_syncEPcjj
 libstdc++.so.6:_ZNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEC1Ev
 libstdc++.so.6:_ZNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEED1Ev
@@ -93,11 +93,12 @@ libstdc++.so.6:_ZSt16__ostream_insertIcSt11char_traitsIcEERSt13basic_ostreamIT_T
 libstdc++.so.6:_ZSt16__throw_bad_castv
 libstdc++.so.6:_ZSt17__throw_bad_allocv
 libstdc++.so.6:_ZSt18_Rb_tree_decrementPSt18_Rb_tree_node_base
-libstdc++.so.6:_ZSt18_Rb_tree_incrementPKSt18_Rb_tree_node_base
+libstdc++.so.6:_ZSt18_Rb_tree_incrementPSt18_Rb_tree_node_base
 libstdc++.so.6:_ZSt19__throw_logic_errorPKc
 libstdc++.so.6:_ZSt20__throw_length_errorPKc
 libstdc++.so.6:_ZSt20__throw_out_of_rangePKc
 libstdc++.so.6:_ZSt20__throw_system_errori
+libstdc++.so.6:_ZSt21__glibcxx_assert_failPKciS0_S0_
 libstdc++.so.6:_ZSt21ios_base_library_initv
 libstdc++.so.6:_ZSt24__throw_invalid_argumentPKc
 libstdc++.so.6:_ZSt24__throw_out_of_range_fmtPKcz
@@ -107,7 +108,6 @@ libstdc++.so.6:_ZSt29_Rb_tree_insert_and_rebalancebPSt18_Rb_tree_node_baseS0_RS_
 libstdc++.so.6:_ZSt4cerr
 libstdc++.so.6:_ZSt4cout
 libstdc++.so.6:_ZSt7getlineIcSt11char_traitsIcESaIcEERSt13basic_istreamIT_T0_ES7_RNSt7__cxx1112basic_stringIS4_S5_T1_EES4_
-libstdc++.so.6:_ZSt9terminatev
 libstdc++.so.6:_ZStrsIcSt11char_traitsIcESaIcEERSt13basic_istreamIT_T0_ES7_RNSt7__cxx1112basic_stringIS4_S5_T1_EE
 libstdc++.so.6:_ZTTNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEE
 libstdc++.so.6:_ZTTSt14basic_ifstreamIcSt11char_traitsIcEE
@@ -124,6 +124,7 @@ libstdc++.so.6:_ZTVSt9basic_iosIcSt11char_traitsIcEE
 libstdc++.so.6:_ZdlPvj
 libstdc++.so.6:_Znwj
 libstdc++.so.6:__cxa_begin_catch
+libstdc++.so.6:__cxa_call_terminate
 libstdc++.so.6:__cxa_end_catch
 libstdc++.so.6:__cxa_guard_abort
 libstdc++.so.6:__cxa_guard_acquire

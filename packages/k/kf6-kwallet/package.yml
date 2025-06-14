@@ -1,8 +1,8 @@
 name       : kf6-kwallet
-version    : 6.0.0
-release    : 4
+version    : 6.14.0
+release    : 24
 source     :
-    - https://cdn.download.kde.org/stable/frameworks/6.0/kwallet-6.0.0.tar.xz : bab43823de8b1b086dc4b2ad10d10bd6c4d0d2e1f8b5fd5fdd5f7d365fb8e5cc
+    - https://download.kde.org/stable/frameworks/6.14/kwallet-6.14.0.tar.xz : a7477e4e5e7ccb43491c5a0eccadf6a33e962088d5af32c4b6b4aacb920f59e3
 homepage   : https://community.kde.org/Frameworks
 license    :
     - BSD-3-Clause
@@ -17,24 +17,25 @@ description: |
     * Interface to KWallet, the safe desktop-wide storage for passwords on KDE work spaces.
     * The kwalletd used to safely store the passwords on KDE work spaces.
 builddeps  :
+    - pkgconfig(KF6WindowSystem)
     - pkgconfig(libgcrypt)
+    - pkgconfig(libsecret-1)
     - gpgme-qt-devel
     - kf6-kcolorscheme-devel
     - kf6-kconfig-devel
     - kf6-kcoreaddons-devel
+    - kf6-kcrash-devel
     - kf6-kdbusaddons-devel
     - kf6-kdoctools-devel
     - kf6-ki18n-devel
     - kf6-knotifications-devel
     - kf6-kwidgetsaddons-devel
-    - kf6-kwindowsystem-devel
     - qca-qt6-devel
 clang      : yes
 optimize   : thin-lto
 setup      : |
-    # Plasma-6: Change BUILD_KWALLETD and BUILD_KWALLET_QUERY
-    %cmake_kf6 -DBUILD_KWALLETD=OFF \
-               -DBUILD_KWALLET_QUERY=OFF
+    %patch -p1 -i $pkgfiles/upstream-01.patch
+    %cmake_kf6
 build      : |
     %ninja_build
 install    : |

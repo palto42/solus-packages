@@ -1,8 +1,8 @@
 name       : python-typeguard
-version    : 4.0.0
-release    : 9
+version    : 4.4.2
+release    : 12
 source     :
-    - https://files.pythonhosted.org/packages/source/t/typeguard/typeguard-4.0.0.tar.gz : 194fb3dbcb06ea9caf7088f3befee014de57961689f9c859ac5239b1ef61d987
+    - https://files.pythonhosted.org/packages/source/t/typeguard/typeguard-4.4.2.tar.gz : a6f1065813e32ef365bc3b3f503af8a96f9dd4e0033a02c28c4a4983de8c6c49
 homepage   : https://github.com/agronholm/typeguard
 license    : MIT
 component  : programming.python

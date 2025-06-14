@@ -1,12 +1,12 @@
 name       : elfutils
-version    : '0.190'
-release    : 24
+version    : '0.192'
+release    : 27
 source     :
-    - https://sourceware.org/elfutils/ftp/0.190/elfutils-0.190.tar.bz2 : 8e00a3a9b5f04bc1dc273ae86281d2d26ed412020b391ffcc23198f10231d692
+    - https://sourceware.org/elfutils/ftp/0.192/elfutils-0.192.tar.bz2 : 616099beae24aba11f9b63d86ca6cc8d566d968b802391334c91df54eab416b4
 homepage   : https://fedorahosted.org/elfutils/
 license    :
     - GPL-2.0-or-later
-    - LPL-3.0-or-later
+    - LGPL-3.0-or-later
 component  :
     - programming.tools
     - ^libdw : system.base
@@ -23,34 +23,33 @@ description: |
     The elfutils package contains set of utilities and libraries for handling ELF (Executable and Linkable Format) files.
 builddeps  :
     - pkgconfig32(bzip2)
+    - pkgconfig32(json-c)
+    - pkgconfig32(libarchive)
     - pkgconfig32(libcurl)
     - pkgconfig32(liblzma)
     - pkgconfig32(libzstd)
     - pkgconfig32(zlib)
-    - pkgconfig(libarchive)
     - pkgconfig(libmicrohttpd)
     - pkgconfig(sqlite3)
 rundeps    :
-    - devel :
-        - libdw-devel
-        - libelf-devel
-    - ^libdw-devel :
-        - libdw
     - ^libdw-32bit :
         - libdw
     - ^libdw-32bit-devel :
         - libdw-32bit
         - libdw-devel
-    - ^libelf-devel :
-        - libelf
+    - ^libdw-devel :
+        - libdw
     - ^libelf-32bit :
         - libelf
     - ^libelf-32bit-devel :
         - libelf-32bit
         - libelf-devel
+    - ^libelf-devel :
+        - libelf
+    - devel :
+        - libdw-devel
+        - libelf-devel
 setup      : |
-    %patch -p1 -i $pkgfiles/upstream/elfutils-0.190-fix-core-noncontig.patch
-
     if [[ ! -z "${EMUL32BUILD}" ]]; then
         debuginfod="--disable-debuginfod"
     fi

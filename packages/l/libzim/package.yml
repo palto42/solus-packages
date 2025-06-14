@@ -1,8 +1,8 @@
 name       : libzim
-version    : 9.1.0
-release    : 9
+version    : 9.2.3
+release    : 14
 source     :
-    - https://github.com/openzim/libzim/archive/refs/tags/9.1.0.tar.gz : faf19a35882415212d46a51aab45692ccfa1e2e36beb7261eec1ec53e29b9e6a
+    - https://github.com/openzim/libzim/archive/refs/tags/9.2.3.tar.gz : 7c6e7fcaf5bc82447edb12c6c573779af6d77b3b79227da57586e81c4e13f1bf
 homepage   : https://wiki.openzim.org/wiki/Libzim
 license    : GPL-2.0-or-later
 component  : programming.library

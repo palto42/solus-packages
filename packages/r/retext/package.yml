@@ -1,8 +1,8 @@
 name       : retext
-version    : 8.0.1
-release    : 19
+version    : 8.1.0
+release    : 23
 source     :
-    - https://github.com/retext-project/retext/archive/refs/tags/8.0.1.tar.gz : 8381672537b6f4dcb437a1d42aae55e87415bb6ef05d6dec33922a7fec368bcd
+    - https://github.com/retext-project/retext/archive/refs/tags/8.1.0.tar.gz : eb53486197ad92af65fc8a21f8362011d29c8c58ecba84de40dc11cb953439d2
 homepage   : https://github.com/retext-project/retext
 license    : GPL-2.0-or-later
 component  : editor
@@ -11,12 +11,16 @@ description: |
     ReText is a simple but powerful editor for Markdown and reStructuredText markup languages. ReText is written in Python language and works on Linux and other POSIX-compatible platforms.
 builddeps  :
     - pkgconfig(Qt6UiTools)
-    - pygments              # check
-    - pymarkups             # check
-    - python-chardet        # check
-    - python-docutils       # check
-    - python-qt6            # check
-    - xorg-server-xvfb      # check
+    - python-build
+    - python-installer
+    - python-setuptools
+checkdeps  :
+    - pygments
+    - pymarkups
+    - python-chardet
+    - python-docutils
+    - python-qt6
+    - xorg-server-xvfb
 rundeps    :
     - pyenchant
     - pygments
@@ -28,7 +32,8 @@ build      : |
     %python3_setup
 install    : |
     %python3_install
+
+    install -Dm00644 data/me.mitya57.ReText.desktop $installdir/usr/share/applications/data/me.mitya57.ReText.desktop
 check      : |
-    pushd $PKG_BUILD_DIR/py3build
-        xvfb-run python3 setup.py test
-    popd
+    xvfb-run python3 -m unittest -v
+

@@ -1,8 +1,8 @@
 name       : drkonqi
-version    : 5.27.10
-release    : 88
+version    : 6.3.5
+release    : 118
 source     :
-    - https://cdn.download.kde.org/stable/plasma/5.27.10/drkonqi-5.27.10.tar.xz : a3ea4794ca1d8e31cacfe78301884419cfd9daaf939c5d843718372b65657fd0
+    - https://download.kde.org/stable/plasma/6.3.5/drkonqi-6.3.5.tar.xz : d0c93f0fc1b4203b6245d3a2f4e9c85d4161570d14a14d81eed5a4ebd5adffcd
 homepage   : https://www.kde.org/workspaces/plasmadesktop/
 license    :
     - GPL-2.0-or-later
@@ -11,22 +11,40 @@ component  : desktop.kde.core
 summary    : KDE Crash Handler
 description: |
     The KDE Crash Handler.
-optimize   : lto
+networking : yes
 builddeps  :
-    - pkgconfig(Qt5Quick)
-    - pkgconfig(Qt5X11Extras)
-    - kcrash-devel
-    - kdeclarative-devel
-    - kidletime-devel
-    - kio-devel
-    - knotifications-devel
-    - kuserfeedback-devel
-    - kwallet-devel
-    - syntax-highlighting-devel
-rundep     :
+    - pkgconfig(Qt6Qml)
+    - pkgconfig(python3)
+    - kf6-kcmutils-devel
+    - kf6-kcrash-devel
+    - kf6-kidletime-devel
+    - kf6-kio-devel
+    - kf6-kirigami-devel
+    - kf6-kitemmodels-devel
+    - kf6-knotifications-devel
+    - kf6-kstatusnotifieritem-devel
+    - kf6-kwallet-devel
+    - kf6-syntax-highlighting-devel
+    - polkit-qt-1-qt6-devel
+    - python-distro
+    - python-psutil
+    - python-pygdbmi
+    - python-sentry-sdk
+rundeps    :
     - gdb
+    - kf6-kcmutils
+    - kf6-kirigami
+    - kf6-kitemmodels
+    - python-psutil
+    - python-pygdbmi
+    - python-sentry-sdk
+clang      : yes
+optimize   :
+    - speed
+    - thin-lto
 setup      : |
-    %cmake_ninja -DBUILD_TESTING=OFF
+    %cmake_kf6 -DWITH_GDB12=ON \
+               -DWITH_PYTHON_VENDORING=OFF
 build      : |
     %ninja_build
 install    : |

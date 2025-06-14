@@ -1,9 +1,10 @@
 name       : poco
-version    : 1.12.4
-release    : 5
+version    : 1.14.2
+release    : 9
 source     :
-    - https://github.com/pocoproject/poco/archive/refs/tags/poco-1.12.4-release.tar.gz : 71ef96c35fced367d6da74da294510ad2c912563f12cd716ab02b6ed10a733ef
+    - https://github.com/pocoproject/poco/archive/refs/tags/poco-1.14.2-release.tar.gz : 47394ea7ddb7b0a40e1a5be896f8f5dc77cfdc4f561d2e7131ecf582df5a0c3a
 license    : BSL-1.0
+homepage   : https://pocoproject.org
 component  :
     - programming.library
     - tools : programming.tools
@@ -13,6 +14,7 @@ description: |
 builddeps  :
     - pkgconfig(expat)
     - pkgconfig(libpcre2-posix)
+    - pkgconfig(libutf8proc)
     - pkgconfig(sqlite3)
     - pkgconfig(zlib)
 patterns   :
@@ -24,6 +26,3 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
-
-    # Rename arc to avoid a conflict with arcanist
-    mv $installdir/usr/bin/arc $installdir/usr/bin/poco-arc

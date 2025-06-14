@@ -1,0 +1,66 @@
+<PISI>
+    <Source>
+        <Name>sox_ng</Name>
+        <Homepage>https://codeberg.org/sox_ng/sox_ng</Homepage>
+        <Packager>
+            <Name>Jakob Gezelius</Name>
+            <Email>jakob@knugen.nu</Email>
+        </Packager>
+        <License>GPL-2.0-only</License>
+        <PartOf>multimedia.audio</PartOf>
+        <Summary xml:lang="en">SoX (Sound eXchange) is the Swiss Army knife of sound processing tools</Summary>
+        <Description xml:lang="en">SoX (Sound eXchange) is the Swiss Army knife of sound processing tools: it can convert sound files between many different file formats &amp; audio devices, and can apply many sound effects &amp; transformations, as well as doing basic analysis and providing input to more capable analysis and plotting tools.
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>sox_ng</Name>
+        <Summary xml:lang="en">SoX (Sound eXchange) is the Swiss Army knife of sound processing tools</Summary>
+        <Description xml:lang="en">SoX (Sound eXchange) is the Swiss Army knife of sound processing tools: it can convert sound files between many different file formats &amp; audio devices, and can apply many sound effects &amp; transformations, as well as doing basic analysis and providing input to more capable analysis and plotting tools.
+</Description>
+        <PartOf>multimedia.audio</PartOf>
+        <Files>
+            <Path fileType="executable">/usr/bin/play_ng</Path>
+            <Path fileType="executable">/usr/bin/rec_ng</Path>
+            <Path fileType="executable">/usr/bin/samples</Path>
+            <Path fileType="executable">/usr/bin/sox_ng</Path>
+            <Path fileType="executable">/usr/bin/soxi_ng</Path>
+            <Path fileType="library">/usr/lib64/libsox_ng.so.3</Path>
+            <Path fileType="library">/usr/lib64/libsox_ng.so.3.0.0</Path>
+            <Path fileType="man">/usr/share/man/man1/play_ng.1</Path>
+            <Path fileType="man">/usr/share/man/man1/rec_ng.1</Path>
+            <Path fileType="man">/usr/share/man/man1/sox_ng.1</Path>
+            <Path fileType="man">/usr/share/man/man1/soxi_ng.1</Path>
+            <Path fileType="man">/usr/share/man/man7/soxeffect_ng.7</Path>
+            <Path fileType="man">/usr/share/man/man7/soxformat_ng.7</Path>
+        </Files>
+        <Replaces>
+            <Package>sox</Package>
+        </Replaces>
+    </Package>
+    <Package>
+        <Name>sox_ng-devel</Name>
+        <Summary xml:lang="en">Development files for sox_ng</Summary>
+        <Description xml:lang="en">SoX (Sound eXchange) is the Swiss Army knife of sound processing tools: it can convert sound files between many different file formats &amp; audio devices, and can apply many sound effects &amp; transformations, as well as doing basic analysis and providing input to more capable analysis and plotting tools.
+</Description>
+        <PartOf>programming.devel</PartOf>
+        <RuntimeDependencies>
+            <Dependency release="18">sox_ng</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include/sox_ng.h</Path>
+            <Path fileType="library">/usr/lib64/libsox_ng.so</Path>
+            <Path fileType="data">/usr/lib64/pkgconfig/sox_ng.pc</Path>
+            <Path fileType="man">/usr/share/man/man3/libsox_ng.3</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="18">
+            <Date>2025-04-10</Date>
+            <Version>14.5.1.1</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Jakob Gezelius</Name>
+            <Email>jakob@knugen.nu</Email>
+        </Update>
+    </History>
+</PISI>

@@ -1,8 +1,8 @@
 name       : qgis
-version    : 3.34.3
-release    : 104
+version    : 3.42.2
+release    : 119
 source     :
-    - https://github.com/qgis/QGIS/archive/refs/tags/final-3_34_3.tar.gz : 3e81a20b122d8defa4c48a9570f653033d1208be3a8a4cb4c20ea8c0e0c525fc
+    - https://github.com/qgis/QGIS/archive/refs/tags/final-3_42_2.tar.gz : ff276fd3e666ce804b984fd40f5c69966c7936fb210b0af7c93bf52fbfc134ff
 homepage   : https://qgis.org/
 license    : GPL-2.0-or-later
 component  : office.scientific
@@ -17,7 +17,6 @@ builddeps  :
     - pkgconfig(Qt5SerialPort)
     - pkgconfig(Qt5Svg)
     - pkgconfig(Qt5UiTools)
-    - pkgconfig(Qt5WebKit)
     - pkgconfig(draco)
     - pkgconfig(exiv2)
     - pkgconfig(geos)
@@ -43,6 +42,7 @@ builddeps  :
     - libspatialindex-devel
     - pyqt-builder
     - python-qscintilla
+    - python-setuptools
     - python-sip
     - python-six
     - qscintilla-devel
@@ -63,6 +63,7 @@ setup      : |
         -DQGIS_MANUAL_SUBDIR=share/man \
         -DWITH_CUSTOM_WIDGETS=TRUE \
         -DWITH_PDAL=TRUE \
+        -DWITH_QTWEBKIT=FALSE \
         -DWITH_3D=TRUE
 build      : |
     %ninja_build

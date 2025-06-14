@@ -1,8 +1,8 @@
 name       : bash-completion
-version    : '2.11'
-release    : 21
+version    : 2.16.0
+release    : 25
 source     :
-    - https://github.com/scop/bash-completion/archive/2.11.tar.gz : 16adefabf43ec8ffb473704f5724d775c2f47e9f750d7d608f0251ec21fe8813
+    - https://github.com/scop/bash-completion/archive/refs/tags/2.16.0.tar.gz : c4d7edf0b035d8f6ed33294380326bde1fb8a4a8e24699566d545b4276141cc2
 homepage   : https://github.com/scop/bash-completion
 license    : GPL-2.0-or-later
 component  :
@@ -24,3 +24,6 @@ install    : |
     %make_install
 
     install -Dm00644 $pkgfiles/eopkg $installdir/usr/share/bash-completion/completions/eopkg
+
+    # provided by libsecret
+    rm -fv $installdir/usr/share/bash-completion/completions/secret-tool

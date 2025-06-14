@@ -76,6 +76,9 @@ libfluidsynth.so.3:fluid_get_stdin
 libfluidsynth.so.3:fluid_get_stdout
 libfluidsynth.so.3:fluid_get_sysconf
 libfluidsynth.so.3:fluid_get_userconf
+libfluidsynth.so.3:fluid_iir_filter_apply
+libfluidsynth.so.3:fluid_iir_filter_calc
+libfluidsynth.so.3:fluid_iir_filter_init_table
 libfluidsynth.so.3:fluid_is_midifile
 libfluidsynth.so.3:fluid_is_soundfont
 libfluidsynth.so.3:fluid_ladspa_activate
@@ -92,9 +95,6 @@ libfluidsynth.so.3:fluid_ladspa_effect_set_mix
 libfluidsynth.so.3:fluid_ladspa_host_port_exists
 libfluidsynth.so.3:fluid_ladspa_is_active
 libfluidsynth.so.3:fluid_ladspa_reset
-libfluidsynth.so.3:fluid_lash_connect
-libfluidsynth.so.3:fluid_lash_create_thread
-libfluidsynth.so.3:fluid_lash_extract_args
 libfluidsynth.so.3:fluid_log
 libfluidsynth.so.3:fluid_midi_dump_postrouter
 libfluidsynth.so.3:fluid_midi_dump_prerouter
@@ -133,12 +133,14 @@ libfluidsynth.so.3:fluid_mod_get_flags1
 libfluidsynth.so.3:fluid_mod_get_flags2
 libfluidsynth.so.3:fluid_mod_get_source1
 libfluidsynth.so.3:fluid_mod_get_source2
+libfluidsynth.so.3:fluid_mod_get_transform
 libfluidsynth.so.3:fluid_mod_has_dest
 libfluidsynth.so.3:fluid_mod_has_source
 libfluidsynth.so.3:fluid_mod_set_amount
 libfluidsynth.so.3:fluid_mod_set_dest
 libfluidsynth.so.3:fluid_mod_set_source1
 libfluidsynth.so.3:fluid_mod_set_source2
+libfluidsynth.so.3:fluid_mod_set_transform
 libfluidsynth.so.3:fluid_mod_sizeof
 libfluidsynth.so.3:fluid_mod_test_identity
 libfluidsynth.so.3:fluid_note_compute_id
@@ -169,6 +171,8 @@ libfluidsynth.so.3:fluid_preset_get_name
 libfluidsynth.so.3:fluid_preset_get_num
 libfluidsynth.so.3:fluid_preset_get_sfont
 libfluidsynth.so.3:fluid_preset_set_data
+libfluidsynth.so.3:fluid_rvoice_dsp_interpolate
+libfluidsynth.so.3:fluid_rvoice_dsp_silence
 libfluidsynth.so.3:fluid_sample_set_loop
 libfluidsynth.so.3:fluid_sample_set_name
 libfluidsynth.so.3:fluid_sample_set_pitch

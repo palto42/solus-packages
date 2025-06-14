@@ -1,0 +1,52 @@
+name       : libplasma
+version    : 6.3.5
+release    : 29
+source     :
+    - https://download.kde.org/stable/plasma/6.3.5/libplasma-6.3.5.tar.xz : 5012c83d2da265de960709b4f2138f3978aa44e1fb2bb0d6b3ef95de98e6eae4
+homepage   : https://kde.org/plasma-desktop/
+license    :
+    - BSD-3-Clause
+    - GPL-2.0-or-later
+    - LGPL-2.0-or-later
+    - LGPL-2.1-only
+    - LGPL-2.1-or-later
+component  : desktop.library
+summary    : Plasma library and runtime components
+description: |
+    Plasma library and runtime components
+builddeps  :
+    - pkgconfig(KF6GuiAddons)
+    - pkgconfig(KWaylandClient)
+    - pkgconfig(Qt6QuickControls2)
+    - pkgconfig(Qt6Svg)
+    - pkgconfig(Qt6WaylandClient)
+    - kf6-karchive-devel
+    - kf6-kcmutils-devel
+    - kf6-kdbusaddons-devel
+    - kf6-kdeclarative-devel
+    - kf6-kdoctools-devel
+    - kf6-kglobalaccel-devel
+    - kf6-kguiaddons-devel
+    - kf6-kiconthemes-devel
+    - kf6-kio-devel
+    - kf6-kirigami-devel
+    - kf6-knotifications-devel
+    - kf6-kpackage-devel
+    - kf6-ksvg-devel
+    - plasma-activities-devel
+    - plasma-wayland-protocols-devel
+rundeps    :
+    - devel :
+        - kf6-kpackage-devel
+        - kf6-kwindowsystem-devel
+        - qt6-base-devel
+        - qt6-declarative-devel
+clang      : yes
+optimize   : thin-lto
+setup      : |
+    %cmake_kf6
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install
+    %qml6_cache

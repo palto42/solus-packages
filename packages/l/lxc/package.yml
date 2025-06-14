@@ -1,8 +1,8 @@
 name       : lxc
-version    : 5.0.3
-release    : 21
+version    : 6.0.3
+release    : 24
 source     :
-    - https://linuxcontainers.org/downloads/lxc/lxc-5.0.3.tar.gz : 2693a4c654dcfdafb3aa95c262051d8122afa1b6f5cef1920221ebbdee934d07
+    - https://linuxcontainers.org/downloads/lxc/lxc-6.0.3.tar.gz : adac0837d2abfd2903916eaf56f60756f131327311f4f25ad917f6a71f73f98c
 license    : LGPL-2.1-or-later
 component  : virt
 homepage   : https://linuxcontainers.org/lxc
@@ -14,9 +14,11 @@ builddeps  :
     - pkgconfig(libapparmor)
     - pkgconfig(libcap)
     - pkgconfig(libseccomp)
-    - pkgconfig(lua-5.3)
     - pkgconfig(python3)
     - docbook2x
+rundeps    :
+    - dnsmasq
+clang      : yes
 setup      : |
     sed -i "s|if sanitize == 'none'|if false|g" src/lxc/cmd/meson.build
 
@@ -25,3 +27,16 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+
+    # No static libs
+    rm -v $installdir/%libdir%/lib*.a
+
+    # Stateless
+    install -Dm00644 $pkgfiles/lxc.tmpfiles $installdir/usr/lib/tmpfiles.d/lxc.conf
+    # rm -v $installdir/etc/default/lxc \
+    #       $installdir/etc/lxc/default.conf
+    rmdir -v $installdir/var/cache/lxc \
+             $installdir/var/cache \
+             $installdir/var/lib/lxc \
+             $installdir/var/lib \
+             $installdir/var

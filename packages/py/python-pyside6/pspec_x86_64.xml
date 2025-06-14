@@ -3,8 +3,8 @@
         <Name>python-pyside6</Name>
         <Homepage>https://www.qt.io</Homepage>
         <Packager>
-            <Name>Joey Riches</Name>
-            <Email>josephriches@gmail.com</Email>
+            <Name>Reilly Brogan</Name>
+            <Email>solus@reillybrogan.com</Email>
         </Packager>
         <License>GPL-2.0-or-later</License>
         <License>LGPL-3.0-or-later</License>
@@ -21,135 +21,148 @@
 </Description>
         <PartOf>programming.python</PartOf>
         <Files>
-            <Path fileType="library">/usr/lib/libpyside6.abi3.so.6.6</Path>
-            <Path fileType="library">/usr/lib/libpyside6.abi3.so.6.6.1</Path>
-            <Path fileType="library">/usr/lib/libpyside6qml.abi3.so.6.6</Path>
-            <Path fileType="library">/usr/lib/libpyside6qml.abi3.so.6.6.1</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6.egg-info/PKG-INFO</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6.egg-info/SOURCES.txt</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6.egg-info/dependency_links.txt</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6.egg-info/entry_points.txt</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6.egg-info/not-zip-safe</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6.egg-info/requires.txt</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6.egg-info/top_level.txt</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/Qt3DAnimation.abi3.so</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/Qt3DAnimation.pyi</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/Qt3DCore.abi3.so</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/Qt3DCore.pyi</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/Qt3DExtras.abi3.so</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/Qt3DExtras.pyi</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/Qt3DInput.abi3.so</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/Qt3DInput.pyi</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/Qt3DLogic.abi3.so</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/Qt3DLogic.pyi</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/Qt3DRender.abi3.so</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/Qt3DRender.pyi</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtAsyncio/__init__.py</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtAsyncio/__pycache__/__init__.cpython-311.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtAsyncio/__pycache__/events.cpython-311.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtAsyncio/__pycache__/futures.cpython-311.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtAsyncio/__pycache__/tasks.cpython-311.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtAsyncio/events.py</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtAsyncio/futures.py</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtAsyncio/tasks.py</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtBluetooth.abi3.so</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtBluetooth.pyi</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtCharts.abi3.so</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtCharts.pyi</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtConcurrent.abi3.so</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtConcurrent.pyi</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtCore.abi3.so</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtCore.pyi</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtDBus.abi3.so</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtDBus.pyi</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtDataVisualization.abi3.so</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtDataVisualization.pyi</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtDesigner.abi3.so</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtDesigner.pyi</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtExampleIcons.abi3.so</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtGui.abi3.so</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtGui.pyi</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtHelp.abi3.so</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtHelp.pyi</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtMultimedia.abi3.so</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtMultimedia.pyi</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtMultimediaWidgets.abi3.so</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtMultimediaWidgets.pyi</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtNetwork.abi3.so</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtNetwork.pyi</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtNetworkAuth.abi3.so</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtNetworkAuth.pyi</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtNfc.abi3.so</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtNfc.pyi</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtOpenGL.abi3.so</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtOpenGL.pyi</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtOpenGLWidgets.abi3.so</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtOpenGLWidgets.pyi</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtPdf.abi3.so</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtPdf.pyi</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtPdfWidgets.abi3.so</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtPdfWidgets.pyi</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtPositioning.abi3.so</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtPositioning.pyi</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtPrintSupport.abi3.so</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtPrintSupport.pyi</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtQml.abi3.so</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtQml.pyi</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtQuick.abi3.so</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtQuick.pyi</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtQuickControls2.abi3.so</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtQuickControls2.pyi</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtQuickWidgets.abi3.so</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtQuickWidgets.pyi</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtRemoteObjects.abi3.so</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtRemoteObjects.pyi</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtScxml.abi3.so</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtScxml.pyi</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtSensors.abi3.so</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtSensors.pyi</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtSerialPort.abi3.so</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtSerialPort.pyi</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtSpatialAudio.abi3.so</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtSpatialAudio.pyi</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtSql.abi3.so</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtSql.pyi</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtStateMachine.abi3.so</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtStateMachine.pyi</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtSvg.abi3.so</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtSvg.pyi</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtSvgWidgets.abi3.so</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtSvgWidgets.pyi</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtTest.abi3.so</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtTest.pyi</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtUiTools.abi3.so</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtUiTools.pyi</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtWebChannel.abi3.so</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtWebChannel.pyi</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtWebEngineCore.abi3.so</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtWebEngineCore.pyi</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtWebEngineQuick.abi3.so</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtWebEngineQuick.pyi</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtWebEngineWidgets.abi3.so</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtWebEngineWidgets.pyi</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtWebSockets.abi3.so</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtWebSockets.pyi</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtWidgets.abi3.so</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtWidgets.pyi</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtXml.abi3.so</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/QtXml.pyi</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/__init__.py</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/__pycache__/__init__.cpython-311.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/__pycache__/_config.cpython-311.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/__pycache__/_git_pyside_version.cpython-311.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/_config.py</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/_git_pyside_version.py</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/support/__init__.py</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/support/__pycache__/__init__.cpython-311.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/support/__pycache__/deprecated.cpython-311.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/support/__pycache__/generate_pyi.cpython-311.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/support/deprecated.py</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/PySide6/support/generate_pyi.py</Path>
-            <Path fileType="library">/usr/lib64/qt6/plugins/designer/libPySidePlugin.so</Path>
+            <Path fileType="library">/usr/lib/libpyside6.abi3.so.6.9</Path>
+            <Path fileType="library">/usr/lib/libpyside6.abi3.so.6.9.1</Path>
+            <Path fileType="library">/usr/lib/libpyside6qml.abi3.so.6.9</Path>
+            <Path fileType="library">/usr/lib/libpyside6qml.abi3.so.6.9.1</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6.egg-info/PKG-INFO</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6.egg-info/SOURCES.txt</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6.egg-info/dependency_links.txt</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6.egg-info/entry_points.txt</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6.egg-info/requires.txt</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6.egg-info/top_level.txt</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/Qt3DAnimation.abi3.so</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/Qt3DAnimation.pyi</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/Qt3DCore.abi3.so</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/Qt3DCore.pyi</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/Qt3DExtras.abi3.so</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/Qt3DExtras.pyi</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/Qt3DInput.abi3.so</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/Qt3DInput.pyi</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/Qt3DLogic.abi3.so</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/Qt3DLogic.pyi</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/Qt3DRender.abi3.so</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/Qt3DRender.pyi</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtAsyncio/__init__.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtAsyncio/__pycache__/__init__.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtAsyncio/__pycache__/events.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtAsyncio/__pycache__/futures.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtAsyncio/__pycache__/tasks.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtAsyncio/events.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtAsyncio/futures.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtAsyncio/tasks.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtBluetooth.abi3.so</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtBluetooth.pyi</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtCharts.abi3.so</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtCharts.pyi</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtConcurrent.abi3.so</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtConcurrent.pyi</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtCore.abi3.so</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtCore.pyi</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtDBus.abi3.so</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtDBus.pyi</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtDataVisualization.abi3.so</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtDataVisualization.pyi</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtDesigner.abi3.so</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtDesigner.pyi</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtExampleIcons.abi3.so</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtGui.abi3.so</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtGui.pyi</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtHelp.abi3.so</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtHelp.pyi</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtLocation.abi3.so</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtLocation.pyi</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtMultimedia.abi3.so</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtMultimedia.pyi</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtMultimediaWidgets.abi3.so</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtMultimediaWidgets.pyi</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtNetwork.abi3.so</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtNetwork.pyi</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtNetworkAuth.abi3.so</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtNetworkAuth.pyi</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtNfc.abi3.so</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtNfc.pyi</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtOpenGL.abi3.so</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtOpenGL.pyi</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtOpenGLWidgets.abi3.so</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtOpenGLWidgets.pyi</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtPdf.abi3.so</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtPdf.pyi</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtPdfWidgets.abi3.so</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtPdfWidgets.pyi</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtPositioning.abi3.so</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtPositioning.pyi</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtPrintSupport.abi3.so</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtPrintSupport.pyi</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtQml.abi3.so</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtQml.pyi</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtQuick.abi3.so</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtQuick.pyi</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtQuick3D.abi3.so</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtQuick3D.pyi</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtQuickControls2.abi3.so</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtQuickControls2.pyi</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtQuickTest.abi3.so</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtQuickTest.pyi</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtQuickWidgets.abi3.so</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtQuickWidgets.pyi</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtRemoteObjects.abi3.so</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtRemoteObjects.pyi</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtScxml.abi3.so</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtScxml.pyi</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtSensors.abi3.so</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtSensors.pyi</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtSerialBus.abi3.so</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtSerialBus.pyi</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtSerialPort.abi3.so</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtSerialPort.pyi</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtSpatialAudio.abi3.so</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtSpatialAudio.pyi</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtSql.abi3.so</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtSql.pyi</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtStateMachine.abi3.so</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtStateMachine.pyi</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtSvg.abi3.so</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtSvg.pyi</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtSvgWidgets.abi3.so</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtSvgWidgets.pyi</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtTest.abi3.so</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtTest.pyi</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtTextToSpeech.abi3.so</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtTextToSpeech.pyi</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtUiTools.abi3.so</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtUiTools.pyi</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtWebChannel.abi3.so</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtWebChannel.pyi</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtWebEngineCore.abi3.so</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtWebEngineCore.pyi</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtWebEngineQuick.abi3.so</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtWebEngineQuick.pyi</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtWebEngineWidgets.abi3.so</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtWebEngineWidgets.pyi</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtWebSockets.abi3.so</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtWebSockets.pyi</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtWidgets.abi3.so</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtWidgets.pyi</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtXml.abi3.so</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/QtXml.pyi</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/__init__.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/__pycache__/__init__.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/__pycache__/_config.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/__pycache__/_git_pyside_version.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/_config.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/_git_pyside_version.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/support/__init__.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/support/__pycache__/__init__.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/support/__pycache__/deprecated.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/support/__pycache__/generate_pyi.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/support/deprecated.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/PySide6/support/generate_pyi.py</Path>
+            <Path fileType="data">/usr/share/PySide6/doc/qtcore.rst</Path>
+            <Path fileType="data">/usr/share/PySide6/doc/qtqml.rst</Path>
+            <Path fileType="data">/usr/share/PySide6/doc/qtquicktest.rst</Path>
+            <Path fileType="data">/usr/share/PySide6/doc/qtuitools.rst</Path>
+            <Path fileType="data">/usr/share/PySide6/doc/qtwebenginecore.rst</Path>
             <Path fileType="data">/usr/share/PySide6/glue/qtcharts.cpp</Path>
             <Path fileType="data">/usr/share/PySide6/glue/qtcore.cpp</Path>
             <Path fileType="data">/usr/share/PySide6/glue/qtdatavisualization.cpp</Path>
@@ -159,15 +172,19 @@
             <Path fileType="data">/usr/share/PySide6/glue/qtnetwork.cpp</Path>
             <Path fileType="data">/usr/share/PySide6/glue/qtnetworkauth.cpp</Path>
             <Path fileType="data">/usr/share/PySide6/glue/qtopengl.cpp</Path>
+            <Path fileType="data">/usr/share/PySide6/glue/qtpositioning.cpp</Path>
             <Path fileType="data">/usr/share/PySide6/glue/qtprintsupport.cpp</Path>
             <Path fileType="data">/usr/share/PySide6/glue/qtqml.cpp</Path>
             <Path fileType="data">/usr/share/PySide6/glue/qtquick.cpp</Path>
+            <Path fileType="data">/usr/share/PySide6/glue/qtquick3d.cpp</Path>
+            <Path fileType="data">/usr/share/PySide6/glue/qtquicktest.cpp</Path>
+            <Path fileType="data">/usr/share/PySide6/glue/qtremoteobjects.cpp</Path>
+            <Path fileType="data">/usr/share/PySide6/glue/qtserialbus.cpp</Path>
             <Path fileType="data">/usr/share/PySide6/glue/qtsql.cpp</Path>
             <Path fileType="data">/usr/share/PySide6/glue/qtstatemachine.cpp</Path>
             <Path fileType="data">/usr/share/PySide6/glue/qttest.cpp</Path>
             <Path fileType="data">/usr/share/PySide6/glue/qtuitools.cpp</Path>
             <Path fileType="data">/usr/share/PySide6/glue/qtwebenginecore.cpp</Path>
-            <Path fileType="data">/usr/share/PySide6/glue/qtwebenginewidgets.cpp</Path>
             <Path fileType="data">/usr/share/PySide6/glue/qtwidgets.cpp</Path>
             <Path fileType="data">/usr/share/PySide6/glue/qtxml.cpp</Path>
             <Path fileType="data">/usr/share/PySide6/typesystems/common.xml</Path>
@@ -177,7 +194,6 @@
             <Path fileType="data">/usr/share/PySide6/typesystems/glue/qeasingcurve_glue.cpp</Path>
             <Path fileType="data">/usr/share/PySide6/typesystems/glue/qeasingcurve_glue.h</Path>
             <Path fileType="data">/usr/share/PySide6/typesystems/gui_common.xml</Path>
-            <Path fileType="data">/usr/share/PySide6/typesystems/opengl_common.xml</Path>
             <Path fileType="data">/usr/share/PySide6/typesystems/typesystem_3danimation.xml</Path>
             <Path fileType="data">/usr/share/PySide6/typesystems/typesystem_3dcore.xml</Path>
             <Path fileType="data">/usr/share/PySide6/typesystems/typesystem_3dextras.xml</Path>
@@ -204,6 +220,7 @@
             <Path fileType="data">/usr/share/PySide6/typesystems/typesystem_gui_win.xml</Path>
             <Path fileType="data">/usr/share/PySide6/typesystems/typesystem_gui_x11.xml</Path>
             <Path fileType="data">/usr/share/PySide6/typesystems/typesystem_help.xml</Path>
+            <Path fileType="data">/usr/share/PySide6/typesystems/typesystem_location.xml</Path>
             <Path fileType="data">/usr/share/PySide6/typesystems/typesystem_multimedia.xml</Path>
             <Path fileType="data">/usr/share/PySide6/typesystems/typesystem_multimediawidgets.xml</Path>
             <Path fileType="data">/usr/share/PySide6/typesystems/typesystem_network.xml</Path>
@@ -240,11 +257,14 @@
             <Path fileType="data">/usr/share/PySide6/typesystems/typesystem_printsupport_common.xml</Path>
             <Path fileType="data">/usr/share/PySide6/typesystems/typesystem_qml.xml</Path>
             <Path fileType="data">/usr/share/PySide6/typesystems/typesystem_quick.xml</Path>
+            <Path fileType="data">/usr/share/PySide6/typesystems/typesystem_quick3d.xml</Path>
             <Path fileType="data">/usr/share/PySide6/typesystems/typesystem_quickcontrols2.xml</Path>
+            <Path fileType="data">/usr/share/PySide6/typesystems/typesystem_quicktest.xml</Path>
             <Path fileType="data">/usr/share/PySide6/typesystems/typesystem_quickwidgets.xml</Path>
             <Path fileType="data">/usr/share/PySide6/typesystems/typesystem_remoteobjects.xml</Path>
             <Path fileType="data">/usr/share/PySide6/typesystems/typesystem_scxml.xml</Path>
             <Path fileType="data">/usr/share/PySide6/typesystems/typesystem_sensors.xml</Path>
+            <Path fileType="data">/usr/share/PySide6/typesystems/typesystem_serialbus.xml</Path>
             <Path fileType="data">/usr/share/PySide6/typesystems/typesystem_serialport.xml</Path>
             <Path fileType="data">/usr/share/PySide6/typesystems/typesystem_spatialaudio.xml</Path>
             <Path fileType="data">/usr/share/PySide6/typesystems/typesystem_sql.xml</Path>
@@ -252,6 +272,7 @@
             <Path fileType="data">/usr/share/PySide6/typesystems/typesystem_svg.xml</Path>
             <Path fileType="data">/usr/share/PySide6/typesystems/typesystem_svgwidgets.xml</Path>
             <Path fileType="data">/usr/share/PySide6/typesystems/typesystem_test.xml</Path>
+            <Path fileType="data">/usr/share/PySide6/typesystems/typesystem_texttospeech.xml</Path>
             <Path fileType="data">/usr/share/PySide6/typesystems/typesystem_uitools.xml</Path>
             <Path fileType="data">/usr/share/PySide6/typesystems/typesystem_webchannel.xml</Path>
             <Path fileType="data">/usr/share/PySide6/typesystems/typesystem_webenginecore.xml</Path>
@@ -271,7 +292,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="9">python-pyside6</Dependency>
+            <Dependency release="18">python-pyside6</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/PySide6/Qt3DAnimation/pyside6_qt3danimation_python.h</Path>
@@ -284,6 +305,7 @@
             <Path fileType="header">/usr/include/PySide6/QtCharts/pyside6_qtcharts_python.h</Path>
             <Path fileType="header">/usr/include/PySide6/QtConcurrent/pyside6_qtconcurrent_python.h</Path>
             <Path fileType="header">/usr/include/PySide6/QtCore/pyside6_qtcore_python.h</Path>
+            <Path fileType="header">/usr/include/PySide6/QtCore/qiopipe.h</Path>
             <Path fileType="header">/usr/include/PySide6/QtCore/qtcorehelper.h</Path>
             <Path fileType="header">/usr/include/PySide6/QtDBus/pyside6_qtdbus_python.h</Path>
             <Path fileType="header">/usr/include/PySide6/QtDBus/qtdbushelper.h</Path>
@@ -295,6 +317,7 @@
             <Path fileType="header">/usr/include/PySide6/QtGui/qpytextobject.h</Path>
             <Path fileType="header">/usr/include/PySide6/QtGui/qtguihelper.h</Path>
             <Path fileType="header">/usr/include/PySide6/QtHelp/pyside6_qthelp_python.h</Path>
+            <Path fileType="header">/usr/include/PySide6/QtLocation/pyside6_qtlocation_python.h</Path>
             <Path fileType="header">/usr/include/PySide6/QtMultimedia/pyside6_qtmultimedia_python.h</Path>
             <Path fileType="header">/usr/include/PySide6/QtMultimediaWidgets/pyside6_qtmultimediawidgets_python.h</Path>
             <Path fileType="header">/usr/include/PySide6/QtNetwork/pyside6_qtnetwork_python.h</Path>
@@ -308,11 +331,14 @@
             <Path fileType="header">/usr/include/PySide6/QtPrintSupport/pyside6_qtprintsupport_python.h</Path>
             <Path fileType="header">/usr/include/PySide6/QtQml/pyside6_qtqml_python.h</Path>
             <Path fileType="header">/usr/include/PySide6/QtQuick/pyside6_qtquick_python.h</Path>
+            <Path fileType="header">/usr/include/PySide6/QtQuick3D/pyside6_qtquick3d_python.h</Path>
             <Path fileType="header">/usr/include/PySide6/QtQuickControls2/pyside6_qtquickcontrols2_python.h</Path>
+            <Path fileType="header">/usr/include/PySide6/QtQuickTest/pyside6_qtquicktest_python.h</Path>
             <Path fileType="header">/usr/include/PySide6/QtQuickWidgets/pyside6_qtquickwidgets_python.h</Path>
             <Path fileType="header">/usr/include/PySide6/QtRemoteObjects/pyside6_qtremoteobjects_python.h</Path>
             <Path fileType="header">/usr/include/PySide6/QtScxml/pyside6_qtscxml_python.h</Path>
             <Path fileType="header">/usr/include/PySide6/QtSensors/pyside6_qtsensors_python.h</Path>
+            <Path fileType="header">/usr/include/PySide6/QtSerialBus/pyside6_qtserialbus_python.h</Path>
             <Path fileType="header">/usr/include/PySide6/QtSerialPort/pyside6_qtserialport_python.h</Path>
             <Path fileType="header">/usr/include/PySide6/QtSpatialAudio/pyside6_qtspatialaudio_python.h</Path>
             <Path fileType="header">/usr/include/PySide6/QtSql/pyside6_qtsql_python.h</Path>
@@ -320,6 +346,7 @@
             <Path fileType="header">/usr/include/PySide6/QtSvg/pyside6_qtsvg_python.h</Path>
             <Path fileType="header">/usr/include/PySide6/QtSvgWidgets/pyside6_qtsvgwidgets_python.h</Path>
             <Path fileType="header">/usr/include/PySide6/QtTest/pyside6_qttest_python.h</Path>
+            <Path fileType="header">/usr/include/PySide6/QtTextToSpeech/pyside6_qttexttospeech_python.h</Path>
             <Path fileType="header">/usr/include/PySide6/QtUiTools/pyside6_qtuitools_python.h</Path>
             <Path fileType="header">/usr/include/PySide6/QtWebChannel/pyside6_qtwebchannel_python.h</Path>
             <Path fileType="header">/usr/include/PySide6/QtWebEngineCore/pyside6_qtwebenginecore_python.h</Path>
@@ -330,16 +357,21 @@
             <Path fileType="header">/usr/include/PySide6/QtXml/pyside6_qtxml_python.h</Path>
             <Path fileType="header">/usr/include/PySide6/class_property.h</Path>
             <Path fileType="header">/usr/include/PySide6/dynamicqmetaobject.h</Path>
+            <Path fileType="header">/usr/include/PySide6/dynamicslot_p.h</Path>
             <Path fileType="header">/usr/include/PySide6/feature_select.h</Path>
-            <Path fileType="header">/usr/include/PySide6/globalreceiverv2.h</Path>
             <Path fileType="header">/usr/include/PySide6/pyside.h</Path>
             <Path fileType="header">/usr/include/PySide6/pyside6_global.h</Path>
             <Path fileType="header">/usr/include/PySide6/pyside_numpy.h</Path>
             <Path fileType="header">/usr/include/PySide6/pyside_p.h</Path>
+            <Path fileType="header">/usr/include/PySide6/pysidecapsulemethod_p.h</Path>
             <Path fileType="header">/usr/include/PySide6/pysideclassdecorator_p.h</Path>
             <Path fileType="header">/usr/include/PySide6/pysideclassinfo.h</Path>
             <Path fileType="header">/usr/include/PySide6/pysideclassinfo_p.h</Path>
             <Path fileType="header">/usr/include/PySide6/pysidecleanup.h</Path>
+            <Path fileType="header">/usr/include/PySide6/pysidedynamicclass_p.h</Path>
+            <Path fileType="header">/usr/include/PySide6/pysidedynamiccommon_p.h</Path>
+            <Path fileType="header">/usr/include/PySide6/pysidedynamicenum_p.h</Path>
+            <Path fileType="header">/usr/include/PySide6/pysidedynamicpod_p.h</Path>
             <Path fileType="header">/usr/include/PySide6/pysideinit.h</Path>
             <Path fileType="header">/usr/include/PySide6/pysidelogging_p.h</Path>
             <Path fileType="header">/usr/include/PySide6/pysidemacros.h</Path>
@@ -366,6 +398,8 @@
             <Path fileType="header">/usr/include/PySide6/pysideqmltypeinfo_p.h</Path>
             <Path fileType="header">/usr/include/PySide6/pysideqmluncreatable.h</Path>
             <Path fileType="header">/usr/include/PySide6/pysideqobject.h</Path>
+            <Path fileType="header">/usr/include/PySide6/pysideqslotobject_p.h</Path>
+            <Path fileType="header">/usr/include/PySide6/pysiderephandler_p.h</Path>
             <Path fileType="header">/usr/include/PySide6/pysidesignal.h</Path>
             <Path fileType="header">/usr/include/PySide6/pysidesignal_p.h</Path>
             <Path fileType="header">/usr/include/PySide6/pysideslot_p.h</Path>
@@ -386,16 +420,18 @@
             <Path fileType="library">/usr/lib/cmake/PySide6Qml/PySide6QmlTargets.cmake</Path>
             <Path fileType="library">/usr/lib/libpyside6.abi3.so</Path>
             <Path fileType="library">/usr/lib/libpyside6qml.abi3.so</Path>
+            <Path fileType="library">/usr/lib/libpyside6remoteobjects.a</Path>
             <Path fileType="data">/usr/lib/pkgconfig/pyside6.pc</Path>
+            <Path fileType="library">/usr/lib64/qt6/plugins/designer/libPySidePlugin.so</Path>
         </Files>
     </Package>
     <History>
-        <Update release="9">
-            <Date>2024-02-17</Date>
-            <Version>6.6.1</Version>
+        <Update release="18">
+            <Date>2025-06-10</Date>
+            <Version>6.9.1</Version>
             <Comment>Packaging update</Comment>
-            <Name>Joey Riches</Name>
-            <Email>josephriches@gmail.com</Email>
+            <Name>Reilly Brogan</Name>
+            <Email>solus@reillybrogan.com</Email>
         </Update>
     </History>
 </PISI>

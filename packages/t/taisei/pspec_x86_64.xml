@@ -3,22 +3,22 @@
         <Name>taisei</Name>
         <Homepage>https://taisei-project.org</Homepage>
         <Packager>
-            <Name>Alexander Vorobyev</Name>
-            <Email>avorobyev@protonmail.com</Email>
+            <Name>Reilly Brogan</Name>
+            <Email>solus@reillybrogan.com</Email>
         </Packager>
         <License>CC0-1.0</License>
         <License>CC-BY-4.0</License>
         <License>MIT</License>
         <PartOf>games.arcade</PartOf>
         <Summary xml:lang="en">A free and open-source Touhou Project clone and fangame</Summary>
-        <Description xml:lang="en">Taisei is an open clone of the Tōhō Project series. Tōhō is a one-man project of shoot-em-up games set in an isolated world full of Japanese folklore.
+        <Description xml:lang="en">Taisei is an open clone of the T&#x14d;h&#x14d; Project series. T&#x14d;h&#x14d; is a one-man project of shoot-em-up games set in an isolated world full of Japanese folklore.
 </Description>
         <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>taisei</Name>
         <Summary xml:lang="en">A free and open-source Touhou Project clone and fangame</Summary>
-        <Description xml:lang="en">Taisei is an open clone of the Tōhō Project series. Tōhō is a one-man project of shoot-em-up games set in an isolated world full of Japanese folklore.
+        <Description xml:lang="en">Taisei is an open clone of the T&#x14d;h&#x14d; Project series. T&#x14d;h&#x14d; is a one-man project of shoot-em-up games set in an isolated world full of Japanese folklore.
 </Description>
         <PartOf>games.arcade</PartOf>
         <Files>
@@ -57,12 +57,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="13">
-            <Date>2023-11-12</Date>
-            <Version>1.4</Version>
+        <Update release="18">
+            <Date>2025-06-06</Date>
+            <Version>1.4.1</Version>
             <Comment>Packaging update</Comment>
-            <Name>Alexander Vorobyev</Name>
-            <Email>avorobyev@protonmail.com</Email>
+            <Name>Reilly Brogan</Name>
+            <Email>solus@reillybrogan.com</Email>
         </Update>
     </History>
 </PISI>

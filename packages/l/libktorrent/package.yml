@@ -1,8 +1,8 @@
 name       : libktorrent
-version    : 23.08.5
-release    : 36
+version    : 25.04.2
+release    : 54
 source     :
-    - https://cdn.download.kde.org/stable/release-service/23.08.5/src/libktorrent-23.08.5.tar.xz : 0fa23c3f5a8e6aeaf76e1c3f1ff7c10046d4ad925798907cf5b28c9788d297bd
+    - https://download.kde.org/stable/release-service/25.04.2/src/libktorrent-25.04.2.tar.xz : e6ccf6d0503a0b71d594b75e67aa0ad505d57316d20d5380ccc590c4f0604e98
 homepage   : https://invent.kde.org/network/libktorrent
 license    : GPL-2.0-or-later
 component  : programming.library
@@ -11,13 +11,24 @@ description: |
     libkTorrent is a BitTorrent protocol implementation for KDE.
 builddeps  :
     - pkgconfig(libgcrypt)
-    - pkgconfig(qca2-qt5)
-    - karchive-devel
-    - kcrash-devel
-    - kio-devel
+    - kf6-karchive-devel
+    - kf6-kcrash-devel
+    - kf6-kio-devel
     - libboost-devel
+    - xfsprogs-devel
+rundeps    :
+    - devel :
+        - kf6-karchive-devel
+        - kf6-kconfig-devel
+        - kf6-kio-devel
+        - libboost-devel
+        - libgcrypt-devel
+clang      : yes
+optimize   :
+    - speed
+    - thin-lto
 setup      : |
-    %cmake_ninja
+    %cmake_kf6
 build      : |
     %ninja_build
 install    : |

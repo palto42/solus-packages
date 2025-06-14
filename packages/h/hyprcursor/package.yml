@@ -1,0 +1,26 @@
+name       : hyprcursor
+version    : 0.1.12
+release    : 6
+source     :
+    - https://github.com/hyprwm/hyprcursor/archive/refs/tags/v0.1.12.tar.gz : 3200a7a31e28884b9d046f8ec7b0aa67ede9ce0ab0d20193c2b61ee522d6b1f2
+homepage   : https://github.com/hyprwm/hyprcursor
+license    : BSD-3-Clause
+component  : desktop.hyprland
+summary    : The hyprland cursor format, library and utilities.
+description: |
+    The hyprland cursor format, library and utilities.
+patterns   :
+    - devel :
+        - /usr/bin/hyprcursor-util
+builddeps  :
+    - pkgconfig(cairo)
+    - pkgconfig(hyprlang)
+    - pkgconfig(librsvg-2.0)
+    - pkgconfig(libzip)
+    - pkgconfig(tomlplusplus)
+setup      : |
+    %cmake_ninja
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install

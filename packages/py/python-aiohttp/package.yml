@@ -1,0 +1,30 @@
+name       : python-aiohttp
+version    : 3.12.12
+release    : 16
+source     :
+    - https://files.pythonhosted.org/packages/source/a/aiohttp/aiohttp-3.12.12.tar.gz : 05875595d2483d96cb61fa9f64e75262d7ac6251a7e3c811d8e26f7d721760bd
+homepage   : https://docs.aiohttp.org/
+license    : Apache-2.0
+component  : programming.python
+summary    : Asynchronous HTTP client/server framework for asyncio and Python
+description: |
+    Asynchronous HTTP client/server framework for asyncio and Python
+builddeps  :
+    - cython
+    - python-build
+    - python-installer
+    - python-packaging
+    - python-pkgconfig
+    - python-setuptools
+    - python-wheel
+rundeps    :
+    - python-aiohappyeyeballs
+    - python-aiosignal
+    - python-attrs
+    - python-frozenlist
+    - python-propcache
+    - python-yarl
+build      : |
+    %python3_setup
+install    : |
+    %python3_install

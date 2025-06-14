@@ -1,8 +1,8 @@
 name       : kf6-syndication
-version    : 6.0.0
-release    : 4
+version    : 6.14.0
+release    : 20
 source     :
-    - https://cdn.download.kde.org/stable/frameworks/6.0/syndication-6.0.0.tar.xz : ff5e5189fcf8f6fb1289886ea370c20295de8c07269521316c2548b8e7294bad
+    - https://download.kde.org/stable/frameworks/6.14/syndication-6.14.0.tar.xz : 14e5ac6f632dc3022f6a32b9c8e5bd00896bdda5fad8585745023b2539561a19
 homepage   : https://community.kde.org/Frameworks
 license    :
     - BSD-2-Clause

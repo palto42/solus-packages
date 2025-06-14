@@ -1,8 +1,8 @@
 name       : v4l2loopback
-version    : 0.12.7
-release    : 285
+version    : 0.13.2
+release    : 322
 source     :
-    - https://github.com/umlaeute/v4l2loopback/archive/v0.12.7.tar.gz : e0782b8abe8f2235e2734f725dc1533a0729e674c4b7834921ade43b9f04939b
+    - https://github.com/umlaeute/v4l2loopback/archive/v0.13.2.tar.gz : 1e57e1e382d7451aa2a88d63cc9f146eab1f425b90e76104d4c3d73127e34771
 license    : GPL-2.0-or-later
 component  :
     - kernel.drivers
@@ -27,14 +27,16 @@ rundeps    :
         - v4l2loopback-common
     - v4l2loopback-common
 permanent  :
-    - /lib/modules
+    - /lib64/modules
+    - /usr/lib64/modules
 patterns   :
     - common :
         - /usr/bin
         - /usr/share/man
-    - current : /lib/modules/*.current
+    - current :
+        - /lib64/modules/*.current
+        - /usr/lib64/modules/*.current
 setup      : |
-    %patch -p1 -i $pkgfiles/kernel-5.18.patch
     pushd ..
     cp -aR v4l2loopback-$version lts-build
     cp -aR v4l2loopback-$version current-build
@@ -47,10 +49,24 @@ install    : |
     pushd lts-build
     export KERN=%kernel_version_lts%
     %make KERNELRELEASE=$KERN install-utils install-man DESTDIR=$installdir PREFIX=/usr
-    install -D -m 00755 v4l2loopback.ko $installdir/lib/modules/$KERN/extra/v4l2loopback.ko
+    install -D -m 00755 v4l2loopback.ko $installdir/usr/lib64/modules/$KERN/extra/v4l2loopback.ko
     pushd ../current-build
     export KERN=%kernel_version_current%
-    install -D -m 00755 v4l2loopback.ko $installdir/lib/modules/$KERN/extra/v4l2loopback.ko
+    install -D -m 00755 v4l2loopback.ko $installdir/usr/lib64/modules/$KERN/extra/v4l2loopback.ko
 
     # Compress modules with zstd
     find "$installdir" -name '*.ko' -exec strip --strip-debug {} \; -exec zstd {} \; -exec rm -v {} \;
+
+    # Usr-merge
+    install -dm00755 $installdir/lib64
+    pushd $installdir/usr
+    file_list=()
+    while IFS=  read -r -d $'\0'; do
+        file_list+=("$REPLY")
+    done < <(find lib64/modules -type f -print0)
+    for file in "${file_list[@]}"; do
+        parent=$(dirname "$file")
+        install -dm00755 "$installdir/$parent"
+        ln -srv "$installdir/usr/$file" "$installdir/$file"
+    done
+    popd

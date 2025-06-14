@@ -1,7 +1,4 @@
-configure-printer
 kcm_printer_manager.so
-kde-add-printer
-kde-print-queue
 libkcupslib.so
-libprintmanager.so
+libkcupslibplugin.so
 printmanager.so

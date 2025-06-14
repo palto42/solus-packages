@@ -1,8 +1,8 @@
 name       : kanagram
-version    : 23.08.5
-release    : 73
+version    : 25.04.2
+release    : 91
 source     :
-    - https://cdn.download.kde.org/stable/release-service/23.08.5/src/kanagram-23.08.5.tar.xz : 9290fc0b47c347ab31fc2b779894d8d5758806c1e6e0f581b7da4f6094d4c304
+    - https://download.kde.org/stable/release-service/25.04.2/src/kanagram-25.04.2.tar.xz : 622a45ee55d2df00cff78c7f4b90cf9332858da376f97c19da0315a6e26c62c7
 homepage   : https://kde.org/applications/education/org.kde.kanagram
 license    :
     - GFDL-1.2-or-later
@@ -16,21 +16,26 @@ description: |
     There is no limit on either time taken, or the amount of attempts
     to solve the word.
 builddeps  :
-    - pkgconfig(Qt5Quick)
-    - pkgconfig(Qt5TextToSpeech)
-    - kcrash-devel
-    - kdoctools-devel
-    - kio-devel
-    - knewstuff-devel
+    - pkgconfig(Qt6Qml)
+    - pkgconfig(Qt6TextToSpeech)
+    - kf6-kcrash-devel
+    - kf6-kdoctools-devel
+    - kf6-kio-devel
+    - kf6-knewstuff-devel
+    - kf6-kxmlgui-devel
+    - kf6-sonnet-devel
     - libkeduvocdocument-devel
-    - sonnet-devel
+clang      : yes
+optimize   :
+    - speed
+    - thin-lto
 setup      : |
-    %cmake_ninja
+    %cmake_kf6
 build      : |
     %ninja_build
 install    : |
     %ninja_install
-    %qml_cache
+    %qml6_cache
 
     # remove doc
-    rm -rf $installdir/usr/share/doc
+    rm -rfv $installdir/usr/share/doc

@@ -1,0 +1,37 @@
+name       : pkgconf
+version    : 2.3.0
+release    : 2
+source     :
+    - https://distfiles.ariadne.space/pkgconf/pkgconf-2.3.0.tar.xz : 3a9080ac51d03615e7c1910a0a2a8df08424892b5f13b0628a204d3fcce0ea8b
+homepage   : http://pkgconf.org/
+license    :
+    - ISC
+summary    : Package compiler and linker metadata toolkit
+component  : system.devel
+patterns   :
+    - /usr/share/aclocal
+description: |
+    Package compiler and linker metadata toolkit
+setup      : |
+    %meson_configure
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install
+
+    # pkg-config compatibility
+    ln -sv pkgconf $installdir/usr/bin/pkg-config
+    ln -sv pkgconf.1 $installdir/usr/share/man/man1/pkg-config.1
+
+    # Triplet support
+    for i in $pkgfiles/*.personality; do
+        file=$(basename $i)
+        triplet=${file%.personality}
+        install -Dm00644 $pkgfiles/$file -t $installdir/usr/share/pkgconfig/personality.d
+        ln -sv pkgconf $installdir/usr/bin/${triplet}-pkg-config
+    done
+# check      : |
+#     %ninja_check
+replaces   :
+    - pkg-config
+    - dbginfo : pkg-config-dbginfo

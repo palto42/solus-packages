@@ -2,6 +2,8 @@ kimg_ani.so:qt_plugin_instance
 kimg_ani.so:qt_plugin_query_metadata_v2
 kimg_avif.so:qt_plugin_instance
 kimg_avif.so:qt_plugin_query_metadata_v2
+kimg_dds.so:qt_plugin_instance
+kimg_dds.so:qt_plugin_query_metadata_v2
 kimg_eps.so:qt_plugin_instance
 kimg_eps.so:qt_plugin_query_metadata_v2
 kimg_exr.so:qt_plugin_instance
@@ -18,10 +20,14 @@ kimg_ora.so:qt_plugin_instance
 kimg_ora.so:qt_plugin_query_metadata_v2
 kimg_pcx.so:qt_plugin_instance
 kimg_pcx.so:qt_plugin_query_metadata_v2
+kimg_pfm.so:qt_plugin_instance
+kimg_pfm.so:qt_plugin_query_metadata_v2
 kimg_pic.so:qt_plugin_instance
 kimg_pic.so:qt_plugin_query_metadata_v2
 kimg_psd.so:qt_plugin_instance
 kimg_psd.so:qt_plugin_query_metadata_v2
+kimg_pxr.so:qt_plugin_instance
+kimg_pxr.so:qt_plugin_query_metadata_v2
 kimg_qoi.so:qt_plugin_instance
 kimg_qoi.so:qt_plugin_query_metadata_v2
 kimg_ras.so:qt_plugin_instance
@@ -30,6 +36,8 @@ kimg_raw.so:qt_plugin_instance
 kimg_raw.so:qt_plugin_query_metadata_v2
 kimg_rgb.so:qt_plugin_instance
 kimg_rgb.so:qt_plugin_query_metadata_v2
+kimg_sct.so:qt_plugin_instance
+kimg_sct.so:qt_plugin_query_metadata_v2
 kimg_tga.so:qt_plugin_instance
 kimg_tga.so:qt_plugin_query_metadata_v2
 kimg_xcf.so:qt_plugin_instance

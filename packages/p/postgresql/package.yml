@@ -1,9 +1,9 @@
 name       : postgresql
-version    : '16.2'
-release    : 48
+version    : '17.5'
+release    : 58
 homepage   : https://www.postgresql.org/
 source     :
-    - https://ftp.postgresql.org/pub/source/v16.2/postgresql-16.2.tar.gz : 2b8201047ec81acd1bad29dba278d788e7891b9c3e8232eda16bb29dec8131c7
+    - https://ftp.postgresql.org/pub/source/v17.5/postgresql-17.5.tar.bz2 : fcb7ab38e23b264d1902cb25e6adafb4525a6ebcbd015434aeef9eda80f528d8
 license    :
     - PostgreSQL
     - TCL
@@ -77,21 +77,22 @@ builddeps  :
     - pkgconfig(python3)
     - python-distutils-extra
 setup      : |
-    %configure_no_runstatedir \
-        --disable-static \
-        --with-pam \
-        --with-python \
-        --with-libxml \
-        --with-openssl \
-        --with-systemd \
-        --with-system-tzdata=/usr/share/zoneinfo \
-        --with-uuid=e2fs \
-        PYTHON=/usr/bin/python3
+    %meson_configure \
+        -Ddefault_library=shared \
+        -Dpam=enabled \
+        -Dplpython=enabled \
+        -Dlibxml=enabled \
+        -Dssl=openssl \
+        -Dsystemd=enabled \
+        -Dsystem_tzdata=/usr/share/zoneinfo \
+        -Duuid=e2fs \
 build      : |
-    %make
+    %ninja_build
 install    : |
-    %make_install
-    %make_install -C contrib
+    %ninja_install
+
+    find $installdir -name "*.a" -delete
+
     install -Dm 00644 $pkgfiles/postgresql.sysusers $installdir/%libdir%/sysusers.d/postgresql.conf
     install -Dm 00644 $pkgfiles/postgresql.tmpfiles $installdir/%libdir%/tmpfiles.d/postgresql.conf
     install -Dm 00644 $pkgfiles/postgresql.service $installdir/%libdir%/systemd/system/postgresql.service

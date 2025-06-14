@@ -21,14 +21,12 @@ libc.so.6:ferror
 libc.so.6:fread
 libc.so.6:free
 libc.so.6:fstat64
-libc.so.6:getauxval
 libc.so.6:getenv
 libc.so.6:getpid
-libc.so.6:getppid
+libc.so.6:getpwuid_r
 libc.so.6:getrandom
 libc.so.6:getuid
 libc.so.6:in6addr_any
-libc.so.6:inet_aton
 libc.so.6:inet_ntop
 libc.so.6:inet_pton
 libc.so.6:memchr
@@ -60,7 +58,7 @@ libc.so.6:strncpy
 libc.so.6:strpbrk
 libc.so.6:strrchr
 libc.so.6:strstr
-libc.so.6:syscall
+libc.so.6:sysconf
 libgio-2.0.so.0:g_async_initable_get_type
 libgio-2.0.so.0:g_async_initable_new_async
 libgio-2.0.so.0:g_async_initable_new_finish
@@ -77,6 +75,8 @@ libgio-2.0.so.0:g_dbus_connection_call
 libgio-2.0.so.0:g_dbus_connection_call_finish
 libgio-2.0.so.0:g_dbus_connection_call_sync
 libgio-2.0.so.0:g_dbus_connection_emit_signal
+libgio-2.0.so.0:g_dbus_connection_flush
+libgio-2.0.so.0:g_dbus_connection_flush_finish
 libgio-2.0.so.0:g_dbus_connection_get_type
 libgio-2.0.so.0:g_dbus_connection_register_object
 libgio-2.0.so.0:g_dbus_connection_signal_subscribe
@@ -168,7 +168,6 @@ libglib-2.0.so.0:g_bytes_unref
 libglib-2.0.so.0:g_checksum_free
 libglib-2.0.so.0:g_checksum_get_digest
 libglib-2.0.so.0:g_checksum_new
-libglib-2.0.so.0:g_checksum_reset
 libglib-2.0.so.0:g_checksum_update
 libglib-2.0.so.0:g_convert
 libglib-2.0.so.0:g_convert_with_fallback
@@ -187,7 +186,6 @@ libglib-2.0.so.0:g_file_test
 libglib-2.0.so.0:g_free
 libglib-2.0.so.0:g_get_charset
 libglib-2.0.so.0:g_get_current_dir
-libglib-2.0.so.0:g_get_real_time
 libglib-2.0.so.0:g_getenv
 libglib-2.0.so.0:g_hash_table_add
 libglib-2.0.so.0:g_hash_table_contains
@@ -213,6 +211,7 @@ libglib-2.0.so.0:g_intern_string
 libglib-2.0.so.0:g_key_file_error_quark
 libglib-2.0.so.0:g_key_file_get_boolean
 libglib-2.0.so.0:g_key_file_get_groups
+libglib-2.0.so.0:g_key_file_get_integer
 libglib-2.0.so.0:g_key_file_get_keys
 libglib-2.0.so.0:g_key_file_get_string
 libglib-2.0.so.0:g_key_file_get_string_list
@@ -225,6 +224,7 @@ libglib-2.0.so.0:g_key_file_new
 libglib-2.0.so.0:g_key_file_remove_key
 libglib-2.0.so.0:g_key_file_set_boolean
 libglib-2.0.so.0:g_key_file_set_int64
+libglib-2.0.so.0:g_key_file_set_integer
 libglib-2.0.so.0:g_key_file_set_string
 libglib-2.0.so.0:g_key_file_set_string_list
 libglib-2.0.so.0:g_key_file_set_uint64
@@ -285,10 +285,6 @@ libglib-2.0.so.0:g_ptr_array_unref
 libglib-2.0.so.0:g_qsort_with_data
 libglib-2.0.so.0:g_quark_from_static_string
 libglib-2.0.so.0:g_quark_from_string
-libglib-2.0.so.0:g_rand_free
-libglib-2.0.so.0:g_rand_int
-libglib-2.0.so.0:g_rand_new
-libglib-2.0.so.0:g_rand_new_with_seed_array
 libglib-2.0.so.0:g_realloc
 libglib-2.0.so.0:g_return_if_fail_warning
 libglib-2.0.so.0:g_set_error
@@ -359,7 +355,6 @@ libglib-2.0.so.0:g_variant_builder_add
 libglib-2.0.so.0:g_variant_builder_clear
 libglib-2.0.so.0:g_variant_builder_end
 libglib-2.0.so.0:g_variant_builder_init
-libglib-2.0.so.0:g_variant_compare
 libglib-2.0.so.0:g_variant_dup_string
 libglib-2.0.so.0:g_variant_dup_strv
 libglib-2.0.so.0:g_variant_equal
@@ -367,6 +362,7 @@ libglib-2.0.so.0:g_variant_get
 libglib-2.0.so.0:g_variant_get_boolean
 libglib-2.0.so.0:g_variant_get_byte
 libglib-2.0.so.0:g_variant_get_bytestring
+libglib-2.0.so.0:g_variant_get_child
 libglib-2.0.so.0:g_variant_get_child_value
 libglib-2.0.so.0:g_variant_get_data_as_bytes
 libglib-2.0.so.0:g_variant_get_fixed_array
@@ -412,7 +408,6 @@ libglib-2.0.so.0:g_variant_type_checked_
 libglib-2.0.so.0:g_variant_type_equal
 libglib-2.0.so.0:g_variant_type_is_array
 libglib-2.0.so.0:g_variant_type_is_basic
-libglib-2.0.so.0:g_variant_type_is_tuple
 libglib-2.0.so.0:g_variant_type_peek_string
 libglib-2.0.so.0:g_variant_unref
 libglib-2.0.so.0:g_vsnprintf
@@ -423,8 +418,9 @@ libgobject-2.0.so.0:g_boxed_type_register_static
 libgobject-2.0.so.0:g_bytes_get_type
 libgobject-2.0.so.0:g_cclosure_marshal_VOID__OBJECT
 libgobject-2.0.so.0:g_cclosure_marshal_VOID__STRING
+libgobject-2.0.so.0:g_cclosure_marshal_VOID__UINT
+libgobject-2.0.so.0:g_cclosure_marshal_VOID__VARIANT
 libgobject-2.0.so.0:g_cclosure_marshal_VOID__VOID
-libgobject-2.0.so.0:g_cclosure_marshal_generic
 libgobject-2.0.so.0:g_cclosure_new_swap
 libgobject-2.0.so.0:g_closure_set_meta_marshal
 libgobject-2.0.so.0:g_enum_get_value
@@ -476,7 +472,6 @@ libgobject-2.0.so.0:g_signal_accumulator_true_handled
 libgobject-2.0.so.0:g_signal_connect_closure
 libgobject-2.0.so.0:g_signal_connect_data
 libgobject-2.0.so.0:g_signal_emit
-libgobject-2.0.so.0:g_signal_emit_by_name
 libgobject-2.0.so.0:g_signal_emitv
 libgobject-2.0.so.0:g_signal_handler_disconnect
 libgobject-2.0.so.0:g_signal_handlers_block_matched
@@ -491,6 +486,7 @@ libgobject-2.0.so.0:g_type_add_instance_private
 libgobject-2.0.so.0:g_type_add_interface_static
 libgobject-2.0.so.0:g_type_check_class_is_a
 libgobject-2.0.so.0:g_type_check_instance_is_a
+libgobject-2.0.so.0:g_type_check_instance_is_fundamentally_a
 libgobject-2.0.so.0:g_type_check_value
 libgobject-2.0.so.0:g_type_check_value_holds
 libgobject-2.0.so.0:g_type_class_add_private
@@ -526,6 +522,7 @@ libgobject-2.0.so.0:g_value_get_uint
 libgobject-2.0.so.0:g_value_get_uint64
 libgobject-2.0.so.0:g_value_get_variant
 libgobject-2.0.so.0:g_value_init
+libgobject-2.0.so.0:g_value_peek_pointer
 libgobject-2.0.so.0:g_value_reset
 libgobject-2.0.so.0:g_value_set_boolean
 libgobject-2.0.so.0:g_value_set_boxed

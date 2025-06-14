@@ -3,8 +3,8 @@
         <Name>zsh</Name>
         <Homepage>https://www.zsh.org/</Homepage>
         <Packager>
-            <Name>Muhammad Alfi Syahrin</Name>
-            <Email>ems1000.syahrin@gmail.com</Email>
+            <Name>Tracey Clark</Name>
+            <Email>traceyc.dev@tlcnet.info</Email>
         </Packager>
         <License>MIT</License>
         <PartOf>system.utils</PartOf>
@@ -22,6 +22,7 @@
         <Files>
             <Path fileType="executable">/bin/zsh</Path>
             <Path fileType="executable">/bin/zsh-5.9</Path>
+            <Path fileType="config">/etc/skel/.zshrc</Path>
             <Path fileType="executable">/usr/bin/zsh</Path>
             <Path fileType="executable">/usr/bin/zsh-5.9</Path>
             <Path fileType="library">/usr/lib64/zsh/5.9/zsh/attr.so</Path>
@@ -1397,12 +1398,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="29">
-            <Date>2023-10-09</Date>
+        <Update release="35">
+            <Date>2025-02-02</Date>
             <Version>5.9</Version>
             <Comment>Packaging update</Comment>
-            <Name>Muhammad Alfi Syahrin</Name>
-            <Email>ems1000.syahrin@gmail.com</Email>
+            <Name>Tracey Clark</Name>
+            <Email>traceyc.dev@tlcnet.info</Email>
         </Update>
     </History>
 </PISI>

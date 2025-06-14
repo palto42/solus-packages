@@ -1,8 +1,8 @@
 name       : samba
-version    : 4.17.12
-release    : 104
+version    : 4.19.9
+release    : 109
 source     :
-    - https://download.samba.org/pub/samba/stable/samba-4.17.12.tar.gz : 6129a7f967b822b308c57152326e7302711c2d0b9830a82d0c21832b648741f4
+    - https://download.samba.org/pub/samba/stable/samba-4.19.9.tar.gz : 71ed406444714c90bb9d36c576d807b67af15449f297e91106d42b3ca2fa5549
 homepage   : https://samba.org
 license    : GPL-3.0-or-later
 summary    : Provides file and print services to SMB/CIFS clients and Windows networking to Linux clients
@@ -16,6 +16,7 @@ builddeps  :
     - pkgconfig(avahi-client)
     - pkgconfig(cmocka)
     - pkgconfig(com_err)
+    - pkgconfig(cups)
     - pkgconfig(fuse)
     - pkgconfig(gnutls)
     - pkgconfig(icu-i18n)
@@ -36,7 +37,6 @@ builddeps  :
     - pkgconfig(openssl)
     - pkgconfig(popt)
     - pkgconfig(tevent)
-    - cups-devel
     - docbook-xml
     - gpgme-devel
     - libaio-devel
@@ -47,6 +47,9 @@ builddeps  :
 rundeps    :
     - wsdd
 setup      : |
+    %patch -p1 -i $pkgfiles/icu-stuff.patch
+    %patch -p1 -i $pkgfiles/fix-wscript-fup.patch
+
     # Build as a stand-alone server with no AD DC functionality
     #
     %configure_no_runstatedir \
@@ -61,7 +64,6 @@ setup      : |
       --with-acl-support \
       --with-automount \
       --with-configdir=/usr/share/defaults/samba \
-      --with-iconv \
       --with-ldap \
       --with-lockdir=/run/lock \
       --with-pammodulesdir=%libdir%/security \

@@ -1,8 +1,9 @@
 name       : foomatic-db-nonfree
-version    : 4.0.20171217
-release    : 4
+version    : '4.0.20240508.99'
+release    : 6
 source     :
-    - https://www.openprinting.org/download/foomatic/foomatic-db-nonfree-20171217.tar.gz : 98a4074ddcb2ef5c990391cae34135ff9833829ea20caed10d8ef18a41be4ed5
+    - git|https://github.com/OpenPrinting/foomatic-db-nonfree : 6ddae02ac89240c019f8b5026cfe70e30fd2b3db
+homepage   : https://www.openprinting.org
 license    :
     - Distributable
     - NonFree
@@ -13,7 +14,7 @@ description: |
 rundeps    :
     - foomatic-db
 setup      : |
-    %configure
+    %reconfigure
 build      : |
     %make
 install    : |

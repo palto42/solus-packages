@@ -1,8 +1,8 @@
 name       : cherrytree
-version    : 1.0.4
-release    : 35
+version    : 1.4.0
+release    : 44
 source     :
-    - https://github.com/giuspen/cherrytree/releases/download/v1.0.4/cherrytree_1.0.4.tar.xz : db4161268d555b10a6bbe6b43dd97ec968000b76aaac0a5d15716088f567fc84
+    - https://github.com/giuspen/cherrytree/releases/download/v1.4.0/cherrytree_1.4.0.tar.xz : 3ab77aa7de62a0285ea9d227e640b0b20afc2f0b5b0dd1dbacde8bfe4791e8ab
 homepage   : https://www.giuspen.com/cherrytree/
 license    : GPL-3.0-or-later
 component  : office.notes
@@ -11,7 +11,8 @@ description: |
     cherrytree is a hierarchical note taking application, featuring rich text, syntax  highlighting, images handling, hyperlinks, import/export with support for multiple formats, support for multiple languages, and more.
 builddeps  :
     - pkgconfig(gspell-1)
-    - pkgconfig(gtksourceviewmm-3.0)
+    - pkgconfig(gtkmm-3.0)
+    - pkgconfig(gtksourceview-4)
     - pkgconfig(libcurl)
     - pkgconfig(libxml++-2.6)
     - pkgconfig(spdlog)

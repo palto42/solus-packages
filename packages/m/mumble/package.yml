@@ -1,8 +1,9 @@
 name       : mumble
-version    : 1.4.287
-release    : 36
+version    : 1.5.735
+release    : 42
 source     :
-    - https://github.com/mumble-voip/mumble/releases/download/v1.4.287/mumble-1.4.287.tar.gz : 378e61d5bfa58ba51bfbb645067f459214a9872da09b306f2c2c3f1902200547
+    - https://github.com/mumble-voip/mumble/releases/download/v1.5.735/mumble-1.5.735.tar.gz : db8990079f556a877218d471bcf2c24eb5e4520b652f3c20793d0aadedaae6ae
+homepage   : https://www.mumble.info
 license    : BSD-3-Clause
 component  : network.clients
 summary    : High quality voice chat software
@@ -17,22 +18,25 @@ builddeps  :
     - pkgconfig(libcap)
     - pkgconfig(libpipewire-0.3)
     - pkgconfig(libpulse)
+    - pkgconfig(libutf8proc)
+    - pkgconfig(nlohmann_json)
     - pkgconfig(opus)
     - pkgconfig(protobuf)
     - pkgconfig(sndfile)
     - pkgconfig(speex)
     - pkgconfig(xi)
     - libboost-devel
+    - microsoft-gsl
     - poco-devel
 setup      : |
-    %patch -p1 -i $pkgfiles/0001-BUILD-crypto-Migrate-to-OpenSSL-3.0-compatible-API.patch
-    %patch -p1 -i $pkgfiles/0002-FIX-crypto-Sharing-EVP-context-between-threads-crush.patch
-
+    export CXXFLAGS="${CXXFLAGS} -Wno-error=deprecated-declarations"
     %cmake_ninja \
-        -Dbundled-opus=OFF \
-        -Dbundled-speex=OFF \
+        -DCMAKE_C_STANDARD=17 \
         -Dbundle-qt-translations=OFF \
-        -Dg15=OFF \
+        -Dbundled-gsl=OFF \
+        -Dbundled-json=OFF \
+        -Dbundled-renamenoise=ON \
+        -Dbundled-speex=OFF \
         -Dice=OFF \
         -Doverlay-xcompile=OFF \
         -Dserver=OFF \

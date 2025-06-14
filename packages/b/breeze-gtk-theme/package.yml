@@ -1,8 +1,8 @@
 name       : breeze-gtk-theme
-version    : 5.27.10
-release    : 95
+version    : 6.3.5
+release    : 125
 source     :
-    - https://cdn.download.kde.org/stable/plasma/5.27.10/breeze-gtk-5.27.10.tar.xz : 1da3f98cce2761bb2c9c72d0156b93cf7bf50f08d59fd64bfeb06149a87069b6
+    - https://download.kde.org/stable/plasma/6.3.5/breeze-gtk-6.3.5.tar.xz : b2926272ac908dc0c121759333316cfe5567c591d975724e2d4531141507580d
 homepage   : https://www.kde.org/workspaces/plasmadesktop/
 license    :
     - BSD-3-Clause
@@ -11,15 +11,18 @@ component  : desktop.theme
 summary    : A GTK Theme Built to Match KDE's Breeze
 description: |
     A GTK Theme Built to Match KDE's Breeze
-optimize   : lto
 builddeps  :
-    - pkgconfig(Qt5Core)
+    - pkgconfig(Qt6Core)
     - breeze-devel
     - extra-cmake-modules
     - python3-cairo
     - sassc
+clang      : yes
+optimize   :
+    - speed
+    - thin-lto
 setup      : |
-    %cmake_ninja
+    %cmake_kf6
 build      : |
     %ninja_build
 install    : |

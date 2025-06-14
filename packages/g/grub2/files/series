@@ -1,3 +1,2 @@
-0001-Fix-default-gnulib-url.patch
-brand.patch
-ignore-checksum-seed-incompat-feature.patch
+0001-Allow-Solus-to-remain-named-Solus.patch
+0002-Enable-os-prober-by-default.patch

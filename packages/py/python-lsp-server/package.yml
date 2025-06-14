@@ -1,8 +1,8 @@
 name       : python-lsp-server
-version    : 1.9.0
-release    : 14
+version    : 1.12.2
+release    : 18
 source     :
-    - https://files.pythonhosted.org/packages/source/p/python-lsp-server/python-lsp-server-1.9.0.tar.gz : dc0c8298f0222fd66a52aa3170f3a5c8fe3021007a02098bb72f7fd8df353d13
+    - https://files.pythonhosted.org/packages/source/p/python_lsp_server/python_lsp_server-1.12.2.tar.gz : fea039a36b3132774d0f803671184cf7dde0c688e7b924f23a6359a66094126d
 homepage   : https://github.com/python-lsp/python-lsp-server
 license    : MIT
 component  : programming.python
@@ -11,7 +11,9 @@ description: |
     Fork of the python-language-server project, maintained by the Spyder IDE team and the community. This is a Python 3.6+ implementation of the Language Server Protocol.
 networking : yes
 builddeps  :
+    - python-build
     - python-docstring-to-markdown
+    - python-installer
     - python-setuptools-scm
     - python-wheel
 checkdeps  :

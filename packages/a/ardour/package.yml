@@ -1,8 +1,8 @@
 name       : ardour
-version    : '8.2'
-release    : 41
+version    : '8.12'
+release    : 51
 source     :
-    - git|https://github.com/Ardour/ardour.git : 8.2
+    - git|https://github.com/Ardour/ardour.git : 8.12
 homepage   : https://ardour.org/
 license    : GPL-3.0-or-later
 component  : multimedia.audio
@@ -24,9 +24,9 @@ builddeps  :
     - pkgconfig(liblo)
     - pkgconfig(libpulse-simple)
     - pkgconfig(libusb-1.0)
-    - pkgconfig(ltc)
-    - pkgconfig(lrdf)
     - pkgconfig(lilv-0)
+    - pkgconfig(lrdf)
+    - pkgconfig(ltc)
     - pkgconfig(ogg)
     - pkgconfig(raptor2)
     - pkgconfig(rubberband)
@@ -44,16 +44,17 @@ builddeps  :
 setup      : |
     %apply_patches
 
-    %waf_configure -j1 \
+    %waf_configure \
         --use-external-libs \
         --cxx11 \
         --optimize \
         --freedesktop \
         --no-phone-home \
         --libdir=%libdir% \
+        --no-ytk \
         --with-backends=alsa,dummy,jack,pulseaudio
 build      : |
-    %waf_build -j4
+    %waf_build
 install    : |
     %waf_install
 
@@ -65,5 +66,10 @@ install    : |
 
     install -Dm00644 $workdir/gtk2_ardour/resources/Ardour-icon_512px.png $installdir/usr/share/pixmaps/ardour.png
 
-    # Add mimetype info for .ardour s	ession files.
+    # Add mimetype info for .ardour session files.
     install -Dm00644 build/gtk2_ardour/ardour.xml $installdir/usr/share/mime/packages/ardour.xml
+
+    # Don't use obsolete metainfo path
+    install -dm00755 $installdir/usr/share/metainfo/
+    mv $installdir/usr/share/appdata/* $installdir/usr/share/metainfo
+    rm -rv $installdir/usr/share/appdata

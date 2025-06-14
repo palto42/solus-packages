@@ -96,8 +96,8 @@
 	},
 	"builtInExtensions": [{
 		"name": "ms-vscode.js-debug-companion",
-		"version": "1.1.2",
-		"sha256": "e034b8b41beb4e97e02c70f7175bd88abe66048374c2bd629f54bb33354bc2aa",
+		"version": "1.1.3",
+		"sha256": "7380a890787452f14b2db7835dfa94de538caf358ebc263f9d46dd68ac52de93",
 		"repo": "https://github.com/microsoft/vscode-js-debug-companion",
 		"metadata": {
 			"id": "99cb0b7f-7354-4278-b8da-6cc79972169d",
@@ -111,8 +111,8 @@
 		}
 	}, {
 		"name": "ms-vscode.js-debug",
-		"version": "1.87.0",
-		"sha256": "155ba715cc1045835951e70a663010c8f91d773d90a3ec504a041fd53b5658b0",
+		"version": "1.100.1",
+		"sha256": "8c2218df3422d45b95e96d9d28cdc4aa4426a2799aaaedd862d3f60ecab03844",
 		"repo": "https://github.com/microsoft/vscode-js-debug",
 		"metadata": {
 			"id": "25629058-ddac-4e17-abba-74678e126c5d",
@@ -126,8 +126,8 @@
 		}
 	}, {
 		"name": "ms-vscode.vscode-js-profile-table",
-		"version": "1.0.8",
-		"sha256": "ca30069e21fbf576b49638ff8ff7c316b028c2faca924c23526737c65b8762bf",
+		"version": "1.0.10",
+		"sha256": "7361748ddf9fd09d8a2ed1f2a2d7376a2cf9aae708692820b799708385c38e08",
 		"repo": "https://github.com/microsoft/vscode-js-profile-visualizer",
 		"metadata": {
 			"id": "7e52b41b-71ad-457b-ab7e-0620f1fc4feb",
@@ -141,7 +141,7 @@
 		}
 	}
 	],
-	"commit": "1e790d77f81672c49be070e04474901747115651",
-	"date": "2024-03-06T00:21:07.287Z",
-	"version": "1.87.1"
+	"commit": "dfaf44141ea9deb3b4096f7cd6d24e00c147a4b1",
+	"date": "2025-06-11T15:00:50.123Z",
+	"version": "1.101.0"
 }

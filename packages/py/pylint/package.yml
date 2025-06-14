@@ -1,8 +1,8 @@
 name       : pylint
-version    : 3.1.0
-release    : 36
+version    : 3.3.4
+release    : 40
 source     :
-    - https://github.com/pylint-dev/pylint/archive/refs/tags/v3.1.0.tar.gz : c4c13c6b77f6604367763f906e5df4e9f4c7fbfa6e8553f31493adfabfc73092
+    - https://github.com/pylint-dev/pylint/archive/refs/tags/v3.3.4.tar.gz : bdb1f2218222df18d1b1336686d81f5e0a03de28acaa3092fae9fbe660ca76db
 homepage   : https://github.com/PyCQA/pylint
 license    : GPL-2.0-or-later
 component  : programming.tools
@@ -12,7 +12,7 @@ description: |
 builddeps  :
     - python-build
     - python-installer
-    - python-packaging
+    - python-setuptools
     - python-wheel
 checkdeps  :
     - mccabe
@@ -21,11 +21,11 @@ checkdeps  :
     - python-isort
     - python-magic
     - python-platformdirs
+    - python-pytest-benchmark
+    - python-pytest-timeout
     - python-six
     - python-tomlkit
     - python-typing-extensions
-    - python-pytest-timeout
-    - python-pytest-benchmark
 rundeps    :
     - mccabe
     - python-astroid
@@ -39,8 +39,7 @@ install    : |
     %python3_install
 check      : |
     # Need to undeprecate and udpate python-gitpython and deps
-    rm py3build/tests/testutils/_primer/{test_package_to_lint.py,test_primer.py}
-    rm py3build/tests/profile/test_profile_against_externals.py
+    rm tests/testutils/_primer/{test_package_to_lint.py,test_primer.py}
 
     # skip failing tests
     skiptest='test_do_not_import_files_from_local_directory'

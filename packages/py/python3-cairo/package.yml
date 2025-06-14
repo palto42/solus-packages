@@ -1,20 +1,25 @@
 name       : python3-cairo
-version    : 1.24.0
-release    : 16
+version    : 1.27.0
+release    : 19
 source     :
-    - https://github.com/pygobject/pycairo/archive/refs/tags/v1.24.0.tar.gz : 94f4e743853ac02b0671a65fec1d0e3c31fd7f13256498303d9530c69a2d9903
+    - https://github.com/pygobject/pycairo/archive/refs/tags/v1.27.0.tar.gz : ce10721e4a5d74c53c8b7241e5ccfd4627fadb2830ecdae72524c077067ca247
+homepage   : https://pycairo.readthedocs.io/
 license    : LGPL-2.1-or-later
 component  : programming.python
 summary    : Python3 Cairo Bindings
 description: |
     Python3 Cairo Bindings
 builddeps  :
-    - pkgconfig(python3)
     - pkgconfig(cairo)
+    - pkgconfig(python3)
+    - meson-python
+checkdeps  :
     - python-pytest
+setup      : |
+    %meson_configure
 build      : |
-    %python3_setup
+    %ninja_build
 install    : |
-    %python3_install
+    %ninja_install
 check      : |
-    %python3_test
+    %ninja_check

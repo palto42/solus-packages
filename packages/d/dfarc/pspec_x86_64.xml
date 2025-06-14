@@ -1,6 +1,7 @@
 <PISI>
     <Source>
         <Name>dfarc</Name>
+        <Homepage>https://www.gnu.org/software/freedink/</Homepage>
         <Packager>
             <Name>Joey Riches</Name>
             <Email>josephriches@gmail.com</Email>
@@ -10,7 +11,7 @@
         <Summary xml:lang="en">Dink front-end and archiver, which helps running and managing D-Mods</Summary>
         <Description xml:lang="en">DFArc is the Dink front-end and archiver, which helps running and managing D-Mods.
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>dfarc</Name>
@@ -23,6 +24,7 @@
             <Path fileType="executable">/usr/bin/freedink-dfarc</Path>
             <Path fileType="data">/usr/share/applications/freedink-dfarc.desktop</Path>
             <Path fileType="data">/usr/share/icons/hicolor/32x32/mimetypes/application-x-dmod.png</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/64x64/apps/dfarc.png</Path>
             <Path fileType="localedata">/usr/share/locale/ca/LC_MESSAGES/dfarc.mo</Path>
             <Path fileType="localedata">/usr/share/locale/da/LC_MESSAGES/dfarc.mo</Path>
             <Path fileType="localedata">/usr/share/locale/de/LC_MESSAGES/dfarc.mo</Path>
@@ -43,13 +45,14 @@
             <Path fileType="localedata">/usr/share/locale/vi/LC_MESSAGES/dfarc.mo</Path>
             <Path fileType="man">/usr/share/man/man1/dfarc.1</Path>
             <Path fileType="man">/usr/share/man/man1/freedink-dfarc.1</Path>
+            <Path fileType="data">/usr/share/metainfo/org.gnu.dfarc.metainfo.xml</Path>
             <Path fileType="data">/usr/share/mime/packages/freedink-mime.xml</Path>
             <Path fileType="data">/usr/share/pixmaps/dfarc.png</Path>
         </Files>
     </Package>
     <History>
-        <Update release="3">
-            <Date>2023-07-22</Date>
+        <Update release="8">
+            <Date>2025-05-25</Date>
             <Version>3.14</Version>
             <Comment>Packaging update</Comment>
             <Name>Joey Riches</Name>

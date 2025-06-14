@@ -1,8 +1,8 @@
 name       : blueman
-version    : 2.3.5
-release    : 23
+version    : 2.4.4
+release    : 30
 source     :
-    - https://github.com/blueman-project/blueman/releases/download/2.3.5/blueman-2.3.5.tar.gz : 2feb9288c3f547175ea3b619b9023c1f556aa79a8c6c4602965bd475fbc023f3
+    - https://github.com/blueman-project/blueman/releases/download/2.4.4/blueman-2.4.4.tar.gz : 1c0689d51d784c6f0408119c6280d1c3f0c1027cecd58ff8d558e4fff73da858
 homepage   : https://github.com/blueman-project/blueman
 license    : GPL-3.0-or-later
 component  : desktop.mate
@@ -18,7 +18,7 @@ rundeps    :
     - python-gobject
 setup      : |
     # Solus uses the sudo group instead of wheel
-    sed -i "s|wheel|sudo|" data/configs/blueman.rules
+    %patch -p1 -i $pkgfiles/0001-Use-sudo-group-instead-of-wheel.patch
 
     %configure  --disable-static \
         --enable-settings-integration \
@@ -31,3 +31,4 @@ install    : |
 
     # Rename polkit rules file for consistency
     mv $installdir/usr/share/polkit-1/rules.d/blueman.rules $installdir/usr/share/polkit-1/rules.d/org.blueman.rules
+    install -Dm00644 $pkgfiles/io.github.blueman_project.blueman.metainfo.xml $installdir/usr/share/metainfo/io.github.blueman_project.blueman.metainfo.xml

@@ -7,8 +7,6 @@ libatk-1.0.so.0:atk_object_ref_relation_set
 libatk-1.0.so.0:atk_relation_new
 libatk-1.0.so.0:atk_relation_set_add
 libc.so.6:__errno_location
-libc.so.6:__isoc23_strtol
-libc.so.6:__isoc23_strtoul
 libc.so.6:__libc_start_main
 libc.so.6:__stack_chk_fail
 libc.so.6:access
@@ -31,6 +29,8 @@ libc.so.6:strncmp
 libc.so.6:strrchr
 libc.so.6:strstr
 libc.so.6:strtod
+libc.so.6:strtol
+libc.so.6:strtoul
 libc.so.6:tcgetpgrp
 libc.so.6:time
 libcairo.so.2:cairo_create
@@ -51,6 +51,8 @@ libgdk-3.so.0:gdk_display_flush
 libgdk-3.so.0:gdk_display_get_default
 libgdk-3.so.0:gdk_display_get_default_screen
 libgdk-3.so.0:gdk_display_get_monitor
+libgdk-3.so.0:gdk_display_get_monitor_at_window
+libgdk-3.so.0:gdk_display_get_n_monitors
 libgdk-3.so.0:gdk_display_get_name
 libgdk-3.so.0:gdk_display_manager_get
 libgdk-3.so.0:gdk_display_manager_list_displays
@@ -88,6 +90,7 @@ libgdk-3.so.0:gdk_x11_get_default_root_xwindow
 libgdk-3.so.0:gdk_x11_get_default_xdisplay
 libgdk-3.so.0:gdk_x11_get_server_time
 libgdk-3.so.0:gdk_x11_get_xatom_by_name
+libgdk-3.so.0:gdk_x11_screen_get_type
 libgdk-3.so.0:gdk_x11_screen_supports_net_wm_hint
 libgdk-3.so.0:gdk_x11_window_get_xid
 libgdk_pixbuf-2.0.so.0:gdk_pixbuf_composite
@@ -106,6 +109,8 @@ libgdk_pixbuf-2.0.so.0:gdk_pixbuf_new_from_file_at_size
 libgdk_pixbuf-2.0.so.0:gdk_pixbuf_scale
 libgio-2.0.so.0:g_bus_get_sync
 libgio-2.0.so.0:g_bus_own_name
+libgio-2.0.so.0:g_cancellable_cancel
+libgio-2.0.so.0:g_cancellable_new
 libgio-2.0.so.0:g_dbus_connection_call_sync
 libgio-2.0.so.0:g_dbus_connection_register_object
 libgio-2.0.so.0:g_dbus_error_quark
@@ -115,11 +120,13 @@ libgio-2.0.so.0:g_dbus_node_info_new_for_xml
 libgio-2.0.so.0:g_dbus_node_info_unref
 libgio-2.0.so.0:g_file_new_for_uri
 libgio-2.0.so.0:g_file_replace
+libgio-2.0.so.0:g_io_error_quark
 libgio-2.0.so.0:g_settings_get_string
 libgio-2.0.so.0:g_settings_new
 libglib-2.0.so.0:g_access
 libglib-2.0.so.0:g_ascii_strcasecmp
 libglib-2.0.so.0:g_ascii_strtod
+libglib-2.0.so.0:g_assertion_message_expr
 libglib-2.0.so.0:g_clear_error
 libglib-2.0.so.0:g_dgettext
 libglib-2.0.so.0:g_error_free
@@ -143,6 +150,7 @@ libglib-2.0.so.0:g_main_loop_quit
 libglib-2.0.so.0:g_main_loop_run
 libglib-2.0.so.0:g_main_loop_unref
 libglib-2.0.so.0:g_malloc
+libglib-2.0.so.0:g_malloc0
 libglib-2.0.so.0:g_malloc0_n
 libglib-2.0.so.0:g_malloc_n
 libglib-2.0.so.0:g_memdup
@@ -250,6 +258,7 @@ libgobject-2.0.so.0:g_param_spec_string
 libgobject-2.0.so.0:g_param_spec_uint
 libgobject-2.0.so.0:g_param_value_set_default
 libgobject-2.0.so.0:g_signal_connect_data
+libgobject-2.0.so.0:g_signal_connect_object
 libgobject-2.0.so.0:g_signal_emit
 libgobject-2.0.so.0:g_signal_emit_by_name
 libgobject-2.0.so.0:g_signal_handler_block
@@ -268,6 +277,11 @@ libgobject-2.0.so.0:g_type_name
 libgobject-2.0.so.0:g_type_register_static_simple
 libgobject-2.0.so.0:g_value_copy
 libgobject-2.0.so.0:g_value_dup_object
+libgobject-2.0.so.0:g_value_get_boolean
+libgobject-2.0.so.0:g_value_get_boxed
+libgobject-2.0.so.0:g_value_get_int
+libgobject-2.0.so.0:g_value_get_string
+libgobject-2.0.so.0:g_value_get_uint
 libgobject-2.0.so.0:g_value_init
 libgobject-2.0.so.0:g_value_peek_pointer
 libgobject-2.0.so.0:g_value_register_transform_func
@@ -611,11 +625,21 @@ libgtk-3.so.0:gtk_window_set_urgency_hint
 libgtk-3.so.0:gtk_window_stick
 libgtk-3.so.0:gtk_window_unfullscreen
 libgtk-3.so.0:gtk_window_unmaximize
+libgtk-layer-shell.so.0:gtk_layer_init_for_window
+libgtk-layer-shell.so.0:gtk_layer_is_layer_window
+libgtk-layer-shell.so.0:gtk_layer_is_supported
+libgtk-layer-shell.so.0:gtk_layer_set_anchor
+libgtk-layer-shell.so.0:gtk_layer_set_exclusive_zone
+libgtk-layer-shell.so.0:gtk_layer_set_keyboard_mode
+libgtk-layer-shell.so.0:gtk_layer_set_layer
+libgtk-layer-shell.so.0:gtk_layer_set_margin
+libgtk-layer-shell.so.0:gtk_layer_set_monitor
 libpango-1.0.so.0:pango_attr_foreground_new
 libpango-1.0.so.0:pango_attr_list_insert
 libpango-1.0.so.0:pango_attr_list_new
 libpango-1.0.so.0:pango_attr_list_unref
 libpango-1.0.so.0:pango_attr_weight_new
+libpango-1.0.so.0:pango_font_description_equal
 libpango-1.0.so.0:pango_font_description_free
 libpango-1.0.so.0:pango_font_description_from_string
 libpango-1.0.so.0:pango_font_family_is_monospace
@@ -641,6 +665,7 @@ libvte-2.91.so.0:vte_terminal_get_char_width
 libvte-2.91.so.0:vte_terminal_get_column_count
 libvte-2.91.so.0:vte_terminal_get_current_directory_uri
 libvte-2.91.so.0:vte_terminal_get_encoding
+libvte-2.91.so.0:vte_terminal_get_font
 libvte-2.91.so.0:vte_terminal_get_has_selection
 libvte-2.91.so.0:vte_terminal_get_input_enabled
 libvte-2.91.so.0:vte_terminal_get_pty
@@ -663,7 +688,6 @@ libvte-2.91.so.0:vte_terminal_search_set_regex
 libvte-2.91.so.0:vte_terminal_search_set_wrap_around
 libvte-2.91.so.0:vte_terminal_select_all
 libvte-2.91.so.0:vte_terminal_set_allow_bold
-libvte-2.91.so.0:vte_terminal_set_allow_hyperlink
 libvte-2.91.so.0:vte_terminal_set_audible_bell
 libvte-2.91.so.0:vte_terminal_set_backspace_binding
 libvte-2.91.so.0:vte_terminal_set_bold_is_bright
@@ -717,7 +741,6 @@ libxfce4ui-2.so.0:xfce_sm_client_get_restart_command
 libxfce4ui-2.so.0:xfce_sm_client_set_desktop_file
 libxfce4ui-2.so.0:xfce_sm_client_set_restart_command
 libxfce4ui-2.so.0:xfce_titled_dialog_add_action_widget
-libxfce4ui-2.so.0:xfce_titled_dialog_create_action_area
 libxfce4ui-2.so.0:xfce_titled_dialog_get_type
 libxfce4ui-2.so.0:xfce_titled_dialog_new
 libxfce4ui-2.so.0:xfce_titled_dialog_set_default_response

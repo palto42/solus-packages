@@ -1,8 +1,8 @@
 name       : foliate
-version    : 3.1.0
-release    : 2
+version    : 3.3.0
+release    : 5
 source     :
-    - https://github.com/johnfactotum/foliate/releases/download/3.1.0/com.github.johnfactotum.Foliate-3.1.0.tar.xz : 87f8a14dcb730a585f7b9ce47d3fa6dbbe03733bf134d40423b20931b3b429dc
+    - https://github.com/johnfactotum/foliate/releases/download/3.3.0/com.github.johnfactotum.Foliate-3.3.0.tar.xz : 09d0cc0a34426a2e57af25d67147dfe9b77ebf638a5a041b9f5c42499c4db672
 homepage   : https://johnfactotum.github.io/foliate/
 license    : GPL-3.0-or-later
 component  : office.viewers

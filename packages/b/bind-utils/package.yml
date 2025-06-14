@@ -1,8 +1,9 @@
+# Make sure to update the Anitya ID if changing this from the 9.20.x LTS series
 name       : bind-utils
-version    : 9.18.24
-release    : 32
+version    : 9.20.7
+release    : 36
 source     :
-    - https://gitlab.isc.org/isc-projects/bind9/-/archive/v9.18.24/bind9-v9.18.24.tar.gz : f03f3a1b571e8bf8d919721b41c64ab83e2a372b315885c14fa1ec337227c9d4
+    - https://gitlab.isc.org/isc-projects/bind9/-/archive/v9.20.7/bind9-v9.20.7.tar.gz : e0ebd53b844c4a4a63a16f3cabd4ca6b006f4735e7f2b74808381af97baf624c
 homepage   : https://www.isc.org/bind/
 license    : MPL-2.0-or-later
 component  : network.util
@@ -18,10 +19,14 @@ builddeps  :
     - pkgconfig(libidn2)
     - pkgconfig(libnghttp2)
     - pkgconfig(libmaxminddb)
+    - pkgconfig(liburcu)
     - pkgconfig(libuv)
     - python-sphinx
 setup      : |
-    %reconfigure --disable-static --disable-linux-caps --with-readline=libedit --with-libidn2
+    %reconfigure \
+        --disable-static \
+        --with-readline=libedit \
+        --with-libidn2
 build      : |
     %make -C lib
     %make bind.keys.h
@@ -34,6 +39,8 @@ install    : |
     %make_install -C bin/delv
     %make_install -C bin/dig
     %make_install -C bin/nsupdate
-    rm -rf $installdir/usr/include
+
+    rm -rfv $installdir/usr/include
+
     install -dm00755 $installdir/usr/share/man/man1
     install -Dm00644 doc/man/delv.1 doc/man/dig.1 doc/man/host.1 doc/man/nslookup.1 doc/man/nsupdate.1 -t $installdir/usr/share/man/man1

@@ -33,7 +33,6 @@ file-gif-load
 file-gif-save
 file-gih
 file-header
-file-heif
 file-html-table
 file-ico
 file-jp2-load
@@ -54,6 +53,7 @@ file-raw-placeholder
 file-rawtherapee
 file-sgi
 file-sunras
+file-svg
 file-tga
 file-tiff
 file-webp

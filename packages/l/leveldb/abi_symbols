@@ -104,9 +104,6 @@ libleveldb.so.1:_ZNK7leveldb12TableBuilder8FileSizeEv
 libleveldb.so.1:_ZNK7leveldb5Table11NewIteratorERKNS_11ReadOptionsE
 libleveldb.so.1:_ZNK7leveldb5Table19ApproximateOffsetOfERKNS_5SliceE
 libleveldb.so.1:_ZNK7leveldb6Status8ToStringB5cxx11Ev
-libleveldb.so.1:__bss_start
-libleveldb.so.1:_edata
-libleveldb.so.1:_end
 libleveldb.so.1:leveldb_approximate_sizes
 libleveldb.so.1:leveldb_cache_create_lru
 libleveldb.so.1:leveldb_cache_destroy

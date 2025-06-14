@@ -2,6 +2,8 @@ barcodeplugin.so:qt_plugin_instance
 barcodeplugin.so:qt_plugin_query_metadata_v2
 bluetoothplugin.so:qt_plugin_instance
 bluetoothplugin.so:qt_plugin_query_metadata_v2
+clipboardplugin.so:qt_plugin_instance
+clipboardplugin.so:qt_plugin_query_metadata_v2
 emailplugin.so:qt_plugin_instance
 emailplugin.so:qt_plugin_query_metadata_v2
 imgurplugin.so:qt_plugin_instance
@@ -111,6 +113,7 @@ libKF6Purpose.so.6:_ZTVN7Purpose17AlternativesModelE
 libKF6Purpose.so.6:_ZTVN7Purpose3JobE
 libKF6PurposeWidgets.so.6:_ZN7Purpose4Menu11qt_metacallEN11QMetaObject4CallEiPPv
 libKF6PurposeWidgets.so.6:_ZN7Purpose4Menu11qt_metacastEPKc
+libKF6PurposeWidgets.so.6:_ZN7Purpose4Menu12aboutToShareEv
 libKF6PurposeWidgets.so.6:_ZN7Purpose4Menu16staticMetaObjectE
 libKF6PurposeWidgets.so.6:_ZN7Purpose4Menu6reloadEv
 libKF6PurposeWidgets.so.6:_ZN7Purpose4Menu8finishedERK11QJsonObjectiRK7QString
@@ -121,6 +124,9 @@ libKF6PurposeWidgets.so.6:_ZNK7Purpose4Menu5modelEv
 libKF6PurposeWidgets.so.6:_ZTIN7Purpose4MenuE
 libKF6PurposeWidgets.so.6:_ZTSN7Purpose4MenuE
 libKF6PurposeWidgets.so.6:_ZTVN7Purpose4MenuE
+libkdeconnectQml.so:_Z45qml_register_types_org_kde_purpose_kdeconnectv
+libkdeconnectQml.so:qt_plugin_instance
+libkdeconnectQml.so:qt_plugin_query_metadata_v2
 libphabricatorquickplugin.so:qt_plugin_instance
 libphabricatorquickplugin.so:qt_plugin_query_metadata_v2
 libpurposequickplugin.so:_Z34qml_register_types_org_kde_purposev
@@ -128,6 +134,8 @@ libpurposequickplugin.so:qt_plugin_instance
 libpurposequickplugin.so:qt_plugin_query_metadata_v2
 librbpurposequickplugin.so:qt_plugin_instance
 librbpurposequickplugin.so:qt_plugin_query_metadata_v2
+nextcloudplugin.so:qt_plugin_instance
+nextcloudplugin.so:qt_plugin_query_metadata_v2
 pastebinplugin.so:qt_plugin_instance
 pastebinplugin.so:qt_plugin_query_metadata_v2
 phabricatorplugin.so:qt_plugin_instance
@@ -140,5 +148,5 @@ sharefileitemaction.so:qt_plugin_instance
 sharefileitemaction.so:qt_plugin_query_metadata_v2
 telegramplugin.so:qt_plugin_instance
 telegramplugin.so:qt_plugin_query_metadata_v2
-twitterplugin.so:qt_plugin_instance
-twitterplugin.so:qt_plugin_query_metadata_v2
+youtubeplugin.so:qt_plugin_instance
+youtubeplugin.so:qt_plugin_query_metadata_v2

@@ -1,5 +1,5 @@
-libc.so.6:__ctype_b_loc
 libc.so.6:__ctype_get_mb_cur_max
+libc.so.6:__environ
 libc.so.6:__errno_location
 libc.so.6:__fdelt_chk
 libc.so.6:__fprintf_chk
@@ -13,7 +13,6 @@ libc.so.6:__vfprintf_chk
 libc.so.6:__vsnprintf_chk
 libc.so.6:__xpg_basename
 libc.so.6:access
-libc.so.6:alarm
 libc.so.6:bindtextdomain
 libc.so.6:calloc
 libc.so.6:chmod
@@ -22,7 +21,7 @@ libc.so.6:close
 libc.so.6:closedir
 libc.so.6:dcgettext
 libc.so.6:dup
-libc.so.6:dup2
+libc.so.6:environ
 libc.so.6:exit
 libc.so.6:fclose
 libc.so.6:fcntl
@@ -46,6 +45,7 @@ libc.so.6:ioctl
 libc.so.6:isatty
 libc.so.6:iswspace
 libc.so.6:kill
+libc.so.6:killpg
 libc.so.6:localtime
 libc.so.6:lseek
 libc.so.6:lstat
@@ -58,6 +58,7 @@ libc.so.6:memset
 libc.so.6:mkdir
 libc.so.6:mkstemp
 libc.so.6:nanosleep
+libc.so.6:nl_langinfo
 libc.so.6:open
 libc.so.6:opendir
 libc.so.6:optarg
@@ -75,23 +76,25 @@ libc.so.6:realloc
 libc.so.6:remove
 libc.so.6:rename
 libc.so.6:select
+libc.so.6:setitimer
 libc.so.6:setlocale
 libc.so.6:shmat
 libc.so.6:shmctl
 libc.so.6:shmdt
 libc.so.6:shmget
 libc.so.6:sigaction
+libc.so.6:sigaddset
 libc.so.6:sigemptyset
-libc.so.6:signal
+libc.so.6:sigprocmask
 libc.so.6:splice
 libc.so.6:stat
 libc.so.6:stderr
 libc.so.6:strchr
+libc.so.6:strcmp
 libc.so.6:strerror
 libc.so.6:strftime
 libc.so.6:strlcat
 libc.so.6:strlen
-libc.so.6:strncat
 libc.so.6:strncmp
 libc.so.6:strncpy
 libc.so.6:strrchr
@@ -107,3 +110,7 @@ libc.so.6:umask
 libc.so.6:wcswidth
 libc.so.6:wctomb
 libc.so.6:write
+libm.so.6:fmod
+libm.so.6:sqrtl
+libncursesw.so.6:setupterm
+libncursesw.so.6:tigetnum

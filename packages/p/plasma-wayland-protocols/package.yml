@@ -1,8 +1,8 @@
 name       : plasma-wayland-protocols
-version    : 1.12.0
-release    : 13
+version    : 1.18.0
+release    : 19
 source     :
-    - https://cdn.download.kde.org/stable/plasma-wayland-protocols/plasma-wayland-protocols-1.12.0.tar.xz : 1483bfd279cb913c83579b5d71c58f9958764f9ba4303b3647e1007cb70d4f9e
+    - https://download.kde.org/stable/plasma-wayland-protocols/plasma-wayland-protocols-1.18.0.tar.xz : 2567472671ad5d989f88b51baef9dd59353a5e7c3f2ed7e6b989755cb9004233
 homepage   : https://kde.org/plasma-desktop
 license    : LGPL-2.1-or-later
 component  : desktop.kde.core
@@ -10,10 +10,10 @@ summary    : Plasma Specific Protocols for Wayland
 description: |
     Plasma Specific Protocols for Wayland
 builddeps  :
-    - pkgconfig(Qt5Core)
+    - pkgconfig(Qt6Core)
     - extra-cmake-modules
 setup      : |
-    %cmake_ninja
+    %cmake_ninja -DBUILD_TESTING=OFF
 build      : |
     %ninja_build
 install    : |

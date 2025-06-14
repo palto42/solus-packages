@@ -1,0 +1,5 @@
+releases:
+  id: 1223
+  rss: https://gitlab.gnome.org/GNOME/gobject-introspection/-/releases.atom
+security:
+  cpe: ~ # Last checked 2025-03-27

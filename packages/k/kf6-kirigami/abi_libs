@@ -1,7 +1,16 @@
 libKirigami.so.6
 libKirigamiDelegates.so.6
 libKirigamiDelegatesplugin.so
+libKirigamiDialogs.so.6
+libKirigamiDialogsplugin.so
+libKirigamiLayouts.so.6
+libKirigamiLayoutsPrivate.so.6
+libKirigamiLayoutsPrivateplugin.so
+libKirigamiLayoutsplugin.so
 libKirigamiPlatform.so.6
 libKirigamiPlatformplugin.so
-libKirigamiPrivatePlugin.so
+libKirigamiPrimitives.so.6
+libKirigamiPrimitivesplugin.so
+libKirigamiPrivate.so.6
+libKirigamiPrivateplugin.so
 libKirigamiplugin.so

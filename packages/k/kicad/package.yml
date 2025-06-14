@@ -1,8 +1,8 @@
 name       : kicad
-version    : 7.0.6
-release    : 27
+version    : 9.0.2
+release    : 40
 source     :
-    - https://github.com/KiCad/kicad-source-mirror/archive/refs/tags/7.0.6.tar.gz : d01f67dc8d506b6e3b6dd3c8c785c8d872d5b46aa1e069c02481167af158334f
+    - https://github.com/KiCad/kicad-source-mirror/archive/refs/tags/9.0.2.tar.gz : 387645304a4e17ee24f2944ca824c820dc517a2d750120cd504c48c5d9412152
 homepage   : https://www.kicad.org/
 license    : GPL-3.0-or-later
 component  : office.scientific
@@ -11,18 +11,22 @@ description: |
     KiCad is an open source software suite for Electronic Design Automation (EDA).
 libsplit   : no
 builddeps  :
-    - pkgconfig(dri)
     - pkgconfig(cairo)
-    - pkgconfig(glm)
+    - pkgconfig(dri)
     - pkgconfig(glew)
+    - pkgconfig(glm)
     - pkgconfig(glut)
     - pkgconfig(gtk+-3.0)
     - pkgconfig(libcurl)
+    - pkgconfig(libgit2)
+    - pkgconfig(libsecret-1)
     - pkgconfig(odbc)
+    - pkgconfig(protobuf)
     - pkgconfig(python3)
     - pkgconfig(x11)
     - libboost-devel
     - ngspice-devel
+    - nng-devel
     - opencascade-devel
     - swig
     - wxPython

@@ -1,8 +1,8 @@
 name       : gnome-remote-desktop
-version    : '45.1'
-release    : 12
+version    : '48.1'
+release    : 26
 source     :
-    - https://download.gnome.org/sources/gnome-remote-desktop/45/gnome-remote-desktop-45.1.tar.xz : dcd9c18ac2306695631fcf00a88645c38e370eba05c69df39f540204d4eafd8d
+    - https://download.gnome.org/sources/gnome-remote-desktop/48/gnome-remote-desktop-48.1.tar.xz : bcf3770fca0faeda2fae3b1a3ff6f2e90a02778f76a42e8fd103cae18628f4f2
 homepage   : https://gitlab.gnome.org/GNOME/gnome-remote-desktop
 license    : GPL-2.0-or-later
 component  : desktop.gnome
@@ -12,17 +12,19 @@ description: |
 builddeps  :
     - pkgconfig(fdk-aac)
     - pkgconfig(ffnvcodec)
-    - pkgconfig(freerdp2)
+    - pkgconfig(freerdp3)
     - pkgconfig(fuse3)
     - pkgconfig(gbm)
     - pkgconfig(gtk+-3.0)
     - pkgconfig(libdrm)
     - pkgconfig(libei-1.0)
-    - pkgconfig(libmutter-13)
+    - pkgconfig(libmutter-16)
     - pkgconfig(libnotify)
     - pkgconfig(libpipewire-0.3)
     - pkgconfig(libsecret-1)
+    - pkgconfig(libva)
     - pkgconfig(libvncclient)
+    - pkgconfig(opus)
     - pkgconfig(tss2-esys)
     - asciidoc
 setup      : |

@@ -1,8 +1,9 @@
 name       : docker-compose
-version    : 2.24.7
-release    : 44
+version    : 2.34.0
+release    : 58
 source     :
-    - https://github.com/docker/compose/archive/refs/tags/v2.24.7.tar.gz : f671c42b2189372e2128a0abf218c04cc92693ef8960c3d26aab60bf7ca4febf
+    - https://github.com/docker/compose/archive/refs/tags/v2.34.0.tar.gz : 3612fa592658bfaaf646bf3c05289396af954bbbc6299d5bcddec5b0424589be
+homepage   : https://docs.docker.com/compose/
 license    : Apache-2.0
 component  : virt
 summary    : A tool for defining and running multi-container Docker applications.
@@ -23,12 +24,14 @@ environment: |
     export GOFLAGS="-buildmode=pie -trimpath -ldflags=-linkmode=external -ldflags=-X=github.com/docker/compose/v2/internal.Version=v$version -mod=readonly -modcacherw"
 
     export _cli_plugins_dir=/usr/lib/docker/cli-plugins
+setup      : |
+    go mod vendor
 build      : |
     go build -trimpath -tags "e2e,kube" -o compose ./cmd
 install    : |
-    install -Ddm00755 $installdir/$_cli_plugins_dir
+    install -dm00755 $installdir/$_cli_plugins_dir
     install -m00755 compose $installdir/$_cli_plugins_dir/docker-compose
 
     # Compatibility symlink
-    install -Ddm00755 "$installdir/usr/bin"
-    ln -sf /usr/lib/docker/cli-plugins/docker-compose "$installdir/usr/bin/docker-compose"
+    install -dm00755 $installdir/usr/bin
+    ln -srf $installdir/usr/lib/docker/cli-plugins/docker-compose $installdir/usr/bin/docker-compose

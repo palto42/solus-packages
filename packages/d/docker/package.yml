@@ -1,8 +1,9 @@
 name       : docker
-version    : 25.0.4
-release    : 52
+version    : 28.0.4
+release    : 70
 source     :
-    - https://github.com/docker/cli/archive/refs/tags/v25.0.4.tar.gz : e29bcd588142981f0a8f7955628863441099cead1c860dc5040f5af0156de71a
+    - https://github.com/docker/cli/archive/refs/tags/v28.0.4.tar.gz : 09b41aa5ff656bc135feb80cb9b73c70aeba099ef9756c3cef7bcb2eb3c98ba6
+homepage   : https://github.com/docker/cli/
 license    : Apache-2.0
 component  : virt
 summary    : Open source application container engine
@@ -20,20 +21,20 @@ rundeps    :
     - docker-buildx
     - moby
 environment: |
-    export DISABLE_WARN_OUTSIDE_CONTAINER=1
-
-    export GOFLAGS="-buildmode=pie -trimpath -mod=readonly -modcacherw -ldflags=-linkmode=external"
-
-    export GO111MODULE=auto
 setup      : |
     mkdir -p src/github.com/docker/
     ln -s `pwd` src/github.com/docker/cli
 build      : |
     cd src/github.com/docker/cli
     export GOPATH=`pwd`
+    export GO111MODULE=auto
+
+    export GOFLAGS="-buildmode=pie -trimpath -mod=readonly -modcacherw -ldflags=-linkmode=external"
 
     export GITCOMMIT="$(git ls-remote https://github.com/docker/cli.git refs/tags/v$version^{} | awk '{print $1}')"
     export DOCKER_GITCOMMIT=$GITCOMMIT
+
+    export DISABLE_WARN_OUTSIDE_CONTAINER=1
 
     # Build CLI
     PLATFORM="Docker Engine - Community" \

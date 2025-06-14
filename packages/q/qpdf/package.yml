@@ -1,9 +1,9 @@
 name       : qpdf
-version    : 11.5.0
-release    : 24
+version    : 11.10.1
+release    : 27
 source     :
-    - https://github.com/qpdf/qpdf/releases/download/v11.5.0/qpdf-11.5.0.tar.gz : 15cb419e72c494a4a4b2e7c0eb9f4e980c8fd4e61ccdea64399e987f4c56c8ee
-homepage   : https://github.com/qpdf/qpdf
+    - https://github.com/qpdf/qpdf/archive/refs/tags/v11.10.1.tar.gz : cb691932fd2935c575fb6f4c93a9aa7ae60a0f167c3b51fbe0029d2134f27199
+homepage   : https://qpdf.sourceforge.io/
 license    : Apache-2.0
 component  : desktop.core
 summary    : PDF manipulation library

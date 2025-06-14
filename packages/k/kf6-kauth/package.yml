@@ -1,8 +1,8 @@
 name       : kf6-kauth
-version    : 6.0.0
-release    : 4
+version    : 6.14.0
+release    : 21
 source     :
-    - https://cdn.download.kde.org/stable/frameworks/6.0/kauth-6.0.0.tar.xz : 66046698d2584692d5397a6ec808b2c9f8b7882a0f85233be9cd69283d03c768
+    - https://download.kde.org/stable/frameworks/6.14/kauth-6.14.0.tar.xz : f5a16e489f26b5741d3f11bf6b203fd99a84ecaae798eb6b0eaa0d71c88f6645
 homepage   : https://community.kde.org/Frameworks
 license    :
     - BSD-3-Clause
@@ -13,9 +13,12 @@ summary    : Execute actions as privileged user.
 description: |
     Execute actions as privileged user.
 builddeps  :
+    - pkgconfig(KF6WindowSystem)
     - pkgconfig(polkit-qt6-1)
     - kf6-kcoreaddons-devel
-    - kf6-kwindowsystem-devel
+rundeps    :
+    - devel :
+        - kf6-kcoreaddons-devel
 clang      : yes
 optimize   : thin-lto
 setup      : |

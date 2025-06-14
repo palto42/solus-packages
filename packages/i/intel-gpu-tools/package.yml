@@ -1,9 +1,9 @@
 name       : intel-gpu-tools
-version    : '1.28'
-release    : 14
+version    : '2.0'
+release    : 18
 homepage   : https://gitlab.freedesktop.org/drm/igt-gpu-tools
 source     :
-    - https://xorg.freedesktop.org/releases/individual/app/igt-gpu-tools-1.28.tar.xz : ffcbdf61bd495803d9ae9dfa83e2fe04b8f583a2296fe059c1d5dd135a8a3b15
+    - https://xorg.freedesktop.org/releases/individual/app/igt-gpu-tools-2.0.tar.xz : ab060a2652509e3bbaeb19d8b227c3b063074c9a905a37508830360435d2bb8f
 license    : MIT
 component  : system.utils
 summary    : Tools for development and testing of the Intel DRM driver
@@ -17,7 +17,7 @@ builddeps  :
     - pkgconfig(libdrm)
     - pkgconfig(libdw)
     - pkgconfig(libkmod)
-    - pkgconfig(libprocps)
+    - pkgconfig(libproc2)
     - pkgconfig(libunwind)
     - pkgconfig(gsl)
     - pkgconfig(pciaccess)
@@ -38,3 +38,4 @@ install    : |
     %ninja_install
 check      : |
     %ninja_check || :
+

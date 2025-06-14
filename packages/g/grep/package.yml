@@ -1,8 +1,9 @@
 name       : grep
-version    : '3.11'
-release    : 17
+version    : '3.12'
+release    : 22
 source     :
-    - https://ftp.gnu.org/gnu/grep/grep-3.11.tar.gz : 1f31014953e71c3cddcedb97692ad7620cb9d6d04fbdc19e0d8dd836f87622bb
+    - https://ftp.gnu.org/gnu/grep/grep-3.12.tar.gz : badda546dfc4b9d97e992e2c35f3b5c7f20522ffcbe2f01ba1e9cdcbe7644cdc
+homepage   : https://www.gnu.org/software/grep/
 license    : GPL-3.0-or-later
 component  : system.base
 summary    : grep (pattern searching tool)
@@ -11,15 +12,16 @@ description: |
 builddeps  :
     - pkgconfig(libpcre2-posix)
 setup      : |
-    %configure --bindir=/bin
+    %configure --bindir=/usr/bin
 build      : |
     %make
 install    : |
     %make_install
-    install -d -m00755 ${installdir}/usr/bin
 
+    # usr-merge
+    install -d -m00755 ${installdir}/bin
     for i in egrep fgrep grep; do
-        ln -sv /bin/$i ${installdir}/usr/bin/$i
+        ln -srv $installdir/usr/bin/$i ${installdir}/bin/$i
     done
 check      : |
     %make check

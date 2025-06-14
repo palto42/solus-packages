@@ -1,8 +1,8 @@
 name       : python-pytest-httpserver
-version    : 1.0.8
-release    : 9
+version    : 1.1.2
+release    : 12
 source     :
-    - https://github.com/csernazs/pytest-httpserver/archive/refs/tags/1.0.8.tar.gz : d25a765e660f252029738392cff49dd3b2d6e5070ac81c7fb794ae6eac93ef76
+    - https://github.com/csernazs/pytest-httpserver/archive/refs/tags/1.1.2.tar.gz : b706af59bcf019d9d1e623b7934c316038529cb18137163289ab5387ba627d43
 homepage   : https://github.com/csernazs/pytest-httpserver
 license    : MIT
 component  : programming.python

@@ -1,8 +1,8 @@
 name       : xfce4-screenshooter
-version    : 1.10.5
-release    : 2
+version    : 1.11.2
+release    : 5
 source     :
-    - https://archive.xfce.org/src/apps/xfce4-screenshooter/1.10/xfce4-screenshooter-1.10.5.tar.bz2 : fa711f2a6a5517f575f2e129fe48c2678e836bd4ede5433075f3076d7670621c
+    - https://archive.xfce.org/src/apps/xfce4-screenshooter/1.11/xfce4-screenshooter-1.11.2.tar.xz : 6ae5bc4823d43e770b3a11700d048d56bdcaafdef37de7deacb8970b55fc1565
 homepage   : https://docs.xfce.org/apps/screenshooter/start
 license    : GPL-2.0-or-later
 component  : desktop.xfce
@@ -11,12 +11,13 @@ description: |
     An application to take screenshots for xfce.
 builddeps  :
     - pkgconfig(exo-2)
-    - pkgconfig(libsoup-3.0)
     - pkgconfig(libxfce4panel-2.0)
     - pkgconfig(libxfce4ui-2)
+    - pkgconfig(wayland-client)
+    - pkgconfig(wayland-protocols)
 setup      : |
-    %configure --disable-debug
+    %meson_configure
 build      : |
-    %make
+    %ninja_build
 install    : |
-    %make_install
+    %ninja_install

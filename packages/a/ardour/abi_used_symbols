@@ -41,6 +41,12 @@ UNKNOWN:_ZN6Evoral8SequenceIN8Temporal5BeatsEEC2ERKNS_7TypeMapE
 UNKNOWN:_ZNK6Evoral8SequenceIN8Temporal5BeatsEE14const_iteratoreqERKS4_
 UNKNOWN:_ZNK6Evoral8SequenceIN8Temporal5BeatsEE8containsERKSt10shared_ptrINS_4NoteIS2_EEE
 UNKNOWN:_ZNK6Evoral8SequenceIN8Temporal5BeatsEE9get_notesERSt8multisetISt10shared_ptrINS_4NoteIS2_EEENS3_21EarlierNoteComparatorESaIS8_EENS3_12NoteOperatorEhi
+UNKNOWN:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv
+UNKNOWN:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4swapERS4_
+UNKNOWN:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE7reserveEm
+UNKNOWN:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE8_M_eraseEmm
+UNKNOWN:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_assignERKS4_
+UNKNOWN:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm
 UNKNOWN:_ZTI11CairoWidget
 UNKNOWN:_ZTI11MIDISurface
 UNKNOWN:_ZTI11Transmitter
@@ -59,6 +65,7 @@ UNKNOWN:_ZTIN12AudioGrapher13BroadcastInfoE
 UNKNOWN:_ZTIN13ActionManager22MissingActionExceptionE
 UNKNOWN:_ZTIN13ArdourWidgets10ArdourKnobE
 UNKNOWN:_ZTIN13ArdourWidgets11ArdourFaderE
+UNKNOWN:_ZTIN13ArdourWidgets11FaderWidgetE
 UNKNOWN:_ZTIN13ArdourWidgets12ArdourButtonE
 UNKNOWN:_ZTIN13ArdourWidgets13BarControllerE
 UNKNOWN:_ZTIN13ArdourWidgets16SliderControllerE
@@ -134,7 +141,6 @@ UNKNOWN:_ZTIN6ARDOUR10FileSourceE
 UNKNOWN:_ZTIN6ARDOUR10MidiRegionE
 UNKNOWN:_ZTIN6ARDOUR10MidiSourceE
 UNKNOWN:_ZTIN6ARDOUR10PortInsertE
-UNKNOWN:_ZTIN6ARDOUR10TriggerBoxE
 UNKNOWN:_ZTIN6ARDOUR10UserBundleE
 UNKNOWN:_ZTIN6ARDOUR10VST3PluginE
 UNKNOWN:_ZTIN6ARDOUR11AudioRegionE
@@ -151,14 +157,17 @@ UNKNOWN:_ZTIN6ARDOUR12InternalSendE
 UNKNOWN:_ZTIN6ARDOUR12MidiPlaylistE
 UNKNOWN:_ZTIN6ARDOUR12PluginInsertE
 UNKNOWN:_ZTIN6ARDOUR12SimpleExportE
+UNKNOWN:_ZTIN6ARDOUR12SurroundSendE
 UNKNOWN:_ZTIN6ARDOUR13AsyncMIDIPortE
 UNKNOWN:_ZTIN6ARDOUR13AudioPlaylistE
 UNKNOWN:_ZTIN6ARDOUR14AutomationListE
 UNKNOWN:_ZTIN6ARDOUR14InternalReturnE
 UNKNOWN:_ZTIN6ARDOUR14PortExportMIDIE
+UNKNOWN:_ZTIN6ARDOUR14RegionFxPluginE
 UNKNOWN:_ZTIN6ARDOUR15AudioFileSourceE
 UNKNOWN:_ZTIN6ARDOUR15ControlProtocolE
 UNKNOWN:_ZTIN6ARDOUR15ExportFormatBWFE
+UNKNOWN:_ZTIN6ARDOUR15PanControllableE
 UNKNOWN:_ZTIN6ARDOUR15TransportMasterE
 UNKNOWN:_ZTIN6ARDOUR16ExportFormatBaseE
 UNKNOWN:_ZTIN6ARDOUR16ExportFormatFLACE
@@ -183,7 +192,6 @@ UNKNOWN:_ZTIN6ARDOUR4PortE
 UNKNOWN:_ZTIN6ARDOUR4SendE
 UNKNOWN:_ZTIN6ARDOUR5RouteE
 UNKNOWN:_ZTIN6ARDOUR5TrackE
-UNKNOWN:_ZTIN6ARDOUR6IOPlugE
 UNKNOWN:_ZTIN6ARDOUR6PannerE
 UNKNOWN:_ZTIN6ARDOUR6PluginE
 UNKNOWN:_ZTIN6ARDOUR6RegionE
@@ -226,7 +234,6 @@ UNKNOWN:_ZTVN12ArdourCanvas9GtkCanvasE
 UNKNOWN:_ZTVN12ArdourCanvas9RectangleE
 UNKNOWN:_ZTVN13ArdourWidgets10ArdourKnobE
 UNKNOWN:_ZTVN13ArdourWidgets10FocusEntryE
-UNKNOWN:_ZTVN13ArdourWidgets16SliderControllerE
 UNKNOWN:_ZTVN13ArdourWidgets20StatefulToggleButtonE
 UNKNOWN:_ZTVN13ArdourWidgets8PrompterE
 UNKNOWN:_ZTVN3Gtk14TreeViewColumnE
@@ -235,6 +242,7 @@ UNKNOWN:_ZTVN3PBD13StandardTimerE
 UNKNOWN:_ZTVN3PBD7CommandE
 UNKNOWN:_ZTVN6ARDOUR10UserBundleE
 UNKNOWN:_ZTVN6ARDOUR12SimpleExportE
+UNKNOWN:_ZTVN6ARDOUR13BroadcastInfoE
 UNKNOWN:_ZTVN6ARDOUR16PresentationInfoE
 UNKNOWN:_ZTVN6ARDOUR16SessionHandlePtrE
 UNKNOWN:_ZTVN6ARDOUR19ParameterDescriptorE
@@ -460,7 +468,6 @@ libc.so.6:__stack_chk_fail
 libc.so.6:__strcat_chk
 libc.so.6:__strcpy_chk
 libc.so.6:__strncat_chk
-libc.so.6:__swprintf_chk
 libc.so.6:__sysconf
 libc.so.6:__sysv_signal
 libc.so.6:__uflow
@@ -616,7 +623,6 @@ libc.so.6:regexec
 libc.so.6:regfree
 libc.so.6:remove
 libc.so.6:rename
-libc.so.6:rmdir
 libc.so.6:sched_get_priority_max
 libc.so.6:sched_get_priority_min
 libc.so.6:sched_setscheduler
@@ -666,7 +672,6 @@ libc.so.6:strstr
 libc.so.6:strtod
 libc.so.6:strtok
 libc.so.6:strtok_r
-libc.so.6:strtol
 libc.so.6:syscall
 libc.so.6:sysconf
 libc.so.6:system
@@ -680,11 +685,6 @@ libc.so.6:usleep
 libc.so.6:utime
 libc.so.6:vfork
 libc.so.6:waitpid
-libc.so.6:wcscmp
-libc.so.6:wcslen
-libc.so.6:wcsncmp
-libc.so.6:wcstombs
-libc.so.6:wmemcpy
 libc.so.6:write
 libcairo.so.2:cairo_arc
 libcairo.so.2:cairo_arc_negative
@@ -1084,6 +1084,7 @@ libgdkmm-2.4.so.1:_ZN3Gdk7Display21get_window_at_pointerERiS1_
 libgdkmm-2.4.so.1:_ZN3Gdk8Drawable11draw_layoutERKN4Glib6RefPtrIKNS_2GCEEEiiRKNS2_IKN5Pango6LayoutEEE
 libgdkmm-2.4.so.1:_ZN3Gdk8Drawable11draw_pixbufERKN4Glib6RefPtrIKNS_2GCEEERKNS2_INS_6PixbufEEEiiiiiiNS_9RgbDitherEii
 libgdkmm-2.4.so.1:_ZN3Gdk8Drawable12get_colormapEv
+libgdkmm-2.4.so.1:_ZN3Gdk8Drawable14draw_rectangleERKN4Glib6RefPtrIKNS_2GCEEEbiiii
 libgdkmm-2.4.so.1:_ZN3Gdk8Drawable20create_cairo_contextEv
 libgdkmm-2.4.so.1:_ZN3Gdk8Drawable8get_sizeERiS1_
 libgdkmm-2.4.so.1:_ZN3Gdk9Rectangle10set_heightERKi
@@ -1138,9 +1139,7 @@ libglib-2.0.so.0:g_ascii_table
 libglib-2.0.so.0:g_assertion_message_expr
 libglib-2.0.so.0:g_base64_decode
 libglib-2.0.so.0:g_base64_encode
-libglib-2.0.so.0:g_basename
 libglib-2.0.so.0:g_build_filename
-libglib-2.0.so.0:g_build_path
 libglib-2.0.so.0:g_chdir
 libglib-2.0.so.0:g_clear_error
 libglib-2.0.so.0:g_date_time_new_now_local
@@ -1382,7 +1381,6 @@ libglibmm-2.4.so.1:_ZN4Glib7Threads8RecMutex6unlockEv
 libglibmm-2.4.so.1:_ZN4Glib7Threads8RecMutex7trylockEv
 libglibmm-2.4.so.1:_ZN4Glib7Threads8RecMutexC1Ev
 libglibmm-2.4.so.1:_ZN4Glib7Threads8RecMutexD1Ev
-libglibmm-2.4.so.1:_ZN4Glib7convertERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_S7_
 libglibmm-2.4.so.1:_ZN4Glib7ustring7replaceEmmPKc
 libglibmm-2.4.so.1:_ZN4Glib7ustringC1EONSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
 libglibmm-2.4.so.1:_ZN4Glib7ustringC1EOS0_
@@ -1772,7 +1770,9 @@ libgtkmm-2.4.so.1:_ZN3Gtk12TreeSortable27set_default_sort_func_vfuncEPFiP13_GtkT
 libgtkmm-2.4.so.1:_ZN3Gtk13CheckMenuItem10set_activeEb
 libgtkmm-2.4.so.1:_ZN3Gtk13CheckMenuItem14signal_toggledEv
 libgtkmm-2.4.so.1:_ZN3Gtk13CheckMenuItem16set_inconsistentEb
+libgtkmm-2.4.so.1:_ZN3Gtk13CheckMenuItem17set_draw_as_radioEb
 libgtkmm-2.4.so.1:_ZN3Gtk13CheckMenuItemC1ERKN4Glib7ustringEb
+libgtkmm-2.4.so.1:_ZN3Gtk13CheckMenuItemC1Ev
 libgtkmm-2.4.so.1:_ZN3Gtk13ImageMenuItem21set_always_show_imageEb
 libgtkmm-2.4.so.1:_ZN3Gtk13MessageDialog18set_secondary_textERKN4Glib7ustringEb
 libgtkmm-2.4.so.1:_ZN3Gtk13MessageDialogC1ERKN4Glib7ustringEbNS_11MessageTypeENS_11ButtonsTypeEb
@@ -2184,6 +2184,7 @@ libgtkmm-2.4.so.1:_ZN3Gtk6Widget16on_style_changedERKN4Glib6RefPtrINS_5StyleEEE
 libgtkmm-2.4.so.1:_ZN3Gtk6Widget16set_size_requestEii
 libgtkmm-2.4.so.1:_ZN3Gtk6Widget16set_tooltip_textERKN4Glib7ustringE
 libgtkmm-2.4.so.1:_ZN3Gtk6Widget16signal_map_eventEv
+libgtkmm-2.4.so.1:_ZN3Gtk6Widget16signal_unrealizeEv
 libgtkmm-2.4.so.1:_ZN3Gtk6Widget17drag_source_unsetEv
 libgtkmm-2.4.so.1:_ZN3Gtk6Widget17get_pango_contextEv
 libgtkmm-2.4.so.1:_ZN3Gtk6Widget17on_focus_in_eventEP14_GdkEventFocus
@@ -2356,6 +2357,7 @@ libgtkmm-2.4.so.1:_ZN3Gtk8Expander17property_expandedEv
 libgtkmm-2.4.so.1:_ZN3Gtk8ExpanderC1ERKN4Glib7ustringEb
 libgtkmm-2.4.so.1:_ZN3Gtk8ExpanderD1Ev
 libgtkmm-2.4.so.1:_ZN3Gtk8MenuItem11set_submenuERNS_4MenuE
+libgtkmm-2.4.so.1:_ZN3Gtk8MenuItem14remove_submenuEv
 libgtkmm-2.4.so.1:_ZN3Gtk8MenuItem15signal_activateEv
 libgtkmm-2.4.so.1:_ZN3Gtk8MenuItem17set_use_underlineEb
 libgtkmm-2.4.so.1:_ZN3Gtk8MenuItem8activateEv
@@ -2525,6 +2527,7 @@ libgtkmm-2.4.so.1:_ZN3Gtk9ListStore7reorderERKN4Glib11ArrayHandleIiNS1_17Contain
 libgtkmm-2.4.so.1:_ZN3Gtk9MenuShell11select_itemERNS_8MenuItemE
 libgtkmm-2.4.so.1:_ZN3Gtk9MenuShell13activate_itemERNS_8MenuItemEb
 libgtkmm-2.4.so.1:_ZN3Gtk9MenuShell5itemsEv
+libgtkmm-2.4.so.1:_ZN3Gtk9MenuShell6appendERNS_8MenuItemE
 libgtkmm-2.4.so.1:_ZN3Gtk9SizeGroup10add_widgetERNS_6WidgetE
 libgtkmm-2.4.so.1:_ZN3Gtk9SizeGroup13remove_widgetERNS_6WidgetE
 libgtkmm-2.4.so.1:_ZN3Gtk9SizeGroup6createENS_13SizeGroupModeE
@@ -2671,6 +2674,7 @@ libgtkmm-2.4.so.1:_ZNK3Gtk6Widget9get_stateEv
 libgtkmm-2.4.so.1:_ZNK3Gtk6Widget9get_styleEv
 libgtkmm-2.4.so.1:_ZNK3Gtk6Widget9get_widthEv
 libgtkmm-2.4.so.1:_ZNK3Gtk6Widget9has_focusEv
+libgtkmm-2.4.so.1:_ZNK3Gtk6Widget9is_mappedEv
 libgtkmm-2.4.so.1:_ZNK3Gtk6Window12get_positionERiS1_
 libgtkmm-2.4.so.1:_ZNK3Gtk6Window27property_has_toplevel_focusEv
 libgtkmm-2.4.so.1:_ZNK3Gtk6Window8get_sizeERiS1_
@@ -2695,6 +2699,7 @@ libgtkmm-2.4.so.1:_ZNK3Gtk8TreeIter5equalERKS0_
 libgtkmm-2.4.so.1:_ZNK3Gtk8TreeItercvbEv
 libgtkmm-2.4.so.1:_ZNK3Gtk8TreePath4sizeEv
 libgtkmm-2.4.so.1:_ZNK3Gtk8TreePath5emptyEv
+libgtkmm-2.4.so.1:_ZNK3Gtk8TreePathcvbEv
 libgtkmm-2.4.so.1:_ZNK3Gtk8TreeView13get_selectionEv
 libgtkmm-2.4.so.1:_ZNK3Gtk8TreeView15get_path_at_posEiiRNS_8TreePathE
 libgtkmm-2.4.so.1:_ZNK3Gtk8TreeView19get_dest_row_at_posEiiRNS_8TreePathERNS_20TreeViewDropPositionE
@@ -3009,6 +3014,7 @@ libmvec.so.1:_ZGVbN2vv_atan2
 libmvec.so.1:_ZGVbN2vv_pow
 libmvec.so.1:_ZGVbN4v_cosf
 libmvec.so.1:_ZGVbN4v_expf
+libmvec.so.1:_ZGVbN4v_log10f
 libmvec.so.1:_ZGVbN4v_sinf
 libpango-1.0.so.0:pango_context_get_font_description
 libpango-1.0.so.0:pango_font_description_free
@@ -3240,6 +3246,7 @@ libstdc++.so.6:_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6substrEmm
 libstdc++.so.6:_ZNKSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEE3strEv
 libstdc++.so.6:_ZNKSt8__detail20_Prime_rehash_policy14_M_need_rehashEmmm
 libstdc++.so.6:_ZNKSt9exception4whatEv
+libstdc++.so.6:_ZNSdC2Ev
 libstdc++.so.6:_ZNSi10_M_extractIdEERSiRT_
 libstdc++.so.6:_ZNSi10_M_extractIjEERSiRT_
 libstdc++.so.6:_ZNSi10_M_extractIlEERSiRT_
@@ -3259,7 +3266,6 @@ libstdc++.so.6:_ZNSo9_M_insertIdEERSoT_
 libstdc++.so.6:_ZNSo9_M_insertIlEERSoT_
 libstdc++.so.6:_ZNSo9_M_insertImEERSoT_
 libstdc++.so.6:_ZNSolsEi
-libstdc++.so.6:_ZNSolsEs
 libstdc++.so.6:_ZNSt11logic_errorC1EPKc
 libstdc++.so.6:_ZNSt11logic_errorC2EPKc
 libstdc++.so.6:_ZNSt11logic_errorC2ERKS_
@@ -3308,31 +3314,22 @@ libstdc++.so.6:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_dispose
 libstdc++.so.6:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_replaceEmmPKcm
 libstdc++.so.6:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructEmc
 libstdc++.so.6:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE14_M_replace_auxEmmmc
-libstdc++.so.6:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4swapERS4_
 libstdc++.so.6:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6appendEPKc
 libstdc++.so.6:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6appendEPKcm
 libstdc++.so.6:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6insertEmPKc
 libstdc++.so.6:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6resizeEmc
-libstdc++.so.6:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE7replaceEmmPKcm
 libstdc++.so.6:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE7reserveEm
-libstdc++.so.6:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE8_M_eraseEmm
 libstdc++.so.6:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_appendEPKcm
 libstdc++.so.6:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_assignERKS4_
 libstdc++.so.6:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_createERmm
-libstdc++.so.6:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm
 libstdc++.so.6:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9push_backEc
 libstdc++.so.6:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC1EOS4_
-libstdc++.so.6:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC1ERKS4_mm
 libstdc++.so.6:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEED1Ev
-libstdc++.so.6:_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE10_M_disposeEv
-libstdc++.so.6:_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE10_M_replaceEmmPKwm
-libstdc++.so.6:_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE9_M_createERmm
 libstdc++.so.6:_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEE7_M_syncEPcmm
 libstdc++.so.6:_ZNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEC1ERKNS_12basic_stringIcS2_S3_EESt13_Ios_Openmode
 libstdc++.so.6:_ZNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEC1Ev
 libstdc++.so.6:_ZNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEED1Ev
 libstdc++.so.6:_ZNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEED2Ev
-libstdc++.so.6:_ZNSt7__cxx1119basic_istringstreamIcSt11char_traitsIcESaIcEEC1ERKNS_12basic_stringIcS2_S3_EESt13_Ios_Openmode
 libstdc++.so.6:_ZNSt7__cxx1119basic_istringstreamIcSt11char_traitsIcESaIcEED1Ev
 libstdc++.so.6:_ZNSt7__cxx1119basic_ostringstreamIcSt11char_traitsIcESaIcEEC1Ev
 libstdc++.so.6:_ZNSt7__cxx1119basic_ostringstreamIcSt11char_traitsIcESaIcEED1Ev
@@ -3353,9 +3350,7 @@ libstdc++.so.6:_ZNSt9exceptionD2Ev
 libstdc++.so.6:_ZSt16__ostream_insertIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_PKS3_l
 libstdc++.so.6:_ZSt16__throw_bad_castv
 libstdc++.so.6:_ZSt17__throw_bad_allocv
-libstdc++.so.6:_ZSt18_Rb_tree_decrementPKSt18_Rb_tree_node_base
 libstdc++.so.6:_ZSt18_Rb_tree_decrementPSt18_Rb_tree_node_base
-libstdc++.so.6:_ZSt18_Rb_tree_incrementPKSt18_Rb_tree_node_base
 libstdc++.so.6:_ZSt18_Rb_tree_incrementPSt18_Rb_tree_node_base
 libstdc++.so.6:_ZSt19__throw_logic_errorPKc
 libstdc++.so.6:_ZSt19__throw_regex_errorNSt15regex_constants10error_typeE
@@ -3375,13 +3370,13 @@ libstdc++.so.6:_ZSt4cout
 libstdc++.so.6:_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_
 libstdc++.so.6:_ZSt7getlineIcSt11char_traitsIcESaIcEERSt13basic_istreamIT_T0_ES7_RNSt7__cxx1112basic_stringIS4_S5_T1_EES4_
 libstdc++.so.6:_ZSt7nothrow
-libstdc++.so.6:_ZSt9terminatev
+libstdc++.so.6:_ZSt9use_facetISt5ctypeIcEERKT_RKSt6locale
 libstdc++.so.6:_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc
 libstdc++.so.6:_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_c
 libstdc++.so.6:_ZStrsIcSt11char_traitsIcEERSt13basic_istreamIT_T0_ES6_RS3_
 libstdc++.so.6:_ZStrsIcSt11char_traitsIcESaIcEERSt13basic_istreamIT_T0_ES7_RNSt7__cxx1112basic_stringIS4_S5_T1_EE
-libstdc++.so.6:_ZTINSt6locale5facetE
 libstdc++.so.6:_ZTINSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEE
+libstdc++.so.6:_ZTINSt7__cxx117collateIcEE
 libstdc++.so.6:_ZTISd
 libstdc++.so.6:_ZTISi
 libstdc++.so.6:_ZTISo
@@ -3394,7 +3389,6 @@ libstdc++.so.6:_ZTISt13runtime_error
 libstdc++.so.6:_ZTISt14overflow_error
 libstdc++.so.6:_ZTISt15basic_streambufIcSt11char_traitsIcEE
 libstdc++.so.6:_ZTISt16invalid_argument
-libstdc++.so.6:_ZTISt5ctypeIcE
 libstdc++.so.6:_ZTISt9bad_alloc
 libstdc++.so.6:_ZTISt9exception
 libstdc++.so.6:_ZTId
@@ -3433,6 +3427,7 @@ libstdc++.so.6:_ZnwmRKSt9nothrow_t
 libstdc++.so.6:__cxa_allocate_exception
 libstdc++.so.6:__cxa_bad_cast
 libstdc++.so.6:__cxa_begin_catch
+libstdc++.so.6:__cxa_call_terminate
 libstdc++.so.6:__cxa_call_unexpected
 libstdc++.so.6:__cxa_demangle
 libstdc++.so.6:__cxa_end_catch
@@ -3462,6 +3457,7 @@ libtag.so.1:_ZN6TagLib7FileRef4saveEv
 libtag.so.1:_ZN6TagLib7FileRefC1EPKcbNS_15AudioProperties9ReadStyleE
 libtag.so.1:_ZN6TagLib7FileRefD1Ev
 libtag.so.1:_ZNK6TagLib4RIFF3WAV4File7InfoTagEv
+libtag.so.1:_ZNK6TagLib4RIFF3WAV4File8ID3v2TagEv
 libtag.so.1:_ZNK6TagLib7FileRef3tagEv
 libtag.so.1:_ZNK6TagLib7FileRef4fileEv
 libtag.so.1:_ZNK6TagLib7FileRef6isNullEv

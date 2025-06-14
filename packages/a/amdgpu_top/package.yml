@@ -1,10 +1,12 @@
 name       : amdgpu_top
-version    : 0.7.0
-release    : 10
+version    : 0.10.5
+release    : 25
 source     :
-    - https://github.com/Umio-Yasuno/amdgpu_top/archive/refs/tags/v0.7.0.tar.gz : a4050b8e31930099c63b2085894896cedb1e05e8e7462b3a7d7d39132ae090c6
+    - https://github.com/Umio-Yasuno/amdgpu_top/archive/refs/tags/v0.10.5.tar.gz : 6b02b26ed35c2a87629a4141108293c1755782ba607dff824e04f27e161ece13
 homepage   : https://github.com/Umio-Yasuno/amdgpu_top
-license    : MIT
+license    :
+    - CC-BY-SA-4.0 # Default icons borrowed from "Paper Icons" by Sam Hewitt
+    - MIT
 component  : system.utils
 summary    : Tool that shows AMD GPU utilization
 description: |
@@ -12,14 +14,18 @@ description: |
 networking : yes
 builddeps  :
     - pkgconfig(libdrm)
-    - cargo
+    - rust
 setup      : |
-    cargo fetch --locked
+    %patch -p1 -i $pkgfiles/0001-Fix-Appstream-metainfo.patch
+    %cargo_fetch
 build      : |
-    cargo build --frozen --release \
-                --no-default-features \
-                --features "tui gui json"
+    %cargo_build --features "package"
 install    : |
-    install -Dm00755 target/release/amdgpu_top -t $installdir/usr/bin/
+    %cargo_install
     install -Dm00644 docs/amdgpu_top.1 -t $installdir/usr/share/man/man1/
     install -Dm00644 assets/amdgpu_top.desktop -t $installdir/usr/share/applications
+    install -Dm00644 assets/io.github.umio_yasuno.amdgpu_top.metainfo.xml -t $installdir/usr/share/metainfo
+    # Install default icons
+    for i in 32 48 64 96 512; do
+        install -Dm00644 $pkgfiles/utilities-system-monitor${i}.png $installdir/usr/share/icons/hicolor/${i}x${i}/apps/utilities-system-monitor.png
+    done

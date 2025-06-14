@@ -1,20 +1,16 @@
 name       : gnome-software
-version    : '45.3'
-release    : 4
+version    : '48.2'
+release    : 27
 source     :
-    - https://download.gnome.org/sources/gnome-software/45/gnome-software-45.3.tar.xz : d6b9245b22237da7bd1739dd28c23cc8f3835f99fa10c1037d9dd7635335251c
+    - https://download.gnome.org/sources/gnome-software/48/gnome-software-48.2.tar.xz : abfd30643a86c65f4886b6765eb3bb6215c9ea09817d6bd165c50056890822c9
 homepage   : https://apps.gnome.org/Software/
 license    : GPL-2.0-or-later
 component  : desktop.gnome
-summary    : UNSUPPORTED & EXPERIMENTAL (reserved for Solus Staff testing)
+summary    : GNOME Software allows users to easily find, discover and install apps.
 description: |
-    WARNING: This package is **unsupported** and **experimental.**
-
-    It is included at this early stage to make it easier for Solus Staff to test and debug it.
-
-    Experienced contributors with packaging and bugreporting experience are welcome to help us test and report (non-duplicate!) problems here:
-
-    See getsolus/packages#717 and getsolus/packages#718
+    GNOME Software allows users to easily find, discover and install apps. It also keeps their OS, apps and devices up to date without them having to think about it, and gives them confidence that their system is up to date. It supports popular distributions, subject to those distributions maintaining their own distro-specific integration code.
+optimize   :
+    - lto
 builddeps  :
     - pkgconfig(appstream)
     - pkgconfig(flatpak)
@@ -27,12 +23,19 @@ builddeps  :
     - pkgconfig(packagekit-glib2)
     - pkgconfig(xmlb)
     - gtk-doc
+    - itstool
+rundeps    :
+    - gnome-app-list
 setup      : |
-    # Reenable me for GNOME 46!
+    # reenable me!
     #patch -p1 -i $pkgfiles/0001-gs-appstream-Check-against-kernel-relation-types.patch
-
-    %patch -p1 -i $pkgfiles/0001-port-to-appstream1.patch
     %patch -p1 -i $pkgfiles/0001-packagekit-Hardcode-some-solus-thingies.patch
+    %patch -p1 -i $pkgfiles/0001-packagekit-Set-PK_INFO_ENUM_SECURITY-as-AS_URGENCY_K.patch
+    # https://gitlab.gnome.org/GNOME/gnome-software/-/issues/2610
+    %patch -p1 -i $pkgfiles/0001-packagekit-HACK-Disable-req.-for-repo-plugin-to-show.patch
+    %patch -p1 -i $pkgfiles/0001-Allow-notification-to-autostart-on-all-editions.patch
+    %patch -p1 -i $pkgfiles/0001-Show-console-apps.patch
+
     %meson_configure \
         -Dpackagekit_autoremove=true \
         -Dmalcontent=false \
@@ -42,8 +45,11 @@ build      : |
 install    : |
     %ninja_install
 
-    install -Dm00644 $pkgfiles/org.gnome.software.gschema.override $installdir/usr/share/glib-2.0/schemas/org.gnome.software.gschema.override
+    # Stateless
+    install -dm0755 $installdir/usr/share/xdg/autostart/
+    mv $installdir/etc/xdg/autostart/org.gnome.Software.desktop $installdir/usr/share/xdg/autostart/
+    rmdir -v $installdir/etc/xdg/autostart \
+             $installdir/etc/xdg \
+             $installdir/etc/
 
-    # TODO: Remove once this is ready for user testing
-    # - the goal is to ensure that Solus SC picks up the scary summary + description text
-    rm -fr $installdir/usr/share/metainfo/
+    install -Dm00644 $pkgfiles/org.gnome.software.gschema.override $installdir/usr/share/glib-2.0/schemas/org.gnome.software.gschema.override

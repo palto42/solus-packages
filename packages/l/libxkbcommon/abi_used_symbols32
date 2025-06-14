@@ -2,11 +2,11 @@ libc.so.6:__asprintf_chk
 libc.so.6:__assert_fail
 libc.so.6:__errno_location
 libc.so.6:__fprintf_chk
+libc.so.6:__isoc23_strtol
 libc.so.6:__libc_start_main
 libc.so.6:__printf_chk
 libc.so.6:__snprintf_chk
 libc.so.6:__stack_chk_fail
-libc.so.6:__strcpy_chk
 libc.so.6:__vasprintf_chk
 libc.so.6:__vfprintf_chk
 libc.so.6:__vsnprintf_chk
@@ -17,6 +17,7 @@ libc.so.6:eaccess
 libc.so.6:execv
 libc.so.6:exit
 libc.so.6:fclose
+libc.so.6:fdopen
 libc.so.6:feof
 libc.so.6:ferror
 libc.so.6:fileno
@@ -44,6 +45,7 @@ libc.so.6:munmap
 libc.so.6:open64
 libc.so.6:optarg
 libc.so.6:optind
+libc.so.6:perror
 libc.so.6:poll
 libc.so.6:posix_fallocate64
 libc.so.6:read
@@ -60,7 +62,6 @@ libc.so.6:stdin
 libc.so.6:stdout
 libc.so.6:strchr
 libc.so.6:strcmp
-libc.so.6:strcpy
 libc.so.6:strdup
 libc.so.6:strerror
 libc.so.6:strlen
@@ -68,9 +69,6 @@ libc.so.6:strncmp
 libc.so.6:strndup
 libc.so.6:strnlen
 libc.so.6:strpbrk
-libc.so.6:strtod
-libc.so.6:strtol
-libc.so.6:strtoul
 libc.so.6:tcgetattr
 libc.so.6:tcsetattr
 libc.so.6:tmpfile64
@@ -185,15 +183,18 @@ libxcb.so.1:xcb_request_check
 libxcb.so.1:xcb_setup_roots_iterator
 libxcb.so.1:xcb_wait_for_event
 libxml2.so.2:xmlCheckVersion
+libxml2.so.2:xmlCtxtReadFile
+libxml2.so.2:xmlCtxtUseOptions
 libxml2.so.2:xmlDocGetRootElement
 libxml2.so.2:xmlFree
 libxml2.so.2:xmlFreeDoc
 libxml2.so.2:xmlFreeDtd
+libxml2.so.2:xmlFreeParserCtxt
 libxml2.so.2:xmlFreeValidCtxt
 libxml2.so.2:xmlGetProp
 libxml2.so.2:xmlIOParseDTD
+libxml2.so.2:xmlNewParserCtxt
 libxml2.so.2:xmlNewValidCtxt
-libxml2.so.2:xmlParseFile
 libxml2.so.2:xmlParserInputBufferCreateMem
 libxml2.so.2:xmlSetGenericErrorFunc
 libxml2.so.2:xmlStrEqual

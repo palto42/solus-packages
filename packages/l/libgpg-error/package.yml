@@ -1,17 +1,16 @@
 name       : libgpg-error
-version    : '1.47'
-release    : 21
+version    : '1.51'
+release    : 25
 source     :
-    - https://www.gnupg.org/ftp/gcrypt/libgpg-error/libgpg-error-1.47.tar.gz : 685d4bd9d05576c4fc7f0870903dfdfbe41f2dd6a12e76fd8bd1717278f6b365
+    - https://www.gnupg.org/ftp/gcrypt/libgpg-error/libgpg-error-1.51.tar.gz : 2a3ca8568c1f767eb9a80380145a2d35d72db44cf0e3b8537d90ae15164d20a9
 license    : LGPL-2.1-or-later
 component  : system.base
 devel      : yes
 emul32     : yes
+homepage   : https://www.gnupg.org
 summary    : library with error codes for GnuPG related software
 description: |
     Libgpg-error is a small library with error codes and descriptions shared by most GnuPG related software.
-patterns   :
-    - devel : /usr/share/aclocal
 setup      : |
     %apply_patches
     %reconfigure --disable-static \
@@ -22,3 +21,5 @@ install    : |
     %make_install
 check      : |
     %make check
+patterns   :
+    - devel : /usr/share/aclocal

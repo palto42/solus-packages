@@ -1,8 +1,8 @@
 name       : python-referencing
-version    : 0.30.2
-release    : 2
+version    : 0.36.2
+release    : 5
 source     :
-    - https://files.pythonhosted.org/packages/source/r/referencing/referencing-0.30.2.tar.gz : 794ad8003c65938edcdbc027f1933215e0d0ccc0291e3ce20a4d87432b59efc0
+    - https://files.pythonhosted.org/packages/source/r/referencing/referencing-0.36.2.tar.gz : df2e89862cd09deabbdba16944cc3f10feb6b3e6f18e902f7cc25609a34775aa
 homepage   : https://github.com/python-jsonschema/referencing
 license    : MIT
 component  : programming.python

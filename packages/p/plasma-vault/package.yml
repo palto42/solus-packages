@@ -1,8 +1,8 @@
 name       : plasma-vault
-version    : 5.27.10
-release    : 63
+version    : 6.3.5
+release    : 92
 source     :
-    - https://cdn.download.kde.org/stable/plasma/5.27.10/plasma-vault-5.27.10.tar.xz : 75f1d05661ac553fc8fec14f4ea683bfbb60b0dea816cd7cffb22a2ae3d11a5b
+    - https://download.kde.org/stable/plasma/6.3.5/plasma-vault-6.3.5.tar.xz : a6cc8eae781671f62d465dc9ec453604409a24a5c9a91ca2bd029122b7d01e73
 homepage   : https://www.kde.org/workspaces/plasmadesktop/
 license    : GPL-2.0-or-later
 component  : desktop.kde
@@ -10,20 +10,25 @@ summary    : Plasma applet and services for creating encrypted vaults
 description: |
     Plasma Vault is a plasmoid for creating and managing encrypted vaults
 builddeps  :
-    - pkgconfig(Qt5Quick)
-    - kactivities-devel
-    - kdbusaddons-devel
-    - kiconthemes-devel
-    - kio-devel
+    - pkgconfig(Qt6Qml)
+    - pkgconfig(libnm)
+    - kf6-kdbusaddons-devel
+    - kf6-kio-devel
+    - kf6-kitemmodels-devel
+    - kf6-networkmanager-qt-devel
     - libksysguard-devel
-    - networkmanager-qt-devel
-    - plasma-framework-devel
+    - libplasma-devel
+    - plasma-activities-devel
 rundeps    :
     - cryfs
+clang      : yes
+optimize   :
+    - speed
+    - thin-lto
 setup      : |
-    %cmake_ninja
+    %cmake_kf6
 build      : |
     %ninja_build
 install    : |
     %ninja_install
-    %qml_cache
+    %qml6_cache

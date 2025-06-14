@@ -1,19 +1,21 @@
 name       : razergenie
-version    : 0.9.0
-release    : 11
+version    : 1.3.0
+release    : 14
 source     :
-    - https://github.com/z3ntu/RazerGenie/archive/refs/tags/v0.9.0.tar.gz : 8e1f570a4b810df2c5f60d37780cb4efbe8c9058ec77588ab823de7e6225b365
+    - https://github.com/z3ntu/RazerGenie/archive/refs/tags/v1.3.0.tar.gz : 87c1baec117260171753d8e886fdddff9104907250c78d9d2c3ad16b80750cf3
+homepage   : https://github.com/z3ntu/RazerGenie/
 license    : GPL-3.0-or-later
 component  : system.utils
 summary    : Standalone Qt application for configuring your Razer devices under GNU/Linux.
 description: |
     Standalone Qt application for configuring your Razer devices under GNU/Linux.
 builddeps  :
-    - pkgconfig(Qt5UiTools)
+    - pkgconfig(Qt6UiTools)
+    - pkgconfig(libopenrazer)
 rundeps    :
     - openrazer-current
 setup      : |
-    %meson_configure -Denable_experimental=true -Dinclude_matrix_discovery=true
+    %meson_configure
 build      : |
     %ninja_build
 install    : |

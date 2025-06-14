@@ -1,8 +1,8 @@
 name       : python-injector
-version    : 0.21.0
-release    : 7
+version    : 0.22.0
+release    : 9
 source     :
-    - https://github.com/python-injector/injector/archive/refs/tags/0.21.0.tar.gz : a2f057c6811368d0fa400a8f05c7789273a9bdacccd02f06ff8913b651872540
+    - https://files.pythonhosted.org/packages/source/i/injector/injector-0.22.0.tar.gz : 79b2d4a0874c75d3aa735f11c5b32b89d9542711ca07071161882c5e9cc15ed6
 homepage   : https://github.com/python-injector/injector
 license    : BSD-3-Clause
 component  : programming.python
@@ -11,9 +11,11 @@ description: |
     Injector - Python dependency injection framework, inspired by Guice.
 builddeps  :
     - pkgconfig(python3)
+    - python-build
+    - python-installer
+    - python-setuptools
     - python-typing-extensions
 rundeps    :
-    - python3
     - python-typing-extensions
 build      : |
     %python3_setup

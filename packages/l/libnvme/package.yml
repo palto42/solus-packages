@@ -1,8 +1,8 @@
 name       : libnvme
-version    : '1.8'
-release    : 10
+version    : '1.14'
+release    : 17
 source     :
-    - https://github.com/linux-nvme/libnvme/archive/refs/tags/v1.8.tar.gz : d59939a280eec41eb7a716e1681d0d0c612099385204ffb55d07134a6be08d75
+    - https://github.com/linux-nvme/libnvme/archive/refs/tags/v1.14.tar.gz : a7230d6d4959f26cf0c0ef6c9bb479bd94a8c0ec738bf6e164d66c3dc6397e66
 homepage   : https://github.com/linux-nvme/libnvme
 license    : LGPL-2.1-or-later
 component  : programming.library

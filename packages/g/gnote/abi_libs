@@ -1,10 +1,11 @@
+gnote
 libbacklinks.so
 libbugzilla.so
 libexporttogtg.so
 libexporttohtml.so
 libfilesystemsyncservice.so
 libfixedwidth.so
-libgnote-45.so.0
+libgnote-48.so.1
 libgvfssyncservice.so
 libinserttimestamp.so
 libnotedirectorywatcher.so

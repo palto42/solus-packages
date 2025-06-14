@@ -1,0 +1,41 @@
+name       : xreader
+version    : 4.2.6
+release    : 4
+source     :
+    - https://github.com/linuxmint/xreader/archive/refs/tags/4.2.6.tar.gz : 0a02051fed4919f0accb891b4374adf6431e1d2acd788ef553a6629c878d6a39
+homepage   : https://github.com/linuxmint/xreader
+license    : GPL-2.0-or-later
+component  : office.viewers
+summary    : A generic Document Reader
+description: |
+    Xreader is a document viewer capable of displaying multiple and single page document formats like PDF and Postscript.
+builddeps  :
+    - pkgconfig(ddjvuapi)
+    - pkgconfig(gtk+-3.0)
+    - pkgconfig(libgnomekbdui)
+    - pkgconfig(libgxps)
+    - pkgconfig(libsecret-1)
+    - pkgconfig(libspectre)
+    - pkgconfig(libtiff-4)
+    - pkgconfig(libxml-2.0)
+    - pkgconfig(poppler-glib)
+    - pkgconfig(sm)
+    - pkgconfig(webkit2gtk-4.1)
+    - pkgconfig(xapp)
+    - pkgconfig(xkbfile)
+    - pkgconfig(zlib)
+    - itstool
+    - mathjax2
+    - yelp-tools
+setup      : |
+    %meson_configure \
+        -Ddjvu=true \
+        -Dpixbuf=true \
+        -Dcomics=true \
+        -Dintrospection=true \
+        -Dhelp_files=true \
+        -Dmathjax-directory=/usr/share/mathjax2
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install

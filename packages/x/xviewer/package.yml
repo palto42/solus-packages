@@ -1,0 +1,30 @@
+name       : xviewer
+version    : 3.4.7
+release    : 3
+source     :
+    - https://github.com/linuxmint/xviewer/archive/refs/tags/3.4.7.tar.gz : 1f5a3135464710ea8dc335719ef0910507b08bea705e9d3d31ae799e4736f5d7
+homepage   : https://github.com/linuxmint/xviewer
+license    : GPL-2.0-or-later
+component  : desktop
+summary    : A generic Image viewer
+description: |
+    Xviewer is a simple image viewer which uses the gdk-pixbuf library. It can deal with large images, and zoom and scroll with constant memory usage. Its goals are simplicity and standards compliance.
+builddeps  :
+    - pkgconfig(cinnamon-desktop)
+    - pkgconfig(exempi-2.0)
+    - pkgconfig(gtk+-3.0)
+    - pkgconfig(lcms2)
+    - pkgconfig(libexif)
+    - pkgconfig(libgnomekbdui)
+    - pkgconfig(libpeas-1.0)
+    - pkgconfig(librsvg-2.0)
+    - pkgconfig(xapp)
+    - pkgconfig(xkbfile)
+    - gtk-doc
+    - itstool
+setup      : |
+    %meson_configure
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install

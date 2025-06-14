@@ -1,8 +1,8 @@
 name       : python-argcomplete
-version    : 3.2.1
-release    : 6
+version    : 3.6.0
+release    : 12
 source     :
-    - https://files.pythonhosted.org/packages/source/a/argcomplete/argcomplete-3.2.1.tar.gz : 437f67fb9b058da5a090df505ef9be0297c4883993f3f56cb186ff087778cfb4
+    - https://files.pythonhosted.org/packages/source/a/argcomplete/argcomplete-3.6.0.tar.gz : 2e4e42ec0ba2fff54b0d244d0b1623e86057673e57bafe72dda59c64bd5dee8b
 homepage   : https://github.com/kislyuk/argcomplete
 license    : Apache-2.0
 component  : programming.python
@@ -10,7 +10,11 @@ summary    : Python and tab completion, better together
 description: |
     Argcomplete provides easy, extensible command line tab completion of arguments for your Python script.
 builddeps  :
-    - python-setuptools-scm
+    - python-build
+    - python-hatch-vcs
+    - python-installer
+    - python-packaging
+    - python-wheel
 build      : |
     %python3_setup
 install    : |

@@ -1,8 +1,8 @@
 name       : libwebkit-gtk
-version    : 2.42.5
-release    : 116
+version    : 2.48.1
+release    : 129
 source     :
-    - https://webkitgtk.org/releases/webkitgtk-2.42.5.tar.xz : b64278c1f20b8cfdbfb5ff573c37d871aba74a1db26d9b39f74e8953fe61e749
+    - https://webkitgtk.org/releases/webkitgtk-2.48.1.tar.xz : 98efdf21c4cdca0fe0b73ab5a8cb52093b5aa52d9b1b016a93f71dbfa1eb258f
 homepage   : https://webkitgtk.org
 license    : LGPL-2.1-only
 component  : desktop.web
@@ -19,20 +19,17 @@ builddeps  :
     - pkgconfig(enchant-2)
     - pkgconfig(gbm)
     - pkgconfig(geoclue-2.0)
-    - pkgconfig(gnutls)
     - pkgconfig(gstreamer-gl-1.0)
     - pkgconfig(gstreamer-transcoder-1.0)
     - pkgconfig(gstreamer-video-1.0)
-    - pkgconfig(gtk+-2.0)
     - pkgconfig(gtk+-3.0)
+    - pkgconfig(ice)
     - pkgconfig(icu-uc)
     - pkgconfig(lcms2)
     - pkgconfig(libavif)
     - pkgconfig(libgcrypt)
     - pkgconfig(libjpeg)
     - pkgconfig(libjxl)
-    - pkgconfig(libnotify)
-    - pkgconfig(libopenjp2)
     - pkgconfig(libseccomp)
     - pkgconfig(libsecret-1)
     - pkgconfig(libsoup-2.4)
@@ -40,9 +37,8 @@ builddeps  :
     - pkgconfig(libwoff2dec)
     - pkgconfig(libxslt)
     - pkgconfig(ruby-3.2)
+    - pkgconfig(sysprof-capture-4)
     - pkgconfig(wayland-protocols)
-    - pkgconfig(wpebackend-fdo-1.0)
-    - pkgconfig(xt)
     - bubblewrap
     - gperf
     - hyphen-devel
@@ -52,13 +48,13 @@ rundeps    :
     - bubblewrap
     - xdg-dbus-proxy
 setup      : |
-    %patch -p1 -i $pkgfiles/upstream/GTK-Disable-DMABuf-renderer-for-NVIDIA-proprietary-drivers.patch
-    %patch -p1 -i $pkgfiles/upstream/GTK-MiniBrowser-should-hide-the-toolbar-when-using-full-screen.patch
-
     %cmake_ninja \
                  -DENABLE_DOCUMENTATION=OFF \
                  -DENABLE_GAMEPAD=OFF \
+                 -DENABLE_SPEECH_SYNTHESIS=OFF \
                  -DPORT=GTK \
+                 -DUSE_GTK4=OFF \
+                 -DUSE_LIBBACKTRACE=OFF \
                  -DUSE_SOUP2=ON
 build      : |
     %ninja_build

@@ -1,8 +1,8 @@
 name       : vivaldi-stable
-version    : 6.6.3271.48
-release    : 235
+version    : 7.4.3684.50
+release    : 299
 source     :
-    - https://downloads.vivaldi.com/stable/vivaldi-stable_6.6.3271.48-1_amd64.deb : ff306f1f4210649afc3ca5a42339cf47134b331428c553a70eb030fb40563843
+    - https://downloads.vivaldi.com/stable/vivaldi-stable_7.4.3684.50-1_amd64.deb : 242fef2a5d8153e3faab253c5a188ba157789c41b611862fc0e54fa9d55ad84a
 license    : Distributable
 homepage   : https://vivaldi.com
 component  : network.web.browser
@@ -12,19 +12,19 @@ extract    : no
 builddeps  :
     - pkgconfig(Qt5Core)
     - pkgconfig(Qt6Core)
-    - at-spi2-devel
     - pkgconfig(alsa)
+    - pkgconfig(atk)
     - pkgconfig(gbm)
     - pkgconfig(gtk+-2.0)
     - pkgconfig(gtk+-3.0)
     - pkgconfig(x11)
-    - pkgconfig(xcursor)
     - pkgconfig(xcomposite)
+    - pkgconfig(xcursor)
     - pkgconfig(xdamage)
     - pkgconfig(xi)
     - pkgconfig(xrandr)
-    - pkgconfig(xtst)
     - pkgconfig(xscrnsaver)
+    - pkgconfig(xtst)
     - ffmpeg-chromium-vivaldi-stable
 rundeps    :
     - ffmpeg-chromium-vivaldi-stable
@@ -39,6 +39,11 @@ install    : |
     install -D -d -m 00755 $installdir/usr/bin
     install -D -d -m 00644 $installdir/usr/share
     cp -R root/usr/share/applications $installdir/usr/share/
+
+    # Fix metainfo
+    install -Dm00644 root/usr/share/appdata/vivaldi.appdata.xml $installdir/usr/share/metainfo/vivaldi.metainfo.xml
+    sed -i 's|vivaldi.desktop|vivaldi-stable.desktop|g' $installdir/usr/share/metainfo/vivaldi.metainfo.xml
+    sed -i 's|<translation/>||g' $installdir/usr/share/metainfo/vivaldi.metainfo.xml
 
     # We do not use /opt for binary packages in Solus, so just use /usr/share.
     cp -R root/opt/* $installdir/usr/share/.

@@ -1,19 +1,19 @@
 name       : packagekit
-version    : 1.2.8
-release    : 22
+version    : 1.3.1
+release    : 36
 source     :
-    - git|https://github.com/getsolus/PackageKit.git : 065102d894a7dec5c646a61b151fabc3f2d9c73b
+    - git|https://github.com/getsolus/PackageKit.git : dd7ff1c2d345e9bb190596db3210c0fb0dd9101a
 license    : GPL-2.0-or-later
 component  : programming.library
 homepage   : https://www.freedesktop.org/software/PackageKit/
-summary    : A D-BUS abstraction layer that allows the user to manage packages in a secure way using a cross-distro, cross-architecture API. (NOT SUPPORTED)
+summary    : A D-BUS abstraction layer that allows the user to manage packages in a secure way using a cross-distro, cross-architecture API.
 description: |
-    This package is experimental and not supported! Help will not currently be provided.
     PackageKit is a DBUS abstraction layer that allows the session user to manage packages in a secure way using a cross-distro, cross-architecture API.
 builddeps  :
     - pkgconfig(appstream)
     - pkgconfig(appstream-glib)
     - pkgconfig(bash-completion)
+    - pkgconfig(gio-2.0)
     - pkgconfig(gmodule-2.0)
     - pkgconfig(gstreamer-plugins-base-1.0)
     - pkgconfig(gtk+-3.0)
@@ -22,9 +22,9 @@ builddeps  :
     - pkgconfig(python3)
     - pkgconfig(sqlite3)
     - docbook-xml
+    - python-setuptools
     - vala
 setup      : |
-    %patch -p1 -i $pkgfiles/0001-dynamic-backend.patch
     %meson_configure \
         -Dpackaging_backend=eopkg \
         -Dpythonpackagedir=/usr/lib/python%python3_version%/site-packages/ \
@@ -33,7 +33,10 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
-    # FIXME: reproducibility, should be created by systemd-tmpfiles?
-    # /var/lib/PackageKit/transactions.db
+
+    # Reproducibility /var/lib/PackageKit/transactions.db
+    rm -rv $installdir/var/
+
+    # temporary python 2 + 3 interoperablity
     install -D -d $installdir/usr/lib/python2.7/site-packages
     ln -sv /usr/lib/python%python3_version%/site-packages/packagekit $installdir/usr/lib/python2.7/site-packages/

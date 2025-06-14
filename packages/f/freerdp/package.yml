@@ -1,23 +1,29 @@
 name       : freerdp
-version    : 2.11.4
-release    : 34
+version    : 3.15.0
+release    : 44
 source     :
-    - https://github.com/FreeRDP/FreeRDP/releases/download/2.11.4/freerdp-2.11.4.tar.gz : 2534e5bc53e3fd1b55611c0753a7c2b73242da33f058771cbf053e4f77483146
+    - https://pub.freerdp.com/releases/freerdp-3.15.0.tar.gz : e8cd58decef4c970faea2fbea675970eea60e440ebe8033c54889acb83787371
 homepage   : https://www.freerdp.com/
 license    : Apache-2.0
 component  : network.util
 summary    : FreeRDP is a free remote desktop protocol client
 description: |
     FreeRDP is a free implementation of the Remote Desktop Protocol (RDP).
-patterns   :
-    - devel : /usr/lib64/cmake
 builddeps  :
+    - pkgconfig(SDL2_ttf)
     - pkgconfig(alsa)
     - pkgconfig(cairo)
+    - pkgconfig(cups)
+    - pkgconfig(fuse3)
+    - pkgconfig(json-c)
     - pkgconfig(libavcodec)
+    - pkgconfig(libcjson)
     - pkgconfig(libpcsclite)
+    - pkgconfig(libpkcs11-helper-1)
     - pkgconfig(libpulse)
     - pkgconfig(libusbredirhost)
+    - pkgconfig(mit-krb5)
+    - pkgconfig(sdl2)
     - pkgconfig(wayland-client)
     - pkgconfig(xcursor)
     - pkgconfig(xdamage)
@@ -29,16 +35,19 @@ builddeps  :
     - pkgconfig(xkbfile)
     - pkgconfig(xrandr)
     - pkgconfig(xrender)
-    - pkgconfig(xshmfence)
     - pkgconfig(xtst)
-    - pkgconfig(xv)
-    - cups-devel
     - docbook-xml
+rundeps    :
+    - devel:
+        - fuse-devel
+clang      : yes
+optimize   : thin-lto
 setup      : |
     %cmake_ninja \
-        -DWITH_SSE2=ON \
-        -DWITH_SERVER=ON \
-        -DWITH_SWSCALE=ON
+        -DWITH_BINARY_VERSIONING=ON \
+        -DWITH_MANPAGES=ON \
+        -DWITH_SIMD=ON \
+        -DUWAC_FORCE_STATIC_BUILD=ON # fixme! fix conflicts with freerdp2
 build      : |
     %ninja_build
 install    : |

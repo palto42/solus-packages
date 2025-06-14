@@ -1,8 +1,8 @@
 name       : pangomm-2.48
-version    : 2.50.1
-release    : 1
+version    : 2.56.1
+release    : 4
 source     :
-    - https://gitlab.gnome.org/GNOME/pangomm/-/archive/2.50.1/pangomm-2.50.1.tar.gz : 6f09a57d7098ee82a55427be51c7870a9c627327262d0b8dcd9f836eb5f6498b
+    - https://download.gnome.org/sources/pangomm/2.56/pangomm-2.56.1.tar.xz : 539f5aa60e9bdc6b955bb448e2a62cc14562744df690258040fbb74bf885755d
 homepage   : https://gtkmm.org
 license    : LGPL-2.0-or-later
 component  : desktop.library
@@ -19,7 +19,7 @@ builddeps  :
     - doxygen
     - graphviz
 patterns   :
-    devel  : /usr/lib64/pangomm-2.48
+    devel : /usr/lib64/pangomm-2.48
 setup      : |
     %meson_configure -Dmaintainer-mode=true
 build      : |

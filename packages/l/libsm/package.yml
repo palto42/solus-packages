@@ -1,8 +1,8 @@
 name       : libsm
-version    : 1.2.4
-release    : 14
+version    : 1.2.6
+release    : 16
 source     :
-    - https://www.x.org/releases/individual/lib/libSM-1.2.4.tar.gz : 51464ce1abce323d5b6707ceecf8468617106e1a8a98522f8342db06fd024c15
+    - https://www.x.org/releases/individual/lib/libSM-1.2.6.tar.gz : 166b4b50d606cdd83f1ddc61b5b9162600034f848b3e32ccbb0e63536b7d6cdd
 license    : MIT
 component  : xorg.library
 homepage   : https://www.x.org/

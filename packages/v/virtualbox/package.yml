@@ -1,11 +1,11 @@
 name       : virtualbox
-version    : 7.0.14
-release    : 306
+version    : 7.1.10
+release    : 355
 source     :
-    - https://download.virtualbox.org/virtualbox/7.0.14/VirtualBox-7.0.14.tar.bz2 : 45860d834804a24a163c1bb264a6b1cb802a5bc7ce7e01128072f8d6a4617ca9
-    - https://download.virtualbox.org/virtualbox/7.0.14/VBoxGuestAdditions_7.0.14.iso : 0efbcb9bf4722cb19292ae00eba29587432e918d3b1f70905deb70f7cf78e8ce
-license    : GPL-2.0-only
+    - https://download.virtualbox.org/virtualbox/7.1.10/VirtualBox-7.1.10.tar.bz2 : 7d60010a4c9102613554b46f61d17b825c30ee59d8be071e52d8aac664ca9869
+    - https://download.virtualbox.org/virtualbox/7.1.10/VBoxGuestAdditions_7.1.10.iso : 59c92f7f5fd7e081211e989f5117fc53ad8d8800ad74a01b21e97bb66fe62972
 homepage   : https://www.virtualbox.org
+license    : GPL-2.0-only
 component  :
     - virt
     - common : virt
@@ -28,55 +28,49 @@ description: |
 
     Installation Guide: https://help.getsol.us/docs/user/software/virtualization/virtualbox/
 builddeps  :
-    - pkgconfig(Qt5UiTools)
-    - pkgconfig(Qt5X11Extras)
-    - pkgconfig(SDL_ttf)
+    - pkgconfig(Qt6Help)
+    - pkgconfig(Qt6StateMachine)
     - pkgconfig(alsa)
+    # Still in the configure script, but it doesn't actually use it anymore. Can probably be removed in the future:
     - pkgconfig(devmapper)
     - pkgconfig(glu)
     - pkgconfig(libIDL-2.0)
-    - pkgconfig(libcap)
     - pkgconfig(libcurl)
-    - pkgconfig(libelf)
     - pkgconfig(liblzma)
     - pkgconfig(libpng)
     - pkgconfig(libpulse)
     - pkgconfig(libtpms)
-    - pkgconfig(libxcrypt)
     - pkgconfig(libxslt)
     - pkgconfig(python3)
     - pkgconfig(sdl2)
     - pkgconfig(vpx)
-    - pkgconfig(xcomposite)
     - pkgconfig(xcursor)
     - pkgconfig(xinerama)
     - pkgconfig(xmu)
-    - pkgconfig(xorg-server)
     - pkgconfig(xrandr)
     - acpica-unix
-    - cdrtools
-    - docbook-xml
-    - git
     - glibc-32bit-devel
-    - glslang-devel
+    - glslang
     - libgcc-32bit
     - linux-current
     - linux-current-headers
     - linux-lts
     - linux-lts-headers
+    - python-setuptools
     - yasm
 permanent  :
     - /lib/modules
+    - /lib64/modules
+    - /usr/lib64/modules
 autodep    : no
 rundeps    :
     - common :
         - libtpms
-        - libxcursor
-        - libxinerama
-        - libxmu
-        - qt5-tools
-        - qt5-x11extras
-        - sdl1
+        - libx11
+        - libxt
+        - qt6-scxml
+        - qt6-tools
+        - sdl2
     - current :
         - linux-current
         - virtualbox-common
@@ -86,11 +80,8 @@ rundeps    :
         - linux-lts
         - virtualbox-guest-common
     - guest-common :
-        - libxcomposite
-        - libxdamage
-        - libxfixes
-        - libxmu
-        - libxrandr
+        - libx11
+        - libxt
         - pam
     - guest-current :
         - linux-current
@@ -102,11 +93,15 @@ patterns   :
     - devel :
         - /usr/lib/python*
         - /usr/lib64/virtualbox/sdk
-    - current : /lib/modules/*.current/extra
+    - current :
+        - /lib64/modules/*.current/extra
+        - /usr/lib64/modules/*.current/extra
     - guest :
-        - /lib/modules/*.lts/misc
+        - /lib64/modules/*.lts/misc
+        - /usr/lib64/modules/*.lts/misc
     - guest-current :
-        - /lib/modules/*.current/misc
+        - /lib64/modules/*.current/misc
+        - /usr/lib64/modules/*.current/misc
     - guest-common :
         - /usr/sbin
         - /usr/bin/VBoxClient
@@ -122,15 +117,22 @@ patterns   :
         - /usr/share/xdg
     - guest-additions-iso :
         - /usr/share/virtualbox/VBoxGuestAdditions.iso
+    - main :
+        - /lib64/modules/*.lts/extra
+        - /usr/lib64/modules/*.lts/extra
 setup      : |
     # Apply patches before we go off changing the tree
     %apply_patches
 
     # Ensure we don't ever use bundled libraries
-    rm -rvf src/libs/{libpng-*,libxml2-*,libxslt-*,zlib-*,boost-*}
+    # Note that VBox uses private libslirp headers, so that can't be debundled
+    rm -rvf src/libs/{curl-*,liblzma-*,libpng-*,libtpms-*,libxml2-*,openssl-*,zlib-*}
 
     cp $pkgfiles/LocalConfig.kmk .
     echo "VBOX_GCC_OPT=$CXXFLAGS" >> LocalConfig.kmk
+
+    # It actually wants SDL2
+    sed -i 's/sdl-config/sdl2-config/' configure
 
     ./configure --disable-kmods \
                 --disable-docs \
@@ -175,7 +177,7 @@ install    : |
     install -m00644 *.r0 VBoxEFI*.fd -t $installdir/%libdir%/virtualbox
 
     # binaries & scripts
-    install -m00755 VirtualBox VBoxManage VBoxSVC VBoxExtPackHelperApp VBoxXPCOMIPCD VBoxTestOGL VBoxBalloonCtrl -t $installdir/%libdir%/virtualbox
+    install -m00755 VirtualBox VBoxManage VBoxSVC VBoxExtPackHelperApp VBoxBalloonCtrl -t $installdir/%libdir%/virtualbox
     install -m00755 VBoxAutostart VBoxCpuReport VBoxBugReport VBoxVMMPreload -t $installdir/%libdir%/virtualbox
     install -m00755 VBoxCreateUSBNode.sh VBoxSysInfo.sh -t $installdir/%libdir%/virtualbox
 
@@ -203,17 +205,20 @@ install    : |
     install -Dm00644 virtualbox.desktop $installdir/usr/share/applications/virtualbox.desktop
     install -Dm00644 virtualbox.xml $installdir/usr/share/mime/packages/virtualbox.xml
 
+    # appstream metainfo
+    install -Dm00644 $pkgfiles/org.virtualbox.virtualbox.metainfo.xml -t $installdir/usr/share/metainfo
+
     # kernel modules
     for kern in "%kernel_version_lts%" "%kernel_version_current%"; do
         pushd ${kern}
-            install -dm00755 $installdir/lib/modules/${kern}/extra
-            install -m00644 *.ko $installdir/lib/modules/${kern}/extra
+            install -dm00755 $installdir/usr/lib64/modules/${kern}/extra
+            install -m00644 *.ko $installdir/usr/lib64/modules/${kern}/extra
         popd
     done
 
     # devel
     install -Dm00755 vboxshell.py $installdir/%libdir%/virtualbox/vboxshell.py
-    pushd sdk/installer
+    pushd sdk/installer/python
         VBOX_INSTALL_PATH="%libdir%/virtualbox" python3 vboxapisetup.py install --root=$installdir
     popd
     install -dm00755 $installdir/%libdir%/virtualbox/sdk/bindings
@@ -240,14 +245,14 @@ install    : |
 
     # current kernel modules
     pushd %kernel_version_current%
-        install -dm00755 $installdir/lib/modules/%kernel_version_current%/misc
-        install -m00644 *.ko $installdir/lib/modules/%kernel_version_current%/misc
+        install -dm00755 $installdir/usr/lib64/modules/%kernel_version_current%/misc
+        install -m00644 *.ko $installdir/usr/lib64/modules/%kernel_version_current%/misc
     popd
 
     # lts kernel modules
     pushd %kernel_version_lts%
-        install -dm00755 $installdir/lib/modules/%kernel_version_lts%/misc
-        install -m00644 *.ko $installdir/lib/modules/%kernel_version_lts%/misc
+        install -dm00755 $installdir/usr/lib64/modules/%kernel_version_lts%/misc
+        install -m00644 *.ko $installdir/usr/lib64/modules/%kernel_version_lts%/misc
     popd
 
     # systemd configuration
@@ -262,3 +267,20 @@ install    : |
 
     # Install Guest Additons ISO
     install -Dm00644 $sources/VBoxGuestAdditions_*.iso $installdir/usr/share/virtualbox/VBoxGuestAdditions.iso
+
+    # Disable KVM
+    install -Dm00644 $pkgfiles/virtualbox.conf $installdir/usr/lib/modprobe.d/virtualbox.conf
+
+    # Usr-merge
+    install -dm00755 $installdir/lib64
+    pushd $installdir/usr
+    file_list=()
+    while IFS=  read -r -d $'\0'; do
+        file_list+=("$REPLY")
+    done < <(find lib64/modules -type f -print0)
+    for file in "${file_list[@]}"; do
+        parent=$(dirname "$file")
+        install -dm00755 "$installdir/$parent"
+        ln -srv "$installdir/usr/$file" "$installdir/$file"
+    done
+    popd

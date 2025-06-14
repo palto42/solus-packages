@@ -1,8 +1,8 @@
 name       : elisa
-version    : 23.08.5
-release    : 46
+version    : 25.04.2
+release    : 62
 source     :
-    - https://cdn.download.kde.org/stable/release-service/23.08.5/src/elisa-23.08.5.tar.xz : 872cc4f1be3177c92906bf1b47d7f36729e3c4a741099c7a62d8b170eb02b4c2
+    - https://download.kde.org/stable/release-service/25.04.2/src/elisa-25.04.2.tar.xz : e3d5e341e533e91969ee5f2015a1f81f8ec2b0b1b60102ea7c16882d36bfe750
 license    : LGPL-3.0-or-later
 component  : multimedia.audio
 summary    : Music player from KDE
@@ -10,28 +10,38 @@ homepage   : https://community.kde.org/Elisa
 description: |
     Elisa is a simple music player aiming to provide a nice experience for its users. Elisa allows to browse music by album, artist or all tracks. The music is indexed using either a private indexer or an indexer using Baloo.
 builddeps  :
-    - pkgconfig(Qt5Multimedia)
-    - pkgconfig(Qt5QuickControls2)
-    - pkgconfig(Qt5Svg)
-    - baloo-devel
-    - kcmutils-devel
-    - kcrash-devel
-    - kdbusaddons-devel
-    - kdeclarative-devel
-    - kdoctools-devel
-    - kiconthemes-devel
-    - kio-devel
-    - kirigami2-devel
-    - kpackage-devel
+    - pkgconfig(Qt6Multimedia)
+    - pkgconfig(Qt6Qml)
+    - pkgconfig(Qt6Svg)
+    - pkgconfig(libvlc)
+    - kf6-kcolorscheme-devel
+    - kf6-kconfig-devel
+    - kf6-kcrash-devel
+    - kf6-kdbusaddons-devel
+    - kf6-kdoctools-devel
+    - kf6-kfilemetadata-devel
+    - kf6-ki18n-devel
+    - kf6-kiconthemes-devel
+    - kf6-kio-devel
+    - kf6-kirigami
+    - kf6-kxmlgui-devel
+    - kf6-qqc2-desktop-style-devel
+    - kirigami-addons
 rundeps    :
     - breeze-icons
-    - kirigami2
+    - kf6-kirigami
+    - kf6-qqc2-desktop-style
+    - kirigami-addons
+clang      : yes
+optimize   :
+    - speed
+    - thin-lto
 setup      : |
-    %cmake_ninja -DBUILD_TESTING=OFF
+    %cmake_kf6
 build      : |
     %ninja_build
 install    : |
     %ninja_install
 
     # remove doc
-    rm -rf $installdir/usr/share/doc
+    rm -rfv $installdir/usr/share/doc

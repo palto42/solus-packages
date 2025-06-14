@@ -10,9 +10,9 @@ libexslt.so.0
 libgcc_s.so.1
 libgd.so.3
 libgmp.so.10
-libicui18n.so.74
-libicuio.so.74
-libicuuc.so.74
+libicui18n.so.76
+libicuio.so.76
+libicuuc.so.76
 liblber-2.5.so.0
 libldap-2.5.so.0
 libm.so.6
@@ -25,6 +25,7 @@ libreadline.so.8
 libsodium.so.26
 libsqlite3.so.0
 libssl.so.3
+libstdc++.so.6
 libsystemd.so.0
 libtidy.so.58
 libxml2.so.2

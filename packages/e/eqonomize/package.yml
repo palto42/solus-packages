@@ -1,8 +1,8 @@
 name       : eqonomize
-version    : 1.5.6
-release    : 18
+version    : 1.5.9
+release    : 22
 source     :
-    - https://github.com/Eqonomize/Eqonomize/releases/download/v1.5.6/eqonomize-1.5.6.tar.gz : 86d91490aabb66f5d63246bedf377989525a75324d89bdb2362e57251012f8d0
+    - https://github.com/Eqonomize/Eqonomize/releases/download/v1.5.9/eqonomize-1.5.9.tar.gz : a38ab8cec54233c8ba0268171ee5e45907dd64a898e3156a04f57e574a295c5b
 homepage   : https://eqonomize.github.io/
 license    : GPL-3.0-or-later
 component  : office.finance
@@ -18,3 +18,6 @@ build      : |
     %make
 install    : |
     %make_install INSTALL_ROOT=$installdir
+
+    # Install AppStream metainfo
+    install -Dm00644 data/io.github.eqonomize.eqonomize.metainfo.xml -t $installdir/usr/share/metainfo

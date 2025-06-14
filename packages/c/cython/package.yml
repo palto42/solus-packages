@@ -1,8 +1,9 @@
 name       : cython
-version    : 0.29.37.1
-release    : 34
+version    : 3.0.12
+release    : 39
 source     :
-    - https://github.com/cython/cython/archive/refs/tags/0.29.37.1.tar.gz : cbd3949bec315ef1cc974c2907b69af3d36ec35dacc9b1ab258e3e9cf800b157
+    - https://github.com/cython/cython/archive/refs/tags/3.0.12.tar.gz : a156fff948c2013f2c8c398612c018e2b52314fdf0228af8fbdb5585e13699c2
+homepage   : https://cython.org/
 license    : Apache-2.0
 component  : programming
 summary    : Compiler for Python and Cython
@@ -10,6 +11,9 @@ description: |
     Cython is an optimising static compiler for Python and Cython, making writing C extensions for Python as easy as Python itself. It allows you to write callbacks from and to C or C++ natively, tune Python into C performance, work efficiently with large datasets, and more.
 builddeps  :
     - pkgconfig(python3)
+    - python-build
+    - python-installer
+    - python-setuptools
 checkdeps  :
     - numpy
     - python-coverage

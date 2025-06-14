@@ -1,8 +1,8 @@
 name       : pentobi
-version    : '24.0'
-release    : 15
+version    : '26.3'
+release    : 20
 source     :
-    - https://sourceforge.net/projects/pentobi/files/24.0/pentobi-24.0.tar.xz/download : bd223993ef3e24b717b6f535e3d8ae5c0cced69c14456c2a2fc27c7698eeac67
+    - https://sourceforge.net/projects/pentobi/files/26.3/pentobi-26.3.tar.xz : 4104ad479efb87e5c96bb72bfbaf07c2320f8a3fbd2a9636fa0834d199fd243b
 homepage   : https://pentobi.sourceforge.io/
 license    : GPL-3.0-or-later
 component  : games.puzzle
@@ -13,11 +13,8 @@ builddeps  :
     - pkgconfig(Qt6QuickControls2)
     - pkgconfig(Qt6UiTools)
     - pkgconfig(librsvg-2.0)
-    - itstool
 setup      : |
-    %cmake \
-        -DDOCBOOKXSL_DIR=/usr/share/xml/docbook/xsl-stylesheets-1.79.2/ \
-        -DMETAINFO_ITS=/usr/share/gettext-0.20.2/its
+    %cmake -DDOCBOOKXSL_DIR=/usr/share/xml/docbook/xsl-stylesheets-1.79.2/
 build      : |
     %make
 install    : |

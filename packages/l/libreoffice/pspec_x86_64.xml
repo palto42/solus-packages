@@ -3,8 +3,8 @@
         <Name>libreoffice</Name>
         <Homepage>https://www.libreoffice.org/</Homepage>
         <Packager>
-            <Name>Joey Riches</Name>
-            <Email>josephriches@gmail.com</Email>
+            <Name>Automated Package Build</Name>
+            <Email>no.email.set.in.config</Email>
         </Packager>
         <License>Apache-2.0</License>
         <License>BSD-2-Clause</License>
@@ -25,13 +25,13 @@
         <Description xml:lang="en">LibreOffice Office Suite</Description>
         <PartOf>office</PartOf>
         <RuntimeDependencies>
-            <Dependency releaseFrom="176">libreoffice-base</Dependency>
-            <Dependency releaseFrom="176">libreoffice-calc</Dependency>
-            <Dependency releaseFrom="176">libreoffice-common</Dependency>
-            <Dependency releaseFrom="176">libreoffice-common-dictionaries</Dependency>
-            <Dependency releaseFrom="176">libreoffice-draw</Dependency>
-            <Dependency releaseFrom="176">libreoffice-impress</Dependency>
-            <Dependency releaseFrom="176">libreoffice-math</Dependency>
+            <Dependency releaseFrom="196">libreoffice-base</Dependency>
+            <Dependency releaseFrom="196">libreoffice-calc</Dependency>
+            <Dependency releaseFrom="196">libreoffice-common</Dependency>
+            <Dependency releaseFrom="196">libreoffice-common-dictionaries</Dependency>
+            <Dependency releaseFrom="196">libreoffice-draw</Dependency>
+            <Dependency releaseFrom="196">libreoffice-impress</Dependency>
+            <Dependency releaseFrom="196">libreoffice-math</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="doc">/usr/share/doc/libreoffice-all</Path>
@@ -43,8 +43,8 @@
         <Description xml:lang="en">LibreOffice Office Suite</Description>
         <PartOf>office</PartOf>
         <RuntimeDependencies>
-            <Dependency release="176">libreoffice-common</Dependency>
-            <Dependency releaseFrom="176">libreoffice-writer</Dependency>
+            <Dependency release="196">libreoffice-common</Dependency>
+            <Dependency releaseFrom="196">libreoffice-writer</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin/lobase</Path>
@@ -73,7 +73,7 @@
         <Description xml:lang="en">LibreOffice Office Suite</Description>
         <PartOf>office</PartOf>
         <RuntimeDependencies>
-            <Dependency releaseFrom="176">libreoffice-common-help</Dependency>
+            <Dependency releaseFrom="196">libreoffice-common-help</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib64/libreoffice/help/am/sdatabase.cfg</Path>
@@ -625,6 +625,15 @@
             <Path fileType="library">/usr/lib64/libreoffice/help/tg/sdatabase.jar</Path>
             <Path fileType="library">/usr/lib64/libreoffice/help/tg/sdatabase.key</Path>
             <Path fileType="library">/usr/lib64/libreoffice/help/tg/sdatabase.tree</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/sdatabase.cfg</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/sdatabase.db</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/sdatabase.ht</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/sdatabase.idxl/_0.cfs</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/sdatabase.idxl/segments.gen</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/sdatabase.idxl/segments_3</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/sdatabase.jar</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/sdatabase.key</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/sdatabase.tree</Path>
             <Path fileType="library">/usr/lib64/libreoffice/help/tr/sdatabase.cfg</Path>
             <Path fileType="library">/usr/lib64/libreoffice/help/tr/sdatabase.db</Path>
             <Path fileType="library">/usr/lib64/libreoffice/help/tr/sdatabase.ht</Path>
@@ -687,7 +696,7 @@
         <Description xml:lang="en">Calc is the spreadsheet program you&apos;ve always needed.</Description>
         <PartOf>office</PartOf>
         <RuntimeDependencies>
-            <Dependency releaseFrom="176">libreoffice-writer</Dependency>
+            <Dependency releaseFrom="196">libreoffice-writer</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin/localc</Path>
@@ -802,6 +811,7 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/scalc/ui/doubledialog.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/scalc/ui/drawtemplatedialog.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/scalc/ui/dropmenu.ui</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/scalc/ui/duplicaterecordsdlg.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/scalc/ui/erroralerttabpage.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/scalc/ui/exponentialsmoothingdialog.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/scalc/ui/externaldata.ui</Path>
@@ -852,6 +862,7 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/scalc/ui/notebookbar_online.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/scalc/ui/numberbox.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/scalc/ui/numbertransformationentry.ui</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/scalc/ui/onlyactivesheetsaveddialog.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/scalc/ui/optcalculatepage.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/scalc/ui/optchangespage.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/scalc/ui/optcompatibilitypage.ui</Path>
@@ -963,7 +974,7 @@
         <Description xml:lang="en">LibreOffice Office Suite</Description>
         <PartOf>office</PartOf>
         <RuntimeDependencies>
-            <Dependency releaseFrom="176">libreoffice-common-help</Dependency>
+            <Dependency releaseFrom="196">libreoffice-common-help</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib64/libreoffice/help/am/scalc.cfg</Path>
@@ -1515,6 +1526,15 @@
             <Path fileType="library">/usr/lib64/libreoffice/help/tg/scalc.jar</Path>
             <Path fileType="library">/usr/lib64/libreoffice/help/tg/scalc.key</Path>
             <Path fileType="library">/usr/lib64/libreoffice/help/tg/scalc.tree</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/scalc.cfg</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/scalc.db</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/scalc.ht</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/scalc.idxl/_0.cfs</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/scalc.idxl/segments.gen</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/scalc.idxl/segments_3</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/scalc.jar</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/scalc.key</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/scalc.tree</Path>
             <Path fileType="library">/usr/lib64/libreoffice/help/tr/scalc.cfg</Path>
             <Path fileType="library">/usr/lib64/libreoffice/help/tr/scalc.db</Path>
             <Path fileType="library">/usr/lib64/libreoffice/help/tr/scalc.ht</Path>
@@ -1602,11 +1622,8 @@
             <Path fileType="library">/usr/lib64/libreoffice/program/classes/ScriptProviderForBeanShell.jar</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/classes/ScriptProviderForJava.jar</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/classes/ScriptProviderForJavaScript.jar</Path>
-            <Path fileType="library">/usr/lib64/libreoffice/program/classes/XMergeBridge.jar</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/classes/bsh.jar</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/classes/commonwizards.jar</Path>
-            <Path fileType="library">/usr/lib64/libreoffice/program/classes/flow-engine.jar</Path>
-            <Path fileType="library">/usr/lib64/libreoffice/program/classes/flute-1.1.6.jar</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/classes/form.jar</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/classes/hsqldb.jar</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/classes/java_uno.jar</Path>
@@ -1614,28 +1631,16 @@
             <Path fileType="library">/usr/lib64/libreoffice/program/classes/js.jar</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/classes/juh.jar</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/classes/jurt.jar</Path>
-            <Path fileType="library">/usr/lib64/libreoffice/program/classes/libbase-1.1.6.jar</Path>
-            <Path fileType="library">/usr/lib64/libreoffice/program/classes/libfonts-1.1.6.jar</Path>
-            <Path fileType="library">/usr/lib64/libreoffice/program/classes/libformula-1.1.7.jar</Path>
-            <Path fileType="library">/usr/lib64/libreoffice/program/classes/liblayout.jar</Path>
-            <Path fileType="library">/usr/lib64/libreoffice/program/classes/libloader-1.1.6.jar</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/classes/libreoffice.jar</Path>
-            <Path fileType="library">/usr/lib64/libreoffice/program/classes/librepository-1.1.6.jar</Path>
-            <Path fileType="library">/usr/lib64/libreoffice/program/classes/libserializer-1.1.6.jar</Path>
-            <Path fileType="library">/usr/lib64/libreoffice/program/classes/libxml-1.1.7.jar</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/classes/officebean.jar</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/classes/query.jar</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/classes/report.jar</Path>
-            <Path fileType="library">/usr/lib64/libreoffice/program/classes/reportbuilder.jar</Path>
-            <Path fileType="library">/usr/lib64/libreoffice/program/classes/reportbuilderwizard.jar</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/classes/ridl.jar</Path>
-            <Path fileType="library">/usr/lib64/libreoffice/program/classes/sac.jar</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/classes/sdbc_hsqldb.jar</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/classes/smoketest.jar</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/classes/table.jar</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/classes/unoil.jar</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/classes/unoloader.jar</Path>
-            <Path fileType="library">/usr/lib64/libreoffice/program/classes/xmerge.jar</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/fundamentalrc</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/gdbtrace</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/gengal</Path>
@@ -1656,6 +1661,7 @@
             <Path fileType="library">/usr/lib64/libreoffice/program/libanimcorelo.so</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/libavmediagst.so</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/libavmedialo.so</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/libavmediaqt6.so</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/libbasctllo.so</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/libbasegfxlo.so</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/libbasprovlo.so</Path>
@@ -1672,7 +1678,6 @@
             <Path fileType="library">/usr/lib64/libreoffice/program/libclewlo.so</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/libclucene.so</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/libcmdmaillo.so</Path>
-            <Path fileType="library">/usr/lib64/libreoffice/program/libcollator_data.so</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/libcomphelper.so</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/libconfigmgrlo.so</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/libcppcanvaslo.so</Path>
@@ -1690,10 +1695,7 @@
             <Path fileType="library">/usr/lib64/libreoffice/program/libdeployment.so</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/libdeploymentgui.so</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/libdeploymentmisclo.so</Path>
-            <Path fileType="library">/usr/lib64/libreoffice/program/libdesktop_detectorlo.so</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/libdesktopbe1lo.so</Path>
-            <Path fileType="library">/usr/lib64/libreoffice/program/libdict_ja.so</Path>
-            <Path fileType="library">/usr/lib64/libreoffice/program/libdict_zh.so</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/libdlgprovlo.so</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/libdocmodello.so</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/libdrawinglayercorelo.so</Path>
@@ -1724,7 +1726,6 @@
             <Path fileType="library">/usr/lib64/libreoffice/program/libi18nsearchlo.so</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/libi18nutil.so</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/libicglo.so</Path>
-            <Path fileType="library">/usr/lib64/libreoffice/program/libindex_data.so</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/libintrospectionlo.so</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/libinvocadaptlo.so</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/libinvocationlo.so</Path>
@@ -1781,14 +1782,8 @@
             <Path fileType="library">/usr/lib64/libreoffice/program/libproxyfaclo.so</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/libpythonloaderlo.so</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/libpyuno.so</Path>
-            <Path fileType="library">/usr/lib64/libreoffice/program/libraptor2-lo.so.0</Path>
-            <Path fileType="library">/usr/lib64/libreoffice/program/librasqal-lo.so.3</Path>
-            <Path fileType="library">/usr/lib64/libreoffice/program/librdf-lo.so.0</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/libreflectionlo.so</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/libreglo.so</Path>
-            <Path fileType="library">/usr/lib64/libreoffice/program/librptlo.so</Path>
-            <Path fileType="library">/usr/lib64/libreoffice/program/librptuilo.so</Path>
-            <Path fileType="library">/usr/lib64/libreoffice/program/librptxmllo.so</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/libsal_textenclo.so</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/libsaxlo.so</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/libsblo.so</Path>
@@ -1826,12 +1821,12 @@
             <Path fileType="library">/usr/lib64/libreoffice/program/libsvtlo.so</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/libsvxcorelo.so</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/libsvxlo.so</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/libsw_writerfilterlo.so</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/libswdlo.so</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/libswlo.so</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/libswuilo.so</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/libsysshlo.so</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/libt602filterlo.so</Path>
-            <Path fileType="library">/usr/lib64/libreoffice/program/libtextconv_dict.so</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/libtextconversiondlgslo.so</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/libtextfdlo.so</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/libtklo.so</Path>
@@ -1875,7 +1870,6 @@
             <Path fileType="library">/usr/lib64/libreoffice/program/libwpftdrawlo.so</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/libwpftimpresslo.so</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/libwpftwriterlo.so</Path>
-            <Path fileType="library">/usr/lib64/libreoffice/program/libwriterfilterlo.so</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/libwriterlo.so</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/libwriterperfectlo.so</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/libxmlfalo.so</Path>
@@ -1931,6 +1925,39 @@
             <Path fileType="library">/usr/lib64/libreoffice/program/pyuno.so</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/redirectrc</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/regview</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/ab/LC_MESSAGES/acc.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/ab/LC_MESSAGES/avmedia.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/ab/LC_MESSAGES/basctl.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/ab/LC_MESSAGES/chart.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/ab/LC_MESSAGES/cnr.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/ab/LC_MESSAGES/cui.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/ab/LC_MESSAGES/dba.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/ab/LC_MESSAGES/dkt.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/ab/LC_MESSAGES/editeng.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/ab/LC_MESSAGES/flt.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/ab/LC_MESSAGES/for.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/ab/LC_MESSAGES/fps.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/ab/LC_MESSAGES/frm.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/ab/LC_MESSAGES/fwk.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/ab/LC_MESSAGES/oox.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/ab/LC_MESSAGES/pcr.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/ab/LC_MESSAGES/rpt.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/ab/LC_MESSAGES/sb.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/ab/LC_MESSAGES/sc.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/ab/LC_MESSAGES/sca.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/ab/LC_MESSAGES/scc.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/ab/LC_MESSAGES/sd.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/ab/LC_MESSAGES/sfx.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/ab/LC_MESSAGES/sm.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/ab/LC_MESSAGES/svl.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/ab/LC_MESSAGES/svt.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/ab/LC_MESSAGES/svx.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/ab/LC_MESSAGES/sw.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/ab/LC_MESSAGES/uui.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/ab/LC_MESSAGES/vcl.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/ab/LC_MESSAGES/wiz.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/ab/LC_MESSAGES/wpt.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/ab/LC_MESSAGES/xsc.mo</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/resource/af/LC_MESSAGES/acc.mo</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/resource/af/LC_MESSAGES/avmedia.mo</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/resource/af/LC_MESSAGES/basctl.mo</Path>
@@ -4836,6 +4863,39 @@
             <Path fileType="library">/usr/lib64/libreoffice/program/resource/sat/LC_MESSAGES/wiz.mo</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/resource/sat/LC_MESSAGES/wpt.mo</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/resource/sat/LC_MESSAGES/xsc.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/sat_Olck/LC_MESSAGES/acc.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/sat_Olck/LC_MESSAGES/avmedia.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/sat_Olck/LC_MESSAGES/basctl.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/sat_Olck/LC_MESSAGES/chart.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/sat_Olck/LC_MESSAGES/cnr.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/sat_Olck/LC_MESSAGES/cui.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/sat_Olck/LC_MESSAGES/dba.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/sat_Olck/LC_MESSAGES/dkt.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/sat_Olck/LC_MESSAGES/editeng.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/sat_Olck/LC_MESSAGES/flt.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/sat_Olck/LC_MESSAGES/for.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/sat_Olck/LC_MESSAGES/fps.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/sat_Olck/LC_MESSAGES/frm.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/sat_Olck/LC_MESSAGES/fwk.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/sat_Olck/LC_MESSAGES/oox.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/sat_Olck/LC_MESSAGES/pcr.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/sat_Olck/LC_MESSAGES/rpt.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/sat_Olck/LC_MESSAGES/sb.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/sat_Olck/LC_MESSAGES/sc.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/sat_Olck/LC_MESSAGES/sca.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/sat_Olck/LC_MESSAGES/scc.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/sat_Olck/LC_MESSAGES/sd.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/sat_Olck/LC_MESSAGES/sfx.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/sat_Olck/LC_MESSAGES/sm.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/sat_Olck/LC_MESSAGES/svl.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/sat_Olck/LC_MESSAGES/svt.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/sat_Olck/LC_MESSAGES/svx.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/sat_Olck/LC_MESSAGES/sw.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/sat_Olck/LC_MESSAGES/uui.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/sat_Olck/LC_MESSAGES/vcl.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/sat_Olck/LC_MESSAGES/wiz.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/sat_Olck/LC_MESSAGES/wpt.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/sat_Olck/LC_MESSAGES/xsc.mo</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/resource/sd/LC_MESSAGES/acc.mo</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/resource/sd/LC_MESSAGES/avmedia.mo</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/resource/sd/LC_MESSAGES/basctl.mo</Path>
@@ -5397,6 +5457,39 @@
             <Path fileType="library">/usr/lib64/libreoffice/program/resource/th/LC_MESSAGES/wiz.mo</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/resource/th/LC_MESSAGES/wpt.mo</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/resource/th/LC_MESSAGES/xsc.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/tl/LC_MESSAGES/acc.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/tl/LC_MESSAGES/avmedia.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/tl/LC_MESSAGES/basctl.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/tl/LC_MESSAGES/chart.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/tl/LC_MESSAGES/cnr.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/tl/LC_MESSAGES/cui.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/tl/LC_MESSAGES/dba.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/tl/LC_MESSAGES/dkt.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/tl/LC_MESSAGES/editeng.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/tl/LC_MESSAGES/flt.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/tl/LC_MESSAGES/for.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/tl/LC_MESSAGES/fps.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/tl/LC_MESSAGES/frm.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/tl/LC_MESSAGES/fwk.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/tl/LC_MESSAGES/oox.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/tl/LC_MESSAGES/pcr.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/tl/LC_MESSAGES/rpt.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/tl/LC_MESSAGES/sb.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/tl/LC_MESSAGES/sc.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/tl/LC_MESSAGES/sca.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/tl/LC_MESSAGES/scc.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/tl/LC_MESSAGES/sd.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/tl/LC_MESSAGES/sfx.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/tl/LC_MESSAGES/sm.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/tl/LC_MESSAGES/svl.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/tl/LC_MESSAGES/svt.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/tl/LC_MESSAGES/svx.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/tl/LC_MESSAGES/sw.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/tl/LC_MESSAGES/uui.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/tl/LC_MESSAGES/vcl.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/tl/LC_MESSAGES/wiz.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/tl/LC_MESSAGES/wpt.mo</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/resource/tl/LC_MESSAGES/xsc.mo</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/resource/tn/LC_MESSAGES/acc.mo</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/resource/tn/LC_MESSAGES/avmedia.mo</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/resource/tn/LC_MESSAGES/basctl.mo</Path>
@@ -5860,6 +5953,7 @@
             <Path fileType="library">/usr/lib64/libreoffice/program/resource/zu/LC_MESSAGES/wpt.mo</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/resource/zu/LC_MESSAGES/xsc.mo</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/scriptforge.py</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/scriptforge.pyi</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/senddoc</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/services.rdb</Path>
             <Path fileType="library">/usr/lib64/libreoffice/program/services/postgresql-sdbc.rdb</Path>
@@ -6008,6 +6102,7 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/Scripts/python/HelloWorld.py</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/Scripts/python/InsertText.py</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/Scripts/python/LibreLogo/LibreLogo.py</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/Scripts/python/LibreLogo/LibreLogo_ab.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/Scripts/python/LibreLogo/LibreLogo_af.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/Scripts/python/LibreLogo/LibreLogo_am.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/Scripts/python/LibreLogo/LibreLogo_ar.properties</Path>
@@ -6097,6 +6192,7 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/Scripts/python/LibreLogo/LibreLogo_rw.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/Scripts/python/LibreLogo/LibreLogo_sa_IN.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/Scripts/python/LibreLogo/LibreLogo_sat.properties</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/Scripts/python/LibreLogo/LibreLogo_sat_Olck.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/Scripts/python/LibreLogo/LibreLogo_sd.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/Scripts/python/LibreLogo/LibreLogo_si.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/Scripts/python/LibreLogo/LibreLogo_sid.properties</Path>
@@ -6114,6 +6210,7 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/Scripts/python/LibreLogo/LibreLogo_te.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/Scripts/python/LibreLogo/LibreLogo_tg.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/Scripts/python/LibreLogo/LibreLogo_th.properties</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/Scripts/python/LibreLogo/LibreLogo_tl.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/Scripts/python/LibreLogo/LibreLogo_tn.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/Scripts/python/LibreLogo/LibreLogo_tr.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/Scripts/python/LibreLogo/LibreLogo_ts.properties</Path>
@@ -6181,6 +6278,7 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/autocorr/acor_vro-EE.dat</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/autocorr/acor_zh-CN.dat</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/autocorr/acor_zh-TW.dat</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/autotext/ab</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/autotext/af/standard.bau</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/autotext/am/standard.bau</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/autotext/ar/standard.bau</Path>
@@ -6199,6 +6297,7 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/autotext/ca-valencia/standard.bau</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/autotext/ca/standard.bau</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/autotext/ckb</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/autotext/common</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/autotext/cs/crdbus50.bau</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/autotext/cs/crdbus54.bau</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/autotext/cs/standard.bau</Path>
@@ -6309,6 +6408,7 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/autotext/ru/template.bau</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/autotext/rw/standard.bau</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/autotext/sa-IN/standard.bau</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/autotext/sat-Olck</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/autotext/sat/standard.bau</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/autotext/sd/standard.bau</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/autotext/si/standard.bau</Path>
@@ -6335,6 +6435,7 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/autotext/te/standard.bau</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/autotext/tg/standard.bau</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/autotext/th/standard.bau</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/autotext/tl</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/autotext/tn/standard.bau</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/autotext/tr/crdbus50.bau</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/autotext/tr/standard.bau</Path>
@@ -6480,6 +6581,7 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/basic/SFUnitTests/__License.xba</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/basic/SFUnitTests/dialog.xlb</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/basic/SFUnitTests/script.xlb</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/basic/SFWidgets/SF_ContextMenu.xba</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/basic/SFWidgets/SF_Menu.xba</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/basic/SFWidgets/SF_MenuListener.xba</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/basic/SFWidgets/SF_PopupMenu.xba</Path>
@@ -6551,6 +6653,7 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/calc/styles.xml</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/classification/example.xml</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/classification/example_ca-ES.xml</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/classification/example_es-ES.xml</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/classification/example_fr-FR.xml</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/classification/example_hu-HU.xml</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/classification/example_nl-NL.xml</Path>
@@ -6587,6 +6690,7 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/cui/ui/additionsdialog.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/cui/ui/additionsfragment.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/cui/ui/agingdialog.ui</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/cui/ui/appearance.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/cui/ui/applyautofmtpage.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/cui/ui/applylocalizedpage.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/cui/ui/areadialog.ui</Path>
@@ -6606,7 +6710,6 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/cui/ui/certdialog.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/cui/ui/chapterfragment.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/cui/ui/charnamepage.ui</Path>
-            <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/cui/ui/colorconfigwin.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/cui/ui/colorfragment.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/cui/ui/colorpage.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/cui/ui/colorpickerdialog.ui</Path>
@@ -6673,6 +6776,7 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/cui/ui/listdialog.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/cui/ui/macroassigndialog.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/cui/ui/macroassignpage.ui</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/cui/ui/macromanagerdialog.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/cui/ui/macroselectordialog.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/cui/ui/menuassignpage.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/cui/ui/mosaicdialog.ui</Path>
@@ -6690,7 +6794,6 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/cui/ui/objecttitledescdialog.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/cui/ui/optaccessibilitypage.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/cui/ui/optadvancedpage.ui</Path>
-            <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/cui/ui/optappearancepage.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/cui/ui/optasianpage.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/cui/ui/optbasicidepage.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/cui/ui/optchartcolorspage.ui</Path>
@@ -6723,7 +6826,6 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/cui/ui/pastespecial.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/cui/ui/patterntabpage.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/cui/ui/percentdialog.ui</Path>
-            <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/cui/ui/personalization_tab.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/cui/ui/pickbulletpage.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/cui/ui/pickgraphicpage.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/cui/ui/picknumberingpage.ui</Path>
@@ -6914,6 +7016,7 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/BasicIDE/ui/basicmacrodialog.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/BasicIDE/ui/breakpointmenus.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/BasicIDE/ui/codecomplete.ui</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/BasicIDE/ui/colorscheme.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/BasicIDE/ui/combobox.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/BasicIDE/ui/defaultlanguage.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/BasicIDE/ui/deletelangdialog.ui</Path>
@@ -7454,6 +7557,7 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/svx/ui/absrecbox.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/svx/ui/acceptrejectchangesdialog.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/svx/ui/accessibilitycheckentry.ui</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/svx/ui/accessibilitychecklevel.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/svx/ui/addconditiondialog.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/svx/ui/adddataitemdialog.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/svx/ui/addinstancedialog.ui</Path>
@@ -7521,6 +7625,7 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/svx/ui/gallerymenu2.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/svx/ui/genericcheckdialog.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/svx/ui/genericcheckentry.ui</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/svx/ui/gotopagedialog.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/svx/ui/grafctrlbox.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/svx/ui/grafmodebox.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/svx/ui/headfootformatpage.ui</Path>
@@ -7573,6 +7678,7 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/svx/ui/sidebarshadow.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/svx/ui/sidebarstylespanel.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/svx/ui/sidebartextcolumnspanel.ui</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/svx/ui/sidebartexteffect.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/svx/ui/sidebartextpanel.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/svx/ui/stylemenu.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/svx/ui/stylespreview.ui</Path>
@@ -7669,6 +7775,7 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/EvolutionarySolver.jar</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/META-INF/manifest.xml</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/components.rdb</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/description-ab.txt</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/description-af.txt</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/description-am.txt</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/description-ar.txt</Path>
@@ -7757,6 +7864,7 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/description-ru.txt</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/description-rw.txt</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/description-sa-IN.txt</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/description-sat-Olck.txt</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/description-sat.txt</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/description-sd.txt</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/description-si.txt</Path>
@@ -7775,6 +7883,7 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/description-te.txt</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/description-tg.txt</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/description-th.txt</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/description-tl.txt</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/description-tn.txt</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/description-tr.txt</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/description-ts.txt</Path>
@@ -7790,6 +7899,17 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/description-zh-TW.txt</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/description-zu.txt</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/description.xml</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/help/.dir</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/help/ab-xhp.done</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/help/ab.done</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/help/ab/help.db_</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/help/ab/help.ht_</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/help/ab/help.idxl/_0.cfs</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/help/ab/help.idxl/segments.gen</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/help/ab/help.idxl/segments_3</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/help/ab/help.jar</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/help/ab/help.key_</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/help/ab/help.tree</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/help/af-xhp.done</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/help/af.done</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/help/af/help.db_</Path>
@@ -8670,6 +8790,16 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/help/sa-IN/help.jar</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/help/sa-IN/help.key_</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/help/sa-IN/help.tree</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/help/sat-Olck-xhp.done</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/help/sat-Olck.done</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/help/sat-Olck/help.db_</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/help/sat-Olck/help.ht_</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/help/sat-Olck/help.idxl/_0.cfs</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/help/sat-Olck/help.idxl/segments.gen</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/help/sat-Olck/help.idxl/segments_3</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/help/sat-Olck/help.jar</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/help/sat-Olck/help.key_</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/help/sat-Olck/help.tree</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/help/sat-xhp.done</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/help/sat.done</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/help/sat/help.db_</Path>
@@ -8850,6 +8980,16 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/help/th/help.jar</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/help/th/help.key_</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/help/th/help.tree</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/help/tl-xhp.done</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/help/tl.done</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/help/tl/help.db_</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/help/tl/help.ht_</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/help/tl/help.idxl/_0.cfs</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/help/tl/help.idxl/segments.gen</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/help/tl/help.idxl/segments_3</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/help/tl/help.jar</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/help/tl/help.key_</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/help/tl/help.tree</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/help/tn-xhp.done</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/help/tn.done</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/help/tn/help.db_</Path>
@@ -8990,6 +9130,7 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/help/zu/help.jar</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/help/zu/help.key_</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/help/zu/help.tree</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/locale/NLPSolverCommon_ab.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/locale/NLPSolverCommon_af.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/locale/NLPSolverCommon_am.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/locale/NLPSolverCommon_ar.properties</Path>
@@ -9080,6 +9221,7 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/locale/NLPSolverCommon_rw.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/locale/NLPSolverCommon_sa_IN.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/locale/NLPSolverCommon_sat.properties</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/locale/NLPSolverCommon_sat_Olck.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/locale/NLPSolverCommon_sd.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/locale/NLPSolverCommon_si.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/locale/NLPSolverCommon_sid.properties</Path>
@@ -9097,6 +9239,7 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/locale/NLPSolverCommon_te.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/locale/NLPSolverCommon_tg.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/locale/NLPSolverCommon_th.properties</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/locale/NLPSolverCommon_tl.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/locale/NLPSolverCommon_tn.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/locale/NLPSolverCommon_tr.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/locale/NLPSolverCommon_ts.properties</Path>
@@ -9111,6 +9254,7 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/locale/NLPSolverCommon_zh_CN.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/locale/NLPSolverCommon_zh_TW.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/locale/NLPSolverCommon_zu.properties</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/locale/NLPSolverStatusDialog_ab.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/locale/NLPSolverStatusDialog_af.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/locale/NLPSolverStatusDialog_am.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/locale/NLPSolverStatusDialog_ar.properties</Path>
@@ -9201,6 +9345,7 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/locale/NLPSolverStatusDialog_rw.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/locale/NLPSolverStatusDialog_sa_IN.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/locale/NLPSolverStatusDialog_sat.properties</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/locale/NLPSolverStatusDialog_sat_Olck.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/locale/NLPSolverStatusDialog_sd.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/locale/NLPSolverStatusDialog_si.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/locale/NLPSolverStatusDialog_sid.properties</Path>
@@ -9218,6 +9363,7 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/locale/NLPSolverStatusDialog_te.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/locale/NLPSolverStatusDialog_tg.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/locale/NLPSolverStatusDialog_th.properties</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/locale/NLPSolverStatusDialog_tl.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/locale/NLPSolverStatusDialog_tn.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/locale/NLPSolverStatusDialog_tr.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/nlpsolver/locale/NLPSolverStatusDialog_ts.properties</Path>
@@ -9250,6 +9396,7 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/wiki-publisher/WikiExtension.xcs</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/wiki-publisher/WikiExtension.xcu</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/wiki-publisher/components.rdb</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/wiki-publisher/description-ab.txt</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/wiki-publisher/description-af.txt</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/wiki-publisher/description-am.txt</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/wiki-publisher/description-ar.txt</Path>
@@ -9338,6 +9485,7 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/wiki-publisher/description-ru.txt</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/wiki-publisher/description-rw.txt</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/wiki-publisher/description-sa-IN.txt</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/wiki-publisher/description-sat-Olck.txt</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/wiki-publisher/description-sat.txt</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/wiki-publisher/description-sd.txt</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/wiki-publisher/description-si.txt</Path>
@@ -9356,6 +9504,7 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/wiki-publisher/description-te.txt</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/wiki-publisher/description-tg.txt</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/wiki-publisher/description-th.txt</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/wiki-publisher/description-tl.txt</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/wiki-publisher/description-tn.txt</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/wiki-publisher/description-tr.txt</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/wiki-publisher/description-ts.txt</Path>
@@ -9379,6 +9528,17 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/wiki-publisher/filter/math/tables.xsl</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/wiki-publisher/filter/math/tokens.xsl</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/wiki-publisher/filter/odt2mediawiki.xsl</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/wiki-publisher/help/.dir</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/wiki-publisher/help/ab-xhp.done</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/wiki-publisher/help/ab.done</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/wiki-publisher/help/ab/help.db_</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/wiki-publisher/help/ab/help.ht_</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/wiki-publisher/help/ab/help.idxl/_0.cfs</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/wiki-publisher/help/ab/help.idxl/segments.gen</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/wiki-publisher/help/ab/help.idxl/segments_3</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/wiki-publisher/help/ab/help.jar</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/wiki-publisher/help/ab/help.key_</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/wiki-publisher/help/ab/help.tree</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/wiki-publisher/help/af-xhp.done</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/wiki-publisher/help/af.done</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/wiki-publisher/help/af/help.db_</Path>
@@ -10259,6 +10419,16 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/wiki-publisher/help/sa-IN/help.jar</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/wiki-publisher/help/sa-IN/help.key_</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/wiki-publisher/help/sa-IN/help.tree</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/wiki-publisher/help/sat-Olck-xhp.done</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/wiki-publisher/help/sat-Olck.done</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/wiki-publisher/help/sat-Olck/help.db_</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/wiki-publisher/help/sat-Olck/help.ht_</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/wiki-publisher/help/sat-Olck/help.idxl/_0.cfs</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/wiki-publisher/help/sat-Olck/help.idxl/segments.gen</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/wiki-publisher/help/sat-Olck/help.idxl/segments_3</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/wiki-publisher/help/sat-Olck/help.jar</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/wiki-publisher/help/sat-Olck/help.key_</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/wiki-publisher/help/sat-Olck/help.tree</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/wiki-publisher/help/sat-xhp.done</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/wiki-publisher/help/sat.done</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/wiki-publisher/help/sat/help.db_</Path>
@@ -10439,6 +10609,16 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/wiki-publisher/help/th/help.jar</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/wiki-publisher/help/th/help.key_</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/wiki-publisher/help/th/help.tree</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/wiki-publisher/help/tl-xhp.done</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/wiki-publisher/help/tl.done</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/wiki-publisher/help/tl/help.db_</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/wiki-publisher/help/tl/help.ht_</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/wiki-publisher/help/tl/help.idxl/_0.cfs</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/wiki-publisher/help/tl/help.idxl/segments.gen</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/wiki-publisher/help/tl/help.idxl/segments_3</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/wiki-publisher/help/tl/help.jar</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/wiki-publisher/help/tl/help.key_</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/wiki-publisher/help/tl/help.tree</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/wiki-publisher/help/tn-xhp.done</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/wiki-publisher/help/tn.done</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/wiki-publisher/help/tn/help.db_</Path>
@@ -10595,6 +10775,55 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/gallery/arrows.sdv</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/gallery/arrows.str</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/gallery/arrows.thm</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/gallery/backgrounds.sdg</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/gallery/backgrounds.sdv</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/gallery/backgrounds.str</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/gallery/backgrounds.thm</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/gallery/backgrounds/brick-wall.png</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/gallery/backgrounds/cardboard.jpg</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/gallery/backgrounds/circuit-board.jpg</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/gallery/backgrounds/cloud.jpg</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/gallery/backgrounds/coffee.jpg</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/gallery/backgrounds/color-stripes.png</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/gallery/backgrounds/concrete.jpg</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/gallery/backgrounds/crumpled-paper.jpg</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/gallery/backgrounds/fence.jpg</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/gallery/backgrounds/floral.png</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/gallery/backgrounds/fuzzy-darkgrey.jpg</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/gallery/backgrounds/fuzzy-grey.jpg</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/gallery/backgrounds/fuzzy-lightgrey.jpg</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/gallery/backgrounds/giraffe.png</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/gallery/backgrounds/graph-paper.png</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/gallery/backgrounds/ice-light.jpg</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/gallery/backgrounds/invoice-paper.jpg</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/gallery/backgrounds/leaf.jpg</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/gallery/backgrounds/maple-leaves.jpg</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/gallery/backgrounds/marble.jpg</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/gallery/backgrounds/painted-white.jpg</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/gallery/backgrounds/painted-wood.jpg</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/gallery/backgrounds/parchment-paper.jpg</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/gallery/backgrounds/pebble-light.jpg</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/gallery/backgrounds/pool.jpg</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/gallery/backgrounds/rock-wall.jpg</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/gallery/backgrounds/sand-light.jpg</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/gallery/backgrounds/sand.jpg</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/gallery/backgrounds/sky.jpg</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/gallery/backgrounds/space.png</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/gallery/backgrounds/stone-gray.jpg</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/gallery/backgrounds/stone-wall.jpg</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/gallery/backgrounds/stone.jpg</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/gallery/backgrounds/stones.jpg</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/gallery/backgrounds/studio.jpg</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/gallery/backgrounds/surface-black.jpg</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/gallery/backgrounds/surface.jpg</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/gallery/backgrounds/texture-paper.jpg</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/gallery/backgrounds/tiger.jpg</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/gallery/backgrounds/tiles.jpg</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/gallery/backgrounds/white-diffusion.jpg</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/gallery/backgrounds/wood.jpg</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/gallery/backgrounds/wooden-board.jpg</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/gallery/backgrounds/wooden-fence.jpg</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/gallery/backgrounds/zebra.png</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/gallery/bigapple.gif</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/gallery/bpmn.sdg</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/gallery/bpmn.sdv</Path>
@@ -10809,6 +11038,7 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/palette/tonal.soc</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/psprint/driver/SGENPRT.PS</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/psprint/psprint.conf</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/registry/Langpack-ab.xcd</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/registry/Langpack-af.xcd</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/registry/Langpack-am.xcd</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/registry/Langpack-ar.xcd</Path>
@@ -10897,6 +11127,7 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/registry/Langpack-ru.xcd</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/registry/Langpack-rw.xcd</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/registry/Langpack-sa-IN.xcd</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/registry/Langpack-sat-Olck.xcd</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/registry/Langpack-sat.xcd</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/registry/Langpack-sd.xcd</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/registry/Langpack-si.xcd</Path>
@@ -10915,6 +11146,7 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/registry/Langpack-te.xcd</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/registry/Langpack-tg.xcd</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/registry/Langpack-th.xcd</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/registry/Langpack-tl.xcd</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/registry/Langpack-tn.xcd</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/registry/Langpack-tr.xcd</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/registry/Langpack-ts.xcd</Path>
@@ -10961,7 +11193,7 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/registry/oo-ldap.xcd.sample</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/registry/pdfimport.xcd</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/registry/postgresql.xcd</Path>
-            <Path fileType="library">/usr/lib64/libreoffice/share/registry/reportbuilder.xcd</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/registry/res/fcfg_langpack_ab.xcd</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/registry/res/fcfg_langpack_af.xcd</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/registry/res/fcfg_langpack_am.xcd</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/registry/res/fcfg_langpack_ar.xcd</Path>
@@ -11050,6 +11282,7 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/registry/res/fcfg_langpack_ru.xcd</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/registry/res/fcfg_langpack_rw.xcd</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/registry/res/fcfg_langpack_sa-IN.xcd</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/registry/res/fcfg_langpack_sat-Olck.xcd</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/registry/res/fcfg_langpack_sat.xcd</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/registry/res/fcfg_langpack_sd.xcd</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/registry/res/fcfg_langpack_si.xcd</Path>
@@ -11068,6 +11301,7 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/registry/res/fcfg_langpack_te.xcd</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/registry/res/fcfg_langpack_tg.xcd</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/registry/res/fcfg_langpack_th.xcd</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/registry/res/fcfg_langpack_tl.xcd</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/registry/res/fcfg_langpack_tn.xcd</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/registry/res/fcfg_langpack_tr.xcd</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/registry/res/fcfg_langpack_ts.xcd</Path>
@@ -11082,6 +11316,7 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/registry/res/fcfg_langpack_zh-CN.xcd</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/registry/res/fcfg_langpack_zh-TW.xcd</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/registry/res/fcfg_langpack_zu.xcd</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/registry/res/registry_ab.xcd</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/registry/res/registry_af.xcd</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/registry/res/registry_am.xcd</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/registry/res/registry_ar.xcd</Path>
@@ -11169,6 +11404,7 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/registry/res/registry_ru.xcd</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/registry/res/registry_rw.xcd</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/registry/res/registry_sa-IN.xcd</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/registry/res/registry_sat-Olck.xcd</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/registry/res/registry_sat.xcd</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/registry/res/registry_sd.xcd</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/registry/res/registry_si.xcd</Path>
@@ -11187,6 +11423,7 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/registry/res/registry_te.xcd</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/registry/res/registry_tg.xcd</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/registry/res/registry_th.xcd</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/registry/res/registry_tl.xcd</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/registry/res/registry_tn.xcd</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/registry/res/registry_tr.xcd</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/registry/res/registry_ts.xcd</Path>
@@ -11204,7 +11441,7 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/registry/xsltfilter.xcd</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/skia/skia_denylist_vulkan.xml</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/template/common/draw/bpmn.otg</Path>
-            <Path fileType="library">/usr/lib64/libreoffice/share/template/common/internal/html.stw</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/template/common/internal/html.oth</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/template/common/internal/idxexample.odt</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/template/common/l10n/ja_ott_normal.ott</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/template/common/l10n/zh_CN_ott_normal.ott</Path>
@@ -11296,7 +11533,6 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/template/common/wizard/report/cnt-061.ott</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/template/common/wizard/report/cnt-062.ott</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/template/common/wizard/report/cnt-default.ott</Path>
-            <Path fileType="library">/usr/lib64/libreoffice/share/template/common/wizard/report/default.otr</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/template/common/wizard/report/stl-01.ott</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/template/common/wizard/report/stl-02.ott</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/template/common/wizard/report/stl-03.ott</Path>
@@ -11409,6 +11645,7 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/toolbarmode/sidebar.png</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/toolbarmode/single.png</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/uno_packages/cache/uno_packages</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/wizards/resources_ab.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/wizards/resources_af.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/wizards/resources_am.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/wizards/resources_ar.properties</Path>
@@ -11498,6 +11735,7 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/wizards/resources_rw.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/wizards/resources_sa_IN.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/wizards/resources_sat.properties</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/wizards/resources_sat_Olck.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/wizards/resources_sd.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/wizards/resources_si.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/wizards/resources_sid.properties</Path>
@@ -11515,6 +11753,7 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/wizards/resources_te.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/wizards/resources_tg.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/wizards/resources_th.properties</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/wizards/resources_tl.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/wizards/resources_tn.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/wizards/resources_tr.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/wizards/resources_ts.properties</Path>
@@ -11536,11 +11775,10 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/wordbook/technical.dic</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/xdg/startcenter.desktop</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/xdg/xsltfilter.desktop</Path>
-            <Path fileType="library">/usr/lib64/libreoffice/share/xpdfimport/xpdfimport_err.pdf</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/xslt/common/copy.xsl</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/xslt/common/math.xsl</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/xslt/common/measure_conversion.xsl</Path>
-            <Path fileType="library">/usr/lib64/libreoffice/share/xslt/docbook/DocBookTemplate.stw</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/xslt/docbook/DocBookTemplate.ott</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/xslt/docbook/docbooktosoffheadings.xsl</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/xslt/docbook/sofftodocbookheadings.xsl</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/xslt/export/common/body.xsl</Path>
@@ -11972,6 +12210,7 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-en/dialog/OptionsDialog.xcs</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-en/dialog/OptionsDialog.xcu</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-en/dialog/en.xdl</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-en/dialog/en_ab.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-en/dialog/en_af.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-en/dialog/en_am.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-en/dialog/en_ar.properties</Path>
@@ -12062,6 +12301,7 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-en/dialog/en_rw.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-en/dialog/en_sa_IN.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-en/dialog/en_sat.properties</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-en/dialog/en_sat_Olck.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-en/dialog/en_sd.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-en/dialog/en_si.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-en/dialog/en_sid.properties</Path>
@@ -12079,6 +12319,7 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-en/dialog/en_te.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-en/dialog/en_tg.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-en/dialog/en_th.properties</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-en/dialog/en_tl.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-en/dialog/en_tn.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-en/dialog/en_tr.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-en/dialog/en_ts.properties</Path>
@@ -12280,6 +12521,7 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-hu/dialog/OptionsDialog.xcs</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-hu/dialog/OptionsDialog.xcu</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-hu/dialog/hu_HU.xdl</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-hu/dialog/hu_HU_ab.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-hu/dialog/hu_HU_af.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-hu/dialog/hu_HU_am.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-hu/dialog/hu_HU_ar.properties</Path>
@@ -12371,6 +12613,7 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-hu/dialog/hu_HU_rw.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-hu/dialog/hu_HU_sa_IN.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-hu/dialog/hu_HU_sat.properties</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-hu/dialog/hu_HU_sat_Olck.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-hu/dialog/hu_HU_sd.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-hu/dialog/hu_HU_si.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-hu/dialog/hu_HU_sid.properties</Path>
@@ -12388,6 +12631,7 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-hu/dialog/hu_HU_te.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-hu/dialog/hu_HU_tg.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-hu/dialog/hu_HU_th.properties</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-hu/dialog/hu_HU_tl.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-hu/dialog/hu_HU_tn.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-hu/dialog/hu_HU_tr.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-hu/dialog/hu_HU_ts.properties</Path>
@@ -12558,6 +12802,7 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-pt-BR/dialog/OptionsDialog.xcs</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-pt-BR/dialog/OptionsDialog.xcu</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-pt-BR/dialog/pt_BR.xdl</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-pt-BR/dialog/pt_BR_ab.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-pt-BR/dialog/pt_BR_af.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-pt-BR/dialog/pt_BR_am.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-pt-BR/dialog/pt_BR_ar.properties</Path>
@@ -12648,6 +12893,7 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-pt-BR/dialog/pt_BR_rw.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-pt-BR/dialog/pt_BR_sa_IN.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-pt-BR/dialog/pt_BR_sat.properties</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-pt-BR/dialog/pt_BR_sat_Olck.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-pt-BR/dialog/pt_BR_sd.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-pt-BR/dialog/pt_BR_si.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-pt-BR/dialog/pt_BR_sid.properties</Path>
@@ -12665,6 +12911,7 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-pt-BR/dialog/pt_BR_te.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-pt-BR/dialog/pt_BR_tg.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-pt-BR/dialog/pt_BR_th.properties</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-pt-BR/dialog/pt_BR_tl.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-pt-BR/dialog/pt_BR_tn.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-pt-BR/dialog/pt_BR_tr.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-pt-BR/dialog/pt_BR_ts.properties</Path>
@@ -12729,6 +12976,7 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-ru/dialog/OptionsDialog.xcs</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-ru/dialog/OptionsDialog.xcu</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-ru/dialog/ru_RU.xdl</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-ru/dialog/ru_RU_ab.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-ru/dialog/ru_RU_af.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-ru/dialog/ru_RU_am.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-ru/dialog/ru_RU_ar.properties</Path>
@@ -12820,6 +13068,7 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-ru/dialog/ru_RU_rw.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-ru/dialog/ru_RU_sa_IN.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-ru/dialog/ru_RU_sat.properties</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-ru/dialog/ru_RU_sat_Olck.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-ru/dialog/ru_RU_sd.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-ru/dialog/ru_RU_si.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-ru/dialog/ru_RU_sid.properties</Path>
@@ -12837,6 +13086,7 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-ru/dialog/ru_RU_te.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-ru/dialog/ru_RU_tg.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-ru/dialog/ru_RU_th.properties</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-ru/dialog/ru_RU_tl.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-ru/dialog/ru_RU_tn.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-ru/dialog/ru_RU_tr.properties</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/extensions/dict-ru/dialog/ru_RU_ts.properties</Path>
@@ -14567,6 +14817,32 @@
             <Path fileType="library">/usr/lib64/libreoffice/help/tg/schart.tree</Path>
             <Path fileType="library">/usr/lib64/libreoffice/help/tg/shared.jar</Path>
             <Path fileType="library">/usr/lib64/libreoffice/help/tg/shared.tree</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/default.css</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/err.html</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/highcontrast1.css</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/highcontrast2.css</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/highcontrastblack.css</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/highcontrastwhite.css</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/sbasic.cfg</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/sbasic.db</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/sbasic.ht</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/sbasic.idxl/_0.cfs</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/sbasic.idxl/segments.gen</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/sbasic.idxl/segments_3</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/sbasic.jar</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/sbasic.key</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/sbasic.tree</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/schart.cfg</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/schart.db</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/schart.ht</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/schart.idxl/_0.cfs</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/schart.idxl/segments.gen</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/schart.idxl/segments_3</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/schart.jar</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/schart.key</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/schart.tree</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/shared.jar</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/shared.tree</Path>
             <Path fileType="library">/usr/lib64/libreoffice/help/tr/default.css</Path>
             <Path fileType="library">/usr/lib64/libreoffice/help/tr/err.html</Path>
             <Path fileType="library">/usr/lib64/libreoffice/help/tr/highcontrast1.css</Path>
@@ -14731,12 +15007,11 @@
         <Description xml:lang="en">KDE integration for LibreOffice.</Description>
         <PartOf>office</PartOf>
         <RuntimeDependencies>
-            <Dependency release="176">libreoffice-common</Dependency>
+            <Dependency release="196">libreoffice-common</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="library">/usr/lib64/libreoffice/program/libkf5be1lo.so</Path>
-            <Path fileType="library">/usr/lib64/libreoffice/program/libvclplug_kf5lo.so</Path>
-            <Path fileType="library">/usr/lib64/libreoffice/program/libvclplug_qt5lo.so</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/libvclplug_kf6lo.so</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/program/libvclplug_qt6lo.so</Path>
             <Path fileType="data">/usr/share/metainfo/org.libreoffice.kde.metainfo.xml</Path>
         </Files>
     </Package>
@@ -14746,7 +15021,7 @@
         <Description xml:lang="en">Draw lets you produce anything from a quick sketch to a complex plan and gives you the means to communicate with graphics and diagrams.</Description>
         <PartOf>office</PartOf>
         <RuntimeDependencies>
-            <Dependency releaseFrom="176">libreoffice-writer</Dependency>
+            <Dependency releaseFrom="196">libreoffice-writer</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin/lodraw</Path>
@@ -14755,6 +15030,7 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/sdraw/popupmenu/3dobject.xml</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/sdraw/popupmenu/3dscene.xml</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/sdraw/popupmenu/3dscene2.xml</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/sdraw/popupmenu/annotation.xml</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/sdraw/popupmenu/bezier.xml</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/sdraw/popupmenu/connector.xml</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/sdraw/popupmenu/curve.xml</Path>
@@ -14851,6 +15127,7 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/sdraw/ui/notebookbar_single.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/sdraw/ui/paranumberingtab.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/sdraw/ui/queryunlinkimagedialog.ui</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/sdraw/ui/selectlayerdialog.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/sdraw/ui/vectorize.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/registry/draw.xcd</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/xdg/draw.desktop</Path>
@@ -14874,7 +15151,7 @@
         <Description xml:lang="en">LibreOffice Office Suite</Description>
         <PartOf>office</PartOf>
         <RuntimeDependencies>
-            <Dependency releaseFrom="176">libreoffice-common-help</Dependency>
+            <Dependency releaseFrom="196">libreoffice-common-help</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib64/libreoffice/help/am/sdraw.cfg</Path>
@@ -15426,6 +15703,15 @@
             <Path fileType="library">/usr/lib64/libreoffice/help/tg/sdraw.jar</Path>
             <Path fileType="library">/usr/lib64/libreoffice/help/tg/sdraw.key</Path>
             <Path fileType="library">/usr/lib64/libreoffice/help/tg/sdraw.tree</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/sdraw.cfg</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/sdraw.db</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/sdraw.ht</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/sdraw.idxl/_0.cfs</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/sdraw.idxl/segments.gen</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/sdraw.idxl/segments_3</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/sdraw.jar</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/sdraw.key</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/sdraw.tree</Path>
             <Path fileType="library">/usr/lib64/libreoffice/help/tr/sdraw.cfg</Path>
             <Path fileType="library">/usr/lib64/libreoffice/help/tr/sdraw.db</Path>
             <Path fileType="library">/usr/lib64/libreoffice/help/tr/sdraw.ht</Path>
@@ -15488,8 +15774,8 @@
         <Description xml:lang="en">Impress is a truly outstanding tool for creating effective multimedia presentations.</Description>
         <PartOf>office</PartOf>
         <RuntimeDependencies>
-            <Dependency releaseFrom="176">libreoffice-draw</Dependency>
-            <Dependency releaseFrom="176">libreoffice-writer</Dependency>
+            <Dependency releaseFrom="196">libreoffice-draw</Dependency>
+            <Dependency releaseFrom="196">libreoffice-writer</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin/loimpress</Path>
@@ -15498,6 +15784,7 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/simpress/popupmenu/3dobject.xml</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/simpress/popupmenu/3dscene.xml</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/simpress/popupmenu/3dscene2.xml</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/simpress/popupmenu/annotation.xml</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/simpress/popupmenu/bezier.xml</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/simpress/popupmenu/connector.xml</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/simpress/popupmenu/curve.xml</Path>
@@ -15620,6 +15907,8 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/simpress/ui/notebookbar_groups.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/simpress/ui/notebookbar_online.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/simpress/ui/notebookbar_single.ui</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/simpress/ui/noteschildwindow.ui</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/simpress/ui/notespanelcontextmenu.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/simpress/ui/optimpressgeneralpage.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/simpress/ui/pagesfieldbox.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/simpress/ui/photoalbum.ui</Path>
@@ -15671,7 +15960,7 @@
         <Description xml:lang="en">LibreOffice Office Suite</Description>
         <PartOf>office</PartOf>
         <RuntimeDependencies>
-            <Dependency releaseFrom="176">libreoffice-common-help</Dependency>
+            <Dependency releaseFrom="196">libreoffice-common-help</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib64/libreoffice/help/am/simpress.cfg</Path>
@@ -16223,6 +16512,15 @@
             <Path fileType="library">/usr/lib64/libreoffice/help/tg/simpress.jar</Path>
             <Path fileType="library">/usr/lib64/libreoffice/help/tg/simpress.key</Path>
             <Path fileType="library">/usr/lib64/libreoffice/help/tg/simpress.tree</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/simpress.cfg</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/simpress.db</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/simpress.ht</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/simpress.idxl/_0.cfs</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/simpress.idxl/segments.gen</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/simpress.idxl/segments_3</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/simpress.jar</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/simpress.key</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/simpress.tree</Path>
             <Path fileType="library">/usr/lib64/libreoffice/help/tr/simpress.cfg</Path>
             <Path fileType="library">/usr/lib64/libreoffice/help/tr/simpress.db</Path>
             <Path fileType="library">/usr/lib64/libreoffice/help/tr/simpress.ht</Path>
@@ -16285,7 +16583,7 @@
         <Description xml:lang="en">Math is LibreOffice&apos;s formula editor.</Description>
         <PartOf>office</PartOf>
         <RuntimeDependencies>
-            <Dependency releaseFrom="176">libreoffice-writer</Dependency>
+            <Dependency releaseFrom="196">libreoffice-writer</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin/lomath</Path>
@@ -16300,6 +16598,7 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/smath/ui/alignmentdialog.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/smath/ui/catalogdialog.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/smath/ui/editwindow.ui</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/smath/ui/embedwindow.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/smath/ui/fontdialog.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/smath/ui/fontsizedialog.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/smath/ui/fonttypedialog.ui</Path>
@@ -16332,7 +16631,7 @@
         <Description xml:lang="en">LibreOffice Office Suite</Description>
         <PartOf>office</PartOf>
         <RuntimeDependencies>
-            <Dependency releaseFrom="176">libreoffice-common-help</Dependency>
+            <Dependency releaseFrom="196">libreoffice-common-help</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib64/libreoffice/help/am/smath.cfg</Path>
@@ -16884,6 +17183,15 @@
             <Path fileType="library">/usr/lib64/libreoffice/help/tg/smath.jar</Path>
             <Path fileType="library">/usr/lib64/libreoffice/help/tg/smath.key</Path>
             <Path fileType="library">/usr/lib64/libreoffice/help/tg/smath.tree</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/smath.cfg</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/smath.db</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/smath.ht</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/smath.idxl/_0.cfs</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/smath.idxl/segments.gen</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/smath.idxl/segments_3</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/smath.jar</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/smath.key</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/smath.tree</Path>
             <Path fileType="library">/usr/lib64/libreoffice/help/tr/smath.cfg</Path>
             <Path fileType="library">/usr/lib64/libreoffice/help/tr/smath.db</Path>
             <Path fileType="library">/usr/lib64/libreoffice/help/tr/smath.ht</Path>
@@ -16946,7 +17254,7 @@
         <Description xml:lang="en">Writer has all the features you need from a modern, full-featured word processing and desktop publishing tool.</Description>
         <PartOf>office</PartOf>
         <RuntimeDependencies>
-            <Dependency releaseFrom="176">libreoffice-common</Dependency>
+            <Dependency releaseFrom="196">libreoffice-common</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin/loweb</Path>
@@ -17062,6 +17370,10 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/swriter/ui/columnwidth.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/swriter/ui/combobox.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/swriter/ui/comboboxfragment.ui</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/swriter/ui/commentcontextmenu.ui</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/swriter/ui/commentspanel.ui</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/swriter/ui/commentsthread.ui</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/swriter/ui/commentwidget.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/swriter/ui/conditionpage.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/swriter/ui/contentcontrolaliasbutton.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/swriter/ui/contentcontrolcalendar.ui</Path>
@@ -17108,7 +17420,6 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/swriter/ui/frmaddpage.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/swriter/ui/frmtypepage.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/swriter/ui/frmurlpage.ui</Path>
-            <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/swriter/ui/gotopagedialog.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/swriter/ui/hfmenubutton.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/swriter/ui/indentpage.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/swriter/ui/indexentry.ui</Path>
@@ -17150,6 +17461,7 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/swriter/ui/mmselectpage.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/swriter/ui/mmsendmails.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/swriter/ui/navigatorcontextmenu.ui</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/swriter/ui/navigatordraginsertmenu.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/swriter/ui/navigatorpanel.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/swriter/ui/newuserindexdialog.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/swriter/ui/notebookbar.ui</Path>
@@ -17216,6 +17528,8 @@
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/swriter/ui/selectblockdialog.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/swriter/ui/selectindexdialog.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/swriter/ui/selecttabledialog.ui</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/swriter/ui/sidebarquickfind.ui</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/swriter/ui/sidebarquickfindoptionsdialog.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/swriter/ui/sidebarstylepresets.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/swriter/ui/sidebartableedit.ui</Path>
             <Path fileType="library">/usr/lib64/libreoffice/share/config/soffice.cfg/modules/swriter/ui/sidebartheme.ui</Path>
@@ -17280,7 +17594,7 @@
         <Description xml:lang="en">LibreOffice Office Suite</Description>
         <PartOf>office</PartOf>
         <RuntimeDependencies>
-            <Dependency releaseFrom="176">libreoffice-common-help</Dependency>
+            <Dependency releaseFrom="196">libreoffice-common-help</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib64/libreoffice/help/am/swriter.cfg</Path>
@@ -17832,6 +18146,15 @@
             <Path fileType="library">/usr/lib64/libreoffice/help/tg/swriter.jar</Path>
             <Path fileType="library">/usr/lib64/libreoffice/help/tg/swriter.key</Path>
             <Path fileType="library">/usr/lib64/libreoffice/help/tg/swriter.tree</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/swriter.cfg</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/swriter.db</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/swriter.ht</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/swriter.idxl/_0.cfs</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/swriter.idxl/segments.gen</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/swriter.idxl/segments_3</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/swriter.jar</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/swriter.key</Path>
+            <Path fileType="library">/usr/lib64/libreoffice/help/tl/swriter.tree</Path>
             <Path fileType="library">/usr/lib64/libreoffice/help/tr/swriter.cfg</Path>
             <Path fileType="library">/usr/lib64/libreoffice/help/tr/swriter.db</Path>
             <Path fileType="library">/usr/lib64/libreoffice/help/tr/swriter.ht</Path>
@@ -17889,12 +18212,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="176">
-            <Date>2024-02-24</Date>
-            <Version>24.2.0.3</Version>
+        <Update release="196">
+            <Date>2025-05-30</Date>
+            <Version>25.2.3.2</Version>
             <Comment>Packaging update</Comment>
-            <Name>Joey Riches</Name>
-            <Email>josephriches@gmail.com</Email>
+            <Name>Automated Package Build</Name>
+            <Email>no.email.set.in.config</Email>
         </Update>
     </History>
 </PISI>

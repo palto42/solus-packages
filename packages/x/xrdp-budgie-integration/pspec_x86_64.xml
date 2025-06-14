@@ -1,9 +1,10 @@
 <PISI>
     <Source>
         <Name>xrdp-budgie-integration</Name>
+        <Homepage>https://getsol.us/</Homepage>
         <Packager>
-            <Name>Reilly Brogan</Name>
-            <Email>solus@reillybrogan.com</Email>
+            <Name>Evan Maddock</Name>
+            <Email>maddock.evan@vivaldi.net</Email>
         </Packager>
         <License>Apache-2.0</License>
         <PartOf>network.util</PartOf>
@@ -25,15 +26,16 @@
             <Package>xrdp-gnome-integration</Package>
             <Package>xrdp-mate-integration</Package>
             <Package>xrdp-plasma-integration</Package>
+            <Package>xrdp-xfce4-integration</Package>
         </Conflicts>
     </Package>
     <History>
-        <Update release="2">
-            <Date>2023-12-04</Date>
+        <Update release="4">
+            <Date>2024-07-18</Date>
             <Version>0.1.0</Version>
             <Comment>Packaging update</Comment>
-            <Name>Reilly Brogan</Name>
-            <Email>solus@reillybrogan.com</Email>
+            <Name>Evan Maddock</Name>
+            <Email>maddock.evan@vivaldi.net</Email>
         </Update>
     </History>
 </PISI>

@@ -1,7 +1,7 @@
 <PISI>
     <Source>
         <Name>sysprof</Name>
-        <Homepage>https://wiki.gnome.org/Apps/Sysprof</Homepage>
+        <Homepage>https://apps.gnome.org/Sysprof/</Homepage>
         <Packager>
             <Name>Joey Riches</Name>
             <Email>josephriches@gmail.com</Email>
@@ -22,6 +22,7 @@
         <Files>
             <Path fileType="executable">/usr/bin/sysprof</Path>
             <Path fileType="executable">/usr/bin/sysprof-agent</Path>
+            <Path fileType="executable">/usr/bin/sysprof-cat</Path>
             <Path fileType="executable">/usr/bin/sysprof-cli</Path>
             <Path fileType="library">/usr/lib/systemd/system/sysprof3.service</Path>
             <Path fileType="library">/usr/lib64/libsysprof-6.so</Path>
@@ -30,6 +31,7 @@
             <Path fileType="library">/usr/lib64/libsysprof-memory-6.so</Path>
             <Path fileType="library">/usr/lib64/libsysprof-speedtrack-6.so</Path>
             <Path fileType="library">/usr/lib64/libsysprof-tracer-6.so</Path>
+            <Path fileType="library">/usr/lib64/sysprof/sysprof-live-unwinder</Path>
             <Path fileType="library">/usr/lib64/sysprof/sysprofd</Path>
             <Path fileType="data">/usr/share/applications/org.gnome.Sysprof.desktop</Path>
             <Path fileType="data">/usr/share/dbus-1/interfaces/org.gnome.Sysprof.Agent.xml</Path>
@@ -79,6 +81,18 @@
             <Path fileType="doc">/usr/share/help/es/sysprof/introduction.page</Path>
             <Path fileType="doc">/usr/share/help/es/sysprof/legal.xml</Path>
             <Path fileType="doc">/usr/share/help/es/sysprof/profiling.page</Path>
+            <Path fileType="doc">/usr/share/help/eu/sysprof/faq.page</Path>
+            <Path fileType="doc">/usr/share/help/eu/sysprof/figures/Sysprof.svg</Path>
+            <Path fileType="doc">/usr/share/help/eu/sysprof/index.page</Path>
+            <Path fileType="doc">/usr/share/help/eu/sysprof/introduction.page</Path>
+            <Path fileType="doc">/usr/share/help/eu/sysprof/legal.xml</Path>
+            <Path fileType="doc">/usr/share/help/eu/sysprof/profiling.page</Path>
+            <Path fileType="doc">/usr/share/help/fr/sysprof/faq.page</Path>
+            <Path fileType="doc">/usr/share/help/fr/sysprof/figures/Sysprof.svg</Path>
+            <Path fileType="doc">/usr/share/help/fr/sysprof/index.page</Path>
+            <Path fileType="doc">/usr/share/help/fr/sysprof/introduction.page</Path>
+            <Path fileType="doc">/usr/share/help/fr/sysprof/legal.xml</Path>
+            <Path fileType="doc">/usr/share/help/fr/sysprof/profiling.page</Path>
             <Path fileType="doc">/usr/share/help/hu/sysprof/faq.page</Path>
             <Path fileType="doc">/usr/share/help/hu/sysprof/figures/Sysprof.svg</Path>
             <Path fileType="doc">/usr/share/help/hu/sysprof/index.page</Path>
@@ -141,11 +155,13 @@
             <Path fileType="data">/usr/share/icons/hicolor/scalable/actions/sysprof-trace-app.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.gnome.Sysprof.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/symbolic/apps/org.gnome.Sysprof-symbolic.svg</Path>
+            <Path fileType="localedata">/usr/share/locale/bg/LC_MESSAGES/sysprof.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ca/LC_MESSAGES/sysprof.mo</Path>
             <Path fileType="localedata">/usr/share/locale/cs/LC_MESSAGES/sysprof.mo</Path>
             <Path fileType="localedata">/usr/share/locale/da/LC_MESSAGES/sysprof.mo</Path>
             <Path fileType="localedata">/usr/share/locale/de/LC_MESSAGES/sysprof.mo</Path>
             <Path fileType="localedata">/usr/share/locale/el/LC_MESSAGES/sysprof.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/en_GB/LC_MESSAGES/sysprof.mo</Path>
             <Path fileType="localedata">/usr/share/locale/eo/LC_MESSAGES/sysprof.mo</Path>
             <Path fileType="localedata">/usr/share/locale/es/LC_MESSAGES/sysprof.mo</Path>
             <Path fileType="localedata">/usr/share/locale/eu/LC_MESSAGES/sysprof.mo</Path>
@@ -155,12 +171,15 @@
             <Path fileType="localedata">/usr/share/locale/fur/LC_MESSAGES/sysprof.mo</Path>
             <Path fileType="localedata">/usr/share/locale/gl/LC_MESSAGES/sysprof.mo</Path>
             <Path fileType="localedata">/usr/share/locale/he/LC_MESSAGES/sysprof.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/hi/LC_MESSAGES/sysprof.mo</Path>
             <Path fileType="localedata">/usr/share/locale/hu/LC_MESSAGES/sysprof.mo</Path>
             <Path fileType="localedata">/usr/share/locale/id/LC_MESSAGES/sysprof.mo</Path>
             <Path fileType="localedata">/usr/share/locale/it/LC_MESSAGES/sysprof.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ka/LC_MESSAGES/sysprof.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/kab/LC_MESSAGES/sysprof.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ko/LC_MESSAGES/sysprof.mo</Path>
             <Path fileType="localedata">/usr/share/locale/lt/LC_MESSAGES/sysprof.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/ne/LC_MESSAGES/sysprof.mo</Path>
             <Path fileType="localedata">/usr/share/locale/nl/LC_MESSAGES/sysprof.mo</Path>
             <Path fileType="localedata">/usr/share/locale/oc/LC_MESSAGES/sysprof.mo</Path>
             <Path fileType="localedata">/usr/share/locale/pa/LC_MESSAGES/sysprof.mo</Path>
@@ -188,7 +207,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="13">sysprof</Dependency>
+            <Dependency release="17">sysprof</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/sysprof-6/sysprof-address.h</Path>
@@ -209,6 +228,7 @@
             <Path fileType="header">/usr/include/sysprof-6/sysprof-cpu-info.h</Path>
             <Path fileType="header">/usr/include/sysprof-6/sysprof-cpu-usage.h</Path>
             <Path fileType="header">/usr/include/sysprof-6/sysprof-dbus-monitor.h</Path>
+            <Path fileType="header">/usr/include/sysprof-6/sysprof-debuginfod-symbolizer.h</Path>
             <Path fileType="header">/usr/include/sysprof-6/sysprof-diagnostic.h</Path>
             <Path fileType="header">/usr/include/sysprof-6/sysprof-disk-usage.h</Path>
             <Path fileType="header">/usr/include/sysprof-6/sysprof-document-allocation.h</Path>
@@ -231,6 +251,7 @@
             <Path fileType="header">/usr/include/sysprof-6/sysprof-document-overlay.h</Path>
             <Path fileType="header">/usr/include/sysprof-6/sysprof-document-process.h</Path>
             <Path fileType="header">/usr/include/sysprof-6/sysprof-document-sample.h</Path>
+            <Path fileType="header">/usr/include/sysprof-6/sysprof-document-task.h</Path>
             <Path fileType="header">/usr/include/sysprof-6/sysprof-document-traceable.h</Path>
             <Path fileType="header">/usr/include/sysprof-6/sysprof-document.h</Path>
             <Path fileType="header">/usr/include/sysprof-6/sysprof-elf-symbolizer.h</Path>
@@ -264,6 +285,7 @@
             <Path fileType="header">/usr/include/sysprof-6/sysprof-time-span.h</Path>
             <Path fileType="header">/usr/include/sysprof-6/sysprof-tracefd-consumer.h</Path>
             <Path fileType="header">/usr/include/sysprof-6/sysprof-tracer.h</Path>
+            <Path fileType="header">/usr/include/sysprof-6/sysprof-user-sampler.h</Path>
             <Path fileType="header">/usr/include/sysprof-6/sysprof-version-macros.h</Path>
             <Path fileType="header">/usr/include/sysprof-6/sysprof-version.h</Path>
             <Path fileType="header">/usr/include/sysprof-6/sysprof.h</Path>
@@ -273,9 +295,9 @@
         </Files>
     </Package>
     <History>
-        <Update release="13">
-            <Date>2024-02-13</Date>
-            <Version>45.2</Version>
+        <Update release="17">
+            <Date>2025-04-04</Date>
+            <Version>48.0</Version>
             <Comment>Packaging update</Comment>
             <Name>Joey Riches</Name>
             <Email>josephriches@gmail.com</Email>

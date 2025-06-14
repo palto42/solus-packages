@@ -1,6 +1,7 @@
 <PISI>
     <Source>
         <Name>nemo</Name>
+        <Homepage>https://github.com/linuxmint/nemo</Homepage>
         <Packager>
             <Name>Evan Maddock</Name>
             <Email>maddock.evan@vivaldi.net</Email>
@@ -11,7 +12,7 @@
         <Summary xml:lang="en">File browser for Cinnamon</Summary>
         <Description xml:lang="en">Nemo is the file manager for the Cinnamon desktop environment.
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>nemo</Name>
@@ -21,25 +22,25 @@
         <PartOf>desktop.gtk</PartOf>
         <Files>
             <Path fileType="executable">/usr/bin/nemo</Path>
+            <Path fileType="executable">/usr/bin/nemo-action-layout-editor</Path>
             <Path fileType="executable">/usr/bin/nemo-autorun-software</Path>
             <Path fileType="executable">/usr/bin/nemo-connect-server</Path>
             <Path fileType="executable">/usr/bin/nemo-desktop</Path>
             <Path fileType="executable">/usr/bin/nemo-epub2text</Path>
             <Path fileType="executable">/usr/bin/nemo-mso-to-txt</Path>
+            <Path fileType="executable">/usr/bin/nemo-odf-to-txt</Path>
             <Path fileType="executable">/usr/bin/nemo-open-with</Path>
             <Path fileType="executable">/usr/bin/nemo-ppt-to-txt</Path>
             <Path fileType="executable">/usr/bin/nemo-xls-to-txt</Path>
             <Path fileType="library">/usr/lib64/girepository-1.0/Nemo-3.0.typelib</Path>
             <Path fileType="library">/usr/lib64/libnemo-extension.so.1</Path>
             <Path fileType="library">/usr/lib64/libnemo-extension.so.1.4.0</Path>
-            <Path fileType="library">/usr/lib64/nemo/nemo-convert-metadata</Path>
             <Path fileType="library">/usr/lib64/nemo/nemo-extensions-list</Path>
             <Path fileType="data">/usr/share/applications/nemo-autorun-software.desktop</Path>
             <Path fileType="data">/usr/share/applications/nemo-autostart.desktop</Path>
             <Path fileType="data">/usr/share/applications/nemo.desktop</Path>
             <Path fileType="data">/usr/share/dbus-1/services/nemo.FileManager1.service</Path>
             <Path fileType="data">/usr/share/dbus-1/services/nemo.service</Path>
-            <Path fileType="data">/usr/share/gir-1.0/Nemo-3.0.gir</Path>
             <Path fileType="data">/usr/share/glib-2.0/schemas/org.nemo.gschema.xml</Path>
             <Path fileType="data">/usr/share/gtksourceview-2.0/language-specs/nemo_action.lang</Path>
             <Path fileType="data">/usr/share/gtksourceview-2.0/language-specs/nemo_search_helper.lang</Path>
@@ -63,17 +64,6 @@
             <Path fileType="data">/usr/share/icons/hicolor/24x24/apps/nemo.png</Path>
             <Path fileType="data">/usr/share/icons/hicolor/32x32/actions/nemo-eject.png</Path>
             <Path fileType="data">/usr/share/icons/hicolor/32x32/apps/nemo.png</Path>
-            <Path fileType="data">/usr/share/icons/hicolor/48x48/status/progress-0.png</Path>
-            <Path fileType="data">/usr/share/icons/hicolor/48x48/status/progress-10.png</Path>
-            <Path fileType="data">/usr/share/icons/hicolor/48x48/status/progress-100.png</Path>
-            <Path fileType="data">/usr/share/icons/hicolor/48x48/status/progress-20.png</Path>
-            <Path fileType="data">/usr/share/icons/hicolor/48x48/status/progress-30.png</Path>
-            <Path fileType="data">/usr/share/icons/hicolor/48x48/status/progress-40.png</Path>
-            <Path fileType="data">/usr/share/icons/hicolor/48x48/status/progress-50.png</Path>
-            <Path fileType="data">/usr/share/icons/hicolor/48x48/status/progress-60.png</Path>
-            <Path fileType="data">/usr/share/icons/hicolor/48x48/status/progress-70.png</Path>
-            <Path fileType="data">/usr/share/icons/hicolor/48x48/status/progress-80.png</Path>
-            <Path fileType="data">/usr/share/icons/hicolor/48x48/status/progress-90.png</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/actions/location-symbolic-rtl.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/actions/location-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/actions/mount-archive-symbolic.svg</Path>
@@ -96,10 +86,22 @@
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/nemo.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/devices/drive-removable-media-usb-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/status/nemo-bookmark-not-found-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/scalable/status/nemo-progress-0-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/scalable/status/nemo-progress-10-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/scalable/status/nemo-progress-100-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/scalable/status/nemo-progress-20-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/scalable/status/nemo-progress-30-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/scalable/status/nemo-progress-40-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/scalable/status/nemo-progress-50-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/scalable/status/nemo-progress-60-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/scalable/status/nemo-progress-70-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/scalable/status/nemo-progress-80-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/scalable/status/nemo-progress-90-symbolic.svg</Path>
             <Path fileType="man">/usr/share/man/man1/nemo-connect-server.1</Path>
             <Path fileType="man">/usr/share/man/man1/nemo-desktop.1</Path>
             <Path fileType="man">/usr/share/man/man1/nemo.1</Path>
             <Path fileType="data">/usr/share/mime/packages/nemo.xml</Path>
+            <Path fileType="data">/usr/share/nemo/action-info.md</Path>
             <Path fileType="data">/usr/share/nemo/actions/90_new-launcher.nemo_action</Path>
             <Path fileType="data">/usr/share/nemo/actions/90_new-workspace.nemo_action</Path>
             <Path fileType="data">/usr/share/nemo/actions/91_delete-workspace.nemo_action</Path>
@@ -114,15 +116,18 @@
             <Path fileType="data">/usr/share/nemo/icons/hicolor/16x16/emblems/emblem-note.png</Path>
             <Path fileType="data">/usr/share/nemo/icons/hicolor/24x24/emblems/emblem-note.png</Path>
             <Path fileType="data">/usr/share/nemo/icons/hicolor/48x48/emblems/emblem-note.png</Path>
+            <Path fileType="data">/usr/share/nemo/layout-editor/leconfig.py</Path>
+            <Path fileType="data">/usr/share/nemo/layout-editor/nemo_action_layout_editor.py</Path>
+            <Path fileType="data">/usr/share/nemo/nemo-action-layout-editor-resources.gresource</Path>
             <Path fileType="data">/usr/share/nemo/script-info.md</Path>
             <Path fileType="data">/usr/share/nemo/search-helpers/epub2text.nemo_search_helper</Path>
             <Path fileType="data">/usr/share/nemo/search-helpers/exif.nemo_search_helper</Path>
             <Path fileType="data">/usr/share/nemo/search-helpers/id3.nemo_search_helper</Path>
-            <Path fileType="data">/usr/share/nemo/search-helpers/libreoffice.nemo_search_helper</Path>
             <Path fileType="data">/usr/share/nemo/search-helpers/mso-doc.nemo_search_helper</Path>
             <Path fileType="data">/usr/share/nemo/search-helpers/mso-ppt.nemo_search_helper</Path>
             <Path fileType="data">/usr/share/nemo/search-helpers/mso-xls.nemo_search_helper</Path>
             <Path fileType="data">/usr/share/nemo/search-helpers/mso.nemo_search_helper</Path>
+            <Path fileType="data">/usr/share/nemo/search-helpers/odf.nemo_search_helper</Path>
             <Path fileType="data">/usr/share/nemo/search-helpers/pdf2txt.nemo_search_helper</Path>
             <Path fileType="data">/usr/share/nemo/search-helpers/pdftotext.nemo_search_helper</Path>
             <Path fileType="data">/usr/share/nemo/search-helpers/ps2ascii.nemo_search_helper</Path>
@@ -137,7 +142,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="8">nemo</Dependency>
+            <Dependency release="14">nemo</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/nemo/libnemo-extension/nemo-column-provider.h</Path>
@@ -156,12 +161,13 @@
             <Path fileType="header">/usr/include/nemo/libnemo-extension/nemo-simple-button.h</Path>
             <Path fileType="library">/usr/lib64/libnemo-extension.so</Path>
             <Path fileType="data">/usr/lib64/pkgconfig/libnemo-extension.pc</Path>
+            <Path fileType="data">/usr/share/gir-1.0/Nemo-3.0.gir</Path>
         </Files>
     </Package>
     <History>
-        <Update release="8">
-            <Date>2023-09-26</Date>
-            <Version>5.8.5</Version>
+        <Update release="14">
+            <Date>2025-02-26</Date>
+            <Version>6.4.5</Version>
             <Comment>Packaging update</Comment>
             <Name>Evan Maddock</Name>
             <Email>maddock.evan@vivaldi.net</Email>

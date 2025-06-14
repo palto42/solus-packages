@@ -1,0 +1,32 @@
+name       : git-absorb
+version    : 0.8.0
+release    : 8
+source     :
+    - https://github.com/tummychow/git-absorb/archive/refs/tags/0.8.0.tar.gz : 9ed6fef801fbfeb7110744cac38ae5b3387d8832749ae20077b9139d032211f1
+homepage   : https://crates.io/crates/git-absorb
+license    : BSD-3-Clause
+component  : programming.tools
+summary    : git commit --fixup, but automatic
+description: |
+    Automatically absorb staged changes into your current branch.
+networking : yes
+builddeps  :
+    - asciidoc
+    - rust
+setup      : |
+    %cargo_fetch
+build      : |
+    %cargo_build
+    make -C Documentation
+install    : |
+    %cargo_install
+    install -Dm00644 Documentation/git-absorb.1 $installdir/usr/share/man/man1/git-absorb.1
+
+    for shell in bash fish nushell zsh; do
+        $installdir/usr/bin/git-absorb --gen-completions $shell > $shell
+    done
+
+    install -Dm00644 bash    $installdir/usr/share/bash-completion/completions/git-absorb
+    install -Dm00644 fish    $installdir/usr/share/fish/vendor_completions.d/git-absorb.fish
+    install -Dm00644 nushell $installdir/usr/share/nushell/vendor/git-absorb.nu
+    install -Dm00644 zsh     $installdir/usr/share/zsh/site-functions/_git-absorb

@@ -1,22 +1,28 @@
-name       : kdocker 
-version    : 5.2
-release    : 1
+name       : kdocker
+version    : '6.2'
+release    : 3
 source     :
-    - https://github.com/user-none/KDocker/archive/5.2.tar.gz : ffcb11ac0cf50ae80a35e000b7a7470259e624511d1281579386a9cb68935cba
+    - https://github.com/user-none/KDocker/archive/refs/tags/6.2.tar.gz : 575ca18ba7121fdfcb109e5b962e5ef3aaf8e85307edcaff3790a5e0c13d73da
+homepage   : https://github.com/user-none/KDocker
 license    : GPL-2.0-or-later
 component  : desktop.kde
 summary    : KDocker will help you dock any application in the system tray.
 description: |
     KDocker will help you dock any application in the system tray.
 builddeps  :
-    - pkgconfig(Qt5X11Extras)
+    - pkgconfig(Qt6Core)
+    - pkgconfig(x11)
     - pkgconfig(xcb)
-    - pkgconfig(xmu)
-    - pkgconfig(xpm)
+    # - pkgconfig(xmu)
+    # - pkgconfig(xpm)
+    # - llvm-clang-devel
+clang      : yes
+optimize   : thin-lto
 setup      : |
-    sed -i 's|/etc/bash_completion.d|/usr/share/bash-completion/completions|' kdocker.pro
-    %qmake
+    %patch -p1 -i $pkgfiles/0001-Fix-clang-compilation.patch
+
+    %cmake_ninja
 build      : |
-    %make
+    %ninja_build
 install    : |
-    %make_install INSTALL_ROOT=$installdir 
+    %ninja_install

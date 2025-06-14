@@ -1,0 +1,30 @@
+name       : fooyin
+version    : 0.8.1
+release    : 12
+source     :
+    - https://github.com/fooyin/fooyin/archive/refs/tags/v0.8.1.tar.gz : e702389488e19c4c48b1b62bf1b2adf263b818138e3b232a39259057cbcec9c2
+homepage   : https://www.fooyin.org/
+license    : GPL-3.0-or-later
+component  : multimedia.audio
+summary    : fooyin is a music player built around customisation.
+description: |
+    fooyin is a music player built around customisation.
+clang      : yes
+builddeps  :
+    - pkgconfig(Qt6Designer)
+    - pkgconfig(Qt6Platform)
+    - pkgconfig(Qt6SvgWidgets)
+    - pkgconfig(alsa)
+    - pkgconfig(icu-i18n)
+    - pkgconfig(libavfilter)
+    - pkgconfig(libspa-0.2)
+    - pkgconfig(sdl2)
+    - pkgconfig(sndfile)
+    - pkgconfig(taglib)
+    - kdsingleapplication-devel
+setup      : |
+    %cmake_ninja
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install

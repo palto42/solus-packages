@@ -1,8 +1,8 @@
 name       : gstreamer-editing-services
-version    : 1.22.10
-release    : 31
+version    : 1.24.10
+release    : 44
 source     :
-    - https://gstreamer.freedesktop.org/src/gst-editing-services/gst-editing-services-1.22.10.tar.xz : bfb1ee1b352dd4d929c3a5b7fe19071a6c62b4828bb70318ad44bcf06828e9f0
+    - https://gstreamer.freedesktop.org/src/gst-editing-services/gst-editing-services-1.24.10.tar.xz : 6f00b11b4e5e34c2a32d64df521dca77519d626fcc5e3863c0218bd12367e174
 homepage   : https://gstreamer.freedesktop.org
 license    :
     - GPL-2.0-or-later
@@ -12,9 +12,10 @@ summary    : Library for creating audio/video editors
 description: |
     The "GStreamer Editing Services" is a library to simplify the creation of multimedia editing applications. Based on the GStreamer multimedia framework and the GNonLin set of plugins, its goals are to suit all types of editing-related applications.
 builddeps  :
-    - pkgconfig(gst-validate-1.0)
     - pkgconfig(gstreamer-plugins-bad-1.0)
     - pkgconfig(pygobject-3.0)
+    - pkgconfig(python3)
+    - python-setuptools
 checkdeps  :
     - xorg-server-xvfb
 setup      : |
@@ -24,5 +25,6 @@ build      : |
 install    : |
     %ninja_install
 check      : |
-    export XDG_CACHE_HOME="$(mktemp -p $workdir -d xdg-cache-XXXXXX)"
-    GST_GL_WINDOW=x11 xvfb-run -d -s "-screen 0 1024x768x24" %ninja_check || cat solusBuildDir/meson-logs/testlog.txt
+    export XDG_RUNTIME_DIR="$(mktemp -p $(pwd) -d xdg-runtime-XXXXXX)"
+    export MESA_SHADER_CACHE_DIR=$XDG_RUNTIME_DIR/.cache
+    GST_GL_WINDOW=x11 xvfb-run -d -s "-screen 0 1024x768x24"  %ninja_check || cat solusBuildDir/meson-logs/testlog.txt

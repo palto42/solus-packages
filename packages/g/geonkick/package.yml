@@ -1,8 +1,8 @@
 name       : geonkick
-version    : 3.3.2
-release    : 17
+version    : 3.5.2
+release    : 22
 source     :
-    - https://github.com/Geonkick-Synthesizer/geonkick/archive/refs/tags/v3.3.2.tar.gz : 5eead121337c20bce56fd14d7ede177e6533eac9d5987fe9a08bf388315a6ab1
+    - https://github.com/Geonkick-Synthesizer/geonkick/archive/refs/tags/v3.5.2.tar.gz : fa181377ad23716533c8f5b5d4a9fb609be11ca1a5a4d5c60a1f1ad5479cad8c
 homepage   : https://geonkick.org/
 license    : GPL-3.0-or-later
 component  : multimedia.audio
@@ -16,14 +16,13 @@ builddeps  :
     - pkgconfig(sndfile)
     - pkgconfig(x11)
     - rapidjson-devel
-    - redkite-devel
 setup      : |
-    %cmake_ninja -DGKICK_REDKITE_SDK_PATH=/usr
+    %cmake_ninja
 build      : |
     %ninja_build
 install    : |
     %ninja_install
     # Install appstream metadata
     install -Dm00644 $pkgfiles/org.geonkick.geonkick.metainfo.xml -t $installdir/usr/share/metainfo
-    # Install config file to allow access to memory lock
-    install -Dm00644 $pkgfiles/10-geonkick.conf -t $installdir/usr/share/defaults/etc/security/limits.d/
+    # Remove all header files and static libs, it is only needed during build time
+    rm -rf $installdir/usr/include $installdir/usr/lib

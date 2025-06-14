@@ -1,8 +1,8 @@
 name       : python-lxml
-version    : 4.9.1
-release    : 21
+version    : 5.3.1
+release    : 24
 source     :
-    - https://github.com/lxml/lxml/archive/refs/tags/lxml-4.9.1.tar.gz : e46a74cef580e069586b7a98e9a74b49e56b849822130654d28e00826db75095
+    - https://github.com/lxml/lxml/archive/refs/tags/lxml-5.3.1.tar.gz : db2ec01227b01888b6d5458fc1ade6e6bbf3cdc52a63c3b072378851b81e59f1
 homepage   : https://lxml.de/
 license    :
     - BSD-3-Clause
@@ -21,6 +21,10 @@ builddeps  :
     - pkgconfig(libxslt)
     - pkgconfig(python3)
     - cython
+    - python-build
+    - python-installer
+    - python-setuptools
+    - python-wheel
 build      : |
     %python3_setup
 install    : |

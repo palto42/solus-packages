@@ -1,8 +1,8 @@
 name       : lightdm-settings
-version    : 2.0.2
-release    : 22
+version    : 2.0.7
+release    : 26
 source     :
-    - https://github.com/linuxmint/lightdm-settings/archive/refs/tags/2.0.2.tar.gz : df5a8ca7e6fd66238efcb4436a4db455be3144d26ac63396fe22601fc7198d67
+    - https://github.com/linuxmint/lightdm-settings/archive/refs/tags/2.0.7.tar.gz : 7c93c311881ed8dd59d5888e2c4823bee9943c32856ce12c0ae432aba95b7cf2
 homepage   : https://github.com/linuxmint/lightdm-settings
 license    : GPL-3.0-or-later
 component  : system.utils
@@ -13,7 +13,6 @@ rundeps    :
     - hicolor-icon-theme
     - python-packaging
     - python-setproctitle
-    - python-xapp
     - slick-greeter
 build      : |
     %make

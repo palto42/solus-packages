@@ -1,8 +1,8 @@
 name       : kfind
-version    : 23.08.5
-release    : 30
+version    : 25.04.2
+release    : 48
 source     :
-    - https://cdn.download.kde.org/stable/release-service/23.08.5/src/kfind-23.08.5.tar.xz : ba14e9ec9f79ff8b7a8a434e9b3d2545a6297e3fe53bafe82b3dbc061d8c2ec8
+    - https://download.kde.org/stable/release-service/25.04.2/src/kfind-25.04.2.tar.xz : f282b2d324aa9d6105466fb2f05ff7b344a3dd6a10bf8219e182c498f2ac98da
 homepage   : https://www.kde.org/applications/utilities/kfind
 license    : GPL-2.0-or-later
 component  : system.utils
@@ -10,17 +10,22 @@ summary    : Find Files/Folders
 description: |
     KFind allows you to search for directories and files
 builddeps  :
-    - karchive-devel
-    - kdoctools-devel
-    - kfilemetadata-devel
-    - kio-devel
-    - ktextwidgets-devel
+    - pkgconfig(Qt6Core5Compat)
+    - kf6-karchive-devel
+    - kf6-kdoctools-devel
+    - kf6-kfilemetadata-devel
+    - kf6-kio-devel
+    - kf6-kxmlgui-devel
+clang      : yes
+optimize   :
+    - speed
+    - thin-lto
 setup      : |
-    %cmake_ninja -DBUILD_TESTING=OFF
+    %cmake_kf6
 build      : |
     %ninja_build
 install    : |
     %ninja_install
 
     #remove HTML docs
-    rm -rv $installdir/usr/share/doc
+    rm -rfv $installdir/usr/share/doc

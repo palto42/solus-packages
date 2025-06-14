@@ -3,8 +3,8 @@
         <Name>gdm</Name>
         <Homepage>https://projects.gnome.org/gdm/</Homepage>
         <Packager>
-            <Name>Reilly Brogan</Name>
-            <Email>solus@reillybrogan.com</Email>
+            <Name>Joey Riches</Name>
+            <Email>josephriches@gmail.com</Email>
         </Packager>
         <License>GPL-2.0-or-later</License>
         <PartOf>desktop.gnome</PartOf>
@@ -26,7 +26,7 @@
             <Path fileType="config">/etc/gdm/PreSession/Default</Path>
             <Path fileType="config">/etc/gdm/Xsession</Path>
             <Path fileType="config">/etc/gdm/custom.conf</Path>
-            <Path fileType="executable">/usr/bin/gdm-screenshot</Path>
+            <Path fileType="executable">/usr/bin/gdm-config</Path>
             <Path fileType="executable">/usr/bin/gdmflexiserver</Path>
             <Path fileType="library">/usr/lib/systemd/system/display-manager.service</Path>
             <Path fileType="library">/usr/lib/systemd/system/gdm.service</Path>
@@ -60,7 +60,6 @@
             <Path fileType="data">/usr/share/gdm/greeter/applications/mimeapps.list</Path>
             <Path fileType="data">/usr/share/gdm/greeter/autostart/orca-autostart.desktop</Path>
             <Path fileType="data">/usr/share/gdm/locale.alias</Path>
-            <Path fileType="data">/usr/share/gir-1.0/Gdm-1.0.gir</Path>
             <Path fileType="data">/usr/share/glib-2.0/schemas/org.gnome.login-screen.gschema.xml</Path>
             <Path fileType="data">/usr/share/gnome-session/sessions/gnome-login.session</Path>
             <Path fileType="doc">/usr/share/help/C/gdm/index.docbook</Path>
@@ -228,6 +227,7 @@
             <Path fileType="localedata">/usr/share/locale/zh_HK/LC_MESSAGES/gdm.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_TW/LC_MESSAGES/gdm.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zu/LC_MESSAGES/gdm.mo</Path>
+            <Path fileType="data">/usr/share/polkit-1/rules.d/20-gdm.rules</Path>
         </Files>
         <Conflicts>
             <Package>lightdm</Package>
@@ -243,26 +243,30 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="76">gdm</Dependency>
+            <Dependency release="80">gdm</Dependency>
         </RuntimeDependencies>
         <Files>
+            <Path fileType="header">/usr/include/gdm/gdm-choice-list-pam-extension.h</Path>
             <Path fileType="header">/usr/include/gdm/gdm-client-glue.h</Path>
             <Path fileType="header">/usr/include/gdm/gdm-client.h</Path>
+            <Path fileType="header">/usr/include/gdm/gdm-custom-json-pam-extension.h</Path>
+            <Path fileType="header">/usr/include/gdm/gdm-pam-extensions-common.h</Path>
             <Path fileType="header">/usr/include/gdm/gdm-pam-extensions.h</Path>
             <Path fileType="header">/usr/include/gdm/gdm-sessions.h</Path>
             <Path fileType="header">/usr/include/gdm/gdm-user-switching.h</Path>
             <Path fileType="library">/usr/lib64/libgdm.so</Path>
             <Path fileType="data">/usr/lib64/pkgconfig/gdm-pam-extensions.pc</Path>
             <Path fileType="data">/usr/lib64/pkgconfig/gdm.pc</Path>
+            <Path fileType="data">/usr/share/gir-1.0/Gdm-1.0.gir</Path>
         </Files>
     </Package>
     <History>
-        <Update release="76">
-            <Date>2024-02-26</Date>
-            <Version>45.0.1</Version>
+        <Update release="80">
+            <Date>2025-04-04</Date>
+            <Version>48.0</Version>
             <Comment>Packaging update</Comment>
-            <Name>Reilly Brogan</Name>
-            <Email>solus@reillybrogan.com</Email>
+            <Name>Joey Riches</Name>
+            <Email>josephriches@gmail.com</Email>
         </Update>
     </History>
 </PISI>

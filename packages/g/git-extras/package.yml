@@ -1,8 +1,8 @@
 name       : git-extras
-version    : 7.1.0
-release    : 11
+version    : 7.3.0
+release    : 13
 source     :
-    - https://github.com/tj/git-extras/archive/refs/tags/7.1.0.tar.gz : e5c855361d2f1ec1be6ee601247153d9c8c04a221949b6ec3903b32fa736f542
+    - https://github.com/tj/git-extras/archive/refs/tags/7.3.0.tar.gz : 89bae1a05731f4aaafb04066ea0186e181117b74fcfbf89d686cf205459220b7
 homepage   : https://github.com/tj/git-extras
 license    : MIT
 component  : programming.tools

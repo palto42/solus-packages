@@ -1,9 +1,9 @@
 name       : pv
-version    : 1.8.5
-release    : 7
+version    : 1.9.31
+release    : 17
 homepage   : http://www.ivarch.com/programs/pv.shtml
 source     :
-    - https://www.ivarch.com/programs/sources/pv-1.8.5.tar.gz : d22948d06be06a5be37336318de540a2215be10ab0163f8cd23a20149647b780
+    - https://www.ivarch.com/programs/sources/pv-1.9.31.tar.gz : a35e92ec4ac0e8f380e8e840088167ae01014bfa008a3a9d6506b848079daedf
 license    : GPL-3.0-or-later
 summary    : A terminal-based tool for monitoring the progress of data through a pipeline.
 component  : system.utils

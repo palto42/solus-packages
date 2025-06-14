@@ -1,0 +1,42 @@
+name       : libphonenumber
+version    : 8.13.40
+release    : 7
+source     :
+    - https://github.com/google/libphonenumber/archive/refs/tags/v8.13.40.tar.gz : 0d6733f842c30e5b3762ec1478f1da2f27a7661ae2e6bbe38b8c07ae4dd2277b
+homepage   : https://github.com/googlei18n/libphonenumber
+license    :
+    - Apache-2.0
+    - BSD-3-Clause
+component  : desktop.library
+summary    : library for working with international phone numbers
+description: |-
+    Google's common library for parsing, formatting, and validating international phone numbers
+builddeps  :
+    - pkgconfig(absl_base)
+    - pkgconfig(protobuf)
+    - libboost-devel
+    - openjdk-17
+checkdeps  :
+    - pkgconfig(gtest)
+rundeps    :
+    - devel :
+        - abseil-cpp-devel
+        - libboost-devel
+        - protobuf-devel
+clang      : yes
+optimize   :
+    - thin-lto
+environment: |
+    export JAVA_HOME=/usr/lib64/openjdk-17
+    export PATH=$JAVA_HOME/bin:$PATH
+setup      : |
+    %cmake_ninja -S cpp
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install
+
+    # Cleanup
+    find $installdir -name '*.a' -print -delete
+check      : |
+    cmake --build solusBuildDir --target tests -j %YJOBS%

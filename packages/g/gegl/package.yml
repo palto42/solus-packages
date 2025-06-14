@@ -1,8 +1,8 @@
 name       : gegl
-version    : 0.4.46
-release    : 57
+version    : 0.4.58
+release    : 60
 source     :
-    - https://download.gimp.org/pub/gegl/0.4/gegl-0.4.46.tar.xz : d0b3b2481bc8774c5f3d0a487611910166d18eef823a859fb91e781ab7b1e892
+    - https://download.gimp.org/pub/gegl/0.4/gegl-0.4.58.tar.xz : d5678bbd5fe535941b82f965b97fcc9385ce936f70c982bd565a53d5519d1bff
 license    :
     - GPL-3.0-or-later
     - LGPL-3.0-or-later

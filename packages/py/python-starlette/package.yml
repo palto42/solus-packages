@@ -1,10 +1,10 @@
 name       : python-starlette
-version    : 0.35.1
-release    : 5
+version    : 0.46.0
+release    : 8
 source     :
-    - https://files.pythonhosted.org/packages/source/s/starlette/starlette-0.35.1.tar.gz : 3e2639dac3520e4f58734ed22553f950d3f3cb1001cd2eaac4d57e8cdc5f66bc
+    - https://files.pythonhosted.org/packages/source/s/starlette/starlette-0.46.0.tar.gz : b359e4567456b28d473d0193f34c0de0ed49710d75ef183a74a5ce0499324f50
 homepage   : https://github.com/encode/starlette
-license    : BSC-3-Clause
+license    : BSD-3-Clause
 component  : programming.python
 summary    : The little ASGI framework that shines
 description: |

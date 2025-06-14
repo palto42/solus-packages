@@ -1,18 +1,21 @@
 name       : gnote
-version    : '45.1'
-release    : 27
+version    : '48.1'
+release    : 34
 source     :
-    - https://download.gnome.org/sources/gnote/45/gnote-45.1.tar.xz : 9eec27f8cb0a10d2fdb914a451e8b8418c260e78bf07360781a78a5e418cf941
-homepage   : https://wiki.gnome.org/Apps/Gnote
+    - https://download.gnome.org/sources/gnote/48/gnote-48.1.tar.xz : e4851ee6a5bc2f5c07d1c6ff4d69ba0471c24caa7d8204bd2a1098dc7187bedf
+homepage   : https://gitlab.gnome.org/GNOME/gnote
 license    : GPL-3.0-or-later
 component  : office.notes
 summary    : A simple and easy to use desktop note-taking application
 description: |
-    Gnote is a simple note-taking application for GNOME desktop environment. It allows you to capture your ideas, link them together using WikiWiki-style links, group together in notebooks and some extra features for everyday use. 
+    Gnote is a simple note-taking application for GNOME desktop environment. It allows you to capture your ideas, link them together using WikiWiki-style links, group together in notebooks and some extra features for everyday use.
+optimize   :
+    - lto
 builddeps  :
+    - pkgconfig(glibmm-2.68)
     - pkgconfig(gspell-1)
     - pkgconfig(gtkmm-4.0)
-    - pkgconfig(glibmm-2.68)
+    - pkgconfig(libadwaita-1)
     - pkgconfig(libsecret-1)
     - pkgconfig(libxslt)
     - desktop-file-utils

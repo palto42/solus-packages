@@ -3,8 +3,8 @@
         <Name>budgie-desktop</Name>
         <Homepage>https://blog.buddiesofbudgie.org</Homepage>
         <Packager>
-            <Name>Evan Maddock</Name>
-            <Email>maddock.evan@vivaldi.net</Email>
+            <Name>Joey Riches</Name>
+            <Email>josephriches@gmail.com</Email>
         </Packager>
         <License>GPL-2.0-only</License>
         <License>LGPL-2.1-only</License>
@@ -103,8 +103,6 @@
             <Path fileType="data">/usr/share/applications/org.buddiesofbudgie.sendto.desktop</Path>
             <Path fileType="data">/usr/share/backgrounds/budgie/default.jpg</Path>
             <Path fileType="data">/usr/share/budgie/budgie-version.xml</Path>
-            <Path fileType="data">/usr/share/gir-1.0/Budgie-1.0.gir</Path>
-            <Path fileType="data">/usr/share/gir-1.0/BudgieRaven-1.0.gir</Path>
             <Path fileType="data">/usr/share/glib-2.0/schemas/20_buddiesofbudgie.budgie-desktop.notifications.gschema.override</Path>
             <Path fileType="data">/usr/share/glib-2.0/schemas/20_solus-project.budgie.wm.gschema.override</Path>
             <Path fileType="data">/usr/share/glib-2.0/schemas/com.solus-project.budgie-menu.gschema.xml</Path>
@@ -132,7 +130,7 @@
             <Path fileType="data">/usr/share/icons/hicolor/scalable/actions/pane-show-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/actions/system-hibernate-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/actions/system-log-out-symbolic.svg</Path>
-            <Path fileType="data">/usr/share/icons/hicolor/scalable/actions/system-restart-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/scalable/actions/system-reboot-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/actions/system-suspend-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/budgie-desktop-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/clock-applet-symbolic.svg</Path>
@@ -250,7 +248,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="269">budgie-desktop</Dependency>
+            <Dependency release="276">budgie-desktop</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/budgie-desktop/applet-info.h</Path>
@@ -272,6 +270,8 @@
             <Path fileType="data">/usr/lib64/pkgconfig/budgie-1.0.pc</Path>
             <Path fileType="data">/usr/lib64/pkgconfig/budgie-raven-plugin-1.0.pc</Path>
             <Path fileType="data">/usr/lib64/pkgconfig/budgie-theme-1.0.pc</Path>
+            <Path fileType="data">/usr/share/gir-1.0/Budgie-1.0.gir</Path>
+            <Path fileType="data">/usr/share/gir-1.0/BudgieRaven-1.0.gir</Path>
             <Path fileType="data">/usr/share/vala/vapi/budgie-1.0.deps</Path>
             <Path fileType="data">/usr/share/vala/vapi/budgie-1.0.vapi</Path>
             <Path fileType="data">/usr/share/vala/vapi/budgie-raven-plugin-1.0.deps</Path>
@@ -309,12 +309,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="269">
-            <Date>2024-02-02</Date>
-            <Version>10.9.1</Version>
+        <Update release="276">
+            <Date>2025-04-15</Date>
+            <Version>10.9.2</Version>
             <Comment>Packaging update</Comment>
-            <Name>Evan Maddock</Name>
-            <Email>maddock.evan@vivaldi.net</Email>
+            <Name>Joey Riches</Name>
+            <Email>josephriches@gmail.com</Email>
         </Update>
     </History>
 </PISI>

@@ -1,14 +1,18 @@
 name       : thonny
-version    : 4.1.4
-release    : 30
+version    : 4.1.7
+release    : 33
 source     :
-    - https://files.pythonhosted.org/packages/source/t/thonny/thonny-4.1.4.tar.gz : 2f64ec9b8fef0c5ecf1ba33648926e9074d2d241a8ed9d8ee6c34155894560ce
+    - https://files.pythonhosted.org/packages/source/t/thonny/thonny-4.1.7.tar.gz : 6b3b5605f524c12462830e232c8eaf01235645820dd13c24d720acab44a58123
 homepage   : https://thonny.org
 license    : MIT
 component  : programming.ide
 summary    : Python IDE for beginners
 description: |
     Thonny is a simple Python IDE with features useful for learning programming. It comes with a debugger which is able to visualize all the conceptual steps taken to run a Python program (executing statements, evaluating expressions, maintaining the call stack). There is a GUI for installing 3rd-party packages and special mode for learning about references.
+builddeps  :
+    - python-build
+    - python-installer
+    - python-setuptools
 rundeps    :
     - pylint
     - python-asttokens

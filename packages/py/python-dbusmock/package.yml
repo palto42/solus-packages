@@ -1,8 +1,8 @@
 name       : python-dbusmock
-version    : 0.30.2
-release    : 14
+version    : 0.34.3
+release    : 17
 source     :
-    - https://files.pythonhosted.org/packages/source/p/python-dbusmock/python-dbusmock-0.30.2.tar.gz : 1d7b3794af7b280942f7f6cda4d8bb5d17d8c7216000825cf8b43b6af8792d7d
+    - https://files.pythonhosted.org/packages/source/p/python-dbusmock/python_dbusmock-0.34.3.tar.gz : 439127291ec4364cbe3c2f58c47987bbe189e9493ccc6d56629bd484e79a6f8b
 homepage   : https://github.com/martinpitt/python-dbusmock
 license    : LGPL-3.0-or-later
 component  : programming.python
@@ -17,8 +17,8 @@ builddeps  :
     - python-setuptools-scm
     - python-wheel
 rundeps    :
-    - python3-dbus
     - python-gobject
+    - python3-dbus
 setup      : |
     # build with PEP517
     rm setup.py

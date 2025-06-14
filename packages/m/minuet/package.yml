@@ -1,8 +1,8 @@
 name       : minuet
-version    : 23.08.5
-release    : 75
+version    : 25.04.2
+release    : 93
 source     :
-    - https://cdn.download.kde.org/stable/release-service/23.08.5/src/minuet-23.08.5.tar.xz : 75346d4a6a7b9533aa1c1319544699d644ecb97b666e449cdf1587f552f265ae
+    - https://download.kde.org/stable/release-service/25.04.2/src/minuet-25.04.2.tar.xz : 6d01871df0f666fbfc9c84bad6c7146955690e6a37b46738e98058f8a5bfb514
 homepage   : https://kde.org/applications/education/org.kde.minuet
 license    :
     - GPL-2.0-or-later
@@ -22,12 +22,16 @@ builddeps  :
     - ki18n-devel
 rundeps    :
     - qt5-quickcontrols2
+clang      : yes
+optimize   :
+    - speed
+    - thin-lto
 setup      : |
-    %cmake_ninja
+    %cmake_kf6 -DBUILD_WITH_QT6=OFF
 build      : |
     %ninja_build
 install    : |
     %ninja_install
 
     #remove docs
-    rm -rf $installdir/usr/share/doc
+    rm -rfv $installdir/usr/share/doc

@@ -1,20 +1,20 @@
 name       : gnome-builder
-version    : '45.0'
-release    : 94
-homepage   : https://wiki.gnome.org/Apps/Builder
+version    : '48.0'
+release    : 106
 source     :
-    - https://download.gnome.org/sources/gnome-builder/45/gnome-builder-45.0.tar.xz : 242da02593293d456ea24108a45934730a1e316d8dc5b18d9df0e864db7ba596
-license    : GPL-2.0-or-later
+    - https://download.gnome.org/sources/gnome-builder/48/gnome-builder-48.0.tar.xz : 7afe9a7a3b3c6621768bc46a61d698dd788b3653fb46a708238bdccf4de67ba4
+homepage   : https://apps.gnome.org/Builder/
+license    : GPL-3.0-or-later
 component  : programming.ide
-summary    : Gnome Builder
+summary    : An IDE for GNOME
 description: |
-    Builder is a new IDE for GNOME that is focused on bringing the power of our platform to more developers than ever before.
+    Builder is an actively developed Integrated Development Environment for GNOME. It combines integrated support for essential GNOME technologies such as GTK+, GLib, and GNOME APIs with features that any developer will appreciate, like syntax highlighting and snippets.
 builddeps  :
-    - pkgconfig(dspy-1)
     - pkgconfig(editorconfig)
     - pkgconfig(enchant-2)
     - pkgconfig(flatpak)
     - pkgconfig(gjs-1.0)
+    - pkgconfig(gom-1.0)
     - pkgconfig(gtksourceview-5)
     - pkgconfig(jsonrpc-glib-1.0)
     - pkgconfig(libadwaita-1)
@@ -23,16 +23,17 @@ builddeps  :
     - pkgconfig(libgit2-glib-1.0)
     - pkgconfig(libpanel-1)
     - pkgconfig(libpeas-2)
-    - pkgconfig(libportal)
+    - pkgconfig(libportal-gtk4)
+    - pkgconfig(libspelling-1)
     - pkgconfig(mm-common-util)
     - pkgconfig(sysprof-capture-4)
     - pkgconfig(template-glib-1.0)
     - pkgconfig(vte-2.91)
-    - libwebkit-gtk6-devel # FIXME: change this back to pkgconfig
+    - pkgconfig(webkitgtk-6.0)
+    - clang-devel
     - ctags
     - desktop-file-utils
     - itstool
-    - llvm-clang-devel
     - vala
 rundeps    :
     - ctags
@@ -40,8 +41,9 @@ rundeps    :
     - python-jedi
     - python-lxml
     - valgrind # Ensure the "run with valgrind" support works OOTB
+clang      : yes
 setup      : |
-    %patch -p1 -i $pkgfiles/fix-build.patch
+    export CFLAGS="$CFLAGS -Wno-error -Wno-incompatible-pointer-types-discards-qualifiers -Wno-shadow -Wno-array-bounds"
 
     %meson_configure \
         -Dplugin_autotools=true \

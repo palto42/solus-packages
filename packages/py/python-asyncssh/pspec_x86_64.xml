@@ -1,0 +1,238 @@
+<PISI>
+    <Source>
+        <Name>python-asyncssh</Name>
+        <Homepage>https://github.com/ronf/asyncssh</Homepage>
+        <Packager>
+            <Name>Joey Riches</Name>
+            <Email>josephriches@gmail.com</Email>
+        </Packager>
+        <License>EPL-2.0</License>
+        <PartOf>programming.python</PartOf>
+        <Summary xml:lang="en">Asynchronous SSHv2 client and server library</Summary>
+        <Description xml:lang="en">AsyncSSH is a Python package which provides an asynchronous client and server implementation of the SSHv2 protocol on top of the Python 3.6+ asyncio framework.
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>python-asyncssh</Name>
+        <Summary xml:lang="en">Asynchronous SSHv2 client and server library</Summary>
+        <Description xml:lang="en">AsyncSSH is a Python package which provides an asynchronous client and server implementation of the SSHv2 protocol on top of the Python 3.6+ asyncio framework.
+</Description>
+        <PartOf>programming.python</PartOf>
+        <Files>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh-2.20.0.dist-info/LICENSE</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh-2.20.0.dist-info/METADATA</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh-2.20.0.dist-info/RECORD</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh-2.20.0.dist-info/WHEEL</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh-2.20.0.dist-info/top_level.txt</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__init__.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/__init__.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/__init__.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/agent.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/agent.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/agent_unix.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/agent_unix.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/agent_win32.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/agent_win32.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/asn1.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/asn1.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/auth.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/auth.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/auth_keys.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/auth_keys.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/channel.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/channel.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/client.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/client.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/compression.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/compression.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/config.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/config.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/connection.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/connection.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/constants.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/constants.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/dsa.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/dsa.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/ecdsa.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/ecdsa.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/eddsa.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/eddsa.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/editor.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/editor.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/encryption.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/encryption.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/forward.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/forward.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/gss.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/gss.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/gss_unix.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/gss_unix.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/gss_win32.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/gss_win32.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/kex.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/kex.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/kex_dh.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/kex_dh.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/kex_rsa.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/kex_rsa.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/keysign.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/keysign.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/known_hosts.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/known_hosts.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/listener.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/listener.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/logging.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/logging.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/mac.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/mac.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/misc.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/misc.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/packet.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/packet.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/pattern.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/pattern.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/pbe.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/pbe.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/pkcs11.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/pkcs11.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/process.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/process.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/public_key.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/public_key.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/rsa.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/rsa.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/saslprep.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/saslprep.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/scp.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/scp.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/server.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/server.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/session.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/session.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/sftp.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/sftp.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/sk.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/sk.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/sk_ecdsa.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/sk_ecdsa.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/sk_eddsa.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/sk_eddsa.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/socks.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/socks.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/stream.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/stream.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/subprocess.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/subprocess.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/tuntap.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/tuntap.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/version.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/version.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/x11.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/__pycache__/x11.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/agent.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/agent_unix.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/agent_win32.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/asn1.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/auth.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/auth_keys.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/channel.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/client.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/compression.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/config.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/connection.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/constants.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/crypto/__init__.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/crypto/__pycache__/__init__.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/crypto/__pycache__/__init__.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/crypto/__pycache__/chacha.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/crypto/__pycache__/chacha.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/crypto/__pycache__/cipher.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/crypto/__pycache__/cipher.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/crypto/__pycache__/dh.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/crypto/__pycache__/dh.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/crypto/__pycache__/dsa.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/crypto/__pycache__/dsa.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/crypto/__pycache__/ec.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/crypto/__pycache__/ec.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/crypto/__pycache__/ec_params.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/crypto/__pycache__/ec_params.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/crypto/__pycache__/ed.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/crypto/__pycache__/ed.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/crypto/__pycache__/kdf.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/crypto/__pycache__/kdf.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/crypto/__pycache__/misc.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/crypto/__pycache__/misc.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/crypto/__pycache__/pq.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/crypto/__pycache__/pq.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/crypto/__pycache__/rsa.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/crypto/__pycache__/rsa.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/crypto/__pycache__/umac.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/crypto/__pycache__/umac.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/crypto/__pycache__/x509.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/crypto/__pycache__/x509.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/crypto/chacha.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/crypto/cipher.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/crypto/dh.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/crypto/dsa.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/crypto/ec.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/crypto/ec_params.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/crypto/ed.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/crypto/kdf.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/crypto/misc.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/crypto/pq.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/crypto/rsa.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/crypto/umac.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/crypto/x509.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/dsa.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/ecdsa.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/eddsa.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/editor.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/encryption.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/forward.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/gss.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/gss_unix.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/gss_win32.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/kex.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/kex_dh.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/kex_rsa.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/keysign.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/known_hosts.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/listener.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/logging.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/mac.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/misc.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/packet.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/pattern.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/pbe.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/pkcs11.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/process.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/public_key.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/py.typed</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/rsa.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/saslprep.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/scp.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/server.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/session.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/sftp.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/sk.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/sk_ecdsa.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/sk_eddsa.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/socks.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/stream.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/subprocess.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/tuntap.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/version.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/asyncssh/x11.py</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="5">
+            <Date>2025-05-15</Date>
+            <Version>2.20.0</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Joey Riches</Name>
+            <Email>josephriches@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

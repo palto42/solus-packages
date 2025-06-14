@@ -1,8 +1,8 @@
 name       : gdal
-version    : 3.8.3
-release    : 39
+version    : 3.10.2
+release    : 50
 source     :
-    - https://github.com/OSGeo/gdal/releases/download/v3.8.3/gdal-3.8.3.tar.gz : f7a30387a8239e9da26200f787a02136df2ee6473e86b36d05ad682761a049ea
+    - https://github.com/OSGeo/gdal/releases/download/v3.10.2/gdal-3.10.2.tar.gz : ca710aab81eb4d638f5dbd4f03d4d4b902aeb6ee73a3d4a8c5e966b6b648b0da
 homepage   : https://www.gdal.org/
 license    : MIT
 component  : programming
@@ -39,6 +39,7 @@ builddeps  :
     - giflib-devel
     - libgeotiff-devel
     - numpy
+    - python-setuptools
     - swig
 rundeps    :
     - numpy

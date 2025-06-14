@@ -1,0 +1,41 @@
+name       : pix
+version    : 3.4.4
+release    : 2
+source     :
+    - https://github.com/linuxmint/pix/archive/refs/tags/3.4.4.tar.gz : 38991168a1e90611ca6190ac86c68babc9e93b1705d6274c701af625c26e11aa
+homepage   : https://github.com/linuxmint/pix
+license    : GPL-2.0-or-later
+component  : multimedia.graphics
+summary    : Image management application
+description: |
+    An image viewer and browser utility. Pix is part of the X-Apps project, which aims at producing cross-distribution and cross-desktop software.
+builddeps  :
+    - pkgconfig(colord)
+    - pkgconfig(exiv2)
+    - pkgconfig(gsettings-desktop-schemas)
+    - pkgconfig(gstreamer-1.0)
+    - pkgconfig(gstreamer-plugins-base-1.0)
+    - pkgconfig(gstreamer-video-1.0)
+    - pkgconfig(gtk+-3.0)
+    - pkgconfig(json-glib-1.0)
+    - pkgconfig(libbrasero-burn3)
+    - pkgconfig(libgnomekbdui)
+    - pkgconfig(libheif)
+    - pkgconfig(libjxl)
+    - pkgconfig(libraw)
+    - pkgconfig(librsvg-2.0)
+    - pkgconfig(libsecret-1)
+    - pkgconfig(libsoup-2.4)
+    - pkgconfig(libwebp)
+    - pkgconfig(webkit2gtk-4.1)
+    - pkgconfig(xapp)
+    - pkgconfig(xkbfile)
+    - itstool
+setup      : |
+    %meson_configure
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install
+
+    install -Dm00644 $pkgfiles/pix.metainfo.xml $installdir/usr/share/metainfo/pix.metainfo.xml

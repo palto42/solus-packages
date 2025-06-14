@@ -1,8 +1,8 @@
 name       : qbittorrent
-version    : 4.6.3
-release    : 85
+version    : 5.1.0
+release    : 97
 source     :
-    - https://github.com/qbittorrent/qBittorrent/archive/refs/tags/release-4.6.3.tar.gz : 9a44d974a5b2cf945ccdecdc20f452d6b8f4800487492945729a493ff6d11502
+    - https://github.com/qbittorrent/qBittorrent/archive/refs/tags/release-5.1.0.tar.gz : ac54cd8b3c6035cfcd684be5afd0eccc8c5fbbc3008a9b6f9ba42f6ef91105af
 homepage   : https://www.qbittorrent.org/
 license    : GPL-2.0-or-later
 component  : network.download
@@ -10,20 +10,19 @@ summary    : qBittorrent project aims to provide a Free Software alternative to 
 description: |
     qBittorrent project aims to provide a Free Software alternative to µTorrent
 builddeps  :
-    - pkgconfig(Qt5Help)
-    - pkgconfig(Qt5Svg)
+    - pkgconfig(Qt6Help)
+    - pkgconfig(Qt6Svg)
     - pkgconfig(libtorrent-rasterbar)
     - libboost-devel
 rundeps    :
-    - qt5-svg
+    - qt6-svg
+clang      : yes
+optimize   :
+    - speed
+    - thin-lto
 setup      : |
-    # Note that tray icons are currently broken in Plasma 6 when building with Qt6. Keep as Qt5 for now
-    # https://github.com/qbittorrent/qBittorrent/issues/20367
-    # https://bugs.kde.org/show_bug.cgi?id=384591
-
-    %cmake_ninja -DQT6=OFF
+    %cmake_ninja
 build      : |
     %ninja_build
 install    : |
     %ninja_install
-    install -Dm00644 $workdir/doc/qbittorrent.1 $installdir/usr/share/man/man1/qbittorrent.1

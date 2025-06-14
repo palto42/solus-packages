@@ -1,8 +1,8 @@
 name       : qt5-connectivity
-version    : 5.15.12
-release    : 37
+version    : 5.15.17
+release    : 42
 source     :
-    - git|https://invent.kde.org/qt/qt/qtconnectivity.git : 70020cb64f71dcf2fd65a8a167cb785d2127e159
+    - git|https://invent.kde.org/qt/qt/qtconnectivity.git : 15961348aa26b73248432a0a274b332c36cd0054
 homepage   : https://www.qt.io
 license    :
     - GPL-2.0-or-later

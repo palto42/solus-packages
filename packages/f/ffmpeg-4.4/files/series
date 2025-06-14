@@ -1,4 +1,7 @@
-0001-avcodec-libsvtav1-remove-compressed_ten_bit_format-a.patch
-0002-avcodec-x86-mathops-clip-constants-used-with-shift-i.patch
 0003-configure-use-non-deprecated-nvenc-GUID-for-conftest.patch
 0004-avcodec-nvenc-stop-using-deprecated-rc-modes-with-SD.patch
+ftbfs-nvenc-1.patch
+ftbfs-nvenc-2.patch
+0001-lavc-vaapi_decode-Make-it-possible-to-send-multiple-.patch
+0002-lavc-vaapi_av1-Avoid-sending-the-same-slice-buffer-m.patch
+svt-av1-3.0.0.patch

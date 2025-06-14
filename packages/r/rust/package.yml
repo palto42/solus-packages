@@ -1,60 +1,133 @@
 name       : rust
-version    : 1.76.0
-release    : 119
+version    : 1.86.0
+release    : 141
 source     :
-    - https://static.rust-lang.org/dist/rustc-1.76.0-src.tar.xz : 805482b436442a6786d270cacbab8f00529e06141b27b7fb01909b97ce4f3464
+    - https://static.rust-lang.org/dist/rustc-1.86.0-src.tar.xz : d939eada065dc827a9d4dbb55bd48533ad14c16e7f0a42e70147029c82a7707b
+    - git|https://github.com/rust-lang/llvm-project.git : 1268e87bdbaed0693a9d782ccd5a21e2cab2de33 # rustc/19.1-2024-12-03
 license    :
     - Apache-2.0
     - MIT
 homepage   : https://www.rust-lang.org/
 summary    :
     - A fast and secure system programming language
-    - ^cargo : The Rust build system
+    - devel : Tools and stdlib source for developing with Rust
 description:
     - Rust is a systems programming language that runs blazingly fast, prevents nearly all segfaults, and guarantees thread safety.
-    - ^cargo : The Rust build system.
+    - devel : Tools and stdlib source for developing with Rust
 component  :
     - programming
-    - ^cargo : programming.tools
 libsplit   : no
+## Uncomment for bootstrapping
 # networking : yes
 builddeps  :
-    - cargo
+    - pkgconfig(libcurl)
+    # - pkgconfig(libgit2)
+    - pkgconfig(libssh2)
+    - pkgconfig(liblzma)
+    - pkgconfig(sqlite3)
+    - clang-32bit
     - glibc-32bit-devel
-    - libgcc-32bit
     - llvm-devel
+    - rust
+rundeps    :
+    - 32bit :
+        - clang-32bit
+        - rust
+    # We default to the LLVM toolchain for rust builds
+    - clang
+clang      : yes
 checkdeps  :
     - fakeroot-32bit
-rundeps    :
-    - ^cargo :
-        - rust
+environment: |
+    # Don't set these here, all configuration should come from config.toml or the package.yml
+    unset RUSTFLAGS
+
+    # Force libsqlite3-sys, libssh2-sys, and libgit2-sys to use the system deps
+    export LIBSQLITE3_SYS_USE_PKG_CONFIG=1
+    export LIBSSH2_SYS_USE_PKG_CONFIG=1
+    # export LIBGIT2_NO_VENDOR=1
+
 setup      : |
-    %patch -p1 -i $pkgfiles/Set-correct-libdir-in-bootstrap.patch
-    sed -e 's|PREFIX|%PREFIX%|g' \
-        -e 's|LIBDIR|%libdir%|g' $pkgfiles/config.toml.in > config.toml
+    rm -rf src/llvm-project
+    cp -r $sources/llvm-project.git src/llvm-project
+
+    %patch -p1 -i $pkgfiles/0001-Set-correct-libdir-in-bootstrap.patch
+
+    # Profiling build. "thin-local" is the fastest available LTO type
+    sed -e 's|@@LTO@@|thin-local|g' $pkgfiles/config.toml.in > config.toml.pgo
+
+    # PGO build. "fat" is the slowest LTO type but generates the fastest code
+    sed -e 's|@@LTO@@|fat|g' $pkgfiles/config.toml.in > config.toml.release
+
+    # Ensure that we use the system sqlite3
+    %patch -p1 -d src/tools/cargo -i $pkgfiles/0001-unbundle-sqlite.patch
+    find ./vendor/libsqlite3-sys*/sqlite3/ -mindepth 1 -delete -print
+
+    # Remove unused vendored libraries
+    find ./vendor/curl-sys*/curl/ -mindepth 1 -delete -print
+    find ./vendor/*jemalloc-sys*/jemalloc/ -mindepth 1 -delete -print
+    find ./vendor/libffi-sys*/libffi/ -mindepth 1 -delete -print
+    find ./vendor/libmimalloc-sys*/c_src/mimalloc/ -mindepth 1 -delete -print
+    find ./vendor/libsqlite3-sys*/sqlcipher/ -mindepth 1 -delete -print
+    find ./vendor/libssh2-sys*/libssh2/ -mindepth 1 -delete -print
+    find ./vendor/libz-sys*/src/zlib{,-ng}/ -mindepth 1 -delete -print
+    find ./vendor/openssl-src*/openssl/ -mindepth 1 -delete -print
+    # find ./vendor/libgit2-sys*/libgit2/ -mindepth 1 -delete -print
+
+    # This only affects the transient rust-installer, but let it use our system lzma
+    find ./vendor/lzma-sys*/xz-*/ -mindepth 1 -delete -print
+    sed -i.lzma -e '/LZMA_API_STATIC/d' src/bootstrap/src/core/build_steps/tool.rs
+
+    # Fix bootstrap checking checksums for all the files we just deleted
+    find vendor -name .cargo-checksum.json -print \
+        -exec sed -i.uncheck -e 's/"files":{[^}]*}/"files":{ }/' '{}' '+'
 build      : |
-    python3 x.py build --stage 2
+    ## Generate rustc PGO profiling data
+    mkdir $workdir/rustc-pgo-profile-data
+    python3 x.py build \
+                       --build-dir $workdir/build-pgo \
+                       --config config.toml.pgo \
+                       --jobs %YJOBS% \
+                       --rust-profile-generate $workdir/rustc-pgo-profile-data \
+                       --stage 2
+    llvm-profdata merge -output=$workdir/rustc-pgo-profile-data/rustc-pgo.profdata $workdir/rustc-pgo-profile-data/default_*.profraw
+
+    # rust-bootstrap is very inconsistent with the stages of various tools that it wants to build between `dist` and `install`. This
+    # causes a lot of redundant and unnecessary builds if we attempt to do the build with various stages (IE build the compiler first, then the
+    # tools, then install it last). To prevent this from happening just let `install` figure out what it wants.
+    DESTDIR=$installdir python3 x.py install \
+                                             --build-dir $workdir/build-release \
+                                             --config config.toml.release \
+                                             --jobs %YJOBS% \
+                                             --rust-profile-use $workdir/rustc-pgo-profile-data/rustc-pgo.profdata
 install    : |
-    DESTDIR=$installdir python3 x.py install
     install -Dm00644 $installdir/etc/bash_completion.d/* -t $installdir/usr/share/bash-completion/completions
     rm -rvf $installdir/etc
 
     # Remove text files from libs (manifests, installation logs...)
-    find $installdir/%libdir%/rustlib -maxdepth 1 -type f -delete
+    find $installdir/%libdir%/rustlib -maxdepth 1 -type f -delete -print
 
     # Remove license files and such
     rm -rvf $installdir/usr/share/doc
 check      : |
+    common_opts="--config config.toml.release --build-dir $workdir/build-release --jobs %YJOBS%"
     # Some tests require targets we don't support, such as ARM.
     # For this reason we run only a small subset of the test suite.
-    python3 x.py test --stage 2 src/test/compile-fail || :
-    python3 x.py test --stage 2 src/test/pretty       || :
-    python3 x.py test --stage 2 src/test/run-fail     || :
-    python3 x.py test --stage 2 src/test/run-make     || :
+    python3 x.py test $common_opts src/test/compile-fail || :
+    python3 x.py test $common_opts src/test/pretty       || :
+    python3 x.py test $common_opts src/test/run-fail     || :
+    python3 x.py test $common_opts src/test/run-make     || :
 patterns   :
-    - ^cargo :
-        - /usr/bin/cargo
-        - /usr/libexec/cargo*
-        - /usr/share/bash-completion/completions/cargo
-        - /usr/share/man/man1/cargo*
-        - /usr/share/zsh/site-functions/_cargo
+    - 32bit :
+        - /usr/lib64/rustlib/i686*
+    - devel :
+        - /usr/bin/cargo-clippy
+        - /usr/bin/cargo-fmt
+        - /usr/bin/clippy-driver
+        - /usr/bin/rust-analyzer
+        - /usr/bin/rust-gdb*
+        - /usr/bin/rust-lldb
+        - /usr/bin/rustfmt
+        - /usr/lib64/rustlib/etc/
+        - /usr/lib64/rustlib/src/
+        - /usr/libexec/rust-analyzer-proc-macro-srv

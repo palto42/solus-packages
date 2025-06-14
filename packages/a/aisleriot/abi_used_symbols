@@ -113,7 +113,6 @@ libgio-2.0.so.0:g_zlib_decompressor_new
 libglib-2.0.so.0:g_access
 libglib-2.0.so.0:g_ascii_strcasecmp
 libglib-2.0.so.0:g_ascii_strdown
-libglib-2.0.so.0:g_ascii_strtoll
 libglib-2.0.so.0:g_ascii_strtoull
 libglib-2.0.so.0:g_ascii_table
 libglib-2.0.so.0:g_ascii_toupper
@@ -134,7 +133,6 @@ libglib-2.0.so.0:g_error_copy
 libglib-2.0.so.0:g_error_free
 libglib-2.0.so.0:g_error_matches
 libglib-2.0.so.0:g_file_error_quark
-libglib-2.0.so.0:g_file_get_contents
 libglib-2.0.so.0:g_file_open_tmp
 libglib-2.0.so.0:g_file_set_contents
 libglib-2.0.so.0:g_filename_display_name
@@ -187,8 +185,8 @@ libglib-2.0.so.0:g_malloc0
 libglib-2.0.so.0:g_malloc_n
 libglib-2.0.so.0:g_markup_printf_escaped
 libglib-2.0.so.0:g_mkdir_with_parents
-libglib-2.0.so.0:g_once_init_enter
-libglib-2.0.so.0:g_once_init_leave
+libglib-2.0.so.0:g_once_init_enter_pointer
+libglib-2.0.so.0:g_once_init_leave_pointer
 libglib-2.0.so.0:g_option_context_add_group
 libglib-2.0.so.0:g_option_context_add_main_entries
 libglib-2.0.so.0:g_option_context_free
@@ -220,7 +218,6 @@ libglib-2.0.so.0:g_snprintf
 libglib-2.0.so.0:g_source_remove
 libglib-2.0.so.0:g_spawn_async
 libglib-2.0.so.0:g_str_equal
-libglib-2.0.so.0:g_str_has_prefix
 libglib-2.0.so.0:g_str_has_suffix
 libglib-2.0.so.0:g_str_hash
 libglib-2.0.so.0:g_strchomp
@@ -292,14 +289,13 @@ libgobject-2.0.so.0:g_signal_handler_disconnect
 libgobject-2.0.so.0:g_signal_handlers_disconnect_matched
 libgobject-2.0.so.0:g_signal_new
 libgobject-2.0.so.0:g_signal_newv
+libgobject-2.0.so.0:g_type_add_instance_private
 libgobject-2.0.so.0:g_type_add_interface_static
 libgobject-2.0.so.0:g_type_check_instance_is_a
-libgobject-2.0.so.0:g_type_class_add_private
 libgobject-2.0.so.0:g_type_class_adjust_private_offset
 libgobject-2.0.so.0:g_type_class_peek_parent
 libgobject-2.0.so.0:g_type_class_ref
 libgobject-2.0.so.0:g_type_class_unref
-libgobject-2.0.so.0:g_type_instance_get_private
 libgobject-2.0.so.0:g_type_name
 libgobject-2.0.so.0:g_type_register_static_simple
 libgobject-2.0.so.0:g_value_dup_boxed
@@ -533,7 +529,7 @@ libguile-2.0.so.22:scm_to_uint32
 libguile-2.0.so.22:scm_to_utf8_string
 libguile-2.0.so.22:scm_variable_ref
 libguile-2.0.so.22:scm_variable_set_x
-librsvg-2.so.2:rsvg_handle_get_dimensions
+librsvg-2.so.2:rsvg_handle_get_intrinsic_size_in_pixels
 librsvg-2.so.2:rsvg_handle_get_type
 librsvg-2.so.2:rsvg_handle_read_stream_sync
 librsvg-2.so.2:rsvg_handle_render_cairo_sub

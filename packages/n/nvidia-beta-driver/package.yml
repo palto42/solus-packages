@@ -1,8 +1,8 @@
 name       : nvidia-beta-driver
-version    : 550.54.14
-release    : 261
+version    : 575.57.08
+release    : 313
 source     :
-    - https://us.download.nvidia.com/XFree86/Linux-x86_64/550.54.14/NVIDIA-Linux-x86_64-550.54.14.run : 8c497ff1cfc7c310fb875149bc30faa4fd26d2237b2cba6cd2e8b0780157cfe3
+    - https://us.download.nvidia.com/XFree86/Linux-x86_64/575.57.08/NVIDIA-Linux-x86_64-575.57.08.run : 2aa701dac180a7b20a6e578cccd901ded8d44e57d60580f08f9d28dd1fffc6f2
 extract    : no
 homepage   : https://nvidia.com
 license    :
@@ -22,10 +22,15 @@ description: |
     NVIDIA Short-lived Binary Driver
 rundeps    :
     - 32bit :
+        - egl-gbm-32bit
+        - egl-wayland-32bit
+        - egl-x11-32bit
         - libglvnd-32bit
         - nvidia-beta-driver-common
     - common :
+        - egl-gbm
         - egl-wayland
+        - egl-x11
         - kbd
         - libglvnd
         - linux-driver-management
@@ -51,11 +56,13 @@ patterns   :
     - common : /*
     - 32bit : /usr/lib32
     - main :
-        - /lib/modules/*.lts
+        - /lib64/modules/*.lts
         - /usr/lib64/kernel/initrd-com.solus-project.lts.*
+        - /usr/lib64/modules/*.lts
     - current :
-        - /lib/modules/*.current
+        - /lib64/modules/*.current
         - /usr/lib64/kernel/initrd-com.solus-project.current.*
+        - /usr/lib64/modules/*.current
 strip      : no
 debug      : no
 builddeps  :
@@ -69,10 +76,16 @@ builddeps  :
     - linux-lts
     - linux-lts-headers
 permanent  :
-    - /lib/modules
+    - /lib64/modules
+    - /usr/lib64/kernel
+    - /usr/lib64/modules
 setup      : |
     sh $sources/NVIDIA-Linux-x86_64-$version.run --extract-only
     pushd NVIDIA*
+
+    pushd kernel
+    %patch -p2 -i $pkgfiles/make-modeset-fbdev-default.diff
+    popd
 
     # Prepare kernel trees
     cp -a kernel lts_kernel
@@ -86,12 +99,12 @@ build      : |
     %make -C current_kernel SYSSRC="/lib/modules/%kernel_version_current%/build"
 install    : |
     # Install LTS kernel drivers
-    install -D -d -m 00755 $installdir/lib/modules/%kernel_version_lts%/kernel/drivers/video
-    install -m 00644 lts_kernel/*.ko $installdir/lib/modules/%kernel_version_lts%/kernel/drivers/video/.
+    install -D -d -m 00755 $installdir/usr/lib64/modules/%kernel_version_lts%/kernel/drivers/video
+    install -m 00644 lts_kernel/*.ko $installdir/usr/lib64/modules/%kernel_version_lts%/kernel/drivers/video/.
 
     # Install current kernel drivers
-    install -D -d -m 00755 $installdir/lib/modules/%kernel_version_current%/kernel/drivers/video
-    install -m 00644 current_kernel/*.ko $installdir/lib/modules/%kernel_version_current%/kernel/drivers/video/.
+    install -D -d -m 00755 $installdir/usr/lib64/modules/%kernel_version_current%/kernel/drivers/video
+    install -m 00644 current_kernel/*.ko $installdir/usr/lib64/modules/%kernel_version_current%/kernel/drivers/video/.
 
     # Install nvidia driver for xorg
     install -D -m 00755 nvidia_drv.so $installdir/%libdir%/xorg/modules/drivers/nvidia_drv.so
@@ -100,6 +113,9 @@ install    : |
     install -D -d -m 00755 $installdir/usr/bin
     install -m 00755 `find . -maxdepth 1 -type f -name "nvidia-*" -executable` $installdir/usr/bin/.
     rm -v $installdir/usr/bin/nvidia-installer
+
+    # Needs setuid set to create /dev/ thingyies
+    chmod 4755 $installdir/usr/bin/nvidia-modprobe
 
     # Install all libraries
     install -D -d -m 00755 $installdir/usr/lib{32,64}
@@ -112,8 +128,8 @@ install    : |
     # Remove the non glvnd portions
     rm -v $installdir/usr/lib{32,64}/lib{EGL,GLESv1_CM,GLESv2}.so*
 
-    # Nuke egl wayland conflict, we package it separately
-    rm -fv $installdir/%libdir%/libnvidia-egl-wayland*
+    # Nuke egl-gbm/wayland/x11 conflicts, we package those separately
+    rm -fv $installdir/usr/lib{32,64}/libnvidia-egl-{gbm,wayland,xcb,xlib}*
 
     # Remove OpenSSL 1.1 fallback library
     rm -fv $installdir/%libdir%/libnvidia-pkcs11.so*
@@ -135,7 +151,7 @@ install    : |
     redo_libs $installdir/usr/lib{32,64}/lib*.so.%version%
 
     # GSP Firmware
-    install -D -m 00644 -t "$installdir/lib/firmware/nvidia/$version/" firmware/*.bin
+    install -Dm644 -t "$installdir/usr/lib64/firmware/nvidia/$version/" firmware/*.bin
 
     # Move vdpau into the final position
     install -D -d -m 00755 $installdir/usr/lib{32,64}/vdpau
@@ -147,29 +163,26 @@ install    : |
     sed -e 's@__UTILS_PATH__@/usr/bin@' -i $installdir/usr/share/applications/nvidia-settings.desktop
     install -D -m 00644 nvidia-settings.png $installdir/usr/share/pixmaps/nvidia-settings.png
     install -D -m 00644 nvidia.icd $installdir/usr/share/OpenCL/vendors/nvidia.icd
-    install -D -d -m 00755 $installdir/usr/share/nvidia
+    install -D -d -m 00755 $installdir/usr/share/nvidia/files.d
     install -m 00644 nvoptix.bin $installdir/usr/share/nvidia/
+    install -m 00644 sandboxutils-filelist.json $installdir/usr/share/nvidia/files.d/
 
     # Vulkan
-    install -D -m 00644 nvidia_icd.json $installdir/usr/share/vulkan/icd.d/10_nvidia.json
-    install -D -m 00644 nvidia_layers.json $installdir/usr/share/vulkan/implicit_layer.d/nvidia_layers.json
-
-    # EGL/GBM
-    install -D -m 00644 15_nvidia_gbm.json $installdir/usr/share/egl/egl_external_platform.d/15_nvidia_gbm.json
+    install -Dm00644 nvidia_icd.json $installdir/usr/share/vulkan/icd.d/10_nvidia.json
+    install -Dm00644 nvidia_icd_vksc.json $installdir/usr/share/vulkansc/icd.d/nvidia_icd_vksc.json
+    install -Dm00644 nvidia_layers.json $installdir/usr/share/vulkan/implicit_layer.d/nvidia_layers.json
 
     # GBM
     install -D -d -m 00755 $installdir/%libdir%/gbm
     ln -s "../libnvidia-allocator.so.$version" $installdir/%libdir%/gbm/nvidia-drm_gbm.so
-    # Missing symlinks
-    ln -s libnvidia-egl-gbm.so.1* $installdir/%libdir%/libnvidia-egl-gbm.so.1
-    ln -s libnvidia-egl-gbm.so.1 $installdir/%libdir%/libnvidia-egl-gbm.so
 
     # Make sure glvnd knows where to be
     install -D -d -m 00755 $installdir/usr/share/glvnd/egl_vendor.d
     install -m 00644 10_nvidia.json $installdir/usr/share/glvnd/egl_vendor.d/10_nvidia.json
 
     # Keep settings UI happy
-    install -m 00644 nvidia-application-profiles-${version}-key-documentation $installdir/usr/share/nvidia/.
+    install -m 00644 nvidia-application-profiles-${version}-rc -t $installdir/usr/share/nvidia
+    install -m 00644 nvidia-application-profiles-${version}-key-documentation -t $installdir/usr/share/nvidia
 
     # Install NVIDIA NGX dll for use with Proton and Wine
     install -D -d -m 00755 $installdir/%libdir%/nvidia/wine
@@ -178,6 +191,9 @@ install    : |
     # Blacklist nouveau
     install -D -d -m 00755 $installdir/usr/lib64/modprobe.d
     echo "blacklist nouveau" > $installdir/usr/lib64/modprobe.d/nvidia.conf
+
+    # Fixes Wayland sleep
+    install -D -m 00644 $pkgfiles/nvidia-sleep.modprobe $installdir/usr/lib64/modprobe.d/nvidia-sleep.conf
 
     # Init
     install -D -m 00644 nvidia-persistenced-init/systemd/nvidia-persistenced.service.template \
@@ -188,7 +204,10 @@ install    : |
     install -D -m 00644 $pkgfiles/nvidia.rules $installdir/%libdir%/udev/rules.d/60-nvidia.rules
     install -D -m 00644 $pkgfiles/nvidia-glx-driver.tmpfiles $installdir/%libdir%/tmpfiles.d/nvidia-glx-driver.conf
     install -D -m 00644 $pkgfiles/nvidia-glx-driver.sysusers $installdir/%libdir%/sysusers.d/nvidia-glx-driver.conf
-    install -D -m 00755 $pkgfiles/create-uvm-dev-node $installdir/sbin/create-uvm-dev-node
+
+    # We enable modprobe and fbdev by default now, but we still need to the corresponding kernel args until either we support
+    # early KMS with grub or it's determined that the 0001-drivers-firmware-skip-simpledrm-if-nvidia-drm.modese.patch kernel patch
+    # is no longer necessary and it's removed from all supported kernels.
     install -D -m 00644 $pkgfiles/cmdline-nvidia.conf $installdir/usr/lib64/kernel/cmdline.d/40_nvidia.conf
 
     # new PM stuff
@@ -215,27 +234,26 @@ install    : |
     install -d $installdir/%libdir%/nvidia/modules
     mv $installdir/usr/lib64/libglxserver_nvidia.so* $installdir/%libdir%/nvidia/modules/
 
+    # Check for broken symlinks
+    %symlink_check
+
     # Generate per-kernel initrd with embedded nvidia kernel drivers
-    ### NOTE THIS IS A GIANT TODO AND SUPPORT FOR THIS IS NOT YET IMPLEMENTED IN CLR-BOOT-MANAGER
-    ### DO NOT COPY THIS SECTION INTO THE OTHER NVIDIA DRIVERS UNTIL THAT'S DONE
-    shopt -s extglob
     for i in current lts; do
-        mkdir init-$i && pushd init-$i
-        # Copy from what we have in the installdir already
-        cp -ra $installdir/* .
-        # cleanup, don't need anything besides the modules for the chosen kernel
-        rm -rfv usr sbin lib/firmware
-        rm -rv lib/modules/!(*.$i)
+        mkdir -p init-$i/dracut-nvidia
+
+        # This file triggers a dracut service that regenerates the depmod index files
+        touch init-$i/.dracut-depmod-invalidate
+
+        pushd $installdir/usr/lib64/modules/*.$i
+        find . -name "*.ko" -print -exec install -Dm0644 "{}" "${workdir}/init-$i/dracut-nvidia" \;
+        popd
+
         # Strip the debug symobls (we can get them from the normal kernel modules).
         # Don't compress the kernel modules here so that the final archive is slightly smaller
-        find . -name '*.ko' -exec strip --verbose --strip-unneeded {} \;
+        find init-$i -name '*.ko' -exec strip --verbose --strip-unneeded {} \;
 
-        # We need this because we can't share path inodes
-        mkdir nvidia && pushd nvidia
-        find ../. -name '*.ko' -print -exec mv {} . \;
-        popd
-        rm -rf lib
         # Create the initrd
+        pushd init-$i
         find . | cpio --create --format='newc' | zstd -19 > $workdir/initrd-$i
 
         # TODO Sign it
@@ -251,10 +269,28 @@ install    : |
     install -D -m 00644 $workdir/initrd-lts $installdir/usr/lib64/kernel/initrd-com.solus-project.lts.$lts_string.nvidia
 
     # Generate single initrd (to be shared between current and lts) with the GSP firmware
-    mkdir -p init-firmware/nvidia-firmware && pushd init-firmware
-    cp -ra $installdir/lib/firmware/nvidia/ nvidia-firmware/
+    mkdir -p init-firmware/dracut-firmware-nvidia-proprietary && pushd init-firmware
+    cp -rav $installdir/usr/lib64/firmware/nvidia/* dracut-firmware-nvidia-proprietary/
     find . | cpio --create --format='newc' | zstd -19 > $workdir/initrd-firmware
-    install -D -m 00644 $workdir/initrd-firmware $installdir/usr/lib64/kernel/initrd-com.solus-project.nvidia-firmware
+    popd
+    install -D -m 00644 $workdir/initrd-firmware $installdir/usr/lib64/kernel/initrd.d/com.solus-project.nvidia-firmware
 
     # Compress modules with zstd. TODO fix this so that we're able to capture the debug symbols (needs ypkg changes)
     find "$installdir" -name '*.ko' -exec strip --strip-unneeded {} \; -exec zstd -19 {} \; -exec rm -v {} \;
+
+    # Usr-merge
+    install -dm00755 $installdir/lib64
+    pushd $installdir/usr
+    file_list=()
+    while IFS=  read -r -d $'\0'; do
+        file_list+=("$REPLY")
+    done < <(find lib64/modules -type f -print0)
+    while IFS=  read -r -d $'\0'; do
+        file_list+=("$REPLY")
+    done < <(find lib64/firmware -type f -print0)
+    for file in "${file_list[@]}"; do
+        parent=$(dirname "$file")
+        install -dm00755 "$installdir/$parent"
+        ln -srv "$installdir/usr/$file" "$installdir/$file"
+    done
+    popd

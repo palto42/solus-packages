@@ -1,8 +1,8 @@
 name       : libopenshot
-version    : 0.3.2
-release    : 35
+version    : 0.4.0
+release    : 40
 source     :
-    - https://github.com/OpenShot/libopenshot/archive/refs/tags/v0.3.2.tar.gz : 58765cfc8aec199814346e97ce31a5618a261260b380670a6fb2bf6f68733638
+    - https://github.com/OpenShot/libopenshot/archive/refs/tags/v0.4.0.tar.gz : be0e760d81275543f7fbbf87863645748c3fe8aa8f4b5b771ff45a5d026bc9cc
 homepage   : https://www.openshot.org/
 license    : LGPL-3.0-or-later
 component  : multimedia.library
@@ -13,7 +13,6 @@ builddeps  :
     - pkgconfig(ImageMagick)
     - pkgconfig(Qt5Multimedia)
     - pkgconfig(Qt5Svg)
-    - pkgconfig(UnitTest++)
     - pkgconfig(alsa)
     - pkgconfig(cppzmq)
     - pkgconfig(gl)
@@ -24,7 +23,10 @@ builddeps  :
     - pkgconfig(x264)
     - doxygen
     - libopenshot-audio-devel
+    - python-setuptools
     - swig
+checkdeps  :
+    - pkgconfig(catch2)
 setup      : |
     # Sometimes build fails with ruby enabled.
     # Use -DENABLE_RUBY=OFF to disable it and reenable at a later date.

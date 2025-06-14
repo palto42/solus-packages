@@ -1,8 +1,8 @@
 name       : libnss
-version    : '3.98'
-release    : 59
+version    : '3.110'
+release    : 71
 source     :
-    - https://ftp.mozilla.org/pub/security/nss/releases/NSS_3_98_RTM/src/nss-3.98.tar.gz : f549cc33d35c0601674bfacf7c6ad683c187595eb4125b423238d3e9aa4209ce
+    - https://ftp.mozilla.org/pub/security/nss/releases/NSS_3_110_RTM/src/nss-3.110.tar.gz : 9cd610c40422a07771b9b45166be2d052ea2f00b605a7928129e1f2071b3ae27
 license    :
     - GPL-2.0-or-later
     - LGPL-2.1-or-later
@@ -10,6 +10,7 @@ license    :
 component  : system.base
 emul32     : yes
 libsplit   : no
+homepage   : https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSS
 summary    : Network Security Services
 description: |
     The Network Security Services (NSS) package is a set of libraries designed to support cross-platform development of security-enabled client and server applications. Applications built with NSS can support SSL v2 and v3, TLS, PKCS #5, PKCS #7, PKCS #11, PKCS #12, S/MIME, X.509 v3 certificates, and other security standards. This is useful for implementing SSL and S/MIME or other Internet security standards into an application.

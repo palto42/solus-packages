@@ -1,8 +1,8 @@
 name       : qt-creator
-version    : 12.0.2
-release    : 53
+version    : 16.0.2
+release    : 69
 source     :
-    - https://download.qt.io/official_releases/qtcreator/12.0/12.0.2/qt-creator-opensource-src-12.0.2.tar.xz : ace811ac3aee9bfbd1a55eb6cb49479a4823ead6f39f203571e9d77648450381
+    - https://download.qt.io/official_releases/qtcreator/16.0/16.0.2/qt-creator-opensource-src-16.0.2.tar.xz : 516cb164ae17ccbf12a9491fa8d53e71bdb63fd8c4c639fa4642d5d44b37d982
 homepage   : https://doc.qt.io/qtcreator/
 license    : GPL-3.0-only
 component  : programming.ide
@@ -10,6 +10,7 @@ summary    : IDE for Qt Development
 description: |
     Qt Creator is a cross-platform IDE for development with the Qt framework.
 builddeps  :
+    - pkgconfig(Qt6Charts)
     - pkgconfig(Qt6Core5Compat)
     - pkgconfig(Qt6Help)
     - pkgconfig(Qt6Qml)
@@ -18,8 +19,11 @@ builddeps  :
     - pkgconfig(Qt6ShaderTools)
     - pkgconfig(Qt6Svg)
     - pkgconfig(Qt6WebEngineCore)
+    - pkgconfig(Qt6WebSockets)
     - pkgconfig(libdw)
+    - pkgconfig(libsecret-1)
     - pkgconfig(yaml-cpp)
+    - clang-devel
 rundeps    :
     - qt6-base-devel
 clang      : yes
@@ -32,8 +36,11 @@ setup      : |
     %cmake_ninja \
         -DBUILD_TESTING=OFF \
         -DCMAKE_INSTALL_LIBDIR=$(basename %libdir%) \
-        -DPYTHON_EXECUTABLE=$(which python3)
+        -DPYTHON_EXECUTABLE=$(which python3) \
+        -DQTC_CLANG_BUILDMODE_MATCH=ON \
+        -DCLANGTOOLING_LINK_CLANG_DYLIB=ON
 build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %qml6_cache

@@ -1,0 +1,69 @@
+name       : bcc
+version    : 0.33.0
+release    : 9
+source     :
+    - https://github.com/iovisor/bcc/releases/download/v0.33.0/bcc-src-with-submodule.tar.gz : 7d190ba34a715f3909470bb2a4d5c43d9f07f67ea0928393259d932990b21f6c
+homepage   : https://github.com/iovisor/bcc
+license    : Apache-2.0
+component  : system.utils
+summary    : BPF Compiler Collection
+description: |
+    BPF Compiler Collection
+builddeps  :
+    - pkgconfig(libbpf)
+    - pkgconfig(libelf)
+    - clang-devel
+    - linux-tools-bpftool
+    - python-setuptools
+clang      : yes
+optimize   : thin-lto
+setup      : |
+    %cmake_ninja \
+                -DCMAKE_USE_LIBBPF_PACKAGE=ON \
+                -DENABLE_LLVM_SHARED=1 \
+                -DENABLE_TESTS=OFF \
+                -DPYTHON_CMD=python3 \
+                -DREVISION=$version \
+                -DRUN_LUA_TESTS=OFF
+build      : |
+    %ninja_build
+    cd libbpf-tools
+    %make BPFTOOL=bpftool LIBBPF_OBJ=/usr/lib64/libbpf.so CFLAGS="$CFLAGS" LDFLAGS="$LDFLAGS"
+install    : |
+    %ninja_install
+
+    # Make symlinks for python tools available with bcc- prefix
+    install -dm00755 $installdir/usr/sbin
+    pushd $installdir/usr/share/bcc/tools
+    for f in *; do
+        if [ ! -d "$f" ]; then
+            ln -srv $installdir/usr/share/bcc/tools/$f $installdir/usr/sbin/bcc-$f
+        fi
+    done
+    popd
+
+    pushd libbpf-tools
+    %make_install APP_PREFIX="bpf-" prefix="/usr" bindir="/usr/sbin"
+    popd
+
+    # Fix manpages
+    mv $installdir/usr/share/bcc/man $installdir/usr/share/man
+    pushd $installdir/usr/share/man/man8
+    for i in *; do
+        mv $i bcc-$i
+    done
+    popd
+
+    # Fix shebangs
+    find $installdir/usr/share/bcc/{tools,examples} -type f -exec \
+        sed -i -e '1s=^#!/usr/bin/python\([0-9.]\+\)\?$=#!/usr/bin/python3=' \
+            -e '1s=^#!/usr/bin/env python\([0-9.]\+\)\?$=#!/usr/bin/env python3=' \
+            -e '1s=^#!/usr/bin/env bcc-lua$=#!/usr/bin/bcc-lua=' {} \;
+    %python3_compile
+
+    # Cleanup static
+    rm $installdir/usr/lib64/*.a
+patterns   :
+    - docs :
+        - /usr/share/bcc/examples
+        - /usr/share/bcc/tools/doc

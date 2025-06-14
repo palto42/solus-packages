@@ -1,8 +1,8 @@
 name       : waybar
-version    : 0.9.24
-release    : 11
+version    : 0.12.0
+release    : 19
 source     :
-    - https://github.com/Alexays/Waybar/archive/refs/tags/0.9.24.tar.gz : 57aa7860bc066ebf4f3327dafa9841100b098c0dec1dce4baaa1fae63e9b57ae
+    - https://github.com/Alexays/Waybar/archive/refs/tags/0.12.0.tar.gz : 80454a0778176f575c112bdef9107f272621b578aa629bcc257ad9844a6c7165
 license    : MIT
 homepage   : https://github.com/Alexays/Waybar
 component  : system.utils
@@ -12,6 +12,7 @@ description: |
 builddeps  :
     - pkgconfig(ayatana-appindicator3-0.1)
     - pkgconfig(gobject-introspection-1.0)
+    - pkgconfig(gtk-layer-shell-0)
     - pkgconfig(gtkmm-3.0)
     - pkgconfig(jack)
     - pkgconfig(jsoncpp)
@@ -20,18 +21,19 @@ builddeps  :
     - pkgconfig(libmpdclient)
     - pkgconfig(libnl-3.0)
     - pkgconfig(libpulse)
+    - pkgconfig(playerctl)
     - pkgconfig(scdoc)
     - pkgconfig(sigc++-2.0)
     - pkgconfig(sndio)
     - pkgconfig(spdlog)
+    - pkgconfig(upower-glib)
     - pkgconfig(wayland-protocols)
-    - pkgconfig(wireplumber-0.4)
-    - chrono-date-devel
+    - pkgconfig(wireplumber-0.5)
 rundeps    :
     - font-awesome-ttf
 setup      : |
     %patch -p1 -i $pkgfiles/0001-Enable-stateless-config.patch
-    %meson_configure -Dgtk-layer-shell=disabled -Dtests=disabled -Dcava=disabled
+    %meson_configure -Dtests=disabled -Dcava=disabled
 build      : |
     %ninja_build
 install    : |

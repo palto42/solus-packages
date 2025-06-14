@@ -1,10 +1,10 @@
 <PISI>
     <Source>
         <Name>libgweather</Name>
-        <Homepage>https://wiki.gnome.org/Projects/LibGWeather</Homepage>
+        <Homepage>https://gnome.pages.gitlab.gnome.org/libgweather/</Homepage>
         <Packager>
-            <Name>Zach Bacon</Name>
-            <Email>zachbacon@vba-m.com</Email>
+            <Name>Jakob Gezelius</Name>
+            <Email>jakob@knugen.nu</Email>
         </Packager>
         <License>GPL-2.0-or-later</License>
         <License>LGPL-2.1-or-later</License>
@@ -23,9 +23,8 @@
         <Files>
             <Path fileType="library">/usr/lib64/girepository-1.0/GWeather-4.0.typelib</Path>
             <Path fileType="library">/usr/lib64/libgweather-4.so.0</Path>
-            <Path fileType="library">/usr/lib64/libgweather-4.so.0.400.0</Path>
+            <Path fileType="library">/usr/lib64/libgweather-4.so.0.400.4</Path>
             <Path fileType="library">/usr/lib64/libgweather-4/Locations.bin</Path>
-            <Path fileType="data">/usr/share/gir-1.0/GWeather-4.0.gir</Path>
             <Path fileType="data">/usr/share/glib-2.0/schemas/org.gnome.GWeather4.enums.xml</Path>
             <Path fileType="data">/usr/share/glib-2.0/schemas/org.gnome.GWeather4.gschema.xml</Path>
             <Path fileType="data">/usr/share/libgweather-4/Locations.xml</Path>
@@ -140,6 +139,7 @@
             <Path fileType="localedata">/usr/share/locale/ja/LC_MESSAGES/libgweather-4.0.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ka/LC_MESSAGES/libgweather-4.0-locations.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ka/LC_MESSAGES/libgweather-4.0.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/kab/LC_MESSAGES/libgweather-4.0.mo</Path>
             <Path fileType="localedata">/usr/share/locale/kk/LC_MESSAGES/libgweather-4.0-locations.mo</Path>
             <Path fileType="localedata">/usr/share/locale/kk/LC_MESSAGES/libgweather-4.0.mo</Path>
             <Path fileType="localedata">/usr/share/locale/kn/LC_MESSAGES/libgweather-4.0-locations.mo</Path>
@@ -240,7 +240,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="33">libgweather</Dependency>
+            <Dependency release="36">libgweather</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/libgweather-4.0/libgweather/gweather-enum-types.h</Path>
@@ -251,17 +251,18 @@
             <Path fileType="header">/usr/include/libgweather-4.0/libgweather/gweather.h</Path>
             <Path fileType="library">/usr/lib64/libgweather-4.so</Path>
             <Path fileType="data">/usr/lib64/pkgconfig/gweather4.pc</Path>
+            <Path fileType="data">/usr/share/gir-1.0/GWeather-4.0.gir</Path>
             <Path fileType="data">/usr/share/vala/vapi/gweather4.deps</Path>
             <Path fileType="data">/usr/share/vala/vapi/gweather4.vapi</Path>
         </Files>
     </Package>
     <History>
-        <Update release="33">
-            <Date>2023-10-17</Date>
-            <Version>4.4.0</Version>
+        <Update release="36">
+            <Date>2024-11-20</Date>
+            <Version>4.4.4</Version>
             <Comment>Packaging update</Comment>
-            <Name>Zach Bacon</Name>
-            <Email>zachbacon@vba-m.com</Email>
+            <Name>Jakob Gezelius</Name>
+            <Email>jakob@knugen.nu</Email>
         </Update>
     </History>
 </PISI>

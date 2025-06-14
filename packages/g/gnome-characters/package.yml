@@ -1,16 +1,18 @@
 name       : gnome-characters
-version    : '45.0'
-release    : 11
+version    : '48.0'
+release    : 14
 source     :
-    - https://download.gnome.org/sources/gnome-characters/45/gnome-characters-45.0.tar.xz : 3fd54fcc14d291b77fff12deefff00da383e0a6400af507d1605fbcb49b8c741
-homepage   : https://apps.gnome.org/app/org.gnome.Characters/
+    - https://download.gnome.org/sources/gnome-characters/48/gnome-characters-48.0.tar.xz : a2c32ca54d911db2404420350d3442e691a2dce8b0f5d00899f66cff8c3c8d71
+homepage   : https://apps.gnome.org/Characters/
 license    :
     - BSD-3-Clause
     - GPL-2.0-or-later
-component  : multimedia.graphics
+component  : office.spelling
 summary    : Character map application
 description: |
     Characters is a simple utility application to find and insert unusual characters. It allows you to quickly find the character you are looking for by searching for keywords. You can also browse characters by categories, such as Punctuation, Pictures, etc.
+optimize   :
+    - lto
 builddeps  :
     - pkgconfig(gjs-1.0)
     - pkgconfig(libadwaita-1)

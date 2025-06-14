@@ -1,15 +1,18 @@
 name       : ethtool
-version    : 5.0
-release    : 10
+version    : '6.11'
+release    : 12
 source     :
-    - https://mirrors.edge.kernel.org/pub/software/network/ethtool/ethtool-5.0.tar.xz : ecd4233bf023589125d53a4f4a9af19147a2dd8999f72c7768b1d500809bee99
+    - https://mirrors.edge.kernel.org/pub/software/network/ethtool/ethtool-6.11.tar.xz : 8d91f5c72ae3f25b7e88d4781279dcb320f71e30058914370b1c574c96b31202
+homepage   : https://www.kernel.org/pub/software/network/ethtool/
 license    : GPL-2.0-only
 component  : network.util
 summary    : Utility for controlling network drivers and hardware
 description: |
     Utility for controlling network drivers and hardware
+builddeps  :
+    - pkgconfig(libmnl)
 setup      : |
-    %configure
+    %reconfigure
 build      : |
     %make
 install    : |

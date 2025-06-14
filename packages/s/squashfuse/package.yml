@@ -1,8 +1,9 @@
 name       : squashfuse
-version    : 0.1.104
-release    : 3
+version    : 0.6.0
+release    : 6
 source     :
-    - https://github.com/vasi/squashfuse/releases/download/0.1.104/squashfuse-0.1.104.tar.gz : aa52460559e0d0b1753f6b1af5c68cfb777ca5a13913285e93f4f9b7aa894b3a
+    - https://github.com/vasi/squashfuse/releases/download/0.6.0/squashfuse-0.6.0.tar.gz : 56ff48814d3a083fad0ef427742bc95c9754d1ddaf9b08a990d4e26969f8eeeb
+homepage   : https://github.com/vasi/squashfuse
 license    : BSD-2-Clause
 component  : system.utils
 summary    : FUSE filesystem to mount squashfs archives
@@ -12,6 +13,8 @@ builddeps  :
     - pkgconfig(fuse3)
     - pkgconfig(liblz4)
     - pkgconfig(libzstd)
+clang      : yes
+optimize   : thin-lto
 setup      : |
     %configure --disable-static
 build      : |

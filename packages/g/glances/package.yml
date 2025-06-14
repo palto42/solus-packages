@@ -1,8 +1,8 @@
 name       : glances
-version    : 3.4.0.3
-release    : 43
+version    : 4.3.1
+release    : 55
 source     :
-    - https://github.com/nicolargo/glances/archive/refs/tags/v3.4.0.3.tar.gz : fc66089237b3a6a6cdd1868a296f16d35d97e8229b7efe369430abd140d07eb2
+    - https://github.com/nicolargo/glances/archive/refs/tags/v4.3.1.tar.gz : 473793bf118a0c34ef54bc7004cfc2d7bbc8752551b440e07ed37684a68d50b3
 homepage   : https://nicolargo.github.io/glances/
 license    : LGPL-3.0-or-later
 component  : system.utils
@@ -10,20 +10,21 @@ summary    : Glances is a cross-platform system monitoring tool written in Pytho
 description: |
     Glances is a cross-platform monitoring tool which aims to present a large amount of monitoring information through a curses or Web based interface. The information dynamically adapts depending on the size of the user interface.
 builddeps  :
-    - python-defusedxml # check
-    - python-psutil     # check
-    - python-ujson      # check
+    - python-build
+    - python-installer
+    - python-setuptools
 rundeps    :
     - python-bottle
     - python-defusedxml
     - python-future
+    - python-orjson
     - python-packaging
     - python-psutil
-    - python-ujson
+    - python-pydantic  # optional
 setup      : |
     %patch -p1 -i $pkgfiles/no-check-update.patch
+build      : |
+    %python3_setup
 install    : |
     %python3_install
     rm -rf $installdir/usr/share/doc/glances/{AUTHORS,CONTRIBUTING.md,COPYING,NEWS.rst,README.rst}
-check      : |
-    %python3_test

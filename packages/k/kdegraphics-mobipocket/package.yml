@@ -1,8 +1,8 @@
 name       : kdegraphics-mobipocket
-version    : 23.08.5
-release    : 72
+version    : 25.04.2
+release    : 90
 source     :
-    - https://cdn.download.kde.org/stable/release-service/23.08.5/src/kdegraphics-mobipocket-23.08.5.tar.xz : 714fa91bc7b004145fbba02e302dde0faa14bc652e4672c507fc507ac508a3fc
+    - https://download.kde.org/stable/release-service/25.04.2/src/kdegraphics-mobipocket-25.04.2.tar.xz : ddd546e8fff5552e5b7e7294f3c63b6130d9a98f6155ea280fa861f793cf2337
 homepage   : https://apps.kde.org/kdegraphics_mobipocket/
 license    : GPL-2.0-or-later
 component  : programming
@@ -10,10 +10,14 @@ summary    : Plugins for mobpocket
 description: |
     A collection of plugins to handle mobipocket files.
 builddeps  :
-    - pkgconfig(Qt5Core)
+    - pkgconfig(Qt6Core5Compat)
     - extra-cmake-modules
+clang      : yes
+optimize   :
+    - speed
+    - thin-lto
 setup      : |
-    %cmake_ninja
+    %cmake_kf6 -DBUILD_WITH_QT6=ON
 build      : |
     %ninja_build
 install    : |

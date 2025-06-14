@@ -1,8 +1,8 @@
 name       : dolphin-emu
-version    : 5.0.21088
-release    : 67
+version    : 2503a
+release    : 77
 source     :
-    - git|https://github.com/dolphin-emu/dolphin.git : 9240f579eab18a2f67eef23846a6b508393d0e6c
+    - git|https://github.com/dolphin-emu/dolphin.git : 0827d9f06d2b467926ede9a636d51075495c2859
 homepage   : https://dolphin-emu.org/
 license    : GPL-2.0-or-later
 component  : games.emulator
@@ -27,6 +27,7 @@ builddeps  :
     - pkgconfig(libxxhash)
     - pkgconfig(libzstd)
     - pkgconfig(lzo2)
+    - pkgconfig(mbedtls)
     - pkgconfig(miniupnpc)
     - pkgconfig(minizip-ng)
     - pkgconfig(openal)
@@ -36,21 +37,20 @@ builddeps  :
     - pkgconfig(sfml-all)
     - pkgconfig(soundtouch)
     - pkgconfig(speexdsp)
+    - pkgconfig(spng)
     - pkgconfig(xi)
     - pkgconfig(xrandr)
     - cubeb-devel
-    - llvm-clang-devel
-    - mbedtls-devel
+    - llvm-devel
 optimize   :
     - thin-lto
 clang      : yes
 setup      : |
     %patch -p1 -i $pkgfiles/0001-Desktop-integration-fixes.patch
-    %patch -p1 -i $pkgfiles/minizip-ng-4.0.4.patch
-    %patch -p1 -i $pkgfiles/0001-Allow-Solus-system-libenet.patch
+    %patch -p1 -i $pkgfiles/0001-solus-Suppress-dirty-from-version-string.patch
+    %patch -p1 -i $pkgfiles/0001-link-against-zlib.patch
 
     %cmake_ninja -DDISTRIBUTOR='Solus' \
-                 -DUSE_SHARED_ENET=TRUE \
                  -DENABLE_AUTOUPDATE=OFF \
                  -DENABLE_TESTS=OFF \
 build      : |
@@ -63,5 +63,3 @@ install    : |
 
     # Appdata
     install -Dm00644 $pkgfiles/org.DolphinEmu.dolphin-emu.appdata.xml $installdir/usr/share/metainfo/org.DolphinEmu.dolphin-emu.appdata.xml
-
-# TODO: Fix the "-dirty" that appears in the titlebar

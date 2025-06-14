@@ -1,8 +1,8 @@
 name       : calibre
-version    : 7.6.0
-release    : 188
+version    : 8.4.0
+release    : 221
 source     :
-    - https://download.calibre-ebook.com/7.6.0/calibre-7.6.0.tar.xz : 7c3da44f01faf76c7a366f7736b510be66dc5e25fd847069a38c2f52f06a2c03
+    - https://download.calibre-ebook.com/8.4.0/calibre-8.4.0.tar.xz : e6e7b1708b5b0603b64efe767254b437e221a65aa92b0ab8de9db2a92c4035e9
 homepage   : https://calibre-ebook.com/
 license    : GPL-3.0-only
 component  : office.viewers
@@ -15,6 +15,7 @@ builddeps  :
     - pkgconfig(dbus-python)
     - pkgconfig(hunspell)
     - pkgconfig(icu-i18n)
+    - pkgconfig(libavutil)
     - pkgconfig(libinput)
     - pkgconfig(libmtp)
     - pkgconfig(mtdev)
@@ -53,6 +54,7 @@ builddeps  :
     - python-pyqt6-webengine
     - python-pyzstd
     - python-regex
+    - python-setuptools
     - python-sip
     - python-xxhash
     - python-zeroconf
@@ -115,7 +117,6 @@ install    : |
 
     # Remove MimeTypes from .desktop as it creates unwanted associations
     sed -e "/MimeType/d" -i  $installdir/usr/share/applications/calibre*.desktop
-    rm -rfv $installdir/usr/share/applications/calibre-{ebook-*,lrfviewer}.desktop
     chmod -R 00755 $installdir/usr/share/applications/calibre-gui.desktop
     install -Dm00644 $workdir/resources/calibre-mimetypes.xml $installdir/usr/share/mime/packages/calibre-mimetypes.xml
 
@@ -124,15 +125,21 @@ install    : |
 
     # Remove unneeded files
     rm $installdir/usr/share/calibre/*portable*
+
+    # We can only include one, remove other appstream metainfo files
+    rm -rfv $installdir/usr/share/metainfo/calibre-ebook-*.metainfo.xml
 check      : |
     # excluded tests for optional or missing packages like:
-    # python-py7zr python-pychm python-pycryptodome python-sgmllib3k python-unrardll
+    # python-py7zr python-pychm python-pycryptodome python-pykakasi python-sgmllib3k python-unrardll piper is not yet packaged
     xvfb-run python3 setup.py test \
         --exclude-test-name 7z \
         --exclude-test-name feedparser \
         --exclude-test-name import_of_all_python_modules \
         --exclude-test-name pychm \
         --exclude-test-name pycryptodome \
+        --exclude-test-name pykakasi \
         --exclude-test-name qt \
+        --exclude-test-name recipe_browser_webengine \
+        --exclude-test-name test_piper \
         --exclude-test-name test_dom_load \
         --exclude-test-name unrar

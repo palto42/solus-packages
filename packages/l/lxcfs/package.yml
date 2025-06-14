@@ -1,8 +1,8 @@
 name       : lxcfs
-version    : 5.0.4
-release    : 6
+version    : 6.0.3
+release    : 9
 source     :
-    - https://linuxcontainers.org/downloads/lxcfs/lxcfs-5.0.4.tar.gz : c2b361edc881d5ca8fa2cd3260a4999b8f87afce8d937be2160e5cf0b482c52f
+    - https://linuxcontainers.org/downloads/lxcfs/lxcfs-6.0.3.tar.gz : 886484d4a74d33dfa285635d5ebef20b0686a64901d23e00dc0f4496c10c1114
 license    : LGPL-2.1-or-later
 homepage   : https://linuxcontainers.org/lxcfs/
 component  : virt
@@ -14,6 +14,7 @@ builddeps  :
     - help2man
     - lxc
     - python-jinja
+clang      : yes
 setup      : |
     %meson_configure
 build      : |

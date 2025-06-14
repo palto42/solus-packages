@@ -1,8 +1,8 @@
 name       : open-vm-tools
-version    : 12.3.5
-release    : 293
+version    : 12.5.0
+release    : 334
 source     :
-    - https://github.com/vmware/open-vm-tools/archive/stable-12.3.5.tar.gz : 2688a71c917228d0ac48e52cced2f5e3bd7031cf0bc7f6e7dce9a56f3badca09
+    - https://github.com/vmware/open-vm-tools/archive/stable-12.5.0.tar.gz : a52182c7e6b5df41bb317625e9d8592ecdb9db814d1c2c9b7cdb91a77f8c0640
 license    : LGPL-2.1-or-later
 component  : system.utils
 homepage   : https://github.com/vmware/open-vm-tools
@@ -17,7 +17,7 @@ builddeps  :
     - pkgconfig(gtkmm-3.0)
     - pkgconfig(libdrm)
     - pkgconfig(libmspack)
-    - pkgconfig(libprocps)
+    - pkgconfig(libproc2)
     - pkgconfig(libtirpc)
     - pkgconfig(sm)
     - pkgconfig(xext)
@@ -27,7 +27,6 @@ builddeps  :
     - pkgconfig(xrandr)
     - pkgconfig(xrender)
     - pkgconfig(xtst)
-    - libdnet-devel
     - linux-current-headers
     - rpcsvc-proto-devel
 patterns   :
@@ -36,11 +35,13 @@ optimize   : no-bind-now
 setup      : |
     pushd open-vm-tools
     %patch -p1 -i $pkgfiles/0001-Don-t-set-Werror-it-s-evil.patch
+    %patch -p2 -i $pkgfiles/ftbfs-gcc-15.patch
     sed -i -e 's|.*common-agent/etc/config/Makefile.*||' configure.ac
     mkdir -p common-agent/etc/config
     %reconfigure --with-kernel-release="%kernel_version_current%" \
                  --with-gtk3 \
-                 --with-gtkmm3
+                 --with-gtkmm3 \
+                 --disable-static
 build      : |
     pushd open-vm-tools
     %make

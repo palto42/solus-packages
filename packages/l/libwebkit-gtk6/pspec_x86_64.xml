@@ -3,8 +3,8 @@
         <Name>libwebkit-gtk6</Name>
         <Homepage>https://webkitgtk.org</Homepage>
         <Packager>
-            <Name>Reilly Brogan</Name>
-            <Email>solus@reillybrogan.com</Email>
+            <Name>Joey Riches</Name>
+            <Email>josephriches@gmail.com</Email>
         </Packager>
         <License>LGPL-2.1-only</License>
         <PartOf>desktop.web</PartOf>
@@ -25,17 +25,15 @@
             <Path fileType="library">/usr/lib64/girepository-1.0/WebKit-6.0.typelib</Path>
             <Path fileType="library">/usr/lib64/girepository-1.0/WebKitWebProcessExtension-6.0.typelib</Path>
             <Path fileType="library">/usr/lib64/libjavascriptcoregtk-6.0.so.1</Path>
-            <Path fileType="library">/usr/lib64/libjavascriptcoregtk-6.0.so.1.1.14</Path>
+            <Path fileType="library">/usr/lib64/libjavascriptcoregtk-6.0.so.1.5.4</Path>
             <Path fileType="library">/usr/lib64/libwebkitgtk-6.0.so.4</Path>
-            <Path fileType="library">/usr/lib64/libwebkitgtk-6.0.so.4.4.8</Path>
+            <Path fileType="library">/usr/lib64/libwebkitgtk-6.0.so.4.11.6</Path>
             <Path fileType="library">/usr/lib64/webkitgtk-6.0/injected-bundle/libwebkitgtkinjectedbundle.so</Path>
             <Path fileType="executable">/usr/libexec/webkitgtk-6.0/MiniBrowser</Path>
+            <Path fileType="executable">/usr/libexec/webkitgtk-6.0/WebKitGPUProcess</Path>
             <Path fileType="executable">/usr/libexec/webkitgtk-6.0/WebKitNetworkProcess</Path>
             <Path fileType="executable">/usr/libexec/webkitgtk-6.0/WebKitWebProcess</Path>
             <Path fileType="executable">/usr/libexec/webkitgtk-6.0/jsc</Path>
-            <Path fileType="data">/usr/share/gir-1.0/JavaScriptCore-6.0.gir</Path>
-            <Path fileType="data">/usr/share/gir-1.0/WebKit-6.0.gir</Path>
-            <Path fileType="data">/usr/share/gir-1.0/WebKitWebProcessExtension-6.0.gir</Path>
             <Path fileType="localedata">/usr/share/locale/ar/LC_MESSAGES/WebKitGTK-6.0.mo</Path>
             <Path fileType="localedata">/usr/share/locale/as/LC_MESSAGES/WebKitGTK-6.0.mo</Path>
             <Path fileType="localedata">/usr/share/locale/bg/LC_MESSAGES/WebKitGTK-6.0.mo</Path>
@@ -99,7 +97,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="2">libwebkit-gtk6</Dependency>
+            <Dependency release="15">libwebkit-gtk6</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/webkitgtk-6.0/jsc/JSCClass.h</Path>
@@ -120,6 +118,7 @@
             <Path fileType="header">/usr/include/webkitgtk-6.0/webkit/WebKitBackForwardListItem.h</Path>
             <Path fileType="header">/usr/include/webkitgtk-6.0/webkit/WebKitClipboardPermissionRequest.h</Path>
             <Path fileType="header">/usr/include/webkitgtk-6.0/webkit/WebKitColorChooserRequest.h</Path>
+            <Path fileType="header">/usr/include/webkitgtk-6.0/webkit/WebKitConsoleMessage.h</Path>
             <Path fileType="header">/usr/include/webkitgtk-6.0/webkit/WebKitContextMenu.h</Path>
             <Path fileType="header">/usr/include/webkitgtk-6.0/webkit/WebKitContextMenuActions.h</Path>
             <Path fileType="header">/usr/include/webkitgtk-6.0/webkit/WebKitContextMenuItem.h</Path>
@@ -177,6 +176,7 @@
             <Path fileType="header">/usr/include/webkitgtk-6.0/webkit/WebKitVersion.h</Path>
             <Path fileType="header">/usr/include/webkitgtk-6.0/webkit/WebKitWebContext.h</Path>
             <Path fileType="header">/usr/include/webkitgtk-6.0/webkit/WebKitWebEditor.h</Path>
+            <Path fileType="header">/usr/include/webkitgtk-6.0/webkit/WebKitWebExtensionMatchPattern.h</Path>
             <Path fileType="header">/usr/include/webkitgtk-6.0/webkit/WebKitWebFormManager.h</Path>
             <Path fileType="header">/usr/include/webkitgtk-6.0/webkit/WebKitWebHitTestResult.h</Path>
             <Path fileType="header">/usr/include/webkitgtk-6.0/webkit/WebKitWebInspector.h</Path>
@@ -199,18 +199,21 @@
             <Path fileType="data">/usr/lib64/pkgconfig/javascriptcoregtk-6.0.pc</Path>
             <Path fileType="data">/usr/lib64/pkgconfig/webkitgtk-6.0.pc</Path>
             <Path fileType="data">/usr/lib64/pkgconfig/webkitgtk-web-process-extension-6.0.pc</Path>
+            <Path fileType="data">/usr/share/gir-1.0/JavaScriptCore-6.0.gir</Path>
+            <Path fileType="data">/usr/share/gir-1.0/WebKit-6.0.gir</Path>
+            <Path fileType="data">/usr/share/gir-1.0/WebKitWebProcessExtension-6.0.gir</Path>
         </Files>
         <Replaces>
             <Package>libwebkit-gtk5-devel</Package>
         </Replaces>
     </Package>
     <History>
-        <Update release="2">
-            <Date>2024-03-03</Date>
-            <Version>2.42.5</Version>
+        <Update release="15">
+            <Date>2025-04-10</Date>
+            <Version>2.48.1</Version>
             <Comment>Packaging update</Comment>
-            <Name>Reilly Brogan</Name>
-            <Email>solus@reillybrogan.com</Email>
+            <Name>Joey Riches</Name>
+            <Email>josephriches@gmail.com</Email>
         </Update>
     </History>
 </PISI>

@@ -1,6 +1,7 @@
 <PISI>
     <Source>
         <Name>msgpack</Name>
+        <Homepage>https://msgpack.org/</Homepage>
         <Packager>
             <Name>Evan Maddock</Name>
             <Email>maddock.evan@vivaldi.net</Email>
@@ -10,7 +11,7 @@
         <Summary xml:lang="en">An efficient object serialization library</Summary>
         <Description xml:lang="en">MessagePack is an efficient binary serialization format. It lets you exchange data among multiple languages like JSON. But it&apos;s faster and smaller. Small integers are encoded into a single byte, and typical short strings require only one extra byte in addition to the strings themselves.
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>msgpack</Name>
@@ -30,7 +31,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="6">msgpack</Dependency>
+            <Dependency release="8">msgpack</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/msgpack.h</Path>
@@ -61,9 +62,9 @@
         </Files>
     </Package>
     <History>
-        <Update release="6">
-            <Date>2023-04-23</Date>
-            <Version>6.0.0</Version>
+        <Update release="8">
+            <Date>2024-10-03</Date>
+            <Version>6.1.0</Version>
             <Comment>Packaging update</Comment>
             <Name>Evan Maddock</Name>
             <Email>maddock.evan@vivaldi.net</Email>

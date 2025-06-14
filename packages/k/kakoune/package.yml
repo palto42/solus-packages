@@ -1,8 +1,8 @@
 name       : kakoune
-version    : 2023.08.05
-release    : 14
+version    : 2025.06.03
+release    : 17
 source     :
-    - https://github.com/mawww/kakoune/archive/refs/tags/v2023.08.05.tar.gz : 1ad7bfe9e1d861115cd418cb500990ea5fa63726e998df13702e5caa8fc84356
+    - https://github.com/mawww/kakoune/archive/refs/tags/v2025.06.03.tar.gz : e065dbb715bfe6b0abdaeee775243115748bd540a346d0212fdca6c20c13d340
 homepage   : https://kakoune.org
 license    : Unlicense
 component  : editor
@@ -12,9 +12,11 @@ description: |
 builddeps  :
     - asciidoc
 build      : |
-    %make -C src
+    %make
+check      : |
+    make test
 install    : |
-    %make_install -C src PREFIX='/usr'
+    %make_install PREFIX='/usr'
 
     # Set EDITOR and VISUAL defaults should nano be removed.
     install -Dm00644 $pkgfiles/80-kakoune-is-default-EDITOR-and-VISUAL.sh $installdir/usr/share/defaults/etc/profile.d/80-kakoune-is-default-EDITOR-and-VISUAL.sh

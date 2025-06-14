@@ -1,12 +1,12 @@
 name       : less
-version    : '643'
-release    : 20
+version    : '668'
+release    : 22
 source     :
-    - http://www.greenwoodsoftware.com/less/less-643.tar.gz : 2911b5432c836fa084c8a2e68f6cd6312372c026a58faaa98862731c8b6052e8
+    - https://www.greenwoodsoftware.com/less/less-668.tar.gz : 2819f55564d86d542abbecafd82ff61e819a3eec967faa36cd3e68f1596a44b8
 license    :
     - GPL-3.0-only
     - BSD-2-Clause
-homepage   : http://www.greenwoodsoftware.com/less/
+homepage   : https://www.greenwoodsoftware.com/less/
 component  : system.base
 summary    : less (file pager)
 description: |

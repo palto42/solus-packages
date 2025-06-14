@@ -1,9 +1,9 @@
 name       : pinta
-version    : 2.1.1
+version    : 3.0.1
 homepage   : https://www.pinta-project.com/
-release    : 16
+release    : 19
 source     :
-    - https://github.com/PintaProject/Pinta/releases/download/2.1.1/pinta-2.1.1.tar.gz : 32cedc983e9c50e1bc15a85b0fc909f52e97c7a0f5cca3a2c47b711a717df9eb
+    - https://github.com/PintaProject/Pinta/releases/download/3.0.1/pinta-3.0.1.tar.gz : f18feaa245bcb927bd13a971dbcf3ea25628b3e091cf65478126573be2a2f5b7
 license    : MIT
 component  : multimedia.graphics
 summary    : Pinta Painting Made Simple
@@ -12,7 +12,7 @@ description: |
 libsplit   : no
 networking : yes
 builddeps  :
-    - pkgconfig(gtk+-3.0)
+    - pkgconfig(libadwaita-1)
     - autoconf-archive
     - dotnet-sdk
     - gettext-devel
@@ -21,7 +21,6 @@ rundeps    :
     - dotnet
 setup      : |
     sed -i '/^PINTA_BUILD_OPTS/ s/$/ -maxcpucount:1/' Makefile.am
-    %patch -p1 -i $pkgfiles/0001-use-net8.patch
     %patch -p1 -i $pkgfiles/0002-force-x11-compat.patch
     %reconfigure
 build      : |

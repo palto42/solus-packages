@@ -1,8 +1,8 @@
 name       : winff
-version    : 1.6.2
-release    : 9
+version    : 1.6.4
+release    : 11
 source     :
-    - https://github.com/WinFF/winff/archive/refs/tags/winff-1.6.2.tar.gz : c06e8f35f0ee67025422265baa07dab7508596a11d80034c93b519af0472a730
+    - https://github.com/WinFF/winff/archive/refs/tags/winff-1.6.4.tar.gz : e96189560ef3f3c4da769e28cbfd6344543b532704d6b22550650a0cf18e6aa0
 homepage   : https://github.com/WinFF/winff
 license    : GPL-3.0-or-later
 component  : multimedia.video
@@ -17,7 +17,7 @@ rundeps    :
     - ffmpeg
 build      : |
     pushd winff
-    lazbuild --lazarusdir=/usr/share/lazarus winff.lpr
+    lazbuild --lazarusdir=%libdir%/lazarus winff.lpr
 install    : |
     pushd winff
     install -Dm00755 winff $installdir/usr/bin/winff
@@ -30,3 +30,4 @@ install    : |
         install -Dm00644 winff-icons/$size/winff.png $installdir/usr/share/icons/hicolor/$size/apps/winff.png
     done
     install -Dm00644 $pkgfiles/winff.desktop $installdir/usr/share/applications/winff.desktop
+    install -Dm00644 $pkgfiles/io.github.winff.winff.metainfo.xml -t $installdir/usr/share/metainfo

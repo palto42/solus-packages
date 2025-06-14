@@ -1,38 +1,36 @@
 <PISI>
     <Source>
         <Name>gnome-control-center</Name>
-        <Homepage>https://gitlab.gnome.org/GNOME/gnome-control-center</Homepage>
+        <Homepage>https://apps.gnome.org/Settings/</Homepage>
         <Packager>
             <Name>Joey Riches</Name>
             <Email>josephriches@gmail.com</Email>
         </Packager>
-        <License>GPL-2.0-only</License>
+        <License>GPL-2.0-or-later</License>
         <PartOf>desktop.gnome</PartOf>
-        <Summary xml:lang="en">The GNOME Control Center</Summary>
-        <Description xml:lang="en">The GNOME Control Center
+        <Summary xml:lang="en">Utility to configure the GNOME desktop</Summary>
+        <Description xml:lang="en">Settings is the primary interface for configuring your system.
 </Description>
         <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>gnome-control-center</Name>
-        <Summary xml:lang="en">The GNOME Control Center</Summary>
-        <Description xml:lang="en">The GNOME Control Center
+        <Summary xml:lang="en">Utility to configure the GNOME desktop</Summary>
+        <Description xml:lang="en">Settings is the primary interface for configuring your system.
 </Description>
         <PartOf>desktop.gnome</PartOf>
         <Files>
             <Path fileType="executable">/usr/bin/gnome-control-center</Path>
-            <Path fileType="library">/usr/lib64/gnome-control-center/cc-remote-login-helper</Path>
-            <Path fileType="library">/usr/lib64/gnome-control-center/gnome-control-center-goa-helper</Path>
+            <Path fileType="library">/usr/lib64/gnome-control-center/gnome-control-center-global-shortcuts-provider</Path>
             <Path fileType="library">/usr/lib64/gnome-control-center/gnome-control-center-print-renderer</Path>
             <Path fileType="library">/usr/lib64/gnome-control-center/gnome-control-center-search-provider</Path>
+            <Path fileType="data">/usr/share/applications/gnome-about-panel.desktop</Path>
             <Path fileType="data">/usr/share/applications/gnome-applications-panel.desktop</Path>
             <Path fileType="data">/usr/share/applications/gnome-background-panel.desktop</Path>
             <Path fileType="data">/usr/share/applications/gnome-bluetooth-panel.desktop</Path>
             <Path fileType="data">/usr/share/applications/gnome-color-panel.desktop</Path>
             <Path fileType="data">/usr/share/applications/gnome-datetime-panel.desktop</Path>
-            <Path fileType="data">/usr/share/applications/gnome-default-apps-panel.desktop</Path>
             <Path fileType="data">/usr/share/applications/gnome-display-panel.desktop</Path>
-            <Path fileType="data">/usr/share/applications/gnome-info-overview-panel.desktop</Path>
             <Path fileType="data">/usr/share/applications/gnome-keyboard-panel.desktop</Path>
             <Path fileType="data">/usr/share/applications/gnome-mouse-panel.desktop</Path>
             <Path fileType="data">/usr/share/applications/gnome-multitasking-panel.desktop</Path>
@@ -43,17 +41,20 @@
             <Path fileType="data">/usr/share/applications/gnome-printers-panel.desktop</Path>
             <Path fileType="data">/usr/share/applications/gnome-privacy-panel.desktop</Path>
             <Path fileType="data">/usr/share/applications/gnome-region-panel.desktop</Path>
-            <Path fileType="data">/usr/share/applications/gnome-removable-media-panel.desktop</Path>
             <Path fileType="data">/usr/share/applications/gnome-search-panel.desktop</Path>
             <Path fileType="data">/usr/share/applications/gnome-sharing-panel.desktop</Path>
             <Path fileType="data">/usr/share/applications/gnome-sound-panel.desktop</Path>
+            <Path fileType="data">/usr/share/applications/gnome-system-panel.desktop</Path>
             <Path fileType="data">/usr/share/applications/gnome-universal-access-panel.desktop</Path>
-            <Path fileType="data">/usr/share/applications/gnome-user-accounts-panel.desktop</Path>
+            <Path fileType="data">/usr/share/applications/gnome-users-panel.desktop</Path>
             <Path fileType="data">/usr/share/applications/gnome-wacom-panel.desktop</Path>
+            <Path fileType="data">/usr/share/applications/gnome-wellbeing-panel.desktop</Path>
             <Path fileType="data">/usr/share/applications/gnome-wifi-panel.desktop</Path>
             <Path fileType="data">/usr/share/applications/gnome-wwan-panel.desktop</Path>
             <Path fileType="data">/usr/share/applications/org.gnome.Settings.desktop</Path>
             <Path fileType="data">/usr/share/bash-completion/completions/gnome-control-center</Path>
+            <Path fileType="data">/usr/share/dbus-1/interfaces/org.gnome.GlobalShortcutsRebind.xml</Path>
+            <Path fileType="data">/usr/share/dbus-1/services/org.gnome.Settings.GlobalShortcutsProvider.service</Path>
             <Path fileType="data">/usr/share/dbus-1/services/org.gnome.Settings.SearchProvider.service</Path>
             <Path fileType="data">/usr/share/dbus-1/services/org.gnome.Settings.service</Path>
             <Path fileType="data">/usr/share/gettext/its/gnome-keybindings.its</Path>
@@ -71,17 +72,28 @@
             <Path fileType="data">/usr/share/icons/gnome-logo-text-dark.svg</Path>
             <Path fileType="data">/usr/share/icons/gnome-logo-text.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.gnome.Settings-about-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.gnome.Settings-accessibility-hearing-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.gnome.Settings-accessibility-pointing-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.gnome.Settings-accessibility-seeing-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.gnome.Settings-accessibility-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.gnome.Settings-accessibility-typing-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.gnome.Settings-accessibility-zoom-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.gnome.Settings-appearance-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.gnome.Settings-applications-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.gnome.Settings-bluetooth-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.gnome.Settings-camera-access-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.gnome.Settings-color-symbolic.svg</Path>
-            <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.gnome.Settings-default-apps-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.gnome.Settings-desktop-sharing-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.gnome.Settings-device-diagnostics-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.gnome.Settings-device-security-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.gnome.Settings-display-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.gnome.Settings-keyboard-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.gnome.Settings-location-access-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.gnome.Settings-microphone-access-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.gnome.Settings-mobile-network-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.gnome.Settings-mouse-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.gnome.Settings-multitasking-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.gnome.Settings-network-proxy-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.gnome.Settings-network-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.gnome.Settings-notifications-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.gnome.Settings-online-accounts-symbolic.svg</Path>
@@ -89,16 +101,22 @@
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.gnome.Settings-printers-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.gnome.Settings-privacy-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.gnome.Settings-region-symbolic.svg</Path>
-            <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.gnome.Settings-removable-media-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.gnome.Settings-remote-desktop-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.gnome.Settings-screen-lock-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.gnome.Settings-screen-time-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.gnome.Settings-search-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.gnome.Settings-secure-shell-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.gnome.Settings-sharing-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.gnome.Settings-sound-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.gnome.Settings-system-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.gnome.Settings-thunderbolt-access-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.gnome.Settings-time-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.gnome.Settings-trash-file-history-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.gnome.Settings-users-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.gnome.Settings-wacom-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.gnome.Settings-wellbeing-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.gnome.Settings.Devel.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.gnome.Settings.svg</Path>
-            <Path fileType="data">/usr/share/icons/hicolor/scalable/status/info-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/symbolic/apps/org.gnome.Settings-symbolic.svg</Path>
             <Path fileType="localedata">/usr/share/locale/ab/LC_MESSAGES/gnome-control-center-2.0.mo</Path>
             <Path fileType="localedata">/usr/share/locale/af/LC_MESSAGES/gnome-control-center-2.0.mo</Path>
@@ -173,6 +191,7 @@
             <Path fileType="localedata">/usr/share/locale/hu/LC_MESSAGES/gnome-control-center-2.0-timezones.mo</Path>
             <Path fileType="localedata">/usr/share/locale/hu/LC_MESSAGES/gnome-control-center-2.0.mo</Path>
             <Path fileType="localedata">/usr/share/locale/hy/LC_MESSAGES/gnome-control-center-2.0.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/ia/LC_MESSAGES/gnome-control-center-2.0.mo</Path>
             <Path fileType="localedata">/usr/share/locale/id/LC_MESSAGES/gnome-control-center-2.0-timezones.mo</Path>
             <Path fileType="localedata">/usr/share/locale/id/LC_MESSAGES/gnome-control-center-2.0.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ie/LC_MESSAGES/gnome-control-center-2.0.mo</Path>
@@ -280,71 +299,24 @@
             <Path fileType="localedata">/usr/share/locale/zu/LC_MESSAGES/gnome-control-center-2.0.mo</Path>
             <Path fileType="man">/usr/share/man/man1/gnome-control-center.1</Path>
             <Path fileType="data">/usr/share/metainfo/org.gnome.Settings.appdata.xml</Path>
-            <Path fileType="data">/usr/share/pixmaps/faces/astronaut.jpg</Path>
-            <Path fileType="data">/usr/share/pixmaps/faces/baseball.png</Path>
             <Path fileType="data">/usr/share/pixmaps/faces/bicycle.jpg</Path>
             <Path fileType="data">/usr/share/pixmaps/faces/book.jpg</Path>
-            <Path fileType="data">/usr/share/pixmaps/faces/butterfly.png</Path>
             <Path fileType="data">/usr/share/pixmaps/faces/calculator.jpg</Path>
-            <Path fileType="data">/usr/share/pixmaps/faces/cat-eye.jpg</Path>
             <Path fileType="data">/usr/share/pixmaps/faces/cat.jpg</Path>
-            <Path fileType="data">/usr/share/pixmaps/faces/chess.jpg</Path>
-            <Path fileType="data">/usr/share/pixmaps/faces/coffee.jpg</Path>
             <Path fileType="data">/usr/share/pixmaps/faces/coffee2.jpg</Path>
-            <Path fileType="data">/usr/share/pixmaps/faces/dice.jpg</Path>
-            <Path fileType="data">/usr/share/pixmaps/faces/energy-arc.jpg</Path>
-            <Path fileType="data">/usr/share/pixmaps/faces/fish.jpg</Path>
-            <Path fileType="data">/usr/share/pixmaps/faces/flake.jpg</Path>
-            <Path fileType="data">/usr/share/pixmaps/faces/flower.jpg</Path>
             <Path fileType="data">/usr/share/pixmaps/faces/flower2.jpg</Path>
             <Path fileType="data">/usr/share/pixmaps/faces/gamepad.jpg</Path>
-            <Path fileType="data">/usr/share/pixmaps/faces/grapes.jpg</Path>
-            <Path fileType="data">/usr/share/pixmaps/faces/guitar.jpg</Path>
             <Path fileType="data">/usr/share/pixmaps/faces/guitar2.jpg</Path>
             <Path fileType="data">/usr/share/pixmaps/faces/headphones.jpg</Path>
             <Path fileType="data">/usr/share/pixmaps/faces/hummingbird.jpg</Path>
-            <Path fileType="data">/usr/share/pixmaps/faces/launch.jpg</Path>
-            <Path fileType="data">/usr/share/pixmaps/faces/leaf.jpg</Path>
-            <Path fileType="data">/usr/share/pixmaps/faces/legacy/astronaut.jpg</Path>
-            <Path fileType="data">/usr/share/pixmaps/faces/legacy/baseball.png</Path>
-            <Path fileType="data">/usr/share/pixmaps/faces/legacy/butterfly.png</Path>
-            <Path fileType="data">/usr/share/pixmaps/faces/legacy/cat-eye.jpg</Path>
-            <Path fileType="data">/usr/share/pixmaps/faces/legacy/chess.jpg</Path>
-            <Path fileType="data">/usr/share/pixmaps/faces/legacy/coffee.jpg</Path>
-            <Path fileType="data">/usr/share/pixmaps/faces/legacy/dice.jpg</Path>
-            <Path fileType="data">/usr/share/pixmaps/faces/legacy/energy-arc.jpg</Path>
-            <Path fileType="data">/usr/share/pixmaps/faces/legacy/fish.jpg</Path>
-            <Path fileType="data">/usr/share/pixmaps/faces/legacy/flake.jpg</Path>
-            <Path fileType="data">/usr/share/pixmaps/faces/legacy/flower.jpg</Path>
-            <Path fileType="data">/usr/share/pixmaps/faces/legacy/grapes.jpg</Path>
-            <Path fileType="data">/usr/share/pixmaps/faces/legacy/guitar.jpg</Path>
-            <Path fileType="data">/usr/share/pixmaps/faces/legacy/launch.jpg</Path>
-            <Path fileType="data">/usr/share/pixmaps/faces/legacy/leaf.jpg</Path>
-            <Path fileType="data">/usr/share/pixmaps/faces/legacy/lightning.jpg</Path>
-            <Path fileType="data">/usr/share/pixmaps/faces/legacy/penguin.jpg</Path>
-            <Path fileType="data">/usr/share/pixmaps/faces/legacy/puppy.jpg</Path>
-            <Path fileType="data">/usr/share/pixmaps/faces/legacy/sky.jpg</Path>
-            <Path fileType="data">/usr/share/pixmaps/faces/legacy/soccerball.png</Path>
-            <Path fileType="data">/usr/share/pixmaps/faces/legacy/sunflower.jpg</Path>
-            <Path fileType="data">/usr/share/pixmaps/faces/legacy/sunset.jpg</Path>
-            <Path fileType="data">/usr/share/pixmaps/faces/legacy/tennis-ball.png</Path>
-            <Path fileType="data">/usr/share/pixmaps/faces/legacy/yellow-rose.jpg</Path>
-            <Path fileType="data">/usr/share/pixmaps/faces/lightning.jpg</Path>
             <Path fileType="data">/usr/share/pixmaps/faces/mountain.jpg</Path>
-            <Path fileType="data">/usr/share/pixmaps/faces/penguin.jpg</Path>
             <Path fileType="data">/usr/share/pixmaps/faces/plane.jpg</Path>
-            <Path fileType="data">/usr/share/pixmaps/faces/puppy.jpg</Path>
-            <Path fileType="data">/usr/share/pixmaps/faces/sky.jpg</Path>
-            <Path fileType="data">/usr/share/pixmaps/faces/soccerball.png</Path>
-            <Path fileType="data">/usr/share/pixmaps/faces/sunflower.jpg</Path>
-            <Path fileType="data">/usr/share/pixmaps/faces/sunset.jpg</Path>
             <Path fileType="data">/usr/share/pixmaps/faces/surfer.jpg</Path>
-            <Path fileType="data">/usr/share/pixmaps/faces/tennis-ball.png</Path>
             <Path fileType="data">/usr/share/pixmaps/faces/tomatoes.jpg</Path>
             <Path fileType="data">/usr/share/pixmaps/faces/tree.jpg</Path>
-            <Path fileType="data">/usr/share/pixmaps/faces/yellow-rose.jpg</Path>
-            <Path fileType="data">/usr/share/polkit-1/actions/org.gnome.controlcenter.datetime.policy</Path>
             <Path fileType="data">/usr/share/polkit-1/actions/org.gnome.controlcenter.remote-login-helper.policy</Path>
+            <Path fileType="data">/usr/share/polkit-1/actions/org.gnome.controlcenter.remote-session-helper.policy</Path>
+            <Path fileType="data">/usr/share/polkit-1/actions/org.gnome.controlcenter.system.policy</Path>
             <Path fileType="data">/usr/share/polkit-1/actions/org.gnome.controlcenter.user-accounts.policy</Path>
             <Path fileType="data">/usr/share/polkit-1/rules.d/org.gnome.controlcenter.rules</Path>
             <Path fileType="data">/usr/share/sounds/gnome/default/alerts/click.ogg</Path>
@@ -356,20 +328,20 @@
     <Package>
         <Name>gnome-control-center-devel</Name>
         <Summary xml:lang="en">Development files for gnome-control-center</Summary>
-        <Description xml:lang="en">The GNOME Control Center
+        <Description xml:lang="en">Settings is the primary interface for configuring your system.
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="152">gnome-control-center</Dependency>
+            <Dependency release="171">gnome-control-center</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="data">/usr/share/pkgconfig/gnome-keybindings.pc</Path>
         </Files>
     </Package>
     <History>
-        <Update release="152">
-            <Date>2024-02-13</Date>
-            <Version>45.3</Version>
+        <Update release="171">
+            <Date>2025-05-27</Date>
+            <Version>48.2</Version>
             <Comment>Packaging update</Comment>
             <Name>Joey Riches</Name>
             <Email>josephriches@gmail.com</Email>

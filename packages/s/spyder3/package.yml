@@ -1,8 +1,8 @@
 name       : spyder3
-version    : 5.5.0
-release    : 33
+version    : 6.0.5
+release    : 40
 source     :
-    - https://github.com/spyder-ide/spyder/archive/refs/tags/v5.5.0.tar.gz : 8d7d86add5147698da0e3658ed65c2a594727130027a69fc62e719f59e32ae86
+    - https://github.com/spyder-ide/spyder/archive/refs/tags/v6.0.5.tar.gz : b18b5bda3f5bf64e2044b0a8291a5458d0e2edc318feb4d6779140353e1f8dfc
 homepage   : https://www.spyder-ide.org/
 license    :
     - BSD-3-Clause
@@ -22,9 +22,14 @@ description: |
     Spyder is a powerful scientific environment written in Python, for Python, and designed by and for scientists, engineers and data analysts. It offers a unique combination of the advanced editing, analysis, debugging, and profiling functionality of a comprehensive development tool with the data exploration, interactive execution, deep inspection, and beautiful visualization capabilities of a scientific package.
 builddeps  :
     - pkgconfig(python3)
+    - python-build
+    - python-installer
+    - python-setuptools
 rundeps    :
     - cython
     - matplotlib
+    - python-aiohttp
+    - python-asyncssh
     - python-atomicwrites
     - python-chardet
     - python-cookiecutter
@@ -37,8 +42,10 @@ rundeps    :
     - python-opengl
     - python-pandas
     - python-psutil
+    - python-pygithub
     - python-pylint-venv
     - python-pyls-spyder
+    - python-pyuca
     - python-qdarkstyle
     - python-qstylizer
     - python-qtawesome
@@ -46,6 +53,7 @@ rundeps    :
     - python-qtwebengine
     - python-rtree
     - python-spyder-kernels
+    - python-superqt
     - python-textdistance
     - python-three-merge
     - python-watchdog

@@ -1,8 +1,8 @@
 name       : libei
-version    : 1.2.1
-release    : 3
+version    : 1.4.1
+release    : 6
 source     :
-    - https://gitlab.freedesktop.org/libinput/libei/-/archive/1.2.1/libei-1.2.1.tar.gz : 7e06f06aa4dd1f7d170a0e5194644fe5cc889adc9b7be16bed5f2c39145569a4
+    - https://gitlab.freedesktop.org/libinput/libei/-/archive/1.4.1/libei-1.4.1.tar.gz : d0e8f18eb3617fbcc3d860bb54a47e17709e94e8e7cb0ae01ae221c67f000872
 homepage   : https://libinput.pages.freedesktop.org/libei/
 license    : MIT
 component  : desktop.library

@@ -1,8 +1,8 @@
 name       : yt-dlp
-version    : 2023.12.30
-release    : 212
+version    : 2025.06.09
+release    : 249
 source     :
-    - https://github.com/yt-dlp/yt-dlp/archive/refs/tags/2023.12.30.tar.gz : 2878501990f3ab6aa8eabb7346c16d4b4cbc01984372a1f0b3a6be8d260c7aff
+    - https://github.com/yt-dlp/yt-dlp/archive/refs/tags/2025.06.09.tar.gz : f823d212dda8fe905b7ddbc72b5a0cffef0c9fa7d32eb1b6885b4314928bc6d0
 license    : Unlicense
 component  : network.download
 homepage   : https://github.com/yt-dlp/yt-dlp
@@ -15,19 +15,20 @@ replaces   :
 builddeps  :
     - pkgconfig(python3)
     - pandoc
+    - python-build
+    - python-hatchling
+    - python-installer
 rundeps    :
     - mutagen
-    - python3
     - python-certifi
+    - python-pycryptodome
     - python-websockets
-    - python3-pycryptodome
-setup      : |
-    # Adjust requirement for pycryptodome and optional dependencies
-    sed -ri requirements.txt -e "s/^(pycryptodome)x/\1/" -e "/^(brotli.*)/d"
-    %make pypi-files
-    %python3_setup
+    - python3
+build      : |
+    %make PREFIX=$installdir/usr yt-dlp.1 completion-bash completion-fish completion-zsh
+    python3 -m build --wheel --no-isolation
 install    : |
-    %python3_install
+    python3 -m installer --destdir="$installdir" dist/*.whl
     rm -rf $installdir/usr/share/doc
     ln -s /usr/bin/yt-dlp $installdir/usr/bin/youtube-dl
     ln -s /usr/bin/yt-dlp $installdir/usr/bin/yt-dlc

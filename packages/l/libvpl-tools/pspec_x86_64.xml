@@ -1,0 +1,47 @@
+<PISI>
+    <Source>
+        <Name>libvpl-tools</Name>
+        <Homepage>https://intel.github.io/libvpl</Homepage>
+        <Packager>
+            <Name>Reilly Brogan</Name>
+            <Email>solus@reillybrogan.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <PartOf>programming.tools</PartOf>
+        <Summary xml:lang="en">Tools for libvpl</Summary>
+        <Description xml:lang="en">The Intel Video Processing Library (libVPL) is a programming interface for video decoding, encoding, and processing to build portable media pipelines on CPUs, GPUs, and other accelerators.
+It provides device discovery and selection in media centric and video analytics workloads and API primitives for zero-copy buffer sharing. libVPL is backwards and cross-architecture compatible to ensure optimal execution on current and next generation hardware without source code changes.
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>libvpl-tools</Name>
+        <Summary xml:lang="en">Tools for libvpl</Summary>
+        <Description xml:lang="en">The Intel Video Processing Library (libVPL) is a programming interface for video decoding, encoding, and processing to build portable media pipelines on CPUs, GPUs, and other accelerators.
+It provides device discovery and selection in media centric and video analytics workloads and API primitives for zero-copy buffer sharing. libVPL is backwards and cross-architecture compatible to ensure optimal execution on current and next generation hardware without source code changes.
+</Description>
+        <PartOf>programming.tools</PartOf>
+        <Files>
+            <Path fileType="executable">/usr/bin/metrics_monitor</Path>
+            <Path fileType="executable">/usr/bin/sample_decode</Path>
+            <Path fileType="executable">/usr/bin/sample_encode</Path>
+            <Path fileType="executable">/usr/bin/sample_multi_transcode</Path>
+            <Path fileType="executable">/usr/bin/sample_vpp</Path>
+            <Path fileType="executable">/usr/bin/system_analyzer</Path>
+            <Path fileType="executable">/usr/bin/val-surface-sharing</Path>
+            <Path fileType="executable">/usr/bin/vpl-import-export</Path>
+            <Path fileType="executable">/usr/bin/vpl-inspect</Path>
+            <Path fileType="library">/usr/lib64/vpl-tools/libvpl_wayland.so</Path>
+            <Path fileType="library">/usr/lib64/vpl-tools/libvpl_wayland.so.1.0.0</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="4">
+            <Date>2024-09-03</Date>
+            <Version>1.2.0</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Reilly Brogan</Name>
+            <Email>solus@reillybrogan.com</Email>
+        </Update>
+    </History>
+</PISI>

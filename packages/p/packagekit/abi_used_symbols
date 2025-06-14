@@ -1,12 +1,10 @@
 libc.so.6:__errno_location
-libc.so.6:__fprintf_chk
 libc.so.6:__isoc99_sscanf
 libc.so.6:__libc_start_main
 libc.so.6:__snprintf_chk
 libc.so.6:__stack_chk_fail
 libc.so.6:__syslog_chk
 libc.so.6:_exit
-libc.so.6:access
 libc.so.6:bind_textdomain_codeset
 libc.so.6:bindtextdomain
 libc.so.6:chmod
@@ -24,6 +22,7 @@ libc.so.6:fgets
 libc.so.6:fileno
 libc.so.6:fopen64
 libc.so.6:fork
+libc.so.6:fputs
 libc.so.6:free
 libc.so.6:getc
 libc.so.6:geteuid
@@ -36,7 +35,6 @@ libc.so.6:isatty
 libc.so.6:kill
 libc.so.6:localtime
 libc.so.6:lstat64
-libc.so.6:memcmp
 libc.so.6:memcpy
 libc.so.6:memmove
 libc.so.6:open64
@@ -62,6 +60,7 @@ libc.so.6:strlen
 libc.so.6:strtol
 libc.so.6:symlink
 libc.so.6:sync
+libc.so.6:syscall
 libc.so.6:tcgetattr
 libc.so.6:tcsetattr
 libc.so.6:textdomain
@@ -117,6 +116,8 @@ libgio-2.0.so.0:g_dbus_proxy_call_sync
 libgio-2.0.so.0:g_dbus_proxy_call_with_unix_fd_list_sync
 libgio-2.0.so.0:g_dbus_proxy_get_cached_property
 libgio-2.0.so.0:g_dbus_proxy_get_cached_property_names
+libgio-2.0.so.0:g_dbus_proxy_get_connection
+libgio-2.0.so.0:g_dbus_proxy_get_name_owner
 libgio-2.0.so.0:g_dbus_proxy_new
 libgio-2.0.so.0:g_dbus_proxy_new_finish
 libgio-2.0.so.0:g_dbus_proxy_new_for_bus
@@ -207,6 +208,7 @@ libglib-2.0.so.0:g_file_read_link
 libglib-2.0.so.0:g_file_set_contents
 libglib-2.0.so.0:g_file_test
 libglib-2.0.so.0:g_find_program_in_path
+libglib-2.0.so.0:g_format_size_full
 libglib-2.0.so.0:g_free
 libglib-2.0.so.0:g_get_current_time
 libglib-2.0.so.0:g_get_environ
@@ -279,8 +281,8 @@ libglib-2.0.so.0:g_mutex_init
 libglib-2.0.so.0:g_mutex_lock
 libglib-2.0.so.0:g_mutex_trylock
 libglib-2.0.so.0:g_mutex_unlock
-libglib-2.0.so.0:g_once_init_enter
-libglib-2.0.so.0:g_once_init_leave
+libglib-2.0.so.0:g_once_init_enter_pointer
+libglib-2.0.so.0:g_once_init_leave_pointer
 libglib-2.0.so.0:g_option_context_add_group
 libglib-2.0.so.0:g_option_context_add_main_entries
 libglib-2.0.so.0:g_option_context_free
@@ -306,6 +308,7 @@ libglib-2.0.so.0:g_ptr_array_remove
 libglib-2.0.so.0:g_ptr_array_remove_index
 libglib-2.0.so.0:g_ptr_array_remove_index_fast
 libglib-2.0.so.0:g_ptr_array_set_size
+libglib-2.0.so.0:g_ptr_array_sized_new
 libglib-2.0.so.0:g_ptr_array_sort
 libglib-2.0.so.0:g_ptr_array_unref
 libglib-2.0.so.0:g_quark_from_static_string
@@ -421,11 +424,12 @@ libgobject-2.0.so.0:g_cclosure_marshal_VOID__VOID
 libgobject-2.0.so.0:g_enum_register_static
 libgobject-2.0.so.0:g_flags_register_static
 libgobject-2.0.so.0:g_object_add_weak_pointer
+libgobject-2.0.so.0:g_object_class_install_properties
 libgobject-2.0.so.0:g_object_class_install_property
 libgobject-2.0.so.0:g_object_get
 libgobject-2.0.so.0:g_object_get_data
 libgobject-2.0.so.0:g_object_new
-libgobject-2.0.so.0:g_object_notify
+libgobject-2.0.so.0:g_object_notify_by_pspec
 libgobject-2.0.so.0:g_object_ref
 libgobject-2.0.so.0:g_object_set
 libgobject-2.0.so.0:g_object_set_data_full
@@ -444,6 +448,7 @@ libgobject-2.0.so.0:g_signal_handler_disconnect
 libgobject-2.0.so.0:g_signal_handlers_disconnect_matched
 libgobject-2.0.so.0:g_signal_new
 libgobject-2.0.so.0:g_strv_get_type
+libgobject-2.0.so.0:g_type_add_instance_private
 libgobject-2.0.so.0:g_type_check_instance_is_a
 libgobject-2.0.so.0:g_type_class_add_private
 libgobject-2.0.so.0:g_type_class_adjust_private_offset
@@ -452,6 +457,7 @@ libgobject-2.0.so.0:g_type_instance_get_private
 libgobject-2.0.so.0:g_type_name
 libgobject-2.0.so.0:g_type_query
 libgobject-2.0.so.0:g_type_register_static_simple
+libgobject-2.0.so.0:g_value_dup_string
 libgobject-2.0.so.0:g_value_get_boolean
 libgobject-2.0.so.0:g_value_get_boxed
 libgobject-2.0.so.0:g_value_get_enum

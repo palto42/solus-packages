@@ -1,8 +1,8 @@
 name       : ldc
-version    : 1.36.0
-release    : 62
+version    : 1.39.0
+release    : 68
 source     :
-    - git|https://github.com/ldc-developers/ldc.git : v1.36.0
+    - git|https://github.com/ldc-developers/ldc.git : v1.39.0
 homepage   : https://github.com/ldc-developers/ldc
 license    :
     - Apache-2.0
@@ -21,13 +21,13 @@ builddeps  :
     - pkgconfig(LLVMSPIRVLib)
     - dmd
     - llvm-bolt
+    - llvm-devel
 rundeps    :
     - ldc-libs
 environment: |
     unset LDFLAGS # bc we need manual linking off
 setup      : |
-    %patch -p1 -i $pkgfiles/stateless.patch
-    %patch -p1 -i $pkgfiles/extra-dflags.patch
+    %apply_patches
 
     # Build basic compiler for bootstrap
     mkdir bootstrap && pushd bootstrap
@@ -70,9 +70,9 @@ build      : |
         -DSYSCONF_INSTALL_DIR=/usr/share/defaults/etc \
         -DLDC_WITH_LLD=OFF \
         -DD_COMPILER=$workdir/ldc-bootstrap/bin/ldmd2 \
-        -DD_COMPILER_FLAGS="-O -linker=lld -release -flto=full" \
+        -DD_COMPILER_FLAGS="-O -linker=lld -release" \
         -DEXTRA_CXXFLAGS="-fprofile-use=$workdir/merged.profdata" \
-        -DEXTRA_DFLAGS_LDC="-flto=full -fprofile-use=$workdir/merged.profdata" \
+        -DEXTRA_DFLAGS_LDC="-fprofile-use=$workdir/merged.profdata" \
         -DLDC_LINK_MANUALLY=OFF \
         -DCMAKE_EXE_LINKER_FLAGS="-Wl,-q"
     %ninja_build

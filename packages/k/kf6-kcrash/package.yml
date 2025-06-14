@@ -1,8 +1,8 @@
 name       : kf6-kcrash
-version    : 6.0.0
-release    : 4
+version    : 6.14.0
+release    : 20
 source     :
-    - https://cdn.download.kde.org/stable/frameworks/6.0/kcrash-6.0.0.tar.xz : f56f1ed44e494417b7046e4f94791ad4ddd07c6cb8f0f704f2053717a44296f9
+    - https://download.kde.org/stable/frameworks/6.14/kcrash-6.14.0.tar.xz : 69d736be73bbe4a936f8996c3591a53c16816d4396d242d2e63dce079a268c34
 homepage   : https://community.kde.org/Frameworks
 license    : LGPL-2.0-or-later
 component  : desktop.library

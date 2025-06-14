@@ -29,7 +29,7 @@ welcomeExpandingLogo:   true
 #  - "normal" or unset, expand as needed, use *windowSize*
 #  - "fullscreen", start as large as possible, ignore *windowSize*
 #  - "noexpand", don't expand automatically, use *windowSize*
-windowExpanding:    noexpand
+windowExpanding:    normal
 
 # Size of Calamares window, expressed as w,h. Both w and h
 # may be either pixels (suffix px) or font-units (suffix em).
@@ -113,10 +113,10 @@ navigation: widget
 strings:
     productName:         "Solus"
     shortProductName:    "Solus"
-    version:             "4.5 Resilience"
-    shortVersion:        "4.5"
-    versionedName:       "Solus 4.5 Resilience"
-    shortVersionedName:  "Solus 4.5"
+    version:             "4.7 Endurance"
+    shortVersion:        "4.7"
+    versionedName:       "Solus 4.7 Endurance"
+    shortVersionedName:  "Solus 4.7"
     bootloaderEntryName: "Solus"
     productUrl:          https://getsol.us
     supportUrl:          https://help.getsol.us
@@ -170,10 +170,10 @@ images:
 # branding component also ships a stylesheet.qss. Then they are
 # the corresponding CSS attributes of #sidebarApp.
 style:
-   sidebarBackground:    "#2F343F"
-   sidebarText:          "#FFFFFF"
-   sidebarTextSelect:    "#FFFFFF"
-   sidebarTextHighlight: "#5294E2"
+   SidebarBackground:    "#2F343F"
+   SidebarText:          "#FFFFFF"
+   SidebarTextCurrent:    "#FFFFFF"
+   SidebarBackgroundCurrent: "#5294E2"
 
 ### SLIDESHOW
 #

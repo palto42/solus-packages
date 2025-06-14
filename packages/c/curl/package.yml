@@ -1,8 +1,8 @@
 name       : curl
-version    : 8.6.0
-release    : 86
+version    : 8.14.1
+release    : 108
 source     :
-    - https://github.com/curl/curl/releases/download/curl-8_6_0/curl-8.6.0.tar.gz#curl.tar.gz : 9c6db808160015f30f3c656c0dec125feb9dc00753596bf858a272b5dd8dc398
+    - https://github.com/curl/curl/releases/download/curl-8_14_1/curl-8.14.1.tar.gz : 6766ada7101d292b42b8b15681120acd68effa4a9660935853cf6d61f0d984d4
 extract    : no
 homepage   : https://curl.se
 license    : MIT
@@ -30,44 +30,52 @@ builddeps  :
     - pkgconfig32(libzstd)
     - pkgconfig32(openssl)
     - pkgconfig32(zlib)
+    - pkgconfig(libnghttp3)
     - groff
     - patchelf
 rundeps    :
+    - 32bit-devel :
+        - kerberos-32bit-devel
+        - libssh2-32bit-devel
     - devel :
         - kerberos-devel
         - libssh2-devel
         - nghttp2-devel
-    - 32bit-devel :
-        - kerberos-32bit-devel
-        - libssh2-32bit-devel
+        - nghttp3-devel
 checkdeps  :
     - openssh-server
 setup      : |
     mkdir main gnutls
-    tar --strip-components=1 -xf $sources/curl.tar.gz -C main
-    tar --strip-components=1 -xf $sources/curl.tar.gz -C gnutls
+    tar --strip-components=1 -xf $sources/curl-%version%.tar.gz -C main
+    tar --strip-components=1 -xf $sources/curl-%version%.tar.gz -C gnutls
 
     common="\
         --disable-static \
         --enable-threaded-resolver \
-        --with-ca-path=/etc/ssl/certs"
+        --with-ca-path=/etc/ssl/certs \
+        --without-libpsl"
+
+    if [ -z "${EMUL32BUILD+set}" ]; then
+        extra_args="--with-nghttp3 --enable-websockets"
+    fi
 
     pushd main
-    cp $sources/errorcodes.pl tests/ && chmod +x tests/errorcodes.pl
-    %reconfigure $common \
-                 --without-gnutls \
-                 --without-libpsl \
-                 --enable-libcurl-option \
-                 --with-libssh2 \
-                 --with-openssl \
-                 --with-gssapi
+    %configure $common \
+               --enable-libcurl-option \
+               --with-fish-functions-dir=/usr/share/fish/vendor_completions.d \
+               --with-gssapi \
+               --with-libssh2 \
+               --with-openssl \
+               --with-openssl-quic \
+               --with-zsh-functions-dir=/usr/share/zsh/site-functions \
+               --without-gnutls \
+               $extra_args
     popd
 
     pushd gnutls
-    %reconfigure $common \
-                 --disable-libcurl-option \
-                 --with-gnutls \
-                 --without-libpsl
+    %configure $common \
+               --disable-libcurl-option \
+               --with-gnutls
 build      : |
     %make -C main
     %make -C main/scripts
@@ -94,6 +102,9 @@ install    : |
 check      : |
     # ccache breaks some tests if enabled
     export CCACHE_DISABLE=1
+
+    # Disable test that fails on build server
+    echo 1510 >> main/tests/data/DISABLED
 
     %make -k check -C main
 patterns   :

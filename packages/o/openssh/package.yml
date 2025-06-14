@@ -1,8 +1,8 @@
 name       : openssh
-version    : 9.6_p1
-release    : 54
+version    : 9.9_p2
+release    : 60
 source     :
-    - https://cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-9.6p1.tar.gz : 910211c07255a8c5ad654391b40ee59800710dd8119dd5362de09385aa7a777c
+    - https://cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-9.9p2.tar.gz : 91aadb603e08cc285eddf965e1199d02585fa94d994d6cae5b41e1721e215673
 homepage   : https://www.openssh.com/
 license    :
     - BSD-2-Clause
@@ -38,6 +38,7 @@ patterns   :
         - /usr/lib/sysusers.d
         - /usr/lib/tmpfiles.d/openssh-server.conf
         - /usr/lib64/openssh/sftp*
+        - /usr/lib64/openssh/sshd-session
         - /usr/share/defaults/etc/ssh/moduli
         - /usr/share/defaults/etc/ssh/sshd_config
         - /usr/share/defaults/etc/pam.d/sshd
@@ -47,19 +48,17 @@ patterns   :
 setup      : |
     %apply_patches
 
-    %reconfigure --sysconfdir=/etc/ssh \
-                 --datadir=/usr/share/sshd \
-                 --with-pid-dir=/run \
-                 --with-xauth=/usr/bin/xauth \
-                 --with-kerberos5=/usr \
-                 --with-ldns=/usr \
-                 --with-libedit \
-                 --with-md5-passwords \
-                 --with-pam \
-                 --with-ssl-engine \
-                 --with-systemd \
-                 --with-security-key-builtin \
-                 --with-privsep-path=/var/lib/sshd
+    %configure --sysconfdir=/etc/ssh \
+               --datadir=/usr/share/sshd \
+               --with-pid-dir=/run \
+               --with-xauth=/usr/bin/xauth \
+               --with-kerberos5=/usr \
+               --with-ldns=/usr \
+               --with-libedit \
+               --with-pam \
+               --with-ssl-engine \
+               --with-security-key-builtin \
+               --with-privsep-path=/var/lib/sshd
 build      : |
     %make
 install    : |

@@ -1,40 +1,69 @@
-changelog-seen = 2
+# At the end of the install phase Rust will print a message about the new change-id. Please
+# review any changed settings and then update the following field when updating to new Rust versions
+change-id = 136941
 
-[build]
-cargo = "PREFIX/bin/cargo"
-docs = false
-# Triggers the build of tools. Cargo, in our case.
-extended = true
-# Mainly needed for cross-language PGO in Firefox.
-profiler = true
-rustc = "PREFIX/bin/rustc"
-# Triples we're going to support. i686 is needed for multilib.
-target = ["i686-unknown-linux-gnu", "x86_64-unknown-linux-gnu"]
-tools = [
-    "cargo",
-    "rustdoc",
-    ]
-vendor = true
-
-[install]
-libdir = "LIBDIR"
-prefix = "PREFIX"
+# Inherit from src/bootstrap/defaults/config.dist.toml
+profile = "dist"
 
 [llvm]
 link-shared = true
 targets = "X86"
 
+[build]
+rustc = "/usr/bin/rustc"
+cargo = "/usr/bin/cargo"
+docs = false
+# Triggers the build of tools. Cargo, in our case.
+extended = true
+# Mainly needed for cross-language PGO in Firefox.
+profiler = true
+sanitizers = true
+# Triples we're going to support. i686 is needed for multilib.
+target = ["i686-unknown-linux-gnu", "x86_64-unknown-linux-gnu"]
+tools = [
+    "analysis",
+    "cargo",
+    "clippy",
+    "rustdoc",
+    "rustfmt",
+    "rust-analyzer",
+    "rust-analyzer-proc-macro-srv",
+    "rust-demangler",
+    "src",
+]
+vendor = true
+
+[install]
+libdir = "/usr/lib64"
+prefix = "/usr"
+
 [rust]
 channel = "stable"
+default-linker = "clang"
 description = "Solus"
+lto = "@@LTO@@"
+new-symbol-mangling = true
+optimize = true
 rpath = false
+strip = false # This should always be handled by the build env
+lld = false
+use-lld = "external"
+llvm-bitcode-linker = false
 
 [target.i686-unknown-linux-gnu]
-ar = "/usr/bin/ar"
+# Use LLVM toolchain by default
+cc = "clang"
+cxx = "clang++"
+ar = "/usr/bin/llvm-ar"
+ranlib = "/usr/bin/llvm-ranlib"
 # Remove this line to build bundled LLVM. Everything's already set up.
 llvm-config = "/usr/bin/llvm-config32"
 
 [target.x86_64-unknown-linux-gnu]
-ar = "/usr/bin/ar"
+# Use LLVM toolchain by default
+cc = "clang"
+cxx = "clang++"
+ar = "/usr/bin/llvm-ar"
+ranlib = "/usr/bin/llvm-ranlib"
 # Remove this line to build bundled LLVM. Everything's already set up.
 llvm-config = "/usr/bin/llvm-config"

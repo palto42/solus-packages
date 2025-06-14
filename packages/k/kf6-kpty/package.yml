@@ -1,8 +1,8 @@
 name       : kf6-kpty
-version    : 6.0.0
-release    : 3
+version    : 6.14.0
+release    : 20
 source     :
-    - https://cdn.download.kde.org/stable/frameworks/6.0/kpty-6.0.0.tar.xz : c5df357adfc1733593f6ceb3cd95ff7a3e587701f990b631dfaee0278e0df171
+    - https://download.kde.org/stable/frameworks/6.14/kpty-6.14.0.tar.xz : 979e0bb19cd7d9db843bf5df35115447eb492637a099eb53c345b82fc80bea65
 homepage   : https://community.kde.org/Frameworks
 license    :
     - BSD-3-Clause
@@ -19,6 +19,7 @@ builddeps  :
 rundeps    :
     - devel :
         - kf6-kcoreaddons-devel
+    - libutempter
 clang      : yes
 optimize   : thin-lto
 setup      : |

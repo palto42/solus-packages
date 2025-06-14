@@ -73,11 +73,14 @@ libKF6WidgetsAddons.so.6:_ZN15KPixmapSequenceD1Ev
 libKF6WidgetsAddons.so.6:_ZN21KPixmapSequenceWidget11setIntervalEi
 libKF6WidgetsAddons.so.6:_ZN21KPixmapSequenceWidget11setSequenceERK15KPixmapSequence
 libKF6WidgetsAddons.so.6:_ZN21KPixmapSequenceWidgetC1EP7QWidget
+libQt6Core.so.6:_Z13comparesEqualRK21QPersistentModelIndexS1_
+libQt6Core.so.6:_Z15compareThreeWayRK21QPersistentModelIndexS1_
 libQt6Core.so.6:_Z21qRegisterResourceDataiPKhS0_S0_
 libQt6Core.so.6:_Z23qUnregisterResourceDataiPKhS0_S0_
 libQt6Core.so.6:_Z26qt_QMetaEnum_debugOperatorR6QDebugxPK11QMetaObjectPKc
 libQt6Core.so.6:_Z42qRegisterNormalizedMetaType_QItemSelectionRK10QByteArray
 libQt6Core.so.6:_Z5qHash11QStringViewm
+libQt6Core.so.6:_ZN10QArrayData10deallocateEPS_xx
 libQt6Core.so.6:_ZN10QArrayData19reallocateUnalignedEPS_PvxxNS_16AllocationOptionE
 libQt6Core.so.6:_ZN10QArrayData8allocateEPPS_xxxNS_16AllocationOptionE
 libQt6Core.so.6:_ZN10QByteArray10fromBase64ERKS_6QFlagsINS_12Base64OptionEE
@@ -88,7 +91,7 @@ libQt6Core.so.6:_ZN10QByteArrayC1EPKcx
 libQt6Core.so.6:_ZN10QByteArrayaSEPKc
 libQt6Core.so.6:_ZN11QBasicMutex12lockInternalEv
 libQt6Core.so.6:_ZN11QBasicMutex14unlockInternalEv
-libQt6Core.so.6:_ZN11QBasicMutex15destroyInternalEP13QMutexPrivate
+libQt6Core.so.6:_ZN11QBasicMutex15destroyInternalEPv
 libQt6Core.so.6:_ZN11QDataStreamlsEi
 libQt6Core.so.6:_ZN11QDataStreamrsERi
 libQt6Core.so.6:_ZN11QMetaObject10ConnectionD1Ev
@@ -103,8 +106,6 @@ libQt6Core.so.6:_ZN11QTextStreamlsEi
 libQt6Core.so.6:_ZN11QTextStreamlsEx
 libQt6Core.so.6:_ZN14QItemSelectionC1ERK11QModelIndexS2_
 libQt6Core.so.6:_ZN14QStandardPaths16writableLocationENS_16StandardLocationE
-libQt6Core.so.6:_ZN15QtSharedPointer20ExternalRefCountData16setQObjectSharedEPK7QObjectb
-libQt6Core.so.6:_ZN15QtSharedPointer20ExternalRefCountData18checkQObjectSharedEPK7QObject
 libQt6Core.so.6:_ZN15QtSharedPointer20ExternalRefCountData9getAndRefEPK7QObject
 libQt6Core.so.6:_ZN16QDebugStateSaverC1ER6QDebug
 libQt6Core.so.6:_ZN16QDebugStateSaverD1Ev
@@ -148,6 +149,7 @@ libQt6Core.so.6:_ZN18QAbstractListModelD2Ev
 libQt6Core.so.6:_ZN18QRandomGenerator646systemEv
 libQt6Core.so.6:_ZN19QAbstractProxyModel11setItemDataERK11QModelIndexRK4QMapIi8QVariantE
 libQt6Core.so.6:_ZN19QAbstractProxyModel13clearItemDataERK11QModelIndex
+libQt6Core.so.6:_ZN19QAbstractProxyModel16staticMetaObjectE
 libQt6Core.so.6:_ZN19QAbstractProxyModel6revertEv
 libQt6Core.so.6:_ZN19QAbstractProxyModel6submitEv
 libQt6Core.so.6:_ZN21QAbstractConcatenable14appendLatin1ToE13QLatin1StringP5QChar
@@ -212,7 +214,6 @@ libQt6Core.so.6:_ZN7QString10fromLatin1E14QByteArrayView
 libQt6Core.so.6:_ZN7QString11reallocDataExN10QArrayData16AllocationOptionE
 libQt6Core.so.6:_ZN7QString6_emptyE
 libQt6Core.so.6:_ZN7QString6appendE13QLatin1String
-libQt6Core.so.6:_ZN7QString6appendERKS_
 libQt6Core.so.6:_ZN7QString6numberEii
 libQt6Core.so.6:_ZN7QString6numberEji
 libQt6Core.so.6:_ZN7QString6removeERKS_N2Qt15CaseSensitivityE
@@ -243,15 +244,14 @@ libQt6Core.so.6:_ZN9QMetaType25registerNormalizedTypedefERK10QByteArrayS_
 libQt6Core.so.6:_ZN9QMetaType27registerMutableViewFunctionERKSt8functionIFbPvS1_EES_S_
 libQt6Core.so.6:_ZN9QMetaType27unregisterConverterFunctionES_S_
 libQt6Core.so.6:_ZN9QMetaType29unregisterMutableViewFunctionES_S_
-libQt6Core.so.6:_ZN9QMetaType30hasRegisteredConverterFunctionES_S_
-libQt6Core.so.6:_ZN9QMetaType32hasRegisteredMutableViewFunctionES_S_
 libQt6Core.so.6:_ZN9QMetaType7convertES_PKvS_Pv
-libQt6Core.so.6:_ZN9QtPrivate12argToQStringE11QStringViewmPPKNS_7ArgBaseE
+libQt6Core.so.6:_ZN9QtPrivate12argToQStringE14QAnyStringViewmPPKNS_7ArgBaseE
 libQt6Core.so.6:_ZN9QtPrivate12equalStringsE11QStringView13QLatin1String
 libQt6Core.so.6:_ZN9QtPrivate12equalStringsE11QStringViewS0_
 libQt6Core.so.6:_ZN9QtPrivate13convertToUtf8E11QStringView
 libQt6Core.so.6:_ZN9QtPrivate14compareStringsE11QStringViewS0_N2Qt15CaseSensitivityE
 libQt6Core.so.6:_ZN9QtPrivate16QStringList_joinEPK5QListI7QStringEPK5QCharx
+libQt6Core.so.6:_ZN9QtPrivate19QStringList_indexOfERK5QListI7QStringE11QStringViewxN2Qt15CaseSensitivityE
 libQt6Core.so.6:_ZN9QtPrivate20QStringList_containsEPK5QListI7QStringE11QStringViewN2Qt15CaseSensitivityE
 libQt6Core.so.6:_ZN9QtPrivate25QMetaTypeInterfaceWrapperI11QModelIndexE8metaTypeE
 libQt6Core.so.6:_ZN9QtPrivate25QMetaTypeInterfaceWrapperI4QMapI7QString8QVariantEE8metaTypeE
@@ -263,6 +263,8 @@ libQt6Core.so.6:_ZN9QtPrivate25QMetaTypeInterfaceWrapperIP7QObjectE8metaTypeE
 libQt6Core.so.6:_ZN9QtPrivate25QMetaTypeInterfaceWrapperIbE8metaTypeE
 libQt6Core.so.6:_ZN9QtPrivate25QMetaTypeInterfaceWrapperIiE8metaTypeE
 libQt6Core.so.6:_ZN9QtPrivate28QStringList_removeDuplicatesEP5QListI7QStringE
+libQt6Core.so.6:_ZN9QtPrivate52hasRegisteredConverterFunctionToIterableMetaSequenceE9QMetaType
+libQt6Core.so.6:_ZN9QtPrivate54hasRegisteredMutableViewFunctionToIterableMetaSequenceE9QMetaType
 libQt6Core.so.6:_ZNK10QByteArray8toBase64E6QFlagsINS_12Base64OptionEE
 libQt6Core.so.6:_ZNK11QMetaObject2trEPKcS1_i
 libQt6Core.so.6:_ZNK11QMetaObject4castEPK7QObject
@@ -303,8 +305,6 @@ libQt6Core.so.6:_ZNK21QPersistentModelIndex3rowEv
 libQt6Core.so.6:_ZNK21QPersistentModelIndex4dataEi
 libQt6Core.so.6:_ZNK21QPersistentModelIndex7isValidEv
 libQt6Core.so.6:_ZNK21QPersistentModelIndexcv11QModelIndexEv
-libQt6Core.so.6:_ZNK21QPersistentModelIndexeqERKS_
-libQt6Core.so.6:_ZNK21QPersistentModelIndexltERKS_
 libQt6Core.so.6:_ZNK21QSortFilterProxyModel10headerDataEiN2Qt11OrientationEi
 libQt6Core.so.6:_ZNK21QSortFilterProxyModel11columnCountERK11QModelIndex
 libQt6Core.so.6:_ZNK21QSortFilterProxyModel11hasChildrenERK11QModelIndex
@@ -341,7 +341,6 @@ libQt6Core.so.6:_ZNK7QObject6senderEv
 libQt6Core.so.6:_ZNK7QObject8propertyEPKc
 libQt6Core.so.6:_ZNK7QString10startsWithE13QLatin1StringN2Qt15CaseSensitivityE
 libQt6Core.so.6:_ZNK7QString10startsWithERKS_N2Qt15CaseSensitivityE
-libQt6Core.so.6:_ZNK7QString3midExx
 libQt6Core.so.6:_ZNK8QVariant11toByteArrayEv
 libQt6Core.so.6:_ZNK8QVariant5toIntEPb
 libQt6Core.so.6:_ZNK8QVariant5toUrlEv
@@ -353,7 +352,7 @@ libQt6Core.so.6:_ZNK8QVariant8toStringEv
 libQt6Core.so.6:_ZNK8QVariant8typeNameEv
 libQt6Core.so.6:_ZNK9QFileInfo16absoluteFilePathEv
 libQt6Core.so.6:_ZNK9QFileInfo6isFileEv
-libQt6Core.so.6:_ZNK9QMetaType7isValidEv
+libQt6Core.so.6:_ZNKR7QString3midExx
 libQt6Core.so.6:_ZTI18QAbstractItemModel
 libQt6Core.so.6:_ZTI18QAbstractListModel
 libQt6Core.so.6:_ZTI21QSortFilterProxyModel
@@ -362,7 +361,6 @@ libQt6Core.so.6:_Zls6QDebugRK19QItemSelectionRange
 libQt6Core.so.6:qt_version_tag
 libQt6DBus.so.6:_ZN12QDBusMessage12createSignalERK7QStringS2_S2_
 libQt6DBus.so.6:_ZN12QDBusMessage12setArgumentsERK5QListI8QVariantE
-libQt6DBus.so.6:_ZN12QDBusMessageC1ERKS_
 libQt6DBus.so.6:_ZN12QDBusMessageD1Ev
 libQt6DBus.so.6:_ZN15QDBusConnection10sessionBusEv
 libQt6DBus.so.6:_ZN15QDBusConnection7connectERK7QStringS2_S2_S2_P7QObjectPKc
@@ -429,7 +427,7 @@ libQt6Gui.so.6:_ZlsR11QDataStreamRK7QPixmap
 libQt6Gui.so.6:_ZrsR11QDataStreamR5QIcon
 libQt6Gui.so.6:_ZrsR11QDataStreamR6QImage
 libQt6Gui.so.6:_ZrsR11QDataStreamR7QPixmap
-libQt6Qml.so.6:_Z32qmlRegisterUncreatableMetaObjectRK11QMetaObjectPKciiS3_RK7QString
+libQt6Qml.so.6:_Z17qmlRegisterModulePKcii
 libQt6Qml.so.6:_ZN10QQmlEngine16addImageProviderERK7QStringP21QQmlImageProviderBase
 libQt6Qml.so.6:_ZN11QQmlPrivate11qmlregisterENS_16RegistrationTypeEPv
 libQt6Qml.so.6:_ZN11QQmlPrivate30qdeclarativeelement_destructorEP7QObject
@@ -439,6 +437,8 @@ libQt6Qml.so.6:_ZN19QQmlExtensionPlugin15unregisterTypesEv
 libQt6Qml.so.6:_ZN19QQmlExtensionPlugin16staticMetaObjectE
 libQt6Qml.so.6:_ZN19QQmlExtensionPluginC2EP7QObject
 libQt6Qml.so.6:_ZN19QQmlExtensionPluginD2Ev
+libQt6Qml.so.6:_ZN22QQmlModuleRegistrationC1EPKcPFvvE
+libQt6Qml.so.6:_ZN22QQmlModuleRegistrationD1Ev
 libQt6Qml.so.6:_ZTI19QQmlExtensionPlugin
 libQt6Quick.so.6:_ZN19QQuickImageProvider11qt_metacallEN11QMetaObject4CallEiPPv
 libQt6Quick.so.6:_ZN19QQuickImageProvider11qt_metacastEPKc
@@ -589,14 +589,12 @@ libQt6Widgets.so.6:_ZThn16_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE
 libQt6Widgets.so.6:_ZThn16_NK7QWidget7devTypeEv
 libc.so.6:__cxa_atexit
 libc.so.6:__stack_chk_fail
-libc.so.6:free
 libc.so.6:memcmp
 libc.so.6:memcpy
 libc.so.6:memmove
 libc.so.6:strcmp
 libc.so.6:strlen
 libstdc++.so.6:_ZSt18_Rb_tree_decrementPSt18_Rb_tree_node_base
-libstdc++.so.6:_ZSt18_Rb_tree_incrementPKSt18_Rb_tree_node_base
 libstdc++.so.6:_ZSt18_Rb_tree_incrementPSt18_Rb_tree_node_base
 libstdc++.so.6:_ZSt28_Rb_tree_rebalance_for_erasePSt18_Rb_tree_node_baseRS_
 libstdc++.so.6:_ZSt29_Rb_tree_insert_and_rebalancebPSt18_Rb_tree_node_baseS0_RS_
@@ -606,7 +604,9 @@ libstdc++.so.6:_ZTVN10__cxxabiv120__function_type_infoE
 libstdc++.so.6:_ZTVN10__cxxabiv120__si_class_type_infoE
 libstdc++.so.6:_ZTVN10__cxxabiv121__vmi_class_type_infoE
 libstdc++.so.6:_ZdaPv
+libstdc++.so.6:_ZdaPvm
 libstdc++.so.6:_ZdlPv
+libstdc++.so.6:_ZdlPvm
 libstdc++.so.6:_Znam
 libstdc++.so.6:_Znwm
 libstdc++.so.6:__cxa_guard_acquire

@@ -1,11 +1,11 @@
-OpenImageIO.cpython-311-x86_64-linux-gnu.so
+OpenImageIO.cpython-312-x86_64-linux-gnu.so
 iconvert
 idiff
 igrep
 iinfo
 iv
-libOpenImageIO.so.2.4
-libOpenImageIO_Util.so.2.4
+libOpenImageIO.so.2.5
+libOpenImageIO_Util.so.2.5
 maketx
 oiiotool
 testtex

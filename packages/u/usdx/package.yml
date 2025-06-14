@@ -1,8 +1,8 @@
 name       : usdx
-version    : 2024.1.0
-release    : 9
+version    : 2025.6.0
+release    : 16
 source     :
-    - https://github.com/UltraStar-Deluxe/USDX/archive/refs/tags/v2024.1.0.tar.gz : 98486e03181c998031554e36c95ccbc75d692f3b75cf8f4d7e90b3dbe619e8cd
+    - https://github.com/UltraStar-Deluxe/USDX/archive/refs/tags/v2025.6.0.tar.gz : 0f67c3f8e0055a95e35bdfa95ff3713eb7e769087575fa3cc191840fbebc1697
 homepage   : https://usdx.eu/
 license    : GPL-2.0-or-later
 component  : games

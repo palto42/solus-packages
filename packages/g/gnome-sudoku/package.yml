@@ -1,9 +1,9 @@
 name       : gnome-sudoku
-version    : '45.5'
-release    : 18
+version    : '48.1'
+release    : 27
 source     :
-    - https://download.gnome.org/sources/gnome-sudoku/45/gnome-sudoku-45.5.tar.xz : 8e8e2bca6cda49f05d0061c3f9866020b363ef84c3a30f5b7e8ed4e41a57fd0f
-homepage   : https://wiki.gnome.org/Apps/Sudoku/
+    - https://download.gnome.org/sources/gnome-sudoku/48/gnome-sudoku-48.1.tar.xz : 79713ad82a59904cd696ff02255eb6ed9364e88f3e783343b1f9d0ca09f2c7e3
+homepage   : https://gitlab.gnome.org/GNOME/gnome-sudoku/-/wikis/home
 license    : GPL-3.0-or-later
 component  : games.puzzle
 summary    : Sudoku - The popular Japanese logic puzzle
@@ -15,6 +15,7 @@ builddeps  :
     - pkgconfig(json-glib-1.0)
     - pkgconfig(libadwaita-1)
     - pkgconfig(qqwing)
+    - blueprint-compiler
     - desktop-file-utils
     - itstool
     - vala

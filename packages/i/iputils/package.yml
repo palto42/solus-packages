@@ -1,14 +1,14 @@
 name       : iputils
-version    : '20240117'
-release    : 11
+version    : '20250605'
+release    : 16
 source     :
-    - https://github.com/iputils/iputils/archive/refs/tags/20240117.tar.gz : a5d66e2997945b2541b8f780a7f5a5ec895d53a517ae1dc4f3ab762573edea9a
+    - https://github.com/iputils/iputils/archive/refs/tags/20250605.tar.gz : 19e680c9eef8c079da4da37040b5f5453763205b4edfb1e2c114de77908927e4
 homepage   : https://github.com/iputils/iputils
 license    :
     - GPL-2.0-or-later
     - BSD-3-Clause
     - Rdisc
-component  : network.utils
+component  : system.base
 summary    : A set of small useful utilities for Linux networking.
 description: |
     The iputils package is set of small useful utilities for Linux networking.
@@ -19,12 +19,15 @@ builddeps  :
     - docbook-xml
     - libxslt
 setup      : |
-    %apply_patches
     %meson_configure
 build      : |
     %ninja_build
 install    : |
     %ninja_install
 
-    # Rename ping manpage
-    mv $installdir/usr/share/man/man8/{,iputils-}ping.8
+    # Create ping6 symlinks for those who want them
+    ln -sv ping $installdir/usr/bin/ping6
+    ln -sv ping.8 $installdir/usr/share/man/man8/ping6.8
+
+    setcap 'CAP_NET_RAW=p' $installdir/usr/bin/arping
+    setcap 'CAP_NET_RAW=ep CAP_SYS_NICE=ep' $installdir/usr/bin/clockdiff

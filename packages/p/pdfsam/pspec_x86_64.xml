@@ -1,16 +1,17 @@
 <PISI>
     <Source>
         <Name>pdfsam</Name>
+        <Homepage>https://pdfsam.org/</Homepage>
         <Packager>
-            <Name>Reilly Brogan</Name>
-            <Email>solus@reillybrogan.com</Email>
+            <Name>Muhammad Alfi Syahrin</Name>
+            <Email>malfisya.dev@hotmail.com</Email>
         </Packager>
         <License>AGPL-3.0-only</License>
         <PartOf>office</PartOf>
         <Summary xml:lang="en">PDFsam Basic, a free, open source, multi-platform software designed to split, merge, extract pages, mix and rotate PDF files.</Summary>
         <Description xml:lang="en">PDFsam Basic, a free, open source, multi-platform software designed to split, merge, extract pages, mix and rotate PDF files.
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>pdfsam</Name>
@@ -22,6 +23,7 @@
             <Path fileType="executable">/usr/bin/pdfsam</Path>
             <Path fileType="data">/usr/share/applications/pdfsam.desktop</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/pdfsam.svg</Path>
+            <Path fileType="data">/usr/share/metainfo/org.pdfsam.pdfsam_basic.metainfo.xml</Path>
             <Path fileType="data">/usr/share/pdfsam/lib/bcmail-jdk15on-1.70.jar</Path>
             <Path fileType="data">/usr/share/pdfsam/lib/bcpkix-jdk15on-1.70.jar</Path>
             <Path fileType="data">/usr/share/pdfsam/lib/bcprov-jdk15on-1.70.jar</Path>
@@ -79,12 +81,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="8">
-            <Date>2022-04-07</Date>
+        <Update release="10">
+            <Date>2025-02-27</Date>
             <Version>4.2.12</Version>
             <Comment>Packaging update</Comment>
-            <Name>Reilly Brogan</Name>
-            <Email>solus@reillybrogan.com</Email>
+            <Name>Muhammad Alfi Syahrin</Name>
+            <Email>malfisya.dev@hotmail.com</Email>
         </Update>
     </History>
 </PISI>

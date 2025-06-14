@@ -1,8 +1,8 @@
 name       : libxfce4ui
-version    : 4.18.5
-release    : 7
+version    : 4.20.1
+release    : 11
 source     :
-    - https://archive.xfce.org/src/xfce/libxfce4ui/4.18/libxfce4ui-4.18.5.tar.bz2 : 0dbbf7fc6da07fe743cca020280e1f6cc437cba61698bb0694619fbebf4ee7e7
+    - https://archive.xfce.org/src/xfce/libxfce4ui/4.20/libxfce4ui-4.20.1.tar.bz2 : ec99f0b8f6d7cd4222c8f8e3bca51d144fb240d719829344b354900eb3a07100
 homepage   : https://docs.xfce.org/xfce/libxfce4ui/start
 license    : GPL-2.0-only
 component  : desktop.xfce

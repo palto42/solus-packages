@@ -22,7 +22,8 @@
         <PartOf>desktop</PartOf>
         <Files>
             <Path fileType="executable">/usr/bin/sddm</Path>
-            <Path fileType="executable">/usr/bin/sddm-greeter</Path>
+            <Path fileType="executable">/usr/bin/sddm-greeter-qt5</Path>
+            <Path fileType="executable">/usr/bin/sddm-greeter-qt6</Path>
             <Path fileType="library">/usr/lib/sysusers.d/sddm.conf</Path>
             <Path fileType="library">/usr/lib/tmpfiles.d/sddm.conf</Path>
             <Path fileType="library">/usr/lib64/qt5/qml/SddmComponents/Background.qml</Path>
@@ -49,6 +50,30 @@
             <Path fileType="library">/usr/lib64/qt5/qml/SddmComponents/TextConstants.qmlc</Path>
             <Path fileType="library">/usr/lib64/qt5/qml/SddmComponents/qmldir</Path>
             <Path fileType="library">/usr/lib64/qt5/qml/SddmComponents/warning.png</Path>
+            <Path fileType="library">/usr/lib64/qt6/qml/SddmComponents/Background.qml</Path>
+            <Path fileType="library">/usr/lib64/qt6/qml/SddmComponents/Background.qmlc</Path>
+            <Path fileType="library">/usr/lib64/qt6/qml/SddmComponents/Button.qml</Path>
+            <Path fileType="library">/usr/lib64/qt6/qml/SddmComponents/Button.qmlc</Path>
+            <Path fileType="library">/usr/lib64/qt6/qml/SddmComponents/Clock.qml</Path>
+            <Path fileType="library">/usr/lib64/qt6/qml/SddmComponents/Clock.qmlc</Path>
+            <Path fileType="library">/usr/lib64/qt6/qml/SddmComponents/ComboBox.qml</Path>
+            <Path fileType="library">/usr/lib64/qt6/qml/SddmComponents/ComboBox.qmlc</Path>
+            <Path fileType="library">/usr/lib64/qt6/qml/SddmComponents/ImageButton.qml</Path>
+            <Path fileType="library">/usr/lib64/qt6/qml/SddmComponents/ImageButton.qmlc</Path>
+            <Path fileType="library">/usr/lib64/qt6/qml/SddmComponents/LayoutBox.qml</Path>
+            <Path fileType="library">/usr/lib64/qt6/qml/SddmComponents/LayoutBox.qmlc</Path>
+            <Path fileType="library">/usr/lib64/qt6/qml/SddmComponents/Menu.qml</Path>
+            <Path fileType="library">/usr/lib64/qt6/qml/SddmComponents/Menu.qmlc</Path>
+            <Path fileType="library">/usr/lib64/qt6/qml/SddmComponents/PasswordBox.qml</Path>
+            <Path fileType="library">/usr/lib64/qt6/qml/SddmComponents/PasswordBox.qmlc</Path>
+            <Path fileType="library">/usr/lib64/qt6/qml/SddmComponents/PictureBox.qml</Path>
+            <Path fileType="library">/usr/lib64/qt6/qml/SddmComponents/PictureBox.qmlc</Path>
+            <Path fileType="library">/usr/lib64/qt6/qml/SddmComponents/TextBox.qml</Path>
+            <Path fileType="library">/usr/lib64/qt6/qml/SddmComponents/TextBox.qmlc</Path>
+            <Path fileType="library">/usr/lib64/qt6/qml/SddmComponents/TextConstants.qml</Path>
+            <Path fileType="library">/usr/lib64/qt6/qml/SddmComponents/TextConstants.qmlc</Path>
+            <Path fileType="library">/usr/lib64/qt6/qml/SddmComponents/qmldir</Path>
+            <Path fileType="library">/usr/lib64/qt6/qml/SddmComponents/warning.png</Path>
             <Path fileType="library">/usr/lib64/sddm/sddm-helper</Path>
             <Path fileType="library">/usr/lib64/sddm/sddm-helper-start-wayland</Path>
             <Path fileType="library">/usr/lib64/sddm/sddm-helper-start-x11user</Path>
@@ -238,11 +263,55 @@
             <Path fileType="data">/usr/share/sddm/translations-qt5/uk.qm</Path>
             <Path fileType="data">/usr/share/sddm/translations-qt5/zh_CN.qm</Path>
             <Path fileType="data">/usr/share/sddm/translations-qt5/zh_TW.qm</Path>
+            <Path fileType="data">/usr/share/sddm/translations-qt6/ar.qm</Path>
+            <Path fileType="data">/usr/share/sddm/translations-qt6/bg.qm</Path>
+            <Path fileType="data">/usr/share/sddm/translations-qt6/bn.qm</Path>
+            <Path fileType="data">/usr/share/sddm/translations-qt6/ca.qm</Path>
+            <Path fileType="data">/usr/share/sddm/translations-qt6/cs.qm</Path>
+            <Path fileType="data">/usr/share/sddm/translations-qt6/da.qm</Path>
+            <Path fileType="data">/usr/share/sddm/translations-qt6/de.qm</Path>
+            <Path fileType="data">/usr/share/sddm/translations-qt6/es.qm</Path>
+            <Path fileType="data">/usr/share/sddm/translations-qt6/et.qm</Path>
+            <Path fileType="data">/usr/share/sddm/translations-qt6/eu.qm</Path>
+            <Path fileType="data">/usr/share/sddm/translations-qt6/fi.qm</Path>
+            <Path fileType="data">/usr/share/sddm/translations-qt6/fr.qm</Path>
+            <Path fileType="data">/usr/share/sddm/translations-qt6/gl.qm</Path>
+            <Path fileType="data">/usr/share/sddm/translations-qt6/he.qm</Path>
+            <Path fileType="data">/usr/share/sddm/translations-qt6/hi_IN.qm</Path>
+            <Path fileType="data">/usr/share/sddm/translations-qt6/hu.qm</Path>
+            <Path fileType="data">/usr/share/sddm/translations-qt6/ie.qm</Path>
+            <Path fileType="data">/usr/share/sddm/translations-qt6/is.qm</Path>
+            <Path fileType="data">/usr/share/sddm/translations-qt6/it.qm</Path>
+            <Path fileType="data">/usr/share/sddm/translations-qt6/ja.qm</Path>
+            <Path fileType="data">/usr/share/sddm/translations-qt6/ka.qm</Path>
+            <Path fileType="data">/usr/share/sddm/translations-qt6/kk.qm</Path>
+            <Path fileType="data">/usr/share/sddm/translations-qt6/ko.qm</Path>
+            <Path fileType="data">/usr/share/sddm/translations-qt6/lt.qm</Path>
+            <Path fileType="data">/usr/share/sddm/translations-qt6/lv.qm</Path>
+            <Path fileType="data">/usr/share/sddm/translations-qt6/nb.qm</Path>
+            <Path fileType="data">/usr/share/sddm/translations-qt6/nl.qm</Path>
+            <Path fileType="data">/usr/share/sddm/translations-qt6/nn.qm</Path>
+            <Path fileType="data">/usr/share/sddm/translations-qt6/oc.qm</Path>
+            <Path fileType="data">/usr/share/sddm/translations-qt6/pl.qm</Path>
+            <Path fileType="data">/usr/share/sddm/translations-qt6/pt_BR.qm</Path>
+            <Path fileType="data">/usr/share/sddm/translations-qt6/pt_PT.qm</Path>
+            <Path fileType="data">/usr/share/sddm/translations-qt6/ro.qm</Path>
+            <Path fileType="data">/usr/share/sddm/translations-qt6/ru.qm</Path>
+            <Path fileType="data">/usr/share/sddm/translations-qt6/sk.qm</Path>
+            <Path fileType="data">/usr/share/sddm/translations-qt6/sr.qm</Path>
+            <Path fileType="data">/usr/share/sddm/translations-qt6/sr@ijekavian.qm</Path>
+            <Path fileType="data">/usr/share/sddm/translations-qt6/sr@ijekavianlatin.qm</Path>
+            <Path fileType="data">/usr/share/sddm/translations-qt6/sr@latin.qm</Path>
+            <Path fileType="data">/usr/share/sddm/translations-qt6/sv.qm</Path>
+            <Path fileType="data">/usr/share/sddm/translations-qt6/tr.qm</Path>
+            <Path fileType="data">/usr/share/sddm/translations-qt6/uk.qm</Path>
+            <Path fileType="data">/usr/share/sddm/translations-qt6/zh_CN.qm</Path>
+            <Path fileType="data">/usr/share/sddm/translations-qt6/zh_TW.qm</Path>
         </Files>
     </Package>
     <History>
-        <Update release="41">
-            <Date>2024-02-26</Date>
+        <Update release="52">
+            <Date>2025-06-10</Date>
             <Version>0.21.0</Version>
             <Comment>Packaging update</Comment>
             <Name>Reilly Brogan</Name>

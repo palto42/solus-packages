@@ -1,8 +1,8 @@
 name       : python-pyproject-hooks
-version    : 1.0.0
-release    : 5
+version    : 1.2.0
+release    : 9
 source     :
-    - https://github.com/pypa/pyproject-hooks/archive/refs/tags/v1.0.0.tar.gz : d45c52f9af6bce94755eecf9dbfe6b3c89ef9a50088a8809f5bbec4ed0f9be0b
+    - https://pypi.debian.net/pyproject-hooks/pyproject_hooks-1.2.0.tar.gz : 1e859bd5c40fae9448642dd871adf459e5e2084186e8d2c2a79a824c970da1f8
 homepage   : https://github.com/pypa/pyproject-hooks
 license    : MIT
 component  : programming.python
@@ -14,7 +14,6 @@ builddeps  :
     - python-build
     - python-flit-core
     - python-installer
-    - python-packaging
 environment: |
     # flip this for python3 rebuilds
     export BOOTSTRAP=0

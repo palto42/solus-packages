@@ -1,9 +1,9 @@
 name       : thunderbird
-version    : 115.8.1
-release    : 185
+version    : 139.0.2
+release    : 230
 source     :
-    - https://ftp.mozilla.org/pub/thunderbird/releases/115.8.1/source/thunderbird-115.8.1.source.tar.xz : 80d75ae91b7cbd60bcbaf134fc3f11290bd542a8a7ff965eaa4a0d95bb0d4d51
-    - https://sources.getsol.us/mozilla/thunderbird/thunderbird-115.8.1-langpacks.tar.zst : a8671e3fc477e3e7fd981b196ba1a71b70c84f1100d7cd46ec84ac1208255866
+    - https://ftp.mozilla.org/pub/thunderbird/releases/139.0.2/source/thunderbird-139.0.2.source.tar.xz : 1087eb5ea49049fb2a9d8e0f67757590bb5cb12d82d7f03045675f8162704584
+    - https://sources.getsol.us/mozilla/thunderbird/thunderbird-139.0.2-langpacks.tar.zst : 4ef12d224e05f9374da541cff4a9686b83a125cba9174115eaf2e5c2b2fd971b
 license    :
     - GPL-2.0-or-later
     - LGPL-2.1-or-later
@@ -34,11 +34,11 @@ builddeps  :
     - pkgconfig(xt)
     - at-spi2-devel
     - autoconf213
-    - cargo
     - cbindgen
     - dump_syms
     - llvm-clang
-    - nodejs-devel
+    - nodejs
+    - rust
     - yasm
 environment: |
     export MACH_BUILD_PYTHON_NATIVE_PACKAGE_SOURCE=system
@@ -48,8 +48,9 @@ setup      : |
     cp $pkgfiles/config mozconfig
     sed -e 's|##JOBCOUNT##|%JOBS%|' -e 's|##LIBDIR##|%libdir%|' -e 's|##WORKDIR##|%workdir%|' -i mozconfig
 
-    %patch -p1 -i $pkgfiles/0001-Hardcode-Solus-.desktop-filename.patch
-    %patch -p1 -i $pkgfiles/icu74.patch
+    %patch -p1 -i $pkgfiles/0001-Fix-Firefox-Thunderbird-envvar-conflicts.patch
+    %patch -p1 -i $pkgfiles/0002-Fix-appstream-metainfo.patch
+    %patch -p1 -i $pkgfiles/icu76.patch
 
     ./mach configure
     ./mach busted
@@ -78,16 +79,12 @@ install    : |
         ln -s %libdir%/thunderbird/chrome/icons/default/default${i}.png $installdir/usr/share/icons/hicolor/${i}x${i}/apps/thunderbird.png
     done
     install -Dm00644 $pkgfiles/thunderbird-symbolic.svg $installdir/usr/share/icons/hicolor/symbolic/apps/thunderbird-symbolic.svg
-    install -Dm00644 $pkgfiles/thunderbird.desktop $installdir/usr/share/applications/net.thunderbird.Thunderbird.desktop
+    install -Dm00644 $pkgfiles/net.thunderbird.Thunderbird.desktop $installdir/usr/share/applications/net.thunderbird.Thunderbird.desktop
 
     # set up defaults and install appdata.xml
     install -Dm00644 $pkgfiles/prefs.js $installdir/%libdir%/thunderbird/defaults/pref/prefs.js
     install -Dm00644 $workdir/comm/mail/branding/thunderbird/net.thunderbird.Thunderbird.appdata.xml $installdir/usr/share/metainfo/net.thunderbird.Thunderbird.appdata.xml
 
-    # Don't specify logo manually in the appdata, find it naturally through the desktop file. Fixes appstream generation
-    sed -i 's|<icon type="remote" width="256" height="256">https://www.thunderbird.net/media/img/thunderbird/thunderbird-256.png</icon>||g' $installdir/usr/share/metainfo/net.thunderbird.Thunderbird.appdata.xml
-
     # Use a wrapper script to launch in Wayland
-    install build/unix/run-mozilla.sh -t $installdir/%libdir%/thunderbird/
     rm -v $installdir/usr/bin/thunderbird
     install -D -m 00755 $pkgfiles/thunderbird-wrapper.sh $installdir/usr/bin/thunderbird

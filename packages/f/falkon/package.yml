@@ -1,8 +1,8 @@
 name       : falkon
-version    : 23.08.5
-release    : 34
+version    : 25.04.2
+release    : 60
 source     :
-    - https://cdn.download.kde.org/stable/release-service/23.08.5/src/falkon-23.08.5.tar.xz : 800a5f1432a6e50f64265eb4bbd8982f445ddd436b5e072f3e49bb4e7183b077
+    - https://download.kde.org/stable/release-service/25.04.2/src/falkon-25.04.2.tar.xz : 8bfda5e95abc463a88241148c81584a30bd443b767818d1225739e681942c988
 homepage   : https://www.falkon.org/
 license    : GPL-3.0-or-later
 component  : network.web.browser
@@ -12,19 +12,26 @@ description: |
 replaces   :
     - qupzilla
 builddeps  :
-    - pkgconfig(Qt5Designer)
-    - pkgconfig(Qt5WebEngine)
-    - pkgconfig(Qt5X11Extras)
+    - pkgconfig(Qt6Core5Compat)
+    - pkgconfig(Qt6Designer)
+    - pkgconfig(Qt6WebEngineCore)
+    - pkgconfig(gnome-keyring-1)
+    - pkgconfig(pyside6)
+    - pkgconfig(python3)
     - pkgconfig(xcb-atom)
-    - karchive-devel
-    - kcrash-devel
-    - ki18n-devel
-    - kio-devel
-    - kwallet-devel
-    - kwindowsystem-devel
-    - purpose-devel
+    - kf6-karchive-devel
+    - kf6-kcrash-devel
+    - kf6-ki18n-devel
+    - kf6-kio-devel
+    - kf6-kwallet-devel
+    - kf6-purpose-devel
+    - shiboken6-devel
+clang      : yes
+optimize   :
+    - speed
+    - thin-lto
 setup      : |
-    %cmake_ninja
+    %cmake_kf6
 build      : |
     %ninja_build
 install    : |

@@ -1,8 +1,8 @@
 name       : qt5-tools
-version    : 5.15.12
-release    : 43
+version    : 5.15.17
+release    : 52
 source     :
-    - git|https://invent.kde.org/qt/qt/qttools.git : bd0ceb7de5d0c918ae596150e95b069dca8b9150
+    - git|https://invent.kde.org/qt/qt/qttools.git : e02ce0dfa692913bd5dcc50917f7e21f5a41cd2b
 homepage   : https://www.qt.io
 license    :
     - GPL-3.0-or-later
@@ -14,11 +14,11 @@ component  :
     - demos : programming.library
 summary    : Qt5 QtTools Module
 description: |
-    Qt is a set of libraries for developing applications.  This package contains base tools, like string, xml, and network handling.
+    Qt is a set of libraries for developing applications.  This package contains base tools, like string, xml, and network handling.  It also provides access to Linguist translations.
 builddeps  :
     - pkgconfig(Qt5Qml)
     - pkgconfig(libxslt)
-    - llvm-clang-devel
+    - clang-devel
     - vulkan-headers
 clang      : yes
 patterns   :
@@ -34,20 +34,16 @@ patterns   :
         - /usr/bin/qdbus
         - /usr/bin/qtpaths
 environment: |
+setup      : |
+    export CFLAGS="$CFLAGS -ffat-lto-objects"
+    export CXXFLAGS="$CXXFLAGS -ffat-lto-objects"
+    export LDFLAGS="$LDFLAGS -ffat-lto-objects"
+
     # qdoc segfaults when trying to build qt5-docs without this
     export CXXFLAGS="${CXXFLAGS/-fno-plt/}"
-setup      : |
+
     %qmake CONFIG+=release qttools.pro
 build      : |
-    %make
-
-    # uitools is a static library -- putting LLVM bytecode in there
-    # wreaks havoc for anything trying to link to it without using lto
-    # Rebuild it without lto
-    rm lib/libQt5UiTools.a
-    sed -i -e 's,-flto=thin,,g' src/designer/src/uitools/Makefile
-    cd src/designer/src/uitools
-    make clean
     %make
 install    : |
     %make INSTALL_ROOT="$installdir" install

@@ -1,8 +1,8 @@
 name       : matcha-gtk-theme
-version    : 2023.10.30
-release    : 27
+version    : 2025.04.11
+release    : 29
 source     :
-    - https://github.com/vinceliuice/Matcha-gtk-theme/archive/refs/tags/2023-10-30.tar.gz : 9e7c1b7055bd996eaa01e8cd30e098dc1873f98690d2ace6ecad0e945307d470
+    - https://github.com/vinceliuice/Matcha-gtk-theme/archive/refs/tags/2025-04-11.tar.gz : 8a3f71a3b9fd4907b28686e228e337d27742018e6dfa8e338326fe77115f5ea7
 homepage   : https://github.com/vinceliuice/Matcha-gtk-theme
 license    : GPL-3.0-or-later
 component  : desktop.theme

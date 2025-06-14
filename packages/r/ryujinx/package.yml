@@ -1,0 +1,67 @@
+name       : ryujinx
+version    : 1.1.1401
+release    : 5
+source     :
+    - https://github.com/Ryujinx/Ryujinx/archive/refs/tags/1.1.1401.tar.gz : 24808576159f6231359963763d963fcdd51ce9f0389285dc79c58438d558597c
+    - https://github.com/flathub/org.ryujinx.Ryujinx/raw/master/org.ryujinx.Ryujinx.appdata.xml : aeb436368ff5e1bc809dcad7722227730c5e4f649122455de3cb45f32c45f06f
+license    : MIT
+component  : games.emulator
+homepage   : https://github.com/Ryujinx/Ryujinx
+summary    : Experimental Nintendo Switch Emulator written in C#
+description: |
+    Experimental Nintendo Switch Emulator written in C#
+# Strip/debug no are required for self-contained dotnet
+strip      : no
+debug      : no
+networking : yes
+builddeps  :
+    - pkgconfig(gtk+-3.0)
+    - alsa-lib
+    - dotnet-sdk
+    - pulseaudio
+    - jack-audio-connection-kit
+rundeps    :
+    # De-bundled libraries
+    - ffmpeg
+    - glfw
+    - sdl2
+setup      : |
+    %patch -p1 -i $pkgfiles/0001-Revert-nuget-bump-Microsoft.CodeAnalysis.CSharp-from.patch
+    %patch -p1 -i $pkgfiles/0001-Solus-Debundle-libs.patch
+
+    dotnet nuget locals all -c
+build      : |
+    # Breaks restore phase
+    unset LD_PRELOAD
+
+    # Avalonia build has HiDPI issues
+    dotnet publish -c Release \
+                   -r linux-x64 \
+                   --nologo \
+                   --self-contained true \
+                   -p:DebugType=none \
+                   -p:ExtraDefineConstants=DISABLE_UPDATER \
+                   -p:Version=$version \
+                   -o publish_gtk src/Ryujinx.Gtk3
+install    : |
+    install -dm755 $installdir/usr/share/ryujinx
+    cp -ra publish_gtk/* "$installdir/usr/share/ryujinx/"
+
+    # Use gtk3 UI by default
+    mv $installdir/usr/share/ryujinx/Ryujinx.Gtk3 $installdir/usr/share/ryujinx/Ryujinx
+
+    # symlinks
+    install -dm755 "$installdir/usr/bin"
+    ln -s "../share/ryujinx/Ryujinx.sh" $installdir/usr/bin/ryujinx
+
+    # Compat symlink since the code searches for libSDL2.so but it's built as libSDL2-2.0.so.0 on Solus
+    ln -sv ../../lib64/libSDL2-2.0.so.0 $installdir/usr/share/ryujinx/libSDL2.so
+
+    # .desktop
+    install -Dm644 $pkgfiles/Ryujinx.desktop $installdir/usr/share/applications/org.ryujinx.Ryujinx.desktop
+    # icon
+    install -Dm644 distribution/misc/Logo.svg $installdir/usr/share/icons/hicolor/scalable/apps/org.ryujinx.Ryujinx.svg
+    # mimetype
+    install -Dm644 distribution/linux/mime/Ryujinx.xml $installdir/usr/share/mime/packages/org.ryujinx.Ryujinx.xml
+    # Metainfo
+    install -Dm644 $sources/org.ryujinx.Ryujinx.appdata.xml $installdir/usr/share/metainfo/org.ryujinx.Ryujinx.appdata.xml

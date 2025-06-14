@@ -15,13 +15,13 @@ libgdk_pixbuf-2.0.so.0
 libgio-2.0.so.0
 libglib-2.0.so.0
 libgobject-2.0.so.0
-libgspell-1.so.2
+libgspell-1.so.3
 libgtk-3.so.0
 libheif.so.1
 libjpeg.so.8
 libjxl.so.0.10
 liblcms2.so.2
-liblua.so.5.3
+liblua.so.5.4
 libm.so.6
 libopenjp2.so.7
 libpango-1.0.so.0
@@ -30,3 +30,4 @@ libpoppler-glib.so.8
 libraw.so.23
 libstdc++.so.6
 libtiff.so.6
+libwebp.so.7

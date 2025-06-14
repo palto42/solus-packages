@@ -1,8 +1,9 @@
 name       : network-manager
-version    : 1.42.8
-release    : 80
+version    : 1.52.0
+release    : 88
 source     :
-    - https://download.gnome.org/sources/NetworkManager/1.42/NetworkManager-1.42.8.tar.xz : 0337e7583d2ec5ade2ba2e8c625d2f09eeccda1d22836ee29aa72925d399c353
+    # - https://gitlab.freedesktop.org/NetworkManager/NetworkManager/-/releases/1.52.0/downloads/NetworkManager-1.52.0.tar.xz : eb30ecf21177b186c61726b8b715a3e3c69c8a7327da925551c19b16231efb2f
+    - git|https://gitlab.freedesktop.org/NetworkManager/NetworkManager.git : 995a28fa1ccc54ad22e794294c3c6783cc3f30ed # 1.52.0
 license    : GPL-2.0-or-later
 component  :
     - network.base
@@ -30,15 +31,17 @@ builddeps  :
     - pkgconfig32(nss)
     - pkgconfig32(readline)
     - pkgconfig32(uuid)
+    - pkgconfig(libnewt)
     - pkgconfig(mm-glib)
     - pkgconfig(mobile-broadband-provider-info)
+    - pkgconfig(pppd)
     - gtk-doc
     - iproute2
-    - nftables
-    - ppp-devel
+    - iptables
     - python-gobject-devel
     - vala
 rundeps    :
+    - iptables
     - mobile-broadband-provider-info
     - ppp
     - usb-modeswitch
@@ -54,20 +57,19 @@ emul32     : yes
 environment: |
     unset LD_AS_NEEDED
 setup      : |
-    %patch -p1 -i $pkgfiles/0001-Use-run-instead-of-var-run-for-runstatedir.patch
-    %patch -p1 -i $pkgfiles/curl-8-4.patch
-
     if [[ ! -z "${EMUL32BUILD}" ]]; then
-        extraOpts="-Dintrospection=false -Dmodem_manager=false -Dpolkit=false -Dppp=false -Dvapi=false"
+        extraOpts="-Dintrospection=false -Dmodem_manager=false -Dpolkit=false -Dppp=false -Dvapi=false  -Dnmtui=false"
     else
-        extraOpts="-Ddocs=true"
+        extraOpts="-Ddocs=true -Dnmtui=true"
     fi
+
+    %patch -p1 -i $pkgfiles/2164.patch
+    %patch -p1 -i $pkgfiles/2173.patch
+
     %meson_configure \
                      -Dconfig_dhcp_default=internal \
                      -Dconfig_dns_rc_manager_default=auto \
                      -Dconfig_plugins_default=keyfile \
-                     -Ddhclient=no \
-                     -Ddhcpcanon=no \
                      -Ddhcpcd=no \
                      -Ddist_version="${version}-solus" \
                      -Diwd=true \
@@ -75,8 +77,8 @@ setup      : |
                      -Dmodify_system=true \
                      -Dmore_asserts=no \
                      -Dmore_logging=false \
-                     -Dnmtui=false \
-                     -Dpppd_plugin_dir=%libdir%/pppd/2.4.8/ \
+                     -Dnm_cloud_setup=false \
+                     -Dpppd_plugin_dir="$(pkgconf --variable=plugindir pppd)" \
                      -Dqt=false \
                      -Dresolvconf=no \
                      -Dselinux=false \
@@ -93,6 +95,7 @@ install    : |
         rm -rfv $installdir/%libdir%/systemd \
                 $installdir/%libdir%/network-manager \
                 $installdir/%libdir%/NetworkManager
+
     else
 
         # Enable by default
@@ -113,7 +116,17 @@ install    : |
         rm -v $installdir/usr/share/man/man1/{nmtui,nmtui-connect,nmtui-edit,nmtui-hostname}.1
 
         # More stateless
-        rmdir -v $installdir/var/lib/NetworkManager \
+        rmdir -v $installdir/etc/NetworkManager/conf.d \
+                 $installdir/etc/NetworkManager/dispatcher.d/no-wait.d \
+                 $installdir/etc/NetworkManager/dispatcher.d/pre-down.d \
+                 $installdir/etc/NetworkManager/dispatcher.d/pre-up.d \
+                 $installdir/etc/NetworkManager/dispatcher.d/ \
+                 $installdir/etc/NetworkManager/dnsmasq-shared.d \
+                 $installdir/etc/NetworkManager/dnsmasq.d \
+                 $installdir/etc/NetworkManager/system-connections \
+                 $installdir/etc/NetworkManager/ \
+                 $installdir/etc/ \
+                 $installdir/var/lib/NetworkManager \
                  $installdir/var/lib/ \
                  $installdir/var/
     fi

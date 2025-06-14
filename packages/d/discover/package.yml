@@ -1,60 +1,60 @@
 name       : discover
-version    : 5.27.10.1
-release    : 7
+version    : 6.3.5
+release    : 36
 source     :
-    - https://cdn.download.kde.org/stable/plasma/5.27.10/discover-5.27.10.1.tar.xz : d856aeb1288b966955e04d5669cfc2b3fb659fdd3f07b869a41dc705a7f6d1ac
+    - https://download.kde.org/stable/plasma/6.3.5/discover-6.3.5.tar.xz : 0822e1fae078a00e3295b578e0054d1e098daca75d75e769c4c1ada937f0b3a0
 homepage   : https://apps.kde.org/discover/
 license    : GPL-2.0-or-later
 component  : desktop.kde
-summary    : UNSUPPORTED & EXPERIMENTAL (reserved for Solus Staff testing)
+summary    : Discover helps you find and install applications, games, and tools.
 description: |
-    WARNING: This package is **unsupported** and **experimental.**
-
-    It is included at this early stage to make it easier for Solus Staff to test and debug it.
-
-    Experienced contributors with packaging and bugreporting experience are welcome to help us test and report (non-duplicate!) problems here:
-
-    See getsolus/packages#715 and getsolus/packages#716
-optimize   : lto
+    Discover helps you find and install applications, games, and tools. You can search or browse by category, and look at screenshots and read reviews to help you pick the perfect app. With Discover, you can manage software from multiple sources, including your operating system's software repository, Flatpak repos, the Snap store, or even AppImages from store.kde.org. Finally, Discover also allows you to find, install, and manage add-ons for Plasma and all your favorite KDE apps!
 builddeps  :
-    - pkgconfig(Qt5Quick)
-    - pkgconfig(Qt5Script)
-    - pkgconfig(Qt5WebView)
+    - pkgconfig(Qt6Quick)
+    - pkgconfig(Qt6WebView)
     - pkgconfig(flatpak)
     - pkgconfig(fwupd)
-    - pkgconfig(packagekitqt5)
-    - appstream-qt5-devel
-    - attica-devel
-    - extra-cmake-modules
-    - karchive-devel
-    - kcmutils-devel
-    - kcrash-devel
-    - kdbusaddons-devel
-    - kdeclarative-devel
-    - kidletime-devel
-    - kio-devel
-    - kirigami2-devel
-    - knewstuff-devel
-    - knotifications-devel
-    - kuserfeedback-devel
-    - purpose-devel
+    - pkgconfig(libmarkdown)
+    - pkgconfig(packagekitqt6)
+    - appstream-qt6-devel
+    - kf6-attica-devel
+    - kf6-karchive-devel
+    - kf6-kauth-devel
+    - kf6-kcmutils-devel
+    - kf6-kcrash-devel
+    - kf6-kdbusaddons-devel
+    - kf6-kidletime-devel
+    - kf6-kio-devel
+    - kf6-kirigami-devel
+    - kf6-kitemmodels
+    - kf6-knewstuff-devel
+    - kf6-knotifications-devel
+    - kf6-kstatusnotifieritem-devel
+    - kf6-kuserfeedback-devel
+    - kf6-purpose-devel
+    - kirigami-addons-devel
+    - qcoro-qt6-devel
 rundeps    :
-    - kirigami2
-    - qt5-quickcontrols2
+    - kf6-kirigami
+    - kf6-kitemmodels
+    - kf6-purpose
+    - kf6-qqc2-desktop-style
+    - kirigami-addons
+clang      : yes
+optimize   : thin-lto
 setup      : |
+    # https://github.com/getsolus/discover/commit/61ddf4e7b0ef774bf79b69dd4ea964cb1ddc2554
     %patch -p1 -i $pkgfiles/0001-PackageKitBackend-Add-the-Drivers-menu-filtered-by-t.patch
-    %cmake_ninja
+    %patch -p1 -i $pkgfiles/0001-Allow-notifier-to-autostart-on-all-editions.patch
+
+    %cmake_kf6 -DPACKAGEKIT_AUTOREMOVE=ON
 build      : |
     %ninja_build
 install    : |
     %ninja_install
 
-    %qml_cache
+    # Remove docs
+    rm -rfv $installdir/usr/share/doc
 
-    #remove docs
-    rm -rf $installdir/usr/share/doc
-    rm $installdir/usr/share/icons/hicolor/scalable/apps/flatpak-discover.svg
-
-    # TODO: Remove once this is ready for user testing
-    # - the goal is to ensure that Solus SC picks up the scary summary + description text
-    rm -fr $installdir/usr/share/metainfo/
+    # Duplicate with flatpak-kcm
+    rm -v $installdir/usr/share/icons/hicolor/scalable/apps/flatpak-discover.svg

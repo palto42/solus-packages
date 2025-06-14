@@ -1,16 +1,14 @@
 name       : easyeffects
-version    : 7.1.4
-release    : 12
+version    : 7.2.3
+release    : 21
 source     :
-    - https://github.com/wwmm/easyeffects/archive/refs/tags/v7.1.4.tar.gz : bf7988cd683e225f929bfc07ad7227bd30de2d256e53c082712c729780e22dea
+    - https://github.com/wwmm/easyeffects/archive/refs/tags/v7.2.3.tar.gz : 5d3afa96901c86c4fa065aa40db11800a7cdfd9d393f1de9b44bb126eee4b01e
 homepage   : https://github.com/wwmm/easyeffects
 license    : GPL-3.0-or-later
 component  : multimedia.audio
 summary    : Audio effects for PipeWire applications
 description: |
     Limiter, compressor, convolver, equalizer and auto volume and many other plugins for PipeWire applications
-conflicts  :
-    - pulseeffects
 builddeps  :
     - pkgconfig(fftw3)
     - pkgconfig(fftw3f)
@@ -21,6 +19,7 @@ builddeps  :
     - pkgconfig(libadwaita-1)
     - pkgconfig(libbs2b)
     - pkgconfig(libebur128)
+    - pkgconfig(libeconf)
     - pkgconfig(libpipewire-0.3)
     - pkgconfig(libportal-gtk4)
     - pkgconfig(lilv-0)
@@ -53,3 +52,6 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+replaces   :
+    - pulseeffects
+    - dbginfo : pulseeffects-dbginfo

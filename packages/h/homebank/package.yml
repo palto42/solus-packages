@@ -1,9 +1,9 @@
 name       : homebank
-version    : 5.7.4
-release    : 31
+version    : 5.9.1
+release    : 38
 source     :
-    - http://homebank.free.fr/public/sources/homebank-5.7.4.tar.gz : 42ce7146c875ea0ca3c93391b6a9bf4714db4621c63f4a094dcc6f8985bb54e4
-homepage   : http://homebank.free.fr/en/index.php
+    - https://www.gethomebank.org/public/sources/homebank-5.9.1.tar.gz : b350edc3a6e321414e6c26f8550e2b2c130dc1fb459669556b61ffd7e8f2e380
+homepage   : https://www.gethomebank.org/en/index.php
 license    : GPL-2.0-or-later
 component  : office.finance
 summary    : HomeBank assists you to manage your personal accounting

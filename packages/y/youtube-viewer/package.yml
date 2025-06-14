@@ -1,8 +1,8 @@
 name       : youtube-viewer
-version    : 3.10.9
-release    : 41
+version    : 3.11.6
+release    : 46
 source     :
-    - https://github.com/trizen/youtube-viewer/archive/refs/tags/3.10.9.tar.gz : e3593324176f5f8dd82e72936fcc1b529f85b88acc16000e1f1133b417590775
+    - https://github.com/trizen/youtube-viewer/archive/refs/tags/3.11.6.tar.gz : bf0a5b2bf911ecb2201212d2a87d8425c9140f87093957af1e61cbe1039a46f1
 homepage   : https://github.com/trizen/youtube-viewer
 license    : Artistic-2.0
 component  : network.web
@@ -24,12 +24,16 @@ rundeps    :
     - perl-term-readline-gnu
     - perl-unicode-linebreak
     - yt-dlp
+setup      : |
+    # The Makefile build doesn't include the gtk app (yet)
+    rm Makefile.PL
 build      : |
     %perl_setup --gtk
 install    : |
     %perl_install
     install -Dm00644 $workdir/share/gtk-youtube-viewer.desktop $installdir/usr/share/applications/gtk-youtube-viewer.desktop
     install -Dm00644 $workdir/share/icons/gtk-youtube-viewer.png $installdir/usr/share/pixmaps/gtk-youtube-viewer.png
+    install -Dm00644 $pkgfiles/io.github.trizen.youtube_viewer.metainfo.xml -t $installdir/usr/share/metainfo/
 check      : |
     $workdir/Build test
 patterns   :

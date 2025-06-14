@@ -1,9 +1,9 @@
 name       : scribus
-version    : 1.6.1
-release    : 49
+version    : 1.6.4
+release    : 61
 source     :
-    - https://sourceforge.net/projects/scribus/files/scribus/1.6.1/scribus-1.6.1.tar.gz : afc3d63314e0e7735e157609a653ff9fa4034288440b411aaf65fc5eba7318cf
-homepage   : http://www.scribus.us/
+    - https://sourceforge.net/projects/scribus/files/scribus/1.6.4/scribus-1.6.4.tar.gz : d7cee18376a36817e510a3e8d1bb4dddbd0480a99a66111615987361907abab5
+homepage   : http://www.scribus.net
 license    :
     - LGPL-2.0-or-later
     - BSD-3-Clause
@@ -18,15 +18,15 @@ patterns   :
 builddeps  :
     - pkgconfig(GraphicsMagick)
     - pkgconfig(Qt5UiTools)
+    - pkgconfig(cups)
     - pkgconfig(hunspell)
     - pkgconfig(lcms2)
     - pkgconfig(libjpeg)
+    - pkgconfig(libpodofo)
     - pkgconfig(libtiff-4)
     - pkgconfig(poppler)
     - pkgconfig(python3)
-    - cups-devel
     - libboost-devel
-    - podofo-devel
 setup      : |
     %cmake_ninja \
         -DWANT_NORPATH=1 \

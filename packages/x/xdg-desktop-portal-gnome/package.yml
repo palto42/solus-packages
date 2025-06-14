@@ -1,8 +1,8 @@
 name       : xdg-desktop-portal-gnome
-version    : '45.1'
-release    : 5
+version    : '48.0'
+release    : 13
 source     :
-    - https://download.gnome.org/sources/xdg-desktop-portal-gnome/45/xdg-desktop-portal-gnome-45.1.tar.xz : 3e9ca821044005fb37bd68ebe4ad196fc3d072835581467a22a4879dac7b5fdd
+    - https://download.gnome.org/sources/xdg-desktop-portal-gnome/48/xdg-desktop-portal-gnome-48.0.tar.xz : cd15aca2e1364da308eb3796bb8ae4a577e60ca4fe12006b315232cfd19c8861
 homepage   : https://gitlab.gnome.org/GNOME/xdg-desktop-portal-gnome
 license    : LGPL-2.1-or-later
 component  : desktop.util
@@ -16,6 +16,7 @@ builddeps  :
     - pkgconfig(xdg-desktop-portal)
     - gnome-keyring
 rundeps    :
+    - nautilus
     - xdg-desktop-portal-gtk
 setup      : |
     %meson_configure

@@ -1,10 +1,10 @@
 name       : qemu
-version    : 8.2.2
-release    : 64
+version    : 9.2.3
+release    : 76
 source     :
-    - https://download.qemu.org/qemu-8.2.2.tar.xz : 847346c1b82c1a54b2c38f6edbd85549edeb17430b7d4d3da12620e2962bc4f3
+    - https://download.qemu.org/qemu-9.2.3.tar.xz : baed494270c361bf69816acc84512e3efed71c7a23f76691642b80bc3de7693e
+homepage   : https://www.qemu.org/
 license    : GPL-2.0-only
-homepage   : https://wiki.qemu.org/Main_Page
 component  :
     - virt
     - guest-agent : virt
@@ -22,13 +22,14 @@ builddeps  :
     - pkgconfig(alsa)
     - pkgconfig(bzip2)
     - pkgconfig(capstone)
-    - pkgconfig(fuse3)
     - pkgconfig(epoxy)
+    - pkgconfig(fuse3)
     - pkgconfig(gbm)
     - pkgconfig(gnutls)
     - pkgconfig(gtk+-3.0)
     - pkgconfig(keyutils)
     - pkgconfig(libattr)
+    - pkgconfig(libbpf)
     - pkgconfig(libcacard)
     - pkgconfig(libcap-ng)
     - pkgconfig(libcurl)
@@ -42,9 +43,9 @@ builddeps  :
     - pkgconfig(libpulse)
     - pkgconfig(libsasl2)
     - pkgconfig(libseccomp)
+    - pkgconfig(liburing)
     - pkgconfig(libusb-1.0)
     - pkgconfig(libusbredirhost)
-    - pkgconfig(liburing)
     - pkgconfig(libzstd)
     - pkgconfig(lzo2)
     - pkgconfig(slirp)
@@ -71,6 +72,7 @@ setup      : |
                 --audio-drv-list=pipewire,pa,alsa \
                 --disable-strip \
                 --enable-attr \
+                --enable-bpf \
                 --enable-curl \
                 --enable-curses \
                 --enable-gtk \

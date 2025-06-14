@@ -1,8 +1,8 @@
 name       : hugo
-version    : 0.123.4
-release    : 154
+version    : 0.147.7
+release    : 192
 source     :
-    - https://github.com/gohugoio/hugo/archive/refs/tags/v0.123.4.tar.gz : 3e681c0a3f5d1422e7b26cb996ec53f20481ab4bb24eaf9f1ba0cccf5dde20ac
+    - https://github.com/gohugoio/hugo/archive/refs/tags/v0.147.7.tar.gz : f9d2e4c85b2d7b1d9ca11e5606973b56717285bbedbb4008afccfd6378d23f52
 license    : Apache-2.0
 homepage   : https://gohugo.io
 component  : programming

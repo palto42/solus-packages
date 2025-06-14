@@ -1,0 +1,23 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Ikey Doherty <ikey@solus-project.com>
+Date: Sat, 19 Mar 2016 23:58:19 +0000
+Subject: [PATCH] Support local configs too for stateless implementation
+
+Signed-off-by: Ikey Doherty <ikey@solus-project.com>
+---
+ fonts.conf.in | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/fonts.conf.in b/fonts.conf.in
+index 44a4484..25c3481 100644
+--- a/fonts.conf.in
++++ b/fonts.conf.in
+@@ -80,7 +80,7 @@
+ <!--
+   Load local system customization file
+ -->
+-	<include ignore_missing="yes">@CONFIGDIR@</include>
++	<include ignore_missing="yes">/usr/share/fonts/conf.d</include>
+ 
+ <!-- Font cache directory list -->
+ 

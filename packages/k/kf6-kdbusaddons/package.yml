@@ -1,8 +1,8 @@
 name       : kf6-kdbusaddons
-version    : 6.0.0
-release    : 4
+version    : 6.14.0
+release    : 21
 source     :
-    - https://cdn.download.kde.org/stable/frameworks/6.0/kdbusaddons-6.0.0.tar.xz : 11e70d0c7239bd818962d91cdb94aeba94748055c77003a4f64ff14dab0ae989
+    - https://download.kde.org/stable/frameworks/6.14/kdbusaddons-6.14.0.tar.xz : f673c9f295df5998948def94caf92d487d63886452802ffb97ad151315627ee4
 homepage   : https://community.kde.org/Frameworks
 license    :
     - LGPL-2.0-only

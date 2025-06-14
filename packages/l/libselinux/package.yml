@@ -1,8 +1,8 @@
 name       : libselinux
-version    : '3.3'
-release    : 3
+version    : 3.8.1
+release    : 6
 source     :
-    - https://github.com/SELinuxProject/selinux/archive/refs/tags/3.3.tar.gz : 1434900229858103bd50570083fa9a99a6a6a694d0100dff81d5a5914f6b8e6b
+    - https://github.com/SELinuxProject/selinux/releases/download/3.8.1/libselinux-3.8.1.tar.gz : ec2d2789f931152d21c1db1eb4bc202ce4eccede34d9be9e360e3b45243cee2c
 homepage   : https://github.com/SELinuxProject/selinux
 license    : Public-Domain
 component  :
@@ -21,6 +21,6 @@ patterns   :
 builddeps  :
     - pkgconfig(libsepol)
 build      : |
-    %make -C libselinux SHLIBDIR=%libdir% LIBDIR=%libdir%
+    %make SHLIBDIR=%libdir% LIBDIR=%libdir%
 install    : |
-    %make_install -C libselinux SHLIBDIR=%libdir% LIBDIR=%libdir%
+    %make_install SHLIBDIR=%libdir% LIBDIR=%libdir%

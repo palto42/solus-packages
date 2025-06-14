@@ -1,9 +1,9 @@
 name       : nvidia-vaapi-driver
-version    : 0.0.11
-release    : 14
+version    : 0.0.14
+release    : 18
 homepage   : https://github.com/elFarto/nvidia-vaapi-driver
 source     :
-    - git|https://github.com/elFarto/nvidia-vaapi-driver.git : v0.0.11
+    - https://github.com/elFarto/nvidia-vaapi-driver/archive/refs/tags/v0.0.14.tar.gz : 4ded132ec4164f3e05656061675dffce677327e4af0d8da33da5f8527609ad2a
 license    : MIT
 component  : xorg.display
 summary    : A VA-API implemention using NVIDIA's NVDEC as the backend (UNSUPPORTED)

@@ -7,7 +7,7 @@ libcanberra.so.0
 libcmark.so.0.30.3
 libebook-1.2.so.21
 libebook-contacts-1.2.so.4
-libecal-2.0.so.2
+libecal-2.0.so.3
 libedataserver-1.2.so.27
 libedataserverui-1.2.so.4
 libenchant-2.so.2
@@ -22,7 +22,7 @@ libgnome-autoar-0.so.0
 libgnome-autoar-gtk-0.so.0
 libgnome-desktop-3.so.20
 libgobject-2.0.so.0
-libgspell-1.so.2
+libgspell-1.so.3
 libgtk-3.so.0
 libgweather-4.so.0
 libical-glib.so.3

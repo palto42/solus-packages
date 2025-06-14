@@ -1,0 +1,21 @@
+name       : hyprwayland-scanner
+version    : 0.4.4
+release    : 3
+source     :
+    - https://github.com/hyprwm/hyprwayland-scanner/archive/refs/tags/v0.4.4.tar.gz : ac73f626019f8d819ff79a5fca06ce4768ce8a3bded6f48c404445f3afaa25ac
+homepage   : https://github.com/hyprwm/hyprwayland-scanner
+license    : BSD-3-Clause
+component  : desktop.hyprland
+summary    : A Hyprland implementation of wayland-scanner
+description: |
+    A Hyprland implementation of wayland-scanner, in and for C++.
+builddeps  :
+    - pkgconfig(pugixml)
+setup      : |
+    %cmake_ninja
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install
+patterns   :
+    - /*

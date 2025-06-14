@@ -1,8 +1,8 @@
 name       : kmix
-version    : 23.08.5
-release    : 69
+version    : 25.04.2
+release    : 84
 source     :
-    - https://cdn.download.kde.org/stable/release-service/23.08.5/src/kmix-23.08.5.tar.xz : 8671aca9dbe50c82885c2b346461488dc491645eb09728fa75c33492e42c8180
+    - https://download.kde.org/stable/release-service/25.04.2/src/kmix-25.04.2.tar.xz : 8674160a2aded6239cc2f665925a6efffbe3c26e1af92f9d83f15e8e5bc6cd0f
 homepage   : https://kde.org/applications/multimedia/org.kde.kmix
 license    :
     - GFDL-1.2-or-later
@@ -15,23 +15,29 @@ builddeps  :
     - pkgconfig(alsa)
     - pkgconfig(libcanberra)
     - pkgconfig(libpulse)
-    - kcompletion-devel
-    - kcrash-devel
-    - kdbusaddons-devel
-    - kdoctools-devel
-    - kglobalaccel-devel
-    - ki18n-devel
-    - kiconthemes-devel
-    - knotifications-devel
-    - kwindowsystem-devel
-    - kxmlgui-devel
-    - solid-devel
+    - kf6-kconfigwidgets-devel
+    - kf6-kcoreaddons-devel
+    - kf6-kcrash-devel
+    - kf6-kdbusaddons-devel
+    - kf6-kdoctools-devel
+    - kf6-kglobalaccel-devel
+    - kf6-ki18n-devel
+    - kf6-knotifications-devel
+    - kf6-kstatusnotifieritem-devel
+    - kf6-kwidgetsaddons-devel
+    - kf6-kwindowsystem-devel
+    - kf6-kxmlgui-devel
+    - kf6-solid-devel
+clang      : yes
+optimize   :
+    - speed
+    - thin-lto
 setup      : |
-    %cmake_ninja
+    %cmake_kf6
 build      : |
     %ninja_build
 install    : |
     %ninja_install
 
     # remove docs
-    rm -rf $installdir/usr/share/doc
+    rm -rfv $installdir/usr/share/doc

@@ -1,0 +1,128 @@
+name       : rocm-clr
+version    : 6.2.4
+release    : 9
+source     :
+    - https://github.com/ROCm/clr/archive/refs/tags/rocm-6.2.4.tar.gz : 0a3164af7f997a4111ade634152957378861b95ee72d7060eb01c86c87208c54
+    - https://github.com/ROCm/HIP/archive/refs/tags/rocm-6.2.4.tar.gz#HIP-6.2.4.tar.gz : 76e4583ae3d31786270fd92abbb2e3dc5e665b22fdedb5ceff0093131d4dc0ca
+    - https://github.com/ROCm/roctracer/archive/refs/tags/rocm-6.2.4.tar.gz#roctracer-6.2.4.tar.gz : b94c7db8ac57a4a1d7f8115020c36551220c20f33289fd06830495b4914a7d7b
+    - https://github.com/ROCm/llvm-project/archive/refs/tags/rocm-6.2.4.tar.gz#HIPCC-6.2.4.tar.gz : 7af782bf5835fcd0928047dbf558f5000e7f0207ca39cf04570969343e789528
+homepage   : https://github.com/ROCm/clr
+license    : MIT
+component  : programming.library
+summary    : AMD Common Language Runtime for HIP and OpenCL
+description: |
+    AMD Common Language Runtime contains source code for AMD's HIP and OpenCL compute languages runtimes.
+builddeps  :
+    - pkgconfig(OpenCL)
+    - pkgconfig(d3d)
+    - pkgconfig(gl)
+    - pkgconfig(libhsakmt)
+    - pkgconfig(numa)
+    - pkgconfig(x11-xcb)
+    - python-cppheaderparser
+    - rocm-cmake
+    - rocm-compilersupport-devel
+    - rocm-device-libs-devel
+    - rocm-llvm
+    - rocm-runtime-devel
+    - rocprofiler-register-devel
+rundeps    :
+    - ^rocm-hip:
+      - rocm-clr
+      - rocm-device-libs-devel
+      - rocm-compilersupport-devel
+      - rocm-info
+      - rocm-llvm
+      - rocm-runtime-devel
+      - rocm-smi-devel
+    - ^rocm-opencl:
+      - rocm-clr
+patterns   :
+    - ^rocm-hip:
+      - /usr/bin/hip*
+      - /usr/bin/roc-*
+      - /usr/include/hip*
+      - /usr/lib64/cmake/hip*
+      - /usr/lib64/libamdhip64.so
+      - /usr/lib64/libhiprtc.so
+      - /usr/lib64/libhiprtc-builtins.so
+    - ^rocm-opencl:
+      - /usr/include/rocm-opencl
+      - /usr/lib64/libamdocl64.so
+      - /usr/lib64/libcltrace.so
+replaces   :
+    - ^rocm-hip:
+      - rocm-hip-devel
+    - ^rocm-opencl:
+      - rocm-opencl-devel
+environment: |
+    export ROCM_PATH=/usr
+    export CMAKE_PREFIX_PATH=/usr/lib64/llvm-rocm
+    export HIP_DEVICE_LIB_PATH=/usr/lib64/amdgcn/bitcode
+    export HIP_CLANG_PATH=/usr/lib64/llvm-rocm/bin
+    export HIP_PLATFORM=amd
+
+    export HIP_DIR="$sources/HIP-rocm-%version%"
+    export ROCTRACER_DIR="$sources/roctracer-rocm-%version%"
+    export HIPCC_DIR=$workdir/HIPCC
+
+    export GCC_IGNORE_WERROR=1
+setup      : |
+    pushd $sources
+        tar -xf $sources/roctracer-%version%.tar.gz
+        tar -xf $sources/HIP-%version%.tar.gz
+
+        mkdir -p $HIPCC_DIR
+        tar --strip-components=3 -C $HIPCC_DIR -xf $sources/HIPCC-%version%.tar.gz llvm-project-rocm-%version%/amd/hipcc
+    popd
+
+    pushd $HIPCC_DIR
+        %patch -p3 -i $pkgfiles/0001-Add-HIP_CLANG_LAUNCHER-for-caching.patch
+        %cmake_ninja -DHIPCC_BACKWARD_COMPATIBILITY=OFF
+        %ninja_build
+    popd
+
+    pushd opencl
+        # Add soname to amdocl and cltrace:
+        # Upstream doesn't want this because they don't guarentee ABI.
+        # Just use the package version. SOVERSION can be major.minor as patch releases
+        # are unlikely to break anything.
+        echo "set_target_properties(amdocl PROPERTIES VERSION %version% SOVERSION $(v=%version%;echo ${v%%.*}))" \
+            >> amdocl/CMakeLists.txt
+        echo "libamdocl64.so.%{rocm_release}" > config/amdocl64.icd
+        echo "set_target_properties(cltrace PROPERTIES VERSION %version% SOVERSION $(v=%version%;echo ${v%%.*}))" \
+            >> tools/cltrace/CMakeLists.txt
+    popd
+
+    # ISA compatibility
+    # This is essentially why Solus is one of the best distros to run ROCm!
+    %patch -p1 -i $pkgfiles/0001-improve-rocclr-isa-compatibility-check.patch
+    %patch -p1 -i $pkgfiles/0002-Improve-hipamd-compat-check.patch
+
+    %cmake_ninja -L \
+      -DROCM_PATH=$ROCM_PATH \
+      -DHIP_COMMON_DIR=$HIP_DIR \
+      -DHIPCC_BIN_DIR=$HIPCC_DIR/solusBuildDir \
+      -DCLR_BUILD_HIP=ON \
+      -DCLR_BUILD_OCL=ON \
+      -DBUILD_ICD=OFF \
+      -DPROF_API_HEADER_PATH=$ROCTRACER_DIR/inc/ext \
+      -DHIP_ENABLE_ROCPROFILER_REGISTER=ON \
+      -DBUILD_TESTS=OFF
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install
+
+    install -dm00644 $installdir/usr/share/OpenCL/vendors
+    echo "libamdocl64.so.6" >> $installdir/usr/share/OpenCL/vendors/amdocl64.icd
+
+    # Some applications detect for libamdhip64.so.5, like Blender
+    ln -s libamdhip64.so.6 $installdir/%libdir%/libamdhip64.so.5
+
+    # Avoid file conflicts with opencl-headers package:
+    install -dm00644 $installdir/usr/include/rocm-opencl
+    mv $installdir/usr/include/CL $installdir/usr/include/rocm-opencl/CL
+
+    # Avoid file conflicts with clinfo package:
+    mv $installdir/usr/bin/clinfo $installdir/usr/bin/rocm-clinfo

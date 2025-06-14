@@ -1,8 +1,8 @@
 name       : wireplumber
-version    : 0.4.17
-release    : 22
+version    : 0.5.8
+release    : 36
 source     :
-    - https://gitlab.freedesktop.org/pipewire/wireplumber/-/archive/0.4.17/wireplumber-0.4.17.tar.gz : a12534fd9c1ecf9fbc09f79192d9d57c9ab7bf01da82615ab4103b2f8e2e91a7
+    - https://gitlab.freedesktop.org/pipewire/wireplumber/-/archive/0.5.8/wireplumber-0.5.8.tar.gz : 234667497c6b1dd2457e7f4566567fad6cde31e4cb8990c7d0f149cb45a3894a
 license    : MIT
 component  : multimedia.library
 homepage   : https://pipewire.pages.freedesktop.org/wireplumber/

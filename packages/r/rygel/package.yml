@@ -1,14 +1,16 @@
 name       : rygel
-version    : 0.42.5
-release    : 23
+version    : 0.44.2
+release    : 29
 source     :
-    - https://download.gnome.org/sources/rygel/0.42/rygel-0.42.5.tar.xz : 1133602d2e6710aade6b22aa98d93384c8d56396f344763413e96e0110b7d89f
-homepage   : https://wiki.gnome.org/Projects/Rygel
+    - https://download.gnome.org/sources/rygel/0.44/rygel-0.44.2.tar.xz : 796eee494cdf60dc2bf82b00b8f99a14ba1c7cf40d2944817ff0c1aa6073d5a0
+homepage   : https://gnome.pages.gitlab.gnome.org/rygel/
 license    : LGPL-2.0-or-later
 component  : network.util
 summary    : Rygel uPnP Media Server
 description: |
     Rygel is a home media solution that allows you to easily share audio, video and pictures, and control of media player on your home network. In technical terms it is both a UPnP AV MediaServer and MediaRenderer implemented through a plug-in mechanism. Interoperability with other devices in the market is achieved by conformance to very strict requirements of DLNA and on the fly conversion of media to format that client devices are capable of handling.
+optimize   :
+    - lto
 builddeps  :
     - pkgconfig(gee-0.8)
     - pkgconfig(gst-editing-services-1.0)
@@ -17,12 +19,14 @@ builddeps  :
     - pkgconfig(gupnp-av-1.0)
     - pkgconfig(gupnp-dlna-2.0)
     - pkgconfig(libmediaart-2.0)
-    - pkgconfig(tracker-sparql-3.0)
+    - pkgconfig(tinysparql-3.0)
     - gtk-doc
     - libunistring-devel
     - valadoc
 setup      : |
-    %meson_configure -Dplugins=gst-launch,lms,media-export,mpris,playbin,tracker3
+    %patch -p1 -i $pkgfiles/0001-solus-Make-stateless.patch
+    %meson_configure \
+                     -Dplugins=gst-launch,media-export,mpris,playbin,tracker3
 build      : |
     %ninja_build
 install    : |

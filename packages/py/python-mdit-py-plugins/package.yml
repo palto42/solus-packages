@@ -1,0 +1,28 @@
+name       : python-mdit-py-plugins
+version    : 0.4.2
+release    : 3
+source     :
+    # The pypi source doesn't include the tests https://github.com/executablebooks/mdit-py-plugins/issues/97
+    - https://github.com/executablebooks/mdit-py-plugins/archive/refs/tags/v0.4.2.tar.gz : ebf41856b3876473dd9adabee689d9a79105a4ef7ede09891b7d8ef1015e0ae5
+license    : MIT
+component  : programming.python
+homepage   : https://github.com/executablebooks/mdit-py-plugins
+summary    : Collection of core plugins for markdown-it-py
+description: |
+    Collection of core plugins for markdown-it-py
+builddeps  :
+    - python-build
+    - python-flit-core
+    - python-installer
+rundeps    :
+    - python-markdown-it-py
+checkdeps  :
+    - python-markdown-it-py
+    - python-pytest
+    - python-pytest-regressions
+build      : |
+    %python3_setup
+install    : |
+    %python3_install
+check      : |
+    %python3_test pytest -v

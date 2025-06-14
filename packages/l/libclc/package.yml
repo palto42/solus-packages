@@ -1,14 +1,14 @@
 name       : libclc
-version    : 16.0.6
-release    : 3
+version    : 19.1.5
+release    : 7
 source     :
-    - https://github.com/llvm/llvm-project/releases/download/llvmorg-16.0.6/libclc-16.0.6.src.tar.xz : 61952af79c555d50bc88cb6f134d9abe9278f65dd34c2bc945cc3d324c2af224
+    - https://github.com/llvm/llvm-project/releases/download/llvmorg-19.1.5/libclc-19.1.5.src.tar.xz : 95ee4b8694fd7b1405d362b9ed758be3e88a81c9ee80c1e8433183f0ddde070e
 license    : MIT
 component  : programming.library
+homepage   : https://libclc.llvm.org/
 summary    : libclc is an open source implementation of the OpenCL 1.1 Specification
 description: |
     libclc is an open source, BSD licensed implementation of the library requirements of the OpenCL C programming language, as specified by the OpenCL 1.1 Specification.
-emul32     : yes
 clang      : yes
 builddeps  :
     - pkgconfig(LLVMSPIRVLib)

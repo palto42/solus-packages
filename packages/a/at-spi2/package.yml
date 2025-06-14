@@ -1,8 +1,8 @@
 name       : at-spi2
-version    : 2.50.1
-release    : 41
+version    : 2.56.2
+release    : 48
 source     :
-    - https://download.gnome.org/sources/at-spi2-core/2.50/at-spi2-core-2.50.1.tar.xz : 5727b5c0687ac57ba8040e79bd6731b714a36b8fcf32190f236b8fb3698789e7
+    - https://download.gnome.org/sources/at-spi2-core/2.56/at-spi2-core-2.56.2.tar.xz : e1b1c9836a8947852f7440c32e23179234c76bd98cd9cc4001f376405f8b783b
 homepage   : https://gitlab.gnome.org/GNOME/at-spi2-core
 license    : LGPL-2.1-or-later
 component  : desktop.gtk
@@ -10,6 +10,8 @@ summary    : Accessibility toolkit
 description: |
     ATK provides the set of accessibility interfaces that are implemented by other toolkits and applications. Using the ATK interfaces, accessibility tools have full access to view and control running applications.
 emul32     : yes
+optimize   :
+    - lto
 builddeps  :
     - pkgconfig32(dbus-1)
     - pkgconfig32(gobject-2.0)
@@ -51,3 +53,10 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+
+    # Stateless
+    install -dm0755 $installdir/usr/share/xdg/Xwayland-session.d/
+    mv $installdir/etc/xdg/Xwayland-session.d/00-at-spi $installdir/usr/share/xdg/Xwayland-session.d/
+    rmdir -v $installdir/etc/xdg/Xwayland-session.d \
+             $installdir/etc/xdg \
+             $installdir/etc/

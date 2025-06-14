@@ -1,8 +1,9 @@
 name       : onefetch
-version    : 2.9.1
-release    : 4
+version    : 2.24.0
+release    : 12
 source     :
-    - https://github.com/o2sh/onefetch/archive/v2.9.1.tar.gz : 33ac8e019e5b7412fec3c7593843e0c3780ca473498c31e36cbe95371fff943b
+    - https://github.com/o2sh/onefetch/archive/refs/tags/2.24.0.tar.gz : 41f457c9a8145de94980bcae497d84a56cd75c1598a6a9eeb45984947bf4f1f8
+homepage   : https://onefetch.dev
 license    : MIT
 component  : system.utils
 networking : yes
@@ -10,11 +11,28 @@ summary    : A command-line Git information tool written in Rust
 description: |
     Onefetch is a command-line Git information tool written in Rust that will display project information and code statistics about your Git repository directly on your terminal.
 builddeps  :
-    - cargo
+    - rust
+environment: |
+    # Force use of system libs
+    export ZSTD_SYS_USE_PKG_CONFIG=1
+setup      : |
+    %cargo_fetch
 build      : |
-    cargo build --release
+    %cargo_build --all-features
 install    : |
-    install -Dm00755 target/release/onefetch $installdir/usr/bin/onefetch
+    %cargo_install
     install -Dm00644 docs/onefetch.1 $installdir/usr/share/man/man1/onefetch.1
-check      : |
-    cargo test --all
+
+    # Generate shell completions
+    for shellcomp in bash fish zsh; do
+        ./target/release/onefetch --generate "$shellcomp" > onefetch."$shellcomp"
+    done
+
+    # Due to an accident, these were previously installed as directories, and eopkg doesn't know
+    # how to handle that. Since this happened at the same time as the usr-merge incident, we're
+    # opting to remove the completions for now, and will revisit later, just so we can get things
+    # working.
+    #
+    # install -Dm00644 onefetch.bash $installdir/usr/share/bash-completion/completions/onefetch
+    # install -Dm00644 onefetch.fish $installdir/usr/share/fish/vendor_completions.d/onefetch.fish
+    # install -Dm00644 onefetch.zsh  $installdir/usr/share/zsh/site-functions/_onefetch

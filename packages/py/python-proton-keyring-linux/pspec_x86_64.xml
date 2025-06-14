@@ -1,0 +1,55 @@
+<PISI>
+    <Source>
+        <Name>python-proton-keyring-linux</Name>
+        <Homepage>https://github.com/ProtonVPN/python-proton-keyring-linux</Homepage>
+        <Packager>
+            <Name>Joey Riches</Name>
+            <Email>josephriches@gmail.com</Email>
+        </Packager>
+        <License>GPL-3.0-or-later</License>
+        <PartOf>programming.python</PartOf>
+        <Summary xml:lang="en">The python-proton-keyring-linux component</Summary>
+        <Description xml:lang="en">The python-proton-keyring-linux component
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>python-proton-keyring-linux</Name>
+        <Summary xml:lang="en">The python-proton-keyring-linux component</Summary>
+        <Description xml:lang="en">The python-proton-keyring-linux component
+</Description>
+        <PartOf>programming.python</PartOf>
+        <Files>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/proton/keyring_linux/core/__init__.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/proton/keyring_linux/core/__pycache__/__init__.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/proton/keyring_linux/core/__pycache__/__init__.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/proton/keyring_linux/core/__pycache__/keyring_linux.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/proton/keyring_linux/core/__pycache__/keyring_linux.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/proton/keyring_linux/core/keyring_linux.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/proton/keyring_linux/secretservice/__init__.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/proton/keyring_linux/secretservice/__pycache__/__init__.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/proton/keyring_linux/secretservice/__pycache__/__init__.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/proton/keyring_linux/secretservice/__pycache__/secretservice_backend.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/proton/keyring_linux/secretservice/__pycache__/secretservice_backend.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/proton/keyring_linux/secretservice/secretservice_backend.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/proton_keyring_linux-0.2.0.dist-info/LICENSE</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/proton_keyring_linux-0.2.0.dist-info/METADATA</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/proton_keyring_linux-0.2.0.dist-info/RECORD</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/proton_keyring_linux-0.2.0.dist-info/WHEEL</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/proton_keyring_linux-0.2.0.dist-info/entry_points.txt</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/proton_keyring_linux-0.2.0.dist-info/top_level.txt</Path>
+        </Files>
+        <Replaces>
+            <Package>python-proton-keyring-linux-secretservice</Package>
+        </Replaces>
+    </Package>
+    <History>
+        <Update release="4">
+            <Date>2025-05-17</Date>
+            <Version>0.2.0</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Joey Riches</Name>
+            <Email>josephriches@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

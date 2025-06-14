@@ -1,26 +1,40 @@
 name       : magic-wormhole
-version    : 0.12.0
-release    : 6
+version    : 0.19.1
+release    : 13
 source     :
-    - https://github.com/warner/magic-wormhole/archive/0.12.0.tar.gz : 5522184ab995a22ff72bf9019e54cb7b5e7f0f3308c251f121da15a198afe1d9
+    - https://github.com/magic-wormhole/magic-wormhole/archive/refs/tags/0.19.1.tar.gz : 52e7e114f56364b638c6b9e6d809162ca7fdacc9525a38c57dc917ad02b17ee5
+homepage   : https://github.com/magic-wormhole/magic-wormhole
 license    : MIT
 component  : network
 summary    : Securely transfer data between computers
 description: |
     Securely transfer data between computers.
+builddeps  :
+    - python-build
+    - python-installer
+    - python-setuptools
+    - python-versioneer
+    - python-wheel
 rundeps    :
     - python-autobahn
-    - python-cffi
     - python-click
-    - python-hkdf
     - python-humanize
     - python-idna
+    - python-iterable-io
     - python-pynacl
+    - python-qrcode
     - python-service-identity
     - python-spake2
     - python-tqdm
     - python-txtorcon
+    - python-zipstream-ng
 setup      : |
     %python3_setup
 install    : |
     %python3_install
+
+    # install completions
+    install wormhole_complete.bash -Dm00644 $installdir/usr/share/bash-completion/completions/wormhole
+    install wormhole_complete.fish -Dm00644 $installdir/usr/share/fish/vendor_completions.d/wormhole.fish
+    install wormhole_complete.zsh  -Dm00644 $installdir/usr/share/zsh/site-functions/_wormhole
+    rm $installdir/usr/wormhole_complete.*

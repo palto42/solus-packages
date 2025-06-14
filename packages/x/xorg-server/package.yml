@@ -1,9 +1,9 @@
 # Updating this package? Make sure to update the bundled xorg-server in tigervnc too
 name       : xorg-server
-version    : 21.1.11
-release    : 99
+version    : 21.1.16
+release    : 107
 source     :
-    - https://www.x.org/releases/individual/xserver/xorg-server-21.1.11.tar.xz : 1d3dadbd57fb86b16a018e9f5f957aeeadf744f56c0553f55737628d06d326ef
+    - https://www.x.org/releases/individual/xserver/xorg-server-21.1.16.tar.xz : b14a116d2d805debc5b5b2aac505a279e69b217dae2fae2dfcb62400471a9970
 homepage   : https://xorg.freedesktop.org/wiki/
 license    : MIT
 component  :
@@ -47,6 +47,7 @@ rundeps    :
     - linux-driver-management
     - xorg-xwayland
     - xvfb :
+        - harfbuzz # I have no idea why this isn't picked up automatically
         - xauth
         - xkbcomp
         - xkeyboard-config
@@ -54,7 +55,7 @@ optimize   :
     - no-bind-now
     - no-symbolic
 setup      : |
-    %apply_patches
+    %patch -p1 -i $pkgfiles/0006-use-intel-only-on-pre-gen4.patch
     %meson_configure \
       -Ddefault_font_path=/usr/share/fonts \
       -Ddri1=true \

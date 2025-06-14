@@ -1,14 +1,21 @@
 name       : python-cachetools
-version    : 5.3.2
-release    : 8
+version    : 5.5.2
+release    : 13
 source     :
-    - https://files.pythonhosted.org/packages/source/c/cachetools/cachetools-5.3.2.tar.gz : 086ee420196f7b2ab9ca2db2520aca326318b68fe5ba8bc4d49cca91add450f2
+    - https://files.pythonhosted.org/packages/source/c/cachetools/cachetools-5.5.2.tar.gz : 1a661caa9175d26759571b2e19580f9d6393969e5dfca11fdb1f947a23e640d4
 homepage   : https://github.com/tkem/cachetools/
 license    : MIT
 component  : programming.python
 summary    : Extensible memoizing collections and decorators
 description: |
     This module provides various memoizing collections and decorators, including variants of the Python 3 Standard Library @lru_cache function decorator.
+builddeps  :
+    - python-build
+    - python-installer
+    - python-setuptools
+    - python-wheel
+checkdeps  :
+    - python-pytest
 rundeps    :
     - python3
 build      : |
@@ -16,4 +23,4 @@ build      : |
 install    : |
     %python3_install
 check      : |
-    %python3_test
+    %python3_test pytest -v

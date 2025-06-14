@@ -1,8 +1,8 @@
 name       : kf6-kwindowsystem
-version    : 6.0.0
-release    : 5
+version    : 6.14.0
+release    : 22
 source     :
-    - https://cdn.download.kde.org/stable/frameworks/6.0/kwindowsystem-6.0.0.tar.xz : 1906caa53b7d58fc0c4d78a3c8d99f25aa056fc6d09c5fc121ed5e1f80396a94
+    - https://download.kde.org/stable/frameworks/6.14/kwindowsystem-6.14.0.tar.xz : 6625f7d5a46cb9c72289bcaaa65ee74450a671e4dbf6eebefc772650f24cf2a6
 homepage   : https://community.kde.org/Frameworks
 license    :
     - LGPL-2.0-only

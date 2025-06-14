@@ -7,11 +7,10 @@ libcairo.so.2
 libcurl.so.4
 libgdk-3.so.0
 libgdk_pixbuf-2.0.so.0
-libgio-2.0.so.0
 libglib-2.0.so.0
 libgobject-2.0.so.0
 libgtk-3.so.0
-libicuuc.so.74
+libicuuc.so.76
 liblzma.so.5
 libm.so.6
 libpango-1.0.so.0
@@ -19,3 +18,4 @@ libpangocairo-1.0.so.0
 libreadline.so.8
 libsqlite3.so.0
 libz.so.1
+libzstd.so.1

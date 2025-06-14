@@ -1,8 +1,8 @@
 name       : qt5-datavis3d
-version    : 5.15.12
-release    : 16
+version    : 5.15.17
+release    : 21
 source     :
-    - git|https://invent.kde.org/qt/qt/qtdatavis3d.git : c887477198cae44585fe9db371db0ddf4c3b205e
+    - git|https://invent.kde.org/qt/qt/qtdatavis3d.git : a57e633b675d7886c3e5c64441f50ffe831f2de8
 license    : GPL-3.0-only
 component  :
     - desktop.qt

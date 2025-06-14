@@ -1,0 +1,27 @@
+name       : kunifiedpush
+version    : 25.04.2
+release    : 6
+source     :
+    - https://download.kde.org/stable/release-service/25.04.2/src/kunifiedpush-25.04.2.tar.xz : f9692c9ff3a1322695b218cbd6c26e8c08fafc940a66cba8bcf5bee7be82baa4
+homepage   : https://invent.kde.org/libraries/kunifiedpush
+license    : LGPL-2.0-or-later
+component  : programming.library
+summary    : UnifiedPush client library
+description: |
+    UnifiedPush client library and distributor daemon
+builddeps  :
+    - pkgconfig(Qt6WebSockets)
+    - kf6-kcmutils-devel
+    - kf6-kcoreaddons-devel
+    - kf6-ki18n-devel
+    - kf6-kservice-devel
+clang      : yes
+optimize   :
+    - speed
+    - thin-lto
+setup      : |
+    %cmake_kf6
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install

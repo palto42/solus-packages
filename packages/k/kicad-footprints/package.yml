@@ -1,8 +1,9 @@
 name       : kicad-footprints
-version    : 7.0.6
-release    : 6
+version    : 9.0.2
+release    : 14
 source     :
-    - https://gitlab.com/kicad/libraries/kicad-footprints/-/archive/7.0.6/kicad-footprints-7.0.6.tar.gz : 577fad1792bcca998b369d62d8e576191c94c507e700d2ae55309fbe3bba9556
+    - https://gitlab.com/kicad/libraries/kicad-footprints/-/archive/9.0.2/kicad-footprints-9.0.2.tar.gz : 800288d4af6429182493f12b16d146f6a04b04710200d41724d4a4d990a0e0e6
+homepage   : https://www.kicad.org/
 license    : CC-BY-SA-4.0
 component  : office.scientific
 summary    : Official KiCad Footprint Libraries

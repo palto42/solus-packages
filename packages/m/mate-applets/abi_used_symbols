@@ -132,9 +132,11 @@ libgdk-3.so.0:gdk_display_beep
 libgdk-3.so.0:gdk_display_get_app_launch_context
 libgdk-3.so.0:gdk_display_get_default
 libgdk-3.so.0:gdk_display_get_default_seat
+libgdk-3.so.0:gdk_display_get_monitor
 libgdk-3.so.0:gdk_drag_context_list_targets
 libgdk-3.so.0:gdk_drag_status
 libgdk-3.so.0:gdk_get_default_root_window
+libgdk-3.so.0:gdk_monitor_get_geometry
 libgdk-3.so.0:gdk_pixbuf_get_from_surface
 libgdk-3.so.0:gdk_property_get
 libgdk-3.so.0:gdk_rectangle_intersect
@@ -329,8 +331,8 @@ libglib-2.0.so.0:g_malloc0_n
 libglib-2.0.so.0:g_malloc_n
 libglib-2.0.so.0:g_markup_printf_escaped
 libglib-2.0.so.0:g_mkdir_with_parents
-libglib-2.0.so.0:g_once_init_enter
-libglib-2.0.so.0:g_once_init_leave
+libglib-2.0.so.0:g_once_init_enter_pointer
+libglib-2.0.so.0:g_once_init_leave_pointer
 libglib-2.0.so.0:g_option_context_add_group
 libglib-2.0.so.0:g_option_context_add_main_entries
 libglib-2.0.so.0:g_option_context_free

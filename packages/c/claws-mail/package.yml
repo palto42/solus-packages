@@ -1,8 +1,8 @@
 name       : claws-mail
-version    : 4.1.1
-release    : 38
+version    : 4.3.1
+release    : 42
 source     :
-    - https://www.claws-mail.org/releases/claws-mail-4.1.1.tar.xz : b189e700c1896f5e0deb0b76d4bfa820eb7ac1935ee10aa9afbada3cf53a0344
+    - https://www.claws-mail.org/releases/claws-mail-4.3.1.tar.xz : d8adf210c767ab58252dfc5ab3c69e603d7ffdb7281a1e3340d2d86062f468a6
 homepage   : https://claws-mail.org/
 license    : GPL-3.0-or-later
 component  : network.mail
@@ -21,7 +21,6 @@ builddeps  :
     - pkgconfig(libcanberra-gtk)
     - pkgconfig(libcurl)
     - pkgconfig(libetpan)
-    - pkgconfig(libgdata)
     - pkgconfig(libical)
     - pkgconfig(libnm)
     - pkgconfig(libnotify)
@@ -47,3 +46,4 @@ build      : |
     %make
 install    : |
     %make_install
+    install -Dm00644 $pkgfiles/org.claws_mail.Claws-Mail.appdata.xml $installdir/usr/share/metainfo/org.claws_mail.Claws-Mail.appdata.xml

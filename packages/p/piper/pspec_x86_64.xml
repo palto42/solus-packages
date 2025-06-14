@@ -21,60 +21,67 @@
         <PartOf>system.utils</PartOf>
         <Files>
             <Path fileType="executable">/usr/bin/piper</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/piper/__init__.py</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/piper/__pycache__/__init__.cpython-311.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/piper/__pycache__/application.cpython-311.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/piper/__pycache__/buttondialog.cpython-311.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/piper/__pycache__/buttonspage.cpython-311.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/piper/__pycache__/devicerow.cpython-311.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/piper/__pycache__/errorperspective.cpython-311.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/piper/__pycache__/gi_composites.cpython-311.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/piper/__pycache__/leddialog.cpython-311.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/piper/__pycache__/ledspage.cpython-311.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/piper/__pycache__/mousemap.cpython-311.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/piper/__pycache__/mouseperspective.cpython-311.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/piper/__pycache__/optionbutton.cpython-311.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/piper/__pycache__/profilerow.cpython-311.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/piper/__pycache__/ratbagd.cpython-311.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/piper/__pycache__/resolutionrow.cpython-311.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/piper/__pycache__/resolutionspage.cpython-311.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/piper/__pycache__/svg.cpython-311.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/piper/__pycache__/welcomeperspective.cpython-311.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/piper/__pycache__/window.cpython-311.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/piper/application.py</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/piper/buttondialog.py</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/piper/buttonspage.py</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/piper/devicerow.py</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/piper/errorperspective.py</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/piper/gi_composites.py</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/piper/leddialog.py</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/piper/ledspage.py</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/piper/mousemap.py</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/piper/mouseperspective.py</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/piper/optionbutton.py</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/piper/profilerow.py</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/piper/ratbagd.py</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/piper/resolutionrow.py</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/piper/resolutionspage.py</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/piper/svg.py</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/piper/welcomeperspective.py</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/piper/window.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/piper/__init__.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/piper/__pycache__/__init__.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/piper/__pycache__/advancedpage.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/piper/__pycache__/application.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/piper/__pycache__/buttondialog.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/piper/__pycache__/buttonspage.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/piper/__pycache__/devicerow.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/piper/__pycache__/errorperspective.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/piper/__pycache__/leddialog.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/piper/__pycache__/ledspage.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/piper/__pycache__/mousemap.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/piper/__pycache__/mouseperspective.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/piper/__pycache__/optionbutton.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/piper/__pycache__/profilerow.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/piper/__pycache__/ratbagd.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/piper/__pycache__/resolutionrow.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/piper/__pycache__/resolutionspage.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/piper/__pycache__/svg.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/piper/__pycache__/welcomeperspective.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/piper/__pycache__/window.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/piper/advancedpage.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/piper/application.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/piper/buttondialog.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/piper/buttonspage.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/piper/devicerow.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/piper/errorperspective.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/piper/leddialog.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/piper/ledspage.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/piper/mousemap.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/piper/mouseperspective.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/piper/optionbutton.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/piper/profilerow.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/piper/ratbagd.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/piper/resolutionrow.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/piper/resolutionspage.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/piper/svg.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/piper/util/__init__.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/piper/util/__pycache__/__init__.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/piper/util/__pycache__/gobject.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/piper/util/gobject.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/piper/welcomeperspective.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/piper/window.py</Path>
             <Path fileType="data">/usr/share/applications/org.freedesktop.Piper.desktop</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.freedesktop.Piper.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/symbolic/apps/org.freedesktop.Piper-symbolic.svg</Path>
             <Path fileType="localedata">/usr/share/locale/be/LC_MESSAGES/piper.mo</Path>
             <Path fileType="localedata">/usr/share/locale/bg/LC_MESSAGES/piper.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/cs/LC_MESSAGES/piper.mo</Path>
             <Path fileType="localedata">/usr/share/locale/de/LC_MESSAGES/piper.mo</Path>
             <Path fileType="localedata">/usr/share/locale/es/LC_MESSAGES/piper.mo</Path>
             <Path fileType="localedata">/usr/share/locale/fr/LC_MESSAGES/piper.mo</Path>
             <Path fileType="localedata">/usr/share/locale/hr/LC_MESSAGES/piper.mo</Path>
             <Path fileType="localedata">/usr/share/locale/it/LC_MESSAGES/piper.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/ka/LC_MESSAGES/piper.mo</Path>
             <Path fileType="localedata">/usr/share/locale/nl/LC_MESSAGES/piper.mo</Path>
             <Path fileType="localedata">/usr/share/locale/pl/LC_MESSAGES/piper.mo</Path>
             <Path fileType="localedata">/usr/share/locale/pt_BR/LC_MESSAGES/piper.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ru/LC_MESSAGES/piper.mo</Path>
             <Path fileType="localedata">/usr/share/locale/sv/LC_MESSAGES/piper.mo</Path>
             <Path fileType="localedata">/usr/share/locale/uk_UA/LC_MESSAGES/piper.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/zh_CN/LC_MESSAGES/piper.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_TW/LC_MESSAGES/piper.mo</Path>
             <Path fileType="man">/usr/share/man/man1/piper.1</Path>
             <Path fileType="data">/usr/share/metainfo/org.freedesktop.Piper.appdata.xml</Path>
@@ -92,9 +99,9 @@
         </Files>
     </Package>
     <History>
-        <Update release="27">
-            <Date>2024-02-16</Date>
-            <Version>0.7</Version>
+        <Update release="29">
+            <Date>2025-05-20</Date>
+            <Version>0.8</Version>
             <Comment>Packaging update</Comment>
             <Name>Joey Riches</Name>
             <Email>josephriches@gmail.com</Email>

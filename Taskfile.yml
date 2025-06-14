@@ -20,14 +20,14 @@ tasks:
   # Ensure people new to go-task and used to 'make help' have an easier time
   help:
     desc: Show how to list available tasks
+    silent: true
     cmds:
-      - |
-        echo "Use 'go-task -l/--list' to list available tasks."
+      - echo "Use 'go-task -l/--list' to list available tasks."
 
   # Utility tasks, mainly for precondition checks
   package-file:
     internal: true
-    desc: |
+    desc: >-
       Check that either `package.yml` or `pspec.xml` exists in the current directory
     dir: '{{ .USER_WORKING_DIR }}'
     requires:
@@ -37,9 +37,9 @@ tasks:
         msg: Either `package.yml` or `pspec.xml` must exists in the current directory
 
   solbuild-reset:
-    desc: |
+    desc: >-
       Delete all existing solbuild cache and images, then download fresh solbuild images + cache updates
-    cmds: 
+    cmds:
       - sudo solbuild delete-cache --all --images
       - sudo solbuild init --update --profile unstable-x86_64
       - sudo solbuild init --update --profile main-x86_64
@@ -54,8 +54,7 @@ tasks:
     deps:
       - package-file
     cmds:
-      - |
-        sudo solbuild build {{ .SPECFILE }} -p {{ .PROFILE }} {{ .CLI_ARGS }}
+      - sudo solbuild build {{ .SPECFILE }} -p {{ .PROFILE }} {{ .CLI_ARGS }}
 
   build-local:
     desc: "Build the current package against the unstable and the default local repo"
@@ -72,8 +71,7 @@ tasks:
     aliases: [localcp]
     cmds:
       - task: build-local
-      - |
-        sudo cp -fv {{ .USER_WORKING_DIR }}/*.eopkg /var/lib/solbuild/local/
+      - sudo cp -fv {{ .USER_WORKING_DIR }}/*.eopkg /var/lib/solbuild/local/
       # Ensure that the freshly built package is picked up by the local repo index
       - task: build-localindex
 
@@ -83,8 +81,8 @@ tasks:
     cmds:
       - |
         [[ -d /var/lib/solbuild/local ]] && \
-        sudo eopkg index --skip-signing /var/lib/solbuild/local/ --output /var/lib/solbuild/local/eopkg-index.xml && \
-        sudo eopkg ur  # Force eopkg to pick up the new index
+        sudo eopkg.bin index --skip-signing /var/lib/solbuild/local/ --output /var/lib/solbuild/local/eopkg-index.xml && \
+        sudo eopkg.bin ur  # Force eopkg to pick up the new index
 
   build-stable:
     desc: Build the current package against the stable repo (do NOT use for official submissions!)
@@ -105,14 +103,13 @@ tasks:
     desc: Bump current release
     dir: '{{ .USER_WORKING_DIR }}'
     vars:
-      YBUMP: "/usr/share/ypkg/ybump.py"
+      YBUMP: "ybump"
       PBUMP: "{{ .TASKFILE_DIR }}/common/Scripts/pbump.py"
       BUMP_SCRIPT: '{{ eq .SPECFILE "package.yml" | ternary .YBUMP .PBUMP }}'
     deps:
       - package-file
     cmds:
-      - |
-        {{ .BUMP_SCRIPT }} {{ .SPECFILE }}
+      - "{{ .BUMP_SCRIPT }} {{ .SPECFILE }}"
 
   convert:
     desc: Convert pspec to package.yml
@@ -121,14 +118,19 @@ tasks:
       - sh: test -f pspec.xml
         msg: "`pspec.xml` must exist in the current directory to perform conversion"
     cmds:
-      - |
-        {{ .TASKFILE_DIR }}/common/Scripts/yconvert.py pspec.xml
+      - '{{ .TASKFILE_DIR }}/common/Scripts/yconvert.py pspec.xml'
+
+  updatecheck:
+    desc: Check package for update
+    dir: '{{ .USER_WORKING_DIR }}'
+    cmds:
+      - ent check updates
 
   cvecheck:
     desc: Check package for CVEs
     dir: '{{ .USER_WORKING_DIR }}'
     cmds:
-      - cve-check-tool {{ .PSPECFILE }} -M {{ .TASKFILE_DIR }}/common/mapping -o report.html
+      - 'cve-check-tool {{ .PSPECFILE }} -M {{ .TASKFILE_DIR }}/common/mapping -o report.html'
 
   notify-complete:
     desc: Get a notification when the build has finished on the buildserver
@@ -139,52 +141,56 @@ tasks:
       - "{{ .TASKFILE_DIR }}/common/Scripts/buildserver-notification.sh"
 
   pkgconfig:
-    desc: |
+    desc: >-
       Find which package provides a given pkgconfig target.
-
       Example usage: `go-task pkgconfig -- Qt5Core Qt6Core`
     cmds:
-      - |
-        {{ .TASKFILE_DIR }}/common/Scripts/epcsearch.py {{ .CLI_ARGS }}
+      - '{{ .TASKFILE_DIR }}/common/Scripts/epcsearch.py {{ .CLI_ARGS }}'
 
   update:
-    desc: |
+    desc: >-
       Update an existing package.yml recipe to a new version given a version and a download URI.
-
       Example usage: `go-task update -- 7.2 https://www.nano-editor.org/dist/v7/nano-7.2.tar.xz`
     dir: '{{ .USER_WORKING_DIR }}'
     preconditions:
       - sh: test -f package.yml
-        msg: "`package.yml` ust exist in the current directory"
+        msg: "`package.yml` must exist in the current directory"
     cmds:
-      - |
-        /usr/share/ypkg/yupdate.py {{ .CLI_ARGS }}
+      - 'yupdate {{ .CLI_ARGS }}'
 
   # For staff and packagers with push access
   publish:
-    desc: Tag and publish a release
+    desc: >-
+      Publish the last commit for the current package to the repository and the build server.
+      The `run-safety-catches` task is used to check for common issues before pushing.
     dir: '{{ .USER_WORKING_DIR }}'
     preconditions:
       - sh: test $(git symbolic-ref HEAD 2>/dev/null) = "refs/heads/main"
         msg: Not on main branch
-      - sh: "{{ .TASKFILE_DIR }}/common/Scripts/package-publish-safety-catches.sh"
-        msg: Failed to pass safety catches
     deps:
       - package-file
     cmds:
+      - task: run-safety-catches
       - git push
       - task: push
 
   republish:
-    desc: Rebuild existing tag
+    desc: >-
+      Retry the last commit for the current package on the build server.
+      The `run-safety-catches` task is used to check for common issues before pushing.
     dir: '{{ .USER_WORKING_DIR }}'
     preconditions:
       - sh: test $(git symbolic-ref HEAD 2>/dev/null) = "refs/heads/main"
         msg: Not on main branch
-      - sh: "{{ .TASKFILE_DIR }}/common/Scripts/package-publish-safety-catches.sh"
-        msg: Failed to pass safety catches
     cmds:
+      - task: run-safety-catches
       - task: push
+
+  run-safety-catches:
+    desc: Check for issues in the currently staged commits using the CI package checks.
+    dir: '{{ .USER_WORKING_DIR }}'
+    cmds:
+      - "{{ .TASKFILE_DIR }}/common/Scripts/package-publish-safety-catches.sh"
 
   push:
     desc: Push package to the build server
@@ -199,8 +205,9 @@ tasks:
         sh: git rev-parse --show-prefix
       REF:
         sh: git rev-list -1 HEAD "{{ .USER_WORKING_DIR }}"
+      PUBLISH_COMMENT: '{{ .PUBLISH_COMMENT | default "" | b64enc }}'
     cmds:
-      - ssh build-controller@build.getsol.us build "{{ .SOURCE }}" "{{ .TAG }}" "{{ .PATH }}" "{{ .REF }}"
+      - ssh build-controller@build.getsol.us build "{{ .SOURCE }}" "{{ .TAG }}" "{{ .PATH }}" "{{ .REF }}" "{{ .PUBLISH_COMMENT }}"
 
   # Other utilities
   check:
@@ -210,30 +217,66 @@ tasks:
       - "{{ .TASKFILE_DIR }}/common/CI/package_checks.py --modified --untracked --base origin/main {{.CLI_ARGS}}"
 
   clean:
-    desc: Clean current tree
+    desc: Clean .eopkgs found in the current directory
     dir: '{{ .USER_WORKING_DIR }}'
     cmds:
       - rm *.eopkg -fv
 
-  clean-all:
-    desc: WARNING - Clean ALL eopkgs found in the monorepo
+  clean-local:
+    desc: WARNING - Clean ALL eopkgs found in solbuild local repository /var/lib/solbuild/local
+    aliases: [rmlocal, rml]
+    cmds:
+      - task: list-local       # first show all found .eopkg files
+      - task: delete-local     # then prompt before deleting them
+      - task: build-localindex # ... and rebuild the index afterwards
+
+  delete-local:
+    desc: Ask before deleting all .eopkgs found in the local repo
     dir: '{{ .TASKFILE_DIR }}'
+    prompt: This will delete ALL .eopkgs found in the solbuild local repository. Continue?
+    cmds:
+      - sudo rm /var/lib/solbuild/local/*.eopkg
+
+  list-local:
+    desc: List all .eopkgs in the local repo (/var/lib/solbuild/local/*.eopkg)
+    aliases: [lslocal, lsl]
+    cmds:
+      - ls -AFcghlot /var/lib/solbuild/local/
+
+  clean-all:
+    desc: List all .eopkgs found in the monorepo, ask before deleting them.
+    aliases: [rmall, rma]
+    cmds:
+      - task: list-all-eopkgs   # first show all found .eopkg files
+      - task: delete-all-eopkgs # then prompt before deleting them
+
+  delete-all-eopkgs:
+    desc: Ask before deleting all .eopkgs found in the monorepo.
+    dir: '{{ .TASKFILE_DIR }}'
+    prompt: This will delete ALL .eopkgs found in the monorepo. Do you wish to continue?
     cmds:
       - find $(git rev-parse --show-toplevel) -type f -name '*.eopkg' -delete
+
+  list-all-eopkgs:
+    desc: List all .eopkgs found in the monorepo
+    aliases: [lsall, lsa]
+    dir: '{{ .TASKFILE_DIR }}'
+    cmds:
+      - find $(git rev-parse --show-toplevel) -type f -name '*.eopkg' -print
 
   init:
     desc: Initialize the packages repo
     cmds:
-      - ln -sf ../../common/Hooks/pre-commit.py .git/hooks/pre-commit
-      - ln -sf ../../common/Hooks/prepare-commit-msg.py .git/hooks/prepare-commit-msg
-      - ln -sf ../../common/Hooks/post-merge.sh .git/hooks/post-merge
-      - ln -sf ../../common/Hooks/post-rewrite.sh .git/hooks/post-rewrite
+      - ln -sf ../../common/Hooks/pre-commit.py $(git rev-parse --git-path hooks)/pre-commit
+      - ln -sf ../../common/Hooks/prepare-commit-msg.py $(git rev-parse --git-path hooks)/prepare-commit-msg
+      - ln -sf ../../common/Hooks/post-merge.sh $(git rev-parse --git-path hooks)/post-merge
+      - ln -sf ../../common/Hooks/post-rewrite.sh $(git rev-parse --git-path hooks)/post-rewrite
 
   pull:
     desc: Pull/rebase latest changes
     dir: '{{ .USER_WORKING_DIR }}'
     preconditions:
-      - test -d .git
+      - git rev-parse --is-inside-work-tree
     cmds:
       - git pull --rebase
 
@@ -243,5 +286,28 @@ tasks:
     vars:
       NEWPKG: "{{ .TASKFILE_DIR }}/common/Scripts/new-package.sh"
     cmds:
-      - |
-        {{ .NEWPKG }} {{.CLI_ARGS}}
+      - '{{ .NEWPKG }} {{.CLI_ARGS}}'
+
+  check-appstream-progress:
+    desc: Generate a progress report detailing which packages still need appstream metadata added
+    dir: '{{ .TASKFILE_DIR }}'
+    cmds:
+      - common/Scripts/check_appstream_progress.py packages
+
+  add-monitoring:
+    desc: Add skeleton for monitoring.yaml
+    dir: '{{ .USER_WORKING_DIR }}'
+    vars:
+      DATE:
+        sh: date -u +%Y-%m-%d
+      COMMENT: "# No known CPE, checked {{ .DATE }}"
+    cmds:
+      - touch monitoring.yaml
+      - yq --inplace '
+          . head_comment="Remove all comments before submitting, except CPE check date if none found" |
+          .releases.id line_comment = "Check https://release-monitoring.org/" |
+          .releases.rss line_comment = "For example https://github.com/PyO3/maturin/releases.atom" |
+          .releases.[] = ~ |
+          (.security | key) head_comment = "{{ .COMMENT }}" |
+          .security.cpe = ~
+        '  monitoring.yaml

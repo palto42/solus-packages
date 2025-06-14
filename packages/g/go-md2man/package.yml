@@ -1,17 +1,21 @@
 name       : go-md2man
-version    : 2.0.2
-release    : 3
+version    : 2.0.4
+release    : 6
 source     :
-    - https://github.com/cpuguy83/go-md2man/archive/v2.0.2.tar.gz : 2f52e37101ea2734b02f2b54a53c74305b95b3a9a27792fdac962b5354aa3e4a
+    - https://github.com/cpuguy83/go-md2man/archive/v2.0.4.tar.gz : b0a4c7c077ede56967deef6ab7e7696c0f46124b0b3360fd05564ec5a536f11f
+homepage   : https://github.com/cpuguy83/go-md2man
 license    : MIT
 component  : system.utils
 summary    : A utility to convert md-files to man pages
 description: |
     A utility to convert md-files to man pages
+networking : yes
 builddeps  :
     - golang
 build      : |
-    export GOFLAGS="-buildmode=pie -mod=vendor -trimpath"
+    # export GOFLAGS="-buildmode=pie -mod=vendor -trimpath"
+    # -mod=vendor temporarily disabled due to lockfile shenanigans
+    export GOFLAGS="-buildmode=pie -trimpath"
     go build -o go-md2man .
 
     # Bonus, this also checks that go-md2man is working:

@@ -1,0 +1,91 @@
+<PISI>
+    <Source>
+        <Name>labwc</Name>
+        <Homepage>https://labwc.github.io/</Homepage>
+        <Packager>
+            <Name>Evan Maddock</Name>
+            <Email>maddock.evan@vivaldi.net</Email>
+        </Packager>
+        <License>GPL-2.0-or-later</License>
+        <PartOf>desktop</PartOf>
+        <Summary xml:lang="en">Labwc is a window-stacking compositor for wayland</Summary>
+        <Description xml:lang="en">Labwc is a wlroots-based window-stacking compositor for wayland, inspired by openbox.</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>labwc</Name>
+        <Summary xml:lang="en">Labwc is a window-stacking compositor for wayland</Summary>
+        <Description xml:lang="en">Labwc is a wlroots-based window-stacking compositor for wayland, inspired by openbox.</Description>
+        <PartOf>desktop</PartOf>
+        <Files>
+            <Path fileType="executable">/usr/bin/labwc</Path>
+            <Path fileType="doc">/usr/share/doc/labwc/README</Path>
+            <Path fileType="doc">/usr/share/doc/labwc/autostart</Path>
+            <Path fileType="doc">/usr/share/doc/labwc/environment</Path>
+            <Path fileType="doc">/usr/share/doc/labwc/menu.xml</Path>
+            <Path fileType="doc">/usr/share/doc/labwc/rc.xml</Path>
+            <Path fileType="doc">/usr/share/doc/labwc/rc.xml.all</Path>
+            <Path fileType="doc">/usr/share/doc/labwc/shutdown</Path>
+            <Path fileType="doc">/usr/share/doc/labwc/themerc</Path>
+            <Path fileType="localedata">/usr/share/locale/ar/LC_MESSAGES/labwc.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/ca/LC_MESSAGES/labwc.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/cs/LC_MESSAGES/labwc.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/da/LC_MESSAGES/labwc.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/de/LC_MESSAGES/labwc.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/el/LC_MESSAGES/labwc.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/es/LC_MESSAGES/labwc.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/et/LC_MESSAGES/labwc.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/eu/LC_MESSAGES/labwc.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/fa/LC_MESSAGES/labwc.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/fi/LC_MESSAGES/labwc.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/fr/LC_MESSAGES/labwc.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/gl/LC_MESSAGES/labwc.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/hu/LC_MESSAGES/labwc.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/id/LC_MESSAGES/labwc.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/it/LC_MESSAGES/labwc.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/ja/LC_MESSAGES/labwc.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/ka/LC_MESSAGES/labwc.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/ko/LC_MESSAGES/labwc.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/lt/LC_MESSAGES/labwc.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/ms/LC_MESSAGES/labwc.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/nl/LC_MESSAGES/labwc.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/pa/LC_MESSAGES/labwc.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/pl/LC_MESSAGES/labwc.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/pt/LC_MESSAGES/labwc.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/pt_BR/LC_MESSAGES/labwc.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/ru/LC_MESSAGES/labwc.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/sv/LC_MESSAGES/labwc.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/tr/LC_MESSAGES/labwc.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/uk/LC_MESSAGES/labwc.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/zh_CN/LC_MESSAGES/labwc.mo</Path>
+            <Path fileType="man">/usr/share/man/man1/labwc.1</Path>
+            <Path fileType="man">/usr/share/man/man5/labwc-actions.5</Path>
+            <Path fileType="man">/usr/share/man/man5/labwc-config.5</Path>
+            <Path fileType="man">/usr/share/man/man5/labwc-menu.5</Path>
+            <Path fileType="man">/usr/share/man/man5/labwc-theme.5</Path>
+            <Path fileType="data">/usr/share/xdg-desktop-portal/labwc-portals.conf</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>labwc-session</Name>
+        <Summary xml:lang="en">Labwc session</Summary>
+        <Description xml:lang="en">Labwc session</Description>
+        <RuntimeDependencies>
+            <Dependency releaseFrom="9">labwc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/labwc-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/labwc.svg</Path>
+            <Path fileType="data">/usr/share/wayland-sessions/labwc.desktop</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="9">
+            <Date>2025-05-02</Date>
+            <Version>0.8.4</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Evan Maddock</Name>
+            <Email>maddock.evan@vivaldi.net</Email>
+        </Update>
+    </History>
+</PISI>

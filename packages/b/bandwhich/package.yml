@@ -1,8 +1,8 @@
 name       : bandwhich
-version    : 0.22.2
-release    : 4
+version    : 0.23.1
+release    : 7
 source     :
-    - https://github.com/imsnif/bandwhich/archive/refs/tags/v0.22.2.tar.gz : 4c41719549e05dbaac1bc84828269e59b2f2032e76ae646da9b9e3b87e5a5fd1
+    - https://github.com/imsnif/bandwhich/archive/refs/tags/v0.23.1.tar.gz : aafb96d059cf9734da915dca4f5940c319d2e6b54e2ffb884332e9f5e820e6d7
 homepage   : https://github.com/imsnif/bandwhich
 license    : MIT
 component  : system.utils
@@ -13,10 +13,11 @@ networking : yes
 environment: |
     export BANDWHICH_GEN_DIR=$workdir
 builddeps  :
-    - cargo
+    - rust
+setup      : |
+    %cargo_fetch
 build      : |
-    cargo update
-    cargo build --release    
+    %cargo_build
 install    : |
-    install -Dm00755 target/release/bandwhich $installdir/usr/bin/bandwhich
+    %cargo_install
     install -Dm00644 bandwhich.1 -t $installdir/usr/share/man/man1/

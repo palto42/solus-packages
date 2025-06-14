@@ -1,14 +1,18 @@
 name       : python-tifffile
-version    : 2023.9.26
-release    : 3
+version    : 2025.2.18
+release    : 6
 source     :
-    - https://files.pythonhosted.org/packages/source/t/tifffile/tifffile-2023.9.26.tar.gz : 67e355e4595aab397f8405d04afe1b4ae7c6f62a44e22d933fee1a571a48c7ae
+    - https://files.pythonhosted.org/packages/source/t/tifffile/tifffile-2025.2.18.tar.gz : 8d731789e691b468746c1615d989bc550ac93cf753e9210865222e90a5a95d11
 homepage   : https://github.com/cgohlke/tifffile/
 license    : BSD-3-Clause
 component  : programming.python
 summary    : Read and write TIFF files
 description: |
     Tifffile is a Python library to store numpy arrays in TIFF (Tagged Image File Format) files, and read image and metadata from TIFF-like files used in bioimaging.
+builddeps  :
+    - python-build
+    - python-installer
+    - python-setuptools
 rundeps    :
     - numpy
 build      : |

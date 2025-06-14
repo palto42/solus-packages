@@ -1,8 +1,9 @@
 name       : ldns
-version    : 1.8.3
-release    : 6
+version    : 1.8.4
+release    : 8
 source     :
-    - https://github.com/NLnetLabs/ldns/archive/refs/tags/1.8.3.tar.gz : 33fb1a77f2de2fca9e749d17256334a3222a9e9d11b31c6d998bd920f3bd6776
+    - https://github.com/NLnetLabs/ldns/archive/refs/tags/1.8.4.tar.gz : b64a0f619ecb74aaf5fe4fbbb4640b150aec55f9a708031a68b3b4fae95326a2
+homepage   : https://nlnetlabs.nl/projects/ldns/
 license    : BSD-3-Clause
 component  :
     - programming.library
@@ -18,6 +19,8 @@ patterns   :
     - devel :
         - /usr/bin/ldns-config
         - /usr/share/man/man1/ldns-config.1
+environment: |
+    unset CFLAGS
 setup      : |
     libtoolize -ci
     %reconfigure --disable-dane-ta-usage --with-drill --with-examples

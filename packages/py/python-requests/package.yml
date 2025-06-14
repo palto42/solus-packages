@@ -1,8 +1,8 @@
 name       : python-requests
-version    : 2.31.0
-release    : 19
+version    : 2.32.3
+release    : 22
 source     :
-    - https://files.pythonhosted.org/packages/source/r/requests/requests-2.31.0.tar.gz : 942c5a758f98d790eaed1a29cb6eefc7ffb0d1cf7af05c3d2791656dbd6ad1e1
+    - https://files.pythonhosted.org/packages/source/r/requests/requests-2.32.3.tar.gz : 55365417734eb18255590a9ff9eb97e9e1da868d4ccd6402399eaf68af20a760
 homepage   : https://requests.readthedocs.io/en/latest/
 license    : Apache-2.0
 component  : programming.python
@@ -10,14 +10,18 @@ summary    : Python HTTP for Humans
 description: |
     Requests allows you to send organic, grass-fed HTTP/1.1 requests, without the need for manual labor. There's no need to manually add query strings to your URLs, or to form-encode your POST data. Keep-alive and HTTP connection pooling are 100% automatic, thanks to urllib3.
 builddeps  :
+    - python-build
     - python-certifi
-    - python-chardet
     - python-idna
-    - python-pytest
+    - python-installer
+    - python-packaging
+    - python-setuptools
     - python-urllib3
+    - python-wheel
+checkdeps  :
+    - python-pytest
 rundeps    :
     - python-certifi
-    - python-chardet
     - python-charset-normalizer
     - python-idna
     - python-urllib3

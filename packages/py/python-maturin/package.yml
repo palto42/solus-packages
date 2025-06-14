@@ -1,8 +1,8 @@
 name       : python-maturin
-version    : 1.4.0
-release    : 40
+version    : 1.8.7
+release    : 58
 source     :
-    - https://github.com/PyO3/maturin/archive/refs/tags/v1.4.0.tar.gz : cd2cd3d465619bb997b41594398310e8b257d0c17854a58ca0598efa11e6d698
+    - https://github.com/PyO3/maturin/archive/refs/tags/v1.8.7.tar.gz : 7fae57e8f14ea469c904f190774dd3c68a70fbc4c87b6a778b3e950e44cb8c24
 license    :
     - Apache-2.0
     - MIT
@@ -13,9 +13,17 @@ summary    : Build and publish crates with pyo3, rust-cpython and cffi bindings 
 description: |
     Build and publish crates with pyo3, rust-cpython and cffi bindings as well as rust binaries as python packages.
 builddeps  :
-    - cargo
+    - pkgconfig(bzip2)
+    - pkgconfig(openssl)
+    - python-build
+    - python-installer
     - python-setuptools-rust
-    - python-tomli
+rundeps    :
+    - rust
+environment: |
+    export MATURIN_SETUP_ARGS="--no-default-features --features full,native-tls"
+setup      : |
+    %cargo_fetch
 build      : |
     %python3_setup
 install    : |

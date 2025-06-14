@@ -1,8 +1,8 @@
 name       : erlang
-version    : 26.2.1
-release    : 45
+version    : 27.3.3
+release    : 48
 source     :
-    - https://github.com/erlang/otp/archive/refs/tags/OTP-26.2.1.tar.gz : d99eab3af908b41dd4d7df38f0b02a447579326dd6604f641bbe9f2789b5656b
+    - https://github.com/erlang/otp/archive/refs/tags/OTP-27.3.3.tar.gz : 1ecd443b3ba832148f4644ebc7722024b66bf1ab4fa70823c4c86f3801f50baf
 homepage   : https://www.erlang.org/
 license    : Apache-2.0
 component  : programming
@@ -22,3 +22,6 @@ build      : |
     %make
 install    : |
     %make_install
+
+    # Remove static libraries
+    find $installdir/usr/lib64 -name "*.a" -delete

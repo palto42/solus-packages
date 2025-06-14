@@ -1,8 +1,8 @@
 name       : gscan2pdf
-version    : 2.13.2
-release    : 29
+version    : 2.13.4
+release    : 31
 source     :
-    - https://netix.dl.sourceforge.net/project/gscan2pdf/gscan2pdf/2.13.2/gscan2pdf-2.13.2.tar.xz : 346cfa0d46bb4dd0a1a60c260fda5c19dbd8af747e16dde33cf489a726c25b84
+    - https://sourceforge.net/projects/gscan2pdf/files/gscan2pdf/2.13.4/gscan2pdf-2.13.4.tar.xz/download : e07713915241b1c05bf00c5e37aa2b310155474c388457e41a1c503b33f79969
 homepage   : https://gscan2pdf.sourceforge.net/
 license    : GPL-3.0-or-later
 component  : multimedia.graphics

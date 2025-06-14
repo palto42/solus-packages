@@ -1,26 +1,25 @@
 name       : python-protobuf
-version    : '21.12'
-release    : 21
+version    : '27.2'
+release    : 25
 source     :
-    - https://github.com/protocolbuffers/protobuf/archive/refs/tags/v21.12.tar.gz : 22fdaf641b31655d4b2297f9981fa5203b2866f8332d3c6333f6b0107bb320de
+    - https://github.com/protocolbuffers/protobuf/releases/download/v27.2/protobuf-27.2.tar.gz : e4ff2aeb767da6f4f52485c2e72468960ddfe5262483879ef6ad552e52757a77
 license    : BSD-3-Clause
 homepage   : https://pypi.python.org/pypi/protobuf/
 component  : programming.python
 summary    : Python bindings for Protobuf
 description: |
     Protocol Buffers are Google’s data interchange format.
+networking : yes
 builddeps  :
     - pkgconfig(protobuf)
     - pkgconfig(python3)
+    - bazel
+    - python-installer
+    - python-wheel
 rundeps    :
     - protobuf
     - python-six
-setup      : |
-    %patch -p1 -i $pkgfiles/python3.11.patch
 build      : |
-    pushd python
-    # Python macros do not work with this
-    python3 setup.py build --cpp_implementation
+    bazel build //python/dist:binary_wheel
 install    : |
-    pushd python
-    python3 setup.py install --root="%installroot%" --cpp_implementation
+    python3 -m installer --destdir=$installdir bazel-bin/python/dist/*.whl

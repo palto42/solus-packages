@@ -1,14 +1,16 @@
 name       : gnome-clocks
-version    : '45.0'
-release    : 19
+version    : '48.0'
+release    : 22
 source     :
-    - https://download.gnome.org/sources/gnome-clocks/45/gnome-clocks-45.0.tar.xz : fc8eb4fd9530f1e641dc00ee2086ee7d354a7a00b0a0d1722e305d5c9aab91b5
+    - https://download.gnome.org/sources/gnome-clocks/48/gnome-clocks-48.0.tar.xz : 616ee1fb75300b1f26b9766219e954751360ca0fa0f491311bcf83bf38087c62
 homepage   : https://apps.gnome.org/Clocks/
 license    : GPL-2.0-or-later
 component  : desktop.gnome
 summary    : Keep track of time
 description: |
     A simple and elegant clock application. It includes world clocks, alarms, a stopwatch, and timers.
+optimize   :
+    - lto
 builddeps  :
     - pkgconfig(geocode-glib-1.0)
     - pkgconfig(gnome-desktop-4)

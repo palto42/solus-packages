@@ -1,8 +1,8 @@
 name       : strace
-version    : '6.7'
-release    : 9
+version    : '6.14'
+release    : 14
 source     :
-    - https://github.com/strace/strace/releases/download/v6.7/strace-6.7.tar.xz : 2090201e1a3ff32846f4fe421c1163b15f440bb38e31355d09f82d3949922af7
+    - https://github.com/strace/strace/releases/download/v6.14/strace-6.14.tar.xz : 244f3b5c20a32854ca9b7ca7a3ee091dd3d4bd20933a171ecee8db486c77d3c9
 license    : BSD-3-Clause
 summary    : Diagnostic, debugging and instructional userspace utility
 component  : programming.tools
@@ -11,6 +11,7 @@ description: |
 homepage   : https://strace.io/
 builddeps  :
     - pkgconfig(libunwind)
+clang      : yes
 setup      : |
     %configure --with-libunwind
 build      : |

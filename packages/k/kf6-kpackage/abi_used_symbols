@@ -58,8 +58,10 @@ libKF6I18n.so.6:_ZN16KLocalizedStringD1Ev
 libKF6I18n.so.6:_ZNK16KLocalizedString4subsERK7QStringi5QChar
 libKF6I18n.so.6:_ZNK16KLocalizedString8toStringEv
 libQt6Core.so.6:_Z20qEnvironmentVariablePKc
+libQt6Core.so.6:_Z30qt_QMetaEnum_flagDebugOperatorR6QDebugmj
 libQt6Core.so.6:_Z5qHash11QStringViewm
 libQt6Core.so.6:_Z5qHash14QByteArrayViewm
+libQt6Core.so.6:_ZN10QArrayData10deallocateEPS_xx
 libQt6Core.so.6:_ZN10QArrayData19reallocateUnalignedEPS_PvxxNS_16AllocationOptionE
 libQt6Core.so.6:_ZN10QArrayData8allocateEPPS_xxxNS_16AllocationOptionE
 libQt6Core.so.6:_ZN10QByteArray11reallocDataExN10QArrayData16AllocationOptionE
@@ -76,11 +78,11 @@ libQt6Core.so.6:_ZN11QMetaObject10ConnectionD1Ev
 libQt6Core.so.6:_ZN11QMetaObject8activateEP7QObjectPKS_iPPv
 libQt6Core.so.6:_ZN11QTextStream5flushEv
 libQt6Core.so.6:_ZN11QTextStreamC1EP8_IO_FILE6QFlagsIN13QIODeviceBase12OpenModeFlagEE
+libQt6Core.so.6:_ZN11QTextStreamD1Ev
 libQt6Core.so.6:_ZN11QTextStreamlsEPKc
 libQt6Core.so.6:_ZN11QTextStreamlsERK7QString
 libQt6Core.so.6:_ZN11QTextStreamlsEc
 libQt6Core.so.6:_ZN11QTextStreamlsEi
-libQt6Core.so.6:_ZN11QTextStreamlsEj
 libQt6Core.so.6:_ZN11QThreadPool14globalInstanceEv
 libQt6Core.so.6:_ZN11QThreadPool5startEP9QRunnablei
 libQt6Core.so.6:_ZN12QDirIterator4nextEv
@@ -148,8 +150,6 @@ libQt6Core.so.6:_ZN18QRegularExpressionD1Ev
 libQt6Core.so.6:_ZN19QXmlStreamAttributeC1ERK7QStringS2_
 libQt6Core.so.6:_ZN21QAbstractConcatenable14appendLatin1ToE13QLatin1StringP5QChar
 libQt6Core.so.6:_ZN23QRegularExpressionMatchD1Ev
-libQt6Core.so.6:_ZN2Qt3hexER11QTextStream
-libQt6Core.so.6:_ZN2Qt8showbaseER11QTextStream
 libQt6Core.so.6:_ZN4QDir11currentPathEv
 libQt6Core.so.6:_ZN4QDir14isRelativePathERK7QString
 libQt6Core.so.6:_ZN4QDir17removeRecursivelyEv
@@ -166,11 +166,10 @@ libQt6Core.so.6:_ZN5QFile4openE6QFlagsIN13QIODeviceBase12OpenModeFlagEE
 libQt6Core.so.6:_ZN5QFile6existsERK7QString
 libQt6Core.so.6:_ZN5QFileC1ERK7QString
 libQt6Core.so.6:_ZN5QFileD1Ev
-libQt6Core.so.6:_ZN6QDebug11resetFormatEv
 libQt6Core.so.6:_ZN6QDebug12putByteArrayEPKcmNS_13Latin1ContentE
 libQt6Core.so.6:_ZN6QDebug9putStringEPK5QCharm
 libQt6Core.so.6:_ZN6QDebugD1Ev
-libQt6Core.so.6:_ZN6QTimer14singleShotImplEiN2Qt9TimerTypeEPK7QObjectPN9QtPrivate15QSlotObjectBaseE
+libQt6Core.so.6:_ZN6QTimer14singleShotImplENSt6chrono8durationIlSt5ratioILl1ELl1000000000EEEEN2Qt9TimerTypeEPK7QObjectPN9QtPrivate15QSlotObjectBaseE
 libQt6Core.so.6:_ZN7QObject10childEventEP11QChildEvent
 libQt6Core.so.6:_ZN7QObject10timerEventEP11QTimerEvent
 libQt6Core.so.6:_ZN7QObject11connectImplEPKS_PPvS1_S3_PN9QtPrivate15QSlotObjectBaseEN2Qt14ConnectionTypeEPKiPK11QMetaObject
@@ -218,7 +217,7 @@ libQt6Core.so.6:_ZN9QMetaType14registerHelperEPKN9QtPrivate18QMetaTypeInterfaceE
 libQt6Core.so.6:_ZN9QMetaType25registerNormalizedTypedefERK10QByteArrayS_
 libQt6Core.so.6:_ZN9QMimeTypeD1Ev
 libQt6Core.so.6:_ZN9QRunnableD2Ev
-libQt6Core.so.6:_ZN9QtPrivate12argToQStringE11QStringViewmPPKNS_7ArgBaseE
+libQt6Core.so.6:_ZN9QtPrivate12argToQStringE14QAnyStringViewmPPKNS_7ArgBaseE
 libQt6Core.so.6:_ZN9QtPrivate12equalStringsE11QStringView13QLatin1String
 libQt6Core.so.6:_ZN9QtPrivate12equalStringsE11QStringViewS0_
 libQt6Core.so.6:_ZN9QtPrivate14compareStringsE11QStringViewS0_N2Qt15CaseSensitivityE
@@ -272,8 +271,8 @@ libQt6Core.so.6:_ZNK4QUrl8toStringE12QUrlTwoFlagsINS_19UrlFormattingOptionENS_25
 libQt6Core.so.6:_ZNK5QFile8fileNameEv
 libQt6Core.so.6:_ZNK7QString10startsWithE13QLatin1StringN2Qt15CaseSensitivityE
 libQt6Core.so.6:_ZNK7QString10startsWithERKS_N2Qt15CaseSensitivityE
-libQt6Core.so.6:_ZNK7QString3argERKS_i5QChar
 libQt6Core.so.6:_ZNK7QString5splitE5QChar6QFlagsIN2Qt18SplitBehaviorFlagsEENS2_15CaseSensitivityE
+libQt6Core.so.6:_ZNK7QString8arg_implE14QAnyStringViewi5QChar
 libQt6Core.so.6:_ZNK7QString8endsWithE5QCharN2Qt15CaseSensitivityE
 libQt6Core.so.6:_ZNK8QProcess8exitCodeEv
 libQt6Core.so.6:_ZNK9QFileInfo11absoluteDirEv
@@ -307,7 +306,6 @@ libc.so.6:__libc_start_main
 libc.so.6:__stack_chk_fail
 libc.so.6:abort
 libc.so.6:exit
-libc.so.6:free
 libc.so.6:memcmp
 libc.so.6:memcpy
 libc.so.6:memmove
@@ -324,7 +322,6 @@ libstdc++.so.6:_ZSt16__ostream_insertIcSt11char_traitsIcEERSt13basic_ostreamIT_T
 libstdc++.so.6:_ZSt16__throw_bad_castv
 libstdc++.so.6:_ZSt17__throw_bad_allocv
 libstdc++.so.6:_ZSt18_Rb_tree_decrementPSt18_Rb_tree_node_base
-libstdc++.so.6:_ZSt18_Rb_tree_incrementPKSt18_Rb_tree_node_base
 libstdc++.so.6:_ZSt18_Rb_tree_incrementPSt18_Rb_tree_node_base
 libstdc++.so.6:_ZSt21ios_base_library_initv
 libstdc++.so.6:_ZSt25__throw_bad_function_callv
@@ -335,7 +332,9 @@ libstdc++.so.6:_ZTVN10__cxxabiv117__class_type_infoE
 libstdc++.so.6:_ZTVN10__cxxabiv120__si_class_type_infoE
 libstdc++.so.6:_ZTVN10__cxxabiv121__vmi_class_type_infoE
 libstdc++.so.6:_ZdaPv
+libstdc++.so.6:_ZdaPvm
 libstdc++.so.6:_ZdlPv
+libstdc++.so.6:_ZdlPvm
 libstdc++.so.6:_Znam
 libstdc++.so.6:_Znwm
 libstdc++.so.6:__cxa_guard_acquire

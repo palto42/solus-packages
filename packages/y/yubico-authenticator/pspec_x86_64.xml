@@ -3,8 +3,8 @@
         <Name>yubico-authenticator</Name>
         <Homepage>https://www.yubico.com/products/yubico-authenticator/</Homepage>
         <Packager>
-            <Name>Tracey Clark</Name>
-            <Email>traceyc.dev@tlcnet.info</Email>
+            <Name>Muhammad Alfi Syahrin</Name>
+            <Email>malfisya.dev@hotmail.com</Email>
         </Packager>
         <License>BSD-2-Clause</License>
         <PartOf>security</PartOf>
@@ -29,8 +29,9 @@ The Yubico Authenticator securely generates a code used to verify your identity 
         <PartOf>security</PartOf>
         <Files>
             <Path fileType="executable">/usr/bin/authenticator</Path>
-            <Path fileType="data">/usr/share/applications/com.yubico.authenticator.desktop</Path>
-            <Path fileType="data">/usr/share/pixmaps/com.yubico.yubioath.png</Path>
+            <Path fileType="data">/usr/share/applications/com.yubico.yubioath.desktop</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/128x128/apps/com.yubico.yubioath.png</Path>
+            <Path fileType="data">/usr/share/metainfo/com.yubico.yubioath.appdata.xml</Path>
             <Path fileType="data">/usr/share/yubioath-desktop/authenticator</Path>
             <Path fileType="data">/usr/share/yubioath-desktop/data/flutter_assets/AssetManifest.bin</Path>
             <Path fileType="data">/usr/share/yubioath-desktop/data/flutter_assets/AssetManifest.json</Path>
@@ -69,6 +70,9 @@ The Yubico Authenticator securely generates a code used to verify your identity 
             <Path fileType="data">/usr/share/yubioath-desktop/data/flutter_assets/assets/product-images/ykedge.png</Path>
             <Path fileType="data">/usr/share/yubioath-desktop/data/flutter_assets/assets/product-images/ykplus.png</Path>
             <Path fileType="data">/usr/share/yubioath-desktop/data/flutter_assets/fonts/MaterialIcons-Regular.otf</Path>
+            <Path fileType="data">/usr/share/yubioath-desktop/data/flutter_assets/packages/material_symbols_icons/lib/fonts/MaterialSymbolsOutlined.ttf</Path>
+            <Path fileType="data">/usr/share/yubioath-desktop/data/flutter_assets/packages/material_symbols_icons/lib/fonts/MaterialSymbolsRounded.ttf</Path>
+            <Path fileType="data">/usr/share/yubioath-desktop/data/flutter_assets/packages/material_symbols_icons/lib/fonts/MaterialSymbolsSharp.ttf</Path>
             <Path fileType="data">/usr/share/yubioath-desktop/data/flutter_assets/packages/test_res/resources/.gitignore</Path>
             <Path fileType="data">/usr/share/yubioath-desktop/data/flutter_assets/packages/window_manager/images/ic_chrome_close.png</Path>
             <Path fileType="data">/usr/share/yubioath-desktop/data/flutter_assets/packages/window_manager/images/ic_chrome_maximize.png</Path>
@@ -128,12 +132,12 @@ The Yubico Authenticator securely generates a code used to verify your identity 
         </Replaces>
     </Package>
     <History>
-        <Update release="7">
-            <Date>2024-03-04</Date>
-            <Version>6.4.0</Version>
+        <Update release="10">
+            <Date>2024-11-13</Date>
+            <Version>7.1.1</Version>
             <Comment>Packaging update</Comment>
-            <Name>Tracey Clark</Name>
-            <Email>traceyc.dev@tlcnet.info</Email>
+            <Name>Muhammad Alfi Syahrin</Name>
+            <Email>malfisya.dev@hotmail.com</Email>
         </Update>
     </History>
 </PISI>

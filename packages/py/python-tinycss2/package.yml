@@ -1,9 +1,9 @@
 name       : python-tinycss2
-version    : 1.2.1
-release    : 6
+version    : 1.4.0
+release    : 9
 source     :
-    - https://pypi.io/packages/source/t/tinycss2/tinycss2-1.2.1.tar.gz : 8cff3a8f066c2ec677c06dbc7b45619804a6938478d9d73c284b29d14ecb0627
-homepage   : https://tinycss2.readthedocs.io/
+    - https://pypi.io/packages/source/t/tinycss2/tinycss2-1.4.0.tar.gz : 10c0972f6fc0fbee87c3edb76549357415e94548c1ae10ebccdea16fb404a9b7
+homepage   : https://www.courtbouillon.org/tinycss2/
 license    : BSD-3-Clause
 component  : programming.python
 summary    : Low-level CSS parser for Python
@@ -13,10 +13,11 @@ builddeps  :
     - python-build
     - python-flit-core
     - python-installer
-    - pytest-runner       # check
-    - python-pytest-cov   # check
-    - python-pytest-isort # check
     - python-webencodings
+checkdeps  :
+    - pytest-runner
+    - python-pytest-cov
+    - python-pytest-isort
 rundeps    :
     - python-webencodings
 setup      : |
@@ -26,4 +27,4 @@ build      : |
 install    : |
     %python3_install
 check      : |
-    %python3_test pytest3 -v
+    %python3_test pytest -v

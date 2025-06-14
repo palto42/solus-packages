@@ -1,8 +1,8 @@
 name       : nextcloud-client
-version    : 3.12.0
-release    : 53
+version    : 3.16.5
+release    : 71
 source     :
-    - https://github.com/nextcloud/desktop/archive/refs/tags/v3.12.0.tar.gz : df6c56c8fcbee7d9ab09673cdb7b41671f2eb0eb1dbb79ee393b207a9bc46ee8
+    - https://github.com/nextcloud/desktop/archive/refs/tags/v3.16.5.tar.gz : 5ab443582dea135b84c875a4b1fd4305dfb4359905e7e6cdb16fc0d34f2215ca
 homepage   : https://docs.nextcloud.com/desktop
 license    : GPL-2.0-or-later
 component  :
@@ -16,42 +16,44 @@ description:
     - Nextcloud client enables you to connect to your private Nextcloud Server. With it you can create directories in your home directory, and keep the contents of those directories synced with the server.
     - dolphin-integration : Dolphin file manager integration for the Nextcloud client.
 builddeps  :
-    - pkgconfig(Qt5QuickControls2)
-    - pkgconfig(Qt5Svg)
-    - pkgconfig(Qt5UiTools)
-    - pkgconfig(Qt5WebEngine)
-    - pkgconfig(Qt5WebKit)
-    - pkgconfig(Qt5WebSockets)
+    - pkgconfig(KF6GuiAddons)
+    - pkgconfig(Qt6Core)
+    - pkgconfig(Qt6Core5Compat)
+    - pkgconfig(Qt6QuickControls2)
+    - pkgconfig(Qt6Svg)
+    - pkgconfig(Qt6UiTools)
+    - pkgconfig(Qt6WebEngineCore)
+    - pkgconfig(Qt6WebSockets)
     - pkgconfig(cloudproviders)
+    - pkgconfig(cmocka)
+    - pkgconfig(libp11)
     - pkgconfig(sqlite3)
-    - extra-cmake-modules
+    - appstream
+    - graphviz
     - inkscape
-    - karchive-devel
+    - kf6-karchive-devel
+    - kf6-kio-devel
+    - kf6-kwindowsystem-devel
     - kio-devel
-    - kwindowsystem-devel
-    - libiconv-devel
-    - qtkeychain-qt5-devel
+    - python-sphinx
+    - qtkeychain-qt6-devel
     - xdg-utils
 rundeps    :
     - dolphin-integration :
         - nextcloud-client
     - libgnome-keyring
-    - qt5-graphicaleffects
-    - qt5-svg
-    - qt5-webengine
-    - qt5-webkit
 patterns   :
     - dolphin-integration :
         - /usr/lib64/libnextclouddolphinpluginhelper.so
-        - /usr/lib64/qt5/plugins/kf5/overlayicon/nextclouddolphinoverlayplugin.so
-        - /usr/lib64/qt5/plugins/kf5/kfileitemaction/nextclouddolphinactionplugin.so
+        - /usr/lib64/*/plugins/*/overlayicon/nextclouddolphinoverlayplugin.so
+        - /usr/lib64/*/plugins/*/kfileitemaction/nextclouddolphinactionplugin.so
 setup      : |
     %cmake_ninja \
         -DCMAKE_BUILD_TYPE=Release \
         -DUNIT_TESTING=false \
         -DBUILD_SHELL_INTEGRATION_DOLPHIN=true \
         -DBUILD_UPDATER=false \
-        -DPLUGINDIR=lib64/qt5/plugins
+        -DPLUGINDIR=lib64/qt6/plugins
 build      : |
     %ninja_build
 install    : |

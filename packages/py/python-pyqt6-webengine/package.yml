@@ -1,8 +1,8 @@
 name       : python-pyqt6-webengine
-version    : 6.6.0
-release    : 4
+version    : 6.9.0
+release    : 13
 source     :
-    - https://pypi.python.org/packages/source/P/PyQt6-WebEngine/PyQt6_WebEngine-6.6.0.tar.gz : d50b984c3f85e409e692b156132721522d4e8cf9b6c25e0cf927eea2dfb39487
+    - https://pypi.debian.net/PyQt6-WebEngine/pyqt6_webengine-6.9.0.tar.gz : 6ae537e3bbda06b8e06535e4852297e0bc3b00543c47929541fcc9b11981aa25
 homepage   : https://www.riverbankcomputing.com/software/pyqtwebengine/
 license    : GPL-3.0-or-later
 component  : programming.python
@@ -15,13 +15,18 @@ builddeps  :
     - pkgconfig(python3)
     - pyqt-builder
     - python-qt6
+    - python-setuptools
     - python-sip
 rundeps    :
     - python-qt6
+clang      : yes
 setup      : |
+    %patch -p1 -i $pkgfiles/ftbfs-qt-6.8.patch
     sip-build \
         --no-make \
-        --qmake=/usr/bin/qmake6 
+        --pep484-pyi \
+        --qmake=/usr/bin/qmake6 \
+        --verbose
 build      : |
     %make -C build
 install    : |

@@ -1,0 +1,40 @@
+<PISI>
+    <Source>
+        <Name>git-absorb</Name>
+        <Homepage>https://crates.io/crates/git-absorb</Homepage>
+        <Packager>
+            <Name>Silke Hofstra</Name>
+            <Email>silke@slxh.eu</Email>
+        </Packager>
+        <License>BSD-3-Clause</License>
+        <PartOf>programming.tools</PartOf>
+        <Summary xml:lang="en">git commit --fixup, but automatic</Summary>
+        <Description xml:lang="en">Automatically absorb staged changes into your current branch.
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>git-absorb</Name>
+        <Summary xml:lang="en">git commit --fixup, but automatic</Summary>
+        <Description xml:lang="en">Automatically absorb staged changes into your current branch.
+</Description>
+        <PartOf>programming.tools</PartOf>
+        <Files>
+            <Path fileType="executable">/usr/bin/git-absorb</Path>
+            <Path fileType="data">/usr/share/bash-completion/completions/git-absorb</Path>
+            <Path fileType="data">/usr/share/fish/vendor_completions.d/git-absorb.fish</Path>
+            <Path fileType="man">/usr/share/man/man1/git-absorb.1</Path>
+            <Path fileType="data">/usr/share/nushell/vendor/git-absorb.nu</Path>
+            <Path fileType="data">/usr/share/zsh/site-functions/_git-absorb</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="8">
+            <Date>2025-04-30</Date>
+            <Version>0.8.0</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Silke Hofstra</Name>
+            <Email>silke@slxh.eu</Email>
+        </Update>
+    </History>
+</PISI>

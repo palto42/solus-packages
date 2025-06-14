@@ -1,8 +1,8 @@
 name       : brave
-version    : 1.63.165
-release    : 180
+version    : 1.79.123
+release    : 232
 source     :
-    - https://github.com/brave/brave-browser/releases/download/v1.63.165/brave-browser_1.63.165_amd64.deb : 532cce57ab14bfb59dc0ddf54c8837e4719c86b5125e7bf393701b6bf77c7497
+    - https://github.com/brave/brave-browser/releases/download/v1.79.123/brave-browser_1.79.123_amd64.deb : 5d6c3c2a7db8e4a3e9271852473eb1985c228c9494e6f320a4350d47244c7f43
 homepage   : https://brave.com
 license    :
     - GPL-2.0-or-later # Privacy Badger
@@ -17,7 +17,8 @@ builddeps  :
     - pkgconfig(Qt5Core)
     - pkgconfig(Qt6Core)
     - pkgconfig(alsa)
-    - at-spi2-devel
+    - pkgconfig(atk)
+    - pkgconfig(cups)
     - pkgconfig(gconf-2.0)
     - pkgconfig(libsecret-1)
     - pkgconfig(pango)
@@ -25,9 +26,8 @@ builddeps  :
     - pkgconfig(xdamage)
     - pkgconfig(xkbcommon)
     - pkgconfig(xkbfile)
-    - pkgconfig(xscrnsaver)
     - pkgconfig(xrandr)
-    - cups-devel
+    - pkgconfig(xscrnsaver)
 rundeps    :
     - libgnome-keyring
 setup      : |
@@ -45,3 +45,9 @@ install    : |
     sed -i 's/brave-browser-stable/brave-browser/g' $installdir/usr/share/applications/brave-browser.desktop
     rm -f $installdir/usr/bin/brave-browser-stable
     rm -f $installdir/usr/share/brave/LICENSE
+
+    # Fix appdata
+    rm -f $installdir/usr/share/appdata/brave-browser.appdata.xml
+    rmdir $installdir/usr/share/appdata
+    install -dm00755 $installdir/usr/share/metainfo
+    install -Dm00644 $pkgfiles/com.brave.Browser.metainfo.xml $installdir/usr/share/metainfo/brave-browser.metainfo.xml

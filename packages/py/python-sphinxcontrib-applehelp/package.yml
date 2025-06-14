@@ -1,15 +1,18 @@
 name       : python-sphinxcontrib-applehelp
-version    : 1.0.2
-release    : 5
+version    : 2.0.0
+release    : 8
 source     :
-    - https://github.com/sphinx-doc/sphinxcontrib-applehelp/archive/1.0.2.tar.gz : bc5223c931c8db3ebc501e91ed7cd13eaaf48b8fe69c4898a99ec355f4c89e01
+    - https://github.com/sphinx-doc/sphinxcontrib-applehelp/archive/2.0.0.tar.gz : 953f2b79bf0162715e943fadbb805f614fb879c61f07a44d425961485baf7891
+homepage   : https://github.com/sphinx-doc/sphinxcontrib-applehelp
 license    : BSD-2-Clause
 component  : programming.python
 summary    : Sphinx extension for Apple help books
 description: |
     sphinxcontrib-applehelp is a sphinx extension which outputs Apple help books.
 builddeps  :
-    - pkgconfig(python3)
+    - python-build
+    - python-flit-core
+    - python-installer
 build      : |
     %python3_setup
 install    : |

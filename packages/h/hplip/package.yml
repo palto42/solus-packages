@@ -1,8 +1,8 @@
 name       : hplip
-version    : 3.23.12
-release    : 59
+version    : 3.25.2
+release    : 68
 source     :
-    - https://downloads.sourceforge.net/project/hplip/hplip/3.23.12/hplip-3.23.12.tar.gz : a76c2ac8deb31ddb5f0da31398d25ac57440928a0692dcb060a48daa718e69ed
+    - https://sourceforge.net/projects/hplip/files/hplip/3.25.2/hplip-3.25.2.tar.gz : e872ff28eb2517705a95f6e1839efa1e50a77a33aae8905278df2bd820919653
 homepage   : https://developers.hp.com/hp-linux-imaging-and-printing/gethplip
 license    :
     - GPL-2.0-or-later
@@ -20,12 +20,12 @@ description: |
     The Hewlett-Packard Linux Imaging and Printing Project provides drivers for HP printers and multi-function peripherals.
 builddeps  :
     - pkgconfig(avahi-client)
+    - pkgconfig(cups)
     - pkgconfig(libusb-1.0)
     - pkgconfig(polkit-agent-1)
     - pkgconfig(pygobject-3.0)
     - pkgconfig(python3)
     - pkgconfig(sane-backends)
-    - cups-devel
     - libjpeg-turbo-devel
     - net-snmp-devel
     - python-distro
@@ -50,6 +50,7 @@ patterns   :
         - /usr/lib64/lib*.so*
         - /usr/lib64/udev/rules.d
         - /usr/lib/cups
+environment: export CFLAGS="${CFLAGS} -Wno-implicit-function-declaration -Wno-return-mismatch"
 setup      : |
     %apply_patches
 
@@ -101,3 +102,7 @@ install    : |
 
     # Install appstream metainfo
     install -Dm00644 $pkgfiles/hplip.metainfo.xml -t $installdir/usr/share/metainfo/
+
+    # Fix permissions on backend
+    chown --recursive root:root $installdir
+    chmod 744 $installdir/usr/lib/cups/backend/*

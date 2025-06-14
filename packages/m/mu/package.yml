@@ -1,8 +1,8 @@
 name       : mu
-version    : 1.12.0
-release    : 21
+version    : 1.12.9
+release    : 30
 source     :
-    - https://github.com/djcb/mu/releases/download/v1.12.0/mu-1.12.0.tar.xz : 55072bea9fe378c14728bd0c0d199f6ed62847b0031bd908eb277c6d3621e7cd
+    - https://github.com/djcb/mu/releases/download/v1.12.9/mu-1.12.9.tar.xz : ed493ef4eab536815ca8f948848370cd00b4383bc006b6527ccdf21d38e16de5
 license    : GPL-3.0-only
 homepage   : https://www.djcbsoftware.nl/code/mu/
 component  : editor
@@ -24,5 +24,3 @@ build      : |
     emacs --batch --eval '(byte-recompile-directory "mu4e")'
 install    : |
     %ninja_install
-    # remove mu-docs
-    rm -rf $installdir/usr/share/doc

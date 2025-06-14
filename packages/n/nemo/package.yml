@@ -1,8 +1,9 @@
 name       : nemo
-version    : 5.8.5
-release    : 8
+version    : 6.4.5
+release    : 14
 source     :
-    - https://github.com/linuxmint/nemo/archive/refs/tags/5.8.5.tar.gz : eee308a5ae473c77bdf5fa870eff79087485b859a11de501df2d34e91bad174b
+    - https://github.com/linuxmint/nemo/archive/refs/tags/6.4.5.tar.gz : 06dc3c7884dc0ec8ce4d55ed48f0cd77cbf7bd6be5dba9ed883d49a43118ebdf
+homepage   : https://github.com/linuxmint/nemo
 license    :
     - GPL-2.0-or-later
     - LGPL-2.0-or-later
@@ -14,6 +15,7 @@ builddeps  :
     - pkgconfig(cinnamon-desktop)
     - pkgconfig(exempi-2.0)
     - pkgconfig(gtk+-3.0)
+    - pkgconfig(json-glib-1.0)
     - pkgconfig(libexif)
     - pkgconfig(libgnomekbdui) # This should be pulled in by xapp, but it isn't
     - pkgconfig(libgsf-1)

@@ -1,8 +1,8 @@
 name       : linux-tools
-version    : 6.6.18
-release    : 94
+version    : 6.14.4
+release    : 115
 source     :
-    - https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.6.18.tar.xz : 4e43d8c5fba14f7c82597838011648056487b7550fd83276ad534559e8499b1d
+    - https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.14.4.tar.xz : 9452f28d7a0051fba4886712395b484c4c7fcf9f85944a62fd3d97dc923f5339
 license    : GPL-2.0-only
 component  :
     - programming.tools
@@ -29,7 +29,7 @@ description:
 libsplit   : no
 patterns   :
     - main :
-        - /usr/include
+        - /usr/include/perf
     - bpftool :
         - /usr/bin/bpf*
         - /usr/share/bash-completion/completions/bpftool
@@ -66,16 +66,17 @@ builddeps  :
     - pkgconfig(python3)
     - pkgconfig(slang)
     - asciidoc
-    - llvm-clang
+    - binutils-devel
+    - clang
+    - llvm-devel
     - python-docutils
     - xmlto
 environment: |
     # Maximize ccache efficiency
     export KBUILD_BUILD_USER=root
-    export KBUILD_BUILD_TIMESTAMP="0"
-    export SOURCE_DATE_EPOCH=0
-
-    # export GCC_IGNORE_WERROR=1 # please for the love of god stop.
+    export KBUILD_BUILD_TIMESTAMP=$(date --utc --date=@$SOURCE_DATE_EPOCH +%F)
+setup      : |
+    %patch -p1 -i $pkgfiles/gcc-15-ub.patch
 build      : |
     pushd tools/bpf/bpftool
     %make prefix=/usr all doc

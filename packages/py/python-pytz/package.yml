@@ -1,8 +1,8 @@
 name       : python-pytz
-version    : '2022.7'
-release    : 22
+version    : '2025.1'
+release    : 25
 source     :
-    - https://pypi.io/packages/source/p/pytz/pytz-2022.7.tar.gz : 7ccfae7b4b2c067464a6733c6261673fdb8fd1be905460396b97a073e9fa683a
+    - https://pypi.debian.net/pytz/pytz-2025.1.tar.gz : c2db42be2a2518b28e65f9207c4d05e6ff547d1efa4086469ef855e4ab70178e
 homepage   : http://pythonhosted.org/pytz
 license    : MIT
 component  : programming.python
@@ -10,6 +10,10 @@ summary    : World timezone definitions, modern and historical
 description: |
     World timezone definitions, modern and historical
 builddeps  :
+    - python-build
+    - python-installer
+    - python-setuptools
+checkdeps  :
     - python-pytest
 setup      : |
     %patch -p1 -i $pkgfiles/use-system-zoneinfo.patch

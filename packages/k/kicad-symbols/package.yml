@@ -1,8 +1,9 @@
 name       : kicad-symbols
-version    : 7.0.6
-release    : 6
+version    : 9.0.2
+release    : 14
 source     :
-    - https://gitlab.com/kicad/libraries/kicad-symbols/-/archive/7.0.6/kicad-symbols-7.0.6.tar.gz : a5cdf6139837e9a34d0ef4089928b2fc9b865754f65c11af35eaf4cce1eaca3b
+    - https://gitlab.com/kicad/libraries/kicad-symbols/-/archive/9.0.2/kicad-symbols-9.0.2.tar.gz : b9be128d4c82ec89ebfc2d7aaafcb06a924a1c5a7ae0aff1ac30a37b06243312
+homepage   : https://www.kicad.org/
 license    : CC-BY-SA-4.0
 component  : office.scientific
 summary    : Official KiCad schematic symbol libraries

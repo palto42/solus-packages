@@ -3,8 +3,8 @@
         <Name>thunar</Name>
         <Homepage>https://docs.xfce.org/xfce/thunar/start</Homepage>
         <Packager>
-            <Name>Joey Riches</Name>
-            <Email>josephriches@gmail.com</Email>
+            <Name>Evan Maddock</Name>
+            <Email>maddock.evan@vivaldi.net</Email>
         </Packager>
         <License>GPL-2.0-or-later</License>
         <PartOf>desktop.xfce</PartOf>
@@ -32,15 +32,15 @@
             <Path fileType="library">/usr/lib64/thunarx-3/thunar-sbr.so</Path>
             <Path fileType="library">/usr/lib64/thunarx-3/thunar-uca.so</Path>
             <Path fileType="library">/usr/lib64/thunarx-3/thunar-wallpaper-plugin.so</Path>
+            <Path fileType="library">/usr/lib64/xfce4/panel/plugins/libthunar-tpa.so</Path>
             <Path fileType="data">/usr/share/Thunar/sendto/thunar-sendto-email.desktop</Path>
-            <Path fileType="data">/usr/share/applications/org.xfce.Thunar.desktop</Path>
             <Path fileType="data">/usr/share/applications/thunar-bulk-rename.desktop</Path>
             <Path fileType="data">/usr/share/applications/thunar-settings.desktop</Path>
+            <Path fileType="data">/usr/share/applications/thunar.desktop</Path>
             <Path fileType="data">/usr/share/dbus-1/services/org.xfce.FileManager.service</Path>
             <Path fileType="data">/usr/share/dbus-1/services/org.xfce.Thunar.FileManager1.service</Path>
             <Path fileType="data">/usr/share/dbus-1/services/org.xfce.Thunar.service</Path>
             <Path fileType="doc">/usr/share/doc/thunar/README.gtkrc</Path>
-            <Path fileType="data">/usr/share/gir-1.0/Thunarx-3.0.gir</Path>
             <Path fileType="data">/usr/share/icons/hicolor/128x128/apps/org.xfce.thunar.png</Path>
             <Path fileType="data">/usr/share/icons/hicolor/16x16/apps/org.xfce.thunar.png</Path>
             <Path fileType="data">/usr/share/icons/hicolor/16x16/stock/navigation/stock_folder-copy.png</Path>
@@ -117,6 +117,7 @@
             <Path fileType="data">/usr/share/metainfo/org.xfce.thunar.appdata.xml</Path>
             <Path fileType="data">/usr/share/polkit-1/actions/org.xfce.thunar.policy</Path>
             <Path fileType="data">/usr/share/xdg/Thunar/uca.xml</Path>
+            <Path fileType="data">/usr/share/xfce4/panel/plugins/thunar-tpa.desktop</Path>
         </Files>
     </Package>
     <Package>
@@ -126,7 +127,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="6">thunar</Dependency>
+            <Dependency release="13">thunar</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/thunarx-3/thunarx/thunarx-config.h</Path>
@@ -145,6 +146,7 @@
             <Path fileType="header">/usr/include/thunarx-3/thunarx/thunarx.h</Path>
             <Path fileType="library">/usr/lib64/libthunarx-3.so</Path>
             <Path fileType="data">/usr/lib64/pkgconfig/thunarx-3.pc</Path>
+            <Path fileType="data">/usr/share/gir-1.0/Thunarx-3.0.gir</Path>
         </Files>
     </Package>
     <Package>
@@ -174,7 +176,6 @@
             <Path fileType="doc">/usr/share/gtk-doc/html/thunar/ThunarDeviceMonitor.html</Path>
             <Path fileType="doc">/usr/share/gtk-doc/html/thunar/ThunarEmblemChooser.html</Path>
             <Path fileType="doc">/usr/share/gtk-doc/html/thunar/ThunarFile.html</Path>
-            <Path fileType="doc">/usr/share/gtk-doc/html/thunar/ThunarFileMonitor.html</Path>
             <Path fileType="doc">/usr/share/gtk-doc/html/thunar/ThunarFolder.html</Path>
             <Path fileType="doc">/usr/share/gtk-doc/html/thunar/ThunarHistory.html</Path>
             <Path fileType="doc">/usr/share/gtk-doc/html/thunar/ThunarIconFactory.html</Path>
@@ -307,12 +308,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="6">
-            <Date>2024-02-13</Date>
-            <Version>4.18.10</Version>
+        <Update release="13">
+            <Date>2025-02-10</Date>
+            <Version>4.20.2</Version>
             <Comment>Packaging update</Comment>
-            <Name>Joey Riches</Name>
-            <Email>josephriches@gmail.com</Email>
+            <Name>Evan Maddock</Name>
+            <Email>maddock.evan@vivaldi.net</Email>
         </Update>
     </History>
 </PISI>

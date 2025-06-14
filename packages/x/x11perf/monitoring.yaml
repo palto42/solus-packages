@@ -1,0 +1,7 @@
+releases:
+  id: 15035
+  rss: https://gitlab.freedesktop.org/xorg/test/x11perf/-/tags?format=atom
+security:
+  cpe:
+  - vendor: xfree86
+    product: x11perf

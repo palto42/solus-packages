@@ -1,10 +1,10 @@
 <PISI>
     <Source>
         <Name>gnome-online-accounts</Name>
-        <Homepage>https://wiki.gnome.org/Projects/GnomeOnlineAccounts</Homepage>
+        <Homepage>https://gnome.pages.gitlab.gnome.org/gnome-online-accounts/</Homepage>
         <Packager>
-            <Name>Zach Bacon</Name>
-            <Email>zachbacon@vba-m.com</Email>
+            <Name>Joey Riches</Name>
+            <Email>josephriches@gmail.com</Email>
         </Packager>
         <License>GPL-2.0-or-later</License>
         <PartOf>desktop.gnome.core</PartOf>
@@ -23,26 +23,25 @@
             <Path fileType="library">/usr/lib64/girepository-1.0/Goa-1.0.typelib</Path>
             <Path fileType="library">/usr/lib64/gnome-online-accounts/goa-daemon</Path>
             <Path fileType="library">/usr/lib64/gnome-online-accounts/goa-identity-service</Path>
+            <Path fileType="library">/usr/lib64/gnome-online-accounts/goa-oauth2-handler</Path>
             <Path fileType="library">/usr/lib64/goa-1.0/include/goaconfig.h</Path>
-            <Path fileType="library">/usr/lib64/goa-1.0/web-extensions/libgoawebextension.so</Path>
             <Path fileType="library">/usr/lib64/libgoa-1.0.so.0</Path>
             <Path fileType="library">/usr/lib64/libgoa-1.0.so.0.0.0</Path>
-            <Path fileType="library">/usr/lib64/libgoa-backend-1.0.so.1</Path>
-            <Path fileType="library">/usr/lib64/libgoa-backend-1.0.so.1.0.0</Path>
+            <Path fileType="library">/usr/lib64/libgoa-backend-1.0.so.2</Path>
+            <Path fileType="library">/usr/lib64/libgoa-backend-1.0.so.2.0.0</Path>
+            <Path fileType="data">/usr/share/applications/org.gnome.OnlineAccounts.OAuth2.desktop</Path>
             <Path fileType="data">/usr/share/dbus-1/services/org.gnome.Identity.service</Path>
             <Path fileType="data">/usr/share/dbus-1/services/org.gnome.OnlineAccounts.service</Path>
-            <Path fileType="data">/usr/share/gir-1.0/Goa-1.0.gir</Path>
             <Path fileType="data">/usr/share/glib-2.0/schemas/org.gnome.online-accounts.gschema.xml</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/goa-account-exchange.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/goa-account-fedora.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/goa-account-google.svg</Path>
-            <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/goa-account-lastfm.svg</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/goa-account-ms365.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/goa-account-msn.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/goa-account-owncloud.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/goa-account.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/symbolic/apps/goa-account-exchange-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/symbolic/apps/goa-account-google-symbolic.svg</Path>
-            <Path fileType="data">/usr/share/icons/hicolor/symbolic/apps/goa-account-lastfm-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/symbolic/apps/goa-account-msn-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/symbolic/apps/goa-account-owncloud-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/symbolic/apps/goa-account-symbolic.svg</Path>
@@ -121,10 +120,12 @@
             <Path fileType="localedata">/usr/share/locale/tr/LC_MESSAGES/gnome-online-accounts.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ug/LC_MESSAGES/gnome-online-accounts.mo</Path>
             <Path fileType="localedata">/usr/share/locale/uk/LC_MESSAGES/gnome-online-accounts.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/uz/LC_MESSAGES/gnome-online-accounts.mo</Path>
             <Path fileType="localedata">/usr/share/locale/vi/LC_MESSAGES/gnome-online-accounts.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_CN/LC_MESSAGES/gnome-online-accounts.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_HK/LC_MESSAGES/gnome-online-accounts.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_TW/LC_MESSAGES/gnome-online-accounts.mo</Path>
+            <Path fileType="man">/usr/share/man/man8/goa-daemon.8</Path>
         </Files>
     </Package>
     <Package>
@@ -134,7 +135,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="43">gnome-online-accounts</Dependency>
+            <Dependency release="58">gnome-online-accounts</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/goa-1.0/goa/goa-generated.h</Path>
@@ -152,17 +153,18 @@
             <Path fileType="library">/usr/lib64/libgoa-backend-1.0.so</Path>
             <Path fileType="data">/usr/lib64/pkgconfig/goa-1.0.pc</Path>
             <Path fileType="data">/usr/lib64/pkgconfig/goa-backend-1.0.pc</Path>
+            <Path fileType="data">/usr/share/gir-1.0/Goa-1.0.gir</Path>
             <Path fileType="data">/usr/share/vala/vapi/goa-1.0.deps</Path>
             <Path fileType="data">/usr/share/vala/vapi/goa-1.0.vapi</Path>
         </Files>
     </Package>
     <History>
-        <Update release="43">
-            <Date>2023-10-17</Date>
-            <Version>3.48.0</Version>
+        <Update release="58">
+            <Date>2025-05-27</Date>
+            <Version>3.54.3</Version>
             <Comment>Packaging update</Comment>
-            <Name>Zach Bacon</Name>
-            <Email>zachbacon@vba-m.com</Email>
+            <Name>Joey Riches</Name>
+            <Email>josephriches@gmail.com</Email>
         </Update>
     </History>
 </PISI>

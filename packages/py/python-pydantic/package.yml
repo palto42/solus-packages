@@ -1,8 +1,8 @@
 name       : python-pydantic
-version    : 2.5.3
-release    : 3
+version    : 2.10.6
+release    : 6
 source     :
-    - https://files.pythonhosted.org/packages/source/p/pydantic/pydantic-2.5.3.tar.gz : b3ef57c62535b0941697cce638c08900d87fcb67e29cfa99e8a68f747f393f7a
+    - https://files.pythonhosted.org/packages/source/p/pydantic/pydantic-2.10.6.tar.gz : ca5daa827cce33de7a42be142548b0096bf05a7e7b365aebfa5f8eeec7128236
 homepage   : https://github.com/pydantic/pydantic
 license    : MIT
 component  : programming.python
@@ -17,7 +17,8 @@ builddeps  :
     - python-packaging
     - python-wheel
 rundeps    :
-    - python-typing-extensions
+    - python-annotated-types
+    - python-pydantic-core
 build      : |
     %python3_setup
 install    : |

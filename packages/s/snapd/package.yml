@@ -1,9 +1,9 @@
 name       : snapd
-version    : 2.61.2
+version    : '2.69'
 homepage   : https://snapcraft.io/
-release    : 79
+release    : 89
 source     :
-    - https://github.com/snapcore/snapd/releases/download/2.61.2/snapd_2.61.2.vendor.tar.xz : d000725250a4d9c8a931b74df9733479a2851d03fe1e663a81fcb61b21509702
+    - https://github.com/canonical/snapd/releases/download/2.69/snapd_2.69.vendor.tar.xz : e887f14d4dcd332e7dae65111932cbdd62a31d229f1527be38e660883e35e59f
 license    : GPL-3.0-only
 component  : desktop
 summary    : The snapd and snap tools enable systems to work with .snap files
@@ -42,9 +42,7 @@ setup      : |
     pushd src/${import_path}
     ./mkversion.sh "$version"
 
-    %patch -p1 -i $pkgfiles/0001-Force-usage-of-sudo-over-runuser-on-Solus.patch
-    %patch -p1 -i $pkgfiles/0002-Support-glibc-hwcaps-library-paths.patch
-    %patch -p1 -i $pkgfiles/0001-Add-lib64-to-expected-paths-for-snapd-confine.patch
+    %apply_patches
 
     pushd cmd
     %reconfigure \
@@ -66,7 +64,8 @@ install    : |
 
     # Golang binaries
     for snap_bin in ${bincommands[@]} ; do
-        install -m00755 bin/$snap_bin $installdir/usr/bin/.
+        install -Dm00755 $pkgfiles/wrapper.sh $installdir/usr/bin/$snap_bin
+        install -Dm00755 bin/$snap_bin $installdir/%libdir%/$package/.
     done
     for snap_lib in ${dcommands[@]} ; do
         install -m00755 bin/$snap_lib $installdir/%libdir%/$package/.

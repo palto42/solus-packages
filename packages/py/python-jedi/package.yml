@@ -1,8 +1,8 @@
 name       : python-jedi
-version    : 0.19.1
-release    : 16
+version    : 0.19.2
+release    : 18
 source     :
-    - git|https://github.com/davidhalter/jedi.git : v0.19.1
+    - git|https://github.com/davidhalter/jedi.git : v0.19.2
 homepage   : https://github.com/davidhalter/jedi
 license    : MIT
 component  : programming.python
@@ -10,7 +10,10 @@ summary    : An autocompletion tool for Python that can be used for text editors
 description: |
     An autocompletion tool for Python that can be used for text editors.
 builddeps  :
+    - python-build
+    - python-installer
     - python-parso
+    - python-setuptools
 checkdeps  :
     - python-pytest
 rundeps    :
@@ -22,4 +25,4 @@ build      : |
 install    : |
     %python3_install
 check      : |
-    %python3_test pytest3 -v
+    %python3_test pytest -v

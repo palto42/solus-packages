@@ -1,8 +1,8 @@
 name       : gamescope
-version    : 3.13.16.8
-release    : 17
+version    : 3.16.2
+release    : 42
 source     :
-    - git|https://github.com/ValveSoftware/gamescope.git : 3.13.16.8
+    - git|https://github.com/ValveSoftware/gamescope.git : 3.16.2
 license    : BSD-2-Clause
 component  : system.utils
 homepage   : https://github.com/ValveSoftware/gamescope
@@ -13,21 +13,28 @@ networking : yes
 patterns   :
     - /*
 builddeps  :
+    - pkgconfig(glm)
+    - pkgconfig(lcms2)
+    - pkgconfig(libavif)
     - pkgconfig(libcap)
-    - pkgconfig(libdisplay-info)
+    - pkgconfig(libdecor-0)
     - pkgconfig(libdrm)
-    - pkgconfig(libliftoff)
+    - pkgconfig(libeis-1.0)
+    - pkgconfig(libinput)
     - pkgconfig(libpipewire-0.3)
+    - pkgconfig(libseat)
+    - pkgconfig(luajit)
     - pkgconfig(openvr)
+    - pkgconfig(pixman-1)
     - pkgconfig(sdl2)
     # - pkgconfig(stb)
     - pkgconfig(vulkan)
     - pkgconfig(wayland-protocols)
-    - pkgconfig(wayland-protocols)
     - pkgconfig(wayland-server)
-    - pkgconfig(wlroots)
     - pkgconfig(x11)
+    - pkgconfig(xcb-ewmh)
     - pkgconfig(xcomposite)
+    - pkgconfig(xcursor)
     - pkgconfig(xdamage)
     - pkgconfig(xext)
     - pkgconfig(xfixes)
@@ -40,38 +47,51 @@ builddeps  :
     - pkgconfig(xxf86vm)
     - glslang-devel
     - vulkan-headers
+    # This vendors it's own libdisplay-info libliftoff, stb, vkroots, and wlroots
+clang      : yes
+optimize   :
+    - thin-lto
 setup      : |
     # For issue getsolus/packages#869. Let's create a special nvidia binary with the offending patch reverted. This only works on Nvidia, so we still need non-patched.
-    mkdir ../nvidia
-    cp -ra * ../nvidia
+    # mkdir ../nvidia
+    # cp -ra * ../nvidia
 
     # Normal build
-    %meson_configure -Dforce_fallback_for="stb"
+    %meson_configure -Dforce_fallback_for="libdisplay-info,libliftoff,stb,vkroots,wlroots" -Dpipewire=enabled
 
-    cd ../nvidia
-    %patch -p1 -i $pkgfiles/0001-Revert-rendervulkan-Get-a-general-graphics-compute-q.patch
-    %meson_configure -Dforce_fallback_for="stb"
+    # cd ../nvidia
+    # %patch -p1 -i $pkgfiles/0001-Revert-rendervulkan-Get-a-general-graphics-compute-q.patch
+    # meson_configure -Dforce_fallback_for="stb" -Dpipewire=enabled
 build      : |
     %ninja_build
 
-    cd ../nvidia
-    %ninja_build
+    # pushd ../nvidia
+    # ninja_build
+    # popd
 install    : |
-    # Install the nvidia build first so we can rename the binary
-    pushd ../nvidia
-    %ninja_install
-
-    # Rename binary and remove everything else that would otherwise conflict
-    mv $installdir/usr/bin/gamescope $installdir/usr/bin/gamescope-nvidia
-    rm -rf $installdir/usr/include \
-           $installdir/usr/lib64 \
-           $installdir/usr/share
-    popd
+    # Install the nvidia build to a temporary location
+    # pushd ../nvidia
+    # DESTDIR=tmp_nvidia %ninja_install
 
     # Unpatched install
     %ninja_install
 
     # Unneeded. This were only for libs that were statically compiled in
-    rm -v $installdir/usr/include/vkroots.h \
-          $installdir/usr/lib64/pkgconfig/vkroots.pc
+    rm -v $installdir/usr/bin/edid-decode \
+          $installdir/usr/bin/di-edid-decode \
+          $installdir/usr/include/libliftoff.h \
+          $installdir/usr/include/vkroots.h \
+          $installdir/usr/lib64/libdisplay-info.a \
+          $installdir/usr/lib64/libliftoff.a \
+          $installdir/usr/lib64/libwlroots-0.18.a \
+          $installdir/usr/lib64/pkgconfig/libdisplay-info.pc \
+          $installdir/usr/lib64/pkgconfig/libliftoff.pc \
+          $installdir/usr/lib64/pkgconfig/vkroots.pc \
+          $installdir/usr/lib64/pkgconfig/wlroots-0.18.pc \
+          $installdir/usr/share/man/man1/edid-decode.1
+    rm -rfv $installdir/usr/include/libdisplay-info/ \
+            $installdir/usr/include/wlroots-0.18
     find $installdir -type d -empty -print -delete
+
+    # Add the nvidia binary
+    # install -Dm00755 tmp_nvidia/usr/bin/gamescope $installdir/usr/bin/gamescope-nvidia

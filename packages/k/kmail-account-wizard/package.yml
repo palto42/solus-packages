@@ -1,8 +1,8 @@
 name       : kmail-account-wizard
-version    : 23.08.5
-release    : 73
+version    : 25.04.2
+release    : 91
 source     :
-    - https://cdn.download.kde.org/stable/release-service/23.08.5/src/kmail-account-wizard-23.08.5.tar.xz : 2789e52cbb4d6a081875c390cf49ad75904071373c635b509b262c8d9eff5dba
+    - https://download.kde.org/stable/release-service/25.04.2/src/kmail-account-wizard-25.04.2.tar.xz : 12d762f9b0dcc67bfe9d26e0bc4dadc0cf4a0cf3d14284ce4441c45d63c76cce
 homepage   : https://kde.org/
 license    :
     - GFDL-1.2-or-later
@@ -12,33 +12,22 @@ summary    : KMail Account Wizard
 description: |
     An application which assists you with the configuration of accounts in KMail.
 builddeps  :
-    - akonadi-contacts-devel
     - akonadi-devel
-    - akonadi-mime-devel
     - gpgme-qt-devel
-    - kcmutils-devel
-    - kcontacts-devel
-    - kcrash-devel
-    - kdbusaddons-devel
-    - kdoctools-devel
+    - kf6-kcrash-devel
+    - kf6-kdbusaddons-devel
+    - kf6-kdoctools-devel
+    - kf6-ktexteditor-devel
     - kidentitymanagement-devel
-    - kimap-devel
-    - kldap-devel
     - kmailtransport-devel
     - kmime-devel
-    - knewstuff-devel
-    - knotifications-devel
-    - knotifyconfig-devel
-    - kpimtextedit-devel
-    - kross-devel
-    - ktextaddons-devel
-    - ktexteditor-devel
-    - kwallet-devel
-    - libkdepim-devel
-    - libkleo-devel
-    - pimcommon-devel
+    - qtkeychain-qt6-devel
+clang      : yes
+optimize   :
+    - speed
+    - thin-lto
 setup      : |
-    %cmake_ninja -DBUILD_TESTING=OFF
+    %cmake_kf6
 build      : |
     %ninja_build
 install    : |

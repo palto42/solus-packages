@@ -1,8 +1,8 @@
 name       : acpica-unix
-version    : '20230628'
-release    : 8
+version    : '20250404'
+release    : 12
 source     :
-    - https://github.com/acpica/acpica/archive/refs/tags/R06_28_23.tar.gz : 2248799b7ca08a7711ac87d31924354ed49047507607d033bd327ba861ec4d31
+    - https://github.com/acpica/acpica/archive/refs/tags/R2025_04_04.tar.gz : 9991ec103b3660d17715780406ee7409f705cf87ac55e9a32374affe1a6f275a
 license    : GPL-2.0-or-later
 homepage   : https://www.intel.com/content/www/us/en/developer/topic-technology/open/acpica/overview.html
 component  : programming.tools

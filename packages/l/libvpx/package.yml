@@ -1,8 +1,12 @@
+# Updating this package? Run the create-vpx-testdata.sh script and if the hash of the test data changes
+# then let Solus staff know so they can update the new test data to sources.getsol.us
 name       : libvpx
-version    : 1.13.1
-release    : 18
+version    : 1.14.1
+release    : 20
 source     :
-    - https://github.com/webmproject/libvpx/archive/refs/tags/v1.13.1.tar.gz : 00dae80465567272abd077f59355f95ac91d7809a2d3006f9ace2637dd429d14
+    - https://github.com/webmproject/libvpx/archive/refs/tags/v1.14.1.tar.gz : 901747254d80a7937c933d03bd7c5d41e8e6c883e0665fadcb172542167c7977
+    # - git|https://github.com/webmproject/libvpx.git : 4ac9c4ba32bde8beb86da2553f5e75a9c124fcc7
+    - https://sources.getsol.us/libvpx/libvpx-test-data-58786a964d522f66.tar.zst : 58786a964d522f667c64d67c9fbcbf27bea7a5077e9f328b5a02c067f489d4c2
 homepage   : http://www.webmproject.org/
 license    : MIT
 component  : multimedia.codecs
@@ -11,9 +15,13 @@ description: |
     Reference implementation of the VP8 & VP9 codec
 emul32     : yes
 avx2       : yes
-optimize   : lto
+clang      : yes
+optimize   :
+    - lto
 builddeps  :
     - yasm
+environment: |
+    export LIBVPX_TEST_DATA_PATH=$workdir/libvpx-test-data
 setup      : |
     if [[ ! -z "${EMUL32BUILD}" ]]; then
         TARGET_CC=x86-linux-gcc
@@ -21,10 +29,15 @@ setup      : |
         TARGET_CC=x86_64-linux-gcc
     fi
 
+    # Breaks tests
+    %patch -p1 -i $pkgfiles/0001-Revert-Modify-vp9_c_vs_simd_enc_test-script.patch
+
+    tar xf $sources/libvpx-test-data*.tar.zst -C $workdir
+
     ./configure \
         --disable-static \
-        --disable-unit-tests \
         --enable-shared \
+        --enable-unit-tests \
         --enable-vp9-highbitdepth \
         --enable-vp9-postproc \
         --enable-vp9-temporal-denoising \
@@ -33,5 +46,13 @@ setup      : |
         --target=$TARGET_CC
 build      : |
     %make
+profile    : |
+    LD_LIBRARY_PATH="$workdir:$LD_LIBRARY_PATH" %make exampletest-no-data-check
 install    : |
     %make_install
+
+    # No point in this file
+    rm -v $installdir/%libdir%/libvpx.so.9.0
+check      : |
+    unset LD_PRELOAD
+    LD_LIBRARY_PATH="$workdir:$LD_LIBRARY_PATH" %make exampletest-no-data-check

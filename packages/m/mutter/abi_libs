@@ -1,6 +1,5 @@
 libdefault.so
-libmutter-13.so.0
-libmutter-clutter-13.so.0
-libmutter-cogl-13.so.0
-libmutter-cogl-pango-13.so.0
-libmutter-mtk-13.so.0
+libmutter-16.so.0
+libmutter-clutter-16.so.0
+libmutter-cogl-16.so.0
+libmutter-mtk-16.so.0

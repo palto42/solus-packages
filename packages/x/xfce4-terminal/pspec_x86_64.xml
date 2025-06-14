@@ -99,6 +99,7 @@
             <Path fileType="localedata">/usr/share/locale/zh_CN/LC_MESSAGES/xfce4-terminal.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_TW/LC_MESSAGES/xfce4-terminal.mo</Path>
             <Path fileType="man">/usr/share/man/man1/xfce4-terminal.1</Path>
+            <Path fileType="data">/usr/share/metainfo/org.xfce.terminal.metainfo.xml</Path>
             <Path fileType="data">/usr/share/xfce4/terminal/colorschemes/black-on-white.theme</Path>
             <Path fileType="data">/usr/share/xfce4/terminal/colorschemes/dark-pastels.theme</Path>
             <Path fileType="data">/usr/share/xfce4/terminal/colorschemes/green-on-black.theme</Path>
@@ -110,9 +111,9 @@
         </Files>
     </Package>
     <History>
-        <Update release="3">
-            <Date>2024-03-07</Date>
-            <Version>1.1.3</Version>
+        <Update release="7">
+            <Date>2025-03-26</Date>
+            <Version>1.1.5</Version>
             <Comment>Packaging update</Comment>
             <Name>Evan Maddock</Name>
             <Email>maddock.evan@vivaldi.net</Email>

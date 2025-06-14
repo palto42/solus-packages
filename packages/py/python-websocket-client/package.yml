@@ -1,8 +1,9 @@
 name       : python-websocket-client
-version    : 1.6.1
-release    : 14
+version    : 1.8.0
+release    : 17
 source     :
-    - https://github.com/websocket-client/websocket-client/archive/refs/tags/v1.6.1.tar.gz : d685b61743dcd52b73ce08ac84b230afaa23c2a5b62b41a507d8d2b2cab71df9
+    - https://github.com/websocket-client/websocket-client/archive/refs/tags/v1.8.0.tar.gz : 03306a5a5afb4e5bffd7fce4e2fb6438be91c14543cf1d6f506893f831047bfc
+homepage   : https://github.com/websocket-client/websocket-client
 license    : LGPL-2.1-or-later
 component  : programming.python
 summary    : Websocket client for python
@@ -10,6 +11,9 @@ description: |
     The websocket-client module is WebSocket client for python. It provides the low level APIs for WebSocket. All APIs are the synchronous functions.
 builddeps  :
     - pkgconfig(python3)
+    - python-build
+    - python-installer
+    - python-setuptools
 rundeps    :
     - python-six
 build      : |

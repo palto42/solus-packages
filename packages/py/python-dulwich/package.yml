@@ -1,17 +1,20 @@
 name       : python-dulwich
-version    : 0.21.6
-release    : 3
+version    : 0.22.8
+release    : 6
 source     :
-    - https://files.pythonhosted.org/packages/source/d/dulwich/dulwich-0.21.6.tar.gz : 30fbe87e8b51f3813c131e2841c86d007434d160bd16db586b40d47f31dd05b0
+    - https://files.pythonhosted.org/packages/source/d/dulwich/dulwich-0.22.8.tar.gz : 701547310415de300269331abe29cb5717aa1ea377af826bf513d0adfb1c209b
 homepage   : https://github.com/jelmer/dulwich
 license    : Apache-2.0
 component  : programming.python
 summary    : Pure-Python Git implementation
 description: |
     This is the Dulwich project. It aims to provide an interface to git repos (both local and remote) that doesn't call out to git directly but instead uses pure Python.
+networking : yes
 builddeps  :
     - python-build
     - python-installer
+    - python-setuptools
+    - python-setuptools-rust
 build      : |
     %python3_setup
 install    : |

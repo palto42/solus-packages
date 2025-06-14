@@ -1,0 +1,26 @@
+name       : python-xattr
+version    : 1.1.4
+release    : 3
+source     :
+    - https://pypi.debian.net/xattr/xattr-1.1.4.tar.gz : b7b02ecb2270da5b7e7deaeea8f8b528c17368401c2b9d5f63e91f545b45d372
+homepage   : https://github.com/xattr/xattr
+license    : MIT
+component  : programming.python
+summary    : Python wrapper for extended filesystem attributes
+description: |
+    Python wrapper for extended filesystem attributes 
+builddeps  :
+    - pkgconfig(python3)
+    - python-build
+    - python-cffi
+    - python-installer
+    - python-setuptools
+    - python-wheel
+rundeps    :
+    - python-cffi
+setup      : |
+    %patch -p1 -i $pkgfiles/0001-Fix-use-with-nuitka.patch
+build      : |
+    python3 -m build --wheel --no-isolation
+install    : |
+    python3 -m installer --destdir="$installdir" dist/*.whl

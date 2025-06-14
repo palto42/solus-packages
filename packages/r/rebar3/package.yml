@@ -1,0 +1,23 @@
+name       : rebar3
+version    : 3.25.0
+release    : 3
+source     :
+    - https://github.com/erlang/rebar3/archive/refs/tags/3.25.0.tar.gz : 7d3f42dc0e126e18fb73e4366129f11dd37bad14d404f461e0a3129ce8903440
+homepage   : https://rebar3.org
+license    : Apache-2.0
+component  : programming.tools
+summary    : Erlang build tool that makes it easy to compile and test Erlang applications and releases.
+description: |
+    Rebar3 is an Erlang tool that makes it easy to create, develop, and release Erlang libraries, applications, and systems in a repeatable manner.
+builddeps  :
+    - erlang
+rundeps    :
+    - erlang
+build      : |
+    escript bootstrap
+install    : |
+    install -Dm00755 $workdir/rebar3 $installdir/usr/bin/rebar3
+    install -Dm00644 $workdir/manpages/rebar3.1 $installdir/usr/share/man/man1/rebar3.1
+    install -Dm00644 $workdir/apps/rebar/priv/shell-completion/bash/rebar3 $installdir/usr/share/bash-completion/completions/rebar3
+    install -Dm00644 $workdir/apps/rebar/priv/shell-completion/fish/rebar3.fish $installdir/usr/share/fish/vendor_completions.d/rebar3.fish
+    install -Dm00644 $workdir/apps/rebar/priv/shell-completion/zsh/_rebar3 $installdir/usr/share/zsh/site-functions/_rebar3

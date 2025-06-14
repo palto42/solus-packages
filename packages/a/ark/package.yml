@@ -1,32 +1,38 @@
 name       : ark
-version    : 23.08.5
-release    : 79
+version    : 25.04.2
+release    : 98
 source     :
-    - https://cdn.download.kde.org/stable/release-service/23.08.5/src/ark-23.08.5.tar.xz : 6081c564e2d4e25113691483d2cf3843461a9db6c726e1e547fa9a9697aecfeb
+    - https://download.kde.org/stable/release-service/25.04.2/src/ark-25.04.2.tar.xz : 54a374c2f06ff65abe577865a7fc2521de70f10f438b399f81bbe3c0dd4be68a
 homepage   : https://kde.org/applications/utilities/org.kde.ark
 license    : GPL-2.0-or-later
 component  : desktop.kde.core
 summary    : A graphical file compression/decompression utility
 description: |
     Ark is a graphical file compression/decompression utility with support for multiple formats, including tar, gzip, bzip2, rar and zip, as well as CD-ROM images.
-optimize   : lto
 builddeps  :
-    - pkgconfig(bzip2)
     - pkgconfig(libarchive)
-    - pkgconfig(libunarr)
     - pkgconfig(libzip)
-    - karchive-devel
-    - kcrash-devel
-    - kdbusaddons-devel
-    - kdoctools-devel
-    - kiconthemes-devel
-    - kitemmodels-devel
-    - kparts-devel
-    - kpty-devel
-rundeps    :
+    - breeze-icons-devel
+    - kf6-kcrash-devel
+    - kf6-kdbusaddons-devel
+    - kf6-kdoctools-devel
+    - kf6-kfilemetadata-devel
+    - kf6-kiconthemes-devel
+    - kf6-kparts-devel
+    - kf6-kpty-devel
+    - lrzip
+    - p7zip
     - unrar
+rundeps    :
+    - lrzip
+    - p7zip
+    - unrar
+clang      : yes
+optimize   :
+    - speed
+    - thin-lto
 setup      : |
-    %cmake_ninja -DBUILD_TESTING=OFF
+    %cmake_kf6
 build      : |
     %ninja_build
 install    : |

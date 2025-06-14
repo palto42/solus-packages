@@ -1,0 +1,21 @@
+name       : oxygen-sounds
+version    : 6.3.5
+release    : 28
+source     :
+    - https://download.kde.org/stable/plasma/6.3.5/oxygen-sounds-6.3.5.tar.xz : 4058f03bef3d9c734a679aaf6e60ceeb2e845007078b4b654a1f3c90d2822e56
+homepage   : https://www.kde.org/workspaces/plasmadesktop/
+license    :
+    - GPL-2.0-or-later
+    - LGPL-2.1-only
+component  : desktop.theme
+summary    : The Oxygen Sound Theme
+description: The Oxygen Sound Theme
+builddeps  :
+    - pkgconfig(Qt6Core)
+    - extra-cmake-modules
+setup      : |
+    %cmake_kf6 -DBUILD_WITH_QT6=ON
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install

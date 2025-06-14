@@ -1,0 +1,84 @@
+<PISI>
+    <Source>
+        <Name>fooyin</Name>
+        <Homepage>https://www.fooyin.org/</Homepage>
+        <Packager>
+            <Name>Joey Riches</Name>
+            <Email>josephriches@gmail.com</Email>
+        </Packager>
+        <License>GPL-3.0-or-later</License>
+        <PartOf>multimedia.audio</PartOf>
+        <Summary xml:lang="en">fooyin is a music player built around customisation.</Summary>
+        <Description xml:lang="en">fooyin is a music player built around customisation.
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>fooyin</Name>
+        <Summary xml:lang="en">fooyin is a music player built around customisation.</Summary>
+        <Description xml:lang="en">fooyin is a music player built around customisation.
+</Description>
+        <PartOf>multimedia.audio</PartOf>
+        <Files>
+            <Path fileType="executable">/usr/bin/fooyin</Path>
+            <Path fileType="library">/usr/lib64/fooyin/libfooyin_core.so.0.0.0</Path>
+            <Path fileType="library">/usr/lib64/fooyin/libfooyin_gui.so.0.0.0</Path>
+            <Path fileType="library">/usr/lib64/fooyin/libfooyin_utils.so.0.0.0</Path>
+            <Path fileType="library">/usr/lib64/fooyin/plugins/fyplugin_alsa.so</Path>
+            <Path fileType="library">/usr/lib64/fooyin/plugins/fyplugin_fileops.so</Path>
+            <Path fileType="library">/usr/lib64/fooyin/plugins/fyplugin_filters.so</Path>
+            <Path fileType="library">/usr/lib64/fooyin/plugins/fyplugin_mpris.so</Path>
+            <Path fileType="library">/usr/lib64/fooyin/plugins/fyplugin_pipewire.so</Path>
+            <Path fileType="library">/usr/lib64/fooyin/plugins/fyplugin_rawaudio.so</Path>
+            <Path fileType="library">/usr/lib64/fooyin/plugins/fyplugin_rgscanner.so</Path>
+            <Path fileType="library">/usr/lib64/fooyin/plugins/fyplugin_scrobbler.so</Path>
+            <Path fileType="library">/usr/lib64/fooyin/plugins/fyplugin_sdl.so</Path>
+            <Path fileType="library">/usr/lib64/fooyin/plugins/fyplugin_sndfile.so</Path>
+            <Path fileType="library">/usr/lib64/fooyin/plugins/fyplugin_tageditor.so</Path>
+            <Path fileType="library">/usr/lib64/fooyin/plugins/fyplugin_vumeter.so</Path>
+            <Path fileType="library">/usr/lib64/fooyin/plugins/fyplugin_wavebar.so</Path>
+            <Path fileType="data">/usr/share/applications/org.fooyin.fooyin.desktop</Path>
+            <Path fileType="doc">/usr/share/doc/fooyin/LICENSE</Path>
+            <Path fileType="doc">/usr/share/doc/fooyin/README</Path>
+            <Path fileType="data">/usr/share/fooyin/translations/fooyin_af.qm</Path>
+            <Path fileType="data">/usr/share/fooyin/translations/fooyin_de.qm</Path>
+            <Path fileType="data">/usr/share/fooyin/translations/fooyin_en.qm</Path>
+            <Path fileType="data">/usr/share/fooyin/translations/fooyin_en_GB.qm</Path>
+            <Path fileType="data">/usr/share/fooyin/translations/fooyin_en_US.qm</Path>
+            <Path fileType="data">/usr/share/fooyin/translations/fooyin_es.qm</Path>
+            <Path fileType="data">/usr/share/fooyin/translations/fooyin_fi.qm</Path>
+            <Path fileType="data">/usr/share/fooyin/translations/fooyin_fr.qm</Path>
+            <Path fileType="data">/usr/share/fooyin/translations/fooyin_id.qm</Path>
+            <Path fileType="data">/usr/share/fooyin/translations/fooyin_ie.qm</Path>
+            <Path fileType="data">/usr/share/fooyin/translations/fooyin_it.qm</Path>
+            <Path fileType="data">/usr/share/fooyin/translations/fooyin_nl.qm</Path>
+            <Path fileType="data">/usr/share/fooyin/translations/fooyin_pl.qm</Path>
+            <Path fileType="data">/usr/share/fooyin/translations/fooyin_pt.qm</Path>
+            <Path fileType="data">/usr/share/fooyin/translations/fooyin_pt_BR.qm</Path>
+            <Path fileType="data">/usr/share/fooyin/translations/fooyin_ru.qm</Path>
+            <Path fileType="data">/usr/share/fooyin/translations/fooyin_sk.qm</Path>
+            <Path fileType="data">/usr/share/fooyin/translations/fooyin_sv.qm</Path>
+            <Path fileType="data">/usr/share/fooyin/translations/fooyin_th.qm</Path>
+            <Path fileType="data">/usr/share/fooyin/translations/fooyin_zh_CN.qm</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/128x128/apps/org.fooyin.fooyin.png</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/16x16/apps/org.fooyin.fooyin.png</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/22x22/apps/org.fooyin.fooyin.png</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/256x256/apps/org.fooyin.fooyin.png</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/32x32/apps/org.fooyin.fooyin.png</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/48x48/apps/org.fooyin.fooyin.png</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/512x512/apps/org.fooyin.fooyin.png</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/64x64/apps/org.fooyin.fooyin.png</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.fooyin.fooyin.svg</Path>
+            <Path fileType="data">/usr/share/metainfo/org.fooyin.fooyin.metainfo.xml</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="12">
+            <Date>2025-03-11</Date>
+            <Version>0.8.1</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Joey Riches</Name>
+            <Email>josephriches@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

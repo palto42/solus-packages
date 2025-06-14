@@ -1,16 +1,17 @@
 <PISI>
     <Source>
         <Name>oniguruma</Name>
+        <Homepage>https://github.com/kkos/oniguruma</Homepage>
         <Packager>
-            <Name>Algent Albrahimi</Name>
-            <Email>algent@protonmail.com</Email>
+            <Name>Marcus Mellor</Name>
+            <Email>marcus@infinitymdm.dev</Email>
         </Packager>
         <License>BSD-2-Clause</License>
         <PartOf>programming.library</PartOf>
         <Summary xml:lang="en">Oniguruma is a modern and flexible regular expressions library</Summary>
         <Description xml:lang="en">Oniguruma is a modern and flexible regular expressions library. It encompasses features from different regular expression implementations that traditionally exist in different languages.
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>oniguruma</Name>
@@ -21,7 +22,7 @@
         <Files>
             <Path fileType="executable">/usr/bin/onig-config</Path>
             <Path fileType="library">/usr/lib64/libonig.so.5</Path>
-            <Path fileType="library">/usr/lib64/libonig.so.5.1.0</Path>
+            <Path fileType="library">/usr/lib64/libonig.so.5.5.0</Path>
         </Files>
     </Package>
     <Package>
@@ -31,7 +32,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="3">oniguruma</Dependency>
+            <Dependency release="5">oniguruma</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/oniggnu.h</Path>
@@ -41,12 +42,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="3">
-            <Date>2023-07-29</Date>
-            <Version>6.9.6</Version>
+        <Update release="5">
+            <Date>2025-02-11</Date>
+            <Version>6.9.10</Version>
             <Comment>Packaging update</Comment>
-            <Name>Algent Albrahimi</Name>
-            <Email>algent@protonmail.com</Email>
+            <Name>Marcus Mellor</Name>
+            <Email>marcus@infinitymdm.dev</Email>
         </Update>
     </History>
 </PISI>

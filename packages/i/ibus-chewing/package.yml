@@ -1,23 +1,23 @@
 name       : ibus-chewing
-version    : 1.5.1
-release    : 3
+version    : 2.1.4
+release    : 6
 source     :
-    - https://github.com/definite/ibus-chewing/releases/download/1.5.1/ibus-chewing-1.5.1-Source.tar.gz : 687ce9f09fef31b0e31ad0d2f1be17f1ca0b9212af9d71812cf53d84a90f0060
-homepage   : https://github.com/definite/ibus-chewing
-license    : GPL-2.0
+    - https://github.com/chewing/ibus-chewing/releases/download/v2.1.4/ibus-chewing-2.1.4-Source.tar.xz : dfa73f177c059280609174d7bdac9a90fe87a46a0d3d1b2b4ab8500f3013a29e
+homepage   : https://github.com/chewing/ibus-chewing
+license    : GPL-2.0-or-later
 component  : desktop.core
 summary    : IBus-Chewing is an IBus front-end of Chewing, an intelligent Chinese input method for Zhuyin (BoPoMoFo) users
 description: |
     Bus-Chewing is an IBus front-end of Chewing, an intelligent Chinese input method for Zhuyin (BoPoMoFo) users
 builddeps  :
     - pkgconfig(chewing)
-    - pkgconfig(gtk+-2.0)
+    - pkgconfig(gtk4)
     - pkgconfig(ibus-1.0)
-    - pkgconfig(x11)
+    - pkgconfig(libadwaita-1)
     - gob2
 setup      : |
-    %cmake .
+    %cmake_ninja
 build      : |
-    %make
+    %ninja_build
 install    : |
-    %make_install
+    %ninja_install

@@ -1,8 +1,8 @@
 name       : kf6-bluez-qt
-version    : 6.0.0
-release    : 5
+version    : 6.14.0
+release    : 21
 source     :
-    - https://cdn.download.kde.org/stable/frameworks/6.0/bluez-qt-6.0.0.tar.xz : 36798f1e7a0a472607435beb2833f6cc77d65cb006decac1ec0b0a3a6f5142eb
+    - https://download.kde.org/stable/frameworks/6.14/bluez-qt-6.14.0.tar.xz : ea845f930ecc7c4f259c478ae6680c79395dcb2598ee3f5b45bced6df277f9d5
 homepage   : https://community.kde.org/Frameworks
 license    : LGPL-2.1-only
 component  : desktop.library

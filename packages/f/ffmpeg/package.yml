@@ -1,8 +1,8 @@
 name       : ffmpeg
-version    : 6.1.1
-release    : 149
+version    : 7.1.1
+release    : 163
 source     :
-    - https://ffmpeg.org/releases/ffmpeg-6.1.1.tar.gz : b0aee531e4a91fed6bc031445dfc3ad8eb36de1fcb0fa2acdb589ecc9f8dc9cb
+    - https://ffmpeg.org/releases/ffmpeg-7.1.1.tar.gz : 9a6e57a446b671012612aaeb9df5126794d5ac8f2015ca220934f99a6a4e0601
 homepage   : https://www.ffmpeg.org/
 license    :
     - GPL-3.0-or-later
@@ -22,6 +22,7 @@ builddeps  :
     - pkgconfig(ffnvcodec)
     - pkgconfig(gl)
     - pkgconfig(gnutls)
+    - pkgconfig(lc3)
     - pkgconfig(libass)
     - pkgconfig(libbluray)
     - pkgconfig(libcdio_paranoia)
@@ -52,6 +53,7 @@ builddeps  :
     - pkgconfig(vapoursynth)
     - pkgconfig(vdpau)
     - pkgconfig(vidstab)
+    - pkgconfig(vpl)
     - pkgconfig(vpx)
     - pkgconfig(x264)
     - pkgconfig(x265)
@@ -60,8 +62,11 @@ builddeps  :
     - lame-devel
     - vulkan-headers
     - xvidcore-devel
+clang      : yes
+optimize   : thin-lto
 setup      : |
     %patch -p1 -i $pkgfiles/add-av_stream_get_first_dts-for-chromium.patch
+    %patch -p1 -i $pkgfiles/svt-av1-3.0.0.patch
 
     ./configure \
         --enable-gcrypt \
@@ -72,12 +77,12 @@ setup      : |
         --enable-libbluray \
         --enable-libcdio \
         --enable-libdav1d \
-        --enable-libdrm \
         --enable-libfontconfig \
         --enable-libfreetype \
         --enable-libfribidi \
         --enable-libgsm \
         --enable-libjxl \
+        --enable-liblc3 \
         --enable-libmp3lame \
         --enable-libopenjpeg \
         --enable-libopenmpt \
@@ -99,6 +104,7 @@ setup      : |
         --enable-libv4l2 \
         --enable-libvidstab \
         --enable-libvorbis \
+        --enable-libvpl \
         --enable-libvpx \
         --enable-libwebp \
         --enable-libx264 \
@@ -119,7 +125,9 @@ setup      : |
         --disable-static \
         --disable-stripping \
         --libdir=%libdir% \
-        --prefix=/usr
+        --prefix=/usr \
+        --cc="$CC" \
+        --cxx="$CXX"
 build      : |
     %make
 install    : |

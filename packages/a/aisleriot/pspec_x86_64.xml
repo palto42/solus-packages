@@ -1,7 +1,7 @@
 <PISI>
     <Source>
         <Name>aisleriot</Name>
-        <Homepage>https://wiki.gnome.org/Apps/Aisleriot</Homepage>
+        <Homepage>https://gitlab.gnome.org/GNOME/aisleriot</Homepage>
         <Packager>
             <Name>Thomas Staudinger</Name>
             <Email>Staudi.Kaos@gmail.com</Email>
@@ -11,14 +11,14 @@
         <License>GFDL-1.1</License>
         <PartOf>games.card</PartOf>
         <Summary xml:lang="en">Gnome Aisleriot Card Game</Summary>
-        <Description xml:lang="en">Aisleriot — also known as sol or solitaire — is a card game application that features over 80 different solitaire-type card games which are designed to play using a mouse, keyboard, or trackpad.
+        <Description xml:lang="en">Aisleriot, also known as sol or solitaire, is a card game application that features over 80 different solitaire-type card games which are designed to play using a mouse, keyboard, or trackpad.
 </Description>
         <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>aisleriot</Name>
         <Summary xml:lang="en">Gnome Aisleriot Card Game</Summary>
-        <Description xml:lang="en">Aisleriot — also known as sol or solitaire — is a card game application that features over 80 different solitaire-type card games which are designed to play using a mouse, keyboard, or trackpad.
+        <Description xml:lang="en">Aisleriot, also known as sol or solitaire, is a card game application that features over 80 different solitaire-type card games which are designed to play using a mouse, keyboard, or trackpad.
 </Description>
         <PartOf>games.card</PartOf>
         <Files>
@@ -30,6 +30,7 @@
             <Path fileType="library">/usr/lib64/aisleriot/guile/2.0/athena.go</Path>
             <Path fileType="library">/usr/lib64/aisleriot/guile/2.0/auld-lang-syne.go</Path>
             <Path fileType="library">/usr/lib64/aisleriot/guile/2.0/aunt-mary.go</Path>
+            <Path fileType="library">/usr/lib64/aisleriot/guile/2.0/australian-patience.go</Path>
             <Path fileType="library">/usr/lib64/aisleriot/guile/2.0/backbone.go</Path>
             <Path fileType="library">/usr/lib64/aisleriot/guile/2.0/bakers-dozen.go</Path>
             <Path fileType="library">/usr/lib64/aisleriot/guile/2.0/bakers-game.go</Path>
@@ -116,18 +117,32 @@
             <Path fileType="library">/usr/lib64/aisleriot/guile/2.0/yukon.go</Path>
             <Path fileType="library">/usr/lib64/aisleriot/guile/2.0/zebra.go</Path>
             <Path fileType="library">/usr/lib64/valgrind/aisleriot.supp</Path>
+            <Path fileType="data">/usr/share/aisleriot/cards/Atlasnye.svgz</Path>
+            <Path fileType="data">/usr/share/aisleriot/cards/XSkat.svgz</Path>
+            <Path fileType="data">/usr/share/aisleriot/cards/adler.svgz</Path>
             <Path fileType="data">/usr/share/aisleriot/cards/anglo.svgz</Path>
-            <Path fileType="data">/usr/share/aisleriot/cards/anglo_bitmap.svgz</Path>
-            <Path fileType="data">/usr/share/aisleriot/cards/bellot.svgz</Path>
-            <Path fileType="data">/usr/share/aisleriot/cards/bonded.svgz</Path>
-            <Path fileType="data">/usr/share/aisleriot/cards/dondorf.svgz</Path>
-            <Path fileType="data">/usr/share/aisleriot/cards/gnomangelo.svgz</Path>
-            <Path fileType="data">/usr/share/aisleriot/cards/gnomangelo_bitmap.svgz</Path>
+            <Path fileType="data">/usr/share/aisleriot/cards/anglo_poker.svgz</Path>
+            <Path fileType="data">/usr/share/aisleriot/cards/atlasnye.svgz</Path>
+            <Path fileType="data">/usr/share/aisleriot/cards/atlasnye_skat.svgz</Path>
+            <Path fileType="data">/usr/share/aisleriot/cards/clubkarte.svgz</Path>
             <Path fileType="data">/usr/share/aisleriot/cards/guyenne-classic.svgz</Path>
+            <Path fileType="data">/usr/share/aisleriot/cards/l-&amp;-h.svgz</Path>
+            <Path fileType="data">/usr/share/aisleriot/cards/minimum.svgz</Path>
+            <Path fileType="data">/usr/share/aisleriot/cards/minimum_dark.svgz</Path>
+            <Path fileType="data">/usr/share/aisleriot/cards/mittelalter.svgz</Path>
+            <Path fileType="data">/usr/share/aisleriot/cards/neoclassical.svgz</Path>
+            <Path fileType="data">/usr/share/aisleriot/cards/neoclassical_4_color.svgz</Path>
             <Path fileType="data">/usr/share/aisleriot/cards/ornamental.svgz</Path>
             <Path fileType="data">/usr/share/aisleriot/cards/paris.svgz</Path>
-            <Path fileType="data">/usr/share/aisleriot/cards/swiss-xvii.svgz</Path>
-            <Path fileType="data">/usr/share/aisleriot/cards/tango.svgz</Path>
+            <Path fileType="data">/usr/share/aisleriot/cards/pixelangelo.svgz</Path>
+            <Path fileType="data">/usr/share/aisleriot/cards/pixelangelo_compact.svgz</Path>
+            <Path fileType="data">/usr/share/aisleriot/cards/plastic.svgz</Path>
+            <Path fileType="data">/usr/share/aisleriot/cards/simplistic.svgz</Path>
+            <Path fileType="data">/usr/share/aisleriot/cards/swiss-XVII.svgz</Path>
+            <Path fileType="data">/usr/share/aisleriot/cards/tango_nuevo.svgz</Path>
+            <Path fileType="data">/usr/share/aisleriot/cards/tarot.svgz</Path>
+            <Path fileType="data">/usr/share/aisleriot/cards/tigullio.svgz</Path>
+            <Path fileType="data">/usr/share/aisleriot/cards/tragy.svgz</Path>
             <Path fileType="data">/usr/share/aisleriot/icons/hicolor/16x16/actions/cards-deal.png</Path>
             <Path fileType="data">/usr/share/aisleriot/icons/hicolor/22x22/actions/cards-deal.png</Path>
             <Path fileType="data">/usr/share/aisleriot/icons/hicolor/24x24/actions/cards-deal.png</Path>
@@ -145,6 +160,7 @@
             <Path fileType="doc">/usr/share/help/C/aisleriot/athena.xml</Path>
             <Path fileType="doc">/usr/share/help/C/aisleriot/auld_lang_syne.xml</Path>
             <Path fileType="doc">/usr/share/help/C/aisleriot/aunt_mary.xml</Path>
+            <Path fileType="doc">/usr/share/help/C/aisleriot/australian_patience.xml</Path>
             <Path fileType="doc">/usr/share/help/C/aisleriot/backbone.xml</Path>
             <Path fileType="doc">/usr/share/help/C/aisleriot/bakers_dozen.xml</Path>
             <Path fileType="doc">/usr/share/help/C/aisleriot/bakers_game.xml</Path>
@@ -240,6 +256,7 @@
             <Path fileType="doc">/usr/share/help/ca/aisleriot/athena.xml</Path>
             <Path fileType="doc">/usr/share/help/ca/aisleriot/auld_lang_syne.xml</Path>
             <Path fileType="doc">/usr/share/help/ca/aisleriot/aunt_mary.xml</Path>
+            <Path fileType="doc">/usr/share/help/ca/aisleriot/australian_patience.xml</Path>
             <Path fileType="doc">/usr/share/help/ca/aisleriot/backbone.xml</Path>
             <Path fileType="doc">/usr/share/help/ca/aisleriot/bakers_dozen.xml</Path>
             <Path fileType="doc">/usr/share/help/ca/aisleriot/bakers_game.xml</Path>
@@ -335,6 +352,7 @@
             <Path fileType="doc">/usr/share/help/cs/aisleriot/athena.xml</Path>
             <Path fileType="doc">/usr/share/help/cs/aisleriot/auld_lang_syne.xml</Path>
             <Path fileType="doc">/usr/share/help/cs/aisleriot/aunt_mary.xml</Path>
+            <Path fileType="doc">/usr/share/help/cs/aisleriot/australian_patience.xml</Path>
             <Path fileType="doc">/usr/share/help/cs/aisleriot/backbone.xml</Path>
             <Path fileType="doc">/usr/share/help/cs/aisleriot/bakers_dozen.xml</Path>
             <Path fileType="doc">/usr/share/help/cs/aisleriot/bakers_game.xml</Path>
@@ -430,6 +448,7 @@
             <Path fileType="doc">/usr/share/help/de/aisleriot/athena.xml</Path>
             <Path fileType="doc">/usr/share/help/de/aisleriot/auld_lang_syne.xml</Path>
             <Path fileType="doc">/usr/share/help/de/aisleriot/aunt_mary.xml</Path>
+            <Path fileType="doc">/usr/share/help/de/aisleriot/australian_patience.xml</Path>
             <Path fileType="doc">/usr/share/help/de/aisleriot/backbone.xml</Path>
             <Path fileType="doc">/usr/share/help/de/aisleriot/bakers_dozen.xml</Path>
             <Path fileType="doc">/usr/share/help/de/aisleriot/bakers_game.xml</Path>
@@ -525,6 +544,7 @@
             <Path fileType="doc">/usr/share/help/el/aisleriot/athena.xml</Path>
             <Path fileType="doc">/usr/share/help/el/aisleriot/auld_lang_syne.xml</Path>
             <Path fileType="doc">/usr/share/help/el/aisleriot/aunt_mary.xml</Path>
+            <Path fileType="doc">/usr/share/help/el/aisleriot/australian_patience.xml</Path>
             <Path fileType="doc">/usr/share/help/el/aisleriot/backbone.xml</Path>
             <Path fileType="doc">/usr/share/help/el/aisleriot/bakers_dozen.xml</Path>
             <Path fileType="doc">/usr/share/help/el/aisleriot/bakers_game.xml</Path>
@@ -620,6 +640,7 @@
             <Path fileType="doc">/usr/share/help/en_GB/aisleriot/athena.xml</Path>
             <Path fileType="doc">/usr/share/help/en_GB/aisleriot/auld_lang_syne.xml</Path>
             <Path fileType="doc">/usr/share/help/en_GB/aisleriot/aunt_mary.xml</Path>
+            <Path fileType="doc">/usr/share/help/en_GB/aisleriot/australian_patience.xml</Path>
             <Path fileType="doc">/usr/share/help/en_GB/aisleriot/backbone.xml</Path>
             <Path fileType="doc">/usr/share/help/en_GB/aisleriot/bakers_dozen.xml</Path>
             <Path fileType="doc">/usr/share/help/en_GB/aisleriot/bakers_game.xml</Path>
@@ -715,6 +736,7 @@
             <Path fileType="doc">/usr/share/help/es/aisleriot/athena.xml</Path>
             <Path fileType="doc">/usr/share/help/es/aisleriot/auld_lang_syne.xml</Path>
             <Path fileType="doc">/usr/share/help/es/aisleriot/aunt_mary.xml</Path>
+            <Path fileType="doc">/usr/share/help/es/aisleriot/australian_patience.xml</Path>
             <Path fileType="doc">/usr/share/help/es/aisleriot/backbone.xml</Path>
             <Path fileType="doc">/usr/share/help/es/aisleriot/bakers_dozen.xml</Path>
             <Path fileType="doc">/usr/share/help/es/aisleriot/bakers_game.xml</Path>
@@ -810,6 +832,7 @@
             <Path fileType="doc">/usr/share/help/eu/aisleriot/athena.xml</Path>
             <Path fileType="doc">/usr/share/help/eu/aisleriot/auld_lang_syne.xml</Path>
             <Path fileType="doc">/usr/share/help/eu/aisleriot/aunt_mary.xml</Path>
+            <Path fileType="doc">/usr/share/help/eu/aisleriot/australian_patience.xml</Path>
             <Path fileType="doc">/usr/share/help/eu/aisleriot/backbone.xml</Path>
             <Path fileType="doc">/usr/share/help/eu/aisleriot/bakers_dozen.xml</Path>
             <Path fileType="doc">/usr/share/help/eu/aisleriot/bakers_game.xml</Path>
@@ -905,6 +928,7 @@
             <Path fileType="doc">/usr/share/help/fr/aisleriot/athena.xml</Path>
             <Path fileType="doc">/usr/share/help/fr/aisleriot/auld_lang_syne.xml</Path>
             <Path fileType="doc">/usr/share/help/fr/aisleriot/aunt_mary.xml</Path>
+            <Path fileType="doc">/usr/share/help/fr/aisleriot/australian_patience.xml</Path>
             <Path fileType="doc">/usr/share/help/fr/aisleriot/backbone.xml</Path>
             <Path fileType="doc">/usr/share/help/fr/aisleriot/bakers_dozen.xml</Path>
             <Path fileType="doc">/usr/share/help/fr/aisleriot/bakers_game.xml</Path>
@@ -1000,6 +1024,7 @@
             <Path fileType="doc">/usr/share/help/gl/aisleriot/athena.xml</Path>
             <Path fileType="doc">/usr/share/help/gl/aisleriot/auld_lang_syne.xml</Path>
             <Path fileType="doc">/usr/share/help/gl/aisleriot/aunt_mary.xml</Path>
+            <Path fileType="doc">/usr/share/help/gl/aisleriot/australian_patience.xml</Path>
             <Path fileType="doc">/usr/share/help/gl/aisleriot/backbone.xml</Path>
             <Path fileType="doc">/usr/share/help/gl/aisleriot/bakers_dozen.xml</Path>
             <Path fileType="doc">/usr/share/help/gl/aisleriot/bakers_game.xml</Path>
@@ -1095,6 +1120,7 @@
             <Path fileType="doc">/usr/share/help/hu/aisleriot/athena.xml</Path>
             <Path fileType="doc">/usr/share/help/hu/aisleriot/auld_lang_syne.xml</Path>
             <Path fileType="doc">/usr/share/help/hu/aisleriot/aunt_mary.xml</Path>
+            <Path fileType="doc">/usr/share/help/hu/aisleriot/australian_patience.xml</Path>
             <Path fileType="doc">/usr/share/help/hu/aisleriot/backbone.xml</Path>
             <Path fileType="doc">/usr/share/help/hu/aisleriot/bakers_dozen.xml</Path>
             <Path fileType="doc">/usr/share/help/hu/aisleriot/bakers_game.xml</Path>
@@ -1190,6 +1216,7 @@
             <Path fileType="doc">/usr/share/help/id/aisleriot/athena.xml</Path>
             <Path fileType="doc">/usr/share/help/id/aisleriot/auld_lang_syne.xml</Path>
             <Path fileType="doc">/usr/share/help/id/aisleriot/aunt_mary.xml</Path>
+            <Path fileType="doc">/usr/share/help/id/aisleriot/australian_patience.xml</Path>
             <Path fileType="doc">/usr/share/help/id/aisleriot/backbone.xml</Path>
             <Path fileType="doc">/usr/share/help/id/aisleriot/bakers_dozen.xml</Path>
             <Path fileType="doc">/usr/share/help/id/aisleriot/bakers_game.xml</Path>
@@ -1285,6 +1312,7 @@
             <Path fileType="doc">/usr/share/help/oc/aisleriot/athena.xml</Path>
             <Path fileType="doc">/usr/share/help/oc/aisleriot/auld_lang_syne.xml</Path>
             <Path fileType="doc">/usr/share/help/oc/aisleriot/aunt_mary.xml</Path>
+            <Path fileType="doc">/usr/share/help/oc/aisleriot/australian_patience.xml</Path>
             <Path fileType="doc">/usr/share/help/oc/aisleriot/backbone.xml</Path>
             <Path fileType="doc">/usr/share/help/oc/aisleriot/bakers_dozen.xml</Path>
             <Path fileType="doc">/usr/share/help/oc/aisleriot/bakers_game.xml</Path>
@@ -1380,6 +1408,7 @@
             <Path fileType="doc">/usr/share/help/pt_BR/aisleriot/athena.xml</Path>
             <Path fileType="doc">/usr/share/help/pt_BR/aisleriot/auld_lang_syne.xml</Path>
             <Path fileType="doc">/usr/share/help/pt_BR/aisleriot/aunt_mary.xml</Path>
+            <Path fileType="doc">/usr/share/help/pt_BR/aisleriot/australian_patience.xml</Path>
             <Path fileType="doc">/usr/share/help/pt_BR/aisleriot/backbone.xml</Path>
             <Path fileType="doc">/usr/share/help/pt_BR/aisleriot/bakers_dozen.xml</Path>
             <Path fileType="doc">/usr/share/help/pt_BR/aisleriot/bakers_game.xml</Path>
@@ -1475,6 +1504,7 @@
             <Path fileType="doc">/usr/share/help/ru/aisleriot/athena.xml</Path>
             <Path fileType="doc">/usr/share/help/ru/aisleriot/auld_lang_syne.xml</Path>
             <Path fileType="doc">/usr/share/help/ru/aisleriot/aunt_mary.xml</Path>
+            <Path fileType="doc">/usr/share/help/ru/aisleriot/australian_patience.xml</Path>
             <Path fileType="doc">/usr/share/help/ru/aisleriot/backbone.xml</Path>
             <Path fileType="doc">/usr/share/help/ru/aisleriot/bakers_dozen.xml</Path>
             <Path fileType="doc">/usr/share/help/ru/aisleriot/bakers_game.xml</Path>
@@ -1570,6 +1600,7 @@
             <Path fileType="doc">/usr/share/help/sl/aisleriot/athena.xml</Path>
             <Path fileType="doc">/usr/share/help/sl/aisleriot/auld_lang_syne.xml</Path>
             <Path fileType="doc">/usr/share/help/sl/aisleriot/aunt_mary.xml</Path>
+            <Path fileType="doc">/usr/share/help/sl/aisleriot/australian_patience.xml</Path>
             <Path fileType="doc">/usr/share/help/sl/aisleriot/backbone.xml</Path>
             <Path fileType="doc">/usr/share/help/sl/aisleriot/bakers_dozen.xml</Path>
             <Path fileType="doc">/usr/share/help/sl/aisleriot/bakers_game.xml</Path>
@@ -1665,6 +1696,7 @@
             <Path fileType="doc">/usr/share/help/sr/aisleriot/athena.xml</Path>
             <Path fileType="doc">/usr/share/help/sr/aisleriot/auld_lang_syne.xml</Path>
             <Path fileType="doc">/usr/share/help/sr/aisleriot/aunt_mary.xml</Path>
+            <Path fileType="doc">/usr/share/help/sr/aisleriot/australian_patience.xml</Path>
             <Path fileType="doc">/usr/share/help/sr/aisleriot/backbone.xml</Path>
             <Path fileType="doc">/usr/share/help/sr/aisleriot/bakers_dozen.xml</Path>
             <Path fileType="doc">/usr/share/help/sr/aisleriot/bakers_game.xml</Path>
@@ -1760,6 +1792,7 @@
             <Path fileType="doc">/usr/share/help/sr@latin/aisleriot/athena.xml</Path>
             <Path fileType="doc">/usr/share/help/sr@latin/aisleriot/auld_lang_syne.xml</Path>
             <Path fileType="doc">/usr/share/help/sr@latin/aisleriot/aunt_mary.xml</Path>
+            <Path fileType="doc">/usr/share/help/sr@latin/aisleriot/australian_patience.xml</Path>
             <Path fileType="doc">/usr/share/help/sr@latin/aisleriot/backbone.xml</Path>
             <Path fileType="doc">/usr/share/help/sr@latin/aisleriot/bakers_dozen.xml</Path>
             <Path fileType="doc">/usr/share/help/sr@latin/aisleriot/bakers_game.xml</Path>
@@ -1855,6 +1888,7 @@
             <Path fileType="doc">/usr/share/help/sv/aisleriot/athena.xml</Path>
             <Path fileType="doc">/usr/share/help/sv/aisleriot/auld_lang_syne.xml</Path>
             <Path fileType="doc">/usr/share/help/sv/aisleriot/aunt_mary.xml</Path>
+            <Path fileType="doc">/usr/share/help/sv/aisleriot/australian_patience.xml</Path>
             <Path fileType="doc">/usr/share/help/sv/aisleriot/backbone.xml</Path>
             <Path fileType="doc">/usr/share/help/sv/aisleriot/bakers_dozen.xml</Path>
             <Path fileType="doc">/usr/share/help/sv/aisleriot/bakers_game.xml</Path>
@@ -1950,6 +1984,7 @@
             <Path fileType="doc">/usr/share/help/uk/aisleriot/athena.xml</Path>
             <Path fileType="doc">/usr/share/help/uk/aisleriot/auld_lang_syne.xml</Path>
             <Path fileType="doc">/usr/share/help/uk/aisleriot/aunt_mary.xml</Path>
+            <Path fileType="doc">/usr/share/help/uk/aisleriot/australian_patience.xml</Path>
             <Path fileType="doc">/usr/share/help/uk/aisleriot/backbone.xml</Path>
             <Path fileType="doc">/usr/share/help/uk/aisleriot/bakers_dozen.xml</Path>
             <Path fileType="doc">/usr/share/help/uk/aisleriot/bakers_game.xml</Path>
@@ -2045,6 +2080,7 @@
             <Path fileType="doc">/usr/share/help/zh_CN/aisleriot/athena.xml</Path>
             <Path fileType="doc">/usr/share/help/zh_CN/aisleriot/auld_lang_syne.xml</Path>
             <Path fileType="doc">/usr/share/help/zh_CN/aisleriot/aunt_mary.xml</Path>
+            <Path fileType="doc">/usr/share/help/zh_CN/aisleriot/australian_patience.xml</Path>
             <Path fileType="doc">/usr/share/help/zh_CN/aisleriot/backbone.xml</Path>
             <Path fileType="doc">/usr/share/help/zh_CN/aisleriot/bakers_dozen.xml</Path>
             <Path fileType="doc">/usr/share/help/zh_CN/aisleriot/bakers_game.xml</Path>
@@ -2243,9 +2279,9 @@
         </Files>
     </Package>
     <History>
-        <Update release="33">
-            <Date>2023-10-22</Date>
-            <Version>3.22.30</Version>
+        <Update release="39">
+            <Date>2025-02-17</Date>
+            <Version>3.22.35</Version>
             <Comment>Packaging update</Comment>
             <Name>Thomas Staudinger</Name>
             <Email>Staudi.Kaos@gmail.com</Email>

@@ -1,8 +1,8 @@
 name       : nano
-version    : '7.2'
-release    : 187
+version    : '8.5'
+release    : 205
 source     :
-    - https://www.nano-editor.org/dist/v7/nano-7.2.tar.xz : 86f3442768bd2873cec693f83cdf80b4b444ad3cc14760b74361474fc87a4526
+    - https://www.nano-editor.org/dist/v8/nano-8.5.tar.xz : 000b011d339c141af9646d43288f54325ff5c6e8d39d6e482b787bbc6654c26a
 homepage   : https://www.nano-editor.org
 license    : GPL-3.0-or-later
 component  : system.devel
@@ -11,12 +11,14 @@ description: |
     GNU nano is an easy-to-use text editor originally designed as a replacement for Pico, the ncurses-based editor from the non-free mailer package Pine (itself now available under the Apache License as Alpine).
 mancompress: yes
 builddeps  :
-    - nanorc
+    - nano-syntax-highlighting
 rundeps    :
-    - nanorc
+    - nano-syntax-highlighting
 setup      : |
     %patch -p1 -i $pkgfiles/0001-Use-a-stateless-configuration.patch
-    %reconfigure --enable-utf8 --docdir=/usr/share/doc/nano
+    %configure \
+               --docdir=/usr/share/doc/nano \
+               --enable-utf8
 build      : |
     %make
 install    : |

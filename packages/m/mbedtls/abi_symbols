@@ -639,6 +639,10 @@ libmbedcrypto.so.7:psa_close_key
 libmbedcrypto.so.7:psa_copy_key
 libmbedcrypto.so.7:psa_copy_key_material_into_slot
 libmbedcrypto.so.7:psa_crypto_init
+libmbedcrypto.so.7:psa_crypto_local_input_alloc
+libmbedcrypto.so.7:psa_crypto_local_input_free
+libmbedcrypto.so.7:psa_crypto_local_output_alloc
+libmbedcrypto.so.7:psa_crypto_local_output_free
 libmbedcrypto.so.7:psa_destroy_key
 libmbedcrypto.so.7:psa_destroy_persistent_key
 libmbedcrypto.so.7:psa_driver_wrapper_aead_decrypt
@@ -860,6 +864,7 @@ libmbedtls.so.14:mbedtls_ssl_get_ciphersuite_name
 libmbedtls.so.14:mbedtls_ssl_get_ciphersuite_sig_alg
 libmbedtls.so.14:mbedtls_ssl_get_ciphersuite_sig_pk_alg
 libmbedtls.so.14:mbedtls_ssl_get_current_mtu
+libmbedtls.so.14:mbedtls_ssl_get_hostname_pointer
 libmbedtls.so.14:mbedtls_ssl_get_input_max_frag_len
 libmbedtls.so.14:mbedtls_ssl_get_key_exchange_md_ssl_tls
 libmbedtls.so.14:mbedtls_ssl_get_key_exchange_md_tls1_2

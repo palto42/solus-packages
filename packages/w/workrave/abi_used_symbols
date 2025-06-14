@@ -1,3 +1,8 @@
+UNKNOWN:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv
+UNKNOWN:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4swapERS4_
+UNKNOWN:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE7reserveEm
+UNKNOWN:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_assignERKS4_
+UNKNOWN:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm
 UNKNOWN:_ZTIN3Atk11ImplementorE
 UNKNOWN:_ZTIN3Gdk6PixbufE
 UNKNOWN:_ZTIN3Gtk10OrientableE
@@ -395,8 +400,8 @@ libglib-2.0.so.0:g_mutex_clear
 libglib-2.0.so.0:g_mutex_init
 libglib-2.0.so.0:g_mutex_lock
 libglib-2.0.so.0:g_mutex_unlock
-libglib-2.0.so.0:g_once_init_enter
-libglib-2.0.so.0:g_once_init_leave
+libglib-2.0.so.0:g_once_init_enter_pointer
+libglib-2.0.so.0:g_once_init_leave_pointer
 libglib-2.0.so.0:g_option_context_add_group
 libglib-2.0.so.0:g_option_context_free
 libglib-2.0.so.0:g_option_context_new
@@ -414,6 +419,7 @@ libglib-2.0.so.0:g_rec_mutex_lock
 libglib-2.0.so.0:g_rec_mutex_unlock
 libglib-2.0.so.0:g_return_if_fail_warning
 libglib-2.0.so.0:g_setenv
+libglib-2.0.so.0:g_slice_alloc
 libglib-2.0.so.0:g_snprintf
 libglib-2.0.so.0:g_source_attach
 libglib-2.0.so.0:g_source_destroy
@@ -542,6 +548,7 @@ libgobject-2.0.so.0:g_param_spec_int
 libgobject-2.0.so.0:g_param_spec_string
 libgobject-2.0.so.0:g_signal_connect_data
 libgobject-2.0.so.0:g_signal_emit
+libgobject-2.0.so.0:g_signal_handlers_disconnect_matched
 libgobject-2.0.so.0:g_signal_new
 libgobject-2.0.so.0:g_type_add_instance_private
 libgobject-2.0.so.0:g_type_check_instance_is_a
@@ -577,6 +584,10 @@ libgtk-3.so.0:gtk_action_group_new
 libgtk-3.so.0:gtk_action_group_set_translation_domain
 libgtk-3.so.0:gtk_action_set_visible
 libgtk-3.so.0:gtk_button_get_type
+libgtk-3.so.0:gtk_check_menu_item_get_active
+libgtk-3.so.0:gtk_check_menu_item_get_type
+libgtk-3.so.0:gtk_check_menu_item_new_with_label
+libgtk-3.so.0:gtk_check_menu_item_set_active
 libgtk-3.so.0:gtk_container_add
 libgtk-3.so.0:gtk_container_forall
 libgtk-3.so.0:gtk_container_get_border_width
@@ -588,12 +599,18 @@ libgtk-3.so.0:gtk_get_option_group
 libgtk-3.so.0:gtk_image_new
 libgtk-3.so.0:gtk_image_set_from_pixbuf
 libgtk-3.so.0:gtk_init
+libgtk-3.so.0:gtk_menu_item_new_with_label
+libgtk-3.so.0:gtk_menu_item_set_submenu
+libgtk-3.so.0:gtk_menu_new
+libgtk-3.so.0:gtk_menu_shell_append
 libgtk-3.so.0:gtk_notebook_page_num
 libgtk-3.so.0:gtk_orientation_get_type
 libgtk-3.so.0:gtk_plug_get_id
 libgtk-3.so.0:gtk_plug_get_type
 libgtk-3.so.0:gtk_radio_action_get_current_value
 libgtk-3.so.0:gtk_radio_action_get_type
+libgtk-3.so.0:gtk_radio_menu_item_get_group
+libgtk-3.so.0:gtk_radio_menu_item_new_with_label
 libgtk-3.so.0:gtk_render_focus
 libgtk-3.so.0:gtk_settings_get_default
 libgtk-3.so.0:gtk_show_about_dialog
@@ -642,6 +659,7 @@ libgtk-3.so.0:gtk_widget_realize
 libgtk-3.so.0:gtk_widget_set_app_paintable
 libgtk-3.so.0:gtk_widget_set_can_focus
 libgtk-3.so.0:gtk_widget_set_double_buffered
+libgtk-3.so.0:gtk_widget_set_visible
 libgtk-3.so.0:gtk_widget_set_visual
 libgtk-3.so.0:gtk_widget_show
 libgtk-3.so.0:gtk_widget_show_all
@@ -1211,7 +1229,6 @@ libstdc++.so.6:_ZNKSt5ctypeIcE13_M_widen_initEv
 libstdc++.so.6:_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4findEPKcmm
 libstdc++.so.6:_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4findEcm
 libstdc++.so.6:_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE5rfindEPKcmm
-libstdc++.so.6:_ZNKSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEE3strEv
 libstdc++.so.6:_ZNKSt9bad_alloc4whatEv
 libstdc++.so.6:_ZNKSt9exception4whatEv
 libstdc++.so.6:_ZNSdD2Ev
@@ -1239,18 +1256,12 @@ libstdc++.so.6:_ZNSt14basic_ifstreamIcSt11char_traitsIcEED1Ev
 libstdc++.so.6:_ZNSt14basic_ofstreamIcSt11char_traitsIcEED1Ev
 libstdc++.so.6:_ZNSt6localeC1Ev
 libstdc++.so.6:_ZNSt6localeD1Ev
-libstdc++.so.6:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv
 libstdc++.so.6:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_replaceEmmPKcm
-libstdc++.so.6:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructEmc
 libstdc++.so.6:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcPKcS7_
 libstdc++.so.6:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE14_M_replace_auxEmmmc
-libstdc++.so.6:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4swapERS4_
 libstdc++.so.6:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6appendEPKc
-libstdc++.so.6:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE7reserveEm
 libstdc++.so.6:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_appendEPKcm
-libstdc++.so.6:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_assignERKS4_
 libstdc++.so.6:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_createERmm
-libstdc++.so.6:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_mutateEmmPKcm
 libstdc++.so.6:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC1EOS4_
 libstdc++.so.6:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEC1ERKS4_
 libstdc++.so.6:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEED1Ev
@@ -1285,7 +1296,6 @@ libstdc++.so.6:_ZSt4cerr
 libstdc++.so.6:_ZSt4cout
 libstdc++.so.6:_ZSt7getlineIcSt11char_traitsIcESaIcEERSt13basic_istreamIT_T0_ES7_RNSt7__cxx1112basic_stringIS4_S5_T1_EES4_
 libstdc++.so.6:_ZSt7nothrow
-libstdc++.so.6:_ZSt9terminatev
 libstdc++.so.6:_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc
 libstdc++.so.6:_ZStrsIcSt11char_traitsIcESaIcEERSt13basic_istreamIT_T0_ES7_RNSt7__cxx1112basic_stringIS4_S5_T1_EE
 libstdc++.so.6:_ZTIPKc
@@ -1316,6 +1326,7 @@ libstdc++.so.6:_Znwm
 libstdc++.so.6:_ZnwmRKSt9nothrow_t
 libstdc++.so.6:__cxa_allocate_exception
 libstdc++.so.6:__cxa_begin_catch
+libstdc++.so.6:__cxa_call_terminate
 libstdc++.so.6:__cxa_call_unexpected
 libstdc++.so.6:__cxa_demangle
 libstdc++.so.6:__cxa_end_catch
@@ -1328,3 +1339,6 @@ libstdc++.so.6:__cxa_throw
 libstdc++.so.6:__cxa_throw_bad_array_new_length
 libstdc++.so.6:__dynamic_cast
 libstdc++.so.6:__gxx_personality_v0
+libxfce4panel-2.0.so.4:xfce_panel_plugin_get_type
+libxfce4panel-2.0.so.4:xfce_panel_plugin_menu_insert_item
+libxfce4panel-2.0.so.4:xfce_panel_plugin_set_expand

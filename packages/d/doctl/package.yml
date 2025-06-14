@@ -1,8 +1,8 @@
 name       : doctl
-version    : 1.102.0
-release    : 1
+version    : 1.130.0
+release    : 19
 source     :
-    - https://github.com/digitalocean/doctl/archive/refs/tags/v1.102.0.tar.gz : e61067b57861bbac147bdf20a8cb5eb0537653057f978c1c06f5b5214d0b6571
+    - https://github.com/digitalocean/doctl/archive/refs/tags/v1.130.0.tar.gz : 6fea58bab84cc10fc07cc676590c0c35459d8fbc5d7b4c8ad39e984795485b4e
 homepage   : https://github.com/digitalocean/doctl/
 license    : Apache-2.0
 component  : network.client
@@ -30,7 +30,7 @@ build      : |
     ./doctl completion zsh > completions/_doctl
 install    : |
     install -Dm00755 doctl $installdir/usr/bin/doctl
-    install -Dm00755 completions/doctl $installdir/usr/share/bash-completions/doctl
-    install -Dm00755 completions/doctl.fish $installdir/usr/share/fish/vendor_completions.d/doctl.fish
-    install -Dm00755 completions/_doctl $installdir/usr/share/zsh/site-functions/_doctl
+    install -Dm00644 completions/doctl $installdir/usr/share/bash-completion/completions/doctl
+    install -Dm00644 completions/doctl.fish $installdir/usr/share/fish/vendor_completions.d/doctl.fish
+    install -Dm00644 completions/_doctl $installdir/usr/share/zsh/site-functions/_doctl
 

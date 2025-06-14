@@ -1,10 +1,12 @@
 name       : gnome-settings-daemon
-version    : '45.1'
-release    : 62
+version    : '48.1'
+release    : 68
 source     :
-    - https://download.gnome.org/sources/gnome-settings-daemon/45/gnome-settings-daemon-45.1.tar.xz : c62bfec9817eee5b83ebe901a9286189a67eb5ff033c5dd41506574f822bf090
+    - https://download.gnome.org/sources/gnome-settings-daemon/48/gnome-settings-daemon-48.1.tar.xz : 3860a2ea214dcbcb6600ae7a1e3358a5389215087bc3e4a47cee3f87baee062e
 homepage   : https://gitlab.gnome.org/GNOME/gnome-settings-daemon
-license    : GPL-2.0-only
+license    :
+    - GPL-2.0-or-later
+    - LGPL-2.1-or-later
 component  : desktop.gnome.core
 summary    : Daemon handling the GNOME session settings
 description: |
@@ -12,6 +14,7 @@ description: |
 builddeps  :
     - pkgconfig(alsa)
     - pkgconfig(colord)
+    - pkgconfig(cups)
     - pkgconfig(gcr-4)
     - pkgconfig(geoclue-2.0)
     - pkgconfig(geocode-glib-2.0)
@@ -34,14 +37,12 @@ builddeps  :
     - pkgconfig(xkeyboard-config)
     - pkgconfig(xorg-wacom)
     - pkgconfig(xrandr)
-    - cups-devel
 rundeps    :
     - bluez
     - gvfs
     - udisks
     - upower
 setup      : |
-    %patch -p1 -i $pkgfiles/0001-Apply-Solus-defaults.patch
     %patch -p1 -i $pkgfiles/0001-Allow-specifying-the-path-to-the-gnome-session-ctl-b.patch
 
     %meson_configure -Dsession_ctl_dir=/usr/lib64/gnome-session

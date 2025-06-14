@@ -1,8 +1,9 @@
 name       : kicad-packages3d
-version    : 7.0.6
-release    : 5
+version    : 9.0.2
+release    : 13
 source     :
-    - https://gitlab.com/kicad/libraries/kicad-packages3D/-/archive/7.0.6/kicad-packages3D-7.0.6.tar.gz : 8c3f295e746300f5f430c251b8c797b3e171ed5f10088e33e7476613ffed23e3
+    - https://gitlab.com/kicad/libraries/kicad-packages3D/-/archive/9.0.2/kicad-packages3D-9.0.2.tar.gz : 0044e649b06230145ae0bb0382f8e15b0a287e76507b6d34a070028fc8be0d85
+homepage   : https://www.kicad.org/
 license    : CC-BY-SA-4.0
 component  : office.scientific
 summary    : Official KiCad 3D model libraries for rendering and MCAD integration

@@ -1,8 +1,8 @@
 name       : flatpak-builder
-version    : 1.4.2
-release    : 25
+version    : 1.4.4
+release    : 27
 source     :
-    - https://github.com/flatpak/flatpak-builder/releases/download/1.4.2/flatpak-builder-1.4.2-fixed-libglnx.tar.xz : c041b974e03a2c2d3cda88a0efe1ecf69f9adf42a1758eac341d555e779d0596
+    - https://github.com/flatpak/flatpak-builder/releases/download/1.4.4/flatpak-builder-1.4.4.tar.xz : dc27159394baaa2cb523f52f874472ff50d161983233264ca2a22e850741ec7a
 homepage   : https://flatpak.org
 license    : LGPL-2.1-or-later
 component  : desktop

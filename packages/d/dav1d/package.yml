@@ -1,9 +1,9 @@
 name       : dav1d
-version    : 1.4.0
-release    : 26
+version    : 1.5.0
+release    : 31
 source     :
-    - https://code.videolan.org/videolan/dav1d/-/archive/1.4.0/dav1d-1.4.0.tar.bz2 : 7661648c95755db3d61857b3fdc427fa6d3271a573e84fd11c235441965e9397
-    - https://code.videolan.org/videolan/dav1d-test-data/-/archive/1.4.0/dav1d-test-data-1.4.0.tar.gz#dav1d-test-data.tar.gz : 67c592642c72385194636a21d8ab98c1ad230d6f1b826d3cb99f55026fd5ff34
+    - https://code.videolan.org/videolan/dav1d/-/archive/1.5.0/dav1d-1.5.0.tar.bz2 : a6ca64e34cec56ae1c2d359e1da5c5386ecd7a3a62f931d026ac4f2ff72ade64
+    - https://code.videolan.org/videolan/dav1d-test-data/-/archive/1.5.0/dav1d-test-data-1.5.0.tar.gz#dav1d-test-data.tar.gz : acdbbdac30ea4e9df61530f8d8cab3245a34c89ab0c0b18bc8e8122cde79ca09
 homepage   : https://code.videolan.org/videolan/dav1d
 license    : BSD-2-Clause
 component  : multimedia.codecs

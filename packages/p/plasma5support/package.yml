@@ -1,0 +1,38 @@
+name       : plasma5support
+version    : 6.3.5
+release    : 29
+source     :
+    - https://download.kde.org/stable/plasma/6.3.5/plasma5support-6.3.5.tar.xz : e82549de043e8befa2156ad81caf7c7a81519149cd7aa804ffd602a0c4a548be
+homepage   : https://invent.kde.org/plasma/plasma5support
+license    :
+    - GPL-2.0-or-later
+    - LGPL-2.0-or-later
+component  : desktop.libraries
+summary    : Support components for porting from KF5/Qt5 to KF6/Qt6
+description: |
+    Support components for porting from KF5/Qt5 to KF6/Qt6
+builddeps  :
+    - pkgconfig(Qt6Qml)
+    - pkgconfig(xfixes)
+    - extra-cmake-modules
+    - kf6-kconfig-devel
+    - kf6-kcoreaddons-devel
+    - kf6-kguiaddons-devel
+    - kf6-ki18n-devel
+    - kf6-kidletime-devel
+    - kf6-kio-devel
+    - kf6-knotifications-devel
+    - kf6-kservice-devel
+    - kf6-networkmanager-qt-devel
+    - kf6-solid-devel
+    - libksysguard-devel
+    - libplasma-devel
+    - plasma-activities-devel
+clang      : yes
+optimize   : thin-lto
+setup      : |
+    %cmake_kf6
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install

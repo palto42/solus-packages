@@ -1,15 +1,18 @@
 name       : glib2
-version    : 2.78.4
-release    : 102
+version    : 2.84.2
+release    : 120
 source     :
-    - https://download.gnome.org/sources/glib/2.78/glib-2.78.4.tar.xz : 24b8e0672dca120cc32d394bccb85844e732e04fe75d18bb0573b2dbc7548f63
-homepage   : https://wiki.gnome.org/Projects/GLib
+    - https://download.gnome.org/sources/glib/2.84/glib-2.84.2.tar.xz : 88e960dd937057407d61fcb3b45a860704b25923c37ae2478b85f2ecb5a4021f
+homepage   : https://docs.gtk.org/glib/
 license    : LGPL-2.1-or-later
 summary    : Low level C library containing data structure handling and interfaces
 description: |
     GLib is the low-level core library that forms the basis for projects such as GTK+ and GNOME. It provides data structure handling for C, portability wrappers, and interfaces for such runtime functionality as an event loop, threads, dynamic loading, and an object system.
 component  : system.base
 emul32     : yes
+optimize   :
+    - lto
+    - speed
 builddeps  :
     - pkgconfig32(dbus-1)
     - pkgconfig32(libelf)
@@ -19,17 +22,47 @@ builddeps  :
     - pkgconfig32(libpcre2-8)
     - pkgconfig32(mount)
     - pkgconfig32(zlib)
+    - python-packaging
+rundeps    :
+    - devel :
+        - python-packaging
 setup      : |
     %apply_patches
     export CFLAGS+=" -g3"
     export CXXFLAGS+=" -g3"
+
+    if [ -n "${EMUL32BUILD+set}" ]; then
+        introspection=disabled
+    else
+        introspection=enabled
+    fi
+
     %meson_configure \
                     -Dglib_debug=disabled \
-                    -Dgtk_doc=false \
-                    -Dtests=false
+                    -Ddocumentation=false \
+                    -Dtests=false \
+                    -Dintrospection=$introspection
 build      : |
     %ninja_build
 install    : |
     %ninja_install
     # Allow emul32 to work correctly.
     install -Dm00644 $pkgfiles/glibconfig.h $installdir/usr/include/glib-2.0/glibconfig.h
+patterns   :
+    - devel :
+        - /usr/bin/gdbus-codegen
+        - /usr/bin/glib-mkenums
+        - /usr/bin/glib-genmarshal
+        - /usr/bin/gresource
+        - /usr/bin/gtester
+        - /usr/bin/gtester-report
+        - /usr/share/gdb/
+        - /usr/share/glib-2.0/gdb/
+        - /usr/share/glib-2.0/codegen/
+        - /usr/share/bash-completion/completions/gresource
+        - /usr/share/man/man1/gdbus-codegen.1
+        - /usr/share/man/man1/glib-mkenums.1
+        - /usr/share/man/man1/glib-genmarshal.1
+        - /usr/share/man/man1/gresource.1
+        - /usr/share/man/man1/gtester.1
+        - /usr/share/man/man1/gtester-report.1

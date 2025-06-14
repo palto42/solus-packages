@@ -1,0 +1,22 @@
+name       : python-proton-vpn-core-api
+version    : 0.42.4
+release    : 12
+source     :
+    - https://github.com/ProtonVPN/python-proton-vpn-api-core/archive/refs/tags/v0.42.4.tar.gz : 3902e15247b81d437aeb71587ecafaf147e59658d3b8d8307be4c25a10aa453d
+homepage   : https://github.com/ProtonVPN/python-proton-vpn-api-core
+license    : GPL-3.0-or-later
+component  : programming.python
+summary    : The proton-vpn-core-api component
+description: |
+    The proton-vpn-core-api acts as a facade to the other Proton VPN components, exposing a uniform API to the available Proton VPN services.
+builddeps  :
+    - python-build
+    - python-installer
+    - python-setuptools
+    - python-wheel
+build      : |
+    %python3_setup
+install    : |
+    %python3_install
+replaces   :
+    - python-proton-vpn-logger

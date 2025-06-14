@@ -1,0 +1,36 @@
+<PISI>
+    <Source>
+        <Name>wlopm</Name>
+        <Homepage>https://git.iohub.dev/dany/wlopm</Homepage>
+        <Packager>
+            <Name>Evan Maddock</Name>
+            <Email>maddock.evan@vivaldi.net</Email>
+        </Packager>
+        <License>GPL-3.0</License>
+        <PartOf>desktop</PartOf>
+        <Summary xml:lang="en">Wayland output power management</Summary>
+        <Description xml:lang="en">Wayland output power management.
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>wlopm</Name>
+        <Summary xml:lang="en">Wayland output power management</Summary>
+        <Description xml:lang="en">Wayland output power management.
+</Description>
+        <PartOf>desktop</PartOf>
+        <Files>
+            <Path fileType="executable">/usr/bin/wlopm</Path>
+            <Path fileType="man">/usr/share/man/man1/wlopm.1</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="2">
+            <Date>2024-12-31</Date>
+            <Version>0.1.0</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Evan Maddock</Name>
+            <Email>maddock.evan@vivaldi.net</Email>
+        </Update>
+    </History>
+</PISI>

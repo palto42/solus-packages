@@ -1,44 +1,53 @@
 name       : powerdevil
-version    : 5.27.10
-release    : 98
+version    : 6.3.5
+release    : 130
 source     :
-    - https://cdn.download.kde.org/stable/plasma/5.27.10/powerdevil-5.27.10.tar.xz : 06c1a3c09880dd2060e3c8026189d8568d8a0f166ea33c2584669f85a04ec8f1
+    - https://download.kde.org/stable/plasma/6.3.5/powerdevil-6.3.5.tar.xz : a69883d6156e7a677c8d1cb5cd915a89e24669274ef1966d5d9ceb313250da53
 homepage   : https://www.kde.org/workspaces/plasmadesktop/
 license    : GPL-2.0-or-later
 component  : desktop.kde.core
 summary    : Manages the power settings of KDE Plasma
 description: |
     Manages the power settings of KDE Plasma.
-optimize   : lto
 builddeps  :
-    - pkgconfig(KF5WaylandClient)
-    - pkgconfig(Qt5X11Extras)
+    - pkgconfig(KF6Screen)
+    - pkgconfig(Qt6WaylandClient)
     - pkgconfig(ddcutil)
     - pkgconfig(libcap)
-    - pkgconfig(libnm)
-    - pkgconfig(upower-glib)
+    - pkgconfig(libudev)
     - pkgconfig(xcb-util)
-    - bluez-qt-devel
-    - kactivities-devel
-    - kcmutils-devel
-    - kcrash-devel
-    - kdbusaddons-devel
-    - kdoctools-devel
-    - kglobalaccel-devel
-    - kidletime-devel
-    - kio-devel
-    - kirigami2-devel
-    - knotifyconfig-devel
-    - libkscreen-devel
-    - networkmanager-qt-devel
+    - kf6-kauth-devel
+    - kf6-kcmutils-devel
+    - kf6-kconfig-devel
+    - kf6-kcrash-devel
+    - kf6-kdbusaddons-devel
+    - kf6-kdoctools-devel
+    - kf6-kglobalaccel-devel
+    - kf6-ki18n-devel
+    - kf6-kidletime-devel
+    - kf6-kio-devel
+    - kf6-kirigami-devel
+    - kf6-kitemmodels-devel
+    - kf6-knotifications-devel
+    - kf6-krunner-devel
+    - kf6-kxmlgui-devel
+    - kf6-solid-devel
+    - libplasma-devel
+    - plasma-activities-devel
+    - plasma-wayland-protocols-devel
     - plasma-workspace-devel
+    - qcoro-qt6-devel
 rundeps    :
     - power-profiles-daemon
     - upower
+clang      : yes
+optimize   :
+    - speed
+    - thin-lto
 setup      : |
-    %cmake_ninja -DHAVE_DDCUTIL=On
+    %cmake_kf6 -DHAVE_DDCUTIL=On
 build      : |
     %ninja_build
 install    : |
     %ninja_install
-    rm -rf $installdir/usr/share/doc
+    rm -rfv $installdir/usr/share/doc

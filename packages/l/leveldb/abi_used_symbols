@@ -51,7 +51,6 @@ libsnappy.so.1:_ZN6snappy13RawUncompressEPKcmPc
 libsnappy.so.1:_ZN6snappy19MaxCompressedLengthEm
 libsnappy.so.1:_ZN6snappy21GetUncompressedLengthEPKcmPm
 libstdc++.so.6:_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE5rfindEcm
-libstdc++.so.6:_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE7compareEPKc
 libstdc++.so.6:_ZNSo3putEc
 libstdc++.so.6:_ZNSo9_M_insertImEERSoT_
 libstdc++.so.6:_ZNSolsEi

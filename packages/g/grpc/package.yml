@@ -1,15 +1,14 @@
 name       : grpc
-version    : 1.54.3
-release    : 7
+version    : 1.65.0
+release    : 12
 source     :
-    - https://github.com/grpc/grpc/archive/refs/tags/v1.54.3.tar.gz : 17e4e1b100657b88027721220cbfb694d86c4b807e9257eaf2fb2d273b41b1b1
+    - https://github.com/grpc/grpc/archive/refs/tags/v1.65.0.tar.gz : ebc3acfde70cfae3f4f04b8dbb72259540cb1dc427be362569fbc2607dabfe39
 homepage   : https://grpc.io/
 license    : Apache-2.0
 component  : programming.library
 summary    : An RPC library and framework
 description: |
     gRPC is a modern, open source, high-performance remote procedure call (RPC) framework that can run anywhere. gRPC enables client and server applications to communicate transparently, and simplifies the building of connected systems.
-clang      : yes
 networking : yes
 builddeps  :
     - pkgconfig(absl_hash)
@@ -23,11 +22,11 @@ rundeps    :
         - c-ares-devel
         - protobuf-devel
         - re2-devel
+clang      : yes
+optimize   : thin-lto
 environment: |
     export CXXFLAGS="$CXXFLAGS -DNDEBUG"
 setup      : |
-    %patch -p1 -i $pkgfiles/0001-OpenSSL-Support-for-OpenSSL-3-31256.patch
-
     %cmake_ninja \
         -DCMAKE_CXX_STANDARD=17 \
         -DCMAKE_SKIP_INSTALL_RPATH=ON \

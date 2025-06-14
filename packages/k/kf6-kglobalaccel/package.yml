@@ -1,8 +1,8 @@
 name       : kf6-kglobalaccel
-version    : 6.0.0
-release    : 4
+version    : 6.14.0
+release    : 21
 source     :
-    - https://cdn.download.kde.org/stable/frameworks/6.0/kglobalaccel-6.0.0.tar.xz : 58009eb0d0b70c93dc0cb0886ae929f3756e972c841d7a3e465df8307e5b7149
+    - https://download.kde.org/stable/frameworks/6.14/kglobalaccel-6.14.0.tar.xz : e7aaca16bb4c5b5865af3ed4b48f2347c5163065d17c2b24be97752ff5e8c71d
 homepage   : https://community.kde.org/Frameworks
 license    :
     - LGPL-2.0-only

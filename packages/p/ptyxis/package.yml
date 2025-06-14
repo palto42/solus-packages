@@ -1,0 +1,23 @@
+name       : ptyxis
+version    : '48.3'
+release    : 7
+source     :
+    - https://download.gnome.org/sources/ptyxis/48/ptyxis-48.3.tar.xz : 1478ff38f09294f351af9f40bc19fd86513248332b77e1f4754dd8958e4a6a5f
+homepage   : https://devsuite.app/ptyxis/
+license    : GPL-3.0-or-later
+component  : desktop.gnome
+summary    : A terminal for a container-oriented desktop
+description: |
+    Ptyxis is a terminal for GNOME that focuses on ease-of-use in a world of containers.
+builddeps  :
+    - pkgconfig(json-glib-1.0)
+    - pkgconfig(libadwaita-1)
+    - pkgconfig(libportal-gtk4)
+    - pkgconfig(vte-2.91)
+    - desktop-file-utils
+setup      : |
+    %meson_configure -Dgeneric=terminal
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install

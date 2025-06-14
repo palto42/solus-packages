@@ -1,0 +1,52 @@
+name       : buildkit
+version    : 0.18.2
+release    : 7
+source     :
+    - https://github.com/moby/buildkit/archive/refs/tags/v0.18.2.tar.gz : dd23faf8bca378a96404f11ad570b47d25f281f0b223b922601bd1b26d2aa4ec
+homepage   : https://github.com/moby/buildkit
+license    : Apache-2.0
+component  : virt
+summary    : Container builder toolkit
+description: |
+    Concurrent, cache-efficient, and Dockerfile-agnostic builder toolkit 
+builddeps  :
+    - git
+    - golang
+rundeps    :
+    - containerd
+networking : yes
+environment: |
+    export GO111MODULE=auto
+
+    export CGO_CPPFLAGS="${CPPFLAGS}"
+    export CGO_CFLAGS="${CFLAGS}"
+    export CGO_CXXFLAGS="${CXXFLAGS}"
+    export CGO_LDFLAGS="${LDFLAGS}"
+    export GOFLAGS='-buildmode=pie -trimpath -mod=readonly -modcacherw'
+setup      : |
+    %patch -p1 -i $pkgfiles/0001-Solus-Use-containerd-and-other-defaults.patch
+
+    go mod vendor
+build      : |
+    GITCOMMIT="$(git ls-remote https://github.com/moby/buildkit.git refs/tags/v$version | awk '{print $1}')"
+    if [[ -z "${GITCOMMIT}" ]]; then
+        echo "GITCOMMIT is undefined for some reason"
+        exit 1
+    fi
+
+    mkdir build-output
+    go build -o build-output \
+             -ldflags "-linkmode=external \
+                       -X github.com/moby/buildkit/version.Version=$version \
+                       -X github.com/moby/buildkit/version.Revision=$GITCOMMIT" \
+             ./cmd/...
+install    : |
+    install -vDm755 -t "$installdir/usr/bin" build-output/*
+
+    # Systemd socket activation
+    install -vDm00644 -t "$installdir/usr/lib/systemd/system" examples/systemd/system/buildkit.*
+    install -vdm00755 $installdir/usr/lib/systemd/system/sockets.target.wants
+    ln -svf ../buildkit.socket $installdir/usr/lib/systemd/system/sockets.target.wants/
+
+    # buildkit group (allows users to connect without root)
+    install -vDm00644 $pkgfiles/buildkit.sysusers $installdir/usr/lib/sysusers.d/buildkit.conf

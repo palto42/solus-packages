@@ -1,5 +1,0 @@
-releases:
-  id: 1704
-  rss: https://gitlab.com/libpipeline/libpipeline/-/tags?format=atom
-security:
-  cpe: ~

@@ -1,8 +1,8 @@
 name       : lutris
-version    : 0.5.16
-release    : 77
+version    : 0.5.19
+release    : 82
 source     :
-    - https://github.com/lutris/lutris/archive/refs/tags/v0.5.16.tar.gz : e6f39bba5a2c1eb942cb3d6583b6b25c304c130076a3bb803879e13561361a72
+    - https://github.com/lutris/lutris/archive/refs/tags/v0.5.19.tar.gz : 54edba892517473920b04423037dd480afb5e3b5e197040db33d15b1535d5096
 license    : GPL-3.0-or-later
 component  : games
 homepage   : https://lutris.net/
@@ -14,7 +14,7 @@ rundeps    :
     - gamemode-32bit
     - libgnome-desktop
     - libgnome-keyring
-    - libwebkit-gtk
+    - libwebkit-gtk41
     - mangohud
     - python-distro
     - python-evdev
@@ -29,8 +29,6 @@ rundeps    :
     - pyyaml
     - wine-32bit
 setup      : |
-    # Remove patches in the next upstream release (0.5.17)
-    %apply_patches
     %meson_configure
 build      : |
     %ninja_build

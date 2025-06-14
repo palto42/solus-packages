@@ -1,5 +1,15 @@
 libwacom.so.9:LIBWACOM_2.0
+libwacom.so.9:LIBWACOM_2.12
+libwacom.so.9:LIBWACOM_2.14
+libwacom.so.9:LIBWACOM_2.15
 libwacom.so.9:LIBWACOM_2.9
+libwacom.so.9:libwacom_builder_destroy
+libwacom.so.9:libwacom_builder_new
+libwacom.so.9:libwacom_builder_set_bustype
+libwacom.so.9:libwacom_builder_set_device_name
+libwacom.so.9:libwacom_builder_set_match_name
+libwacom.so.9:libwacom_builder_set_uniq
+libwacom.so.9:libwacom_builder_set_usbid
 libwacom.so.9:libwacom_compare
 libwacom.so.9:libwacom_database_destroy
 libwacom.so.9:libwacom_database_new
@@ -13,7 +23,10 @@ libwacom.so.9:libwacom_get_bustype
 libwacom.so.9:libwacom_get_button_evdev_code
 libwacom.so.9:libwacom_get_button_flag
 libwacom.so.9:libwacom_get_button_led_group
+libwacom.so.9:libwacom_get_button_modeswitch_mode
 libwacom.so.9:libwacom_get_class
+libwacom.so.9:libwacom_get_dial2_num_modes
+libwacom.so.9:libwacom_get_dial_num_modes
 libwacom.so.9:libwacom_get_height
 libwacom.so.9:libwacom_get_integration_flags
 libwacom.so.9:libwacom_get_layout_filename
@@ -22,7 +35,9 @@ libwacom.so.9:libwacom_get_matches
 libwacom.so.9:libwacom_get_model_name
 libwacom.so.9:libwacom_get_name
 libwacom.so.9:libwacom_get_num_buttons
+libwacom.so.9:libwacom_get_num_dials
 libwacom.so.9:libwacom_get_num_keys
+libwacom.so.9:libwacom_get_num_rings
 libwacom.so.9:libwacom_get_num_strips
 libwacom.so.9:libwacom_get_paired_device
 libwacom.so.9:libwacom_get_product_id
@@ -30,6 +45,7 @@ libwacom.so.9:libwacom_get_ring2_num_modes
 libwacom.so.9:libwacom_get_ring_num_modes
 libwacom.so.9:libwacom_get_status_leds
 libwacom.so.9:libwacom_get_strips_num_modes
+libwacom.so.9:libwacom_get_styli
 libwacom.so.9:libwacom_get_supported_styli
 libwacom.so.9:libwacom_get_vendor_id
 libwacom.so.9:libwacom_get_width
@@ -45,7 +61,9 @@ libwacom.so.9:libwacom_match_get_bustype
 libwacom.so.9:libwacom_match_get_match_string
 libwacom.so.9:libwacom_match_get_name
 libwacom.so.9:libwacom_match_get_product_id
+libwacom.so.9:libwacom_match_get_uniq
 libwacom.so.9:libwacom_match_get_vendor_id
+libwacom.so.9:libwacom_new_from_builder
 libwacom.so.9:libwacom_new_from_name
 libwacom.so.9:libwacom_new_from_path
 libwacom.so.9:libwacom_new_from_usbid
@@ -58,7 +76,9 @@ libwacom.so.9:libwacom_stylus_get_id
 libwacom.so.9:libwacom_stylus_get_name
 libwacom.so.9:libwacom_stylus_get_num_buttons
 libwacom.so.9:libwacom_stylus_get_paired_ids
+libwacom.so.9:libwacom_stylus_get_paired_styli
 libwacom.so.9:libwacom_stylus_get_type
+libwacom.so.9:libwacom_stylus_get_vendor_id
 libwacom.so.9:libwacom_stylus_has_eraser
 libwacom.so.9:libwacom_stylus_has_lens
 libwacom.so.9:libwacom_stylus_has_wheel

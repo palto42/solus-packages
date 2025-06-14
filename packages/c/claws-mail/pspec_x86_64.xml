@@ -30,7 +30,6 @@
             <Path fileType="library">/usr/lib64/claws-mail/plugins/clamd.so</Path>
             <Path fileType="library">/usr/lib64/claws-mail/plugins/dillo.so</Path>
             <Path fileType="library">/usr/lib64/claws-mail/plugins/fetchinfo.so</Path>
-            <Path fileType="library">/usr/lib64/claws-mail/plugins/gdata.so</Path>
             <Path fileType="library">/usr/lib64/claws-mail/plugins/keyword_warner.so</Path>
             <Path fileType="library">/usr/lib64/claws-mail/plugins/libravatar.so</Path>
             <Path fileType="library">/usr/lib64/claws-mail/plugins/mailmbox.so</Path>
@@ -73,13 +72,16 @@
             <Path fileType="localedata">/usr/share/locale/nl/LC_MESSAGES/claws-mail.mo</Path>
             <Path fileType="localedata">/usr/share/locale/pl/LC_MESSAGES/claws-mail.mo</Path>
             <Path fileType="localedata">/usr/share/locale/pt_BR/LC_MESSAGES/claws-mail.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/pt_PT/LC_MESSAGES/claws-mail.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ro/LC_MESSAGES/claws-mail.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ru/LC_MESSAGES/claws-mail.mo</Path>
             <Path fileType="localedata">/usr/share/locale/sk/LC_MESSAGES/claws-mail.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/sq/LC_MESSAGES/claws-mail.mo</Path>
             <Path fileType="localedata">/usr/share/locale/sv/LC_MESSAGES/claws-mail.mo</Path>
             <Path fileType="localedata">/usr/share/locale/tr/LC_MESSAGES/claws-mail.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_TW/LC_MESSAGES/claws-mail.mo</Path>
             <Path fileType="man">/usr/share/man/man1/claws-mail.1</Path>
+            <Path fileType="data">/usr/share/metainfo/org.claws_mail.Claws-Mail.appdata.xml</Path>
         </Files>
     </Package>
     <Package>
@@ -89,7 +91,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="38">claws-mail</Dependency>
+            <Dependency release="42">claws-mail</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/claws-mail/account.h</Path>
@@ -325,9 +327,9 @@
         </Files>
     </Package>
     <History>
-        <Update release="38">
-            <Date>2024-02-15</Date>
-            <Version>4.1.1</Version>
+        <Update release="42">
+            <Date>2025-05-21</Date>
+            <Version>4.3.1</Version>
             <Comment>Packaging update</Comment>
             <Name>Joey Riches</Name>
             <Email>josephriches@gmail.com</Email>

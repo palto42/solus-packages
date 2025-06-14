@@ -36,6 +36,7 @@ genl:cmdlineno
 genl:color_fprintf
 genl:ctrl_genl_util
 genl:dec_indent
+genl:default_color_opt
 genl:delete_json_obj
 genl:delete_json_obj_plain
 genl:do_batch
@@ -46,6 +47,7 @@ genl:family_name
 genl:format_host
 genl:format_host_r
 genl:free_indent_mem
+genl:generic_proc_open
 genl:get_addr
 genl:get_addr32
 genl:get_addr64
@@ -78,6 +80,7 @@ genl:get_unsigned
 genl:hex2mem
 genl:hexstring_a2n
 genl:hexstring_n2a
+genl:human_readable
 genl:ifa_family_color
 genl:inc_indent
 genl:incomplete_command
@@ -149,6 +152,8 @@ genl:nl_proto_a2n
 genl:nl_proto_n2a
 genl:nodev
 genl:numeric
+genl:open_fds_add
+genl:open_fds_close
 genl:open_json_array
 genl:open_json_object
 genl:oper_state_color
@@ -157,6 +162,7 @@ genl:parse_mapping_gen
 genl:parse_mapping_num_all
 genl:parse_on_off
 genl:parse_one_of
+genl:parse_one_of_deprecated
 genl:parse_rtattr
 genl:parse_rtattr_flags
 genl:parse_rtattr_one
@@ -184,6 +190,7 @@ genl:print_indent
 genl:print_name_and_link
 genl:print_nl
 genl:print_nlmsg_timestamp
+genl:print_num
 genl:print_range
 genl:print_string_name_value
 genl:print_timestamp
@@ -213,6 +220,8 @@ genl:rtnl_addrprot_a2n
 genl:rtnl_addrprot_n2a
 genl:rtnl_brvlandump_req
 genl:rtnl_close
+genl:rtnl_dscp_a2n
+genl:rtnl_dscp_n2a
 genl:rtnl_dsfield_a2n
 genl:rtnl_dsfield_get_name
 genl:rtnl_dsfield_n2a
@@ -268,6 +277,7 @@ genl:str_map_lookup_uint
 genl:str_split_by_char
 genl:timestamp_short
 genl:uint_to_str
+genl:use_iec
 ip:_IO_stdin_used
 ip:_SL_
 ip:__bss_start
@@ -335,7 +345,9 @@ ip:close_json_object
 ip:cmd_exec
 ip:cmdlineno
 ip:color_fprintf
+ip:ctrl_data
 ip:dec_indent
+ip:default_color_opt
 ip:delete_json_obj
 ip:delete_json_obj_plain
 ip:do_all
@@ -361,6 +373,7 @@ ip:do_iptoken
 ip:do_iptunnel
 ip:do_iptuntap
 ip:do_ipvrf
+ip:do_monitor
 ip:do_mptcp
 ip:do_multiaddr
 ip:do_multiroute
@@ -389,6 +402,7 @@ ip:format_host_r
 ip:free_indent_mem
 ip:free_nlmsg_chain
 ip:freecon
+ip:generic_proc_open
 ip:geneve_link_util
 ip:genl_add_mcast_grp
 ip:genl_init_handle
@@ -414,7 +428,6 @@ ip:get_libbpf_version
 ip:get_link_kind
 ip:get_long
 ip:get_name_from_nsid
-ip:get_netnsid_from_name
 ip:get_operstate
 ip:get_prefix
 ip:get_prefix_1
@@ -551,10 +564,13 @@ ip:mpls_pton
 ip:name_is_vrf
 ip:namehash
 ip:netdevsim_link_util
+ip:netkit_link_util
 ip:netns_foreach
 ip:netns_get_fd
+ip:netns_id_from_name
 ip:netns_identify_pid
 ip:netns_map_init
+ip:netns_name_from_id
 ip:netns_nsid_socket_init
 ip:netns_switch
 ip:netrom_ntop
@@ -569,6 +585,8 @@ ip:nlmon_link_util
 ip:nodev
 ip:numeric
 ip:oneline
+ip:open_fds_add
+ip:open_fds_close
 ip:open_json_array
 ip:open_json_object
 ip:oper_state_color
@@ -577,6 +595,7 @@ ip:parse_mapping_gen
 ip:parse_mapping_num_all
 ip:parse_on_off
 ip:parse_one_of
+ip:parse_one_of_deprecated
 ip:parse_rtattr
 ip:parse_rtattr_flags
 ip:parse_rtattr_one
@@ -605,6 +624,7 @@ ip:print_color_tv
 ip:print_color_u64
 ip:print_color_uint
 ip:print_escape_buf
+ip:print_headers
 ip:print_indent
 ip:print_linkinfo
 ip:print_mpls_link_stats
@@ -654,6 +674,8 @@ ip:rtnl_addrprot_a2n
 ip:rtnl_addrprot_n2a
 ip:rtnl_brvlandump_req
 ip:rtnl_close
+ip:rtnl_dscp_a2n
+ip:rtnl_dscp_n2a
 ip:rtnl_dsfield_a2n
 ip:rtnl_dsfield_get_name
 ip:rtnl_dsfield_n2a
@@ -700,7 +722,7 @@ ip:rtnl_talk
 ip:rtnl_talk_suppress_rtnl_errmsg
 ip:rtnl_tunneldump_req
 ip:security_get_initial_context
-ip:set_netnsid_from_name
+ip:set_netns_id_from_name
 ip:setexecfilecon
 ip:show_details
 ip:show_stats
@@ -771,8 +793,6 @@ ip:xfrm_xfrma_print
 ip:xfrm_xfrmproto_getbyname
 ip:xfrm_xfrmproto_is_ipsec
 ip:xfrm_xfrmproto_is_ro
-m_xt.so:lib_dir
-m_xt.so:xt_action_util
 rtmon:_IO_stdin_used
 rtmon:_SL_
 rtmon:__bss_start
@@ -810,6 +830,7 @@ rtmon:close_json_object
 rtmon:cmdlineno
 rtmon:color_fprintf
 rtmon:dec_indent
+rtmon:default_color_opt
 rtmon:delete_json_obj
 rtmon:delete_json_obj_plain
 rtmon:do_batch
@@ -820,6 +841,7 @@ rtmon:family_name
 rtmon:format_host
 rtmon:format_host_r
 rtmon:free_indent_mem
+rtmon:generic_proc_open
 rtmon:get_addr
 rtmon:get_addr32
 rtmon:get_addr64
@@ -852,6 +874,7 @@ rtmon:get_unsigned
 rtmon:hex2mem
 rtmon:hexstring_a2n
 rtmon:hexstring_n2a
+rtmon:human_readable
 rtmon:ifa_family_color
 rtmon:inc_indent
 rtmon:incomplete_command
@@ -923,6 +946,8 @@ rtmon:nl_proto_a2n
 rtmon:nl_proto_n2a
 rtmon:nodev
 rtmon:numeric
+rtmon:open_fds_add
+rtmon:open_fds_close
 rtmon:open_json_array
 rtmon:open_json_object
 rtmon:oper_state_color
@@ -931,6 +956,7 @@ rtmon:parse_mapping_gen
 rtmon:parse_mapping_num_all
 rtmon:parse_on_off
 rtmon:parse_one_of
+rtmon:parse_one_of_deprecated
 rtmon:parse_rtattr
 rtmon:parse_rtattr_flags
 rtmon:parse_rtattr_one
@@ -958,6 +984,7 @@ rtmon:print_indent
 rtmon:print_name_and_link
 rtmon:print_nl
 rtmon:print_nlmsg_timestamp
+rtmon:print_num
 rtmon:print_range
 rtmon:print_string_name_value
 rtmon:print_timestamp
@@ -987,6 +1014,8 @@ rtmon:rtnl_addrprot_a2n
 rtmon:rtnl_addrprot_n2a
 rtmon:rtnl_brvlandump_req
 rtmon:rtnl_close
+rtmon:rtnl_dscp_a2n
+rtmon:rtnl_dscp_n2a
 rtmon:rtnl_dsfield_a2n
 rtmon:rtnl_dsfield_get_name
 rtmon:rtnl_dsfield_n2a
@@ -1039,6 +1068,7 @@ rtmon:str_map_lookup_uint
 rtmon:str_split_by_char
 rtmon:timestamp_short
 rtmon:uint_to_str
+rtmon:use_iec
 tc:_IO_stdin_used
 tc:_SL_
 tc:__bss_start
@@ -1118,6 +1148,7 @@ tc:db_names_alloc
 tc:db_names_free
 tc:db_names_load
 tc:dec_indent
+tc:default_color_opt
 tc:delete_json_obj
 tc:delete_json_obj_plain
 tc:do_action
@@ -1132,6 +1163,7 @@ tc:drop_cap
 tc:drr_qdisc_util
 tc:duparg
 tc:duparg2
+tc:echo_request
 tc:em_parse_error
 tc:ematch__create_buffer
 tc:ematch__delete_buffer
@@ -1190,6 +1222,7 @@ tc:free_indent_mem
 tc:fw_filter_util
 tc:gact_action_util
 tc:gate_action_util
+tc:generic_proc_open
 tc:get_addr
 tc:get_addr32
 tc:get_addr64
@@ -1198,6 +1231,8 @@ tc:get_addr_rta
 tc:get_be16
 tc:get_be32
 tc:get_be64
+tc:get_clock_name
+tc:get_clockid
 tc:get_filter_kind
 tc:get_guid
 tc:get_ifname
@@ -1239,6 +1274,7 @@ tc:hexstring_n2a
 tc:hfsc_qdisc_util
 tc:hhf_qdisc_util
 tc:htb_qdisc_util
+tc:human_readable
 tc:id_to_name
 tc:ifa_family_color
 tc:ife_action_util
@@ -1321,6 +1357,8 @@ tc:nbyte_ematch_util
 tc:netem_qdisc_util
 tc:netns_foreach
 tc:netns_get_fd
+tc:netns_id_from_name
+tc:netns_name_from_id
 tc:netns_switch
 tc:netrom_ntop
 tc:new_json_obj
@@ -1333,6 +1371,8 @@ tc:nl_proto_n2a
 tc:nodev
 tc:numeric
 tc:oneline
+tc:open_fds_add
+tc:open_fds_close
 tc:open_json_array
 tc:open_json_object
 tc:oper_state_color
@@ -1354,6 +1394,7 @@ tc:parse_mapping_gen
 tc:parse_mapping_num_all
 tc:parse_on_off
 tc:parse_one_of
+tc:parse_one_of_deprecated
 tc:parse_percent
 tc:parse_police
 tc:parse_rtattr
@@ -1405,6 +1446,7 @@ tc:print_masked_u8
 tc:print_name_and_link
 tc:print_nl
 tc:print_nlmsg_timestamp
+tc:print_num
 tc:print_qdisc
 tc:print_range
 tc:print_size_table
@@ -1456,6 +1498,8 @@ tc:rtnl_addrprot_a2n
 tc:rtnl_addrprot_n2a
 tc:rtnl_brvlandump_req
 tc:rtnl_close
+tc:rtnl_dscp_a2n
+tc:rtnl_dscp_n2a
 tc:rtnl_dsfield_a2n
 tc:rtnl_dsfield_get_name
 tc:rtnl_dsfield_n2a
@@ -1500,6 +1544,7 @@ tc:rtnl_talk
 tc:rtnl_talk_suppress_rtnl_errmsg
 tc:rtnl_tunneldump_req
 tc:sample_action_util
+tc:set_netns_id_from_name
 tc:sfb_qdisc_util
 tc:sfq_qdisc_util
 tc:show_details
@@ -1513,7 +1558,6 @@ tc:skbprio_qdisc_util
 tc:sprint_linklayer
 tc:sprint_size
 tc:sprint_tc_classid
-tc:sprint_ticks
 tc:sprint_time
 tc:sprint_time64
 tc:str_map_lookup_str
@@ -1531,9 +1575,7 @@ tc:tc_calc_xmittime
 tc:tc_core_init
 tc:tc_core_ktime2time
 tc:tc_core_tick2time
-tc:tc_core_time2big
 tc:tc_core_time2ktime
-tc:tc_core_time2tick
 tc:tc_print_action
 tc:tc_print_police
 tc:tc_print_rate

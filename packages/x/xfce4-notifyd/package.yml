@@ -1,8 +1,8 @@
 name       : xfce4-notifyd
-version    : 0.9.4
-release    : 5
+version    : 0.9.7
+release    : 10
 source     :
-    - https://archive.xfce.org/src/apps/xfce4-notifyd/0.9/xfce4-notifyd-0.9.4.tar.bz2 : ae6c128c055c44bd07202f73ae69ad833c5e4754f3530696965136e4d9ea7818
+    - https://archive.xfce.org/src/apps/xfce4-notifyd/0.9/xfce4-notifyd-0.9.7.tar.bz2 : 170d18fd5f40cce823ffc7ae3d7e21644007c3f45808ab4835f0401d21b3516a
 homepage   : https://docs.xfce.org/apps/notifyd/start
 license    : GPL-2.0-or-later
 component  : desktop.xfce
@@ -10,6 +10,7 @@ summary    : Notification daemon for the Xfce desktop.
 description: |
     Notification daemon for the Xfce desktop.
 builddeps  :
+    - pkgconfig(gtk-layer-shell-0)
     - pkgconfig(libcanberra)
     - pkgconfig(libnotify)
     - pkgconfig(libxfce4panel-2.0)

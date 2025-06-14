@@ -1,8 +1,8 @@
 name       : kscreen
-version    : 5.27.10
-release    : 90
+version    : 6.3.5
+release    : 120
 source     :
-    - https://cdn.download.kde.org/stable/plasma/5.27.10/kscreen-5.27.10.tar.xz : 8987bfcdb4e8617a229090ff42c4e4142ac0b5228e9bed7c3d2f03ed4e981c3c
+    - https://download.kde.org/stable/plasma/6.3.5/kscreen-6.3.5.tar.xz : 71dcb79021681d8e48d819b810e6736e88b2a464e6b159a5f70fe945fa910a25
 homepage   : https://www.kde.org/workspaces/plasmadesktop/
 license    :
     - GPL-2.0-or-later
@@ -11,28 +11,26 @@ component  : desktop.kde.core
 summary    : KDE Plasma screen management
 description: |
     KDE Plasma screen management.
-optimize   : lto
 builddeps  :
-    - pkgconfig(xi)
+    - pkgconfig(KF6Screen)
+    - pkgconfig(KF6WindowSystem)
+    - pkgconfig(Qt6Sensors)
     - pkgconfig(xcb-atom)
-    - pkgconfig(kscreen2)
-    - pkgconfig(Qt5Sensors)
-    - pkgconfig(Qt5X11Extras)
-    - kcmutils-devel
-    - kdbusaddons-devel
-    - kdeclarative-devel
-    - kglobalaccel-devel
-    - ki18n-devel
-    - kiconthemes-devel
-    - kxmlgui-devel
+    - pkgconfig(xi)
+    - kf6-kcmutils-devel
+    - kf6-kdbusaddons-devel
+    - kf6-ki18n-devel
+    - kf6-ksvg-devel
     - layer-shell-qt-devel
-    - plasma-framework-devel
-rundeps    :
-    - qt5-graphicaleffects
+    - libplasma-devel
+clang      : yes
+optimize   :
+    - speed
+    - thin-lto
 setup      : |
-    %cmake_ninja -DBUILD_TESTING=OFF
+    %cmake_kf6
 build      : |
     %ninja_build
 install    : |
     %ninja_install
-    %qml_cache
+    %qml6_cache

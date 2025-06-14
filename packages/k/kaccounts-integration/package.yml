@@ -1,8 +1,8 @@
 name       : kaccounts-integration
-version    : 23.08.5
-release    : 62
+version    : 25.04.2
+release    : 81
 source     :
-    - https://cdn.download.kde.org/stable/release-service/23.08.5/src/kaccounts-integration-23.08.5.tar.xz : c02ee25495c387dfc9c7581babd4756e04d7c3dae68bffd1652cf418e1d129b9
+    - https://download.kde.org/stable/release-service/25.04.2/src/kaccounts-integration-25.04.2.tar.xz : 0fecd64d0b0bc698bd4c9a13a80daf96d3a77072ddb8616b8bc670b67249d15c
 homepage   : https://kde.org/
 license    : GPL-2.0-or-later
 component  : programming.library
@@ -10,23 +10,36 @@ summary    : System to administer web accounts - shared library
 description: |
     Small system to administer web accounts for the sites and services across the KDE desktop, including: Google, Facebook, Owncloud, IMAP, Jabber and others
 builddeps  :
-    - pkgconfig(accounts-qt5)
+    - pkgconfig(Qt5Qml)
+    - pkgconfig(accounts-qt6)
     - pkgconfig(signond)
     - kcmutils-devel
     - kdbusaddons-devel
-    - kdeclarative-devel
+    - kf6-kcmutils-devel
+    - kf6-kdbusaddons-devel
+    - kf6-kdeclarative-devel
+    - kf6-kio-devel
+    - kf6-kwallet-devel
     - kio-devel
     - kwallet-devel
     - qcoro-qt5-devel
+    - qcoro-qt6-devel
 rundeps    :
     - devel :
+        - libaccounts-qt-devel
         - signond-devel
     - signon-kwallet-extension
     - signon-plugin-oauth2
+clang      : yes
+optimize   : thin-lto
 setup      : |
-    %cmake_ninja
+    %cmake_kf6 -B qt6-build
+
+    %cmake_kf6 -B qt5-build \
+               -DKF6_COMPAT_BUILD=ON
 build      : |
-    %ninja_build
+    %ninja_build -C qt6-build
+    %ninja_build -C qt5-build
 install    : |
-    %ninja_install
-    %qml_cache
+    %ninja_install -C qt6-build
+    %ninja_install -C qt5-build

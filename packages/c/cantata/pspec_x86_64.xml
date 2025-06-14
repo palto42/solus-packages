@@ -56,11 +56,12 @@
             <Path fileType="data">/usr/share/icons/hicolor/64x64/apps/cantata.png</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/cantata.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/symbolic/apps/cantata-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/metainfo/io.github.cdrummond.cantata.metainfo.xml</Path>
         </Files>
     </Package>
     <History>
-        <Update release="21">
-            <Date>2024-01-20</Date>
+        <Update release="23">
+            <Date>2024-11-15</Date>
             <Version>2.5.0</Version>
             <Comment>Packaging update</Comment>
             <Name>Reilly Brogan</Name>

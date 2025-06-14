@@ -1,8 +1,8 @@
 name       : akonadi-contacts
-version    : 23.08.5
-release    : 75
+version    : 25.04.2
+release    : 93
 source     :
-    - https://cdn.download.kde.org/stable/release-service/23.08.5/src/akonadi-contacts-23.08.5.tar.xz : e7a4b37c6bb4dbdb074398a48050b3ea63b1ffd8b576f3efa9cef56759cf4251
+    - https://download.kde.org/stable/release-service/25.04.2/src/akonadi-contacts-25.04.2.tar.xz : be8f1b45bbcfd7ef79fb4b2df34a9e0b8e8742faf195a8b39c05c7ee0e63704d
 homepage   : https://kde.org/
 license    : LGPL-2.1-or-later
 component  : desktop.library
@@ -11,21 +11,25 @@ description: |
     Libraries and daemons to implement Contact Management in Akonadi.
 builddeps  :
     - akonadi-devel
-    - gpgme-qt-devel
     - grantleetheme-devel
-    - kcmutils-devel
-    - kcontacts-devel
-    - kiconthemes-devel
-    - kio-devel
+    - kf6-kcontacts-devel
+    - kf6-kiconthemes-devel
+    - kf6-kio-devel
+    - kf6-ktextwidgets-devel
+    - kf6-kxmlgui-devel
+    - kf6-prison-devel
     - kmime-devel
-    - ktextwidgets-devel
-    - prison-devel
+    - ktextaddons-devel
 rundeps    :
     - devel :
         - akonadi-devel
         - grantleetheme-devel
+clang      : yes
+optimize   :
+    - speed
+    - thin-lto
 setup      : |
-    %cmake_ninja -DBUILD_TESTING=OFF
+    %cmake_kf6
 build      : |
     %ninja_build
 install    : |

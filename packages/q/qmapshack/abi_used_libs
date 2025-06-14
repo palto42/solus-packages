@@ -1,3 +1,4 @@
+UNKNOWN
 libQt5Core.so.5
 libQt5DBus.so.5
 libQt5Gui.so.5
@@ -12,7 +13,7 @@ libQt5Xml.so.5
 libalglib-3.18.0.so
 libc.so.6
 libgcc_s.so.1
-libgdal.so.34
+libgdal.so.36
 libjpeg.so.8
 libm.so.6
 libproj.so.25

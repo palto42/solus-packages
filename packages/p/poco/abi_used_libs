@@ -1,4 +1,5 @@
 UNKNOWN
+ld-linux-x86-64.so.2
 libc.so.6
 libcrypto.so.3
 libexpat.so.1
@@ -8,4 +9,5 @@ libpcre2-8.so.0
 libsqlite3.so.0
 libssl.so.3
 libstdc++.so.6
+libutf8proc.so.3
 libz.so.1

@@ -1,8 +1,8 @@
 name       : rclone
-version    : 1.65.2
-release    : 25
+version    : 1.69.3
+release    : 34
 source     :
-    - https://github.com/rclone/rclone/archive/refs/tags/v1.65.2.tar.gz : 5ae6179908650429e8d366e4940b586a4bd4aa9ee90c23c423be35550dded346
+    - https://github.com/rclone/rclone/archive/refs/tags/v1.69.3.tar.gz : ff6d17d187dd23648bfd33f20ff48902f7f08d2d9231f1f11825109903356b21
 license    : MIT
 component  : network.util
 homepage   : https://rclone.org

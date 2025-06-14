@@ -1,16 +1,17 @@
 <PISI>
     <Source>
         <Name>tuxmath</Name>
+        <Homepage>www.tux4kids.com/tuxmath</Homepage>
         <Packager>
-            <Name>Algent Albrahimi</Name>
-            <Email>algent@protonmail.com</Email>
+            <Name>Muhammad Alfi Syahrin</Name>
+            <Email>malfisya.dev@hotmail.com</Email>
         </Packager>
-        <License>GPL-3.0</License>
+        <License>GPL-3.0-or-later</License>
         <PartOf>games.learning</PartOf>
         <Summary xml:lang="en">An arcade game that helps kids practice their math facts</Summary>
         <Description xml:lang="en">An arcade game that helps kids practice their math facts
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>tuxmath</Name>
@@ -73,8 +74,9 @@
             <Path fileType="localedata">/usr/share/locale/zam/LC_MESSAGES/tuxmath.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_CN/LC_MESSAGES/tuxmath.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_TW/LC_MESSAGES/tuxmath.mo</Path>
+            <Path fileType="data">/usr/share/metainfo/tuxmath.appdata.xml</Path>
             <Path fileType="data">/usr/share/pixmaps/tuxmath.png</Path>
-            <Path fileType="data">/usr/share/tuxmath/fonts/AndikaDesRevG.ttf</Path>
+            <Path fileType="data">/usr/share/tuxmath/fonts</Path>
             <Path fileType="data">/usr/share/tuxmath/images/backgrounds/0.jpg</Path>
             <Path fileType="data">/usr/share/tuxmath/images/backgrounds/1.jpg</Path>
             <Path fileType="data">/usr/share/tuxmath/images/backgrounds/2.jpg</Path>
@@ -565,12 +567,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="4">
-            <Date>2022-03-27</Date>
+        <Update release="6">
+            <Date>2025-02-24</Date>
             <Version>2.0.3</Version>
             <Comment>Packaging update</Comment>
-            <Name>Algent Albrahimi</Name>
-            <Email>algent@protonmail.com</Email>
+            <Name>Muhammad Alfi Syahrin</Name>
+            <Email>malfisya.dev@hotmail.com</Email>
         </Update>
     </History>
 </PISI>

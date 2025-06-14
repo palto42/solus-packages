@@ -1,8 +1,8 @@
 name       : simplenote
-version    : 2.21.0
-release    : 45
+version    : 2.23.2
+release    : 50
 source     :
-    - https://github.com/Automattic/simplenote-electron/releases/download/v2.21.0/Simplenote-linux-2.21.0-amd64.deb : b3ba6bff0ae5f30d8ef0d7ed60a4f3b95e18fb16856dcbbbb12fcb39122c4aef
+    - https://github.com/Automattic/simplenote-electron/releases/download/v2.23.2/Simplenote-linux-2.23.2-amd64.deb : ae5c5a46347d68031324633c27f33afdeabfc6ffca5f58dd638002e6db99f22b
 homepage   : https://simplenote.com/
 license    : GPL-2.0-only
 component  : office.notes
@@ -12,10 +12,9 @@ description: |
 extract    : no
 builddeps  :
     - pkgconfig(alsa)
+    - pkgconfig(cups)
     - pkgconfig(gbm)
-    - pkgconfig(gconf-2.0)
     - pkgconfig(gtk+-3.0)
-    - cups-devel
 setup      : |
     ar xf $sources/Simplenote-linux-${version}-amd64.deb
     mkdir root
@@ -26,3 +25,4 @@ install    : |
     cp -Rv root/opt/* $installdir/usr/share
     ln -sv ../share/Simplenote/simplenote $installdir/usr/bin/simplenote
     install -Dm00644 $pkgfiles/simplenote.desktop $installdir/usr/share/applications/simplenote.desktop
+    install -Dm00644 $pkgfiles/com.simplenote.Simplenote.appdata.xml $installdir/usr/share/metainfo/com.simplenote.Simplenote.appdata.xml

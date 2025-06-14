@@ -4,29 +4,21 @@
 # Begin /usr/share/defaults/etc/profile
 
 if [ -d /usr/share/defaults/etc/profile.d ] ; then
-    for script in /usr/share/defaults/etc/profile.d/*.sh
-    do
-      source $script
+    for script in /usr/share/defaults/etc/profile.d/*.sh; do
+        if [ -r $script ] ; then
+            source $script
+        fi
     done
     unset script
 fi
 
 if [ -d /etc/profile.d ] ; then
-    for script in /etc/profile.d/*.sh
-    do
-      source $script
-    done
-    unset script
-fi
-
-# User specific aliases and functions
-if [ -d ~/.bashrc.d ]; then
-    for rc in ~/.bashrc.d/*; do
-        if [ -f "$rc" ]; then
-            . "$rc"
+    for script in /etc/profile.d/*.sh; do
+        if [ -r $script ] ; then
+            source $script
         fi
     done
-    unset rc
+    unset script
 fi
 
 # End /usr/share/defaults/etc/profile

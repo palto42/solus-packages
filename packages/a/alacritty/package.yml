@@ -1,8 +1,8 @@
 name       : alacritty
-version    : 0.13.1
-release    : 28
+version    : 0.15.1
+release    : 34
 source     :
-    - https://github.com/alacritty/alacritty/archive/refs/tags/v0.13.1.tar.gz : 38a42e23e1e6faaa9e300347df3f7b58b6182908a701517aac6e296fbdf37451
+    - https://github.com/alacritty/alacritty/archive/refs/tags/v0.15.1.tar.gz : b814e30c6271ae23158c66e0e2377c3600bb24041fa382a36e81be564eeb2e36
 license    : Apache-2.0
 component  : system.utils
 summary    : A cross-platform, GPU-accelerated terminal emulator
@@ -15,7 +15,7 @@ builddeps  :
     - pkgconfig(fontconfig)
     - pkgconfig(freetype2)
     - pkgconfig(scdoc)
-    - cargo
+    - rust
 build      : |
     make binary
 
@@ -33,5 +33,6 @@ install    : |
         install -Dm00644 extra/man/$fname $installdir/usr/share/man/man${fname##*.}/$fname
     done
 
-    install -Dm00644 extra/linux/Alacritty.desktop $installdir/usr/share/applications/alacritty.desktop
+    install -Dm00644 extra/linux/Alacritty.desktop $installdir/usr/share/applications/Alacritty.desktop
     install -Dm00644 extra/logo/alacritty-term+scanlines.svg $installdir/usr/share/icons/hicolor/scalable/apps/Alacritty.svg
+    install -Dm00644 extra/linux/org.alacritty.Alacritty.appdata.xml -t $installdir/usr/share/metainfo/

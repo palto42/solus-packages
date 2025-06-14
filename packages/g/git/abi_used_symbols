@@ -217,6 +217,7 @@ libc.so.6:strpbrk
 libc.so.6:strrchr
 libc.so.6:strspn
 libc.so.6:strstr
+libc.so.6:strtod
 libc.so.6:strtol
 libc.so.6:symlink
 libc.so.6:sync_file_range
@@ -270,6 +271,7 @@ libcurl.so.4:curl_multi_strerror
 libcurl.so.4:curl_multi_timeout
 libcurl.so.4:curl_slist_append
 libcurl.so.4:curl_slist_free_all
+libcurl.so.4:curl_version_info
 libexpat.so.1:XML_ErrorString
 libexpat.so.1:XML_GetErrorCode
 libexpat.so.1:XML_Parse
@@ -286,6 +288,7 @@ libglib-2.0.so.0:g_hash_table_new_full
 libglib-2.0.so.0:g_hash_table_unref
 libglib-2.0.so.0:g_list_free_full
 libglib-2.0.so.0:g_log
+libglib-2.0.so.0:g_malloc
 libglib-2.0.so.0:g_set_application_name
 libglib-2.0.so.0:g_str_equal
 libglib-2.0.so.0:g_str_has_prefix
@@ -348,8 +351,10 @@ libz.so.1:deflateBound
 libz.so.1:deflateEnd
 libz.so.1:deflateInit2_
 libz.so.1:deflateInit_
+libz.so.1:deflateReset
 libz.so.1:deflateSetHeader
 libz.so.1:inflate
 libz.so.1:inflateEnd
 libz.so.1:inflateInit2_
 libz.so.1:inflateInit_
+libz.so.1:inflateReset

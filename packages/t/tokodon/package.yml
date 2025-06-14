@@ -1,39 +1,46 @@
 name       : tokodon
-version    : 23.08.5
-release    : 3
+version    : 25.04.2
+release    : 21
 source     :
-    - https://cdn.download.kde.org/stable/release-service/23.08.5/src/tokodon-23.08.5.tar.xz : 4b887aa586712a771aa4a72dc4421b7e82839ecd406bcb47bc66db5fa6e81265
+    - https://download.kde.org/stable/release-service/25.04.2/src/tokodon-25.04.2.tar.xz : 399ed21708a67a4fc3f5fdffb1630af1be6a82d526b9b64d53e956eec7954bac
 homepage   : https://apps.kde.org/tokodon
 license    : GPL-3.0-or-later
 component  : desktop.kde
-summary    : A Mastodon client for Plasma and Plasma Mobile
+summary    : A Mastodon client for Plasma
 description: |
     A modern client for Mastodon and other decentralized servers that implement its API (such as Pixelfed).
 builddeps  :
-    - pkgconfig(Qt5Core)
-    - pkgconfig(Qt5Gui)
-    - pkgconfig(Qt5Quick)
-    - pkgconfig(Qt5QuickControls2)
-    - pkgconfig(Qt5Svg)
-    - pkgconfig(Qt5Test)
-    - pkgconfig(Qt5WebSockets)
-    - pkgconfig(Qt5WebView)
-    - pkgconfig(Qt5Widgets)
-    - extra-cmake-modules
-    - kconfig-devel
-    - kconfigwidgets-devel
-    - kcoreaddons-devel
-    - kdbusaddons-devel
-    - ki18n-devel
-    - kio-devel
+    - pkgconfig(Qt6Multimedia)
+    - pkgconfig(Qt6Quick)
+    - pkgconfig(Qt6QuickControls2)
+    - pkgconfig(Qt6Svg)
+    - pkgconfig(Qt6WebSockets)
+    - pkgconfig(Qt6WebView)
+    - kf6-kconfig-devel
+    - kf6-kcrash-devel
+    - kf6-kdbusaddons-devel
+    - kf6-ki18n-devel
+    - kf6-kio-devel
+    - kf6-kirigami-devel
+    - kf6-kitemmodels-devel
+    - kf6-knotifications-devel
+    - kf6-purpose-devel
+    - kf6-qqc2-desktop-style-devel
     - kirigami-addons-devel
-    - kirigami2-devel
-    - knotifications-devel
-    - mpv-libs-devel
-    - qqc2-desktop-style-devel
-    - qtkeychain-qt5-devel
+    - kunifiedpush-devel
+    - mpvqt-devel
+    - qtkeychain-qt6-devel
+rundeps    :
+    - kf6-kirigami
+    - kf6-kitemmodels
+    - kf6-qqc2-desktop-style
+    - kf6-sonnet
+clang      : yes
+optimize   :
+    - speed
+    - thin-lto
 setup      : |
-    %cmake_ninja
+    %cmake_kf6
 build      : |
     %ninja_build
 install    : |

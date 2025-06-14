@@ -13,7 +13,7 @@ libcairo-gobject.so.2
 libcairo.so.2
 libdbus-1.so.3
 libevent-2.1.so.7
-libffi.so.7
+libffi.so.8
 libfontconfig.so.1
 libfreetype.so.6
 libgcc_s.so.1
@@ -22,10 +22,8 @@ libgdk_pixbuf-2.0.so.0
 libgio-2.0.so.0
 libglib-2.0.so.0
 libgobject-2.0.so.0
-libgthread-2.0.so.0
 libgtk-3.so.0
-libicui18n.so.74
-libicuuc.so.74
+libjpeg.so.8
 libm.so.6
 libnspr4.so
 libnss3.so
@@ -36,7 +34,7 @@ libplc4.so
 libsmime3.so
 libssl3.so
 libstdc++.so.6
-libvpx.so.8
+libvpx.so.9
 libwebp.so.7
 libwebpdemux.so.2
 libxcb-shm.so.0

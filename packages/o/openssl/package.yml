@@ -1,8 +1,8 @@
 name       : openssl
-version    : 3.1.5
-release    : 48
+version    : 3.3.3
+release    : 54
 source     :
-    - https://www.openssl.org/source/openssl-3.1.5.tar.gz : 6ae015467dabf0469b139ada93319327be24b98251ffaeceda0221848dc09262
+    - https://github.com/openssl/openssl/releases/download/openssl-3.3.3/openssl-3.3.3.tar.gz : 712590fd20aaa60ec75d778fe5b810d6b829ca7fb1e530577917a131f9105539
 homepage   : https://www.openssl.org/
 license    : OpenSSL
 summary    : Cryptographic tools required by many packages
@@ -19,6 +19,7 @@ builddeps  :
     - libgcc-32bit
 setup      : |
     %patch -p1 -i $pkgfiles/0001-Use-OS-provided-copy-of-openssl.cnf-as-fallback.patch
+    %patch -p1 -i $pkgfiles/0001-Fix-soname-dynamic-loading.patch
     %patch -p1 -i $pkgfiles/ca-dir.patch
 
     if [[ -z "${EMUL32BUILD}" ]]; then

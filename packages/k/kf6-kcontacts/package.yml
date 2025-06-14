@@ -1,8 +1,8 @@
 name       : kf6-kcontacts
-version    : 6.0.0
-release    : 3
+version    : 6.14.0
+release    : 19
 source     :
-    - https://cdn.download.kde.org/stable/frameworks/6.0/kcontacts-6.0.0.tar.xz : 179c6748e555c5c028b02a4b9b165ede13a09cf5eaf0ea012366c9727d230ec4
+    - https://download.kde.org/stable/frameworks/6.14/kcontacts-6.14.0.tar.xz : 64fd6f2692dc5bea9bc720f52bfdb2880771d82db27e1c9c0f61ac846e503729
 homepage   : https://community.kde.org/Frameworks
 license    :
     - BSD-3-Clause

@@ -1,6 +1,7 @@
 <PISI>
     <Source>
         <Name>docker-buildx</Name>
+        <Homepage>https://github.com/docker/buildx/</Homepage>
         <Packager>
             <Name>Reilly Brogan</Name>
             <Email>solus@reillybrogan.com</Email>
@@ -23,9 +24,9 @@
         </Files>
     </Package>
     <History>
-        <Update release="11">
-            <Date>2024-03-07</Date>
-            <Version>0.13.0</Version>
+        <Update release="25">
+            <Date>2025-03-19</Date>
+            <Version>0.22.0</Version>
             <Comment>Packaging update</Comment>
             <Name>Reilly Brogan</Name>
             <Email>solus@reillybrogan.com</Email>

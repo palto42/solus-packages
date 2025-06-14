@@ -1,8 +1,8 @@
 name       : go-task
-version    : 3.35.1
-release    : 13
+version    : 3.42.1
+release    : 22
 source     :
-    - https://github.com/go-task/task/archive/refs/tags/v3.35.1.tar.gz : 09fec550ce19f531ebb94379cea747efff24f6da2465e5a60c53cf8cbae0d9ba
+    - https://github.com/go-task/task/archive/refs/tags/v3.42.1.tar.gz : ebda29f1ec14e3e78f6d1e89136822c8177cc0b6d214fac8b1f027abce3c9042
 license    : MIT
 component  : programming.tools
 networking : yes
@@ -15,15 +15,18 @@ builddeps  :
     - golang
 environment: |
     export GO111MODULE=auto
-    export GOFLAGS="-buildmode=pie -trimpath -mod=readonly -modcacherw -ldflags=-linkmode=external"
-    # Make sure the version ends up in the binary. go-releaser typically handles this but we're not using that
-    sed -i "s|version = \"\"|version = \"v$version\"|g" internal/version/version.go
+    export GOFLAGS="-buildmode=pie -trimpath -mod=readonly -modcacherw -ldflags=-linkmode=external -ldflags=-X=github.com/go-task/task/v3/internal/version.version=v$version"
+setup      : |
+    # Simplify the version string since we only care about the actual version, and this allows us to set it with a ldflag
+    %patch -p1 -i $pkgfiles/0001-solus-Simplify-version-code-for-build.patch
 
     # Unfortunately /usr/bin/task is already taken so we have to convert everything to go-task instead
     sed -i 's/complete -F _task task/complete -F _task go-task/' completion/bash/task.bash
     sed -i 's/set GO_TASK_PROGNAME task/set GO_TASK_PROGNAME go-task/' completion/fish/task.fish
     sed -i 's/#compdef task/#compdef go-task/' completion/zsh/_task
     sed -i 's/cmd=(task)/cmd=(go-task)/' completion/zsh/_task
+
+    go mod vendor
 build      : |
     go build -v -o bin ./cmd/task
 install    : |
@@ -34,6 +37,4 @@ install    : |
     install -Dm00644 completion/zsh/_task $installdir/usr/share/zsh/site-functions/_go-task
     install -Dm00644 completion/fish/task.fish $installdir/usr/share/fish/vendor_completions.d/go-task.fish
 check      : |
-    # Fix a couple of tests that are broken because we're overriding the version
-    sed -i "s|unknown|v$version|g" task_test.go
     go test ./...

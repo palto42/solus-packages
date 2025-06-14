@@ -1,0 +1,31 @@
+name       : qt6-webview
+version    : 6.9.1
+release    : 10
+source     :
+    - https://download.qt.io/official_releases/qt/6.9/6.9.1/submodules/qtwebview-everywhere-src-6.9.1.tar.xz : c29ad4fbb8f7a2042c4941bef88bb13bd04757eed94d6937ae69e0e4ea0d59a5
+license    :
+    - LGPL-3.0-only
+component  :
+    - desktop.qt
+    - demos : programming.library
+homepage   : https://www.qt.io
+summary    : Qt6 WebView Library
+description: |
+    Qt WebView provides a way to display web content in a QML application without necessarily including a full web browser stack by using native APIs where it makes sense.
+clang      : yes
+optimize   :
+    - speed
+    - thin-lto
+builddeps  :
+    - pkgconfig(Qt6Qml)
+    - pkgconfig(Qt6WebEngineCore)
+setup      : |
+    %cmake_ninja \
+                 -DCMAKE_MESSAGE_LOG_LEVEL=STATUS
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install
+patterns   :
+    - demos :
+        - /usr/lib64/qt6/examples

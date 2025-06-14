@@ -1,8 +1,8 @@
 name       : gstreamer-vaapi
-version    : 1.22.10
-release    : 22
+version    : 1.24.10
+release    : 34
 source     :
-    - https://gstreamer.freedesktop.org/src/gstreamer-vaapi/gstreamer-vaapi-1.22.10.tar.xz : 094ca144aca8f2c554a2517dfdc421fa37c80294c6f12b992c20cbc73aa2c0bd
+    - https://gstreamer.freedesktop.org/src/gstreamer-vaapi/gstreamer-vaapi-1.24.10.tar.xz : 21593dbde5c6bcdcfe99195defbe3c3f4da01cb85f8ec10aae943887d39d8a4c
 license    : LGPL-2.1-or-later
 component  : multimedia.gstreamer
 homepage   : https://gstreamer.freedesktop.org
@@ -14,14 +14,8 @@ description: |
     Includes elements for video decoding, display, encoding and post-processing
     using VA API (subject to hardware limitations).
 builddeps  :
-    - pkgconfig(gl)
     - pkgconfig(gstreamer-codecparsers-1.0)
     - pkgconfig(gtk+-3.0)
-    - pkgconfig(libdrm)
-    - pkgconfig(libudev)
-    - pkgconfig(libva)
-    - pkgconfig(vpx)
-    - pkgconfig(wayland-client)
     - pkgconfig(wayland-protocols)
     - pkgconfig(xrandr)
 setup      : |

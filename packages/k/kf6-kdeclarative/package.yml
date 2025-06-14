@@ -1,8 +1,8 @@
 name       : kf6-kdeclarative
-version    : 6.0.0
-release    : 3
+version    : 6.14.0
+release    : 20
 source     :
-    - https://cdn.download.kde.org/stable/frameworks/6.0/kdeclarative-6.0.0.tar.xz : 4671ebb7ee9ba2ed7a02d2c71dde90fe681be507e7d7913e79acb15dfce7b6f9
+    - https://download.kde.org/stable/frameworks/6.14/kdeclarative-6.14.0.tar.xz : ed0aa62653fe5a09bc44f584faaa633cb386f7a106cf9b5c930122ae86c0a1d0
 homepage   : https://community.kde.org/Frameworks
 license    :
     - BSD-3-Clause
@@ -16,12 +16,12 @@ summary    : Integration of QML and KDE work spaces
 description: |
     Integration of QML and KDE work spaces
 builddeps  :
+    - pkgconfig(KF6GuiAddons)
     - pkgconfig(Qt6Quick)
     - pkgconfig(Qt6ShaderTools)
     - pkgconfig(epoxy)
     - pkgconfig(x11)
     - kf6-kglobalaccel-devel
-    - kf6-kguiaddons-devel
     - kf6-kiconthemes-devel
     - kf6-kio-devel
     - kf6-knotifications-devel

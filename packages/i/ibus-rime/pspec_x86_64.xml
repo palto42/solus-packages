@@ -3,8 +3,8 @@
         <Name>ibus-rime</Name>
         <Homepage>https://github.com/rime/ibus-rime</Homepage>
         <Packager>
-            <Name>Zach Bacon</Name>
-            <Email>zachbacon@vba-m.com</Email>
+            <Name>Gavin Zhao</Name>
+            <Email>me@gzgz.dev</Email>
         </Packager>
         <License>GPL-3.0-or-later</License>
         <PartOf>desktop.core</PartOf>
@@ -150,12 +150,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="6">
-            <Date>2023-10-17</Date>
+        <Update release="9">
+            <Date>2024-06-06</Date>
             <Version>1.5.0</Version>
             <Comment>Packaging update</Comment>
-            <Name>Zach Bacon</Name>
-            <Email>zachbacon@vba-m.com</Email>
+            <Name>Gavin Zhao</Name>
+            <Email>me@gzgz.dev</Email>
         </Update>
     </History>
 </PISI>

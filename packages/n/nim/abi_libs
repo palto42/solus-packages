@@ -1,6 +1,8 @@
+atlas
+libnimrtl.so
 nim
+nim_dbg
 nimble
-nimfind
 nimgrep
 nimpretty
 nimsuggest

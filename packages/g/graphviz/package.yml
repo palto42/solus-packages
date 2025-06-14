@@ -1,8 +1,8 @@
 name       : graphviz
-version    : 9.0.0
-release    : 33
+version    : 12.2.1
+release    : 36
 source     :
-    - https://gitlab.com/graphviz/graphviz/-/archive/9.0.0/graphviz-9.0.0.tar.gz : 504d19b5d0e5398a57e9d9de42393f90b9e79aff0969b4ebc3b891ccb39602ed
+    - https://gitlab.com/api/v4/projects/4207231/packages/generic/graphviz-releases/12.2.1/graphviz-12.2.1.tar.gz : 242bc18942eebda6db4039f108f387ec97856fc91ba47f21e89341c34b554df8
 homepage   : https://www.graphviz.org
 license    : EPL-1.0
 component  : multimedia.graphics
@@ -11,7 +11,8 @@ summary    : Graphviz is open source graph visualization software
 description: |
     Graphviz is open source graph visualization software
 builddeps  :
-    - pkgconfig(Qt5Core)
+    - pkgconfig(Qt6Core)
+    - pkgconfig(gdk-3.0)
     - pkgconfig(gdk-pixbuf-2.0)
     - pkgconfig(glu)
     - pkgconfig(glut)
@@ -28,8 +29,7 @@ patterns   :
     - devel :
         - /usr/lib64/graphviz/*.so
 setup      : |
-    %patch -p1 -i $pkgfiles/ghostscript918.patch
-    %autogen
+    %configure
 build      : |
     %make
 install    : |

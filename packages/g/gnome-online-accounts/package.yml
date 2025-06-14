@@ -1,29 +1,31 @@
 name       : gnome-online-accounts
-version    : 3.48.0
-release    : 43
+version    : 3.54.3
+release    : 58
 source     :
-    - https://download.gnome.org/sources/gnome-online-accounts/3.48/gnome-online-accounts-3.48.0.tar.xz : 418bb9fcffdbd72a98205ad365137617fc1e3551a54de74f6a98d45d266175bf
-homepage   : https://wiki.gnome.org/Projects/GnomeOnlineAccounts
+    - https://download.gnome.org/sources/gnome-online-accounts/3.54/gnome-online-accounts-3.54.3.tar.xz : bcf655dd1ddc22bc25793b6840da19f5cad7ba0b7227ff969ed9c252f036aac5
+homepage   : https://gnome.pages.gitlab.gnome.org/gnome-online-accounts/
 license    : GPL-2.0-or-later
 component  : desktop.gnome.core
 summary    : The GNOME Online Accounts package contains a framework used to access the user's online accounts
 description: |
     GNOME Online Accounts is a single sign-on framework for GNOME. It aims to provide a way for users to setup online accounts to be used by the core system and core applications only.
+optimize   :
+    - lto
 builddeps  :
-    - pkgconfig(gcr-3)
+    - pkgconfig(gcr-4)
     - pkgconfig(gobject-introspection-1.0)
-    - pkgconfig(gtk+-3.0)
-    - pkgconfig(ice)
+    - pkgconfig(gtk4)
     - pkgconfig(json-glib-1.0)
     - pkgconfig(krb5)
+    - pkgconfig(libadwaita-1)
+    - pkgconfig(libkeyutils)
     - pkgconfig(libsecret-1)
     - pkgconfig(rest-1.0)
-    - pkgconfig(webkit2gtk-4.1)
     - docbook-xml
     - vala
 setup      : |
-    %meson_configure
+    %meson_configure -Ddocumentation=false
 build      : |
-    %ninja_build -j4
+    %ninja_build
 install    : |
     %ninja_install

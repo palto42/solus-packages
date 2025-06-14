@@ -1,16 +1,17 @@
 <PISI>
     <Source>
         <Name>pciutils</Name>
+        <Homepage>https://mj.ucw.cz/sw/pciutils/</Homepage>
         <Packager>
-            <Name>Thomas Staudinger</Name>
-            <Email>Staudi.Kaos@gmail.com</Email>
+            <Name>Reilly Brogan</Name>
+            <Email>solus@reillybrogan.com</Email>
         </Packager>
         <License>GPL-2.0-only</License>
         <PartOf>system.utils</PartOf>
         <Summary xml:lang="en">Utilities to deal with PCI bus</Summary>
         <Description xml:lang="en">The PCI Utilities are a collection of programs for inspecting and manipulating configuration of PCI devices, all based on a common portable library libpci which offers access to the PCI configuration space on a variety of operating systems.
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>pciutils</Name>
@@ -21,12 +22,14 @@
         <Files>
             <Path fileType="executable">/usr/bin/lspci</Path>
             <Path fileType="library">/usr/lib64/libpci.so.3</Path>
-            <Path fileType="library">/usr/lib64/libpci.so.3.7.0</Path>
+            <Path fileType="library">/usr/lib64/libpci.so.3.13.0</Path>
+            <Path fileType="executable">/usr/sbin/pcilmr</Path>
             <Path fileType="executable">/usr/sbin/setpci</Path>
             <Path fileType="executable">/usr/sbin/update-pciids</Path>
             <Path fileType="man">/usr/share/man/man5/pci.ids.5</Path>
             <Path fileType="man">/usr/share/man/man7/pcilib.7</Path>
             <Path fileType="man">/usr/share/man/man8/lspci.8</Path>
+            <Path fileType="man">/usr/share/man/man8/pcilmr.8</Path>
             <Path fileType="man">/usr/share/man/man8/setpci.8</Path>
             <Path fileType="man">/usr/share/man/man8/update-pciids.8</Path>
         </Files>
@@ -38,11 +41,11 @@
 </Description>
         <PartOf>emul32</PartOf>
         <RuntimeDependencies>
-            <Dependency release="12">pciutils</Dependency>
+            <Dependency release="14">pciutils</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib32/libpci.so.3</Path>
-            <Path fileType="library">/usr/lib32/libpci.so.3.7.0</Path>
+            <Path fileType="library">/usr/lib32/libpci.so.3.13.0</Path>
         </Files>
     </Package>
     <Package>
@@ -52,8 +55,8 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="12">pciutils-32bit</Dependency>
-            <Dependency release="12">pciutils-devel</Dependency>
+            <Dependency release="14">pciutils-32bit</Dependency>
+            <Dependency release="14">pciutils-devel</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib32/libpci.so</Path>
@@ -67,7 +70,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="12">pciutils</Dependency>
+            <Dependency release="14">pciutils</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/pci/config.h</Path>
@@ -79,12 +82,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="12">
-            <Date>2022-04-06</Date>
-            <Version>3.7.0</Version>
+        <Update release="14">
+            <Date>2024-07-01</Date>
+            <Version>3.13.0</Version>
             <Comment>Packaging update</Comment>
-            <Name>Thomas Staudinger</Name>
-            <Email>Staudi.Kaos@gmail.com</Email>
+            <Name>Reilly Brogan</Name>
+            <Email>solus@reillybrogan.com</Email>
         </Update>
     </History>
 </PISI>

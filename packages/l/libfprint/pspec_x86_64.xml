@@ -1,16 +1,17 @@
 <PISI>
     <Source>
         <Name>libfprint</Name>
+        <Homepage>https://fprint.freedesktop.org/</Homepage>
         <Packager>
-            <Name>F. von Gellhorn</Name>
-            <Email>flinux@vongellhorn.ch</Email>
+            <Name>Robert Gonzalez</Name>
+            <Email>uni.dos12@outlook.com</Email>
         </Packager>
         <License>LGPL-2.1-or-later</License>
         <PartOf>desktop.library</PartOf>
         <Summary xml:lang="en">Library for fingerprint readers</Summary>
         <Description xml:lang="en">libfprint is an open source software library designed to make it easy for application developers to add support for consumer fingerprint readers to their software.
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>libfprint</Name>
@@ -23,7 +24,7 @@
             <Path fileType="library">/usr/lib64/girepository-1.0/FPrint-2.0.typelib</Path>
             <Path fileType="library">/usr/lib64/libfprint-2.so.2</Path>
             <Path fileType="library">/usr/lib64/libfprint-2.so.2.0.0</Path>
-            <Path fileType="data">/usr/share/gir-1.0/FPrint-2.0.gir</Path>
+            <Path fileType="data">/usr/share/metainfo/org.freedesktop.libfprint.metainfo.xml</Path>
         </Files>
     </Package>
     <Package>
@@ -33,7 +34,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="6">libfprint</Dependency>
+            <Dependency release="9">libfprint</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/libfprint-2/fp-context.h</Path>
@@ -45,6 +46,7 @@
             <Path fileType="header">/usr/include/libfprint-2/fprint.h</Path>
             <Path fileType="library">/usr/lib64/libfprint-2.so</Path>
             <Path fileType="data">/usr/lib64/pkgconfig/libfprint-2.pc</Path>
+            <Path fileType="data">/usr/share/gir-1.0/FPrint-2.0.gir</Path>
         </Files>
     </Package>
     <Package>
@@ -94,12 +96,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="6">
-            <Date>2022-03-22</Date>
-            <Version>1.94.3</Version>
+        <Update release="9">
+            <Date>2025-04-08</Date>
+            <Version>1.94.9</Version>
             <Comment>Packaging update</Comment>
-            <Name>F. von Gellhorn</Name>
-            <Email>flinux@vongellhorn.ch</Email>
+            <Name>Robert Gonzalez</Name>
+            <Email>uni.dos12@outlook.com</Email>
         </Update>
     </History>
 </PISI>

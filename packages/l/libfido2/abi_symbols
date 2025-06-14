@@ -145,6 +145,7 @@ libfido2.so.1:fido_cred_clientdata_hash_len
 libfido2.so.1:fido_cred_clientdata_hash_ptr
 libfido2.so.1:fido_cred_display_name
 libfido2.so.1:fido_cred_empty_exclude_list
+libfido2.so.1:fido_cred_entattest
 libfido2.so.1:fido_cred_exclude
 libfido2.so.1:fido_cred_flags
 libfido2.so.1:fido_cred_fmt
@@ -160,12 +161,14 @@ libfido2.so.1:fido_cred_pubkey_len
 libfido2.so.1:fido_cred_pubkey_ptr
 libfido2.so.1:fido_cred_rp_id
 libfido2.so.1:fido_cred_rp_name
+libfido2.so.1:fido_cred_set_attobj
 libfido2.so.1:fido_cred_set_attstmt
 libfido2.so.1:fido_cred_set_authdata
 libfido2.so.1:fido_cred_set_authdata_raw
 libfido2.so.1:fido_cred_set_blob
 libfido2.so.1:fido_cred_set_clientdata
 libfido2.so.1:fido_cred_set_clientdata_hash
+libfido2.so.1:fido_cred_set_entattest
 libfido2.so.1:fido_cred_set_extensions
 libfido2.so.1:fido_cred_set_fmt
 libfido2.so.1:fido_cred_set_id
@@ -189,6 +192,9 @@ libfido2.so.1:fido_cred_user_name
 libfido2.so.1:fido_cred_verify
 libfido2.so.1:fido_cred_verify_self
 libfido2.so.1:fido_cred_x5c_len
+libfido2.so.1:fido_cred_x5c_list_count
+libfido2.so.1:fido_cred_x5c_list_len
+libfido2.so.1:fido_cred_x5c_list_ptr
 libfido2.so.1:fido_cred_x5c_ptr
 libfido2.so.1:fido_credman_del_dev_rk
 libfido2.so.1:fido_credman_get_dev_metadata

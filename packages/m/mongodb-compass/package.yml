@@ -1,8 +1,9 @@
 name       : mongodb-compass
-version    : 1.39.0
-release    : 13
+version    : 1.43.0
+release    : 15
 source     :
-    - https://github.com/mongodb-js/compass/archive/refs/tags/v1.39.0.tar.gz : dc9953c0184f22d86c0bfd853af5cd39580cfd1f89a2dc1f82fbb3941e13965f
+    - https://github.com/mongodb-js/compass/archive/refs/tags/v1.43.0.tar.gz : 13df0ab4ea4abc7db8c3e8e071bfac003ebe50197e24f24fcdcc1932f4384758
+homepage   : https://www.mongodb.com/products/tools/compass
 license    : SSPL-1.0
 component  : database
 summary    : MongoDB management GUI
@@ -15,9 +16,10 @@ builddeps  :
     - pkgconfig(libdrm)
     - pkgconfig(libsecret-1)
     - git
-    - nodejs
-rundeps    :
-    - nodejs
+    - lerna
+# Maybe we can get away without depping on this
+# rundeps    :
+#     - nodejs
 setup      : |
     # Disable husky command
     sed -i '/husky install/d' 'package.json'
@@ -25,8 +27,11 @@ setup      : |
     # Run the first part of npm run bootstrap
     npm install
 
+    # Fixes `Error: Unknown version 29.3 of electron.`
+    npm i -S -w @mongodb-js/webpack-config-compass browserslist@4.23.1
+
     # Run the second part of npm run bootstrap
-    npx lerna run bootstrap --stream
+    lerna run bootstrap --stream
 
     %patch -p1 -i $pkgfiles/Package-only-Solus-bits.patch
 build      : |

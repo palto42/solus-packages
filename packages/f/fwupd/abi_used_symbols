@@ -54,7 +54,6 @@ libc.so.6:__fdelt_chk
 libc.so.6:__isoc23_sscanf
 libc.so.6:__libc_start_main
 libc.so.6:__memcpy_chk
-libc.so.6:__open64_2
 libc.so.6:__realpath_chk
 libc.so.6:__stack_chk_fail
 libc.so.6:_exit
@@ -130,7 +129,7 @@ libcurl.so.4:curl_easy_strerror
 libcurl.so.4:curl_free
 libcurl.so.4:curl_mime_addpart
 libcurl.so.4:curl_mime_data
-libcurl.so.4:curl_mime_filedata
+libcurl.so.4:curl_mime_filename
 libcurl.so.4:curl_mime_free
 libcurl.so.4:curl_mime_init
 libcurl.so.4:curl_mime_name
@@ -225,7 +224,6 @@ libgio-2.0.so.0:g_dbus_server_new_sync
 libgio-2.0.so.0:g_dbus_server_start
 libgio-2.0.so.0:g_file_append_to
 libgio-2.0.so.0:g_file_copy
-libgio-2.0.so.0:g_file_create
 libgio-2.0.so.0:g_file_delete
 libgio-2.0.so.0:g_file_get_child
 libgio-2.0.so.0:g_file_get_parent
@@ -307,9 +305,9 @@ libgio-2.0.so.0:g_unix_fd_list_get_length
 libgio-2.0.so.0:g_unix_fd_list_new
 libgio-2.0.so.0:g_unix_input_stream_get_fd
 libgio-2.0.so.0:g_unix_input_stream_new
-libgio-2.0.so.0:g_unix_mount_at
-libgio-2.0.so.0:g_unix_mount_free
-libgio-2.0.so.0:g_unix_mount_is_readonly
+libgio-2.0.so.0:g_unix_mount_entry_at
+libgio-2.0.so.0:g_unix_mount_entry_free
+libgio-2.0.so.0:g_unix_mount_entry_is_readonly
 libgio-2.0.so.0:g_unix_output_stream_new
 libgio-2.0.so.0:g_zlib_compressor_new
 libgio-2.0.so.0:g_zlib_decompressor_new
@@ -494,8 +492,8 @@ libglib-2.0.so.0:g_node_n_children
 libglib-2.0.so.0:g_node_n_nodes
 libglib-2.0.so.0:g_node_new
 libglib-2.0.so.0:g_node_traverse
-libglib-2.0.so.0:g_once_init_enter
-libglib-2.0.so.0:g_once_init_leave
+libglib-2.0.so.0:g_once_init_enter_pointer
+libglib-2.0.so.0:g_once_init_leave_pointer
 libglib-2.0.so.0:g_option_context_add_group
 libglib-2.0.so.0:g_option_context_add_main_entries
 libglib-2.0.so.0:g_option_context_free
@@ -588,6 +586,7 @@ libglib-2.0.so.0:g_string_append_vprintf
 libglib-2.0.so.0:g_string_ascii_down
 libglib-2.0.so.0:g_string_ascii_up
 libglib-2.0.so.0:g_string_assign
+libglib-2.0.so.0:g_string_equal
 libglib-2.0.so.0:g_string_erase
 libglib-2.0.so.0:g_string_free
 libglib-2.0.so.0:g_string_free_and_steal
@@ -635,7 +634,6 @@ libglib-2.0.so.0:g_unichar_iszerowidth
 libglib-2.0.so.0:g_unix_signal_add_full
 libglib-2.0.so.0:g_unix_signal_source_new
 libglib-2.0.so.0:g_unlink
-libglib-2.0.so.0:g_unsetenv
 libglib-2.0.so.0:g_uri_escape_string
 libglib-2.0.so.0:g_usleep
 libglib-2.0.so.0:g_utf16_to_utf8
@@ -749,12 +747,15 @@ libgobject-2.0.so.0:g_signal_handler_unblock
 libgobject-2.0.so.0:g_signal_handlers_disconnect_matched
 libgobject-2.0.so.0:g_signal_new
 libgobject-2.0.so.0:g_type_add_instance_private
+libgobject-2.0.so.0:g_type_add_interface_static
 libgobject-2.0.so.0:g_type_check_instance_is_a
 libgobject-2.0.so.0:g_type_check_instance_is_fundamentally_a
 libgobject-2.0.so.0:g_type_class_adjust_private_offset
 libgobject-2.0.so.0:g_type_class_peek_parent
 libgobject-2.0.so.0:g_type_ensure
 libgobject-2.0.so.0:g_type_from_name
+libgobject-2.0.so.0:g_type_interface_add_prerequisite
+libgobject-2.0.so.0:g_type_interface_peek
 libgobject-2.0.so.0:g_type_is_a
 libgobject-2.0.so.0:g_type_name
 libgobject-2.0.so.0:g_type_register_static_simple
@@ -1086,9 +1087,9 @@ libxmlb.so.2:xb_node_get_element
 libxmlb.so.2:xb_node_get_silo
 libxmlb.so.2:xb_node_get_tail
 libxmlb.so.2:xb_node_get_text
-libxmlb.so.2:xb_node_get_text_as_uint
 libxmlb.so.2:xb_node_get_type
 libxmlb.so.2:xb_node_query
+libxmlb.so.2:xb_node_query_attr
 libxmlb.so.2:xb_node_query_first
 libxmlb.so.2:xb_node_query_first_full
 libxmlb.so.2:xb_node_query_full
@@ -1113,6 +1114,7 @@ libxmlb.so.2:xb_silo_query_first_with_context
 libxmlb.so.2:xb_silo_query_with_context
 libxmlb.so.2:xb_string_append_union
 libxmlb.so.2:xb_value_bindings_bind_str
+libxmlb.so.2:xb_version_string
 libz.so.1:deflate
 libz.so.1:deflateEnd
 libz.so.1:deflateInit2_

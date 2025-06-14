@@ -1,11 +1,12 @@
 name       : polychromatic
-version    : 0.8.0
-release    : 23
+version    : 0.9.5
+release    : 28
 source     :
-    - https://github.com/polychromatic/polychromatic/archive/v0.8.0.tar.gz : b751a226a22d01018c25a72222f410dfb6cd4260eda4225da70b884be499bf00
+    - https://github.com/polychromatic/polychromatic/archive/refs/tags/v0.9.5.tar.gz : a8c9c84f27d1ada1ce9d3da6ad4d6f361edc79f8e348c2206d19c3af4203a770
 license    : GPL-3.0-or-later
 component  : system.utils
 networking : yes
+homepage   : https://polychromatic.app
 summary    : Graphical front end and tray applet for configuring Razer peripherals
 description: |
     A front-end for customising the functionality of your Razer perpherials.
@@ -18,13 +19,20 @@ rundeps    :
     - python-colorama
     - python-colour
     - python-gobject
-    - python-setproctitle
-    - python-qtwebengine
+    - python-pyqt6-webengine
+    - python-qt6
     - python-requests
-    - python3-qt5
+    - python-setproctitle
 setup      : |
     %meson_configure
 build      : |
     %ninja_build
 install    : |
     %ninja_install
+
+    # Move to stateless path
+    install -Dm00644 $installdir/etc/xdg/autostart/polychromatic-autostart.desktop -t $installdir/usr/share/xdg/autostart/
+    rm -v $installdir/etc/xdg/autostart/polychromatic-autostart.desktop
+    rmdir -v $installdir/etc/xdg/autostart/ \
+             $installdir/etc/xdg/ \
+             $installdir/etc/

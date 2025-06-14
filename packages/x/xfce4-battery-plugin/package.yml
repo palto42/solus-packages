@@ -1,0 +1,21 @@
+name       : xfce4-battery-plugin
+version    : 1.2.0
+release    : 3
+source     :
+    - https://archive.xfce.org/src/panel-plugins/xfce4-battery-plugin/1.2/xfce4-battery-plugin-1.2.0.tar.xz : 1dba8f470d2b12517e7b86d83cd2ebf13eb57ff1a01a4f2d2d156cf5194d97b6
+homepage   : https://docs.xfce.org/panel-plugins/xfce4-battery-plugin/start
+license    : GPL-2.0-or-later
+component  : desktop.xfce
+summary    : A battery monitor panel plugin for Xfce4, compatible with APM and ACPI, for Linux and *BSD.
+description: |
+    A battery monitor panel plugin for Xfce4, compatible with APM and ACPI, for Linux and *BSD.
+builddeps  :
+    - pkgconfig(libxfce4panel-2.0)
+    - pkgconfig(libxfce4ui-2)
+    - pkgconfig(libxfce4util-1.0)
+setup      : |
+    %meson_configure
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install

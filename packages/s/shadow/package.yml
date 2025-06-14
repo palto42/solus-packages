@@ -1,8 +1,8 @@
 name       : shadow
-version    : 4.14.5
-release    : 27
+version    : 4.15.3
+release    : 37
 source     :
-    - https://github.com/shadow-maint/shadow/releases/download/4.14.5/shadow-4.14.5.tar.xz : cba74bc7b05d89c015afe23131f9159ece38779d40a8af4cf162852e6e85ca23
+    - https://github.com/shadow-maint/shadow/releases/download/4.15.3/shadow-4.15.3.tar.xz : fd22f56f29395bdb72028d01ca6d44c0fa02ca3c2b1d6e8a4c6c115249301242
 license    : BSD-3-Clause
 component  : system.base
 homepage   : https://github.com/shadow-maint/shadow
@@ -17,18 +17,18 @@ builddeps  :
 setup      : |
     %patch -p1 -i $pkgfiles/0001-Adapt-login.defs-for-PAM-and-util-linux.patch
     %patch -p1 -i $pkgfiles/0002-Solus-login.defs-changes.patch
+    %patch -p1 -i $pkgfiles/0001-Always-initialize-econf_file.patch
 
     # add extra check, preventing accidental deletion of other user's home dirs when using `userdel -r <user with home in />`
     export CFLAGS="$CFLAGS -DEXTRA_CHECK_HOME_DIR"
 
-    # File capabilities are not supported by ypkg yet, so use suid for newgidmap/newuidmap
     %configure \
                --disable-account-tools-setuid \
                --enable-man \
                --enable-vendordir=/usr/share/defaults/etc/ \
+               --with-fcaps \
                --with-libpam \
                --with-yescrypt \
-               --without-fcaps \
                --without-libbsd \
                --without-nscd \
                --without-su
@@ -97,13 +97,17 @@ install    : |
         install -D -d -m 00755 $installdir/$TOP
         pushd $installdir/usr/$TOP
         for FILE in *; do
-            ln -sv /usr/$TOP/$FILE $installdir/$TOP/$FILE
+            ln -srv $installdir/usr/$TOP/$FILE $installdir/$TOP/$FILE
         done
         popd
     done
 
     # Cleanup
     find $installdir -type d -empty -print -delete
+
+    # Without setuid on /usr/bin/new{u,g}idmap, user namespaces do not work
+    # (this breaks e.g. boulder)
+    chmod -c u+s $installdir/usr/bin/new{u,g}idmap
 
 ## TODO:
 # - Stateless /etc/skel

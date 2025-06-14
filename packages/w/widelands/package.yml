@@ -1,8 +1,8 @@
 name       : widelands
-version    : '1.1'
-release    : 29
+version    : 1.2.1
+release    : 33
 source     :
-    - https://github.com/widelands/widelands/archive/refs/tags/v1.1.tar.gz : 6853fcf3daec9b66005691e5bcb00326634baf0985ad89a7e6511502612f6412
+    - https://github.com/widelands/widelands/archive/refs/tags/v1.2.1.tar.gz : 799bfd32048ef20118c48e21f3fc843ae0451c42bb8bf2eabcb9b26bf6fe54b4
 license    : GPL-2.0-or-later
 homepage   : https://www.widelands.org/
 component  : games.strategy
@@ -23,7 +23,6 @@ builddeps  :
 setup      : |
     %patch -p1 -i $pkgfiles/widelands-1.1-f37-sys-minizip-buildfix.patch
     %patch -p1 -i $pkgfiles/0001-minizip-ng-compat.patch
-    %patch -p1 -i $pkgfiles/gcc13.patch
 
     %cmake_ninja -DCMAKE_BUILD_TYPE=Release \
                  -DOPTION_BUILD_TESTS=OFF \

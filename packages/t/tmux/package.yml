@@ -1,8 +1,8 @@
 name       : tmux
-version    : '3.4'
-release    : 21
+version    : 3.5.1
+release    : 25
 source     :
-    - https://github.com/tmux/tmux/archive/refs/tags/3.4.tar.gz : ec7ddf021a0a1d3778862feb845fd0c02759dcdb37ba5380ba4e0038164f7187
+    - https://github.com/tmux/tmux/archive/refs/tags/3.5a.tar.gz : 49e68b41dec0bf408990160ee12fa29b06dee8f74c1f0b4b71c9d2a1477dd910
 homepage   : https://github.com/tmux/tmux/wiki
 license    : 0BSD
 component  : system.utils

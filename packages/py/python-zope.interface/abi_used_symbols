@@ -1,7 +1,8 @@
 UNKNOWN:PyArg_ParseTuple
 UNKNOWN:PyArg_ParseTupleAndKeywords
-UNKNOWN:PyBaseObject_Type
+UNKNOWN:PyBool_Type
 UNKNOWN:PyDict_GetItem
+UNKNOWN:PyDict_GetItemString
 UNKNOWN:PyDict_New
 UNKNOWN:PyDict_SetItem
 UNKNOWN:PyErr_Clear
@@ -14,8 +15,10 @@ UNKNOWN:PyExc_TypeError
 UNKNOWN:PyExc_ValueError
 UNKNOWN:PyImport_ImportModule
 UNKNOWN:PyList_New
+UNKNOWN:PyLong_Type
+UNKNOWN:PyModuleDef_Init
 UNKNOWN:PyModule_AddObject
-UNKNOWN:PyModule_Create2
+UNKNOWN:PyModule_GetState
 UNKNOWN:PyObject_CallFunctionObjArgs
 UNKNOWN:PyObject_CallMethodObjArgs
 UNKNOWN:PyObject_CallObject
@@ -24,7 +27,7 @@ UNKNOWN:PyObject_GC_UnTrack
 UNKNOWN:PyObject_GetAttr
 UNKNOWN:PyObject_GetAttrString
 UNKNOWN:PyObject_GetItem
-UNKNOWN:PyObject_HasAttr
+UNKNOWN:PyObject_HasAttrString
 UNKNOWN:PyObject_Hash
 UNKNOWN:PyObject_IsInstance
 UNKNOWN:PyObject_IsTrue
@@ -35,8 +38,9 @@ UNKNOWN:PyTuple_GetSlice
 UNKNOWN:PyTuple_New
 UNKNOWN:PyTuple_Pack
 UNKNOWN:PyTuple_Type
+UNKNOWN:PyType_FromModuleAndSpec
+UNKNOWN:PyType_GetModuleByDef
 UNKNOWN:PyType_IsSubtype
-UNKNOWN:PyType_Ready
 UNKNOWN:PyUnicode_FromString
 UNKNOWN:Py_BuildValue
 UNKNOWN:_Py_Dealloc
@@ -44,4 +48,5 @@ UNKNOWN:_Py_FalseStruct
 UNKNOWN:_Py_NoneStruct
 UNKNOWN:_Py_NotImplementedStruct
 UNKNOWN:_Py_TrueStruct
+libc.so.6:__assert_fail
 libc.so.6:__stack_chk_fail

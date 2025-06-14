@@ -1,0 +1,20 @@
+name       : libopenrazer
+version    : 0.4.0
+release    : 3
+source     :
+    - https://github.com/z3ntu/libopenrazer/archive/refs/tags/v0.4.0.tar.gz : faedf2922f0b39abe26cedbb4ad5ab88d00af18a3691f7d73583e343a5179a63
+homepage   : https://github.com/z3ntu/libopenrazer/
+license    : GPL-3.0-or-later
+component  : desktop.library
+summary    : Qt wrapper around the D-Bus API from OpenRazer
+description: |
+    Qt wrapper around the D-Bus API from OpenRazer
+builddeps  :
+    - pkgconfig(Qt6Core)
+    - pkgconfig(Qt6Help)
+setup      : |
+    %meson_configure
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install

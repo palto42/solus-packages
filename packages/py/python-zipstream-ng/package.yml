@@ -1,0 +1,23 @@
+name       : python-zipstream-ng
+version    : 1.8.0
+release    : 3
+source     :
+    - https://files.pythonhosted.org/packages/source/z/zipstream-ng/zipstream_ng-1.8.0.tar.gz : b7129d2c15d26934b3e1cb22256593b6bdbd03c553c26f4199a5bf05110642bc
+homepage   : https://github.com/pR0Ps/zipstream-ng
+license    : LGPL-3.0-only
+component  : programming.python
+summary    : A modern and easy to use streamable zip file generator
+description: |
+    A modern and easy to use streamable zip file generator. It can package and stream many files and folders into a zip on the fly without needing temporary files or excessive memory. It can also calculate the final size of the zip file before streaming it.
+builddeps  :
+    - python-build
+    - python-installer
+    - python-setuptools
+checkdeps  :
+    - python-pytest
+build      : |
+    %python3_setup
+install    : |
+    %python3_install
+check      : |
+    %python3_test pytest -v

@@ -1,8 +1,8 @@
 name       : iso-codes
-version    : 4.16.0
-release    : 13
+version    : 4.18.0
+release    : 15
 source     :
-    - https://salsa.debian.org/iso-codes-team/iso-codes/-/archive/v4.16.0/iso-codes-v4.16.0.tar.gz : 7c990fc39a05975bedb0175e3ff09fc383048815f68b462abbf055a8032e66cc
+    - https://salsa.debian.org/iso-codes-team/iso-codes/-/archive/v4.18.0/iso-codes-v4.18.0.tar.gz : 511f67bf4b51aa77f17c45adbff533242b50f1e370fe49a5706b6341902fac87
 license    : LGPL-2.1-only
 component  : system.base
 homepage   : https://salsa.debian.org/iso-codes-team/iso-codes

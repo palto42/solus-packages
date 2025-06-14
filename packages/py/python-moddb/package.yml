@@ -1,19 +1,22 @@
 name       : python-moddb
-version    : 0.10.0
-release    : 5
+version    : 0.12.0
+release    : 8
 source     :
-    - https://pypi.io/packages/source/m/moddb/moddb-0.10.0.tar.gz : 42784e1b34328a87113ad2a51e8ba5c99e6169657a4117d2be37d61b26aaadb5
+    - https://files.pythonhosted.org/packages/source/m/moddb/moddb-0.12.0.tar.gz : 75ac2f1c37860bfb28302527bb58529bd35a408e86d01dc82323b672fae5278c
 homepage   : https://github.com/ClementJ18/moddb
 license    : MIT
 component  : programming.python
 summary    : A scrapper for ModDB Mod and Game pages
 description: |
     The goal of this library is to be able to navigate ModDB purely programmatically through scraping and parsing of the various models present on the website.
+builddeps  :
+    - python-build
+    - python-installer
+    - python-setuptools
 rundeps    :
     - python-beautifulsoup4
     - python-pyrate-limiter
     - python-requests
-    - python-toolz
 build      : |
     %python3_setup
 install    : |

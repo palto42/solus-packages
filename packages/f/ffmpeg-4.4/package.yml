@@ -1,8 +1,8 @@
 name       : ffmpeg-4.4
-version    : 4.4.4
-release    : 2
+version    : 4.4.6
+release    : 9
 source     :
-    - https://ffmpeg.org/releases/ffmpeg-4.4.4.tar.xz : e80b380d595c809060f66f96a5d849511ef4a76a26b76eacf5778b94c3570309
+    - https://ffmpeg.org/releases/ffmpeg-4.4.6.tar.xz : 2290461f467c08ab801731ed412d8e724a5511d6c33173654bd9c1d2e25d0617
 license    :
     - GPL-3.0-or-later
     - LGPL-3.0-or-later
@@ -49,6 +49,8 @@ builddeps  :
     - lame-devel
     - xvidcore-devel
 clang      : yes
+environment: |
+    export CFLAGS="${CFLAGS} -Wno-incompatible-pointer-types"
 setup      : |
     %apply_patches
 

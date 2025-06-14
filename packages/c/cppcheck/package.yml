@@ -1,8 +1,8 @@
 name       : cppcheck
-version    : 2.13.4
-release    : 25
+version    : 2.17.1
+release    : 31
 source     :
-    - https://github.com/danmar/cppcheck/archive/refs/tags/2.13.4.tar.gz : d6ea064ebab76c6aa000795440479767d8d814dd29405918df4c1bbfcd6cb86c
+    - https://github.com/danmar/cppcheck/archive/refs/tags/2.17.1.tar.gz : bfd681868248ec03855ca7c2aea7bcb1f39b8b18860d76aec805a92a967b966c
 homepage   : https://cppcheck.sourceforge.io/
 license    : GPL-3.0-or-later
 component  : programming.tools
@@ -12,7 +12,7 @@ description: |
 builddeps  :
     - pcre2
 setup      : |
-    %cmake_ninja . -DBUILD_TESTS=ON -DHAVE_RULES=OFF -DUSE_MATCHCOMPILER=ON
+    %cmake_ninja . -DBUILD_TESTS=ON -DHAVE_RULES=OFF -DUSE_MATCHCOMPILER=On
 build      : |
     %ninja_build
 install    : |

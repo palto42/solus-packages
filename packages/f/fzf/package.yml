@@ -1,8 +1,9 @@
 name       : fzf
-version    : 0.40.0
-release    : 27
+version    : 0.62.0
+release    : 41
 source     :
-    - git|https://github.com/junegunn/fzf : 0.40.0
+    - git|https://github.com/junegunn/fzf : v0.62.0
+homepage   : https://github.com/junegunn/fzf
 license    : MIT
 component  : system.utils
 summary    : fzf is a general-purpose command-line fuzzy finder
@@ -10,8 +11,8 @@ description: |
     fzf is a general-purpose command-line fuzzy finder
 networking : yes
 builddeps  :
-    - golang
     - git
+    - golang
 build      : |
     %make
 install    : |

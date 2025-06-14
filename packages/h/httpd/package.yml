@@ -1,8 +1,8 @@
 name       : httpd
-version    : 2.4.58
-release    : 30
+version    : 2.4.63
+release    : 32
 source     :
-    - https://dlcdn.apache.org/httpd/httpd-2.4.58.tar.bz2 : fa16d72a078210a54c47dd5bef2f8b9b8a01d94909a51453956b3ec6442ea4c5
+    - https://dlcdn.apache.org/httpd/httpd-2.4.63.tar.gz : 1fdf1667ebe313a04e9f4d35ea9f043a4e0ebb62ba5a3047abcad824224c3867
 homepage   : https://httpd.apache.org/
 license    : Apache-2.0
 component  : programming
@@ -21,6 +21,7 @@ builddeps  :
     - pkgconfig(libxcrypt)
     - pkgconfig(openssl)
     - fcgi-devel
+    - gdbm-devel
     - perl
 setup      : |
     %apply_patches

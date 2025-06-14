@@ -1,17 +1,17 @@
 name       : aisleriot
-version    : 3.22.30
-release    : 33
+version    : 3.22.35
+release    : 39
 source     :
-    - https://gitlab.gnome.org/GNOME/aisleriot/-/archive/3.22.30/aisleriot-3.22.30.tar.gz : 0d8898fc4cec71d9f49adf76712797e27497ee1f40b5974f62819118e53ec2a8
+    - https://gitlab.gnome.org/GNOME/aisleriot/-/archive/3.22.35/aisleriot-3.22.35.tar.gz : 790282d3c61ed360cb4c826f5c85d6285dc9d7bae03af9380b5503b470e1149d
 license    :
     - LGPL-3.0-or-later
     - GPL-3.0-or-later
     - GFDL-1.1
-homepage   : https://wiki.gnome.org/Apps/Aisleriot
+homepage   : https://gitlab.gnome.org/GNOME/aisleriot
 component  : games.card
 summary    : Gnome Aisleriot Card Game
 description: |
-    Aisleriot — also known as sol or solitaire — is a card game application that features over 80 different solitaire-type card games which are designed to play using a mouse, keyboard, or trackpad.
+    Aisleriot, also known as sol or solitaire, is a card game application that features over 80 different solitaire-type card games which are designed to play using a mouse, keyboard, or trackpad.
 builddeps  :
     - pkgconfig(bdw-gc)
     - pkgconfig(gconf-2.0)
@@ -21,17 +21,13 @@ builddeps  :
     - pkgconfig(librsvg-2.0)
     - desktop-file-utils
     - itstool
-    - pysolfc
-    - pysolfc-cardsets
-rundeps    :
-    - pysolfc
-    - pysolfc-cardsets
 setup      : |
+    # Change file names that are not latin1 to fix eopkg creation
+    %patch -p1 -i $pkgfiles/0001-Rename-non-latin1-files.patch
+
     %meson_configure \
         -Ddefault_theme_format=svg-rsvg \
-        -Dtheme_kde=false \
-        -Dtheme_pysol=true \
-        -Dtheme_pysol_path=/usr/share/PySolFC/
+        -Dtheme_kde=false
 build      : |
     %ninja_build
 install    : |

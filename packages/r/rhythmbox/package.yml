@@ -1,9 +1,9 @@
 name       : rhythmbox
-version    : 3.4.7
-release    : 53
+version    : 3.4.8
+release    : 59
 source     :
-    - https://download.gnome.org/sources/rhythmbox/3.4/rhythmbox-3.4.7.tar.xz : 2f6d56c13fc1a64c534f500788fb482936ce547b343ed90c67de1f2bce0cfa7e
-homepage   : https://wiki.gnome.org/Apps/Rhythmbox
+    - https://download.gnome.org/sources/rhythmbox/3.4/rhythmbox-3.4.8.tar.xz : 2016a8a8d2a959c07a467ac9682c6ed605ba8883fb760410d68b68ab838df9f2
+homepage   : https://gnome.pages.gitlab.gnome.org/rhythmbox/
 license    : GPL-2.0-only
 component  : multimedia.audio
 summary    : Music playing application
@@ -12,12 +12,11 @@ description: |
 builddeps  :
     - pkgconfig(avahi-client)
     - pkgconfig(clutter-1.0)
-    - pkgconfig(gstreamer-audio-1.0)
     - pkgconfig(grilo-0.3)
+    - pkgconfig(gstreamer-audio-1.0)
     - pkgconfig(gtk+-3.0)
     - pkgconfig(ice)
     - pkgconfig(json-glib-1.0)
-    - pkgconfig(libgpod-1.0)
     - pkgconfig(libmtp)
     - pkgconfig(libnotify)
     - pkgconfig(libpeas-gtk-1.0)

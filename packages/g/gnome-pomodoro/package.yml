@@ -1,8 +1,8 @@
 name       : gnome-pomodoro
-version    : 0.24.0
-release    : 17
+version    : 0.27.0
+release    : 19
 source     :
-    - https://github.com/gnome-pomodoro/gnome-pomodoro/archive/refs/tags/0.24.0.tar.gz : 230b9243c96893a2a04103f42f36f15520436eebceef15b53fdda9f6375d5247
+    - https://github.com/gnome-pomodoro/gnome-pomodoro/archive/refs/tags/0.27.0.tar.gz : 266c773dd591ae373440805fd6885d3052155e63c4c3671322e621ad1a42f7f8
 homepage   : https://gnomepomodoro.org/
 license    : GPL-3.0-or-later
 component  : office
@@ -23,6 +23,9 @@ builddeps  :
     - gnome-common
     - vala
 setup      : |
+    # This wouldn't have done anything but this lets us skip the builddep
+    sed -i "s|update_desktop_database: true|update_desktop_database: false|g" meson.build
+
     %meson_configure
 build      : |
     %ninja_build

@@ -1,0 +1,48 @@
+name       : zenergy
+version    : 1.0.2
+release    : 11
+source     :
+    - https://github.com/uni-dos/zenergy/archive/refs/tags/1.0.2.tar.gz : 06b0fc67f4f000bcd4a7b60e90ee25ca89eefb6bb9bb83902ecc56b56d758bbc
+homepage   : https://github.com/uni-dos/zenergy
+license    : GPL-2.0-only
+component  :
+    - kernel.drivers
+    - current : kernel.drivers
+summary    :
+    - AMD Zen energy driver for the linux-lts kernel
+    - current : AMD Zen energy driver for the linux-current kernel
+description: |
+    Based on AMD_ENERGY driver, modified so non-root users can read it safely. Exposes the energy counters that are reported via the Running Average Power Limit (RAPL) Model-specific Registers (MSRs) through the hardware monitor (HWMON) sysfs interface.
+builddeps  :
+    - linux-current
+    - linux-current-headers
+    - linux-lts
+    - linux-lts-headers
+patterns   :
+    - current :
+        - /usr/lib64/modules/*.current
+setup      : |
+    # Prep build dirs for each kernel version
+    pushd ../
+        for KVER in %kernel_version_lts% %kernel_version_current%
+        do
+          cp -ra "zenergy-%version%" ${KVER}-build
+        done
+    popd
+build      : |
+    for KVER in %kernel_version_lts% %kernel_version_current%
+    do
+       pushd ${KVER}-build
+       %make KDIR=/usr/lib64/modules/$KVER/build
+       popd
+    done
+install    : |
+    for KVER in %kernel_version_lts% %kernel_version_current%
+    do
+
+    pushd ${KVER}-build
+    install -Dm00644 zenergy.ko -t $installdir%libdir%/modules/$KVER/kernel/drivers/platform/x86/
+    popd
+
+    done
+    find "$installdir" -name '*.ko' -exec strip --strip-debug {} \; -exec zstd {} \; -exec rm -v {} \;

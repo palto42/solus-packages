@@ -1,9 +1,8 @@
 name       : apparmor
 version    : 3.1.7
-release    : 26
+release    : 34
 source     :
-    # TODO replace this with the launchpad tar and switch back to configure when they upload it
-    - https://gitlab.com/apparmor/apparmor/-/archive/v3.1.7/apparmor-v3.1.7.tar.gz : 64494bd99fa6547a9cbdb4fc6bc732451a02dd19e6eb70eab977b239632151eb
+    - https://launchpad.net/apparmor/3.1/3.1.7/+download/apparmor-3.1.7.tar.gz : c6c161d6dbd99c2f10758ff347cbc6848223c7381f311de62522f22b0a16de64
 license    :
     - GPL-2.0-only
     - LGPL-2.1-or-later
@@ -17,19 +16,22 @@ builddeps  :
     - dejagnu      # Tests
     - perl-gettext # Tests
     - pyflakes     # Tests
+    - python-setuptools
     - swig
 rundeps    :
-    - python3
+    - aa-lsm-hook
     - python-notify2
+    - python3
 networking : yes
 environment: |
     export PYTHON=/usr/bin/python3
     export PYTHON_VERSIONS=python3
 setup      : |
     %patch -p1 -i $pkgfiles/0001-Add-stateless-directory-to-default-apparmor-profile.patch
+    %patch -p1 -i $pkgfiles/0001-Adjust-paths-to-usr-location.patch
     # You can't build this with --disable-static since the libraries here need to statically compile it
     cd libraries/libapparmor
-    %reconfigure --with-python
+    %configure --with-python
 build      : |
     %make -C libraries/libapparmor
     %make -C binutils
@@ -64,13 +66,26 @@ install    : |
 
     # TODO T10615
     # Move some things into /usr, create symlinks so things still work
-    mv $installdir/lib/apparmor $installdir/usr/lib64/
     mv $installdir/lib/security $installdir/usr/lib64/
-    ln -sv /usr/lib64/apparmor $installdir/lib/apparmor
     mv $installdir/sbin/apparmor_parser $installdir/usr/sbin/apparmor_parser
-    ln -sv /usr/sbin/apparmor_parser $installdir/sbin/apparmor_parser
+    ln -srv $installdir/usr/sbin/apparmor_parser $installdir/sbin/apparmor_parser
+
+    # Usr-merge for libdir
+    install -dm00755 $installdir/lib%LIBSUFFIX%
+    pushd $installdir/usr
+    file_list=()
+    while IFS=  read -r -d $'\0'; do
+        file_list+=("$REPLY")
+    done < <(find lib%LIBSUFFIX%/apparmor -type f -print0)
+    for file in "${file_list[@]}"; do
+        parent=$(dirname "$file")
+        install -dm00755 "$installdir/$parent"
+        ln -srv "$installdir/usr/$file" "$installdir/$file"
+    done
+    popd
 
     # Stateless
-    rmdir $installdir/var/lib/apparmor
-    rmdir $installdir/var/lib/
-    rmdir $installdir/var/
+    rmdir $installdir/var/lib/apparmor \
+          $installdir/var/lib/ \
+          $installdir/var/ \
+          $installdir/lib

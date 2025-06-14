@@ -1,0 +1,48 @@
+<PISI>
+    <Source>
+        <Name>passt</Name>
+        <Homepage>https://passt.top/passt/about/</Homepage>
+        <Packager>
+            <Name>Robert Gonzalez</Name>
+            <Email>uni.dos12@outlook.com</Email>
+        </Packager>
+        <License>BSD-3-Clause</License>
+        <License>GPL-2.0-or-later</License>
+        <PartOf>network.util</PartOf>
+        <Summary xml:lang="en">Plug A Simple Socket Transport</Summary>
+        <Description xml:lang="en">passt implements a translation layer between a Layer-2 network interface and native Layer-4 sockets (TCP, UDP, ICMP/ICMPv6 echo) on a host. It doesn&apos;t require any capabilities or privileges, and it can be used as a simple replacement for Slirp.
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>passt</Name>
+        <Summary xml:lang="en">Plug A Simple Socket Transport</Summary>
+        <Description xml:lang="en">passt implements a translation layer between a Layer-2 network interface and native Layer-4 sockets (TCP, UDP, ICMP/ICMPv6 echo) on a host. It doesn&apos;t require any capabilities or privileges, and it can be used as a simple replacement for Slirp.
+</Description>
+        <PartOf>network.util</PartOf>
+        <Files>
+            <Path fileType="executable">/usr/bin/passt</Path>
+            <Path fileType="executable">/usr/bin/passt.avx2</Path>
+            <Path fileType="executable">/usr/bin/pasta</Path>
+            <Path fileType="executable">/usr/bin/pasta.avx2</Path>
+            <Path fileType="executable">/usr/bin/qrap</Path>
+            <Path fileType="doc">/usr/share/doc/passt/README.md</Path>
+            <Path fileType="doc">/usr/share/doc/passt/demo.sh</Path>
+            <Path fileType="man">/usr/share/man/man1/passt.1</Path>
+            <Path fileType="man">/usr/share/man/man1/pasta.1</Path>
+            <Path fileType="man">/usr/share/man/man1/qrap.1</Path>
+        </Files>
+        <Replaces>
+            <Package>slirp4netns</Package>
+        </Replaces>
+    </Package>
+    <History>
+        <Update release="3">
+            <Date>2025-01-09</Date>
+            <Version>2024.12.11</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Robert Gonzalez</Name>
+            <Email>uni.dos12@outlook.com</Email>
+        </Update>
+    </History>
+</PISI>

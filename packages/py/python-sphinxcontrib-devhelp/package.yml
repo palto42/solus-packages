@@ -1,15 +1,18 @@
 name       : python-sphinxcontrib-devhelp
-version    : 1.0.2
-release    : 5
+version    : 2.0.0
+release    : 8
 source     :
-    - https://github.com/sphinx-doc/sphinxcontrib-devhelp/archive/1.0.2.tar.gz : 00f9fbe1d6362764fec95f38ab105f7fea784af79d6ecf2582c4174c83131511
+    - https://github.com/sphinx-doc/sphinxcontrib-devhelp/archive/refs/tags/2.0.0.tar.gz : e650ce2bde1204477df2f428757e14aa85735bd6a40517645eba55730262b8e8
+homepage   : https://github.com/sphinx-doc/sphinxcontrib-devhelp
 license    : BSD-2-Clause
 component  : programming.python
 summary    : Sphinx extension for Devhelp documents
 description: |
     sphinxcontrib-devhelp is a sphinx extension which outputs Devhelp document.
 builddeps  :
-    - pkgconfig(python3)
+    - python-build
+    - python-flit-core
+    - python-installer
 build      : |
     %python3_setup
 install    : |

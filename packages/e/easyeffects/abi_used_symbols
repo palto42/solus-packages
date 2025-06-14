@@ -1,3 +1,4 @@
+UNKNOWN:_ZN3fmt3v106detail10locale_refC1ISt6localeEERKT_
 libSoundTouch.so.1:_ZN10soundtouch10SoundTouch10setSettingEii
 libSoundTouch.so.1:_ZN10soundtouch10SoundTouch11setChannelsEj
 libSoundTouch.so.1:_ZN10soundtouch10SoundTouch13setRateChangeEd
@@ -5,16 +6,17 @@ libSoundTouch.so.1:_ZN10soundtouch10SoundTouch13setSampleRateEj
 libSoundTouch.so.1:_ZN10soundtouch10SoundTouch14setTempoChangeEd
 libSoundTouch.so.1:_ZN10soundtouch10SoundTouch17setPitchSemiTonesEd
 libSoundTouch.so.1:_ZN10soundtouch10SoundTouchC1Ev
+libadwaita-1.so.0:adw_alert_dialog_add_response
+libadwaita-1.so.0:adw_alert_dialog_new
+libadwaita-1.so.0:adw_alert_dialog_set_default_response
 libadwaita-1.so.0:adw_application_get_type
 libadwaita-1.so.0:adw_application_window_get_type
-libadwaita-1.so.0:adw_message_dialog_add_response
-libadwaita-1.so.0:adw_message_dialog_new
-libadwaita-1.so.0:adw_message_dialog_set_default_response
+libadwaita-1.so.0:adw_dialog_present
+libadwaita-1.so.0:adw_preferences_dialog_add
+libadwaita-1.so.0:adw_preferences_dialog_get_type
+libadwaita-1.so.0:adw_preferences_dialog_remove
 libadwaita-1.so.0:adw_preferences_page_get_type
-libadwaita-1.so.0:adw_preferences_window_add
-libadwaita-1.so.0:adw_preferences_window_get_type
-libadwaita-1.so.0:adw_preferences_window_remove
-libadwaita-1.so.0:adw_show_about_window
+libadwaita-1.so.0:adw_show_about_dialog
 libadwaita-1.so.0:adw_status_page_new
 libadwaita-1.so.0:adw_status_page_set_description
 libadwaita-1.so.0:adw_status_page_set_icon_name
@@ -76,6 +78,7 @@ libc.so.6:strerror
 libc.so.6:strlen
 libc.so.6:strncpy
 libc.so.6:strtod
+libc.so.6:system
 libc.so.6:textdomain
 libc.so.6:tolower
 libc.so.6:toupper
@@ -152,6 +155,7 @@ libgio-2.0.so.0:g_settings_new_with_path
 libgio-2.0.so.0:g_settings_reset
 libgio-2.0.so.0:g_settings_schema_get_key
 libgio-2.0.so.0:g_settings_schema_key_get_range
+libgio-2.0.so.0:g_settings_schema_key_range_check
 libgio-2.0.so.0:g_settings_schema_key_unref
 libgio-2.0.so.0:g_settings_schema_list_keys
 libgio-2.0.so.0:g_settings_schema_unref
@@ -166,13 +170,15 @@ libgio-2.0.so.0:g_static_resource_fini
 libgio-2.0.so.0:g_static_resource_get_resource
 libgio-2.0.so.0:g_static_resource_init
 libglib-2.0.so.0:g_free
+libglib-2.0.so.0:g_get_home_dir
+libglib-2.0.so.0:g_get_system_data_dirs
 libglib-2.0.so.0:g_get_user_config_dir
 libglib-2.0.so.0:g_idle_add
 libglib-2.0.so.0:g_intern_static_string
 libglib-2.0.so.0:g_log
 libglib-2.0.so.0:g_malloc
-libglib-2.0.so.0:g_once_init_enter
-libglib-2.0.so.0:g_once_init_leave
+libglib-2.0.so.0:g_once_init_enter_pointer
+libglib-2.0.so.0:g_once_init_leave_pointer
 libglib-2.0.so.0:g_set_application_name
 libglib-2.0.so.0:g_strcmp0
 libglib-2.0.so.0:g_strdup
@@ -278,6 +284,7 @@ libgtk-4.so.1:gtk_file_dialog_set_accept_label
 libgtk-4.so.1:gtk_file_dialog_set_filters
 libgtk-4.so.1:gtk_file_dialog_set_initial_folder
 libgtk-4.so.1:gtk_file_dialog_set_title
+libgtk-4.so.1:gtk_file_filter_add_mime_type
 libgtk-4.so.1:gtk_file_filter_add_pattern
 libgtk-4.so.1:gtk_file_filter_get_type
 libgtk-4.so.1:gtk_file_filter_new
@@ -289,6 +296,7 @@ libgtk-4.so.1:gtk_icon_theme_get_for_display
 libgtk-4.so.1:gtk_icon_theme_get_theme_name
 libgtk-4.so.1:gtk_icon_theme_has_icon
 libgtk-4.so.1:gtk_image_set_from_icon_name
+libgtk-4.so.1:gtk_label_get_text
 libgtk-4.so.1:gtk_label_get_type
 libgtk-4.so.1:gtk_label_new
 libgtk-4.so.1:gtk_label_set_ellipsize
@@ -358,6 +366,7 @@ libgtk-4.so.1:gtk_uri_launcher_launch
 libgtk-4.so.1:gtk_uri_launcher_new
 libgtk-4.so.1:gtk_widget_add_controller
 libgtk-4.so.1:gtk_widget_add_css_class
+libgtk-4.so.1:gtk_widget_add_tick_callback
 libgtk-4.so.1:gtk_widget_class_bind_template_callback_full
 libgtk-4.so.1:gtk_widget_class_bind_template_child_full
 libgtk-4.so.1:gtk_widget_class_set_template_from_resource
@@ -442,6 +451,7 @@ libm.so.6:lrint
 libm.so.6:pow
 libm.so.6:powf
 libm.so.6:sinf
+libm.so.6:sqrt
 libm.so.6:sqrtf
 libpango-1.0.so.0:pango_font_description_free
 libpango-1.0.so.0:pango_font_description_from_string
@@ -467,6 +477,7 @@ libpipewire-0.3.so.0:pw_properties_free
 libpipewire-0.3.so.0:pw_properties_new
 libpipewire-0.3.so.0:pw_properties_set
 libpipewire-0.3.so.0:pw_proxy_add_listener
+libpipewire-0.3.so.0:pw_proxy_add_object_listener
 libpipewire-0.3.so.0:pw_proxy_destroy
 libpipewire-0.3.so.0:pw_proxy_get_user_data
 libpipewire-0.3.so.0:pw_thread_loop_destroy
@@ -520,19 +531,17 @@ libstdc++.so.6:_ZNKSt10filesystem7__cxx1118directory_iteratordeEv
 libstdc++.so.6:_ZNKSt10filesystem7__cxx114path17_M_find_extensionEv
 libstdc++.so.6:_ZNKSt10filesystem7__cxx114path5_List13_Impl_deleterclEPNS2_5_ImplE
 libstdc++.so.6:_ZNKSt10filesystem7__cxx114path5_List3endEv
+libstdc++.so.6:_ZNKSt10filesystem7__cxx114path5_List5beginEv
 libstdc++.so.6:_ZNKSt10filesystem7__cxx114path7compareERKS1_
 libstdc++.so.6:_ZNKSt12__basic_fileIcE7is_openEv
 libstdc++.so.6:_ZNKSt13runtime_error4whatEv
 libstdc++.so.6:_ZNKSt5ctypeIcE13_M_widen_initEv
 libstdc++.so.6:_ZNKSt6locale2id5_M_idEv
-libstdc++.so.6:_ZNKSt8__detail20_Prime_rehash_policy11_M_next_bktEm
 libstdc++.so.6:_ZNKSt8__detail20_Prime_rehash_policy14_M_need_rehashEmmm
 libstdc++.so.6:_ZNSi10_M_extractIdEERSiRT_
 libstdc++.so.6:_ZNSi10_M_extractIlEERSiRT_
 libstdc++.so.6:_ZNSo3putEc
-libstdc++.so.6:_ZNSo5flushEv
 libstdc++.so.6:_ZNSo5writeEPKcl
-libstdc++.so.6:_ZNSo9_M_insertIdEERSoT_
 libstdc++.so.6:_ZNSo9_M_insertImEERSoT_
 libstdc++.so.6:_ZNSolsEi
 libstdc++.so.6:_ZNSt10filesystem18create_directoriesERKNS_7__cxx114pathE
@@ -550,7 +559,7 @@ libstdc++.so.6:_ZNSt10filesystem7__cxx114pathdVERKS1_
 libstdc++.so.6:_ZNSt10filesystem9copy_fileERKNS_7__cxx114pathES3_NS_12copy_optionsE
 libstdc++.so.6:_ZNSt11regex_errorD1Ev
 libstdc++.so.6:_ZNSt12__basic_fileIcED1Ev
-libstdc++.so.6:_ZNSt12out_of_rangeC1EPKc
+libstdc++.so.6:_ZNSt12out_of_rangeC1ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
 libstdc++.so.6:_ZNSt12out_of_rangeD1Ev
 libstdc++.so.6:_ZNSt13basic_filebufIcSt11char_traitsIcEE4openEPKcSt13_Ios_Openmode
 libstdc++.so.6:_ZNSt13basic_filebufIcSt11char_traitsIcEE5closeEv
@@ -579,7 +588,6 @@ libstdc++.so.6:_ZNSt6thread15_M_start_threadESt10unique_ptrINS_6_StateESt14defau
 libstdc++.so.6:_ZNSt6thread4joinEv
 libstdc++.so.6:_ZNSt6thread6_StateD2Ev
 libstdc++.so.6:_ZNSt6thread6detachEv
-libstdc++.so.6:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE15_M_replace_coldEPcmPKcmm
 libstdc++.so.6:_ZNSt7__cxx1115basic_stringbufIcSt11char_traitsIcESaIcEE7_M_syncEPcmm
 libstdc++.so.6:_ZNSt7__cxx1119basic_istringstreamIcSt11char_traitsIcESaIcEED1Ev
 libstdc++.so.6:_ZNSt7__cxx1119basic_ostringstreamIcSt11char_traitsIcESaIcEED1Ev
@@ -607,6 +615,7 @@ libstdc++.so.6:_ZSt19__throw_regex_errorNSt15regex_constants10error_typeE
 libstdc++.so.6:_ZSt20__throw_length_errorPKc
 libstdc++.so.6:_ZSt20__throw_out_of_rangePKc
 libstdc++.so.6:_ZSt20__throw_system_errori
+libstdc++.so.6:_ZSt21__glibcxx_assert_failPKciS0_S0_
 libstdc++.so.6:_ZSt21ios_base_library_initv
 libstdc++.so.6:_ZSt24__throw_out_of_range_fmtPKcz
 libstdc++.so.6:_ZSt25__throw_bad_function_callv
@@ -653,6 +662,7 @@ libstdc++.so.6:_Znwm
 libstdc++.so.6:_ZnwmRKSt9nothrow_t
 libstdc++.so.6:__cxa_allocate_exception
 libstdc++.so.6:__cxa_begin_catch
+libstdc++.so.6:__cxa_call_terminate
 libstdc++.so.6:__cxa_end_catch
 libstdc++.so.6:__cxa_free_exception
 libstdc++.so.6:__cxa_guard_abort

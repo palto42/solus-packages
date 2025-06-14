@@ -418,6 +418,7 @@ libCoin.so.80:_ZN10SoGLImageP18shouldCreateMipmapEv
 libCoin.so.80:_ZN10SoGLImageP19createGLDisplayListEP7SoState
 libCoin.so.80:_ZN10SoGLImageP19reallyCreateTextureEP7SoStatePKhiiiiiii
 libCoin.so.80:_ZN10SoGLImageP4initEv
+libCoin.so.80:_ZN10SoGLImageP5mutexE
 libCoin.so.80:_ZN10SoGLImageP5tagDLEP7SoState
 libCoin.so.80:_ZN10SoGLImageP6findDLEP7SoState
 libCoin.so.80:_ZN10SoGLImageP8resizecbE
@@ -3273,7 +3274,7 @@ libCoin.so.80:_ZN13SoFieldSensorD2Ev
 libCoin.so.80:_ZN13SoGLBigImageP10resetCacheEv
 libCoin.so.80:_ZN13SoGLBigImageP10unrefOldDLEP15SoGLBigImageTlsP7SoStatej
 libCoin.so.80:_ZN13SoGLBigImageP11classTypeIdE
-libCoin.so.80:_ZN13SoGLBigImageP11createCacheEPKh7SbVec2si
+libCoin.so.80:_ZN13SoGLBigImageP11createCacheEPKhRK7SbVec2si
 libCoin.so.80:_ZN13SoGLBigImageP11resetAllTlsEP7SoState
 libCoin.so.80:_ZN13SoGLBigImageP12copySubImageEP15SoGLBigImageTlsiPKhRK7SbVec2siPhii
 libCoin.so.80:_ZN13SoGLBigImageP18copyResizeSubImageEP15SoGLBigImageTlsiPKhRK7SbVec2siPhS6_
@@ -4453,7 +4454,7 @@ libCoin.so.80:_ZN14SoShadowGroupP18updateShadowLightsEP16SoGLRenderAction
 libCoin.so.80:_ZN14SoShadowGroupP23updateDirectionalCameraEP7SoStateP18SoShadowLightCacheRK8SbMatrix
 libCoin.so.80:_ZN14SoShadowGroupP8GLRenderEP16SoGLRenderActioni
 libCoin.so.80:_ZN14SoShadowGroupP8calcBBoxEP18SoShadowLightCache
-libCoin.so.80:_ZN14SoShadowGroupP9supportedEPK9cc_glglue8SbString
+libCoin.so.80:_ZN14SoShadowGroupP9supportedEPK9cc_glglueR8SbString
 libCoin.so.80:_ZN14SoSoundElement11classTypeIdE
 libCoin.so.80:_ZN14SoSoundElement14createInstanceEv
 libCoin.so.80:_ZN14SoSoundElement14getClassTypeIdEv
@@ -7150,6 +7151,7 @@ libCoin.so.80:_ZN17SoFontSizeElementD1Ev
 libCoin.so.80:_ZN17SoFontSizeElementD2Ev
 libCoin.so.80:_ZN17SoForeignFileKitP8fileextsE
 libCoin.so.80:_ZN17SoGLCubeMapImageP11classTypeIdE
+libCoin.so.80:_ZN17SoGLCubeMapImageP5mutexE
 libCoin.so.80:_ZN17SoGLNormalElement11classTypeIdE
 libCoin.so.80:_ZN17SoGLNormalElement14createInstanceEv
 libCoin.so.80:_ZN17SoGLNormalElement14getClassTypeIdEv
@@ -8360,6 +8362,10 @@ libCoin.so.80:_ZN18SoMouseButtonEventC2Ev
 libCoin.so.80:_ZN18SoMouseButtonEventD0Ev
 libCoin.so.80:_ZN18SoMouseButtonEventD1Ev
 libCoin.so.80:_ZN18SoMouseButtonEventD2Ev
+libCoin.so.80:_ZN18SoOffscreenGLXData10getDisplayEv
+libCoin.so.80:_ZN18SoOffscreenGLXData13getResolutionEv
+libCoin.so.80:_ZN18SoOffscreenGLXData7cleanupEv
+libCoin.so.80:_ZN18SoOffscreenGLXData7displayE
 libCoin.so.80:_ZN18SoPickStyleElement10getDefaultEv
 libCoin.so.80:_ZN18SoPickStyleElement11classTypeIdE
 libCoin.so.80:_ZN18SoPickStyleElement14createInstanceEv
@@ -9588,6 +9594,7 @@ libCoin.so.80:_ZN19SoVRMLElevationGridD0Ev
 libCoin.so.80:_ZN19SoVRMLElevationGridD1Ev
 libCoin.so.80:_ZN19SoVRMLElevationGridD2Ev
 libCoin.so.80:_ZN19SoVRMLImageTextureP10is_exitingE
+libCoin.so.80:_ZN19SoVRMLImageTextureP12glimagemutexE
 libCoin.so.80:_ZN19SoVRMLImageTextureP14timersensor_cbEPvP8SoSensor
 libCoin.so.80:_ZN19SoVRMLImageTextureP9schedulerE
 libCoin.so.80:_ZN19SoVectorizePSAction11classTypeIdE
@@ -10522,6 +10529,7 @@ libCoin.so.80:_ZN21SoGLSLShaderParameter6set3fvEPK16SoGLShaderObjectiPKfPKci
 libCoin.so.80:_ZN21SoGLSLShaderParameter6set3ivEPK16SoGLShaderObjectiPKiPKci
 libCoin.so.80:_ZN21SoGLSLShaderParameter6set4fvEPK16SoGLShaderObjectiPKfPKci
 libCoin.so.80:_ZN21SoGLSLShaderParameter6set4ivEPK16SoGLShaderObjectiPKiPKci
+libCoin.so.80:_ZN21SoGLSLShaderParameter7isEqualEjj
 libCoin.so.80:_ZN21SoGLSLShaderParameter7isValidEPK16SoGLShaderObjectPKcjPi
 libCoin.so.80:_ZN21SoGLSLShaderParameter9setMatrixEPK16SoGLShaderObjectPKfPKci
 libCoin.so.80:_ZN21SoGLSLShaderParameterC1Ev
@@ -11877,7 +11885,7 @@ libCoin.so.80:_ZN24SoTextureCoordinateCacheC2EP7SoState
 libCoin.so.80:_ZN24SoTextureCoordinateCacheD0Ev
 libCoin.so.80:_ZN24SoTextureCoordinateCacheD1Ev
 libCoin.so.80:_ZN24SoTextureCoordinateCacheD2Ev
-libCoin.so.80:_ZN24SoTextureCoordinateCubeP26calculateTextureCoordinateE7SbVec3fS0_
+libCoin.so.80:_ZN24SoTextureCoordinateCubeP26calculateTextureCoordinateERK7SbVec3fS2_
 libCoin.so.80:_ZN24SoTextureCoordinatePlane11classTypeIdE
 libCoin.so.80:_ZN24SoTextureCoordinatePlane12handleTexgenEPv
 libCoin.so.80:_ZN24SoTextureCoordinatePlane13setupGencacheEv
@@ -12501,7 +12509,7 @@ libCoin.so.80:_ZN26SoTextureCoordinateDefaultC2Ev
 libCoin.so.80:_ZN26SoTextureCoordinateDefaultD0Ev
 libCoin.so.80:_ZN26SoTextureCoordinateDefaultD1Ev
 libCoin.so.80:_ZN26SoTextureCoordinateDefaultD2Ev
-libCoin.so.80:_ZN26SoTextureCoordinateSphereP26calculateTextureCoordinateE7SbVec3fS0_
+libCoin.so.80:_ZN26SoTextureCoordinateSphereP26calculateTextureCoordinateERK7SbVec3fS2_
 libCoin.so.80:_ZN26SoVRMLPositionInterpolator10outputdataE
 libCoin.so.80:_ZN26SoVRMLPositionInterpolator11classTypeIdE
 libCoin.so.80:_ZN26SoVRMLPositionInterpolator14atexit_cleanupEv
@@ -12792,7 +12800,7 @@ libCoin.so.80:_ZN28SoShaderStateMatrixParameterC2Ev
 libCoin.so.80:_ZN28SoShaderStateMatrixParameterD0Ev
 libCoin.so.80:_ZN28SoShaderStateMatrixParameterD1Ev
 libCoin.so.80:_ZN28SoShaderStateMatrixParameterD2Ev
-libCoin.so.80:_ZN28SoTextureCoordinateCylinderP26calculateTextureCoordinateE7SbVec3fS0_
+libCoin.so.80:_ZN28SoTextureCoordinateCylinderP26calculateTextureCoordinateERK7SbVec3fS2_
 libCoin.so.80:_ZN28SoTextureCoordinateNormalMap11classTypeIdE
 libCoin.so.80:_ZN28SoTextureCoordinateNormalMap12handleTexgenEPv
 libCoin.so.80:_ZN28SoTextureCoordinateNormalMap14atexit_cleanupEv
@@ -13195,6 +13203,7 @@ libCoin.so.80:_ZN5ScXML26getEvaluatorTypeForProfileE6SbName
 libCoin.so.80:_ZN5ScXML8readFileEPKc
 libCoin.so.80:_ZN5SoDBP10convertersE
 libCoin.so.80:_ZN5SoDBP10headerlistE
+libCoin.so.80:_ZN5SoDBP11globalmutexE
 libCoin.so.80:_ZN5SoDBP11read3DSFileEP7SoInput
 libCoin.so.80:_ZN5SoDBP13isinitializedE
 libCoin.so.80:_ZN5SoDBP13sensormanagerE
@@ -18879,7 +18888,6 @@ libCoin.so.80:_ZNK6SoType22getInstantiationMethodEv
 libCoin.so.80:_ZNK6SoType7getDataEv
 libCoin.so.80:_ZNK6SoType7getNameEv
 libCoin.so.80:_ZNK6SoType9getParentEv
-libCoin.so.80:_ZNK6Vertex9getNormalEP10tagContextt
 libCoin.so.80:_ZNK7SbBox2d15getClosestPointERK7SbVec2d
 libCoin.so.80:_ZNK7SbBox2d16findIntersectionERK7SbVec2dS2_RS0_S3_
 libCoin.so.80:_ZNK7SbBox2d9intersectERK7SbVec2d
@@ -19601,6 +19609,7 @@ libCoin.so.80:_ZNK9SoVRMLLOD8getLevelEi
 libCoin.so.80:_ZNK9SoVRMLLOD9findChildEPK6SoNode
 libCoin.so.80:_ZNK9SoVRMLLOD9findLevelEPK6SoNode
 libCoin.so.80:_ZNK9SoVRMLLOD9getTypeIdEv
+libCoin.so.80:_ZNK9tagVertex9getNormalEP10tagContextt
 libCoin.so.80:_ZdvRK6SbTimed
 libCoin.so.80:_ZdvRK9SbColor4ff
 libCoin.so.80:_ZeqPKcRK6SbName
@@ -20368,6 +20377,7 @@ libCoin.so.80:coin_catch_gl_errors
 libCoin.so.80:coin_debug_caching_level
 libCoin.so.80:coin_debug_extra
 libCoin.so.80:coin_debug_normalize
+libCoin.so.80:coin_default2dfont_get_bearing
 libCoin.so.80:coin_default2dfont_get_data
 libCoin.so.80:coin_default2dfont_get_height
 libCoin.so.80:coin_default2dfont_get_width
@@ -20472,6 +20482,7 @@ libCoin.so.80:glue_cgIsParameter
 libCoin.so.80:glue_cgIsProgram
 libCoin.so.80:glue_cgSetErrorCallback
 libCoin.so.80:glue_cgglue_cgfx_available
+libCoin.so.80:glxglue_cleanup
 libCoin.so.80:glxglue_context_create_offscreen
 libCoin.so.80:glxglue_context_destruct
 libCoin.so.80:glxglue_context_make_current

@@ -6,12 +6,15 @@ libnpth.so.0:npth_cond_wait
 libnpth.so.0:npth_connect
 libnpth.so.0:npth_create
 libnpth.so.0:npth_exit
+libnpth.so.0:npth_get_version
 libnpth.so.0:npth_getname_np
 libnpth.so.0:npth_init
 libnpth.so.0:npth_is_protected
 libnpth.so.0:npth_join
 libnpth.so.0:npth_mutex_lock
 libnpth.so.0:npth_mutex_timedlock
+libnpth.so.0:npth_poll
+libnpth.so.0:npth_ppoll
 libnpth.so.0:npth_protect
 libnpth.so.0:npth_pselect
 libnpth.so.0:npth_read

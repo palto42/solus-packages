@@ -1,8 +1,8 @@
 name       : unbound
-version    : 1.19.1
-release    : 14
+version    : 1.23.0
+release    : 17
 source     :
-    - https://github.com/NLnetLabs/unbound/archive/release-1.19.1.tar.gz : cc1231e6756c9ec88fadf8425f7302f8884ca8781fb108275f2ad476c284edd8
+    - https://nlnetlabs.nl/downloads/unbound/unbound-1.23.0.tar.gz : 959bd5f3875316d7b3f67ee237a56de5565f5b35fc9b5fc3cea6cfe735a03bb8
 homepage   : https://nlnetlabs.nl/projects/unbound/about/
 license    : BSD-3-Clause
 component  : network.util

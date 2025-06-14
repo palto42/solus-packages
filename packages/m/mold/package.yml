@@ -1,8 +1,8 @@
 name       : mold
-version    : 2.4.0
-release    : 14
+version    : 2.35.0
+release    : 22
 source     :
-    - https://github.com/rui314/mold/archive/refs/tags/v2.4.0.tar.gz : be65f3d785d32ece7b3204ecaa57810847fdd25c232cf704cbfff2dafb1ac107
+    - https://github.com/rui314/mold/archive/refs/tags/v2.35.0.tar.gz : 2703f1c88c588523815886478950bcae1ef02190dc4787e0d120a293b1a46e3b
 homepage   : https://github.com/rui314/mold
 license    : MIT
 component  : programming.tools
@@ -13,10 +13,13 @@ avx2       : yes
 lto        : yes
 clang      : yes
 builddeps  :
+    - pkgconfig(libblake3)
     - pkgconfig(libzstd)
+    - pkgconfig(mimalloc)
     - pkgconfig(tbb)
-    - mimalloc-devel
 setup      : |
+    %patch -p1 -i $pkgfiles/0001-solus-Set-default-settings-for-compression-and-build.patch
+
     %cmake_ninja -DMOLD_LTO=ON \
                  -DMOLD_MOSTLY_STATIC=OFF \
                  -DMOLD_USE_MIMALLOC=ON \

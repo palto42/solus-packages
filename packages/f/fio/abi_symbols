@@ -70,7 +70,6 @@ fio:buf_output_init
 fio:calc_clat_percentiles
 fio:calc_lat
 fio:calc_log_samples
-fio:calc_thread_status
 fio:cgroup_kill
 fio:cgroup_setup
 fio:cgroup_shutdown
@@ -100,6 +99,7 @@ fio:crc32c_intel_probe
 fio:crc32c_sw
 fio:crc7_syndrome_table
 fio:cur_segment
+fio:cycles_spin
 fio:debug_levels
 fio:deinitialize_fio
 fio:del_opt_posval
@@ -111,6 +111,8 @@ fio:display_thread_status
 fio:do_io_u_sync
 fio:do_io_u_trim
 fio:done_secs
+fio:dp_fill_dspec_data
+fio:dp_init
 fio:dup_files
 fio:eta_interval_msec
 fio:eta_new_line
@@ -125,9 +127,7 @@ fio:exitall_on_terminate
 fio:expand_variables
 fio:f_err
 fio:f_out
-fio:fdp_fill_dspec_data
 fio:fdp_free_ruhs_info
-fio:fdp_init
 fio:fifo_alloc
 fio:fifo_free
 fio:fifo_get
@@ -888,7 +888,6 @@ gfio:buf_output_init
 gfio:calc_clat_percentiles
 gfio:calc_lat
 gfio:calc_log_samples
-gfio:calc_thread_status
 gfio:calc_tickmarks
 gfio:cgroup_kill
 gfio:cgroup_setup
@@ -921,6 +920,7 @@ gfio:crc32c_sw
 gfio:crc7_syndrome_table
 gfio:create_spinbutton
 gfio:cur_segment
+gfio:cycles_spin
 gfio:debug_levels
 gfio:deinitialize_fio
 gfio:del_opt_posval
@@ -932,6 +932,8 @@ gfio:display_thread_status
 gfio:do_io_u_sync
 gfio:do_io_u_trim
 gfio:done_secs
+gfio:dp_fill_dspec_data
+gfio:dp_init
 gfio:draw_centered_text
 gfio:draw_left_justified_text
 gfio:draw_right_justified_text
@@ -951,9 +953,7 @@ gfio:exitall_on_terminate
 gfio:expand_variables
 gfio:f_err
 gfio:f_out
-gfio:fdp_fill_dspec_data
 gfio:fdp_free_ruhs_info
-gfio:fdp_init
 gfio:fifo_alloc
 gfio:fifo_free
 gfio:fifo_get

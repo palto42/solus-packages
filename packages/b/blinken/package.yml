@@ -1,8 +1,8 @@
 name       : blinken
-version    : 23.08.5
-release    : 72
+version    : 25.04.2
+release    : 90
 source     :
-    - https://cdn.download.kde.org/stable/release-service/23.08.5/src/blinken-23.08.5.tar.xz : 4ad04b9973c97b1dd12f2b263b6fb8accdd6af68c97907681cb0ad80227ba3c6
+    - https://download.kde.org/stable/release-service/25.04.2/src/blinken-25.04.2.tar.xz : 0e31cabd6340b6fdfe5c7c2d725b2ceb88a01ad54b50d790c2c3d028d2c425f8
 homepage   : https://kde.org/applications/education/org.kde.blinken
 license    : GPL-2.0-or-later
 component  : games.action
@@ -10,17 +10,20 @@ summary    : Blinken is based on an electronic game released in 1978, which chal
 description: |
     Blinken is based on an electronic game released in 1978, which challenges players to remember sequences of increasing length
 builddeps  :
-    - pkgconfig(Qt5Svg)
-    - pkgconfig(Qt5Widgets)
-    - pkgconfig(phonon4qt5)
-    - kcrash-devel
-    - kdbusaddons-devel
-    - kdoctools-devel
-    - kguiaddons-devel
-    - ki18n-devel
-    - kxmlgui-devel
+    - pkgconfig(KF6GuiAddons)
+    - pkgconfig(Qt6Multimedia)
+    - pkgconfig(Qt6Svg)
+    - kf6-kcrash-devel
+    - kf6-kdbusaddons-devel
+    - kf6-kdoctools-devel
+    - kf6-ki18n-devel
+    - kf6-kxmlgui-devel
+clang      : yes
+optimize   :
+    - speed
+    - thin-lto
 setup      : |
-    %cmake_ninja
+    %cmake_kf6
 build      : |
     %ninja_build
 install    : |

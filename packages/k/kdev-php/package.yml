@@ -1,8 +1,8 @@
 name       : kdev-php
-version    : 23.08.5
-release    : 31
+version    : 25.04.2
+release    : 46
 source     :
-    - https://cdn.download.kde.org/stable/release-service/23.08.5/src/kdev-php-23.08.5.tar.xz : 2663298ffaa479791d3600e82046069867d8fbcc1aa449f86c075712747e2e77
+    - https://download.kde.org/stable/release-service/25.04.2/src/kdev-php-25.04.2.tar.xz : 0c6b9ef749d0f8435651fd01dc25a0dcb4a13a73485e66ed6d53e8244ec84e4d
 homepage   : https://apps.kde.org/kdev-php/
 license    : GPL-2.0-or-later
 component  : programming.tools
@@ -11,13 +11,18 @@ description: |
     KDevelop plugin which provides PHP language support.
 libsplit   : no
 builddeps  :
-    - pkgconfig(Qt5Core)
-    - kcmutils-devel
+    - pkgconfig(Qt6Core)
     - kdevelop-devel
     - kdevelop-pg-qt-devel
-    - ktexteditor-devel
+    - kf6-kcmutils-devel
+    - kf6-ki18n-devel
+    - kf6-ktexteditor-devel
+clang      : yes
+optimize   :
+    - speed
+    - thin-lto
 setup      : |
-    %cmake_ninja -DBUILD_TESTING=OFF
+    %cmake_kf6
 build      : |
     %ninja_build
 install    : |

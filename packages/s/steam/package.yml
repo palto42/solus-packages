@@ -1,19 +1,28 @@
 name       : steam
-version    : 1.0.0.79
-release    : 92
+version    : 1.0.0.83
+release    : 99
 source     :
-    - https://repo.steampowered.com/steam/pool/steam/s/steam/steam_1.0.0.79.tar.gz : 3a0012daf5889311c2e1dcf33a587b409019b66d893a52192df6947e18f1ec46
+    - https://repo.steampowered.com/steam/pool/steam/s/steam/steam_1.0.0.83.tar.gz : 791682b0cc7efd946c7002f917c9dd474d2619b7f9ed00891216a8a6b4ac8f82
 homepage   : https://store.steampowered.com
 license    : Distributable
-component  : games
-summary    : Launcher for the Steam software distribution service
-description: |
-    Launcher for the Steam software distribution service
+component  :
+    - games
+    - devices : games
+summary    :
+    - Launcher for the Steam software distribution service
+    - devices : udev rules for Steam and SteamVR
+description:
+    - Launcher for the Steam software distribution service
+    - devices : udev rules for Steam and SteamVR
+patterns   :
+    - devices :
+        - /usr/lib64/udev/rules.d/
 rundeps    :
     - acl-32bit
     - alsa-plugins-32bit
     - attr-32bit
     - bzip2-32bit
+    - curl-32bit
     - curl-gnutls-32bit
     - dconf-32bit
     - diffutils
@@ -30,6 +39,7 @@ rundeps    :
     - json-c-32bit
     - libav
     - libayatana-appindicator-32bit
+    - libbsd
     - libcap2-32bit
     - libffi6-32bit
     - libgcrypt-32bit
@@ -82,6 +92,7 @@ rundeps    :
     - sdl2-mixer-32bit
     - sdl2-net-32bit
     - sdl2-ttf-32bit
+    - steam-devices
     - tcp_wrappers-32bit
     - vulkan-32bit
     - zenity
@@ -96,3 +107,5 @@ install    : |
 
     # Integrate with LSI.
     mv $installdir/usr/bin/steam $installdir/usr/lib/steam/.
+replaces    :
+    - devices : steam-udev-rules

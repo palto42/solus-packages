@@ -24,8 +24,7 @@
             <Path fileType="library">/usr/lib64/girepository-1.0/GstRtspServer-1.0.typelib</Path>
             <Path fileType="library">/usr/lib64/gstreamer-1.0/libgstrtspclientsink.so</Path>
             <Path fileType="library">/usr/lib64/libgstrtspserver-1.0.so.0</Path>
-            <Path fileType="library">/usr/lib64/libgstrtspserver-1.0.so.0.2210.0</Path>
-            <Path fileType="data">/usr/share/gir-1.0/GstRtspServer-1.0.gir</Path>
+            <Path fileType="library">/usr/lib64/libgstrtspserver-1.0.so.0.2410.0</Path>
         </Files>
     </Package>
     <Package>
@@ -35,7 +34,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="10">gst-rtsp-server</Dependency>
+            <Dependency release="22">gst-rtsp-server</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/gstreamer-1.0/gst/rtsp-server/rtsp-address-pool.h</Path>
@@ -65,12 +64,13 @@
             <Path fileType="header">/usr/include/gstreamer-1.0/gst/rtsp-server/rtsp-token.h</Path>
             <Path fileType="library">/usr/lib64/libgstrtspserver-1.0.so</Path>
             <Path fileType="data">/usr/lib64/pkgconfig/gstreamer-rtsp-server-1.0.pc</Path>
+            <Path fileType="data">/usr/share/gir-1.0/GstRtspServer-1.0.gir</Path>
         </Files>
     </Package>
     <History>
-        <Update release="10">
-            <Date>2024-02-15</Date>
-            <Version>1.22.10</Version>
+        <Update release="22">
+            <Date>2024-12-04</Date>
+            <Version>1.24.10</Version>
             <Comment>Packaging update</Comment>
             <Name>Reilly Brogan</Name>
             <Email>solus@reillybrogan.com</Email>

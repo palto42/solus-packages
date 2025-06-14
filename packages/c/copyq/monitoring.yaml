@@ -1,0 +1,6 @@
+releases:
+  id: 6205
+  rss: https://github.com/hluk/CopyQ/tags.atom
+# Last checked: 20240419
+security:
+  cpe: ~

@@ -1,7 +1,0 @@
-releases:
-  id: 827
-  rss: ~
-security:
-  cpe:
-  - vendor: fontconfig_project
-    product: fontconfig

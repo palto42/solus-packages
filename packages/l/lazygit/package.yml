@@ -1,8 +1,8 @@
 name       : lazygit
-version    : 0.40.2
-release    : 26
+version    : 0.52.0
+release    : 42
 source     :
-    - https://github.com/jesseduffield/lazygit/archive/refs/tags/v0.40.2.tar.gz : 146bd63995fcf2f2373bbc2143b3565b7a2be49a1d4e385496265ac0f69e4128
+    - https://github.com/jesseduffield/lazygit/archive/refs/tags/v0.52.0.tar.gz : 2d6b045105cca36fb4a9ea9fa8834bab70f99a71dcb6f7a1aea11184ac1f66f8
 license    : MIT
 homepage   : https://github.com/jesseduffield/lazygit
 component  : programming.tools

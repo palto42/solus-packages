@@ -20,10 +20,11 @@
 </Description>
         <PartOf>kernel.drivers</PartOf>
         <RuntimeDependencies>
-            <Dependency releaseFrom="245">vhba-module-common</Dependency>
+            <Dependency releaseFrom="282">vhba-module-common</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="data">/lib/modules/6.6.20-236.lts/kernel/drivers/misc/vhba.ko.zst</Path>
+            <Path fileType="data">/lib64/modules/6.12.28-269.lts/kernel/drivers/misc/vhba.ko.zst</Path>
+            <Path fileType="library">/usr/lib64/modules/6.12.28-269.lts/kernel/drivers/misc/vhba.ko.zst</Path>
         </Files>
     </Package>
     <Package>
@@ -43,16 +44,17 @@
 </Description>
         <PartOf>kernel.drivers</PartOf>
         <RuntimeDependencies>
-            <Dependency releaseFrom="245">vhba-module-common</Dependency>
+            <Dependency releaseFrom="282">vhba-module-common</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="data">/lib/modules/6.6.20-279.current/kernel/drivers/misc/vhba.ko.zst</Path>
+            <Path fileType="data">/lib64/modules/6.14.6-319.current/kernel/drivers/misc/vhba.ko.zst</Path>
+            <Path fileType="library">/usr/lib64/modules/6.14.6-319.current/kernel/drivers/misc/vhba.ko.zst</Path>
         </Files>
     </Package>
     <History>
-        <Update release="245">
-            <Date>2024-03-05</Date>
-            <Version>20240202</Version>
+        <Update release="282">
+            <Date>2025-05-13</Date>
+            <Version>20250329</Version>
             <Comment>Packaging update</Comment>
             <Name>Reilly Brogan</Name>
             <Email>solus@reillybrogan.com</Email>

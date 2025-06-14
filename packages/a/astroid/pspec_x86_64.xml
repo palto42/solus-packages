@@ -48,12 +48,13 @@
             <Path fileType="data">/usr/share/icons/hicolor/512x512/apps/astroid.png</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/astroid.svg</Path>
             <Path fileType="man">/usr/share/man/man1/astroid.1.gz</Path>
+            <Path fileType="data">/usr/share/metainfo/io.github.astroidmail.astroid.metainfo.xml</Path>
             <Path fileType="data">/usr/share/pixmaps/astroid.png</Path>
         </Files>
     </Package>
     <History>
-        <Update release="26">
-            <Date>2023-11-29</Date>
+        <Update release="30">
+            <Date>2024-07-13</Date>
             <Version>0.16</Version>
             <Comment>Packaging update</Comment>
             <Name>Joey Riches</Name>

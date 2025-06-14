@@ -1,34 +1,34 @@
 name       : inkscape
-version    : 1.3.2
-release    : 65
+version    : 1.4.2
+release    : 75
 source     :
-    - https://media.inkscape.org/dl/resources/file/inkscape-1.3.2.tar.xz : dbd1844dc443fe5e10d3e9a887144e5fb7223852fff191cfb5ef7adeab0e086b
+    - https://media.inkscape.org/dl/resources/file/inkscape-1.4.2.tar.xz : 2000530c7917e5260c9e8575a7154ff6926643d2006487d714e304a963f0c782
 homepage   : https://inkscape.org/
 license    :
     - GPL-2.0-or-later
     - LGPL-3.0-or-later
     - MPL-1.1
 component  : multimedia.graphics
-summary    : Inkscape is an open-source vector graphics editor similar to Adobe Illustrator, Corel Draw, Freehand, or Xara X
+summary    :
+    - Inkscape is an open-source vector graphics editor similar to Adobe Illustrator, Corel Draw, Freehand, or Xara X
+    - tutorials : Tutorial for Inkscape
 description: |
     Inkscape is an open-source vector graphics editor similar to Adobe Illustrator, Corel Draw, Freehand, or Xara X. What sets Inkscape apart is its use of Scalable Vector Graphics (SVG), an open XML-based W3C standard, as the native format.
 clang      : yes
 builddeps  :
     - pkgconfig(2geom)
+    - pkgconfig(GraphicsMagick)
     - pkgconfig(bdw-gc)
-    - pkgconfig(dbus-glib-1)
     - pkgconfig(gsl)
     - pkgconfig(gspell-1)
     - pkgconfig(gtkmm-3.0)
+    - pkgconfig(gtksourceview-4)
     - pkgconfig(lcms2)
     - pkgconfig(libcdr-0.1)
-    - pkgconfig(libexif)
     - pkgconfig(libjpeg)
-    - pkgconfig(libsoup-2.4)
     - pkgconfig(libvisio-0.1)
     - pkgconfig(libxslt)
     - pkgconfig(poppler)
-    - pkgconfig(popt)
     - double-conversion-devel
     - libboost-devel
     - numpy
@@ -39,20 +39,23 @@ rundeps    :
     - python-cssselect
     - python-lxml
     - python-pillow
+    - python-tinycss2
     - scour
 setup      : |
-    %patch -p1 -i $pkgfiles/ftbfs-libxml-2.12.patch
+    %patch -p1 -i $pkgfiles/poppler-private-includes.patch
     %cmake_ninja -DWITH_DBUS=ON
 build      : |
     %ninja_build
 install    : |
     %ninja_install
-    rm -rf $installdir/usr/share/inkscape/doc
-    rm -rf $installdir/usr/share/inkscape/extensions/{README,STYLEGUIDE,TESTING}.md
-    rm -rf $installdir/usr/share/inkscape/themes/LICENSE.txt
-    rm -rf $installdir/usr/share/inkscape/themes/README.md
+    rm -rfv $installdir/usr/share/inkscape/doc
+    rm -rfv $installdir/usr/share/inkscape/extensions/{README,STYLEGUIDE,TESTING}.md
+    rm -rfv $installdir/usr/share/inkscape/themes/LICENSE.txt
+    rm -rfv $installdir/usr/share/inkscape/themes/README.md
 patterns   :
-    - docs :
+    - tutorials :
         - /usr/share/inkscape/examples
         - /usr/share/inkscape/extensions/docs/
         - /usr/share/inkscape/tutorials
+replaces   :
+    - tutorials : inkscape-docs

@@ -1,9 +1,9 @@
 name       : evolution
-version    : 3.50.4
-release    : 72
+version    : 3.56.2
+release    : 84
 source     :
-    - https://download.gnome.org/sources/evolution/3.50/evolution-3.50.4.tar.xz : e0f955ca14dfb1b2e1682fcfa1816a03c114b8161998f96cf9d681a6a3842698
-homepage   : https://wiki.gnome.org/Apps/Evolution
+    - https://download.gnome.org/sources/evolution/3.56/evolution-3.56.2.tar.xz : 7dfdc9aeb2dab326dabfdc1f8577c4ecc123a12da0012f8c64a726065a3c0b2b
+homepage   : https://gnome.pages.gitlab.gnome.org/evolution/help/
 license    : LGPL-2.1-or-later
 component  : network.mail
 summary    : Evolution Mail Client

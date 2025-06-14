@@ -1,8 +1,8 @@
 name       : cryptsetup
-version    : 2.6.1
-release    : 17
+version    : 2.7.5
+release    : 22
 source     :
-    - https://mirrors.edge.kernel.org/pub/linux/utils/cryptsetup/v2.6/cryptsetup-2.6.1.tar.xz : 410ded65a1072ab9c8e41added37b9729c087fef4d2db02bb4ef529ad6da4693
+    - https://mirrors.edge.kernel.org/pub/linux/utils/cryptsetup/v2.7/cryptsetup-2.7.5.tar.xz : d2be4395b8f503b0ebf4b2d81db90c35a97050a358ee21fe62a0dfb66e5d5522
 homepage   : https://gitlab.com/cryptsetup/cryptsetup
 license    :
     - GPL-2.0-or-later

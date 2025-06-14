@@ -1,8 +1,8 @@
 name       : linux-headers
-version    : 6.6.18
-release    : 104
+version    : '6.14'
+release    : 112
 source     :
-    - https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.6.18.tar.xz : 4e43d8c5fba14f7c82597838011648056487b7550fd83276ad534559e8499b1d
+    - https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.14.2.tar.xz : c5c682a354ea3190139357a57d34a79e5c37221ace823a938e10116b577a2e1b
 license    : GPL-2.0-only
 component  : system.devel
 replaces   : kernel-libc-devel

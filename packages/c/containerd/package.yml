@@ -1,8 +1,8 @@
 name       : containerd
-version    : 1.7.13
-release    : 55
+version    : 2.1.2
+release    : 70
 source     :
-    - git|https://github.com/containerd/containerd.git : v1.7.13
+    - https://github.com/containerd/containerd/archive/refs/tags/v2.1.2.tar.gz : 9fc20eb912ae46b32243bc8a23ce7df83be34dbbd15325ba5c6f3765a3ca0529
 license    : Apache-2.0
 component  : virt
 homepage   : https://containerd.io/
@@ -11,6 +11,7 @@ description: |
     A daemon to control OCI container runtimes
 builddeps  :
     - btrfs-progs-devel
+    - git
     - go-md2man
     - golang
 rundeps    :
@@ -26,15 +27,19 @@ environment: |
     unset LDFLAGS
 setup      : |
     sed -i 's|/usr/local/bin/containerd|/usr/bin/containerd|' containerd.service
+
+    go mod vendor
 build      : |
+    set -e
+    export GITCOMMIT="$(git ls-remote https://github.com/containerd/containerd.git refs/tags/v$version^{} | awk '{print $1}')"
+
     mkdir -p src/github.com/containerd
     ln -s `pwd` src/github.com/containerd/containerd
     pushd src/github.com/containerd/containerd
-    %make GO_BUILD_FLAGS="$GOFLAGS" REVISION=$(git rev-parse HEAD) BUILDTAGS=no_aufs binaries man
+
+    %make GO_BUILD_FLAGS="$GOFLAGS" REVISION=$GITCOMMIT binaries man
 install    : |
     %make_install PREFIX=/usr/
-
-    rm -fv $installdir/usr/bin/containerd-shim-runc-v1
 
     # Install the service file, but disable it by default
     install -Dm644 containerd.service $installdir/usr/lib/systemd/system/containerd.service

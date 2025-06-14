@@ -1,8 +1,8 @@
 name       : fluidsynth
-version    : 2.3.4
-release    : 26
+version    : 2.4.4
+release    : 32
 source     :
-    - https://github.com/FluidSynth/fluidsynth/archive/v2.3.4.tar.gz : 1529ef5bc3b9ef3adc2a7964505912f7305103e269e50cc0316f500b22053ac9
+    - https://github.com/FluidSynth/fluidsynth/archive/refs/tags/v2.4.4.tar.gz : fc492a255f453e65ac5b99a25e6ffbe0fbd64d6a4fe824bacd68de16fe8af7ba
 homepage   : https://www.fluidsynth.org/
 license    : LGPL-2.1-or-later
 component  : multimedia.audio

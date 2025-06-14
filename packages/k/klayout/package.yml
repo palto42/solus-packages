@@ -1,8 +1,8 @@
 name       : klayout
-version    : 0.28.14
-release    : 38
+version    : 0.30.2
+release    : 45
 source     :
-    - https://github.com/KLayout/klayout/archive/v0.28.14.tar.gz : 96dd2548511b20a8f710455ba4f90b70dbc8bc542641acb0ca8684cdb5a317ac
+    - https://www.klayout.org/downloads/source/klayout-0.30.2.tar.gz : 8c99d4570723a8865914c62d26f473192d4836b434ebd3e2daf0de93289fdb53
 homepage   : https://www.klayout.de/
 license    :
     - GPL-2.0-or-later
@@ -21,7 +21,8 @@ builddeps  :
 replaces   :
     - klayout-devel
 setup      : |
-    ./build.sh -dry-run -qt5 -rpath %libdir%/klayout
+    export QMAKESPEC=linux-g++
+    ./build.sh -dry-run -rpath %libdir%/klayout
 build      : |
     %make -C build-release
 install    : |
@@ -46,7 +47,7 @@ install    : |
     install -dm00755 $installdir/${sitedir}/klayout
     install -dm00755 $installdir/${sitedir}/klayout/${subdir}
     install -m00644 bin-release/pymod/klayout/{*.py,*.so} $installdir/${sitedir}/klayout/.
-    for subdir in db lib rdb tl lay; do
+    for subdir in db lib rdb tl lay pya; do
         install -dm00755 $installdir/${sitedir}/klayout/${subdir}
         install -m00644 bin-release/pymod/klayout/${subdir}/*.py $installdir/${sitedir}/klayout/${subdir}/.
     done

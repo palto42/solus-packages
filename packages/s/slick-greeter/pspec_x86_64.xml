@@ -137,6 +137,7 @@
             <Path fileType="localedata">/usr/share/locale/th/LC_MESSAGES/slick-greeter.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ti/LC_MESSAGES/slick-greeter.mo</Path>
             <Path fileType="localedata">/usr/share/locale/tr/LC_MESSAGES/slick-greeter.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/tt/LC_MESSAGES/slick-greeter.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ug/LC_MESSAGES/slick-greeter.mo</Path>
             <Path fileType="localedata">/usr/share/locale/uk/LC_MESSAGES/slick-greeter.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ur/LC_MESSAGES/slick-greeter.mo</Path>
@@ -206,6 +207,7 @@
             <Path fileType="data">/usr/share/slick-greeter/badges/kde-plasma.png</Path>
             <Path fileType="data">/usr/share/slick-greeter/badges/kde.png</Path>
             <Path fileType="data">/usr/share/slick-greeter/badges/larswm.png</Path>
+            <Path fileType="data">/usr/share/slick-greeter/badges/lomiri.svg</Path>
             <Path fileType="data">/usr/share/slick-greeter/badges/lubuntu-nexus7.png</Path>
             <Path fileType="data">/usr/share/slick-greeter/badges/lxgames.png</Path>
             <Path fileType="data">/usr/share/slick-greeter/badges/lxqt.png</Path>
@@ -221,6 +223,7 @@
             <Path fileType="data">/usr/share/slick-greeter/badges/pantheon.png</Path>
             <Path fileType="data">/usr/share/slick-greeter/badges/pekwm.png</Path>
             <Path fileType="data">/usr/share/slick-greeter/badges/plasma.png</Path>
+            <Path fileType="data">/usr/share/slick-greeter/badges/plasmax11.png</Path>
             <Path fileType="data">/usr/share/slick-greeter/badges/ratpoison.png</Path>
             <Path fileType="data">/usr/share/slick-greeter/badges/razor.png</Path>
             <Path fileType="data">/usr/share/slick-greeter/badges/recovery_console.png</Path>
@@ -244,6 +247,7 @@
             <Path fileType="data">/usr/share/slick-greeter/badges/usr.png</Path>
             <Path fileType="data">/usr/share/slick-greeter/badges/wmaker-common.png</Path>
             <Path fileType="data">/usr/share/slick-greeter/badges/wmii.png</Path>
+            <Path fileType="data">/usr/share/slick-greeter/badges/xfce-wayland.svg</Path>
             <Path fileType="data">/usr/share/slick-greeter/badges/xfce.svg</Path>
             <Path fileType="data">/usr/share/slick-greeter/badges/xmonad.png</Path>
             <Path fileType="data">/usr/share/slick-greeter/badges/xterm.png</Path>
@@ -278,9 +282,9 @@
         </Conflicts>
     </Package>
     <History>
-        <Update release="31">
-            <Date>2024-02-10</Date>
-            <Version>2.0.3</Version>
+        <Update release="36">
+            <Date>2025-01-10</Date>
+            <Version>2.0.9</Version>
             <Comment>Packaging update</Comment>
             <Name>Algent Albrahimi</Name>
             <Email>algent@protonmail.com</Email>

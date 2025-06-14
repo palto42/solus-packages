@@ -1,8 +1,8 @@
 name       : xfsprogs
-version    : 6.4.0
-release    : 23
+version    : 6.14.0
+release    : 30
 source     :
-    - https://mirrors.edge.kernel.org/pub/linux/utils/fs/xfs/xfsprogs/xfsprogs-6.4.0.tar.xz : c31868418bfbf49a3a9c47fc70cdffde9d96f4ff0051bd04a0881e6654648104
+    - https://mirrors.edge.kernel.org/pub/linux/utils/fs/xfs/xfsprogs/xfsprogs-6.14.0.tar.xz : fa5ab77f8b5169ce48dd8de09446ad7e29834a05b8f52012bae411cf53ec1f58
 license    :
     - GPL-2.0-only
     - LGPL-2.1-only
@@ -11,26 +11,25 @@ summary    : XFS User Tools
 description: |
     XFS combines advanced journaling technology with full 64-bit addressing and scalable structures and algorithms. This combination delivers the most scalable high-performance filesystem ever conceived.
 component  : system.utils
-patterns   :
-    - devel : /usr/share/man/man3
 builddeps  :
     - pkgconfig(inih)
     - pkgconfig(libedit)
     - pkgconfig(liburcu)
     - libunistring-devel
 setup      : |
-    %patch -p1 -i $pkgfiles/0001-Use-merged-usr-tree-layout.patch
-
-    # Fix installing certain binaries to /sbin
-    sed -i "s|root_sbindir='/sbin'|root_sbindir='/usr/sbin'|g" configure
-
     %configure --disable-static \
                --enable-editline=yes \
                --with-crond=no
 build      : |
     %make
 install    : |
-    %make_install install-dev
+    make DESTDIR="$installdir" install install-dev
 
     # Fix permission issue caused by not using fakeroot during the build
     chown root:root --recursive $installdir/
+
+    # Stateless
+    install -Dm00644 $pkgfiles/xfsprogs.tmpfiles $installdir/usr/lib/tmpfiles.d/xfsprogs.conf
+    rmdir -v $installdir/var/lib/xfsprogs \
+             $installdir/var/lib \
+             $installdir/var

@@ -1,8 +1,8 @@
 name       : ccache
-version    : 4.9.1
-release    : 27
+version    : 4.10.2
+release    : 30
 source     :
-    - https://github.com/ccache/ccache/releases/download/v4.9.1/ccache-4.9.1.tar.gz : 12834ecaaaf2db069dda1d1d991f91c19e3274cc04a471af5b64195def17e90f
+    - https://github.com/ccache/ccache/releases/download/v4.10.2/ccache-4.10.2.tar.gz : 108100960bb7e64573ea925af2ee7611701241abb36ce0aae3354528403a7d87
 homepage   : https://ccache.dev/
 license    : GPL-3.0-or-later
 component  : programming.tools
@@ -10,13 +10,17 @@ summary    : compiler cache
 description: |
     ccache is a compiler cache. It speeds up recompilation by caching previous compilations and detecting when the same compilation is being done again. Supported languages are C, C++, Objective-C and Objective-C++.
 builddeps  :
+    - pkgconfig(fmt)
+    - pkgconfig(libxxhash)
     - pkgconfig(libzstd)
     - asciidoctor
 setup      : |
     %patch -p1 -i $pkgfiles/0001-ccache-Add-vendor-dir.patch
     %cmake_ninja -DCMAKE_INSTALL_SYSCONFDIR="/etc/ccache" \
                  -DVENDORDIR="/usr/share/defaults/etc/ccache" \
-                 -DREDIS_STORAGE_BACKEND=OFF
+                 -DREDIS_STORAGE_BACKEND=OFF \
+                 -DENABLE_TESTING=OFF \
+                 -DDEPS=LOCAL
 build      : |
     %ninja_build
 install    : |
@@ -30,5 +34,6 @@ install    : |
     done
 
     install -Dm00644 $pkgfiles/ccache.conf -t $installdir/usr/share/defaults/etc/ccache
-check      : |
-    %ninja_check
+# Need to package doctest before we can re-enable the test-suite
+# check      : |
+#     %ninja_check

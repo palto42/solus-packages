@@ -1,6 +1,7 @@
 <PISI>
     <Source>
         <Name>kio-fuse</Name>
+        <Homepage>https://invent.kde.org/system/kio-fuse</Homepage>
         <Packager>
             <Name>Reilly Brogan</Name>
             <Email>solus@reillybrogan.com</Email>
@@ -26,8 +27,8 @@
         </Files>
     </Package>
     <History>
-        <Update release="3">
-            <Date>2024-03-02</Date>
+        <Update release="7">
+            <Date>2025-04-09</Date>
             <Version>5.1.0</Version>
             <Comment>Packaging update</Comment>
             <Name>Reilly Brogan</Name>

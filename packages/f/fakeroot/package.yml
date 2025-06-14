@@ -1,8 +1,9 @@
 name       : fakeroot
-version    : 1.32.1
-release    : 18
+version    : '1.35'
+release    : 21
 source     :
-    - https://ftp.debian.org/debian/pool/main/f/fakeroot/fakeroot_1.32.1.orig.tar.gz : c072b0f65bafc4cc5b6112f7c61185f5170ce4cb0c410d1681c1af4a183e94e6
+    - https://ftp.debian.org/debian/pool/main/f/fakeroot/fakeroot_1.35.orig.tar.gz : e5a427b4ab1eb4a2158b3312547a4155aede58735cd5c2910421988834b440a4
+homepage   : https://tracker.debian.org/pkg/fakeroot
 license    : GPL-3.0-or-later
 summary    : Tool for simulating superuser privileges
 description: |

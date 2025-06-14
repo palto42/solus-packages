@@ -1,0 +1,39 @@
+name       : lact
+version    : 0.7.4
+release    : 7
+source     :
+    - git|https://github.com/ilya-zlobintsev/LACT.git : v0.7.4
+homepage   : https://github.com/ilya-zlobintsev/LACT
+license    : MIT
+component  : system.utils
+summary    : Linux GPU Configuration Tool
+networking : yes
+clang      : yes
+description: |
+    This application allows you to control your GPU on a Linux system.
+builddeps  :
+    - pkgconfig(gtk4)
+    - pkgconfig(libdrm)
+    - pkgconfig(ocl-icd)
+    - git
+    - rust
+    - vulkan-tools
+rundeps    :
+    - ocl-icd
+    - vulkan-tools
+setup      : |
+    %patch -p1 -i $pkgfiles/0001-Solus-Start-after-systemd-udev.patch
+    %patch -p1 -i $pkgfiles/0001-Solus-Adapt-to-our-amdgpu-kernel-argument.patch
+    %patch -p1 -i $pkgfiles/group-priority.patch
+build      : |
+    %make
+install    : |
+    %make_install PREFIX=/usr
+
+    # Start service by default
+    install -dm00755 $installdir/usr/lib/systemd/system/multi-user.target.wants
+    ln -sv ../lactd.service $installdir/usr/lib/systemd/system/multi-user.target.wants/lactd.service
+
+    # Allow amdgpu users to overclock their GPUs by default
+    # This only works on our -current kernel for now (remove this note once -lts is >= kernel 6.12)
+    install -Dm00644 $pkgfiles/kernel-lact.cmdline $installdir/usr/lib64/kernel/cmdline.d/50_lact.conf

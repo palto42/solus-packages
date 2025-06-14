@@ -1,19 +1,26 @@
 name       : rocm-hipify
-version    : 5.5.1
-release    : 3
+version    : 6.2.4
+release    : 5
 source     :
-    - https://github.com/ROCm-Developer-Tools/HIPIFY/archive/refs/tags/rocm-5.5.1.tar.gz : 35b9c07a7afaf9cf6f3bbe9dd147fa81b1b297af3e5e26e60c55629e83feaa48
+    # tag: rocm-6.2.4
+    - git|https://github.com/ROCm/HIPIFY.git : 0776ed88a0386fea6a10c991485083bb6b8b3433
 homepage   : https://github.com/ROCm-Developer-Tools/HIPIFY
 license    : MIT
 component  : programming.tools
 summary    : Convert CUDA to Portable C++ Code
 description: |
     Tools to translate CUDA source code into portable HIP C++ automatically.
-clang      : yes
+patterns   : /*
+builddeps  :
+    - rocm-cmake
+    - rocm-llvm
+environment: |
+    export ROCM_PATH=/usr
+    export CMAKE_PREFIX_PATH=/usr/lib64/llvm-rocm
 setup      : |
-    %patch -p1 -i $pkgfiles/install.diff
-    %cmake_ninja -DFILE_REORG_BACKWARD_COMPATIBILITY=OFF
+    %cmake_ninja -L
 build      : |
     %ninja_build
 install    : |
-    %ninja_install hipify-clang
+    %ninja_install 
+    chmod +x $installdir/usr/bin/hipify-perl

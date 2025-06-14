@@ -5,6 +5,7 @@ libobs_glcapture.so:eglCreateWindowSurface
 libobs_glcapture.so:eglDestroyContext
 libobs_glcapture.so:eglGetProcAddress
 libobs_glcapture.so:eglSwapBuffers
+libobs_glcapture.so:glXCreateWindow
 libobs_glcapture.so:glXDestroyContext
 libobs_glcapture.so:glXGetProcAddress
 libobs_glcapture.so:glXGetProcAddressARB
@@ -24,6 +25,7 @@ linux-vkcapture.so:obs_module_text
 linux-vkcapture.so:obs_module_unload
 linux-vkcapture.so:obs_module_ver
 linux-vkcapture.so:p_glGetUnsignedBytei_vEXT
+linux-vkcapture.so:vkcapture_get_color_space
 linux-vkcapture.so:wl_cursor_destroy
 linux-vkcapture.so:wl_cursor_init
 linux-vkcapture.so:wl_cursor_render

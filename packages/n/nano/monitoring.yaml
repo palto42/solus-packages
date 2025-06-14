@@ -1,0 +1,9 @@
+releases:
+  id: 2046
+  ignore: 
+    # Linux Mint projects have a moving release/tag for every commit to master
+    - "master.*"
+  rss: https://github.com/linuxmint/nemo/tags.atom
+# No known CPE, checked 20240213
+security:
+  cpe: ~

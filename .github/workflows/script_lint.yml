@@ -4,9 +4,12 @@ on:
   pull_request:
     paths:
       - 'common/**'
+      - packages/u/usysconf-epoch/files/epoch.sh
+
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: true
+
 jobs:
   Python:
     name: Python Linting
@@ -20,19 +23,22 @@ jobs:
           python-version: "3.10"
       - name: flake8 Lint
         uses: py-actions/flake8@v2
-        with:
-           path: common/CI common/Hooks common/Scripts/worklog.py
+        with: 
+           path: >-
+              common/CI
+              common/Hooks
+              common/Scripts
       - name: mypy lint
         uses: jpetrucciani/mypy-check@master
         with:
           path: common/CI common/Hooks common/Scripts/worklog.py
           python_version: "3.10"
-          requirements: types-PyYAML
+          requirements: ruamel.yaml types-PyYAML types-Markdown
   ShellCheck:
     name: ShellCheck
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Run ShellCheck
         uses: ludeeus/action-shellcheck@master
         with:
@@ -40,7 +46,6 @@ jobs:
           check_together: 'yes'
           ignore_paths: >-
             common/Legacy/**
-            common/Scripts/package-publish-safety-catches.sh
             common/Scripts/helpers.zsh
             common/Scripts/sync_licenses.sh
             common/Scripts/new-package.sh

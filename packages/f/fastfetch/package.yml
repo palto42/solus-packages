@@ -1,9 +1,9 @@
 name       : fastfetch
-version    : 2.8.7
-release    : 9
+version    : 2.44.0
+release    : 55
 source     :
-    - https://github.com/fastfetch-cli/fastfetch/archive/refs/tags/2.8.7.tar.gz : d5382b12a0df30afaa99f17b284a151009b0e15a5ad73d13f140a3b8a460fd9c
-homepage   : https://github.com/LinusDierheimer/fastfetch
+    - https://github.com/fastfetch-cli/fastfetch/archive/refs/tags/2.44.0.tar.gz : 3fc2b6d71e38f07ccef29945937daac7825a7cf48f67658207d31a5d42a5a90b
+homepage   : https://github.com/fastfetch-cli/fastfetch
 license    : MIT
 component  : system.utils
 summary    : Like neofetch, but much faster because written in C
@@ -13,18 +13,22 @@ builddeps  :
     - pkgconfig(ImageMagick)
     - pkgconfig(OpenCL)
     - pkgconfig(dconf)
+    - pkgconfig(ddcutil)
+    - pkgconfig(egl)
     - pkgconfig(gio-2.0)
+    - pkgconfig(libdrm)
+    - pkgconfig(libelf)
     - pkgconfig(libpci)
-    - pkgconfig(osmesa)
+    - pkgconfig(libpulse)
+    - pkgconfig(libxfconf-0)
     - pkgconfig(sqlite3)
     - pkgconfig(vulkan)
-    - pkgconfig(libxfconf-0)
+    - pkgconfig(wayland-client)
     - pkgconfig(xrandr)
     - vulkan-headers
 setup      : |
     %cmake_ninja \
         -DENABLE_IMAGEMAGICK6='OFF' \
-        -DENABLE_LIBCJSON='OFF' \
         -DENABLE_RPM='OFF' \
         -Wno-dev
 build      : |

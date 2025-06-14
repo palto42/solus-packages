@@ -1,8 +1,8 @@
 name       : gettext
-version    : 0.21.1
-release    : 16
+version    : '0.24'
+release    : 19
 source     :
-    - https://ftp.gnu.org/gnu/gettext/gettext-0.21.1.tar.gz : e8c3650e1d8cee875c4f355642382c1df83058bd5a11ee8555c0cf276d646d45
+    - https://ftp.gnu.org/gnu/gettext/gettext-0.24.tar.gz : c918503d593d70daf4844d175a13d816afacb667c06fba1ec9dcd5002c1518b7
 homepage   : https://www.gnu.org/software/gettext
 license    : GPL-3.0-or-later
 component  : system.base
@@ -16,7 +16,6 @@ builddeps  :
     - pkgconfig(libpcre)
 patterns   :
     - docs : /usr/share/doc
-    - devel : /usr/share/man/man3
 setup      : |
     %configure
 build      : |
@@ -24,5 +23,4 @@ build      : |
 install    : |
     %make_install
 check      : |
-    # test-execute.sh failing
-    %make check || :
+    %make check

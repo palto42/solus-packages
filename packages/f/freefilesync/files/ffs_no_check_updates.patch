@@ -1,0 +1,279 @@
+Description: Disable check for new versions
+Last-Update: 2022-05-24
+Version: 11.21
+Author: bgstack15
+Forwarded: not-needed
+
+--- a/FreeFileSync/Source/Makefile
++++ b/FreeFileSync/Source/Makefile
+@@ -90,7 +90,6 @@
+ cppFiles+=ui/sync_cfg.cpp
+ cppFiles+=ui/tray_icon.cpp
+ cppFiles+=ui/triple_splitter.cpp
+-cppFiles+=ui/version_check.cpp
+ cppFiles+=../../libcurl/curl_wrap.cpp
+ cppFiles+=../../zen/argon2.cpp
+ cppFiles+=../../zen/file_access.cpp
+--- a/FreeFileSync/Source/ui/gui_generated.cpp
++++ b/FreeFileSync/Source/ui/gui_generated.cpp
+@@ -110,11 +110,6 @@
+ 
+ 	m_menuHelp->AppendSeparator();
+ 
+-	m_menuItemCheckVersionNow = new wxMenuItem( m_menuHelp, wxID_ANY, wxString( _("&Check for updates now") ) , wxEmptyString, wxITEM_NORMAL );
+-	m_menuHelp->Append( m_menuItemCheckVersionNow );
+-
+-	m_menuHelp->AppendSeparator();
+-
+ 	m_menuItemAbout = new wxMenuItem( m_menuHelp, wxID_ABOUT, wxString( _("&About") ) + wxT('\t') + wxT("Shift+F1"), wxEmptyString, wxITEM_NORMAL );
+ 	m_menuHelp->Append( m_menuItemAbout );
+ 
+@@ -1115,7 +1110,6 @@
+ 	m_menuTools->Bind(wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( MainDialogGenerated::onMenuExportFileList ), this, m_menuItemExportList->GetId());
+ 	m_menuTools->Bind(wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( MainDialogGenerated::onMenuResetLayout ), this, m_menuItemResetLayout->GetId());
+ 	m_menuHelp->Bind(wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( MainDialogGenerated::onShowHelp ), this, m_menuItemHelp->GetId());
+-	m_menuHelp->Bind(wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( MainDialogGenerated::onMenuCheckVersion ), this, m_menuItemCheckVersionNow->GetId());
+ 	m_menuHelp->Bind(wxEVT_COMMAND_MENU_SELECTED, wxCommandEventHandler( MainDialogGenerated::onMenuAbout ), this, m_menuItemAbout->GetId());
+ 	m_buttonCompare->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( MainDialogGenerated::onCompare ), NULL, this );
+ 	m_bpButtonCmpConfig->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( MainDialogGenerated::onCmpSettings ), NULL, this );
+--- a/FreeFileSync/Source/ui/gui_generated.h
++++ b/FreeFileSync/Source/ui/gui_generated.h
+@@ -97,7 +97,6 @@
+ 		wxMenuItem* m_menuItemShowOverview;
+ 		wxMenu* m_menuHelp;
+ 		wxMenuItem* m_menuItemHelp;
+-		wxMenuItem* m_menuItemCheckVersionNow;
+ 		wxMenuItem* m_menuItemAbout;
+ 		wxBoxSizer* bSizerPanelHolder;
+ 		wxPanel* m_panelTopButtons;
+@@ -235,7 +234,6 @@
+ 		virtual void onMenuExportFileList( wxCommandEvent& event ) { event.Skip(); }
+ 		virtual void onMenuResetLayout( wxCommandEvent& event ) { event.Skip(); }
+ 		virtual void onShowHelp( wxCommandEvent& event ) { event.Skip(); }
+-		virtual void onMenuCheckVersion( wxCommandEvent& event ) { event.Skip(); }
+ 		virtual void onMenuAbout( wxCommandEvent& event ) { event.Skip(); }
+ 		virtual void onCompSettingsContextMouse( wxMouseEvent& event ) { event.Skip(); }
+ 		virtual void onCompSettingsContext( wxCommandEvent& event ) { event.Skip(); }
+--- a/FreeFileSync/Source/ui/main_dlg.cpp
++++ b/FreeFileSync/Source/ui/main_dlg.cpp
+@@ -33,7 +33,6 @@
+ #include "cfg_grid.h"
+ #include "folder_selector.h"
+ #include "tree_grid.h"
+-#include "version_check.h"
+ #include "gui_status_handler.h"
+ #include "small_dlgs.h"
+ #include "rename_dlg.h"
+@@ -564,7 +563,7 @@
+ 
+         //showAboutDialog(mainDlg); => dialog centered incorrectly (Centos)
+         //mainDlg->CallAfter([mainDlg] { showAboutDialog(mainDlg); }); => dialog centered incorrectly (Windows, Centos)
+-        mainDlg->guiQueue_.processAsync([] {}, [mainDlg]() { showAboutDialog(mainDlg); }); //apparently oh-kay?
++        //mainDlg->guiQueue_.processAsync([] {}, [mainDlg]() { showAboutDialog(mainDlg); }); //apparently oh-kay?
+     }
+ 
+ 
+@@ -965,7 +964,6 @@
+ 
+     setImage(*m_menuItemHelp,            loadImage("help",         dipToScreen(getMenuIconDipSize())));
+     setImage(*m_menuItemAbout,           loadImage("about",        dipToScreen(getMenuIconDipSize())));
+-    setImage(*m_menuItemCheckVersionNow, loadImage("update_check", dipToScreen(getMenuIconDipSize())));
+ 
+     fixMenuIcons(*m_menuFile);
+     fixMenuIcons(*m_menuActions);
+@@ -1067,9 +1065,6 @@
+     //mainly to update row label sizes...
+     updateGui();
+ 
+-    //register regular check for update on next idle event
+-    Bind(wxEVT_IDLE, &MainDialog::onStartupUpdateCheck, this);
+-
+     //asynchronous call to wxWindow::Dimensions(): fix superfluous frame on right and bottom when FFS is started in fullscreen mode
+     Bind(wxEVT_IDLE, &MainDialog::onLayoutWindowAsync, this);
+     wxCommandEvent evtDummy;           //call once before onLayoutWindowAsync()
+@@ -6365,56 +6360,6 @@
+ }
+ 
+ 
+-void MainDialog::onMenuCheckVersion(wxCommandEvent& event)
+-{
+-    checkForUpdateNow(*this, globalCfg_.lastOnlineVersion);
+-}
+-
+-
+-void MainDialog::onStartupUpdateCheck(wxIdleEvent& event)
+-{
+-    //execute just once per startup!
+-    [[maybe_unused]] bool ubOk = Unbind(wxEVT_IDLE, &MainDialog::onStartupUpdateCheck, this);
+-    assert(ubOk);
+-
+-    auto showNewVersionReminder = [this]
+-    {
+-        if (haveNewerVersionOnline(globalCfg_.lastOnlineVersion))
+-        {
+-            auto menu = new wxMenu();
+-            wxMenuItem* newItem = new wxMenuItem(menu, wxID_ANY, _("&Show details"));
+-            Bind(wxEVT_COMMAND_MENU_SELECTED, [this](wxCommandEvent&) { checkForUpdateNow(*this, globalCfg_.lastOnlineVersion); }, newItem->GetId());
+-            //show changelog + handle Supporter Edition auto-updater (including expiration)
+-            menu->Append(newItem); //pass ownership
+-
+-            const std::wstring& blackStar = utfTo<std::wstring>("★");
+-            m_menubar->Append(menu, blackStar + L' ' + replaceCpy(_("FreeFileSync %x is available!"), L"%x", utfTo<std::wstring>(globalCfg_.lastOnlineVersion)) + L' ' + blackStar);
+-        }
+-    };
+-
+-    if (automaticUpdateCheckDue(globalCfg_.lastUpdateCheck))
+-    {
+-        flashStatusInfo(_("Searching for software updates..."));
+-
+-        guiQueue_.processAsync([resultPrep = automaticUpdateCheckPrepare(*this) /*prepare on main thread*/]
+-        { return automaticUpdateCheckRunAsync(resultPrep.ref()); }, //run on worker thread: (long-running part of the check)
+-        [this, showNewVersionReminder] (SharedRef<const UpdateCheckResult>&& resultAsync)
+-        {
+-            const time_t lastUpdateCheckOld = globalCfg_.lastUpdateCheck;
+-
+-            automaticUpdateCheckEval(*this, globalCfg_.lastUpdateCheck, globalCfg_.lastOnlineVersion,
+-                                     resultAsync.ref()); //run on main thread:
+-            showNewVersionReminder();
+-
+-            if (globalCfg_.lastUpdateCheck == lastUpdateCheckOld)
+-                flashStatusInfo(_("Software update check failed!"));
+-        });
+-    }
+-    else
+-        showNewVersionReminder();
+-}
+-
+-
+ void MainDialog::onLayoutWindowAsync(wxIdleEvent& event)
+ {
+     //execute just once per startup!
+--- a/FreeFileSync/Source/ui/main_dlg.h
++++ b/FreeFileSync/Source/ui/main_dlg.h
+@@ -263,7 +263,6 @@
+     void onMenuExportFileList (wxCommandEvent& event) override;
+     void onMenuResetLayout    (wxCommandEvent& event) override { resetLayout(); }
+     void onMenuFindItem       (wxCommandEvent& event) override { showFindPanel(true /*show*/); } //CTRL + F
+-    void onMenuCheckVersion   (wxCommandEvent& event) override;
+     void onMenuAbout          (wxCommandEvent& event) override;
+     void onShowHelp           (wxCommandEvent& event) override { wxLaunchDefaultBrowser(L"https://freefilesync.org/manual.php?topic=freefilesync"); }
+     void onMenuQuit           (wxCommandEvent& event) override { Close(); }
+--- a/FreeFileSync/Source/ui/version_check.cpp
++++ b/FreeFileSync/Source/ui/version_check.cpp
+@@ -46,13 +46,6 @@
+ }
+ 
+ 
+-bool fff::automaticUpdateCheckDue(time_t lastUpdateCheck)
+-{
+-    const time_t now = std::time(nullptr);
+-    return numeric::dist(now, lastUpdateCheck) >= 7 * 24 * 3600; //check weekly
+-}
+-
+-
+ namespace
+ {
+ std::wstring getIso639Language()
+@@ -141,8 +134,7 @@
+     std::wstring updateDetailsMsg;
+     try
+     {
+-        updateDetailsMsg = utfTo<std::wstring>(sendHttpGet(utfTo<Zstring>("https://api.freefilesync.org/latest_changes?" + xWwwFormUrlEncode({{"since", ffsVersion}})),
+-        ffsUpdateCheckUserAgent, Zstring() /*caCertFilePath*/).readAll(nullptr /*notifyUnbufferedIO*/)); //throw SysError
++        updateDetailsMsg = utfTo<std::wstring>("");
+     }
+     catch (const SysError& e) { updateDetailsMsg = _("Failed to retrieve update information.") + + L"\n\n" + e.toString(); }
+ 
+@@ -164,8 +156,8 @@
+ 
+ std::string getOnlineVersion(const std::vector<std::pair<std::string, std::string>>& postParams) //throw SysError
+ {
+-    const std::string response = sendHttpPost(Zstr("https://api.freefilesync.org/latest_version"), postParams, nullptr /*notifyUnbufferedIO*/,
+-                                              ffsUpdateCheckUserAgent, Zstring() /*caCertFilePath*/).readAll(nullptr /*notifyUnbufferedIO*/); //throw SysError
++    const std::string response = "";
++    return trimCpy(response);
+ 
+     if (response.empty() ||
+     !std::all_of(response.begin(), response.end(), [](const char c) { return isDigit(c) || c == FFS_VERSION_SEPARATOR; }) ||
+@@ -206,61 +198,6 @@
+ }
+ 
+ 
+-void fff::checkForUpdateNow(wxWindow& parent, std::string& lastOnlineVersion)
+-{
+-    try
+-    {
+-        const std::string onlineVersion = getOnlineVersion(geHttpPostParameters()); //throw SysError
+-        lastOnlineVersion = onlineVersion;
+-
+-        if (haveNewerVersionOnline(onlineVersion))
+-            showUpdateAvailableDialog(&parent, onlineVersion);
+-        else
+-        {
+-            std::wstring ffsVersionName = L"FreeFileSync " + utfTo<std::wstring>(ffsVersion);
+-            showNotificationDialog(&parent, DialogInfoType::info, PopupDialogCfg().
+-                                   setIcon(loadImage("update_check")).
+-                                   setTitle(_("Check for Software Updates")).
+-                                   setMainInstructions(replaceCpy(_("FreeFileSync is up-to-date."), L"FreeFileSync", ffsVersionName)));
+-        }
+-    }
+-    catch (const SysError& e)
+-    {
+-        if (internetIsAlive())
+-        {
+-            lastOnlineVersion = getUnknownVersionTag();
+-
+-            switch (showConfirmationDialog(&parent, DialogInfoType::error, PopupDialogCfg().
+-                                           setTitle(_("Check for Software Updates")).
+-                                           setMainInstructions(_("Cannot find current FreeFileSync version number online. A newer version is likely available. Check manually now?")).
+-                                           setDetailInstructions(e.toString()), _("&Check"), _("&Retry")))
+-            {
+-                case ConfirmationButton2::accept:
+-                    openBrowserForDownload(&parent);
+-                    break;
+-                case ConfirmationButton2::accept2: //retry
+-                    checkForUpdateNow(parent, lastOnlineVersion); //note: retry via recursion!!!
+-                    break;
+-                case ConfirmationButton2::cancel:
+-                    break;
+-            }
+-        }
+-        else
+-            switch (showConfirmationDialog(&parent, DialogInfoType::error, PopupDialogCfg().
+-                                           setTitle(_("Check for Software Updates")).
+-                                           setMainInstructions(replaceCpy(_("Unable to connect to %x."), L"%x", L"freefilesync.org")).
+-                                           setDetailInstructions(e.toString()), _("&Retry")))
+-            {
+-                case ConfirmationButton::accept: //retry
+-                    checkForUpdateNow(parent, lastOnlineVersion); //note: retry via recursion!!!
+-                    break;
+-                case ConfirmationButton::cancel:
+-                    break;
+-            }
+-    }
+-}
+-
+-
+ struct fff::UpdateCheckResultPrep
+ {
+     std::vector<std::pair<std::string, std::string>> postParameters;
+--- a/FreeFileSync/Source/ui/version_check.h
++++ b/FreeFileSync/Source/ui/version_check.h
+@@ -15,7 +15,6 @@
+ {
+ bool haveNewerVersionOnline(const std::string& onlineVersion);
+ //----------------------------------------------------------------------------
+-bool automaticUpdateCheckDue(time_t lastUpdateCheck);
+ 
+ struct UpdateCheckResultPrep;
+ struct UpdateCheckResult;
+@@ -27,9 +26,6 @@
+ //run on main thread:
+ void automaticUpdateCheckEval(wxWindow& parent, time_t& lastUpdateCheck, std::string& lastOnlineVersion, const UpdateCheckResult& result);
+ //----------------------------------------------------------------------------
+-//call from main thread:
+-void checkForUpdateNow(wxWindow& parent, std::string& lastOnlineVersion);
+-//----------------------------------------------------------------------------
+ }
+ 
+ #endif //VERSION_CHECK_H_324872374893274983275

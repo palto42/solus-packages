@@ -402,9 +402,6 @@ libKF6BalooEngine.so.6:_ZNK5Baloo18AndPostingIterator5docIdEv
 libKF6BalooEngine.so.6:_ZNK5Baloo21VectorPostingIterator5docIdEv
 libKF6BalooEngine.so.6:_ZNK5Baloo26VectorPositionInfoIterator5docIdEv
 libKF6BalooEngine.so.6:_ZNK5Baloo7MTimeDB9toTestMapEv
-libKF6BalooEngine.so.6:_ZNK5Baloo8Database11isAvailableEv
-libKF6BalooEngine.so.6:_ZNK5Baloo8Database4pathEv
-libKF6BalooEngine.so.6:_ZNK5Baloo8Database6isOpenEv
 libKF6BalooEngine.so.6:_ZNK5Baloo8Document15contentIndexingEv
 libKF6BalooEngine.so.6:_ZNK5Baloo8Document2idEv
 libKF6BalooEngine.so.6:_ZNK5Baloo8Document3urlEv
@@ -429,8 +426,10 @@ libKF6BalooEngine.so.6:_ZTVN5Baloo17PhraseAndIteratorE
 libKF6BalooEngine.so.6:_ZTVN5Baloo18AndPostingIteratorE
 libKF6BalooEngine.so.6:_ZTVN5Baloo21VectorPostingIteratorE
 libKF6BalooEngine.so.6:_ZTVN5Baloo26VectorPositionInfoIteratorE
+libbaloomonitorplugin.so:_Z45qml_register_types_org_kde_baloo_experimentalv
 libbaloomonitorplugin.so:qt_plugin_instance
 libbaloomonitorplugin.so:qt_plugin_query_metadata_v2
+libbalooplugin.so:_Z32qml_register_types_org_kde_baloov
 libbalooplugin.so:qt_plugin_instance
 libbalooplugin.so:qt_plugin_query_metadata_v2
 tags.so:kdemain

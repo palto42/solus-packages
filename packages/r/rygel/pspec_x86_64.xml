@@ -1,10 +1,10 @@
 <PISI>
     <Source>
         <Name>rygel</Name>
-        <Homepage>https://wiki.gnome.org/Projects/Rygel</Homepage>
+        <Homepage>https://gnome.pages.gitlab.gnome.org/rygel/</Homepage>
         <Packager>
-            <Name>Reilly Brogan</Name>
-            <Email>solus@reillybrogan.com</Email>
+            <Name>Joey Riches</Name>
+            <Email>josephriches@gmail.com</Email>
         </Packager>
         <License>LGPL-2.0-or-later</License>
         <PartOf>network.util</PartOf>
@@ -20,7 +20,6 @@
 </Description>
         <PartOf>network.util</PartOf>
         <Files>
-            <Path fileType="config">/etc/rygel.conf</Path>
             <Path fileType="executable">/usr/bin/rygel</Path>
             <Path fileType="executable">/usr/bin/rygel-preferences</Path>
             <Path fileType="library">/usr/lib/systemd/user/rygel.service</Path>
@@ -29,17 +28,17 @@
             <Path fileType="library">/usr/lib64/girepository-1.0/RygelRendererGst-2.8.typelib</Path>
             <Path fileType="library">/usr/lib64/girepository-1.0/RygelServer-2.8.typelib</Path>
             <Path fileType="library">/usr/lib64/librygel-core-2.8.so.0</Path>
-            <Path fileType="library">/usr/lib64/librygel-core-2.8.so.0.42.5</Path>
+            <Path fileType="library">/usr/lib64/librygel-core-2.8.so.0.44.2</Path>
             <Path fileType="library">/usr/lib64/librygel-db-2.8.so.0</Path>
-            <Path fileType="library">/usr/lib64/librygel-db-2.8.so.0.42.5</Path>
+            <Path fileType="library">/usr/lib64/librygel-db-2.8.so.0.44.2</Path>
             <Path fileType="library">/usr/lib64/librygel-renderer-2.8.so.0</Path>
-            <Path fileType="library">/usr/lib64/librygel-renderer-2.8.so.0.42.5</Path>
+            <Path fileType="library">/usr/lib64/librygel-renderer-2.8.so.0.44.2</Path>
             <Path fileType="library">/usr/lib64/librygel-renderer-gst-2.8.so.0</Path>
-            <Path fileType="library">/usr/lib64/librygel-renderer-gst-2.8.so.0.42.5</Path>
+            <Path fileType="library">/usr/lib64/librygel-renderer-gst-2.8.so.0.44.2</Path>
             <Path fileType="library">/usr/lib64/librygel-ruih-2.8.so.0</Path>
-            <Path fileType="library">/usr/lib64/librygel-ruih-2.8.so.0.42.5</Path>
+            <Path fileType="library">/usr/lib64/librygel-ruih-2.8.so.0.44.2</Path>
             <Path fileType="library">/usr/lib64/librygel-server-2.8.so.0</Path>
-            <Path fileType="library">/usr/lib64/librygel-server-2.8.so.0.42.5</Path>
+            <Path fileType="library">/usr/lib64/librygel-server-2.8.so.0.44.2</Path>
             <Path fileType="library">/usr/lib64/rygel-2.8/engines/librygel-media-engine-gst.so</Path>
             <Path fileType="library">/usr/lib64/rygel-2.8/engines/librygel-media-engine-simple.so</Path>
             <Path fileType="library">/usr/lib64/rygel-2.8/engines/media-engine-gst.plugin</Path>
@@ -54,12 +53,10 @@
             <Path fileType="library">/usr/lib64/rygel-2.8/plugins/librygel-example-server-plugin-c.so</Path>
             <Path fileType="library">/usr/lib64/rygel-2.8/plugins/librygel-example-server-plugin-vala.so</Path>
             <Path fileType="library">/usr/lib64/rygel-2.8/plugins/librygel-gst-launch.so</Path>
-            <Path fileType="library">/usr/lib64/rygel-2.8/plugins/librygel-lms.so</Path>
             <Path fileType="library">/usr/lib64/rygel-2.8/plugins/librygel-media-export.so</Path>
             <Path fileType="library">/usr/lib64/rygel-2.8/plugins/librygel-mpris.so</Path>
             <Path fileType="library">/usr/lib64/rygel-2.8/plugins/librygel-playbin.so</Path>
             <Path fileType="library">/usr/lib64/rygel-2.8/plugins/librygel-tracker3.so</Path>
-            <Path fileType="library">/usr/lib64/rygel-2.8/plugins/lms.plugin</Path>
             <Path fileType="library">/usr/lib64/rygel-2.8/plugins/media-export.plugin</Path>
             <Path fileType="library">/usr/lib64/rygel-2.8/plugins/mpris.plugin</Path>
             <Path fileType="library">/usr/lib64/rygel-2.8/plugins/playbin.plugin</Path>
@@ -68,10 +65,7 @@
             <Path fileType="data">/usr/share/applications/rygel-preferences.desktop</Path>
             <Path fileType="data">/usr/share/applications/rygel.desktop</Path>
             <Path fileType="data">/usr/share/dbus-1/services/org.gnome.Rygel1.service</Path>
-            <Path fileType="data">/usr/share/gir-1.0/RygelCore-2.8.gir</Path>
-            <Path fileType="data">/usr/share/gir-1.0/RygelRenderer-2.8.gir</Path>
-            <Path fileType="data">/usr/share/gir-1.0/RygelRendererGst-2.8.gir</Path>
-            <Path fileType="data">/usr/share/gir-1.0/RygelServer-2.8.gir</Path>
+            <Path fileType="data">/usr/share/defaults/rygel.conf</Path>
             <Path fileType="data">/usr/share/icons/hicolor/128x128/apps/rygel.png</Path>
             <Path fileType="data">/usr/share/icons/hicolor/32x32/apps/rygel.png</Path>
             <Path fileType="data">/usr/share/icons/hicolor/48x48/apps/rygel.png</Path>
@@ -110,6 +104,7 @@
             <Path fileType="localedata">/usr/share/locale/it/LC_MESSAGES/rygel.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ja/LC_MESSAGES/rygel.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ka/LC_MESSAGES/rygel.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/kab/LC_MESSAGES/rygel.mo</Path>
             <Path fileType="localedata">/usr/share/locale/kk/LC_MESSAGES/rygel.mo</Path>
             <Path fileType="localedata">/usr/share/locale/kn/LC_MESSAGES/rygel.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ko/LC_MESSAGES/rygel.mo</Path>
@@ -183,7 +178,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="23">rygel</Dependency>
+            <Dependency release="29">rygel</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/rygel-2.8/rygel-core.h</Path>
@@ -203,6 +198,10 @@
             <Path fileType="data">/usr/lib64/pkgconfig/rygel-renderer-gst-2.8.pc</Path>
             <Path fileType="data">/usr/lib64/pkgconfig/rygel-ruih-2.8.pc</Path>
             <Path fileType="data">/usr/lib64/pkgconfig/rygel-server-2.8.pc</Path>
+            <Path fileType="data">/usr/share/gir-1.0/RygelCore-2.8.gir</Path>
+            <Path fileType="data">/usr/share/gir-1.0/RygelRenderer-2.8.gir</Path>
+            <Path fileType="data">/usr/share/gir-1.0/RygelRendererGst-2.8.gir</Path>
+            <Path fileType="data">/usr/share/gir-1.0/RygelServer-2.8.gir</Path>
             <Path fileType="data">/usr/share/vala/vapi/rygel-core-2.8.deps</Path>
             <Path fileType="data">/usr/share/vala/vapi/rygel-core-2.8.vapi</Path>
             <Path fileType="data">/usr/share/vala/vapi/rygel-db-2.8.deps</Path>
@@ -218,12 +217,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="23">
-            <Date>2024-02-24</Date>
-            <Version>0.42.5</Version>
+        <Update release="29">
+            <Date>2025-04-04</Date>
+            <Version>0.44.2</Version>
             <Comment>Packaging update</Comment>
-            <Name>Reilly Brogan</Name>
-            <Email>solus@reillybrogan.com</Email>
+            <Name>Joey Riches</Name>
+            <Email>josephriches@gmail.com</Email>
         </Update>
     </History>
 </PISI>

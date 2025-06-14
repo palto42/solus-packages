@@ -1,16 +1,17 @@
 <PISI>
     <Source>
         <Name>pavucontrol</Name>
+        <Homepage>https://freedesktop.org/software/pulseaudio/pavucontrol/</Homepage>
         <Packager>
-            <Name>Tracey Clark</Name>
-            <Email>tracey_dev@tlcnet.info</Email>
+            <Name>Reilly Brogan</Name>
+            <Email>solus@reillybrogan.com</Email>
         </Packager>
         <License>GPL-2.0-or-later</License>
         <PartOf>multimedia.audio</PartOf>
         <Summary xml:lang="en">A GTK volume control for PulseAudio</Summary>
         <Description xml:lang="en">A GTK volume control for PulseAudio
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>pavucontrol</Name>
@@ -20,7 +21,7 @@
         <PartOf>multimedia.audio</PartOf>
         <Files>
             <Path fileType="executable">/usr/bin/pavucontrol</Path>
-            <Path fileType="data">/usr/share/applications/pavucontrol.desktop</Path>
+            <Path fileType="data">/usr/share/applications/org.pulseaudio.pavucontrol.desktop</Path>
             <Path fileType="doc">/usr/share/doc/pavucontrol/README</Path>
             <Path fileType="doc">/usr/share/doc/pavucontrol/README.html</Path>
             <Path fileType="doc">/usr/share/doc/pavucontrol/style.css</Path>
@@ -44,6 +45,7 @@
             <Path fileType="localedata">/usr/share/locale/hi/LC_MESSAGES/pavucontrol.mo</Path>
             <Path fileType="localedata">/usr/share/locale/hr/LC_MESSAGES/pavucontrol.mo</Path>
             <Path fileType="localedata">/usr/share/locale/hu/LC_MESSAGES/pavucontrol.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/id/LC_MESSAGES/pavucontrol.mo</Path>
             <Path fileType="localedata">/usr/share/locale/it/LC_MESSAGES/pavucontrol.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ja/LC_MESSAGES/pavucontrol.mo</Path>
             <Path fileType="localedata">/usr/share/locale/kk/LC_MESSAGES/pavucontrol.mo</Path>
@@ -60,6 +62,7 @@
             <Path fileType="localedata">/usr/share/locale/pl/LC_MESSAGES/pavucontrol.mo</Path>
             <Path fileType="localedata">/usr/share/locale/pt/LC_MESSAGES/pavucontrol.mo</Path>
             <Path fileType="localedata">/usr/share/locale/pt_BR/LC_MESSAGES/pavucontrol.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/ro/LC_MESSAGES/pavucontrol.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ru/LC_MESSAGES/pavucontrol.mo</Path>
             <Path fileType="localedata">/usr/share/locale/si/LC_MESSAGES/pavucontrol.mo</Path>
             <Path fileType="localedata">/usr/share/locale/sk/LC_MESSAGES/pavucontrol.mo</Path>
@@ -74,16 +77,16 @@
             <Path fileType="localedata">/usr/share/locale/uk/LC_MESSAGES/pavucontrol.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_CN/LC_MESSAGES/pavucontrol.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_TW/LC_MESSAGES/pavucontrol.mo</Path>
-            <Path fileType="data">/usr/share/pavucontrol/pavucontrol.glade</Path>
+            <Path fileType="data">/usr/share/metainfo/org.pulseaudio.pavucontrol.metainfo.xml</Path>
         </Files>
     </Package>
     <History>
-        <Update release="11">
-            <Date>2023-07-24</Date>
-            <Version>5.0</Version>
+        <Update release="14">
+            <Date>2024-09-08</Date>
+            <Version>6.1</Version>
             <Comment>Packaging update</Comment>
-            <Name>Tracey Clark</Name>
-            <Email>tracey_dev@tlcnet.info</Email>
+            <Name>Reilly Brogan</Name>
+            <Email>solus@reillybrogan.com</Email>
         </Update>
     </History>
 </PISI>

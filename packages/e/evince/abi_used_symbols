@@ -442,6 +442,8 @@ libgio-2.0.so.0:g_file_query_info_async
 libgio-2.0.so.0:g_file_query_info_finish
 libgio-2.0.so.0:g_file_query_writable_namespaces
 libgio-2.0.so.0:g_file_read
+libgio-2.0.so.0:g_file_read_async
+libgio-2.0.so.0:g_file_read_finish
 libgio-2.0.so.0:g_file_replace
 libgio-2.0.so.0:g_file_resolve_relative_path
 libgio-2.0.so.0:g_file_set_attributes_async
@@ -460,6 +462,8 @@ libgio-2.0.so.0:g_menu_remove_all
 libgio-2.0.so.0:g_output_stream_close
 libgio-2.0.so.0:g_output_stream_write
 libgio-2.0.so.0:g_resources_lookup_data
+libgio-2.0.so.0:g_seekable_can_seek
+libgio-2.0.so.0:g_seekable_seek
 libgio-2.0.so.0:g_settings_apply
 libgio-2.0.so.0:g_settings_delay
 libgio-2.0.so.0:g_settings_get
@@ -504,6 +508,7 @@ libglib-2.0.so.0:g_ascii_strcasecmp
 libglib-2.0.so.0:g_ascii_strdown
 libglib-2.0.so.0:g_ascii_strtod
 libglib-2.0.so.0:g_ascii_strtoull
+libglib-2.0.so.0:g_ascii_table
 libglib-2.0.so.0:g_ascii_tolower
 libglib-2.0.so.0:g_assertion_message_cmpstr
 libglib-2.0.so.0:g_assertion_message_error
@@ -561,6 +566,7 @@ libglib-2.0.so.0:g_get_user_special_dir
 libglib-2.0.so.0:g_getenv
 libglib-2.0.so.0:g_hash_table_destroy
 libglib-2.0.so.0:g_hash_table_foreach_remove
+libglib-2.0.so.0:g_hash_table_get_keys
 libglib-2.0.so.0:g_hash_table_insert
 libglib-2.0.so.0:g_hash_table_lookup
 libglib-2.0.so.0:g_hash_table_lookup_extended
@@ -633,7 +639,9 @@ libglib-2.0.so.0:g_mutex_trylock
 libglib-2.0.so.0:g_mutex_unlock
 libglib-2.0.so.0:g_once_impl
 libglib-2.0.so.0:g_once_init_enter
+libglib-2.0.so.0:g_once_init_enter_pointer
 libglib-2.0.so.0:g_once_init_leave
+libglib-2.0.so.0:g_once_init_leave_pointer
 libglib-2.0.so.0:g_option_context_add_group
 libglib-2.0.so.0:g_option_context_add_main_entries
 libglib-2.0.so.0:g_option_context_free
@@ -747,8 +755,12 @@ libglib-2.0.so.0:g_try_malloc
 libglib-2.0.so.0:g_unichar_break_type
 libglib-2.0.so.0:g_unichar_isspace
 libglib-2.0.so.0:g_unlink
+libglib-2.0.so.0:g_uri_get_fragment
+libglib-2.0.so.0:g_uri_parse
+libglib-2.0.so.0:g_uri_parse_params
 libglib-2.0.so.0:g_uri_parse_scheme
 libglib-2.0.so.0:g_uri_unescape_string
+libglib-2.0.so.0:g_uri_unref
 libglib-2.0.so.0:g_usleep
 libglib-2.0.so.0:g_utf8_casefold
 libglib-2.0.so.0:g_utf8_collate_key_for_filename
@@ -764,6 +776,7 @@ libglib-2.0.so.0:g_variant_builder_add
 libglib-2.0.so.0:g_variant_builder_close
 libglib-2.0.so.0:g_variant_builder_end
 libglib-2.0.so.0:g_variant_builder_init
+libglib-2.0.so.0:g_variant_builder_init_static
 libglib-2.0.so.0:g_variant_builder_new
 libglib-2.0.so.0:g_variant_builder_open
 libglib-2.0.so.0:g_variant_builder_unref
@@ -913,9 +926,9 @@ libgobject-2.0.so.0:g_value_set_uint
 libgobject-2.0.so.0:g_value_set_variant
 libgobject-2.0.so.0:g_value_take_object
 libgobject-2.0.so.0:g_value_unset
-libgspell-1.so.2:gspell_text_view_basic_setup
-libgspell-1.so.2:gspell_text_view_get_from_gtk_text_view
-libgspell-1.so.2:gspell_text_view_set_inline_spell_checking
+libgspell-1.so.3:gspell_text_view_basic_setup
+libgspell-1.so.3:gspell_text_view_get_from_gtk_text_view
+libgspell-1.so.3:gspell_text_view_set_inline_spell_checking
 libgstreamer-1.0.so.0:gst_bus_add_signal_watch
 libgstreamer-1.0.so.0:gst_bus_remove_signal_watch
 libgstreamer-1.0.so.0:gst_bus_set_sync_handler
@@ -1149,7 +1162,6 @@ libgtk-3.so.0:gtk_image_new_from_surface
 libgtk-3.so.0:gtk_image_set_from_icon_name
 libgtk-3.so.0:gtk_info_bar_add_button
 libgtk-3.so.0:gtk_info_bar_set_message_type
-libgtk-3.so.0:gtk_info_bar_set_show_close_button
 libgtk-3.so.0:gtk_init
 libgtk-3.so.0:gtk_label_get_label
 libgtk-3.so.0:gtk_label_new
@@ -1632,6 +1644,7 @@ libhandy-1.so.0:hdy_style_manager_get_default
 libhandy-1.so.0:hdy_style_manager_set_color_scheme
 libm.so.6:ceil
 libm.so.6:exp
+libm.so.6:floor
 libm.so.6:fmax
 libm.so.6:fmin
 libm.so.6:hypot

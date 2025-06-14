@@ -3,7 +3,7 @@ libatk-1.0.so.0:atk_action_get_name
 libatk-1.0.so.0:atk_action_set_description
 libc.so.6:__fprintf_chk
 libc.so.6:__fread_chk
-libc.so.6:__isoc99_fscanf
+libc.so.6:__isoc23_fscanf
 libc.so.6:__libc_start_main
 libc.so.6:__memcpy_chk
 libc.so.6:__printf_chk
@@ -164,7 +164,6 @@ libgtk-x11-2.0.so.0:gtk_combo_box_set_active
 libgtk-x11-2.0.so.0:gtk_combo_box_set_active_iter
 libgtk-x11-2.0.so.0:gtk_container_add
 libgtk-x11-2.0.so.0:gtk_dialog_add_button
-libgtk-x11-2.0.so.0:gtk_dialog_new_with_buttons
 libgtk-x11-2.0.so.0:gtk_dialog_run
 libgtk-x11-2.0.so.0:gtk_dialog_set_alternative_button_order
 libgtk-x11-2.0.so.0:gtk_dialog_set_default_response

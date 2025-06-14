@@ -1,0 +1,43 @@
+name       : luanti
+version    : 5.12.0
+release    : 33
+source     :
+    - https://github.com/luanti-org/luanti/archive/refs/tags/5.12.0.tar.gz : 876867ac874492f20968f2c2eb4e403231e8e9f29e0e06efa512200bd5152355
+license    :
+    - Apache-2.0
+    - CC-BY-SA-3.0
+    - LGPL-2.1-or-later
+    - MIT
+homepage   : https://www.luanti.org/
+component  : games
+summary    : Multiplayer infinite-world block sandbox game
+description: |
+    Minetest is an infinite-world block sandbox game and game engine.
+    Players can create and destroy various types of blocks in a three-dimensional open world. This allows forming structures in every possible creation, on multiplayer servers or in singleplayer.
+    Minetest is designed to be simple, stable, and portable. It is lightweight enough to run on fairly old hardware.
+builddeps  :
+    - pkgconfig(freetype2)
+    - pkgconfig(gl)
+    - pkgconfig(jsoncpp)
+    - pkgconfig(libcurl)
+    - pkgconfig(libjpeg)
+    - pkgconfig(libpq)
+    - pkgconfig(libzstd)
+    - pkgconfig(luajit)
+    - pkgconfig(openal)
+    - pkgconfig(sdl2)
+    - pkgconfig(sqlite3)
+    - pkgconfig(vorbis)
+    - pkgconfig(x11)
+    - irrlichtmt-devel
+    - leveldb-devel
+    - libspatialindex-devel
+setup      : |
+    %cmake_ninja
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install
+replaces   :
+    - minetest
+    - dbginfo : minetest-dbginfo

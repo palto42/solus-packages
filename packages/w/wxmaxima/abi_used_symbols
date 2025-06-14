@@ -22,7 +22,6 @@ libc.so.6:iswprint
 libc.so.6:iswspace
 libc.so.6:iswupper
 libc.so.6:malloc
-libc.so.6:memcmp
 libc.so.6:memcpy
 libc.so.6:memmove
 libc.so.6:memset
@@ -94,8 +93,6 @@ libstdc++.so.6:_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEC1ERKS4_
 libstdc++.so.6:_ZNSt8__detail15_List_node_base11_M_transferEPS0_S1_
 libstdc++.so.6:_ZNSt8__detail15_List_node_base7_M_hookEPS0_
 libstdc++.so.6:_ZNSt8__detail15_List_node_base9_M_unhookEv
-libstdc++.so.6:_ZNSt9basic_iosIcSt11char_traitsIcEE5clearESt12_Ios_Iostate
-libstdc++.so.6:_ZNSt9basic_iosIcSt11char_traitsIcEE5rdbufEPSt15basic_streambufIcS1_E
 libstdc++.so.6:_ZSt11_Hash_bytesPKvmm
 libstdc++.so.6:_ZSt16__ostream_insertIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_PKS3_l
 libstdc++.so.6:_ZSt17__throw_bad_allocv
@@ -107,7 +104,6 @@ libstdc++.so.6:_ZSt24__throw_out_of_range_fmtPKcz
 libstdc++.so.6:_ZSt25__throw_bad_function_callv
 libstdc++.so.6:_ZSt28__throw_bad_array_new_lengthv
 libstdc++.so.6:_ZSt4cerr
-libstdc++.so.6:_ZSt4cout
 libstdc++.so.6:_ZSt9terminatev
 libstdc++.so.6:_ZTINSt6thread6_StateE
 libstdc++.so.6:_ZTVN10__cxxabiv117__class_type_infoE
@@ -118,6 +114,7 @@ libstdc++.so.6:_ZdlPvm
 libstdc++.so.6:_Znwm
 libstdc++.so.6:__cxa_bad_cast
 libstdc++.so.6:__cxa_begin_catch
+libstdc++.so.6:__cxa_call_terminate
 libstdc++.so.6:__cxa_end_catch
 libstdc++.so.6:__cxa_guard_abort
 libstdc++.so.6:__cxa_guard_acquire
@@ -144,7 +141,6 @@ libwx_baseu-3.2.so.0:_Z12wxRenameFileRK8wxStringS1_b
 libwx_baseu-3.2.so.0:_Z14wxBase64DecodePKcm18wxBase64DecodeModePm
 libwx_baseu-3.2.so.0:_Z14wxBase64EncodePcmPKvm
 libwx_baseu-3.2.so.0:_Z14wxGetOsVersionPiS_S_
-libwx_baseu-3.2.so.0:_Z14wxGetProcessIdv
 libwx_baseu-3.2.so.0:_Z14wxNewEventTypev
 libwx_baseu-3.2.so.0:_Z18wxFileNameFromPathRK8wxString
 libwx_baseu-3.2.so.0:_Z18wxGetOsDescriptionv
@@ -154,18 +150,18 @@ libwx_baseu-3.2.so.0:_Z19wxGet_wxConvUTF8Ptrv
 libwx_baseu-3.2.so.0:_Z20wxGet_wxConvLocalPtrv
 libwx_baseu-3.2.so.0:_Z21wxSetWorkingDirectoryRK8wxString
 libwx_baseu-3.2.so.0:_Z28wxGet_wxConvWhateverWorksPtrv
-libwx_baseu-3.2.so.0:_Z6wxExitv
-libwx_baseu-3.2.so.0:_Z6wxKilll8wxSignalP11wxKillErrori
+libwx_baseu-3.2.so.0:_Z6wxJoinRK13wxArrayStringww
 libwx_baseu-3.2.so.0:_Z7wxMkdirRK8wxStringi
 libwx_baseu-3.2.so.0:_Z7wxSleepi
 libwx_baseu-3.2.so.0:_Z8wxGetCwdv
 libwx_baseu-3.2.so.0:_Z8wxGetEnvRK8wxStringPS_
 libwx_baseu-3.2.so.0:_Z8wxSetEnvRK8wxStringS1_
 libwx_baseu-3.2.so.0:_Z9wxExecutePKPKciP9wxProcessPK12wxExecuteEnv
+libwx_baseu-3.2.so.0:_Z9wxExecuteRK8wxStringR13wxArrayStringS3_iPK12wxExecuteEnv
 libwx_baseu-3.2.so.0:_Z9wxExecuteRK8wxStringiP9wxProcessPK12wxExecuteEnv
 libwx_baseu-3.2.so.0:_ZN10wxDateTime3SetERK2tm
 libwx_baseu-3.2.so.0:_ZN10wxDateTime8GetTmNowEP2tm
-libwx_baseu-3.2.so.0:_ZN10wxDateTime8TimeZoneC1ENS_2TZE
+libwx_baseu-3.2.so.0:_ZN10wxFileName14SetPermissionsEi
 libwx_baseu-3.2.so.0:_ZN10wxFileName17GetPathSeparatorsE12wxPathFormat
 libwx_baseu-3.2.so.0:_ZN10wxFileName18CreateTempFileNameERK8wxString
 libwx_baseu-3.2.so.0:_ZN10wxFileName5ClearEv
@@ -180,6 +176,7 @@ libwx_baseu-3.2.so.0:_ZN10wxListBase4InitE9wxKeyType
 libwx_baseu-3.2.so.0:_ZN10wxListBase5ClearEv
 libwx_baseu-3.2.so.0:_ZN10wxListBase6DoCopyERKS_
 libwx_baseu-3.2.so.0:_ZN10wxListBaseD2Ev
+libwx_baseu-3.2.so.0:_ZN10wxLogChainC1EP5wxLog
 libwx_baseu-3.2.so.0:_ZN10wxNodeBaseC2EP10wxListBasePS_S2_PvRK9wxListKey
 libwx_baseu-3.2.so.0:_ZN10wxPathList10AddEnvListERK8wxString
 libwx_baseu-3.2.so.0:_ZN10wxPathList3AddERK8wxString
@@ -241,6 +238,7 @@ libwx_baseu-3.2.so.0:_ZN14wxOutputStreamD2Ev
 libwx_baseu-3.2.so.0:_ZN14wxPlatformInfo3GetEv
 libwx_baseu-3.2.so.0:_ZN14wxTranslations10AddCatalogERK8wxString10wxLanguage
 libwx_baseu-3.2.so.0:_ZN14wxTranslations11SetLanguageE10wxLanguage
+libwx_baseu-3.2.so.0:_ZN14wxTranslations13AddStdCatalogEv
 libwx_baseu-3.2.so.0:_ZN14wxTranslations21GetUntranslatedStringERK8wxString
 libwx_baseu-3.2.so.0:_ZN14wxTranslations3GetEv
 libwx_baseu-3.2.so.0:_ZN14wxTranslations3SetEPS_
@@ -341,7 +339,6 @@ libwx_baseu-3.2.so.0:_ZN5wxDirC1ERK8wxString
 libwx_baseu-3.2.so.0:_ZN5wxLog11DoLogRecordEmRK8wxStringRK15wxLogRecordInfo
 libwx_baseu-3.2.so.0:_ZN5wxLog15GetActiveTargetEv
 libwx_baseu-3.2.so.0:_ZN5wxLog15SetActiveTargetEPS_
-libwx_baseu-3.2.so.0:_ZN5wxLog16DoLogTextAtLevelEmRK8wxString
 libwx_baseu-3.2.so.0:_ZN5wxLog17GetComponentLevelERK8wxString
 libwx_baseu-3.2.so.0:_ZN5wxLog19EnableThreadLoggingEb
 libwx_baseu-3.2.so.0:_ZN5wxLog22IsThreadLoggingEnabledEv
@@ -397,7 +394,6 @@ libwx_baseu-3.2.so.0:_ZN9wxProcess6DetachEv
 libwx_baseu-3.2.so.0:_ZN9wxProcess6ExistsEi
 libwx_baseu-3.2.so.0:_ZN9wxUniChar10FromHi8bitEc
 libwx_baseu-3.2.so.0:_ZN9wxUniChar8ToHi8bitEj
-libwx_baseu-3.2.so.0:_ZNK10wxDateTime6FormatERK8wxStringRKNS_8TimeZoneE
 libwx_baseu-3.2.so.0:_ZNK10wxFileName10IsAbsoluteE12wxPathFormat
 libwx_baseu-3.2.so.0:_ZNK10wxFileName11GetFullNameEv
 libwx_baseu-3.2.so.0:_ZNK10wxFileName11GetFullPathE12wxPathFormat
@@ -480,7 +476,6 @@ libwx_baseu-3.2.so.0:_ZTI12wxEvtHandler
 libwx_baseu-3.2.so.0:_ZTI14wxDirTraverser
 libwx_baseu-3.2.so.0:_ZTI14wxEventFunctor
 libwx_baseu-3.2.so.0:_ZTI16wxZipInputStream
-libwx_baseu-3.2.so.0:_ZTI5wxLog
 libwx_baseu-3.2.so.0:_ZTI7wxEvent
 libwx_baseu-3.2.so.0:_ZTI8wxObject
 libwx_baseu-3.2.so.0:_ZTI8wxThread
@@ -488,14 +483,12 @@ libwx_baseu-3.2.so.0:_ZTV10wxConvAuto
 libwx_baseu-3.2.so.0:_ZTV10wxListBase
 libwx_baseu-3.2.so.0:_ZTV10wxTextFile
 libwx_baseu-3.2.so.0:_ZTV11wxLogBuffer
-libwx_baseu-3.2.so.0:_ZTV11wxLogStderr
 libwx_baseu-3.2.so.0:_ZTV12wxMBConvUTF8
 libwx_baseu-3.2.so.0:_ZTV13wxThreadEvent
 libwx_baseu-3.2.so.0:_ZTV14wxLogFormatter
 libwx_baseu-3.2.so.0:_ZTV18wxZlibOutputStream
 libwx_baseu-3.2.so.0:_ZTV19wxStringInputStream
 libwx_baseu-3.2.so.0:_ZTV20wxStringOutputStream
-libwx_baseu-3.2.so.0:_ZTV21wxMessageOutputStderr
 libwx_baseu-3.2.so.0:_ZTV5wxLog
 libwx_baseu-3.2.so.0:_ZTV5wxURI
 libwx_baseu-3.2.so.0:_ZTV7wxTimer
@@ -569,12 +562,10 @@ libwx_baseu_xml-3.2.so.0:_ZNK9wxXmlNode14GetNodeContentEv
 libwx_baseu_xml-3.2.so.0:_ZTV13wxXmlDocument
 libwx_gtk3u_aui-3.2.so.0:_ZN12wxAuiManager15LoadPerspectiveERK8wxStringb
 libwx_gtk3u_aui-3.2.so.0:_ZN12wxAuiManager15SavePerspectiveEv
-libwx_gtk3u_aui-3.2.so.0:_ZN12wxAuiManager6UnInitEv
 libwx_gtk3u_aui-3.2.so.0:_ZN12wxAuiManager6UpdateEv
 libwx_gtk3u_aui-3.2.so.0:_ZN12wxAuiManager7AddPaneEP8wxWindowRK13wxAuiPaneInfo
 libwx_gtk3u_aui-3.2.so.0:_ZN12wxAuiManager7GetPaneERK8wxString
 libwx_gtk3u_aui-3.2.so.0:_ZN12wxAuiManagerC1EP8wxWindowj
-libwx_gtk3u_aui-3.2.so.0:_ZN12wxAuiManagerD1Ev
 libwx_gtk3u_aui-3.2.so.0:_ZN12wxAuiToolBar10AddControlEP9wxControlRK8wxString
 libwx_gtk3u_aui-3.2.so.0:_ZN12wxAuiToolBar10EnableToolEib
 libwx_gtk3u_aui-3.2.so.0:_ZN12wxAuiToolBar12AddSeparatorEv
@@ -688,6 +679,8 @@ libwx_gtk3u_core-3.2.so.0:_ZN11wxFrameBaseC2Ev
 libwx_gtk3u_core-3.2.so.0:_ZN11wxFrameBaseD2Ev
 libwx_gtk3u_core-3.2.so.0:_ZN11wxGridSizerC1EiRK6wxSize
 libwx_gtk3u_core-3.2.so.0:_ZN11wxIdManager9ReserveIdEi
+libwx_gtk3u_core-3.2.so.0:_ZN11wxLogWindow4ShowEb
+libwx_gtk3u_core-3.2.so.0:_ZN11wxLogWindowC1EP8wxWindowRK8wxStringbb
 libwx_gtk3u_core-3.2.so.0:_ZN11wxPanelBase10InitDialogEv
 libwx_gtk3u_core-3.2.so.0:_ZN11wxPanelBase6CreateEP8wxWindowiRK7wxPointRK6wxSizelRK8wxString
 libwx_gtk3u_core-3.2.so.0:_ZN11wxPrintDataC1ERKS_
@@ -799,10 +792,8 @@ libwx_gtk3u_core-3.2.so.0:_ZN12wxWindowBase22TransferDataFromWindowEv
 libwx_gtk3u_core-3.2.so.0:_ZN12wxWindowBase25GetClassDefaultAttributesE15wxWindowVariant
 libwx_gtk3u_core-3.2.so.0:_ZN12wxWindowBase29WXSetInitialFittingClientSizeEiP7wxSizer
 libwx_gtk3u_core-3.2.so.0:_ZN12wxWindowBase3FitEv
-libwx_gtk3u_core-3.2.so.0:_ZN12wxWindowBase4ThawEv
 libwx_gtk3u_core-3.2.so.0:_ZN12wxWindowBase5CloseEb
 libwx_gtk3u_core-3.2.so.0:_ZN12wxWindowBase6EnableEb
-libwx_gtk3u_core-3.2.so.0:_ZN12wxWindowBase6FreezeEv
 libwx_gtk3u_core-3.2.so.0:_ZN12wxWindowBase6LayoutEv
 libwx_gtk3u_core-3.2.so.0:_ZN12wxWindowBase7DestroyEv
 libwx_gtk3u_core-3.2.so.0:_ZN12wxWindowBase7DoPhaseEi
@@ -824,12 +815,12 @@ libwx_gtk3u_core-3.2.so.0:_ZN13wxControlBase7CommandER14wxCommandEvent
 libwx_gtk3u_core-3.2.so.0:_ZN13wxControlBaseD2Ev
 libwx_gtk3u_core-3.2.so.0:_ZN13wxListBoxBase11DeselectAllEi
 libwx_gtk3u_core-3.2.so.0:_ZN13wxListBoxBaseD2Ev
-libwx_gtk3u_core-3.2.so.0:_ZN13wxLogTextCtrlC1EP10wxTextCtrl
 libwx_gtk3u_core-3.2.so.0:_ZN13wxMenuBarBase11UpdateMenusEv
 libwx_gtk3u_core-3.2.so.0:_ZN13wxMenuBarBase5CheckEib
 libwx_gtk3u_core-3.2.so.0:_ZN13wxMenuBarBase6EnableEib
 libwx_gtk3u_core-3.2.so.0:_ZN13wxRadioButton6CreateEP8wxWindowiRK8wxStringRK7wxPointRK6wxSizelRK11wxValidatorS4_
 libwx_gtk3u_core-3.2.so.0:_ZN14wxBitmapBundle7FromSVGEPKcRK6wxSize
+libwx_gtk3u_core-3.2.so.0:_ZN14wxBitmapBundle7FromSVGEPcRK6wxSize
 libwx_gtk3u_core-3.2.so.0:_ZN14wxBitmapBundleC1ERK7wxImage
 libwx_gtk3u_core-3.2.so.0:_ZN14wxBitmapBundleC1ERK8wxBitmap
 libwx_gtk3u_core-3.2.so.0:_ZN14wxBitmapBundleC1ERKS_
@@ -1155,7 +1146,6 @@ libwx_gtk3u_core-3.2.so.0:_ZN8wxDialog8EndModalEi
 libwx_gtk3u_core-3.2.so.0:_ZN8wxDialog9ShowModalEv
 libwx_gtk3u_core-3.2.so.0:_ZN8wxDialogC2EP8wxWindowiRK8wxStringRK7wxPointRK6wxSizelS4_
 libwx_gtk3u_core-3.2.so.0:_ZN8wxDialogD2Ev
-libwx_gtk3u_core-3.2.so.0:_ZN8wxLogGuiC1Ev
 libwx_gtk3u_core-3.2.so.0:_ZN8wxRegion11DoIntersectERKS_
 libwx_gtk3u_core-3.2.so.0:_ZN8wxRegion15DoUnionWithRectERK6wxRect
 libwx_gtk3u_core-3.2.so.0:_ZN8wxRegion5ClearEv
@@ -1283,6 +1273,7 @@ libwx_gtk3u_core-3.2.so.0:_ZNK11wxFrameBase11IsOneOfBarsEPK8wxWindow
 libwx_gtk3u_core-3.2.so.0:_ZNK11wxFrameBase13GetEventTableEv
 libwx_gtk3u_core-3.2.so.0:_ZNK11wxFrameBase17FindItemInMenuBarEi
 libwx_gtk3u_core-3.2.so.0:_ZNK11wxFrameBase17GetEventHashTableEv
+libwx_gtk3u_core-3.2.so.0:_ZNK11wxLogWindow8GetFrameEv
 libwx_gtk3u_core-3.2.so.0:_ZNK11wxStatusBar12GetClassInfoEv
 libwx_gtk3u_core-3.2.so.0:_ZNK11wxStatusBar12GetFieldRectEiR6wxRect
 libwx_gtk3u_core-3.2.so.0:_ZNK11wxStatusBar13DoGetBestSizeEv
@@ -1295,6 +1286,7 @@ libwx_gtk3u_core-3.2.so.0:_ZNK11wxTextEntry7GetHintEv
 libwx_gtk3u_core-3.2.so.0:_ZNK11wxWrapSizer12GetClassInfoEv
 libwx_gtk3u_core-3.2.so.0:_ZNK12wxColourBase11GetAsStringEl
 libwx_gtk3u_core-3.2.so.0:_ZNK12wxColourBase15ChangeLightnessEi
+libwx_gtk3u_core-3.2.so.0:_ZNK12wxDataFormateqERKS_
 libwx_gtk3u_core-3.2.so.0:_ZNK12wxDataObject17IsSupportedFormatERK12wxDataFormatN16wxDataObjectBase9DirectionE
 libwx_gtk3u_core-3.2.so.0:_ZNK12wxDialogBase11GetModalityEv
 libwx_gtk3u_core-3.2.so.0:_ZNK12wxDialogBase13GetEventTableEv
@@ -1426,7 +1418,6 @@ libwx_gtk3u_core-3.2.so.0:_ZNK7wxImage4IsOkEv
 libwx_gtk3u_core-3.2.so.0:_ZNK7wxImage5ScaleEii20wxImageResizeQuality
 libwx_gtk3u_core-3.2.so.0:_ZNK7wxImage6GetRedEii
 libwx_gtk3u_core-3.2.so.0:_ZNK7wxImage7GetBlueEii
-libwx_gtk3u_core-3.2.so.0:_ZNK7wxImage7GetDataEv
 libwx_gtk3u_core-3.2.so.0:_ZNK7wxImage8GetGreenEii
 libwx_gtk3u_core-3.2.so.0:_ZNK7wxImage8GetWidthEv
 libwx_gtk3u_core-3.2.so.0:_ZNK7wxImage8SaveFileER14wxOutputStream12wxBitmapType
@@ -1543,7 +1534,6 @@ libwx_gtk3u_core-3.2.so.0:_ZTV12wxMouseEvent
 libwx_gtk3u_core-3.2.so.0:_ZTV12wxPNGHandler
 libwx_gtk3u_core-3.2.so.0:_ZTV12wxXPMHandler
 libwx_gtk3u_core-3.2.so.0:_ZTV13wxJPEGHandler
-libwx_gtk3u_core-3.2.so.0:_ZTV13wxLogTextCtrl
 libwx_gtk3u_core-3.2.so.0:_ZTV13wxNotifyEvent
 libwx_gtk3u_core-3.2.so.0:_ZTV13wxRadioButton
 libwx_gtk3u_core-3.2.so.0:_ZTV14wxBitmapButton

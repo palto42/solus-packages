@@ -86,6 +86,7 @@ UNKNOWN:_Py_FalseStruct
 UNKNOWN:_Py_NoneStruct
 UNKNOWN:_Py_NotImplementedStruct
 UNKNOWN:_Py_TrueStruct
+libc.so.6:__assert_fail
 libc.so.6:__stack_chk_fail
 libc.so.6:memcpy
 libc.so.6:strcpy
@@ -128,6 +129,9 @@ libcairo.so.2:cairo_font_options_create
 libcairo.so.2:cairo_font_options_destroy
 libcairo.so.2:cairo_font_options_equal
 libcairo.so.2:cairo_font_options_get_antialias
+libcairo.so.2:cairo_font_options_get_color_mode
+libcairo.so.2:cairo_font_options_get_color_palette
+libcairo.so.2:cairo_font_options_get_custom_palette_color
 libcairo.so.2:cairo_font_options_get_hint_metrics
 libcairo.so.2:cairo_font_options_get_hint_style
 libcairo.so.2:cairo_font_options_get_subpixel_order
@@ -135,6 +139,9 @@ libcairo.so.2:cairo_font_options_get_variations
 libcairo.so.2:cairo_font_options_hash
 libcairo.so.2:cairo_font_options_merge
 libcairo.so.2:cairo_font_options_set_antialias
+libcairo.so.2:cairo_font_options_set_color_mode
+libcairo.so.2:cairo_font_options_set_color_palette
+libcairo.so.2:cairo_font_options_set_custom_palette_color
 libcairo.so.2:cairo_font_options_set_hint_metrics
 libcairo.so.2:cairo_font_options_set_hint_style
 libcairo.so.2:cairo_font_options_set_subpixel_order
@@ -222,6 +229,7 @@ libcairo.so.2:cairo_pattern_create_rgba
 libcairo.so.2:cairo_pattern_destroy
 libcairo.so.2:cairo_pattern_get_color_stop_count
 libcairo.so.2:cairo_pattern_get_color_stop_rgba
+libcairo.so.2:cairo_pattern_get_dither
 libcairo.so.2:cairo_pattern_get_extend
 libcairo.so.2:cairo_pattern_get_filter
 libcairo.so.2:cairo_pattern_get_linear_points
@@ -232,6 +240,7 @@ libcairo.so.2:cairo_pattern_get_surface
 libcairo.so.2:cairo_pattern_get_type
 libcairo.so.2:cairo_pattern_get_user_data
 libcairo.so.2:cairo_pattern_reference
+libcairo.so.2:cairo_pattern_set_dither
 libcairo.so.2:cairo_pattern_set_extend
 libcairo.so.2:cairo_pattern_set_filter
 libcairo.so.2:cairo_pattern_set_matrix

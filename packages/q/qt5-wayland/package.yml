@@ -1,8 +1,8 @@
 name       : qt5-wayland
-version    : 5.15.12
-release    : 50
+version    : 5.15.17
+release    : 57
 source     :
-    - git|https://invent.kde.org/qt/qt/qtwayland.git : c8b37a1bda9b8f29d56775ed6556d56ac5d3ea1d
+    - git|https://invent.kde.org/qt/qt/qtwayland.git : c1ac089f3f37ab172d8010b0fabf4007d62d1812
 homepage   : https://www.qt.io
 license    :
     - LGPL-2.1-or-later
@@ -39,6 +39,7 @@ patterns   :
     - devel :
         - /usr/bin
 setup      : |
+    %patch -p1 -i $pkgfiles/qtwayland-decoration-support-backports-from-qt6.patch
     %qmake CONFIG+="release wayland-compositor" qtwayland.pro
 build      : |
     %make

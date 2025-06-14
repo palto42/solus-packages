@@ -1,8 +1,8 @@
 name       : python-jupyterlab
-version    : 4.0.6
-release    : 2
+version    : 4.3.5
+release    : 6
 source     :
-    - https://files.pythonhosted.org/packages/source/j/jupyterlab/jupyterlab-4.0.6.tar.gz : 6c43ae5a6a1fd2fdfafcb3454004958bde6da76331abb44cffc6f9e436b19ba1
+    - https://files.pythonhosted.org/packages/source/j/jupyterlab/jupyterlab-4.3.5.tar.gz : c779bf72ced007d7d29d5bcef128e7fdda96ea69299e19b04a43635a7d641f9d
 homepage   : https://github.com/jupyterlab/jupyterlab
 license    : BSD-3-Clause
 component  : programming.python
@@ -15,11 +15,11 @@ builddeps  :
     - python-installer
 rundeps    :
     - python-async-lru
+    - python-httpx
     - python-ipykernel
     - python-jupyter-lsp
     - python-jupyterlab-server
     - python-notebook-shim
-    - python-tomli
 build      : |
     %python3_setup
 install    : |

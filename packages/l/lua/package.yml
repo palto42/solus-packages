@@ -1,23 +1,38 @@
 name       : lua
-version    : 5.3.4
-release    : 6
+version    : 5.4.7
+release    : 8
 source     :
-    - https://www.lua.org/ftp/lua-5.3.4.tar.gz : f681aa518233bc407e23acf0f5887c884f17436f000d453b2491a9f11a52400c
+    - https://www.lua.org/ftp/lua-5.4.7.tar.gz : 9fbf5e28ef86c69858f6d3d34eccc32e911c1a28b4120ff3e84aaa70cfbf1e30
 license    : MIT
+homepage   : https://www.lua.org/
 component  : programming
 summary    : Lightweight programming language
 description: |
     Lua is a powerful light-weight programming language designed for extending applications. It is also frequently used as a general-purpose, stand-alone language. Lua is implemented as a small library of C functions, written in ANSI C, and compiles unmodified in all known platforms. The implementation goals are simplicity, efficiency, portability, and low embedding cost. The result is a fast language engine with small footprint, making it ideal in embedded systems too.
+builddeps  :
+    - pkgconfig(readline)
+setup      : |
+    %patch -p1 -i $pkgfiles/0001-Use-shared-libraries-and-proper-prefix.patch
+    cd ..
+    cp -a $workdir lua++
+build      : |
+    %make MYCFLAGS="$CFLAGS" MYLDFLAGS="$LDFLAGS" linux-readline
+    pushd ../lua++
+    %make MYCFLAGS="$CXXFLAGS" MYLDFLAGS="$LDFLAGS" CC=g++ LUA_A=liblua++.a LUA_SO=liblua++.so linux-readline
+install    : |
+    %make_install INSTALL_TOP=$installdir/usr TO_LIB="liblua.so liblua.so.5.4 liblua.so.${version}" INSTALL_DATA="cp -d" INSTALL_MAN=$installdir/usr/share/man/man1
+    install -Dm00644 $pkgfiles/lua-5.4.pc $installdir/usr/lib/pkgconfig/lua-5.4.pc
+    ln -s lua-5.4.pc $installdir/usr/lib/pkgconfig/lua.pc
+
+    pushd ../lua++
+    %make_install INSTALL_TOP=$installdir/usr TO_LIB="liblua++.so liblua++.so.5.4 liblua++.so.${version}" INSTALL_DATA='cp -d' INSTALL_MAN=$installdir/usr/share/man/man1 INSTALL_BIN=null INSTALL_INC=null
+    install -Dm00644 $pkgfiles/lua++-5.4.pc $installdir/usr/lib/pkgconfig/lua++-5.4.pc
+    ln -s lua++-5.4.pc $installdir/usr/lib/pkgconfig/lua++.pc
+
+    ln -sf /usr/lib/liblua++.so.$version $installdir/usr/lib/liblua++$_majorver.so
+
+    # empty
+    rm -frv $installdir/usr/lib/lua
+    rm -frv $installdir/usr/share/lua
 patterns   :
     - devel : [/usr/bin]
-setup      : |
-    unset LD_AS_NEEDED
-    %patch -p1 -i $pkgfiles/0001-Use-shared-libraries-and-proper-prefix.patch
-build      : |
-    unset LD_AS_NEEDED
-    %make linux
-install    : |
-    unset LD_AS_NEEDED
-    %make_install INSTALL_TOP=$installdir/usr TO_LIB="liblua.so liblua.so.5.3 liblua.so.${version}" INSTALL_DATA="cp -d" INSTALL_MAN=$installdir/usr/share/man/man1
-    install -Dm00644 $pkgfiles/lua-5.3.pc $installdir/usr/lib/pkgconfig/lua-5.3.pc
-    ln -s lua-5.3.pc $installdir/usr/lib/pkgconfig/lua.pc

@@ -1,14 +1,16 @@
 name       : gnome-console
-version    : 45.0
-release    : 1
+version    : 48.0.1
+release    : 5
 source     :
-    - https://download.gnome.org/sources/gnome-console/45/gnome-console-45.0.tar.xz : e7462128d2df2324a1d748062c40429cd0504af09e407067b33f3a9d0c59c8e1
-homepage   : https://gitlab.gnome.org/GNOME/console
+    - https://download.gnome.org/sources/gnome-console/48/gnome-console-48.0.1.tar.xz : 018e908e4daebcfcb150d4f1bb28d98272aa9d14d6815eaf8da45f889db05c49
+homepage   : https://apps.gnome.org/Console/
 license    : GPL-3.0-or-later
 component  : desktop.gnome
-summary    : A simple user-friendly terminal emulator for the GNOME desktop.
+summary    : Terminal Emulator
 description: |
     A simple user-friendly terminal emulator for the GNOME desktop
+optimize   :
+    - lto
 builddeps  :
     - pkgconfig(gsettings-desktop-schemas)
     - pkgconfig(libadwaita-1)

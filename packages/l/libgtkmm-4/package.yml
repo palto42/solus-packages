@@ -1,14 +1,16 @@
 name       : libgtkmm-4
-version    : 4.12.0
-release    : 1
+version    : 4.18.0
+release    : 4
 source     :
-    - https://download.gnome.org/sources/gtkmm/4.12/gtkmm-4.12.0.tar.xz : fbc3e7618123345c0148ef71abb6548d421f52bb224fbda34875b677dc032c92
+    - https://download.gnome.org/sources/gtkmm/4.18/gtkmm-4.18.0.tar.xz : 2ee31c15479fc4d8e958b03c8b5fbbc8e17bc122c2a2f544497b4e05619e33ec
 homepage   : https://gtkmm.org
-license    : GPL-2.0-only
+license    : LGPL-2.1-or-later
 component  : desktop.gtk
 summary    : C++ bindings to GTK+
 description: |
     C++ bindings to GTK+
+optimize   :
+    - lto
 builddeps  :
     - pkgconfig(epoxy)
     - pkgconfig(gtk4)

@@ -1,8 +1,8 @@
 name       : meld
-version    : 3.22.1
-release    : 33
+version    : 3.23.0
+release    : 36
 source     :
-    - https://download.gnome.org/sources/meld/3.22/meld-3.22.1.tar.xz : 6dd3bd32dbd4341aba7630fb953777f77c77681eea2236b3641d622a8f906836
+    - https://download.gnome.org/sources/meld/3.23/meld-3.23.0.tar.xz : 983c2a4240e025a2109c7738198710e9d6b063c910b048332d14690cf538c2a6
 homepage   : https://meldmerge.org/
 license    : GPL-2.0-or-later
 component  : programming.tools
@@ -14,11 +14,12 @@ builddeps  :
     - pkgconfig(py3cairo)
     - pkgconfig(pygobject-3.0)
     - pkgconfig(python3)
+    - desktop-file-utils
     - itstool
 rundeps    :
     - libgtksourceview4
-    - python3-dbus
     - python-gobject
+    - python3-dbus
 setup      : |
     %meson_configure
 build      : |

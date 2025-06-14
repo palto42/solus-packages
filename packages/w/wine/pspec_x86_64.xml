@@ -3,8 +3,8 @@
         <Name>wine</Name>
         <Homepage>https://www.winehq.org/</Homepage>
         <Packager>
-            <Name>Thomas Staudinger</Name>
-            <Email>Staudi.Kaos@gmail.com</Email>
+            <Name>Joey Riches</Name>
+            <Email>josephriches@gmail.com</Email>
         </Packager>
         <License>LGPL-2.1-or-later</License>
         <PartOf>virt</PartOf>
@@ -65,10 +65,13 @@
             <Path fileType="library">/usr/lib64/wine/x86_64-unix/opencl.so</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-unix/opengl32.so</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-unix/qcap.so</Path>
+            <Path fileType="library">/usr/lib64/wine/x86_64-unix/sane.so</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-unix/secur32.so</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-unix/win32u.so</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-unix/winealsa.so</Path>
+            <Path fileType="library">/usr/lib64/wine/x86_64-unix/winebth.so</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-unix/winebus.so</Path>
+            <Path fileType="library">/usr/lib64/wine/x86_64-unix/winedmo.so</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-unix/winegstreamer.so</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-unix/wineps.so</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-unix/winepulse.so</Path>
@@ -109,6 +112,7 @@
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/avicap32.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/avifil32.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/avrt.dll</Path>
+            <Path fileType="library">/usr/lib64/wine/x86_64-windows/bcp47langs.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/bcrypt.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/bcryptprimitives.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/bluetoothapis.dll</Path>
@@ -126,6 +130,7 @@
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/clusapi.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/cmd.exe</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/cng.sys</Path>
+            <Path fileType="library">/usr/lib64/wine/x86_64-windows/colorcnv.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/combase.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/comcat.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/comctl32.dll</Path>
@@ -137,6 +142,7 @@
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/conhost.exe</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/connect.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/control.exe</Path>
+            <Path fileType="library">/usr/lib64/wine/x86_64-windows/coremessaging.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/credui.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/crtdll.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/crypt32.dll</Path>
@@ -210,6 +216,7 @@
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/d3dx9_42.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/d3dx9_43.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/d3dxof.dll</Path>
+            <Path fileType="library">/usr/lib64/wine/x86_64-windows/dataexchange.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/davclnt.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/dbgeng.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/dbghelp.dll</Path>
@@ -217,6 +224,7 @@
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/dcomp.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/ddraw.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/ddrawex.dll</Path>
+            <Path fileType="library">/usr/lib64/wine/x86_64-windows/desk.cpl</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/devenum.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/dhcpcsvc.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/dhcpcsvc6.dll</Path>
@@ -313,8 +321,10 @@
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/iccvid.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/icinfo.exe</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/icmp.dll</Path>
+            <Path fileType="library">/usr/lib64/wine/x86_64-windows/icmui.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/ieframe.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/ieproxy.dll</Path>
+            <Path fileType="library">/usr/lib64/wine/x86_64-windows/iertutil.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/iexplore.exe</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/imaadp32.acm</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/imagehlp.dll</Path>
@@ -345,6 +355,7 @@
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/ksuser.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/ktmw32.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/l3codeca.acm</Path>
+            <Path fileType="library">/usr/lib64/wine/x86_64-windows/l3codecx.ax</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/light.msstyles</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/loadperf.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/localspl.dll</Path>
@@ -361,8 +372,11 @@
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/mciwave.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/mf.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/mf3216.dll</Path>
+            <Path fileType="library">/usr/lib64/wine/x86_64-windows/mfasfsrcsnk.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/mferror.dll</Path>
+            <Path fileType="library">/usr/lib64/wine/x86_64-windows/mfh264enc.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/mfmediaengine.dll</Path>
+            <Path fileType="library">/usr/lib64/wine/x86_64-windows/mfmp4srcsnk.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/mfplat.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/mfplay.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/mfreadwrite.dll</Path>
@@ -456,6 +470,7 @@
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/msvcrtd.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/msvfw32.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/msvidc32.dll</Path>
+            <Path fileType="library">/usr/lib64/wine/x86_64-windows/msvproc.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/mswsock.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/msxml.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/msxml2.dll</Path>
@@ -517,6 +532,7 @@
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/presentationfontcache.exe</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/printui.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/prntvpt.dll</Path>
+            <Path fileType="library">/usr/lib64/wine/x86_64-windows/profapi.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/progman.exe</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/propsys.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/psapi.dll</Path>
@@ -540,10 +556,12 @@
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/regini.exe</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/regsvcs.exe</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/regsvr32.exe</Path>
+            <Path fileType="library">/usr/lib64/wine/x86_64-windows/resampledmo.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/resutils.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/riched20.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/riched32.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/robocopy.exe</Path>
+            <Path fileType="library">/usr/lib64/wine/x86_64-windows/rometadata.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/rpcrt4.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/rpcss.exe</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/rsabase.dll</Path>
@@ -553,6 +571,7 @@
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/rtworkq.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/rundll32.exe</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/samlib.dll</Path>
+            <Path fileType="library">/usr/lib64/wine/x86_64-windows/sane.ds</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/sapi.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/sas.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/sc.exe</Path>
@@ -589,6 +608,7 @@
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/slc.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/snmpapi.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/softpub.dll</Path>
+            <Path fileType="library">/usr/lib64/wine/x86_64-windows/sort.exe</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/spoolss.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/spoolsv.exe</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/sppc.dll</Path>
@@ -678,6 +698,7 @@
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/windows.media.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/windows.media.mediacontrol.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/windows.media.speech.dll</Path>
+            <Path fileType="library">/usr/lib64/wine/x86_64-windows/windows.networking.connectivity.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/windows.networking.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/windows.networking.hostname.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/windows.perception.stub.dll</Path>
@@ -686,17 +707,21 @@
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/windows.storage.applicationdata.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/windows.system.profile.systemmanufacturers.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/windows.ui.dll</Path>
+            <Path fileType="library">/usr/lib64/wine/x86_64-windows/windows.ui.xaml.dll</Path>
+            <Path fileType="library">/usr/lib64/wine/x86_64-windows/windows.web.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/windowscodecs.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/windowscodecsext.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/winealsa.drv</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/wineboot.exe</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/winebrowser.exe</Path>
+            <Path fileType="library">/usr/lib64/wine/x86_64-windows/winebth.sys</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/winebus.sys</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/winecfg.exe</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/wineconsole.exe</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/wined3d.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/winedbg.exe</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/winedevice.exe</Path>
+            <Path fileType="library">/usr/lib64/wine/x86_64-windows/winedmo.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/winefile.exe</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/winegstreamer.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/winehid.sys</Path>
@@ -732,14 +757,17 @@
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/wlanui.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/wldap32.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/wldp.dll</Path>
+            <Path fileType="library">/usr/lib64/wine/x86_64-windows/wmadmod.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/wmasf.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/wmi.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/wmic.exe</Path>
+            <Path fileType="library">/usr/lib64/wine/x86_64-windows/wmilib.sys</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/wmiutils.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/wmp.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/wmphoto.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/wmplayer.exe</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/wmvcore.dll</Path>
+            <Path fileType="library">/usr/lib64/wine/x86_64-windows/wmvdecod.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/wnaspi32.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/wofutil.dll</Path>
             <Path fileType="library">/usr/lib64/wine/x86_64-windows/wordpad.exe</Path>
@@ -838,6 +866,7 @@
             <Path fileType="man">/usr/share/man/man1/wmc.1</Path>
             <Path fileType="man">/usr/share/man/man1/wrc.1</Path>
             <Path fileType="man">/usr/share/man/pl.UTF-8/man1/wine.1</Path>
+            <Path fileType="data">/usr/share/metainfo/org.winehq.Wine.metainfo.xml</Path>
             <Path fileType="data">/usr/share/wine/fonts/coue1255.fon</Path>
             <Path fileType="data">/usr/share/wine/fonts/coue1256.fon</Path>
             <Path fileType="data">/usr/share/wine/fonts/coue1257.fon</Path>
@@ -980,7 +1009,7 @@
 </Description>
         <PartOf>emul32</PartOf>
         <RuntimeDependencies>
-            <Dependency release="170">wine</Dependency>
+            <Dependency release="199">wine</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin/wine</Path>
@@ -1005,7 +1034,9 @@
             <Path fileType="library">/usr/lib32/wine/i386-unix/secur32.so</Path>
             <Path fileType="library">/usr/lib32/wine/i386-unix/win32u.so</Path>
             <Path fileType="library">/usr/lib32/wine/i386-unix/winealsa.so</Path>
+            <Path fileType="library">/usr/lib32/wine/i386-unix/winebth.so</Path>
             <Path fileType="library">/usr/lib32/wine/i386-unix/winebus.so</Path>
+            <Path fileType="library">/usr/lib32/wine/i386-unix/winedmo.so</Path>
             <Path fileType="library">/usr/lib32/wine/i386-unix/winegstreamer.so</Path>
             <Path fileType="library">/usr/lib32/wine/i386-unix/wineps.so</Path>
             <Path fileType="library">/usr/lib32/wine/i386-unix/winepulse.so</Path>
@@ -1046,6 +1077,7 @@
             <Path fileType="library">/usr/lib32/wine/i386-windows/avifil32.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/avifile.dll16</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/avrt.dll</Path>
+            <Path fileType="library">/usr/lib32/wine/i386-windows/bcp47langs.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/bcrypt.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/bcryptprimitives.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/bluetoothapis.dll</Path>
@@ -1063,6 +1095,7 @@
             <Path fileType="library">/usr/lib32/wine/i386-windows/clusapi.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/cmd.exe</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/cng.sys</Path>
+            <Path fileType="library">/usr/lib32/wine/i386-windows/colorcnv.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/combase.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/comcat.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/comctl32.dll</Path>
@@ -1077,6 +1110,7 @@
             <Path fileType="library">/usr/lib32/wine/i386-windows/conhost.exe</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/connect.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/control.exe</Path>
+            <Path fileType="library">/usr/lib32/wine/i386-windows/coremessaging.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/credui.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/crtdll.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/crypt32.dll</Path>
@@ -1152,6 +1186,7 @@
             <Path fileType="library">/usr/lib32/wine/i386-windows/d3dx9_42.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/d3dx9_43.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/d3dxof.dll</Path>
+            <Path fileType="library">/usr/lib32/wine/i386-windows/dataexchange.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/davclnt.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/dbgeng.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/dbghelp.dll</Path>
@@ -1160,6 +1195,7 @@
             <Path fileType="library">/usr/lib32/wine/i386-windows/ddeml.dll16</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/ddraw.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/ddrawex.dll</Path>
+            <Path fileType="library">/usr/lib32/wine/i386-windows/desk.cpl</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/devenum.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/dhcpcsvc.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/dhcpcsvc6.dll</Path>
@@ -1259,8 +1295,10 @@
             <Path fileType="library">/usr/lib32/wine/i386-windows/iccvid.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/icinfo.exe</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/icmp.dll</Path>
+            <Path fileType="library">/usr/lib32/wine/i386-windows/icmui.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/ieframe.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/ieproxy.dll</Path>
+            <Path fileType="library">/usr/lib32/wine/i386-windows/iertutil.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/iexplore.exe</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/ifsmgr.vxd</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/imaadp32.acm</Path>
@@ -1295,6 +1333,7 @@
             <Path fileType="library">/usr/lib32/wine/i386-windows/ksuser.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/ktmw32.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/l3codeca.acm</Path>
+            <Path fileType="library">/usr/lib32/wine/i386-windows/l3codecx.ax</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/light.msstyles</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/loadperf.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/localspl.dll</Path>
@@ -1312,8 +1351,11 @@
             <Path fileType="library">/usr/lib32/wine/i386-windows/mciwave.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/mf.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/mf3216.dll</Path>
+            <Path fileType="library">/usr/lib32/wine/i386-windows/mfasfsrcsnk.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/mferror.dll</Path>
+            <Path fileType="library">/usr/lib32/wine/i386-windows/mfh264enc.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/mfmediaengine.dll</Path>
+            <Path fileType="library">/usr/lib32/wine/i386-windows/mfmp4srcsnk.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/mfplat.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/mfplay.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/mfreadwrite.dll</Path>
@@ -1413,6 +1455,7 @@
             <Path fileType="library">/usr/lib32/wine/i386-windows/msvfw32.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/msvidc32.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/msvideo.dll16</Path>
+            <Path fileType="library">/usr/lib32/wine/i386-windows/msvproc.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/mswsock.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/msxml.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/msxml2.dll</Path>
@@ -1482,6 +1525,7 @@
             <Path fileType="library">/usr/lib32/wine/i386-windows/presentationfontcache.exe</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/printui.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/prntvpt.dll</Path>
+            <Path fileType="library">/usr/lib32/wine/i386-windows/profapi.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/progman.exe</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/propsys.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/psapi.dll</Path>
@@ -1506,10 +1550,12 @@
             <Path fileType="library">/usr/lib32/wine/i386-windows/regini.exe</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/regsvcs.exe</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/regsvr32.exe</Path>
+            <Path fileType="library">/usr/lib32/wine/i386-windows/resampledmo.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/resutils.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/riched20.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/riched32.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/robocopy.exe</Path>
+            <Path fileType="library">/usr/lib32/wine/i386-windows/rometadata.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/rpcrt4.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/rpcss.exe</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/rsabase.dll</Path>
@@ -1558,6 +1604,7 @@
             <Path fileType="library">/usr/lib32/wine/i386-windows/slc.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/snmpapi.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/softpub.dll</Path>
+            <Path fileType="library">/usr/lib32/wine/i386-windows/sort.exe</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/sound.drv16</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/spoolss.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/spoolsv.exe</Path>
@@ -1667,6 +1714,7 @@
             <Path fileType="library">/usr/lib32/wine/i386-windows/windows.media.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/windows.media.mediacontrol.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/windows.media.speech.dll</Path>
+            <Path fileType="library">/usr/lib32/wine/i386-windows/windows.networking.connectivity.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/windows.networking.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/windows.networking.hostname.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/windows.perception.stub.dll</Path>
@@ -1675,17 +1723,21 @@
             <Path fileType="library">/usr/lib32/wine/i386-windows/windows.storage.applicationdata.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/windows.system.profile.systemmanufacturers.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/windows.ui.dll</Path>
+            <Path fileType="library">/usr/lib32/wine/i386-windows/windows.ui.xaml.dll</Path>
+            <Path fileType="library">/usr/lib32/wine/i386-windows/windows.web.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/windowscodecs.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/windowscodecsext.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/winealsa.drv</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/wineboot.exe</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/winebrowser.exe</Path>
+            <Path fileType="library">/usr/lib32/wine/i386-windows/winebth.sys</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/winebus.sys</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/winecfg.exe</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/wineconsole.exe</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/wined3d.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/winedbg.exe</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/winedevice.exe</Path>
+            <Path fileType="library">/usr/lib32/wine/i386-windows/winedmo.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/winefile.exe</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/winegstreamer.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/winehid.sys</Path>
@@ -1728,14 +1780,17 @@
             <Path fileType="library">/usr/lib32/wine/i386-windows/wlanui.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/wldap32.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/wldp.dll</Path>
+            <Path fileType="library">/usr/lib32/wine/i386-windows/wmadmod.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/wmasf.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/wmi.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/wmic.exe</Path>
+            <Path fileType="library">/usr/lib32/wine/i386-windows/wmilib.sys</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/wmiutils.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/wmp.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/wmphoto.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/wmplayer.exe</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/wmvcore.dll</Path>
+            <Path fileType="library">/usr/lib32/wine/i386-windows/wmvdecod.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/wnaspi32.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/wofutil.dll</Path>
             <Path fileType="library">/usr/lib32/wine/i386-windows/wordpad.exe</Path>
@@ -1810,7 +1865,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="170">wine</Dependency>
+            <Dependency release="199">wine</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/wine/debug.h</Path>
@@ -1923,6 +1978,7 @@
             <Path fileType="header">/usr/include/wine/windows/asysta.idl</Path>
             <Path fileType="header">/usr/include/wine/windows/atlbase.h</Path>
             <Path fileType="header">/usr/include/wine/windows/atlcom.h</Path>
+            <Path fileType="header">/usr/include/wine/windows/atldef.h</Path>
             <Path fileType="header">/usr/include/wine/windows/atliface.h</Path>
             <Path fileType="header">/usr/include/wine/windows/atliface.idl</Path>
             <Path fileType="header">/usr/include/wine/windows/atlthunk.h</Path>
@@ -1963,6 +2019,8 @@
             <Path fileType="header">/usr/include/wine/windows/bits5_0.idl</Path>
             <Path fileType="header">/usr/include/wine/windows/bitsmsg.h</Path>
             <Path fileType="header">/usr/include/wine/windows/bluetoothapis.h</Path>
+            <Path fileType="header">/usr/include/wine/windows/bthdef.h</Path>
+            <Path fileType="header">/usr/include/wine/windows/bthioctl.h</Path>
             <Path fileType="header">/usr/include/wine/windows/bthsdpdef.h</Path>
             <Path fileType="header">/usr/include/wine/windows/cderr.h</Path>
             <Path fileType="header">/usr/include/wine/windows/cdosys.h</Path>
@@ -2078,6 +2136,8 @@
             <Path fileType="header">/usr/include/wine/windows/d3d8types.h</Path>
             <Path fileType="header">/usr/include/wine/windows/d3d9.h</Path>
             <Path fileType="header">/usr/include/wine/windows/d3d9caps.h</Path>
+            <Path fileType="header">/usr/include/wine/windows/d3d9on12.h</Path>
+            <Path fileType="header">/usr/include/wine/windows/d3d9on12.idl</Path>
             <Path fileType="header">/usr/include/wine/windows/d3d9types.h</Path>
             <Path fileType="header">/usr/include/wine/windows/d3dcaps.h</Path>
             <Path fileType="header">/usr/include/wine/windows/d3dcommon.h</Path>
@@ -2189,6 +2249,8 @@
             <Path fileType="header">/usr/include/wine/windows/dinputd.h</Path>
             <Path fileType="header">/usr/include/wine/windows/directmanipulation.h</Path>
             <Path fileType="header">/usr/include/wine/windows/directmanipulation.idl</Path>
+            <Path fileType="header">/usr/include/wine/windows/dispatcherqueue.h</Path>
+            <Path fileType="header">/usr/include/wine/windows/dispatcherqueue.idl</Path>
             <Path fileType="header">/usr/include/wine/windows/dispdib.h</Path>
             <Path fileType="header">/usr/include/wine/windows/dispex.h</Path>
             <Path fileType="header">/usr/include/wine/windows/dispex.idl</Path>
@@ -2224,6 +2286,8 @@
             <Path fileType="header">/usr/include/wine/windows/dplobby.h</Path>
             <Path fileType="header">/usr/include/wine/windows/dplobby8.h</Path>
             <Path fileType="header">/usr/include/wine/windows/dpnathlp.h</Path>
+            <Path fileType="header">/usr/include/wine/windows/dragdropinterop.h</Path>
+            <Path fileType="header">/usr/include/wine/windows/dragdropinterop.idl</Path>
             <Path fileType="header">/usr/include/wine/windows/driverspecs.h</Path>
             <Path fileType="header">/usr/include/wine/windows/drmexternals.h</Path>
             <Path fileType="header">/usr/include/wine/windows/drmexternals.idl</Path>
@@ -2275,6 +2339,8 @@
             <Path fileType="header">/usr/include/wine/windows/dxva.h</Path>
             <Path fileType="header">/usr/include/wine/windows/dxva2api.h</Path>
             <Path fileType="header">/usr/include/wine/windows/dxva2api.idl</Path>
+            <Path fileType="header">/usr/include/wine/windows/dxvahd.h</Path>
+            <Path fileType="header">/usr/include/wine/windows/dxvahd.idl</Path>
             <Path fileType="header">/usr/include/wine/windows/dyngraph.idl</Path>
             <Path fileType="header">/usr/include/wine/windows/endpointvolume.h</Path>
             <Path fileType="header">/usr/include/wine/windows/endpointvolume.idl</Path>
@@ -2328,6 +2394,8 @@
             <Path fileType="header">/usr/include/wine/windows/hlguids.h</Path>
             <Path fileType="header">/usr/include/wine/windows/hlink.h</Path>
             <Path fileType="header">/usr/include/wine/windows/hlink.idl</Path>
+            <Path fileType="header">/usr/include/wine/windows/holographicspaceinterop.h</Path>
+            <Path fileType="header">/usr/include/wine/windows/holographicspaceinterop.idl</Path>
             <Path fileType="header">/usr/include/wine/windows/hrtfapoapi.h</Path>
             <Path fileType="header">/usr/include/wine/windows/hrtfapoapi.idl</Path>
             <Path fileType="header">/usr/include/wine/windows/hstring.h</Path>
@@ -2409,6 +2477,7 @@
             <Path fileType="header">/usr/include/wine/windows/lmerr.h</Path>
             <Path fileType="header">/usr/include/wine/windows/lmjoin.h</Path>
             <Path fileType="header">/usr/include/wine/windows/lmmsg.h</Path>
+            <Path fileType="header">/usr/include/wine/windows/lmremutl.h</Path>
             <Path fileType="header">/usr/include/wine/windows/lmserver.h</Path>
             <Path fileType="header">/usr/include/wine/windows/lmshare.h</Path>
             <Path fileType="header">/usr/include/wine/windows/lmstats.h</Path>
@@ -2655,6 +2724,7 @@
             <Path fileType="header">/usr/include/wine/windows/rmxftmpl.x</Path>
             <Path fileType="header">/usr/include/wine/windows/roapi.h</Path>
             <Path fileType="header">/usr/include/wine/windows/roerrorapi.h</Path>
+            <Path fileType="header">/usr/include/wine/windows/rometadata.h</Path>
             <Path fileType="header">/usr/include/wine/windows/rometadataresolution.h</Path>
             <Path fileType="header">/usr/include/wine/windows/roparameterizediid.h</Path>
             <Path fileType="header">/usr/include/wine/windows/roparameterizediid.idl</Path>
@@ -2672,10 +2742,15 @@
             <Path fileType="header">/usr/include/wine/windows/rpcsal.h</Path>
             <Path fileType="header">/usr/include/wine/windows/rstbas.idl</Path>
             <Path fileType="header">/usr/include/wine/windows/rstchg.idl</Path>
+            <Path fileType="header">/usr/include/wine/windows/rstfnd.idl</Path>
+            <Path fileType="header">/usr/include/wine/windows/rstidn.idl</Path>
             <Path fileType="header">/usr/include/wine/windows/rstinf.idl</Path>
             <Path fileType="header">/usr/include/wine/windows/rstloc.idl</Path>
             <Path fileType="header">/usr/include/wine/windows/rstnot.idl</Path>
+            <Path fileType="header">/usr/include/wine/windows/rstscr.idl</Path>
             <Path fileType="header">/usr/include/wine/windows/rstupd.idl</Path>
+            <Path fileType="header">/usr/include/wine/windows/rstxsc.idl</Path>
+            <Path fileType="header">/usr/include/wine/windows/rtlsupportapi.h</Path>
             <Path fileType="header">/usr/include/wine/windows/rtutils.h</Path>
             <Path fileType="header">/usr/include/wine/windows/rtworkq.h</Path>
             <Path fileType="header">/usr/include/wine/windows/rtworkq.idl</Path>
@@ -2707,6 +2782,7 @@
             <Path fileType="header">/usr/include/wine/windows/shdispid.h</Path>
             <Path fileType="header">/usr/include/wine/windows/shellapi.h</Path>
             <Path fileType="header">/usr/include/wine/windows/shellscalingapi.h</Path>
+            <Path fileType="header">/usr/include/wine/windows/sherrors.h</Path>
             <Path fileType="header">/usr/include/wine/windows/shimgdata.h</Path>
             <Path fileType="header">/usr/include/wine/windows/shimgdata.idl</Path>
             <Path fileType="header">/usr/include/wine/windows/shldisp.h</Path>
@@ -2838,6 +2914,7 @@
             <Path fileType="header">/usr/include/wine/windows/weakreference.h</Path>
             <Path fileType="header">/usr/include/wine/windows/weakreference.idl</Path>
             <Path fileType="header">/usr/include/wine/windows/webservices.h</Path>
+            <Path fileType="header">/usr/include/wine/windows/websocket.h</Path>
             <Path fileType="header">/usr/include/wine/windows/werapi.h</Path>
             <Path fileType="header">/usr/include/wine/windows/wfext.h</Path>
             <Path fileType="header">/usr/include/wine/windows/wia.h</Path>
@@ -2861,10 +2938,24 @@
             <Path fileType="header">/usr/include/wine/windows/windef.h</Path>
             <Path fileType="header">/usr/include/wine/windows/windns.h</Path>
             <Path fileType="header">/usr/include/wine/windows/windot11.h</Path>
+            <Path fileType="header">/usr/include/wine/windows/windows.applicationmodel.activation.h</Path>
+            <Path fileType="header">/usr/include/wine/windows/windows.applicationmodel.activation.idl</Path>
+            <Path fileType="header">/usr/include/wine/windows/windows.applicationmodel.background.h</Path>
+            <Path fileType="header">/usr/include/wine/windows/windows.applicationmodel.background.idl</Path>
             <Path fileType="header">/usr/include/wine/windows/windows.applicationmodel.core.h</Path>
             <Path fileType="header">/usr/include/wine/windows/windows.applicationmodel.core.idl</Path>
+            <Path fileType="header">/usr/include/wine/windows/windows.applicationmodel.datatransfer.dragdrop.core.h</Path>
+            <Path fileType="header">/usr/include/wine/windows/windows.applicationmodel.datatransfer.dragdrop.core.idl</Path>
+            <Path fileType="header">/usr/include/wine/windows/windows.applicationmodel.datatransfer.dragdrop.h</Path>
+            <Path fileType="header">/usr/include/wine/windows/windows.applicationmodel.datatransfer.dragdrop.idl</Path>
+            <Path fileType="header">/usr/include/wine/windows/windows.applicationmodel.datatransfer.h</Path>
+            <Path fileType="header">/usr/include/wine/windows/windows.applicationmodel.datatransfer.idl</Path>
             <Path fileType="header">/usr/include/wine/windows/windows.applicationmodel.h</Path>
             <Path fileType="header">/usr/include/wine/windows/windows.applicationmodel.idl</Path>
+            <Path fileType="header">/usr/include/wine/windows/windows.data.json.h</Path>
+            <Path fileType="header">/usr/include/wine/windows/windows.data.json.idl</Path>
+            <Path fileType="header">/usr/include/wine/windows/windows.data.xml.dom.h</Path>
+            <Path fileType="header">/usr/include/wine/windows/windows.data.xml.dom.idl</Path>
             <Path fileType="header">/usr/include/wine/windows/windows.devices.bluetooth.h</Path>
             <Path fileType="header">/usr/include/wine/windows/windows.devices.bluetooth.idl</Path>
             <Path fileType="header">/usr/include/wine/windows/windows.devices.enumeration.h</Path>
@@ -2873,6 +2964,8 @@
             <Path fileType="header">/usr/include/wine/windows/windows.devices.geolocation.idl</Path>
             <Path fileType="header">/usr/include/wine/windows/windows.devices.haptics.h</Path>
             <Path fileType="header">/usr/include/wine/windows/windows.devices.haptics.idl</Path>
+            <Path fileType="header">/usr/include/wine/windows/windows.devices.input.h</Path>
+            <Path fileType="header">/usr/include/wine/windows/windows.devices.input.idl</Path>
             <Path fileType="header">/usr/include/wine/windows/windows.devices.power.h</Path>
             <Path fileType="header">/usr/include/wine/windows/windows.devices.power.idl</Path>
             <Path fileType="header">/usr/include/wine/windows/windows.devices.radios.h</Path>
@@ -2907,8 +3000,10 @@
             <Path fileType="header">/usr/include/wine/windows/windows.graphics.directx.idl</Path>
             <Path fileType="header">/usr/include/wine/windows/windows.graphics.effects.h</Path>
             <Path fileType="header">/usr/include/wine/windows/windows.graphics.effects.idl</Path>
+            <Path fileType="header">/usr/include/wine/windows/windows.graphics.h</Path>
             <Path fileType="header">/usr/include/wine/windows/windows.graphics.holographic.h</Path>
             <Path fileType="header">/usr/include/wine/windows/windows.graphics.holographic.idl</Path>
+            <Path fileType="header">/usr/include/wine/windows/windows.graphics.idl</Path>
             <Path fileType="header">/usr/include/wine/windows/windows.graphics.imaging.h</Path>
             <Path fileType="header">/usr/include/wine/windows/windows.graphics.imaging.idl</Path>
             <Path fileType="header">/usr/include/wine/windows/windows.h</Path>
@@ -2942,12 +3037,16 @@
             <Path fileType="header">/usr/include/wine/windows/windows.perception.spatial.surfaces.idl</Path>
             <Path fileType="header">/usr/include/wine/windows/windows.security.authentication.onlineid.h</Path>
             <Path fileType="header">/usr/include/wine/windows/windows.security.authentication.onlineid.idl</Path>
+            <Path fileType="header">/usr/include/wine/windows/windows.security.authorization.appcapabilityaccess.h</Path>
+            <Path fileType="header">/usr/include/wine/windows/windows.security.authorization.appcapabilityaccess.idl</Path>
             <Path fileType="header">/usr/include/wine/windows/windows.security.credentials.h</Path>
             <Path fileType="header">/usr/include/wine/windows/windows.security.credentials.idl</Path>
             <Path fileType="header">/usr/include/wine/windows/windows.security.credentials.ui.h</Path>
             <Path fileType="header">/usr/include/wine/windows/windows.security.credentials.ui.idl</Path>
             <Path fileType="header">/usr/include/wine/windows/windows.security.cryptography.h</Path>
             <Path fileType="header">/usr/include/wine/windows/windows.security.cryptography.idl</Path>
+            <Path fileType="header">/usr/include/wine/windows/windows.security.enterprisedata.h</Path>
+            <Path fileType="header">/usr/include/wine/windows/windows.security.enterprisedata.idl</Path>
             <Path fileType="header">/usr/include/wine/windows/windows.security.exchangeactivesyncprovisioning.h</Path>
             <Path fileType="header">/usr/include/wine/windows/windows.security.exchangeactivesyncprovisioning.idl</Path>
             <Path fileType="header">/usr/include/wine/windows/windows.security.isolation.h</Path>
@@ -2980,10 +3079,18 @@
             <Path fileType="header">/usr/include/wine/windows/windows.ui.core.idl</Path>
             <Path fileType="header">/usr/include/wine/windows/windows.ui.h</Path>
             <Path fileType="header">/usr/include/wine/windows/windows.ui.idl</Path>
+            <Path fileType="header">/usr/include/wine/windows/windows.ui.input.h</Path>
+            <Path fileType="header">/usr/include/wine/windows/windows.ui.input.idl</Path>
+            <Path fileType="header">/usr/include/wine/windows/windows.ui.notifications.h</Path>
+            <Path fileType="header">/usr/include/wine/windows/windows.ui.notifications.idl</Path>
             <Path fileType="header">/usr/include/wine/windows/windows.ui.viewmanagement.h</Path>
             <Path fileType="header">/usr/include/wine/windows/windows.ui.viewmanagement.idl</Path>
+            <Path fileType="header">/usr/include/wine/windows/windows.ui.xaml.h</Path>
             <Path fileType="header">/usr/include/wine/windows/windows.ui.xaml.hosting.desktopwindowxamlsource.h</Path>
             <Path fileType="header">/usr/include/wine/windows/windows.ui.xaml.hosting.desktopwindowxamlsource.idl</Path>
+            <Path fileType="header">/usr/include/wine/windows/windows.ui.xaml.idl</Path>
+            <Path fileType="header">/usr/include/wine/windows/windows.ui.xaml.interop.h</Path>
+            <Path fileType="header">/usr/include/wine/windows/windows.ui.xaml.interop.idl</Path>
             <Path fileType="header">/usr/include/wine/windows/windowscontracts.h</Path>
             <Path fileType="header">/usr/include/wine/windows/windowscontracts.idl</Path>
             <Path fileType="header">/usr/include/wine/windows/windowsx.h</Path>
@@ -3107,12 +3214,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="170">
-            <Date>2024-02-25</Date>
-            <Version>9.3</Version>
+        <Update release="199">
+            <Date>2025-05-31</Date>
+            <Version>10.1</Version>
             <Comment>Packaging update</Comment>
-            <Name>Thomas Staudinger</Name>
-            <Email>Staudi.Kaos@gmail.com</Email>
+            <Name>Joey Riches</Name>
+            <Email>josephriches@gmail.com</Email>
         </Update>
     </History>
 </PISI>

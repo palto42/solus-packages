@@ -1,9 +1,7 @@
 grantlee_skgfilters.so
 libskgbankgui.so.2
-libskgbankguidesigner.so
 libskgbankmodeler.so.2
 libskgbasegui.so.2
-libskgbaseguidesigner.so
 libskgbasemodeler.so.2
 libskgsqlcipher.so
 skg_advice.so
@@ -19,7 +17,6 @@ skg_properties.so
 skg_selectall.so
 skg_statistic.so
 skg_undoredo.so
-skrooge
 skrooge_bank.so
 skrooge_budget.so
 skrooge_calculator.so
@@ -35,6 +32,7 @@ skrooge_import_kmy.so
 skrooge_import_ledger.so
 skrooge_import_mmb.so
 skrooge_import_mny.so
+skrooge_import_mt940.so
 skrooge_import_ofx.so
 skrooge_import_pdf.so
 skrooge_import_qif.so

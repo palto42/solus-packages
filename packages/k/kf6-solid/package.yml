@@ -1,8 +1,8 @@
 name       : kf6-solid
-version    : 6.0.0
-release    : 4
+version    : 6.14.0
+release    : 23
 source     :
-    - https://cdn.download.kde.org/stable/frameworks/6.0/solid-6.0.0.tar.xz : 75c5d254eeceb917c35cb0e32beff76a2cf1458f773ecd0e7795b47dad5aadd3
+    - https://download.kde.org/stable/frameworks/6.14/solid-6.14.0.tar.xz : 00996f063478863fe61b902d20c96c9eb4f4ac43353e59b779b466fa62b1a8c4
 homepage   : https://community.kde.org/Frameworks
 license    :
     - BSD-3-Clause

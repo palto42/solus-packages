@@ -1,6 +1,7 @@
+libarchive.so.13
 libc.so.6
 libgcc_s.so.1
-libgomp.so.1
 libleptonica.so.6
 libm.so.6
+libomp.so
 libstdc++.so.6

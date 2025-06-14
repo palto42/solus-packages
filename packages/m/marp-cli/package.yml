@@ -1,9 +1,9 @@
 name       : marp-cli
-version    : 3.4.0
-release    : 11
+version    : 4.1.2
+release    : 16
 homepage   : https://marp.app/
 source     :
-    - https://github.com/marp-team/marp-cli/archive/refs/tags/v3.4.0.tar.gz : 7112cab9b9bf0829c266bbe64ae61d9b8feab75071dd9a0cb32ec95bc09b95f1
+    - https://github.com/marp-team/marp-cli/archive/refs/tags/v4.1.2.tar.gz : 1480fa52107eb807b2c1c597b3d0fe50d0849dbb125129f4f74793a2cead8738
 license    : MIT
 component  : office
 summary    : A CLI interface for Marp and Marpit based converters
@@ -13,6 +13,8 @@ networking : yes
 strip      : no
 debug      : no
 builddeps  :
+    - git
+    - nodejs
     - yarn
 setup      : |
     yarn install

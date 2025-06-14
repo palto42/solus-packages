@@ -1,8 +1,8 @@
 name       : thunar
-version    : 4.18.10
-release    : 6
+version    : 4.20.2
+release    : 13
 source     :
-    - https://archive.xfce.org/src/xfce/thunar/4.18/thunar-4.18.10.tar.bz2 : e8308a1f139602d8c125f594bfcebb063b7dac1fbb6e14293bab4cdb3ecf1d08
+    - https://archive.xfce.org/src/xfce/thunar/4.20/thunar-4.20.2.tar.bz2 : 71376f6d7ba4998943c412f374db16ec9b709610acd4d27ecb1eef3aca82af05
 homepage   : https://docs.xfce.org/xfce/thunar/start
 license    : GPL-2.0-or-later
 component  : desktop.xfce
@@ -11,6 +11,7 @@ description: |
     Modern, fast and easy-to-use file manager for Xfce.
 builddeps  :
     - pkgconfig(exo-2)
+    - pkgconfig(libxfce4panel-2.0)
     - pkgconfig(libxfce4ui-2)
 rundeps    :
     - gvfs
@@ -22,11 +23,7 @@ setup      : |
         --enable-notifications \
         --enable-exif \
         --sysconfdir=/usr/share
-
 build      : |
     %make
 install    : |
     %make_install
-
-    # Rename to fix appdata stream generation
-    mv $installdir/usr/share/applications/{thunar,org.xfce.Thunar}.desktop

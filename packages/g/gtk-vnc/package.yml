@@ -1,10 +1,10 @@
 name       : gtk-vnc
-version    : 1.3.1
-release    : 26
+version    : 1.5.0
+release    : 29
 source     :
-    - https://download.gnome.org/sources/gtk-vnc/1.3/gtk-vnc-1.3.1.tar.xz : 512763ac4e0559d0158b6682ca5dd1a3bd633f082f5e4349d7158e6b5f80f1ce
-homepage   : https://wiki.gnome.org/Projects/gtk-vnc
-license    : LGPL-2.1-only
+    - https://download.gnome.org/sources/gtk-vnc/1.5/gtk-vnc-1.5.0.tar.xz : c0beb4747528ad931da43acc567c6a0190f7fc624465571ed9ccece02c34dd23
+homepage   : https://gitlab.gnome.org/GNOME/gtk-vnc
+license    : LGPL-2.1-or-later
 component  : desktop.gnome.core
 summary    : GTK VNC viewer widget
 description: |
@@ -12,7 +12,6 @@ description: |
 builddeps  :
     - pkgconfig(gnutls)
     - pkgconfig(gtk+-3.0)
-    - pkgconfig(libgcrypt)
     - pkgconfig(libpulse)
     - pkgconfig(libsasl2)
     - pkgconfig(python3)

@@ -1,8 +1,8 @@
 name       : freeorion
-version    : '0.5'
-release    : 36
+version    : 0.5.1
+release    : 39
 source     :
-    - https://github.com/freeorion/freeorion/releases/download/v0.5/FreeOrion_v0.5_Source.tar.gz : 09f31cfe55d6165bdfee97db3a75c245aae1133c792fd480af7a13aa67674cb1
+    - https://github.com/freeorion/freeorion/releases/download/v0.5.1/FreeOrion_v0.5.1_Source.tar.gz : 75cca4aa0895b8988e800f7c75e0f4fbffd302dfd5fb64f0a7f509123c43cbbb
 homepage   : https://www.freeorion.org
 license    :
     - CC-BY-SA-3.0

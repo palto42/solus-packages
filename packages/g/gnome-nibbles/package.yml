@@ -1,19 +1,20 @@
 name       : gnome-nibbles
-version    : 3.38.3
-release    : 13
+version    : 4.2.2
+release    : 19
 source     :
-    - https://download.gnome.org/sources/gnome-nibbles/3.38/gnome-nibbles-3.38.3.tar.xz : 975fde1d83c7b15b392eac7a359161290fc8aeb7605c11e71cee0c3c326b5e61
+    - https://download.gnome.org/sources/gnome-nibbles/4.2/gnome-nibbles-4.2.2.tar.xz : 3e4a1f9baf1c57b8e835dedf0869e3272e6534a1dd69c4e26fae10c4200aaf00
+homepage   : https://gitlab.gnome.org/GNOME/gnome-nibbles/-/wikis/home
 license    : GPL-3.0-or-later
 component  : games.arcade
 summary    : Guide a worm around a maze
 description: |
-    Guide a worm around a maze
+    Nibbles is a Snake game for GNOME. The aim of the game is to swallow as many objects as you can while avoiding maze walls and other worms. You have to complete 26 levels to finish the game.
 builddeps  :
     - pkgconfig(appstream-glib)
     - pkgconfig(clutter-gtk-1.0)
     - pkgconfig(gee-0.8)
     - pkgconfig(gsound)
-    - pkgconfig(libgnome-games-support-1)
+    - pkgconfig(libgnome-games-support-2)
     - desktop-file-utils
     - itstool
     - vala

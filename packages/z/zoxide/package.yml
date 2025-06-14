@@ -1,8 +1,8 @@
 name       : zoxide
-version    : 0.9.2
-release    : 1
+version    : 0.9.8
+release    : 5
 source     :
-    - https://github.com/ajeetdsouza/zoxide/archive/refs/tags/v0.9.2.tar.gz : a6c2d993a02211c3d23b242c2c6faab9a2648be7a45ad1ff0586651ac827e914
+    - https://github.com/ajeetdsouza/zoxide/archive/refs/tags/v0.9.8.tar.gz : 1b276edbf328aafc86afe1ebce41f45ccba3a3125412e89c8c5d8e825b0c7407
 homepage   : https://github.com/ajeetdsouza/zoxide
 license    : MIT
 component  : programming.tools
@@ -11,12 +11,14 @@ description: |
     A smarter cd command. Supports all major shells.
 networking : yes
 builddeps  :
-  - cargo
+    - rust
+setup      : |
+    %cargo_fetch
 build      : |
-    cargo build --release --all-features
+    %cargo_build
 install    : |
-    install -Dm00755 target/release/zoxide $installdir/usr/bin/zoxide
-    #install -Dm00644 LICENSE $installdir/usr/share/licenses/zoxide/
+    %cargo_install
+
     install -d $installdir/usr/share/{man/man1,doc/zoxide,zsh/site-functions,fish/vendor_completions.d,bash-completion/completions/zoxide}
     install -Dm00644 man/man1/*.1 $installdir/usr/share/man/man1/
     install -Dm00644 README.md $installdir/usr/share/doc/zoxide/

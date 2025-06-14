@@ -1,8 +1,9 @@
 name       : adw-gtk3-theme
-version    : '5.2'
-release    : 12
+version    : '6.2'
+release    : 19
 source     :
-    - https://github.com/lassekongo83/adw-gtk3/archive/refs/tags/v5.2.tar.gz : 1265b9dbc933bf602da1c419e515752bc8d7b9e6f8a09eafd740315d321501d7
+    - https://github.com/lassekongo83/adw-gtk3/archive/refs/tags/v6.2.tar.gz : ef554d3d0e7ee65833150b9af4fb2efeadd666c739d3de7b2e26ecaeb9bb026a
+    - https://github.com/sass/dart-sass/releases/download/1.87.0/dart-sass-1.87.0-linux-x64.tar.gz#sass.tar.gz : 1e7cf8d190c24c28b09389121d7eee328b5ed23524a3f1feca416a8124927bde
 license    : LGPL-2.1-only
 homepage   : https://github.com/lassekongo83/adw-gtk3
 component  : desktop.theme
@@ -10,11 +11,13 @@ summary    : An unofficial GTK3 port of libadwaita
 description: |
     An unofficial GTK3 port of libadwaita
 builddeps  :
-    - sassc
     - gnome-themes-extra
 rundeps    :
     - gnome-themes-extra
+environment: |
+    export PATH="$PATH:$sources/dart-sass"
 setup      : |
+    tar -xvf $sources/sass.tar.gz -C $sources/
     %meson_configure
 build      : |
     %ninja_build

@@ -1,9 +1,9 @@
 name       : libtiff
-version    : 4.6.0
-release    : 41
+version    : 4.7.0
+release    : 43
 source     :
-    - https://download.osgeo.org/libtiff/tiff-4.6.0.tar.gz : 88b3979e6d5c7e32b50d7ec72fb15af724f6ab2cbf7e10880c360a77e4b5d99a
-homepage   : http://www.simplesystems.org/libtiff/
+    - https://download.osgeo.org/libtiff/tiff-4.7.0.tar.xz : 273a0a73b1f0bed640afee4a5df0337357ced5b53d3d5d1c405b936501f71017
+homepage   : http://www.libtiff.org/
 license    : libtiff
 component  :
     - desktop.library
@@ -19,7 +19,6 @@ builddeps  :
     - pkgconfig32(libzstd)
     - pkgconfig32(zlib)
 patterns   :
-    - devel : /usr/share/man/man3
     - docs : /usr/share/doc
     - utils :
         - /usr/bin

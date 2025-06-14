@@ -1,0 +1,6 @@
+releases:
+  id: 70626
+  rss: https://github.com/Kistler-Group/sdbus-cpp/releases.atom
+# No known CPE, checked 2024-09-15
+security:
+  cpe: ~

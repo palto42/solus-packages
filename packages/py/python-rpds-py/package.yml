@@ -1,8 +1,8 @@
 name       : python-rpds-py
-version    : 0.10.4
-release    : 2
+version    : 0.23.1
+release    : 6
 source     :
-    - https://files.pythonhosted.org/packages/source/r/rpds_py/rpds_py-0.10.4.tar.gz : 18d5ff7fbd305a1d564273e9eb22de83ae3cd9cd6329fddc8f12f6428a711a6a
+    - https://files.pythonhosted.org/packages/source/r/rpds_py/rpds_py-0.23.1.tar.gz : 7f3240dcfa14d198dba24b8b9cb3b108c06b68d45b7babd9eefc1038fdf7e707
 homepage   : https://github.com/crate-py/rpds
 license    : MIT
 component  : programming.python
@@ -11,7 +11,6 @@ description: |
     Python bindings to the Rust rpds crate for persistent data structures.
 networking : yes
 builddeps  :
-    - cargo
     - python-build
     - python-installer
     - python-maturin

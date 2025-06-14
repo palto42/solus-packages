@@ -1,4 +1,54 @@
 ---
+# Configuration for a repository freeze.
+# Dates can be generated using `date --iso-8601=s`.
 freeze:
-  start: null
-  end: null
+  start: "2025-01-10T23:59:59+00:00"
+  end: "2025-01-25T23:30:30+00:00"
+
+# Configuration for including static libraries.
+static_libs:
+  # These packages are allowed to include static libraries:
+  allowed_packages:
+    - apparmor
+    - appstream-generator
+    - gcc
+    - gettext
+    - ghc
+    - glibc
+    - golang
+    - ispc
+    - ldc
+    - libboost
+    - libnss
+    - libuv
+    - llvm
+    - llvm-15
+    - llvm-bolt
+    - ocaml
+    - opencolorio
+    - opencv
+    - paraview
+    - python3
+    - pcsc-lite # check again when doing rebuild
+    - qt5-base
+    - qt5-tools
+    - qt6-base
+    - qt6-declarative
+    - rocm-llvm
+    - rocmlir
+    - rust
+    - sdl2
+    - sdl3
+    - shadow
+    - sysprof
+    - util-linux
+    - vlc
+    - numpy # temporary addition until updated to 2.x
+  # These files are allowed as static libraries:
+  allowed_files:
+    - /usr/lib64/dotnet/packs/Microsoft.NETCore.App.Host.solus.*/**/libnethost.a
+    - /usr/lib64/ghc-*/**
+    - /usr/lib64/libgodot-cpp.a
+    - /usr/lib64/libtcod.a
+    - /usr/lib64/libselinux.a
+    - /usr/lib64/libsepol.a

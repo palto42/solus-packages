@@ -1,0 +1,5 @@
+releases:
+  id: 369440 # glibmm~2.66
+security:
+  # No known CPE, last checked 2024-02-29
+  cpe: ~

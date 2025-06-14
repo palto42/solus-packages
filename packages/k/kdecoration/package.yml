@@ -1,20 +1,21 @@
 name       : kdecoration
-version    : 5.27.10
-release    : 91
+version    : 6.3.5
+release    : 120
 source     :
-    - https://cdn.download.kde.org/stable/plasma/5.27.10/kdecoration-5.27.10.tar.xz : 64966cb8258b50b55da50a8ab01fd1dd201065f1512216a04ce92189df679dde
+    - https://download.kde.org/stable/plasma/6.3.5/kdecoration-6.3.5.tar.xz : 6e155710f5f3a799b47d906b8a2a6116a951dee3d190fe15bc72413ca9633f07
 homepage   : https://www.kde.org/workspaces/plasmadesktop/
 license    : LGPL-2.1-only
 component  : programming
 summary    : Plugin based library to create window decorations
 description: |
     Plugin based library to create window decorations.
-optimize   : lto
 builddeps  :
-    - kcoreaddons-devel
-    - ki18n-devel
+    - kf6-kcoreaddons-devel
+    - kf6-ki18n-devel
+clang      : yes
+optimize   : thin-lto
 setup      : |
-    %cmake_ninja -DBUILD_TESTING=OFF
+    %cmake_kf6
 build      : |
     %ninja_build
 install    : |

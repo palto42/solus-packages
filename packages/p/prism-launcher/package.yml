@@ -1,8 +1,8 @@
 name       : prism-launcher
-version    : '8.2'
-release    : 5
+version    : '9.4'
+release    : 11
 source     :
-    - https://github.com/PrismLauncher/PrismLauncher/releases/download/8.2/PrismLauncher-8.2.tar.gz : 80bc2f7657d9432c11039799fe85a31c284affa84a41cafb758ac32a96bd10fe
+    - https://github.com/PrismLauncher/PrismLauncher/releases/download/9.4/PrismLauncher-9.4.tar.gz : 77ab52239c2a2a9f77d7c4607e1d9cf40970f9240d2f5061b116a7b1b8fd0277
 license    : GPL-3.0-or-later
 homepage   : https://prismlauncher.org/
 component  : games
@@ -12,13 +12,16 @@ description: |
 builddeps  :
     - pkgconfig(Qt6Core)
     - pkgconfig(Qt6Core5Compat)
+    - pkgconfig(Qt6NetworkAuth)
     - pkgconfig(libcmark)
     - pkgconfig(quazip1-qt6)
     - pkgconfig(scdoc)
+    - pkgconfig(tomlplusplus)
     - extra-cmake-modules
     - openjdk-17
 rundeps    :
-    - openjdk-17
+    # This package should always have a rundep on whatever version of Java the latest stable Minecraft version requires
+    - openjdk-21
 clang      : yes
 optimize   : thin-lto
 environment: |

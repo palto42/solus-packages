@@ -1,0 +1,39 @@
+name       : appstream-catalog
+version    : '20250613'
+release    : 7
+source     :
+    - https://appstream.getsol.us/data/unstable/main/Components-x86_64.xml.gz: 29e5d9545cf967909e18e56163be7ee4cfa89503e465049999e9249d2aef756e
+    - https://appstream.getsol.us/data/unstable/main/icons-128x128.tar.gz: 854779b279022d79708b1af50a42901bdfc28c6ab689001f2ffa51058138f2dc
+    - https://appstream.getsol.us/data/unstable/main/icons-128x128@2.tar.gz: 5a00c5ec8aecf041b6f6fb68c6efe3490f0d75fd57d0d4eb5a56e7376ebaa398
+    - https://appstream.getsol.us/data/unstable/main/icons-48x48.tar.gz: afd04eea6413bb28d2e0e4ff6550a729da3bb32435e8b58252dc88adadcca69e
+    - https://appstream.getsol.us/data/unstable/main/icons-48x48@2.tar.gz: f0546f9c9dd47bc796687fef47dbaf7e122fad59bb60721d81f801d1c32f08c2
+    - https://appstream.getsol.us/data/unstable/main/icons-64x64.tar.gz: 23f4b7dd21eed05681dd84ad5f6c467d9856ca76f12152a69f8bc4a70ff5914a
+    - https://appstream.getsol.us/data/unstable/main/icons-64x64@2.tar.gz: 99abdbff2354a50a30db937130b4414e8a29d830b07e94771e3c4ea7d00aea10
+homepage   : https://www.freedesktop.org/wiki/Distributions/AppStream/
+license    :
+    - CC-BY-SA-3.0
+    - CC-BY-SA-4.0
+    - CC0-1.0
+    - GFDL-1.3
+component  : desktop.core
+summary    : AppStream data for Solus
+description: |
+    AppStream data for Solus
+extract    : no
+install    : |
+    install -Dm00644 $sources/Components-x86_64.xml.gz $installdir/usr/share/swcatalog/xml/solus-unstable-main.xml.gz
+
+    install -dm00644 $installdir/usr/share/swcatalog/icons/solus-unstable-main/48x48
+    install -dm00644 $installdir/usr/share/swcatalog/icons/solus-unstable-main/48x48@2
+    install -dm00644 $installdir/usr/share/swcatalog/icons/solus-unstable-main/64x64
+    install -dm00644 $installdir/usr/share/swcatalog/icons/solus-unstable-main/64x64@2
+    install -dm00644 $installdir/usr/share/swcatalog/icons/solus-unstable-main/128x128
+    install -dm00644 $installdir/usr/share/swcatalog/icons/solus-unstable-main/128x128@2
+
+    tar xf $sources/icons-48x48.tar.gz -C $installdir/usr/share/swcatalog/icons/solus-unstable-main/48x48
+    tar xf $sources/icons-48x48@2.tar.gz -C $installdir/usr/share/swcatalog/icons/solus-unstable-main/48x48@2
+    tar xf $sources/icons-64x64.tar.gz -C $installdir/usr/share/swcatalog/icons/solus-unstable-main/64x64
+    tar xf $sources/icons-64x64@2.tar.gz -C $installdir/usr/share/swcatalog/icons/solus-unstable-main/64x64@2
+    tar xf $sources/icons-128x128.tar.gz -C $installdir/usr/share/swcatalog/icons/solus-unstable-main/128x128
+    tar xf $sources/icons-128x128@2.tar.gz -C $installdir/usr/share/swcatalog/icons/solus-unstable-main/128x128@2
+replaces   : appstream-data

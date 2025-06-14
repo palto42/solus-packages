@@ -1,6 +1,6 @@
 name       : mccabe
 version    : 0.7.0
-release    : 10
+release    : 12
 source     :
     - https://files.pythonhosted.org/packages/source/m/mccabe/mccabe-0.7.0.tar.gz : 348e0240c33b60bbdf4e523192ef919f28cb2c3d7d5c7794f74009290f236325
 homepage   : https://github.com/pycqa/mccabe
@@ -10,7 +10,11 @@ summary    : McCabe checker, plugin for flake8
 description: |
     This module provides a plugin for flake8, the Python code checker.
 builddeps  :
-    - pytest-runner       # check
+    - python-build
+    - python-installer
+    - python-setuptools
+checkdeps  :
+    - pytest-runner
 setup      : |
     %patch -p1 -i $pkgfiles/no-hypothesmith.patch
 build      : |

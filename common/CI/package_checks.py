@@ -1,24 +1,90 @@
 #!/usr/bin/env python3
 import argparse
+import fnmatch
 import glob
 import json
+import logging
 import os.path
 import re
 import subprocess
+import sys
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from enum import Enum
-from typing import Any, Dict, List, Optional, TextIO, Tuple, Union
+from ruamel.yaml import YAML
+from ruamel.yaml.compat import StringIO
+from typing import Any, Callable, Dict, List, Optional, TextIO, Tuple, Union
 from urllib import request
 from xml.etree import ElementTree
 
-import yaml
+"""Package is either a Package YML file or Pspec XML file."""
+Package = Union['PackageYML', 'PspecXML']
+
+
+def in_ci() -> bool:
+    """Returns true if running in GitHub Actions or GitLab CI."""
+    return os.environ.get('CI') == 'true'
+
+
+class PackageYML:
+    """Represents a Package YML file."""
+
+    def __init__(self, stream: Any):
+        yaml = YAML(typ='safe', pure=True)
+        yaml.default_flow_style = False
+        self._data = dict(yaml.load(stream))
+
+    @property
+    def name(self) -> str:
+        return str(self._data['name'])
+
+    @property
+    def version(self) -> str:
+        return str(self._data['version'])
+
+    @property
+    def release(self) -> int:
+        return int(self._data['release'])
+
+    @property
+    def homepage(self) -> Optional[str]:
+        return self._data.get('homepage')
+
+    def get(self, key: str, default: Any = None) -> Any:
+        return self._data.get(key, default)
+
+
+class PspecXML:
+    """Represents a Pspec XML file."""
+
+    def __init__(self, data: str):
+        self._xml = ElementTree.fromstring(data)
+
+    @property
+    def release(self) -> int:
+        return int(self._xml.findall('.//Update')[0].attrib['release'])
+
+    @property
+    def homepage(self) -> Optional[str]:
+        xml_homepage_element = self._xml.find('.//Homepage')
+        if xml_homepage_element is not None:
+            return xml_homepage_element.text
+
+        return None
+
+    @property
+    def files(self) -> List[str]:
+        return [str(element.text) for element in self._xml.findall('.//Path')]
 
 
 @dataclass
 class FreezeConfig:
     start: Optional[datetime]
     end: Optional[datetime]
+
+    def __init__(self, start: Optional[Union[str | datetime]], end: Optional[Union[str | datetime]]):
+        self.start = datetime.fromisoformat(start) if isinstance(start, str) else start
+        self.end = datetime.fromisoformat(end) if isinstance(end, str) else end
 
     def active(self) -> bool:
         now = datetime.now(tz=timezone.utc)
@@ -28,15 +94,25 @@ class FreezeConfig:
 
 
 @dataclass
+class StaticLibsConfig:
+    """Configuration for the 'StaticLibs' check."""
+    allowed_packages: List[str]
+    allowed_files: List[str]
+
+
+@dataclass
 class Config:
     freeze: FreezeConfig
+    static_libs: StaticLibsConfig
 
     @staticmethod
     def load(stream: Any) -> 'Config':
-        return Config(**yaml.safe_load(stream))
+        yaml = YAML(typ='safe', pure=True)
+        return Config(**yaml.load(stream))
 
     def __post_init__(self) -> None:
         self.freeze = FreezeConfig(**self.freeze)  # type: ignore
+        self.static_libs = StaticLibsConfig(**self.static_libs)  # type: ignore
 
 
 class Git:
@@ -56,7 +132,7 @@ class Git:
         return self._run(self.root, list(args))
 
     def run_lines(self, *args: str) -> List[str]:
-        return self.run(*args).split("\n")
+        return self.run(*args).splitlines()
 
     def changed_files(self, base: str, head: str) -> List[str]:
         return self.run_lines('diff', '--name-only', '--diff-filter=AM', base, head)
@@ -89,12 +165,48 @@ class Git:
         return self.run_lines('diff', '--name-only', '--diff-filter=AM')
 
 
+class LogFormatter(logging.Formatter):
+    fmt = '\033[0m \033[94m%(pathname)s:%(lineno)d:\033[0m %(message)s'
+    formatters = {
+        logging.DEBUG: logging.Formatter('\033[1;30mDBG' + fmt),
+        logging.INFO: logging.Formatter('\033[34mINF' + fmt),
+        logging.WARNING: logging.Formatter('\033[33mWRN' + fmt),
+        logging.ERROR: logging.Formatter('\033[31mERR' + fmt),
+        logging.CRITICAL: logging.Formatter('\033[31mCRI' + fmt),
+    }
+
+    def format(self, record: logging.LogRecord) -> str:
+        return self.formatters[record.levelno].format(record)
+
+    @staticmethod
+    def handler() -> logging.Handler:
+        handler = logging.StreamHandler(sys.stderr)
+        handler.setLevel(logging.DEBUG)
+        handler.setFormatter(LogFormatter())
+
+        return handler
+
+
 class Level(str, Enum):
     __str__ = Enum.__str__
     DEBUG = 'debug'
     NOTICE = 'notice'
     ERROR = 'error'
     WARNING = 'warning'
+
+    @property
+    def log_level(self) -> int:
+        match self:
+            case Level.DEBUG:
+                return logging.DEBUG
+            case Level.NOTICE:
+                return logging.INFO
+            case Level.WARNING:
+                return logging.WARNING
+            case Level.ERROR:
+                return logging.ERROR
+            case _:
+                return 0
 
 
 @dataclass
@@ -109,7 +221,14 @@ class Result:
     endLine: Optional[int] = None
 
     def __str__(self) -> str:
-        return f'::{self.level}{self._meta}::{self._message}'
+        return f'::{self.level.value}{self._meta}::{self._message}'
+
+    def log(self) -> None:
+        if in_ci():
+            print(str(self))
+            return
+
+        logging.getLogger(__name__).handle(self._record)
 
     @property
     def _message(self) -> str:
@@ -131,6 +250,15 @@ class Result:
             return ''
 
         return f'{key}={value}'
+
+    @property
+    def _record(self) -> logging.LogRecord:
+        return logging.LogRecord('',
+                                 self.level.log_level,
+                                 self.file or '',
+                                 self.line or 1,
+                                 self.message,
+                                 None, None)
 
 
 class PullRequestCheck:
@@ -157,11 +285,11 @@ class PullRequestCheck:
 
     @property
     def package_files(self) -> List[str]:
-        return self._filter_packages(self.files)
+        return self.filter_files(*self._package_files)
 
-    def _filter_packages(self, files: List[str]) -> List[str]:
-        return [f for f in files
-                if os.path.basename(f) in self._package_files]
+    def filter_files(self, *allowed: str) -> List[str]:
+        return [f for f in self.files
+                if os.path.basename(f) in allowed]
 
     def _path(self, path: str) -> str:
         return os.path.join(self.git.root, path)
@@ -169,12 +297,25 @@ class PullRequestCheck:
     def _open(self, path: str) -> TextIO:
         return open(self._path(path), 'r')
 
-    def load_package_yml(self, file: str) -> Dict[str, Any]:
-        with self._open(file) as f:
-            return dict(yaml.safe_load(f))
+    def _read(self, path: str) -> str:
+        with self._open(path) as f:
+            return str(f.read())
 
-    def load_package_yml_from_commit(self, ref: str, file: str) -> Dict[str, Any]:
-        return dict(yaml.safe_load(self.git.file_from_commit(ref, file)))
+    def _exists(self, path: str) -> bool:
+        return os.path.exists(self._path(path))
+
+    def load_package_yml(self, file: str) -> PackageYML:
+        with self._open(file) as f:
+            return PackageYML(f)
+
+    def load_package_yml_from_commit(self, ref: str, file: str) -> PackageYML:
+        return PackageYML(self.git.file_from_commit(ref, file))
+
+    def load_pspec_xml(self, file: str) -> PspecXML:
+        return PspecXML(self._read(file))
+
+    def load_pspec_xml_from_commit(self, ref: str, file: str) -> PspecXML:
+        return PspecXML(self.git.file_from_commit(ref, file))
 
     def file_line(self, file: str, expr: str) -> Optional[int]:
         with self._open(file) as f:
@@ -274,33 +415,56 @@ class Homepage(PullRequestCheck):
 
     def _includes_homepage(self, file: str) -> bool:
         with self._open(file) as f:
-            return 'homepage' in yaml.safe_load(f)
+            yaml = YAML(typ='safe', pure=True)
+            yaml.default_flow_style = False
+            return 'homepage' in yaml.load(f)
+
+
+class Monitoring(PullRequestCheck):
+    _error = '`monitoring.yaml` is missing'
+    _level = Level.WARNING
+
+    def run(self) -> List[Result]:
+        return [Result(message=self._error, file=f, level=self._level)
+                for f in self.package_files
+                if not self._has_monitoring_yml(f)]
+
+    def _has_monitoring_yml(self, file: str) -> bool:
+        return self._exists(os.path.join(os.path.dirname(file), 'monitoring.yaml'))
 
 
 class PackageBumped(PullRequestCheck):
     _msg = 'Package release is not incremented by 1'
     _msg_new = 'Package release is not 1'
-    _level = Level.WARNING
 
     def run(self) -> List[Result]:
         results = [self._check_commit(self.base or 'HEAD', file)
-                   for file in self.package_files]
+                   for file in self.files]
 
         return [result for result in results if result is not None]
 
     def _check_commit(self, base: str, file: str) -> Optional[Result]:
-        new = self.load_package_yml(file)
+        match os.path.basename(file):
+            case 'package.yml':
+                return self._check(base, file, PackageYML, Level.WARNING)
+            case 'pspec_x86_64.xml':
+                return self._check(base, file, PspecXML, Level.ERROR)
+            case _:
+                return None
+
+    def _check(self, base: str, file: str, loader: Callable[[str], Package], level: Level) -> Optional[Result]:
+        new = loader(self._read(file))
 
         try:
-            old = self.load_package_yml_from_commit(base, file)
-            if int(old['release']) + 1 != int(new['release']):
-                return Result(level=self._level, file=file, message=self._msg)
+            old = loader(self.git.file_from_commit(base, file))
+            if old.release + 1 != new.release:
+                return Result(level=level, file=file, message=self._msg)
 
             return None
         except Exception as e:
             if 'exists on disk, but not in' in str(e):
-                if int(new['release']) != 1:
-                    return Result(level=self._level, file=file, message=self._msg_new)
+                if new.release != 1:
+                    return Result(level=level, file=file, message=self._msg_new)
 
                 return None
 
@@ -324,8 +488,18 @@ class PackageDependenciesOrder(PullRequestCheck):
         exp = self._sorted(cur)
 
         if cur != exp:
+            class Dumper(YAML):
+                def dump(self, data: Any, stream: Optional[StringIO] = None, **kw: int) -> Any:
+                    self.default_flow_style = False
+                    self.indent(offset=4, sequence=4)
+                    self.prefix_colon = ' '  # type: ignore[assignment]
+                    stream = StringIO()
+                    YAML.dump(self, data, stream, **kw)
+                    return stream.getvalue()
+
+            yaml = Dumper(typ='safe', pure=True)
             return Result(file=file, level=self._level, line=self.file_line(file, '^' + deps + r'\s*:'),
-                          message=f'{deps} are not in order, expected: \n' + yaml.safe_dump(exp))
+                          message=f'{deps} are not in order, expected: \n' + yaml.dump(exp))
 
         return None
 
@@ -378,14 +552,12 @@ class PackageVersion(PullRequestCheck):
 
     def run(self) -> List[Result]:
         return [Result(message=self._error, level=self._level,
-                       file=path, line=self.file_line(path, r'^version\s*:'),)
+                       file=path, line=self.file_line(path, r'^version\s*:'), )
                 for path in self.package_files
                 if not self._check_version(path)]
 
     def _check_version(self, path: str) -> bool:
-        version = self.load_package_yml(path)['version']
-
-        return isinstance(version, str)
+        return isinstance(self.load_package_yml(path).version, str)
 
 
 class Patch(PullRequestCheck):
@@ -413,7 +585,7 @@ class SPDXLicense(PullRequestCheck):
     _exceptions_url = 'https://raw.githubusercontent.com/spdx/license-list-data/main/json/exceptions.json'
     _licenses: Optional[List[str]] = None
     _exceptions: Optional[List[str]] = None
-    _extra_licenses = ['Distributable', 'Public-Domain']
+    _extra_licenses = ['Distributable', 'EULA', 'Public-Domain']
     _error = 'Invalid license identifier: '
     _level = Level.WARNING
 
@@ -422,7 +594,7 @@ class SPDXLicense(PullRequestCheck):
                 for r in self._validate_spdx(f) if r]
 
     def _validate_spdx(self, file: str) -> List[Optional[Result]]:
-        license = self.load_package_yml(file)['license']
+        license = self.load_package_yml(file).get('license')
         if isinstance(license, list):
             return [self._validate_license(file, id) for id in license]
 
@@ -492,26 +664,50 @@ class Pspec(PullRequestCheck):
                 if not self._check_consistent(path)]
 
     def _check_consistent(self, package_dir: str) -> bool:
-        xml = ElementTree.parse(self._xml_file(package_dir))
-        xml_release = int(xml.findall('.//Update')[0].attrib['release'])
-        xml_homepage: str = ''
-        xml_homepage_element = xml.find('.//Homepage')
+        xml = self._xml_file(package_dir)
+        yml = self._yml_file(package_dir)
 
-        if xml_homepage_element is not None:
-            xml_homepage = xml_homepage_element.text or ''
+        return bool(yml.release == xml.release and yml.homepage == xml.homepage)
 
-        with open(self._yml_file(package_dir), 'r') as f:
-            yml = yaml.safe_load(f)
-            yml_release = yml.get('release', '')
-            yml_homepage = yml.get('homepage', '')
+    def _yml_file(self, package_dir: str) -> PackageYML:
+        return self.load_package_yml(os.path.join(package_dir, 'package.yml'))
 
-        return bool(yml_release == xml_release and yml_homepage == xml_homepage)
+    def _xml_file(self, package_dir: str) -> PspecXML:
+        return self.load_pspec_xml(os.path.join(package_dir, 'pspec_x86_64.xml'))
 
-    def _yml_file(self, package_dir: str) -> str:
-        return self._path(os.path.join(package_dir, 'package.yml'))
 
-    def _xml_file(self, package_dir: str) -> str:
-        return self._path(os.path.join(package_dir, 'pspec_x86_64.xml'))
+class StaticLibs(PullRequestCheck):
+    """
+    Checks if any static libraries have been included.
+
+    Static libraries can be allowed by adding them to the allow list.
+    """
+    _error = 'A static library has been included in the package.'
+    _level = Level.ERROR
+
+    def run(self) -> List[Result]:
+        return [self._result(pspec, file)
+                for pspec in self.filter_files('pspec_x86_64.xml')
+                if not self._allowed_package(pspec)
+                for file in self.load_pspec_xml(pspec).files
+                if self._check(file)]
+
+    def _result(self, pspec: str, file: str) -> Result:
+        return Result(message=f'A static library has been included in the package: `{file}`. '
+                              'Whitelist the package or file in `common/CI/config.yaml` if this is desired.',
+                      file=pspec, line=self.file_line(pspec, f'.*{file}.*'), level=self._level)
+
+    def _check(self, file: str) -> bool:
+        return (file.startswith('/usr/lib') and
+                file.endswith('.a') and
+                not self._allowed_path(file))
+
+    def _allowed_package(self, file: str) -> bool:
+        return self.package_for(file) in self.config.static_libs.allowed_packages
+
+    def _allowed_path(self, file: str) -> bool:
+        return any([fnmatch.filter([file], pattern)
+                    for pattern in self.config.static_libs.allowed_files])
 
 
 class SystemDependencies(PullRequestCheck):
@@ -529,7 +725,7 @@ class SystemDependencies(PullRequestCheck):
         return self._validate_deps(pkg) if self._components_match(pkg_components) else []
 
     def _package_components(self, pkg: str) -> List[str]:
-        return self._unwrap_component(self.load_package_yml(self.package_yml_path(pkg))['component'])
+        return self._unwrap_component(self.load_package_yml(self.package_yml_path(pkg)).get('component'))
 
     def _unwrap_component(self, component: Any) -> List[str]:
         if isinstance(component, dict):
@@ -587,9 +783,9 @@ class SummaryGenerator(PullRequestCheck):
         if package is None:
             return None
 
-        return f"{package['name']}-{package['version']}-{package['release']}"
+        return f"{package.name}-{package.version}-{package.release}"
 
-    def _commit_package_yaml(self, ref: str) -> Optional[Dict[str, Any]]:
+    def _commit_package_yaml(self, ref: str) -> Optional[PackageYML]:
         files = [f for f in self.git.files_in_commit(ref) if os.path.basename(f) == 'package.yml']
         if len(files) == 0:
             return None
@@ -602,6 +798,7 @@ class Checker:
         CommitMessage,
         FrozenPackage,
         Homepage,
+        Monitoring,
         PackageBumped,
         PackageDependenciesOrder,
         PackageDirectory,
@@ -609,11 +806,15 @@ class Checker:
         Patch,
         Pspec,
         SPDXLicense,
+        StaticLibs,
         SystemDependencies,
         UnwantedFiles,
     ]
 
-    def __init__(self, base: Optional[str], head: str, path: str, modified: bool, untracked: bool, files: List[str]):
+    def __init__(self, base: Optional[str], head: str, path: str, files: List[str],
+                 modified: bool, untracked: bool, results_only: bool, exit_warn: bool):
+        self.results_only = results_only
+        self.exit_warn = exit_warn
         self.base = base
         self.head = head
         self.git = Git(path)
@@ -633,22 +834,25 @@ class Checker:
             self.files += self.git.untracked_files()
 
     def run(self) -> bool:
-        print(f'Checking files: {", ".join(self.files)}')
-        if self.commits:
-            print(f'Checking commits: {", ".join(self.commits)}')
+        if not self.results_only:
+            print(f'Checking files: {", ".join(self.files)}')
+            if self.commits:
+                print(f'Checking commits: {", ".join(self.commits)}')
 
         results = [result for check in self.checks
                    for result in check(self.git, self.files, self.commits, self.base).run()]
         errors = [r for r in results if r.level == Level.ERROR]
+        warnings = [r for r in results if r.level == Level.WARNING]
 
-        print(f"Found {len(results)} result(s), {len(errors)} error(s)")
+        if not self.results_only:
+            print(f"Found {len(results)} result(s), {len(warnings)} warnings and {len(errors)} error(s)")
 
         for result in results:
-            print(result)
+            result.log()
 
         self.write_summary()
 
-        return len(errors) > 0
+        return len(errors) > 0 or self.exit_warn and len(warnings) > 0
 
     def write_summary(self) -> None:
         if self.summary_file is None:
@@ -663,6 +867,8 @@ class Checker:
 
 
 if __name__ == "__main__":
+    logging.basicConfig(level=logging.INFO, handlers=[LogFormatter.handler()])
+
     parser = argparse.ArgumentParser()
     parser.add_argument('--base', type=str,
                         help='Optional reference to the base branch')
@@ -674,13 +880,20 @@ if __name__ == "__main__":
                         help='Include modified files')
     parser.add_argument('--untracked', action='store_true',
                         help='Include untracked files')
+    parser.add_argument('--fail-on-warnings', action='store_true',
+                        help='Exit with an error if warnings are encountered')
+    parser.add_argument('--results-only', action='store_true',
+                        help='Only show results, nothing else')
     parser.add_argument('filename', type=str, nargs="*",
                         help='Additional files to check')
+
     cli_args = parser.parse_args()
-    checker = Checker(cli_args.base,
-                      cli_args.head,
-                      cli_args.root,
-                      cli_args.modified,
-                      cli_args.untracked,
-                      cli_args.filename)
+    checker = Checker(base=cli_args.base,
+                      head=cli_args.head,
+                      path=cli_args.root,
+                      modified=cli_args.modified,
+                      untracked=cli_args.untracked,
+                      files=cli_args.filename,
+                      results_only=cli_args.results_only,
+                      exit_warn=cli_args.fail_on_warnings)
     exit(checker.run())

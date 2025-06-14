@@ -1,8 +1,8 @@
 name       : exfatprogs
-version    : 1.2.2
-release    : 7
+version    : 1.2.9
+release    : 14
 source     :
-    - https://github.com/exfatprogs/exfatprogs/archive/refs/tags/1.2.2.tar.gz : 16b28c9130b4dfab0b571dce6d2959d2ee93fce27aa0f4b2c1bb30700f371393
+    - https://github.com/exfatprogs/exfatprogs/archive/refs/tags/1.2.9.tar.gz : a9d2722a4190a6d4080df6a447498886cc566ae22bb721e3405bb82f423d51d1
 homepage   : https://github.com/exfatprogs/exfatprogs
 license    : GPL-2.0-or-later
 component  : system.utils

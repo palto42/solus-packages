@@ -1,8 +1,8 @@
 name       : kded
-version    : 5.115.0
-release    : 73
+version    : 5.116.0
+release    : 74
 source     :
-    - https://cdn.download.kde.org/stable/frameworks/5.115/kded-5.115.0.tar.xz : 8ac22a0031b3fc60c2f2b75db529afef879b6aa10cd882b2fee4c2494baf23b3
+    - https://download.kde.org/stable/frameworks/5.116/kded-5.116.0.tar.xz : 5cb67255f866ad765a88a091ad864e4fa83c7bd8b59fa96717817f448e6fa03d
 homepage   : https://community.kde.org/Frameworks
 license    :
     - LGPL-2.0-only
@@ -11,8 +11,6 @@ component  : programming.library
 summary    : Central daemon of KDE work spaces
 description: |
     KDED runs in the background and performs a number of small tasks. Some of these tasks are built in, others are started on demand.
-patterns   :
-    - /usr/lib64/libkdeinit*.so
 optimize   : lto
 builddeps  :
     - kcrash-devel

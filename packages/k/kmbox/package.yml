@@ -1,8 +1,8 @@
 name       : kmbox
-version    : 23.08.5
-release    : 69
+version    : 25.04.2
+release    : 87
 source     :
-    - https://cdn.download.kde.org/stable/release-service/23.08.5/src/kmbox-23.08.5.tar.xz : e583b87b0eb995ebfafa67817748c23cbd872108451e6bc8cd9590ba7ecdf400
+    - https://download.kde.org/stable/release-service/25.04.2/src/kmbox-25.04.2.tar.xz : e348396fb8f1de1729d0415116b05f6220f0ebb4428c4607b98b56edd321f1aa
 homepage   : https://kde.org/
 license    : LGPL-2.1-or-later
 component  : desktop.library
@@ -10,10 +10,16 @@ summary    : KMBox provides API to access emails in storages in the MBox format
 description: |
     KMBox provides API to access emails in storages in the MBox format.
 builddeps  :
-    - kcodecs-devel
     - kmime-devel
+rundeps    :
+    - devel :
+        - kmime-devel
+clang      : yes
+optimize   :
+    - speed
+    - thin-lto
 setup      : |
-    %cmake_ninja -DBUILD_TESTING=OFF
+    %cmake_kf6
 build      : |
     %ninja_build
 install    : |

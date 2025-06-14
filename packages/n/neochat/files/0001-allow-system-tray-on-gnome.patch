@@ -1,0 +1,23 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Joey Riches <josephriches@gmail.com>
+Date: Sun, 29 Sep 2024 17:06:12 +0100
+Subject: [PATCH] controller: Allow system tray on GNOME
+
+Our GNOME edition ships an extension that support system tray OOTB.
+---
+ src/controller.cpp | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/controller.cpp b/src/controller.cpp
+index 2a4dd5058..bb83e40ff 100644
+--- a/src/controller.cpp
++++ b/src/controller.cpp
+@@ -287,7 +287,7 @@ bool Controller::supportSystemTray() const
+     return false;
+ #else
+     auto de = QString::fromLatin1(qgetenv("XDG_CURRENT_DESKTOP"));
+-    return de != u"GNOME"_s && de != u"Pantheon"_s;
++    return de != u"Pantheon"_s;
+ #endif
+ }
+ 

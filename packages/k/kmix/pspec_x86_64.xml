@@ -3,8 +3,8 @@
         <Name>kmix</Name>
         <Homepage>https://kde.org/applications/multimedia/org.kde.kmix</Homepage>
         <Packager>
-            <Name>Justin Zobel</Name>
-            <Email>justin@1707.io</Email>
+            <Name>Troy Harvey</Name>
+            <Email>harveydevel@gmail.com</Email>
         </Packager>
         <License>GFDL-1.2-or-later</License>
         <License>GPL-2.0-or-later</License>
@@ -24,9 +24,8 @@
             <Path fileType="executable">/usr/bin/kmix</Path>
             <Path fileType="executable">/usr/bin/kmixctrl</Path>
             <Path fileType="executable">/usr/bin/kmixremote</Path>
-            <Path fileType="library">/usr/lib64/libkmixcore.so.23.08.5</Path>
-            <Path fileType="library">/usr/lib64/libkmixcore.so.5</Path>
-            <Path fileType="library">/usr/lib64/qt5/plugins/kf5/kded/kmixd.so</Path>
+            <Path fileType="library">/usr/lib64/libkmixcore.so.25.04.2</Path>
+            <Path fileType="library">/usr/lib64/libkmixcore.so.6</Path>
             <Path fileType="data">/usr/share/applications/org.kde.kmix.desktop</Path>
             <Path fileType="data">/usr/share/config.kcfg/kmixsettings.kcfg</Path>
             <Path fileType="data">/usr/share/dbus-1/interfaces/org.kde.kmix.control.xml</Path>
@@ -52,6 +51,8 @@
             <Path fileType="data">/usr/share/kmix/pics/mixer-pcm.png</Path>
             <Path fileType="data">/usr/share/kmix/pics/mixer-surround.png</Path>
             <Path fileType="data">/usr/share/kmix/pics/mixer-video.png</Path>
+            <Path fileType="data">/usr/share/kmix/pics/settings-channels.png</Path>
+            <Path fileType="data">/usr/share/kmix/pics/settings-master.png</Path>
             <Path fileType="data">/usr/share/kmix/pics/show-mixer.png</Path>
             <Path fileType="data">/usr/share/kmix/profiles/ALSA.TerraTec_DMX6Fire.1.default.xml</Path>
             <Path fileType="data">/usr/share/kmix/profiles/ALSA.capture.xml</Path>
@@ -61,8 +62,7 @@
             <Path fileType="data">/usr/share/kmix/profiles/OSS.default.xml</Path>
             <Path fileType="data">/usr/share/kmix/profiles/PulseAudio.default.xml</Path>
             <Path fileType="data">/usr/share/kmix/profiles/SUNAudio.default.xml</Path>
-            <Path fileType="data">/usr/share/knotifications5/kmix.notifyrc</Path>
-            <Path fileType="data">/usr/share/kservices5/kmixctrl_restore.desktop</Path>
+            <Path fileType="data">/usr/share/knotifications6/kmix.notifyrc</Path>
             <Path fileType="data">/usr/share/kxmlgui5/kmix/kmixui.rc</Path>
             <Path fileType="localedata">/usr/share/locale/af/LC_MESSAGES/kmix.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ar/LC_MESSAGES/kmix.mo</Path>
@@ -118,6 +118,7 @@
             <Path fileType="localedata">/usr/share/locale/pt_BR/LC_MESSAGES/kmix.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ro/LC_MESSAGES/kmix.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ru/LC_MESSAGES/kmix.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/sa/LC_MESSAGES/kmix.mo</Path>
             <Path fileType="localedata">/usr/share/locale/se/LC_MESSAGES/kmix.mo</Path>
             <Path fileType="localedata">/usr/share/locale/sk/LC_MESSAGES/kmix.mo</Path>
             <Path fileType="localedata">/usr/share/locale/sl/LC_MESSAGES/kmix.mo</Path>
@@ -140,18 +141,18 @@
             <Path fileType="localedata">/usr/share/locale/zh_HK/LC_MESSAGES/kmix.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_TW/LC_MESSAGES/kmix.mo</Path>
             <Path fileType="data">/usr/share/metainfo/org.kde.kmix.appdata.xml</Path>
-            <Path fileType="data">/usr/share/qlogging-categories5/kmix.categories</Path>
+            <Path fileType="data">/usr/share/qlogging-categories6/kmix.categories</Path>
             <Path fileType="data">/usr/share/xdg/autostart/kmix_autostart.desktop</Path>
             <Path fileType="data">/usr/share/xdg/autostart/restore_kmix_volumes.desktop</Path>
         </Files>
     </Package>
     <History>
-        <Update release="69">
-            <Date>2024-02-16</Date>
-            <Version>23.08.5</Version>
+        <Update release="84">
+            <Date>2025-06-11</Date>
+            <Version>25.04.2</Version>
             <Comment>Packaging update</Comment>
-            <Name>Justin Zobel</Name>
-            <Email>justin@1707.io</Email>
+            <Name>Troy Harvey</Name>
+            <Email>harveydevel@gmail.com</Email>
         </Update>
     </History>
 </PISI>

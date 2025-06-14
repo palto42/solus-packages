@@ -1,0 +1,7 @@
+releases:
+  id: 135615
+  rss: https://github.com/cli/cli/releases.atom
+security:
+  cpe:
+    - vendor: github
+      product: cli

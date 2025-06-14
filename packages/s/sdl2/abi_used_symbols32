@@ -202,7 +202,8 @@ libc.so.6:__ctype_tolower_loc
 libc.so.6:__ctype_toupper_loc
 libc.so.6:__cxa_atexit
 libc.so.6:__errno_location
-libc.so.6:__fprintf_chk
+libc.so.6:__gethostname_chk
+libc.so.6:__isoc23_fscanf
 libc.so.6:__isoc23_sscanf
 libc.so.6:__isoc23_strtol
 libc.so.6:__isoc23_strtoll
@@ -212,10 +213,15 @@ libc.so.6:__isoc23_vsscanf
 libc.so.6:__libc_current_sigrtmax
 libc.so.6:__libc_current_sigrtmin
 libc.so.6:__memmove_chk
-libc.so.6:__printf_chk
+libc.so.6:__open64_2
+libc.so.6:__poll_chk
+libc.so.6:__read_chk
+libc.so.6:__readlink_chk
 libc.so.6:__stack_chk_fail
 libc.so.6:__strlcat_chk
 libc.so.6:__strlcpy_chk
+libc.so.6:__vfprintf_chk
+libc.so.6:__vprintf_chk
 libc.so.6:__vsnprintf_chk
 libc.so.6:_exit
 libc.so.6:access
@@ -248,7 +254,6 @@ libc.so.6:ftello64
 libc.so.6:ftruncate64
 libc.so.6:fwrite
 libc.so.6:getenv
-libc.so.6:gethostname
 libc.so.6:getpid
 libc.so.6:getrlimit64
 libc.so.6:gettimeofday
@@ -264,6 +269,7 @@ libc.so.6:malloc
 libc.so.6:mbstowcs
 libc.so.6:memcmp
 libc.so.6:memcpy
+libc.so.6:memfd_create
 libc.so.6:memmove
 libc.so.6:memset
 libc.so.6:mkdir
@@ -276,7 +282,7 @@ libc.so.6:opendir
 libc.so.6:perror
 libc.so.6:pipe
 libc.so.6:pipe2
-libc.so.6:poll
+libc.so.6:posix_fallocate64
 libc.so.6:pthread_attr_init
 libc.so.6:pthread_attr_setdetachstate
 libc.so.6:pthread_attr_setstacksize
@@ -292,6 +298,7 @@ libc.so.6:pthread_getschedparam
 libc.so.6:pthread_getspecific
 libc.so.6:pthread_join
 libc.so.6:pthread_key_create
+libc.so.6:pthread_key_delete
 libc.so.6:pthread_mutex_destroy
 libc.so.6:pthread_mutex_init
 libc.so.6:pthread_mutex_lock
@@ -349,7 +356,6 @@ libc.so.6:strlcpy
 libc.so.6:strlen
 libc.so.6:strncasecmp
 libc.so.6:strncmp
-libc.so.6:strncpy
 libc.so.6:strrchr
 libc.so.6:strstr
 libc.so.6:strtod
@@ -357,6 +363,7 @@ libc.so.6:strtok_r
 libc.so.6:syscall
 libc.so.6:sysconf
 libc.so.6:uname
+libc.so.6:unlink
 libc.so.6:unsetenv
 libc.so.6:usleep
 libc.so.6:vfork
@@ -407,6 +414,7 @@ libdrm.so.2:drmDropMaster
 libdrm.so.2:drmGetCap
 libdrm.so.2:drmHandleEvent
 libdrm.so.2:drmModeAddFB
+libdrm.so.2:drmModeAddFB2WithModifiers
 libdrm.so.2:drmModeCrtcGetGamma
 libdrm.so.2:drmModeCrtcSetGamma
 libdrm.so.2:drmModeFreeConnector
@@ -431,9 +439,15 @@ libdrm.so.2:drmModeSetCursor2
 libdrm.so.2:drmSetMaster
 libgbm.so.1:gbm_bo_create
 libgbm.so.1:gbm_bo_destroy
+libgbm.so.1:gbm_bo_get_format
 libgbm.so.1:gbm_bo_get_handle
+libgbm.so.1:gbm_bo_get_handle_for_plane
 libgbm.so.1:gbm_bo_get_height
+libgbm.so.1:gbm_bo_get_modifier
+libgbm.so.1:gbm_bo_get_offset
+libgbm.so.1:gbm_bo_get_plane_count
 libgbm.so.1:gbm_bo_get_stride
+libgbm.so.1:gbm_bo_get_stride_for_plane
 libgbm.so.1:gbm_bo_get_user_data
 libgbm.so.1:gbm_bo_get_width
 libgbm.so.1:gbm_bo_set_user_data
@@ -600,6 +614,7 @@ libxkbcommon.so.0:xkb_compose_state_feed
 libxkbcommon.so.0:xkb_compose_state_get_one_sym
 libxkbcommon.so.0:xkb_compose_state_get_status
 libxkbcommon.so.0:xkb_compose_state_new
+libxkbcommon.so.0:xkb_compose_state_reset
 libxkbcommon.so.0:xkb_compose_state_unref
 libxkbcommon.so.0:xkb_compose_table_new_from_locale
 libxkbcommon.so.0:xkb_compose_table_unref

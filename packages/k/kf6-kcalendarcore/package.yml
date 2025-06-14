@@ -1,8 +1,8 @@
 name       : kf6-kcalendarcore
-version    : 6.0.0
-release    : 4
+version    : 6.14.0
+release    : 20
 source     :
-    - https://cdn.download.kde.org/stable/frameworks/6.0/kcalendarcore-6.0.0.tar.xz : 641356ac286c1a5287327ce8fa2529bf53048e439d1ff672c925d4ab7e0eb7c2
+    - https://download.kde.org/stable/frameworks/6.14/kcalendarcore-6.14.0.tar.xz : 702bfc2edfced4d0903365657434fd8c2dc0b8f66d0ce96e4ea0b6950ef8798b
 homepage   : https://community.kde.org/Frameworks
 license    : LGPL-2.0-or-later
 component  : desktop.library

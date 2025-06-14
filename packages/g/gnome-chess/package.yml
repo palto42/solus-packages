@@ -1,14 +1,16 @@
 name       : gnome-chess
-version    : '43.2'
-release    : 33
+version    : '48.0'
+release    : 37
 source     :
-    - https://download.gnome.org/sources/gnome-chess/43/gnome-chess-43.2.tar.xz : 348508f8f6e7451c07344ffa7a09a990cf1d2883bccf533409dbe029268d49f2
-homepage   : https://wiki.gnome.org/Apps/Chess
+    - https://download.gnome.org/sources/gnome-chess/48/gnome-chess-48.0.tar.xz : 7834c476f08bbf277906b0293632ed32e80374cb944326b219ea9056a6a95f3f
+homepage   : https://gitlab.gnome.org/GNOME/gnome-chess
 license    : GPL-2.0-or-later
 component  : games.strategy
 summary    : GNOME Chess Game
 description: |
     GNOME Chess is a 2D chess game, where games can be played between a combination of human and computer players. GNOME Chess detects known third party chess engines for computer players.
+optimize   :
+    - lto
 builddeps  :
     - pkgconfig(glu)
     - pkgconfig(libadwaita-1)

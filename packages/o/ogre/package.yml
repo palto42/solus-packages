@@ -1,9 +1,9 @@
 name       : ogre
-version    : 14.1.2
-release    : 23
+version    : 14.3.4
+release    : 26
 source     :
-    - https://github.com/OGRECave/ogre/archive/refs/tags/v14.1.2.tar.gz : 7269d659fa74b61b5df48aa81aa9a517227cb7da9f316f04cb9093f963e6911c
-    - https://github.com/ocornut/imgui/archive/refs/tags/v1.89.8.tar.gz#imgui.tar.gz : 6680ccc32430009a8204291b1268b2367d964bd6d1b08a4e0358a017eb8e8c9e
+    - https://github.com/OGRECave/ogre/archive/refs/tags/v14.3.4.tar.gz : 0c74e6ca7bb920ff59c5da8a359e6d96215c7804261301feec4f2e54f206b27d
+    - https://github.com/ocornut/imgui/archive/refs/tags/v1.91.2.tar.gz#imgui.tar.gz : a3c4fd857a0a48f6edad3e25de68fa1e96d2437f1665039714d1de9ad579b8d0
 homepage   : https://ogrecave.github.io/ogre/
 license    : MIT
 component  : programming.library

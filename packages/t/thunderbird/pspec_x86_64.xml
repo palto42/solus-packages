@@ -11,19 +11,20 @@
         <License>MPL-2.0</License>
         <PartOf>network.mail</PartOf>
         <Summary xml:lang="en">Thunderbird Email Client</Summary>
-        <Description xml:lang="en">Thunderbird is a free email application that’s easy to set up and customize - and it’s loaded with great features!
+        <Description xml:lang="en">Thunderbird is a free email application that&#x2019;s easy to set up and customize - and it&#x2019;s loaded with great features!
 </Description>
         <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>thunderbird</Name>
         <Summary xml:lang="en">Thunderbird Email Client</Summary>
-        <Description xml:lang="en">Thunderbird is a free email application that’s easy to set up and customize - and it’s loaded with great features!
+        <Description xml:lang="en">Thunderbird is a free email application that&#x2019;s easy to set up and customize - and it&#x2019;s loaded with great features!
 </Description>
         <PartOf>network.mail</PartOf>
         <Files>
             <Path fileType="executable">/usr/bin/thunderbird</Path>
             <Path fileType="library">/usr/lib64/thunderbird/application.ini</Path>
+            <Path fileType="library">/usr/lib64/thunderbird/chrome/icons/default/TB-symbolic.svg</Path>
             <Path fileType="library">/usr/lib64/thunderbird/chrome/icons/default/calendar-alarm-dialog.png</Path>
             <Path fileType="library">/usr/lib64/thunderbird/chrome/icons/default/calendar-general-dialog.png</Path>
             <Path fileType="library">/usr/lib64/thunderbird/chrome/icons/default/default128.png</Path>
@@ -44,6 +45,7 @@
             <Path fileType="library">/usr/lib64/thunderbird/dependentlibs.list</Path>
             <Path fileType="library">/usr/lib64/thunderbird/fonts/TwemojiMozilla.ttf</Path>
             <Path fileType="library">/usr/lib64/thunderbird/glxtest</Path>
+            <Path fileType="library">/usr/lib64/thunderbird/interesting_serverknobs.json</Path>
             <Path fileType="library">/usr/lib64/thunderbird/isp/Bogofilter.sfd</Path>
             <Path fileType="library">/usr/lib64/thunderbird/isp/DSPAM.sfd</Path>
             <Path fileType="library">/usr/lib64/thunderbird/isp/POPFile.sfd</Path>
@@ -115,6 +117,7 @@
             <Path fileType="library">/usr/lib64/thunderbird/langpacks/langpack-vi@thunderbird.mozilla.org.xpi</Path>
             <Path fileType="library">/usr/lib64/thunderbird/langpacks/langpack-zh-CN@thunderbird.mozilla.org.xpi</Path>
             <Path fileType="library">/usr/lib64/thunderbird/langpacks/langpack-zh-TW@thunderbird.mozilla.org.xpi</Path>
+            <Path fileType="library">/usr/lib64/thunderbird/libgkcodecs.so</Path>
             <Path fileType="library">/usr/lib64/thunderbird/liblgpllibs.so</Path>
             <Path fileType="library">/usr/lib64/thunderbird/libmozavcodec.so</Path>
             <Path fileType="library">/usr/lib64/thunderbird/libmozavutil.so</Path>
@@ -127,11 +130,9 @@
             <Path fileType="library">/usr/lib64/thunderbird/omni.ja</Path>
             <Path fileType="library">/usr/lib64/thunderbird/pingsender</Path>
             <Path fileType="library">/usr/lib64/thunderbird/platform.ini</Path>
-            <Path fileType="library">/usr/lib64/thunderbird/plugin-container</Path>
             <Path fileType="library">/usr/lib64/thunderbird/removed-files</Path>
             <Path fileType="library">/usr/lib64/thunderbird/rnp-cli</Path>
             <Path fileType="library">/usr/lib64/thunderbird/rnpkeys</Path>
-            <Path fileType="library">/usr/lib64/thunderbird/run-mozilla.sh</Path>
             <Path fileType="library">/usr/lib64/thunderbird/thunderbird</Path>
             <Path fileType="library">/usr/lib64/thunderbird/thunderbird-bin</Path>
             <Path fileType="library">/usr/lib64/thunderbird/vaapitest</Path>
@@ -149,9 +150,9 @@
         </Files>
     </Package>
     <History>
-        <Update release="185">
-            <Date>2024-03-05</Date>
-            <Version>115.8.1</Version>
+        <Update release="230">
+            <Date>2025-06-11</Date>
+            <Version>139.0.2</Version>
             <Comment>Packaging update</Comment>
             <Name>Troy Harvey</Name>
             <Email>harveydevel@gmail.com</Email>

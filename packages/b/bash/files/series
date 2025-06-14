@@ -1,7 +1,2 @@
-upstream/bash52-022 -p0
-upstream/bash52-023 -p0
-upstream/bash52-024 -p0
-upstream/bash52-025 -p0
-upstream/bash52-026 -p0
 0001-Use-a-stateless-profile-by-default.patch
 0001-Fix-reconfigure-error.patch

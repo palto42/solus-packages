@@ -1,6 +1,7 @@
 <PISI>
     <Source>
         <Name>python3-cairo</Name>
+        <Homepage>https://pycairo.readthedocs.io/</Homepage>
         <Packager>
             <Name>Joey Riches</Name>
             <Email>josephriches@gmail.com</Email>
@@ -19,16 +20,13 @@
 </Description>
         <PartOf>programming.python</PartOf>
         <Files>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/cairo/__init__.py</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/cairo/__init__.pyi</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/cairo/__pycache__/__init__.cpython-311.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/cairo/_cairo.cpython-311-x86_64-linux-gnu.so</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/cairo/include/py3cairo.h</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/cairo/py.typed</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/pycairo-1.24.0-py3.11.egg-info/PKG-INFO</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/pycairo-1.24.0-py3.11.egg-info/SOURCES.txt</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/pycairo-1.24.0-py3.11.egg-info/dependency_links.txt</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/pycairo-1.24.0-py3.11.egg-info/top_level.txt</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/cairo/__init__.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/cairo/__init__.pyi</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/cairo/__pycache__/__init__.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/cairo/_cairo.cpython-312-x86_64-linux-gnu.so</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/cairo/include/py3cairo.h</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/cairo/py.typed</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/pycairo-1.27.0.dist-info/METADATA</Path>
         </Files>
     </Package>
     <Package>
@@ -38,17 +36,17 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="16">python3-cairo</Dependency>
+            <Dependency release="19">python3-cairo</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/pycairo/py3cairo.h</Path>
-            <Path fileType="data">/usr/lib/pkgconfig/py3cairo.pc</Path>
+            <Path fileType="data">/usr/lib64/pkgconfig/py3cairo.pc</Path>
         </Files>
     </Package>
     <History>
-        <Update release="16">
-            <Date>2024-02-14</Date>
-            <Version>1.24.0</Version>
+        <Update release="19">
+            <Date>2025-05-20</Date>
+            <Version>1.27.0</Version>
             <Comment>Packaging update</Comment>
             <Name>Joey Riches</Name>
             <Email>josephriches@gmail.com</Email>

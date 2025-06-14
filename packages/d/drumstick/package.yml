@@ -1,8 +1,8 @@
 name       : drumstick
-version    : 2.9.0
-release    : 14
+version    : 2.10.0
+release    : 16
 source     :
-    - https://downloads.sourceforge.net/project/drumstick/2.9.0/drumstick-2.9.0.tar.bz2 : a7437c11e0ad5443c21b33f0891c4f748d574f95d0e6970a6040c95db6184eb3
+    - https://sourceforge.net/projects/drumstick/files/2.10.0/drumstick-2.10.0.tar.gz : 92f5fc2a94b8c9067200897fd14027f707bf0103871ea942e388f9afe95e0f34
 homepage   : https://drumstick.sourceforge.io
 license    : GPL-2.0-or-later
 component  : programming.library

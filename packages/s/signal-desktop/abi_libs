@@ -1,4 +1,4 @@
-better_sqlite3.node
+@signalapp+libsignal-client.node
 chrome-sandbox
 chrome_crashpad_handler
 libEGL.so
@@ -7,6 +7,6 @@ libffmpeg.so
 libringrtc-x64.node
 libvk_swiftshader.so
 libvulkan.so.1
-node.napi.node
+node_sqlcipher.node
 signal-desktop
 xattr.node

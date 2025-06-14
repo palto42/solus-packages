@@ -1,9 +1,10 @@
+# If you're updating this package to a new major version of golang, please update gopls to a version with support for that golang version
 name       : golang
-version    : 1.22.1
-release    : 110
+version    : 1.24.4
+release    : 128
 homepage   : https://golang.org
 source     :
-    - https://golang.org/dl/go1.22.1.src.tar.gz : 79c9b91d7f109515a25fc3ecdaad125d67e6bdb54f6d4d98580f46799caea321
+    - https://golang.org/dl/go1.24.4.src.tar.gz : 5a86a83a31f9fa81490b8c5420ac384fd3d95a3e71fba665c7b3f95d1dfef2b4
 license    : BSD-3-Clause
 summary    : The Go programming language
 description: Go is an open source programming language that makes it easy to build simple, reliable, and efficient software.
@@ -20,7 +21,6 @@ replaces   :
     - golang-binary
 environment: |
     export GOROOT_BOOTSTRAP="%libdir%/golang"
-    export GOROOT_FINAL="%libdir%/golang"
 setup      : |
     %apply_patches
 build      : |
@@ -36,6 +36,7 @@ install    : |
     mkdir -p $installdir/usr/bin
     cp -a *  $installdir/%libdir%/golang
     chmod +x $installdir/%libdir%/golang/bin/{go,gofmt}
-    ln -s %libdir%/golang/bin/go $installdir/usr/bin/go
-    ln -s %libdir%/golang/bin/gofmt $installdir/usr/bin/gofmt
+    ln -srv $installdir/%libdir%/golang/bin/go $installdir/usr/bin/go
+    ln -srv $installdir/%libdir%/golang/bin/gofmt $installdir/usr/bin/gofmt
     rm -rf $installdir/usr/lib64/golang/pkg/obj
+    asciify $installdir

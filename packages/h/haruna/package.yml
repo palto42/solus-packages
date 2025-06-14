@@ -1,8 +1,8 @@
 name       : haruna
-version    : 0.12.3
-release    : 13
+version    : 1.4.0
+release    : 25
 source     :
-    - https://cdn.download.kde.org/stable/haruna/haruna-0.12.3.tar.xz : d0202e0060ae86e10c461e7529f6de6b67f8281bf7b82c845479f46772b9fa6f
+    - https://download.kde.org/stable/haruna/1.4.0/haruna-1.4.0.tar.xz : 3cb47be3148dcc8637ff5262573390ca5edc2ece00028af790d7355347d8df6e
 homepage   : https://invent.kde.org/multimedia/haruna/
 license    :
     - BSD-3-Clause
@@ -15,18 +15,29 @@ summary    : Video player built with Qt/QML on top of libmpv.
 description: |
     Video player built with Qt/QML on top of libmpv.
 builddeps  :
-    - pkgconfig(Qt5QuickControls2)
-    - pkgconfig(Qt5X11Extras)
+    - pkgconfig(Qt6Core5Compat)
+    - pkgconfig(Qt6QuickControls2)
     - pkgconfig(libavformat)
     - pkgconfig(mpv)
     - breeze-devel
-    - kdoctools-devel
-    - kfilemetadata-devel
-    - kiconthemes-devel
-    - kio-devel
-    - kirigami2-devel
+    - kf6-kdoctools-devel
+    - kf6-kfilemetadata-devel
+    - kf6-kiconthemes-devel
+    - kf6-kio-devel
+    - kf6-kirigami-devel
+    - mpvqt-devel
+rundeps    :
+    - breeze
+    - breeze-icons
+    - kf6-kirigami
+    - kf6-qqc2-desktop-style
+clang      : yes
+optimize   :
+    - speed
+    - thin-lto
 setup      : |
-    %cmake_ninja
+    %patch -p1 -i $pkgfiles/0001-Force-opening-remote-files-with-kio-fuse.patch
+    %cmake_kf6
 build      : |
     %ninja_build
 install    : |

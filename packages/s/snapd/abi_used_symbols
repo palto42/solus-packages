@@ -6,8 +6,9 @@ libc.so.6:__ctype_b_loc
 libc.so.6:__errno_location
 libc.so.6:__fprintf_chk
 libc.so.6:__getdelim
+libc.so.6:__isoc23_sscanf
 libc.so.6:__isoc23_strtol
-libc.so.6:__isoc99_sscanf
+libc.so.6:__isoc23_strtoul
 libc.so.6:__libc_start_main
 libc.so.6:__printf_chk
 libc.so.6:__stack_chk_fail
@@ -47,11 +48,11 @@ libc.so.6:fchownat
 libc.so.6:fclose
 libc.so.6:fdopen
 libc.so.6:fdopendir
-libc.so.6:feof
 libc.so.6:ferror
 libc.so.6:fexecve
 libc.so.6:fflush
 libc.so.6:fgets
+libc.so.6:fileno
 libc.so.6:flock
 libc.so.6:fnmatch
 libc.so.6:fopen
@@ -87,12 +88,12 @@ libc.so.6:getuid
 libc.so.6:glob
 libc.so.6:globfree
 libc.so.6:kill
-libc.so.6:lchown
 libc.so.6:lstat
 libc.so.6:malloc
 libc.so.6:memchr
 libc.so.6:memcmp
 libc.so.6:memcpy
+libc.so.6:memmove
 libc.so.6:memset
 libc.so.6:mkdir
 libc.so.6:mkdirat
@@ -111,10 +112,10 @@ libc.so.6:pthread_attr_destroy
 libc.so.6:pthread_attr_getstack
 libc.so.6:pthread_attr_getstacksize
 libc.so.6:pthread_attr_init
+libc.so.6:pthread_attr_setdetachstate
 libc.so.6:pthread_cond_broadcast
 libc.so.6:pthread_cond_wait
 libc.so.6:pthread_create
-libc.so.6:pthread_detach
 libc.so.6:pthread_getattr_np
 libc.so.6:pthread_key_create
 libc.so.6:pthread_mutex_lock
@@ -131,6 +132,7 @@ libc.so.6:regcomp
 libc.so.6:regexec
 libc.so.6:regfree
 libc.so.6:res_search
+libc.so.6:rewind
 libc.so.6:rmdir
 libc.so.6:secure_getenv
 libc.so.6:setegid
@@ -168,7 +170,6 @@ libc.so.6:strrchr
 libc.so.6:strsep
 libc.so.6:strstr
 libc.so.6:strtok_r
-libc.so.6:strtoul
 libc.so.6:symlink
 libc.so.6:syscall
 libc.so.6:sysconf
@@ -184,6 +185,7 @@ libcap.so.2:cap_free
 libcap.so.2:cap_from_name
 libcap.so.2:cap_get_flag
 libcap.so.2:cap_get_proc
+libcap.so.2:cap_to_name
 libseccomp.so.2:seccomp_api_get
 libseccomp.so.2:seccomp_api_set
 libseccomp.so.2:seccomp_arch_add

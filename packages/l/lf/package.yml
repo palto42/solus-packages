@@ -1,8 +1,8 @@
 name       : lf
-version    : '31'
-release    : 17
+version    : '35'
+release    : 21
 source     :
-    - https://github.com/gokcehan/lf/archive/refs/tags/r31.tar.gz : ed47fc22c58cf4f4e4116a58c500bdb9f9ccc0b89f87be09f321e8d1431226ab
+    - https://github.com/gokcehan/lf/archive/refs/tags/r35.tar.gz : bf2ecd63eb75ceeb88f42977d49515bbd755b7f3d4db651a097c6ba47fd2d989
 homepage   : https://github.com/gokcehan/lf
 license    : MIT
 component  : system.utils

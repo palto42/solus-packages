@@ -1,8 +1,8 @@
 name       : calendarsupport
-version    : 23.08.5
-release    : 73
+version    : 25.04.2
+release    : 91
 source     :
-    - https://cdn.download.kde.org/stable/release-service/23.08.5/src/calendarsupport-23.08.5.tar.xz : 65fa5ca77e19515dad579cf96e7cf16025d64a6a9a39c63772691a6bc16f3ef3
+    - https://download.kde.org/stable/release-service/25.04.2/src/calendarsupport-25.04.2.tar.xz : fd4ba25407d043b576424f078a98f2a2425cba6e43c26ccea1b66e4e6e8601a8
 homepage   : https://kde.org/
 license    :
     - GPL-2.0-or-later
@@ -12,23 +12,27 @@ summary    : Calendar Support library provides helper utilities for calendaring 
 description: |
     Calendar Support library provides helper utilities for calendaring applications.
 builddeps  :
-    - pkgconfig(Qt5Quick)
+    - pkgconfig(KF6CalendarCore)
+    - pkgconfig(KF6GuiAddons)
     - akonadi-calendar-devel
-    - akonadi-contacts-devel
-    - akonadi-mime-devel
-    - akonadi-notes-devel
-    - kcalendarcore-devel
     - kcalutils-devel
-    - kcontacts-devel
-    - kguiaddons-devel
-    - kholidays-devel
+    - kf6-kholidays-devel
+    - kf6-kio-devel
     - kidentitymanagement-devel
-    - kio-devel
-    - kpimtextedit-devel
-    - libkdepim-devel
-    - pimcommon-devel
+    - kmime-devel
+    - ktextaddons-devel
+rundeps    :
+    - devel :
+        - akonadi-calendar-devel
+        - kidentitymanagement-devel
+        - kmime-devel
+        - qt6-base-devel
+clang      : yes
+optimize   :
+    - speed
+    - thin-lto
 setup      : |
-    %cmake_ninja -DBUILD_TESTING=OFF
+    %cmake_kf6
 build      : |
     %ninja_build
 install    : |

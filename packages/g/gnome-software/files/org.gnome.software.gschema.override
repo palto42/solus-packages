@@ -1,2 +1,4 @@
 [org.gnome.software]
 download-updates=false
+packaging-format-preference=['eopkg', 'flatpak']
+official-repos=['Solus', 'Unstable', 'unstable']

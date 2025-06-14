@@ -1,0 +1,45 @@
+<PISI>
+    <Source>
+        <Name>netavark</Name>
+        <Homepage>https://github.com/containers/netavark</Homepage>
+        <Packager>
+            <Name>Robert Gonzalez</Name>
+            <Email>uni.dos12@outlook.com</Email>
+        </Packager>
+        <License>Apache-2.0</License>
+        <PartOf>network.util</PartOf>
+        <Summary xml:lang="en">A container network stack</Summary>
+        <Description xml:lang="en">Netavark is a rust based network stack for containers. It is being designed to work with Podman but is also applicable for other OCI container management applications.
+Aardvark-dns is an authoritative dns server for A/AAAA container records. It can forward other requests to configured resolvers.
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>netavark</Name>
+        <Summary xml:lang="en">A container network stack</Summary>
+        <Description xml:lang="en">Netavark is a rust based network stack for containers. It is being designed to work with Podman but is also applicable for other OCI container management applications.
+Aardvark-dns is an authoritative dns server for A/AAAA container records. It can forward other requests to configured resolvers.
+</Description>
+        <PartOf>network.util</PartOf>
+        <Files>
+            <Path fileType="library">/usr/lib/systemd/system/netavark-dhcp-proxy.service</Path>
+            <Path fileType="library">/usr/lib/systemd/system/netavark-dhcp-proxy.socket</Path>
+            <Path fileType="library">/usr/lib/systemd/system/netavark-firewalld-reload.service</Path>
+            <Path fileType="executable">/usr/libexec/podman/aardvark-dns</Path>
+            <Path fileType="executable">/usr/libexec/podman/netavark</Path>
+            <Path fileType="man">/usr/share/man/man1/netavark.1</Path>
+        </Files>
+        <Replaces>
+            <Package>cni-plugins</Package>
+        </Replaces>
+    </Package>
+    <History>
+        <Update release="2">
+            <Date>2025-01-09</Date>
+            <Version>1.13.1</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Robert Gonzalez</Name>
+            <Email>uni.dos12@outlook.com</Email>
+        </Update>
+    </History>
+</PISI>

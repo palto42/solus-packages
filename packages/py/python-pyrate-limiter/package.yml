@@ -1,8 +1,8 @@
 name       : python-pyrate-limiter
-version    : 2.10.0
-release    : 2
+version    : 3.7.0
+release    : 7
 source     :
-    - https://files.pythonhosted.org/packages/source/p/pyrate-limiter/pyrate_limiter-2.10.0.tar.gz : 98cc52cdbe058458e945ae87d4fd5a73186497ffa545ee6e98372f8599a5bd34
+    - https://files.pythonhosted.org/packages/source/p/pyrate-limiter/pyrate_limiter-3.7.0.tar.gz : dc1e6d2c80b559f3333cb44bd822bd558f5a47946dc50cce4263a9c1c5fd8067
 license    : MIT
 homepage   : https://pyratelimiter.readthedocs.io/
 component  : programming.python
@@ -10,9 +10,8 @@ summary    : Python rate limiter using Leaky-Bucket algorithm
 description: |
     The request rate limiter using Leaky-Bucket algorithm
 builddeps  :
-    - python-build
-    - python-installer
     - python-packaging
+    - python-poetry
     - python-wheel
 build      : |
     %python3_setup

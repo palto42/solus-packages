@@ -1,8 +1,8 @@
 name       : lyx
-version    : 2.3.7.1
-release    : 19
+version    : 2.4.3
+release    : 23
 source     :
-    - http://ftp.lyx.org/pub/lyx/stable/2.3.x/lyx-2.3.7-1.tar.xz : 39be8864fb86b34e88310e70fb80e5e9e296601f0856cf161aa094171718d8ed
+    - http://ftp.lyx.org/pub/lyx/stable/2.4.x/lyx-2.4.3.tar.xz : fa6761f598a5915af50a423dd2a607048bdbc540a6d572385fe422df581eebf6
 homepage   : https://www.lyx.org/
 license    : GPL-2.0-or-later
 component  : office
@@ -10,8 +10,7 @@ summary    : LyX document processor
 description: |
     LyX is a document processor that encourages an approach to writing based on the structure of your documents (WYSIWYM) and not simply their appearance (WYSIWYG).
 builddeps  :
-    - pkgconfig(Qt5Svg)
-    - pkgconfig(Qt5X11Extras)
+    - pkgconfig(Qt6Svg)
     - pkgconfig(enchant)
     - pkgconfig(hunspell)
     - pkgconfig(mythes)
@@ -19,19 +18,21 @@ builddeps  :
     - libboost-devel
 rundeps    :
     - texlive
+clang      : yes
 setup      : |
-    %configure \
+    %patch -p1 -i $pkgfiles/0001-Fix-qt6-ldflags.patch
+
+    %reconfigure \
         --with-enchant \
         --with-hunspell \
         --without-included-boost \
         --without-included-mythes \
-        --enable-qt5
+        --enable-qt6
 build      : |
     %make
 install    : |
     %make_install
 
-    install -Dm00644 lib/appdata.xml $installdir/usr/share/metainfo/org.lyx.appdata.xml
     install -dm00755 $installdir/usr/share/bash-completion/completions
     ln -s /usr/share/lyx/scripts/bash_completion $installdir/usr/share/bash-completion/completions/lyx
 check      : |

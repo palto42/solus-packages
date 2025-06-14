@@ -1,14 +1,18 @@
 name       : rednotebook
-version    : '2.32'
-release    : 35
+version    : '2.39'
+release    : 43
 source     :
-    - https://github.com/jendrikseipp/rednotebook/archive/refs/tags/v2.32.tar.gz : 822dd79705610791a253cfec4e6831c59a5c5eded451d2fc955d05976a6c1f21
+    - https://github.com/jendrikseipp/rednotebook/archive/refs/tags/v2.39.tar.gz : c84a25af4cbbb9db7971fbb0ba0120452f7d779a5cbfd2bcd4dee7e8dcc306ee
 homepage   : https://rednotebook.app
 license    : GPL-2.0-or-later
 component  : office.notes
 summary    : A cross-platform journal
 description: |
     RedNotebook is a modern desktop journal. It lets you format, tag and search your entries. You can also add pictures, links and customizable templates, spell check your notes, and export to plain text, HTML, Latex or PDF.
+builddeps  :
+    - python-build
+    - python-installer
+    - python-setuptools
 rundeps    :
     - libgtksourceview4
     - libwebkit-gtk

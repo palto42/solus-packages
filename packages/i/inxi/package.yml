@@ -1,8 +1,8 @@
 name       : inxi
-version    : 3.3.33
-release    : 52
+version    : 3.3.38
+release    : 57
 source     :
-    - https://codeberg.org/smxi/inxi/archive/3.3.33-1.tar.gz : c2d7ae8914f2810d4377999c24d3839fa9a757a6ace59ff57ab366873161d38c
+    - https://codeberg.org/smxi/inxi/archive/3.3.38-1.tar.gz : 9601b5d6287a2508a2e3c2652ce44190636dfe48371dc658e48ffc74af500b1b
 homepage   : https://smxi.org/docs/inxi.htm
 license    : GPL-3.0-or-later
 component  : system.utils
@@ -24,3 +24,4 @@ rundeps    :
 install    : |
     install -Dm00755 inxi -t $installdir/usr/bin
     install -Dm00644 inxi.1 -t $installdir/usr/share/man/man1
+    install -Dm00644 inxi.metainfo.xml $installdir/usr/share/metainfo/org.smxi.inxi.metainfo.xml

@@ -1,9 +1,9 @@
 name       : recoll
-version    : 1.37.0
-release    : 32
+version    : 1.43.2
+release    : 35
 source     :
-    - https://www.lesbonscomptes.com/recoll/recoll-1.37.0.tar.gz : 5d97698308d69c4692fac50874e8c357792d9ed3fccf8728a21875d0fb3b5980
-homepage   : https://www.lesbonscomptes.com/recoll/
+    - https://www.recoll.org/recoll-1.43.2.tar.gz : 15b0d7927ba68e4b5c8a439f01ee052ad3e68202461876acabc7690fef263731
+homepage   : https://www.recoll.org
 license    : GPL-2.0-or-later
 component  : desktop
 summary    : Recoll is a desktop full-text search tool
@@ -12,13 +12,14 @@ description: |
 clang      : yes
 libsplit   : no
 builddeps  :
-    - pkgconfig(Qt5UiTools)
-    - pkgconfig(Qt5WebKit)
+    - pkgconfig(Qt6UiTools)
+    - pkgconfig(Qt6WebEngineCore)
     - pkgconfig(libxslt)
     - pkgconfig(python3)
     - pkgconfig(x11)
     - pkgconfig(xapian-core)
     - chmlib-devel
+    - python-setuptools
 rundeps    :
     - djvulibre
     - ghostscript
@@ -28,16 +29,19 @@ rundeps    :
     - python-chardet
     - python-rarfile
 environment: |
-    export CFLAGS="${CFLAGS} -fpermissive"
-    export CPPFLAGS="${CPPFLAGS} -fpermissive"
+    export QMAKE=qmake6
 setup      : |
-    %patch -p2 -i $pkgfiles/xslt-non-deprecated.patch
-    %configure --without-aspell --without-fam --disable-python-aspell
+    # crashes instantly under wayland
+    %patch -p0 -i $pkgfiles/run-as-x11.patch
+    %meson_configure \
+        -Dwebkit=false \
+        -Dwebengine=true \
+        -Daspell=false \
+        -Dpython-aspell=false \
+        -Drecollq=true
 build      : |
-    %make
+    %ninja_build
 install    : |
-    %make_install
-    # Fix appstream generation
-    mv $installdir/usr/share/applications/{recoll-searchgui.desktop,recoll.desktop}
+    %ninja_install
 check      : |
-    %make check
+    %ninja_check

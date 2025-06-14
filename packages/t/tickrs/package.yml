@@ -1,8 +1,8 @@
 name       : tickrs
-version    : 0.14.9
-release    : 5
+version    : 0.14.11
+release    : 9
 source     :
-    - https://github.com/tarkah/tickrs/archive/refs/tags/v0.14.9.tar.gz : a633754e168a0d9a7488601c058a5056100ff74160f696d328870f70cb38047b
+    - https://github.com/tarkah/tickrs/archive/refs/tags/v0.14.11.tar.gz : e6c7c4cfbc381c4e56316734335c87e88f32b722afb91ea1bd96bba80297660b
 homepage   : https://github.com/tarkah/tickrs
 license    : MIT
 component  : network.news
@@ -12,11 +12,11 @@ description: |
 networking : yes
 builddeps  :
     - pkgconfig(libcurl)
-    - cargo
+    - rust
 setup      : |
     %patch -p1 -i $pkgfiles/0001-vendored-ssl.patch
+    %cargo_fetch
 build      : |
-    cargo build --release
+    %cargo_build
 install    : |
-    install -Dm00755 target/release/tickrs $installdir/usr/bin/tickrs
-
+    %cargo_install

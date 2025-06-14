@@ -1,17 +1,27 @@
 name       : sord
-version    : 0.16.4
-release    : 4
+version    : 0.16.18
+release    : 7
 source     :
-    - git|https://github.com/drobilla/sord.git : v0.16.4
-license    : ISC
+    - https://gitlab.com/drobilla/sord/-/archive/v0.16.18/sord-v0.16.18.tar.bz2 : ff5cccae607accf119015652890fe9e723691de4985a3f6b4817e83f6e33e712
+homepage   : https://gitlab.com/drobilla/sord
+license    :
+    - 0BSD
+    - BSD-3-Clause
+    - ISC
 component  : programming.library
 summary    : Lightweight library for storing RDF data in memory
 description: Lightweight library for storing RDF data in memory
 builddeps  :
     - pkgconfig(serd-0)
+    - pkgconfig(zix-0)
+avx2       : yes
+clang      : yes
+optimize   :
+    - speed
+    - thin-lto
 setup      : |
-    %waf_configure --libdir=%libdir%
+    %meson_configure --libdir=%libdir%
 build      : |
-    %waf_build
+    %ninja_build
 install    : |
-    %waf_install
+    %ninja_install

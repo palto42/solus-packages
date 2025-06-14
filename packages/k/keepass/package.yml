@@ -1,8 +1,8 @@
 name       : keepass
-version    : '2.56'
-release    : 42
+version    : '2.58'
+release    : 46
 source     :
-    - https://downloads.sourceforge.net/project/keepass/KeePass%202.x/2.56/KeePass-2.56-Source.zip : 7bafb3dccdfa2e24b4fd4a2724ebc3deaebe21cdf5b8c8b12fc0e830bd148444
+    - https://sourceforge.net/projects/keepass/files/KeePass%202.x/2.58/KeePass-2.58-Source.zip : f03131daabea69d3ab3503220d37e2056389ecda35e580ce72946eb561c4edc4
 homepage   : https://keepass.info/
 license    : GPL-2.0-or-later
 component  : security
@@ -23,7 +23,7 @@ build      : |
     chmod +x PrepMonoDev.sh
     ./PrepMonoDev.sh
     cd ../
-    xbuild /target:KeePass /property:Configuration=Release
+    xbuild /target:KeePass /property:Configuration=Release KeePass.sln
     cp Ext/KeePass.exe.config Build/KeePass/Release
 install    : |
     cd $workdir/../
@@ -46,3 +46,6 @@ install    : |
     exec mono /usr/share/keepass/KeePass.exe "$@"' >> $installdir/usr/bin/keepass
     chmod +x $installdir/usr/bin/keepass
     install -Dm00644 $pkgfiles/keepass.desktop $installdir/usr/share/applications/keepass.desktop
+
+    # Install appstream metainfo
+    install -Dm00644 $pkgfiles/info.keepass.keepass.metainfo.xml -t $installdir/usr/share/metainfo

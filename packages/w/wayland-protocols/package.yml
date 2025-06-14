@@ -1,8 +1,8 @@
 name       : wayland-protocols
-version    : '1.33'
-release    : 19
+version    : '1.44'
+release    : 28
 source     :
-    - https://gitlab.freedesktop.org/wayland/wayland-protocols/-/archive/1.33/wayland-protocols-1.33.tar.gz : 71a7d2f062d463aa839497ddfac97e4bd3f00aa306e014f94529aa3a2be193a8
+    - https://gitlab.freedesktop.org/wayland/wayland-protocols/-/releases/1.44/downloads/wayland-protocols-1.44.tar.xz : 3df1107ecf8bfd6ee878aeca5d3b7afd81248a48031e14caf6ae01f14eebb50e
 license    : MIT
 homepage   : https://gitlab.freedesktop.org/wayland/wayland-protocols
 component  : desktop.wayland

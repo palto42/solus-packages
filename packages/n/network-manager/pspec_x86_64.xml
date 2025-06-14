@@ -20,15 +20,12 @@
 </Description>
         <PartOf>network.base</PartOf>
         <Files>
-            <Path fileType="config">/etc/NetworkManager/conf.d</Path>
-            <Path fileType="config">/etc/NetworkManager/dispatcher.d/no-wait.d</Path>
-            <Path fileType="config">/etc/NetworkManager/dispatcher.d/pre-down.d</Path>
-            <Path fileType="config">/etc/NetworkManager/dispatcher.d/pre-up.d</Path>
-            <Path fileType="config">/etc/NetworkManager/dnsmasq-shared.d</Path>
-            <Path fileType="config">/etc/NetworkManager/dnsmasq.d</Path>
-            <Path fileType="config">/etc/NetworkManager/system-connections</Path>
             <Path fileType="executable">/usr/bin/nm-online</Path>
             <Path fileType="executable">/usr/bin/nmcli</Path>
+            <Path fileType="executable">/usr/bin/nmtui</Path>
+            <Path fileType="executable">/usr/bin/nmtui-connect</Path>
+            <Path fileType="executable">/usr/bin/nmtui-edit</Path>
+            <Path fileType="executable">/usr/bin/nmtui-hostname</Path>
             <Path fileType="library">/usr/lib/NetworkManager/VPN</Path>
             <Path fileType="library">/usr/lib/NetworkManager/conf.d/20-connectivity-solus.conf</Path>
             <Path fileType="library">/usr/lib/NetworkManager/conf.d/NetworkManager.conf</Path>
@@ -43,13 +40,13 @@
             <Path fileType="library">/usr/lib/udev/rules.d/84-nm-drivers.rules</Path>
             <Path fileType="library">/usr/lib/udev/rules.d/85-nm-unmanaged.rules</Path>
             <Path fileType="library">/usr/lib/udev/rules.d/90-nm-thunderbolt.rules</Path>
-            <Path fileType="library">/usr/lib64/NetworkManager/1.42.8-solus/libnm-device-plugin-adsl.so</Path>
-            <Path fileType="library">/usr/lib64/NetworkManager/1.42.8-solus/libnm-device-plugin-bluetooth.so</Path>
-            <Path fileType="library">/usr/lib64/NetworkManager/1.42.8-solus/libnm-device-plugin-ovs.so</Path>
-            <Path fileType="library">/usr/lib64/NetworkManager/1.42.8-solus/libnm-device-plugin-wifi.so</Path>
-            <Path fileType="library">/usr/lib64/NetworkManager/1.42.8-solus/libnm-device-plugin-wwan.so</Path>
-            <Path fileType="library">/usr/lib64/NetworkManager/1.42.8-solus/libnm-ppp-plugin.so</Path>
-            <Path fileType="library">/usr/lib64/NetworkManager/1.42.8-solus/libnm-wwan.so</Path>
+            <Path fileType="library">/usr/lib64/NetworkManager/1.52.0-solus/libnm-device-plugin-adsl.so</Path>
+            <Path fileType="library">/usr/lib64/NetworkManager/1.52.0-solus/libnm-device-plugin-bluetooth.so</Path>
+            <Path fileType="library">/usr/lib64/NetworkManager/1.52.0-solus/libnm-device-plugin-ovs.so</Path>
+            <Path fileType="library">/usr/lib64/NetworkManager/1.52.0-solus/libnm-device-plugin-wifi.so</Path>
+            <Path fileType="library">/usr/lib64/NetworkManager/1.52.0-solus/libnm-device-plugin-wwan.so</Path>
+            <Path fileType="library">/usr/lib64/NetworkManager/1.52.0-solus/libnm-ppp-plugin.so</Path>
+            <Path fileType="library">/usr/lib64/NetworkManager/1.52.0-solus/libnm-wwan.so</Path>
             <Path fileType="library">/usr/lib64/girepository-1.0/NM-1.0.typelib</Path>
             <Path fileType="library">/usr/lib64/libnm.so.0</Path>
             <Path fileType="library">/usr/lib64/libnm.so.0.1.0</Path>
@@ -58,7 +55,7 @@
             <Path fileType="library">/usr/lib64/network-manager/nm-dispatcher</Path>
             <Path fileType="library">/usr/lib64/network-manager/nm-initrd-generator</Path>
             <Path fileType="library">/usr/lib64/network-manager/nm-priv-helper</Path>
-            <Path fileType="library">/usr/lib64/pppd/2.4.8/nm-pppd-plugin.so</Path>
+            <Path fileType="library">/usr/lib64/pppd/2.5.1/nm-pppd-plugin.so</Path>
             <Path fileType="library">/usr/lib64/systemd/system/NetworkManager-dispatcher.service</Path>
             <Path fileType="library">/usr/lib64/systemd/system/NetworkManager-wait-online.service</Path>
             <Path fileType="library">/usr/lib64/systemd/system/NetworkManager.service</Path>
@@ -79,8 +76,10 @@
             <Path fileType="data">/usr/share/dbus-1/interfaces/org.freedesktop.NetworkManager.Device.Bridge.xml</Path>
             <Path fileType="data">/usr/share/dbus-1/interfaces/org.freedesktop.NetworkManager.Device.Dummy.xml</Path>
             <Path fileType="data">/usr/share/dbus-1/interfaces/org.freedesktop.NetworkManager.Device.Generic.xml</Path>
+            <Path fileType="data">/usr/share/dbus-1/interfaces/org.freedesktop.NetworkManager.Device.Hsr.xml</Path>
             <Path fileType="data">/usr/share/dbus-1/interfaces/org.freedesktop.NetworkManager.Device.IPTunnel.xml</Path>
             <Path fileType="data">/usr/share/dbus-1/interfaces/org.freedesktop.NetworkManager.Device.Infiniband.xml</Path>
+            <Path fileType="data">/usr/share/dbus-1/interfaces/org.freedesktop.NetworkManager.Device.Ipvlan.xml</Path>
             <Path fileType="data">/usr/share/dbus-1/interfaces/org.freedesktop.NetworkManager.Device.Loopback.xml</Path>
             <Path fileType="data">/usr/share/dbus-1/interfaces/org.freedesktop.NetworkManager.Device.Lowpan.xml</Path>
             <Path fileType="data">/usr/share/dbus-1/interfaces/org.freedesktop.NetworkManager.Device.Macsec.xml</Path>
@@ -123,7 +122,6 @@
             <Path fileType="data">/usr/share/dbus-1/system.d/nm-priv-helper.conf</Path>
             <Path fileType="data">/usr/share/dbus-1/system.d/org.freedesktop.NetworkManager.conf</Path>
             <Path fileType="doc">/usr/share/doc/NetworkManager/examples/server.conf</Path>
-            <Path fileType="data">/usr/share/gir-1.0/NM-1.0.gir</Path>
             <Path fileType="localedata">/usr/share/locale/as/LC_MESSAGES/NetworkManager.mo</Path>
             <Path fileType="localedata">/usr/share/locale/be@latin/LC_MESSAGES/NetworkManager.mo</Path>
             <Path fileType="localedata">/usr/share/locale/bg/LC_MESSAGES/NetworkManager.mo</Path>
@@ -214,7 +212,7 @@
 </Description>
         <PartOf>emul32</PartOf>
         <RuntimeDependencies>
-            <Dependency release="80">network-manager</Dependency>
+            <Dependency release="88">network-manager</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib32/libnm.so.0</Path>
@@ -228,8 +226,8 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="80">network-manager-devel</Dependency>
-            <Dependency release="80">network-manager-32bit</Dependency>
+            <Dependency release="88">network-manager-devel</Dependency>
+            <Dependency release="88">network-manager-32bit</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib32/libnm.so</Path>
@@ -243,7 +241,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="80">network-manager</Dependency>
+            <Dependency release="88">network-manager</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/libnm/NetworkManager.h</Path>
@@ -265,8 +263,10 @@
             <Path fileType="header">/usr/include/libnm/nm-device-dummy.h</Path>
             <Path fileType="header">/usr/include/libnm/nm-device-ethernet.h</Path>
             <Path fileType="header">/usr/include/libnm/nm-device-generic.h</Path>
+            <Path fileType="header">/usr/include/libnm/nm-device-hsr.h</Path>
             <Path fileType="header">/usr/include/libnm/nm-device-infiniband.h</Path>
             <Path fileType="header">/usr/include/libnm/nm-device-ip-tunnel.h</Path>
+            <Path fileType="header">/usr/include/libnm/nm-device-ipvlan.h</Path>
             <Path fileType="header">/usr/include/libnm/nm-device-loopback.h</Path>
             <Path fileType="header">/usr/include/libnm/nm-device-macsec.h</Path>
             <Path fileType="header">/usr/include/libnm/nm-device-macvlan.h</Path>
@@ -313,11 +313,14 @@
             <Path fileType="header">/usr/include/libnm/nm-setting-generic.h</Path>
             <Path fileType="header">/usr/include/libnm/nm-setting-gsm.h</Path>
             <Path fileType="header">/usr/include/libnm/nm-setting-hostname.h</Path>
+            <Path fileType="header">/usr/include/libnm/nm-setting-hsr.h</Path>
             <Path fileType="header">/usr/include/libnm/nm-setting-infiniband.h</Path>
             <Path fileType="header">/usr/include/libnm/nm-setting-ip-config.h</Path>
             <Path fileType="header">/usr/include/libnm/nm-setting-ip-tunnel.h</Path>
             <Path fileType="header">/usr/include/libnm/nm-setting-ip4-config.h</Path>
             <Path fileType="header">/usr/include/libnm/nm-setting-ip6-config.h</Path>
+            <Path fileType="header">/usr/include/libnm/nm-setting-ipvlan.h</Path>
+            <Path fileType="header">/usr/include/libnm/nm-setting-link.h</Path>
             <Path fileType="header">/usr/include/libnm/nm-setting-loopback.h</Path>
             <Path fileType="header">/usr/include/libnm/nm-setting-macsec.h</Path>
             <Path fileType="header">/usr/include/libnm/nm-setting-macvlan.h</Path>
@@ -368,6 +371,7 @@
             <Path fileType="header">/usr/include/libnm/nm-wimax-nsp.h</Path>
             <Path fileType="library">/usr/lib64/libnm.so</Path>
             <Path fileType="data">/usr/lib64/pkgconfig/libnm.pc</Path>
+            <Path fileType="data">/usr/share/gir-1.0/NM-1.0.gir</Path>
             <Path fileType="data">/usr/share/vala/vapi/libnm.deps</Path>
             <Path fileType="data">/usr/share/vala/vapi/libnm.vapi</Path>
         </Files>
@@ -401,8 +405,10 @@
             <Path fileType="doc">/usr/share/gtk-doc/html/NetworkManager/gdbus-org.freedesktop.NetworkManager.Device.Bridge.html</Path>
             <Path fileType="doc">/usr/share/gtk-doc/html/NetworkManager/gdbus-org.freedesktop.NetworkManager.Device.Dummy.html</Path>
             <Path fileType="doc">/usr/share/gtk-doc/html/NetworkManager/gdbus-org.freedesktop.NetworkManager.Device.Generic.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/NetworkManager/gdbus-org.freedesktop.NetworkManager.Device.Hsr.html</Path>
             <Path fileType="doc">/usr/share/gtk-doc/html/NetworkManager/gdbus-org.freedesktop.NetworkManager.Device.IPTunnel.html</Path>
             <Path fileType="doc">/usr/share/gtk-doc/html/NetworkManager/gdbus-org.freedesktop.NetworkManager.Device.Infiniband.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/NetworkManager/gdbus-org.freedesktop.NetworkManager.Device.Ipvlan.html</Path>
             <Path fileType="doc">/usr/share/gtk-doc/html/NetworkManager/gdbus-org.freedesktop.NetworkManager.Device.Loopback.html</Path>
             <Path fileType="doc">/usr/share/gtk-doc/html/NetworkManager/gdbus-org.freedesktop.NetworkManager.Device.Lowpan.html</Path>
             <Path fileType="doc">/usr/share/gtk-doc/html/NetworkManager/gdbus-org.freedesktop.NetworkManager.Device.Macsec.html</Path>
@@ -494,10 +500,13 @@
             <Path fileType="doc">/usr/share/gtk-doc/html/NetworkManager/settings-generic.html</Path>
             <Path fileType="doc">/usr/share/gtk-doc/html/NetworkManager/settings-gsm.html</Path>
             <Path fileType="doc">/usr/share/gtk-doc/html/NetworkManager/settings-hostname.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/NetworkManager/settings-hsr.html</Path>
             <Path fileType="doc">/usr/share/gtk-doc/html/NetworkManager/settings-infiniband.html</Path>
             <Path fileType="doc">/usr/share/gtk-doc/html/NetworkManager/settings-ip-tunnel.html</Path>
             <Path fileType="doc">/usr/share/gtk-doc/html/NetworkManager/settings-ipv4.html</Path>
             <Path fileType="doc">/usr/share/gtk-doc/html/NetworkManager/settings-ipv6.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/NetworkManager/settings-ipvlan.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/NetworkManager/settings-link.html</Path>
             <Path fileType="doc">/usr/share/gtk-doc/html/NetworkManager/settings-loopback.html</Path>
             <Path fileType="doc">/usr/share/gtk-doc/html/NetworkManager/settings-macsec.html</Path>
             <Path fileType="doc">/usr/share/gtk-doc/html/NetworkManager/settings-macvlan.html</Path>
@@ -547,8 +556,10 @@
             <Path fileType="doc">/usr/share/gtk-doc/html/libnm/NMDeviceDummy.html</Path>
             <Path fileType="doc">/usr/share/gtk-doc/html/libnm/NMDeviceEthernet.html</Path>
             <Path fileType="doc">/usr/share/gtk-doc/html/libnm/NMDeviceGeneric.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/libnm/NMDeviceHsr.html</Path>
             <Path fileType="doc">/usr/share/gtk-doc/html/libnm/NMDeviceIPTunnel.html</Path>
             <Path fileType="doc">/usr/share/gtk-doc/html/libnm/NMDeviceInfiniband.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/libnm/NMDeviceIpvlan.html</Path>
             <Path fileType="doc">/usr/share/gtk-doc/html/libnm/NMDeviceLoopback.html</Path>
             <Path fileType="doc">/usr/share/gtk-doc/html/libnm/NMDeviceMacsec.html</Path>
             <Path fileType="doc">/usr/share/gtk-doc/html/libnm/NMDeviceMacvlan.html</Path>
@@ -591,11 +602,14 @@
             <Path fileType="doc">/usr/share/gtk-doc/html/libnm/NMSettingGeneric.html</Path>
             <Path fileType="doc">/usr/share/gtk-doc/html/libnm/NMSettingGsm.html</Path>
             <Path fileType="doc">/usr/share/gtk-doc/html/libnm/NMSettingHostname.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/libnm/NMSettingHsr.html</Path>
             <Path fileType="doc">/usr/share/gtk-doc/html/libnm/NMSettingIP4Config.html</Path>
             <Path fileType="doc">/usr/share/gtk-doc/html/libnm/NMSettingIP6Config.html</Path>
             <Path fileType="doc">/usr/share/gtk-doc/html/libnm/NMSettingIPConfig.html</Path>
             <Path fileType="doc">/usr/share/gtk-doc/html/libnm/NMSettingIPTunnel.html</Path>
             <Path fileType="doc">/usr/share/gtk-doc/html/libnm/NMSettingInfiniband.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/libnm/NMSettingIpvlan.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/libnm/NMSettingLink.html</Path>
             <Path fileType="doc">/usr/share/gtk-doc/html/libnm/NMSettingLoopback.html</Path>
             <Path fileType="doc">/usr/share/gtk-doc/html/libnm/NMSettingMacsec.html</Path>
             <Path fileType="doc">/usr/share/gtk-doc/html/libnm/NMSettingMacvlan.html</Path>
@@ -693,9 +707,9 @@
         </Files>
     </Package>
     <History>
-        <Update release="80">
-            <Date>2023-10-13</Date>
-            <Version>1.42.8</Version>
+        <Update release="88">
+            <Date>2025-04-14</Date>
+            <Version>1.52.0</Version>
             <Comment>Packaging update</Comment>
             <Name>Reilly Brogan</Name>
             <Email>solus@reillybrogan.com</Email>

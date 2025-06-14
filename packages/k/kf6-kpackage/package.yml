@@ -1,8 +1,8 @@
 name       : kf6-kpackage
-version    : 6.0.0
-release    : 4
+version    : 6.14.0
+release    : 20
 source     :
-    - https://cdn.download.kde.org/stable/frameworks/6.0/kpackage-6.0.0.tar.xz : d2aec3df0dffb71e93acc03c46f2d4ca59c58263a9989df75107bf5223e9d1b7
+    - https://download.kde.org/stable/frameworks/6.14/kpackage-6.14.0.tar.xz : fb2e260f7a2e2b4cfda4559881485899a77cf5fbc3b8ae05d06444bec82ed1ab
 homepage   : https://community.kde.org/Frameworks
 license    :
     - GPL-2.0-or-later

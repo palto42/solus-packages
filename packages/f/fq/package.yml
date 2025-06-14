@@ -1,0 +1,18 @@
+name       : fq
+version    : 0.15.0
+release    : 3
+source     :
+    - https://github.com/wader/fq/archive/refs/tags/v0.15.0.tar.gz : 1d4856a7dc102f255814b2bff55ac9c92690720097ef44db4c79456fff114b7a
+homepage   : https://github.com/wader/fq
+license    : MIT
+component  : programming.tools
+summary    : tool, language and decoders for working with binary and text formats
+description: |
+    jq for binary formats - tool, language and decoders for working with binary and text formats
+networking : yes
+builddeps  :
+    - golang
+build      : |
+    %make
+install    : |
+    install -Dm00755 fq -t $installdir/usr/bin/

@@ -26,8 +26,8 @@ pref("extensions.webextensions.base-content-security-policy", "script-src 'self'
 // Enable smooth scrolling
 pref("general.smoothScroll",                true);
 // Geolocation preferences
-pref("geo.provider.network.url", "https://location.services.mozilla.com/v1/geolocate?key=%MOZILLA_API_KEY%");
-pref("geo.wifi.uri", "https://location.services.mozilla.com/v1/geolocate?key=%MOZILLA_API_KEY%");
+pref("geo.provider.network.url", "https://api.beacondb.net/v1/geolocate");
+pref("geo.wifi.uri", "https://api.beacondb.net/v1/geolocate");
 pref("layers.use-image-offscreen-surfaces", false);
 // Enable MSE (Media Source Extensions) API
 pref("media.mediasource.enabled",           true);
@@ -42,8 +42,10 @@ pref("startup.homepage_override_url",       "");
 // False = Use NetworkManager to detect offline/online status, and switch between offline/online modes in Firefox
 pref("toolkit.networkmanager.disable",      false);
 pref("toolkit.storage.synchronous",         0);
-pref("ui.context_menus.after_mouseup", true);
+pref("ui.context_menus.after_mouseup",      true);
 // Override theme to prevent local dark themes affecting how website content is displayed
 pref("widget.content.gtk-theme-override","Adwaita:light");
 // Use XDG Desktop Portals for filepicker by default
 pref("widget.use-xdg-desktop-portal.file-picker", 1);
+// Allow gnome search provider to function by default
+pref("browser.gnome-search-provider.enabled", true);

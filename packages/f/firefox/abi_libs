@@ -1,8 +1,8 @@
+crashhelper
 firefox
 firefox-bin
 libclearkey.so
 libgkcodecs.so
-libipcclientcerts.so
 liblgpllibs.so
 libmozavcodec.so
 libmozavutil.so
@@ -11,5 +11,4 @@ libmozsandbox.so
 libmozsqlite3.so
 libmozwayland.so
 libxul.so
-minidump-analyzer
 pingsender

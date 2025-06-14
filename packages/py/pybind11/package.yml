@@ -1,8 +1,8 @@
 name       : pybind11
-version    : 2.11.1
-release    : 9
+version    : 2.13.6
+release    : 12
 source     :
-    - https://github.com/pybind/pybind11/archive/refs/tags/v2.11.1.tar.gz : d475978da0cdc2d43b73f30910786759d593a9d8ee05b1b6846d1eb16c6d2e0c
+    - https://github.com/pybind/pybind11/archive/refs/tags/v2.13.6.tar.gz : e08cb87f4773da97fa7b5f035de8763abc656d87d5773e62f6da0587d1f0ec20
 homepage   : https://github.com/pybind/pybind11
 license    : BSD-3-Clause
 component  : programming.python
@@ -13,12 +13,17 @@ patterns   :
     - /usr/include
     - /usr/share
 builddeps  :
-    - pkgconfig(eigen3)  # check
     - pkgconfig(python3)
     - libboost-devel
-    - python-pytest      # check
-    - scipy              # check
+    - python-build
+    - python-installer
+    - python-setuptools
+checkdeps  :
+    - pkgconfig(eigen3)
+    - python-pytest
+    - scipy
 setup      : |
+    rm pyproject.toml
     mkdir -p build && pushd build
     %cmake ..
     popd
@@ -30,6 +35,4 @@ install    : |
     %make_install -C build
     rm -rfv $installdir/usr/include/python3.*
 check      : |
-    pushd pybind11-%version%/build
-    %make check
-    popd
+    %make check -C build

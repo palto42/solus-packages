@@ -1,8 +1,8 @@
 name       : cmus
-version    : 2.10.0
-release    : 21
+version    : 2.12.0
+release    : 24
 source     :
-    - https://github.com/cmus/cmus/archive/refs/tags/v2.10.0.tar.gz : ff40068574810a7de3990f4f69c9c47ef49e37bd31d298d372e8bcdafb973fff
+    - https://github.com/cmus/cmus/archive/refs/tags/v2.12.0.tar.gz : 44b96cd5f84b0d84c33097c48454232d5e6a19cd33b9b6503ba9c13b6686bfc7
 homepage   : https://cmus.github.io/
 license    : GPL-2.0-or-later
 component  : multimedia.audio
@@ -28,8 +28,6 @@ builddeps  :
     - pkgconfig(wavpack)
     - libiconv-devel
 setup      : |
-    %patch -p1 -i $pkgfiles/0001-pulse-don-t-drain-the-stream.patch
-    %patch -p1 -i $pkgfiles/ffmpeg-6.patch
     ./configure prefix=/usr libdir=%libdir% CONFIG_JACK=n
 build      : |
     %make

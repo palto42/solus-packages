@@ -1,8 +1,8 @@
 name       : gstreamer-1.0
-version    : 1.22.10
-release    : 45
+version    : 1.24.10
+release    : 58
 source     :
-    - https://gstreamer.freedesktop.org/src/gstreamer/gstreamer-1.22.10.tar.xz : 969aaef396f252ce925132a4be2aa004e0320f5c1baf0acaaae09c544a6759f4
+    - https://gstreamer.freedesktop.org/src/gstreamer/gstreamer-1.24.10.tar.xz : 9fc45b1a332e8f812f09e95c281cd75969f6d1682d062a815db0e7bc047518fd
 license    : LGPL-2.0-or-later
 component  : multimedia.gstreamer
 homepage   : https://gstreamer.freedesktop.org/
@@ -12,26 +12,33 @@ description: |
 emul32     : yes
 builddeps  :
     - pkgconfig32(glib-2.0)
-    - pkgconfig32(libcap)
     - pkgconfig32(libdw)
     - pkgconfig32(libunwind)
     - pkgconfig(gobject-introspection-1.0)
-patterns   :
-    - 32bit :
-        - /usr/share/gdb/auto-load/usr/lib32/
+    - pkgconfig(gsl)
+    - rust-32bit
+clang      : yes
+optimize   : thin-lto
 setup      : |
     if [[ -n "${EMUL32BUILD}" ]]; then
-        CONFIGURE_OPTIONS="-Dintrospection=disabled"
+        CONFIGURE_OPTIONS="-Dintrospection=disabled -Dtests=disabled"
     fi
 
     %meson_configure -Dpackage-origin="https://getsol.us" \
-        -Dgobject-cast-checks=disabled \
-        -Dglib-asserts=disabled \
-        -Dglib-checks=disabled \
+        -Dexamples=disabled \
+        -Dptp-helper-permissions=capabilities \
+        -Dwrap_mode=nodownload \
         $CONFIGURE_OPTIONS
 build      : |
     %ninja_build
 install    : |
     %ninja_install
 check      : |
-    %ninja_check || :
+    unset LD_PRELOAD
+    %ninja_check
+patterns   :
+    - 32bit :
+        - /usr/share/gdb/auto-load/usr/lib32/
+    - devel :
+        # Used for running tests in the other gstreamer packages
+        - /usr/bin/gst-tester-1.0

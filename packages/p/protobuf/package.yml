@@ -1,17 +1,31 @@
 name       : protobuf
-version    : '21.12'
-release    : 15
+version    : '27.2'
+release    : 18
 source     :
-    - https://github.com/protocolbuffers/protobuf/archive/refs/tags/v21.12.tar.gz : 22fdaf641b31655d4b2297f9981fa5203b2866f8332d3c6333f6b0107bb320de
+    - https://github.com/protocolbuffers/protobuf/releases/download/v27.2/protobuf-27.2.tar.gz : e4ff2aeb767da6f4f52485c2e72468960ddfe5262483879ef6ad552e52757a77
 homepage   : https://developers.google.com/protocol-buffers/
 license    : BSD-3-Clause
 component  : programming
 summary    : Protocol Buffers - Google's data interchange format
 description: |
     Protocol Buffers - Google's data interchange format
+builddeps  :
+    - pkgconfig(absl_base)
+checkdeps  :
+    - gtest
+clang      : yes
+optimize   : thin-lto
 setup      : |
-    %reconfigure --disable-static
+    %cmake_ninja -D protobuf_BUILD_SHARED_LIBS=ON \
+                 -D protobuf_USE_EXTERNAL_GTEST=ON \
+                 -D protobuf_ABSL_PROVIDER=package \
+                 -W no-dev
 build      : |
-    %make
+    %ninja_build
 install    : |
-    %make_install
+    %ninja_install
+check      : |
+    ctest --test-dir solusBuildDir
+patterns   :
+    - devel :
+      - /usr/bin/*

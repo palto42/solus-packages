@@ -1,8 +1,8 @@
 name       : kf6-kconfig
-version    : 6.0.0
-release    : 4
+version    : 6.14.0
+release    : 21
 source     :
-    - https://cdn.download.kde.org/stable/frameworks/6.0/kconfig-6.0.0.tar.xz : 3f7c1e6b048df4ab3d67fbef01a5ad1dd0289c9b158644668fba0225c050c050
+    - https://download.kde.org/stable/frameworks/6.14/kconfig-6.14.0.tar.xz : a1b27e762b78fbc34124f35fd4125711f4036ae532c79d3cf3dc683289c1e765
 homepage   : https://community.kde.org/Frameworks
 license    :
     - BSD-2-Clause

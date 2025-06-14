@@ -1,20 +1,23 @@
 name       : baloo-widgets
-version    : 23.08.5
-release    : 71
+version    : 25.04.2
+release    : 89
 source     :
-    - https://cdn.download.kde.org/stable/release-service/23.08.5/src/baloo-widgets-23.08.5.tar.xz : 49196c7f74dfeb38b90ab388b35ee3542302ab89fc7b6ded4a3bfaa7f03938d4
+    - https://download.kde.org/stable/release-service/25.04.2/src/baloo-widgets-25.04.2.tar.xz : 997b2a1b8f04f2b6b0e28ee27fcdc1198497e3fadc05a3af62677d1ea6446af0
 homepage   : https://community.kde.org/Baloo
 license    : LGPL-2.1-only
 component  : desktop.kde
 summary    : Widgets for the Baloo search engine
 description: |
     Widgets for the Baloo search engine.
-optimize   : lto
 builddeps  :
-    - baloo-devel
-    - kio-devel
+    - kf6-baloo-devel
+    - kf6-kio-devel
+clang      : yes
+optimize   :
+    - speed
+    - thin-lto
 setup      : |
-    %cmake_ninja -DBUILD_TESTING=OFF
+    %cmake_kf6
 build      : |
     %ninja_build
 install    : |

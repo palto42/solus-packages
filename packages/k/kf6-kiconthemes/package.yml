@@ -1,8 +1,8 @@
 name       : kf6-kiconthemes
-version    : 6.0.0
-release    : 4
+version    : 6.14.0
+release    : 21
 source     :
-    - https://cdn.download.kde.org/stable/frameworks/6.0/kiconthemes-6.0.0.tar.xz : f557bd269fafe617eb8d4b7ac2959609f96cce3ea8b1b3ac231063a726927bb0
+    - https://download.kde.org/stable/frameworks/6.14/kiconthemes-6.14.0.tar.xz : a98cd231bfca420519d55b0b88e4e089b4e27ec79b4a8542b81de8a5ff8af6d5
 homepage   : https://community.kde.org/Frameworks
 license    :
     - GPL-2.0-only
@@ -15,12 +15,13 @@ description: |
     Icon GUI utilities.
 builddeps  :
     - pkgconfig(Qt6Svg)
-    - breeze-icons
+    - breeze-icons-devel
     - kf6-karchive-devel
     - kf6-kconfigwidgets-devel
     - kf6-ki18n-devel
 rundeps    :
     - devel :
+        - breeze-icons-devel
         - kf6-karchive-devel
         - kf6-kconfigwidgets-devel
         - kf6-ki18n-devel

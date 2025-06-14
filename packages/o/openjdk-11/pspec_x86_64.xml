@@ -138,9 +138,6 @@
             <Path fileType="library">/usr/lib64/openjdk-11/jmods/jdk.xml.dom.jmod</Path>
             <Path fileType="library">/usr/lib64/openjdk-11/jmods/jdk.zipfs.jmod</Path>
             <Path fileType="library">/usr/lib64/openjdk-11/lib/classlist</Path>
-            <Path fileType="library">/usr/lib64/openjdk-11/lib/client/Xusage.txt</Path>
-            <Path fileType="library">/usr/lib64/openjdk-11/lib/client/libjsig.so</Path>
-            <Path fileType="library">/usr/lib64/openjdk-11/lib/client/libjvm.so</Path>
             <Path fileType="library">/usr/lib64/openjdk-11/lib/ct.sym</Path>
             <Path fileType="library">/usr/lib64/openjdk-11/lib/jexec</Path>
             <Path fileType="library">/usr/lib64/openjdk-11/lib/jfr/default.jfc</Path>
@@ -191,6 +188,9 @@
             <Path fileType="library">/usr/lib64/openjdk-11/lib/security/cacerts</Path>
             <Path fileType="library">/usr/lib64/openjdk-11/lib/security/default.policy</Path>
             <Path fileType="library">/usr/lib64/openjdk-11/lib/security/public_suffix_list.dat</Path>
+            <Path fileType="library">/usr/lib64/openjdk-11/lib/server/Xusage.txt</Path>
+            <Path fileType="library">/usr/lib64/openjdk-11/lib/server/libjsig.so</Path>
+            <Path fileType="library">/usr/lib64/openjdk-11/lib/server/libjvm.so</Path>
             <Path fileType="library">/usr/lib64/openjdk-11/lib/tzdb.dat</Path>
             <Path fileType="library">/usr/lib64/openjdk-11/release</Path>
             <Path fileType="data">/usr/share/applications/java-11-jar.desktop</Path>
@@ -247,47 +247,12 @@
         </Files>
     </Package>
     <Package>
-        <Name>openjfx-11</Name>
-        <Summary xml:lang="en">Java OpenJFX 11 client application platform</Summary>
-        <Description xml:lang="en">Java OpenJFX 11 client application platform</Description>
-        <RuntimeDependencies>
-            <Dependency releaseFrom="20">openjdk-11</Dependency>
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="library">/usr/lib64/openjdk-11/jmods/javafx.base.jmod</Path>
-            <Path fileType="library">/usr/lib64/openjdk-11/jmods/javafx.controls.jmod</Path>
-            <Path fileType="library">/usr/lib64/openjdk-11/jmods/javafx.fxml.jmod</Path>
-            <Path fileType="library">/usr/lib64/openjdk-11/jmods/javafx.graphics.jmod</Path>
-            <Path fileType="library">/usr/lib64/openjdk-11/jmods/javafx.media.jmod</Path>
-            <Path fileType="library">/usr/lib64/openjdk-11/jmods/javafx.swing.jmod</Path>
-            <Path fileType="library">/usr/lib64/openjdk-11/jmods/javafx.web.jmod</Path>
-            <Path fileType="library">/usr/lib64/openjdk-11/lib/javafx-swt.jar</Path>
-            <Path fileType="library">/usr/lib64/openjdk-11/lib/javafx.properties</Path>
-            <Path fileType="library">/usr/lib64/openjdk-11/lib/libavplugin.so</Path>
-            <Path fileType="library">/usr/lib64/openjdk-11/lib/libdecora_sse.so</Path>
-            <Path fileType="library">/usr/lib64/openjdk-11/lib/libfxplugins.so</Path>
-            <Path fileType="library">/usr/lib64/openjdk-11/lib/libglass.so</Path>
-            <Path fileType="library">/usr/lib64/openjdk-11/lib/libglassgtk2.so</Path>
-            <Path fileType="library">/usr/lib64/openjdk-11/lib/libglassgtk3.so</Path>
-            <Path fileType="library">/usr/lib64/openjdk-11/lib/libgstreamer-lite.so</Path>
-            <Path fileType="library">/usr/lib64/openjdk-11/lib/libjavafx_font.so</Path>
-            <Path fileType="library">/usr/lib64/openjdk-11/lib/libjavafx_font_freetype.so</Path>
-            <Path fileType="library">/usr/lib64/openjdk-11/lib/libjavafx_font_pango.so</Path>
-            <Path fileType="library">/usr/lib64/openjdk-11/lib/libjavafx_iio.so</Path>
-            <Path fileType="library">/usr/lib64/openjdk-11/lib/libjfxmedia.so</Path>
-            <Path fileType="library">/usr/lib64/openjdk-11/lib/libjfxwebkit.so</Path>
-            <Path fileType="library">/usr/lib64/openjdk-11/lib/libprism_common.so</Path>
-            <Path fileType="library">/usr/lib64/openjdk-11/lib/libprism_es2.so</Path>
-            <Path fileType="library">/usr/lib64/openjdk-11/lib/libprism_sw.so</Path>
-        </Files>
-    </Package>
-    <Package>
         <Name>openjdk-11-devel</Name>
         <Summary xml:lang="en">Development files for openjdk-11</Summary>
         <Description xml:lang="en">Open implementation of Oracle&apos;s Java Development Kit, major version 11. This package includes the JDK, the JRE is not separately provided.</Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="20">openjdk-11</Dependency>
+            <Dependency release="26">openjdk-11</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/openjdk-11/classfile_constants.h</Path>
@@ -310,9 +275,9 @@
         </Files>
     </Package>
     <History>
-        <Update release="20">
-            <Date>2024-02-03</Date>
-            <Version>11.0.22</Version>
+        <Update release="26">
+            <Date>2025-04-04</Date>
+            <Version>11.0.26</Version>
             <Comment>Packaging update</Comment>
             <Name>Reilly Brogan</Name>
             <Email>solus@reillybrogan.com</Email>

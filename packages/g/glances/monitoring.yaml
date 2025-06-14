@@ -1,0 +1,6 @@
+releases:
+  id: 1176
+  rss: https://github.com/nicolargo/glances/tags.atom
+# Last checked: 2024-05-14
+security:
+  cpe: ~

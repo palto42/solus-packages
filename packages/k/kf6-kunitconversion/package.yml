@@ -1,8 +1,8 @@
 name       : kf6-kunitconversion
-version    : 6.0.0
-release    : 3
+version    : 6.14.0
+release    : 19
 source     :
-    - https://cdn.download.kde.org/stable/frameworks/6.0/kunitconversion-6.0.0.tar.xz : c88494ac8971c25dc6bc9a1119ea44c0f8eda44e9d2883ade9aca651e9968d5e
+    - https://download.kde.org/stable/frameworks/6.14/kunitconversion-6.14.0.tar.xz : d07d60ec2c5c21246f3aa9f89e01226e084c90fe99b62b08b651933c311cf08d
 homepage   : https://community.kde.org/Frameworks
 license    : LGPL-2.0-or-later
 component  : desktop.library

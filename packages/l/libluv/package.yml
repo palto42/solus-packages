@@ -1,8 +1,8 @@
 name       : libluv
-version    : 1.45.0
-release    : 7
+version    : 1.51.0
+release    : 11
 source     :
-    - https://github.com/luvit/luv/releases/download/1.45.0-0/luv-1.45.0-0.tar.gz : fa6c46fb09f88320afa7f88017efd7b0d2b3a0158c5ba5b6851340b0332a2b81
+    - https://github.com/luvit/luv/releases/download/1.51.0-1/luv-1.51.0-1.tar.gz : dc706d9141c185bdce08b6fc8a9d4df05c3ac3676809ee4e9e37e1553d821237
 homepage   : https://github.com/luvit/luv
 license    : Apache-2.0
 component  : programming

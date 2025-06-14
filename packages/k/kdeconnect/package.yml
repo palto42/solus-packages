@@ -1,8 +1,8 @@
 name       : kdeconnect
-version    : 23.08.5
-release    : 68
+version    : 25.04.2
+release    : 87
 source     :
-    - https://cdn.download.kde.org/stable/release-service/23.08.5/src/kdeconnect-kde-23.08.5.tar.xz : 4b42cd66f824b9ba2ddd09c7147b2abe6107ac866104033a78c0c46909300d64
+    - https://download.kde.org/stable/release-service/25.04.2/src/kdeconnect-kde-25.04.2.tar.xz : 4c65e473a57e4e1ffc999838adb5b1aa01a85534b0e46997ab42abda17ccd1b5
 homepage   : https://kdeconnect.kde.org/
 license    : GPL-2.0-or-later
 component  : desktop.kde
@@ -10,45 +10,54 @@ summary    : KDE Connect adds communication between KDE and your smartphone.
 description: |
     KDE Connect is a multi-platform app that allows your devices to communicate (eg: your phone and your computer).
 builddeps  :
-    - pkgconfig(KF5PulseAudioQt)
-    - pkgconfig(KF5WaylandClient)
-    - pkgconfig(ModemManager)
-    - pkgconfig(Qt5Multimedia)
-    - pkgconfig(Qt5QuickControls2)
-    - pkgconfig(Qt5WaylandClient)
-    - pkgconfig(Qt5X11Extras)
-    - pkgconfig(fuse)
-    - pkgconfig(qca2-qt5)
+    - pkgconfig(KF6GuiAddons)
+    - pkgconfig(KF6PulseAudioQt)
+    - pkgconfig(Qt6Bluetooth)
+    - pkgconfig(Qt6Multimedia)
+    - pkgconfig(Qt6QuickControls2)
+    - pkgconfig(Qt6WaylandClient)
     - pkgconfig(wayland-protocols)
     - pkgconfig(xkbcommon)
     - pkgconfig(xtst)
-    - extra-cmake-modules
-    - kcmutils-devel
-    - kdbusaddons-devel
-    - kdoctools-devel
-    - kguiaddons-devel
-    - kiconthemes-devel
-    - kio-devel
-    - kirigami2-devel
-    - knotifications-devel
-    - kpackage-devel
-    - kpeople-devel
-    - kpeoplevcard-devel
+    - kf6-kcmutils-devel
+    - kf6-kcrash-devel
+    - kf6-kdbusaddons-devel
+    - kf6-kdoctools-devel
+    - kf6-kiconthemes-devel
+    - kf6-kio-devel
+    - kf6-kirigami-devel
+    - kf6-kitemmodels-devel
+    - kf6-knotifications-devel
+    - kf6-kpackage-devel
+    - kf6-kpeople-devel
+    - kf6-kstatusnotifieritem-devel
+    - kf6-modemmanager-qt-devel
+    - kf6-qqc2-desktop-style-devel
+    - kirigami-addons-devel
     - libfakekey-devel
-    - modemmanager-qt-devel
-    - plasma-wayland-protocols-devel
-    - qqc2-desktop-style-devel
 rundeps    :
-    - kirigami2
-    - kpeoplevcard
+    - kf6-kirigami
+    - kf6-qqc2-desktop-style
+    - kirigami-addons
     - sshfs-fuse
+clang      : yes
+optimize   :
+    - speed
+    - thin-lto
 setup      : |
-    %cmake_ninja -DBUILD_TESTING=OFF
+    # https://bugs.kde.org/show_bug.cgi?id=481870
+    %cmake_kf6 -DBLUETOOTH_ENABLED=OFF
 build      : |
     %ninja_build
 install    : |
     %ninja_install
-    %qml_cache
+    %qml6_cache
 
     # remove doc
-    rm -rf $installdir/usr/share/doc
+    rm -rfv $installdir/usr/share/doc
+
+    # ?
+    rm -f $installdir/usr/lib64/libkdeconnectinterfaces.a
+
+    # Old version, org.kde.kdeconnect.metainfo.xml is the modern one
+    rm $installdir/usr/share/metainfo/org.kde.kdeconnect.appdata.xml

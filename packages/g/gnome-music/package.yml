@@ -1,21 +1,21 @@
 name       : gnome-music
-version    : '45.1'
-release    : 46
+version    : '48.0'
+release    : 53
 source     :
-    - https://download.gnome.org/sources/gnome-music/45/gnome-music-45.1.tar.xz : 95959cdb802444048d50a1a91c42db8b25165a0a68533bc03895eb372c4dde0b
-homepage   : https://wiki.gnome.org/Apps/Music
+    - https://download.gnome.org/sources/gnome-music/48/gnome-music-48.0.tar.xz : 8cdaacd05262b63bb1608a25acad516e892c332232357cb9b7f68f2cfb86d66e
+homepage   : https://apps.gnome.org/Music/
 license    : GPL-2.0-or-later
 component  : multimedia.audio
-summary    : Music is the new GNOME music playing application
+summary    : Play and organize your music collection
 description: |
-    Music is the new GNOME music playing application. It aims to combine an elegant and immersive browsing experience with simple and straightforward controls.
+    An easy and pleasant way to play your music. Find tracks in your local collection, use automatically generated playlists or curate a fresh one.
 builddeps  :
     - pkgconfig(flac)
     - pkgconfig(gee-0.8)
+    - pkgconfig(goa-1.0)
     - pkgconfig(grilo-0.3)
     - pkgconfig(grilo-plugins-0.3)
     - pkgconfig(gstreamer-plugins-base-1.0)
-    - pkgconfig(goa-1.0)
     - pkgconfig(libadwaita-1)
     - pkgconfig(libcue)
     - pkgconfig(libdazzle-1.0)
@@ -29,24 +29,23 @@ builddeps  :
     - pkgconfig(pygobject-3.0)
     - pkgconfig(python3)
     - pkgconfig(taglib)
+    - pkgconfig(tinysparql-3.0)
     - pkgconfig(totem-plparser)
-    - pkgconfig(tracker-sparql-3.0)
     - pkgconfig(upower-glib)
     - pkgconfig(vorbis)
     - desktop-file-utils
-    - gvfs-devel
     - itstool
-    - python3-dbus
     - python-requests
+    - python3-dbus
     - vala
 rundeps    :
     - dleyna-connector-dbus
     - dleyna-server
     - grilo-plugins
+    - localsearch
     - python-gobject
     - python-requests
     - python3-dbus
-    - tracker
 setup      : |
     %meson_configure
 build      : |

@@ -1,8 +1,8 @@
 name       : pipewire
-version    : 1.0.3
-release    : 95
+version    : 1.4.2
+release    : 112
 source     :
-    - https://gitlab.freedesktop.org/pipewire/pipewire/-/archive/1.0.3/pipewire-1.0.3.tar.gz : bddb29b9310c344ca069df410f6f02b7f3d8c518811c0505c7fe62d8428fd767
+    - https://gitlab.freedesktop.org/pipewire/pipewire/-/archive/1.4.2/pipewire-1.4.2.tar.gz : 4712aada64b9b49ad41fbb8b440914481432a560f2619ffbdd49461f8d22994f
 homepage   : https://pipewire.org/
 license    :
     - MIT
@@ -32,6 +32,7 @@ builddeps  :
     - pkgconfig32(libpulse)
     - pkgconfig32(libudev)
     - pkgconfig32(ncursesw)
+    - pkgconfig32(readline)
     - pkgconfig32(sdl2)
     - pkgconfig32(sndfile)
     - pkgconfig32(webrtc-audio-processing-1)
@@ -45,13 +46,14 @@ builddeps  :
     - pkgconfig(libavcodec)
     - pkgconfig(libfreeaptx)
     - pkgconfig(libusb-1.0)
-    - pkgconfig(readline)
     - pkgconfig(sbc)
     - pkgconfig(vulkan)
     - vulkan-headers
 rundeps    :
     - rtkit
     - wireplumber
+clang      : yes
+optimize   : thin-lto
 patterns   :
     - lib :
         - /usr/lib64/libpipewire-0.3.so.*

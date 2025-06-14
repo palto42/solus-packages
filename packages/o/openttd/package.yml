@@ -1,8 +1,8 @@
 name       : openttd
-version    : '13.4'
-release    : 40
+version    : '14.1'
+release    : 44
 source     :
-    - https://cdn.openttd.org/openttd-releases/13.4/openttd-13.4-source.tar.xz : 2a1deba01bfe58e2188879f450c3fa4f3819271ab49bf348dd66545f040d146f
+    - https://cdn.openttd.org/openttd-releases/14.1/openttd-14.1-source.tar.xz : 2c14c8f01f44148c4f2c88c169a30abcdb002eb128a92b9adb76baa76b013494
 homepage   : https://www.openttd.org/
 license    : GPL-2.0-or-later
 component  : games.strategy

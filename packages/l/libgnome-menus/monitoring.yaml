@@ -1,0 +1,6 @@
+releases:
+  id: 13134
+  rss: https://gitlab.gnome.org/GNOME/gnome-menus/-/tags?format=atom
+# No known CPE, checked 2024-07-02
+security:
+  cpe: ~

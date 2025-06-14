@@ -1,8 +1,8 @@
 name       : python-kiwisolver
-version    : 1.4.5
-release    : 10
+version    : 1.4.8
+release    : 12
 source     :
-    - https://files.pythonhosted.org/packages/source/k/kiwisolver/kiwisolver-1.4.5.tar.gz : e57e563a57fb22a142da34f38acc2fc1a5c864bc29ca1517a88abc963e60d6ec
+    - https://files.pythonhosted.org/packages/source/k/kiwisolver/kiwisolver-1.4.8.tar.gz : 23d5f023bdc8c7e54eb65f03ca5d5bb25b601eac4d7f1a042888a1f45237987e
 homepage   : https://github.com/nucleic/kiwi
 license    : BSD-3-Clause
 component  : programming.python
@@ -11,9 +11,13 @@ description: |
     Kiwi is an implementation of the algorithm based on the seminal Cassowary paper. It is not a refactoring of the original C++ solver. Kiwi has been designed from the ground up to be lightweight and fast. Kiwi ranges from 10x to 500x faster than the original Cassowary solver with typical use cases gaining a 40x improvement. Memory savings are consistently > 5x.
 builddeps  :
     - pkgconfig(python3)
+    - python-build
     - python-cppy
-    - python-pytest
+    - python-installer
+    - python-setuptools
     - python-setuptools-scm
+checkdeps  :
+    - python-pytest
 build      : |
     %python3_setup
 install    : |

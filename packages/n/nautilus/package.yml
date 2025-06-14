@@ -1,17 +1,17 @@
 name       : nautilus
-version    : 45.2.1
-release    : 82
+version    : '48.2'
+release    : 95
 source     :
-    - https://download.gnome.org/sources/nautilus/45/nautilus-45.2.1.tar.xz : ba5d53df39a155562df971ef5e31e827074905d0c48eab1eb2421a10284b990d
-homepage   : https://wiki.gnome.org/action/show/Apps/Files
-license    : GPL-2.0-only
+    - https://download.gnome.org/sources/nautilus/48/nautilus-48.2.tar.xz : a030f6163f8a68064fae5a9e89e37f19cbb293de2e12a19dd5e210956d0df4b5
+homepage   : https://apps.gnome.org/Nautilus/
+license    : GPL-3.0-or-later
 component  :
     - desktop.gnome
     - extension : programming.library
     - extension-devel : programming.devel
-summary    : The file manager of the GNOME desktop
+summary    : Access and organize files
 description: |
-    The file manager of the GNOME desktop
+    Files, also known as Nautilus, is the default file manager of the GNOME desktop. It provides a simple and integrated way of managing your files and browsing your file system. Nautilus supports all the basic functions of a file manager and more. It can search and manage your files and folders, both locally and on a network, read and write data to and from removable media, run scripts, and launch apps. It has three views: Icon Grid, Icon List, and Tree List. Its functions can be extended with plugins and scripts.
 builddeps  :
     - pkgconfig(cloudproviders)
     - pkgconfig(gexiv2)
@@ -26,13 +26,14 @@ builddeps  :
     - pkgconfig(libnotify)
     - pkgconfig(libportal-gtk4)
     - pkgconfig(shared-mime-info)
-    - pkgconfig(tracker-sparql-3.0)
+    - pkgconfig(tinysparql-3.0)
     - desktop-file-utils
+    - localsearch
 rundeps    :
     - extension-devel :
         - nautilus-extension
     - gvfs
-    - tracker-miners
+    - localsearch
 patterns   :
     - /usr/share
     - extension-devel :
@@ -45,7 +46,7 @@ patterns   :
 replaces   :
     - extension-devel : nautilus-devel
 setup      : |
-    %apply_patches
+    %patch -p1 -i $pkgfiles/0001-Apply-sane-Solus-defaults.patch
     %meson_configure \
         -Ddocs=false \
         -Dpackagekit=false \
@@ -54,3 +55,6 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+
+    # Man pages. Luckily they're already pre-built
+    install -Dm00644 docs/*.1 -t $installdir/usr/share/man/man1

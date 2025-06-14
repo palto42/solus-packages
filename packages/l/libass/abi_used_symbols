@@ -1,6 +1,8 @@
 libc.so.6:__assert_fail
 libc.so.6:__errno_location
-libc.so.6:__isoc99_sscanf
+libc.so.6:__isoc23_sscanf
+libc.so.6:__isoc23_strtol
+libc.so.6:__isoc23_strtoll
 libc.so.6:__stack_chk_fail
 libc.so.6:__vfprintf_chk
 libc.so.6:calloc
@@ -17,6 +19,7 @@ libc.so.6:iconv
 libc.so.6:iconv_close
 libc.so.6:iconv_open
 libc.so.6:malloc
+libc.so.6:memchr
 libc.so.6:memcmp
 libc.so.6:memcpy
 libc.so.6:memset
@@ -34,14 +37,11 @@ libc.so.6:strlen
 libc.so.6:strncmp
 libc.so.6:strndup
 libc.so.6:strrchr
-libc.so.6:strtol
-libc.so.6:strtoll
 libfontconfig.so.1:FcCharSetDestroy
 libfontconfig.so.1:FcCharSetHasChar
 libfontconfig.so.1:FcConfigBuildFonts
 libfontconfig.so.1:FcConfigCreate
 libfontconfig.so.1:FcConfigDestroy
-libfontconfig.so.1:FcConfigGetFonts
 libfontconfig.so.1:FcConfigParseAndLoad
 libfontconfig.so.1:FcConfigSubstitute
 libfontconfig.so.1:FcDefaultSubstitute
@@ -59,6 +59,7 @@ libfontconfig.so.1:FcPatternGetCharSet
 libfontconfig.so.1:FcPatternGetDouble
 libfontconfig.so.1:FcPatternGetInteger
 libfontconfig.so.1:FcPatternGetString
+libfontconfig.so.1:FcPatternReference
 libfontconfig.so.1:FcWeightToOpenTypeDouble
 libfreetype.so.6:FT_Done_Face
 libfreetype.so.6:FT_Done_FreeType
@@ -70,7 +71,6 @@ libfreetype.so.6:FT_Get_Postscript_Name
 libfreetype.so.6:FT_Get_Sfnt_Name
 libfreetype.so.6:FT_Get_Sfnt_Name_Count
 libfreetype.so.6:FT_Get_Sfnt_Table
-libfreetype.so.6:FT_GlyphSlot_Oblique
 libfreetype.so.6:FT_Init_FreeType
 libfreetype.so.6:FT_Library_Version
 libfreetype.so.6:FT_Load_Glyph
@@ -81,6 +81,7 @@ libfreetype.so.6:FT_New_Memory_Face
 libfreetype.so.6:FT_Open_Face
 libfreetype.so.6:FT_Outline_Embolden
 libfreetype.so.6:FT_Outline_Get_Orientation
+libfreetype.so.6:FT_Outline_Transform
 libfreetype.so.6:FT_Request_Size
 libfreetype.so.6:FT_Set_Charmap
 libfribidi.so.0:fribidi_get_bidi_types
@@ -91,7 +92,9 @@ libfribidi.so.0:fribidi_join_arabic
 libfribidi.so.0:fribidi_reorder_line
 libfribidi.so.0:fribidi_shape
 libharfbuzz.so.0:hb_blob_create
+libharfbuzz.so.0:hb_blob_is_immutable
 libharfbuzz.so.0:hb_buffer_add_utf32
+libharfbuzz.so.0:hb_buffer_allocation_successful
 libharfbuzz.so.0:hb_buffer_create
 libharfbuzz.so.0:hb_buffer_destroy
 libharfbuzz.so.0:hb_buffer_get_glyph_infos
@@ -102,12 +105,16 @@ libharfbuzz.so.0:hb_buffer_reset
 libharfbuzz.so.0:hb_buffer_set_segment_properties
 libharfbuzz.so.0:hb_face_create_for_tables
 libharfbuzz.so.0:hb_face_destroy
+libharfbuzz.so.0:hb_face_is_immutable
 libharfbuzz.so.0:hb_face_set_index
 libharfbuzz.so.0:hb_face_set_upem
 libharfbuzz.so.0:hb_font_create
+libharfbuzz.so.0:hb_font_create_sub_font
 libharfbuzz.so.0:hb_font_destroy
 libharfbuzz.so.0:hb_font_funcs_create
 libharfbuzz.so.0:hb_font_funcs_destroy
+libharfbuzz.so.0:hb_font_funcs_is_immutable
+libharfbuzz.so.0:hb_font_funcs_make_immutable
 libharfbuzz.so.0:hb_font_funcs_set_glyph_contour_point_func
 libharfbuzz.so.0:hb_font_funcs_set_glyph_extents_func
 libharfbuzz.so.0:hb_font_funcs_set_glyph_h_advance_func
@@ -118,6 +125,7 @@ libharfbuzz.so.0:hb_font_funcs_set_glyph_v_kerning_func
 libharfbuzz.so.0:hb_font_funcs_set_glyph_v_origin_func
 libharfbuzz.so.0:hb_font_funcs_set_nominal_glyph_func
 libharfbuzz.so.0:hb_font_funcs_set_variation_glyph_func
+libharfbuzz.so.0:hb_font_is_immutable
 libharfbuzz.so.0:hb_font_set_funcs
 libharfbuzz.so.0:hb_font_set_ppem
 libharfbuzz.so.0:hb_font_set_scale
@@ -129,14 +137,11 @@ libharfbuzz.so.0:hb_unicode_script
 libharfbuzz.so.0:hb_version_string
 libm.so.6:exp
 libm.so.6:expm1
-libm.so.6:fmod
 libm.so.6:frexp
 libm.so.6:ldexp
 libm.so.6:log1p
-libm.so.6:lrint
 libm.so.6:lround
 libm.so.6:pow
 libm.so.6:sincos
-libm.so.6:sqrt
 libunibreak.so.5:init_linebreak
 libunibreak.so.5:set_linebreaks_utf32

@@ -1,0 +1,37 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Reilly Brogan <reilly@reillybrogan.com>
+Date: Thu, 11 Apr 2024 09:53:28 -0500
+Subject: [PATCH] system glslang and spirv tools
+
+Signed-off-by: Reilly Brogan <reilly@reillybrogan.com>
+---
+ CMakeLists.txt | 16 ++++------------
+ 1 file changed, 4 insertions(+), 12 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index f6019ab2..3103b42f 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -478,18 +478,10 @@ if (SPIRV_CROSS_CLI)
+ 			find_package(PythonInterp)
+ 		endif()
+ 
+-		find_program(spirv-cross-glslang NAMES glslangValidator
+-				PATHS ${CMAKE_CURRENT_SOURCE_DIR}/external/glslang-build/output/bin
+-				NO_DEFAULT_PATH)
+-		find_program(spirv-cross-spirv-as NAMES spirv-as
+-				PATHS ${CMAKE_CURRENT_SOURCE_DIR}/external/spirv-tools-build/output/bin
+-				NO_DEFAULT_PATH)
+-		find_program(spirv-cross-spirv-val NAMES spirv-val
+-				PATHS ${CMAKE_CURRENT_SOURCE_DIR}/external/spirv-tools-build/output/bin
+-				NO_DEFAULT_PATH)
+-		find_program(spirv-cross-spirv-opt NAMES spirv-opt
+-				PATHS ${CMAKE_CURRENT_SOURCE_DIR}/external/spirv-tools-build/output/bin
+-				NO_DEFAULT_PATH)
++		find_program(spirv-cross-glslang NAMES glslangValidator)
++		find_program(spirv-cross-spirv-as NAMES spirv-as)
++		find_program(spirv-cross-spirv-val NAMES spirv-val)
++		find_program(spirv-cross-spirv-opt NAMES spirv-opt)
+ 
+ 		if ((${spirv-cross-glslang} MATCHES "NOTFOUND") OR (${spirv-cross-spirv-as} MATCHES "NOTFOUND") OR (${spirv-cross-spirv-val} MATCHES "NOTFOUND") OR (${spirv-cross-spirv-opt} MATCHES "NOTFOUND"))
+ 			set(SPIRV_CROSS_ENABLE_TESTS OFF)

@@ -1,16 +1,16 @@
 name       : gnome-web
-version    : '45.2'
-release    : 62
+version    : '48.3'
+release    : 75
 source     :
-    - https://download.gnome.org/sources/epiphany/45/epiphany-45.2.tar.xz : 79c71460bffefccef5e67be3fb5fca657853e8216cb626399d2b950ce0320ddc
-homepage   : https://wiki.gnome.org/Apps/Web
+    - https://download.gnome.org/sources/epiphany/48/epiphany-48.3.tar.xz : da2953e7e2b73bf7473c0a33979104d79362795295eaa0a2a38ea188537daf13
+homepage   : https://apps.gnome.org/Epiphany/
 license    : GPL-3.0-or-later
-summary    : GNOME web browser based on the WebKit rendering engine.
+summary    : Browse the web
 description: |
-    GNOME web browser based on the WebKit rendering engine.
+    The web browser for GNOME, featuring tight integration with the desktop and a simple and intuitive user interface that allows you to focus on your web pages. If you’re looking for a simple, clean, beautiful view of the web, this is the browser for you. Web is often referred to by its code name, Epiphany.
 component  : network.web.browser
-replaces   :
-    - epiphany
+optimize   :
+    - lto
 builddeps  :
     - pkgconfig(appstream-glib)
     - pkgconfig(gcr-4)
@@ -27,7 +27,7 @@ builddeps  :
     - pkgconfig(libsoup-3.0)
     - pkgconfig(libxslt)
     - pkgconfig(sqlite3)
-    - libwebkit-gtk6-devel # FIXME: change this back to pkconfig
+    - pkgconfig(webkitgtk-6.0)
     - desktop-file-utils
     - itstool
 setup      : |
@@ -37,3 +37,6 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+replaces   :
+    - epiphany
+    - dbginfo : epiphany-dbginfo

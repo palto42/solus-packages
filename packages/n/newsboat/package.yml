@@ -1,0 +1,28 @@
+name       : newsboat
+version    : '2.39'
+release    : 6
+source     :
+    - https://newsboat.org/releases/2.39/newsboat-2.39.tar.xz : 62551a7d574d7fb3af7a87f9dbd0795e4d9420ca7136abc2265b4b06663be503
+homepage   : https://newsboat.org/
+license    : MIT
+component  : network.news
+summary    : RSS/Atom feed reader for the text console
+description: |
+    Newsboat is an RSS/Atom feed reader for the text console. It's an actively maintained fork of Newsbeuter.
+networking : yes
+builddeps  :
+    - pkgconfig(json-c)
+    - pkgconfig(libcurl)
+    - pkgconfig(libxml-2.0)
+    - pkgconfig(sqlite3)
+    - pkgconfig(stfl)
+    - asciidoctor
+    - gawk
+    - gettext
+    - rust
+setup      : |
+    ./config.sh
+build      : |
+    %make prefix=/usr
+install    : |
+    %make_install prefix=/usr

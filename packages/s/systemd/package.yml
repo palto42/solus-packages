@@ -1,8 +1,8 @@
 name       : systemd
-version    : '254.10'
-release    : 149
+version    : '254.24'
+release    : 173
 source     :
-    - https://github.com/systemd/systemd-stable/archive/refs/tags/v254.10.tar.gz : 4e4bd490cdc0d38d77688e6e2cd8d9fcead02acbdda066f616507d7bf645afe2
+    - https://github.com/systemd/systemd-stable/archive/refs/tags/v254.24.tar.gz : 9f9ecbec18b91c85ff911ece120c89e2fd523f86f29b45d5112aa88e8d5068e7
 license    :
     - LGPL-2.1-or-later
     - GPL-2.0-or-later
@@ -53,14 +53,6 @@ builddeps  :
     - rsync
     - sbsigntools
 rundeps    :
-    - font-terminus-console
-    - kernel-glue
-    - libgcrypt
-    - devel :
-        - libcap2-devel
-        - libgcrypt-devel
-        - xz-devel
-        - zstd-devel
     - 32bit :
         - libcap2-32bit
         - libgcrypt-32bit
@@ -69,6 +61,14 @@ rundeps    :
         - libgcrypt-32bit-devel
         - xz-32bit-devel
         - zstd-32bit-devel
+    - devel :
+        - libcap2-devel
+        - libgcrypt-devel
+        - xz-devel
+        - zstd-devel
+    - font-terminus-console
+    - kernel-glue
+    - libgcrypt
 setup      : |
     %apply_patches
     if [[ ! -z "${EMUL32BUILD}" ]]; then
@@ -135,6 +135,7 @@ setup      : |
                      -Dtpm=$depends_emul32 \
                      -Dtpm2=$depends_emul32 \
                      -Dusers-gid=100 \
+                     -Duser-path=/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin \
                      -Duserdb=false
 build      : |
     %ninja_build
@@ -177,33 +178,23 @@ install    : |
     ln -sv ../remote-fs.target $installdir/usr/lib/systemd/system/multi-user.target.wants/remote-fs.target
 
     # Install compat dirs
-    install -D -d -m 00755 $installdir/{sbin,bin,lib/udev}
+    install -dm00755 $installdir/{,usr/}lib64/udev
 
     # Compat for old tools
-    ln -sv ../usr/bin/udevadm $installdir/sbin/udevadm
-    ln -sv ../../usr/lib/systemd/systemd-udevd $installdir/lib/udev/udevd
+    ln -srv $installdir/usr/lib/systemd/systemd-udevd $installdir/usr/lib64/udev/udevd
+    ln -srv $installdir/usr/lib/systemd/systemd-udevd $installdir/lib64/udev/udevd
 
-    # Make sure systemd + init can be found
-    ln -sv ../usr/lib/systemd/systemd $installdir/bin/systemd
-    ln -sv ../usr/lib/systemd/systemd $installdir/sbin/init
-
-    # Ensure sbin links exist too
-    for control in reboot shutdown poweroff halt ; do
-        ln -sv ../usr/bin/systemctl $installdir/sbin/$control
-    done
+    # Ensure that XDG_CONFIG_DIRS is set globally
+    install -Dm00755 $pkgfiles/50-xdg-config-dirs -t $installdir/usr/lib/systemd/system-environment-generators/
 
     # We want systemd-update-helper, but not the RPM macros
     rm -rv $installdir/usr/lib/rpm
-
 
     # Stateless xinitrc.d path
     install -Dm00755 xorg/50-systemd-user.sh -t $installdir/usr/share/defaults/etc/X11/xinit/xinitrc.d/
 
     # Required basic support
     install -m 00644 $pkgfiles/solus-base-groups.sysusers $installdir/usr/lib/sysusers.d/solus-base-groups.conf
-
-    # Make assuming scripts happy
-    ln -sv ../usr/bin/systemctl $installdir/bin/.
 
     # add fixed pam config
     rm -rfv $installdir/usr/lib/pam.d
@@ -218,6 +209,21 @@ install    : |
 
         install -Dm00644 $pkgfiles/secureboot-keys/MOK.cer $installdir/usr/lib/systemd/boot/solus-mok.cer
     fi
+
+    # usr-merge
+    install -dm00755 $installdir/{sbin,bin}
+    ln -srv $installdir/usr/bin/udevadm $installdir/usr/sbin/udevadm
+    # Make sure systemd can be found
+    ln -srv $installdir/usr/lib/systemd/systemd $installdir/usr/bin/systemd
+
+    # Install compat links for usr-merge
+    for TOP in {bin,sbin}; do
+        pushd $installdir/usr/$TOP
+        for FILE in *; do
+            ln -srv $installdir/usr/$TOP/$FILE $installdir/$TOP/$FILE
+        done
+        popd
+    done
 
     rm -rfv $installdir/usr/share/doc/
 

@@ -1,14 +1,16 @@
 name       : libadwaita
-version    : 1.4.3
-release    : 14
+version    : 1.7.4
+release    : 29
 source     :
-    - https://download.gnome.org/sources/libadwaita/1.4/libadwaita-1.4.3.tar.xz : ae9622222b0eb18e23675655ad2ba01741db4d8655a796f4cf077b093e2f5841
+    - https://download.gnome.org/sources/libadwaita/1.7/libadwaita-1.7.4.tar.xz : a012bef97ac0d726b969b18099f75fc5eee9e92c012af9672b827350d53ae970
 homepage   : https://gnome.pages.gitlab.gnome.org/libadwaita/
 license    : LGPL-2.1-or-later
 component  : desktop.library
 summary    : Building blocks for modern adaptive GNOME applications.
 description: |
     Adwaita offers application developers many widgets and objects to build GNOME applications scaling from desktop workstations to mobile phones.
+optimize   :
+    - lto
 builddeps  :
     - pkgconfig(appstream)
     - pkgconfig(gobject-introspection-1.0)

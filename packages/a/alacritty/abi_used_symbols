@@ -1,5 +1,4 @@
 ld-linux-x86-64.so.2:__tls_get_addr
-libc.so.6:__environ
 libc.so.6:__errno_location
 libc.so.6:__libc_start_main
 libc.so.6:__res_init
@@ -39,9 +38,9 @@ libc.so.6:fstatat64
 libc.so.6:ftruncate64
 libc.so.6:gai_strerror
 libc.so.6:getaddrinfo
+libc.so.6:getauxval
 libc.so.6:getcwd
 libc.so.6:getenv
-libc.so.6:gethostname
 libc.so.6:getpeername
 libc.so.6:getpid
 libc.so.6:getpwuid_r
@@ -53,16 +52,14 @@ libc.so.6:inotify_rm_watch
 libc.so.6:ioctl
 libc.so.6:isatty
 libc.so.6:kill
+libc.so.6:linkat
 libc.so.6:listen
 libc.so.6:lseek64
 libc.so.6:lstat64
 libc.so.6:malloc
-libc.so.6:memchr
 libc.so.6:memcmp
 libc.so.6:memcpy
-libc.so.6:memfd_create
 libc.so.6:memmove
-libc.so.6:memrchr
 libc.so.6:memset
 libc.so.6:mkdir
 libc.so.6:mmap64
@@ -72,6 +69,7 @@ libc.so.6:nanosleep
 libc.so.6:open
 libc.so.6:open64
 libc.so.6:opendir
+libc.so.6:pause
 libc.so.6:pipe2
 libc.so.6:poll
 libc.so.6:posix_memalign
@@ -92,7 +90,6 @@ libc.so.6:pthread_attr_setstacksize
 libc.so.6:pthread_create
 libc.so.6:pthread_detach
 libc.so.6:pthread_getattr_np
-libc.so.6:pthread_getspecific
 libc.so.6:pthread_join
 libc.so.6:pthread_key_create
 libc.so.6:pthread_key_delete
@@ -118,8 +115,6 @@ libc.so.6:setlocale
 libc.so.6:setpgid
 libc.so.6:setsid
 libc.so.6:setuid
-libc.so.6:shm_open
-libc.so.6:shm_unlink
 libc.so.6:sigaction
 libc.so.6:sigaddset
 libc.so.6:sigaltstack
@@ -134,6 +129,7 @@ libc.so.6:sysconf
 libc.so.6:tcgetpgrp
 libc.so.6:unlink
 libc.so.6:unsetenv
+libc.so.6:waitid
 libc.so.6:waitpid
 libc.so.6:write
 libc.so.6:writev

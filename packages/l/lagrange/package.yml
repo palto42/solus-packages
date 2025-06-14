@@ -1,8 +1,8 @@
 name       : lagrange
-version    : 1.17.6
-release    : 15
+version    : 1.18.5
+release    : 19
 source     :
-    - https://github.com/skyjake/lagrange/releases/download/v1.17.6/lagrange-1.17.6.tar.gz : b9d0982617fec495565ac9c09fb788a0be207d6fdf2324edc390e5cac8b1523b
+    - https://github.com/skyjake/lagrange/releases/download/v1.18.5/lagrange-1.18.5.tar.gz : 1dded64803eef8ff162e79025fd6db60f4a19bac5f9b804f46d79e07cbda5c65
 homepage   : https://gmi.skyjake.fi/lagrange/
 license    : BSD-2-Clause
 component  : network.clients

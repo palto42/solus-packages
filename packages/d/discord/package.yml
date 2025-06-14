@@ -1,8 +1,8 @@
 name       : discord
-version    : 0.0.44
-release    : 60
+version    : 0.0.97
+release    : 117
 source     :
-    - https://dl.discordapp.net/apps/linux/0.0.44/discord-0.0.44.tar.gz : 9b3a62af926cde90edb8e2b96caa1c77be29d0f7039cca4da71f0fa5c844e851
+    - https://dl.discordapp.net/apps/linux/0.0.97/discord-0.0.97.tar.gz : fb72f8eec4e14e810d78d1fca18c241974272f6e5ed26191a50faeb069ca7271
 license    : Distributable
 component  : network.im
 homepage   : https://discord.com/
@@ -17,7 +17,6 @@ builddeps  :
     - pkgconfig(gtk+-3.0)
     - pkgconfig(xshmfence)
 rundeps    :
-    - llvm
     - libayatana-appindicator
     - opus
 # strip and debug will prevent krisp noise supression from loading
@@ -27,6 +26,7 @@ install    : |
     install -Dm00644 $pkgfiles/discord.desktop $installdir/usr/share/applications/discord.desktop
     install -Dm00644 discord.png $installdir/usr/share/pixmaps/discord.png
     install -Dm00644 $pkgfiles/discord.appdata.xml $installdir/usr/share/metainfo/discord.appdata.xml
+    install -Dm00755 $pkgfiles/disable-breaking-updates.py $installdir/usr/share/discord/disable-breaking-updates.py
 
     # Binary
     install -Dm00755 Discord $installdir/usr/share/discord/Discord

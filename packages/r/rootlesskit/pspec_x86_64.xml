@@ -1,6 +1,7 @@
 <PISI>
     <Source>
         <Name>rootlesskit</Name>
+        <Homepage>https://github.com/rootless-containers/rootlesskit/</Homepage>
         <Packager>
             <Name>Reilly Brogan</Name>
             <Email>solus@reillybrogan.com</Email>
@@ -25,9 +26,9 @@
         </Files>
     </Package>
     <History>
-        <Update release="2">
-            <Date>2024-03-07</Date>
-            <Version>2.0.2</Version>
+        <Update release="6">
+            <Date>2024-09-05</Date>
+            <Version>2.3.1</Version>
             <Comment>Packaging update</Comment>
             <Name>Reilly Brogan</Name>
             <Email>solus@reillybrogan.com</Email>

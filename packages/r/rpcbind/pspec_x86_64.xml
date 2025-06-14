@@ -1,6 +1,7 @@
 <PISI>
     <Source>
         <Name>rpcbind</Name>
+        <Homepage>https://sourceforge.net/projects/rpcbind/</Homepage>
         <Packager>
             <Name>Reilly Brogan</Name>
             <Email>solus@reillybrogan.com</Email>
@@ -28,9 +29,9 @@
         </Files>
     </Package>
     <History>
-        <Update release="7">
-            <Date>2023-12-04</Date>
-            <Version>1.2.6</Version>
+        <Update release="9">
+            <Date>2024-07-26</Date>
+            <Version>1.2.7</Version>
             <Comment>Packaging update</Comment>
             <Name>Reilly Brogan</Name>
             <Email>solus@reillybrogan.com</Email>

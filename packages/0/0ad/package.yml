@@ -1,8 +1,8 @@
 name       : 0ad
-version    : 0.0.26
-release    : 53
+version    : 0.27.0
+release    : 58
 source     :
-    - https://releases.wildfiregames.com/0ad-0.0.26-alpha-unix-build.tar.gz : 4a9905004e220d774ff07fd31fe5caab3ada3807eeb7bf664b2904583711421c
+    - https://releases.wildfiregames.com/0ad-0.27.0-unix-build.tar.xz : aa94857009750d5f61dbf016bc150e3bdcbdb3acdfc8ad20b73ab8b43e9a1ba6
 homepage   : https://play0ad.com/
 license    :
     - BSD-2-Clause
@@ -28,30 +28,29 @@ builddeps  :
     - pkgconfig(libsodium)
     - pkgconfig(libtiff-4)
     - pkgconfig(miniupnpc)
-    - pkgconfig(mozjs-78)
     - pkgconfig(openal)
     - pkgconfig(sdl2)
     - pkgconfig(vorbis)
     - pkgconfig(x11)
+    - git
     - libboost-devel
+    - rust
     - wxwidgets-devel
 rundeps    :
     - 0ad-data
 setup      : |
     %patch -p1 -i $pkgfiles/0001-Add-startup-class-to-desktop-file-so-we-can-provide-.patch
-    %patch -p1 -i $pkgfiles/0ad-rpath.patch
-    %patch -p1 -i $pkgfiles/ftbfs-gcc-13.patch
-    %patch -p1 -i $pkgfiles/ftbfs-fmt-10.patch
-    %patch -p1 -i $pkgfiles/ftbfs-libxml2-2.12.patch
+    %patch -p1 -i $pkgfiles/0001-build-Remove-as-root-check.patch
 
-    cd build/workspaces
-    sed -i '3,6d' update-workspaces.sh
+    pushd libraries
+    ./build-source-libs.sh
+    popd
+
+    pushd build/workspaces
     ./update-workspaces.sh \
         --bindir=/usr/bin \
         --datadir=/usr/share/0ad/data \
-        --disable-atlas \
         --libdir=%libdir%/0ad \
-        --with-system-mozjs \
         --without-nvtt
 build      : |
     %make -C build/workspaces/gcc

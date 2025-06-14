@@ -1,3 +1,4 @@
+datenums.so
 kcmapptsummary.so
 kcmsdsummary.so
 kcmtodosummary.so
@@ -5,9 +6,7 @@ kontact_journalplugin.so
 kontact_korganizerplugin.so
 kontact_specialdatesplugin.so
 kontact_todoplugin.so
-korganizer
 korganizer_configcolorsandfonts.so
-korganizer_configdesignerfields.so
 korganizer_configfreebusy.so
 korganizer_configgroupscheduling.so
 korganizer_configmain.so
@@ -16,6 +15,9 @@ korganizer_configtime.so
 korganizer_configviews.so
 korganizer_userfeedback.so
 korganizerpart.so
-libkorganizer_core.so.5
-libkorganizer_interfaces.so.5
-libkorganizerprivate.so.5
+libkorganizer_core.so.6
+libkorganizer_interfaces.so.6
+libkorganizerprivate.so.6
+lunarphases.so
+picoftheday.so
+thisdayinhistory.so

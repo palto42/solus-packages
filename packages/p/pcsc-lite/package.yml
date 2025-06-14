@@ -1,8 +1,9 @@
 name       : pcsc-lite
-version    : 1.9.9
-release    : 15
+version    : 2.3.3
+release    : 18
 source     :
-    - https://github.com/LudovicRousseau/PCSC/archive/refs/tags/1.9.9.tar.gz : 856a1daed9a5ae1ac265c75ce9f81743e66a972e5be5a1d3a2196ed23f75ea26
+    - https://github.com/LudovicRousseau/PCSC/archive/refs/tags/2.3.3.tar.gz : 00b667aa71504ed1d39a48ad377de048c70dbe47229e8c48a3239ab62979c70f
+homepage   : https://pcsclite.apdu.fr/
 license    :
     - BSD-3-Clause
     - GPL-3.0-or-later
@@ -11,13 +12,23 @@ summary    : PC/SC Architecture smartcard middleware library
 description: |
     Middleware to access a smart card using SCard API (PC/SC)
 builddeps  :
-    - autoconf-archive
+    - doxygen
+clang      : yes
+optimize   : thin-lto
 setup      : |
-    %reconfigure --disable-static \
-        --enable-libudev \
-        --enable-usbdropdir=%libdir%/pcsc/drivers \
-        --with-systemdsystemunitdir=%libdir%/systemd/system
+    %patch -p1 -i $pkgfiles/0001-solus-Restore-library-version.patch
+
+    %meson_configure \
+                     -Dsystemdunit=system \
+                     -Dusbdropdir=%libdir%/pcsc/drivers
 build      : |
-    %make
+    %ninja_build
 install    : |
-    %make_install
+    %ninja_install
+
+    # Enable the socket by default
+    install -dm00755 $installdir/usr/lib/systemd/system/sockets.target.wants
+    ln -sv ../pcscd.socket -t $installdir/usr/lib/systemd/system/sockets.target.wants
+
+    # Remove /etc, it was added to supress harmless warning https://github.com/LudovicRousseau/PCSC/issues/211
+    rm -fr $installdir/etc

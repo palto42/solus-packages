@@ -3,20 +3,20 @@
         <Name>qbittorrent</Name>
         <Homepage>https://www.qbittorrent.org/</Homepage>
         <Packager>
-            <Name>Reilly Brogan</Name>
-            <Email>solus@reillybrogan.com</Email>
+            <Name>David Harder</Name>
+            <Email>david@davidjharder.ca</Email>
         </Packager>
         <License>GPL-2.0-or-later</License>
         <PartOf>network.download</PartOf>
-        <Summary xml:lang="en">qBittorrent project aims to provide a Free Software alternative to µTorrent</Summary>
-        <Description xml:lang="en">qBittorrent project aims to provide a Free Software alternative to µTorrent
+        <Summary xml:lang="en">qBittorrent project aims to provide a Free Software alternative to &#xb5;Torrent</Summary>
+        <Description xml:lang="en">qBittorrent project aims to provide a Free Software alternative to &#xb5;Torrent
 </Description>
         <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>qbittorrent</Name>
-        <Summary xml:lang="en">qBittorrent project aims to provide a Free Software alternative to µTorrent</Summary>
-        <Description xml:lang="en">qBittorrent project aims to provide a Free Software alternative to µTorrent
+        <Summary xml:lang="en">qBittorrent project aims to provide a Free Software alternative to &#xb5;Torrent</Summary>
+        <Description xml:lang="en">qBittorrent project aims to provide a Free Software alternative to &#xb5;Torrent
 </Description>
         <PartOf>network.download</PartOf>
         <Files>
@@ -49,16 +49,17 @@
             <Path fileType="data">/usr/share/icons/hicolor/scalable/status/qbittorrent-tray-light.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/status/qbittorrent-tray.svg</Path>
             <Path fileType="man">/usr/share/man/man1/qbittorrent.1</Path>
-            <Path fileType="data">/usr/share/metainfo/org.qbittorrent.qBittorrent.appdata.xml</Path>
+            <Path fileType="man">/usr/share/man/ru/man1/qbittorrent.1</Path>
+            <Path fileType="data">/usr/share/metainfo/org.qbittorrent.qBittorrent.metainfo.xml</Path>
         </Files>
     </Package>
     <History>
-        <Update release="85">
-            <Date>2024-01-18</Date>
-            <Version>4.6.3</Version>
+        <Update release="97">
+            <Date>2025-05-23</Date>
+            <Version>5.1.0</Version>
             <Comment>Packaging update</Comment>
-            <Name>Reilly Brogan</Name>
-            <Email>solus@reillybrogan.com</Email>
+            <Name>David Harder</Name>
+            <Email>david@davidjharder.ca</Email>
         </Update>
     </History>
 </PISI>

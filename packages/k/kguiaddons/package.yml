@@ -1,8 +1,8 @@
 name       : kguiaddons
-version    : 5.115.0
-release    : 77
+version    : 5.116.0
+release    : 80
 source     :
-    - https://cdn.download.kde.org/stable/frameworks/5.115/kguiaddons-5.115.0.tar.xz : 4f6dda36ea182c8f9f7a703301cea8258b094d7b9254f42ad70dedbeb73ff262
+    - https://download.kde.org/stable/frameworks/5.116/kguiaddons-5.116.0.tar.xz : 5c10d56cb02cb60710c2412d4a3d02671cad74f25d1e9889c6c741f6e833fce6
 homepage   : https://community.kde.org/Frameworks
 license    :
     - GPL-3.0-only
@@ -11,7 +11,6 @@ component  : programming.tools
 summary    : Utilities for graphical user interfaces.
 description: |
     Utilities for graphical user interfaces.
-optimize   : lto
 builddeps  :
     - pkgconfig(Qt5Designer)
     - pkgconfig(Qt5WaylandClient)
@@ -24,11 +23,12 @@ rundeps    :
     - devel :
         - extra-cmake-modules
         - qt5-tools-devel
+clang      : yes
+optimize   : thin-lto
 setup      : |
-    # Plasma-6: Set BUILD_GEO_SCHEME_HANDLER=OFF
     %cmake_ninja -DBUILD_QCH=ON \
                  -DBUILD_TESTING=OFF \
-                 -DBUILD_GEO_SCHEME_HANDLER=ON
+                 -DBUILD_GEO_SCHEME_HANDLER=OFF
 build      : |
     %ninja_build
 install    : |

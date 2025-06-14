@@ -1,24 +1,28 @@
 name       : kwallet-pam
-version    : 5.27.10
-release    : 95
+version    : 6.3.5
+release    : 125
 source     :
-    - https://cdn.download.kde.org/stable/plasma/5.27.10/kwallet-pam-5.27.10.tar.xz : ac191714d637c9f43041b08f9c946ff01ffef1b77cf80f33c7ae0f819244a1fb
+    - https://download.kde.org/stable/plasma/6.3.5/kwallet-pam-6.3.5.tar.xz : a943a9557544d8ea6bde26ec165c3ec8b7c02a817b6e7c406c557aee269a3cde
 homepage   : https://www.kde.org/workspaces/plasmadesktop/
 license    : LGPL-2.1-only
 component  : desktop.kde.core
 summary    : KWallet PAM integration
 description: |
     KWallet PAM integration.
-optimize   : lto
 builddeps  :
-    - pkgconfig(Qt5Core)
+    - pkgconfig(Qt6Core)
     - pkgconfig(libgcrypt)
     - extra-cmake-modules
-    - kwallet-devel
+    - kf6-kwallet-devel
+    - socat
 rundeps    :
     - socat
+clang      : yes
+optimize   :
+    - speed
+    - thin-lto
 setup      : |
-    %cmake_ninja
+    %cmake_kf6
 build      : |
     %ninja_build
 install    : |

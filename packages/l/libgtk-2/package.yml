@@ -1,6 +1,6 @@
 name       : libgtk-2
 version    : 2.24.33
-release    : 29
+release    : 30
 source     :
     - https://download.gnome.org/sources/gtk+/2.24/gtk+-2.24.33.tar.xz : ac2ac757f5942d318a311a54b0c80b5ef295f299c2a73c632f6bfb1ff49cc6da
 homepage   : https://www.gnome.org/
@@ -19,10 +19,8 @@ patterns   :
         - /usr/share/gtk-2.0/demo
 emul32     : yes
 builddeps  :
-    - pkgconfig(gtk-doc)
-    - at-spi2-32bit-devel
-    - at-spi2-32bit-devel
     - pkgconfig32(cairo)
+    - pkgconfig32(cups)
     - pkgconfig32(fontconfig)
     - pkgconfig32(freetype2)
     - pkgconfig32(gdk-pixbuf-2.0)
@@ -33,17 +31,21 @@ builddeps  :
     - pkgconfig32(xcursor)
     - pkgconfig32(xdamage)
     - pkgconfig32(xfixes)
-    - pkgconfig32(xinerama)
     - pkgconfig32(xi)
+    - pkgconfig32(xinerama)
     - pkgconfig32(xkbcommon)
     - pkgconfig32(xrandr)
     - pkgconfig32(xshmfence)
-    - cups-32bit-devel
+    - pkgconfig(gtk-doc)
+    - at-spi2-32bit-devel
 setup      : |
     %apply_patches
 
     sed -i 's#l \(gtk-.*\).sgml#& -o \1#' docs/faq/Makefile.in
     sed -i 's#l \(gtk-.*\).sgml#& -o \1#' docs/tutorial/Makefile.in
+
+    # GCC 13/14 build fix
+    export CFLAGS="$CFLAGS -Wno-error=implicit-int -Wno-error=incompatible-pointer-types"
 
     %reconfigure --prefix=/usr \
                  --disable-static \

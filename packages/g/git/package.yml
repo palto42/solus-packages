@@ -1,8 +1,8 @@
 name       : git
-version    : 2.44.0
-release    : 125
+version    : 2.49.0
+release    : 136
 source     :
-    - https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.44.0.tar.xz : e358738dcb5b5ea340ce900a0015c03ae86e804e7ff64e47aa4631ddee681de3
+    - https://www.kernel.org/pub/software/scm/git/git-2.49.0.tar.gz : f8047f572f665bebeb637fd5f14678f31b3ca5d2ff9a18f20bd925bd48f75d3c
 license    :
     - GPL-2.0-only
     - LGPL-2.1-or-later
@@ -18,8 +18,8 @@ builddeps  :
     - pkgconfig(libpcre2-8)
     - pkgconfig(libsecret-1)
     - asciidoc
-    - xmlto
     - perl-error
+    - xmlto
 patterns   :
     - /usr/share/man
 rundeps    :
@@ -27,21 +27,22 @@ rundeps    :
     - perl-error
     - perl-io-socket-ssl
     - tk
+environment: |
+    MAKE_OPTS="INSTALL_SYMLINKS=1 NO_GITWEB=1"
 setup      : |
     %patch -p1 -i $pkgfiles/0001-t-test-lib.sh-Don-t-clobber-LD_PRELOAD-if-already-se.patch
     %configure --disable-static \
                --with-libpcre2
 build      : |
-    %make all doc
-    cd contrib/subtree
-    %make
-    cd $workdir/contrib/credential/libsecret
-    %make
+    %make $MAKE_OPTS all doc
+
+    %make $MAKE_OPTS -C contrib/subtree
+    %make $MAKE_OPTS -C contrib/credential/libsecret
 install    : |
-    %make_install install-doc
-    cd contrib/subtree
-    %make_install install-doc
-    cd $workdir
+    %make_install $MAKE_OPTS install-doc
+
+    %make_install $MAKE_OPTS -C contrib/subtree install-doc
+
     # Bash completion
     install -Dm00644 contrib/completion/git-completion.bash $installdir/usr/share/bash-completion/completions/git
     install -Dm00644 contrib/completion/git-prompt.sh $installdir/%libdir%/git/git-core/git-sh-prompt

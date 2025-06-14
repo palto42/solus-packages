@@ -1,8 +1,8 @@
 name       : python-statsmodels
-version    : 0.14.0
-release    : 12
+version    : 0.14.4
+release    : 15
 source     :
-    - https://files.pythonhosted.org/packages/source/s/statsmodels/statsmodels-0.14.0.tar.gz : 6875c7d689e966d948f15eb816ab5616f4928706b180cf470fd5907ab6f647a4
+    - https://files.pythonhosted.org/packages/source/s/statsmodels/statsmodels-0.14.4.tar.gz : 5d69e0f39060dc72c067f9bb6e8033b6dccdb0bae101d76a7ef0bcc94e898b67
 homepage   : https://www.statsmodels.org/
 license    : BSD-3-Clause
 component  : programming.python
@@ -11,8 +11,11 @@ description: |
     statsmodels is a Python module that provides classes and functions for the estimation of many different statistical models, as well as for conducting statistical tests, and statistical data exploration.
 builddeps  :
     - cython
+    - python-build
+    - python-installer
     - python-pandas
     - python-patsy
+    - python-setuptools
     - python-setuptools-scm
 rundeps    :
     - python-packaging

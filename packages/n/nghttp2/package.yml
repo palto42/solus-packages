@@ -1,8 +1,8 @@
 name       : nghttp2
-version    : 1.60.0
-release    : 12
+version    : 1.65.0
+release    : 18
 source     :
-    - https://github.com/nghttp2/nghttp2/releases/download/v1.60.0/nghttp2-1.60.0.tar.xz : 625d6c3da1d9ca4fd643a638256431ae68fd1901653b2a61a245eea7b261bf4e
+    - https://github.com/nghttp2/nghttp2/releases/download/v1.65.0/nghttp2-1.65.0.tar.xz : f1b9df5f02e9942b31247e3d415483553bc4ac501c87aa39340b6d19c92a9331
 license    : MIT
 component  : system.base
 emul32     : yes

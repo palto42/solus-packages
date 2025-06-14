@@ -1,17 +1,21 @@
 name       : python-zstandard
-version    : 0.22.0
-release    : 2
+version    : 0.23.0
+release    : 6
 source     :
-    - https://files.pythonhosted.org/packages/source/z/zstandard/zstandard-0.22.0.tar.gz : 8226a33c542bcb54cd6bd0a366067b610b41713b64c9abec1bc4533d69f51e70
+    - https://pypi.debian.net/zstandard/zstandard-0.23.0.tar.gz : b2d8c62d08e7255f68f7a740bae85b3c9b8e5466baa9cbf7f57f1cde0ac6bc09
 homepage   : https://github.com/indygreg/python-zstandard
 license    : BSD-3-Clause
 component  : programming.python
 summary    : Zstandard bindings for Python
 description: |
     This project provides Python bindings for interfacing with the Zstandard compression library. A C extension and CFFI interface are provided.
+clang      : yes
 builddeps  :
     - pkgconfig(python3)
+    - python-build
+    - python-installer
+    - python-setuptools
 setup      : |
-    %python3_setup
+    %python3_setup --skip-dependency-check
 install    : |
     %python3_install

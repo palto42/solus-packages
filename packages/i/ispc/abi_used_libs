@@ -1,8 +1,6 @@
-libLLVM-16.so
-libLLVMGenXIntrinsics.so
-libLLVMSPIRVLib.so.16
+libLLVM.so.19.1
 libc.so.6
+libclang-cpp.so.19.1
 libgcc_s.so.1
 libstdc++.so.6
 libtbb.so.12
-libze_loader.so.1

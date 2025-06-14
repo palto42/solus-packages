@@ -3,20 +3,20 @@
         <Name>lmms</Name>
         <Homepage>https://lmms.io/</Homepage>
         <Packager>
-            <Name>Thomas Staudinger</Name>
-            <Email>Staudi.Kaos@gmail.com</Email>
+            <Name>David Harder</Name>
+            <Email>david@davidjharder.ca</Email>
         </Packager>
         <License>GPL-2.0-or-later</License>
         <PartOf>multimedia.audio</PartOf>
-        <Summary xml:lang="en">Free cross-platform alternative to commercial music production suites like FL Studio®</Summary>
-        <Description xml:lang="en">LMMS is a free cross-platform alternative to commercial programs like FL Studio®, which allow you to produce music with your computer. This includes the creation of melodies and beats, the synthesis and mixing of sounds, and arranging of samples. You can have fun with your MIDI-keyboard and much more; all in a user-friendly and modern interface.
+        <Summary xml:lang="en">Free cross-platform alternative to commercial music production suites like FL Studio&#xae;</Summary>
+        <Description xml:lang="en">LMMS is a free cross-platform alternative to commercial programs like FL Studio&#xae;, which allow you to produce music with your computer. This includes the creation of melodies and beats, the synthesis and mixing of sounds, and arranging of samples. You can have fun with your MIDI-keyboard and much more; all in a user-friendly and modern interface.
 </Description>
         <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>lmms</Name>
-        <Summary xml:lang="en">Free cross-platform alternative to commercial music production suites like FL Studio®</Summary>
-        <Description xml:lang="en">LMMS is a free cross-platform alternative to commercial programs like FL Studio®, which allow you to produce music with your computer. This includes the creation of melodies and beats, the synthesis and mixing of sounds, and arranging of samples. You can have fun with your MIDI-keyboard and much more; all in a user-friendly and modern interface.
+        <Summary xml:lang="en">Free cross-platform alternative to commercial music production suites like FL Studio&#xae;</Summary>
+        <Description xml:lang="en">LMMS is a free cross-platform alternative to commercial programs like FL Studio&#xae;, which allow you to produce music with your computer. This includes the creation of melodies and beats, the synthesis and mixing of sounds, and arranging of samples. You can have fun with your MIDI-keyboard and much more; all in a user-friendly and modern interface.
 </Description>
         <PartOf>multimedia.audio</PartOf>
         <Files>
@@ -2900,17 +2900,18 @@
             <Path fileType="data">/usr/share/lmms/wavetables/sqr.bin</Path>
             <Path fileType="data">/usr/share/lmms/wavetables/tri.bin</Path>
             <Path fileType="man">/usr/share/man/man1/lmms.1.gz</Path>
+            <Path fileType="data">/usr/share/metainfo/lmms.appdata.xml</Path>
             <Path fileType="data">/usr/share/mime/packages/lmms.xml</Path>
         </Files>
     </Package>
     <Package>
         <Name>lmms-devel</Name>
         <Summary xml:lang="en">Development files for lmms</Summary>
-        <Description xml:lang="en">LMMS is a free cross-platform alternative to commercial programs like FL Studio®, which allow you to produce music with your computer. This includes the creation of melodies and beats, the synthesis and mixing of sounds, and arranging of samples. You can have fun with your MIDI-keyboard and much more; all in a user-friendly and modern interface.
+        <Description xml:lang="en">LMMS is a free cross-platform alternative to commercial programs like FL Studio&#xae;, which allow you to produce music with your computer. This includes the creation of melodies and beats, the synthesis and mixing of sounds, and arranging of samples. You can have fun with your MIDI-keyboard and much more; all in a user-friendly and modern interface.
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="24">lmms</Dependency>
+            <Dependency release="27">lmms</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/lmms/AboutDialog.h</Path>
@@ -3146,12 +3147,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="24">
-            <Date>2024-02-19</Date>
+        <Update release="27">
+            <Date>2024-11-13</Date>
             <Version>1.2.2</Version>
             <Comment>Packaging update</Comment>
-            <Name>Thomas Staudinger</Name>
-            <Email>Staudi.Kaos@gmail.com</Email>
+            <Name>David Harder</Name>
+            <Email>david@davidjharder.ca</Email>
         </Update>
     </History>
 </PISI>

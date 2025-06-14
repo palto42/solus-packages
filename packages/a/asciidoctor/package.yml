@@ -1,8 +1,8 @@
 name       : asciidoctor
-version    : 2.0.21
-release    : 9
+version    : 2.0.23
+release    : 11
 source     :
-    - https://github.com/asciidoctor/asciidoctor/archive/refs/tags/v2.0.21.tar.gz : 78a54eaf88fe9f5e6945578313aac4096a9d8c49e760932b3ef66c599483f10b
+    - https://github.com/asciidoctor/asciidoctor/archive/refs/tags/v2.0.23.tar.gz : 72d271de1fccd3610e6f12bba29be1a3b6c8c813c5b2f3a12491ffc423090518
 homepage   : https://asciidoctor.org/
 license    : MIT
 component  : programming.tools

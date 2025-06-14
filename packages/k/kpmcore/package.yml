@@ -1,8 +1,8 @@
 name       : kpmcore
-version    : 23.08.5
-release    : 39
+version    : 25.04.2
+release    : 58
 source     :
-    - https://cdn.download.kde.org/stable/release-service/23.08.5/src/kpmcore-23.08.5.tar.xz : b44a40712de593ddfe4cc5799912eb53f9c3e383544306a17279f051de85417a
+    - https://download.kde.org/stable/release-service/25.04.2/src/kpmcore-25.04.2.tar.xz : 31a95cbdca824ddc5df77dd21fdaa42f320f71d786de4674455fb4acca5bb2fd
 homepage   : https://invent.kde.org/system/kpmcore
 license    : GPL-3.0-or-later
 component  : programming.library
@@ -11,14 +11,23 @@ description: |
     Common code for KDE Partition Manager and other projects. Library for managing partitions.
 builddeps  :
     - pkgconfig(blkid)
-    - pkgconfig(polkit-qt5-1)
-    - pkgconfig(qca2-qt5)
-    - kauth-devel
-    - kcoreaddons-devel
-    - ki18n-devel
-    - kwidgetsaddons-devel
+    - pkgconfig(polkit-qt6-1)
+    - kf6-kcoreaddons-devel
+    - kf6-ki18n-devel
+    - kf6-kwidgetsaddons-devel
+rundeps    :
+    - devel :
+        - qt6-base-devel
+clang      : yes
+optimize   :
+    - speed
+    - thin-lto
 setup      : |
-    %cmake_ninja
+    # we need this for calamares
+    # https://github.com/calamares/calamares/issues/2367
+    # https://invent.kde.org/system/kpmcore/-/merge_requests/52
+    %patch -p1 -R -i $pkgfiles/52.diff
+    %cmake_kf6
 build      : |
     %ninja_build
 install    : |

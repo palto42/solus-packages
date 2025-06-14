@@ -1,8 +1,8 @@
 name       : neovim
-version    : 0.9.5
-release    : 39
+version    : 0.11.2
+release    : 51
 source     :
-    - https://github.com/neovim/neovim/archive/refs/tags/v0.9.5.tar.gz : fe74369fc30a32ec7a086b1013acd0eacd674e7570eb1acc520a66180c9e9719
+    - https://github.com/neovim/neovim/archive/refs/tags/v0.11.2.tar.gz : 324759a1bcd1a80b32a7eae1516ee761ec3e566d08284a24c4c7ca59079aabfa
 homepage   : https://neovim.io
 license    : Apache-2.0
 component  : editor
@@ -11,26 +11,40 @@ description: |
     Fork of Vim aiming to improve user experience, plugins, and GUIs
 builddeps  :
     - pkgconfig(libluv)
+    - pkgconfig(libutf8proc)
     - pkgconfig(libuv)
     - pkgconfig(luajit)
-    - pkgconfig(msgpack-c)
     - pkgconfig(termkey)
     - pkgconfig(tree-sitter)
     - pkgconfig(unibilium)
-    - pkgconfig(vterm)
     - gperf
     - libmpack
     - libpth-devel
     - lpeg
 rundeps    :
+    - lpeg
     - xclip
+networking : yes
 setup      : |
-    %cmake_ninja -DUSE_BUNDLED=OFF
+    # Build the bundled tree-sitter parsers
+    %cmake_ninja -S cmake.deps -B .deps \
+        -DCMAKE_BUILD_TYPE=RelWithDebInfo \
+        -DUSE_BUNDLED=OFF \
+        -DUSE_BUNDLED_TS_PARSERS=ON
+
+    cmake --build .deps
+
+    %cmake_ninja -DUSE_BUNDLED=OFF \
+        -DUSE_BUNDLED_TS_PARSERS=ON \
+        -DENABLE_TRANSLATIONS=ON
 build      : |
     %ninja_build
 install    : |
     %ninja_install
     ln -s /usr/bin/nvim $installdir/usr/bin/neovim
+
+    # Install Appstream data
+    install -Dm00644 runtime/nvim.appdata.xml $installdir/usr/share/metainfo/io.neovim.nvim.metainfo.xml
 
     # Set EDITOR and VISUAL defaults should nano be removed.
 

@@ -3,68 +3,61 @@
         <Name>poppler</Name>
         <Homepage>http://poppler.freedesktop.org/</Homepage>
         <Packager>
-            <Name>Reilly Brogan</Name>
-            <Email>solus@reillybrogan.com</Email>
+            <Name>Joey Riches</Name>
+            <Email>josephriches@gmail.com</Email>
         </Packager>
         <License>GPL-2.0-or-later</License>
         <PartOf>desktop.library</PartOf>
         <Summary xml:lang="en">PDF Rendering Library</Summary>
-        <Description xml:lang="en">PDF Rendering Library
+        <Description xml:lang="en">This is Poppler, a library for rendering PDF files, and examining or modifying their structure.
 </Description>
         <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>poppler</Name>
         <Summary xml:lang="en">PDF Rendering Library</Summary>
-        <Description xml:lang="en">PDF Rendering Library
+        <Description xml:lang="en">This is Poppler, a library for rendering PDF files, and examining or modifying their structure.
 </Description>
         <PartOf>desktop.library</PartOf>
         <Files>
             <Path fileType="library">/usr/lib64/girepository-1.0/Poppler-0.18.typelib</Path>
-            <Path fileType="library">/usr/lib64/libpoppler-cpp.so.0</Path>
-            <Path fileType="library">/usr/lib64/libpoppler-cpp.so.0.11.0</Path>
+            <Path fileType="library">/usr/lib64/libpoppler-cpp.so.2</Path>
+            <Path fileType="library">/usr/lib64/libpoppler-cpp.so.2.0.0</Path>
             <Path fileType="library">/usr/lib64/libpoppler-glib.so.8</Path>
-            <Path fileType="library">/usr/lib64/libpoppler-glib.so.8.26.0</Path>
-            <Path fileType="library">/usr/lib64/libpoppler.so.134</Path>
-            <Path fileType="library">/usr/lib64/libpoppler.so.134.0.0</Path>
-            <Path fileType="data">/usr/share/gir-1.0/Poppler-0.18.gir</Path>
+            <Path fileType="library">/usr/lib64/libpoppler-glib.so.8.29.0</Path>
+            <Path fileType="library">/usr/lib64/libpoppler.so.147</Path>
+            <Path fileType="library">/usr/lib64/libpoppler.so.147.0.0</Path>
+            <Path fileType="localedata">/usr/share/locale/ca/LC_MESSAGES/pdfsig.mo</Path>
         </Files>
     </Package>
     <Package>
         <Name>poppler-devel</Name>
         <Summary xml:lang="en">Development files for poppler</Summary>
-        <Description xml:lang="en">PDF Rendering Library
+        <Description xml:lang="en">This is Poppler, a library for rendering PDF files, and examining or modifying their structure.
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="47">poppler</Dependency>
-            <Dependency releaseFrom="47">poppler-utils</Dependency>
+            <Dependency release="53">poppler</Dependency>
+            <Dependency releaseFrom="53">poppler-utils</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/poppler/Annot.h</Path>
             <Path fileType="header">/usr/include/poppler/AnnotStampImageHelper.h</Path>
             <Path fileType="header">/usr/include/poppler/Array.h</Path>
             <Path fileType="header">/usr/include/poppler/BBoxOutputDev.h</Path>
-            <Path fileType="header">/usr/include/poppler/CMap.h</Path>
             <Path fileType="header">/usr/include/poppler/CachedFile.h</Path>
-            <Path fileType="header">/usr/include/poppler/CairoFontEngine.h</Path>
-            <Path fileType="header">/usr/include/poppler/CairoOutputDev.h</Path>
-            <Path fileType="header">/usr/include/poppler/CairoRescaleBox.h</Path>
             <Path fileType="header">/usr/include/poppler/Catalog.h</Path>
             <Path fileType="header">/usr/include/poppler/CertificateInfo.h</Path>
-            <Path fileType="header">/usr/include/poppler/CharCodeToUnicode.h</Path>
             <Path fileType="header">/usr/include/poppler/CharTypes.h</Path>
+            <Path fileType="header">/usr/include/poppler/CryptoSignBackend.h</Path>
             <Path fileType="header">/usr/include/poppler/CurlCachedFile.h</Path>
             <Path fileType="header">/usr/include/poppler/CurlPDFDocBuilder.h</Path>
             <Path fileType="header">/usr/include/poppler/DateInfo.h</Path>
-            <Path fileType="header">/usr/include/poppler/Decrypt.h</Path>
             <Path fileType="header">/usr/include/poppler/Dict.h</Path>
             <Path fileType="header">/usr/include/poppler/Error.h</Path>
             <Path fileType="header">/usr/include/poppler/ErrorCodes.h</Path>
-            <Path fileType="header">/usr/include/poppler/FDPDFDocBuilder.h</Path>
             <Path fileType="header">/usr/include/poppler/FILECacheLoader.h</Path>
             <Path fileType="header">/usr/include/poppler/FileSpec.h</Path>
-            <Path fileType="header">/usr/include/poppler/FontEncodingTables.h</Path>
             <Path fileType="header">/usr/include/poppler/FontInfo.h</Path>
             <Path fileType="header">/usr/include/poppler/Form.h</Path>
             <Path fileType="header">/usr/include/poppler/Function.h</Path>
@@ -73,18 +66,13 @@
             <Path fileType="header">/usr/include/poppler/GfxState.h</Path>
             <Path fileType="header">/usr/include/poppler/GfxState_helpers.h</Path>
             <Path fileType="header">/usr/include/poppler/GlobalParams.h</Path>
-            <Path fileType="header">/usr/include/poppler/Hints.h</Path>
-            <Path fileType="header">/usr/include/poppler/JArithmeticDecoder.h</Path>
-            <Path fileType="header">/usr/include/poppler/JBIG2Stream.h</Path>
+            <Path fileType="header">/usr/include/poppler/HashAlgorithm.h</Path>
             <Path fileType="header">/usr/include/poppler/JPEG2000Stream.h</Path>
             <Path fileType="header">/usr/include/poppler/JSInfo.h</Path>
             <Path fileType="header">/usr/include/poppler/Lexer.h</Path>
-            <Path fileType="header">/usr/include/poppler/Linearization.h</Path>
             <Path fileType="header">/usr/include/poppler/Link.h</Path>
-            <Path fileType="header">/usr/include/poppler/LocalPDFDocBuilder.h</Path>
             <Path fileType="header">/usr/include/poppler/MarkedContentOutputDev.h</Path>
             <Path fileType="header">/usr/include/poppler/Movie.h</Path>
-            <Path fileType="header">/usr/include/poppler/NameToCharCode.h</Path>
             <Path fileType="header">/usr/include/poppler/NameToUnicodeTable.h</Path>
             <Path fileType="header">/usr/include/poppler/Object.h</Path>
             <Path fileType="header">/usr/include/poppler/OptionalContent.h</Path>
@@ -95,15 +83,13 @@
             <Path fileType="header">/usr/include/poppler/PDFDocEncoding.h</Path>
             <Path fileType="header">/usr/include/poppler/PDFDocFactory.h</Path>
             <Path fileType="header">/usr/include/poppler/PSOutputDev.h</Path>
-            <Path fileType="header">/usr/include/poppler/PSTokenizer.h</Path>
             <Path fileType="header">/usr/include/poppler/Page.h</Path>
             <Path fileType="header">/usr/include/poppler/PageTransition.h</Path>
             <Path fileType="header">/usr/include/poppler/Parser.h</Path>
             <Path fileType="header">/usr/include/poppler/PopplerCache.h</Path>
-            <Path fileType="header">/usr/include/poppler/PreScanOutputDev.h</Path>
             <Path fileType="header">/usr/include/poppler/ProfileData.h</Path>
             <Path fileType="header">/usr/include/poppler/Rendition.h</Path>
-            <Path fileType="header">/usr/include/poppler/SecurityHandler.h</Path>
+            <Path fileType="header">/usr/include/poppler/SignatureInfo.h</Path>
             <Path fileType="header">/usr/include/poppler/Sound.h</Path>
             <Path fileType="header">/usr/include/poppler/SplashOutputDev.h</Path>
             <Path fileType="header">/usr/include/poppler/Stream-CCITT.h</Path>
@@ -139,7 +125,6 @@
             <Path fileType="header">/usr/include/poppler/fofi/FoFiEncodings.h</Path>
             <Path fileType="header">/usr/include/poppler/fofi/FoFiIdentifier.h</Path>
             <Path fileType="header">/usr/include/poppler/fofi/FoFiTrueType.h</Path>
-            <Path fileType="header">/usr/include/poppler/fofi/FoFiType1.h</Path>
             <Path fileType="header">/usr/include/poppler/fofi/FoFiType1C.h</Path>
             <Path fileType="header">/usr/include/poppler/glib/poppler-action.h</Path>
             <Path fileType="header">/usr/include/poppler/glib/poppler-annot.h</Path>
@@ -164,7 +149,6 @@
             <Path fileType="header">/usr/include/poppler/goo/JpegWriter.h</Path>
             <Path fileType="header">/usr/include/poppler/goo/PNGWriter.h</Path>
             <Path fileType="header">/usr/include/poppler/goo/TiffWriter.h</Path>
-            <Path fileType="header">/usr/include/poppler/goo/gdir.h</Path>
             <Path fileType="header">/usr/include/poppler/goo/gfile.h</Path>
             <Path fileType="header">/usr/include/poppler/goo/gmem.h</Path>
             <Path fileType="header">/usr/include/poppler/goo/grandom.h</Path>
@@ -175,9 +159,6 @@
             <Path fileType="header">/usr/include/poppler/splash/SplashBitmap.h</Path>
             <Path fileType="header">/usr/include/poppler/splash/SplashClip.h</Path>
             <Path fileType="header">/usr/include/poppler/splash/SplashErrorCodes.h</Path>
-            <Path fileType="header">/usr/include/poppler/splash/SplashFTFont.h</Path>
-            <Path fileType="header">/usr/include/poppler/splash/SplashFTFontEngine.h</Path>
-            <Path fileType="header">/usr/include/poppler/splash/SplashFTFontFile.h</Path>
             <Path fileType="header">/usr/include/poppler/splash/SplashFont.h</Path>
             <Path fileType="header">/usr/include/poppler/splash/SplashFontEngine.h</Path>
             <Path fileType="header">/usr/include/poppler/splash/SplashFontFile.h</Path>
@@ -186,41 +167,38 @@
             <Path fileType="header">/usr/include/poppler/splash/SplashMath.h</Path>
             <Path fileType="header">/usr/include/poppler/splash/SplashPath.h</Path>
             <Path fileType="header">/usr/include/poppler/splash/SplashPattern.h</Path>
-            <Path fileType="header">/usr/include/poppler/splash/SplashScreen.h</Path>
-            <Path fileType="header">/usr/include/poppler/splash/SplashState.h</Path>
             <Path fileType="header">/usr/include/poppler/splash/SplashTypes.h</Path>
-            <Path fileType="header">/usr/include/poppler/splash/SplashXPath.h</Path>
-            <Path fileType="header">/usr/include/poppler/splash/SplashXPathScanner.h</Path>
             <Path fileType="library">/usr/lib64/libpoppler-cpp.so</Path>
             <Path fileType="library">/usr/lib64/libpoppler-glib.so</Path>
             <Path fileType="library">/usr/lib64/libpoppler.so</Path>
             <Path fileType="data">/usr/lib64/pkgconfig/poppler-cpp.pc</Path>
             <Path fileType="data">/usr/lib64/pkgconfig/poppler-glib.pc</Path>
             <Path fileType="data">/usr/lib64/pkgconfig/poppler.pc</Path>
+            <Path fileType="data">/usr/share/gir-1.0/Poppler-0.18.gir</Path>
         </Files>
     </Package>
     <Package>
         <Name>poppler-qt5</Name>
         <Summary xml:lang="en">PDF Rendering Library</Summary>
-        <Description xml:lang="en">PDF Rendering Library
+        <Description xml:lang="en">This is Poppler, a library for rendering PDF files, and examining or modifying their structure.
 </Description>
         <PartOf>desktop.library</PartOf>
         <RuntimeDependencies>
-            <Dependency release="47">poppler</Dependency>
+            <Dependency release="53">poppler</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib64/libpoppler-qt5.so.1</Path>
-            <Path fileType="library">/usr/lib64/libpoppler-qt5.so.1.33.0</Path>
+            <Path fileType="library">/usr/lib64/libpoppler-qt5.so.1.38.0</Path>
         </Files>
     </Package>
     <Package>
         <Name>poppler-qt5-devel</Name>
         <Summary xml:lang="en">PDF Rendering Library</Summary>
-        <Description xml:lang="en">PDF Rendering Library
+        <Description xml:lang="en">This is Poppler, a library for rendering PDF files, and examining or modifying their structure.
 </Description>
         <RuntimeDependencies>
-            <Dependency release="47">poppler-devel</Dependency>
-            <Dependency releaseFrom="47">poppler-qt5</Dependency>
+            <Dependency release="53">poppler-devel</Dependency>
+            <Dependency releaseFrom="53">poppler-qt5</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/poppler/qt5/poppler-annotation.h</Path>
@@ -239,28 +217,29 @@
     <Package>
         <Name>poppler-qt6</Name>
         <Summary xml:lang="en">PDF Rendering Library</Summary>
-        <Description xml:lang="en">PDF Rendering Library
+        <Description xml:lang="en">This is Poppler, a library for rendering PDF files, and examining or modifying their structure.
 </Description>
         <PartOf>desktop.library</PartOf>
         <RuntimeDependencies>
-            <Dependency release="47">poppler</Dependency>
+            <Dependency release="53">poppler</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib64/libpoppler-qt6.so.3</Path>
-            <Path fileType="library">/usr/lib64/libpoppler-qt6.so.3.4.0</Path>
+            <Path fileType="library">/usr/lib64/libpoppler-qt6.so.3.10.0</Path>
         </Files>
     </Package>
     <Package>
         <Name>poppler-qt6-devel</Name>
         <Summary xml:lang="en">PDF Rendering Library</Summary>
-        <Description xml:lang="en">PDF Rendering Library
+        <Description xml:lang="en">This is Poppler, a library for rendering PDF files, and examining or modifying their structure.
 </Description>
         <RuntimeDependencies>
-            <Dependency release="47">poppler-devel</Dependency>
-            <Dependency releaseFrom="47">poppler-qt6</Dependency>
+            <Dependency release="53">poppler-devel</Dependency>
+            <Dependency releaseFrom="53">poppler-qt6</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/poppler/qt6/poppler-annotation.h</Path>
+            <Path fileType="header">/usr/include/poppler/qt6/poppler-converter.h</Path>
             <Path fileType="header">/usr/include/poppler/qt6/poppler-export.h</Path>
             <Path fileType="header">/usr/include/poppler/qt6/poppler-form.h</Path>
             <Path fileType="header">/usr/include/poppler/qt6/poppler-link.h</Path>
@@ -276,11 +255,11 @@
     <Package>
         <Name>poppler-utils</Name>
         <Summary xml:lang="en">PDF Rendering Library</Summary>
-        <Description xml:lang="en">PDF Rendering Library
+        <Description xml:lang="en">This is Poppler, a library for rendering PDF files, and examining or modifying their structure.
 </Description>
         <PartOf>office</PartOf>
         <RuntimeDependencies>
-            <Dependency release="47">poppler</Dependency>
+            <Dependency release="53">poppler</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin/pdfattach</Path>
@@ -312,12 +291,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="47">
-            <Date>2024-02-04</Date>
-            <Version>24.02.0</Version>
+        <Update release="53">
+            <Date>2025-03-06</Date>
+            <Version>25.03.0</Version>
             <Comment>Packaging update</Comment>
-            <Name>Reilly Brogan</Name>
-            <Email>solus@reillybrogan.com</Email>
+            <Name>Joey Riches</Name>
+            <Email>josephriches@gmail.com</Email>
         </Update>
     </History>
 </PISI>

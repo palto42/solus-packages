@@ -22,20 +22,33 @@
 </Description>
         <PartOf>desktop.library</PartOf>
         <Files>
+            <Path fileType="executable">/usr/bin/balooctl6</Path>
             <Path fileType="executable">/usr/bin/baloosearch6</Path>
             <Path fileType="executable">/usr/bin/balooshow6</Path>
+            <Path fileType="library">/usr/lib/systemd/user/kde-baloo.service</Path>
+            <Path fileType="library">/usr/lib64/kf6/baloo_file</Path>
+            <Path fileType="library">/usr/lib64/kf6/baloo_file_extractor</Path>
             <Path fileType="library">/usr/lib64/libKF6Baloo.so.6</Path>
-            <Path fileType="library">/usr/lib64/libKF6Baloo.so.6.0.0</Path>
+            <Path fileType="library">/usr/lib64/libKF6Baloo.so.6.14.0</Path>
             <Path fileType="library">/usr/lib64/libKF6BalooEngine.so.6</Path>
-            <Path fileType="library">/usr/lib64/libKF6BalooEngine.so.6.0.0</Path>
+            <Path fileType="library">/usr/lib64/libKF6BalooEngine.so.6.14.0</Path>
             <Path fileType="library">/usr/lib64/qt6/plugins/kf6/kded/baloosearchmodule.so</Path>
             <Path fileType="library">/usr/lib64/qt6/plugins/kf6/kio/baloosearch.so</Path>
             <Path fileType="library">/usr/lib64/qt6/plugins/kf6/kio/tags.so</Path>
             <Path fileType="library">/usr/lib64/qt6/plugins/kf6/kio/timeline.so</Path>
+            <Path fileType="library">/usr/lib64/qt6/qml/org/kde/baloo/balooplugin.qmltypes</Path>
+            <Path fileType="library">/usr/lib64/qt6/qml/org/kde/baloo/experimental/baloomonitorplugin.qmltypes</Path>
+            <Path fileType="library">/usr/lib64/qt6/qml/org/kde/baloo/experimental/kde-qmlmodule.version</Path>
             <Path fileType="library">/usr/lib64/qt6/qml/org/kde/baloo/experimental/libbaloomonitorplugin.so</Path>
             <Path fileType="library">/usr/lib64/qt6/qml/org/kde/baloo/experimental/qmldir</Path>
+            <Path fileType="library">/usr/lib64/qt6/qml/org/kde/baloo/kde-qmlmodule.version</Path>
             <Path fileType="library">/usr/lib64/qt6/qml/org/kde/baloo/libbalooplugin.so</Path>
             <Path fileType="library">/usr/lib64/qt6/qml/org/kde/baloo/qmldir</Path>
+            <Path fileType="data">/usr/share/dbus-1/interfaces/org.kde.BalooWatcherApplication.xml</Path>
+            <Path fileType="data">/usr/share/dbus-1/interfaces/org.kde.baloo.file.indexer.xml</Path>
+            <Path fileType="data">/usr/share/dbus-1/interfaces/org.kde.baloo.fileindexer.xml</Path>
+            <Path fileType="data">/usr/share/dbus-1/interfaces/org.kde.baloo.main.xml</Path>
+            <Path fileType="data">/usr/share/dbus-1/interfaces/org.kde.baloo.scheduler.xml</Path>
             <Path fileType="localedata">/usr/share/locale/ar/LC_MESSAGES/baloo_file6.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ar/LC_MESSAGES/baloo_file_extractor6.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ar/LC_MESSAGES/balooctl6.mo</Path>
@@ -130,6 +143,8 @@
             <Path fileType="localedata">/usr/share/locale/de/LC_MESSAGES/kio6_baloosearch.mo</Path>
             <Path fileType="localedata">/usr/share/locale/de/LC_MESSAGES/kio6_tags.mo</Path>
             <Path fileType="localedata">/usr/share/locale/de/LC_MESSAGES/kio6_timeline.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/el/LC_MESSAGES/baloo_file6.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/el/LC_MESSAGES/baloo_file_extractor6.mo</Path>
             <Path fileType="localedata">/usr/share/locale/el/LC_MESSAGES/balooctl6.mo</Path>
             <Path fileType="localedata">/usr/share/locale/el/LC_MESSAGES/baloodb6.mo</Path>
             <Path fileType="localedata">/usr/share/locale/el/LC_MESSAGES/balooengine6.mo</Path>
@@ -224,12 +239,24 @@
             <Path fileType="localedata">/usr/share/locale/gl/LC_MESSAGES/kio6_timeline.mo</Path>
             <Path fileType="localedata">/usr/share/locale/he/LC_MESSAGES/baloo_file6.mo</Path>
             <Path fileType="localedata">/usr/share/locale/he/LC_MESSAGES/baloo_file_extractor6.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/he/LC_MESSAGES/balooctl6.mo</Path>
             <Path fileType="localedata">/usr/share/locale/he/LC_MESSAGES/baloodb6.mo</Path>
             <Path fileType="localedata">/usr/share/locale/he/LC_MESSAGES/balooengine6.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/he/LC_MESSAGES/baloosearch6.mo</Path>
             <Path fileType="localedata">/usr/share/locale/he/LC_MESSAGES/balooshow6.mo</Path>
             <Path fileType="localedata">/usr/share/locale/he/LC_MESSAGES/kio6_baloosearch.mo</Path>
             <Path fileType="localedata">/usr/share/locale/he/LC_MESSAGES/kio6_tags.mo</Path>
             <Path fileType="localedata">/usr/share/locale/he/LC_MESSAGES/kio6_timeline.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/hi/LC_MESSAGES/baloo_file6.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/hi/LC_MESSAGES/baloo_file_extractor6.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/hi/LC_MESSAGES/balooctl6.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/hi/LC_MESSAGES/baloodb6.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/hi/LC_MESSAGES/balooengine6.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/hi/LC_MESSAGES/baloosearch6.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/hi/LC_MESSAGES/balooshow6.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/hi/LC_MESSAGES/kio6_baloosearch.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/hi/LC_MESSAGES/kio6_tags.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/hi/LC_MESSAGES/kio6_timeline.mo</Path>
             <Path fileType="localedata">/usr/share/locale/hu/LC_MESSAGES/baloo_file6.mo</Path>
             <Path fileType="localedata">/usr/share/locale/hu/LC_MESSAGES/baloo_file_extractor6.mo</Path>
             <Path fileType="localedata">/usr/share/locale/hu/LC_MESSAGES/balooctl6.mo</Path>
@@ -258,6 +285,10 @@
             <Path fileType="localedata">/usr/share/locale/id/LC_MESSAGES/kio6_baloosearch.mo</Path>
             <Path fileType="localedata">/usr/share/locale/id/LC_MESSAGES/kio6_tags.mo</Path>
             <Path fileType="localedata">/usr/share/locale/id/LC_MESSAGES/kio6_timeline.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/ie/LC_MESSAGES/baloo_file6.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/ie/LC_MESSAGES/baloo_file_extractor6.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/ie/LC_MESSAGES/kio6_baloosearch.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/ie/LC_MESSAGES/kio6_timeline.mo</Path>
             <Path fileType="localedata">/usr/share/locale/it/LC_MESSAGES/baloo_file6.mo</Path>
             <Path fileType="localedata">/usr/share/locale/it/LC_MESSAGES/baloo_file_extractor6.mo</Path>
             <Path fileType="localedata">/usr/share/locale/it/LC_MESSAGES/balooctl6.mo</Path>
@@ -414,6 +445,16 @@
             <Path fileType="localedata">/usr/share/locale/ru/LC_MESSAGES/kio6_baloosearch.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ru/LC_MESSAGES/kio6_tags.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ru/LC_MESSAGES/kio6_timeline.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/sa/LC_MESSAGES/baloo_file6.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/sa/LC_MESSAGES/baloo_file_extractor6.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/sa/LC_MESSAGES/balooctl6.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/sa/LC_MESSAGES/baloodb6.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/sa/LC_MESSAGES/balooengine6.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/sa/LC_MESSAGES/baloosearch6.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/sa/LC_MESSAGES/balooshow6.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/sa/LC_MESSAGES/kio6_baloosearch.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/sa/LC_MESSAGES/kio6_tags.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/sa/LC_MESSAGES/kio6_timeline.mo</Path>
             <Path fileType="localedata">/usr/share/locale/sk/LC_MESSAGES/baloo_file6.mo</Path>
             <Path fileType="localedata">/usr/share/locale/sk/LC_MESSAGES/baloo_file_extractor6.mo</Path>
             <Path fileType="localedata">/usr/share/locale/sk/LC_MESSAGES/balooctl6.mo</Path>
@@ -458,6 +499,8 @@
             <Path fileType="localedata">/usr/share/locale/sr@latin/LC_MESSAGES/kio6_baloosearch.mo</Path>
             <Path fileType="localedata">/usr/share/locale/sr@latin/LC_MESSAGES/kio6_tags.mo</Path>
             <Path fileType="localedata">/usr/share/locale/sr@latin/LC_MESSAGES/kio6_timeline.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/sv/LC_MESSAGES/baloo_file6.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/sv/LC_MESSAGES/baloo_file_extractor6.mo</Path>
             <Path fileType="localedata">/usr/share/locale/sv/LC_MESSAGES/balooctl6.mo</Path>
             <Path fileType="localedata">/usr/share/locale/sv/LC_MESSAGES/baloodb6.mo</Path>
             <Path fileType="localedata">/usr/share/locale/sv/LC_MESSAGES/balooengine6.mo</Path>
@@ -466,6 +509,8 @@
             <Path fileType="localedata">/usr/share/locale/sv/LC_MESSAGES/kio6_baloosearch.mo</Path>
             <Path fileType="localedata">/usr/share/locale/sv/LC_MESSAGES/kio6_tags.mo</Path>
             <Path fileType="localedata">/usr/share/locale/sv/LC_MESSAGES/kio6_timeline.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/ta/LC_MESSAGES/baloo_file6.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/ta/LC_MESSAGES/baloo_file_extractor6.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ta/LC_MESSAGES/balooctl6.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ta/LC_MESSAGES/baloodb6.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ta/LC_MESSAGES/balooengine6.mo</Path>
@@ -523,6 +568,7 @@
             <Path fileType="localedata">/usr/share/locale/zh_TW/LC_MESSAGES/kio6_timeline.mo</Path>
             <Path fileType="data">/usr/share/qlogging-categories6/baloo.categories</Path>
             <Path fileType="data">/usr/share/qlogging-categories6/baloo.renamecategories</Path>
+            <Path fileType="data">/usr/share/xdg/autostart/baloo_file.desktop</Path>
         </Files>
     </Package>
     <Package>
@@ -532,7 +578,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="4">kf6-baloo</Dependency>
+            <Dependency release="23">kf6-baloo</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/KF6/Baloo/Baloo/File</Path>
@@ -564,9 +610,9 @@
         </Files>
     </Package>
     <History>
-        <Update release="4">
-            <Date>2024-02-28</Date>
-            <Version>6.0.0</Version>
+        <Update release="23">
+            <Date>2025-06-11</Date>
+            <Version>6.14.0</Version>
             <Comment>Packaging update</Comment>
             <Name>Reilly Brogan</Name>
             <Email>solus@reillybrogan.com</Email>

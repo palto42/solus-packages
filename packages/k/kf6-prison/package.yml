@@ -1,8 +1,8 @@
 name       : kf6-prison
-version    : 6.0.0
-release    : 3
+version    : 6.14.0
+release    : 19
 source     :
-    - https://cdn.download.kde.org/stable/frameworks/6.0/prison-6.0.0.tar.xz : 6ff5fbc6fc38581072ee45904e022d5bf2e7b3b1f49ac9d1d0c6024d7ca3ec5a
+    - https://download.kde.org/stable/frameworks/6.14/prison-6.14.0.tar.xz : b50454ab0a0d7891ac1f9b6c4e4e00ccd3269bad630a6a392f410c4e252ffb64
 homepage   : https://community.kde.org/Frameworks
 license    :
     - BSD-3-Clause
@@ -17,8 +17,8 @@ builddeps  :
     - pkgconfig(Qt6Quick)
     - pkgconfig(libdmtx)
     - pkgconfig(libqrencode)
+    - pkgconfig(zxing)
     - extra-cmake-modules
-    # TODO maybe add ZXing
 rundeps    :
     - devel :
         - extra-cmake-modules

@@ -50,7 +50,6 @@ libc.so.6:fcntl
 libc.so.6:fflush
 libc.so.6:fileno
 libc.so.6:fopen
-libc.so.6:fopen64
 libc.so.6:fork
 libc.so.6:fprintf
 libc.so.6:fputc
@@ -58,7 +57,7 @@ libc.so.6:fputs
 libc.so.6:fread
 libc.so.6:free
 libc.so.6:fseeko64
-libc.so.6:fstat64
+libc.so.6:fstat
 libc.so.6:ftello64
 libc.so.6:fwrite
 libc.so.6:get_nprocs
@@ -78,7 +77,7 @@ libc.so.6:isatty
 libc.so.6:isprint
 libc.so.6:isspace
 libc.so.6:isxdigit
-libc.so.6:lseek64
+libc.so.6:lseek
 libc.so.6:malloc
 libc.so.6:mbrtowc
 libc.so.6:mbsnrtowcs
@@ -99,20 +98,19 @@ libc.so.6:pthread_cond_destroy
 libc.so.6:pthread_cond_signal
 libc.so.6:pthread_cond_wait
 libc.so.6:pthread_create
-libc.so.6:pthread_getspecific
 libc.so.6:pthread_join
-libc.so.6:pthread_key_create
-libc.so.6:pthread_key_delete
 libc.so.6:pthread_mutex_lock
 libc.so.6:pthread_mutex_trylock
 libc.so.6:pthread_mutex_unlock
 libc.so.6:pthread_once
-libc.so.6:pthread_setspecific
+libc.so.6:pthread_self
 libc.so.6:putc
 libc.so.6:putwc
 libc.so.6:read
 libc.so.6:readdir
 libc.so.6:realloc
+libc.so.6:sched_getcpu
+libc.so.6:sched_yield
 libc.so.6:secure_getenv
 libc.so.6:setenv
 libc.so.6:sprintf
@@ -127,6 +125,7 @@ libc.so.6:strchr
 libc.so.6:strcmp
 libc.so.6:strdup
 libc.so.6:strerror
+libc.so.6:strerror_r
 libc.so.6:strlen
 libc.so.6:strncmp
 libc.so.6:strncpy
@@ -164,6 +163,7 @@ libm.so.6:asinh
 libm.so.6:atan
 libm.so.6:atan2
 libm.so.6:atanh
+libm.so.6:ceil
 libm.so.6:cos
 libm.so.6:cosh
 libm.so.6:exp

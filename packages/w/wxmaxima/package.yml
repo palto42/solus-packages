@@ -1,8 +1,8 @@
 name       : wxmaxima
-version    : 24.02.2
-release    : 28
+version    : 25.04.0
+release    : 34
 source     :
-    - https://github.com/wxMaxima-developers/wxmaxima/archive/refs/tags/Version-24.02.2.tar.gz : ad0b3b7dca4cc554cd29bdf8261f4dce75a01df5898f7efde2c03d539fd074a9
+    - https://github.com/wxMaxima-developers/wxmaxima/archive/refs/tags/Version-25.04.0.tar.gz : ec0b3005c3663f1bb86b0cc5028c2ba121e1563e3d5b671afcb9774895f4191b
 homepage   : https://wxmaxima-developers.github.io/wxmaxima/
 license    : GPL-2.0-or-later
 component  : office.maths

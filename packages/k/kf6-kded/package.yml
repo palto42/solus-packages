@@ -1,8 +1,8 @@
 name       : kf6-kded
-version    : 6.0.0
-release    : 4
+version    : 6.14.0
+release    : 20
 source     :
-    - https://cdn.download.kde.org/stable/frameworks/6.0/kded-6.0.0.tar.xz : c6243233f2827b27b1a42987a7a3058f13853f7d0e2bf289c055f245d0c5c625
+    - https://download.kde.org/stable/frameworks/6.14/kded-6.14.0.tar.xz : 59f1aec94bd0176eba8bffd35a6ad5925b6d40702e26ee1697a46b3a4617d1ca
 homepage   : https://community.kde.org/Frameworks
 license    :
     - LGPL-2.0-only

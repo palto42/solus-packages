@@ -1,8 +1,8 @@
 name       : libkomparediff2
-version    : 23.08.5
-release    : 72
+version    : 25.04.2
+release    : 90
 source     :
-    - https://cdn.download.kde.org/stable/release-service/23.08.5/src/libkomparediff2-23.08.5.tar.xz : d90d411dab811a84953680f08bd2408439593a98c74871d49ac1cd08aae64ad0
+    - https://download.kde.org/stable/release-service/25.04.2/src/libkomparediff2-25.04.2.tar.xz : 0f483451b25f462b7d7201d8920959655ac6d7bb4799a003d463a62e213ae079
 homepage   : https://kde.org/
 license    :
     - GPL-2.0-or-later
@@ -11,11 +11,20 @@ component  : programming
 summary    : Library to compare files and strings
 description: |
     Library to compare files and strings, used in Kompare and KDevelop.
-optimize   : lto
 builddeps  :
-    - kio-devel
+    - kf6-kio-devel
+    - kf6-kxmlgui-devel
+rundeps    :
+    - devel :
+        - kf6-kconfig-devel
+        - kf6-kxmlgui-devel
+        - qt6-base-devel
+clang      : yes
+optimize   :
+    - speed
+    - thin-lto
 setup      : |
-    %cmake_ninja -DBUILD_TESTING=OFF
+    %cmake_kf6
 build      : |
     %ninja_build
 install    : |

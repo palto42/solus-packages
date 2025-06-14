@@ -1,0 +1,15 @@
+name       : adwaita-colors-icon-theme
+version    : 2.4.1
+release    : 3
+source     :
+    - git|https://github.com/dpejoh/Adwaita-colors : f153417260d89e3017988014671e5a507576b2e4
+homepage   : https://github.com/dpejoh/Adwaita-colors/
+license    : GPL-3.0-or-later
+component  : desktop.theme
+summary    : Customizes Adwaita icons to match your GNOME theme's accent color
+description: |
+    Adwaita Colors customizes Adwaita icons to match your GNOME theme's accent color, providing a cohesive, personalized look.
+install    : |
+    %patch -p1 -i $pkgfiles/inherit-morewaita.patch
+    install -dm0755 $installdir/usr/share/icons/
+    cp -r $workdir/Adwaita-* $installdir/usr/share/icons/

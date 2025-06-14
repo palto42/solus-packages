@@ -29,15 +29,14 @@
             <Path fileType="library">/usr/lib64/kf6/kioexec</Path>
             <Path fileType="library">/usr/lib64/kf6/kioworker</Path>
             <Path fileType="library">/usr/lib64/libKF6KIOCore.so.6</Path>
-            <Path fileType="library">/usr/lib64/libKF6KIOCore.so.6.0.0</Path>
+            <Path fileType="library">/usr/lib64/libKF6KIOCore.so.6.14.0</Path>
             <Path fileType="library">/usr/lib64/libKF6KIOFileWidgets.so.6</Path>
-            <Path fileType="library">/usr/lib64/libKF6KIOFileWidgets.so.6.0.0</Path>
+            <Path fileType="library">/usr/lib64/libKF6KIOFileWidgets.so.6.14.0</Path>
             <Path fileType="library">/usr/lib64/libKF6KIOGui.so.6</Path>
-            <Path fileType="library">/usr/lib64/libKF6KIOGui.so.6.0.0</Path>
+            <Path fileType="library">/usr/lib64/libKF6KIOGui.so.6.14.0</Path>
             <Path fileType="library">/usr/lib64/libKF6KIOWidgets.so.6</Path>
-            <Path fileType="library">/usr/lib64/libKF6KIOWidgets.so.6.0.0</Path>
+            <Path fileType="library">/usr/lib64/libKF6KIOWidgets.so.6.14.0</Path>
             <Path fileType="library">/usr/lib64/libkuriikwsfiltereng_private.so</Path>
-            <Path fileType="library">/usr/lib64/qt6/plugins/designer/kio6widgets.so</Path>
             <Path fileType="library">/usr/lib64/qt6/plugins/kf6/kded/remotenotifier.so</Path>
             <Path fileType="library">/usr/lib64/qt6/plugins/kf6/kio/kio_file.so</Path>
             <Path fileType="library">/usr/lib64/qt6/plugins/kf6/kio/kio_ftp.so</Path>
@@ -46,6 +45,7 @@
             <Path fileType="library">/usr/lib64/qt6/plugins/kf6/kio/kio_http.so</Path>
             <Path fileType="library">/usr/lib64/qt6/plugins/kf6/kio/kio_remote.so</Path>
             <Path fileType="library">/usr/lib64/qt6/plugins/kf6/kio/kio_trash.so</Path>
+            <Path fileType="library">/usr/lib64/qt6/plugins/kf6/kio_dnd/dropintonewfolder.so</Path>
             <Path fileType="library">/usr/lib64/qt6/plugins/kf6/kiod/kioexecd.so</Path>
             <Path fileType="library">/usr/lib64/qt6/plugins/kf6/kiod/kpasswdserver.so</Path>
             <Path fileType="library">/usr/lib64/qt6/plugins/kf6/kiod/kssld.so</Path>
@@ -55,6 +55,7 @@
             <Path fileType="library">/usr/lib64/qt6/plugins/kf6/urifilters/kurisearchfilter.so</Path>
             <Path fileType="library">/usr/lib64/qt6/plugins/kf6/urifilters/localdomainurifilter.so</Path>
             <Path fileType="data">/usr/share/applications/ktelnetservice6.desktop</Path>
+            <Path fileType="data">/usr/share/applications/org.kde.kiod6.desktop</Path>
             <Path fileType="data">/usr/share/dbus-1/services/org.kde.kiod6.service</Path>
             <Path fileType="data">/usr/share/dbus-1/services/org.kde.kioexecd6.service</Path>
             <Path fileType="data">/usr/share/dbus-1/services/org.kde.kpasswdserver6.service</Path>
@@ -74,6 +75,7 @@
             <Path fileType="data">/usr/share/kf6/searchproviders/boo.desktop</Path>
             <Path fileType="data">/usr/share/kf6/searchproviders/bug.desktop</Path>
             <Path fileType="data">/usr/share/kf6/searchproviders/call.desktop</Path>
+            <Path fileType="data">/usr/share/kf6/searchproviders/caniuse.desktop</Path>
             <Path fileType="data">/usr/share/kf6/searchproviders/cia.desktop</Path>
             <Path fileType="data">/usr/share/kf6/searchproviders/citeseer.desktop</Path>
             <Path fileType="data">/usr/share/kf6/searchproviders/codeberg.desktop</Path>
@@ -89,6 +91,7 @@
             <Path fileType="data">/usr/share/kf6/searchproviders/deepl.desktop</Path>
             <Path fileType="data">/usr/share/kf6/searchproviders/dictfr.desktop</Path>
             <Path fileType="data">/usr/share/kf6/searchproviders/docbook.desktop</Path>
+            <Path fileType="data">/usr/share/kf6/searchproviders/dockerhub.desktop</Path>
             <Path fileType="data">/usr/share/kf6/searchproviders/doi.desktop</Path>
             <Path fileType="data">/usr/share/kf6/searchproviders/duckduckgo.desktop</Path>
             <Path fileType="data">/usr/share/kf6/searchproviders/duckduckgo_info.desktop</Path>
@@ -100,6 +103,7 @@
             <Path fileType="data">/usr/share/kf6/searchproviders/en2it.desktop</Path>
             <Path fileType="data">/usr/share/kf6/searchproviders/es2en.desktop</Path>
             <Path fileType="data">/usr/share/kf6/searchproviders/facebook.desktop</Path>
+            <Path fileType="data">/usr/share/kf6/searchproviders/fedora.desktop</Path>
             <Path fileType="data">/usr/share/kf6/searchproviders/feedster.desktop</Path>
             <Path fileType="data">/usr/share/kf6/searchproviders/flatpak.desktop</Path>
             <Path fileType="data">/usr/share/kf6/searchproviders/flickr.desktop</Path>
@@ -148,6 +152,7 @@
             <Path fileType="data">/usr/share/kf6/searchproviders/leo.desktop</Path>
             <Path fileType="data">/usr/share/kf6/searchproviders/linguee.desktop</Path>
             <Path fileType="data">/usr/share/kf6/searchproviders/magnatune.desktop</Path>
+            <Path fileType="data">/usr/share/kf6/searchproviders/mdn.desktop</Path>
             <Path fileType="data">/usr/share/kf6/searchproviders/metacrawler.desktop</Path>
             <Path fileType="data">/usr/share/kf6/searchproviders/microsoft_cpp.desktop</Path>
             <Path fileType="data">/usr/share/kf6/searchproviders/msdn.desktop</Path>
@@ -158,8 +163,10 @@
             <Path fileType="data">/usr/share/kf6/searchproviders/multitran-itru.desktop</Path>
             <Path fileType="data">/usr/share/kf6/searchproviders/multitran-nlru.desktop</Path>
             <Path fileType="data">/usr/share/kf6/searchproviders/netcraft.desktop</Path>
+            <Path fileType="data">/usr/share/kf6/searchproviders/nixpkgs.desktop</Path>
             <Path fileType="data">/usr/share/kf6/searchproviders/nl-telephone.desktop</Path>
             <Path fileType="data">/usr/share/kf6/searchproviders/nl-teletekst.desktop</Path>
+            <Path fileType="data">/usr/share/kf6/searchproviders/npm.desktop</Path>
             <Path fileType="data">/usr/share/kf6/searchproviders/opendesktop.desktop</Path>
             <Path fileType="data">/usr/share/kf6/searchproviders/opensuse.desktop</Path>
             <Path fileType="data">/usr/share/kf6/searchproviders/pgpkeys.desktop</Path>
@@ -249,10 +256,12 @@
             <Path fileType="localedata">/usr/share/locale/it/LC_MESSAGES/kio6.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ja/LC_MESSAGES/kio6.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ka/LC_MESSAGES/kio6.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/kab/LC_MESSAGES/kio6.mo</Path>
             <Path fileType="localedata">/usr/share/locale/kk/LC_MESSAGES/kio6.mo</Path>
             <Path fileType="localedata">/usr/share/locale/km/LC_MESSAGES/kio6.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ko/LC_MESSAGES/kio6.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ku/LC_MESSAGES/kio6.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/lg/LC_MESSAGES/kio6.mo</Path>
             <Path fileType="localedata">/usr/share/locale/lt/LC_MESSAGES/kio6.mo</Path>
             <Path fileType="localedata">/usr/share/locale/lv/LC_MESSAGES/kio6.mo</Path>
             <Path fileType="localedata">/usr/share/locale/mai/LC_MESSAGES/kio6.mo</Path>
@@ -308,7 +317,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="5">kf6-kio</Dependency>
+            <Dependency release="24">kf6-kio</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/KF6/KIO/kio_version.h</Path>
@@ -344,6 +353,7 @@
             <Path fileType="header">/usr/include/KF6/KIOCore/KIO/MkdirJob</Path>
             <Path fileType="header">/usr/include/KF6/KIOCore/KIO/MkpathJob</Path>
             <Path fileType="header">/usr/include/KF6/KIOCore/KIO/NameFinderJob</Path>
+            <Path fileType="header">/usr/include/KF6/KIOCore/KIO/OpenWith</Path>
             <Path fileType="header">/usr/include/KF6/KIOCore/KIO/RestoreJob</Path>
             <Path fileType="header">/usr/include/KF6/KIOCore/KIO/SimpleJob</Path>
             <Path fileType="header">/usr/include/KF6/KIOCore/KIO/SpecialJob</Path>
@@ -400,6 +410,7 @@
             <Path fileType="header">/usr/include/KF6/KIOCore/kio/mkdirjob.h</Path>
             <Path fileType="header">/usr/include/KF6/KIOCore/kio/mkpathjob.h</Path>
             <Path fileType="header">/usr/include/KF6/KIOCore/kio/namefinderjob.h</Path>
+            <Path fileType="header">/usr/include/KF6/KIOCore/kio/openwith.h</Path>
             <Path fileType="header">/usr/include/KF6/KIOCore/kio/restorejob.h</Path>
             <Path fileType="header">/usr/include/KF6/KIOCore/kio/simplejob.h</Path>
             <Path fileType="header">/usr/include/KF6/KIOCore/kio/specialjob.h</Path>
@@ -553,14 +564,15 @@
             <Path fileType="library">/usr/lib64/libKF6KIOFileWidgets.so</Path>
             <Path fileType="library">/usr/lib64/libKF6KIOGui.so</Path>
             <Path fileType="library">/usr/lib64/libKF6KIOWidgets.so</Path>
+            <Path fileType="library">/usr/lib64/qt6/plugins/designer/kio6widgets.so</Path>
             <Path fileType="doc">/usr/share/doc/qt6/KF6KIO.qch</Path>
             <Path fileType="doc">/usr/share/doc/qt6/KF6KIO.tags</Path>
         </Files>
     </Package>
     <History>
-        <Update release="5">
-            <Date>2024-02-28</Date>
-            <Version>6.0.0</Version>
+        <Update release="24">
+            <Date>2025-06-11</Date>
+            <Version>6.14.0</Version>
             <Comment>Packaging update</Comment>
             <Name>Reilly Brogan</Name>
             <Email>solus@reillybrogan.com</Email>

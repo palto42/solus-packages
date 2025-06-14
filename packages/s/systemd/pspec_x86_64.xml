@@ -21,13 +21,60 @@
 </Description>
         <PartOf>system.base</PartOf>
         <Files>
+            <Path fileType="executable">/bin/bootctl</Path>
+            <Path fileType="executable">/bin/busctl</Path>
+            <Path fileType="executable">/bin/coredumpctl</Path>
+            <Path fileType="executable">/bin/hostnamectl</Path>
+            <Path fileType="executable">/bin/journalctl</Path>
+            <Path fileType="executable">/bin/localectl</Path>
+            <Path fileType="executable">/bin/loginctl</Path>
+            <Path fileType="executable">/bin/machinectl</Path>
+            <Path fileType="executable">/bin/oomctl</Path>
+            <Path fileType="executable">/bin/portablectl</Path>
+            <Path fileType="executable">/bin/resolvectl</Path>
             <Path fileType="executable">/bin/systemctl</Path>
             <Path fileType="executable">/bin/systemd</Path>
-            <Path fileType="data">/lib/udev/udevd</Path>
+            <Path fileType="executable">/bin/systemd-ac-power</Path>
+            <Path fileType="executable">/bin/systemd-analyze</Path>
+            <Path fileType="executable">/bin/systemd-ask-password</Path>
+            <Path fileType="executable">/bin/systemd-cat</Path>
+            <Path fileType="executable">/bin/systemd-cgls</Path>
+            <Path fileType="executable">/bin/systemd-cgtop</Path>
+            <Path fileType="executable">/bin/systemd-confext</Path>
+            <Path fileType="executable">/bin/systemd-creds</Path>
+            <Path fileType="executable">/bin/systemd-cryptenroll</Path>
+            <Path fileType="executable">/bin/systemd-delta</Path>
+            <Path fileType="executable">/bin/systemd-detect-virt</Path>
+            <Path fileType="executable">/bin/systemd-dissect</Path>
+            <Path fileType="executable">/bin/systemd-escape</Path>
+            <Path fileType="executable">/bin/systemd-firstboot</Path>
+            <Path fileType="executable">/bin/systemd-hwdb</Path>
+            <Path fileType="executable">/bin/systemd-id128</Path>
+            <Path fileType="executable">/bin/systemd-inhibit</Path>
+            <Path fileType="executable">/bin/systemd-machine-id-setup</Path>
+            <Path fileType="executable">/bin/systemd-mount</Path>
+            <Path fileType="executable">/bin/systemd-notify</Path>
+            <Path fileType="executable">/bin/systemd-nspawn</Path>
+            <Path fileType="executable">/bin/systemd-path</Path>
+            <Path fileType="executable">/bin/systemd-repart</Path>
+            <Path fileType="executable">/bin/systemd-resolve</Path>
+            <Path fileType="executable">/bin/systemd-run</Path>
+            <Path fileType="executable">/bin/systemd-socket-activate</Path>
+            <Path fileType="executable">/bin/systemd-stdio-bridge</Path>
+            <Path fileType="executable">/bin/systemd-sysext</Path>
+            <Path fileType="executable">/bin/systemd-sysusers</Path>
+            <Path fileType="executable">/bin/systemd-tmpfiles</Path>
+            <Path fileType="executable">/bin/systemd-tty-ask-password-agent</Path>
+            <Path fileType="executable">/bin/systemd-umount</Path>
+            <Path fileType="executable">/bin/timedatectl</Path>
+            <Path fileType="executable">/bin/udevadm</Path>
+            <Path fileType="data">/lib64/udev/udevd</Path>
             <Path fileType="executable">/sbin/halt</Path>
             <Path fileType="executable">/sbin/init</Path>
+            <Path fileType="executable">/sbin/mount.ddi</Path>
             <Path fileType="executable">/sbin/poweroff</Path>
             <Path fileType="executable">/sbin/reboot</Path>
+            <Path fileType="executable">/sbin/resolvconf</Path>
             <Path fileType="executable">/sbin/shutdown</Path>
             <Path fileType="executable">/sbin/udevadm</Path>
             <Path fileType="executable">/usr/bin/bootctl</Path>
@@ -42,6 +89,7 @@
             <Path fileType="executable">/usr/bin/portablectl</Path>
             <Path fileType="executable">/usr/bin/resolvectl</Path>
             <Path fileType="executable">/usr/bin/systemctl</Path>
+            <Path fileType="executable">/usr/bin/systemd</Path>
             <Path fileType="executable">/usr/bin/systemd-ac-power</Path>
             <Path fileType="executable">/usr/bin/systemd-analyze</Path>
             <Path fileType="executable">/usr/bin/systemd-ask-password</Path>
@@ -119,6 +167,7 @@
             <Path fileType="library">/usr/lib/systemd/portable/profile/strict/service.conf</Path>
             <Path fileType="library">/usr/lib/systemd/portable/profile/trusted/service.conf</Path>
             <Path fileType="library">/usr/lib/systemd/resolv.conf</Path>
+            <Path fileType="library">/usr/lib/systemd/system-environment-generators/50-xdg-config-dirs</Path>
             <Path fileType="library">/usr/lib/systemd/system-generators/systemd-bless-boot-generator</Path>
             <Path fileType="library">/usr/lib/systemd/system-generators/systemd-cryptsetup-generator</Path>
             <Path fileType="library">/usr/lib/systemd/system-generators/systemd-debug-generator</Path>
@@ -535,6 +584,7 @@
             <Path fileType="library">/usr/lib/udev/hwdb.d/70-analyzers.hwdb</Path>
             <Path fileType="library">/usr/lib/udev/hwdb.d/70-av-production.hwdb</Path>
             <Path fileType="library">/usr/lib/udev/hwdb.d/70-cameras.hwdb</Path>
+            <Path fileType="library">/usr/lib/udev/hwdb.d/70-hardware-wallets.hwdb</Path>
             <Path fileType="library">/usr/lib/udev/hwdb.d/70-joystick.hwdb</Path>
             <Path fileType="library">/usr/lib/udev/hwdb.d/70-mouse.hwdb</Path>
             <Path fileType="library">/usr/lib/udev/hwdb.d/70-pda.hwdb</Path>
@@ -599,6 +649,7 @@
             <Path fileType="library">/usr/lib64/security/pam_systemd.so</Path>
             <Path fileType="library">/usr/lib64/systemd/libsystemd-core-254.so</Path>
             <Path fileType="library">/usr/lib64/systemd/libsystemd-shared-254.so</Path>
+            <Path fileType="library">/usr/lib64/udev/udevd</Path>
             <Path fileType="executable">/usr/sbin/halt</Path>
             <Path fileType="executable">/usr/sbin/init</Path>
             <Path fileType="executable">/usr/sbin/mount.ddi</Path>
@@ -606,6 +657,7 @@
             <Path fileType="executable">/usr/sbin/reboot</Path>
             <Path fileType="executable">/usr/sbin/resolvconf</Path>
             <Path fileType="executable">/usr/sbin/shutdown</Path>
+            <Path fileType="executable">/usr/sbin/udevadm</Path>
             <Path fileType="data">/usr/share/bash-completion/completions/bootctl</Path>
             <Path fileType="data">/usr/share/bash-completion/completions/busctl</Path>
             <Path fileType="data">/usr/share/bash-completion/completions/coredumpctl</Path>
@@ -1093,7 +1145,7 @@
 </Description>
         <PartOf>emul32</PartOf>
         <RuntimeDependencies>
-            <Dependency release="149">systemd</Dependency>
+            <Dependency release="173">systemd</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib32/libnss_myhostname.so.2</Path>
@@ -1117,8 +1169,8 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="149">systemd-devel</Dependency>
-            <Dependency release="149">systemd-32bit</Dependency>
+            <Dependency release="173">systemd-devel</Dependency>
+            <Dependency release="173">systemd-32bit</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="data">/usr/lib32/pkgconfig/libsystemd.pc</Path>
@@ -1132,7 +1184,7 @@
 </Description>
         <PartOf>system.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="149">systemd</Dependency>
+            <Dependency release="173">systemd</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/libudev.h</Path>
@@ -1934,9 +1986,9 @@
         </Files>
     </Package>
     <History>
-        <Update release="149">
-            <Date>2024-02-29</Date>
-            <Version>254.10</Version>
+        <Update release="173">
+            <Date>2025-06-11</Date>
+            <Version>254.24</Version>
             <Comment>Packaging update</Comment>
             <Name>Reilly Brogan</Name>
             <Email>solus@reillybrogan.com</Email>

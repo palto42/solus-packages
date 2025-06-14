@@ -1,8 +1,8 @@
 name       : python-peewee
-version    : 3.17.0
-release    : 15
+version    : 3.17.9
+release    : 19
 source     :
-    - https://github.com/coleifer/peewee/archive/refs/tags/3.17.0.tar.gz : 25d013fb16287e07d2ec957c954f425fd8ab12a7c0c389f6fe5df3507f348838
+    - https://github.com/coleifer/peewee/archive/refs/tags/3.17.9.tar.gz : 38e396e72cbcf71d26817b99c6cbe978bd694c655083b751a72c37c8fe4e0c45
 homepage   : https://github.com/coleifer/peewee
 license    : MIT
 component  : programming.python
@@ -11,10 +11,14 @@ description: |
     Peewee is a simple and small ORM. It has few (but expressive) concepts, making it easy to learn and intuitive to use.
 builddeps  :
     - pkgconfig(sqlite3)
-    - flask
     - cython
+    - flask
     - psycopg2
     - python-apsw
+    - python-build
+    - python-installer
+    - python-setuptools
+    - python-wheel
 build      : |
     %python3_setup
 install    : |

@@ -1,10 +1,6 @@
-ld-linux-x86-64.so.2:__tls_get_addr
-libc.so.6:__environ
 libc.so.6:__errno_location
 libc.so.6:__libc_start_main
-libc.so.6:__register_atfork
 libc.so.6:__res_init
-libc.so.6:__stack_chk_fail
 libc.so.6:__xpg_strerror_r
 libc.so.6:_exit
 libc.so.6:abort
@@ -21,10 +17,6 @@ libc.so.6:dl_iterate_phdr
 libc.so.6:dlsym
 libc.so.6:dup2
 libc.so.6:environ
-libc.so.6:epoll_create
-libc.so.6:epoll_ctl
-libc.so.6:epoll_wait
-libc.so.6:eventfd
 libc.so.6:execvp
 libc.so.6:exit
 libc.so.6:fcntl
@@ -35,6 +27,7 @@ libc.so.6:fstat64
 libc.so.6:fstatat64
 libc.so.6:gai_strerror
 libc.so.6:getaddrinfo
+libc.so.6:getauxval
 libc.so.6:getcwd
 libc.so.6:getegid
 libc.so.6:getenv
@@ -55,11 +48,9 @@ libc.so.6:kill
 libc.so.6:lseek64
 libc.so.6:lstat64
 libc.so.6:malloc
-libc.so.6:memchr
 libc.so.6:memcmp
 libc.so.6:memcpy
 libc.so.6:memmove
-libc.so.6:memrchr
 libc.so.6:memset
 libc.so.6:mkdir
 libc.so.6:mmap64
@@ -69,6 +60,7 @@ libc.so.6:nanosleep
 libc.so.6:open
 libc.so.6:open64
 libc.so.6:opendir
+libc.so.6:pause
 libc.so.6:pipe2
 libc.so.6:poll
 libc.so.6:posix_memalign
@@ -90,12 +82,9 @@ libc.so.6:pthread_attr_setstacksize
 libc.so.6:pthread_create
 libc.so.6:pthread_detach
 libc.so.6:pthread_getattr_np
-libc.so.6:pthread_getspecific
 libc.so.6:pthread_join
 libc.so.6:pthread_key_create
 libc.so.6:pthread_key_delete
-libc.so.6:pthread_mutex_lock
-libc.so.6:pthread_mutex_unlock
 libc.so.6:pthread_self
 libc.so.6:pthread_setname_np
 libc.so.6:pthread_setspecific
@@ -106,9 +95,11 @@ libc.so.6:realloc
 libc.so.6:realpath
 libc.so.6:recv
 libc.so.6:recvmsg
+libc.so.6:rmdir
 libc.so.6:sched_getaffinity
 libc.so.6:sched_yield
 libc.so.6:send
+libc.so.6:sendfile64
 libc.so.6:sendmsg
 libc.so.6:setgid
 libc.so.6:setgroups
@@ -122,12 +113,12 @@ libc.so.6:sigemptyset
 libc.so.6:signal
 libc.so.6:socket
 libc.so.6:socketpair
+libc.so.6:splice
 libc.so.6:stat64
 libc.so.6:strlen
 libc.so.6:syscall
 libc.so.6:sysconf
 libc.so.6:sysinfo
-libc.so.6:timerfd_settime
 libc.so.6:uname
 libc.so.6:unlink
 libc.so.6:waitid
@@ -146,6 +137,7 @@ libgcc_s.so.1:_Unwind_RaiseException
 libgcc_s.so.1:_Unwind_Resume
 libgcc_s.so.1:_Unwind_SetGR
 libgcc_s.so.1:_Unwind_SetIP
+libm.so.6:ceilf
 libm.so.6:fmod
 libm.so.6:log
 libm.so.6:round

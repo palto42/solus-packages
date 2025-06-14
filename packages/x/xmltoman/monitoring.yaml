@@ -1,0 +1,6 @@
+releases:
+  id: 375768
+  rss: https://github.com/atsb/xmltoman/tags.atom
+# No known CPE, checked 2024-12-8
+security:
+  cpe: ~

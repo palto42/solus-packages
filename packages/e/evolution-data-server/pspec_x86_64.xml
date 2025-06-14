@@ -1,7 +1,7 @@
 <PISI>
     <Source>
         <Name>evolution-data-server</Name>
-        <Homepage>https://wiki.gnome.org/Apps/Evolution</Homepage>
+        <Homepage>https://gitlab.gnome.org/GNOME/evolution-data-server</Homepage>
         <Packager>
             <Name>Joey Riches</Name>
             <Email>josephriches@gmail.com</Email>
@@ -71,8 +71,8 @@
             <Path fileType="library">/usr/lib/libebook-1.2.so.21.1.3</Path>
             <Path fileType="library">/usr/lib/libebook-contacts-1.2.so.4</Path>
             <Path fileType="library">/usr/lib/libebook-contacts-1.2.so.4.0.0</Path>
-            <Path fileType="library">/usr/lib/libecal-2.0.so.2</Path>
-            <Path fileType="library">/usr/lib/libecal-2.0.so.2.0.0</Path>
+            <Path fileType="library">/usr/lib/libecal-2.0.so.3</Path>
+            <Path fileType="library">/usr/lib/libecal-2.0.so.3.0.0</Path>
             <Path fileType="library">/usr/lib/libedata-book-1.2.so.27</Path>
             <Path fileType="library">/usr/lib/libedata-book-1.2.so.27.0.0</Path>
             <Path fileType="library">/usr/lib/libedata-cal-2.0.so.2</Path>
@@ -134,22 +134,13 @@
             <Path fileType="data">/usr/share/evolution-data-server/icons/hicolor/48x48/status/appointment-soon.png</Path>
             <Path fileType="data">/usr/share/evolution-data-server/icons/hicolor/48x48/status/dialog-password.png</Path>
             <Path fileType="data">/usr/share/evolution-data-server/icons/hicolor/48x48/status/dialog-warning.png</Path>
-            <Path fileType="data">/usr/share/gir-1.0/Camel-1.2.gir</Path>
-            <Path fileType="data">/usr/share/gir-1.0/EBackend-1.2.gir</Path>
-            <Path fileType="data">/usr/share/gir-1.0/EBook-1.2.gir</Path>
-            <Path fileType="data">/usr/share/gir-1.0/EBookContacts-1.2.gir</Path>
-            <Path fileType="data">/usr/share/gir-1.0/ECal-2.0.gir</Path>
-            <Path fileType="data">/usr/share/gir-1.0/EDataBook-1.2.gir</Path>
-            <Path fileType="data">/usr/share/gir-1.0/EDataCal-2.0.gir</Path>
-            <Path fileType="data">/usr/share/gir-1.0/EDataServer-1.2.gir</Path>
-            <Path fileType="data">/usr/share/gir-1.0/EDataServerUI-1.2.gir</Path>
-            <Path fileType="data">/usr/share/gir-1.0/EDataServerUI4-1.0.gir</Path>
             <Path fileType="data">/usr/share/glib-2.0/schemas/org.gnome.Evolution.DefaultSources.gschema.xml</Path>
             <Path fileType="data">/usr/share/glib-2.0/schemas/org.gnome.evolution-data-server.addressbook.gschema.xml</Path>
             <Path fileType="data">/usr/share/glib-2.0/schemas/org.gnome.evolution-data-server.calendar.gschema.xml</Path>
             <Path fileType="data">/usr/share/glib-2.0/schemas/org.gnome.evolution-data-server.gschema.xml</Path>
             <Path fileType="data">/usr/share/glib-2.0/schemas/org.gnome.evolution.eds-shell.gschema.xml</Path>
             <Path fileType="data">/usr/share/glib-2.0/schemas/org.gnome.evolution.shell.network-config.gschema.xml</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.gnome.Evolution-alarm-notify.svg</Path>
             <Path fileType="localedata">/usr/share/locale/am/LC_MESSAGES/evolution-data-server.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ar/LC_MESSAGES/evolution-data-server.mo</Path>
             <Path fileType="localedata">/usr/share/locale/as/LC_MESSAGES/evolution-data-server.mo</Path>
@@ -188,6 +179,7 @@
             <Path fileType="localedata">/usr/share/locale/hr/LC_MESSAGES/evolution-data-server.mo</Path>
             <Path fileType="localedata">/usr/share/locale/hu/LC_MESSAGES/evolution-data-server.mo</Path>
             <Path fileType="localedata">/usr/share/locale/id/LC_MESSAGES/evolution-data-server.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/ie/LC_MESSAGES/evolution-data-server.mo</Path>
             <Path fileType="localedata">/usr/share/locale/is/LC_MESSAGES/evolution-data-server.mo</Path>
             <Path fileType="localedata">/usr/share/locale/it/LC_MESSAGES/evolution-data-server.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ja/LC_MESSAGES/evolution-data-server.mo</Path>
@@ -266,7 +258,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="93">evolution-data-server</Dependency>
+            <Dependency release="109">evolution-data-server</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/evolution-data-server/camel/camel-address.h</Path>
@@ -319,6 +311,7 @@
             <Path fileType="header">/usr/include/evolution-data-server/camel/camel-mime-filter-index.h</Path>
             <Path fileType="header">/usr/include/evolution-data-server/camel/camel-mime-filter-linewrap.h</Path>
             <Path fileType="header">/usr/include/evolution-data-server/camel/camel-mime-filter-pgp.h</Path>
+            <Path fileType="header">/usr/include/evolution-data-server/camel/camel-mime-filter-preview.h</Path>
             <Path fileType="header">/usr/include/evolution-data-server/camel/camel-mime-filter-progress.h</Path>
             <Path fileType="header">/usr/include/evolution-data-server/camel/camel-mime-filter-tohtml.h</Path>
             <Path fileType="header">/usr/include/evolution-data-server/camel/camel-mime-filter-windows.h</Path>
@@ -532,6 +525,7 @@
             <Path fileType="header">/usr/include/evolution-data-server/libedataserver/e-list.h</Path>
             <Path fileType="header">/usr/include/evolution-data-server/libedataserver/e-memory.h</Path>
             <Path fileType="header">/usr/include/evolution-data-server/libedataserver/e-module.h</Path>
+            <Path fileType="header">/usr/include/evolution-data-server/libedataserver/e-ms-oapxbc.h</Path>
             <Path fileType="header">/usr/include/evolution-data-server/libedataserver/e-named-parameters.h</Path>
             <Path fileType="header">/usr/include/evolution-data-server/libedataserver/e-network-monitor.h</Path>
             <Path fileType="header">/usr/include/evolution-data-server/libedataserver/e-oauth2-service-base.h</Path>
@@ -644,6 +638,16 @@
             <Path fileType="data">/usr/lib/pkgconfig/libedataserver-1.2.pc</Path>
             <Path fileType="data">/usr/lib/pkgconfig/libedataserverui-1.2.pc</Path>
             <Path fileType="data">/usr/lib/pkgconfig/libedataserverui4-1.0.pc</Path>
+            <Path fileType="data">/usr/share/gir-1.0/Camel-1.2.gir</Path>
+            <Path fileType="data">/usr/share/gir-1.0/EBackend-1.2.gir</Path>
+            <Path fileType="data">/usr/share/gir-1.0/EBook-1.2.gir</Path>
+            <Path fileType="data">/usr/share/gir-1.0/EBookContacts-1.2.gir</Path>
+            <Path fileType="data">/usr/share/gir-1.0/ECal-2.0.gir</Path>
+            <Path fileType="data">/usr/share/gir-1.0/EDataBook-1.2.gir</Path>
+            <Path fileType="data">/usr/share/gir-1.0/EDataCal-2.0.gir</Path>
+            <Path fileType="data">/usr/share/gir-1.0/EDataServer-1.2.gir</Path>
+            <Path fileType="data">/usr/share/gir-1.0/EDataServerUI-1.2.gir</Path>
+            <Path fileType="data">/usr/share/gir-1.0/EDataServerUI4-1.0.gir</Path>
             <Path fileType="data">/usr/share/vala/vapi/camel-1.2.deps</Path>
             <Path fileType="data">/usr/share/vala/vapi/camel-1.2.vapi</Path>
             <Path fileType="data">/usr/share/vala/vapi/libebackend-1.2.deps</Path>
@@ -667,9 +671,9 @@
         </Files>
     </Package>
     <History>
-        <Update release="93">
-            <Date>2024-02-20</Date>
-            <Version>3.50.4</Version>
+        <Update release="109">
+            <Date>2025-05-27</Date>
+            <Version>3.56.2</Version>
             <Comment>Packaging update</Comment>
             <Name>Joey Riches</Name>
             <Email>josephriches@gmail.com</Email>

@@ -1,0 +1,23 @@
+name       : ocean-sound-theme
+version    : 6.3.5
+release    : 29
+source     :
+    - https://download.kde.org/stable/plasma/6.3.5/ocean-sound-theme-6.3.5.tar.xz : e6ab2ef12ba392cdadbc4fa1043a4a1d5419b6177a086822f68c7a5b521798c3
+homepage   : https://kde.org/plasma-desktop
+license    :
+    - BSD-2-Clause
+    - CC-BY-SA-4.0
+    - CC0-1.0
+component  : desktop
+summary    : Ocean Sound Theme for Plasma
+description: |
+    Ocean Sound Theme for Plasma
+builddeps  :
+    - pkgconfig(Qt6Core)
+    - extra-cmake-modules
+setup      : |
+    %cmake_kf6
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install

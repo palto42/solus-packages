@@ -1,8 +1,9 @@
 name       : gopls
-version    : 0.12.4
-release    : 2
+version    : 0.18.1
+release    : 5
 source     :
-    - https://github.com/golang/tools/archive/refs/tags/gopls/v0.12.4.tar.gz : 746b0e1942c028c62fd8c114242a024faed19009ac64180f2cbfc9480fd45544
+    - https://github.com/golang/tools/archive/refs/tags/gopls/v0.18.1.tar.gz : e49fae5dd964432a0ea1661868e858acd2aa66aaf7e1c1d646fb8506f15c8e52
+homepage   : https://pkg.go.dev/golang.org/x/tools/gopls
 license    : BSD-3-Clause
 component  : programming.tools
 summary    : Go language server (LSP)

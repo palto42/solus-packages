@@ -1,9 +1,9 @@
 name       : mkvtoolnix
-version    : '82.0'
-release    : 91
+version    : '92.0'
+release    : 102
 source     :
-    - https://mkvtoolnix.download/sources/mkvtoolnix-82.0.tar.xz : 635f1dcdc6c42852ea8fe621b50f68c224dda970fd8086944685111368d9c50c
-homepage   : https://gitlab.com/mbunkus/mkvtoolnix
+    - https://codeberg.org/mbunkus/mkvtoolnix/archive/release-92.0.tar.gz : dda998e790c0e657dab2f247eb8014518eaa52790f33591ebe9695e31718e7e4
+homepage   : https://codeberg.org/mbunkus/mkvtoolnix
 license    : GPL-2.0-or-later
 component  : multimedia.video
 summary    : MKV Toolkit for Linux

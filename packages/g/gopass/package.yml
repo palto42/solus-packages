@@ -1,12 +1,12 @@
 name       : gopass
-version    : 1.15.11
-release    : 35
+version    : 1.15.16
+release    : 40
 source     :
-    - https://github.com/gopasspw/gopass/archive/refs/tags/v1.15.11.tar.gz#gopass.tar.gz : f85610a4f114125bd21e1100d6a2970c7ab76f09a7e094aa6be378018979eb56
-    - https://github.com/gopasspw/git-credential-gopass/archive/refs/tags/v1.15.11.tar.gz#git-credential-gopass.tar.gz : b757672d283ee67371022ad68a0060eb798f5f89a1285bba6f4532ad71c8bda0
-    - https://github.com/gopasspw/gopass-hibp/archive/refs/tags/v1.15.11.tar.gz#gopass-hibp.tar.gz : e8067f1b98b7539294538b036051e8058b2362fb66ebf026473c95188f864990
-    - https://github.com/gopasspw/gopass-jsonapi/archive/refs/tags/v1.15.11.tar.gz#gopass-jsonapi.tar.gz : f72b1c691fa41d7e9a3008d2536255bc7677d4f869f98487be00b82e5f76f3c0
-    - https://github.com/gopasspw/gopass-summon-provider/archive/refs/tags/v1.15.11.tar.gz#gopass-summon-provider.tar.gz : 30019254e62920299f2606c6c3966b39e3f745430e50770f5d12a947e302ed0a
+    - https://github.com/gopasspw/gopass/archive/refs/tags/v1.15.16.tar.gz#gopass.tar.gz : 2e387cbfad535665c28ceafe7084f5b8a020845bb56a2e2e01140b16eef0f21a
+    - https://github.com/gopasspw/git-credential-gopass/archive/refs/tags/v1.15.16.tar.gz#git-credential-gopass.tar.gz : 2c17e73471983097df6a0ded43d9c2b2563e49b6b531a8ee9eec3bd84352e59c
+    - https://github.com/gopasspw/gopass-hibp/archive/refs/tags/v1.15.16.tar.gz#gopass-hibp.tar.gz : 870b8334bb9fb2426d7fe146daae655b67d3519a5040c4d0513555d7797a0c94
+    - https://github.com/gopasspw/gopass-jsonapi/archive/refs/tags/v1.15.16.tar.gz#gopass-jsonapi.tar.gz : 8ca561234d700b0b76206b90a053ad3da1daa3fc7fdb47837afae8891610b264
+    - https://github.com/gopasspw/gopass-summon-provider/archive/refs/tags/v1.15.16.tar.gz#gopass-summon-provider.tar.gz : 771be75518db8b6fff63c38ca9b09adf4401434e5fbcbe8bdb53f672d5fd23ec
 homepage   : https://www.gopass.pw
 license    : MIT
 component  : security
@@ -29,6 +29,7 @@ setup      : |
 build      : |
     %make
     for i in integrations/*; do
+        pushd $i; go mod tidy; popd
         %make -C $i
     done
 install    : |

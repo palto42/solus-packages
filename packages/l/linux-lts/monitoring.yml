@@ -1,8 +1,0 @@
-releases:
-  # Latest 6.6.x kernel
-  id: 370513
-  rss: ~
-security:
-  cpe:
-  - vendor: linux
-    product: linux_kernel

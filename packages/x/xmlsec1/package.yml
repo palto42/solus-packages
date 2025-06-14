@@ -1,11 +1,11 @@
 name       : xmlsec1
-version    : 1.2.36
-release    : 8
+version    : 1.3.6
+release    : 11
 source     :
-    - https://github.com/lsh123/xmlsec/releases/download/xmlsec-1_2_36/xmlsec1-1.2.36.tar.gz : f0d97e008b211d85808f038326d42e7f5cf46648e176f07406a323e7e8d41c80
+    - https://github.com/lsh123/xmlsec/releases/download/1.3.6/xmlsec1-1.3.6.tar.gz : 952b626ad3f3be1a4598622dab52fdab2a8604d0837c1b00589f3637535af92f
 license    : MIT
 component  : security.library
-libsplit   : no
+homepage   : https://www.aleksey.com/xmlsec/index.html
 summary    : Library providing support for "XML Signature" and "XML Encryption" standards
 description: |
     XML Security Library is a C library based on LibXML2  and OpenSSL.
@@ -16,15 +16,21 @@ builddeps  :
     - pkgconfig(libexslt)
     - pkgconfig(libgcrypt)
     - pkgconfig(nss)
+clang      : yes
+optimize   : thin-lto
+setup      : |
+    %configure --disable-static \
+               --disable-rsa-pkcs15 \
+               --enable-files
+build      : |
+    %make
+install    : |
+    %make_install
+check      : |
+    %make check
 patterns   :
     - devel :
         - /usr/bin/xmlsec1-config
         - /usr/lib64/xmlsec1Conf.sh
         - /usr/share/doc/*
         - /usr/share/man/man1/xmlsec1-config.1
-setup      : |
-    %reconfigure --disable-static
-build      : |
-    %make
-install    : |
-    %make_install

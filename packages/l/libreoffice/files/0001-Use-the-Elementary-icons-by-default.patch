@@ -1,0 +1,23 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Evan Maddock <maddock.evan@vivaldi.net>
+Date: Fri, 17 May 2024 12:05:18 -0400
+Subject: [PATCH] Use the Elementary icons by default
+
+Signed-off-by: Evan Maddock <maddock.evan@vivaldi.net>
+---
+ officecfg/registry/schema/org/openoffice/Office/Common.xcs | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/officecfg/registry/schema/org/openoffice/Office/Common.xcs b/officecfg/registry/schema/org/openoffice/Office/Common.xcs
+index 53aa213ac80d..ea27e3b0466f 100644
+--- a/officecfg/registry/schema/org/openoffice/Office/Common.xcs
++++ b/officecfg/registry/schema/org/openoffice/Office/Common.xcs
+@@ -5424,7 +5424,7 @@
+           names of the various icon themes ("breeze", "crystal", "elementary",
+           etc.).</desc>
+         </info>
+-        <value>auto</value>
++        <value>elementary</value>
+       </prop>
+       <prop oor:name="Persona" oor:type="xs:string" oor:nillable="false">
+         <!-- UIHints: Tools  Options General Personalization -->

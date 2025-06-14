@@ -1,8 +1,8 @@
 name       : tesseract
-version    : 5.3.3
-release    : 16
+version    : 5.3.4
+release    : 21
 source     :
-    - https://github.com/tesseract-ocr/tesseract/archive/refs/tags/5.3.3.tar.gz : dc4329f85f41191b2d813b71b528ba6047745813474e583ccce8795ff2ff5681
+    - https://github.com/tesseract-ocr/tesseract/archive/refs/tags/5.3.4.tar.gz : 141afc12b34a14bb691a939b4b122db0d51bd38feda7f41696822bacea7710c7
 homepage   : https://tesseract-ocr.github.io/
 license    : Apache-2.0
 component  : office
@@ -11,9 +11,15 @@ description: |
     Tesseract is an open source text recognition (OCR) Engine.
 builddeps  :
     - pkgconfig(lept)
+    - pkgconfig(libarchive)
 rundeps    :
     - tessdata
+clang      : yes
 setup      : |
+    # Since we're building with Clang we need to make sure it links against libomp
+    export CFLAGS="$CFLAGS -fopenmp"
+    export CXXFLAGS="$CXXFLAGS -fopenmp"
+
     %autogen --disable-static
 build      : |
     %make

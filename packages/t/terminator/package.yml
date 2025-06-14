@@ -1,9 +1,9 @@
 name       : terminator
-version    : 2.1.3
-release    : 15
+version    : 2.1.5
+release    : 18
 source     :
-    - https://github.com/gnome-terminator/terminator/archive/v2.1.3.tar.gz : ba499365147f501ab12e495af14d5099aee0b378454b4764bd2e3bb6052b6394
-homepage   : https://gnometerminator.blogspot.com/p/introduction.html
+    - https://github.com/gnome-terminator/terminator/archive/refs/tags/v2.1.5.tar.gz : df46cb8fbf4bc80289cabbf59e22a03948a65278c637573db3bc5e7acfd1966b
+homepage   : https://gnome-terminator.org/
 license    : GPL-2.0-only
 component  : system.utils
 summary    : Store and run multiple GNOME terminals in one window
@@ -12,6 +12,9 @@ description: |
 builddeps  :
     - desktop-file-utils
     - pytest-runner
+    - python-build
+    - python-installer
+    - python-setuptools
 rundeps    :
     - desktop-file-utils
     - gconf

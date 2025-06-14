@@ -1,0 +1,40 @@
+name       : cups-browsed
+version    : 2.1.1
+release    : 5
+source     :
+    - https://github.com/OpenPrinting/cups-browsed/releases/download/2.1.1/cups-browsed-2.1.1.tar.gz : bc9ed54ef6940a6ee076f8627458fbc3cfed9b2f7bf4ef6e865be7644a51ce8f
+homepage   : https://github.com/OpenPrinting/cups-browsed
+license    : Apache-2.0 WITH LLVM-exception
+component  : desktop.core
+summary    : Daemon for local auto-installation of remote printers
+description: |
+    Daemon for local auto-installation of remote printers
+builddeps  :
+    - pkgconfig(libcupsfilters)
+    - pkgconfig(libppd)
+clang      : yes
+setup      : |
+    %apply_patches
+
+    %reconfigure \
+               --with-cups-domainsocket=/run/cups/cups.sock \
+               --with-rcdir=no \
+               --enable-auto-setup-driverless-only \
+               --disable-saving-created-queues \
+               --disable-frequent-netif-update
+build      : |
+    %make
+install    : |
+    %make_install
+
+    # Install the cups-browsed.service systemd unit file from the upstream sources
+    install -Dm00644 daemon/cups-browsed.service $installdir/usr/lib/systemd/system/cups-browsed.service
+
+    # Enable to start on boot
+    install -dm00755 $installdir/usr/lib/systemd/system/multi-user.target.wants
+    ln -sv ../cups-browsed.service $installdir/usr/lib/systemd/system/multi-user.target.wants/.
+
+    rm -rf $installdir/usr/share/doc
+## Hangs
+# check      : |
+#     %make check

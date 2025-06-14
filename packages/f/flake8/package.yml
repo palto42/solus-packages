@@ -1,8 +1,8 @@
 name       : flake8
-version    : 6.1.0
-release    : 18
+version    : 7.1.1
+release    : 21
 source     :
-    - https://github.com/PyCQA/flake8/archive/refs/tags/6.1.0.tar.gz : bcb01efc0c83d3c9362e200b5359fe22e11b859962dd27e5bebf3ada7620ae2f
+    - https://github.com/PyCQA/flake8/archive/refs/tags/7.1.1.tar.gz : e389d1806e1f911b092fd41b7989c751f05eda510bab4ac255b144da96477e2b
 homepage   : https://github.com/PyCQA/flake8
 license    : MIT
 component  : programming.python
@@ -11,6 +11,9 @@ description: |
     flake8 is a python tool that glues together pep8, pyflakes, mccabe, and third-party plugins to check the style and quality of some python code.
 builddeps  :
     - pkgconfig(python3)
+    - python-build
+    - python-installer
+    - python-setuptools
 checkdeps  :
     - mccabe
     - pycodestyle

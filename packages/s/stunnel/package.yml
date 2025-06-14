@@ -1,8 +1,8 @@
 name       : stunnel
-version    : '5.71'
-release    : 14
+version    : '5.75'
+release    : 18
 source     :
-    - https://www.stunnel.org/downloads/stunnel-5.71.tar.gz : f023aae837c2d32deb920831a5ee1081e11c78a5d57340f8e6f0829f031017f5
+    - https://www.stunnel.org/downloads/stunnel-5.75.tar.gz : 0c1ef0ed85240974dccb94fe74fb92d6383474c7c0d10e8796d1f781a3ba5683
 homepage   : https://www.stunnel.org/
 license    : GPL-2.0-or-later
 component  : network.util

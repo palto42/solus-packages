@@ -1,8 +1,8 @@
 name       : gi-docgen
-version    : '2023.3'
-release    : 4
+version    : '2025.3'
+release    : 8
 source     :
-    - https://download.gnome.org/sources/gi-docgen/2023/gi-docgen-2023.3.tar.xz : 4deb1f09773f706259ac652050da7b3ee59871bc3fd5cfb77e811db7498dc8e7
+    - https://download.gnome.org/sources/gi-docgen/2025/gi-docgen-2025.3.tar.xz : 8a89a58bc0f77dfc3e8a2a0e3497fc39f5413ae35e5597e9ec6160abf8ee14d8
 homepage   : https://gnome.pages.gitlab.gnome.org/gi-docgen/
 license    : GPL-2.0-or-later
 component  : programming.tools
@@ -12,19 +12,23 @@ description: |
 builddeps  :
     - pkgconfig(python3)
     - pygments
+    - python-build
+    - python-installer
     - python-jinja
     - python-markdown
     - python-markupsafe
+    - python-setuptools
     - python-toml
     - python-typogrify
 rundeps    :
     - pygments
-    - python3
     - python-jinja
     - python-markdown
     - python-markupsafe
+    - python-packaging
     - python-toml
     - python-typogrify
+    - python3
 patterns   :
     - /*
 build      : |

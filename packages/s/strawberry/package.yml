@@ -1,8 +1,8 @@
 name       : strawberry
-version    : 1.0.23
-release    : 56
+version    : 1.2.11
+release    : 76
 source     :
-    - https://github.com/strawberrymusicplayer/strawberry/releases/download/1.0.23/strawberry-1.0.23.tar.xz : 24f63064caf62c72330e9fa0808a1ca938339831d0a4e8385986280601a54f10
+    - https://github.com/strawberrymusicplayer/strawberry/releases/download/1.2.11/strawberry-1.2.11.tar.xz : 87530e9601bd39b8cabcff529fbd7dbe0361aa8e7efc55931709345af7f9df43
 license    : GPL-3.0-or-later
 homepage   : https://www.strawberrymusicplayer.org
 component  : multimedia.audio
@@ -11,6 +11,7 @@ description: |
     Strawberry is a audio player and music collection organizer. It is a fork of Clementine released in 2018 aimed at music collectors, audio enthusiasts and audiophiles.
 builddeps  :
     - pkgconfig(Qt6UiTools)
+    - pkgconfig(RapidJSON)
     - pkgconfig(alsa)
     - pkgconfig(fftw3)
     - pkgconfig(gstreamer-audio-1.0)
@@ -18,10 +19,9 @@ builddeps  :
     - pkgconfig(libcdio)
     - pkgconfig(libchromaprint)
     - pkgconfig(libebur128)
-    - pkgconfig(libgpod-1.0)
     - pkgconfig(libmtp)
     - pkgconfig(libpulse)
-    - pkgconfig(protobuf)
+    - pkgconfig(libsparsehash)
     - pkgconfig(sqlite3)
     - pkgconfig(taglib)
     - gstreamer-1.0-plugins-good
@@ -30,7 +30,8 @@ builddeps  :
     - libboost-devel
     - liblastfm-devel
 setup      : |
-    %cmake_ninja -DINSTALL_TRANSLATIONS=ON
+    %cmake_ninja -DINSTALL_TRANSLATIONS=ON \
+                 -DENABLE_GPOD=OFF
 build      : |
     %ninja_build
 install    : |
