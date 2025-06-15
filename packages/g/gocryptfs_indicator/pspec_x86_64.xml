@@ -17,20 +17,21 @@
         <Description xml:lang="en">GTK Indicator App for mounting gocryptfs volumes.</Description>
         <Files>
             <Path fileType="executable">/usr/bin/gocryptfs_indicator</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/gocryptfs_indicator-0.11.2-py3.11.egg-info/PKG-INFO</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/gocryptfs_indicator-0.11.2-py3.11.egg-info/SOURCES.txt</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/gocryptfs_indicator-0.11.2-py3.11.egg-info/dependency_links.txt</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/gocryptfs_indicator-0.11.2-py3.11.egg-info/entry_points.txt</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/gocryptfs_indicator-0.11.2-py3.11.egg-info/not-zip-safe</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/gocryptfs_indicator-0.11.2-py3.11.egg-info/requires.txt</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/gocryptfs_indicator-0.11.2-py3.11.egg-info/top_level.txt</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/gocryptfs_indicator/__init__.py</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/gocryptfs_indicator/__pycache__/__init__.cpython-311.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/gocryptfs_indicator/__pycache__/main.cpython-311.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/gocryptfs_indicator/icons/gocryptfs_indicator-black.svg</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/gocryptfs_indicator/icons/gocryptfs_indicator-grey.svg</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/gocryptfs_indicator/icons/gocryptfs_indicator-white.svg</Path>
-            <Path fileType="library">/usr/lib/python3.11/site-packages/gocryptfs_indicator/main.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/gocryptfs_indicator-1.0.0.dist-info/METADATA</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/gocryptfs_indicator-1.0.0.dist-info/RECORD</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/gocryptfs_indicator-1.0.0.dist-info/WHEEL</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/gocryptfs_indicator-1.0.0.dist-info/entry_points.txt</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/gocryptfs_indicator-1.0.0.dist-info/licenses/LICENSE.txt</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/gocryptfs_indicator-1.0.0.dist-info/top_level.txt</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/gocryptfs_indicator/__init__.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/gocryptfs_indicator/__pycache__/__init__.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/gocryptfs_indicator/__pycache__/__init__.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/gocryptfs_indicator/__pycache__/main.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/gocryptfs_indicator/__pycache__/main.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/gocryptfs_indicator/icons/gocryptfs_indicator-black.svg</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/gocryptfs_indicator/icons/gocryptfs_indicator-grey.svg</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/gocryptfs_indicator/icons/gocryptfs_indicator-white.svg</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/gocryptfs_indicator/main.py</Path>
             <Path fileType="data">/usr/share/applications/gocryptfs_indicator.desktop</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/gocryptfs_indicator-black.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/gocryptfs_indicator-grey.svg</Path>
@@ -38,9 +39,9 @@
         </Files>
     </Package>
     <History>
-        <Update release="4">
-            <Date>2024-03-09</Date>
-            <Version>0.11.2</Version>
+        <Update release="5">
+            <Date>2025-06-15</Date>
+            <Version>1.0.0</Version>
             <Comment>Packaging update</Comment>
             <Name>Matthias Homann</Name>
             <Email>palto@mailbox.org</Email>

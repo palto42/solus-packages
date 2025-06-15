@@ -1,14 +1,16 @@
 name       : gocryptfs-indicator
-version    : 0.11.2
-release    : 4
+version    : 1.0.0
+release    : 5
 source     :
-    - https://hp250.fritz.box/git/matthias/-/packages/pypi/gocryptfs-indicator/0.11.2/files/82 : 8ecdc384563a3a8e99a35c3e3f73fe173a85743528dcbc6ef5ac46d64dc166d5
+    - https://hp250.fritz.box/git/matthias/-/packages/pypi/gocryptfs-indicator/1.0.0/files/92 : aeb698499bf37302de4f928efc7a9178f0822c4e6397d59fc536ea42a4fcf817
 homepage   : https://hp250.fritz.box/git/matthias/gocryptfs
 license    : undefined
 summary    : GTK Indicator App for mounting gocryptfs volumes.
-description :  GTK Indicator App for mounting gocryptfs volumes.
+description: GTK Indicator App for mounting gocryptfs volumes.
 builddeps  :
     - pkgconfig(python3)
+    - python-build
+    - python-installer
     - python-setuptools-scm
 rundeps    :
     - python-distro
