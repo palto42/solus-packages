@@ -1,6 +1,6 @@
 name: observice
 version: 0.7.0
-release: 2
+release: 3
 source:
    - https://hp250.fritz.box/git/Python/-/packages/pypi/observice/0.7.0/files/76 : 468b6d44744e0e192d65a7f329064f57d25495ef7814b5d839601882a66a58fe
 homepage: https://hp250.fritz.box/git/Python/observice
@@ -17,7 +17,10 @@ rundeps:
     - python-tomli
 builddeps:
     - pkgconfig(python3)
+    - python-build
+    - python-installer
     - python-setuptools-scm
+    - python-wheel
 build: |
     %python3_setup
 install: |
