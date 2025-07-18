@@ -1,6 +1,6 @@
 name: observice
 version: 0.7.0
-release: 3
+release: 4
 source:
    - https://hp250.fritz.box/git/Python/-/packages/pypi/observice/0.7.0/files/76 : 468b6d44744e0e192d65a7f329064f57d25495ef7814b5d839601882a66a58fe
 homepage: https://hp250.fritz.box/git/Python/observice
@@ -14,7 +14,6 @@ rundeps:
     - libayatana-appindicator
     - python3
     - python-gobject
-    - python-tomli
 builddeps:
     - pkgconfig(python3)
     - python-build
@@ -28,6 +27,8 @@ install: |
     install -Dm00644 src/applications/observice_indicator.desktop $installdir/usr/share/applications/observice_indicator.desktop
     mkdir -p $installdir/usr/share/icons/hicolor/scalable/apps/
     install -Dm00644 src/observice/icons/observice*.svg $installdir/usr/share/icons/hicolor/scalable/apps/
+    # Add icon for deskop launcher
+    install -Dm00644 src/observice/icons/observice_active.svg $installdir/usr/share/icons/hicolor/scalable/apps/observice.svg
 
 # check: |
 #   %python3_test python3 -m pytest
