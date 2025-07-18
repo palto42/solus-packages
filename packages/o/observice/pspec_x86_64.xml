@@ -61,6 +61,7 @@
             <Path fileType="library">/usr/lib/python3.12/site-packages/observice/observice.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/observice/shutdown.py</Path>
             <Path fileType="data">/usr/share/applications/observice_indicator.desktop</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/observice.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/observice_active.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/observice_alert.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/observice_auto.svg</Path>
@@ -72,8 +73,8 @@
         </Files>
     </Package>
     <History>
-        <Update release="3">
-            <Date>2025-06-27</Date>
+        <Update release="4">
+            <Date>2025-07-18</Date>
             <Version>0.7.0</Version>
             <Comment>Packaging update</Comment>
             <Name>Matthias Homann</Name>
