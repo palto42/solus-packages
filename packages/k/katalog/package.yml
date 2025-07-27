@@ -1,8 +1,8 @@
 name       : katalog
-version    : '2.5'
-release    : 2
+version    : '2.6'
+release    : 3
 source     :
-    - https://github.com/StephaneCouturier/Katalog/archive/refs/tags/v2.5.tar.gz : c379611adc646eaecbf8b40e057f220ccf333667e1d776aceb539dfe538d8dbf
+    - https://github.com/StephaneCouturier/Katalog/archive/refs/tags/v2.6.tar.gz : 4b3a38171f982f1667c9709c14de7ec6f91270edc20673bd28c650f25be101ff
 homepage   : https://stephanecouturier.github.io/Katalog/
 license    :
     - GPL-3.0-or-later
@@ -15,12 +15,48 @@ builddeps  :
     - pkgconfig(Qt6UiTools)
     - pkgconfig(Qt6MultimediaWidgets)
     - pkgconfig(Qt6Charts)
+    - pkgconfig(Qt6NetworkAuth)
     - clang-devel
+    - pkgconfig(KF6CoreAddons)
+    - kf6-ki18n-devel
+    - kf6-kxmlgui-devel
+    - kf6-kconfig-devel
+    - kf6-kiconthemes-devel
+    - imagemagick
 setup      : |
-    qmake6 Katalog.pro
+    %cmake_ninja \
+        -GNinja \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DCMAKE_PREFIX_PATH=/usr \
+        -DBUILD_TESTS=OFF
 build      : |
-    %make
+    # Build translations first
+    echo "Building translations..."
+    # example: /home/build/YPKG/root/katalog/build/Katalog-2.6/solusBuildDir/Katalog_hi_IN.qm
+    %ninja_build Katalog_lrelease || echo "Translation build failed, continuing..."
+    # Create missing .qm files as empty files if needed
+    cd solusBuildDir
+    for ts_file in ../src/translations/*.ts; do
+      if [ -f "$ts_file" ]; then
+        qm_file="${ts_file%.ts}.qm"
+        if [ ! -f "$qm_file" ]; then
+          echo "Creating empty .qm file: $qm_file"
+          touch "$qm_file"
+        fi
+      fi
+    done
+    cd ..
+
+    echo "Building application..."
+    %ninja_build
+
+    echo "Convert icon".
+    magick "src/images/Katalog_logo_64.ico[0]" -resize 64x64! solusBuildDir/Katalog.png
 install    : |
-    install -Dm00755 ./Katalog $installdir/usr/bin/Katalog
-    install -Dm00644 $workdir/docs/img/Katalog_logo_1.20.png $installdir/usr/local/share/icons/Katalog.png
-    install -Dm00644 $pkgfiles/Katalog.desktop $installdir/usr/share/applications/Katalog.desktop
+    %ninja_install
+    # Instal icon and desktop launcher
+    install -Dm00644 solusBuildDir/Katalog.png $installdir/usr/local/share/icons/Katalog.png
+    install -Dm00644 $workdir/packaging/Katalog.desktop $installdir/usr/share/applications/Katalog.desktop
+    # Install metainfo
+    install -Dm00644 $workdir/packaging/io.github.stephanecouturier.katalog.appdata.xml $installdir/usr/share/metainfo/io.github.stephanecouturier.katalog.appdata.xml

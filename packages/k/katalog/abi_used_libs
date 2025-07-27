@@ -1,7 +1,10 @@
+libKF6ConfigCore.so.6
+libKF6CoreAddons.so.6
+libKF6I18n.so.6
+libKF6XmlGui.so.6
 libQt6Charts.so.6
 libQt6Core.so.6
 libQt6Gui.so.6
-libQt6Multimedia.so.6
 libQt6Network.so.6
 libQt6Sql.so.6
 libQt6Widgets.so.6
