@@ -23,12 +23,13 @@
             <Path fileType="executable">/usr/bin/Katalog</Path>
             <Path fileType="data">/usr/local/share/icons/Katalog.png</Path>
             <Path fileType="data">/usr/share/applications/Katalog.desktop</Path>
+            <Path fileType="data">/usr/share/metainfo/io.github.stephanecouturier.katalog.appdata.xml</Path>
         </Files>
     </Package>
     <History>
-        <Update release="2">
+        <Update release="3">
             <Date>2025-07-27</Date>
-            <Version>2.5</Version>
+            <Version>2.6</Version>
             <Comment>Packaging update</Comment>
             <Name>Matthias Homann</Name>
             <Email>palto@mailbox.org</Email>
