@@ -20,14 +20,14 @@
 </Description>
         <PartOf>programming</PartOf>
         <Files>
-            <Path fileType="data">/usr/local/bin/katalog</Path>
-            <Path fileType="data">/usr/local/share/icons/katalog.png</Path>
-            <Path fileType="data">/usr/share/applications/katalog.desktop</Path>
+            <Path fileType="executable">/usr/bin/Katalog</Path>
+            <Path fileType="data">/usr/local/share/icons/Katalog.png</Path>
+            <Path fileType="data">/usr/share/applications/Katalog.desktop</Path>
         </Files>
     </Package>
     <History>
         <Update release="2">
-            <Date>2025-06-09</Date>
+            <Date>2025-07-27</Date>
             <Version>2.5</Version>
             <Comment>Packaging update</Comment>
             <Name>Matthias Homann</Name>

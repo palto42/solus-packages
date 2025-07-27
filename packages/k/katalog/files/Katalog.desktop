@@ -1,8 +1,8 @@
 [Desktop Entry]
 Name=Katalog
 Comment=Manage catalogs of disks and files
-Exec=katalog
+Exec=Katalog
 Terminal=false
 Type=Application
-Icon=katalog
+Icon=Katalog
 Categories=Utility;

@@ -21,6 +21,6 @@ setup      : |
 build      : |
     %make
 install    : |
-    install -Dm00755 ./Katalog $installdir/usr/local/bin/katalog
-    install -Dm00644 $workdir/docs/img/Katalog_logo_1.20.png $installdir/usr/local/share/icons/katalog.png
-    install -Dm00644 $pkgfiles/katalog.desktop $installdir/usr/share/applications/katalog.desktop
+    install -Dm00755 ./Katalog $installdir/usr/bin/Katalog
+    install -Dm00644 $workdir/docs/img/Katalog_logo_1.20.png $installdir/usr/local/share/icons/Katalog.png
+    install -Dm00644 $pkgfiles/Katalog.desktop $installdir/usr/share/applications/Katalog.desktop
