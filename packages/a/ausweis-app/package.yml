@@ -1,8 +1,8 @@
 name       : ausweis-app
-version    : 2.2.1
-release    : 2
+version    : 2.3.2
+release    : 3
 source     :
-    - https://github.com/Governikus/AusweisApp/archive/refs/tags/2.2.1.tar.gz : e2786f4818d77c364eb8a6305b9313411d984b6774d9a49564306f10d663f0fe
+    - https://github.com/Governikus/AusweisApp/archive/refs/tags/2.3.2.tar.gz : f16c55d5051598fa6f1ace440acc553b7a1b9d2ee79befd9a2873a06263cd3e0
 homepage   : https://www.ausweisapp.bund.de
 license    : EUPL
 component  : office
@@ -16,6 +16,7 @@ builddeps  :
     - pkgconfig(Qt6ShaderTools)
     - pkgconfig(Qt6Svg)
     - pkgconfig(Qt6WebSockets)
+    - qt6-base-private-devel
 setup      : |
     %cmake_ninja
 build      : |
