@@ -3,8 +3,8 @@
         <Name>apostrophe</Name>
         <Homepage>https://world.pages.gitlab.gnome.org/apostrophe/</Homepage>
         <Packager>
-            <Name>Muhammad Alfi Syahrin</Name>
-            <Email>malfisya.dev@hotmail.com</Email>
+            <Name>Matthias Homann</Name>
+            <Email>palto@mailbox.org</Email>
         </Packager>
         <License>GPL-3.0-or-later</License>
         <PartOf>office.notes</PartOf>
@@ -200,8 +200,8 @@
             <Date>2025-08-23</Date>
             <Version>3.2</Version>
             <Comment>Packaging update</Comment>
-            <Name>Muhammad Alfi Syahrin</Name>
-            <Email>malfisya.dev@hotmail.com</Email>
+            <Name>Matthias Homann</Name>
+            <Email>palto@mailbox.org</Email>
         </Update>
     </History>
 </PISI>
