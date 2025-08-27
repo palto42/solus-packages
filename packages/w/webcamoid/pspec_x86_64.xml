@@ -18,7 +18,7 @@
         <Files>
             <Path fileType="executable">/usr/bin/webcamoid</Path>
             <Path fileType="library">/usr/lib64/libavkys.so.9</Path>
-            <Path fileType="library">/usr/lib64/libavkys.so.9.2.3</Path>
+            <Path fileType="library">/usr/lib64/libavkys.so.9.3.0</Path>
             <Path fileType="library">/usr/lib64/qt/plugins/avkys/libAdjustHSL.so</Path>
             <Path fileType="library">/usr/lib64/qt/plugins/avkys/libAging.so</Path>
             <Path fileType="library">/usr/lib64/qt/plugins/avkys/libAnalogTV.so</Path>
@@ -26,8 +26,12 @@
             <Path fileType="library">/usr/lib64/qt/plugins/avkys/libAudioDevice.so</Path>
             <Path fileType="library">/usr/lib64/qt/plugins/avkys/libAudioDevice_alsa.so</Path>
             <Path fileType="library">/usr/lib64/qt/plugins/avkys/libAudioDevice_jack.so</Path>
+            <Path fileType="library">/usr/lib64/qt/plugins/avkys/libAudioDevice_pipewire.so</Path>
+            <Path fileType="library">/usr/lib64/qt/plugins/avkys/libAudioDevice_portaudio.so</Path>
             <Path fileType="library">/usr/lib64/qt/plugins/avkys/libAudioDevice_pulseaudio.so</Path>
             <Path fileType="library">/usr/lib64/qt/plugins/avkys/libAudioDevice_qtaudio.so</Path>
+            <Path fileType="library">/usr/lib64/qt/plugins/avkys/libAudioDevice_sdl.so</Path>
+            <Path fileType="library">/usr/lib64/qt/plugins/avkys/libAudioEncoder_ffmpeg.so</Path>
             <Path fileType="library">/usr/lib64/qt/plugins/avkys/libAudioGen.so</Path>
             <Path fileType="library">/usr/lib64/qt/plugins/avkys/libBlur.so</Path>
             <Path fileType="library">/usr/lib64/qt/plugins/avkys/libCartoon.so</Path>
@@ -58,8 +62,10 @@
             <Path fileType="library">/usr/lib64/qt/plugins/avkys/libFaceDetect.so</Path>
             <Path fileType="library">/usr/lib64/qt/plugins/avkys/libFaceTrack.so</Path>
             <Path fileType="library">/usr/lib64/qt/plugins/avkys/libFalseColor.so</Path>
+            <Path fileType="library">/usr/lib64/qt/plugins/avkys/libFillAudioGaps.so</Path>
             <Path fileType="library">/usr/lib64/qt/plugins/avkys/libFire.so</Path>
             <Path fileType="library">/usr/lib64/qt/plugins/avkys/libFlip.so</Path>
+            <Path fileType="library">/usr/lib64/qt/plugins/avkys/libFpsControl.so</Path>
             <Path fileType="library">/usr/lib64/qt/plugins/avkys/libFrameOverlap.so</Path>
             <Path fileType="library">/usr/lib64/qt/plugins/avkys/libGamma.so</Path>
             <Path fileType="library">/usr/lib64/qt/plugins/avkys/libGrayScale.so</Path>
@@ -71,9 +77,6 @@
             <Path fileType="library">/usr/lib64/qt/plugins/avkys/libLife.so</Path>
             <Path fileType="library">/usr/lib64/qt/plugins/avkys/libMatrix.so</Path>
             <Path fileType="library">/usr/lib64/qt/plugins/avkys/libMatrixTransform.so</Path>
-            <Path fileType="library">/usr/lib64/qt/plugins/avkys/libMultiSink.so</Path>
-            <Path fileType="library">/usr/lib64/qt/plugins/avkys/libMultiSink_ffmpeg.so</Path>
-            <Path fileType="library">/usr/lib64/qt/plugins/avkys/libMultiSink_gstreamer.so</Path>
             <Path fileType="library">/usr/lib64/qt/plugins/avkys/libMultiSrc.so</Path>
             <Path fileType="library">/usr/lib64/qt/plugins/avkys/libMultiSrc_ffmpeg.so</Path>
             <Path fileType="library">/usr/lib64/qt/plugins/avkys/libMultiSrc_gstreamer.so</Path>
@@ -83,6 +86,7 @@
             <Path fileType="library">/usr/lib64/qt/plugins/avkys/libOilPaint.so</Path>
             <Path fileType="library">/usr/lib64/qt/plugins/avkys/libOpacity.so</Path>
             <Path fileType="library">/usr/lib64/qt/plugins/avkys/libOtsu.so</Path>
+            <Path fileType="library">/usr/lib64/qt/plugins/avkys/libPacketSync.so</Path>
             <Path fileType="library">/usr/lib64/qt/plugins/avkys/libPhotocopy.so</Path>
             <Path fileType="library">/usr/lib64/qt/plugins/avkys/libPixelate.so</Path>
             <Path fileType="library">/usr/lib64/qt/plugins/avkys/libQuark.so</Path>
@@ -92,6 +96,12 @@
             <Path fileType="library">/usr/lib64/qt/plugins/avkys/libSaturated.so</Path>
             <Path fileType="library">/usr/lib64/qt/plugins/avkys/libScanLines.so</Path>
             <Path fileType="library">/usr/lib64/qt/plugins/avkys/libShagadelic.so</Path>
+            <Path fileType="library">/usr/lib64/qt/plugins/avkys/libSimdCore_avx.so</Path>
+            <Path fileType="library">/usr/lib64/qt/plugins/avkys/libSimdCore_avx2.so</Path>
+            <Path fileType="library">/usr/lib64/qt/plugins/avkys/libSimdCore_mmx.so</Path>
+            <Path fileType="library">/usr/lib64/qt/plugins/avkys/libSimdCore_sse.so</Path>
+            <Path fileType="library">/usr/lib64/qt/plugins/avkys/libSimdCore_sse2.so</Path>
+            <Path fileType="library">/usr/lib64/qt/plugins/avkys/libSimdCore_sse4_1.so</Path>
             <Path fileType="library">/usr/lib64/qt/plugins/avkys/libSwapRB.so</Path>
             <Path fileType="library">/usr/lib64/qt/plugins/avkys/libSwirl.so</Path>
             <Path fileType="library">/usr/lib64/qt/plugins/avkys/libTemperature.so</Path>
@@ -102,6 +112,9 @@
             <Path fileType="library">/usr/lib64/qt/plugins/avkys/libVideoCapture_qtcamera.so</Path>
             <Path fileType="library">/usr/lib64/qt/plugins/avkys/libVideoCapture_v4l2sys.so</Path>
             <Path fileType="library">/usr/lib64/qt/plugins/avkys/libVideoCapture_v4lutils.so</Path>
+            <Path fileType="library">/usr/lib64/qt/plugins/avkys/libVideoEncoder_ffmpeg.so</Path>
+            <Path fileType="library">/usr/lib64/qt/plugins/avkys/libVideoEncoder_x264.so</Path>
+            <Path fileType="library">/usr/lib64/qt/plugins/avkys/libVideoMuxer_ffmpeg.so</Path>
             <Path fileType="library">/usr/lib64/qt/plugins/avkys/libVignette.so</Path>
             <Path fileType="library">/usr/lib64/qt/plugins/avkys/libVirtualCamera.so</Path>
             <Path fileType="library">/usr/lib64/qt/plugins/avkys/libVirtualCamera_akvcam.so</Path>
@@ -131,16 +144,16 @@
         <Description xml:lang="en">Webcamoid is a full featured and multiplatform webcam suite.</Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="1">webcamoid</Dependency>
+            <Dependency release="2">webcamoid</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib64/libavkys.so</Path>
         </Files>
     </Package>
     <History>
-        <Update release="1">
-            <Date>2024-10-05</Date>
-            <Version>9.2.3</Version>
+        <Update release="2">
+            <Date>2025-08-27</Date>
+            <Version>9.3.0</Version>
             <Comment>Packaging update</Comment>
             <Name>Matthias Homann</Name>
             <Email>palto@mailbox.org</Email>

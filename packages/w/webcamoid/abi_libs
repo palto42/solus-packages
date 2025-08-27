@@ -5,8 +5,12 @@ libAspectRatio.so
 libAudioDevice.so
 libAudioDevice_alsa.so
 libAudioDevice_jack.so
+libAudioDevice_pipewire.so
+libAudioDevice_portaudio.so
 libAudioDevice_pulseaudio.so
 libAudioDevice_qtaudio.so
+libAudioDevice_sdl.so
+libAudioEncoder_ffmpeg.so
 libAudioGen.so
 libBlur.so
 libCartoon.so
@@ -37,8 +41,10 @@ libEqualize.so
 libFaceDetect.so
 libFaceTrack.so
 libFalseColor.so
+libFillAudioGaps.so
 libFire.so
 libFlip.so
+libFpsControl.so
 libFrameOverlap.so
 libGamma.so
 libGrayScale.so
@@ -50,9 +56,6 @@ libInvert.so
 libLife.so
 libMatrix.so
 libMatrixTransform.so
-libMultiSink.so
-libMultiSink_ffmpeg.so
-libMultiSink_gstreamer.so
 libMultiSrc.so
 libMultiSrc_ffmpeg.so
 libMultiSrc_gstreamer.so
@@ -62,6 +65,7 @@ libNormalize.so
 libOilPaint.so
 libOpacity.so
 libOtsu.so
+libPacketSync.so
 libPhotocopy.so
 libPixelate.so
 libQuark.so
@@ -71,6 +75,12 @@ libRotate.so
 libSaturated.so
 libScanLines.so
 libShagadelic.so
+libSimdCore_avx.so
+libSimdCore_avx2.so
+libSimdCore_mmx.so
+libSimdCore_sse.so
+libSimdCore_sse2.so
+libSimdCore_sse4_1.so
 libSwapRB.so
 libSwirl.so
 libTemperature.so
@@ -81,6 +91,9 @@ libVideoCapture_pipewire.so
 libVideoCapture_qtcamera.so
 libVideoCapture_v4l2sys.so
 libVideoCapture_v4lutils.so
+libVideoEncoder_ffmpeg.so
+libVideoEncoder_x264.so
+libVideoMuxer_ffmpeg.so
 libVignette.so
 libVirtualCamera.so
 libVirtualCamera_akvcam.so
