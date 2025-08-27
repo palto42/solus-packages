@@ -1,8 +1,8 @@
 name       : webcamoid
-version    : 9.2.3
-release    : 1
+version    : 9.3.0
+release    : 2
 source     :
-    - https://github.com/webcamoid/webcamoid/archive/refs/tags/9.2.3.tar.gz : b6601647f5787c3222ffa505beda24064cad910e23d6baa90806241cf09ef075
+    - https://github.com/webcamoid/webcamoid/archive/refs/tags/9.3.0.tar.gz : 5f9fefb305f4309283d06daae663f16ca47a67c0c640fd3031a3e88738fe6879
 homepage   : https://webcamoid.github.io
 license    : GPL-3.0-or-later
 summary    :
@@ -11,22 +11,24 @@ description:
     - Webcamoid is a full featured and multiplatform webcam suite.
 builddeps  :
     - pkgconfig(alsa)
-    - pkgconfig(Qt6QuickControls2)
-    - pkgconfig(Qt6Svg)
-    - pkgconfig(Qt6UiTools)
-    - pkgconfig(Qt6Multimedia)
-    - pkgconfig(gstreamer-base-1.0)
     - pkgconfig(gstreamer-plugins-base-0.10)
-    - pkgconfig(gstreamer-video-1.0)
+    - pkgconfig(jack)
     - pkgconfig(libavcodec)
     - pkgconfig(libkmod)
-    - pkgconfig(jack)
-    - pkgconfig(libpulse)
     - pkgconfig(libpipewire-0.3)
-    - pkgconfig(libv4lconvert)
+    - pkgconfig(libpulse)
+    - pkgconfig(libusb-1.0)
+    - pkgconfig(libv4l1)
     - pkgconfig(libvlc)
-    - xorg-server-xvfb
+    - pkgconfig(portaudio-2.0)
+    - pkgconfig(Qt6Multimedia)
+    - pkgconfig(Qt6Svg)
+    - pkgconfig(Qt6UiTools)
+    - pkgconfig(sdl3)
+    - pkgconfig(x264)
     # - libuvc-devel # optional, not in Solus repository
+rundeps:
+    - polkit
 setup      : |
     %cmake_ninja \
         -DCMAKE_BUILD_TYPE=Release \
