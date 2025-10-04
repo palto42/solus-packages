@@ -1,0 +1,40 @@
+<PISI>
+    <Source>
+        <Name>uv</Name>
+        <Homepage>https://docs.astral.sh/uv</Homepage>
+        <Packager>
+            <Name>Matthias Homann</Name>
+            <Email>palto@mailbox.org</Email>
+        </Packager>
+        <License>Apache-2.0</License>
+        <License>MIT</License>
+        <PartOf>system.utils</PartOf>
+        <Summary xml:lang="en">An extremely fast Python package and project manager, written in Rust.</Summary>
+        <Description xml:lang="en">An extremely fast Python package and project manager, written in Rust.
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>uv</Name>
+        <Summary xml:lang="en">An extremely fast Python package and project manager, written in Rust.</Summary>
+        <Description xml:lang="en">An extremely fast Python package and project manager, written in Rust.
+</Description>
+        <PartOf>system.utils</PartOf>
+        <Files>
+            <Path fileType="executable">/usr/bin/uv</Path>
+            <Path fileType="executable">/usr/bin/uvx</Path>
+            <Path fileType="doc">/usr/share/doc/uv/README.md</Path>
+            <Path fileType="data">/usr/share/licenses/uv/LICENSE-APACHE</Path>
+            <Path fileType="data">/usr/share/licenses/uv/LICENSE-MIT</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2025-10-11</Date>
+            <Version>0.9.2</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Matthias Homann</Name>
+            <Email>palto@mailbox.org</Email>
+        </Update>
+    </History>
+</PISI>
