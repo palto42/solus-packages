@@ -13,13 +13,45 @@ description: |
     An extremely fast Python package and project manager, written in Rust.
 networking : true
 builddeps  :
-    - rust
+    - python-maturin
+    # - cargo-c
 setup      : |
     %cargo_fetch
 build      : |
-    %cargo_build --bin uv --bin uvx
+    tripple="$(rustc -vV | sed -n 's/host: //p')"
+    echo "local=$tripple"
+
+    # Note: do not use --all-features as in enables a self-updater
+    maturin build --locked --release --target "$tripple" --strip --compatibility linux
+    maturin build --locked --release --target "$tripple" --strip --compatibility linux -m crates/uv-build/Cargo.toml
+
+    ls -l
+    ls -l target || echo "no target"
+    ls -l target/release || echo "no target/release"
+    compgen="target/release/uv --generate-shell-completion"
+    echo "compgen=$compgen"
+    mkdir -p completions
+    $compgen bash > "completions/$package"
+    $compgen elvish > "completions/$package.elv"
+    $compgen fish > "completions/$package.fish"
+    $compgen zsh > "completions/_$package"
 install    : |
-    %cargo_install uv uvx
-    # Add license file and readme
-    install -Dm0644 -t "$installdir/usr/share/licenses/$package/" LICENSE-* 
-    install -Dm0644 -t "$installdir/usr/share/doc/$package/" README.md
+    ls -l
+    ls -l target || echo "no target"
+    ls -l target/release || echo "no target/release"
+    ls -l completions || echo "no completions" 
+
+    _target="target/$(rustc -vV | sed -n 's/host: //p')/release/uv"
+    echo "_target=$_target"
+    ls -l "$_target" || echo "not found"
+
+    install -Dm0755 -t "$installdir/usr/bin/" "$_target"
+    install -Dm0755 -t "$installdir/usr/bin/" "${_target}x"
+    install -Dm 644 "completions/$package" -t "$installdir/usr/share/bash-completion/completions/"
+    install -Dm 644 "completions/$package.elv" -t "$installdir/usr/share/elvish/lib/"
+    install -Dm 644 "completions/$package.fish" -t "$installdir/usr/share/fish/vendor_completions.d/"
+    install -Dm 644 "completions/_$package" -t "$installdir/usr/share/zsh/site-functions/"
+
+    # # Add license file and readme
+    # install -Dm0644 -t "$installdir/usr/share/licenses/$package/" LICENSE-* 
+    # install -Dm0644 -t "$installdir/usr/share/doc/$package/" README.md
