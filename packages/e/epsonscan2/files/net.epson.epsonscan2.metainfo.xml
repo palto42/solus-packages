@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='utf-8'?>
+<component type="desktop">
+  <id>net.epson.epsonscan2</id>
+  <name>Epson Scan 2</name>
+  <summary>Software for Epson scanners &amp; multifunction printer</summary>
+  <developer_name>Seiko Epson Corporation</developer_name>
+  <launchable type="desktop-id">net.epson.epsonscan2.desktop</launchable>
+  <project_license>LGPL-2.1 AND LicenseRef-proprietary=https://download.ebz.epson.net/dsc/du/02/eula/global/LINUX_EN.html</project_license>
+  <metadata_license>CC0-1.0</metadata_license>
+  <description>
+    <p>Epson Scan 2 is a scanning application for Epson scanner. It
+    allows to set various scanner settings with graphical user
+    interface and save the scanned images to the various file
+    type.</p>
+    <p>It supports USB, and network connection for the network capable
+    scanners.</p>
+    <p>Scanners can also be controlled with the command line.</p>
+    <p>While the application is Free Software, the scanner drivers
+    contains Proprietary components.</p>
+    <p>This build is not supported by Epson Seiko Corporation, and is provided as is.</p>
+  </description>
+  <url type="homepage">https://download.ebz.epson.net/dsc/search/01/search/</url>
+  <url type="help">https://download.ebz.epson.net/man/linux/epsonscan2_e.html</url>
+  <content_rating type="oars-1.1"/>
+  <screenshots>
+    <screenshot type="default">
+      <image>https://github.com/flathub/net.epson.epsonscan2/raw/1d029b1c55c7394cf1b9a2eb957933b766caaf74/screenshots/epsonscan2-screenshot.png</image>
+    </screenshot>
+  </screenshots>
+  <releases>
+    <release version="6.7.80.0" date="2025-10-02">
+      <description>No details provided.</description>
+    </release>
+    <release version="6.7.65.0" date="2024-05-28">
+      <description>
+        <p>Added support for the following scanners:</p>
+        <ul>
+          <li>AM-C400 Series</li>
+          <li>AM-C550 Series</li>
+          <li>ET-2860 Series</li>
+          <li>ET-2870 Series</li>
+          <li>EW-056A Series</li>
+          <li>EW-456A Series</li>
+          <li>L3230 Series</li>
+          <li>L3270 Series</li>
+          <li>L3280 Series</li>
+          <li>L5310 Series</li>
+          <li>L8100 Series</li>
+          <li>LM-C400</li>
+        </ul>
+      </description>
+    </release>
+    <release version="6.7.63.0" date="2023-11-09">
+      <description>
+        <p>Added support for the following scanners:</p>
+        <ul>
+          <li>EP-716A Series</li>
+          <li>EP-816A Series</li>
+          <li>EP-886A Series</li>
+          <li>EP-M476T Series</li>
+          <li>ES-C220</li>
+          <li>GT-X830</li>
+          <li>M2050 Series</li>
+          <li>PX-M161T Series</li>
+          <li>PX-M382F</li>
+          <li>RR-400W</li>
+          <li>ST-C5000 Series</li>
+          <li>ST-C5500 Series</li>
+          <li>WF-M5899 Series</li>
+          <li>WF-M5899BAM</li>
+        </ul>
+      </description>
+    </release>
+    <release version="6.7.61.0" date="2023-04-27">
+      <description>
+        <p>Added support for the following scanners:</p>
+        <ul>
+          <li>DS-C330</li>
+          <li>DS-C420W</li>
+          <li>DS-C480W</li>
+          <li>DS-C490</li>
+          <li>DS-G30000</li>
+          <li>ES-C320W</li>
+          <li>ES-C380W</li>
+        </ul>
+        <p>Misc bug fixes.</p>
+      </description>
+    </release>
+    <release version="6.7.43.0" date="2023-04-18">
+      <description>
+        <p>Added support for the following scanners:</p>
+        <ul>
+          <li>AM-C4000 Series</li>
+          <li>AM-C5000 Series</li>
+          <li>AM-C6000 Series</li>
+          <li>ET-2830 Series</li>
+          <li>ET-2840 Series</li>
+          <li>ET-4810 Series</li>
+          <li>Expression 13000XL</li>
+          <li>GT-S660</li>
+          <li>L3550 Series</li>
+          <li>L3560 Series</li>
+          <li>L5590 Series</li>
+          <li>LM-C4000</li>
+          <li>LM-C5000</li>
+          <li>LM-C6000</li>
+          <li>PX-M887F</li>
+          <li>Perfection V19II</li>
+          <li>Perfection V39II</li>
+          <li>SC-P8500DM Series</li>
+          <li>SC-T5700DM Series</li>
+          <li>SC-T7700DM Series</li>
+          <li>WF-4830 Series</li>
+          <li>WF-7830 Series</li>
+          <li>WF-7840 Series</li>
+          <li>WF-C5810 Series</li>
+          <li>WF-M4619 Series</li>
+        </ul>
+      </description>
+    </release>
+    <release version="6.6.42.0" date="2022-07-06" type="stable"/>
+  </releases>
+</component>

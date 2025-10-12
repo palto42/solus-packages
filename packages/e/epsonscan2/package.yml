@@ -69,3 +69,13 @@ install    : |
     # Add desktop file
     install -Dm644 "$workdir/desktop/rpm/i686/epsonscan2.desktop" \
         "$installdir/usr/share/applications/epsonscan2.desktop"
+
+    # Rename doc folder
+    mv "$installdir/usr/share/doc/epsonscan2-1.0.0.0-1" "$installdir/usr/share/doc/epsonscan2-${version}-1"
+    
+    # Add metainfo file
+    install -Dm644 "$pkgfiles/net.epson.epsonscan2.metainfo.xml" \
+        "$installdir/usr/share/metainfo/net.epson.epsonscan2.metainfo.xml"
+
+    # Remove unwanted files
+    rm "$installdir/usr/share/doc/epsonscan2-${version}-1/changelog.Debian"

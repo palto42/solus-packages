@@ -24,3 +24,5 @@ install    : |
     install -Dm644 "$installdir/usr/share/doc/epsonscan2-non-free-plugin-%version%-1/copyright" \
                     "$installdir/usr/share/licenses/epsonscan2-non-free-plugin/LICENSE"
 
+    # Remove unwanted files
+    rm "$installdir/usr/share/doc/epsonscan2-non-free-plugin-1.0.0.6-1/changelog.Debian"
