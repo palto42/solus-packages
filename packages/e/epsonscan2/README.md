@@ -24,3 +24,7 @@ https://download3.ebz.epson.net/dsc/f/03/00/14/53/67/1a6447b4acc5568dfd970feba05
 ## User Manual
 
 [EpsonScan2 User Manual](https://download.ebz.epson.net/man/linux/epsonscan2_e.html)
+
+## Support
+
+<https://download-center.epson.com/softwares/?device_id=XP-7100+Series&region=US&os=LXOTHER&language=en>

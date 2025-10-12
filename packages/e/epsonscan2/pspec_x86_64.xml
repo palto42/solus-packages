@@ -1886,17 +1886,17 @@
             <Path fileType="library">/usr/lib64/epsonscan2/libsane-epsonscan2.so</Path>
             <Path fileType="library">/usr/lib64/sane/libsane-epsonscan2.so</Path>
             <Path fileType="data">/usr/share/applications/epsonscan2.desktop</Path>
-            <Path fileType="doc">/usr/share/doc/epsonscan2-1.0.0.0-1/AUTHORS</Path>
-            <Path fileType="doc">/usr/share/doc/epsonscan2-1.0.0.0-1/COPYING</Path>
-            <Path fileType="doc">/usr/share/doc/epsonscan2-1.0.0.0-1/LICENSE</Path>
-            <Path fileType="doc">/usr/share/doc/epsonscan2-1.0.0.0-1/NEWS</Path>
-            <Path fileType="doc">/usr/share/doc/epsonscan2-1.0.0.0-1/README</Path>
-            <Path fileType="doc">/usr/share/doc/epsonscan2-1.0.0.0-1/changelog.Debian</Path>
+            <Path fileType="doc">/usr/share/doc/epsonscan2-6.7.80-1/AUTHORS</Path>
+            <Path fileType="doc">/usr/share/doc/epsonscan2-6.7.80-1/COPYING</Path>
+            <Path fileType="doc">/usr/share/doc/epsonscan2-6.7.80-1/LICENSE</Path>
+            <Path fileType="doc">/usr/share/doc/epsonscan2-6.7.80-1/NEWS</Path>
+            <Path fileType="doc">/usr/share/doc/epsonscan2-6.7.80-1/README</Path>
+            <Path fileType="data">/usr/share/metainfo/net.epson.epsonscan2.metainfo.xml</Path>
         </Files>
     </Package>
     <History>
         <Update release="5">
-            <Date>2025-05-17</Date>
+            <Date>2025-10-12</Date>
             <Version>6.7.80</Version>
             <Comment>Packaging update</Comment>
             <Name>Matthias Homann</Name>
