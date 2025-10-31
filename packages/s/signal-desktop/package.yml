@@ -1,8 +1,8 @@
 name       : signal-desktop
-version    : 7.76.0
-release    : 199
+version    : 7.77.1
+release    : 200
 source     :
-    - https://updates.signal.org/desktop/apt/pool/s/signal-desktop/signal-desktop_7.76.0_amd64.deb : ee8abcc9c2feee15393d729294dc3aa042e3e7a982d3a528001c3537dbc148ca
+    - https://updates.signal.org/desktop/apt/pool/s/signal-desktop/signal-desktop_7.77.1_amd64.deb : b9e83b91dde549e86568ec15a41a376e407356a0473d7358281973aa09caee75
 homepage   : https://signal.org
 license    : AGPL-3.0-or-later
 component  : network.im
@@ -33,4 +33,8 @@ install    : |
     ln -sv /usr/share/signal-desktop/signal-desktop $installdir/usr/bin/signal-desktop
 
     install -Dm00644 root/usr/share/icons/hicolor/512x512/apps/signal-desktop.png $installdir/usr/share/pixmaps/signal-desktop.png
-    install -Dm00644 $pkgfiles/signal-desktop.desktop $installdir/usr/share/applications/signal-desktop.desktop
+    install -Dm00644 $pkgfiles/org.signal.Signal.desktop -t $installdir/usr/share/applications/
+
+    # Add metainfo file for app center integration (borrowed from flathub)
+    install -Dm00644 $pkgfiles/org.signal.Signal.metainfo.xml -t $installdir/usr/share/metainfo/
+    install -Dm00644 root/usr/share/icons/hicolor/64x64/apps/signal-desktop.png $installdir/usr/share/icons/hicolor/64x64/apps/org.signal.Signal.png 
