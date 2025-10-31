@@ -1,8 +1,8 @@
 name       : ausweis-app
-version    : 2.3.2
-release    : 3
+version    : 2.4.0
+release    : 4
 source     :
-    - https://github.com/Governikus/AusweisApp/archive/refs/tags/2.3.2.tar.gz : f16c55d5051598fa6f1ace440acc553b7a1b9d2ee79befd9a2873a06263cd3e0
+    - https://github.com/Governikus/AusweisApp/archive/refs/tags/2.4.0.tar.gz : 411ef84496728239ff1e1e9bb79b8d9273ba5c15f8c0bcb12fa57d7ea2d9f787
 homepage   : https://www.ausweisapp.bund.de
 license    : EUPL
 component  : office

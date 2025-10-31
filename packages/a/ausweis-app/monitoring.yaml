@@ -1,0 +1,5 @@
+releases:
+  id: 15576
+  rss: https://github.com/Governikus/AusweisApp/releases.atom
+security:
+  cpe: ~ # Last checked 2025-10-04
