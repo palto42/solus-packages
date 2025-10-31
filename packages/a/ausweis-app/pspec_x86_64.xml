@@ -26,14 +26,14 @@
             <Path fileType="data">/usr/share/icons/hicolor/96x96/apps/AusweisApp.png</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/AusweisApp.svg</Path>
             <Path fileType="data">/usr/share/licenses/LICENSE.txt</Path>
-            <Path fileType="man">/usr/share/man/man1/AusweisApp.1</Path>
+            <Path fileType="man">/usr/share/man/man1/AusweisApp.1.zst</Path>
             <Path fileType="data">/usr/share/metainfo/com.governikus.ausweisapp2.metainfo.xml</Path>
         </Files>
     </Package>
     <History>
-        <Update release="3">
-            <Date>2025-08-22</Date>
-            <Version>2.3.2</Version>
+        <Update release="4">
+            <Date>2025-10-31</Date>
+            <Version>2.4.0</Version>
             <Comment>Packaging update</Comment>
             <Name>Matthias Homann</Name>
             <Email>palto@mailbox.org</Email>

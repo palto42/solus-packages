@@ -18,6 +18,7 @@ libQt6Core.so.6:_Z29qRegisterStaticPluginFunction13QStaticPlugin
 libQt6Core.so.6:_Z30qt_QMetaEnum_flagDebugOperatorR6QDebugyPK11QMetaObjectPKc
 libQt6Core.so.6:_Z5qHash11QStringViewm
 libQt6Core.so.6:_Z5qHash14QByteArrayViewm
+libQt6Core.so.6:_Z5qHashRK4QUrlm
 libQt6Core.so.6:_Z7qgetenvPKc
 libQt6Core.so.6:_Z7qputenvPKc14QByteArrayView
 libQt6Core.so.6:_Z7qstrdupPKc
@@ -104,6 +105,7 @@ libQt6Core.so.6:_ZN11QMetaObject14normalizedTypeEPKc
 libQt6Core.so.6:_ZN11QMetaObject16invokeMethodImplEP7QObjectPN9QtPrivate15QSlotObjectBaseEN2Qt14ConnectionTypeExPKPKvPKPKcPKPKNS2_18QMetaTypeInterfaceE
 libQt6Core.so.6:_ZN11QMetaObject8activateEP7QObjectPKS_iPPv
 libQt6Core.so.6:_ZN11QTextStream8readLineEx
+libQt6Core.so.6:_ZN11QTextStreamC1EP7QString6QFlagsIN13QIODeviceBase12OpenModeFlagEE
 libQt6Core.so.6:_ZN11QTextStreamC1EP9QIODevice
 libQt6Core.so.6:_ZN11QTextStreamC1ERK10QByteArray6QFlagsIN13QIODeviceBase12OpenModeFlagEE
 libQt6Core.so.6:_ZN11QTextStreamD1Ev
@@ -182,7 +184,6 @@ libQt6Core.so.6:_ZN16QDebugStateSaverD1Ev
 libQt6Core.so.6:_ZN16QLoggingCategoryC1EPKc9QtMsgType
 libQt6Core.so.6:_ZN16QLoggingCategoryD1Ev
 libQt6Core.so.6:_ZN16QRandomGenerator10_fillRangeEPvx
-libQt6Core.so.6:_ZN16QRandomGeneratorC1ERKS_
 libQt6Core.so.6:_ZN16QXmlStreamReader11addDataImplERK10QByteArray
 libQt6Core.so.6:_ZN16QXmlStreamReader15readElementTextENS_24ReadElementTextBehaviourE
 libQt6Core.so.6:_ZN16QXmlStreamReader18skipCurrentElementEv
@@ -261,7 +262,8 @@ libQt6Core.so.6:_ZN18QJsonValueConstRef12concreteTypeES_
 libQt6Core.so.6:_ZN18QJsonValueConstRef14concreteStringES_RK7QString
 libQt6Core.so.6:_ZN18QJsonValueConstRef8concreteES_
 libQt6Core.so.6:_ZN18QJsonValueConstRef9objectKeyES_
-libQt6Core.so.6:_ZN18QRandomGenerator6414securelySeededEv
+libQt6Core.so.6:_ZN18QRandomGenerator646globalEv
+libQt6Core.so.6:_ZN18QRandomGenerator646systemEv
 libQt6Core.so.6:_ZN18QRegularExpressionC1ERK7QString6QFlagsINS_13PatternOptionEE
 libQt6Core.so.6:_ZN18QRegularExpressionD1Ev
 libQt6Core.so.6:_ZN19QAbstractProxyModel11setItemDataERK11QModelIndexRK4QMapIi8QVariantE
@@ -340,7 +342,6 @@ libQt6Core.so.6:_ZN4QUrlC1ERK7QStringNS_11ParsingModeE
 libQt6Core.so.6:_ZN4QUrlC1ERKS_
 libQt6Core.so.6:_ZN4QUrlC1Ev
 libQt6Core.so.6:_ZN4QUrlD1Ev
-libQt6Core.so.6:_ZN4QUrlaSERK7QString
 libQt6Core.so.6:_ZN4QUrlaSERKS_
 libQt6Core.so.6:_ZN5QDate10fromStringERK7QString11QStringViewi
 libQt6Core.so.6:_ZN5QDateC1Eiii
@@ -368,11 +369,13 @@ libQt6Core.so.6:_ZN6QTimerC1EP7QObject
 libQt6Core.so.6:_ZN6QTimerD1Ev
 libQt6Core.so.6:_ZN7QBufferC1EP10QByteArrayP7QObject
 libQt6Core.so.6:_ZN7QBufferD1Ev
+libQt6Core.so.6:_ZN7QLocale10setDefaultERKS_
 libQt6Core.so.6:_ZN7QLocale16languageToStringENS_8LanguageE
 libQt6Core.so.6:_ZN7QLocale6systemEv
 libQt6Core.so.6:_ZN7QLocaleC1E11QStringView
 libQt6Core.so.6:_ZN7QLocaleC1ENS_8LanguageENS_6ScriptENS_7CountryE
 libQt6Core.so.6:_ZN7QLocaleC1ERKS_
+libQt6Core.so.6:_ZN7QLocaleC1Ev
 libQt6Core.so.6:_ZN7QLocaleD1Ev
 libQt6Core.so.6:_ZN7QLocaleaSERKS_
 libQt6Core.so.6:_ZN7QObject10childEventEP11QChildEvent
@@ -573,7 +576,6 @@ libQt6Core.so.6:_ZN9QtPrivate54hasRegisteredMutableViewFunctionToIterableMetaSeq
 libQt6Core.so.6:_ZN9QtPrivate7trimmedE11QStringView
 libQt6Core.so.6:_ZN9QtPrivate8endsWithE11QStringView13QLatin1StringN2Qt15CaseSensitivityE
 libQt6Core.so.6:_ZN9QtPrivate8qustrchrE11QStringViewDs
-libQt6Core.so.6:_ZN9QtPrivate9qustrnlenEPKDsx
 libQt6Core.so.6:_ZNK10QByteArray5splitEc
 libQt6Core.so.6:_ZNK10QByteArray5toHexEc
 libQt6Core.so.6:_ZNK10QByteArray5toIntEPbi
@@ -742,6 +744,7 @@ libQt6Core.so.6:_ZNK5QTime7isValidEv
 libQt6Core.so.6:_ZNK5QTime8addMSecsEi
 libQt6Core.so.6:_ZNK5QTime8toStringE11QStringView
 libQt6Core.so.6:_ZNK5QUuid8toStringENS_12StringFormatE
+libQt6Core.so.6:_ZNK6QTimer8intervalEv
 libQt6Core.so.6:_ZNK6QTimer8isActiveEv
 libQt6Core.so.6:_ZNK7QLocale11uiLanguagesENS_12TagSeparatorE
 libQt6Core.so.6:_ZNK7QLocale4nameENS_12TagSeparatorE
@@ -876,6 +879,7 @@ libQt6Network.so.6:_Z43qRegisterNormalizedMetaType_QSslCertificateRK10QByteArray
 libQt6Network.so.6:_Z55qRegisterNormalizedMetaType_QNetworkReply__NetworkErrorRK10QByteArray
 libQt6Network.so.6:_Z56qRegisterNormalizedMetaType_QAbstractSocket__SocketErrorRK10QByteArray
 libQt6Network.so.6:_Z56qRegisterNormalizedMetaType_QAbstractSocket__SocketStateRK10QByteArray
+libQt6Network.so.6:_Z5qHashRK12QHostAddressm
 libQt6Network.so.6:_Z5qHashRK15QSslCertificatem
 libQt6Network.so.6:_Z61qRegisterNormalizedMetaType_QSslPreSharedKeyAuthenticator_ptrRK10QByteArray
 libQt6Network.so.6:_ZN10QSslCipherC1ERK7QString
@@ -1057,6 +1061,7 @@ libQt6Network.so.6:_ZNK10QTcpServer11serverErrorEv
 libQt6Network.so.6:_ZNK10QTcpServer13serverAddressEv
 libQt6Network.so.6:_ZNK10QTcpServer21hasPendingConnectionsEv
 libQt6Network.so.6:_ZNK10QUdpSocket19hasPendingDatagramsEv
+libQt6Network.so.6:_ZNK12QHostAddress10isLoopbackEv
 libQt6Network.so.6:_ZNK12QHostAddress11isLinkLocalEv
 libQt6Network.so.6:_ZNK12QHostAddress6isNullEv
 libQt6Network.so.6:_ZNK12QHostAddress8isGlobalEv
@@ -1269,8 +1274,10 @@ libQt6WebSockets.so.6:_ZN16QWebSocketServer16staticMetaObjectE
 libQt6WebSockets.so.6:_ZN16QWebSocketServer21nextPendingConnectionEv
 libQt6WebSockets.so.6:_ZN16QWebSocketServerC1ERK7QStringNS_7SslModeEP7QObject
 libQt6WebSockets.so.6:_ZN16QWebSocketServerD1Ev
+libQt6WebSockets.so.6:_ZNK10QWebSocket10requestUrlEv
 libQt6WebSockets.so.6:_ZNK10QWebSocket11errorStringEv
 libQt6WebSockets.so.6:_ZNK10QWebSocket16sslConfigurationEv
+libQt6WebSockets.so.6:_ZNK10QWebSocket5stateEv
 libQt6WebSockets.so.6:_ZNK10QWebSocket9closeCodeEv
 libQt6WebSockets.so.6:_ZNK16QWebSocketServer10serverNameEv
 libQt6WebSockets.so.6:_ZNK16QWebSocketServer16handleConnectionEP10QTcpSocket
@@ -1318,7 +1325,6 @@ libc.so.6:signal
 libc.so.6:socketpair
 libc.so.6:strcmp
 libc.so.6:strlen
-libc.so.6:syscall
 libc.so.6:write
 libcrypto.so.3:ASN1_ANY_it
 libcrypto.so.3:ASN1_INTEGER_get
@@ -1467,8 +1473,6 @@ libcrypto.so.3:OpenSSL_version
 libcrypto.so.3:PEM_read_bio_PrivateKey
 libcrypto.so.3:PEM_read_bio_X509
 libcrypto.so.3:PEM_write_bio_X509
-libcrypto.so.3:RAND_bytes
-libcrypto.so.3:RAND_seed
 libcrypto.so.3:X509_NAME_ENTRY_get_data
 libcrypto.so.3:X509_NAME_add_entry_by_txt
 libcrypto.so.3:X509_NAME_dup
@@ -1507,13 +1511,8 @@ libpcsclite.so.1:SCardTransmit
 libpcsclite.so.1:g_rgSCardRawPci
 libpcsclite.so.1:g_rgSCardT0Pci
 libpcsclite.so.1:g_rgSCardT1Pci
-libstdc++.so.6:_ZNSt13random_device7_M_finiEv
-libstdc++.so.6:_ZNSt13random_device7_M_initERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
-libstdc++.so.6:_ZNSt13random_device9_M_getvalEv
-libstdc++.so.6:_ZNSt6chrono3_V212system_clock3nowEv
 libstdc++.so.6:_ZSt18_Rb_tree_decrementPSt18_Rb_tree_node_base
 libstdc++.so.6:_ZSt18_Rb_tree_incrementPSt18_Rb_tree_node_base
-libstdc++.so.6:_ZSt20__throw_length_errorPKc
 libstdc++.so.6:_ZSt25__throw_bad_function_callv
 libstdc++.so.6:_ZSt28_Rb_tree_rebalance_for_erasePSt18_Rb_tree_node_baseRS_
 libstdc++.so.6:_ZSt29_Rb_tree_insert_and_rebalancebPSt18_Rb_tree_node_baseS0_RS_
