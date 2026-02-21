@@ -1,8 +1,8 @@
 name       : katalog
-version    : '2.6'
-release    : 3
+version    : '2.9'
+release    : 4
 source     :
-    - https://github.com/StephaneCouturier/Katalog/archive/refs/tags/v2.6.tar.gz : 4b3a38171f982f1667c9709c14de7ec6f91270edc20673bd28c650f25be101ff
+    - https://github.com/StephaneCouturier/Katalog/archive/refs/tags/v2.9.tar.gz : 4d9bfbbcd6295bee3532d56454dc68b81a95c8f93170fd50f1115d2492f4305b
 homepage   : https://stephanecouturier.github.io/Katalog/
 license    :
     - GPL-3.0-or-later
@@ -21,6 +21,8 @@ builddeps  :
     - kf6-ki18n-devel
     - kf6-kxmlgui-devel
     - kf6-kconfig-devel
+    - kf6-kfilemetadata-devel
+    - kf6-kcompletion-devel
     - kf6-kiconthemes-devel
     - imagemagick
 setup      : |
