@@ -31,5 +31,9 @@ install    : |
     # Add icon for deskop launcher
     install -Dm00644 src/observice/icons/observice_active.svg $installdir/usr/share/icons/hicolor/scalable/apps/observice.svg
 
+    echo "Upload package with:"
+    PACKAGE_FILE=$package-$version-$release-1-x86_64.eopkg
+    echo "curl --user <username> --upload-file $PACKAGE_FILE https://hp250.fritz.box/git/api/packages/Python/generic/$package/$version-$release-1/$PACKAGE_FILE"
+
 # check: |
 #   %python3_test python3 -m pytest
