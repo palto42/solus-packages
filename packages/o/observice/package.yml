@@ -16,7 +16,6 @@ rundeps    :
     - python-gobject
 builddeps  :
     - pkgconfig(python3)
-    - pkgconfig(cairo-gobject) 
     - python-build
     - python-installer
     - python-setuptools-scm
