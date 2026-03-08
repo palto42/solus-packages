@@ -1,0 +1,60 @@
+From: Matthias Homann <palto@mailbox.org>
+Date: Tue, 8 Jan 2026 12:00:00 +0000
+Subject: [PATCH] devicerow: fix librsvg.get_pixbuf_sub removed in 2.56
+
+Rsvg.Handle.get_pixbuf_sub() was removed in librsvg >= 2.56.
+Render the SVG via Cairo as a fallback to stay compatible with
+Python 3.12 and new librsvg versions.
+
+---
+ piper/devicerow.py | 35 ++++++++++++++++++++++++++++++-----
+ 1 file changed, 30 insertions(+), 5 deletions(-)
+
+diff --git a/piper/devicerow.py b/piper/devicerow.py
+index aaaaaaa..bbbbbbb 100644
+--- a/piper/devicerow.py
++++ b/piper/devicerow.py
+@@ -39,13 +39,38 @@ class DeviceRow(Gtk.ListBoxRow):
+             assert svg_bytes is not None
+             handle = Rsvg.Handle.new_from_data(svg_bytes)
+             assert handle is not None
+-            svg = handle.get_pixbuf_sub("#Device")
++            try:
++                # Try old API first (librsvg < 2.56)
++                svg = handle.get_pixbuf_sub("#Device")
++            except AttributeError:
++                import cairo
++
++                # librsvg >= 2.56 returns a tuple with floats
++                size = handle.get_intrinsic_size_in_pixels()
++                width = int(size[0]) if size[0] else 64
++                height = int(size[1]) if size[1] else 64
++
++                surface = cairo.ImageSurface(cairo.FORMAT_ARGB32, width, height)
++                ctx = cairo.Context(surface)
++
++                # Use new librsvg API
++                handle.render_cairo(ctx)
++
++                svg = GdkPixbuf.Pixbuf.new_from_data(
++                    surface.get_data(),
++                    GdkPixbuf.Colorspace.RGB,
++                    True,
++                    8,
++                    width,
++                    height,
++                    surface.get_stride(),
++                    None,
++                    None,
++                )
++
+             handle.close()
+             if svg is None:
+-                print(
+-                    f"Device {device.name}'s SVG is incompatible",
+-                    file=sys.stderr,
+-                )
++                print(f"Device {device.name}'s SVG is incompatible", file=sys.stderr)
+             else:
+                 svg = svg.scale_simple(50, 50, GdkPixbuf.InterpType.BILINEAR)
+                 if svg is None:
