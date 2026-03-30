@@ -1,0 +1,5 @@
+releases:
+  id: ~
+  rss: https://hp250.fritz.box/git/Python/observice/releases.rss
+security:
+  cpe: ~ # Last checked 2025-10-04

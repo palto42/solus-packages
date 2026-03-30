@@ -1,8 +1,8 @@
 name       : observice
-version    : 0.7.1
-release    : 5
+version    : 0.7.2
+release    : 6
 source     :
-    - https://hp250.fritz.box/git/Python/observice/archive/v0.7.1.tar.gz : a29841a4045535e689d7678d2853ace2cc9631bb279bb3562d0e355e0f728704
+    - https://hp250.fritz.box/git/Python/observice/archive/0.7.2.tar.gz : f4b9bcb78c1a806b8f6b4e592e1b3b6c3be60c76b785cc3b27c6ce689aa3ee78
 homepage   : https://hp250.fritz.box/git/Python/observice
 license    : GPL3
 component  : system.utils
@@ -15,14 +15,11 @@ rundeps    :
     - python3
     - python-gobject
 builddeps  :
-    - pkgconfig(python3)
-    - python-build
+    - python-hatchling 
     - python-installer
-    - python-setuptools-scm
-    - python-wheel
+    - uv
 build      : |
-    export SETUPTOOLS_SCM_PRETEND_VERSION=$version
-    %python3_setup
+    uv build --wheel --no-build-isolation --no-managed-python --no-cache --offline
 install    : |
     %python3_install
     install -Dm00644 src/applications/observice_indicator.desktop $installdir/usr/share/applications/observice_indicator.desktop
