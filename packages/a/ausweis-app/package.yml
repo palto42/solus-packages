@@ -1,8 +1,8 @@
 name       : ausweis-app
-version    : 2.4.1
-release    : 5
+version    : 2.5.0
+release    : 6
 source     :
-    - https://github.com/Governikus/AusweisApp/archive/refs/tags/2.4.1.tar.gz : 3f6c6cb07471f0f0f14dc63789860a808755dbba293e4cf860f8fc5eb0168fc6
+    - https://github.com/Governikus/AusweisApp/archive/refs/tags/2.5.0.tar.gz : f74dd258131df2bf97ea92f18016724bc59577125002140a2b9b41e1447ffb3a
 homepage   : https://www.ausweisapp.bund.de
 license    : EUPL
 component  : office
@@ -17,10 +17,11 @@ builddeps  :
     - pkgconfig(Qt6Svg)
     - pkgconfig(Qt6WebSockets)
     - qt6-base-private-devel
+    - llhttp-devel  # llhttp not available in Solus packages, use `go-task local`
 setup      : |
     %cmake_ninja
 build      : |
     %ninja_build
-install    : |
+install    : |-
     %ninja_install
-    install -Dm00644 LICENSE.txt "$installdir/usr/share/licenses/${NAME}/LICENSE.txt"
+    %install_license LICENSE.txt
