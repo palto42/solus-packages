@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
+name       : llhttp
+version    : 9.3.1
+release    : 1
+source     :
+    - https://github.com/nodejs/llhttp/archive/refs/tags/v9.3.1.tar.gz : ed965f2b205e7f7df65b305edfd8c662d8b0ebe4dc3b58109e6ad03d0f5ee233
+homepage   : https://llhttp.org
+license    : MIT
+summary    : Port of http_parser to llparse.
+networking : true
+description: |
+    This project is a port of http_parser to TypeScript.
+builddeps  :
+    - typescript
+setup      : |
+    npm install
+build      : |
+    make release RELEASE="$version"
+    cmake -B build -S ./release -DBUILD_SHARED_LIBS=ON -DCMAKE_INSTALL_PREFIX=/usr
+    cmake --build build
+install    : |-
+    DESTDIR="$installdir" cmake --install build
+    install -Dm00644 LICENSE -t "$installdir/usr/share/licenses/$package"

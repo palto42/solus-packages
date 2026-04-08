@@ -1,0 +1,7 @@
+releases:
+  id: 241543
+  rss: https://github.com/nodejs/llhttp/tagsORreleases.atom
+security:
+  cpe:
+    - vendor: llhttp
+      product: llhttp
