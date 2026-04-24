@@ -18,7 +18,7 @@ builddeps  :
     - python-build
     - python-hatchling 
     - python-installer
-    # test dependencies
+checkdeps:
     - libayatana-appindicator
     - libnotify
     - python-gobject
