@@ -1,25 +1,31 @@
 name       : observice
-version    : 0.7.2
-release    : 6
+version    : 0.7.4
+release    : 7
 source     :
-    - https://hp250.fritz.box/git/Python/observice/archive/0.7.2.tar.gz : f4b9bcb78c1a806b8f6b4e592e1b3b6c3be60c76b785cc3b27c6ce689aa3ee78
+    - https://hp250.fritz.box/git/Python/observice/archive/v0.7.4.tar.gz : 66c24ecd69060d5cbe4f9f977db2315c93646d956deff6124a9c542ca5c5642e
 homepage   : https://hp250.fritz.box/git/Python/observice
 license    : GPL3
 component  : system.utils
 summary    : Observice indicator tray app for showing the activity status of multiple services.
 description: |
     Observice indicator tray app for showing the activity status of multiple services. One use case is to show the status of backup services so that the user is aware of running backup jobs.
-# networking: yes # required for check
 rundeps    :
     - libayatana-appindicator
+    - libnotify
     - python3
     - python-gobject
 builddeps  :
+    - python-build
     - python-hatchling 
     - python-installer
-    - uv
+    # test dependencies
+    - libayatana-appindicator
+    - libnotify
+    - python-gobject
+    - python-mock
+    - python-pytest
 build      : |
-    uv build --wheel --no-build-isolation --no-managed-python --no-cache --offline
+    %python3_setup
 install    : |
     %python3_install
     install -Dm00644 src/applications/observice_indicator.desktop $installdir/usr/share/applications/observice_indicator.desktop
@@ -32,5 +38,5 @@ install    : |
     PACKAGE_FILE=$package-$version-$release-1-x86_64.eopkg
     echo "curl --user <username> --upload-file $PACKAGE_FILE https://hp250.fritz.box/git/api/packages/Python/generic/$package/$version-$release-1/$PACKAGE_FILE"
 
-# check: |
-#   %python3_test python3 -m pytest
+check: |
+    %python3_test python3 -m pytest
