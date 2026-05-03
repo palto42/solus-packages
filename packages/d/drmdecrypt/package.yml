@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
+name       : drmdecrypt
+version    : "1.1"
+release    : 1
+source     :
+    - https://github.com/tin2tin/drmdecrypt/archive/refs/tags/v1.1.tar.gz : e136a3c5a24d4efce5fe936ec1d90a2d2a61e8cc38a53f92b699593be852a28d
+homepage   : https://github.com/tin2tin/drmdecrypt
+license    : GPL-2.0-or-later
+component  : multimedia.video
+summary    : drmdecrypt is a tool to decrypt PVR recordings from Samsung TVs into standard transport stream format.
+description: |
+    drmdecrypt is a tool to decrypt PVR recordings from Samsung TVs into standard transport stream format.
+build      : |
+    %make
+install    : |
+    install -Dm00755 drmdecrypt -t $installdir/usr/bin
+    %install_license LICENSE
