@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : hyphen-es
-version    : '2.6'
-release    : 1
+version    : '2.9'
+release    : 2
 source     :
-    - https://github.com/sbosio/rla-es/releases/download/v2.6/es.oxt : 10fa51dffb78f0fc15fd791770813f551da43cf007b52cb8fb6ccb0b4117e85f
+    - https://github.com/sbosio/rla-es/releases/download/v2.9/es.oxt : b08a1a0e3e044697f63a67184f591f7e2c37bbb53bbfbb4780bcbd84929d6e8c
 homepage   : https://github.com/sbosio/rla-es/tree/master/separacion
 license    :
     - GPL-3.0-or-later
@@ -23,3 +24,4 @@ install    : |
             ln -s hyph_es.dic hyph_$lang.dic
         done
     popd
+    %install_license LICENSE.md

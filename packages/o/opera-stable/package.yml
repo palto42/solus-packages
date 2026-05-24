@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : opera-stable
-version    : 122.0.5643.142
-release    : 361
+version    : 131.0.5877.74
+release    : 391
 source     :
-    - https://ftp.opera.com/pub/opera/desktop/122.0.5643.142/linux/opera-stable_122.0.5643.142_amd64.deb : 1a227356e2ed567efdaab55c7f91f7672bf5fa09b15f487ae342e29d2d5f55de
+    - https://ftp.opera.com/pub/opera/desktop/131.0.5877.74/linux/opera-stable_131.0.5877.74_amd64.deb : b6f681d7175035ede70c5829a00a4fc3cf63ddc1b396b241cda8ee3b7b3d275e
 license    : Distributable
 homepage   : https://www.opera.com
 extract    : false
@@ -30,8 +31,8 @@ setup      : |
     tar xf data.tar.xz -C root
 install    : |
     pushd $workdir/root
-        chown root:root usr/lib/x86_64-linux-gnu/opera/opera_sandbox
-        chmod 4755 usr/lib/x86_64-linux-gnu/opera/opera_sandbox
+        chown root:root usr/lib/x86_64-linux-gnu/opera-stable/opera_sandbox
+        chmod 4755 usr/lib/x86_64-linux-gnu/opera-stable/opera_sandbox
     popd
 
     install -dm00755 $installdir/usr/bin
@@ -41,10 +42,10 @@ install    : |
     mv usr/lib/x86_64-linux-gnu/* $installdir/usr/lib/
     rm -r usr/share/lintian
     mv usr/share/* $installdir/usr/share/
-    ln -s /usr/lib/opera/opera $installdir/usr/bin/opera
+    ln -s /usr/lib/opera-stable/opera $installdir/usr/bin/opera
 
     # Use system chromium ffmpeg
-    rm $installdir/usr/lib/opera/libffmpeg.so
+    rm $installdir/usr/lib/opera-stable/libffmpeg.so
 
     # Install AppStream metainfo
     install -Dm00644 $pkgfiles/com.opera.Opera.metainfo.xml $installdir/usr/share/metainfo/com.opera.Opera.metainfo.xml

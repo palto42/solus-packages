@@ -1,23 +1,24 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : liblcms2
-version    : '2.16'
-release    : 20
+version    : '2.19'
+release    : 21
 source     :
-    - https://github.com/mm2/Little-CMS/archive/refs/tags/lcms2.16.tar.gz : cb4bf968aa66e3d5d16d1f094a99595966d4330cbd6be46c66129f2747ad2b0d
+    - https://github.com/mm2/Little-CMS/archive/refs/tags/lcms2.19.tar.gz : 6acc3eb5fac194acc85331194133ad1d4a60419dad16b3bc225a7d27380a5b3a
+homepage   : https://www.littlecms.com/
 license    :
     - GPL-3.0-or-later
     - MIT
-component  : desktop.core
-homepage   : https://www.littlecms.com/
-summary    : Small-footprint color management engine
+component  :
+    - desktop.core
+    - utils : desktop.core
+summary    :
+    - Small-footprint color management engine
+    - utils : Small-footprint color management engine - Utilities
 description: |
     The Little Color Management System is a small-footprint color management engine, with special focus on accuracy and performance. It uses the International Color Consortium standard (ICC), which is the modern standard for color management.
 emul32     : true
 builddeps  :
     - pkgconfig(libtiff-4)
-patterns   :
-    - /usr/lib64/liblcms2_*.so
-    - 32bit :
-        - /usr/lib32/liblcms2_*.so
 setup      : |
     if [ -n "${EMUL32BUILD+set}" ]; then
         depends_emul32=false
@@ -33,5 +34,10 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSE
 check      : |
     %ninja_check
+patterns   :
+    - utils :
+        - /usr/bin/
+        - /usr/share/man/man1

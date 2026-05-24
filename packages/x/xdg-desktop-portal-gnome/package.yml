@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : xdg-desktop-portal-gnome
-version    : '48.0'
-release    : 14
+version    : '50.0'
+release    : 16
 source     :
-    - https://download.gnome.org/sources/xdg-desktop-portal-gnome/48/xdg-desktop-portal-gnome-48.0.tar.xz : cd15aca2e1364da308eb3796bb8ae4a577e60ca4fe12006b315232cfd19c8861
+    - https://download.gnome.org/sources/xdg-desktop-portal-gnome/50/xdg-desktop-portal-gnome-50.0.tar.xz : ceeef2fb68b34b3f66a3def0a332a22a70af272641fb6c50065b7a2fde3d5759
 homepage   : https://gitlab.gnome.org/GNOME/xdg-desktop-portal-gnome
 license    : LGPL-2.1-or-later
 component  : desktop.util

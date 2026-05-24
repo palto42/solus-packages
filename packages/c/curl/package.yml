@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : curl
-version    : 8.16.0
-release    : 110
+version    : 8.20.0
+release    : 115
 source     :
-    - https://github.com/curl/curl/releases/download/curl-8_16_0/curl-8.16.0.tar.bz2 : 9459180ab4933b30d0778ddd71c91fe2911fab731c46e59b3f4c8385b1596c91
+    - https://github.com/curl/curl/releases/download/curl-8_20_0/curl-8.20.0.tar.xz : 63fe2dc148ba0ceae89922ef838f7e5c946272c2e78b7c59fab4b79d3ce2b896
 extract    : false
 homepage   : https://curl.se
 license    : MIT
@@ -31,6 +32,7 @@ builddeps  :
     - pkgconfig32(openssl)
     - pkgconfig32(zlib)
     - pkgconfig(libnghttp3)
+    - pkgconfig(libngtcp2)
     - groff
     - patchelf
 rundeps    :
@@ -46,8 +48,8 @@ checkdeps  :
     - openssh-server
 setup      : |
     mkdir main gnutls
-    tar --strip-components=1 -xf $sources/curl-%version%.tar.bz2 -C main
-    tar --strip-components=1 -xf $sources/curl-%version%.tar.bz2 -C gnutls
+    tar --strip-components=1 -xf $sources/curl-%version%.tar.xz -C main
+    tar --strip-components=1 -xf $sources/curl-%version%.tar.xz -C gnutls
 
     common="\
         --disable-static \
@@ -56,7 +58,7 @@ setup      : |
         --without-libpsl"
 
     if [ -z "${EMUL32BUILD+set}" ]; then
-        extra_args="--with-nghttp3 --enable-websockets"
+        extra_args="--with-nghttp3 --with-ngtcp2 --enable-websockets"
     fi
 
     pushd main
@@ -66,7 +68,6 @@ setup      : |
                --with-gssapi \
                --with-libssh2 \
                --with-openssl \
-               --with-openssl-quic \
                --with-zsh-functions-dir=/usr/share/zsh/site-functions \
                --without-gnutls \
                $extra_args
@@ -99,6 +100,8 @@ install    : |
         done
     popd
     cp -a $workdir/gnutlsinst/* $installdir
+
+    %install_license main/COPYING
 check      : |
     # ccache breaks some tests if enabled
     export CCACHE_DISABLE=1

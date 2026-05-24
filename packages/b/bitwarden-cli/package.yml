@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : bitwarden-cli
-version    : 2025.9.0
-release    : 25
+version    : 2026.3.0
+release    : 30
 source     :
-    - https://github.com/bitwarden/clients/archive/refs/tags/cli-v2025.9.0.tar.gz : 4a970c053035550fb5b44fedfbf45dce490f873bc0a397540597a5bc49af022e
+    - https://github.com/bitwarden/clients/archive/refs/tags/cli-v2026.3.0.tar.gz : 85554eade98e3cb972d4fb66d6687f752d7a78af4a4824a2668960f5258af62e
 homepage   : https://bitwarden.com/help/cli/
 license    : GPL-3.0-only
 component  : security
@@ -13,22 +14,23 @@ strip      : false
 debug      : false
 builddeps  :
     - git
-    - nodejs-20
+    - nodejs-22
 environment: |
     export npm_config_build_from_source=true
 
-    # npm is called recursively and we need that to use nodejs-20
-    export PATH=/usr/lib64/nodejs-20/bin:$PATH
+    # npm is called recursively and we need that to use nodejs-22
+    export PATH=/usr/lib64/nodejs-22/bin:$PATH
 setup      : |
-    npm-20 ci
+    npm-22 ci
 build      : |
     cd apps/cli
 
-    npm-20 run dist:oss:lin
+    npm-22 run dist:oss:lin
 
-    node-20 ./build/bw.js completion --shell zsh > _bw
+    node-22 ./build/bw.js completion --shell zsh > _bw
 install    : |
     cd apps/cli
 
     install -Dm00755 dist/oss/linux/bw $installdir/usr/bin/bw
     install -Dm00644 _bw $installdir/usr/share/zsh/site-functions/_bw
+    %install_license ../../LICENSE*.txt

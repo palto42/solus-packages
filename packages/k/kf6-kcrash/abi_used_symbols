@@ -19,6 +19,7 @@ libQt6Core.so.6:_ZN11QTextStreamlsEc
 libQt6Core.so.6:_ZN12QLibraryInfo4pathENS_11LibraryPathE
 libQt6Core.so.6:_ZN14QStandardPaths14findExecutableERK7QStringRK5QListIS0_E
 libQt6Core.so.6:_ZN14QStandardPaths16writableLocationENS_16StandardLocationE
+libQt6Core.so.6:_ZN14QStandardPaths17isTestModeEnabledEv
 libQt6Core.so.6:_ZN16QCoreApplication14applicationPidEv
 libQt6Core.so.6:_ZN16QCoreApplication18applicationDirPathEv
 libQt6Core.so.6:_ZN16QCoreApplication19applicationFilePathEv
@@ -69,7 +70,7 @@ libQt6Core.so.6:_ZN9QtPrivate13findByteArrayE14QByteArrayViewxS0_
 libQt6Core.so.6:_ZNK14QMessageLogger5debugEv
 libQt6Core.so.6:_ZNK14QMessageLogger7warningEv
 libQt6Core.so.6:_ZNK19QUnhandledException9exceptionEv
-libQt6Core.so.6:_ZNK4QDir6mkpathERK7QString
+libQt6Core.so.6:_ZNK4QDir6mkpathERK7QStringSt8optionalI6QFlagsIN11QFileDevice10PermissionEEE
 libQt6Core.so.6:_ZNK7QObject10metaObjectEv
 libQt6Core.so.6:_ZNK7QString5splitE5QChar6QFlagsIN2Qt18SplitBehaviorFlagsEENS2_15CaseSensitivityE
 libQt6Core.so.6:_ZNK8QVariant11toByteArrayEv
@@ -95,8 +96,10 @@ libc.so.6:execve
 libc.so.6:fork
 libc.so.6:getenv
 libc.so.6:getgid
+libc.so.6:getpid
 libc.so.6:getrlimit
 libc.so.6:getuid
+libc.so.6:kill
 libc.so.6:memcmp
 libc.so.6:memcpy
 libc.so.6:memmove

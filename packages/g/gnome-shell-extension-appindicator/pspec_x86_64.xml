@@ -3,8 +3,8 @@
         <Name>gnome-shell-extension-appindicator</Name>
         <Homepage>https://github.com/ubuntu/gnome-shell-extension-appindicator</Homepage>
         <Packager>
-            <Name>Muhammad Alfi Syahrin</Name>
-            <Email>malfisya.dev@hotmail.com</Email>
+            <Name>Joey Riches</Name>
+            <Email>josephriches@gmail.com</Email>
         </Packager>
         <License>GPL-2.0-or-later</License>
         <PartOf>desktop.gnome</PartOf>
@@ -24,6 +24,7 @@
             <Path fileType="data">/usr/share/gnome-shell/extensions/appindicatorsupport@rgcjonas.gmail.com/appIndicator.js</Path>
             <Path fileType="data">/usr/share/gnome-shell/extensions/appindicatorsupport@rgcjonas.gmail.com/dbusMenu.js</Path>
             <Path fileType="data">/usr/share/gnome-shell/extensions/appindicatorsupport@rgcjonas.gmail.com/dbusProxy.js</Path>
+            <Path fileType="data">/usr/share/gnome-shell/extensions/appindicatorsupport@rgcjonas.gmail.com/dbusUtils.js</Path>
             <Path fileType="data">/usr/share/gnome-shell/extensions/appindicatorsupport@rgcjonas.gmail.com/extension.js</Path>
             <Path fileType="data">/usr/share/gnome-shell/extensions/appindicatorsupport@rgcjonas.gmail.com/iconCache.js</Path>
             <Path fileType="data">/usr/share/gnome-shell/extensions/appindicatorsupport@rgcjonas.gmail.com/icons/hicolor/scalable/actions/custom-icons-symbolic.svg</Path>
@@ -33,6 +34,7 @@
             <Path fileType="data">/usr/share/gnome-shell/extensions/appindicatorsupport@rgcjonas.gmail.com/interfaces-xml/StatusNotifierItem.xml</Path>
             <Path fileType="data">/usr/share/gnome-shell/extensions/appindicatorsupport@rgcjonas.gmail.com/interfaces-xml/StatusNotifierWatcher.xml</Path>
             <Path fileType="data">/usr/share/gnome-shell/extensions/appindicatorsupport@rgcjonas.gmail.com/interfaces.js</Path>
+            <Path fileType="data">/usr/share/gnome-shell/extensions/appindicatorsupport@rgcjonas.gmail.com/logger.js</Path>
             <Path fileType="data">/usr/share/gnome-shell/extensions/appindicatorsupport@rgcjonas.gmail.com/metadata.json</Path>
             <Path fileType="data">/usr/share/gnome-shell/extensions/appindicatorsupport@rgcjonas.gmail.com/pixmapsUtils.js</Path>
             <Path fileType="data">/usr/share/gnome-shell/extensions/appindicatorsupport@rgcjonas.gmail.com/preferences/customIconPage.js</Path>
@@ -41,14 +43,18 @@
             <Path fileType="data">/usr/share/gnome-shell/extensions/appindicatorsupport@rgcjonas.gmail.com/promiseUtils.js</Path>
             <Path fileType="data">/usr/share/gnome-shell/extensions/appindicatorsupport@rgcjonas.gmail.com/settingsManager.js</Path>
             <Path fileType="data">/usr/share/gnome-shell/extensions/appindicatorsupport@rgcjonas.gmail.com/statusNotifierWatcher.js</Path>
+            <Path fileType="data">/usr/share/gnome-shell/extensions/appindicatorsupport@rgcjonas.gmail.com/tools/busAnalyzer.js</Path>
             <Path fileType="data">/usr/share/gnome-shell/extensions/appindicatorsupport@rgcjonas.gmail.com/trayIconsManager.js</Path>
             <Path fileType="data">/usr/share/gnome-shell/extensions/appindicatorsupport@rgcjonas.gmail.com/util.js</Path>
+            <Path fileType="localedata">/usr/share/locale/ar/LC_MESSAGES/AppIndicatorExtension.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/bg/LC_MESSAGES/AppIndicatorExtension.mo</Path>
             <Path fileType="localedata">/usr/share/locale/cs/LC_MESSAGES/AppIndicatorExtension.mo</Path>
             <Path fileType="localedata">/usr/share/locale/de/LC_MESSAGES/AppIndicatorExtension.mo</Path>
             <Path fileType="localedata">/usr/share/locale/fr/LC_MESSAGES/AppIndicatorExtension.mo</Path>
             <Path fileType="localedata">/usr/share/locale/hu/LC_MESSAGES/AppIndicatorExtension.mo</Path>
             <Path fileType="localedata">/usr/share/locale/it/LC_MESSAGES/AppIndicatorExtension.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ja/LC_MESSAGES/AppIndicatorExtension.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/ka/LC_MESSAGES/AppIndicatorExtension.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ko/LC_MESSAGES/AppIndicatorExtension.mo</Path>
             <Path fileType="localedata">/usr/share/locale/nl/LC_MESSAGES/AppIndicatorExtension.mo</Path>
             <Path fileType="localedata">/usr/share/locale/oc/LC_MESSAGES/AppIndicatorExtension.mo</Path>
@@ -69,12 +75,12 @@
         </Replaces>
     </Package>
     <History>
-        <Update release="9">
-            <Date>2025-08-10</Date>
-            <Version>60</Version>
+        <Update release="12">
+            <Date>2026-03-21</Date>
+            <Version>64</Version>
             <Comment>Packaging update</Comment>
-            <Name>Muhammad Alfi Syahrin</Name>
-            <Email>malfisya.dev@hotmail.com</Email>
+            <Name>Joey Riches</Name>
+            <Email>josephriches@gmail.com</Email>
         </Update>
     </History>
 </PISI>

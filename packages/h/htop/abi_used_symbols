@@ -5,6 +5,7 @@ libc.so.6:__fprintf_chk
 libc.so.6:__isoc23_fscanf
 libc.so.6:__isoc23_sscanf
 libc.so.6:__isoc23_strtol
+libc.so.6:__isoc23_strtoll
 libc.so.6:__isoc23_strtoul
 libc.so.6:__isoc23_strtoull
 libc.so.6:__libc_current_sigrtmax
@@ -15,6 +16,7 @@ libc.so.6:__realpath_chk
 libc.so.6:__snprintf_chk
 libc.so.6:__stack_chk_fail
 libc.so.6:__strncat_chk
+libc.so.6:__strncpy_chk
 libc.so.6:__vasprintf_chk
 libc.so.6:__vsnprintf_chk
 libc.so.6:_exit
@@ -63,6 +65,7 @@ libc.so.6:getopt_long
 libc.so.6:getpriority
 libc.so.6:getpwnam
 libc.so.6:getpwuid
+libc.so.6:gettimeofday
 libc.so.6:getuid
 libc.so.6:iswprint
 libc.so.6:kill
@@ -70,12 +73,12 @@ libc.so.6:localtime_r
 libc.so.6:lstat
 libc.so.6:malloc
 libc.so.6:mbrtowc
+libc.so.6:memchr
 libc.so.6:memcpy
 libc.so.6:memmove
 libc.so.6:memset
 libc.so.6:mkdir
 libc.so.6:mkstemp
-libc.so.6:nanosleep
 libc.so.6:nl_langinfo
 libc.so.6:open
 libc.so.6:openat
@@ -124,10 +127,12 @@ libc.so.6:strncasecmp
 libc.so.6:strncmp
 libc.so.6:strncpy
 libc.so.6:strndup
+libc.so.6:strnlen
 libc.so.6:strrchr
 libc.so.6:strsep
 libc.so.6:strsignal
 libc.so.6:strstr
+libc.so.6:strtod
 libc.so.6:strtok_r
 libc.so.6:syscall
 libc.so.6:sysconf
@@ -149,6 +154,7 @@ libcap.so.2:cap_set_proc
 libm.so.6:log10
 libm.so.6:lround
 libm.so.6:pow
+libm.so.6:round
 libncursesw.so.6:COLORS
 libncursesw.so.6:COLS
 libncursesw.so.6:LINES

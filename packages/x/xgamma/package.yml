@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : xgamma
-version    : 1.0.7
-release    : 10
+version    : 1.0.8
+release    : 11
 source     :
-    - https://www.x.org/releases/individual/app/xgamma-1.0.7.tar.gz : 61f5ef02883d65ab464678ad3d8c5445a0ff727fe6255af90b1b842ddf77370d
+    - https://www.x.org/releases/individual/app/xgamma-1.0.8.tar.gz : 96ab71ea6a6791538324bb4d2014627816d83178a0ac79335d8c9ef25ce59f1d
 license    : MIT
 component  : xorg.apps
 homepage   : https://www.x.org/
@@ -12,8 +13,8 @@ description: |
     xgamma allows X users to query and alter the gamma correction of a monitor via the X video mode extension (XFree86-VidModeExtension)
 builddeps  :
     - pkgconfig(x11)
-    - pkgconfig(xxf86vm)
     - pkgconfig(xproto)
+    - pkgconfig(xxf86vm)
 setup      : |
     %configure
 build      : |

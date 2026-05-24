@@ -1,0 +1,52 @@
+name       : eden
+version    : 0.2.0.2
+release    : 3
+source     :
+    - git|https://git.eden-emu.dev/eden-emu/eden.git : v0.2.0-rc2
+homepage   : https://eden-emu.dev/
+license    : GPL-3.0-or-later
+component  : games.emulator
+summary    : Eden Nintendo Switch Emulator
+description: |
+    A free and open source Switch 1 emulator derived from Yuzu and Sudachi.
+builddeps  :
+    - pkgconfig(Qt6Charts)
+    - pkgconfig(Qt6Core5Compat)
+    - pkgconfig(SPIRV-Tools)
+    - pkgconfig(cairo)
+    - pkgconfig(catch2)
+    - pkgconfig(fmt)
+    - pkgconfig(gamemode)
+    - pkgconfig(libavcodec)
+    - pkgconfig(libcubeb)
+    - pkgconfig(libdrm)
+    - pkgconfig(libenet)
+    - pkgconfig(liblz4)
+    - pkgconfig(libusb-1.0)
+    - pkgconfig(libva)
+    - pkgconfig(libzstd)
+    - pkgconfig(nlohmann_json)
+    - pkgconfig(openssl)
+    - pkgconfig(opus)
+    - pkgconfig(quazip1-qt6)
+    - pkgconfig(sdl2)
+    - pkgconfig(vdpau)
+    - pkgconfig(vulkan)
+    - pkgconfig(x11)
+    - pkgconfig(zlib)
+    - libboost-devel
+    - llvm-devel
+    - qt6-base-private-devel
+    - vulkan-utility-libraries
+networking : true
+clang      : true
+setup      : |
+    %cmake_ninja \
+        -DENABLE_WEB_SERVICE=OFF \
+        -DTITLE_BAR_FORMAT_RUNNING="eden | %version% {}" \
+        -DTITLE_BAR_FORMAT_IDLE="eden %version% {}" \
+        -DUSE_DISCORD_PRESENCE=ON
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install

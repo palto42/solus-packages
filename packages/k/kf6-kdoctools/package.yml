@@ -1,14 +1,17 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kf6-kdoctools
-version    : 6.19.0
-release    : 27
+version    : 6.26.0
+release    : 34
 source     :
-    - https://download.kde.org/stable/frameworks/6.19/kdoctools-6.19.0.tar.xz : c2048b2979247540f9ba22fd7c6f372ce869699c3a3e81a97af2fa2f733c74bc
+    - https://download.kde.org/stable/frameworks/6.26/kdoctools-6.26.0.tar.xz : 3fbea5de215076130007f3c18e16b870774ffa4fc85ddace201ac020d0245fb6
 homepage   : https://community.kde.org/Frameworks
 license    :
     - BSD-3-Clause
+    - CC0-1.0
     - GPL-2.0-or-later
-    - LGPL-2.1-or-later
     - LGPL-2.1-only
+    - LGPL-2.1-or-later
+    - LGPL-3.0-only
 component  : programming.library
 summary    : Create documentation from DocBook.
 description: |
@@ -31,3 +34,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*

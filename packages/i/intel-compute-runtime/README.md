@@ -1,4 +1,4 @@
-To test `intel-compute-runtime`, an intel Skylake (6th gen i3/5/7-6xxx) CPU or newer is required.
+To test `intel-compute-runtime`, an Alder Lake (12th gen) CPU or newer is required.
 
 Install `clinfo` and run it. It should display suitable information and not error out.
 

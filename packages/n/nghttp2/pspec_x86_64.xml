@@ -3,8 +3,8 @@
         <Name>nghttp2</Name>
         <Homepage>https://nghttp2.org/</Homepage>
         <Packager>
-            <Name>Reilly Brogan</Name>
-            <Email>solus@reillybrogan.com</Email>
+            <Name>Evan Maddock</Name>
+            <Email>maddock.evan@vivaldi.net</Email>
         </Packager>
         <License>MIT</License>
         <PartOf>system.base</PartOf>
@@ -21,8 +21,8 @@
         <PartOf>system.base</PartOf>
         <Files>
             <Path fileType="library">/usr/lib64/libnghttp2.so.14</Path>
-            <Path fileType="library">/usr/lib64/libnghttp2.so.14.28.4</Path>
-            <Path fileType="data">/usr/share/nghttp2/fetch-ocsp-response</Path>
+            <Path fileType="library">/usr/lib64/libnghttp2.so.14.29.3</Path>
+            <Path fileType="data">/usr/share/licenses/nghttp2/COPYING</Path>
         </Files>
     </Package>
     <Package>
@@ -32,11 +32,11 @@
 </Description>
         <PartOf>emul32</PartOf>
         <RuntimeDependencies>
-            <Dependency release="18">nghttp2</Dependency>
+            <Dependency release="19">nghttp2</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib32/libnghttp2.so.14</Path>
-            <Path fileType="library">/usr/lib32/libnghttp2.so.14.28.4</Path>
+            <Path fileType="library">/usr/lib32/libnghttp2.so.14.29.3</Path>
         </Files>
     </Package>
     <Package>
@@ -46,12 +46,10 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="18">nghttp2-32bit</Dependency>
-            <Dependency release="18">nghttp2-devel</Dependency>
+            <Dependency release="19">nghttp2-32bit</Dependency>
+            <Dependency release="19">nghttp2-devel</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="library">/usr/lib32/cmake/nghttp2/nghttp2-targets-relwithdebinfo.cmake</Path>
-            <Path fileType="library">/usr/lib32/cmake/nghttp2/nghttp2-targets.cmake</Path>
             <Path fileType="library">/usr/lib32/libnghttp2.so</Path>
             <Path fileType="data">/usr/lib32/pkgconfig/libnghttp2.pc</Path>
         </Files>
@@ -63,24 +61,26 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="18">nghttp2</Dependency>
+            <Dependency release="19">nghttp2</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/nghttp2/nghttp2.h</Path>
             <Path fileType="header">/usr/include/nghttp2/nghttp2ver.h</Path>
-            <Path fileType="library">/usr/lib64/cmake/nghttp2/nghttp2-targets-relwithdebinfo.cmake</Path>
-            <Path fileType="library">/usr/lib64/cmake/nghttp2/nghttp2-targets.cmake</Path>
+            <Path fileType="library">/usr/lib/cmake/nghttp2/nghttp2Config.cmake</Path>
+            <Path fileType="library">/usr/lib/cmake/nghttp2/nghttp2ConfigVersion.cmake</Path>
+            <Path fileType="library">/usr/lib/cmake/nghttp2/nghttp2Targets-relwithdebinfo.cmake</Path>
+            <Path fileType="library">/usr/lib/cmake/nghttp2/nghttp2Targets.cmake</Path>
             <Path fileType="library">/usr/lib64/libnghttp2.so</Path>
             <Path fileType="data">/usr/lib64/pkgconfig/libnghttp2.pc</Path>
         </Files>
     </Package>
     <History>
-        <Update release="18">
-            <Date>2025-04-08</Date>
-            <Version>1.65.0</Version>
+        <Update release="19">
+            <Date>2026-03-18</Date>
+            <Version>1.68.1</Version>
             <Comment>Packaging update</Comment>
-            <Name>Reilly Brogan</Name>
-            <Email>solus@reillybrogan.com</Email>
+            <Name>Evan Maddock</Name>
+            <Email>maddock.evan@vivaldi.net</Email>
         </Update>
     </History>
 </PISI>

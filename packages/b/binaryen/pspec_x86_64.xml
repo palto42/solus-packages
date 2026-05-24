@@ -3,15 +3,15 @@
         <Name>binaryen</Name>
         <Homepage>https://github.com/WebAssembly/binaryen</Homepage>
         <Packager>
-            <Name>Algent Albrahimi</Name>
-            <Email>algent@protonmail.com</Email>
+            <Name>Jared Cervantes</Name>
+            <Email>jared@jaredcervantes.com</Email>
         </Packager>
         <License>Apache-2.0</License>
         <PartOf>programming</PartOf>
         <Summary xml:lang="en">Compiler infrastructure and toolchain library for WebAssembly</Summary>
         <Description xml:lang="en">Binaryen is a compiler and toolchain infrastructure library for WebAssembly, written in C++
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>binaryen</Name>
@@ -24,6 +24,9 @@
             <Path fileType="executable">/usr/bin/wasm-ctor-eval</Path>
             <Path fileType="executable">/usr/bin/wasm-dis</Path>
             <Path fileType="executable">/usr/bin/wasm-emscripten-finalize</Path>
+            <Path fileType="executable">/usr/bin/wasm-fuzz-lattices</Path>
+            <Path fileType="executable">/usr/bin/wasm-fuzz-types</Path>
+            <Path fileType="executable">/usr/bin/wasm-merge</Path>
             <Path fileType="executable">/usr/bin/wasm-metadce</Path>
             <Path fileType="executable">/usr/bin/wasm-opt</Path>
             <Path fileType="executable">/usr/bin/wasm-reduce</Path>
@@ -31,8 +34,9 @@
             <Path fileType="executable">/usr/bin/wasm-split</Path>
             <Path fileType="executable">/usr/bin/wasm2js</Path>
             <Path fileType="library">/usr/lib64/libbinaryen.so.0</Path>
-            <Path fileType="library">/usr/lib64/libbinaryen.so.0.0.102</Path>
+            <Path fileType="library">/usr/lib64/libbinaryen.so.0.0.126</Path>
             <Path fileType="data">/usr/share/defaults/etc/profile.d/50-binaryen.sh</Path>
+            <Path fileType="data">/usr/share/licenses/binaryen/LICENSE</Path>
         </Files>
     </Package>
     <Package>
@@ -42,7 +46,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="7">binaryen</Dependency>
+            <Dependency release="8">binaryen</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/binaryen-c.h</Path>
@@ -51,12 +55,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="7">
-            <Date>2022-03-24</Date>
-            <Version>102</Version>
+        <Update release="8">
+            <Date>2026-02-28</Date>
+            <Version>126</Version>
             <Comment>Packaging update</Comment>
-            <Name>Algent Albrahimi</Name>
-            <Email>algent@protonmail.com</Email>
+            <Name>Jared Cervantes</Name>
+            <Email>jared@jaredcervantes.com</Email>
         </Update>
     </History>
 </PISI>

@@ -895,6 +895,7 @@
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.gnome.Totem.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/symbolic/apps/org.gnome.Totem-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/symbolic/apps/totem-tv-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/licenses/totem/COPYING</Path>
             <Path fileType="localedata">/usr/share/locale/ab/LC_MESSAGES/totem.mo</Path>
             <Path fileType="localedata">/usr/share/locale/af/LC_MESSAGES/totem.mo</Path>
             <Path fileType="localedata">/usr/share/locale/am/LC_MESSAGES/totem.mo</Path>
@@ -995,8 +996,8 @@
             <Path fileType="localedata">/usr/share/locale/zh_HK/LC_MESSAGES/totem.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_TW/LC_MESSAGES/totem.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zu/LC_MESSAGES/totem.mo</Path>
-            <Path fileType="man">/usr/share/man/man1/totem-video-thumbnailer.1</Path>
-            <Path fileType="man">/usr/share/man/man1/totem.1</Path>
+            <Path fileType="man">/usr/share/man/man1/totem-video-thumbnailer.1.zst</Path>
+            <Path fileType="man">/usr/share/man/man1/totem.1.zst</Path>
             <Path fileType="data">/usr/share/metainfo/org.gnome.Totem.appdata.xml</Path>
             <Path fileType="data">/usr/share/thumbnailers/totem.thumbnailer</Path>
         </Files>
@@ -1008,7 +1009,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="35">totem</Dependency>
+            <Dependency release="38">totem</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/totem/1.0/totem-dirs.h</Path>
@@ -1021,8 +1022,8 @@
         </Files>
     </Package>
     <History>
-        <Update release="35">
-            <Date>2025-05-27</Date>
+        <Update release="38">
+            <Date>2026-03-21</Date>
             <Version>43.2</Version>
             <Comment>Packaging update</Comment>
             <Name>Joey Riches</Name>

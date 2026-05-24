@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kdepim-addons
-version    : 25.08.2
-release    : 92
+version    : 26.04.1
+release    : 98
 source     :
-    - https://download.kde.org/stable/release-service/25.08.2/src/kdepim-addons-25.08.2.tar.xz : d1458248881965366030513e0e1789cd38aa07ad997ee6b7bc1d7c638d96cf87
+    - https://download.kde.org/stable/release-service/26.04.1/src/kdepim-addons-26.04.1.tar.xz : 1cebe640b990e9d25509f4cb94ec8e4d5fdba9aa919fc53ae872c18b0c888da9
 homepage   : https://community.kde.org/PIM
 license    :
     - GPL-2.0-only
@@ -54,3 +55,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*

@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : pix
-version    : 3.4.7
-release    : 4
+version    : 3.4.10
+release    : 10
 source     :
-    - https://github.com/linuxmint/pix/archive/refs/tags/3.4.7.tar.gz : 6bb240ebc8b058aa3e165d6e128dbced3248e561860ab50b7f958a4b20c5ec29
+    - https://github.com/linuxmint/pix/archive/refs/tags/3.4.10.tar.gz : d765e779ee6e7d8220fe556c010c181ae69be059d53192d628f5bec5fdc9082b
 homepage   : https://github.com/linuxmint/pix
 license    : GPL-2.0-or-later
 component  : multimedia.graphics
@@ -21,6 +22,7 @@ builddeps  :
     - pkgconfig(libbrasero-burn3)
     - pkgconfig(libgnomekbdui)
     - pkgconfig(libheif)
+    - pkgconfig(libjpeg)
     - pkgconfig(libjxl)
     - pkgconfig(libraw)
     - pkgconfig(librsvg-2.0)
@@ -31,6 +33,8 @@ builddeps  :
     - pkgconfig(xapp)
     - pkgconfig(xkbfile)
     - itstool
+rundeps    :
+    - xapp-symbolic-icons
 setup      : |
     %meson_configure
 build      : |
@@ -39,3 +43,4 @@ install    : |
     %ninja_install
 
     install -Dm00644 $pkgfiles/pix.metainfo.xml $installdir/usr/share/metainfo/pix.metainfo.xml
+    %install_license COPYING

@@ -1,0 +1,53 @@
+<PISI>
+    <Source>
+        <Name>vali</Name>
+        <Homepage>https://gitlab.freedesktop.org/emersion/vali</Homepage>
+        <Packager>
+            <Name>Evan Maddock</Name>
+            <Email>maddock.evan@vivaldi.net</Email>
+        </Packager>
+        <License>MIT</License>
+        <PartOf>programming.library</PartOf>
+        <Summary xml:lang="en">A C library and code generator for Varlink</Summary>
+        <Description xml:lang="en">A C library and code generator for Varlink.
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>vali</Name>
+        <Summary xml:lang="en">A C library and code generator for Varlink</Summary>
+        <Description xml:lang="en">A C library and code generator for Varlink.
+</Description>
+        <PartOf>programming.library</PartOf>
+        <Files>
+            <Path fileType="executable">/usr/bin/vali</Path>
+            <Path fileType="library">/usr/lib64/libvali.so.0.1.1</Path>
+            <Path fileType="library">/usr/lib64/libvali.so.1</Path>
+            <Path fileType="data">/usr/share/licenses/vali/LICENSE</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>vali-devel</Name>
+        <Summary xml:lang="en">Development files for vali</Summary>
+        <Description xml:lang="en">A C library and code generator for Varlink.
+</Description>
+        <PartOf>programming.devel</PartOf>
+        <RuntimeDependencies>
+            <Dependency release="1">vali</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include/vali.h</Path>
+            <Path fileType="library">/usr/lib64/libvali.so</Path>
+            <Path fileType="data">/usr/lib64/pkgconfig/vali.pc</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2026-04-02</Date>
+            <Version>0.1.1</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Evan Maddock</Name>
+            <Email>maddock.evan@vivaldi.net</Email>
+        </Update>
+    </History>
+</PISI>

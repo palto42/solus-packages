@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : xdg-dbus-proxy
-version    : 0.1.6
-release    : 6
+version    : 0.1.7
+release    : 7
 source     :
-    - https://github.com/flatpak/xdg-dbus-proxy/releases/download/0.1.6/xdg-dbus-proxy-0.1.6.tar.xz : 131bf59fce7c7ee7ecbc5d9106d6750f4f597bfe609966573240f7e4952973a1
+    - https://github.com/flatpak/xdg-dbus-proxy/releases/download/0.1.7/xdg-dbus-proxy-0.1.7.tar.xz : 3ad3d27ba574e178acb5e4d438ba36ace25e3564f899c36f31c56f82c7adbbe7
 license    : LGPL-2.1-or-later
 component  : security
 homepage   : https://github.com/flatpak/xdg-dbus-proxy
@@ -17,3 +18,6 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license COPYING
+check      : |
+    %ninja_check

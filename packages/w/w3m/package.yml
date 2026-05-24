@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : w3m
-version    : 0.5.3.20230121
-release    : 12
+version    : 0.5.6
+release    : 13
 source     :
-    - https://github.com/tats/w3m/archive/refs/tags/debian/0.5.3+git20230121-2.tar.gz : fe47a8c13b2ba8d873fd6c58da96e1d9b1a9c366eddf69a62b5a6ab8f2dd6311
+    - https://git.sr.ht/~rkta/w3m/archive/v0.5.6.tar.gz : 8dd652cd3f31817d68c7263c34eeffb50118c80be19e1159bf8cbf763037095e
 homepage   : https://github.com/tats/w3m
 license    : MIT
 component  : network.web.browser
@@ -15,14 +16,16 @@ builddeps  :
     - pkgconfig(imlib2)
     - pkgconfig(xext)
 setup      : |
-    sed -i 's/file_handle/file_foo/' istream.{c,h}
     %configure --libexecdir=/usr/lib64 \
+               --enable-image=x11,fb \
                --sysconfdir=/etc \
                --with-imagelib=imlib2 \
-               --with-termlib=ncurses
+               --with-termlib=ncurses \
+               --disable-w3mmailer
 build      : |
     %make -j1
 install    : |
     %make_install
     install -Dm 00644 doc/keymap.default $installdir/etc/w3m/keymap
     install -Dm 00644 doc/menu.default $installdir/etc/w3m/menu
+    %install_license COPYING

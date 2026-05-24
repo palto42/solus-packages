@@ -20,7 +20,7 @@
 </Description>
         <PartOf>desktop.theme</PartOf>
         <RuntimeDependencies>
-            <Dependency releaseFrom="16">deepin-icon-theme-bloom</Dependency>
+            <Dependency releaseFrom="17">deepin-icon-theme-bloom</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="data">/usr/share/icons/deepin/apps/128/accessories-calculator.svg</Path>
@@ -6716,7 +6716,6 @@
             <Path fileType="data">/usr/share/icons/bloom/apps/128/deepin-home.svg</Path>
             <Path fileType="data">/usr/share/icons/bloom/apps/128/deepin-image-viewer.svg</Path>
             <Path fileType="data">/usr/share/icons/bloom/apps/128/deepin-installer.svg</Path>
-            <Path fileType="data">/usr/share/icons/bloom/apps/128/deepin-license-activator.svg</Path>
             <Path fileType="data">/usr/share/icons/bloom/apps/128/deepin-log-viewer.svg</Path>
             <Path fileType="data">/usr/share/icons/bloom/apps/128/deepin-mail.svg</Path>
             <Path fileType="data">/usr/share/icons/bloom/apps/128/deepin-manual.svg</Path>
@@ -6825,7 +6824,6 @@
             <Path fileType="data">/usr/share/icons/bloom/apps/16/deepin-home.svg</Path>
             <Path fileType="data">/usr/share/icons/bloom/apps/16/deepin-image-viewer.svg</Path>
             <Path fileType="data">/usr/share/icons/bloom/apps/16/deepin-installer.svg</Path>
-            <Path fileType="data">/usr/share/icons/bloom/apps/16/deepin-license-activator.svg</Path>
             <Path fileType="data">/usr/share/icons/bloom/apps/16/deepin-log-viewer.svg</Path>
             <Path fileType="data">/usr/share/icons/bloom/apps/16/deepin-mail.svg</Path>
             <Path fileType="data">/usr/share/icons/bloom/apps/16/deepin-manual.svg</Path>
@@ -6936,7 +6934,6 @@
             <Path fileType="data">/usr/share/icons/bloom/apps/24/deepin-home.svg</Path>
             <Path fileType="data">/usr/share/icons/bloom/apps/24/deepin-image-viewer.svg</Path>
             <Path fileType="data">/usr/share/icons/bloom/apps/24/deepin-installer.svg</Path>
-            <Path fileType="data">/usr/share/icons/bloom/apps/24/deepin-license-activator.svg</Path>
             <Path fileType="data">/usr/share/icons/bloom/apps/24/deepin-log-viewer.svg</Path>
             <Path fileType="data">/usr/share/icons/bloom/apps/24/deepin-mail.svg</Path>
             <Path fileType="data">/usr/share/icons/bloom/apps/24/deepin-manual.svg</Path>
@@ -7045,7 +7042,6 @@
             <Path fileType="data">/usr/share/icons/bloom/apps/256/deepin-home.svg</Path>
             <Path fileType="data">/usr/share/icons/bloom/apps/256/deepin-image-viewer.svg</Path>
             <Path fileType="data">/usr/share/icons/bloom/apps/256/deepin-installer.svg</Path>
-            <Path fileType="data">/usr/share/icons/bloom/apps/256/deepin-license-activator.svg</Path>
             <Path fileType="data">/usr/share/icons/bloom/apps/256/deepin-log-viewer.svg</Path>
             <Path fileType="data">/usr/share/icons/bloom/apps/256/deepin-mail.svg</Path>
             <Path fileType="data">/usr/share/icons/bloom/apps/256/deepin-manual.svg</Path>
@@ -7152,7 +7148,6 @@
             <Path fileType="data">/usr/share/icons/bloom/apps/32/deepin-home.svg</Path>
             <Path fileType="data">/usr/share/icons/bloom/apps/32/deepin-image-viewer.svg</Path>
             <Path fileType="data">/usr/share/icons/bloom/apps/32/deepin-installer.svg</Path>
-            <Path fileType="data">/usr/share/icons/bloom/apps/32/deepin-license-activator.svg</Path>
             <Path fileType="data">/usr/share/icons/bloom/apps/32/deepin-log-viewer.svg</Path>
             <Path fileType="data">/usr/share/icons/bloom/apps/32/deepin-mail.svg</Path>
             <Path fileType="data">/usr/share/icons/bloom/apps/32/deepin-manual.svg</Path>
@@ -7416,7 +7411,6 @@
             <Path fileType="data">/usr/share/icons/bloom/apps/48/deepin-home.svg</Path>
             <Path fileType="data">/usr/share/icons/bloom/apps/48/deepin-image-viewer.svg</Path>
             <Path fileType="data">/usr/share/icons/bloom/apps/48/deepin-installer.svg</Path>
-            <Path fileType="data">/usr/share/icons/bloom/apps/48/deepin-license-activator.svg</Path>
             <Path fileType="data">/usr/share/icons/bloom/apps/48/deepin-log-viewer.svg</Path>
             <Path fileType="data">/usr/share/icons/bloom/apps/48/deepin-mail.svg</Path>
             <Path fileType="data">/usr/share/icons/bloom/apps/48/deepin-manual.svg</Path>
@@ -7821,7 +7815,6 @@
             <Path fileType="data">/usr/share/icons/bloom/apps/512/deepin-home.svg</Path>
             <Path fileType="data">/usr/share/icons/bloom/apps/512/deepin-image-viewer.svg</Path>
             <Path fileType="data">/usr/share/icons/bloom/apps/512/deepin-installer.svg</Path>
-            <Path fileType="data">/usr/share/icons/bloom/apps/512/deepin-license-activator.svg</Path>
             <Path fileType="data">/usr/share/icons/bloom/apps/512/deepin-log-viewer.svg</Path>
             <Path fileType="data">/usr/share/icons/bloom/apps/512/deepin-mail.svg</Path>
             <Path fileType="data">/usr/share/icons/bloom/apps/512/deepin-manual.svg</Path>
@@ -7920,7 +7913,6 @@
             <Path fileType="data">/usr/share/icons/bloom/apps/64/deepin-home.svg</Path>
             <Path fileType="data">/usr/share/icons/bloom/apps/64/deepin-image-viewer.svg</Path>
             <Path fileType="data">/usr/share/icons/bloom/apps/64/deepin-installer.svg</Path>
-            <Path fileType="data">/usr/share/icons/bloom/apps/64/deepin-license-activator.svg</Path>
             <Path fileType="data">/usr/share/icons/bloom/apps/64/deepin-log-viewer.svg</Path>
             <Path fileType="data">/usr/share/icons/bloom/apps/64/deepin-mail.svg</Path>
             <Path fileType="data">/usr/share/icons/bloom/apps/64/deepin-manual.svg</Path>
@@ -8566,7 +8558,6 @@
             <Path fileType="data">/usr/share/icons/bloom/apps/96/deepin-home.svg</Path>
             <Path fileType="data">/usr/share/icons/bloom/apps/96/deepin-image-viewer.svg</Path>
             <Path fileType="data">/usr/share/icons/bloom/apps/96/deepin-installer.svg</Path>
-            <Path fileType="data">/usr/share/icons/bloom/apps/96/deepin-license-activator.svg</Path>
             <Path fileType="data">/usr/share/icons/bloom/apps/96/deepin-log-viewer.svg</Path>
             <Path fileType="data">/usr/share/icons/bloom/apps/96/deepin-mail.svg</Path>
             <Path fileType="data">/usr/share/icons/bloom/apps/96/deepin-manual.svg</Path>
@@ -18718,7 +18709,7 @@
 </Description>
         <PartOf>desktop.theme</PartOf>
         <RuntimeDependencies>
-            <Dependency releaseFrom="16">deepin-icon-theme</Dependency>
+            <Dependency releaseFrom="17">deepin-icon-theme</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="data">/usr/share/icons/bloom-dark/cursor.theme</Path>
@@ -21692,7 +21683,7 @@
 </Description>
         <PartOf>desktop.theme</PartOf>
         <RuntimeDependencies>
-            <Dependency releaseFrom="16">deepin-icon-theme</Dependency>
+            <Dependency releaseFrom="17">deepin-icon-theme</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="data">/usr/share/icons/deepin-dark/devices/128/android-device.svg</Path>
@@ -25053,7 +25044,7 @@
 </Description>
         <PartOf>desktop.theme</PartOf>
         <RuntimeDependencies>
-            <Dependency releaseFrom="16">deepin-icon-theme</Dependency>
+            <Dependency releaseFrom="17">deepin-icon-theme</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="data">/usr/share/icons/Sea/apps/scalable/0ad.svg</Path>
@@ -25974,9 +25965,9 @@
         </Files>
     </Package>
     <History>
-        <Update release="16">
-            <Date>2025-09-16</Date>
-            <Version>2025.9.11</Version>
+        <Update release="17">
+            <Date>2026-04-12</Date>
+            <Version>2026.02.27</Version>
             <Comment>Packaging update</Comment>
             <Name>David Harder</Name>
             <Email>david@davidjharder.ca</Email>

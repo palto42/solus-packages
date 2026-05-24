@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : bup
-version    : 0.33.7
-release    : 14
+version    : 0.33.10
+release    : 16
 source     :
-    - https://github.com/bup/bup/archive/refs/tags/0.33.7.tar.gz : 03bf3c02ee6912d9f2e017e488625948818efc8538bbc6a7d6a993fbdee709a4
+    - https://github.com/bup/bup/archive/refs/tags/0.33.10.tar.gz : 5b7d169b3b0d821dc93c55798e18339594af618f018aae88dff28b8cc6333b00
 homepage   : https://bup.github.io
 license    :
     - BSD-2-Clause
@@ -32,6 +33,7 @@ build      : |
     %make PYTHON=python3
 install    : |
     %make_install PREFIX=%PREFIX% LIBDIR=%libdir%/bup
+    %install_license LICENSE
 
     # Remove docs
     rm -r $installdir/usr/share/doc

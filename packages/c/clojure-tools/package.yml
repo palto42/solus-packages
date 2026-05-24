@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : clojure-tools
-version    : 1.12.1.1550
-release    : 12
+version    : 1.12.4.1582
+release    : 14
 source     :
-    - https://download.clojure.org/install/clojure-tools-1.12.1.1550.tar.gz : 906c625679c72e7035875988a46392a1d83d16ee1df599a561a2fd33424b0d3f
+    - https://github.com/clojure/brew-install/releases/download/1.12.4.1582/clojure-tools-1.12.4.1582.tar.gz : fd5864f22bf2ec30311f9ce3caf3d31799e04d653b657ecdb4f0836fe972ff21
 homepage   : https://clojure.org/
 license    : EPL-1.0
 component  : programming.tools
@@ -10,7 +11,7 @@ summary    : Clojure tools launch a REPL manage libraries and start Clojure prog
 description: |
     The Clojure command line tools can be used to start a Clojure repl, use Clojure and Java libraries, and start Clojure programs.
 rundeps    :
-    - openjdk-17
+    - openjdk-21
     - rlwrap
 install    : |
 

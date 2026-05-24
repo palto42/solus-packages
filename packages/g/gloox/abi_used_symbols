@@ -1,6 +1,7 @@
 libc.so.6:__cxa_atexit
 libc.so.6:__errno_location
 libc.so.6:__fdelt_chk
+libc.so.6:__isoc23_strtol
 libc.so.6:__memcpy_chk
 libc.so.6:__sprintf_chk
 libc.so.6:__stack_chk_fail
@@ -42,7 +43,6 @@ libc.so.6:srand
 libc.so.6:strerror
 libc.so.6:strlen
 libc.so.6:strncpy
-libc.so.6:strtol
 libc.so.6:time
 libc.so.6:toupper
 libgcc_s.so.1:_Unwind_Resume
@@ -80,7 +80,6 @@ libgnutls.so.30:gnutls_mac_get
 libgnutls.so.30:gnutls_mac_get_name
 libgnutls.so.30:gnutls_perror
 libgnutls.so.30:gnutls_priority_set_direct
-libgnutls.so.30:gnutls_protocol_get_name
 libgnutls.so.30:gnutls_protocol_get_version
 libgnutls.so.30:gnutls_record_recv
 libgnutls.so.30:gnutls_record_send
@@ -101,9 +100,7 @@ libgnutls.so.30:gnutls_x509_crt_verify
 libstdc++.so.6:_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4findEPKcmm
 libstdc++.so.6:_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE4findEcm
 libstdc++.so.6:_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE6substrEmm
-libstdc++.so.6:_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE7compareEPKc
-libstdc++.so.6:_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE7compareEmmPKc
-libstdc++.so.6:_ZNKSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE7compareEmmRKS4_
+libstdc++.so.6:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv
 libstdc++.so.6:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_replaceEmmPKcm
 libstdc++.so.6:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructEmc
 libstdc++.so.6:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcPKcS7_
@@ -121,7 +118,6 @@ libstdc++.so.6:_ZNSt8__detail15_List_node_base4swapERS0_S1_
 libstdc++.so.6:_ZNSt8__detail15_List_node_base7_M_hookEPS0_
 libstdc++.so.6:_ZNSt8__detail15_List_node_base9_M_unhookEv
 libstdc++.so.6:_ZSt18_Rb_tree_decrementPSt18_Rb_tree_node_base
-libstdc++.so.6:_ZSt18_Rb_tree_incrementPKSt18_Rb_tree_node_base
 libstdc++.so.6:_ZSt18_Rb_tree_incrementPSt18_Rb_tree_node_base
 libstdc++.so.6:_ZSt19__throw_logic_errorPKc
 libstdc++.so.6:_ZSt20__throw_length_errorPKc

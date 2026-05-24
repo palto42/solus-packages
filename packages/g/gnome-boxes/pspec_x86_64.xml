@@ -64,7 +64,7 @@ Features:
             <Path fileType="data">/usr/share/gnome-boxes/osinfo/os/freedos.org/freedos-1.2.xml</Path>
             <Path fileType="data">/usr/share/gnome-boxes/osinfo/os/gnome.org/gnome-3.38.xml</Path>
             <Path fileType="data">/usr/share/gnome-boxes/osinfo/os/gnome.org/gnome-nightly.xml</Path>
-            <Path fileType="data">/usr/share/gnome-boxes/osinfo/os/guix.gnu.org/guix-1.3.xml</Path>
+            <Path fileType="data">/usr/share/gnome-boxes/osinfo/os/guix.gnu.org/guix-system-1.1.xml</Path>
             <Path fileType="data">/usr/share/gnome-boxes/osinfo/os/manjaro.org/manjaro-rolling.xml</Path>
             <Path fileType="data">/usr/share/gnome-boxes/osinfo/os/nixos.org/nixos-20.03.xml</Path>
             <Path fileType="data">/usr/share/gnome-boxes/osinfo/os/opensuse.org/opensuse-10.2.xml</Path>
@@ -107,6 +107,35 @@ Features:
             <Path fileType="doc">/usr/share/help/C/gnome-boxes/virtualization.page</Path>
             <Path fileType="doc">/usr/share/help/C/gnome-boxes/what-is-a-virtual-machine.page</Path>
             <Path fileType="doc">/usr/share/help/C/gnome-boxes/why-do-i-need-virtual-machine.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-boxes/3d-acceleration.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-boxes/backup.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-boxes/create.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-boxes/delete.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-boxes/disk-images.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-boxes/edit-domain.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-boxes/figures/boxes_icon.svg</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-boxes/figures/input-keyboard-symbolic.svg</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-boxes/figures/view-more-symbolic.svg</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-boxes/index.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-boxes/install-guest-agent.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-boxes/interface.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-boxes/keystrokes.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-boxes/legal.xml</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-boxes/prop-system.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-boxes/prop-trouble.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-boxes/search.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-boxes/shared-folders.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-boxes/shutdown.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-boxes/snapshot-create.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-boxes/snapshot-delete.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-boxes/snapshot-rename.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-boxes/snapshot-revert.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-boxes/supported-protocols.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-boxes/system-requirements.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-boxes/usb-redirection.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-boxes/virtualization.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-boxes/what-is-a-virtual-machine.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-boxes/why-do-i-need-virtual-machine.page</Path>
             <Path fileType="doc">/usr/share/help/ca/gnome-boxes/3d-acceleration.page</Path>
             <Path fileType="doc">/usr/share/help/ca/gnome-boxes/backup.page</Path>
             <Path fileType="doc">/usr/share/help/ca/gnome-boxes/create.page</Path>
@@ -455,6 +484,64 @@ Features:
             <Path fileType="doc">/usr/share/help/it/gnome-boxes/virtualization.page</Path>
             <Path fileType="doc">/usr/share/help/it/gnome-boxes/what-is-a-virtual-machine.page</Path>
             <Path fileType="doc">/usr/share/help/it/gnome-boxes/why-do-i-need-virtual-machine.page</Path>
+            <Path fileType="doc">/usr/share/help/ja/gnome-boxes/3d-acceleration.page</Path>
+            <Path fileType="doc">/usr/share/help/ja/gnome-boxes/backup.page</Path>
+            <Path fileType="doc">/usr/share/help/ja/gnome-boxes/create.page</Path>
+            <Path fileType="doc">/usr/share/help/ja/gnome-boxes/delete.page</Path>
+            <Path fileType="doc">/usr/share/help/ja/gnome-boxes/disk-images.page</Path>
+            <Path fileType="doc">/usr/share/help/ja/gnome-boxes/edit-domain.page</Path>
+            <Path fileType="doc">/usr/share/help/ja/gnome-boxes/figures/boxes_icon.svg</Path>
+            <Path fileType="doc">/usr/share/help/ja/gnome-boxes/figures/input-keyboard-symbolic.svg</Path>
+            <Path fileType="doc">/usr/share/help/ja/gnome-boxes/figures/view-more-symbolic.svg</Path>
+            <Path fileType="doc">/usr/share/help/ja/gnome-boxes/index.page</Path>
+            <Path fileType="doc">/usr/share/help/ja/gnome-boxes/install-guest-agent.page</Path>
+            <Path fileType="doc">/usr/share/help/ja/gnome-boxes/interface.page</Path>
+            <Path fileType="doc">/usr/share/help/ja/gnome-boxes/keystrokes.page</Path>
+            <Path fileType="doc">/usr/share/help/ja/gnome-boxes/legal.xml</Path>
+            <Path fileType="doc">/usr/share/help/ja/gnome-boxes/prop-system.page</Path>
+            <Path fileType="doc">/usr/share/help/ja/gnome-boxes/prop-trouble.page</Path>
+            <Path fileType="doc">/usr/share/help/ja/gnome-boxes/search.page</Path>
+            <Path fileType="doc">/usr/share/help/ja/gnome-boxes/shared-folders.page</Path>
+            <Path fileType="doc">/usr/share/help/ja/gnome-boxes/shutdown.page</Path>
+            <Path fileType="doc">/usr/share/help/ja/gnome-boxes/snapshot-create.page</Path>
+            <Path fileType="doc">/usr/share/help/ja/gnome-boxes/snapshot-delete.page</Path>
+            <Path fileType="doc">/usr/share/help/ja/gnome-boxes/snapshot-rename.page</Path>
+            <Path fileType="doc">/usr/share/help/ja/gnome-boxes/snapshot-revert.page</Path>
+            <Path fileType="doc">/usr/share/help/ja/gnome-boxes/supported-protocols.page</Path>
+            <Path fileType="doc">/usr/share/help/ja/gnome-boxes/system-requirements.page</Path>
+            <Path fileType="doc">/usr/share/help/ja/gnome-boxes/usb-redirection.page</Path>
+            <Path fileType="doc">/usr/share/help/ja/gnome-boxes/virtualization.page</Path>
+            <Path fileType="doc">/usr/share/help/ja/gnome-boxes/what-is-a-virtual-machine.page</Path>
+            <Path fileType="doc">/usr/share/help/ja/gnome-boxes/why-do-i-need-virtual-machine.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-boxes/3d-acceleration.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-boxes/backup.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-boxes/create.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-boxes/delete.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-boxes/disk-images.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-boxes/edit-domain.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-boxes/figures/boxes_icon.svg</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-boxes/figures/input-keyboard-symbolic.svg</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-boxes/figures/view-more-symbolic.svg</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-boxes/index.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-boxes/install-guest-agent.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-boxes/interface.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-boxes/keystrokes.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-boxes/legal.xml</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-boxes/prop-system.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-boxes/prop-trouble.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-boxes/search.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-boxes/shared-folders.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-boxes/shutdown.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-boxes/snapshot-create.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-boxes/snapshot-delete.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-boxes/snapshot-rename.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-boxes/snapshot-revert.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-boxes/supported-protocols.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-boxes/system-requirements.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-boxes/usb-redirection.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-boxes/virtualization.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-boxes/what-is-a-virtual-machine.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-boxes/why-do-i-need-virtual-machine.page</Path>
             <Path fileType="doc">/usr/share/help/ko/gnome-boxes/3d-acceleration.page</Path>
             <Path fileType="doc">/usr/share/help/ko/gnome-boxes/backup.page</Path>
             <Path fileType="doc">/usr/share/help/ko/gnome-boxes/create.page</Path>
@@ -719,6 +806,7 @@ Features:
             <Path fileType="localedata">/usr/share/locale/hi/LC_MESSAGES/gnome-boxes.mo</Path>
             <Path fileType="localedata">/usr/share/locale/hr/LC_MESSAGES/gnome-boxes.mo</Path>
             <Path fileType="localedata">/usr/share/locale/hu/LC_MESSAGES/gnome-boxes.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/ia/LC_MESSAGES/gnome-boxes.mo</Path>
             <Path fileType="localedata">/usr/share/locale/id/LC_MESSAGES/gnome-boxes.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ie/LC_MESSAGES/gnome-boxes.mo</Path>
             <Path fileType="localedata">/usr/share/locale/it/LC_MESSAGES/gnome-boxes.mo</Path>
@@ -729,6 +817,7 @@ Features:
             <Path fileType="localedata">/usr/share/locale/km/LC_MESSAGES/gnome-boxes.mo</Path>
             <Path fileType="localedata">/usr/share/locale/kn/LC_MESSAGES/gnome-boxes.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ko/LC_MESSAGES/gnome-boxes.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/kw/LC_MESSAGES/gnome-boxes.mo</Path>
             <Path fileType="localedata">/usr/share/locale/lt/LC_MESSAGES/gnome-boxes.mo</Path>
             <Path fileType="localedata">/usr/share/locale/lv/LC_MESSAGES/gnome-boxes.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ml/LC_MESSAGES/gnome-boxes.mo</Path>
@@ -757,6 +846,7 @@ Features:
             <Path fileType="localedata">/usr/share/locale/tr/LC_MESSAGES/gnome-boxes.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ug/LC_MESSAGES/gnome-boxes.mo</Path>
             <Path fileType="localedata">/usr/share/locale/uk/LC_MESSAGES/gnome-boxes.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/uz/LC_MESSAGES/gnome-boxes.mo</Path>
             <Path fileType="localedata">/usr/share/locale/vi/LC_MESSAGES/gnome-boxes.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_CN/LC_MESSAGES/gnome-boxes.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_HK/LC_MESSAGES/gnome-boxes.mo</Path>
@@ -783,7 +873,7 @@ Features:
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="64">gnome-boxes</Dependency>
+            <Dependency release="67">gnome-boxes</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/gnome-boxes/govf/govf-disk.h</Path>
@@ -792,9 +882,9 @@ Features:
         </Files>
     </Package>
     <History>
-        <Update release="64">
-            <Date>2025-04-04</Date>
-            <Version>48.0</Version>
+        <Update release="67">
+            <Date>2026-03-21</Date>
+            <Version>50.0</Version>
             <Comment>Packaging update</Comment>
             <Name>Joey Riches</Name>
             <Email>josephriches@gmail.com</Email>

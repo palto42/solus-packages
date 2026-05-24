@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : ktextaddons
-version    : 1.7.1
-release    : 8
+version    : 2.0.2
+release    : 10
 source     :
-    - https://download.kde.org/stable/ktextaddons/ktextaddons-1.7.1.tar.xz : 90cf25e298e095c40b3286a7153d04f961ef4e6598321bdeb00f2be7e998ae7e
+    - https://download.kde.org/stable/ktextaddons/ktextaddons-2.0.2.tar.xz : 0d7f82a976ef682f45822b221e2f15cefc0039488bc8c700a6b0e7594aaebdea
 license    :
     - GPL-2.0-or-later
     - LGPL-2.1-or-later

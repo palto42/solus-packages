@@ -1,0 +1,31 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
+name       : kew
+version    : 4.0.0
+release    : 2
+source     :
+    - https://codeberg.org/ravachol/kew/archive/v4.0.0.tar.gz : 746236a57c96f9e74e88557f1d9d9e62cad53a2e140596bb9acb051cf59118b5
+homepage   : https://codeberg.org/ravachol/kew
+license    : GPL-2.0-or-later
+component  : multimedia.audio
+summary    : Terminal music player
+description: |
+    kew is a terminal music player with themes and cover-derived colors,
+    lyrics support (.lrc, SYLT, Vorbis comments), MPRIS desktop integration,
+    and support for MP3, FLAC, M4A/AAC, Opus, Ogg, WebM and WAV. It can search
+    and browse your library with gapless playback, playlist editing, and a
+    visualizer. Album art can be shown in sixel-capable terminals via Chafa.
+builddeps  :
+    - pkgconfig(chafa)
+    - pkgconfig(faad2)
+    - pkgconfig(fftw3)
+    - pkgconfig(glib-2.0)
+    - pkgconfig(ogg)
+    - pkgconfig(opus)
+    - pkgconfig(opusfile)
+    - pkgconfig(taglib)
+    - pkgconfig(vorbis)
+build      : |
+    %make
+install    : |
+    %make_install PREFIX=/usr
+    %install_license LICENSE

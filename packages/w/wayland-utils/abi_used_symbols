@@ -25,7 +25,9 @@ libdrm.so.2:drmGetDeviceFromDevId
 libdrm.so.2:drmGetDeviceNameFromFd
 libdrm.so.2:drmGetFormatModifierName
 libdrm.so.2:drmGetFormatModifierVendor
+libwayland-client.so.0:wl_array_add
 libwayland-client.so.0:wl_array_copy
+libwayland-client.so.0:wl_array_init
 libwayland-client.so.0:wl_array_release
 libwayland-client.so.0:wl_buffer_interface
 libwayland-client.so.0:wl_display_connect

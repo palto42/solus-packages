@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
+name       : webrtc-audio-processing-2
+version    : '2.1'
+release    : 1
+source     :
+    - http://freedesktop.org/software/pulseaudio/webrtc-audio-processing/webrtc-audio-processing-2.1.tar.xz : ae9302824b2038d394f10213cab05312c564a038434269f11dbf68f511f9f9fe
+homepage   : https://freedesktop.org/software/pulseaudio/webrtc-audio-processing/
+license    : BSD-3-Clause
+component  : multimedia.library
+summary    : AudioProcessing module from the WebRTC project
+description: |
+    Library derived from Google WebRTC project that provides echo cancellation functionality.
+emul32     : true
+clang      : true
+builddeps  :
+    - pkgconfig32(absl_base)
+setup      : |
+    %patch -p1 -i $pkgfiles/0001-Fix-build-with-abseil-cpp-202508.patch
+    %patch -p1 -i $pkgfiles/0001-Fix-compilation-with-gcc-15.patch
+
+    %meson_configure
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install
+
+    %install_license COPYING

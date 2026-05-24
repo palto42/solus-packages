@@ -30,7 +30,6 @@ libKF6CoreAddons.so.6:_ZN4KJob15setCapabilitiesE6QFlagsINS_10CapabilityEE
 libKF6CoreAddons.so.6:_ZN4KJob16staticMetaObjectE
 libKF6CoreAddons.so.6:_ZN4KJob17startElapsedTimerEv
 libKF6CoreAddons.so.6:_ZN4KJob18setProcessedAmountENS_4UnitEy
-libKF6CoreAddons.so.6:_ZN4KJob6resultEPS_NS_14QPrivateSignalE
 libKF6CoreAddons.so.6:_ZN4KJob6resumeEv
 libKF6CoreAddons.so.6:_ZN4KJob7suspendEv
 libKF6CoreAddons.so.6:_ZN4KJob8finishedEPS_NS_14QPrivateSignalE
@@ -59,11 +58,10 @@ libKF6I18n.so.6:_Z6ki18ndPKcS0_
 libKF6I18n.so.6:_Z7ki18ndcPKcS0_S0_
 libKF6I18n.so.6:_ZN16KLocalizedStringD1Ev
 libKF6I18n.so.6:_ZNK16KLocalizedString8toStringEv
+libKF6JobWidgets.so.6:_ZN21KInhibitionJobTrackerC1EP7QObject
 libKF6JobWidgets.so.6:_ZN21KUiServerV2JobTrackerC1EP7QObject
 libKF6JobWidgets.so.6:_ZN26KNotificationJobUiDelegateC1E6QFlagsIN14KJobUiDelegate4FlagEE
-libKF6KIOCore.so.6:_ZN3KIO17MimeTypeFinderJob30setAuthenticationPromptEnabledEb
-libKF6KIOCore.so.6:_ZN3KIO17MimeTypeFinderJobC1ERK4QUrlP7QObject
-libKF6KIOCore.so.6:_ZNK3KIO17MimeTypeFinderJob8mimeTypeEv
+libKF6KIOGui.so.6:_ZN3KIO22ApplicationLauncherJob12setStartupIdERK10QByteArray
 libKF6KIOGui.so.6:_ZN3KIO22ApplicationLauncherJob7setUrlsERK5QListI4QUrlE
 libKF6KIOGui.so.6:_ZN3KIO22ApplicationLauncherJobC1ERK28QExplicitlySharedDataPointerI8KServiceEP7QObject
 libKF6Purpose.so.6:_ZN7Purpose17AlternativesModel12setInputDataERK11QJsonObject
@@ -89,7 +87,8 @@ libKF6StatusNotifierItem.so.6:_ZN19KStatusNotifierItem25setStandardActionsEnable
 libKF6StatusNotifierItem.so.6:_ZN19KStatusNotifierItem8setTitleERK7QString
 libKF6StatusNotifierItem.so.6:_ZN19KStatusNotifierItem9setStatusENS_10ItemStatusE
 libKF6StatusNotifierItem.so.6:_ZN19KStatusNotifierItemC1EP7QObject
-libPlasmaActivities.so.6:_ZN11KActivities16ResourceInstance14notifyAccessedERK4QUrlRK7QString
+libKF6StatusNotifierItem.so.6:_ZNK19KStatusNotifierItem13providedTokenEv
+libPlasmaActivities.so.7:_ZN11KActivities16ResourceInstance14notifyAccessedERK4QUrlRK7QString
 libQt6Core.so.6:_Z13comparesEqualRK4QUrlS1_
 libQt6Core.so.6:_Z21qRegisterResourceDataiPKhS0_S0_
 libQt6Core.so.6:_Z22qInstallMessageHandlerPFv9QtMsgTypeRK18QMessageLogContextRK7QStringE
@@ -98,7 +97,6 @@ libQt6Core.so.6:_Z25qEnvironmentVariableIsSetPKc
 libQt6Core.so.6:_Z26qt_QMetaEnum_debugOperatorR6QDebugxPK11QMetaObjectPKc
 libQt6Core.so.6:_Z5qHash11QStringViewm
 libQt6Core.so.6:_Z5qHashRK4QUrlm
-libQt6Core.so.6:_Z9qunsetenvPKc
 libQt6Core.so.6:_ZN10QArrayData10deallocateEPS_xx
 libQt6Core.so.6:_ZN10QArrayData19reallocateUnalignedEPS_PvxxNS_16AllocationOptionE
 libQt6Core.so.6:_ZN10QArrayData8allocateEPPS_xxxNS_16AllocationOptionE
@@ -126,7 +124,6 @@ libQt6Core.so.6:_ZN11QDataStreamrsERi
 libQt6Core.so.6:_ZN11QFileDevice5flushEv
 libQt6Core.so.6:_ZN11QJsonObject14fromVariantMapERK4QMapI7QString8QVariantE
 libQt6Core.so.6:_ZN11QJsonObject6insertERK7QStringRK10QJsonValue
-libQt6Core.so.6:_ZN11QJsonObjectC1EOS_
 libQt6Core.so.6:_ZN11QJsonObjectC1ERKS_
 libQt6Core.so.6:_ZN11QJsonObjectC1ESt16initializer_listISt4pairI7QString10QJsonValueEE
 libQt6Core.so.6:_ZN11QJsonObjectC1Ev
@@ -147,10 +144,14 @@ libQt6Core.so.6:_ZN13QJsonDocument8fromJsonERK10QByteArrayP15QJsonParseError
 libQt6Core.so.6:_ZN13QJsonDocumentC1ERK11QJsonObject
 libQt6Core.so.6:_ZN13QJsonDocumentD1Ev
 libQt6Core.so.6:_ZN13QJsonValueRefaSERK10QJsonValue
+libQt6Core.so.6:_ZN13QMimeDatabaseC1Ev
+libQt6Core.so.6:_ZN13QMimeDatabaseD1Ev
+libQt6Core.so.6:_ZN14QTemporaryFileC1ERK7QString
 libQt6Core.so.6:_ZN15QSocketNotifier16staticMetaObjectE
 libQt6Core.so.6:_ZN15QSocketNotifier9activatedE17QSocketDescriptorNS_4TypeENS_14QPrivateSignalE
 libQt6Core.so.6:_ZN15QSocketNotifierC1ExNS_4TypeEP7QObject
 libQt6Core.so.6:_ZN15QtSharedPointer20ExternalRefCountData9getAndRefEPK7QObject
+libQt6Core.so.6:_ZN16QCoreApplication12setAttributeEN2Qt20ApplicationAttributeEb
 libQt6Core.so.6:_ZN16QCoreApplication14applicationPidEv
 libQt6Core.so.6:_ZN16QCoreApplication18setApplicationNameERK7QString
 libQt6Core.so.6:_ZN16QCoreApplication18setQuitLockEnabledEb
@@ -171,6 +172,7 @@ libQt6Core.so.6:_ZN18QJsonValueConstRef14concreteStringES_RK7QString
 libQt6Core.so.6:_ZN18QJsonValueConstRef9objectKeyES_
 libQt6Core.so.6:_ZN21QAbstractConcatenable14appendLatin1ToE13QLatin1StringP5QChar
 libQt6Core.so.6:_ZN4QDir8homePathEv
+libQt6Core.so.6:_ZN4QDir8tempPathEv
 libQt6Core.so.6:_ZN4QDirC1ERK7QString
 libQt6Core.so.6:_ZN4QDirD1Ev
 libQt6Core.so.6:_ZN4QUrl11setFragmentERK7QStringNS_11ParsingModeE
@@ -209,7 +211,7 @@ libQt6Core.so.6:_ZN7QObject11eventFilterEPS_P6QEvent
 libQt6Core.so.6:_ZN7QObject11qt_metacallEN11QMetaObject4CallEiPPv
 libQt6Core.so.6:_ZN7QObject11qt_metacastEPKc
 libQt6Core.so.6:_ZN7QObject13connectNotifyERK11QMetaMethod
-libQt6Core.so.6:_ZN7QObject13doSetPropertyEPKcPK8QVariantPS2_
+libQt6Core.so.6:_ZN7QObject13doSetPropertyEPKcRK8QVariantPS2_
 libQt6Core.so.6:_ZN7QObject16disconnectNotifyERK11QMetaMethod
 libQt6Core.so.6:_ZN7QObject16staticMetaObjectE
 libQt6Core.so.6:_ZN7QObject18installEventFilterEPS_
@@ -223,6 +225,7 @@ libQt6Core.so.6:_ZN7QString14toLower_helperERS_
 libQt6Core.so.6:_ZN7QString17toIntegral_helperE11QStringViewPbi
 libQt6Core.so.6:_ZN7QString6_emptyE
 libQt6Core.so.6:_ZN7QString6appendE13QLatin1String
+libQt6Core.so.6:_ZN7QString6appendE5QChar
 libQt6Core.so.6:_ZN7QString6appendERKS_
 libQt6Core.so.6:_ZN7QString6numberEii
 libQt6Core.so.6:_ZN7QString6numberExi
@@ -274,6 +277,7 @@ libQt6Core.so.6:_ZN9QMetaType27registerMutableViewFunctionERKSt8functionIFbPvS1_
 libQt6Core.so.6:_ZN9QMetaType27unregisterConverterFunctionES_S_
 libQt6Core.so.6:_ZN9QMetaType29unregisterMutableViewFunctionES_S_
 libQt6Core.so.6:_ZN9QMetaType7convertES_PKvS_Pv
+libQt6Core.so.6:_ZN9QMimeTypeD1Ev
 libQt6Core.so.6:_ZN9QtPrivate12equalStringsE11QStringView13QLatin1String
 libQt6Core.so.6:_ZN9QtPrivate12equalStringsE11QStringViewS0_
 libQt6Core.so.6:_ZN9QtPrivate14compareStringsE11QStringViewS0_N2Qt15CaseSensitivityE
@@ -321,12 +325,14 @@ libQt6Core.so.6:_ZNK13QJsonDocument6objectEv
 libQt6Core.so.6:_ZNK13QJsonDocument6toJsonENS_10JsonFormatE
 libQt6Core.so.6:_ZNK13QMetaProperty4nameEv
 libQt6Core.so.6:_ZNK13QMetaProperty4readEPK7QObject
+libQt6Core.so.6:_ZNK13QMimeDatabase15mimeTypeForNameERK7QString
+libQt6Core.so.6:_ZNK13QMimeDatabase26mimeTypeForFileNameAndDataERK7QStringRK10QByteArray
 libQt6Core.so.6:_ZNK14QMessageLogger4infoEv
 libQt6Core.so.6:_ZNK14QMessageLogger5debugEv
 libQt6Core.so.6:_ZNK14QMessageLogger7warningEv
 libQt6Core.so.6:_ZNK14QMetaClassInfo5valueEv
 libQt6Core.so.6:_ZNK18QJsonValueConstRef8toObjectEv
-libQt6Core.so.6:_ZNK4QDir6mkpathERK7QString
+libQt6Core.so.6:_ZNK4QDir6mkpathERK7QStringSt8optionalI6QFlagsIN11QFileDevice10PermissionEEE
 libQt6Core.so.6:_ZNK4QUrl11isLocalFileEv
 libQt6Core.so.6:_ZNK4QUrl11toLocalFileEv
 libQt6Core.so.6:_ZNK4QUrl15toDisplayStringE12QUrlTwoFlagsINS_19UrlFormattingOptionENS_25ComponentFormattingOptionEE
@@ -334,6 +340,7 @@ libQt6Core.so.6:_ZNK4QUrl4hostE6QFlagsINS_25ComponentFormattingOptionEE
 libQt6Core.so.6:_ZNK4QUrl4pathE6QFlagsINS_25ComponentFormattingOptionEE
 libQt6Core.so.6:_ZNK4QUrl6schemeEv
 libQt6Core.so.6:_ZNK4QUrl7isValidEv
+libQt6Core.so.6:_ZNK4QUrl8fileNameE6QFlagsINS_25ComponentFormattingOptionEE
 libQt6Core.so.6:_ZNK4QUrl8fragmentE6QFlagsINS_25ComponentFormattingOptionEE
 libQt6Core.so.6:_ZNK4QUrl8toStringE12QUrlTwoFlagsINS_19UrlFormattingOptionENS_25ComponentFormattingOptionEE
 libQt6Core.so.6:_ZNK6QTimer8isActiveEv
@@ -349,9 +356,12 @@ libQt6Core.so.6:_ZNK8QVariant10toLongLongEPb
 libQt6Core.so.6:_ZNK8QVariant5toUrlEv
 libQt6Core.so.6:_ZNK8QVariant6equalsERKS_
 libQt6Core.so.6:_ZNK8QVariant6toBoolEv
-libQt6Core.so.6:_ZNK8QVariant8metaTypeEv
 libQt6Core.so.6:_ZNK9QDateTime6secsToERKS_
 libQt6Core.so.6:_ZNK9QDateTime7isValidEv
+libQt6Core.so.6:_ZNK9QIODevice11errorStringEv
+libQt6Core.so.6:_ZNK9QMimeType15preferredSuffixEv
+libQt6Core.so.6:_ZNK9QMimeType7isValidEv
+libQt6Core.so.6:_ZNK9QMimeType9isDefaultEv
 libQt6Core.so.6:_ZNKR7QString3midExx
 libQt6Core.so.6:_ZTI7QObject
 libQt6Core.so.6:_Zls6QDebugRK11QJsonObject

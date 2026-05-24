@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : lightsoff
-version    : '48.1'
-release    : 16
+version    : '50.0'
+release    : 17
 source     :
-    - https://download.gnome.org/sources/lightsoff/48/lightsoff-48.1.tar.xz : 2ec99501713dbcd13c5a565a2e118cc4cc2b502836b387a7736cfba40a8b3989
+    - https://download.gnome.org/sources/lightsoff/50/lightsoff-50.0.tar.xz : baa0c17431e85eeede5e649f53162f70b4eb1e7c7a6f16a4ecaa3027b6531578
 homepage   : https://gitlab.gnome.org/GNOME/lightsoff/
 license    : GPL-2.0-or-later
 component  : games.puzzle

@@ -1,9 +1,10 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : vigra
-version    : 1.11.2
-release    : 12
+version    : 1.12.2
+release    : 16
 source     :
-    - https://github.com/ukoethe/vigra/archive/refs/tags/Version-1-11-2.tar.gz : 4841936f5c3c137611ec782e293d961df29d3b5b70ade8cb711374de0f4cb5d3
-homepage   : http://ukoethe.github.io/vigra/
+    - https://github.com/ukoethe/vigra/archive/refs/tags/Version-1-12-2.tar.gz : e927477a8a0bcdabcaab914e425782f7eba82711dbaca02538dfda79476f6b7e
+homepage   : https://ukoethe.github.io/vigra/
 license    : MIT
 component  : multimedia.library
 summary    : C++ library for image analysis
@@ -28,3 +29,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSE.txt

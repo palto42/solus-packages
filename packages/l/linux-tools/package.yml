@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : linux-tools
-version    : 6.15.6
-release    : 116
+version    : 7.0.10
+release    : 127
 source     :
-    - https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.15.6.tar.xz : 2bb586c954277d070c8fdf6d7275faa93b4807d9bf3353b491d8149cca02b4fc
+    - https://cdn.kernel.org/pub/linux/kernel/v7.x/linux-7.0.10.tar.xz : 094977eb62c20e3d1939fe81a92958a1f987f339446e532fa86963b2804e32dc
 license    : GPL-2.0-only
 component  :
     - programming.tools
@@ -38,6 +39,8 @@ patterns   :
         - /usr/bin/cpu*
         - /usr/sbin/cpu*
         - /usr/lib64/libcpu*.so.*
+        - /usr/lib/systemd/system/cpupower.service
+        - /usr/libexec/cpupower
         - /usr/share/bash-completion/completions/cpupower
         - /usr/share/locale
         - /usr/share/man/man1/cpu*
@@ -47,10 +50,10 @@ patterns   :
         - /usr/lib64/libcpu*.so
     - turbostat :
         - /usr/bin/turbostat
-        - /usr/share/man/man8/turbostat.8
+        - /usr/share/man/man8/turbostat.8*
     - x86_energy_perf_policy :
         - /usr/bin/x86_energy_perf_policy
-        - /usr/share/man/man8/x86_energy_perf_policy.8
+        - /usr/share/man/man8/x86_energy_perf_policy.8*
 replaces   :
     - kernel-tools
 builddeps  :
@@ -58,6 +61,7 @@ builddeps  :
     - pkgconfig(devmapper)
     - pkgconfig(libcap)
     - pkgconfig(libdebuginfod)
+    - pkgconfig(libelf)
     - pkgconfig(libpci)
     - pkgconfig(libtraceevent)
     - pkgconfig(libunwind)

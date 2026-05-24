@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : libportal
-version    : 0.8.1
-release    : 9
+version    : 0.9.1
+release    : 11
 source     :
-    - https://github.com/flatpak/libportal/releases/download/0.8.1/libportal-0.8.1.tar.xz : 281e54e4f8561125a65d20658f1462ab932b2b1258c376fed2137718441825ac
+    - https://github.com/flatpak/libportal/releases/download/0.9.1/libportal-0.9.1.tar.xz : de801ee349ed3c255a9af3c01b1a401fab5b3fc1c35eb2fd7dfb35d4b8194d7f
 homepage   : https://github.com/flatpak/libportal
 license    : GPL-2.0-or-later
 component  : desktop.library
@@ -14,6 +15,7 @@ builddeps  :
     - pkgconfig(Qt6UiTools)
     - pkgconfig(gtk+-3.0)
     - pkgconfig(gtk4)
+    - qt6-base-private-devel
     - vala
 rundeps    :
     - gtk3 :
@@ -29,6 +31,7 @@ rundeps    :
     - qt6-devel :
         - libportal-qt6
 setup      : |
+    %patch -p1 -i ${pkgfiles}/qt6.9-services-rename.patch
     # Nothing seems to actually use the qt5 bindings, so let's just not build them
     # Nothing uses the qt6 bindings either currently but at the very least it's more likely
     # that something _will_ than the qt5 ones

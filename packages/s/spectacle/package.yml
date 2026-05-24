@@ -1,13 +1,18 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : spectacle
-version    : 6.4.5
-release    : 111
+version    : 6.6.5
+release    : 126
 source     :
-    - https://download.kde.org/stable/plasma/6.4.5/spectacle-6.4.5.tar.xz : 42a56f0593c0c5c7b661088ef6e6e32a0ea248354fbbfdb4a20f3a21ba5540e7
+    - https://download.kde.org/stable/plasma/6.6.5/spectacle-6.6.5.tar.xz : a37df7731a6bc89bc23ac08ad1f995ce9f1efb330f3ebad9bf926dca6ebb5fc7
 homepage   : https://kde.org/applications/utilities/org.kde.spectacle
 license    :
-    - GFDL-1.3-or-later
+    - BSD-3-Clause
+    - GFDL-1.2-or-later
+    - GPL-2.0-only
     - GPL-2.0-or-later
+    - LGPL-2.0-only
     - LGPL-2.0-or-later
+    - LGPL-2.1-or-later
 component  : desktop.kde.core
 summary    : KDE Screenshot Utility
 description: |
@@ -33,19 +38,23 @@ builddeps  :
     - kf6-prison-devel
     - kf6-purpose-devel
     - kpipewire-devel
+    - kquickimageeditor-devel
     - layer-shell-qt-devel
-    - qt6-base-private-devel
     - plasma-wayland-protocols-devel
+    - qt6-base-private-devel
 clang      : true
 optimize   :
     - speed
     - thin-lto
 setup      : |
+    %patch -p1 -i $pkgfiles/0001-Revert-Fix-tesseract-not-being-found-on-Fedora.patch
+
     %cmake_kf6
 build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*
 
     # remove doc
     rm -rfv $installdir/usr/share/doc

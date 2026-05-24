@@ -1,7 +1,7 @@
 <PISI>
     <Source>
         <Name>calc</Name>
-        <Homepage>http://www.isthe.com/chongo/tech/comp/calc/index.html</Homepage>
+        <Homepage>https://github.com/lcn2/calc</Homepage>
         <Packager>
             <Name>Muhammad Alfi Syahrin</Name>
             <Email>malfisya.dev@hotmail.com</Email>
@@ -29,10 +29,10 @@
             <Path fileType="executable">/usr/bin/cscript/powerterm</Path>
             <Path fileType="executable">/usr/bin/cscript/simple</Path>
             <Path fileType="executable">/usr/bin/cscript/square</Path>
-            <Path fileType="library">/usr/lib/libcalc.so.2.15.1</Path>
-            <Path fileType="library">/usr/lib/libcalc.so.2.15.1.1</Path>
-            <Path fileType="library">/usr/lib/libcustcalc.so.2.15.1</Path>
-            <Path fileType="library">/usr/lib/libcustcalc.so.2.15.1.1</Path>
+            <Path fileType="library">/usr/lib/libcalc.so.2.16.1</Path>
+            <Path fileType="library">/usr/lib/libcalc.so.2.16.1.3</Path>
+            <Path fileType="library">/usr/lib/libcustcalc.so.2.16.1</Path>
+            <Path fileType="library">/usr/lib/libcustcalc.so.2.16.1.3</Path>
             <Path fileType="data">/usr/share/calc/README</Path>
             <Path fileType="data">/usr/share/calc/alg_config.cal</Path>
             <Path fileType="data">/usr/share/calc/beer.cal</Path>
@@ -48,12 +48,14 @@
             <Path fileType="data">/usr/share/calc/custhelp/argv</Path>
             <Path fileType="data">/usr/share/calc/custhelp/devnull</Path>
             <Path fileType="data">/usr/share/calc/custhelp/help</Path>
+            <Path fileType="data">/usr/share/calc/custhelp/pfe</Path>
             <Path fileType="data">/usr/share/calc/custhelp/pmodm127</Path>
             <Path fileType="data">/usr/share/calc/custhelp/pzasusb8</Path>
             <Path fileType="data">/usr/share/calc/custhelp/register</Path>
             <Path fileType="data">/usr/share/calc/custhelp/sysinfo</Path>
             <Path fileType="data">/usr/share/calc/custom/argv.cal</Path>
             <Path fileType="data">/usr/share/calc/custom/halflen.cal</Path>
+            <Path fileType="data">/usr/share/calc/custom/pfe.cal</Path>
             <Path fileType="data">/usr/share/calc/custom/pmodm127.cal</Path>
             <Path fileType="data">/usr/share/calc/custom/pzasusb8.cal</Path>
             <Path fileType="data">/usr/share/calc/custom/register.cal</Path>
@@ -524,7 +526,9 @@
             <Path fileType="data">/usr/share/calc/write2file.cal</Path>
             <Path fileType="data">/usr/share/calc/xx_print.cal</Path>
             <Path fileType="data">/usr/share/calc/zeta2.cal</Path>
-            <Path fileType="man">/usr/share/man/man1/calc.1</Path>
+            <Path fileType="data">/usr/share/licenses/calc/COPYING</Path>
+            <Path fileType="data">/usr/share/licenses/calc/COPYING-LGPL</Path>
+            <Path fileType="man">/usr/share/man/man1/calc.1.zst</Path>
         </Files>
     </Package>
     <Package>
@@ -534,7 +538,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="8">calc</Dependency>
+            <Dependency release="11">calc</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/calc/alloc.h</Path>
@@ -579,9 +583,9 @@
         </Files>
     </Package>
     <History>
-        <Update release="8">
-            <Date>2025-04-26</Date>
-            <Version>2.15.1.1</Version>
+        <Update release="11">
+            <Date>2026-05-14</Date>
+            <Version>2.16.1.3</Version>
             <Comment>Packaging update</Comment>
             <Name>Muhammad Alfi Syahrin</Name>
             <Email>malfisya.dev@hotmail.com</Email>

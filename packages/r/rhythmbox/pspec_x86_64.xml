@@ -3,8 +3,8 @@
         <Name>rhythmbox</Name>
         <Homepage>https://gnome.pages.gitlab.gnome.org/rhythmbox/</Homepage>
         <Packager>
-            <Name>Troy Harvey</Name>
-            <Email>harveydevel@gmail.com</Email>
+            <Name>Joey Riches</Name>
+            <Email>josephriches@gmail.com</Email>
         </Packager>
         <License>GPL-2.0-only</License>
         <PartOf>multimedia.audio</PartOf>
@@ -328,6 +328,7 @@
             <Path fileType="doc">/usr/share/help/zh_CN/rhythmbox/legal.xml</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.gnome.Rhythmbox3-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.gnome.Rhythmbox3.svg</Path>
+            <Path fileType="data">/usr/share/licenses/rhythmbox/COPYING</Path>
             <Path fileType="localedata">/usr/share/locale/af/LC_MESSAGES/rhythmbox.mo</Path>
             <Path fileType="localedata">/usr/share/locale/am/LC_MESSAGES/rhythmbox.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ar/LC_MESSAGES/rhythmbox.mo</Path>
@@ -412,8 +413,8 @@
             <Path fileType="localedata">/usr/share/locale/zh_CN/LC_MESSAGES/rhythmbox.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_HK/LC_MESSAGES/rhythmbox.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_TW/LC_MESSAGES/rhythmbox.mo</Path>
-            <Path fileType="man">/usr/share/man/man1/rhythmbox-client.1</Path>
-            <Path fileType="man">/usr/share/man/man1/rhythmbox.1</Path>
+            <Path fileType="man">/usr/share/man/man1/rhythmbox-client.1.zst</Path>
+            <Path fileType="man">/usr/share/man/man1/rhythmbox.1.zst</Path>
             <Path fileType="data">/usr/share/metainfo/org.gnome.Rhythmbox3.appdata.xml</Path>
             <Path fileType="data">/usr/share/rhythmbox/plugins/audioscrobbler/audioscrobbler-preferences.ui</Path>
             <Path fileType="data">/usr/share/rhythmbox/plugins/audioscrobbler/audioscrobbler-profile.ui</Path>
@@ -444,7 +445,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="60">rhythmbox</Dependency>
+            <Dependency release="65">rhythmbox</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/rhythmbox/backends/rb-encoder.h</Path>
@@ -531,12 +532,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="60">
-            <Date>2025-06-24</Date>
-            <Version>3.4.8</Version>
+        <Update release="65">
+            <Date>2026-04-11</Date>
+            <Version>3.4.9</Version>
             <Comment>Packaging update</Comment>
-            <Name>Troy Harvey</Name>
-            <Email>harveydevel@gmail.com</Email>
+            <Name>Joey Riches</Name>
+            <Email>josephriches@gmail.com</Email>
         </Update>
     </History>
 </PISI>

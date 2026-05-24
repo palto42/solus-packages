@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : papers
-version    : '48.5'
-release    : 12
+version    : '50.1'
+release    : 20
 source     :
-    - https://download.gnome.org/sources/papers/48/papers-48.5.tar.xz : 0cc8d72c71d3d8aab1be10ae1941a4cd92cd1e2a7e830ab7680e2c82dfb19c0b
+    - https://download.gnome.org/sources/papers/50/papers-50.1.tar.xz : f79ce4b950cf5111dc48e8b7dc1728b1651c80f32f0e24dce55371993ccab270
 homepage   : https://apps.gnome.org/Papers/
 license    : GPL-2.0-or-later
 component  : office.viewers
@@ -19,15 +20,19 @@ builddeps  :
     - pkgconfig(libsecret-1)
     - pkgconfig(libspectre)
     - pkgconfig(poppler-glib)
+    - blueprint-compiler
     - desktop-file-utils
     - itstool
     - rust-devel
 setup      : |
+    %patch -p1 -i ${pkgfiles}/cve-2026-46529.patch
+
     %meson_configure -Ddocumentation=false
 build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license COPYING
 check      : |
     # Failed on appdata validation but it doesn't affect function, disable test for now
     #ninja_check

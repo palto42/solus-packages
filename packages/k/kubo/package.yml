@@ -1,10 +1,13 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kubo
-version    : 0.38.0
-release    : 38
+version    : 0.41.0
+release    : 42
 source     :
-    - https://github.com/ipfs/kubo/releases/download/v0.38.0/kubo-source.tar.gz : 220dafe78a7c49e1c6c76b6d9b9311eef69f172f42f0163a3c7cdcf5c87872ac
+    - https://github.com/ipfs/kubo/releases/download/v0.41.0/kubo-source.tar.gz : d20dce2c72f5ee99e2604fa1331ae493cec26c9a3a214de6ec236383dd26951b
 homepage   : https://ipfs.tech/
-license    : MIT
+license    :
+    - Apache-2.0
+    - MIT
 component  : network.util
 summary    : A peer-to-peer hypermedia protocol to make the web faster, safer, and more open.
 description: |
@@ -23,3 +26,4 @@ install    : |
     install -Dm00755 cmd/ipfs/ipfs $installdir/usr/bin/ipfs
     install -Dm00644 $pkgfiles/systemd/* -t $installdir/usr/lib/systemd/user/
     install -Dm00644 ipfs-completion.bash $installdir/usr/share/bash-completion/completions/ipfs
+    %install_license cmd/ipfs/dist/LICENSE*

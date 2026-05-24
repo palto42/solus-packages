@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : zix
-version    : 0.6.2
-release    : 3
+version    : 0.8.0
+release    : 4
 source     :
-    - https://gitlab.com/drobilla/zix/-/archive/v0.6.2/zix-v0.6.2.tar.gz : caa1435c870767e12f71454e8b17e878fa9b4bb35730b8f570934fb7cb74031c
+    - https://gitlab.com/drobilla/zix/-/archive/v0.8.0/zix-v0.8.0.tar.gz : 51d70d63e970214db84e32d55377d84090c02145f5768265ab140d117f2b8e24
 homepage   : https://gitlab.com/drobilla/zix
 license    :
     - 0BSD
@@ -21,4 +22,5 @@ setup      : |
 build      : |
     %ninja_build
 install    : |
+    %install_license COPYING
     %ninja_install

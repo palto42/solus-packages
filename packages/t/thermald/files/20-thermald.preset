@@ -1,0 +1,2 @@
+# Users may systemctl mask to turn it off.
+enable thermald.service

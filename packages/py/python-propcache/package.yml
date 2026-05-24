@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : python-propcache
-version    : 0.3.2
-release    : 5
+version    : 0.5.2
+release    : 7
 source     :
-    - https://files.pythonhosted.org/packages/source/p/propcache/propcache-0.3.2.tar.gz : 20d7d62e4e7ef05f221e0db2856b979540686342e7dd9973b815599c7057e168
+    - https://files.pythonhosted.org/packages/source/p/propcache/propcache-0.5.2.tar.gz : 01c4fc7480cd0598bb4b57022df55b9ca296da7fc5a8760bd8451a7e63a7d427
 homepage   : https://propcache.readthedocs.io/
 license    : Apache-2.0
 component  : programming.python

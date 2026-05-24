@@ -3,26 +3,27 @@
         <Name>rlwrap</Name>
         <Homepage>https://github.com/hanslub42/rlwrap</Homepage>
         <Packager>
-            <Name>Joey Riches</Name>
-            <Email>josephriches@gmail.com</Email>
+            <Name>David Harder</Name>
+            <Email>david@davidjharder.ca</Email>
         </Packager>
         <License>GPL-2.0-or-later</License>
-        <PartOf>system.util</PartOf>
+        <PartOf>system.utils</PartOf>
         <Summary xml:lang="en">rlwrap is a readline wrapper</Summary>
         <Description xml:lang="en">rlwrap is a readline wrapper, a small utility that uses the GNU readline library to allow the editing of keyboard input for any command
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>rlwrap</Name>
         <Summary xml:lang="en">rlwrap is a readline wrapper</Summary>
         <Description xml:lang="en">rlwrap is a readline wrapper, a small utility that uses the GNU readline library to allow the editing of keyboard input for any command
 </Description>
-        <PartOf>system.util</PartOf>
+        <PartOf>system.utils</PartOf>
         <Files>
             <Path fileType="executable">/usr/bin/rlwrap</Path>
-            <Path fileType="man">/usr/share/man/man1/rlwrap.1</Path>
-            <Path fileType="man">/usr/share/man/man3/RlwrapFilter.3pm</Path>
+            <Path fileType="data">/usr/share/licenses/rlwrap/COPYING</Path>
+            <Path fileType="man">/usr/share/man/man1/rlwrap.1.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/RlwrapFilter.3pm.zst</Path>
             <Path fileType="data">/usr/share/rlwrap/completions/coqtop</Path>
             <Path fileType="data">/usr/share/rlwrap/completions/testclient</Path>
             <Path fileType="data">/usr/share/rlwrap/filters/README</Path>
@@ -45,6 +46,7 @@
             <Path fileType="data">/usr/share/rlwrap/filters/logger</Path>
             <Path fileType="data">/usr/share/rlwrap/filters/logger.py</Path>
             <Path fileType="data">/usr/share/rlwrap/filters/makefilter</Path>
+            <Path fileType="data">/usr/share/rlwrap/filters/nl_and_then_prompt.py</Path>
             <Path fileType="data">/usr/share/rlwrap/filters/null</Path>
             <Path fileType="data">/usr/share/rlwrap/filters/null.py</Path>
             <Path fileType="data">/usr/share/rlwrap/filters/outfilter</Path>
@@ -61,12 +63,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="6">
-            <Date>2022-03-25</Date>
-            <Version>0.45.2</Version>
+        <Update release="7">
+            <Date>2026-04-02</Date>
+            <Version>0.48</Version>
             <Comment>Packaging update</Comment>
-            <Name>Joey Riches</Name>
-            <Email>josephriches@gmail.com</Email>
+            <Name>David Harder</Name>
+            <Email>david@davidjharder.ca</Email>
         </Update>
     </History>
 </PISI>

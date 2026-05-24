@@ -1,0 +1,48 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
+name       : rio
+version    : 0.3.11
+release    : 7
+source     :
+    - https://github.com/raphamorim/rio/archive/refs/tags/v0.3.11.tar.gz : f59abcfb501bb4e98dd13d471ba4ceba9b7dd25bcd2c45865b2aef3d8dce9a19
+homepage   : https://rioterm.com
+license    : MIT
+component  : system.utils
+summary    : A hardware-accelerated GPU terminal emulator powered by WebGPU
+description: |
+    Rio is a hardware-accelerated GPU terminal emulator powered by WebGPU, focusing on running in desktops and browsers. It aims to provide a beautiful and fast terminal experience with features like tabs, split panes, and extensive theming options.
+networking : true
+builddeps  :
+    - pkgconfig(alsa)
+    - pkgconfig(fontconfig)
+    - pkgconfig(freetype2)
+    - pkgconfig(scdoc)
+    - pkgconfig(xcb)
+    - pkgconfig(xkbcommon)
+    - rust
+setup      : |
+    %patch -p1 -i $pkgfiles/0001-Default-config-editor-to-nano.patch
+    %patch -p1 -i $pkgfiles/0002-Fix-shell-args-ignored-when-use-fork-true.patch
+
+    # Generate man pages
+    for fname in rio.1 rio.5 rio-bindings.5; do
+        scdoc < extra/man/$fname.scd > extra/man/$fname
+    done
+
+    %cargo_fetch
+build      : |
+    %cargo_build --all-features
+install    : |
+    %cargo_install
+    %install_license LICENSE
+
+    # Install man pages
+    for fname in rio.1 rio.5 rio-bindings.5; do
+        install -Dm00644 extra/man/$fname $installdir/usr/share/man/man${fname##*.}/$fname
+    done
+
+    # Install desktop file, icon and metainfo
+    install -Dm00644 misc/rio.desktop $installdir/usr/share/applications/com.rioterm.Rio.desktop
+    install -Dm00644 docs/static/assets/rio-logo.svg $installdir/usr/share/icons/hicolor/scalable/apps/rio.svg
+    install -Dm00644 misc/com.rioterm.Rio.metainfo.xml -t $installdir/usr/share/metainfo/
+check      : |
+    %cargo_test -- --skip renderer::text_run_manager::tests::test_vertex_positioning

@@ -1,14 +1,15 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kf6-kdeclarative
-version    : 6.19.0
-release    : 26
+version    : 6.26.0
+release    : 36
 source     :
-    - https://download.kde.org/stable/frameworks/6.19/kdeclarative-6.19.0.tar.xz : 0c71a9a08f447b20fa06be836d059b2cd4791e972e279d99464e2dd0dbff7a90
+    - https://download.kde.org/stable/frameworks/6.26/kdeclarative-6.26.0.tar.xz : 9a464e560e436cd3a626ca6aab894f414c6212d2de8b9c5a8eda33be213e00d8
 homepage   : https://community.kde.org/Frameworks
 license    :
-    - BSD-3-Clause
+    - CC0-1.0
     - GPL-2.0-only
+    - GPL-3.0-only
     - LGPL-2.0-or-later
-    - LGPL-2.1-only
     - LGPL-2.1-or-later
     - MIT
 component  : desktop.library
@@ -40,3 +41,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*

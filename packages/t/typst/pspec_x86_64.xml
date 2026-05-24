@@ -3,8 +3,8 @@
         <Name>typst</Name>
         <Homepage>https://typst.app</Homepage>
         <Packager>
-            <Name>Marcus Mellor</Name>
-            <Email>marcus@infinitymdm.dev</Email>
+            <Name>David Harder</Name>
+            <Email>david@davidjharder.ca</Email>
         </Packager>
         <License>Apache-2.0</License>
         <PartOf>office</PartOf>
@@ -21,15 +21,16 @@
         <PartOf>office</PartOf>
         <Files>
             <Path fileType="executable">/usr/bin/typst</Path>
+            <Path fileType="data">/usr/share/licenses/typst/LICENSE</Path>
         </Files>
     </Package>
     <History>
-        <Update release="7">
-            <Date>2025-03-24</Date>
-            <Version>0.13.1</Version>
+        <Update release="9">
+            <Date>2026-03-18</Date>
+            <Version>0.14.2</Version>
             <Comment>Packaging update</Comment>
-            <Name>Marcus Mellor</Name>
-            <Email>marcus@infinitymdm.dev</Email>
+            <Name>David Harder</Name>
+            <Email>david@davidjharder.ca</Email>
         </Update>
     </History>
 </PISI>

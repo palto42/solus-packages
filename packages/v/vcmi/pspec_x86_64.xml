@@ -3,8 +3,8 @@
         <Name>vcmi</Name>
         <Homepage>https://vcmi.eu/</Homepage>
         <Packager>
-            <Name>David Harder</Name>
-            <Email>david@davidjharder.ca</Email>
+            <Name>Jakob Gezelius</Name>
+            <Email>jakob@knugen.nu</Email>
         </Packager>
         <License>CC-BY-SA-4.0</License>
         <License>GPL-2.0-or-later</License>
@@ -549,12 +549,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="33">
-            <Date>2025-07-26</Date>
+        <Update release="34">
+            <Date>2026-04-11</Date>
             <Version>1.6.8</Version>
             <Comment>Packaging update</Comment>
-            <Name>David Harder</Name>
-            <Email>david@davidjharder.ca</Email>
+            <Name>Jakob Gezelius</Name>
+            <Email>jakob@knugen.nu</Email>
         </Update>
     </History>
 </PISI>

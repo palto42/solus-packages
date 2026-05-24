@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : open-vm-tools
-version    : 12.5.0
-release    : 336
+version    : 13.0.10
+release    : 354
 source     :
-    - https://github.com/vmware/open-vm-tools/archive/stable-12.5.0.tar.gz : a52182c7e6b5df41bb317625e9d8592ecdb9db814d1c2c9b7cdb91a77f8c0640
+    - https://github.com/vmware/open-vm-tools/archive/stable-13.0.10.tar.gz : 622777a30703226326248fc7d5e55b9ddc280368fc85539d2d1aa06c0531c613
 license    : LGPL-2.1-or-later
 component  : system.utils
 homepage   : https://github.com/vmware/open-vm-tools
@@ -35,7 +36,7 @@ optimize   : no-bind-now
 setup      : |
     pushd open-vm-tools
     %patch -p1 -i $pkgfiles/0001-Don-t-set-Werror-it-s-evil.patch
-    %patch -p2 -i $pkgfiles/ftbfs-gcc-15.patch
+    %patch -p1 -i $pkgfiles/open-vm-tools-gcc16.patch
     sed -i -e 's|.*common-agent/etc/config/Makefile.*||' configure.ac
     mkdir -p common-agent/etc/config
     %reconfigure --with-kernel-release="%kernel_version_current%" \

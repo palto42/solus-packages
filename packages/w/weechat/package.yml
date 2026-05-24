@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : weechat
-version    : 4.7.1
-release    : 98
+version    : 4.9.0
+release    : 103
 source     :
-    - https://github.com/weechat/weechat/archive/refs/tags/v4.7.1.tar.gz : a00c8c4abc83b22f888d8d615684b39a5fb155bde1d69784aa1dbb88e03d3086
+    - https://github.com/weechat/weechat/archive/refs/tags/v4.9.0.tar.gz : 337fc24c0a4c00aa2c47262f123014b23d55c5cf02785ecfdf204f96ccef5c65
 homepage   : https://weechat.org
 license    : GPL-3.0-or-later
 summary    : WeeChat is a fast, light and extensible chat client.
@@ -20,14 +21,20 @@ builddeps  :
     - pkgconfig(libzstd)
     - pkgconfig(lua-5.4)
     - pkgconfig(python3)
-    - pkgconfig(ruby-3.4)
+    - pkgconfig(ruby-4.0)
     - pkgconfig(tcl)
+    - asciidoctor
     - perl
 rundeps    :
     - perl
 setup      : |
-    %cmake -DENABLE_ENCHANT=ON -DENABLE_JAVASCRIPT=OFF -DENABLE_PHP=OFF -DWITH-DEBUG=1
+    %cmake_ninja \
+        -DENABLE_ENCHANT=ON \
+        -DENABLE_JAVASCRIPT=OFF \
+        -DENABLE_PHP=OFF \
+        -DENABLE_MAN=ON
 build      : |
-    %make
+    %ninja_build
 install    : |
-    %make_install
+    %ninja_install
+    %install_license COPYING LICENSES/*

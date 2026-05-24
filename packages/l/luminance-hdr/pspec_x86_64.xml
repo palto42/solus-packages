@@ -1,7 +1,7 @@
 <PISI>
     <Source>
         <Name>luminance-hdr</Name>
-        <Homepage>http://qtpfsgui.sourceforge.net/</Homepage>
+        <Homepage>https://sourceforge.net/projects/qtpfsgui/</Homepage>
         <Packager>
             <Name>Joey Riches</Name>
             <Email>josephriches@gmail.com</Email>
@@ -24,6 +24,7 @@
             <Path fileType="executable">/usr/bin/luminance-hdr-cli</Path>
             <Path fileType="data">/usr/share/applications/net.sourceforge.qtpfsgui.LuminanceHDR.desktop</Path>
             <Path fileType="data">/usr/share/icons/hicolor/48x48/apps/luminance-hdr.png</Path>
+            <Path fileType="data">/usr/share/licenses/luminance-hdr/LICENSE</Path>
             <Path fileType="data">/usr/share/luminance-hdr/doc/AUTHORS</Path>
             <Path fileType="data">/usr/share/luminance-hdr/doc/Changelog</Path>
             <Path fileType="data">/usr/share/luminance-hdr/doc/LICENSE</Path>
@@ -155,8 +156,8 @@
         </Files>
     </Package>
     <History>
-        <Update release="29">
-            <Date>2025-05-24</Date>
+        <Update release="33">
+            <Date>2026-05-13</Date>
             <Version>2.6.1.1</Version>
             <Comment>Packaging update</Comment>
             <Name>Joey Riches</Name>

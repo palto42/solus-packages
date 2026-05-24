@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : librsvg
-version    : 2.60.0
-release    : 65
+version    : 2.62.1
+release    : 70
 source     :
-    - https://download.gnome.org/sources/librsvg/2.60/librsvg-2.60.0.tar.xz : 0b6ffccdf6e70afc9876882f5d2ce9ffcf2c713cbaaf1ad90170daa752e1eec3
+    - https://download.gnome.org/sources/librsvg/2.62/librsvg-2.62.1.tar.xz : b41ca84206242fddd826a2bf76348d7cdf52c1050cbfa060b866e81a252145c3
 homepage   : https://gitlab.gnome.org/GNOME/librsvg
 license    :
     - LGPL-2.1-or-later
@@ -16,10 +17,13 @@ emul32     : true
 patterns   :
     - devel :
         - /usr/bin
+autodep    : false # avoid the circular dep with librsvg/gdk-pixbuf/glycin
 builddeps  :
     - pkgconfig32(fontconfig)
     - pkgconfig32(gdk-pixbuf-2.0)
+    - pkgconfig32(libjpeg)
     - pkgconfig32(libpng)
+    - pkgconfig32(libtiff-4)
     - pkgconfig32(libxml-2.0)
     - pkgconfig32(pango)
     - pkgconfig32(xdamage)
@@ -28,12 +32,51 @@ builddeps  :
     - python-docutils # man
     - rust-32bit
     - vala
+rundeps    :
+    - pango
+    - glibc
+    - glib2
+    # gdk-pixbuf <- avoid the circular dep with librsvg/gdk-pixbuf/glycin
+    - libxml2
+    - libgcc
+    - libcairo
+    - 32bit :
+        - glibc-32bit
+        - librsvg
+        - libgcc-32bit
+        - gdk-pixbuf-32bit
+        - libcairo-32bit
+        - glib2-32bit
+        - pango-32bit
+        - libxml2-32bit
+    - 32bit-devel :
+        - librsvg-32bit
+        - harfbuzz-32bit-devel
+        - gdk-pixbuf-32bit-devel
+        - pango-32bit-devel
+        - librsvg-devel
+        - libcairo-32bit-devel
+        - glib2-32bit-devel
+        - libxml2-32bit-devel
+        - freetype2-32bit-devel
+    - devel :
+        - librsvg
+        - pango-devel
+        - glib2-devel
+        - libcairo-devel
+        - gdk-pixbuf-devel
+        - harfbuzz-devel
+        - freetype2-devel
+        - libxml2-devel
 setup      : |
     flags='-Ddocs=disabled '
     if [ ! -z $EMUL32BUILD ]; then
         flags+='-Dtriplet=i686-unknown-linux-gnu -Dintrospection=disabled'
+        pixbuf=enabled
+    else
+        pixbuf=disabled
     fi
-    %meson_configure $flags
+    %meson_configure $flags -Dpixbuf-loader=$pixbuf
 build      : |
     %ninja_build
 install    : |

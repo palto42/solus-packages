@@ -4,7 +4,7 @@
         <Homepage>https://kde.org/applications/system/org.kde.dolphin</Homepage>
         <Packager>
             <Name>Troy Harvey</Name>
-            <Email>harveydevel@gmail.com</Email>
+            <Email>harvey@getsol.us</Email>
         </Packager>
         <License>GFDL-1.2-or-later</License>
         <License>GPL-2.0-or-later</License>
@@ -25,18 +25,19 @@
             <Path fileType="executable">/usr/bin/servicemenuinstaller</Path>
             <Path fileType="library">/usr/lib/systemd/user/plasma-dolphin.service</Path>
             <Path fileType="library">/usr/lib64/kconf_update_bin/dolphin_25.04_update_statusandlocationbarssettings</Path>
-            <Path fileType="library">/usr/lib64/libdolphinprivate.so.25.08.2</Path>
+            <Path fileType="library">/usr/lib64/kconf_update_bin/dolphin_update_splitviewsettings</Path>
+            <Path fileType="library">/usr/lib64/libdolphinprivate.so.26.04.1</Path>
             <Path fileType="library">/usr/lib64/libdolphinprivate.so.6</Path>
-            <Path fileType="library">/usr/lib64/libdolphinvcs.so.25.08.2</Path>
+            <Path fileType="library">/usr/lib64/libdolphinvcs.so.26.04.1</Path>
             <Path fileType="library">/usr/lib64/libdolphinvcs.so.6</Path>
             <Path fileType="library">/usr/lib64/qt6/plugins/dolphin/kcms/kcm_dolphingeneral.so</Path>
             <Path fileType="library">/usr/lib64/qt6/plugins/dolphin/kcms/kcm_dolphinviewmodes.so</Path>
+            <Path fileType="library">/usr/lib64/qt6/plugins/kf6/kfileitemaction/hidefileitemaction.so</Path>
             <Path fileType="library">/usr/lib64/qt6/plugins/kf6/kfileitemaction/movetonewfolderitemaction.so</Path>
             <Path fileType="library">/usr/lib64/qt6/plugins/kf6/kfileitemaction/setfoldericonitemaction.so</Path>
             <Path fileType="library">/usr/lib64/qt6/plugins/kf6/parts/dolphinpart.so</Path>
             <Path fileType="data">/usr/share/applications/org.kde.dolphin.desktop</Path>
             <Path fileType="data">/usr/share/config.kcfg/dolphin_compactmodesettings.kcfg</Path>
-            <Path fileType="data">/usr/share/config.kcfg/dolphin_contentdisplaysettings.kcfg</Path>
             <Path fileType="data">/usr/share/config.kcfg/dolphin_contextmenusettings.kcfg</Path>
             <Path fileType="data">/usr/share/config.kcfg/dolphin_detailsmodesettings.kcfg</Path>
             <Path fileType="data">/usr/share/config.kcfg/dolphin_directoryviewpropertysettings.kcfg</Path>
@@ -97,6 +98,7 @@
             <Path fileType="localedata">/usr/share/locale/fr/LC_MESSAGES/dolphin_servicemenuinstaller.mo</Path>
             <Path fileType="localedata">/usr/share/locale/fy/LC_MESSAGES/dolphin.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ga/LC_MESSAGES/dolphin.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/ga/LC_MESSAGES/dolphin_servicemenuinstaller.mo</Path>
             <Path fileType="localedata">/usr/share/locale/gl/LC_MESSAGES/dolphin.mo</Path>
             <Path fileType="localedata">/usr/share/locale/gl/LC_MESSAGES/dolphin_servicemenuinstaller.mo</Path>
             <Path fileType="localedata">/usr/share/locale/gu/LC_MESSAGES/dolphin.mo</Path>
@@ -209,7 +211,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="108">dolphin</Dependency>
+            <Dependency release="117">dolphin</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/Dolphin/KVersionControlPlugin</Path>
@@ -225,12 +227,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="108">
-            <Date>2025-10-10</Date>
-            <Version>25.08.2</Version>
+        <Update release="117">
+            <Date>2026-05-15</Date>
+            <Version>26.04.1</Version>
             <Comment>Packaging update</Comment>
             <Name>Troy Harvey</Name>
-            <Email>harveydevel@gmail.com</Email>
+            <Email>harvey@getsol.us</Email>
         </Update>
     </History>
 </PISI>

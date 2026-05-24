@@ -1,9 +1,10 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : niri
-version    : '25.08'
-release    : 3
+version    : '26.04'
+release    : 6
 source     :
-    - https://github.com/YaLTeR/niri/archive/refs/tags/v25.08.tar.gz : 69f8227d621ee6389bcd5368a250c189e672d02528472dc5ef0e3eccf80cf0b8
-homepage   : https://github.com/YaLTeR/niri
+    - https://github.com/niri-wm/niri/archive/refs/tags/v26.04.tar.gz : 134c602d8e0d53413a52d6cd58f9ce7e79a07d03288ee0a51ba1abd5db1b1ad9
+homepage   : https://niri-wm.github.io/niri/
 license    : GPL-3.0-or-later
 component  : desktop
 summary    :
@@ -16,6 +17,7 @@ builddeps  :
     - pkgconfig(gbm)
     - pkgconfig(libdisplay-info)
     - pkgconfig(libinput)
+    - pkgconfig(libpipewire-0.3)
     - pkgconfig(libseat)
     - pkgconfig(pangocairo)
     - pkgconfig(xkbcommon)
@@ -23,7 +25,6 @@ builddeps  :
 checkdeps  :
     - pkgconfig(gtk4)
     - pkgconfig(libadwaita-1)
-    - pkgconfig(libpipewire-0.3)
 rundeps    :
     - session :
         - niri
@@ -33,9 +34,10 @@ networking : true
 setup      : |
     %cargo_fetch
 build      : |
-    %cargo_build --no-default-features --features dbus,systemd
+    %cargo_build
 install    : |
     %cargo_install
+    %install_license LICENSE
 
     install -Dm00755 -t $installdir/usr/bin resources/niri-session
     install -Dm00644 -t $installdir/usr/share/wayland-sessions resources/niri.desktop

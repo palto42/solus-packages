@@ -1,21 +1,22 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : libphonenumber
-version    : 9.0.9
-release    : 9
+version    : 9.0.30
+release    : 13
 source     :
-    - https://github.com/google/libphonenumber/archive/refs/tags/v9.0.9.tar.gz : 069b4c0cec74aa5b9195a1ddf294c9fa7f3ea0eefacd416bbb5c7fc7847665f1
+    - https://github.com/google/libphonenumber/archive/refs/tags/v9.0.30.tar.gz : 677dd2a555e467073e5c6ef7eaa75ecd7d0d6b2c0e71a231d0a70b730bd0f0c6
 homepage   : https://github.com/googlei18n/libphonenumber
 license    :
     - Apache-2.0
     - BSD-3-Clause
 component  : desktop.library
 summary    : library for working with international phone numbers
-description: |-
+description: |
     Google's common library for parsing, formatting, and validating international phone numbers
 builddeps  :
     - pkgconfig(absl_base)
     - pkgconfig(protobuf)
     - libboost-devel
-    - openjdk-17
+    - openjdk-21
 checkdeps  :
     - pkgconfig(gtest)
 rundeps    :
@@ -27,7 +28,7 @@ clang      : true
 optimize   :
     - thin-lto
 environment: |
-    export JAVA_HOME=/usr/lib64/openjdk-17
+    export JAVA_HOME=/usr/lib64/openjdk-21
     export PATH=$JAVA_HOME/bin:$PATH
     export CLANG_IGNORE_WERROR=1
 setup      : |
@@ -37,5 +38,6 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSE LICENSE.Chromium
 check      : |
     cmake --build solusBuildDir --target tests -j %YJOBS%

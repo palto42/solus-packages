@@ -1,10 +1,12 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kf6-purpose
-version    : 6.19.0
-release    : 29
+version    : 6.26.0
+release    : 39
 source     :
-    - https://download.kde.org/stable/frameworks/6.19/purpose-6.19.0.tar.xz : 799ff3e69872400d2fa6e5e2c91fed66ed6bd0d7a9163efc004eee0bf6d093a2
+    - https://download.kde.org/stable/frameworks/6.26/purpose-6.26.0.tar.xz : cc7b7599d1ac7ce7ed07351a35d742fac1b7e554b208a7b1c92e859b3b4add30
 homepage   : https://community.kde.org/Frameworks
 license    :
+    - CC0-1.0
     - GPL-2.0-or-later
     - LGPL-2.0-or-later
     - LGPL-2.1-or-later
@@ -20,6 +22,7 @@ builddeps  :
     - kf6-kdeclarative-devel
     - kf6-kio-devel
     - kf6-kirigami-devel
+    - kf6-kitemmodels-devel
     - kf6-knotifications-devel
     - kf6-prison-devel
     - qt6-base-private-devel
@@ -39,3 +42,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*

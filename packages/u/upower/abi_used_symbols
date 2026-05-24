@@ -79,10 +79,13 @@ libgio-2.0.so.0:g_dbus_proxy_get_type
 libgio-2.0.so.0:g_dbus_proxy_new_for_bus_sync
 libgio-2.0.so.0:g_dbus_proxy_new_sync
 libgio-2.0.so.0:g_dbus_proxy_set_interface_info
+libgio-2.0.so.0:g_file_new_for_path
+libgio-2.0.so.0:g_file_query_info
 libgio-2.0.so.0:g_initable_get_type
 libgio-2.0.so.0:g_initable_init
 libgio-2.0.so.0:g_initable_new
 libgio-2.0.so.0:g_io_error_quark
+libgio-2.0.so.0:g_task_get_name
 libgio-2.0.so.0:g_task_is_valid
 libgio-2.0.so.0:g_task_new
 libgio-2.0.so.0:g_task_propagate_pointer
@@ -90,6 +93,7 @@ libgio-2.0.so.0:g_task_return_error
 libgio-2.0.so.0:g_task_return_pointer
 libgio-2.0.so.0:g_task_run_in_thread
 libgio-2.0.so.0:g_task_set_source_tag
+libgio-2.0.so.0:g_task_set_static_name
 libgio-2.0.so.0:g_unix_fd_list_get
 libgio-2.0.so.0:g_unix_fd_list_get_length
 libgio-2.0.so.0:g_unix_fd_list_get_type
@@ -145,9 +149,14 @@ libglib-2.0.so.0:g_key_file_free
 libglib-2.0.so.0:g_key_file_get_boolean
 libglib-2.0.so.0:g_key_file_get_double
 libglib-2.0.so.0:g_key_file_get_integer
+libglib-2.0.so.0:g_key_file_get_keys
 libglib-2.0.so.0:g_key_file_get_string
+libglib-2.0.so.0:g_key_file_get_value
+libglib-2.0.so.0:g_key_file_has_group
 libglib-2.0.so.0:g_key_file_load_from_file
 libglib-2.0.so.0:g_key_file_new
+libglib-2.0.so.0:g_key_file_set_value
+libglib-2.0.so.0:g_key_file_unref
 libglib-2.0.so.0:g_list_append
 libglib-2.0.so.0:g_list_find
 libglib-2.0.so.0:g_list_free
@@ -178,6 +187,7 @@ libglib-2.0.so.0:g_option_context_free
 libglib-2.0.so.0:g_option_context_new
 libglib-2.0.so.0:g_option_context_parse
 libglib-2.0.so.0:g_path_get_basename
+libglib-2.0.so.0:g_path_get_dirname
 libglib-2.0.so.0:g_print
 libglib-2.0.so.0:g_propagate_error
 libglib-2.0.so.0:g_ptr_array_add
@@ -190,9 +200,13 @@ libglib-2.0.so.0:g_ptr_array_remove
 libglib-2.0.so.0:g_ptr_array_remove_fast
 libglib-2.0.so.0:g_ptr_array_set_free_func
 libglib-2.0.so.0:g_ptr_array_set_size
+libglib-2.0.so.0:g_ptr_array_sort_values
 libglib-2.0.so.0:g_ptr_array_unref
 libglib-2.0.so.0:g_quark_to_string
 libglib-2.0.so.0:g_quark_try_string
+libglib-2.0.so.0:g_regex_match
+libglib-2.0.so.0:g_regex_new
+libglib-2.0.so.0:g_regex_unref
 libglib-2.0.so.0:g_return_if_fail_warning
 libglib-2.0.so.0:g_set_error
 libglib-2.0.so.0:g_set_error_literal
@@ -223,6 +237,7 @@ libglib-2.0.so.0:g_strfreev
 libglib-2.0.so.0:g_string_append_len
 libglib-2.0.so.0:g_string_append_printf
 libglib-2.0.so.0:g_string_free
+libglib-2.0.so.0:g_string_free_and_steal
 libglib-2.0.so.0:g_string_insert_c
 libglib-2.0.so.0:g_string_insert_len
 libglib-2.0.so.0:g_string_new

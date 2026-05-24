@@ -1,6 +1,7 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : libpaper
 version    : 1.1.28
-release    : 5
+release    : 6
 source     :
     - http://ftp.debian.org/debian/pool/main/libp/libpaper/libpaper_1.1.28.tar.gz : c8bb946ec93d3c2c72bbb1d7257e90172a22a44a07a07fb6b802a5bb2c95fddc
 homepage   : https://packages.qa.debian.org/libp/libpaper.html
@@ -16,3 +17,4 @@ build      : |
     %make
 install    : |
     %make_install
+    %install_license COPYING

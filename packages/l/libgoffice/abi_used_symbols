@@ -3,7 +3,9 @@ libatk-1.0.so.0:atk_relation_new
 libatk-1.0.so.0:atk_relation_set_add
 libc.so.6:__assert_fail
 libc.so.6:__errno_location
-libc.so.6:__isoc99_sscanf
+libc.so.6:__isoc23_sscanf
+libc.so.6:__isoc23_strtol
+libc.so.6:__isoc23_strtoul
 libc.so.6:__snprintf_chk
 libc.so.6:__sprintf_chk
 libc.so.6:__stack_chk_fail
@@ -40,9 +42,7 @@ libc.so.6:strrchr
 libc.so.6:strspn
 libc.so.6:strstr
 libc.so.6:strtod
-libc.so.6:strtol
 libc.so.6:strtold
-libc.so.6:strtoul
 libc.so.6:unlink
 libcairo.so.2:cairo_arc
 libcairo.so.2:cairo_arc_negative
@@ -294,6 +294,7 @@ libglib-2.0.so.0:g_filename_from_uri
 libglib-2.0.so.0:g_filename_from_utf8
 libglib-2.0.so.0:g_filename_to_uri
 libglib-2.0.so.0:g_free
+libglib-2.0.so.0:g_free_sized
 libglib-2.0.so.0:g_get_charset
 libglib-2.0.so.0:g_get_current_dir
 libglib-2.0.so.0:g_get_home_dir
@@ -1107,6 +1108,8 @@ libm.so.6:acos
 libm.so.6:atan
 libm.so.6:atan2
 libm.so.6:atan2l
+libm.so.6:ceil
+libm.so.6:ceill
 libm.so.6:cos
 libm.so.6:cosh
 libm.so.6:coshl
@@ -1115,6 +1118,8 @@ libm.so.6:exp
 libm.so.6:expl
 libm.so.6:expm1
 libm.so.6:expm1l
+libm.so.6:floor
+libm.so.6:floorl
 libm.so.6:fmax
 libm.so.6:fmin
 libm.so.6:fmod
@@ -1153,6 +1158,8 @@ libm.so.6:tan
 libm.so.6:tanh
 libm.so.6:tanhl
 libm.so.6:tanl
+libm.so.6:trunc
+libm.so.6:truncl
 libpango-1.0.so.0:pango_attr_background_new
 libpango-1.0.so.0:pango_attr_family_new
 libpango-1.0.so.0:pango_attr_foreground_new

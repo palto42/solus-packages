@@ -4,7 +4,7 @@
         <Homepage>https://github.com/hamano/pysmbc</Homepage>
         <Packager>
             <Name>Troy Harvey</Name>
-            <Email>harveydevel@gmail.com</Email>
+            <Email>harvey@getsol.us</Email>
         </Packager>
         <License>GPL-2.0-or-later</License>
         <PartOf>programming.python</PartOf>
@@ -35,12 +35,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="39">
-            <Date>2025-06-24</Date>
+        <Update release="41">
+            <Date>2026-04-09</Date>
             <Version>1.0.25.1</Version>
             <Comment>Packaging update</Comment>
             <Name>Troy Harvey</Name>
-            <Email>harveydevel@gmail.com</Email>
+            <Email>harvey@getsol.us</Email>
         </Update>
     </History>
 </PISI>

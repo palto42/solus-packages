@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : joe
-version    : '4.6'
-release    : 4
+version    : '4.7'
+release    : 5
 source     :
-    - https://sourceforge.net/projects/joe-editor/files/JOE%20sources/joe-4.6/joe-4.6.tar.gz : 495a0a61f26404070fe8a719d80406dc7f337623788e445b92a9f6de512ab9de
+    - https://github.com/joe-editor/joe/archive/refs/tags/releases/joe-4.7.tar.gz : c033ef653719165667e8c9e1e9c6b7e63f5fa0c716f2b6f8919cb9a32f4681ab
 homepage   : https://joe-editor.sourceforge.io/
 license    : GPL-2.0-or-later
 component  : editor
@@ -15,3 +16,4 @@ build      : |
     %make
 install    : |
     %make_install
+    %install_license COPYING

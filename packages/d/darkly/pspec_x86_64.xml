@@ -32,6 +32,26 @@
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/darkly-settings.svgz</Path>
             <Path fileType="data">/usr/share/kservices6/darklydecorationconfig.desktop</Path>
             <Path fileType="data">/usr/share/kstyle/themes/darkly.themerc</Path>
+            <Path fileType="data">/usr/share/licenses/darkly/COPYING</Path>
+            <Path fileType="data">/usr/share/metainfo/io.github.bali10050.darkly.metainfo.xml</Path>
+            <Path fileType="data">/usr/share/plasma/desktoptheme/darkly/dialogs/background.svg</Path>
+            <Path fileType="data">/usr/share/plasma/desktoptheme/darkly/metadata.desktop</Path>
+            <Path fileType="data">/usr/share/plasma/desktoptheme/darkly/widgets/background.svg</Path>
+            <Path fileType="data">/usr/share/plasma/desktoptheme/darkly/widgets/bar_meter_horizontal.svg</Path>
+            <Path fileType="data">/usr/share/plasma/desktoptheme/darkly/widgets/button.svg</Path>
+            <Path fileType="data">/usr/share/plasma/desktoptheme/darkly/widgets/clock.svg</Path>
+            <Path fileType="data">/usr/share/plasma/desktoptheme/darkly/widgets/dragger.svg</Path>
+            <Path fileType="data">/usr/share/plasma/desktoptheme/darkly/widgets/frame.svg</Path>
+            <Path fileType="data">/usr/share/plasma/desktoptheme/darkly/widgets/line.svgz</Path>
+            <Path fileType="data">/usr/share/plasma/desktoptheme/darkly/widgets/lineedit.svg</Path>
+            <Path fileType="data">/usr/share/plasma/desktoptheme/darkly/widgets/panel-background.svg</Path>
+            <Path fileType="data">/usr/share/plasma/desktoptheme/darkly/widgets/radiobutton.svgz</Path>
+            <Path fileType="data">/usr/share/plasma/desktoptheme/darkly/widgets/scrollbar.svg</Path>
+            <Path fileType="data">/usr/share/plasma/desktoptheme/darkly/widgets/slider.svg</Path>
+            <Path fileType="data">/usr/share/plasma/desktoptheme/darkly/widgets/switch.svg</Path>
+            <Path fileType="data">/usr/share/plasma/desktoptheme/darkly/widgets/tabbar.svg</Path>
+            <Path fileType="data">/usr/share/plasma/desktoptheme/darkly/widgets/tasks.svg</Path>
+            <Path fileType="data">/usr/share/plasma/desktoptheme/darkly/widgets/viewitem.svg</Path>
         </Files>
     </Package>
     <Package>
@@ -41,7 +61,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="10">darkly</Dependency>
+            <Dependency release="14">darkly</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib64/cmake/Darkly/DarklyConfig.cmake</Path>
@@ -49,9 +69,9 @@
         </Files>
     </Package>
     <History>
-        <Update release="10">
-            <Date>2025-10-05</Date>
-            <Version>0.5.23</Version>
+        <Update release="14">
+            <Date>2026-03-17</Date>
+            <Version>0.5.36</Version>
             <Comment>Packaging update</Comment>
             <Name>Hurican Dev</Name>
             <Email>hurican@keemail.me</Email>

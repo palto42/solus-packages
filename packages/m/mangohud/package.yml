@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : mangohud
-version    : 0.8.1
-release    : 26
+version    : 0.8.3
+release    : 30
 source     :
-    - https://github.com/flightlessmango/MangoHud/releases/download/v0.8.1/MangoHud-v0.8.1-Source.tar.xz : 4c8d8098f5deff7737978d792eef909b7469933f456a47132dccc06804825482
+    - https://github.com/flightlessmango/MangoHud/releases/download/v0.8.3/MangoHud-v0.8.3-Source.tar.xz : e810ac73163468533ddb7c74b681f1de4992a3d785dce294fee9933ec8956b05
 license    : MIT
 component  : system.utils
 homepage   : https://github.com/flightlessmango/MangoHud
@@ -19,14 +20,18 @@ builddeps  :
     - pkgconfig32(wayland-client)
     - pkgconfig32(x11)
     - pkgconfig32(xkbcommon)
-    - pkgconfig(glew)
     - pkgconfig(glfw3)
-    - pkgconfig(nlohmann_json)
     - pkgconfig(spdlog)
+    - appstream
+    - git
     - glslang-devel
     - mako
+    - mesalib-devel
     - vulkan-headers
 setup      : |
+    pushd subprojects
+        patch imgui-*/meson.build $pkgfiles/0001-do-not-install-library.patch
+    popd
     if [[ ! -z "${EMUL32BUILD}" ]]; then
         build_mangoapp="false"
         system_spdlog="disabled"
@@ -38,10 +43,13 @@ setup      : |
     %meson_configure -Dmangoapp=$build_mangoapp \
                      -Dinclude_doc=true \
                      -Dwith_xnvctrl=disabled \
-                     -Duse_system_spdlog=$system_spdlog
+                     -Duse_system_spdlog=$system_spdlog \
+                     -Dtests=enabled
 build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSE
     install -Dm00644 $workdir/data/MangoHud.conf -t $installdir/usr/share/mangohud
-# TODO: Enable tests
+check      : |
+    %ninja_check

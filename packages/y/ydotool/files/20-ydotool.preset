@@ -1,0 +1,2 @@
+# Users may systemctl --user mask to turn it off.
+enable ydotool.service

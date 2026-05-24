@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : fuse
-version    : 3.17.1
-release    : 18
+version    : 3.18.2
+release    : 19
 source     :
-    - https://github.com/libfuse/libfuse/releases/download/fuse-3.17.1/fuse-3.17.1.tar.gz : 2d8ae87a4525fbfa1db5e5eb010ff6f38140627a7004554ed88411c1843d51b2
+    - https://github.com/libfuse/libfuse/releases/download/fuse-3.18.2/fuse-3.18.2.tar.gz : f01de85717e20adf5f98aff324acd85dd73d61a5ca3834d573dcf0bd6e54a298
 license    :
     - GPL-2.0-only
     - LGPL-2.1-only
@@ -13,9 +14,6 @@ description: |
     File Systems in User Space
 builddeps  :
     - libiconv-devel
-patterns   :
-    - common :
-        - /usr/share/defaults/fuse
 rundeps    :
     - fuse-common
 setup      : |
@@ -26,6 +24,12 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSE GPL2.txt LGPL2.txt
+
     install -Dm0644 $pkgfiles/fuse.conf $installdir/usr/share/defaults/fuse/fuse.conf
+
     rm -rfv $installdir/etc
     rm -rfv $installdir/dev
+patterns   :
+    - common :
+        - /usr/share/defaults/fuse

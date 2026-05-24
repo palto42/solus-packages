@@ -61,12 +61,12 @@
             <Path fileType="localedata">/usr/share/locale/vi/LC_MESSAGES/spek.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_CN/LC_MESSAGES/spek.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_TW/LC_MESSAGES/spek.mo</Path>
-            <Path fileType="man">/usr/share/man/man1/spek.1</Path>
+            <Path fileType="man">/usr/share/man/man1/spek.1.zst</Path>
         </Files>
     </Package>
     <History>
-        <Update release="10">
-            <Date>2024-12-17</Date>
+        <Update release="11">
+            <Date>2026-04-11</Date>
             <Version>0.8.5</Version>
             <Comment>Packaging update</Comment>
             <Name>Jakob Gezelius</Name>

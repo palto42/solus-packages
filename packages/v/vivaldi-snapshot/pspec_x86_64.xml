@@ -4,7 +4,7 @@
         <Homepage>https://vivaldi.com</Homepage>
         <Packager>
             <Name>Troy Harvey</Name>
-            <Email>harveydevel@gmail.com</Email>
+            <Email>harvey@getsol.us</Email>
         </Packager>
         <License>Distributable</License>
         <PartOf>network.web.browser</PartOf>
@@ -24,7 +24,6 @@
             <Path fileType="data">/usr/share/applications/vivaldi-snapshot.desktop</Path>
             <Path fileType="data">/usr/share/icons/hicolor/128x128/apps/vivaldi-snapshot.png</Path>
             <Path fileType="data">/usr/share/icons/hicolor/16x16/apps/vivaldi-snapshot.png</Path>
-            <Path fileType="data">/usr/share/icons/hicolor/22x22/apps/vivaldi-snapshot.png</Path>
             <Path fileType="data">/usr/share/icons/hicolor/24x24/apps/vivaldi-snapshot.png</Path>
             <Path fileType="data">/usr/share/icons/hicolor/256x256/apps/vivaldi-snapshot.png</Path>
             <Path fileType="data">/usr/share/icons/hicolor/32x32/apps/vivaldi-snapshot.png</Path>
@@ -38,11 +37,9 @@
             <Path fileType="data">/usr/share/vivaldi-snapshot/PrivacySandboxAttestationsPreloaded/privacy-sandbox-attestations.dat</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/chrome_crashpad_handler</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/cron/vivaldi-snapshot</Path>
-            <Path fileType="data">/usr/share/vivaldi-snapshot/icudtl.dat</Path>
-            <Path fileType="data">/usr/share/vivaldi-snapshot/lib/libffmpeg.so</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/libEGL.so</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/libGLESv2.so</Path>
-            <Path fileType="data">/usr/share/vivaldi-snapshot/libffmpeg.so.7.7</Path>
+            <Path fileType="data">/usr/share/vivaldi-snapshot/libffmpeg.so.8.0</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/libqt5_shim.so</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/libqt6_shim.so</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/libvk_swiftshader.so</Path>
@@ -365,14 +362,17 @@
             <Path fileType="data">/usr/share/vivaldi-snapshot/locales/zh-TW_NEUTER.pak</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/product_logo_128.png</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/product_logo_16.png</Path>
-            <Path fileType="data">/usr/share/vivaldi-snapshot/product_logo_22.png</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/product_logo_24.png</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/product_logo_256.png</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/product_logo_32.png</Path>
-            <Path fileType="data">/usr/share/vivaldi-snapshot/product_logo_32.xpm</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/product_logo_48.png</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/product_logo_64.png</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources.pak</Path>
+            <Path fileType="data">/usr/share/vivaldi-snapshot/resources/accessibility/reading_mode_gdocs_helper/content.js</Path>
+            <Path fileType="data">/usr/share/vivaldi-snapshot/resources/accessibility/reading_mode_gdocs_helper/gdocs_script.js</Path>
+            <Path fileType="data">/usr/share/vivaldi-snapshot/resources/accessibility/reading_mode_gdocs_helper_manifest.json</Path>
+            <Path fileType="data">/usr/share/vivaldi-snapshot/resources/inspector_overlay/inspector_overlay_resources.grd</Path>
+            <Path fileType="data">/usr/share/vivaldi-snapshot/resources/inspector_overlay/main.js</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/_locales/af/messages.json</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/_locales/am/messages.json</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/_locales/ar/messages.json</Path>
@@ -466,6 +466,7 @@
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/_locales/uk/messages.json</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/_locales/vi/messages.json</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/_locales/zh_CN/messages.json</Path>
+            <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/_locales/zh_HANT/messages.json</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/_locales/zh_HK/messages.json</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/_locales/zh_TW/messages.json</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/adblocker_resources/LICENSE.txt</Path>
@@ -473,7 +474,7 @@
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/adblocker_resources/redirectable_resources.json</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/background-bundle.js</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/background-common-bundle.js</Path>
-            <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/background-service-worker-842ef85bfd4669c140c41b9e9dbf8ea6.js</Path>
+            <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/background-service-worker-c74a52572392e47946885723960efb7c.js</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/bundle-mailreader-worker.js</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/bundle.js</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/components/mail/mail.html</Path>
@@ -544,6 +545,7 @@
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/markdowneditor-bundle.js</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/menus/contextmenu.json</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/menus/mainmenu.json</Path>
+            <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/policy_prefs.json</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/prefs_definitions.json</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/reader-bundle.js</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/ToolbarIconFallback.svg</Path>
@@ -555,15 +557,24 @@
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/badge-supporter-16@2x.png</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/bg-paint.webp</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/bg-soft-pink.webp</Path>
+            <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/bg-thumbnail-Vivaldi1.webp</Path>
+            <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/bg-thumbnail-Vivaldi2.webp</Path>
+            <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/bg-thumbnail-VivaldiSoria.webp</Path>
+            <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/bg-thumbnail-VivaldiZen.webp</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/bg_alt_4.webp</Path>
+            <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/bg_dark-8.png</Path>
+            <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/bg_forest-8.jpg</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/bg_geometric_1.webp</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/bg_gradient_01.webp</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/bg_gradient_09.webp</Path>
+            <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/bg_kawaii-8.jpg</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/bg_landscape.webp</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/bg_martin-martz-7it4_acM-0M-unsplash.webp</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/bg_pawel-czerwinski-Xk7ktUfyaNI-unsplash.webp</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/bg_pawel-czerwinski-bWeZR1BQU9o-unsplash.webp</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/bg_richard-horvath-_nWaeTF6qo0-unsplash.webp</Path>
+            <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/bg_soria-8.jpg</Path>
+            <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/bg_zen-8.jpg</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/calendar_caldav.png</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/calendar_web.png</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/check-selected.png</Path>
@@ -611,6 +622,7 @@
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/favicons/americanas_com_br.png</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/favicons/ap.png</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/favicons/aversi.png</Path>
+            <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/favicons/aviasales.png</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/favicons/bbc.png</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/favicons/berlingske_dk.png</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/favicons/bild.png</Path>
@@ -747,6 +759,7 @@
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/favicons/tidal.png</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/favicons/trademe.png</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/favicons/trip.png</Path>
+            <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/favicons/tripadvisor.png</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/favicons/twitch.png</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/favicons/unext_jp.png</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/favicons/vedur.png</Path>
@@ -783,6 +796,7 @@
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/icon_128.png</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/icon_16.png</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/icon_notifications.png</Path>
+            <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/inverse-rounding-mask.svg</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/mail_notification_icon.png</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/mask-add-outline.svg</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/mask-add.svg</Path>
@@ -799,6 +813,8 @@
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/notification_ding.opus</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/notification_rooster.opus</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/notification_tada.opus</Path>
+            <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/perm-denied.svg</Path>
+            <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/perm-undecided.svg</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/picture_in_picture.svg</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/picture_in_picture_exit.svg</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/pref-lock.svg</Path>
@@ -809,6 +825,7 @@
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/provider_outlook.png</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/provider_proton.png</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/provider_yahoo.png</Path>
+            <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/random_image_thumb.png</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/sd_thumbnails/sd_7net.png</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/sd_thumbnails/sd_abc.net.au.png</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/sd_thumbnails/sd_accuweather.png</Path>
@@ -825,6 +842,7 @@
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/sd_thumbnails/sd_ar_tu_babnet.png</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/sd_thumbnails/sd_arstechnica.png</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/sd_thumbnails/sd_at_kronen_zeitung.png</Path>
+            <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/sd_thumbnails/sd_aviasales.png</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/sd_thumbnails/sd_az_oxu.png</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/sd_thumbnails/sd_ben_prothomalo.png</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/sd_thumbnails/sd_bestbuy.png</Path>
@@ -1096,6 +1114,7 @@
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/sd_thumbnails/sd_youtube.png</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/search_duckduckgo.svg</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/search_ecosia.svg</Path>
+            <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/search_kagi.svg</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/search_qwant.svg</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/search_startpage.svg</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/share-confetti.gif</Path>
@@ -1171,6 +1190,7 @@
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/theme/vivaldi/Stop.svg</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/theme/vivaldi/SyncStatus.svg</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/theme/vivaldi/TilingToggle.svg</Path>
+            <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/theme/vivaldi/ToggleAutoHide.svg</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/theme/vivaldi/UpdateButton.svg</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/theme/vivaldi/WorkspaceButton.svg</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/theme/vivaldi/background.webp</Path>
@@ -1277,8 +1297,8 @@
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/web_ui/profile_picker/index.html</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/web_ui/profile_picker/profile-picker.css</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/web_ui/profile_picker/welcomepage-vivaldi.svg</Path>
-            <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/welcome-account.webp</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/welcome-client.webp</Path>
+            <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/welcome-control.webp</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/welcomepage-arc.png</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/welcomepage-brave.png</Path>
             <Path fileType="data">/usr/share/vivaldi-snapshot/resources/vivaldi/resources/welcomepage-chrome.png</Path>
@@ -1331,12 +1351,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="523">
-            <Date>2025-10-10</Date>
-            <Version>7.7.3832.3</Version>
+        <Update release="583">
+            <Date>2026-05-22</Date>
+            <Version>8.0.4033.32</Version>
             <Comment>Packaging update</Comment>
             <Name>Troy Harvey</Name>
-            <Email>harveydevel@gmail.com</Email>
+            <Email>harvey@getsol.us</Email>
         </Update>
     </History>
 </PISI>

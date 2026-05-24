@@ -25,6 +25,7 @@ libc.so.6
 libcairo.so.2
 libcdr-0.1.so.1
 libcmis-0.6.so.6
+libcolamd.so.2
 libcups.so.2
 libcurl.so.4
 libdbus-1.so.3
@@ -44,7 +45,7 @@ libgdk_pixbuf-2.0.so.0
 libgio-2.0.so.0
 libglib-2.0.so.0
 libgobject-2.0.so.0
-libgpgmepp.so.6
+libgpgmepp.so.7
 libgraphite2.so.3
 libgstpbutils-1.0.so.0
 libgstreamer-1.0.so.0
@@ -54,13 +55,13 @@ libharfbuzz-icu.so.0
 libharfbuzz.so.0
 libhunspell-1.7.so.0
 libhyphen.so.0
-libicui18n.so.76
-libicuuc.so.76
+libicui18n.so.78
+libicuuc.so.78
 libjawt.so
 libjpeg.so.8
 liblangtag.so.1
 liblcms2.so.2
-libldap-2.5.so.0
+libldap.so.2
 libm.so.6
 libmariadb.so.3
 libmspub-0.1.so.1
@@ -77,7 +78,7 @@ libpagemaker-0.0.so.0
 libpango-1.0.so.0
 libplc4.so
 libpng16.so.16
-libpoppler.so.147
+libpoppler.so.160
 libpq.so.5
 libpython3.12.so.1.0
 libqxp-0.0.so.0
@@ -98,3 +99,4 @@ libxmlsec1.so.1
 libxslt.so.1
 libz.so.1
 libzmf-0.0.so.0
+libzstd.so.1

@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : libgtkmm-4
-version    : 4.18.0
-release    : 4
+version    : 4.22.0
+release    : 6
 source     :
-    - https://download.gnome.org/sources/gtkmm/4.18/gtkmm-4.18.0.tar.xz : 2ee31c15479fc4d8e958b03c8b5fbbc8e17bc122c2a2f544497b4e05619e33ec
+    - https://download.gnome.org/sources/gtkmm/4.22/gtkmm-4.22.0.tar.xz : 2e8a21b4b0725f620e33aaee0cd343ed121b533275b632896619b1c89e96de67
 homepage   : https://gtkmm.org
 license    : LGPL-2.1-or-later
 component  : desktop.gtk

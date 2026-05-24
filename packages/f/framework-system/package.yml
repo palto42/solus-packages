@@ -1,0 +1,28 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
+name       : framework-system
+version    : 0.6.3
+release    : 2
+source     :
+    - https://github.com/FrameworkComputer/framework-system/archive/refs/tags/v0.6.3.tar.gz : 79e7b5a790fc42c9db62a9ef8aedb4eb7c0bfcbe5c071485c252912a3e625e8b
+homepage   : https://github.com/FrameworkComputer/framework-system
+license    : BSD-3-Clause
+component  : system.utils
+summary    : Tools to interact with the Framework Computer systems
+description: |
+    Tools to interact with the Framework Computer systems 
+builddeps  :
+    - rust
+networking : true
+setup      : |
+    %cargo_fetch
+build      : |
+    %cargo_build
+install    : |
+    install -Dm00755 target/release/framework_tool $installdir/usr/bin/framework_tool
+    %install_license LICENSE.md
+
+    pushd framework_tool
+        install -Dm00644 completions/bash/framework_tool $installdir/usr/share/bash-completion/completions/framework_tool
+        install -Dm00644 completions/zsh/_framework_tool $installdir/usr/share/zsh/site-functions/_framework_tool
+        install -Dm00644 completions/fish/framework_tool.fish $installdir/usr/share/fish/vendor_completions.d/framework_tool.fish
+    popd

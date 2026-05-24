@@ -1,0 +1,58 @@
+<PISI>
+    <Source>
+        <Name>falcond</Name>
+        <Homepage>https://git.pika-os.com/general-packages/falcond</Homepage>
+        <Packager>
+            <Name>Robert Gonzalez</Name>
+            <Email>uni.dos12@outlook.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <PartOf>games</PartOf>
+        <Summary xml:lang="en">Advanced Linux Gaming Performance Daemon</Summary>
+        <Description xml:lang="en">falcond is a powerful system daemon designed to automatically optimize your Linux gaming experience. It intelligently manages system resources and performance settings on a per-game basis, eliminating the need to manually configure settings for each game.
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>falcond</Name>
+        <Summary xml:lang="en">Advanced Linux Gaming Performance Daemon</Summary>
+        <Description xml:lang="en">falcond is a powerful system daemon designed to automatically optimize your Linux gaming experience. It intelligently manages system resources and performance settings on a per-game basis, eliminating the need to manually configure settings for each game.
+</Description>
+        <PartOf>games</PartOf>
+        <Files>
+            <Path fileType="executable">/usr/bin/falcond</Path>
+            <Path fileType="library">/usr/lib64/systemd/system-preset/60-falcond.preset</Path>
+            <Path fileType="library">/usr/lib64/systemd/system/falcond.service</Path>
+            <Path fileType="data">/usr/share/falcond/profiles/civ7.conf</Path>
+            <Path fileType="data">/usr/share/falcond/profiles/cs2.conf</Path>
+            <Path fileType="data">/usr/share/falcond/profiles/cyberpunk2077.conf</Path>
+            <Path fileType="data">/usr/share/falcond/profiles/factorio.conf</Path>
+            <Path fileType="data">/usr/share/falcond/profiles/ffxiv.conf</Path>
+            <Path fileType="data">/usr/share/falcond/profiles/hades2.conf</Path>
+            <Path fileType="data">/usr/share/falcond/profiles/htpc/civ7.conf</Path>
+            <Path fileType="data">/usr/share/falcond/profiles/htpc/cs2.conf</Path>
+            <Path fileType="data">/usr/share/falcond/profiles/htpc/cyberpunk2077.conf</Path>
+            <Path fileType="data">/usr/share/falcond/profiles/htpc/ffxiv.conf</Path>
+            <Path fileType="data">/usr/share/falcond/profiles/htpc/hades2.conf</Path>
+            <Path fileType="data">/usr/share/falcond/profiles/htpc/obliv.conf</Path>
+            <Path fileType="data">/usr/share/falcond/profiles/htpc/proton.conf</Path>
+            <Path fileType="data">/usr/share/falcond/profiles/obliv.conf</Path>
+            <Path fileType="data">/usr/share/falcond/profiles/proton.conf</Path>
+            <Path fileType="data">/usr/share/falcond/profiles/x4.conf</Path>
+            <Path fileType="data">/usr/share/falcond/system.conf</Path>
+            <Path fileType="data">/usr/share/licenses/falcond/LICENSE</Path>
+        </Files>
+        <Conflicts>
+            <Package>gamemode</Package>
+        </Conflicts>
+    </Package>
+    <History>
+        <Update release="2">
+            <Date>2026-04-24</Date>
+            <Version>2.0.2</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Robert Gonzalez</Name>
+            <Email>uni.dos12@outlook.com</Email>
+        </Update>
+    </History>
+</PISI>

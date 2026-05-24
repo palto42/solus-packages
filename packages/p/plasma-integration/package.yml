@@ -1,10 +1,19 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : plasma-integration
-version    : 6.4.5
-release    : 135
+version    : 6.6.5
+release    : 148
 source     :
-    - https://download.kde.org/stable/plasma/6.4.5/plasma-integration-6.4.5.tar.xz : c3e271de1fa26c8833440b69ccac5e8c094a85e4742bf26f97bcb7caa8c17b2c
+    - https://download.kde.org/stable/plasma/6.6.5/plasma-integration-6.6.5.tar.xz : c28482dc8d3387b9a770fdc999dd13480b14714568395c8d86bd568b0181920a
 homepage   : https://www.kde.org/workspaces/plasmadesktop/
-license    : LGPL-2.1-only
+license    :
+    - BSD-3-Clause
+    - CC0-1.0
+    - GPL-2.0-only
+    - GPL-3.0-only
+    - LGPL-2.0-only
+    - LGPL-2.0-or-later
+    - LGPL-2.1-or-later
+    - LGPL-3.0-only
 component  : desktop.kde.core
 summary    : Integration of Qt application with KDE workspaces
 description: |
@@ -61,3 +70,5 @@ build      : |
 install    : |
     %ninja_install -C qt5-build
     %ninja_install -C qt6-build
+
+    %install_license LICENSES/*

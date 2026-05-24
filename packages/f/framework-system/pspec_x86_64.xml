@@ -1,0 +1,39 @@
+<PISI>
+    <Source>
+        <Name>framework-system</Name>
+        <Homepage>https://github.com/FrameworkComputer/framework-system</Homepage>
+        <Packager>
+            <Name>Robert Gonzalez</Name>
+            <Email>uni.dos12@outlook.com</Email>
+        </Packager>
+        <License>BSD-3-Clause</License>
+        <PartOf>system.utils</PartOf>
+        <Summary xml:lang="en">Tools to interact with the Framework Computer systems</Summary>
+        <Description xml:lang="en">Tools to interact with the Framework Computer systems 
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>framework-system</Name>
+        <Summary xml:lang="en">Tools to interact with the Framework Computer systems</Summary>
+        <Description xml:lang="en">Tools to interact with the Framework Computer systems 
+</Description>
+        <PartOf>system.utils</PartOf>
+        <Files>
+            <Path fileType="executable">/usr/bin/framework_tool</Path>
+            <Path fileType="data">/usr/share/bash-completion/completions/framework_tool</Path>
+            <Path fileType="data">/usr/share/fish/vendor_completions.d/framework_tool.fish</Path>
+            <Path fileType="data">/usr/share/licenses/framework-system/LICENSE.md</Path>
+            <Path fileType="data">/usr/share/zsh/site-functions/_framework_tool</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="2">
+            <Date>2026-05-07</Date>
+            <Version>0.6.3</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Robert Gonzalez</Name>
+            <Email>uni.dos12@outlook.com</Email>
+        </Update>
+    </History>
+</PISI>

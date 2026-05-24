@@ -1,10 +1,18 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kf6-krunner
-version    : 6.19.0
-release    : 25
+version    : 6.26.0
+release    : 32
 source     :
-    - https://download.kde.org/stable/frameworks/6.19/krunner-6.19.0.tar.xz : d59ca1a7142529bdca28f539dc7b3784f975be68b36c69d0c3e6835966ec32ab
+    - https://download.kde.org/stable/frameworks/6.26/krunner-6.26.0.tar.xz : 3519c7fe170be1359a4c38dd5269de64c0208ccfeb950661002ddfa4e92f2bf0
 homepage   : https://community.kde.org/Frameworks
-license    : LGPL-2.0-or-later
+license    :
+    - BSD-2-Clause
+    - CC0-1.0
+    - CC-BY-SA-4.0
+    - LGPL-2.0-or-later
+    - LGPL-2.1-only
+    - LGPL-2.1-or-later
+    - LGPL-3.0-only
 component  : desktop.library
 summary    : Framework for Plasma runners
 description: |
@@ -28,6 +36,7 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*
 patterns   :
     - devel :
         - /usr/share/kdevappwizard

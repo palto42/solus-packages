@@ -1,6 +1,7 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : plocate
 version    : 1.1.22
-release    : 9
+release    : 10
 source     :
     - https://plocate.sesse.net/download/plocate-1.1.22.tar.gz : 3b7e4741b4aa2ec044e53eff06474a32a3fb1e928b9382351fe79d4c27fb0049
 homepage   : https://plocate.sesse.net/
@@ -26,6 +27,7 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license COPYING
 
     chgrp 21 $installdir/usr/bin/plocate
     chmod 2755 $installdir/usr/bin/plocate
@@ -40,9 +42,7 @@ install    : |
 
     install -Dm00644 $pkgfiles/locate_group_update.toml $installdir/usr/share/defaults/qol-assist.d/locate_group_update.toml
 
-    # Vendor enable update-db timer
-    install -Ddm00755 $installdir/usr/lib/systemd/system/timers.target.wants
-    ln -sv ../plocate-updatedb.timer $installdir/usr/lib/systemd/system/timers.target.wants
+    install -Dm00644 -t ${installdir}/%libdir%/systemd/system-preset/ ${pkgfiles}/20-plocate.preset
 
     # Add legacy symlinks
     ln -sv plocate $installdir/usr/bin/locate

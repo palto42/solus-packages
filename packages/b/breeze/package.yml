@@ -1,13 +1,16 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : breeze
-version    : 6.4.5
-release    : 148
+version    : 6.6.5
+release    : 162
 source     :
-    - https://download.kde.org/stable/plasma/6.4.5/breeze-6.4.5.tar.xz : dcb8433d399511546958f4c8c1a8fae5ed22f2a698f053968d410ee75bd6d8b4
+    - https://download.kde.org/stable/plasma/6.6.5/breeze-6.6.5.tar.xz : 06c4c3e466cd03a8c1e411a38b04756b6e145879a560534b2fc44666d41330f4
 homepage   : https://www.kde.org/workspaces/plasmadesktop/
 license    :
     - BSD-3-Clause
+    - CC0-1.0
     - GPL-2.0-only
     - GPL-2.0-or-later
+    - GPL-3.0-only
     - MIT
 component  :
     - desktop.theme
@@ -65,6 +68,8 @@ install    : |
     %ninja_install -C qt5-build
 
     %ninja_install -C qt6-build
+
+    %install_license LICENSES/*
 
     # Electron-based applications will segfault if this doesn't exist. Do not remove under any circumstance.
     install -Dm00644 $pkgfiles/index.theme $installdir/usr/share/icons/default/index.theme

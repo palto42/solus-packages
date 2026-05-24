@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : notmuch
-version    : '0.39'
-release    : 43
+version    : '0.40'
+release    : 45
 source     :
-    - https://notmuchmail.org/releases/notmuch-0.39.tar.xz : b88bb02a76c46bad8d313fd2bb4f8e39298b51f66fcbeb304d9f80c3eef704e3
+    - https://notmuchmail.org/releases/notmuch-0.40.tar.xz : 4b4314bbf1c2029fdf793637e6c7bb15c1b1730d22be9aa04803c98c5bbc446f
 homepage   : https://notmuchmail.org/
 license    : GPL-3.0-or-later
 component  : network.mail
@@ -12,7 +13,7 @@ description: |
 builddeps  :
     - pkgconfig(gmime-3.0)
     - pkgconfig(python3)
-    - pkgconfig(ruby-3.4)
+    - pkgconfig(ruby-4.0)
     - pkgconfig(talloc)
     - pkgconfig(xapian-core)
     - python-setuptools
@@ -27,8 +28,10 @@ build      : |
     %python3_setup
 install    : |
     %make_install
+    %install_license COPYING COPYING-GPL-3
     make -C bindings/ruby exec_prefix=$installdir/usr prefix=/usr install
     make -C vim DESTDIR=$installdir prefix=/usr/share/vim/addons install
 
     cd bindings/python-cffi
     %python3_install
+

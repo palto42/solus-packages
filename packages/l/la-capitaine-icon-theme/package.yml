@@ -1,6 +1,7 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : la-capitaine-icon-theme
 version    : 0.6.2
-release    : 7
+release    : 8
 source     :
     - https://github.com/keeferrourke/la-capitaine-icon-theme/archive/v0.6.2.tar.gz : e63e4bc97a7bbf4db71f17fa3b1c71086e3ed8b1dc44b4d10f95d97aa7db2c9d
 homepage   : https://krourke.org/projects/art/la-capitaine-icon-theme
@@ -14,8 +15,10 @@ description: |
 setup      : |
     %patch -i $pkgfiles/0001-Don-t-require-prompts.patch
     ./configure
-    rm {*.md,configure,COPYING,LICENSE}
+    rm {*.md,configure}
 install    : |
     install -dm00644 $installdir/usr/share/icons/la-capitaine-icon-theme
-    mv * $installdir/usr/share/icons/la-capitaine-icon-theme/
+    %install_license COPYING LICENSE
+    rm $workdir/{COPYING,LICENSE}
+    cp -r * $installdir/usr/share/icons/la-capitaine-icon-theme/
     chmod -R 00644 $installdir/usr/share/icons/la-capitaine-icon-theme/*

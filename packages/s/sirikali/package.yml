@@ -1,21 +1,26 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : sirikali
-version    : 1.4.2
-release    : 4
+version    : 1.8.6
+release    : 5
 homepage   : https://mhogomchungu.github.io/sirikali/
 source     :
-    - https://github.com/mhogomchungu/sirikali/archive/1.4.4.tar.gz : b5057f7d9a231454b68c17f859626eee5e05eb5c1e01a7ad7441ce5ae060ba90
+    - https://github.com/mhogomchungu/sirikali/archive/refs/tags/1.8.6.tar.gz : 84eb3c9df08e6b7ce4b7f1a3a4267d42e3a3be7104e595154860b8e83c0eceae
 license    : GPL-2.0-or-later
 component  : security.crypto
 summary    : SiriKali is a frontend application for managing encrypted volumes
 description: |
     SiriKali is a Qt/C++ GUI application that manages ecryptfs, cryfs, encfs, gocryptfs and securefs based encrypted folders. SiriKali can also connect to ssh servers using sshfs.
 builddeps  :
-    - pkgconfig(Qt5Core)
+    - pkgconfig(Qt6Core)
     - pkgconfig(libsecret-1)
     - pkgconfig(pwquality)
+rundeps    :
+    - cracklib
+    - libpwquality
 setup      : |
-    %cmake -DQT5=true
+    %cmake -DBUILD_WITH_QT6=true
 build      : |
     %make
 install    : |
     %make_install
+    %install_license LICENSE

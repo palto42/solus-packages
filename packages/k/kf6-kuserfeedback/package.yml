@@ -1,10 +1,14 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kf6-kuserfeedback
-version    : 6.19.0
-release    : 29
+version    : 6.26.0
+release    : 39
 source     :
-    - https://download.kde.org/stable/frameworks/6.19/kuserfeedback-6.19.0.tar.xz : 6768e73fd21a290f928b8d5714f6231ca5df8a72df625f43ac8f7ab6bb711f9f
+    - https://download.kde.org/stable/frameworks/6.26/kuserfeedback-6.26.0.tar.xz : 6cc18dca65a24af2ac262cb9c8761991701c8081a7133487b4ec936003f3f864
 homepage   : https://community.kde.org/Frameworks
-license    : MIT
+license    :
+    - BSD-3-Clause
+    - CC0-1.0
+    - MIT
 component  : desktop.library
 summary    : Framework for collecting user feedback for applications via telemetry and surveys
 description: |
@@ -15,8 +19,8 @@ builddeps  :
     - pkgconfig(Qt6Qml)
     - pkgconfig(Qt6Svg)
     - extra-cmake-modules
-    - qt6-base-private-devel
     - php-devel
+    - qt6-base-private-devel
 rundeps    :
     - devel :
         - qt6-base-devel
@@ -30,3 +34,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*

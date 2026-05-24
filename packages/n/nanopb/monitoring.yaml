@@ -1,0 +1,8 @@
+releases:
+  id: 55485
+  rss: https://github.com/nanopb/nanopb/releases.atom
+# Verify successful cpe hits by visiting https://cve.circl.lu/search?vendor=$VENDOR&product=$PRODUCT
+security:
+  cpe:
+  - vendor: nanopb_project
+    product: nanopb

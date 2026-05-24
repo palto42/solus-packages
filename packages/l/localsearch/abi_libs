@@ -2,7 +2,6 @@ libextract-abw.so
 libextract-bmp.so
 libextract-desktop.so
 libextract-disc-generic.so
-libextract-epub.so
 libextract-gif.so
 libextract-html.so
 libextract-icon.so
@@ -10,9 +9,7 @@ libextract-iso.so
 libextract-jpeg.so
 libextract-libav.so
 libextract-mp3.so
-libextract-msoffice-xml.so
 libextract-msoffice.so
-libextract-oasis.so
 libextract-pdf.so
 libextract-playlist.so
 libextract-png.so
@@ -23,8 +20,8 @@ libextract-tiff.so
 libextract-xps.so
 libtracker-extract.so
 libwriteback-gstreamer.so
+libwriteback-playlist.so
 libwriteback-xmp.so
 localsearch-3
-localsearch-control-3
 localsearch-extractor-3
 localsearch-writeback-3

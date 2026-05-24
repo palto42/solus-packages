@@ -1,4 +1,4 @@
-libc.so.6:__isoc99_sscanf
+libc.so.6:__isoc23_sscanf
 libc.so.6:__longjmp_chk
 libc.so.6:__memcpy_chk
 libc.so.6:__memset_chk

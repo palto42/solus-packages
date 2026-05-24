@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : procps-ng
-version    : 4.0.5
-release    : 14
+version    : 4.0.6
+release    : 17
 source     :
-    - https://sourceforge.net/projects/procps-ng/files/Production/procps-ng-4.0.5.tar.xz : c2e6d193cc78f84cd6ddb72aaf6d5c6a9162f0470e5992092057f5ff518562fa
+    - https://sourceforge.net/projects/procps-ng/files/Production/procps-ng-4.0.6.tar.xz : 67bea6fbc3a42a535a0230c9e891e5ddfb4d9d39422d46565a2990d1ace15216
 homepage   : https://gitlab.com/procps-ng/procps
 license    : GPL-2.0-or-later
 summary    : /proc file system utilities
@@ -21,9 +22,7 @@ build      : |
     %make
 install    : |
     %make_install
+    %install_license COPYING
 
     # Empty
-    rmdir -v $installdir/usr/share/man/de/man3 \
-             $installdir/usr/share/man/fr/man3 \
-             $installdir/usr/share/man/pl/man5 \
-             $installdir/usr/share/man/pt_BR/man3
+    find $installdir -type d -empty -delete

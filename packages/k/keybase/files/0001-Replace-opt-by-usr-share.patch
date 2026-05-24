@@ -1,35 +1,47 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Thomas Staudinger <Staudi.Kaos@gmail.com>
+Date: Tue, 31 Mar 2026 16:45:47 +0200
+Subject: [PATCH] Replace /opt with /usr/share
+
+Signed-off-by: Thomas Staudinger <Staudi.Kaos@gmail.com>
+---
+ packaging/linux/build_binaries.sh           | 12 ++++++------
+ packaging/linux/run_keybase                 |  4 ++--
+ packaging/linux/systemd/keybase.gui.service |  2 +-
+ 3 files changed, 9 insertions(+), 9 deletions(-)
+
 diff --git a/packaging/linux/build_binaries.sh b/packaging/linux/build_binaries.sh
-index 9842c5dd33..50b120dcd7 100755
+index 82d632e..3ea0946 100755
 --- a/packaging/linux/build_binaries.sh
 +++ b/packaging/linux/build_binaries.sh
-@@ -98,9 +98,9 @@ build_one_architecture() {
-   cp "$here/run_keybase" "$layout_dir/usr/bin/"
+@@ -103,9 +103,9 @@ build_one_architecture() {
+ 	cp "$here/run_keybase" "$layout_dir/usr/bin/"
  
-   # In include-KBFS mode, create the /opt/keybase dir, and include post_install.sh.
--  mkdir -p "$layout_dir/opt/keybase"
--  cp "$here/post_install.sh" "$layout_dir/opt/keybase/"
--  cp "$here/crypto_squirrel.txt" "$layout_dir/opt/keybase/"
-+  mkdir -p "$layout_dir/usr/share/keybase"
-+  cp "$here/post_install.sh" "$layout_dir/usr/share/keybase/"
-+  cp "$here/crypto_squirrel.txt" "$layout_dir/usr/share/keybase/"
+ 	# In include-KBFS mode, create the /opt/keybase dir, and include post_install.sh.
+-	mkdir -p "$layout_dir/opt/keybase"
+-	cp "$here/post_install.sh" "$layout_dir/opt/keybase/"
+-	cp "$here/crypto_squirrel.txt" "$layout_dir/opt/keybase/"
++	mkdir -p "$layout_dir/usr/share/keybase"
++	cp "$here/post_install.sh" "$layout_dir/usr/share/keybase/"
++	cp "$here/crypto_squirrel.txt" "$layout_dir/usr/share/keybase/"
  
-   # Build the kbfsfuse binary. Currently, this always builds from master.
-   echo "Building kbfs for $GOARCH..."
-@@ -140,9 +140,9 @@ build_one_architecture() {
-     cd "$this_repo/shared"
-     yarn run package -- --platform linux --arch "$electron_arch" --appVersion "$version" --network-concurrency 8
-     rsync -a "desktop/release/linux-${electron_arch}/Keybase-linux-${electron_arch}/" \
--      "$layout_dir/opt/keybase"
--    chmod 755 "$layout_dir/opt/keybase"
--    chmod 4755 "$layout_dir/opt/keybase/chrome-sandbox"
-+      "$layout_dir/usr/share/keybase"
-+    chmod 755 "$layout_dir/usr/share/keybase"
-+    chmod 4755 "$layout_dir/usr/share/keybase/chrome-sandbox"
-   )
+ 	# Build the kbfsfuse binary. Currently, this always builds from master.
+ 	echo "Building kbfs for $GOARCH..."
+@@ -154,9 +154,9 @@ build_one_architecture() {
+ 		cd "$this_repo/shared"
+ 		yarn run package -- --platform=linux --arch="$electron_arch" --appVersion="$version" --network-concurrency=8
+ 		rsync -a "desktop/release/linux-${electron_arch}/Keybase-linux-${electron_arch}/" \
+-			"$layout_dir/opt/keybase"
+-		chmod 755 "$layout_dir/opt/keybase"
+-		chmod 4755 "$layout_dir/opt/keybase/chrome-sandbox"
++			"$layout_dir/usr/share/keybase"
++		chmod 755 "$layout_dir/usr/share/keybase"
++		chmod 4755 "$layout_dir/usr/share/keybase/chrome-sandbox"
+ 	)
  
-   # Copy in the icon images and .saltpack file images.
+ 	# Copy in the icon images and .saltpack file images.
 diff --git a/packaging/linux/run_keybase b/packaging/linux/run_keybase
-index 0dcf56576b..fe6a9ca0e3 100755
+index 0dcf565..fe6a9ca 100755
 --- a/packaging/linux/run_keybase
 +++ b/packaging/linux/run_keybase
 @@ -139,7 +139,7 @@ warn_if_weird_path() {
@@ -51,7 +63,7 @@ index 0dcf56576b..fe6a9ca0e3 100755
  }
  
 diff --git a/packaging/linux/systemd/keybase.gui.service b/packaging/linux/systemd/keybase.gui.service
-index 97c6922aac..00a5531f2d 100644
+index 97c6922..00a5531 100644
 --- a/packaging/linux/systemd/keybase.gui.service
 +++ b/packaging/linux/systemd/keybase.gui.service
 @@ -19,7 +19,7 @@ EnvironmentFile=-%t/keybase/keybase.gui.env

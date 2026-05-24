@@ -1,0 +1,6 @@
+releases:
+  id: 7927
+  rss: https://invent.kde.org/qt/qt/qtgraphs/-/tags?format=atom
+ # No known CPE, checked 2026-04-07
+security:
+  cpe: ~

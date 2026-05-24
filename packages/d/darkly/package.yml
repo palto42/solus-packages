@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : darkly
-version    : 0.5.23
-release    : 10
+version    : 0.5.36
+release    : 14
 source     :
-    - https://github.com/Bali10050/Darkly/archive/refs/tags/v0.5.23.tar.gz : a897784e4e43fe7947afe65fd91e796f98f8eec6beec7f94a04f3c102c5d5577
+    - https://github.com/Bali10050/Darkly/archive/refs/tags/v0.5.36.tar.gz : 7cc54dd4b94fa71f52d0836605966b73196497b68b9ac3f2f0b80c2c26d7d8d0
 homepage   : https://github.com/Bali10050/Darkly
 license    : GPL-2.0-or-later
 component  : desktop.theme
@@ -55,3 +56,9 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+
+    # Install appstream metadata
+    install -Dm00644 $pkgfiles/io.github.bali10050.darkly.metainfo.xml -t $installdir/usr/share/metainfo
+
+    # Install Licence
+    %install_license COPYING

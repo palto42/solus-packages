@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kclock
-version    : 25.08.2
-release    : 26
+version    : 26.04.1
+release    : 35
 source     :
-    - https://download.kde.org/stable/release-service/25.08.2/src/kclock-25.08.2.tar.xz : e2ee0358e0168078a6e3d8766e7b673b22c5bc7864012a05b7925eddb9e91adc
+    - https://download.kde.org/stable/release-service/26.04.1/src/kclock-26.04.1.tar.xz : 04468bc8f0f0dda9774aff34ce1dcfa4303a259bddeaec85bb2de107dbbdf18e
 homepage   : https://apps.kde.org/kclock
 license    : GPL-2.0-or-later
 component  : desktop.kde
@@ -18,6 +19,7 @@ builddeps  :
     - pkgconfig(Qt6Multimedia)
     - pkgconfig(Qt6QuickControls2)
     - pkgconfig(Qt6Svg)
+    - pkgconfig(wayland-protocols)
     - kf6-kconfig-devel
     - kf6-kcoreaddons-devel
     - kf6-kcrash-devel
@@ -31,6 +33,7 @@ builddeps  :
     - kf6-ksvg-devel
     - kirigami-addons-devel
     - libplasma-devel
+    - plasma-wayland-protocols-devel
     - qt6-base-private-devel
 rundeps    :
     - kirigami-addons

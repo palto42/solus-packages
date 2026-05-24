@@ -1,12 +1,14 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kf6-kidletime
-version    : 6.19.0
-release    : 25
+version    : 6.26.0
+release    : 34
 source     :
-    - https://download.kde.org/stable/frameworks/6.19/kidletime-6.19.0.tar.xz : df82c386fef8dc98ea5976ffef1da11539c1914d21b773ce62f4533b5ad16f65
+    - https://download.kde.org/stable/frameworks/6.26/kidletime-6.26.0.tar.xz : f0efd67ee0e5b5eb9200e924e9478c1ecb179b4a38e0cf125b377e7fa373ef07
 homepage   : https://community.kde.org/Frameworks
 license    :
+    - CC0-1.0
     - GPL-2.0-or-later
-    - LGPL-2.0-only
+    - LGPL-2.1-or-later
     - MIT
 component  : desktop.library
 summary    : Reporting of idle time of user and system
@@ -22,6 +24,7 @@ builddeps  :
     - pkgconfig(xscrnsaver)
     - extra-cmake-modules
     - plasma-wayland-protocols-devel
+    - qt6-base-private-devel
 rundeps    :
     - devel :
         - extra-cmake-modules
@@ -34,3 +37,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*

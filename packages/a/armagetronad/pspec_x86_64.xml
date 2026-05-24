@@ -49,11 +49,11 @@
             <Path fileType="data">/usr/share/armagetronad/armagetronad/settings_dedicated.cfg</Path>
             <Path fileType="data">/usr/share/armagetronad/armagetronad/settings_visual.cfg</Path>
             <Path fileType="data">/usr/share/armagetronad/armagetronad/subcultures.srv</Path>
-            <Path fileType="data">/usr/share/armagetronad/desktop/armagetronad.appdata.xml</Path>
-            <Path fileType="data">/usr/share/armagetronad/desktop/armagetronad.desktop</Path>
+            <Path fileType="data">/usr/share/armagetronad/desktop/icons/128x128/armagetronad.png</Path>
             <Path fileType="data">/usr/share/armagetronad/desktop/icons/16x16/armagetronad.png</Path>
             <Path fileType="data">/usr/share/armagetronad/desktop/icons/32x32/armagetronad.png</Path>
             <Path fileType="data">/usr/share/armagetronad/desktop/icons/48x48/armagetronad.png</Path>
+            <Path fileType="data">/usr/share/armagetronad/desktop/icons/64x64/armagetronad.png</Path>
             <Path fileType="data">/usr/share/armagetronad/language/american.txt</Path>
             <Path fileType="data">/usr/share/armagetronad/language/british.txt</Path>
             <Path fileType="data">/usr/share/armagetronad/language/deutsch.txt</Path>
@@ -129,16 +129,19 @@
             <Path fileType="doc">/usr/share/doc/armagetronad/html/readme_macosx.html</Path>
             <Path fileType="doc">/usr/share/doc/armagetronad/html/todo.html</Path>
             <Path fileType="doc">/usr/share/doc/armagetronad/html/versions.html</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/128x128/apps/org.armagetronad.armagetronad.png</Path>
             <Path fileType="data">/usr/share/icons/hicolor/16x16/apps/org.armagetronad.armagetronad.png</Path>
             <Path fileType="data">/usr/share/icons/hicolor/32x32/apps/org.armagetronad.armagetronad.png</Path>
             <Path fileType="data">/usr/share/icons/hicolor/48x48/apps/org.armagetronad.armagetronad.png</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/64x64/apps/org.armagetronad.armagetronad.png</Path>
+            <Path fileType="data">/usr/share/licenses/armagetronad/COPYING</Path>
             <Path fileType="data">/usr/share/metainfo/armagetronad.metainfo.xml</Path>
         </Files>
     </Package>
     <History>
-        <Update release="16">
-            <Date>2025-05-24</Date>
-            <Version>0.2.9.2.3</Version>
+        <Update release="18">
+            <Date>2026-05-23</Date>
+            <Version>0.2.9.3.0</Version>
             <Comment>Packaging update</Comment>
             <Name>Joey Riches</Name>
             <Email>josephriches@gmail.com</Email>

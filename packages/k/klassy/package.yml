@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : klassy
-version    : 6.4.0
-release    : 1
+version    : 6.5.3
+release    : 2
 source     :
-    - https://github.com/paulmcauley/klassy/archive/refs/tags/6.4.breeze6.4.0.tar.gz : 77c757b5edef9808a84fe50f9277369ecafc38fba8d7cda11eb448c0c170a3ff
+    - https://github.com/paulmcauley/klassy/archive/refs/tags/v6.5.3.tar.gz : bd734d0998179cc51cd8606c7a5f0013c646d4bf08bb875a5ff7cfdc96e707aa
 homepage   : https://github.com/paulmcauley/klassy/
 license    :
     - BSD-3-Clause
@@ -62,3 +63,5 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+
+    %install_license LICENSES/*

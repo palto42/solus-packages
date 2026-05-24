@@ -1,0 +1,54 @@
+<PISI>
+    <Source>
+        <Name>python-gp-libs</Name>
+        <Homepage>https://github.com/git-pull/gp-libs</Homepage>
+        <Packager>
+            <Name>Evan Maddock</Name>
+            <Email>maddock.evan@vivaldi.net</Email>
+        </Packager>
+        <License>MIT</License>
+        <PartOf>programming.python</PartOf>
+        <Summary xml:lang="en">Incubator for pytest and sphinx helpers for git-pull python projects</Summary>
+        <Description xml:lang="en">Incubator for pytest and sphinx helpers for git-pull python projects.
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>python-gp-libs</Name>
+        <Summary xml:lang="en">Incubator for pytest and sphinx helpers for git-pull python projects</Summary>
+        <Description xml:lang="en">Incubator for pytest and sphinx helpers for git-pull python projects.
+</Description>
+        <PartOf>programming.python</PartOf>
+        <Files>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/__pycache__/doctest_docutils.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/__pycache__/doctest_docutils.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/__pycache__/docutils_compat.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/__pycache__/docutils_compat.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/__pycache__/gp_libs.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/__pycache__/gp_libs.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/__pycache__/linkify_issues.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/__pycache__/linkify_issues.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/__pycache__/pytest_doctest_docutils.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/__pycache__/pytest_doctest_docutils.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/doctest_docutils.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/docutils_compat.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/gp_libs-0.0.17.dist-info/METADATA</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/gp_libs-0.0.17.dist-info/RECORD</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/gp_libs-0.0.17.dist-info/WHEEL</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/gp_libs-0.0.17.dist-info/entry_points.txt</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/gp_libs-0.0.17.dist-info/licenses/LICENSE</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/gp_libs.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/linkify_issues.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/pytest_doctest_docutils.py</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2026-04-02</Date>
+            <Version>0.0.17</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Evan Maddock</Name>
+            <Email>maddock.evan@vivaldi.net</Email>
+        </Update>
+    </History>
+</PISI>

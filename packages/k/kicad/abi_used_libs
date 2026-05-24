@@ -1,8 +1,6 @@
 UNKNOWN
 ld-linux-x86-64.so.2
-libEGL.so.1
 libGLU.so.1
-libOpenGL.so.0
 libTKBO.so.7.9
 libTKBRep.so.7.9
 libTKCDF.so.7.9
@@ -24,9 +22,7 @@ libTKTopAlgo.so.7.9
 libTKXCAF.so.7.9
 libTKXSBase.so.7.9
 libTKernel.so.7.9
-libabsl_hash.so.2401.0.0
-libabsl_log_internal_message.so.2401.0.0
-libabsl_log_internal_nullguard.so.2401.0.0
+libabsl_hash.so.2601.0.0
 libc.so.6
 libcairo.so.2
 libcurl.so.4
@@ -43,9 +39,11 @@ libharfbuzz.so.0
 libm.so.6
 libnng.so.1
 libodbc.so.2
-libprotobuf.so.27.2.0
+libpoppler-glib.so.8
+libprotobuf.so.34.0.0
 libpython3.12.so.1.0
 libsecret-1.so.0
+libspnav.so.0
 libstdc++.so.6
 libwayland-client.so.0
 libwx_baseu-3.2.so.0
@@ -57,5 +55,6 @@ libwx_gtk3u_gl-3.2.so.0
 libwx_gtk3u_html-3.2.so.0
 libwx_gtk3u_propgrid-3.2.so.0
 libwx_gtk3u_stc-3.2.so.0
+libwx_gtk3u_webview-3.2.so.0
 libz.so.1
 libzstd.so.1

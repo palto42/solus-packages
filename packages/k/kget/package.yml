@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kget
-version    : 25.08.2
-release    : 91
+version    : 26.04.1
+release    : 97
 source     :
-    - https://download.kde.org/stable/release-service/25.08.2/src/kget-25.08.2.tar.xz : 6214d5801acea5a7a7f1e87c268c617637213297bd3aa81708a6e97c3b37721f
+    - https://download.kde.org/stable/release-service/26.04.1/src/kget-26.04.1.tar.xz : a2b5a6ac9ead7beea32183b1f9ddb74ef59204b0daf1f78ff50b7dc3f9e4e36d
 homepage   : https://kde.org/applications/internet/org.kde.kget
 license    :
     - GFDL-1.2-or-later
@@ -14,7 +15,7 @@ description: |
 builddeps  :
     - pkgconfig(libmms)
     - pkgconfig(sqlite3)
-    - gpgme-qt-devel
+    - gpgmeqt-qt6-devel
     - kf6-kcmutils-devel
     - kf6-kcrash-devel
     - kf6-kdbusaddons-devel
@@ -37,6 +38,7 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license COPYING COPYING.LIB
 
     # remove docs
     rm -rfv $installdir/usr/share/doc

@@ -3,8 +3,8 @@
         <Name>evolution-data-server</Name>
         <Homepage>https://gitlab.gnome.org/GNOME/evolution-data-server</Homepage>
         <Packager>
-            <Name>Joey Riches</Name>
-            <Email>josephriches@gmail.com</Email>
+            <Name>Evan Maddock</Name>
+            <Email>maddock.evan@vivaldi.net</Email>
         </Packager>
         <License>GPL-2.0-only</License>
         <PartOf>desktop.gnome.core</PartOf>
@@ -63,14 +63,14 @@
             <Path fileType="library">/usr/lib/girepository-1.0/EDataServer-1.2.typelib</Path>
             <Path fileType="library">/usr/lib/girepository-1.0/EDataServerUI-1.2.typelib</Path>
             <Path fileType="library">/usr/lib/girepository-1.0/EDataServerUI4-1.0.typelib</Path>
-            <Path fileType="library">/usr/lib/libcamel-1.2.so.64</Path>
-            <Path fileType="library">/usr/lib/libcamel-1.2.so.64.0.0</Path>
+            <Path fileType="library">/usr/lib/libcamel-1.2.so.67</Path>
+            <Path fileType="library">/usr/lib/libcamel-1.2.so.67.0.0</Path>
             <Path fileType="library">/usr/lib/libebackend-1.2.so.11</Path>
             <Path fileType="library">/usr/lib/libebackend-1.2.so.11.0.0</Path>
             <Path fileType="library">/usr/lib/libebook-1.2.so.21</Path>
             <Path fileType="library">/usr/lib/libebook-1.2.so.21.1.3</Path>
-            <Path fileType="library">/usr/lib/libebook-contacts-1.2.so.4</Path>
-            <Path fileType="library">/usr/lib/libebook-contacts-1.2.so.4.0.0</Path>
+            <Path fileType="library">/usr/lib/libebook-contacts-1.2.so.5</Path>
+            <Path fileType="library">/usr/lib/libebook-contacts-1.2.so.5.0.0</Path>
             <Path fileType="library">/usr/lib/libecal-2.0.so.3</Path>
             <Path fileType="library">/usr/lib/libecal-2.0.so.3.0.0</Path>
             <Path fileType="library">/usr/lib/libedata-book-1.2.so.27</Path>
@@ -84,6 +84,7 @@
             <Path fileType="library">/usr/lib/libedataserverui4-1.0.so.0</Path>
             <Path fileType="library">/usr/lib/libedataserverui4-1.0.so.0.0.0</Path>
             <Path fileType="library">/usr/lib/systemd/user/evolution-addressbook-factory.service</Path>
+            <Path fileType="library">/usr/lib/systemd/user/evolution-alarm-notify.service</Path>
             <Path fileType="library">/usr/lib/systemd/user/evolution-calendar-factory.service</Path>
             <Path fileType="library">/usr/lib/systemd/user/evolution-source-registry.service</Path>
             <Path fileType="library">/usr/lib/systemd/user/evolution-user-prompter.service</Path>
@@ -99,7 +100,6 @@
             <Path fileType="executable">/usr/libexec/evolution-data-server/evolution-alarm-notify</Path>
             <Path fileType="executable">/usr/libexec/evolution-data-server/evolution-oauth2-handler</Path>
             <Path fileType="executable">/usr/libexec/evolution-data-server/list-sources</Path>
-            <Path fileType="executable">/usr/libexec/evolution-scan-gconf-tree-xml</Path>
             <Path fileType="executable">/usr/libexec/evolution-source-registry</Path>
             <Path fileType="executable">/usr/libexec/evolution-user-prompter</Path>
             <Path fileType="data">/usr/share/GConf/gsettings/evolution-data-server.convert</Path>
@@ -141,6 +141,7 @@
             <Path fileType="data">/usr/share/glib-2.0/schemas/org.gnome.evolution.eds-shell.gschema.xml</Path>
             <Path fileType="data">/usr/share/glib-2.0/schemas/org.gnome.evolution.shell.network-config.gschema.xml</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.gnome.Evolution-alarm-notify.svg</Path>
+            <Path fileType="data">/usr/share/licenses/evolution-data-server/COPYING</Path>
             <Path fileType="localedata">/usr/share/locale/am/LC_MESSAGES/evolution-data-server.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ar/LC_MESSAGES/evolution-data-server.mo</Path>
             <Path fileType="localedata">/usr/share/locale/as/LC_MESSAGES/evolution-data-server.mo</Path>
@@ -258,7 +259,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="110">evolution-data-server</Dependency>
+            <Dependency release="119">evolution-data-server</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/evolution-data-server/camel/camel-address.h</Path>
@@ -279,7 +280,6 @@
             <Path fileType="header">/usr/include/evolution-data-server/camel/camel-filter-input-stream.h</Path>
             <Path fileType="header">/usr/include/evolution-data-server/camel/camel-filter-output-stream.h</Path>
             <Path fileType="header">/usr/include/evolution-data-server/camel/camel-filter-search.h</Path>
-            <Path fileType="header">/usr/include/evolution-data-server/camel/camel-folder-search.h</Path>
             <Path fileType="header">/usr/include/evolution-data-server/camel/camel-folder-summary.h</Path>
             <Path fileType="header">/usr/include/evolution-data-server/camel/camel-folder-thread.h</Path>
             <Path fileType="header">/usr/include/evolution-data-server/camel/camel-folder.h</Path>
@@ -335,7 +335,6 @@
             <Path fileType="header">/usr/include/evolution-data-server/camel/camel-nntp-address.h</Path>
             <Path fileType="header">/usr/include/evolution-data-server/camel/camel-null-output-stream.h</Path>
             <Path fileType="header">/usr/include/evolution-data-server/camel/camel-object-bag.h</Path>
-            <Path fileType="header">/usr/include/evolution-data-server/camel/camel-object.h</Path>
             <Path fileType="header">/usr/include/evolution-data-server/camel/camel-offline-folder.h</Path>
             <Path fileType="header">/usr/include/evolution-data-server/camel/camel-offline-settings.h</Path>
             <Path fileType="header">/usr/include/evolution-data-server/camel/camel-offline-store.h</Path>
@@ -356,12 +355,14 @@
             <Path fileType="header">/usr/include/evolution-data-server/camel/camel-sasl-xoauth2.h</Path>
             <Path fileType="header">/usr/include/evolution-data-server/camel/camel-sasl.h</Path>
             <Path fileType="header">/usr/include/evolution-data-server/camel/camel-search-private.h</Path>
-            <Path fileType="header">/usr/include/evolution-data-server/camel/camel-search-sql-sexp.h</Path>
+            <Path fileType="header">/usr/include/evolution-data-server/camel/camel-search-utils.h</Path>
             <Path fileType="header">/usr/include/evolution-data-server/camel/camel-service.h</Path>
             <Path fileType="header">/usr/include/evolution-data-server/camel/camel-session.h</Path>
             <Path fileType="header">/usr/include/evolution-data-server/camel/camel-settings.h</Path>
             <Path fileType="header">/usr/include/evolution-data-server/camel/camel-sexp.h</Path>
             <Path fileType="header">/usr/include/evolution-data-server/camel/camel-smime-context.h</Path>
+            <Path fileType="header">/usr/include/evolution-data-server/camel/camel-store-db.h</Path>
+            <Path fileType="header">/usr/include/evolution-data-server/camel/camel-store-search.h</Path>
             <Path fileType="header">/usr/include/evolution-data-server/camel/camel-store-settings.h</Path>
             <Path fileType="header">/usr/include/evolution-data-server/camel/camel-store-summary.h</Path>
             <Path fileType="header">/usr/include/evolution-data-server/camel/camel-store.h</Path>
@@ -382,7 +383,6 @@
             <Path fileType="header">/usr/include/evolution-data-server/camel/camel-url.h</Path>
             <Path fileType="header">/usr/include/evolution-data-server/camel/camel-utf8.h</Path>
             <Path fileType="header">/usr/include/evolution-data-server/camel/camel-utils.h</Path>
-            <Path fileType="header">/usr/include/evolution-data-server/camel/camel-vee-data-cache.h</Path>
             <Path fileType="header">/usr/include/evolution-data-server/camel/camel-vee-folder.h</Path>
             <Path fileType="header">/usr/include/evolution-data-server/camel/camel-vee-message-info.h</Path>
             <Path fileType="header">/usr/include/evolution-data-server/camel/camel-vee-store.h</Path>
@@ -401,8 +401,6 @@
             <Path fileType="header">/usr/include/evolution-data-server/libebackend/e-collection-backend-factory.h</Path>
             <Path fileType="header">/usr/include/evolution-data-server/libebackend/e-collection-backend.h</Path>
             <Path fileType="header">/usr/include/evolution-data-server/libebackend/e-data-factory.h</Path>
-            <Path fileType="header">/usr/include/evolution-data-server/libebackend/e-db3-utils.h</Path>
-            <Path fileType="header">/usr/include/evolution-data-server/libebackend/e-dbhash.h</Path>
             <Path fileType="header">/usr/include/evolution-data-server/libebackend/e-dbus-server.h</Path>
             <Path fileType="header">/usr/include/evolution-data-server/libebackend/e-file-cache.h</Path>
             <Path fileType="header">/usr/include/evolution-data-server/libebackend/e-oauth2-support.h</Path>
@@ -450,6 +448,7 @@
             <Path fileType="header">/usr/include/evolution-data-server/libecal/e-cal-component-alarm.h</Path>
             <Path fileType="header">/usr/include/evolution-data-server/libecal/e-cal-component-alarms.h</Path>
             <Path fileType="header">/usr/include/evolution-data-server/libecal/e-cal-component-attendee.h</Path>
+            <Path fileType="header">/usr/include/evolution-data-server/libecal/e-cal-component-bag.h</Path>
             <Path fileType="header">/usr/include/evolution-data-server/libecal/e-cal-component-datetime.h</Path>
             <Path fileType="header">/usr/include/evolution-data-server/libecal/e-cal-component-id.h</Path>
             <Path fileType="header">/usr/include/evolution-data-server/libecal/e-cal-component-organizer.h</Path>
@@ -469,7 +468,6 @@
             <Path fileType="header">/usr/include/evolution-data-server/libecal/e-timezone-cache.h</Path>
             <Path fileType="header">/usr/include/evolution-data-server/libecal/libecal.h</Path>
             <Path fileType="header">/usr/include/evolution-data-server/libedata-book/e-book-backend-cache.h</Path>
-            <Path fileType="header">/usr/include/evolution-data-server/libedata-book/e-book-backend-db-cache.h</Path>
             <Path fileType="header">/usr/include/evolution-data-server/libedata-book/e-book-backend-factory.h</Path>
             <Path fileType="header">/usr/include/evolution-data-server/libedata-book/e-book-backend-sexp.h</Path>
             <Path fileType="header">/usr/include/evolution-data-server/libedata-book/e-book-backend-sqlitedb.h</Path>
@@ -549,6 +547,7 @@
             <Path fileType="header">/usr/include/evolution-data-server/libedataserver/e-source-calendar.h</Path>
             <Path fileType="header">/usr/include/evolution-data-server/libedataserver/e-source-camel.h</Path>
             <Path fileType="header">/usr/include/evolution-data-server/libedataserver/e-source-collection.h</Path>
+            <Path fileType="header">/usr/include/evolution-data-server/libedataserver/e-source-conflict-search.h</Path>
             <Path fileType="header">/usr/include/evolution-data-server/libedataserver/e-source-contacts.h</Path>
             <Path fileType="header">/usr/include/evolution-data-server/libedataserver/e-source-credentials-provider-impl-oauth2.h</Path>
             <Path fileType="header">/usr/include/evolution-data-server/libedataserver/e-source-credentials-provider-impl-password.h</Path>
@@ -671,12 +670,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="110">
-            <Date>2025-07-08</Date>
-            <Version>3.56.2</Version>
+        <Update release="119">
+            <Date>2026-04-30</Date>
+            <Version>3.60.1</Version>
             <Comment>Packaging update</Comment>
-            <Name>Joey Riches</Name>
-            <Email>josephriches@gmail.com</Email>
+            <Name>Evan Maddock</Name>
+            <Email>maddock.evan@vivaldi.net</Email>
         </Update>
     </History>
 </PISI>

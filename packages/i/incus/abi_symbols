@@ -10,6 +10,7 @@ incus-benchmark:crosscall2
 incus-user:_cgo_panic
 incus-user:_cgo_topofstack
 incus-user:crosscall2
+incusd:_IO_stdin_used
 incusd:_cgo_panic
 incusd:_cgo_topofstack
 incusd:authorizerTrampoline
@@ -23,6 +24,7 @@ incusd:preUpdateHookTrampoline
 incusd:rollbackHookTrampoline
 incusd:stepTrampoline
 incusd:updateHookTrampoline
+lxc-to-incus:_IO_stdin_used
 lxc-to-incus:_cgo_panic
 lxc-to-incus:_cgo_topofstack
 lxc-to-incus:crosscall2

@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : imagemagick
-version    : 7.1.2.3
-release    : 202
+version    : 7.1.2.23
+release    : 217
 source     :
-    - https://github.com/ImageMagick/ImageMagick/archive/refs/tags/7.1.2-3.tar.gz : b16415e8694a2e15e5282d64fc7b358f309ff3a514a90eb5da268676c772de3d
+    - https://github.com/ImageMagick/ImageMagick/archive/refs/tags/7.1.2-23.tar.gz : f129f7d87fc21da453d032dd291b80ea13faf2497f13ef8279d97759ed7d5c46
 homepage   : https://imagemagick.org/
 license    : Apache-2.0
 component  : multimedia.graphics
@@ -45,6 +46,7 @@ build      : |
     %make
 install    : |
     %make_install
+    %install_license LICENSE
     install -dm00755 $installdir/usr/share/defaults
     mv $installdir/etc/ImageMagick-7 $installdir/usr/share/defaults
     rm -rvf "$installdir/%perl_privlib%"

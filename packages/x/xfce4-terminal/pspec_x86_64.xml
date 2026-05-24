@@ -39,6 +39,7 @@
             <Path fileType="data">/usr/share/icons/hicolor/96x96/apps/org.xfce.terminal.png</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.xfce.terminal-settings.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.xfce.terminal.svg</Path>
+            <Path fileType="data">/usr/share/licenses/xfce4-terminal/COPYING</Path>
             <Path fileType="localedata">/usr/share/locale/ar/LC_MESSAGES/xfce4-terminal.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ast/LC_MESSAGES/xfce4-terminal.mo</Path>
             <Path fileType="localedata">/usr/share/locale/be/LC_MESSAGES/xfce4-terminal.mo</Path>
@@ -91,6 +92,7 @@
             <Path fileType="localedata">/usr/share/locale/te/LC_MESSAGES/xfce4-terminal.mo</Path>
             <Path fileType="localedata">/usr/share/locale/th/LC_MESSAGES/xfce4-terminal.mo</Path>
             <Path fileType="localedata">/usr/share/locale/tr/LC_MESSAGES/xfce4-terminal.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/tt/LC_MESSAGES/xfce4-terminal.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ug/LC_MESSAGES/xfce4-terminal.mo</Path>
             <Path fileType="localedata">/usr/share/locale/uk/LC_MESSAGES/xfce4-terminal.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ur/LC_MESSAGES/xfce4-terminal.mo</Path>
@@ -98,7 +100,7 @@
             <Path fileType="localedata">/usr/share/locale/vi/LC_MESSAGES/xfce4-terminal.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_CN/LC_MESSAGES/xfce4-terminal.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_TW/LC_MESSAGES/xfce4-terminal.mo</Path>
-            <Path fileType="man">/usr/share/man/man1/xfce4-terminal.1</Path>
+            <Path fileType="man">/usr/share/man/man1/xfce4-terminal.1.zst</Path>
             <Path fileType="data">/usr/share/metainfo/org.xfce.terminal.metainfo.xml</Path>
             <Path fileType="data">/usr/share/xfce4/terminal/colorschemes/black-on-white.theme</Path>
             <Path fileType="data">/usr/share/xfce4/terminal/colorschemes/dark-pastels.theme</Path>
@@ -111,9 +113,9 @@
         </Files>
     </Package>
     <History>
-        <Update release="7">
-            <Date>2025-03-26</Date>
-            <Version>1.1.5</Version>
+        <Update release="8">
+            <Date>2026-03-30</Date>
+            <Version>1.2.0</Version>
             <Comment>Packaging update</Comment>
             <Name>Evan Maddock</Name>
             <Email>maddock.evan@vivaldi.net</Email>

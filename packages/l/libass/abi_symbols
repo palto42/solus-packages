@@ -2,6 +2,7 @@ libass.so.9:ass_add_font
 libass.so.9:ass_alloc_event
 libass.so.9:ass_alloc_style
 libass.so.9:ass_clear_fonts
+libass.so.9:ass_configure_prune
 libass.so.9:ass_flush_events
 libass.so.9:ass_fonts_update
 libass.so.9:ass_free
@@ -18,6 +19,7 @@ libass.so.9:ass_process_chunk
 libass.so.9:ass_process_codec_private
 libass.so.9:ass_process_data
 libass.so.9:ass_process_force_style
+libass.so.9:ass_prune_events
 libass.so.9:ass_read_file
 libass.so.9:ass_read_memory
 libass.so.9:ass_read_styles

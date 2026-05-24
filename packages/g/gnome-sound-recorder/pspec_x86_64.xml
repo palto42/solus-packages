@@ -3,8 +3,8 @@
         <Name>gnome-sound-recorder</Name>
         <Homepage>https://gitlab.gnome.org/World/vocalis</Homepage>
         <Packager>
-            <Name>Muhammad Alfi Syahrin</Name>
-            <Email>malfisya.dev@hotmail.com</Email>
+            <Name>Evan Maddock</Name>
+            <Email>maddock.evan@vivaldi.net</Email>
         </Packager>
         <License>GPL-2.0-or-later</License>
         <PartOf>desktop.gnome</PartOf>
@@ -25,6 +25,7 @@
             <Path fileType="data">/usr/share/glib-2.0/schemas/org.gnome.SoundRecorder.gschema.xml</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.gnome.SoundRecorder.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/symbolic/apps/org.gnome.SoundRecorder-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/licenses/gnome-sound-recorder/COPYING</Path>
             <Path fileType="localedata">/usr/share/locale/af/LC_MESSAGES/org.gnome.SoundRecorder.mo</Path>
             <Path fileType="localedata">/usr/share/locale/an/LC_MESSAGES/org.gnome.SoundRecorder.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ar/LC_MESSAGES/org.gnome.SoundRecorder.mo</Path>
@@ -91,12 +92,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="11">
-            <Date>2025-06-08</Date>
+        <Update release="12">
+            <Date>2026-03-17</Date>
             <Version>42.0</Version>
             <Comment>Packaging update</Comment>
-            <Name>Muhammad Alfi Syahrin</Name>
-            <Email>malfisya.dev@hotmail.com</Email>
+            <Name>Evan Maddock</Name>
+            <Email>maddock.evan@vivaldi.net</Email>
         </Update>
     </History>
 </PISI>

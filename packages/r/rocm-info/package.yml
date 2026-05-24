@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : rocm-info
-version    : 6.2.4
-release    : 7
+version    : 7.2.0
+release    : 9
 source     :
-    - https://github.com/ROCm/rocminfo/archive/refs/tags/rocm-6.2.4.tar.gz : 14d4b0e22e2314156091ac9ad1646dd20909dba3a43e037584a503a6754e7f9e
+    - https://github.com/ROCm/rocm-systems/archive/refs/tags/rocm-7.2.0.tar.gz : 728ea7e9bf16e6ed217a0fd1a8c9afaba2dae2e7908fa4e27201e67c803c5638
 homepage   : https://github.com/RadeonOpenCompute/rocminfo/
 license    : NCSA
 component  : programming.devel
@@ -17,7 +18,7 @@ builddeps  :
 replaces   :
     - rocminfo
 setup      : |
-    %cmake_ninja -L \
+    %cmake_ninja -S projects/rocminfo -L \
       -DROCM_DIR=$ROCM_PATH \
       -DROCRTST_BLD_TYPE=Release \
       -DROCRTST_BLD_BITS=64

@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : libpanel
-version    : 1.10.2
-release    : 10
+version    : 1.10.4
+release    : 12
 source     :
-    - https://gitlab.gnome.org/GNOME/libpanel/-/archive/1.10.2/libpanel-1.10.2.tar.gz : 38a0beb4b830396f15716fa1bf7b23a47e485d589e76b464b954387330e5c092
+    - https://gitlab.gnome.org/GNOME/libpanel/-/archive/1.10.4/libpanel-1.10.4.tar.gz : 274f732f0254f6f691a630732e8aa61e08b15a88d0438a76636c8aff23361d4a
 homepage   : https://gitlab.gnome.org/GNOME/libpanel
 license    : LGPL-2.1-or-later
 component  : programming.library

@@ -1,33 +1,38 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : opensnitch
-version    : 1.6.8
-release    : 6
+version    : 1.8.0
+release    : 8
 source     :
-    - https://github.com/evilsocket/opensnitch/archive/refs/tags/v1.6.8.tar.gz : 3c44f585a6a78f63c86f331da099bd001cd199b3c907c262cc6645bf9b3a1825
+    - https://github.com/evilsocket/opensnitch/archive/refs/tags/v1.8.0.tar.gz : bddcfff04202f3ef7713944a69ca8ebaab19ee32e8f01e5a55995bff54f412b7
 homepage   : https://github.com/evilsocket/opensnitch
 license    : GPL-3.0-or-later
 component  : network.util
 summary    : OpenSnitch is a GNU/Linux application firewall.
 description: |
-    OpenSnitch is a GNU/Linux interactive application firewall inspired by Little Snitch. 
+    OpenSnitch is a GNU/Linux interactive application firewall inspired by Little Snitch.
 networking : true
+clang      : true
 builddeps  :
     - pkgconfig(Qt5UiPlugin)
     - pkgconfig(grpc)
     - pkgconfig(libnetfilter_queue)
     - pkgconfig(libnftnl)
     - pkgconfig(protobuf)
+    - git
     - golang
     - pip
     - protobuf
     - python-grpcio
+    - python-grpcio-tools
     - python-inotify
     - python-notify2
     - python-protobuf
     - python-qt-material
+    - python-qt6
     - python-setuptools
     - python-slugify
     - python-wheel
-    - python3-qt5
+    - qt6-tools-devel
 rundeps    :
     - iptables
     - python-asn1
@@ -37,27 +42,31 @@ rundeps    :
     - python-packaging
     - python-protobuf
     - python-qt-material
+    - python-qt6
     - python-slugify
-    - python3-qt5
 setup      : |
-    %patch -p1 -i $pkgfiles/update-config.patch 
-    %patch -p1 -i $pkgfiles/correct-systemd-service.patch
-    %patch -p1 -i $pkgfiles/add-generated-protobuf-files.patch # from https://gitlab.archlinux.org/archlinux/packaging/packages/opensnitch
-    %patch -p1 -i $pkgfiles/use-system-python.patch
-    %patch -p1 -i $pkgfiles/update-socket.patch
+    %apply_patches
 build      : |
+    # From https://github.com/evilsocket/opensnitch/blob/master/.github/workflows/go.yml#L34
+    go install google.golang.org/protobuf/cmd/protoc-gen-go@v1.34.1
+    go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@v1.3.0
+    export PATH="$PATH:$(go env GOPATH)/bin"
+
+    # Fix socket path in translation files/etc
+    find . -type f -exec sed -i 's|unix:///tmp/osui.sock|unix:///run/opensnitch/osui.sock|g' {} +
+
     %make PREFIX=%PREFIX%
 install    : |
     %make_install PREFIX=%PREFIX%
 
-    # start automatically
-    install -dm00755 $installdir/usr/lib64/systemd/system/multi-user.target.wants/
-    ln -sv ../opensnitchd.service $installdir/usr/lib64/systemd/system/multi-user.target.wants/opensnitchd.service
+    install -Dm00644 -t ${installdir}/%libdir%/systemd/system-preset/ ${pkgfiles}/20-opensnitch.preset
 
     # install the ui separately
     pushd ui
     %python3_install
     popd
+
+    %install_license LICENSE
 
     # remove test files
     rm -rfv $installdir/usr/lib/python%python3_version%/site-packages/tests/
@@ -68,6 +77,4 @@ install    : |
     # install these so the socket directory is created & create the opensnitch group
     install -Dm00644 $pkgfiles/opensnitch.sysusers $installdir/usr/lib/sysusers.d/opensnitch.conf
     install -Dm00644 $pkgfiles/opensnitch.tmpfile $installdir/usr/lib/tmpfiles.d/opensnitch.conf
-
     install -Dm00644 $pkgfiles/opensnitch_group_update.toml $installdir/usr/share/defaults/qol-assist.d/opensnitch_group_update.toml
-

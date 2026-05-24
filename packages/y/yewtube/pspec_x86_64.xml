@@ -3,8 +3,8 @@
         <Name>yewtube</Name>
         <Homepage>https://github.com/mps-youtube/yewtube</Homepage>
         <Packager>
-            <Name>Joey Riches</Name>
-            <Email>josephriches@gmail.com</Email>
+            <Name>Thomas Staudinger</Name>
+            <Email>Staudi.Kaos@gmail.com</Email>
         </Packager>
         <License>GPL-3.0-or-later</License>
         <PartOf>multimedia.audio</PartOf>
@@ -153,12 +153,12 @@
             <Path fileType="library">/usr/lib/python3.12/site-packages/mps_youtube/streams.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/mps_youtube/terminalsize.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/mps_youtube/util.py</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/yewtube-2.12.0.dist-info/LICENSE</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/yewtube-2.12.0.dist-info/METADATA</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/yewtube-2.12.0.dist-info/RECORD</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/yewtube-2.12.0.dist-info/WHEEL</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/yewtube-2.12.0.dist-info/entry_points.txt</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/yewtube-2.12.0.dist-info/top_level.txt</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/yewtube-2.13.1.dist-info/METADATA</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/yewtube-2.13.1.dist-info/RECORD</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/yewtube-2.13.1.dist-info/WHEEL</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/yewtube-2.13.1.dist-info/entry_points.txt</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/yewtube-2.13.1.dist-info/licenses/LICENSE</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/yewtube-2.13.1.dist-info/top_level.txt</Path>
             <Path fileType="data">/usr/share/applications/yewtube.desktop</Path>
         </Files>
         <Replaces>
@@ -166,12 +166,12 @@
         </Replaces>
     </Package>
     <History>
-        <Update release="3">
-            <Date>2025-05-08</Date>
-            <Version>2.12.0</Version>
+        <Update release="4">
+            <Date>2026-03-31</Date>
+            <Version>2.13.1</Version>
             <Comment>Packaging update</Comment>
-            <Name>Joey Riches</Name>
-            <Email>josephriches@gmail.com</Email>
+            <Name>Thomas Staudinger</Name>
+            <Email>Staudi.Kaos@gmail.com</Email>
         </Update>
     </History>
 </PISI>

@@ -91,7 +91,10 @@ libc.so.6:fputc
 libc.so.6:fputs
 libc.so.6:fread
 libc.so.6:free
+libc.so.6:free_aligned_sized
+libc.so.6:free_sized
 libc.so.6:freeaddrinfo
+libc.so.6:freeifaddrs
 libc.so.6:freelocale
 libc.so.6:freopen64
 libc.so.6:fstat64
@@ -108,6 +111,7 @@ libc.so.6:getenv
 libc.so.6:geteuid
 libc.so.6:getgrgid_r
 libc.so.6:gethostname
+libc.so.6:getifaddrs
 libc.so.6:getmntent_r
 libc.so.6:getnameinfo
 libc.so.6:getpeername
@@ -244,7 +248,6 @@ libc.so.6:setenv
 libc.so.6:setlocale
 libc.so.6:setrlimit64
 libc.so.6:setsockopt
-libc.so.6:setvbuf
 libc.so.6:setxattr
 libc.so.6:shutdown
 libc.so.6:sigaction
@@ -288,6 +291,7 @@ libc.so.6:strtod_l
 libc.so.6:symlink
 libc.so.6:syscall
 libc.so.6:sysconf
+libc.so.6:sysinfo
 libc.so.6:textdomain
 libc.so.6:timegm
 libc.so.6:tzset

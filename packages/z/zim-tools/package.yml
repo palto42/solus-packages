@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : zim-tools
-version    : 3.5.0
-release    : 18
+version    : 3.6.0
+release    : 21
 source     :
-    - https://github.com/openzim/zim-tools/archive/refs/tags/3.5.0.tar.gz : 43c9049e61165c63a763fbad72ef758051dcad24f84ae1ab2876e9520c753f03
+    - https://github.com/openzim/zim-tools/archive/refs/tags/3.6.0.tar.gz : 5e740767d503858af58eab9c687c1c80b9a45882ef25f5d617103c50e9c1dde0
     - git|https://github.com/kainjow/Mustache : v4.1
 homepage   : https://github.com/openzim/zim-tools/
 license    : GPL-3.0-only
@@ -22,9 +23,14 @@ environment: CXXFLAGS="${CXXFLAGS} -I$workdir/include"
 setup      : |
     mkdir -p $workdir/include
     cp $sources/Mustache.git/mustache.hpp $workdir/include/
-    %patch -p0 -i $pkgfiles/icu-76.patch
+
+    # Thanks Arch
+    %patch -p1 -i $pkgfiles/0001-Fix-build-with-ICU-76.patch
+    %patch -p1 -i $pkgfiles/0002-Allow-deprecated-function-calls.patch
     %meson_configure
 build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSE
+    install -Dm0644 $sources/Mustache.git/LICENSE $installdir/usr/share/licenses/zim-tools/Mustache-LICENSE

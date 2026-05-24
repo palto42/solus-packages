@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : python-rich
-version    : 13.9.4
-release    : 6
+version    : 15.0.0
+release    : 8
 source     :
-    - https://files.pythonhosted.org/packages/source/r/rich/rich-13.9.4.tar.gz : 439594978a49a09530cff7ebc4b5c7103ef57baf48d5ea3184f21d9a2befa098
+    - https://files.pythonhosted.org/packages/source/r/rich/rich-15.0.0.tar.gz : edd07a4824c6b40189fb7ac9bc4c52536e9780fbbfbddf6f1e2502c31b068c36
 homepage   : https://github.com/Textualize/rich
 license    : MIT
 component  : programming.python

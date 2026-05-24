@@ -1,11 +1,13 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kf6-kauth
-version    : 6.19.0
-release    : 27
+version    : 6.26.0
+release    : 34
 source     :
-    - https://download.kde.org/stable/frameworks/6.19/kauth-6.19.0.tar.xz : f86363aeb7f9223a429b6356faa87d2fdb1acde4c2750b37994304b5c9371aa5
+    - https://download.kde.org/stable/frameworks/6.26/kauth-6.26.0.tar.xz : e6b6562114c2cb71db6ca48fdf0ebed2df70e164c48295b35433a80b03385847
 homepage   : https://community.kde.org/Frameworks
 license    :
     - BSD-3-Clause
+    - CC0-1.0
     - LGPL-2.0-or-later
     - LGPL-2.1-or-later
 component  : desktop.library
@@ -27,3 +29,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*

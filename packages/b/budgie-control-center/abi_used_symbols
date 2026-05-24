@@ -724,6 +724,7 @@ libglib-2.0.so.0:g_find_program_in_path
 libglib-2.0.so.0:g_format_size
 libglib-2.0.so.0:g_format_size_full
 libglib-2.0.so.0:g_free
+libglib-2.0.so.0:g_free_sized
 libglib-2.0.so.0:g_get_environ
 libglib-2.0.so.0:g_get_home_dir
 libglib-2.0.so.0:g_get_host_name
@@ -1102,7 +1103,6 @@ libgobject-2.0.so.0:g_cclosure_marshal_VOID__BOOLEAN
 libgobject-2.0.so.0:g_cclosure_marshal_VOID__OBJECT
 libgobject-2.0.so.0:g_cclosure_marshal_VOID__POINTER
 libgobject-2.0.so.0:g_cclosure_marshal_VOID__STRING
-libgobject-2.0.so.0:g_cclosure_marshal_VOID__UINT
 libgobject-2.0.so.0:g_cclosure_marshal_VOID__VOID
 libgobject-2.0.so.0:g_cclosure_marshal_generic
 libgobject-2.0.so.0:g_enum_get_value

@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
+name       : kmscon
+version    : 9.3.5
+release    : 10
+source     :
+    - https://github.com/kmscon/kmscon/archive/refs/tags/v9.3.5.tar.gz : 14975a8c1ddcc163b1afecd2207c9fd2e05b88e8a00246701fabf9dffce52ee9
+homepage   : https://www.freedesktop.org/wiki/Software/kmscon
+license    :
+    - MIT
+    - LGPL-2.1-or-later # external/htable.* external/dbus-loop.*
+component  : system.utils
+summary    : Linux KMS/DRM based virtual Console Emulator
+description: |
+    kmscon is a system console for linux. It does not depend on any graphics-server on your system (like X.org), but instead provides a raw console layer that can be used independently. It can replace the linux kernel console entirely but was designed to work well side-by-side, too. Even though initially targeted at providing internationalization to the system-console, it has grown into a fully modularized console layer including features like multi-head support, internationalized font rendering, XKB-compatible keyboard handling, hardware-accelerated graphics access and more.
+builddeps  :
+    - pkgconfig(egl)
+    - pkgconfig(gbm)
+    - pkgconfig(libdrm)
+    - pkgconfig(libtsm)
+    - pkgconfig(libudev)
+    - pkgconfig(pangoft2)
+    - pkgconfig(xkbcommon)
+checkdeps  :
+    - pkgconfig(check)
+setup      : |
+    %meson_configure
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install
+    %install_license COPYING
+
+    # Use the defaults
+    rm -fr $installdir/etc/
+
+    # Make it the default VT provider if installed
+    # FIXME: statelessness
+    install -dm00755 $installdir/etc/systemd/system/
+    ln -sv ../../../usr/lib/systemd/system/kmsconvt@.service $installdir/etc/systemd/system/autovt@.service
+
+    install -Dm00644 -t ${installdir}/%libdir%/systemd/system-preset/ ${pkgfiles}/60-kmscon.preset
+# check      : |
+#     %ninja_check

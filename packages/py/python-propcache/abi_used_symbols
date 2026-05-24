@@ -9,6 +9,7 @@ UNKNOWN:PyClassMethod_New
 UNKNOWN:PyCode_NewEmpty
 UNKNOWN:PyDescr_NewClassMethod
 UNKNOWN:PyDict_DelItem
+UNKNOWN:PyDict_GetItem
 UNKNOWN:PyDict_GetItemString
 UNKNOWN:PyDict_GetItemWithError
 UNKNOWN:PyDict_New
@@ -18,6 +19,7 @@ UNKNOWN:PyDict_SetItem
 UNKNOWN:PyDict_SetItemString
 UNKNOWN:PyDict_Size
 UNKNOWN:PyDict_Type
+UNKNOWN:PyDict_Update
 UNKNOWN:PyErr_Clear
 UNKNOWN:PyErr_ExceptionMatches
 UNKNOWN:PyErr_Format
@@ -38,6 +40,7 @@ UNKNOWN:PyExc_RuntimeError
 UNKNOWN:PyExc_RuntimeWarning
 UNKNOWN:PyExc_SystemError
 UNKNOWN:PyExc_TypeError
+UNKNOWN:PyExc_ValueError
 UNKNOWN:PyException_SetTraceback
 UNKNOWN:PyFrame_New
 UNKNOWN:PyGC_Disable
@@ -45,6 +48,7 @@ UNKNOWN:PyGC_Enable
 UNKNOWN:PyImport_AddModule
 UNKNOWN:PyImport_GetModule
 UNKNOWN:PyImport_GetModuleDict
+UNKNOWN:PyImport_ImportModule
 UNKNOWN:PyImport_ImportModuleLevelObject
 UNKNOWN:PyInterpreterState_GetID
 UNKNOWN:PyList_New
@@ -55,6 +59,7 @@ UNKNOWN:PyLong_Type
 UNKNOWN:PyMem_Free
 UNKNOWN:PyMem_Malloc
 UNKNOWN:PyMem_Realloc
+UNKNOWN:PyMemoryView_FromMemory
 UNKNOWN:PyMethodDescr_Type
 UNKNOWN:PyMethod_New
 UNKNOWN:PyMethod_Type
@@ -66,7 +71,9 @@ UNKNOWN:PyNumber_InPlaceAdd
 UNKNOWN:PyOS_snprintf
 UNKNOWN:PyObject_Call
 UNKNOWN:PyObject_CallFinalizerFromDealloc
+UNKNOWN:PyObject_CallFunctionObjArgs
 UNKNOWN:PyObject_CallMethodObjArgs
+UNKNOWN:PyObject_CallOneArg
 UNKNOWN:PyObject_ClearWeakRefs
 UNKNOWN:PyObject_Format
 UNKNOWN:PyObject_GC_Del
@@ -74,12 +81,13 @@ UNKNOWN:PyObject_GC_IsFinalized
 UNKNOWN:PyObject_GC_Track
 UNKNOWN:PyObject_GC_UnTrack
 UNKNOWN:PyObject_GenericGetAttr
+UNKNOWN:PyObject_GenericGetDict
+UNKNOWN:PyObject_GenericSetDict
 UNKNOWN:PyObject_GetAttr
 UNKNOWN:PyObject_GetAttrString
 UNKNOWN:PyObject_GetItem
 UNKNOWN:PyObject_HasAttr
 UNKNOWN:PyObject_Hash
-UNKNOWN:PyObject_IsSubclass
 UNKNOWN:PyObject_IsTrue
 UNKNOWN:PyObject_Repr
 UNKNOWN:PyObject_RichCompare
@@ -88,7 +96,6 @@ UNKNOWN:PyObject_SetAttr
 UNKNOWN:PyObject_SetAttrString
 UNKNOWN:PyObject_VectorcallDict
 UNKNOWN:PyObject_VectorcallMethod
-UNKNOWN:PySequence_Contains
 UNKNOWN:PyThreadState_Get
 UNKNOWN:PyTraceBack_Here
 UNKNOWN:PyTuple_GetItem
@@ -101,12 +108,12 @@ UNKNOWN:PyType_Modified
 UNKNOWN:PyType_Ready
 UNKNOWN:PyType_Type
 UNKNOWN:PyUnicode_Concat
-UNKNOWN:PyUnicode_Decode
-UNKNOWN:PyUnicode_Format
+UNKNOWN:PyUnicode_DecodeUTF8
 UNKNOWN:PyUnicode_FromFormat
 UNKNOWN:PyUnicode_FromString
 UNKNOWN:PyUnicode_FromStringAndSize
 UNKNOWN:PyUnicode_InternFromString
+UNKNOWN:PyUnicode_InternInPlace
 UNKNOWN:PyUnicode_New
 UNKNOWN:PyUnicode_Type
 UNKNOWN:PyUnstable_Code_NewWithPosOnlyArgs
@@ -114,8 +121,10 @@ UNKNOWN:Py_EnterRecursiveCall
 UNKNOWN:Py_LeaveRecursiveCall
 UNKNOWN:Py_Version
 UNKNOWN:_PyDict_GetItem_KnownHash
+UNKNOWN:_PyObject_ClearManagedDict
 UNKNOWN:_PyObject_GC_New
 UNKNOWN:_PyObject_GenericGetAttrWithDict
+UNKNOWN:_PyObject_VisitManagedDict
 UNKNOWN:_PyThreadState_UncheckedGet
 UNKNOWN:_PyType_Lookup
 UNKNOWN:_PyUnicode_FastCopyCharacters

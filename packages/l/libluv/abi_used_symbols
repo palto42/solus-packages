@@ -75,6 +75,7 @@ libc.so.6:getprotobynumber
 libc.so.6:getuid
 libc.so.6:malloc
 libc.so.6:memcpy
+libc.so.6:realloc
 libc.so.6:setgid
 libc.so.6:setuid
 libc.so.6:stderr
@@ -275,7 +276,7 @@ libuv.so.1:uv_tcp_getpeername
 libuv.so.1:uv_tcp_getsockname
 libuv.so.1:uv_tcp_init
 libuv.so.1:uv_tcp_init_ex
-libuv.so.1:uv_tcp_keepalive
+libuv.so.1:uv_tcp_keepalive_ex
 libuv.so.1:uv_tcp_nodelay
 libuv.so.1:uv_tcp_open
 libuv.so.1:uv_tcp_simultaneous_accepts
@@ -312,7 +313,7 @@ libuv.so.1:uv_udp_connect
 libuv.so.1:uv_udp_getpeername
 libuv.so.1:uv_udp_getsockname
 libuv.so.1:uv_udp_init_ex
-libuv.so.1:uv_udp_open
+libuv.so.1:uv_udp_open_ex
 libuv.so.1:uv_udp_recv_start
 libuv.so.1:uv_udp_recv_stop
 libuv.so.1:uv_udp_send

@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : xfce4-session
-version    : 4.20.2
-release    : 18
+version    : 4.20.4
+release    : 21
 source     :
-    - https://archive.xfce.org/src/xfce/xfce4-session/4.20/xfce4-session-4.20.2.tar.bz2 : a0b80b7136515bc3c0c54fa859ad420365e29b715b6da0b58a2d2781bfbe73c3
+    - https://archive.xfce.org/src/xfce/xfce4-session/4.20/xfce4-session-4.20.4.tar.bz2 : 805c373378d080754d69dd2f20db95cdc066c89a4f024a41435ca0d66571c402
 homepage   : https://docs.xfce.org/xfce/xfce4-session/start
 license    : GPL-2.0-or-later
 component  :
@@ -30,6 +31,7 @@ rundeps    :
     - iceauth
     - pipewire
     - polkit-gnome
+    - udisks
     - xdg-desktop-portal-gtk
     - xdg-desktop-portal-xapp
     - xdg-user-dirs-gtk
@@ -39,9 +41,7 @@ rundeps    :
 setup      : |
     %patch -p1 -i $pkgfiles/0001-scripts-xinitrc-Source-vendered-and-system-xinitrc-s.patch
     %patch -p1 -i $pkgfiles/xfce-session-4.10-startxfce4.patch
-    %patch -p1 -i $pkgfiles/0001-labwc-Set-snapping-range-to-10.patch
-    %patch -p1 -i $pkgfiles/0001-labwc-Use-Breeze-cursors.patch
-    %patch -p1 -i $pkgfiles/0001-scripts-Only-use-dbus-run-session-if-address-is-unse.patch
+    %patch -p1 -i $pkgfiles/xfce4-session-4.20.3-use-breeze-cursors.patch
 
     %configure \
                  --disable-debug \
@@ -51,6 +51,7 @@ build      : |
     %make
 install    : |
     %make_install
+    %install_license COPYING
     install -Dm00644 $pkgfiles/xfce-polkit-gnome-authentication-agent-1.desktop $installdir/usr/share/xdg/autostart/xfce-polkit-gnome-authentication-agent-1.desktop
 patterns   :
     - wayland :

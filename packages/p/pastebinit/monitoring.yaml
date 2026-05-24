@@ -1,5 +1,5 @@
 releases:
-  id: 2600
+  id: 388631
   rss: https://github.com/pastebinit/pastebinit/tags.atom
 # No known CPE, checked 2025-02-03
 security:

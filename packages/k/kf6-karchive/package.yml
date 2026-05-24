@@ -1,10 +1,15 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kf6-karchive
-version    : 6.19.0
-release    : 26
+version    : 6.26.0
+release    : 33
 source     :
-    - https://download.kde.org/stable/frameworks/6.19/karchive-6.19.0.tar.xz : 944332d802d0e128cebd087ffd50b726d100347973c2037c6051c72d54512a9e
+    - https://download.kde.org/stable/frameworks/6.26/karchive-6.26.0.tar.xz : a7fdf6d0b8db88d60aa52bcc87d8e00d95391a1ad39a4b2a8e9f3027b8ff4035
 homepage   : https://community.kde.org/Frameworks
-license    : LGPL-2.0-or-later
+license    :
+    - Apache-2.0
+    - BSD-2-Clause
+    - CC0-1.0
+    - LGPL-2.0-or-later
 component  : programming.library
 summary    : Reading, creating, and manipulating file archives.
 description: |
@@ -25,3 +30,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*

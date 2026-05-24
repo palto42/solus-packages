@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : yt-dlp
-version    : 2025.09.26
-release    : 259
+version    : 2026.03.17
+release    : 270
 source     :
-    - https://github.com/yt-dlp/yt-dlp/archive/refs/tags/2025.09.26.tar.gz : 1afacd10ec55e4d18dca1f6398823f8b642b5d1c524913a065985b482b8a73c2
+    - https://github.com/yt-dlp/yt-dlp/archive/refs/tags/2026.03.17.tar.gz : 924483986441d8a1e669a0e4371d753a9256ce4bdc06032394ccb7b793342434
 license    : Unlicense
 component  : network.download
 homepage   : https://github.com/yt-dlp/yt-dlp
@@ -19,11 +20,13 @@ builddeps  :
     - python-hatchling
     - python-installer
 rundeps    :
+    - deno
     - mutagen
     - python-certifi
     - python-pycryptodome
     - python-websockets
     - python3
+    - yt-dlp-ejs
 build      : |
     %make PREFIX=$installdir/usr yt-dlp.1 completion-bash completion-fish completion-zsh
     python3 -m build --wheel --no-isolation

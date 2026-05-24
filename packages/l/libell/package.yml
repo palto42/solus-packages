@@ -1,0 +1,24 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
+name       : libell
+version    : '0.83'
+release    : 1
+source     :
+    - https://www.kernel.org/pub/linux/libs/ell/ell-0.83.tar.xz : 39a562f5ab2768e69da1ffbb1f98a8eb3483baffc7d2ef6adc3705e4fd4e53fb
+homepage   : https://git.kernel.org/pub/scm/libs/ell/ell.git/
+license    : LGPL-2.0-or-later
+component  : programming.library
+summary    : Embedded Linux Library
+description: |
+    The Embedded Linux* Library (ELL) provides core, low-level functionality for system daemons. It typically has no dependencies other than the Linux kernel, C standard library, and libdl (for dynamic linking). While ELL is designed to be efficient and compact enough for use on embedded Linux platforms, it is not limited to resource-constrained systems.
+clang      : true
+builddeps  :
+    - pkgconfig(glib-2.0)
+setup      : |
+    %configure
+build      : |
+    %make
+install    : |
+    %make_install
+    %install_license COPYING
+
+    find "${installdir}" -type f -name "*.la" -delete

@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : gnote
-version    : '48.1'
-release    : 34
+version    : '50.1'
+release    : 38
 source     :
-    - https://download.gnome.org/sources/gnote/48/gnote-48.1.tar.xz : e4851ee6a5bc2f5c07d1c6ff4d69ba0471c24caa7d8204bd2a1098dc7187bedf
+    - https://download.gnome.org/sources/gnote/50/gnote-50.1.tar.xz : bed734554acf317b922b7462369ae52dbccdcd5f4d22714c267c5e3055bd98b2
 homepage   : https://gitlab.gnome.org/GNOME/gnote
 license    : GPL-3.0-or-later
 component  : office.notes

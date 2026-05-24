@@ -46,7 +46,7 @@ libQt6Core.so.6:_ZN7QObject11eventFilterEPS_P6QEvent
 libQt6Core.so.6:_ZN7QObject11qt_metacallEN11QMetaObject4CallEiPPv
 libQt6Core.so.6:_ZN7QObject11qt_metacastEPKc
 libQt6Core.so.6:_ZN7QObject13connectNotifyERK11QMetaMethod
-libQt6Core.so.6:_ZN7QObject13doSetPropertyEPKcPK8QVariantPS2_
+libQt6Core.so.6:_ZN7QObject13doSetPropertyEPKcRK8QVariantPS2_
 libQt6Core.so.6:_ZN7QObject16disconnectNotifyERK11QMetaMethod
 libQt6Core.so.6:_ZN7QObject16staticMetaObjectE
 libQt6Core.so.6:_ZN7QObject18installEventFilterEPS_
@@ -106,8 +106,8 @@ libQt6Core.so.6:_ZNK7QObject10objectNameEv
 libQt6Core.so.6:_ZNK7QObject6threadEv
 libQt6Core.so.6:_ZNK7QObject8propertyEPKc
 libQt6Core.so.6:_ZNK7QString10startsWithE13QLatin1StringN2Qt15CaseSensitivityE
+libQt6Core.so.6:_ZNK7QString10startsWithERKS_N2Qt15CaseSensitivityE
 libQt6Core.so.6:_ZNK8QVariant6toBoolEv
-libQt6Core.so.6:_ZNK8QVariant8metaTypeEv
 libQt6Core.so.6:_ZNK8QVariant8toStringEv
 libQt6Core.so.6:_ZTI7QObject
 libQt6Core.so.6:_ZlsR11QDataStreamRK7QString
@@ -166,7 +166,7 @@ libQt6DBus.so.6:_ZNK13QDBusArgumentrsER5QListI7QStringE
 libQt6DBus.so.6:_ZNK13QDBusArgumentrsER7QString
 libQt6DBus.so.6:_ZNK13QDBusArgumentrsERb
 libQt6DBus.so.6:_ZNK13QDBusArgumentrsERi
-libQt6DBus.so.6:_ZNK15QDBusConnection4callERK12QDBusMessageN5QDBus8CallModeEi
+libQt6DBus.so.6:_ZNK15QDBusConnection9asyncCallERK12QDBusMessagei
 libQt6DBus.so.6:_ZNK15QDBusConnection9interfaceEv
 libQt6DBus.so.6:_ZNK15QDBusConnection9lastErrorEv
 libQt6DBus.so.6:_ZNK16QDBusPendingCall5replyEv

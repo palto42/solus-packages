@@ -1,9 +1,10 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : libmtp
-version    : 1.1.21
-release    : 11
+version    : 1.1.23
+release    : 14
 source     :
-    - https://sourceforge.net/projects/libmtp/files/libmtp/1.1.21/libmtp-1.1.21.tar.gz : c4ffa5ab8c8f48c91b0047f2e253c101c418d5696a5ed65c839922a4280872a7
-homepage   : http://libmtp.sourceforge.net/
+    - https://sourceforge.net/projects/libmtp/files/libmtp/1.1.23/libmtp-1.1.23.tar.gz : 74a2b6e8cb4a0304e95b995496ea3ac644c29371649b892b856e22f12a0bdeed
+homepage   : https://libmtp.sourceforge.net/
 license    : LGPL-2.1-or-later
 component  : desktop.library
 summary    : Library implementation of the Media Transfer Protocol

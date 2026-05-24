@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kicad-symbols
-version    : 9.0.5
-release    : 17
+version    : 10.0.3
+release    : 22
 source     :
-    - https://gitlab.com/kicad/libraries/kicad-symbols/-/archive/9.0.5/kicad-symbols-9.0.5.tar.gz : 2f3941a299b7b6d6a1a011f60a9895af06eaf8db5ab501b3aca063e4322e1f03
+    - https://gitlab.com/kicad/libraries/kicad-symbols/-/archive/10.0.3/kicad-symbols-10.0.3.tar.gz : 2fc72a7aefba6db846b8d01b0c55df7be97742eb000a5094d596a258485e6309
 homepage   : https://www.kicad.org/
 license    : CC-BY-SA-4.0
 component  : office.scientific
@@ -13,3 +14,4 @@ setup      : |
     %cmake
 install    : |
     %make_install
+    %install_license LICENSE.md

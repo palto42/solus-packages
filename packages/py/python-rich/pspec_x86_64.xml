@@ -3,8 +3,8 @@
         <Name>python-rich</Name>
         <Homepage>https://github.com/Textualize/rich</Homepage>
         <Packager>
-            <Name>Joey Riches</Name>
-            <Email>josephriches@gmail.com</Email>
+            <Name>George K.</Name>
+            <Email>gk_coder@icloud.com</Email>
         </Packager>
         <License>MIT</License>
         <PartOf>programming.python</PartOf>
@@ -20,18 +20,16 @@
 </Description>
         <PartOf>programming.python</PartOf>
         <Files>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/rich-13.9.4.dist-info/LICENSE</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/rich-13.9.4.dist-info/METADATA</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/rich-13.9.4.dist-info/RECORD</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/rich-13.9.4.dist-info/WHEEL</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich-15.0.0.dist-info/LICENSE</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich-15.0.0.dist-info/METADATA</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich-15.0.0.dist-info/RECORD</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich-15.0.0.dist-info/WHEEL</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/rich/__init__.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/rich/__main__.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/rich/__pycache__/__init__.cpython-312.opt-1.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/rich/__pycache__/__init__.cpython-312.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/rich/__pycache__/__main__.cpython-312.opt-1.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/rich/__pycache__/__main__.cpython-312.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/rich/__pycache__/_cell_widths.cpython-312.opt-1.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/rich/__pycache__/_cell_widths.cpython-312.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/rich/__pycache__/_emoji_codes.cpython-312.opt-1.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/rich/__pycache__/_emoji_codes.cpython-312.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/rich/__pycache__/_emoji_replace.cpython-312.opt-1.pyc</Path>
@@ -182,7 +180,6 @@
             <Path fileType="library">/usr/lib/python3.12/site-packages/rich/__pycache__/traceback.cpython-312.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/rich/__pycache__/tree.cpython-312.opt-1.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/rich/__pycache__/tree.cpython-312.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_cell_widths.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_emoji_codes.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_emoji_replace.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_export_format.py</Path>
@@ -198,6 +195,75 @@
             <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_spinners.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_stack.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_timer.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_unicode_data/__init__.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_unicode_data/__pycache__/__init__.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_unicode_data/__pycache__/__init__.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_unicode_data/__pycache__/_versions.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_unicode_data/__pycache__/_versions.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_unicode_data/__pycache__/unicode10-0-0.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_unicode_data/__pycache__/unicode10-0-0.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_unicode_data/__pycache__/unicode11-0-0.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_unicode_data/__pycache__/unicode11-0-0.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_unicode_data/__pycache__/unicode12-0-0.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_unicode_data/__pycache__/unicode12-0-0.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_unicode_data/__pycache__/unicode12-1-0.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_unicode_data/__pycache__/unicode12-1-0.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_unicode_data/__pycache__/unicode13-0-0.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_unicode_data/__pycache__/unicode13-0-0.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_unicode_data/__pycache__/unicode14-0-0.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_unicode_data/__pycache__/unicode14-0-0.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_unicode_data/__pycache__/unicode15-0-0.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_unicode_data/__pycache__/unicode15-0-0.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_unicode_data/__pycache__/unicode15-1-0.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_unicode_data/__pycache__/unicode15-1-0.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_unicode_data/__pycache__/unicode16-0-0.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_unicode_data/__pycache__/unicode16-0-0.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_unicode_data/__pycache__/unicode17-0-0.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_unicode_data/__pycache__/unicode17-0-0.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_unicode_data/__pycache__/unicode4-1-0.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_unicode_data/__pycache__/unicode4-1-0.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_unicode_data/__pycache__/unicode5-0-0.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_unicode_data/__pycache__/unicode5-0-0.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_unicode_data/__pycache__/unicode5-1-0.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_unicode_data/__pycache__/unicode5-1-0.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_unicode_data/__pycache__/unicode5-2-0.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_unicode_data/__pycache__/unicode5-2-0.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_unicode_data/__pycache__/unicode6-0-0.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_unicode_data/__pycache__/unicode6-0-0.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_unicode_data/__pycache__/unicode6-1-0.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_unicode_data/__pycache__/unicode6-1-0.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_unicode_data/__pycache__/unicode6-2-0.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_unicode_data/__pycache__/unicode6-2-0.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_unicode_data/__pycache__/unicode6-3-0.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_unicode_data/__pycache__/unicode6-3-0.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_unicode_data/__pycache__/unicode7-0-0.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_unicode_data/__pycache__/unicode7-0-0.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_unicode_data/__pycache__/unicode8-0-0.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_unicode_data/__pycache__/unicode8-0-0.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_unicode_data/__pycache__/unicode9-0-0.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_unicode_data/__pycache__/unicode9-0-0.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_unicode_data/_versions.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_unicode_data/unicode10-0-0.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_unicode_data/unicode11-0-0.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_unicode_data/unicode12-0-0.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_unicode_data/unicode12-1-0.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_unicode_data/unicode13-0-0.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_unicode_data/unicode14-0-0.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_unicode_data/unicode15-0-0.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_unicode_data/unicode15-1-0.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_unicode_data/unicode16-0-0.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_unicode_data/unicode17-0-0.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_unicode_data/unicode4-1-0.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_unicode_data/unicode5-0-0.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_unicode_data/unicode5-1-0.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_unicode_data/unicode5-2-0.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_unicode_data/unicode6-0-0.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_unicode_data/unicode6-1-0.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_unicode_data/unicode6-2-0.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_unicode_data/unicode6-3-0.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_unicode_data/unicode7-0-0.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_unicode_data/unicode8-0-0.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_unicode_data/unicode9-0-0.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_win32_console.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_windows.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/rich/_windows_renderer.py</Path>
@@ -262,12 +328,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="6">
-            <Date>2025-05-15</Date>
-            <Version>13.9.4</Version>
+        <Update release="8">
+            <Date>2026-04-17</Date>
+            <Version>15.0.0</Version>
             <Comment>Packaging update</Comment>
-            <Name>Joey Riches</Name>
-            <Email>josephriches@gmail.com</Email>
+            <Name>George K.</Name>
+            <Email>gk_coder@icloud.com</Email>
         </Update>
     </History>
 </PISI>

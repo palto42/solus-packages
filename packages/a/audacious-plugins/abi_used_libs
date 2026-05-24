@@ -14,9 +14,9 @@ libaudcore.so.5
 libaudgui.so.6
 libaudqt.so.3
 libaudtag.so.3
-libavcodec.so.61
-libavformat.so.61
-libavutil.so.59
+libavcodec.so.62
+libavformat.so.62
+libavutil.so.60
 libc.so.6
 libcairo.so.2
 libcddb.so.2

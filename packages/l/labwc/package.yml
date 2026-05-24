@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : labwc
-version    : 0.9.1
-release    : 12
+version    : 0.9.7
+release    : 16
 source     :
-    - https://github.com/labwc/labwc/archive/refs/tags/0.9.1.tar.gz : bf7a245d5fc5665329b3f5c9cb589eb33e658b8eb638cf4f4c9ad68f4b5979f0
+    - https://github.com/labwc/labwc/archive/refs/tags/0.9.7.tar.gz : 4ad4e5e7f29e0d0704fadb4a072037173d850b46f12122b79168879b922e0f43
 homepage   : https://labwc.github.io/
 license    : GPL-2.0-or-later
 component  : desktop
@@ -45,6 +46,7 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSE
 patterns   :
     - session :
         - /usr/share/icons

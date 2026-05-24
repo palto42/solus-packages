@@ -1,6 +1,5 @@
 UNKNOWN
 libEGL.so.1
-libFLAC.so.12
 libGL.so.1
 libQt6Core.so.6
 libQt6Gui.so.6
@@ -14,9 +13,10 @@ libXrandr.so.2
 libXss.so.1
 libXxf86vm.so.1
 libasound.so.2
-libavcodec.so.61
-libavformat.so.61
-libavutil.so.59
+libavcodec.so.62
+libavdevice.so.62
+libavformat.so.62
+libavutil.so.60
 libc.so.6
 libdbus-1.so.3
 libdrm.so.2
@@ -34,8 +34,8 @@ libopenal.so.1
 libpipewire-0.3.so.0
 libpulse.so.0
 libstdc++.so.6
-libswresample.so.5
-libswscale.so.8
+libswresample.so.6
+libswscale.so.9
 libudev.so.1
 libusb-1.0.so.0
 libv4l2.so.0

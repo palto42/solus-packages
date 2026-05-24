@@ -2,7 +2,6 @@ UNKNOWN
 ld-linux-x86-64.so.2
 libSDL2-2.0.so.0
 libX11.so.6
-libboost_filesystem.so.1.83.0
 libc.so.6
 libcurl.so.4
 libenet.so.7
@@ -10,14 +9,15 @@ libfmt.so.12
 libfreetype.so.6
 libgcc_s.so.1
 libgloox.so.18
-libicui18n.so.76
-libicuuc.so.76
+libicui18n.so.78
+libicuuc.so.78
 libm.so.6
 libminiupnpc.so.18
 libopenal.so.1
 libpng16.so.16
 libsodium.so.26
 libstdc++.so.6
+libvorbis.so.0
 libvorbisfile.so.3
 libwx_baseu-3.2.so.0
 libwx_baseu_xml-3.2.so.0

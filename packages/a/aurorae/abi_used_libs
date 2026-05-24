@@ -5,6 +5,7 @@ libKF6CoreAddons.so.6
 libKF6I18n.so.6
 libKF6KCMUtils.so.6
 libKF6Package.so.6
+libKF6Svg.so.6
 libQt6Core.so.6
 libQt6Gui.so.6
 libQt6OpenGL.so.6
@@ -14,4 +15,5 @@ libQt6UiTools.so.6
 libQt6Widgets.so.6
 libc.so.6
 libkdecorations3.so.6
+libm.so.6
 libstdc++.so.6

@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : fq
-version    : 0.15.1
-release    : 4
+version    : 0.17.0
+release    : 6
 source     :
-    - https://github.com/wader/fq/archive/refs/tags/v0.15.1.tar.gz : 9f668394c33f3effd02b7d7a145f1087ce784e01d3d0c6e6ba41a899d5e349a7
+    - https://github.com/wader/fq/archive/refs/tags/v0.17.0.tar.gz : c5658b2bc635a1d344c64e37d7311157f0fc4b20cc3cfa4d09bdd2f023692d57
 homepage   : https://github.com/wader/fq
 license    : MIT
 component  : programming.tools
@@ -16,3 +17,4 @@ build      : |
     %make
 install    : |
     install -Dm00755 fq -t $installdir/usr/bin/
+    %install_license LICENSE

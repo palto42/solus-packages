@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : opus
-version    : '1.5.2'
-release    : 12
+version    : 1.6.1
+release    : 13
 source     :
-    - https://downloads.xiph.org/releases/opus/opus-1.5.2.tar.gz : 65c1d2f78b9f2fb20082c38cbe47c951ad5839345876e46941612ee87f9a7ce1
+    - https://downloads.xiph.org/releases/opus/opus-1.6.1.tar.gz : 6ffcb593207be92584df15b32466ed64bbec99109f007c82205f0194572411a1
 license    : BSD-3-Clause
 component  : multimedia.codecs
 homepage   : https://www.opus-codec.org/
@@ -17,5 +18,6 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license COPYING
 check      : |
     %ninja_check

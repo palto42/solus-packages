@@ -1,5 +1,6 @@
+klayout
 libQtCore.so.0
-libQtDesigner.so.0
+libQtCore5Compat.so.0
 libQtGui.so.0
 libQtMultimedia.so.0
 libQtNetwork.so.0
@@ -9,7 +10,6 @@ libQtSvg.so.0
 libQtUiTools.so.0
 libQtWidgets.so.0
 libQtXml.so.0
-libQtXmlPatterns.so.0
 libcif.so.0
 libd25_ui.so.0
 libdbcore.so.0
@@ -17,7 +17,7 @@ libdxf.so.0
 libgds2.so.0
 libimport_ui.so.0
 libklayout_QtCore.so.0
-libklayout_QtDesigner.so.0
+libklayout_QtCore5Compat.so.0
 libklayout_QtGui.so.0
 libklayout_QtMultimedia.so.0
 libklayout_QtNetwork.so.0
@@ -27,7 +27,6 @@ libklayout_QtSvg.so.0
 libklayout_QtUiTools.so.0
 libklayout_QtWidgets.so.0
 libklayout_QtXml.so.0
-libklayout_QtXmlPatterns.so.0
 libklayout_ant.so.0
 libklayout_bd.so.0
 libklayout_db.so.0
@@ -54,6 +53,7 @@ liblaycore.so.0
 liblefdef.so.0
 liblefdef_ui.so.0
 liblibcore.so.0
+liblstream.so.0
 libmag.so.0
 libmaly.so.0
 libnet_tracer.so.0
@@ -63,3 +63,15 @@ libpexcore.so.0
 libpyacore.so.0
 librdbcore.so.0
 libtlcore.so.0
+strm2cif
+strm2dxf
+strm2gds
+strm2gdstxt
+strm2lstr
+strm2mag
+strm2oas
+strm2txt
+strmclip
+strmcmp
+strmrun
+strmxor

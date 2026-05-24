@@ -1,6 +1,7 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : clisp
 version    : 2.49.92
-release    : 4
+release    : 5
 source     :
     - https://alpha.gnu.org/gnu/clisp/clisp-2.49.92.tar.bz2 : bd443a94aa9b02da4c4abbcecfc04ffff1919c0a8b0e7e35649b86198cd6bb89
 homepage   : https://clisp.sourceforge.io/
@@ -11,8 +12,8 @@ description: |
     CLISP is a Common Lisp implementation by Bruno Haible, then of Karlsruhe University, and Michael Stoll, then of Munich University, both in Germany. It implements the language described in the ANSI Common Lisp standard with many extensions.
 builddeps  :
     - pkgconfig(libxcrypt)
-    - libiconv-devel
     - libffcall-devel
+    - libiconv-devel
     - libsigsegv-devel
 patterns   : /*
 environment: export FORCE_UNSAFE_CONFIGURE=1
@@ -28,3 +29,9 @@ build      : |
 install    : |
     cd src
     make install DESTDIR=$installdir
+    %install_license COPYRIGHT GNU-GPL
+
+    # Remove static libs
+    rm $installdir/usr/lib/clisp-2.49.92/base/libgnu.a
+    rm $installdir/usr/lib/clisp-2.49.92/base/libnoreadline.a
+    rm $installdir/usr/lib/clisp-2.49.92/base/lisp.a

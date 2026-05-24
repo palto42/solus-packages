@@ -3,8 +3,8 @@
         <Name>intel-gpu-tools</Name>
         <Homepage>https://gitlab.freedesktop.org/drm/igt-gpu-tools</Homepage>
         <Packager>
-            <Name>Troy Harvey</Name>
-            <Email>harveydevel@gmail.com</Email>
+            <Name>Robert Gonzalez</Name>
+            <Email>uni.dos12@outlook.com</Email>
         </Packager>
         <License>MIT</License>
         <PartOf>system.utils</PartOf>
@@ -62,6 +62,7 @@
             <Path fileType="executable">/usr/bin/intel_gtt</Path>
             <Path fileType="executable">/usr/bin/intel_guc_logger</Path>
             <Path fileType="executable">/usr/bin/intel_gvtg_test</Path>
+            <Path fileType="executable">/usr/bin/intel_hdcp</Path>
             <Path fileType="executable">/usr/bin/intel_infoframes</Path>
             <Path fileType="executable">/usr/bin/intel_l3_parity</Path>
             <Path fileType="executable">/usr/bin/intel_lid</Path>
@@ -85,13 +86,18 @@
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/amdgpu/amd_abm</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/amdgpu/amd_assr</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/amdgpu/amd_basic</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/amdgpu/amd_basic_ex</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/amdgpu/amd_basic_multi_gpu</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/amdgpu/amd_bo</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/amdgpu/amd_bypass</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/amdgpu/amd_color</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/amdgpu/amd_cp_dma_misc</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/amdgpu/amd_cross_gpu_sync</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/amdgpu/amd_cs_nop</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/amdgpu/amd_cursor_overlay</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/amdgpu/amd_deadlock</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/amdgpu/amd_dispatch</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/amdgpu/amd_dmabuf_unload</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/amdgpu/amd_dp_dsc</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/amdgpu/amd_freesync_video_mode</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/amdgpu/amd_fuzzing</Path>
@@ -100,9 +106,11 @@
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/amdgpu/amd_ilr</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/amdgpu/amd_info</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/amdgpu/amd_jpeg_dec</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/amdgpu/amd_jpeg_queue</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/amdgpu/amd_link_settings</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/amdgpu/amd_mall</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/amdgpu/amd_max_bpc</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/amdgpu/amd_mem</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/amdgpu/amd_mem_leak</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/amdgpu/amd_mode_switch</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/amdgpu/amd_module_load</Path>
@@ -115,6 +123,7 @@
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/amdgpu/amd_pstate</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/amdgpu/amd_queue_reset</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/amdgpu/amd_ras</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/amdgpu/amd_remote_mem</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/amdgpu/amd_replay</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/amdgpu/amd_security</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/amdgpu/amd_subvp</Path>
@@ -123,6 +132,7 @@
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/amdgpu/amd_uvd_enc</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/amdgpu/amd_vce_enc</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/amdgpu/amd_vcn</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/amdgpu/amd_vcn_queue</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/amdgpu/amd_vm</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/amdgpu/amd_vpe</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/amdgpu/amd_vrr_range</Path>
@@ -151,21 +161,25 @@
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/benchmarks/libgem_exec_tracer.so</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/benchmarks/prime_lookup</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/benchmarks/vgem_mmap</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/benchmarks/xe_blt</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/benchmarks/xe_create</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/benchmarks/xe_exec_ctx</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/core_auth</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/core_debugfs</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/core_getclient</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/core_getstats</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/core_getversion</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/core_hotunplug</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/core_setmaster</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/core_setmaster_vs_auth</Path>
-            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/debugfs_test</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/core_sysfs</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/device_reset</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/dmabuf</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/dmabuf_sync_file</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/drm_buddy</Path>
-            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/drm_fdinfo</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/drm_mm</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/drm_read</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/drm_virtgpu</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/dumb_buffer</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/fbdev</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/gem_bad_reloc</Path>
@@ -292,6 +306,7 @@
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/gen3_render_tiledy_blits</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/gen7_exec_parse</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/gen9_exec_parse</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/i915_drm_fdinfo</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/i915_fb_tiling</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/i915_getparams_basic</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/i915_hangman</Path>
@@ -307,15 +322,103 @@
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/i915_query</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/i915_selftest</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/i915_suspend</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/i915/adlp/bat-chamelium.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/i915/adlp/bat.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/i915/adlp/full-chamelium.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/i915/adlp/full.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/i915/adls/bat-chamelium.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/i915/adls/bat.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/i915/adls/full-chamelium.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/i915/adls/full.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/i915/bmg/bat-chamelium.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/i915/bmg/bat.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/i915/bmg/full-chamelium.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/i915/bmg/full.testlist</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/i915/default/bat-chamelium.testlist</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/i915/default/bat.testlist</Path>
-            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/i915/default/chamelium.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/i915/default/full-chamelium.testlist</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/i915/default/full.testlist</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/i915/default/other.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/i915/dg2/bat-chamelium.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/i915/dg2/bat.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/i915/dg2/full-chamelium.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/i915/dg2/full.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/i915/lnl/bat-chamelium.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/i915/lnl/bat.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/i915/lnl/full-chamelium.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/i915/lnl/full.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/i915/mtl/bat-chamelium.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/i915/mtl/bat.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/i915/mtl/full-chamelium.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/i915/mtl/full.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/i915/nvl/bat-chamelium.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/i915/nvl/bat.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/i915/nvl/full-chamelium.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/i915/nvl/full.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/i915/ptl/bat-chamelium.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/i915/ptl/bat.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/i915/ptl/full-chamelium.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/i915/ptl/full.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/i915/wcl</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/xe/adlp/bat-chamelium.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/xe/adlp/bat.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/xe/adlp/full-chamelium.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/xe/adlp/full.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/xe/adls/bat-chamelium.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/xe/adls/bat.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/xe/adls/full-chamelium.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/xe/adls/full.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/xe/bmg/bat-chamelium.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/xe/bmg/bat-vf.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/xe/bmg/bat-vm.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/xe/bmg/bat.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/xe/bmg/full-chamelium.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/xe/bmg/full-vf.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/xe/bmg/full-vm.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/xe/bmg/full.testlist</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/xe/default/bat-chamelium.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/xe/default/bat-vf.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/xe/default/bat-vm.testlist</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/xe/default/bat.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/xe/default/full-chamelium.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/xe/default/full-vf.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/xe/default/full-vm.testlist</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/xe/default/full.testlist</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/xe/default/other.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/xe/dg2/bat-chamelium.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/xe/dg2/bat.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/xe/dg2/full-chamelium.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/xe/dg2/full.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/xe/lnl/bat-chamelium.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/xe/lnl/bat-vf.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/xe/lnl/bat-vm.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/xe/lnl/bat.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/xe/lnl/full-chamelium.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/xe/lnl/full-vf.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/xe/lnl/full-vm.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/xe/lnl/full.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/xe/mtl/bat-chamelium.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/xe/mtl/bat.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/xe/mtl/full-chamelium.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/xe/mtl/full.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/xe/nvl/bat-chamelium.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/xe/nvl/bat.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/xe/nvl/full-chamelium.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/xe/nvl/full.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/xe/ptl/bat-chamelium.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/xe/ptl/bat-vf.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/xe/ptl/bat-vm.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/xe/ptl/bat.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/xe/ptl/full-chamelium.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/xe/ptl/full-vf.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/xe/ptl/full-vm.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/xe/ptl/full.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/xe/wcl/bat-vf.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/xe/wcl/bat-vm.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/xe/wcl/bat.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/xe/wcl/full-vf.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/xe/wcl/full-vm.testlist</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel-ci-tests/xe/wcl/full.testlist</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/intel_hwmon</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/kms_3d</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/kms_addfb_basic</Path>
@@ -333,12 +436,16 @@
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/kms_chamelium_edid</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/kms_chamelium_frames</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/kms_chamelium_hpd</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/kms_chamelium_sharpness_filter</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/kms_color</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/kms_color_pipeline</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/kms_colorop</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/kms_concurrent</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/kms_content_protection</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/kms_cursor_crc</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/kms_cursor_edge_walk</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/kms_cursor_legacy</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/kms_debugfs</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/kms_dirtyfb</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/kms_display_modes</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/kms_dither</Path>
@@ -347,6 +454,7 @@
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/kms_dp_linktrain_fallback</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/kms_draw_crc</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/kms_dsc</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/kms_explicit_fence</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/kms_fb_coherency</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/kms_fbc_dirty_rect</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/kms_fbcon_fbt</Path>
@@ -395,6 +503,7 @@
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/kms_selftest</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/kms_sequence</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/kms_setmode</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/kms_sharpness_filter</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/kms_sysfs_edid_timing</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/kms_tiled_display</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/kms_tv_load_detect</Path>
@@ -403,6 +512,7 @@
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/kms_vrr</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/kms_writeback</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/meta_test</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/msm/msm_bo</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/msm/msm_mapping</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/msm/msm_recovery</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/msm/msm_shrink</Path>
@@ -413,6 +523,10 @@
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/panfrost/panfrost_get_param</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/panfrost/panfrost_prime</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/panfrost/panfrost_submit</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/panthor/panthor_gem</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/panthor/panthor_group</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/panthor/panthor_query</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/panthor/panthor_vm</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/perf</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/perf_pmu</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/prime_busy</Path>
@@ -461,6 +575,7 @@
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/vc4/vc4_wait_seqno</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/vgem_basic</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/vgem_slow</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/vkms/vkms_configfs</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/vmwgfx/vmw_execution_buffer</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/vmwgfx/vmw_mob_stress</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/vmwgfx/vmw_prime</Path>
@@ -470,6 +585,7 @@
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/xe_ccs</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/xe_compute</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/xe_compute_preempt</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/xe_configfs</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/xe_copy_basic</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/xe_create</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/xe_debugfs</Path>
@@ -485,10 +601,12 @@
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/xe_exec_compute_mode</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/xe_exec_fault_mode</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/xe_exec_mix_modes</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/xe_exec_multi_queue</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/xe_exec_queue_property</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/xe_exec_reset</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/xe_exec_sip</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/xe_exec_store</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/xe_exec_system_allocator</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/xe_exec_threads</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/xe_exercise_blt</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/xe_fault_injection</Path>
@@ -500,20 +618,28 @@
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/xe_media_fill</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/xe_mmap</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/xe_module_load</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/xe_multigpu_svm</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/xe_noexec_ping_pong</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/xe_non_msix</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/xe_oa</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/xe_pat</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/xe_peer2peer</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/xe_pm</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/xe_pm_residency</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/xe_pmu</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/xe_prefetch_fault</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/xe_prime_self_import</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/xe_pxp</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/xe_query</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/xe_render_copy</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/xe_spin_batch</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/xe_sriov_admin</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/xe_sriov_auto_provisioning</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/xe_sriov_flr</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/xe_sriov_scheduling</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/xe_sriov_vram</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/xe_survivability</Path>
+            <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/xe_svm_usrptr_madvise</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/xe_sysfs_defaults</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/xe_sysfs_preempt_timeout</Path>
             <Path fileType="library">/usr/lib64/intel-gpu-tools/igt-gpu-tools/xe_sysfs_scheduler</Path>
@@ -531,13 +657,18 @@
             <Path fileType="data">/usr/share/igt-gpu-tools/1080p-left.png</Path>
             <Path fileType="data">/usr/share/igt-gpu-tools/1080p-right.png</Path>
             <Path fileType="data">/usr/share/igt-gpu-tools/README</Path>
-            <Path fileType="data">/usr/share/igt-gpu-tools/blacklist-pre-merge.txt</Path>
-            <Path fileType="data">/usr/share/igt-gpu-tools/blacklist.txt</Path>
             <Path fileType="data">/usr/share/igt-gpu-tools/chamelium-only.testlist</Path>
             <Path fileType="data">/usr/share/igt-gpu-tools/fast-feedback-chamelium-only.testlist</Path>
             <Path fileType="data">/usr/share/igt-gpu-tools/fast-feedback.testlist</Path>
+            <Path fileType="data">/usr/share/igt-gpu-tools/i915.blocklist-pre-merge.txt</Path>
+            <Path fileType="data">/usr/share/igt-gpu-tools/i915.blocklist.txt</Path>
+            <Path fileType="data">/usr/share/igt-gpu-tools/i915.fast-feedback-chamelium-only.testlist</Path>
+            <Path fileType="data">/usr/share/igt-gpu-tools/i915.fast-feedback.testlist</Path>
             <Path fileType="data">/usr/share/igt-gpu-tools/meta.testlist</Path>
             <Path fileType="data">/usr/share/igt-gpu-tools/pass.png</Path>
+            <Path fileType="data">/usr/share/igt-gpu-tools/registers/adlp_base.txt</Path>
+            <Path fileType="data">/usr/share/igt-gpu-tools/registers/adlp_delta.txt</Path>
+            <Path fileType="data">/usr/share/igt-gpu-tools/registers/alderlake_p</Path>
             <Path fileType="data">/usr/share/igt-gpu-tools/registers/audio_config_haswell_plus.txt</Path>
             <Path fileType="data">/usr/share/igt-gpu-tools/registers/audio_debug_haswell_plus.txt</Path>
             <Path fileType="data">/usr/share/igt-gpu-tools/registers/base_interrupt.txt</Path>
@@ -580,7 +711,26 @@
             <Path fileType="data">/usr/share/igt-gpu-tools/xe-fast-feedback-chamelium-only.testlist</Path>
             <Path fileType="data">/usr/share/igt-gpu-tools/xe-fast-feedback.testlist</Path>
             <Path fileType="data">/usr/share/igt-gpu-tools/xe-sriov-vf.blocklist.txt</Path>
+            <Path fileType="data">/usr/share/igt-gpu-tools/xe-sriov-vm.blocklist.txt</Path>
             <Path fileType="data">/usr/share/igt-gpu-tools/xe.blocklist.txt</Path>
+            <Path fileType="data">/usr/share/igt-gpu-tools/xe.bmg.core.blocklist.txt</Path>
+            <Path fileType="data">/usr/share/igt-gpu-tools/xe.bmg.display.blocklist.txt</Path>
+            <Path fileType="data">/usr/share/igt-gpu-tools/xe.bmg.eudebug.blocklist.txt</Path>
+            <Path fileType="data">/usr/share/igt-gpu-tools/xe.eudebug.blocklist.txt</Path>
+            <Path fileType="data">/usr/share/igt-gpu-tools/xe.fast-feedback-chamelium-only.testlist</Path>
+            <Path fileType="data">/usr/share/igt-gpu-tools/xe.fast-feedback.testlist</Path>
+            <Path fileType="data">/usr/share/igt-gpu-tools/xe.lnl.core.blocklist.txt</Path>
+            <Path fileType="data">/usr/share/igt-gpu-tools/xe.lnl.display.blocklist.txt</Path>
+            <Path fileType="data">/usr/share/igt-gpu-tools/xe.lnl.eudebug.blocklist.txt</Path>
+            <Path fileType="data">/usr/share/igt-gpu-tools/xe.multigpu.blocklist.txt</Path>
+            <Path fileType="data">/usr/share/igt-gpu-tools/xe.nvl.core.blocklist.txt</Path>
+            <Path fileType="data">/usr/share/igt-gpu-tools/xe.nvl.display.blocklist.txt</Path>
+            <Path fileType="data">/usr/share/igt-gpu-tools/xe.ptl.core.blocklist.txt</Path>
+            <Path fileType="data">/usr/share/igt-gpu-tools/xe.ptl.display.blocklist.txt</Path>
+            <Path fileType="data">/usr/share/igt-gpu-tools/xe.sriov-vf.blocklist.txt</Path>
+            <Path fileType="data">/usr/share/igt-gpu-tools/xe.sriov-vm.blocklist.txt</Path>
+            <Path fileType="data">/usr/share/igt-gpu-tools/xe.wcl.core.blocklist.txt</Path>
+            <Path fileType="data">/usr/share/licenses/intel-gpu-tools/COPYING</Path>
         </Files>
     </Package>
     <Package>
@@ -590,7 +740,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="19">intel-gpu-tools</Dependency>
+            <Dependency release="20">intel-gpu-tools</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/i915-perf/igt_list.h</Path>
@@ -667,8 +817,8 @@
             <Path fileType="doc">/usr/share/gtk-doc/html/igt-gpu-tools/igt-gpu-tools-aux.html</Path>
             <Path fileType="doc">/usr/share/gtk-doc/html/igt-gpu-tools/igt-gpu-tools-debugfs.html</Path>
             <Path fileType="doc">/usr/share/gtk-doc/html/igt-gpu-tools/igt-gpu-tools-drmtest.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/igt-gpu-tools/igt-gpu-tools-fs.html</Path>
             <Path fileType="doc">/usr/share/gtk-doc/html/igt-gpu-tools/igt-gpu-tools-igt-device.html</Path>
-            <Path fileType="doc">/usr/share/gtk-doc/html/igt-gpu-tools/igt-gpu-tools-io.html</Path>
             <Path fileType="doc">/usr/share/gtk-doc/html/igt-gpu-tools/igt-gpu-tools-ioctl-wrappers.html</Path>
             <Path fileType="doc">/usr/share/gtk-doc/html/igt-gpu-tools/igt-gpu-tools-kmod.html</Path>
             <Path fileType="doc">/usr/share/gtk-doc/html/igt-gpu-tools/igt-gpu-tools-msm.html</Path>
@@ -700,12 +850,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="19">
-            <Date>2025-09-25</Date>
-            <Version>2.0</Version>
+        <Update release="20">
+            <Date>2026-04-07</Date>
+            <Version>2.4</Version>
             <Comment>Packaging update</Comment>
-            <Name>Troy Harvey</Name>
-            <Email>harveydevel@gmail.com</Email>
+            <Name>Robert Gonzalez</Name>
+            <Email>uni.dos12@outlook.com</Email>
         </Update>
     </History>
 </PISI>

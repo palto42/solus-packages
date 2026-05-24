@@ -1,0 +1,43 @@
+<PISI>
+    <Source>
+        <Name>tetro-tui</Name>
+        <Homepage>https://github.com/Strophox/tetro-tui</Homepage>
+        <Packager>
+            <Name>Jared Cervantes</Name>
+            <Email>jared@jaredcervantes.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <PartOf>games.puzzle</PartOf>
+        <Summary xml:lang="en">Cross-platform terminal tetromino game</Summary>
+        <Description xml:lang="en">A cross-platform terminal game where tetrominos fall and stack. Features multiple
+game modes (Swift, Classic, Master, Puzzle, and more), customizable graphics and
+keybinds, scoreboards, replays, and statistics.
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>tetro-tui</Name>
+        <Summary xml:lang="en">Cross-platform terminal tetromino game</Summary>
+        <Description xml:lang="en">A cross-platform terminal game where tetrominos fall and stack. Features multiple
+game modes (Swift, Classic, Master, Puzzle, and more), customizable graphics and
+keybinds, scoreboards, replays, and statistics.
+</Description>
+        <PartOf>games.puzzle</PartOf>
+        <Files>
+            <Path fileType="executable">/usr/bin/tetro-tui</Path>
+            <Path fileType="data">/usr/share/licenses/tetro-tui/LICENSE</Path>
+        </Files>
+        <Replaces>
+            <Package>tetrs</Package>
+        </Replaces>
+    </Package>
+    <History>
+        <Update release="3">
+            <Date>2026-05-21</Date>
+            <Version>3.5.2</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Jared Cervantes</Name>
+            <Email>jared@jaredcervantes.com</Email>
+        </Update>
+    </History>
+</PISI>

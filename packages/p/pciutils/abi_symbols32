@@ -1,6 +1,7 @@
 libpci.so.3:LIBPCI_3.0
 libpci.so.3:LIBPCI_3.1
 libpci.so.3:LIBPCI_3.13
+libpci.so.3:LIBPCI_3.15
 libpci.so.3:LIBPCI_3.2
 libpci.so.3:LIBPCI_3.3
 libpci.so.3:LIBPCI_3.4
@@ -11,6 +12,8 @@ libpci.so.3:LIBPCI_3.8
 libpci.so.3:pci_alloc
 libpci.so.3:pci_cleanup
 libpci.so.3:pci_fill_info
+libpci.so.3:pci_filter_has_id
+libpci.so.3:pci_filter_has_slot
 libpci.so.3:pci_filter_init
 libpci.so.3:pci_filter_match
 libpci.so.3:pci_filter_parse_id

@@ -2,7 +2,9 @@ ld-linux-x86-64.so.2:__tls_get_addr
 libatk-1.0.so.0:atk_object_set_role
 libc.so.6:__errno_location
 libc.so.6:__fprintf_chk
-libc.so.6:__isoc99_sscanf
+libc.so.6:__isoc23_sscanf
+libc.so.6:__isoc23_strtol
+libc.so.6:__isoc23_strtoul
 libc.so.6:__libc_start_main
 libc.so.6:__memcpy_chk
 libc.so.6:__snprintf_chk
@@ -62,8 +64,6 @@ libc.so.6:strrchr
 libc.so.6:strspn
 libc.so.6:strstr
 libc.so.6:strtod
-libc.so.6:strtol
-libc.so.6:strtoul
 libc.so.6:textdomain
 libc.so.6:time
 libc.so.6:uname
@@ -267,6 +267,7 @@ libglib-2.0.so.0:g_filename_from_utf8
 libglib-2.0.so.0:g_filename_to_utf8
 libglib-2.0.so.0:g_find_program_in_path
 libglib-2.0.so.0:g_free
+libglib-2.0.so.0:g_free_sized
 libglib-2.0.so.0:g_get_application_name
 libglib-2.0.so.0:g_get_charset
 libglib-2.0.so.0:g_get_home_dir
@@ -283,6 +284,7 @@ libglib-2.0.so.0:g_hash_table_get_keys
 libglib-2.0.so.0:g_hash_table_insert
 libglib-2.0.so.0:g_hash_table_iter_init
 libglib-2.0.so.0:g_hash_table_iter_next
+libglib-2.0.so.0:g_hash_table_iter_remove
 libglib-2.0.so.0:g_hash_table_iter_replace
 libglib-2.0.so.0:g_hash_table_lookup
 libglib-2.0.so.0:g_hash_table_lookup_extended
@@ -1978,6 +1980,7 @@ libgtk-3.so.0:gtk_paper_size_is_custom
 libgtk-3.so.0:gtk_paper_size_new
 libgtk-3.so.0:gtk_paper_size_new_custom
 libgtk-3.so.0:gtk_position_type_get_type
+libgtk-3.so.0:gtk_print_context_create_pango_context
 libgtk-3.so.0:gtk_print_context_create_pango_layout
 libgtk-3.so.0:gtk_print_context_get_cairo_context
 libgtk-3.so.0:gtk_print_context_get_height
@@ -2413,6 +2416,7 @@ libm.so.6:atan
 libm.so.6:atan2
 libm.so.6:atanh
 libm.so.6:cbrt
+libm.so.6:ceil
 libm.so.6:cos
 libm.so.6:cosh
 libm.so.6:erf

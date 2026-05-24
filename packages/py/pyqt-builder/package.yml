@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : pyqt-builder
-version    : 1.18.2
-release    : 15
+version    : 1.19.1
+release    : 19
 source     :
-    - https://pypi.debian.net/PyQt-builder/pyqt_builder-1.18.2.tar.gz : 56dfea461484a87a8f0c8b0229190defc436d7ec5de71102e20b35e5639180bc
+    - https://pypi.debian.net/PyQt-builder/pyqt_builder-1.19.1.tar.gz : 6af6646ba29668751b039bfdced51642cb510e300796b58a4d68b7f956a024d8
 homepage   : https://www.riverbankcomputing.com/software/pyqt-builder/
 license    : GPL-3.0-or-later
 component  : programming.python

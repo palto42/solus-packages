@@ -1,0 +1,12 @@
+diff '--color=auto' -pruN a/src/rcfile.c b/src/rcfile.c
+--- a/src/rcfile.c	2026-03-15 06:31:07.000000000 -0400
++++ b/src/rcfile.c	2026-04-08 19:51:14.651350975 -0400
+@@ -1746,6 +1746,8 @@ void do_rcfiles(void)
+ 
+ 		if (have_nanorc(SYSCONFDIR, "/nanorc"))
+ 			parse_one_nanorc();
++		else if (have_nanorc("/usr/share/defaults/nano", "/nanorc"))
++			parse_one_nanorc();
+ 
+ 		get_homedir();
+ 		xdgconfdir = getenv("XDG_CONFIG_HOME");

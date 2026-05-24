@@ -70,7 +70,6 @@ libavif.so.16:avifImagePlane
 libavif.so.16:avifImagePlaneHeight
 libavif.so.16:avifImagePlaneRowBytes
 libavif.so.16:avifImagePlaneWidth
-libavif.so.16:avifImagePushProperty
 libavif.so.16:avifImageRGBToYUV
 libavif.so.16:avifImageScale
 libavif.so.16:avifImageSetMetadataExif

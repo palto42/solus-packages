@@ -1,4 +1,4 @@
-From 5c2ba52f981340514a47246d2ebe1b7a0c58b373 Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Maik=20W=C3=B6hl?= <maik.woehl@outlook.de>
 Date: Tue, 27 Feb 2024 22:39:59 +0100
 Subject: [PATCH 2/6] Update config documentation
@@ -15,17 +15,14 @@ Signed-off-by: Maik Wöhl <maik.woehl@outlook.de>
  1 file changed, 1 insertion(+)
 
 diff --git a/xpra/scripts/config.py b/xpra/scripts/config.py
-index 68bce2052..0c7d9e1b8 100755
+index 75be2fb018..70db848fec 100755
 --- a/xpra/scripts/config.py
 +++ b/xpra/scripts/config.py
-@@ -432,6 +432,7 @@ def get_xpra_defaults_dirs(username:Optional[str]=None, uid=None, gid=None):
-     # load config files in this order (the later ones override earlier ones):
-     # * application defaults   (ie: "/Volumes/Xpra/Xpra.app/Contents/Resources/" on OSX)
-     #                          (ie: "C:\Program Files\Xpra\" on win32)
-+    #                          (ie: "/usr/share/defaults/xpra" on solus)
-     #                          (ie: None on others)
-     # * system defaults        (ie: "/etc/xpra" on Posix - not on OSX)
-     #                          (ie: "/Library/Application Support/Xpra" on OSX)
--- 
-2.44.0
-
+@@ -540,6 +540,7 @@ def get_xpra_defaults_dirs(username: str | None = None, uid=None, gid=None) -> l
+     # * application defaults, ie:
+     #   "/Volumes/Xpra/Xpra.app/Contents/Resources/" on OSX
+     #   "C:\Program Files\Xpra\" on win32
++    #   "/usr/share/defaults/xpra" on solus
+     #   None on others
+     # * system defaults, ie:
+     #   "/etc/xpra" on Posix - not on OSX

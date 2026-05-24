@@ -3,8 +3,8 @@
         <Name>clutter-gst</Name>
         <Homepage>https://gitlab.gnome.org/GNOME/clutter-gst</Homepage>
         <Packager>
-            <Name>Zach Bacon</Name>
-            <Email>zachbacon@vba-m.com</Email>
+            <Name>Evan Maddock</Name>
+            <Email>maddock.evan@vivaldi.net</Email>
         </Packager>
         <License>LGPL-2.0-only</License>
         <PartOf>desktop.gnome.core</PartOf>
@@ -24,7 +24,7 @@
             <Path fileType="library">/usr/lib64/gstreamer-1.0/libcluttergst3.so</Path>
             <Path fileType="library">/usr/lib64/libclutter-gst-3.0.so.0</Path>
             <Path fileType="library">/usr/lib64/libclutter-gst-3.0.so.0.27.0</Path>
-            <Path fileType="data">/usr/share/gir-1.0/ClutterGst-3.0.gir</Path>
+            <Path fileType="data">/usr/share/licenses/clutter-gst/COPYING</Path>
         </Files>
     </Package>
     <Package>
@@ -34,7 +34,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="23">clutter-gst</Dependency>
+            <Dependency release="24">clutter-gst</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/clutter-gst-3.0/clutter-gst/clutter-gst-aspectratio.h</Path>
@@ -53,6 +53,7 @@
             <Path fileType="header">/usr/include/clutter-gst-3.0/clutter-gst/clutter-gst.h</Path>
             <Path fileType="library">/usr/lib64/libclutter-gst-3.0.so</Path>
             <Path fileType="data">/usr/lib64/pkgconfig/clutter-gst-3.0.pc</Path>
+            <Path fileType="data">/usr/share/gir-1.0/ClutterGst-3.0.gir</Path>
         </Files>
     </Package>
     <Package>
@@ -95,12 +96,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="23">
-            <Date>2023-10-17</Date>
+        <Update release="24">
+            <Date>2026-03-17</Date>
             <Version>3.0.27</Version>
             <Comment>Packaging update</Comment>
-            <Name>Zach Bacon</Name>
-            <Email>zachbacon@vba-m.com</Email>
+            <Name>Evan Maddock</Name>
+            <Email>maddock.evan@vivaldi.net</Email>
         </Update>
     </History>
 </PISI>

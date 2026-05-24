@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : gnome-pomodoro
-version    : 0.27.0
-release    : 19
+version    : 1.1.0
+release    : 24
 source     :
-    - https://github.com/gnome-pomodoro/gnome-pomodoro/archive/refs/tags/0.27.0.tar.gz : 266c773dd591ae373440805fd6885d3052155e63c4c3671322e621ad1a42f7f8
+    - https://github.com/gnome-pomodoro/gnome-pomodoro/archive/refs/tags/1.1.0.tar.gz : 844a04039fedad6e6d8c4920f6c414fd31e70486b8792cd641c479896a59c97e
 homepage   : https://gnomepomodoro.org/
 license    : GPL-3.0-or-later
 component  : office
@@ -10,24 +11,23 @@ summary    : A Pomodoro timer for GNOME
 description: |
     GNOME Pomodoro is a small application that helps managing time according to Pomodoro Technique. It intends to improve productivity and focus by taking short breaks
 builddeps  :
-    - pkgconfig(appstream-glib)
     - pkgconfig(gnome-desktop-3.0)
     - pkgconfig(gom-1.0)
     - pkgconfig(gsettings-desktop-schemas)
     - pkgconfig(gstreamer-1.0)
     - pkgconfig(gtk+-3.0)
     - pkgconfig(json-glib-1.0)
+    - pkgconfig(libadwaita-1)
     - pkgconfig(libcanberra)
-    - pkgconfig(libpeas-1.0)
+    - pkgconfig(libpeas-2)
     - pkgconfig(sqlite3)
+    - desktop-file-utils
     - gnome-common
     - vala
 setup      : |
-    # This wouldn't have done anything but this lets us skip the builddep
-    sed -i "s|update_desktop_database: true|update_desktop_database: false|g" meson.build
-
     %meson_configure
 build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license COPYING

@@ -1,0 +1,24 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
+name       : libxml++
+version    : 5.6.0
+release    : 13
+source     :
+    - https://github.com/libxmlplusplus/libxmlplusplus/releases/download/5.6.0/libxml++-5.6.0.tar.xz : cd01ad15a5e44d5392c179ddf992891fb1ba94d33188d9198f9daf99e1bc4fec
+homepage   : https://libxmlplusplus.github.io/libxmlplusplus/
+license    : LGPL-2.1-or-later
+component  : programming.library
+summary    : C++ bindings to libxml2
+description: |
+    C++ bindings to libxml2
+builddeps  :
+    - pkgconfig(libxml-2.0)
+setup      : |
+    %meson_configure
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install
+
+    %install_license COPYING
+check      : |
+    %ninja_check

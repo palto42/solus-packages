@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kwave
-version    : 25.08.2
-release    : 64
+version    : 26.04.1
+release    : 73
 source     :
-    - https://download.kde.org/stable/release-service/25.08.2/src/kwave-25.08.2.tar.xz : e00e1a941d56023d503edec6d27468cef2dc1794f72102800a2449dd4f0c970a
+    - https://download.kde.org/stable/release-service/26.04.1/src/kwave-26.04.1.tar.xz : ea9307b8fd470b113b5c4000bb77a7fd4d198fd71abf515a40a71543b28e666c
 homepage   : https://kde.org/applications/multimedia/org.kde.kwave
 license    : GPL-2.0-or-later
 component  : multimedia.audio

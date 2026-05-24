@@ -4,9 +4,14 @@
         <Homepage>https://community.kde.org/Frameworks</Homepage>
         <Packager>
             <Name>Troy Harvey</Name>
-            <Email>harveydevel@gmail.com</Email>
+            <Email>harvey@getsol.us</Email>
         </Packager>
+        <License>CC0-1.0</License>
+        <License>GPL-2.0-only</License>
+        <License>GPL-2.0-or-later</License>
+        <License>GPL-3.0-only</License>
         <License>LGPL-2.0-or-later</License>
+        <License>LGPL-2.1-or-later</License>
         <License>LGPL-3.0-only</License>
         <PartOf>desktop.theme</PartOf>
         <Summary xml:lang="en">QtQuickControls 2 style that integrates with the desktop</Summary>
@@ -55,6 +60,7 @@
             <Path fileType="library">/usr/lib64/qt6/qml/org/kde/desktop/RoundButton.qml</Path>
             <Path fileType="library">/usr/lib64/qt6/qml/org/kde/desktop/ScrollBar.qml</Path>
             <Path fileType="library">/usr/lib64/qt6/qml/org/kde/desktop/ScrollView.qml</Path>
+            <Path fileType="library">/usr/lib64/qt6/qml/org/kde/desktop/SearchField.qml</Path>
             <Path fileType="library">/usr/lib64/qt6/qml/org/kde/desktop/Slider.qml</Path>
             <Path fileType="library">/usr/lib64/qt6/qml/org/kde/desktop/SpinBox.qml</Path>
             <Path fileType="library">/usr/lib64/qt6/qml/org/kde/desktop/SplitView.qml</Path>
@@ -95,6 +101,16 @@
             <Path fileType="library">/usr/lib64/qt6/qml/org/kde/qqc2desktopstyle/private/libqqc2desktopstyleplugin.so</Path>
             <Path fileType="library">/usr/lib64/qt6/qml/org/kde/qqc2desktopstyle/private/qmldir</Path>
             <Path fileType="library">/usr/lib64/qt6/qml/org/kde/qqc2desktopstyle/private/qqc2desktopstyleplugin.qmltypes</Path>
+            <Path fileType="data">/usr/share/licenses/kf6-qqc2-desktop-style/CC0-1.0.txt</Path>
+            <Path fileType="data">/usr/share/licenses/kf6-qqc2-desktop-style/GPL-2.0-only.txt</Path>
+            <Path fileType="data">/usr/share/licenses/kf6-qqc2-desktop-style/GPL-2.0-or-later.txt</Path>
+            <Path fileType="data">/usr/share/licenses/kf6-qqc2-desktop-style/GPL-3.0-only.txt</Path>
+            <Path fileType="data">/usr/share/licenses/kf6-qqc2-desktop-style/LGPL-2.0-or-later.txt</Path>
+            <Path fileType="data">/usr/share/licenses/kf6-qqc2-desktop-style/LGPL-2.1-or-later.txt</Path>
+            <Path fileType="data">/usr/share/licenses/kf6-qqc2-desktop-style/LGPL-3.0-only.txt</Path>
+            <Path fileType="data">/usr/share/licenses/kf6-qqc2-desktop-style/LicenseRef-KDE-Accepted-LGPL.txt</Path>
+            <Path fileType="data">/usr/share/licenses/kf6-qqc2-desktop-style/LicenseRef-KFQF-Accepted-GPL.txt</Path>
+            <Path fileType="data">/usr/share/licenses/kf6-qqc2-desktop-style/LicenseRef-Qt-Commercial.txt</Path>
             <Path fileType="localedata">/usr/share/locale/ar/LC_MESSAGES/qqc2desktopstyle_qt.qm</Path>
             <Path fileType="localedata">/usr/share/locale/ast/LC_MESSAGES/qqc2desktopstyle_qt.qm</Path>
             <Path fileType="localedata">/usr/share/locale/ca/LC_MESSAGES/qqc2desktopstyle_qt.qm</Path>
@@ -107,11 +123,13 @@
             <Path fileType="localedata">/usr/share/locale/eu/LC_MESSAGES/qqc2desktopstyle_qt.qm</Path>
             <Path fileType="localedata">/usr/share/locale/fi/LC_MESSAGES/qqc2desktopstyle_qt.qm</Path>
             <Path fileType="localedata">/usr/share/locale/fr/LC_MESSAGES/qqc2desktopstyle_qt.qm</Path>
+            <Path fileType="localedata">/usr/share/locale/ga/LC_MESSAGES/qqc2desktopstyle_qt.qm</Path>
             <Path fileType="localedata">/usr/share/locale/gl/LC_MESSAGES/qqc2desktopstyle_qt.qm</Path>
             <Path fileType="localedata">/usr/share/locale/he/LC_MESSAGES/qqc2desktopstyle_qt.qm</Path>
             <Path fileType="localedata">/usr/share/locale/hi/LC_MESSAGES/qqc2desktopstyle_qt.qm</Path>
             <Path fileType="localedata">/usr/share/locale/hu/LC_MESSAGES/qqc2desktopstyle_qt.qm</Path>
             <Path fileType="localedata">/usr/share/locale/ia/LC_MESSAGES/qqc2desktopstyle_qt.qm</Path>
+            <Path fileType="localedata">/usr/share/locale/is/LC_MESSAGES/qqc2desktopstyle_qt.qm</Path>
             <Path fileType="localedata">/usr/share/locale/it/LC_MESSAGES/qqc2desktopstyle_qt.qm</Path>
             <Path fileType="localedata">/usr/share/locale/ka/LC_MESSAGES/qqc2desktopstyle_qt.qm</Path>
             <Path fileType="localedata">/usr/share/locale/ko/LC_MESSAGES/qqc2desktopstyle_qt.qm</Path>
@@ -142,7 +160,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="27">kf6-qqc2-desktop-style</Dependency>
+            <Dependency release="38">kf6-qqc2-desktop-style</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib64/cmake/KF6QQC2DesktopStyle/KF6QQC2DesktopStyleConfig.cmake</Path>
@@ -150,12 +168,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="27">
-            <Date>2025-10-11</Date>
-            <Version>6.19.0</Version>
+        <Update release="38">
+            <Date>2026-05-12</Date>
+            <Version>6.26.0</Version>
             <Comment>Packaging update</Comment>
             <Name>Troy Harvey</Name>
-            <Email>harveydevel@gmail.com</Email>
+            <Email>harvey@getsol.us</Email>
         </Update>
     </History>
 </PISI>

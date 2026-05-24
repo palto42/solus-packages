@@ -1,10 +1,12 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kf6-kitemmodels
-version    : 6.19.0
-release    : 25
+version    : 6.26.0
+release    : 35
 source     :
-    - https://download.kde.org/stable/frameworks/6.19/kitemmodels-6.19.0.tar.xz : 96e74a13100d0266ac31bfd1527901637f2bf4d6bc7d46a497e6dc9291bdb98e
+    - https://download.kde.org/stable/frameworks/6.26/kitemmodels-6.26.0.tar.xz : a996201062ff7d21f9db972debc2d9615762ddb0fd9da069a42b7fd7bba1e61d
 homepage   : https://community.kde.org/Frameworks
 license    :
+    - CC0-1.0
     - LGPL-2.0-or-later
     - LGPL-2.1-only
     - LGPL-2.1-or-later
@@ -29,3 +31,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*

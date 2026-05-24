@@ -1,10 +1,12 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kf6-kded
-version    : 6.19.0
-release    : 26
+version    : 6.26.0
+release    : 33
 source     :
-    - https://download.kde.org/stable/frameworks/6.19/kded-6.19.0.tar.xz : 9c5a04227bf63f36c878b7e6925476c8c805acbdb543b8a6c14c35de46a0bc02
+    - https://download.kde.org/stable/frameworks/6.26/kded-6.26.0.tar.xz : 4265d1162cbd7febf16d103bf1bd9fab858fa3f54f52797ed0938436bee347af
 homepage   : https://community.kde.org/Frameworks
 license    :
+    - CC0-1.0
     - LGPL-2.0-only
     - LGPL-2.0-or-later
 component  : programming.library
@@ -26,3 +28,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*

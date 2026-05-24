@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : wxmaxima
-version    : 25.04.0
-release    : 34
+version    : 26.05.0
+release    : 36
 source     :
-    - https://github.com/wxMaxima-developers/wxmaxima/archive/refs/tags/Version-25.04.0.tar.gz : ec0b3005c3663f1bb86b0cc5028c2ba121e1563e3d5b671afcb9774895f4191b
+    - https://github.com/wxMaxima-developers/wxmaxima/archive/refs/tags/Version-26.05.0.tar.gz : 1380c58d27e1b2e0eaee543936ca188658a829fc397cb9e064e8803209e3475f
 homepage   : https://wxmaxima-developers.github.io/wxmaxima/
 license    : GPL-2.0-or-later
 component  : office.maths

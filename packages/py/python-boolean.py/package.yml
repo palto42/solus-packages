@@ -1,0 +1,24 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
+name       : python-boolean.py
+version    : '5.0'
+release    : 1
+source     :
+    - https://files.pythonhosted.org/packages/source/b/boolean_py/boolean_py-5.0.tar.gz : 60cbc4bad079753721d32649545505362c754e121570ada4658b852a3a318d95
+homepage   : https://pypi.org/project/boolean.py/
+license    : BSD-2-Clause
+component  : programming.python
+summary    : Implements boolean algebra in one module
+description: |
+    boolean.py is a small library implementing a boolean algebra. It defines two base elements, TRUE and FALSE, and a Symbol class that can take on one of these two values. Calculations are done in terms of AND, OR and NOT - other compositions like XOR and NAND are not implemented but can be emulated with AND or and NOT.
+builddeps  :
+    - python-build
+    - python-installer
+    - python-setuptools
+checkdeps  :
+    - python-pytest
+build      : |
+    %python3_setup
+install    : |
+    %python3_install
+check      : |
+    %python3_test pytest -v

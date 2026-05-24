@@ -5,6 +5,7 @@ libc.so.6:__cxa_atexit
 libc.so.6:__errno_location
 libc.so.6:__isoc23_fscanf
 libc.so.6:__isoc23_sscanf
+libc.so.6:__isoc23_strtol
 libc.so.6:__isoc23_strtoul
 libc.so.6:__libc_start_main
 libc.so.6:__stack_chk_fail
@@ -158,6 +159,6 @@ libfreetype.so.6:FT_Load_Glyph
 libfreetype.so.6:FT_Load_Sfnt_Table
 libfreetype.so.6:FT_New_Face
 libfreetype.so.6:FT_Set_Pixel_Sizes
-libfuse.so.2:fuse_main_real
+libfuse3.so.4:fuse_main_real_versioned
 liblzma.so.5:lzma_code
 liblzma.so.5:lzma_stream_encoder

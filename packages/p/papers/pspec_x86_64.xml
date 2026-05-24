@@ -3,8 +3,8 @@
         <Name>papers</Name>
         <Homepage>https://apps.gnome.org/Papers/</Homepage>
         <Packager>
-            <Name>Muhammad Alfi Syahrin</Name>
-            <Email>malfisya.dev@hotmail.com</Email>
+            <Name>Evan Maddock</Name>
+            <Email>maddock.evan@vivaldi.net</Email>
         </Packager>
         <License>GPL-2.0-or-later</License>
         <PartOf>office.viewers</PartOf>
@@ -25,19 +25,19 @@
             <Path fileType="executable">/usr/bin/papers-thumbnailer</Path>
             <Path fileType="library">/usr/lib64/girepository-1.0/PapersDocument-4.0.typelib</Path>
             <Path fileType="library">/usr/lib64/girepository-1.0/PapersView-4.0.typelib</Path>
-            <Path fileType="library">/usr/lib64/libppsdocument-4.0.so.5</Path>
-            <Path fileType="library">/usr/lib64/libppsdocument-4.0.so.5.0.0</Path>
-            <Path fileType="library">/usr/lib64/libppsview-4.0.so.4</Path>
-            <Path fileType="library">/usr/lib64/libppsview-4.0.so.4.0.0</Path>
+            <Path fileType="library">/usr/lib64/libppsdocument-4.0.so.6</Path>
+            <Path fileType="library">/usr/lib64/libppsdocument-4.0.so.6.0.0</Path>
+            <Path fileType="library">/usr/lib64/libppsview-4.0.so.5</Path>
+            <Path fileType="library">/usr/lib64/libppsview-4.0.so.5.0.0</Path>
             <Path fileType="library">/usr/lib64/nautilus/extensions-4/libpapers-document-properties.so</Path>
-            <Path fileType="library">/usr/lib64/papers/5/backends/comicsdocument.papers-backend</Path>
-            <Path fileType="library">/usr/lib64/papers/5/backends/djvudocument.papers-backend</Path>
-            <Path fileType="library">/usr/lib64/papers/5/backends/libcomicsdocument.so</Path>
-            <Path fileType="library">/usr/lib64/papers/5/backends/libdjvudocument.so</Path>
-            <Path fileType="library">/usr/lib64/papers/5/backends/libpdfdocument.so</Path>
-            <Path fileType="library">/usr/lib64/papers/5/backends/libtiffdocument.so</Path>
-            <Path fileType="library">/usr/lib64/papers/5/backends/pdfdocument.papers-backend</Path>
-            <Path fileType="library">/usr/lib64/papers/5/backends/tiffdocument.papers-backend</Path>
+            <Path fileType="library">/usr/lib64/papers/6/backends/libcomicsdocument.so</Path>
+            <Path fileType="library">/usr/lib64/papers/6/backends/libdjvudocument.so</Path>
+            <Path fileType="library">/usr/lib64/papers/6/backends/libpdfdocument.so</Path>
+            <Path fileType="library">/usr/lib64/papers/6/backends/libtiffdocument.so</Path>
+            <Path fileType="library">/usr/lib64/papers/6/backends/org.gnome.Papers.ComicsDocument.papers-backend</Path>
+            <Path fileType="library">/usr/lib64/papers/6/backends/org.gnome.Papers.DjvuDocument.papers-backend</Path>
+            <Path fileType="library">/usr/lib64/papers/6/backends/org.gnome.Papers.PdfDocument.papers-backend</Path>
+            <Path fileType="library">/usr/lib64/papers/6/backends/org.gnome.Papers.TiffDocument.papers-backend</Path>
             <Path fileType="data">/usr/share/applications/org.gnome.Papers-previewer.desktop</Path>
             <Path fileType="data">/usr/share/applications/org.gnome.Papers.desktop</Path>
             <Path fileType="data">/usr/share/glib-2.0/schemas/org.gnome.Papers.gschema.xml</Path>
@@ -1247,6 +1247,73 @@
             <Path fileType="doc">/usr/share/help/ja/papers/singlesided-npages.page</Path>
             <Path fileType="doc">/usr/share/help/ja/papers/textselection.page</Path>
             <Path fileType="doc">/usr/share/help/ja/papers/translate.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/papers/annotation-properties.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/papers/annotations-delete.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/papers/annotations-disabled.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/papers/annotations-navigate.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/papers/annotations-save.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/papers/annotations.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/papers/bookmarks.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/papers/bug-filing.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/papers/commandline.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/papers/convertSVG.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/papers/develop.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/papers/documentation.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/papers/duplex-10pages.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/papers/duplex-11pages.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/papers/duplex-12pages.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/papers/duplex-13pages.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/papers/duplex-14pages.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/papers/duplex-15pages.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/papers/duplex-16pages.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/papers/duplex-3pages.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/papers/duplex-4pages.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/papers/duplex-5pages.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/papers/duplex-6pages.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/papers/duplex-7pages.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/papers/duplex-8pages.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/papers/duplex-9pages.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/papers/duplex-npages.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/papers/editing.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/papers/figures/add-text-annotation.png</Path>
+            <Path fileType="doc">/usr/share/help/kk/papers/figures/annotations-nav-to-page.png</Path>
+            <Path fileType="doc">/usr/share/help/kk/papers/figures/emblem-system-symbolic.svg</Path>
+            <Path fileType="doc">/usr/share/help/kk/papers/figures/org.gnome.Papers.svg</Path>
+            <Path fileType="doc">/usr/share/help/kk/papers/figures/search-not-found.png</Path>
+            <Path fileType="doc">/usr/share/help/kk/papers/figures/zoom.png</Path>
+            <Path fileType="doc">/usr/share/help/kk/papers/finding.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/papers/formats.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/papers/forms-saving.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/papers/forms.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/papers/headerbar.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/papers/index.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/papers/introduction.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/papers/invert-colors.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/papers/legal-unported.xml</Path>
+            <Path fileType="doc">/usr/share/help/kk/papers/legal.xml</Path>
+            <Path fileType="doc">/usr/share/help/kk/papers/license.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/papers/movingaround.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/papers/noprint.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/papers/openerror.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/papers/opening.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/papers/password.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/papers/presentations.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/papers/print-2sided.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/papers/print-booklet.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/papers/print-differentsize.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/papers/print-order.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/papers/print-pagescaling.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/papers/print-select.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/papers/printing.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/papers/reload.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/papers/singlesided-13-16pages.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/papers/singlesided-17-20pages.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/papers/singlesided-3-4pages.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/papers/singlesided-5-8pages.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/papers/singlesided-9-12pages.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/papers/singlesided-npages.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/papers/textselection.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/papers/translate.page</Path>
             <Path fileType="doc">/usr/share/help/ko/papers/annotation-properties.page</Path>
             <Path fileType="doc">/usr/share/help/ko/papers/annotations-delete.page</Path>
             <Path fileType="doc">/usr/share/help/ko/papers/annotations-disabled.page</Path>
@@ -2455,6 +2522,7 @@
             <Path fileType="doc">/usr/share/help/zh_TW/papers/translate.page</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.gnome.Papers.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/symbolic/apps/org.gnome.Papers-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/licenses/papers/COPYING</Path>
             <Path fileType="localedata">/usr/share/locale/ab/LC_MESSAGES/papers.mo</Path>
             <Path fileType="localedata">/usr/share/locale/af/LC_MESSAGES/papers.mo</Path>
             <Path fileType="localedata">/usr/share/locale/an/LC_MESSAGES/papers.mo</Path>
@@ -2485,6 +2553,7 @@
             <Path fileType="localedata">/usr/share/locale/eu/LC_MESSAGES/papers.mo</Path>
             <Path fileType="localedata">/usr/share/locale/fa/LC_MESSAGES/papers.mo</Path>
             <Path fileType="localedata">/usr/share/locale/fi/LC_MESSAGES/papers.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/fil/LC_MESSAGES/papers.mo</Path>
             <Path fileType="localedata">/usr/share/locale/fr/LC_MESSAGES/papers.mo</Path>
             <Path fileType="localedata">/usr/share/locale/fur/LC_MESSAGES/papers.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ga/LC_MESSAGES/papers.mo</Path>
@@ -2495,6 +2564,7 @@
             <Path fileType="localedata">/usr/share/locale/hi/LC_MESSAGES/papers.mo</Path>
             <Path fileType="localedata">/usr/share/locale/hr/LC_MESSAGES/papers.mo</Path>
             <Path fileType="localedata">/usr/share/locale/hu/LC_MESSAGES/papers.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/ia/LC_MESSAGES/papers.mo</Path>
             <Path fileType="localedata">/usr/share/locale/id/LC_MESSAGES/papers.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ie/LC_MESSAGES/papers.mo</Path>
             <Path fileType="localedata">/usr/share/locale/is/LC_MESSAGES/papers.mo</Path>
@@ -2555,14 +2625,14 @@
             <Path fileType="localedata">/usr/share/locale/zh_HK/LC_MESSAGES/papers.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_TW/LC_MESSAGES/papers.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zu/LC_MESSAGES/papers.mo</Path>
-            <Path fileType="man">/usr/share/man/man1/papers-previewer.1</Path>
-            <Path fileType="man">/usr/share/man/man1/papers-thumbnailer.1</Path>
-            <Path fileType="man">/usr/share/man/man1/papers.1</Path>
+            <Path fileType="man">/usr/share/man/man1/papers-previewer.1.zst</Path>
+            <Path fileType="man">/usr/share/man/man1/papers-thumbnailer.1.zst</Path>
+            <Path fileType="man">/usr/share/man/man1/papers.1.zst</Path>
+            <Path fileType="data">/usr/share/metainfo/org.gnome.Papers.ComicsDocument.metainfo.xml</Path>
+            <Path fileType="data">/usr/share/metainfo/org.gnome.Papers.DjvuDocument.metainfo.xml</Path>
+            <Path fileType="data">/usr/share/metainfo/org.gnome.Papers.PdfDocument.metainfo.xml</Path>
+            <Path fileType="data">/usr/share/metainfo/org.gnome.Papers.TiffDocument.metainfo.xml</Path>
             <Path fileType="data">/usr/share/metainfo/org.gnome.Papers.metainfo.xml</Path>
-            <Path fileType="data">/usr/share/metainfo/papers-comicsdocument.metainfo.xml</Path>
-            <Path fileType="data">/usr/share/metainfo/papers-djvudocument.metainfo.xml</Path>
-            <Path fileType="data">/usr/share/metainfo/papers-pdfdocument.metainfo.xml</Path>
-            <Path fileType="data">/usr/share/metainfo/papers-tiffdocument.metainfo.xml</Path>
             <Path fileType="data">/usr/share/thumbnailers/papers.thumbnailer</Path>
         </Files>
     </Package>
@@ -2573,7 +2643,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="12">papers</Dependency>
+            <Dependency release="20">papers</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/papers/4.0/libdocument/pps-annotation.h</Path>
@@ -2618,6 +2688,7 @@
             <Path fileType="header">/usr/include/papers/4.0/libdocument/pps-signature.h</Path>
             <Path fileType="header">/usr/include/papers/4.0/libdocument/pps-transition-effect.h</Path>
             <Path fileType="header">/usr/include/papers/4.0/libdocument/pps-version.h</Path>
+            <Path fileType="header">/usr/include/papers/4.0/libview/context/pps-annotation-model.h</Path>
             <Path fileType="header">/usr/include/papers/4.0/libview/context/pps-annotations-context.h</Path>
             <Path fileType="header">/usr/include/papers/4.0/libview/context/pps-attachment-context.h</Path>
             <Path fileType="header">/usr/include/papers/4.0/libview/context/pps-document-model.h</Path>
@@ -2625,6 +2696,9 @@
             <Path fileType="header">/usr/include/papers/4.0/libview/context/pps-metadata.h</Path>
             <Path fileType="header">/usr/include/papers/4.0/libview/context/pps-search-context.h</Path>
             <Path fileType="header">/usr/include/papers/4.0/libview/context/pps-search-result.h</Path>
+            <Path fileType="header">/usr/include/papers/4.0/libview/context/pps-undo-context.h</Path>
+            <Path fileType="header">/usr/include/papers/4.0/libview/context/pps-undo-handler.h</Path>
+            <Path fileType="header">/usr/include/papers/4.0/libview/pps-css-utils.h</Path>
             <Path fileType="header">/usr/include/papers/4.0/libview/pps-job-scheduler.h</Path>
             <Path fileType="header">/usr/include/papers/4.0/libview/pps-job.h</Path>
             <Path fileType="header">/usr/include/papers/4.0/libview/pps-jobs.h</Path>
@@ -2643,12 +2717,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="12">
-            <Date>2025-08-07</Date>
-            <Version>48.5</Version>
+        <Update release="20">
+            <Date>2026-05-19</Date>
+            <Version>50.1</Version>
             <Comment>Packaging update</Comment>
-            <Name>Muhammad Alfi Syahrin</Name>
-            <Email>malfisya.dev@hotmail.com</Email>
+            <Name>Evan Maddock</Name>
+            <Email>maddock.evan@vivaldi.net</Email>
         </Update>
     </History>
 </PISI>

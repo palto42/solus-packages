@@ -1,10 +1,10 @@
 <PISI>
     <Source>
         <Name>mesalib</Name>
-        <Homepage>http://mesa3d.org/</Homepage>
+        <Homepage>https://mesa3d.org/</Homepage>
         <Packager>
-            <Name>Troy Harvey</Name>
-            <Email>harveydevel@gmail.com</Email>
+            <Name>Joey Riches</Name>
+            <Email>josephriches@gmail.com</Email>
         </Packager>
         <License>BSL-1.0</License>
         <License>MIT</License>
@@ -24,22 +24,59 @@
         <Files>
             <Path fileType="executable">/usr/bin/mesa-overlay-control.py</Path>
             <Path fileType="executable">/usr/bin/mesa-screenshot-control.py</Path>
+            <Path fileType="library">/usr/lib64/dri/apple_dri.so</Path>
+            <Path fileType="library">/usr/lib64/dri/armada-drm_dri.so</Path>
             <Path fileType="library">/usr/lib64/dri/crocus_dri.so</Path>
+            <Path fileType="library">/usr/lib64/dri/exynos_dri.so</Path>
+            <Path fileType="library">/usr/lib64/dri/gm12u320_dri.so</Path>
+            <Path fileType="library">/usr/lib64/dri/hdlcd_dri.so</Path>
+            <Path fileType="library">/usr/lib64/dri/hx8357d_dri.so</Path>
+            <Path fileType="library">/usr/lib64/dri/ili9163_dri.so</Path>
+            <Path fileType="library">/usr/lib64/dri/ili9225_dri.so</Path>
+            <Path fileType="library">/usr/lib64/dri/ili9341_dri.so</Path>
+            <Path fileType="library">/usr/lib64/dri/ili9486_dri.so</Path>
+            <Path fileType="library">/usr/lib64/dri/imx-dcss_dri.so</Path>
+            <Path fileType="library">/usr/lib64/dri/imx-drm_dri.so</Path>
+            <Path fileType="library">/usr/lib64/dri/imx-lcdif_dri.so</Path>
+            <Path fileType="library">/usr/lib64/dri/ingenic-drm_dri.so</Path>
             <Path fileType="library">/usr/lib64/dri/iris_dri.so</Path>
+            <Path fileType="library">/usr/lib64/dri/kirin_dri.so</Path>
             <Path fileType="library">/usr/lib64/dri/kms_swrast_dri.so</Path>
+            <Path fileType="library">/usr/lib64/dri/komeda_dri.so</Path>
             <Path fileType="library">/usr/lib64/dri/libdril_dri.so</Path>
+            <Path fileType="library">/usr/lib64/dri/mali-dp_dri.so</Path>
+            <Path fileType="library">/usr/lib64/dri/mcde_dri.so</Path>
+            <Path fileType="library">/usr/lib64/dri/mediatek_dri.so</Path>
+            <Path fileType="library">/usr/lib64/dri/meson_dri.so</Path>
+            <Path fileType="library">/usr/lib64/dri/mi0283qt_dri.so</Path>
+            <Path fileType="library">/usr/lib64/dri/mxsfb-drm_dri.so</Path>
             <Path fileType="library">/usr/lib64/dri/nouveau_dri.so</Path>
             <Path fileType="library">/usr/lib64/dri/nouveau_drv_video.so</Path>
+            <Path fileType="library">/usr/lib64/dri/panel-mipi-dbi_dri.so</Path>
+            <Path fileType="library">/usr/lib64/dri/pl111_dri.so</Path>
             <Path fileType="library">/usr/lib64/dri/r300_dri.so</Path>
             <Path fileType="library">/usr/lib64/dri/r600_dri.so</Path>
             <Path fileType="library">/usr/lib64/dri/r600_drv_video.so</Path>
             <Path fileType="library">/usr/lib64/dri/radeonsi_dri.so</Path>
             <Path fileType="library">/usr/lib64/dri/radeonsi_drv_video.so</Path>
+            <Path fileType="library">/usr/lib64/dri/rcar-du_dri.so</Path>
+            <Path fileType="library">/usr/lib64/dri/repaper_dri.so</Path>
+            <Path fileType="library">/usr/lib64/dri/rockchip_dri.so</Path>
+            <Path fileType="library">/usr/lib64/dri/rzg2l-du_dri.so</Path>
+            <Path fileType="library">/usr/lib64/dri/ssd130x_dri.so</Path>
+            <Path fileType="library">/usr/lib64/dri/st7586_dri.so</Path>
+            <Path fileType="library">/usr/lib64/dri/st7735r_dri.so</Path>
+            <Path fileType="library">/usr/lib64/dri/sti_dri.so</Path>
+            <Path fileType="library">/usr/lib64/dri/stm_dri.so</Path>
+            <Path fileType="library">/usr/lib64/dri/sun4i-drm_dri.so</Path>
             <Path fileType="library">/usr/lib64/dri/swrast_dri.so</Path>
+            <Path fileType="library">/usr/lib64/dri/udl_dri.so</Path>
             <Path fileType="library">/usr/lib64/dri/virtio_gpu_dri.so</Path>
             <Path fileType="library">/usr/lib64/dri/virtio_gpu_drv_video.so</Path>
+            <Path fileType="library">/usr/lib64/dri/vkms_dri.so</Path>
             <Path fileType="library">/usr/lib64/dri/vmwgfx_dri.so</Path>
             <Path fileType="library">/usr/lib64/dri/zink_dri.so</Path>
+            <Path fileType="library">/usr/lib64/dri/zynqmp-dpsub_dri.so</Path>
             <Path fileType="library">/usr/lib64/gbm/dri_gbm.so</Path>
             <Path fileType="library">/usr/lib64/libEGL_mesa.so</Path>
             <Path fileType="library">/usr/lib64/libEGL_mesa.so.0</Path>
@@ -47,45 +84,44 @@
             <Path fileType="library">/usr/lib64/libGLX_indirect.so.0</Path>
             <Path fileType="library">/usr/lib64/libGLX_mesa.so.0</Path>
             <Path fileType="library">/usr/lib64/libGLX_mesa.so.0.0.0</Path>
+            <Path fileType="library">/usr/lib64/libRusticlOpenCL.so</Path>
+            <Path fileType="library">/usr/lib64/libRusticlOpenCL.so.1</Path>
+            <Path fileType="library">/usr/lib64/libRusticlOpenCL.so.1.0.0</Path>
+            <Path fileType="library">/usr/lib64/libVkLayer_MESA_anti_lag.so</Path>
             <Path fileType="library">/usr/lib64/libVkLayer_MESA_device_select.so</Path>
             <Path fileType="library">/usr/lib64/libVkLayer_MESA_overlay.so</Path>
             <Path fileType="library">/usr/lib64/libVkLayer_MESA_screenshot.so</Path>
-            <Path fileType="library">/usr/lib64/libgallium-25.2.4.so</Path>
+            <Path fileType="library">/usr/lib64/libgallium-26.1.1.so</Path>
             <Path fileType="library">/usr/lib64/libgbm.so.1</Path>
             <Path fileType="library">/usr/lib64/libgbm.so.1.0.0</Path>
+            <Path fileType="library">/usr/lib64/libvulkan_gfxstream.so</Path>
             <Path fileType="library">/usr/lib64/libvulkan_intel.so</Path>
             <Path fileType="library">/usr/lib64/libvulkan_intel_hasvk.so</Path>
             <Path fileType="library">/usr/lib64/libvulkan_lvp.so</Path>
             <Path fileType="library">/usr/lib64/libvulkan_nouveau.so</Path>
             <Path fileType="library">/usr/lib64/libvulkan_radeon.so</Path>
             <Path fileType="library">/usr/lib64/libvulkan_virtio.so</Path>
-            <Path fileType="library">/usr/lib64/vdpau/libvdpau_nouveau.so</Path>
-            <Path fileType="library">/usr/lib64/vdpau/libvdpau_nouveau.so.1</Path>
-            <Path fileType="library">/usr/lib64/vdpau/libvdpau_nouveau.so.1.0</Path>
-            <Path fileType="library">/usr/lib64/vdpau/libvdpau_nouveau.so.1.0.0</Path>
-            <Path fileType="library">/usr/lib64/vdpau/libvdpau_r600.so</Path>
-            <Path fileType="library">/usr/lib64/vdpau/libvdpau_r600.so.1</Path>
-            <Path fileType="library">/usr/lib64/vdpau/libvdpau_r600.so.1.0</Path>
-            <Path fileType="library">/usr/lib64/vdpau/libvdpau_r600.so.1.0.0</Path>
-            <Path fileType="library">/usr/lib64/vdpau/libvdpau_radeonsi.so</Path>
-            <Path fileType="library">/usr/lib64/vdpau/libvdpau_radeonsi.so.1</Path>
-            <Path fileType="library">/usr/lib64/vdpau/libvdpau_radeonsi.so.1.0</Path>
-            <Path fileType="library">/usr/lib64/vdpau/libvdpau_radeonsi.so.1.0.0</Path>
-            <Path fileType="library">/usr/lib64/vdpau/libvdpau_virtio_gpu.so</Path>
-            <Path fileType="library">/usr/lib64/vdpau/libvdpau_virtio_gpu.so.1</Path>
-            <Path fileType="library">/usr/lib64/vdpau/libvdpau_virtio_gpu.so.1.0</Path>
-            <Path fileType="library">/usr/lib64/vdpau/libvdpau_virtio_gpu.so.1.0.0</Path>
+            <Path fileType="data">/usr/share/OpenCL/vendors/rusticl.icd</Path>
             <Path fileType="data">/usr/share/drirc.d/00-mesa-defaults.conf</Path>
             <Path fileType="data">/usr/share/drirc.d/00-radv-defaults.conf</Path>
             <Path fileType="data">/usr/share/glvnd/egl_vendor.d/50_mesa.json</Path>
+            <Path fileType="data">/usr/share/licenses/mesalib/Apache-2.0</Path>
+            <Path fileType="data">/usr/share/licenses/mesalib/BSL-1.0</Path>
+            <Path fileType="data">/usr/share/licenses/mesalib/GPL-1.0-or-later</Path>
+            <Path fileType="data">/usr/share/licenses/mesalib/GPL-2.0-only</Path>
+            <Path fileType="data">/usr/share/licenses/mesalib/MIT</Path>
+            <Path fileType="data">/usr/share/licenses/mesalib/SGI-B-2.0</Path>
+            <Path fileType="data">/usr/share/licenses/mesalib/exceptions/Linux-Syscall-Note</Path>
             <Path fileType="data">/usr/share/vulkan/explicit_layer.d/VkLayer_MESA_overlay.json</Path>
             <Path fileType="data">/usr/share/vulkan/explicit_layer.d/VkLayer_MESA_screenshot.json</Path>
+            <Path fileType="data">/usr/share/vulkan/icd.d/gfxstream_vk_icd.x86_64.json</Path>
             <Path fileType="data">/usr/share/vulkan/icd.d/intel_hasvk_icd.x86_64.json</Path>
             <Path fileType="data">/usr/share/vulkan/icd.d/intel_icd.x86_64.json</Path>
             <Path fileType="data">/usr/share/vulkan/icd.d/lvp_icd.x86_64.json</Path>
             <Path fileType="data">/usr/share/vulkan/icd.d/nouveau_icd.x86_64.json</Path>
             <Path fileType="data">/usr/share/vulkan/icd.d/radeon_icd.x86_64.json</Path>
             <Path fileType="data">/usr/share/vulkan/icd.d/virtio_icd.x86_64.json</Path>
+            <Path fileType="data">/usr/share/vulkan/implicit_layer.d/VkLayer_MESA_anti_lag.json</Path>
             <Path fileType="data">/usr/share/vulkan/implicit_layer.d/VkLayer_MESA_device_select.json</Path>
         </Files>
     </Package>
@@ -96,25 +132,62 @@
 </Description>
         <PartOf>emul32</PartOf>
         <RuntimeDependencies>
-            <Dependency release="281">mesalib</Dependency>
+            <Dependency release="303">mesalib</Dependency>
         </RuntimeDependencies>
         <Files>
+            <Path fileType="library">/usr/lib32/dri/apple_dri.so</Path>
+            <Path fileType="library">/usr/lib32/dri/armada-drm_dri.so</Path>
             <Path fileType="library">/usr/lib32/dri/crocus_dri.so</Path>
+            <Path fileType="library">/usr/lib32/dri/exynos_dri.so</Path>
+            <Path fileType="library">/usr/lib32/dri/gm12u320_dri.so</Path>
+            <Path fileType="library">/usr/lib32/dri/hdlcd_dri.so</Path>
+            <Path fileType="library">/usr/lib32/dri/hx8357d_dri.so</Path>
+            <Path fileType="library">/usr/lib32/dri/ili9163_dri.so</Path>
+            <Path fileType="library">/usr/lib32/dri/ili9225_dri.so</Path>
+            <Path fileType="library">/usr/lib32/dri/ili9341_dri.so</Path>
+            <Path fileType="library">/usr/lib32/dri/ili9486_dri.so</Path>
+            <Path fileType="library">/usr/lib32/dri/imx-dcss_dri.so</Path>
+            <Path fileType="library">/usr/lib32/dri/imx-drm_dri.so</Path>
+            <Path fileType="library">/usr/lib32/dri/imx-lcdif_dri.so</Path>
+            <Path fileType="library">/usr/lib32/dri/ingenic-drm_dri.so</Path>
             <Path fileType="library">/usr/lib32/dri/iris_dri.so</Path>
+            <Path fileType="library">/usr/lib32/dri/kirin_dri.so</Path>
             <Path fileType="library">/usr/lib32/dri/kms_swrast_dri.so</Path>
+            <Path fileType="library">/usr/lib32/dri/komeda_dri.so</Path>
             <Path fileType="library">/usr/lib32/dri/libdril_dri.so</Path>
+            <Path fileType="library">/usr/lib32/dri/mali-dp_dri.so</Path>
+            <Path fileType="library">/usr/lib32/dri/mcde_dri.so</Path>
+            <Path fileType="library">/usr/lib32/dri/mediatek_dri.so</Path>
+            <Path fileType="library">/usr/lib32/dri/meson_dri.so</Path>
+            <Path fileType="library">/usr/lib32/dri/mi0283qt_dri.so</Path>
+            <Path fileType="library">/usr/lib32/dri/mxsfb-drm_dri.so</Path>
             <Path fileType="library">/usr/lib32/dri/nouveau_dri.so</Path>
             <Path fileType="library">/usr/lib32/dri/nouveau_drv_video.so</Path>
+            <Path fileType="library">/usr/lib32/dri/panel-mipi-dbi_dri.so</Path>
+            <Path fileType="library">/usr/lib32/dri/pl111_dri.so</Path>
             <Path fileType="library">/usr/lib32/dri/r300_dri.so</Path>
             <Path fileType="library">/usr/lib32/dri/r600_dri.so</Path>
             <Path fileType="library">/usr/lib32/dri/r600_drv_video.so</Path>
             <Path fileType="library">/usr/lib32/dri/radeonsi_dri.so</Path>
             <Path fileType="library">/usr/lib32/dri/radeonsi_drv_video.so</Path>
+            <Path fileType="library">/usr/lib32/dri/rcar-du_dri.so</Path>
+            <Path fileType="library">/usr/lib32/dri/repaper_dri.so</Path>
+            <Path fileType="library">/usr/lib32/dri/rockchip_dri.so</Path>
+            <Path fileType="library">/usr/lib32/dri/rzg2l-du_dri.so</Path>
+            <Path fileType="library">/usr/lib32/dri/ssd130x_dri.so</Path>
+            <Path fileType="library">/usr/lib32/dri/st7586_dri.so</Path>
+            <Path fileType="library">/usr/lib32/dri/st7735r_dri.so</Path>
+            <Path fileType="library">/usr/lib32/dri/sti_dri.so</Path>
+            <Path fileType="library">/usr/lib32/dri/stm_dri.so</Path>
+            <Path fileType="library">/usr/lib32/dri/sun4i-drm_dri.so</Path>
             <Path fileType="library">/usr/lib32/dri/swrast_dri.so</Path>
+            <Path fileType="library">/usr/lib32/dri/udl_dri.so</Path>
             <Path fileType="library">/usr/lib32/dri/virtio_gpu_dri.so</Path>
             <Path fileType="library">/usr/lib32/dri/virtio_gpu_drv_video.so</Path>
+            <Path fileType="library">/usr/lib32/dri/vkms_dri.so</Path>
             <Path fileType="library">/usr/lib32/dri/vmwgfx_dri.so</Path>
             <Path fileType="library">/usr/lib32/dri/zink_dri.so</Path>
+            <Path fileType="library">/usr/lib32/dri/zynqmp-dpsub_dri.so</Path>
             <Path fileType="library">/usr/lib32/gbm/dri_gbm.so</Path>
             <Path fileType="library">/usr/lib32/libEGL_mesa.so</Path>
             <Path fileType="library">/usr/lib32/libEGL_mesa.so.0</Path>
@@ -122,38 +195,21 @@
             <Path fileType="library">/usr/lib32/libGLX_indirect.so.0</Path>
             <Path fileType="library">/usr/lib32/libGLX_mesa.so.0</Path>
             <Path fileType="library">/usr/lib32/libGLX_mesa.so.0.0.0</Path>
+            <Path fileType="library">/usr/lib32/libVkLayer_MESA_anti_lag.so</Path>
             <Path fileType="library">/usr/lib32/libVkLayer_MESA_device_select.so</Path>
             <Path fileType="library">/usr/lib32/libVkLayer_MESA_overlay.so</Path>
             <Path fileType="library">/usr/lib32/libVkLayer_MESA_screenshot.so</Path>
-            <Path fileType="library">/usr/lib32/libgallium-25.2.4.so</Path>
+            <Path fileType="library">/usr/lib32/libgallium-26.1.1.so</Path>
             <Path fileType="library">/usr/lib32/libgbm.so.1</Path>
             <Path fileType="library">/usr/lib32/libgbm.so.1.0.0</Path>
             <Path fileType="library">/usr/lib32/libvulkan_intel.so</Path>
             <Path fileType="library">/usr/lib32/libvulkan_intel_hasvk.so</Path>
             <Path fileType="library">/usr/lib32/libvulkan_lvp.so</Path>
-            <Path fileType="library">/usr/lib32/libvulkan_nouveau.so</Path>
             <Path fileType="library">/usr/lib32/libvulkan_radeon.so</Path>
             <Path fileType="library">/usr/lib32/libvulkan_virtio.so</Path>
-            <Path fileType="library">/usr/lib32/vdpau/libvdpau_nouveau.so</Path>
-            <Path fileType="library">/usr/lib32/vdpau/libvdpau_nouveau.so.1</Path>
-            <Path fileType="library">/usr/lib32/vdpau/libvdpau_nouveau.so.1.0</Path>
-            <Path fileType="library">/usr/lib32/vdpau/libvdpau_nouveau.so.1.0.0</Path>
-            <Path fileType="library">/usr/lib32/vdpau/libvdpau_r600.so</Path>
-            <Path fileType="library">/usr/lib32/vdpau/libvdpau_r600.so.1</Path>
-            <Path fileType="library">/usr/lib32/vdpau/libvdpau_r600.so.1.0</Path>
-            <Path fileType="library">/usr/lib32/vdpau/libvdpau_r600.so.1.0.0</Path>
-            <Path fileType="library">/usr/lib32/vdpau/libvdpau_radeonsi.so</Path>
-            <Path fileType="library">/usr/lib32/vdpau/libvdpau_radeonsi.so.1</Path>
-            <Path fileType="library">/usr/lib32/vdpau/libvdpau_radeonsi.so.1.0</Path>
-            <Path fileType="library">/usr/lib32/vdpau/libvdpau_radeonsi.so.1.0.0</Path>
-            <Path fileType="library">/usr/lib32/vdpau/libvdpau_virtio_gpu.so</Path>
-            <Path fileType="library">/usr/lib32/vdpau/libvdpau_virtio_gpu.so.1</Path>
-            <Path fileType="library">/usr/lib32/vdpau/libvdpau_virtio_gpu.so.1.0</Path>
-            <Path fileType="library">/usr/lib32/vdpau/libvdpau_virtio_gpu.so.1.0.0</Path>
             <Path fileType="data">/usr/share/vulkan/icd.d/intel_hasvk_icd.i686.json</Path>
             <Path fileType="data">/usr/share/vulkan/icd.d/intel_icd.i686.json</Path>
             <Path fileType="data">/usr/share/vulkan/icd.d/lvp_icd.i686.json</Path>
-            <Path fileType="data">/usr/share/vulkan/icd.d/nouveau_icd.i686.json</Path>
             <Path fileType="data">/usr/share/vulkan/icd.d/radeon_icd.i686.json</Path>
             <Path fileType="data">/usr/share/vulkan/icd.d/virtio_icd.i686.json</Path>
         </Files>
@@ -165,8 +221,8 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="281">mesalib-devel</Dependency>
-            <Dependency release="281">mesalib-32bit</Dependency>
+            <Dependency release="303">mesalib-32bit</Dependency>
+            <Dependency release="303">mesalib-devel</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib32/libGLX_mesa.so</Path>
@@ -182,7 +238,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="281">mesalib</Dependency>
+            <Dependency release="303">mesalib</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/EGL/eglext_angle.h</Path>
@@ -197,12 +253,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="281">
-            <Date>2025-10-02</Date>
-            <Version>25.2.4</Version>
+        <Update release="303">
+            <Date>2026-05-20</Date>
+            <Version>26.1.1</Version>
             <Comment>Packaging update</Comment>
-            <Name>Troy Harvey</Name>
-            <Email>harveydevel@gmail.com</Email>
+            <Name>Joey Riches</Name>
+            <Email>josephriches@gmail.com</Email>
         </Update>
     </History>
 </PISI>

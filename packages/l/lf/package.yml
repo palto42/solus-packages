@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : lf
-version    : '37'
-release    : 23
+version    : '41'
+release    : 27
 source     :
-    - https://github.com/gokcehan/lf/archive/refs/tags/r37.tar.gz : 05bbc3543951d9649dd2427395a171cf8106976afa7bfff27f812cbcea73fcf0
+    - https://github.com/gokcehan/lf/archive/refs/tags/r41.tar.gz : 55c556d53b5541d5f8691f1309a0166a7a0d8e06cb051c3030c2cd7d8abc6789
 homepage   : https://github.com/gokcehan/lf
 license    : MIT
 component  : system.utils
@@ -18,6 +19,8 @@ install    : |
     install -Dm00755 lf $installdir/usr/bin/lf
     install -Dm00644 lf.1 $installdir/usr/share/man/man1/lf.1
     install -Dm00644 lf.desktop $installdir/usr/share/applications/lf.desktop
+
+    install -Dm00644 "$pkgfiles/io.github.gokcehan.lf.metainfo.xml" "$installdir/usr/share/metainfo/io.github.gokcehan.lf.metainfo.xml"
     install -Dm00644 etc/lfrc.example $installdir/usr/share/doc/lf/examples/lfrc
     install -Dm00644 etc/colors.example $installdir/usr/share/doc/lf/examples/colors
     install -Dm00644 etc/icons.example $installdir/usr/share/doc/lf/examples/icons
@@ -33,3 +36,5 @@ install    : |
     install -Dm00644 etc/lf.vim $installdir/usr/share/vim/vimfiles/plugin/lf.vim
     install -dm00755 $installdir/usr/share/nvim/plugin
     ln -sf /usr/share/vim/vimfiles/plugin/lf.vim $installdir/usr/share/nvim/plugin/lf.vim
+
+    %install_license LICENSE

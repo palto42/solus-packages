@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : gammaray
-version    : 3.3.0
-release    : 13
+version    : 3.4.0
+release    : 21
 source     :
-    - https://github.com/KDAB/GammaRay/releases/download/v3.3.0/gammaray-3.3.0.tar.gz : 03fda338025d31b6a2794550f090d538996bbb6f4888eab3acb39db5a17127a8
+    - https://github.com/KDAB/GammaRay/releases/download/v3.4.0/gammaray-3.4.0.tar.gz : bcac8aa24671bcfd563213f5cfd9e61cf555b22ee3896e8111a5c3a588aacadf
 homepage   : https://www.kdab.com/development-resources/qt-tools/gammaray/
 license    : GPL-2.0-or-later
 component  :
@@ -46,3 +47,4 @@ build      : |
     %ninja_build -C qt6-build
 install    : |
     %ninja_install -C qt6-build
+    %install_license LICENSE.txt LICENSES/*

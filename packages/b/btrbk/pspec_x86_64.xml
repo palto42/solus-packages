@@ -3,8 +3,8 @@
         <Name>btrbk</Name>
         <Homepage>https://digint.ch/btrbk/</Homepage>
         <Packager>
-            <Name>Muhammad Alfi Syahrin</Name>
-            <Email>malfisya.dev@hotmail.com</Email>
+            <Name>Silke Hofstra</Name>
+            <Email>silke@slxh.eu</Email>
         </Packager>
         <License>GPL-3.0-or-later</License>
         <PartOf>system.utils</PartOf>
@@ -24,6 +24,7 @@
             <Path fileType="executable">/usr/bin/lsbtr</Path>
             <Path fileType="library">/usr/lib/systemd/system/btrbk.service</Path>
             <Path fileType="library">/usr/lib/systemd/system/btrbk.timer</Path>
+            <Path fileType="library">/usr/lib64/systemd/system-preset/60-btrbk.preset</Path>
             <Path fileType="data">/usr/share/bash-completion/completions/btrbk</Path>
             <Path fileType="data">/usr/share/bash-completion/completions/lsbtr</Path>
             <Path fileType="data">/usr/share/btrbk/btrbk.conf.example</Path>
@@ -33,19 +34,19 @@
             <Path fileType="data">/usr/share/btrbk/scripts/kdf_pbkdf2.py</Path>
             <Path fileType="data">/usr/share/btrbk/scripts/raw_suffix2sidecar</Path>
             <Path fileType="data">/usr/share/btrbk/scripts/ssh_filter_btrbk.sh</Path>
-            <Path fileType="man">/usr/share/man/man1/btrbk.1</Path>
-            <Path fileType="man">/usr/share/man/man1/lsbtr.1</Path>
-            <Path fileType="man">/usr/share/man/man1/ssh_filter_btrbk.1</Path>
-            <Path fileType="man">/usr/share/man/man5/btrbk.conf.5</Path>
+            <Path fileType="man">/usr/share/man/man1/btrbk.1.zst</Path>
+            <Path fileType="man">/usr/share/man/man1/lsbtr.1.zst</Path>
+            <Path fileType="man">/usr/share/man/man1/ssh_filter_btrbk.1.zst</Path>
+            <Path fileType="man">/usr/share/man/man5/btrbk.conf.5.zst</Path>
         </Files>
     </Package>
     <History>
-        <Update release="8">
-            <Date>2023-12-23</Date>
+        <Update release="9">
+            <Date>2026-04-12</Date>
             <Version>0.32.6</Version>
             <Comment>Packaging update</Comment>
-            <Name>Muhammad Alfi Syahrin</Name>
-            <Email>malfisya.dev@hotmail.com</Email>
+            <Name>Silke Hofstra</Name>
+            <Email>silke@slxh.eu</Email>
         </Update>
     </History>
 </PISI>

@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : baobab
-version    : '48.0'
-release    : 30
+version    : '50.0'
+release    : 33
 source     :
-    - https://download.gnome.org/sources/baobab/48/baobab-48.0.tar.xz : 54592504d49d807f23591be7e7eef10c6c9dfcb7ac527b81c3acd58787b26fda
+    - https://download.gnome.org/sources/baobab/50/baobab-50.0.tar.xz : 573c84f15f5f963a440500f6f43412c928ac2335f6b69dcb58f1a1fe5201024b
 homepage   : https://apps.gnome.org/Baobab/
 license    : GPL-2.0-or-later
 component  : desktop.gnome

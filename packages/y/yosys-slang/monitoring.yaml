@@ -1,0 +1,6 @@
+releases:
+  id: 389713
+  rss: ~ # For example https://github.com/povik/yosys-slang/releases.atom
+ # No known CPE, checked 2026-04-22
+security:
+  cpe: ~

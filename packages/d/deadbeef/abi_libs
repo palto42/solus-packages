@@ -22,9 +22,12 @@ gme.so
 hotkeys.so
 in_sc68.so
 lastfm.so
+lyrics_gtk3.so
 m3u.so
+medialib.so
 mms.so
 mp3.so
+mpris.so
 musepack.so
 notify.so
 nullout.so

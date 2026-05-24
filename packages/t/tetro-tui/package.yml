@@ -1,0 +1,30 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
+name       : tetro-tui
+version    : 3.5.2
+release    : 3
+source     :
+    - https://github.com/Strophox/tetro-tui/archive/refs/tags/v3.5.2.tar.gz : 5302435075bc4b4b8880dc820fdcea5021458a67ec5f0fe845785c4dafaf4898
+homepage   : https://github.com/Strophox/tetro-tui
+license    : MIT
+component  : games.puzzle
+summary    : Cross-platform terminal tetromino game
+description: |
+    A cross-platform terminal game where tetrominos fall and stack. Features multiple
+    game modes (Swift, Classic, Master, Puzzle, and more), customizable graphics and
+    keybinds, scoreboards, replays, and statistics.
+networking : true
+builddeps  :
+    - rust
+setup      : |
+    %cargo_fetch
+build      : |
+    %cargo_build --all-features
+install    : |
+    %cargo_install
+    %install_license LICENSE
+check      : |
+    %cargo_test
+replaces   :
+    - tetrs
+    - dbginfo :
+        - tetrs-dbginfo

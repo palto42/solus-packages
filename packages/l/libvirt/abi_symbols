@@ -10,7 +10,7 @@ libvirt-admin.so.0:LIBVIRT_ADMIN_11.2.0
 libvirt-admin.so.0:LIBVIRT_ADMIN_2.0.0
 libvirt-admin.so.0:LIBVIRT_ADMIN_3.0.0
 libvirt-admin.so.0:LIBVIRT_ADMIN_8.6.0
-libvirt-admin.so.0:LIBVIRT_ADMIN_PRIVATE_11.2.0
+libvirt-admin.so.0:LIBVIRT_ADMIN_PRIVATE_12.3.0
 libvirt-admin.so.0:virAdmClientClass
 libvirt-admin.so.0:virAdmClientClose
 libvirt-admin.so.0:virAdmClientFree
@@ -206,7 +206,7 @@ libvirt.so.0:LIBVIRT_8.4.0
 libvirt.so.0:LIBVIRT_8.5.0
 libvirt.so.0:LIBVIRT_9.0.0
 libvirt.so.0:LIBVIRT_9.7.0
-libvirt.so.0:LIBVIRT_PRIVATE_11.2.0
+libvirt.so.0:LIBVIRT_PRIVATE_12.3.0
 libvirt.so.0:cpuDecode
 libvirt.so.0:cpuEncode
 libvirt.so.0:dnsmasqAddDhcpHost
@@ -876,6 +876,7 @@ libvirt.so.0:virConnectUnregisterCloseCallback
 libvirt.so.0:virConnectUnregisterCloseCallbackEnsureACL
 libvirt.so.0:virConnectValidateURIPath
 libvirt.so.0:virCopyLastError
+libvirt.so.0:virCryptoDecryptData
 libvirt.so.0:virCryptoEncryptData
 libvirt.so.0:virCryptoHashBuf
 libvirt.so.0:virCryptoHashString
@@ -1009,12 +1010,13 @@ libvirt.so.0:virDomainCapsCPUUsableTypeFromString
 libvirt.so.0:virDomainCapsCPUUsableTypeToString
 libvirt.so.0:virDomainCapsEnumClear
 libvirt.so.0:virDomainCapsEnumSet
+libvirt.so.0:virDomainCapsFeatureHypervCopy
+libvirt.so.0:virDomainCapsFeatureHypervFree
 libvirt.so.0:virDomainCapsFormat
 libvirt.so.0:virDomainCapsNew
 libvirt.so.0:virDomainCgroupConnectCgroup
 libvirt.so.0:virDomainCgroupEmulatorAllNodesAllow
 libvirt.so.0:virDomainCgroupEmulatorAllNodesRestore
-libvirt.so.0:virDomainCgroupInitCgroup
 libvirt.so.0:virDomainCgroupRemoveCgroup
 libvirt.so.0:virDomainCgroupSetMemoryLimitParameters
 libvirt.so.0:virDomainCgroupSetupBlkio
@@ -1180,9 +1182,13 @@ libvirt.so.0:virDomainDefHasNVMeDisk
 libvirt.so.0:virDomainDefHasOldStyleROUEFI
 libvirt.so.0:virDomainDefHasOldStyleUEFI
 libvirt.so.0:virDomainDefHasPCIHostdev
+libvirt.so.0:virDomainDefHasPCIHostdevWithIOMMUFD
+libvirt.so.0:virDomainDefHasPCIHostdevWithoutIOMMUFD
+libvirt.so.0:virDomainDefHasTimer
 libvirt.so.0:virDomainDefHasUSB
 libvirt.so.0:virDomainDefHasVDPANet
 libvirt.so.0:virDomainDefHasVcpusOffline
+libvirt.so.0:virDomainDefIDsParseString
 libvirt.so.0:virDomainDefLifecycleActionAllowed
 libvirt.so.0:virDomainDefMaybeAddController
 libvirt.so.0:virDomainDefMaybeAddInput
@@ -1287,6 +1293,7 @@ libvirt.so.0:virDomainDiskSourceFormat
 libvirt.so.0:virDomainDiskTranslateSourcePool
 libvirt.so.0:virDomainDriverAddIOThreadCheck
 libvirt.so.0:virDomainDriverAutoShutdown
+libvirt.so.0:virDomainDriverAutoShutdownActive
 libvirt.so.0:virDomainDriverAutoShutdownScopeTypeFromString
 libvirt.so.0:virDomainDriverAutoShutdownScopeTypeToString
 libvirt.so.0:virDomainDriverAutoStart
@@ -1364,6 +1371,7 @@ libvirt.so.0:virDomainEventTunableNewFromObj
 libvirt.so.0:virDomainEventWatchdogNewFromDom
 libvirt.so.0:virDomainEventWatchdogNewFromObj
 libvirt.so.0:virDomainFDAssociate
+libvirt.so.0:virDomainFDTupleNew
 libvirt.so.0:virDomainFSAccessModeTypeToString
 libvirt.so.0:virDomainFSCacheModeTypeToString
 libvirt.so.0:virDomainFSDefFind
@@ -1526,6 +1534,8 @@ libvirt.so.0:virDomainHypervTypeFromString
 libvirt.so.0:virDomainHypervTypeToString
 libvirt.so.0:virDomainIBSTypeFromString
 libvirt.so.0:virDomainIBSTypeToString
+libvirt.so.0:virDomainIOMMUDefEquals
+libvirt.so.0:virDomainIOMMUDefFind
 libvirt.so.0:virDomainIOMMUDefFree
 libvirt.so.0:virDomainIOMMUDefNew
 libvirt.so.0:virDomainIOMMUModelTypeFromString
@@ -1634,6 +1644,7 @@ libvirt.so.0:virDomainMemoryFindByDeviceAlias
 libvirt.so.0:virDomainMemoryFindByDeviceInfo
 libvirt.so.0:virDomainMemoryFindInactiveByDef
 libvirt.so.0:virDomainMemoryInsert
+libvirt.so.0:virDomainMemoryIsVirtioModel
 libvirt.so.0:virDomainMemoryModelTypeFromString
 libvirt.so.0:virDomainMemoryModelTypeToString
 libvirt.so.0:virDomainMemoryPeek
@@ -1749,6 +1760,7 @@ libvirt.so.0:virDomainNetModelTypeFromString
 libvirt.so.0:virDomainNetModelTypeToString
 libvirt.so.0:virDomainNetNotifyActualDevice
 libvirt.so.0:virDomainNetPortForwardFree
+libvirt.so.0:virDomainNetPortForwardsIsEqual
 libvirt.so.0:virDomainNetReleaseActualDevice
 libvirt.so.0:virDomainNetRemove
 libvirt.so.0:virDomainNetRemoveByObj
@@ -2180,6 +2192,8 @@ libvirt.so.0:virDomainUndefineFlags
 libvirt.so.0:virDomainUndefineFlagsEnsureACL
 libvirt.so.0:virDomainUpdateDeviceFlags
 libvirt.so.0:virDomainUpdateDeviceFlagsEnsureACL
+libvirt.so.0:virDomainVarstoreDefFree
+libvirt.so.0:virDomainVarstoreDefNew
 libvirt.so.0:virDomainVideoDefClear
 libvirt.so.0:virDomainVideoDefFree
 libvirt.so.0:virDomainVideoDefNew
@@ -2268,6 +2282,7 @@ libvirt.so.0:virFileDataSync
 libvirt.so.0:virFileDeleteTree
 libvirt.so.0:virFileDirectFdFlag
 libvirt.so.0:virFileExists
+libvirt.so.0:virFileFDIsRegular
 libvirt.so.0:virFileFclose
 libvirt.so.0:virFileFdopen
 libvirt.so.0:virFileFindHugeTLBFS
@@ -2433,8 +2448,8 @@ libvirt.so.0:virGetSystemPageSize
 libvirt.so.0:virGetSystemPageSizeKB
 libvirt.so.0:virGetUserCacheDirectory
 libvirt.so.0:virGetUserConfigDirectory
-libvirt.so.0:virGetUserDirectory
-libvirt.so.0:virGetUserDirectoryByUID
+libvirt.so.0:virGetUserHomeDirectory
+libvirt.so.0:virGetUserHomeDirectoryByUID
 libvirt.so.0:virGetUserID
 libvirt.so.0:virGetUserName
 libvirt.so.0:virGetUserRuntimeDirectory
@@ -2508,6 +2523,8 @@ libvirt.so.0:virHostdevFindUSBDevice
 libvirt.so.0:virHostdevHostSupportsPassthroughVFIO
 libvirt.so.0:virHostdevIsMdevDevice
 libvirt.so.0:virHostdevIsPCIDevice
+libvirt.so.0:virHostdevIsPCIDeviceWithIOMMUFD
+libvirt.so.0:virHostdevIsPCIDeviceWithoutIOMMUFD
 libvirt.so.0:virHostdevIsSCSIDevice
 libvirt.so.0:virHostdevManagerGetDefault
 libvirt.so.0:virHostdevNeedsVFIO
@@ -2536,6 +2553,8 @@ libvirt.so.0:virHostdevUpdateActiveNVMeDevices
 libvirt.so.0:virHostdevUpdateActivePCIDevices
 libvirt.so.0:virHostdevUpdateActiveSCSIDevices
 libvirt.so.0:virHostdevUpdateActiveUSBDevices
+libvirt.so.0:virIOMMUFDOpenDevice
+libvirt.so.0:virIOMMUFDSupported
 libvirt.so.0:virIORTNodeTypeTypeFromString
 libvirt.so.0:virIORTNodeTypeTypeToString
 libvirt.so.0:virISCSIConnectionLogin
@@ -3752,6 +3771,7 @@ libvirt.so.0:virPCIDeviceGetStubDriverType
 libvirt.so.0:virPCIDeviceGetUnbindFromStub
 libvirt.so.0:virPCIDeviceGetUsedBy
 libvirt.so.0:virPCIDeviceGetVPD
+libvirt.so.0:virPCIDeviceGetVfioPath
 libvirt.so.0:virPCIDeviceHasPCIExpressLink
 libvirt.so.0:virPCIDeviceIsAssignable
 libvirt.so.0:virPCIDeviceIsPCIExpress
@@ -3767,6 +3787,7 @@ libvirt.so.0:virPCIDeviceListNew
 libvirt.so.0:virPCIDeviceListSteal
 libvirt.so.0:virPCIDeviceListStealIndex
 libvirt.so.0:virPCIDeviceNew
+libvirt.so.0:virPCIDeviceOpenVfioFd
 libvirt.so.0:virPCIDeviceReattach
 libvirt.so.0:virPCIDeviceRebind
 libvirt.so.0:virPCIDeviceReset
@@ -4169,6 +4190,7 @@ libvirt.so.0:virSocketAddrSetIPv4AddrNetOrder
 libvirt.so.0:virSocketAddrSetIPv6Addr
 libvirt.so.0:virSocketAddrSetIPv6AddrNetOrder
 libvirt.so.0:virSocketAddrSetPort
+libvirt.so.0:virSocketAddrSubnetToPrefix
 libvirt.so.0:virSocketRecvFD
 libvirt.so.0:virSocketSendFD
 libvirt.so.0:virSocketSendMsgWithFDs
@@ -4200,7 +4222,6 @@ libvirt.so.0:virStorageFileGetSCSIKey
 libvirt.so.0:virStorageFileParseBackingStoreStr
 libvirt.so.0:virStorageFileProbeFormat
 libvirt.so.0:virStorageFileProbeGetMetadata
-libvirt.so.0:virStorageNetHostDefClear
 libvirt.so.0:virStorageNetHostDefCopy
 libvirt.so.0:virStorageNetHostDefFree
 libvirt.so.0:virStorageNetHostTransportTypeFromString
@@ -4344,7 +4365,6 @@ libvirt.so.0:virStorageSourceClear
 libvirt.so.0:virStorageSourceCopy
 libvirt.so.0:virStorageSourceCreate
 libvirt.so.0:virStorageSourceDeinit
-libvirt.so.0:virStorageSourceFDTupleNew
 libvirt.so.0:virStorageSourceFetchRelativeBackingPath
 libvirt.so.0:virStorageSourceGetActualType
 libvirt.so.0:virStorageSourceGetMetadata
@@ -4370,6 +4390,7 @@ libvirt.so.0:virStorageSourceIsSameLocation
 libvirt.so.0:virStorageSourceNVMeDefFree
 libvirt.so.0:virStorageSourceNetCookiesValidate
 libvirt.so.0:virStorageSourceNetworkAssignDefaultPorts
+libvirt.so.0:virStorageSourceNetworkProtocolPathSplit
 libvirt.so.0:virStorageSourceNew
 libvirt.so.0:virStorageSourceNewFromBacking
 libvirt.so.0:virStorageSourceNewFromBackingAbsolute
@@ -4642,8 +4663,6 @@ libvirt.so.0:virURIParse
 libvirt.so.0:virURIResolveAlias
 libvirt.so.0:virUSBDeviceFileIterate
 libvirt.so.0:virUSBDeviceFind
-libvirt.so.0:virUSBDeviceFindByBus
-libvirt.so.0:virUSBDeviceFindByVendor
 libvirt.so.0:virUSBDeviceFree
 libvirt.so.0:virUSBDeviceGetBus
 libvirt.so.0:virUSBDeviceGetDevno
@@ -4721,13 +4740,14 @@ libvirt.so.0:virXPathLongLong
 libvirt.so.0:virXPathNode
 libvirt.so.0:virXPathNodeSet
 libvirt.so.0:virXPathString
+libvirt.so.0:virXPathTristateBool
+libvirt.so.0:virXPathTristateSwitch
 libvirt.so.0:virXPathUInt
 libvirt.so.0:virXPathUIntBase
 libvirt.so.0:virXPathULongLong
 libvirt.so.0:virXPathULongLongBase
 libvirt.so.0:virZPCIDeviceAddressIsIncomplete
 libvirt.so.0:virZPCIDeviceAddressIsPresent
-libvirt.so.0:vir_g_string_replace
 libvirt.so.0:vmwareDriverTypeFromString
 libvirt.so.0:vmwareParseVersionStr
 libvirt.so.0:xdr_keepalive_procedure
@@ -6306,10 +6326,12 @@ libvirt_driver_network.so:networkDnsmasqConfContents
 libvirt_driver_network.so:networkDnsmasqCreateXMLConf
 libvirt_driver_network.so:networkDnsmasqXMLNamespace
 libvirt_driver_network.so:networkGetDnsmasqCaps
+libvirt_driver_network.so:networkNeedsDnsmasq
 libvirt_driver_network.so:networkPostReloadFirewallRules
 libvirt_driver_network.so:networkPreReloadFirewallRules
 libvirt_driver_network.so:networkRegister
 libvirt_driver_network.so:networkRemoveFirewallRules
+libvirt_driver_network.so:networkValidateTests
 libvirt_driver_network.so:nftablesAddFirewallRules
 libvirt_driver_network.so:nftablesChains
 libvirt_driver_network.so:nftablesLayerTypeFromString
@@ -6375,6 +6397,12 @@ libvirt_driver_nwfilter.so:virNWFilterLearnInit
 libvirt_driver_nwfilter.so:virNWFilterLearnShutdown
 libvirt_driver_nwfilter.so:virNWFilterLearnThreadsTerminate
 libvirt_driver_nwfilter.so:virNWFilterLockIface
+libvirt_driver_nwfilter.so:virNWFilterPrintDataType
+libvirt_driver_nwfilter.so:virNWFilterPrintDataTypeAsHex
+libvirt_driver_nwfilter.so:virNWFilterPrintDataTypeDirection
+libvirt_driver_nwfilter.so:virNWFilterPrintVar
+libvirt_driver_nwfilter.so:virNWFilterRuleInstSort
+libvirt_driver_nwfilter.so:virNWFilterRuleInstSortPtr
 libvirt_driver_nwfilter.so:virNWFilterTeardownFilter
 libvirt_driver_nwfilter.so:virNWFilterTechDriversInit
 libvirt_driver_nwfilter.so:virNWFilterTechDriversShutdown
@@ -6449,6 +6477,7 @@ libvirt_driver_qemu.so:qemuBackupGetXMLDesc
 libvirt_driver_qemu.so:qemuBackupJobCancelBlockjobs
 libvirt_driver_qemu.so:qemuBackupJobTerminate
 libvirt_driver_qemu.so:qemuBackupNotifyBlockjobEnd
+libvirt_driver_qemu.so:qemuBackupNotifyBlockjobEndStopNBD
 libvirt_driver_qemu.so:qemuBlockBitmapChainIsValid
 libvirt_driver_qemu.so:qemuBlockBitmapsHandleBlockcopy
 libvirt_driver_qemu.so:qemuBlockBitmapsHandleCommitFinish
@@ -6477,12 +6506,14 @@ libvirt_driver_qemu.so:qemuBlockJobSyncBegin
 libvirt_driver_qemu.so:qemuBlockJobSyncEnd
 libvirt_driver_qemu.so:qemuBlockJobUpdate
 libvirt_driver_qemu.so:qemuBlockNamedNodeDataGetBitmapByName
+libvirt_driver_qemu.so:qemuBlockNodesEnsureActive
 libvirt_driver_qemu.so:qemuBlockPivot
 libvirt_driver_qemu.so:qemuBlockRemoveImageMetadata
 libvirt_driver_qemu.so:qemuBlockReopenReadOnly
 libvirt_driver_qemu.so:qemuBlockReopenReadWrite
 libvirt_driver_qemu.so:qemuBlockReopenSliceExpand
 libvirt_driver_qemu.so:qemuBlockSnapshotAddBlockdev
+libvirt_driver_qemu.so:qemuBlockStatsNew
 libvirt_driver_qemu.so:qemuBlockStorageGetCopyOnReadProps
 libvirt_driver_qemu.so:qemuBlockStorageSourceAttachApply
 libvirt_driver_qemu.so:qemuBlockStorageSourceAttachDataFree
@@ -6533,12 +6564,14 @@ libvirt_driver_qemu.so:qemuBuildChrDeviceProps
 libvirt_driver_qemu.so:qemuBuildCommandLine
 libvirt_driver_qemu.so:qemuBuildControllerDevProps
 libvirt_driver_qemu.so:qemuBuildDBusVMStateInfoProps
+libvirt_driver_qemu.so:qemuBuildDiskBusProps
 libvirt_driver_qemu.so:qemuBuildDiskDeviceProps
 libvirt_driver_qemu.so:qemuBuildHostNetProps
 libvirt_driver_qemu.so:qemuBuildHostdevMediatedDevProps
 libvirt_driver_qemu.so:qemuBuildHostdevSCSIAttachPrepare
 libvirt_driver_qemu.so:qemuBuildHostdevSCSIDetachPrepare
 libvirt_driver_qemu.so:qemuBuildHotpluggableCPUProps
+libvirt_driver_qemu.so:qemuBuildIOMMUFDProps
 libvirt_driver_qemu.so:qemuBuildInputEvdevProps
 libvirt_driver_qemu.so:qemuBuildInputUSBDevProps
 libvirt_driver_qemu.so:qemuBuildInputVirtioDevProps
@@ -6643,6 +6676,9 @@ libvirt_driver_qemu.so:qemuDomainDefPostParse
 libvirt_driver_qemu.so:qemuDomainDefPostParseBasic
 libvirt_driver_qemu.so:qemuDomainDefValidateMemoryHotplug
 libvirt_driver_qemu.so:qemuDomainDefaultPanicModel
+libvirt_driver_qemu.so:qemuDomainDefaultSCSIControllerModel
+libvirt_driver_qemu.so:qemuDomainDefaultUSBControllerModel
+libvirt_driver_qemu.so:qemuDomainDefaultUSBControllerModelAutoAdded
 libvirt_driver_qemu.so:qemuDomainDelTLSObjects
 libvirt_driver_qemu.so:qemuDomainDestroyNamespace
 libvirt_driver_qemu.so:qemuDomainDetachDeviceLive
@@ -6660,6 +6696,7 @@ libvirt_driver_qemu.so:qemuDomainDiskCachemodeFlags
 libvirt_driver_qemu.so:qemuDomainDiskChangeSupported
 libvirt_driver_qemu.so:qemuDomainDiskGetBackendAlias
 libvirt_driver_qemu.so:qemuDomainDiskGetTopNodename
+libvirt_driver_qemu.so:qemuDomainDiskHasLatencyHistogram
 libvirt_driver_qemu.so:qemuDomainDiskIsMissingLocalOptional
 libvirt_driver_qemu.so:qemuDomainDiskLookupByNodename
 libvirt_driver_qemu.so:qemuDomainEnableNamespace
@@ -6684,13 +6721,11 @@ libvirt_driver_qemu.so:qemuDomainGetMasterKeyFilePath
 libvirt_driver_qemu.so:qemuDomainGetMemLockLimitBytes
 libvirt_driver_qemu.so:qemuDomainGetMemoryBackingPath
 libvirt_driver_qemu.so:qemuDomainGetMonitor
-libvirt_driver_qemu.so:qemuDomainGetSCSIControllerModel
 libvirt_driver_qemu.so:qemuDomainGetStorageSourceByDevstr
 libvirt_driver_qemu.so:qemuDomainGetTLSObjects
 libvirt_driver_qemu.so:qemuDomainGetUnmanagedPRAlias
 libvirt_driver_qemu.so:qemuDomainGetUnplugTimeout
 libvirt_driver_qemu.so:qemuDomainGetVHostUserFSSocketPath
-libvirt_driver_qemu.so:qemuDomainGetVcpuHalted
 libvirt_driver_qemu.so:qemuDomainGetVcpuPid
 libvirt_driver_qemu.so:qemuDomainGetVhostUserChrAlias
 libvirt_driver_qemu.so:qemuDomainHasBlockjob
@@ -6699,6 +6734,7 @@ libvirt_driver_qemu.so:qemuDomainHasBuiltinIDE
 libvirt_driver_qemu.so:qemuDomainHasPCIRoot
 libvirt_driver_qemu.so:qemuDomainHasPCIeRoot
 libvirt_driver_qemu.so:qemuDomainHasVcpuPids
+libvirt_driver_qemu.so:qemuDomainHostdevPrivateNew
 libvirt_driver_qemu.so:qemuDomainInitializePflashStorageSource
 libvirt_driver_qemu.so:qemuDomainInterfaceSetDefaultQDisc
 libvirt_driver_qemu.so:qemuDomainIsARMVirt
@@ -6723,6 +6759,7 @@ libvirt_driver_qemu.so:qemuDomainMachineIsI440FX
 libvirt_driver_qemu.so:qemuDomainMachineIsPSeries
 libvirt_driver_qemu.so:qemuDomainMachineIsQ35
 libvirt_driver_qemu.so:qemuDomainMachineIsXenFV
+libvirt_driver_qemu.so:qemuDomainMachineSupportsFloppy
 libvirt_driver_qemu.so:qemuDomainMakeCPUMigratable
 libvirt_driver_qemu.so:qemuDomainMasterKeyCreate
 libvirt_driver_qemu.so:qemuDomainMasterKeyReadFile
@@ -6795,7 +6832,6 @@ libvirt_driver_qemu.so:qemuDomainPrepareDiskSourceData
 libvirt_driver_qemu.so:qemuDomainPrepareHostdev
 libvirt_driver_qemu.so:qemuDomainPrepareShmemChardev
 libvirt_driver_qemu.so:qemuDomainPrepareStorageSourceBlockdev
-libvirt_driver_qemu.so:qemuDomainPrepareStorageSourceBlockdevNodename
 libvirt_driver_qemu.so:qemuDomainRefreshStatsSchema
 libvirt_driver_qemu.so:qemuDomainRefreshVcpuHalted
 libvirt_driver_qemu.so:qemuDomainRefreshVcpuInfo
@@ -7036,13 +7072,12 @@ libvirt_driver_qemu.so:qemuMonitorBitmapRemove
 libvirt_driver_qemu.so:qemuMonitorBlockCommit
 libvirt_driver_qemu.so:qemuMonitorBlockExportAdd
 libvirt_driver_qemu.so:qemuMonitorBlockGetNamedNodeData
-libvirt_driver_qemu.so:qemuMonitorBlockIOStatusToError
 libvirt_driver_qemu.so:qemuMonitorBlockIOStatusTypeFromString
 libvirt_driver_qemu.so:qemuMonitorBlockIOStatusTypeToString
 libvirt_driver_qemu.so:qemuMonitorBlockJobCancel
 libvirt_driver_qemu.so:qemuMonitorBlockJobSetSpeed
+libvirt_driver_qemu.so:qemuMonitorBlockLatencyHistogramSet
 libvirt_driver_qemu.so:qemuMonitorBlockResize
-libvirt_driver_qemu.so:qemuMonitorBlockStatsUpdateCapacityBlockdev
 libvirt_driver_qemu.so:qemuMonitorBlockStream
 libvirt_driver_qemu.so:qemuMonitorBlockdevAdd
 libvirt_driver_qemu.so:qemuMonitorBlockdevCreate
@@ -7067,10 +7102,8 @@ libvirt_driver_qemu.so:qemuMonitorChardevInfoFree
 libvirt_driver_qemu.so:qemuMonitorClose
 libvirt_driver_qemu.so:qemuMonitorCloseFileHandle
 libvirt_driver_qemu.so:qemuMonitorCreateObjectProps
-libvirt_driver_qemu.so:qemuMonitorCreateSnapshot
 libvirt_driver_qemu.so:qemuMonitorDelDevice
 libvirt_driver_qemu.so:qemuMonitorDelObject
-libvirt_driver_qemu.so:qemuMonitorDeleteSnapshot
 libvirt_driver_qemu.so:qemuMonitorDetachCharDev
 libvirt_driver_qemu.so:qemuMonitorDirtyRateCalcModeTypeFromString
 libvirt_driver_qemu.so:qemuMonitorDirtyRateCalcModeTypeToString
@@ -7097,6 +7130,7 @@ libvirt_driver_qemu.so:qemuMonitorEmitMemoryFailure
 libvirt_driver_qemu.so:qemuMonitorEmitMigrationPass
 libvirt_driver_qemu.so:qemuMonitorEmitMigrationStatus
 libvirt_driver_qemu.so:qemuMonitorEmitNetdevStreamDisconnected
+libvirt_driver_qemu.so:qemuMonitorEmitNetdevVhostUserDisconnected
 libvirt_driver_qemu.so:qemuMonitorEmitNicRxFilterChanged
 libvirt_driver_qemu.so:qemuMonitorEmitPMSuspend
 libvirt_driver_qemu.so:qemuMonitorEmitPMSuspendDisk
@@ -7117,6 +7151,7 @@ libvirt_driver_qemu.so:qemuMonitorEventRdmaGidStatusFree
 libvirt_driver_qemu.so:qemuMonitorExpirePassword
 libvirt_driver_qemu.so:qemuMonitorExtractQueryStats
 libvirt_driver_qemu.so:qemuMonitorFdsetsFree
+libvirt_driver_qemu.so:qemuMonitorGetAccelerators
 libvirt_driver_qemu.so:qemuMonitorGetAllBlockJobInfo
 libvirt_driver_qemu.so:qemuMonitorGetAllBlockStatsInfo
 libvirt_driver_qemu.so:qemuMonitorGetBalloonInfo
@@ -7137,7 +7172,6 @@ libvirt_driver_qemu.so:qemuMonitorGetDeviceProps
 libvirt_driver_qemu.so:qemuMonitorGetDumpGuestMemoryCapability
 libvirt_driver_qemu.so:qemuMonitorGetGICCapabilities
 libvirt_driver_qemu.so:qemuMonitorGetGuestCPU
-libvirt_driver_qemu.so:qemuMonitorGetGuestCPUx86
 libvirt_driver_qemu.so:qemuMonitorGetIOThreads
 libvirt_driver_qemu.so:qemuMonitorGetJobInfo
 libvirt_driver_qemu.so:qemuMonitorGetKVMState
@@ -7158,8 +7192,6 @@ libvirt_driver_qemu.so:qemuMonitorGetSEVMeasurement
 libvirt_driver_qemu.so:qemuMonitorGetSGXCapabilities
 libvirt_driver_qemu.so:qemuMonitorGetStatsByQOMPath
 libvirt_driver_qemu.so:qemuMonitorGetStatus
-libvirt_driver_qemu.so:qemuMonitorGetTPMModels
-libvirt_driver_qemu.so:qemuMonitorGetTPMTypes
 libvirt_driver_qemu.so:qemuMonitorGetTargetArch
 libvirt_driver_qemu.so:qemuMonitorGetVersion
 libvirt_driver_qemu.so:qemuMonitorGraphicsAddressFamilyTypeFromString
@@ -7183,8 +7215,8 @@ libvirt_driver_qemu.so:qemuMonitorJSONBlockGetNamedNodeData
 libvirt_driver_qemu.so:qemuMonitorJSONBlockGetNamedNodeDataJSON
 libvirt_driver_qemu.so:qemuMonitorJSONBlockJobCancel
 libvirt_driver_qemu.so:qemuMonitorJSONBlockJobSetSpeed
+libvirt_driver_qemu.so:qemuMonitorJSONBlockLatencyHistogramSet
 libvirt_driver_qemu.so:qemuMonitorJSONBlockResize
-libvirt_driver_qemu.so:qemuMonitorJSONBlockStatsUpdateCapacityBlockdev
 libvirt_driver_qemu.so:qemuMonitorJSONBlockStream
 libvirt_driver_qemu.so:qemuMonitorJSONBlockdevAdd
 libvirt_driver_qemu.so:qemuMonitorJSONBlockdevCreate
@@ -7205,6 +7237,7 @@ libvirt_driver_qemu.so:qemuMonitorJSONDisplayReload
 libvirt_driver_qemu.so:qemuMonitorJSONDump
 libvirt_driver_qemu.so:qemuMonitorJSONExpirePassword
 libvirt_driver_qemu.so:qemuMonitorJSONFindLinkPath
+libvirt_driver_qemu.so:qemuMonitorJSONGetAccelerators
 libvirt_driver_qemu.so:qemuMonitorJSONGetAllBlockJobInfo
 libvirt_driver_qemu.so:qemuMonitorJSONGetAllBlockStatsInfo
 libvirt_driver_qemu.so:qemuMonitorJSONGetBalloonInfo
@@ -7223,7 +7256,6 @@ libvirt_driver_qemu.so:qemuMonitorJSONGetDeviceProps
 libvirt_driver_qemu.so:qemuMonitorJSONGetDumpGuestMemoryCapability
 libvirt_driver_qemu.so:qemuMonitorJSONGetGICCapabilities
 libvirt_driver_qemu.so:qemuMonitorJSONGetGuestCPU
-libvirt_driver_qemu.so:qemuMonitorJSONGetGuestCPUx86
 libvirt_driver_qemu.so:qemuMonitorJSONGetHotpluggableCPUs
 libvirt_driver_qemu.so:qemuMonitorJSONGetIOThreads
 libvirt_driver_qemu.so:qemuMonitorJSONGetJobInfo
@@ -7246,8 +7278,6 @@ libvirt_driver_qemu.so:qemuMonitorJSONGetSEVInfo
 libvirt_driver_qemu.so:qemuMonitorJSONGetSEVMeasurement
 libvirt_driver_qemu.so:qemuMonitorJSONGetSGXCapabilities
 libvirt_driver_qemu.so:qemuMonitorJSONGetStatus
-libvirt_driver_qemu.so:qemuMonitorJSONGetTPMModels
-libvirt_driver_qemu.so:qemuMonitorJSONGetTPMTypes
 libvirt_driver_qemu.so:qemuMonitorJSONGetTargetArch
 libvirt_driver_qemu.so:qemuMonitorJSONGetVersion
 libvirt_driver_qemu.so:qemuMonitorJSONGraphicsRelocate
@@ -7266,11 +7296,9 @@ libvirt_driver_qemu.so:qemuMonitorJSONMigrateIncoming
 libvirt_driver_qemu.so:qemuMonitorJSONMigratePause
 libvirt_driver_qemu.so:qemuMonitorJSONMigrateRecover
 libvirt_driver_qemu.so:qemuMonitorJSONMigrateStartPostCopy
-libvirt_driver_qemu.so:qemuMonitorJSONNBDServerAdd
 libvirt_driver_qemu.so:qemuMonitorJSONNBDServerStart
 libvirt_driver_qemu.so:qemuMonitorJSONNBDServerStop
 libvirt_driver_qemu.so:qemuMonitorJSONOpenGraphics
-libvirt_driver_qemu.so:qemuMonitorJSONQueryBlockstats
 libvirt_driver_qemu.so:qemuMonitorJSONQueryCPUs
 libvirt_driver_qemu.so:qemuMonitorJSONQueryDirtyRate
 libvirt_driver_qemu.so:qemuMonitorJSONQueryDump
@@ -7301,6 +7329,7 @@ libvirt_driver_qemu.so:qemuMonitorJSONSetMigrationCapabilities
 libvirt_driver_qemu.so:qemuMonitorJSONSetMigrationParams
 libvirt_driver_qemu.so:qemuMonitorJSONSetObjectProperty
 libvirt_driver_qemu.so:qemuMonitorJSONSetPassword
+libvirt_driver_qemu.so:qemuMonitorJSONSetUSBDiskAttached
 libvirt_driver_qemu.so:qemuMonitorJSONSetWatchdogAction
 libvirt_driver_qemu.so:qemuMonitorJSONSnapshotDelete
 libvirt_driver_qemu.so:qemuMonitorJSONSnapshotLoad
@@ -7314,8 +7343,6 @@ libvirt_driver_qemu.so:qemuMonitorJSONSystemWakeup
 libvirt_driver_qemu.so:qemuMonitorJSONTransaction
 libvirt_driver_qemu.so:qemuMonitorJSONTransactionBackup
 libvirt_driver_qemu.so:qemuMonitorJSONTransactionBitmapAdd
-libvirt_driver_qemu.so:qemuMonitorJSONTransactionBitmapDisable
-libvirt_driver_qemu.so:qemuMonitorJSONTransactionBitmapEnable
 libvirt_driver_qemu.so:qemuMonitorJSONTransactionBitmapMerge
 libvirt_driver_qemu.so:qemuMonitorJSONTransactionBitmapMergeSourceAddBitmap
 libvirt_driver_qemu.so:qemuMonitorJSONTransactionBitmapRemove
@@ -7323,6 +7350,7 @@ libvirt_driver_qemu.so:qemuMonitorJSONTransactionSnapshotBlockdev
 libvirt_driver_qemu.so:qemuMonitorJSONUpdateThrottleGroup
 libvirt_driver_qemu.so:qemuMonitorJSONUpdateVideoMemorySize
 libvirt_driver_qemu.so:qemuMonitorJSONUpdateVideoVram64Size
+libvirt_driver_qemu.so:qemuMonitorJSONValidateEventHandlers
 libvirt_driver_qemu.so:qemuMonitorJobComplete
 libvirt_driver_qemu.so:qemuMonitorJobDismiss
 libvirt_driver_qemu.so:qemuMonitorJobFinalize
@@ -7351,13 +7379,11 @@ libvirt_driver_qemu.so:qemuMonitorMigrateToHost
 libvirt_driver_qemu.so:qemuMonitorMigrateToSocket
 libvirt_driver_qemu.so:qemuMonitorMigrationStatusTypeFromString
 libvirt_driver_qemu.so:qemuMonitorMigrationStatusTypeToString
-libvirt_driver_qemu.so:qemuMonitorNBDServerAdd
 libvirt_driver_qemu.so:qemuMonitorNBDServerStart
 libvirt_driver_qemu.so:qemuMonitorNBDServerStop
 libvirt_driver_qemu.so:qemuMonitorNextCommandID
 libvirt_driver_qemu.so:qemuMonitorOpen
 libvirt_driver_qemu.so:qemuMonitorOpenGraphics
-libvirt_driver_qemu.so:qemuMonitorQueryBlockstats
 libvirt_driver_qemu.so:qemuMonitorQueryCpusFree
 libvirt_driver_qemu.so:qemuMonitorQueryDirtyRate
 libvirt_driver_qemu.so:qemuMonitorQueryDump
@@ -7407,6 +7433,7 @@ libvirt_driver_qemu.so:qemuMonitorSetMemoryStatsPeriod
 libvirt_driver_qemu.so:qemuMonitorSetMigrationCapabilities
 libvirt_driver_qemu.so:qemuMonitorSetMigrationParams
 libvirt_driver_qemu.so:qemuMonitorSetPassword
+libvirt_driver_qemu.so:qemuMonitorSetUSBDiskAttached
 libvirt_driver_qemu.so:qemuMonitorSetWatchdogAction
 libvirt_driver_qemu.so:qemuMonitorSnapshotDelete
 libvirt_driver_qemu.so:qemuMonitorSnapshotLoad
@@ -7417,16 +7444,12 @@ libvirt_driver_qemu.so:qemuMonitorStopCPUs
 libvirt_driver_qemu.so:qemuMonitorSystemPowerdown
 libvirt_driver_qemu.so:qemuMonitorSystemReset
 libvirt_driver_qemu.so:qemuMonitorSystemWakeup
-libvirt_driver_qemu.so:qemuMonitorTextCreateSnapshot
-libvirt_driver_qemu.so:qemuMonitorTextDeleteSnapshot
 libvirt_driver_qemu.so:qemuMonitorThrottleGroupLimits
 libvirt_driver_qemu.so:qemuMonitorTransaction
 libvirt_driver_qemu.so:qemuMonitorTransactionBackup
 libvirt_driver_qemu.so:qemuMonitorTransactionBackupSyncModeTypeFromString
 libvirt_driver_qemu.so:qemuMonitorTransactionBackupSyncModeTypeToString
 libvirt_driver_qemu.so:qemuMonitorTransactionBitmapAdd
-libvirt_driver_qemu.so:qemuMonitorTransactionBitmapDisable
-libvirt_driver_qemu.so:qemuMonitorTransactionBitmapEnable
 libvirt_driver_qemu.so:qemuMonitorTransactionBitmapMerge
 libvirt_driver_qemu.so:qemuMonitorTransactionBitmapMergeSourceAddBitmap
 libvirt_driver_qemu.so:qemuMonitorTransactionBitmapRemove
@@ -7463,7 +7486,9 @@ libvirt_driver_qemu.so:qemuNumaPolicyTypeFromString
 libvirt_driver_qemu.so:qemuNumaPolicyTypeToString
 libvirt_driver_qemu.so:qemuOpenChrChardevUNIXSocket
 libvirt_driver_qemu.so:qemuPasstAddNetProps
+libvirt_driver_qemu.so:qemuPasstBuildCommand
 libvirt_driver_qemu.so:qemuPasstCreateSocketPath
+libvirt_driver_qemu.so:qemuPasstPrepareVhostUser
 libvirt_driver_qemu.so:qemuPasstSetupCgroup
 libvirt_driver_qemu.so:qemuPasstStart
 libvirt_driver_qemu.so:qemuPasstStop
@@ -7480,8 +7505,10 @@ libvirt_driver_qemu.so:qemuProcessDestroyMemoryBackingPath
 libvirt_driver_qemu.so:qemuProcessEndJob
 libvirt_driver_qemu.so:qemuProcessEndStopJob
 libvirt_driver_qemu.so:qemuProcessEventFree
+libvirt_driver_qemu.so:qemuProcessFakeRebootViaRecreate
 libvirt_driver_qemu.so:qemuProcessFindDomainDiskByAliasOrQOM
 libvirt_driver_qemu.so:qemuProcessFinishStartup
+libvirt_driver_qemu.so:qemuProcessGetPassedIommuFd
 libvirt_driver_qemu.so:qemuProcessHandleDeviceDeleted
 libvirt_driver_qemu.so:qemuProcessHandleNbdkitExit
 libvirt_driver_qemu.so:qemuProcessIncomingDefFree
@@ -7490,6 +7517,8 @@ libvirt_driver_qemu.so:qemuProcessInit
 libvirt_driver_qemu.so:qemuProcessKill
 libvirt_driver_qemu.so:qemuProcessKillManagedPRDaemon
 libvirt_driver_qemu.so:qemuProcessLaunch
+libvirt_driver_qemu.so:qemuProcessOpenIommuFd
+libvirt_driver_qemu.so:qemuProcessOpenVfioDeviceFd
 libvirt_driver_qemu.so:qemuProcessOpenVhostVsock
 libvirt_driver_qemu.so:qemuProcessPrepareDomain
 libvirt_driver_qemu.so:qemuProcessPrepareHost
@@ -7505,9 +7534,8 @@ libvirt_driver_qemu.so:qemuProcessQMPStart
 libvirt_driver_qemu.so:qemuProcessRebootAllowed
 libvirt_driver_qemu.so:qemuProcessReconnectAll
 libvirt_driver_qemu.so:qemuProcessRefreshBalloonState
-libvirt_driver_qemu.so:qemuProcessRefreshDiskProps
-libvirt_driver_qemu.so:qemuProcessRefreshDisks
 libvirt_driver_qemu.so:qemuProcessRefreshState
+libvirt_driver_qemu.so:qemuProcessSetupDiskPropsRuntime
 libvirt_driver_qemu.so:qemuProcessSetupEmulator
 libvirt_driver_qemu.so:qemuProcessSetupIOThread
 libvirt_driver_qemu.so:qemuProcessSetupVcpu
@@ -7537,6 +7565,7 @@ libvirt_driver_qemu.so:qemuSaveFormatTypeToString
 libvirt_driver_qemu.so:qemuSaveImageCreate
 libvirt_driver_qemu.so:qemuSaveImageDecompressionStart
 libvirt_driver_qemu.so:qemuSaveImageDecompressionStop
+libvirt_driver_qemu.so:qemuSaveImageFDSkipHeader
 libvirt_driver_qemu.so:qemuSaveImageGetCompressionProgram
 libvirt_driver_qemu.so:qemuSaveImageGetMetadata
 libvirt_driver_qemu.so:qemuSaveImageIsCorrupt
@@ -7601,7 +7630,7 @@ libvirt_driver_qemu.so:qemuSoundCodecTypeFromString
 libvirt_driver_qemu.so:qemuSoundCodecTypeToString
 libvirt_driver_qemu.so:qemuStorageSourcePrivateDataAssignSecinfo
 libvirt_driver_qemu.so:qemuTPMCanMigrateSharedStorage
-libvirt_driver_qemu.so:qemuTPMHasSharedStorage
+libvirt_driver_qemu.so:qemuTPMDomainHasSharedStorage
 libvirt_driver_qemu.so:qemuTeardownChardevCgroup
 libvirt_driver_qemu.so:qemuTeardownHostdevCgroup
 libvirt_driver_qemu.so:qemuTeardownImageCgroup
@@ -7630,12 +7659,13 @@ libvirt_driver_qemu.so:qemuVhostUserTypeTypeFromString
 libvirt_driver_qemu.so:qemuVhostUserTypeTypeToString
 libvirt_driver_qemu.so:qemuVideoTypeFromString
 libvirt_driver_qemu.so:qemuVideoTypeToString
+libvirt_driver_qemu.so:qemuVirtioFSBuildCommandLine
 libvirt_driver_qemu.so:qemuVirtioFSCreatePidFilename
-libvirt_driver_qemu.so:qemuVirtioFSCreateSocketFilename
 libvirt_driver_qemu.so:qemuVirtioFSPrepareDomain
 libvirt_driver_qemu.so:qemuVirtioFSSetupCgroup
 libvirt_driver_qemu.so:qemuVirtioFSStart
 libvirt_driver_qemu.so:qemuVirtioFSStop
+libvirt_driver_qemu.so:qemu_block_stats_get_type
 libvirt_driver_qemu.so:qemu_nbdkit_caps_get_type
 libvirt_driver_qemu.so:s390HostPassthroughOnlyMachines
 libvirt_driver_qemu.so:virQEMUCapsArchFromString
@@ -7654,6 +7684,7 @@ libvirt_driver_qemu.so:virQEMUCapsCommands
 libvirt_driver_qemu.so:virQEMUCapsFetchCPUModels
 libvirt_driver_qemu.so:virQEMUCapsFillDomainCaps
 libvirt_driver_qemu.so:virQEMUCapsFillDomainDeviceChannelCaps
+libvirt_driver_qemu.so:virQEMUCapsFillDomainDeviceConsoleCaps
 libvirt_driver_qemu.so:virQEMUCapsFillDomainDeviceCryptoCaps
 libvirt_driver_qemu.so:virQEMUCapsFillDomainDeviceFSCaps
 libvirt_driver_qemu.so:virQEMUCapsFillDomainDeviceGraphicsCaps
@@ -7678,6 +7709,7 @@ libvirt_driver_qemu.so:virQEMUCapsGetCanonicalMachine
 libvirt_driver_qemu.so:virQEMUCapsGetDefaultEmulator
 libvirt_driver_qemu.so:virQEMUCapsGetDefaultVersion
 libvirt_driver_qemu.so:virQEMUCapsGetHostModel
+libvirt_driver_qemu.so:virQEMUCapsGetHypervCapabilities
 libvirt_driver_qemu.so:virQEMUCapsGetKVMSupportsSecureGuest
 libvirt_driver_qemu.so:virQEMUCapsGetMachineDefaultCPU
 libvirt_driver_qemu.so:virQEMUCapsGetMachineDefaultRAMid
@@ -7707,9 +7739,9 @@ libvirt_driver_qemu.so:virQEMUCapsIsCPUUsable
 libvirt_driver_qemu.so:virQEMUCapsIsMachineDeprecated
 libvirt_driver_qemu.so:virQEMUCapsIsMachineSupported
 libvirt_driver_qemu.so:virQEMUCapsIsVirtTypeSupported
+libvirt_driver_qemu.so:virQEMUCapsKVMSupportsVMTypeTDX
 libvirt_driver_qemu.so:virQEMUCapsLoadCache
 libvirt_driver_qemu.so:virQEMUCapsMachineSupportsACPI
-libvirt_driver_qemu.so:virQEMUCapsMigration
 libvirt_driver_qemu.so:virQEMUCapsNew
 libvirt_driver_qemu.so:virQEMUCapsNewBinary
 libvirt_driver_qemu.so:virQEMUCapsNewCopy
@@ -7729,11 +7761,12 @@ libvirt_driver_qemu.so:virQEMUCapsSupportsGICVersion
 libvirt_driver_qemu.so:virQEMUCapsSupportsI8042
 libvirt_driver_qemu.so:virQEMUCapsSupportsI8042Toggle
 libvirt_driver_qemu.so:virQEMUCapsSupportsVmport
-libvirt_driver_qemu.so:virQEMUCapsTPMModelsToCaps
 libvirt_driver_qemu.so:virQEMUCapsTypeFromString
 libvirt_driver_qemu.so:virQEMUCapsTypeToString
 libvirt_driver_qemu.so:virQEMUCapsUpdateCPUDeprecatedFeatures
 libvirt_driver_qemu.so:virQEMUCapsUpdateHostCPUModel
+libvirt_driver_qemu.so:virQEMUDeprecatedFeaturesTypeFromString
+libvirt_driver_qemu.so:virQEMUDeprecatedFeaturesTypeToString
 libvirt_driver_qemu.so:virQEMUDriverConfigLoadFile
 libvirt_driver_qemu.so:virQEMUDriverConfigNew
 libvirt_driver_qemu.so:virQEMUDriverConfigSetDefaults
@@ -7760,6 +7793,8 @@ libvirt_driver_qemu.so:virQEMUSaveDataWrite
 libvirt_driver_qemu.so:virQEMUSchedCoreTypeFromString
 libvirt_driver_qemu.so:virQEMUSchedCoreTypeToString
 libvirt_driver_secret.so:secretRegister
+libvirt_driver_secret.so:virSecretDaemonConfigFilePath
+libvirt_driver_secret.so:virSecretDaemonConfigNew
 libvirt_driver_storage.so:storagePoolLookupByTargetPath
 libvirt_driver_storage.so:storageRegister
 libvirt_driver_storage.so:storageRegisterAll
@@ -7872,6 +7907,7 @@ libvirt_iohelper:virFileDeleteTree
 libvirt_iohelper:virFileDirectFdFlag
 libvirt_iohelper:virFileDiskCopy
 libvirt_iohelper:virFileExists
+libvirt_iohelper:virFileFDIsRegular
 libvirt_iohelper:virFileFclose
 libvirt_iohelper:virFileFdopen
 libvirt_iohelper:virFileFindHugeTLBFS
@@ -8065,6 +8101,8 @@ libvirt_storage_backend_fs.so:virStorageBackendDirectory
 libvirt_storage_backend_fs.so:virStorageBackendFileSystem
 libvirt_storage_backend_fs.so:virStorageBackendFsRegister
 libvirt_storage_backend_fs.so:virStorageBackendNetFileSystem
+libvirt_storage_backend_iscsi.so:virStorageBackendISCSI
+libvirt_storage_backend_iscsi.so:virStorageBackendISCSIRegister
 libvirt_storage_backend_logical.so:virStorageBackendLogical
 libvirt_storage_backend_logical.so:virStorageBackendLogicalRegister
 libvirt_storage_backend_mpath.so:virStorageBackendMpath

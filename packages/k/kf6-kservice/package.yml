@@ -1,13 +1,16 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kf6-kservice
-version    : 6.19.0
-release    : 26
+version    : 6.26.0
+release    : 35
 source     :
-    - https://download.kde.org/stable/frameworks/6.19/kservice-6.19.0.tar.xz : 815e08493e6bb90f82e92726aff78bdcf1358a942972fc75112e99cb840961bd
+    - https://download.kde.org/stable/frameworks/6.26/kservice-6.26.0.tar.xz : f8528524ccafb6a495962dd3260c442377920169f1c444f11657ea42558a53b6
 homepage   : https://community.kde.org/Frameworks
 license    :
-    - GPL-2.0-only
+    - CC0-1.0
     - LGPL-2.0-only
     - LGPL-2.0-or-later
+    - LGPL-2.1-only
+    - LGPL-3.0-only
 component  : programming.library
 summary    : Plugin framework for desktop services.
 description: |
@@ -29,3 +32,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*

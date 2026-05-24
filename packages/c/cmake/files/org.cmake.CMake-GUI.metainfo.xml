@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>org.cmake.CMake-GUI</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>BSD-3-Clause</project_license>
+
+  <name>CMake GUI</name>
+  <summary>Qt-based GUI for CMake</summary>
+  <description>
+    <p>CMake is a cross-platform, open-source build system generator.</p>
+    <p>CMake is used to control the software compilation process using simple platform and compiler independent configuration files. CMake generates native makefiles and workspaces that can be used in the compiler environment of your choice.</p>
+  </description>
+  <developer id="com.kitware">
+    <name>Kitware</name>
+  </developer>
+
+  <launchable type="desktop-id">cmake-gui.desktop</launchable>
+
+  <provides>
+    <binary>cmake-gui</binary>
+    <id>cmake-gui.desktop</id>
+  </provides>
+
+  <url type="homepage">https://www.cmake.org</url>
+  <url type="bugtracker">https://gitlab.kitware.com/cmake/cmake/-/work_items</url>
+  <url type="contact">https://cmake.org/contact-us/</url>
+
+  <content_rating type="oars-1.1" />
+</component>

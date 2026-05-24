@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kmag
-version    : 25.08.2
-release    : 88
+version    : 26.04.1
+release    : 93
 source     :
-    - https://download.kde.org/stable/release-service/25.08.2/src/kmag-25.08.2.tar.xz : f3343998a6b884453fc9738e7a4f560f716e34a5328f9f0df125eeb53274c081
+    - https://download.kde.org/stable/release-service/26.04.1/src/kmag-26.04.1.tar.xz : bc035addd99422d3e467adb36736577b5aec2d8ad5c7c043647f8f8cb9ba5e6f
 homepage   : https://kde.org/applications/utilities/org.kde.kmag
 license    :
     - GFDL-1.2-or-later

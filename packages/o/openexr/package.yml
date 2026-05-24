@@ -1,12 +1,19 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : openexr
-version    : 3.1.5
-release    : 12
+version    : 3.4.11
+release    : 14
 source     :
-    - https://github.com/AcademySoftwareFoundation/openexr/archive/refs/tags/v3.1.5.tar.gz : 93925805c1fc4f8162b35f0ae109c4a75344e6decae5a240afdfce25f8a433ec
+    - https://github.com/AcademySoftwareFoundation/openexr/archive/refs/tags/v3.4.11.tar.gz : 63730442f5fd6c5a79395bdd199040ab3821c229066049f52a57424a984b16ed
 homepage   : https://www.openexr.com/
 license    : BSD-3-Clause
-component  : multimedia.library
-summary    : A high dynamic-range image file format library
+component  :
+    - multimedia.library
+    - libs : multimedia.library
+    - examples : programming.library
+summary    :
+    - A high dynamic-range image file format library
+    - libs : Shared libraries for OpenEXR
+    - examples : OpenEXR code examples
 description: |
     OpenEXR provides the specification and reference implementation of the EXR file format, the professional-grade image storage format of the motion picture industry.
 
@@ -15,11 +22,20 @@ description: |
     OpenEXR is widely used in host application software where accuracy is critical, such as photorealistic rendering, texture access, image compositing, deep compositing, and DI.
 builddeps  :
     - pkgconfig(Imath)
+rundeps    :
+    - devel :
+        - openexr-libs
 setup      : |
     %cmake_ninja
 build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSE*
 check      : |
     %ninja_check
+patterns   :
+    - libs :
+        - /usr/lib64/lib*.so.*
+    - examples :
+        - /usr/share/doc/OpenEXR/examples/

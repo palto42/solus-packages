@@ -1,9 +1,10 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : pv
-version    : 1.9.34
-release    : 18
-homepage   : http://www.ivarch.com/programs/pv.shtml
+version    : 1.10.5
+release    : 23
 source     :
-    - https://www.ivarch.com/programs/sources/pv-1.9.34.tar.gz : c0626bed6cbef5006b53d3281e8e3ae4b2838729462b21eccf28140eefef6bb1
+    - https://www.ivarch.com/s/pv-1.10.5.tar.gz : ab21b4f8662280646b6a02e1b9f096790918f89c952bbe0d06fef75d3b52fb15
+homepage   : https://www.ivarch.com/programs/pv.shtml
 license    : GPL-3.0-or-later
 summary    : A terminal-based tool for monitoring the progress of data through a pipeline.
 component  : system.utils
@@ -15,3 +16,4 @@ build      : |
     %make
 install    : |
     %make_install
+    %install_license docs/COPYING

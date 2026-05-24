@@ -11,7 +11,8 @@ libKF6Notifications.so.6
 libKF6Service.so.6
 libKF6StatusNotifierItem.so.6
 libKF6Svg.so.6
-libPlasma.so.6
+libKF6WindowSystem.so.6
+libPlasma.so.7
 libQt6Core.so.6
 libQt6DBus.so.6
 libQt6Gui.so.6
@@ -19,7 +20,9 @@ libQt6Multimedia.so.6
 libQt6Qml.so.6
 libQt6Quick.so.6
 libQt6QuickControls2.so.6
+libQt6WaylandClient.so.6
 libQt6Widgets.so.6
 libc.so.6
 libm.so.6
 libstdc++.so.6
+libwayland-client.so.0

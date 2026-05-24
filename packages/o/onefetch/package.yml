@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : onefetch
-version    : 2.25.0
-release    : 13
+version    : 2.27.1
+release    : 16
 source     :
-    - https://github.com/o2sh/onefetch/archive/refs/tags/2.25.0.tar.gz : c9ade471eff5f57e5a6506a08293d8e7ebc54c27e99e33c965313a7108562f35
+    - https://github.com/o2sh/onefetch/archive/refs/tags/2.27.1.tar.gz : 3a6f82d3da4da62b2e5406bbe307b0afc73cd8fcc4855534886d80ea0121cc03
 homepage   : https://onefetch.dev
 license    : MIT
 component  : system.utils
@@ -22,17 +23,13 @@ build      : |
 install    : |
     %cargo_install
     install -Dm00644 docs/onefetch.1 $installdir/usr/share/man/man1/onefetch.1
+    %install_license LICENSE.md
 
     # Generate shell completions
     for shellcomp in bash fish zsh; do
         ./target/release/onefetch --generate "$shellcomp" > onefetch."$shellcomp"
     done
 
-    # Due to an accident, these were previously installed as directories, and eopkg doesn't know
-    # how to handle that. Since this happened at the same time as the usr-merge incident, we're
-    # opting to remove the completions for now, and will revisit later, just so we can get things
-    # working.
-    #
-    # install -Dm00644 onefetch.bash $installdir/usr/share/bash-completion/completions/onefetch
-    # install -Dm00644 onefetch.fish $installdir/usr/share/fish/vendor_completions.d/onefetch.fish
-    # install -Dm00644 onefetch.zsh  $installdir/usr/share/zsh/site-functions/_onefetch
+    install -Dm00644 onefetch.bash $installdir/usr/share/bash-completion/completions/onefetch
+    install -Dm00644 onefetch.fish $installdir/usr/share/fish/vendor_completions.d/onefetch.fish
+    install -Dm00644 onefetch.zsh  $installdir/usr/share/zsh/site-functions/_onefetch

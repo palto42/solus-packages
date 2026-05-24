@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : xpra
-version    : 5.1.1
-release    : 16
+version    : 6.4.3
+release    : 17
 source     :
-    - https://github.com/Xpra-org/xpra/archive/refs/tags/v5.1.1.tar.gz : 115bd402bfbb7d508a35069044a403edfbf114db607841db2ddf24aa7ec4a5ce
+    - https://github.com/Xpra-org/xpra/archive/refs/tags/v6.4.3.tar.gz : 41fbef72b03662ad24b0f127ed112ffdbf56f076742f3149be506bad841e1a2c
 homepage   : https://xpra.org
 license    : GPL-2.0-or-later
 component  : desktop
@@ -11,8 +12,8 @@ description: |
     Xpra is a multi platform persistent remote display server and client for forwarding applications and desktop screens. Also known as 'screen for X11'.
 builddeps  :
     - pkgconfig(gtk+-3.0)
-    - pkgconfig(libavutil)
     - pkgconfig(liblz4)
+    - pkgconfig(libxxhash)
     - pkgconfig(py3cairo)
     - pkgconfig(pygobject-3.0)
     - pkgconfig(xkbfile)
@@ -32,6 +33,9 @@ rundeps    :
 setup      : |
     mv -v $workdir/fs/etc/sysconfig/xpra $workdir/fs/etc/sysconfig/xpra.env
     %apply_patches
+
+    # Don't use PEP517
+    rm pyproject.toml
 
     # pkg-config --cflags pam,pam_misc does not report the proper include path expected by xpra
     sed -i 's|if pkg_config_ok("--exists", "pam", "pam_misc"):|if False:|' setup.py

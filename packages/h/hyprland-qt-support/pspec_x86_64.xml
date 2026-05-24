@@ -4,7 +4,7 @@
         <Homepage>https://github.com/hyprwm/hyprland-qt-support</Homepage>
         <Packager>
             <Name>Troy Harvey</Name>
-            <Email>harveydevel@gmail.com</Email>
+            <Email>harvey@getsol.us</Email>
         </Packager>
         <License>BSD-3-Clause</License>
         <PartOf>desktop.hyprland</PartOf>
@@ -33,15 +33,16 @@
             <Path fileType="library">/usr/lib64/qt6/qml/org/hyprland/style/impl/qmldir</Path>
             <Path fileType="library">/usr/lib64/qt6/qml/org/hyprland/style/libhyprland-quick-styleplugin.so</Path>
             <Path fileType="library">/usr/lib64/qt6/qml/org/hyprland/style/qmldir</Path>
+            <Path fileType="data">/usr/share/licenses/hyprland-qt-support/LICENSE</Path>
         </Files>
     </Package>
     <History>
-        <Update release="5">
-            <Date>2025-10-01</Date>
+        <Update release="10">
+            <Date>2026-05-15</Date>
             <Version>0.1.0</Version>
             <Comment>Packaging update</Comment>
             <Name>Troy Harvey</Name>
-            <Email>harveydevel@gmail.com</Email>
+            <Email>harvey@getsol.us</Email>
         </Update>
     </History>
 </PISI>

@@ -1,0 +1,6 @@
+releases:
+  id: 389534
+  rss: https://github.com/Strophox/tetro-tui/tags.atom
+ # No known CPE, checked 2026-04-09
+security:
+  cpe: ~

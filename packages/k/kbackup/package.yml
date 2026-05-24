@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kbackup
-version    : 25.08.2
-release    : 46
+version    : 26.04.1
+release    : 51
 source     :
-    - https://download.kde.org/stable/release-service/25.08.2/src/kbackup-25.08.2.tar.xz : 54c7aedf0d1ec4ccddb822f8330335d0cbf4ec40f64499915f00fef0c030b8b1
+    - https://download.kde.org/stable/release-service/26.04.1/src/kbackup-26.04.1.tar.xz : 584d4f80ced90697799bec8ddcf3cfb1cc225e8ec6576ce23978844d0acb3219
 homepage   : https://apps.kde.org/en/kbackup
 license    : GPL-2.0-or-later
 component  : network.util

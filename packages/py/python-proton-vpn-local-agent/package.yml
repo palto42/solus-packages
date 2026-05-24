@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : python-proton-vpn-local-agent
-version    : 1.4.8
-release    : 7
+version    : 1.6.0
+release    : 9
 source     :
-    - https://github.com/ProtonVPN/local-agent-rs/archive/refs/tags/1.4.8.tar.gz : a2d99adb0f74c0f97b46f69948b998a8d11501c9c4a98e01ec00b23c313d2144
+    - https://github.com/ProtonVPN/local-agent-rs/archive/refs/tags/1.6.0.tar.gz : 52b62ee267ef09d004f6bbfd10ad7ce28a5c32136200b4492c7e681be18d1676
 homepage   : https://github.com/ProtonVPN/local-agent-rs
 license    : GPL-3.0-or-later
 component  : programming.python

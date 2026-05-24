@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : gajim
-version    : 2.2.0
-release    : 33
+version    : 2.4.6
+release    : 40
 source     :
-    - https://gajim.org/downloads/2.2/gajim-2.2.0.tar.gz : 4ce66e32213946368962f356c65d85c82a7ab883be2cb5a245becdf63735c919
+    - https://gajim.org/downloads/2.4/gajim-2.4.6.tar.gz : cce08def13e4b4c2852a91c108f8d949986bcd4697a4a72c954c17c2ff7c9746
 homepage   : https://gajim.org
 license    : GPL-3.0-or-later
 component  : network.im
@@ -16,13 +17,17 @@ builddeps  :
     - python-setuptools
     - python-wheel
 rundeps    :
-    - farstream                  # Audio/Video.
-    - gstreamer-1.0-plugin-libav # Audio/Video.
-    - gstreamer-1.0-plugins-ugly # Audio/Video.
+    - farstream              # Audio/Video.
+    - gstreamer-plugin-libav # Audio/Video.
+    - gstreamer-plugins-ugly # Audio/Video.
     - libgtksourceview5
     - python-css-parser
     - python-emoji
     - python-gssapi
+    - python-h2
+    - python-hpack
+    - python-httpx
+    - python-hyperframe
     - python-keyring
     - python-nbxmpp
     - python-omemo-dr
@@ -30,6 +35,7 @@ rundeps    :
     - python-pillow
     - python-qrcode
     - python-sqlalchemy
+    - python-truststore
 setup      : |
     ./make.py build --dist unix
 build      : |
@@ -41,3 +47,5 @@ install    : |
     # Move locales to the system path
     mv $installdir/usr/lib/python%python3_version%/site-packages/gajim/data/locale $installdir/usr/share
     ln -sv /usr/share/locale $installdir/usr/lib/python%python3_version%/site-packages/gajim/data/locale
+
+    %install_license COPYING

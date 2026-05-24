@@ -4,7 +4,7 @@
         <Homepage>https://kde.org/applications/utilities/org.kde.kleopatra</Homepage>
         <Packager>
             <Name>Troy Harvey</Name>
-            <Email>harveydevel@gmail.com</Email>
+            <Email>harvey@getsol.us</Email>
         </Packager>
         <License>GFDL-1.2-or-later</License>
         <License>GPL-2.0-or-later</License>
@@ -44,6 +44,16 @@
             <Path fileType="data">/usr/share/kio/servicemenus/kleopatra_decryptverifyfiles.desktop</Path>
             <Path fileType="data">/usr/share/kio/servicemenus/kleopatra_signencryptfiles.desktop</Path>
             <Path fileType="data">/usr/share/kio/servicemenus/kleopatra_signencryptfolders.desktop</Path>
+            <Path fileType="data">/usr/share/licenses/kleopatra/BSD-3-Clause.txt</Path>
+            <Path fileType="data">/usr/share/licenses/kleopatra/CC0-1.0.txt</Path>
+            <Path fileType="data">/usr/share/licenses/kleopatra/GFDL-1.2-or-later.txt</Path>
+            <Path fileType="data">/usr/share/licenses/kleopatra/GPL-2.0-only.txt</Path>
+            <Path fileType="data">/usr/share/licenses/kleopatra/GPL-2.0-or-later.txt</Path>
+            <Path fileType="data">/usr/share/licenses/kleopatra/LGPL-2.0-only.txt</Path>
+            <Path fileType="data">/usr/share/licenses/kleopatra/LGPL-2.0-or-later.txt</Path>
+            <Path fileType="data">/usr/share/licenses/kleopatra/LGPL-2.1-only.txt</Path>
+            <Path fileType="data">/usr/share/licenses/kleopatra/LGPL-2.1-or-later.txt</Path>
+            <Path fileType="data">/usr/share/licenses/kleopatra/LGPL-3.0-only.txt</Path>
             <Path fileType="localedata">/usr/share/locale/af/LC_MESSAGES/kleopatra.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ar/LC_MESSAGES/kleopatra.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ar/LC_MESSAGES/kwatchgnupg.mo</Path>
@@ -193,12 +203,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="91">
-            <Date>2025-10-10</Date>
-            <Version>25.08.2</Version>
+        <Update release="97">
+            <Date>2026-05-15</Date>
+            <Version>26.04.1</Version>
             <Comment>Packaging update</Comment>
             <Name>Troy Harvey</Name>
-            <Email>harveydevel@gmail.com</Email>
+            <Email>harvey@getsol.us</Email>
         </Update>
     </History>
 </PISI>

@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : libdrm
-version    : 2.4.125
-release    : 52
+version    : 2.4.133
+release    : 54
 source     :
-    - https://dri.freedesktop.org/libdrm/libdrm-2.4.125.tar.xz : d4bae92797a50f81a93524762e0410a49cd84cfa0f997795bc0172ac8fb1d96a
+    - https://dri.freedesktop.org/libdrm/libdrm-2.4.133.tar.xz : fc68f9d0ba2ea63c9432a299e14fea09fad7a8a66e8039fcd7802ca59f77b4f5
 license    : MIT
 component  : xorg.display
 homepage   : https://dri.freedesktop.org/

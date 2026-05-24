@@ -19,7 +19,6 @@ libc.so.6:clock_gettime
 libc.so.6:close
 libc.so.6:closedir
 libc.so.6:connect
-libc.so.6:copy_file_range
 libc.so.6:dlclose
 libc.so.6:dlerror
 libc.so.6:dlopen
@@ -165,6 +164,8 @@ libc.so.6:write
 libc.so.6:writev
 libcrypt.so.2:crypt_r
 libcrypto.so.3:ASN1_GENERALIZEDTIME_print
+libcrypto.so.3:ASN1_STRING_get0_data
+libcrypto.so.3:ASN1_STRING_length
 libcrypto.so.3:ASN1_TIME_print
 libcrypto.so.3:ASN1_d2i_bio
 libcrypto.so.3:BIO_ctrl
@@ -340,6 +341,7 @@ libssl.so.3:SSL_CTX_set_alpn_select_cb
 libssl.so.3:SSL_CTX_set_cert_cb
 libssl.so.3:SSL_CTX_set_cipher_list
 libssl.so.3:SSL_CTX_set_client_CA_list
+libssl.so.3:SSL_CTX_set_client_hello_cb
 libssl.so.3:SSL_CTX_set_ex_data
 libssl.so.3:SSL_CTX_set_info_callback
 libssl.so.3:SSL_CTX_set_max_early_data
@@ -351,7 +353,6 @@ libssl.so.3:SSL_CTX_set_verify_depth
 libssl.so.3:SSL_CTX_use_PrivateKey
 libssl.so.3:SSL_CTX_use_certificate
 libssl.so.3:SSL_SESSION_free
-libssl.so.3:SSL_SESSION_get0_hostname
 libssl.so.3:SSL_SESSION_get_id
 libssl.so.3:SSL_SESSION_get_time
 libssl.so.3:SSL_SESSION_get_timeout
@@ -360,6 +361,7 @@ libssl.so.3:SSL_SESSION_set_time
 libssl.so.3:SSL_SESSION_set_timeout
 libssl.so.3:SSL_SESSION_up_ref
 libssl.so.3:SSL_clear_options
+libssl.so.3:SSL_client_hello_get0_ext
 libssl.so.3:SSL_ctrl
 libssl.so.3:SSL_do_handshake
 libssl.so.3:SSL_free
@@ -392,6 +394,7 @@ libssl.so.3:SSL_sendfile
 libssl.so.3:SSL_session_reused
 libssl.so.3:SSL_set_SSL_CTX
 libssl.so.3:SSL_set_accept_state
+libssl.so.3:SSL_set_alpn_protos
 libssl.so.3:SSL_set_connect_state
 libssl.so.3:SSL_set_ex_data
 libssl.so.3:SSL_set_fd

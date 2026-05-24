@@ -1,8 +1,10 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : font-iosevka-ttf
-version    : 33.2.2
-release    : 86
+version    : 34.6.0
+release    : 92
 source     :
-    - https://github.com/be5invis/Iosevka/releases/download/v33.2.2/PkgTTF-Iosevka-33.2.2.zip : 678a1b6af82ee1b1d175d67361e32d13e5949768da4917c24459bbc58b4d7670
+    - https://github.com/be5invis/Iosevka/releases/download/v34.6.0/PkgTTF-Iosevka-34.6.0.zip : 4d3878cd8c0f98d9bcd106bcf7ef65b2b4e16cfed04cf793eee132ba0485d64c
+    - https://raw.githubusercontent.com/be5invis/Iosevka/refs/heads/main/LICENSE.md : 4ba53c7c1cb39279aae5f8d7d22054c485c71169920e5a36ed098b115e2e3c5d
 homepage   : https://typeof.net/Iosevka
 license    : OFL-1.1
 component  : desktop.font
@@ -12,3 +14,4 @@ description: |
 install    : |
     install -Dm00644 *.ttf -t $installdir/usr/share/fonts/truetype/iosevka/
     install -Dm00644 $pkgfiles/iosevka.metainfo.xml $installdir/usr/share/metainfo/iosevka.metainfo.xml
+    %install_license ${sources}/LICENSE.md

@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
+name       : proton-vpn-cli
+version    : 0.1.6
+release    : 2
+source     :
+    - https://github.com/ProtonVPN/proton-vpn-cli/archive/refs/tags/v0.1.6.tar.gz : 65e7c2dcb5d8337c543b709695a84de58b48622ba08e66d36da543cd4b50dd91
+homepage   : https://github.com/ProtonVPN/proton-vpn-cli
+license    : GPL-3.0-or-later
+component  : network.clients
+summary    : Official ProtonVPN CLI Linux app
+description: |
+    Official ProtonVPN CLI Linux app
+builddeps  :
+    - python-build
+    - python-installer
+    - python-setuptools
+rundeps    :
+    - proton-vpn-daemon
+    - python-dbus-fast
+    - python-proton-core
+    - python-proton-keyring-linux
+    - python-proton-vpn-core-api
+    - python-proton-vpn-local-agent
+    - python-tabulate
+build      : |
+    %python3_setup
+install    : |
+    %python3_install
+    %install_license COPYING.md LICENSE

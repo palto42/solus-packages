@@ -1,92 +1,60 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : pulseaudio
 version    : '17.0'
-release    : 63
+release    : 65
 source     :
     - https://freedesktop.org/software/pulseaudio/releases/pulseaudio-17.0.tar.xz : 053794d6671a3e397d849e478a80b82a63cb9d8ca296bd35b73317bb5ceb87b5
 homepage   : https://www.freedesktop.org/wiki/Software/PulseAudio/
-license    : LGPL-2.1-or-later
+license    :
+    - BSD-3-Clause
+    - GPL-2.0-or-later
+    - LGPL-2.1-or-later
+    - MIT
 component  :
     - multimedia.audio
-    - equalizer : multimedia.audio
-    - module-jack : multimedia.audio
-    - module-jack-32bit : multimedia.audio
+    - utils : multimedia.audio
 summary    :
-    - Advanced sound system
-    - equalizer : PulseAudio equalizer GUI (qpaeq)
-    - module-jack : JACK modules for the PulseAudio sound server
-    - module-jack-32bit : JACK modules for the PulseAudio sound server
+    - PulseAudio client libraries
+    - utils : Utilities for PulseAudio
 description: |
-    PulseAudio is a sound system for POSIX OSes, meaning that it is a proxy for your sound applications. It allows you to do advanced operations on your sound data as it passes between your application and your hardware. Things like transferring the audio to a different machine, changing the sample format or channel count and mixing several sounds into one are easily achieved using a sound server.
+    This package only provides the client libraries for PulseAudio. The daemon itself is provided by PipeWire.
 emul32     : true
 ccache     : false
-libsplit   : false
 optimize   : size
-patterns   :
-    - equalizer :
-        - /usr/bin/qpaeq
-        - /usr/lib64/pulseaudio/modules/module-equalizer-sink.so
-    - module-jack :
-        - /usr/lib64/pulseaudio/modules/module-jack*
-    - module-jack-32bit :
-        - /usr/lib32/pulseaudio/modules/module-jack*
 builddeps  :
-    - pkgconfig32(alsa)
     - pkgconfig32(gtk+-3.0)
-    - pkgconfig32(jack)
-    - pkgconfig32(json-c)
-    - pkgconfig32(libcap)
-    - pkgconfig32(libcrypto)
-    - pkgconfig32(liblzma)
-    - pkgconfig32(libudev)
-    - pkgconfig32(orc-0.4)
-    - pkgconfig32(sm)
+    - pkgconfig32(libsystemd)
     - pkgconfig32(sndfile)
-    - pkgconfig32(soxr)
-    - pkgconfig32(speex)
-    - pkgconfig32(webrtc-audio-processing-1)
-    - pkgconfig(avahi-core)
-    - pkgconfig(bluez)
-    - pkgconfig(check)
-    - pkgconfig(fftw3f)
-    - pkgconfig(sbc)
-    - gdbm-32bit-devel
-    - libtool-32bit-devel
+    - pkgconfig32(x11-xcb)
 rundeps    :
-    - equalizer :
-        - python3-dbus
-        - python3-qt5
     - rtkit
+    - utils :
+        - pulseaudio
 setup      : |
-    %apply_patches
+    %patch -p1 -i ${pkgfiles}/0001-Support-a-stateless-configuration.patch
 
-    if [[ ! -z "${EMUL32BUILD}" ]]; then
-        extra_opts="-Davahi=disabled -Dbluez5=disabled -Dfftw=disabled -Dgtk=disabled -Dtests=false"
-    else
-        extra_opts="-Dbluez5=enabled -Dbluez5-native-headset=true -Dgsettings=enabled"
-    fi
     %meson_configure \
-        -Dalsa=enabled \
-        -Ddatabase='gdbm' \
-        -Ddbus=enabled \
+        -Dclient=true \
+        -Ddaemon=false \
         -Ddoxygen=false \
-        -Dorc=enabled \
-        -Dpulsedsp-location='%libdir%/pulseaudio' \
-        -Dudevrulesdir=/usr/lib/udev/rules.d \
-        $extra_opts
+        -Dglib=enabled \
+        -Dgsettings=enabled \
+        -Dgstreamer=disabled \
+        -Dman=true \
+        -Dsystemd=enabled \
+        -Dtests=false
 build      : |
     %ninja_build
 install    : |
     %ninja_install
-    # These incorrect files break gdm
-    rm -rfv $installdir/usr/share/bash-completion
-    # Ensure Audio works in PulseAudio
-    ln -sv %libdir%/pulseaudio/libpulsecommon-${version}.so $installdir/%libdir%/.
+    %install_license LICENSE GPL LGPL src/pulsecore/filter/LICENSE.WEBKIT
 
-    # No point now that we've switched to pipewire
-    rm -v $installdir/usr/share/xdg/autostart/pulseaudio.desktop
-    rmdir -v $installdir/usr/share/xdg/autostart/
-
-    # Only do this in the 64bit build
-    if [[ -z "${EMUL32BUILD}" ]]; then
-        install -D -m 00644 $pkgfiles/pulseaudio.conf $installdir/%libdir%/sysusers.d/pulseaudio.conf
-    fi
+    # Not useful
+    rm -rvf ${installdir}/usr/bin/pa-info
+patterns   :
+    - utils :
+        - /usr/bin/pa*
+        - /usr/share/bash-completion/
+        - /usr/share/locale/
+        - /usr/share/man/man1/
+        - /usr/share/zsh/site-functions/

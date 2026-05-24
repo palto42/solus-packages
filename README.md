@@ -1,10 +1,6 @@
-<p align="center">
-  <a href="https://getsol.us">
-    <img src="https://getsol.us/imgs/logo.png" alt="Solus logo"/>
-  </a>
-</p>
+<img src="https://getsol.us/imgs/Solus_With_Text.svg" alt="Solus logo with text" width="250px">
 
-*Packages* contains all the packages definitions for [Solus]. It also contains the main issue tracker.
+*Packages* contains all the packages definitions for [Solus](https://getsol.us). It also contains the main issue tracker.
 
 # Welcome
 
@@ -39,6 +35,10 @@ You can [get involved][Getting Involved] in many ways:
 - [Help fund][Open Collective] our organization.
 - Help [maintain packages][Packaging].
 - [Report Bugs]
+
+## License
+
+See [LICENSE.md](LICENSE.md) for the license of files in this repository.
 
 # Funding
 

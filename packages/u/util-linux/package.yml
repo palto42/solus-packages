@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : util-linux
-version    : 2.40.4
-release    : 53
+version    : 2.41.4
+release    : 57
 source     :
-    - https://mirrors.edge.kernel.org/pub/linux/utils/util-linux/v2.40/util-linux-2.40.4.tar.xz : 5c1daf733b04e9859afdc3bd87cc481180ee0f88b5c0946b16fdec931975fb79
+    - https://mirrors.edge.kernel.org/pub/linux/utils/util-linux/v2.41/util-linux-2.41.4.tar.xz : a8c213cc06048862602a42b2d299b340001f6d05c4407b549f3e03521df83688
 homepage   : https://github.com/util-linux/util-linux
 license    :
     - BSD-3-Clause
@@ -36,6 +37,7 @@ builddeps  :
     - pkgconfig(python3)
     - pkgconfig(sqlite3)
     - asciidoctor
+    - po4a
 rundeps    :
     - 32bit-devel :
         - libeconf-32bit-devel
@@ -62,8 +64,7 @@ build      : |
                       mount:shared_library \
                       ./libsmartcols/smartcols:shared_library \
                       ./libsmartcols/smartcols:static_library \
-                      ./libuuid/uuid:shared_library \
-                      ./libuuid/uuid:static_library
+                      ./libuuid/uuid:shared_library
     else
         %ninja_build
     fi
@@ -105,30 +106,18 @@ install    : |
         mv $installdir/usr/lib/* $installdir/usr/lib64
         rmdir $installdir/usr/lib
 
-        # Create necessary systemd directories
-        install -D -d -m 00755 $installdir/%libdir%/systemd/system/{sockets,timers}.target.wants
-
         # Ensure that uuid daemon works
         install -Dm00644 $pkgfiles/util-linux.sysusers $installdir/%libdir%/sysusers.d/util-linux.conf
-        ln -sv ../uuidd.socket -t $installdir/%libdir%/systemd/system/sockets.target.wants
 
-        # Enable fstrim.timer by default
-        ln -sv ../fstrim.timer $installdir/%libdir%/systemd/system/timers.target.wants/fstrim.timer
+        # Install systemd service presets
+        install -Dm00644 -t ${installdir}/%libdir%/systemd/system-preset/ ${pkgfiles}/20-util-linux.preset
 
         # PAM
         install -dm00755 $installdir/usr/share/defaults/etc/pam.d
         install -m00644 $pkgfiles/pam.d/* -t $installdir/usr/share/defaults/etc/pam.d
-
-        # Install compat links T10615
-        for TOP in {bin,sbin}; do
-            install -D -d -m 00755 $installdir/$TOP
-            pushd $installdir/usr/$TOP
-            for FILE in *; do
-                ln -srv $installdir/usr/$TOP/$FILE $installdir/$TOP/$FILE
-            done
-            popd
-        done
     fi
+
+    %install_license COPYING
 # Tests compile but they are not run because of
 # "Ignore util-linux test suite [non-root UID expected]."
 # check      : |

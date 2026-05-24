@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kgeography
-version    : 25.08.2
-release    : 95
+version    : 26.04.1
+release    : 100
 source     :
-    - https://download.kde.org/stable/release-service/25.08.2/src/kgeography-25.08.2.tar.xz : 57bb04e7744fa01e2b3b9b2a332f434c79203946e0e3268db79a02f229ed223d
+    - https://download.kde.org/stable/release-service/26.04.1/src/kgeography-26.04.1.tar.xz : c6880eaae67cd007d6026c106ce49692c1afbb89c4333e63747cea9a19b8caf9
 homepage   : https://kde.org/applications/education/org.kde.kgeography
 license    :
     - GFDL-1.2-or-later

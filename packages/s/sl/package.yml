@@ -1,6 +1,7 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : sl
 version    : '5.02'
-release    : 3
+release    : 4
 source     :
     - https://github.com/mtoyoda/sl/archive/5.02.tar.gz : 1e5996757f879c81f202a18ad8e982195cf51c41727d3fea4af01fdcbbb5563a
 homepage   : https://github.com/mtoyoda/sl
@@ -14,4 +15,4 @@ build      : |
 install    : |
     install -Dm00755 sl $installdir/usr/bin/sl
     install -Dm00644 sl.1 $installdir/usr/share/man/man1/sl.1
-    install -Dm00644 LICENSE $installdir/usr/share/licenses/sl/LICENSE
+    %install_license LICENSE

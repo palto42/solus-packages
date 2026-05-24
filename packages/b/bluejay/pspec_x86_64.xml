@@ -3,8 +3,8 @@
         <Name>bluejay</Name>
         <Homepage>https://github.com/EbonJaeger/bluejay</Homepage>
         <Packager>
-            <Name>Evan Maddock</Name>
-            <Email>maddock.evan@vivaldi.net</Email>
+            <Name>Troy Harvey</Name>
+            <Email>harvey@getsol.us</Email>
         </Packager>
         <License>MPL-2.0</License>
         <PartOf>desktop</PartOf>
@@ -24,6 +24,12 @@
             <Path fileType="data">/usr/share/applications/io.github.ebonjaeger.bluejay.desktop</Path>
             <Path fileType="data">/usr/share/bluejay/pin-code-database.xml</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/io.github.ebonjaeger.bluejay.svg</Path>
+            <Path fileType="data">/usr/share/licenses/bluejay/CC-BY-SA-4.0.txt</Path>
+            <Path fileType="data">/usr/share/licenses/bluejay/CC0-1.0.txt</Path>
+            <Path fileType="data">/usr/share/licenses/bluejay/GPL-2.0-or-later.txt</Path>
+            <Path fileType="data">/usr/share/licenses/bluejay/LICENSE</Path>
+            <Path fileType="data">/usr/share/licenses/bluejay/MIT.txt</Path>
+            <Path fileType="data">/usr/share/licenses/bluejay/MPL-2.0.txt</Path>
             <Path fileType="localedata">/usr/share/locale/cs/LC_MESSAGES/bluejay.mo</Path>
             <Path fileType="localedata">/usr/share/locale/de/LC_MESSAGES/bluejay.mo</Path>
             <Path fileType="localedata">/usr/share/locale/fr/LC_MESSAGES/bluejay.mo</Path>
@@ -33,12 +39,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="3">
-            <Date>2025-06-02</Date>
+        <Update release="8">
+            <Date>2026-05-15</Date>
             <Version>1.0.3</Version>
             <Comment>Packaging update</Comment>
-            <Name>Evan Maddock</Name>
-            <Email>maddock.evan@vivaldi.net</Email>
+            <Name>Troy Harvey</Name>
+            <Email>harvey@getsol.us</Email>
         </Update>
     </History>
 </PISI>

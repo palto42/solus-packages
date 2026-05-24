@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : httpd
-version    : 2.4.65
-release    : 34
+version    : 2.4.67
+release    : 37
 source     :
-    - https://dlcdn.apache.org/httpd/httpd-2.4.65.tar.gz : 4f92861a50325c6d1046ebad5d814bff0d4169ada8cc265655f32b7f1ba4be1b
+    - https://dlcdn.apache.org/httpd/httpd-2.4.67.tar.gz : 10a578d199c3930250534fac629995f34ef7571709a7c88c45239e1fdc88cf77
 homepage   : https://httpd.apache.org/
 license    : Apache-2.0
 component  : programming
@@ -66,6 +67,7 @@ build      : |
     %make
 install    : |
     %make_install -j1
+    %install_license LICENSE
     # Install httpd systemd stuff
     install -Dm00644 $pkgfiles/httpd.service $installdir/%libdir%/systemd/system/httpd.service
     install -Dm00644 $pkgfiles/httpd.sysusers $installdir/%libdir%/sysusers.d/httpd.conf

@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : pcre2
-version    : '10.44'
-release    : 15
+version    : '10.47'
+release    : 16
 source     :
-    - https://github.com/PCRE2Project/pcre2/releases/download/pcre2-10.44/pcre2-10.44.tar.bz2 : d34f02e113cf7193a1ebf2770d3ac527088d485d4e047ed10e5d217c6ef5de96
+    - https://github.com/PCRE2Project/pcre2/releases/download/pcre2-10.47/pcre2-10.47.tar.bz2 : 47fe8c99461250d42f89e6e8fdaeba9da057855d06eb7fc08d9ca03fd08d7bc7
 homepage   : https://github.com/PCRE2Project/pcre2
 license    : BSD-3-Clause
 component  : system.base
@@ -17,7 +18,6 @@ optimize   :
     - lto
     - speed
 setup      : |
-    %patch -p1 -i $pkgfiles/418.patch
     %configure --disable-static \
                --enable-pcre2-16 \
                --enable-pcre2-32 \
@@ -28,6 +28,8 @@ install    : |
     %make_install
     rm -v $installdir/usr/bin/pcre2{grep,test}
     rm -v $installdir/usr/share/man/man1/pcre2{grep,test}.1
+    %install_license LICENCE.md
+    install -Dm00644 deps/sljit/LICENSE ${installdir}/usr/share/licenses/pcre2/sljit/LICENSE
 check      : |
     %make check
 patterns   :

@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
+name       : yosys-slang
+version    : 26.04.22
+release    : 1
+source     :
+    - git|https://github.com/povik/yosys-slang.git : eabdfd1b836f08047de64dca93c286f2a935d68a
+homepage   : https://github.com/povik/yosys-slang
+license    : ISC
+component  : office.scientific
+summary    : SystemVerilog frontend for Yosys
+description: |
+    yosys-slang is a Yosys plugin providing a new command (read_slang) for elaborating SystemVerilog designs.
+builddeps  :
+    - pkgconfig(fmt)
+    - yosys-devel
+rundeps    :
+    - yosys
+clang      : true
+setup      : |
+    %patch -p1 -i $pkgfiles/01-use-system-fmt.patch
+build      : |
+    %cmake_ninja
+install    : |
+    %ninja_install
+    %install_license LICENSE
+    install -Dm00644 third_party/slang/LICENSE $installdir/%PREFIX%/share/licenses/yosys-slang/third-party/slang/LICENSE

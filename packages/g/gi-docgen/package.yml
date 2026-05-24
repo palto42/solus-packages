@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : gi-docgen
-version    : '2025.4'
-release    : 9
+version    : '2026.1'
+release    : 11
 source     :
-    - https://download.gnome.org/sources/gi-docgen/2025/gi-docgen-2025.4.tar.xz : 66c865d459febdfb5e4078a88df06183620c3e91f726d1dc608d88ee3605526e
+    - https://download.gnome.org/sources/gi-docgen/2026/gi-docgen-2026.1.tar.xz : c316d6c04699976b6823912aae1fb2a6a3ffa2553b422be88fb56eb881acf479
 homepage   : https://gnome.pages.gitlab.gnome.org/gi-docgen/
 license    : GPL-2.0-or-later
 component  : programming.tools

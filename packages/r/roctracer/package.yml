@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : roctracer
-version    : 6.2.4
-release    : 5
+version    : 7.2.0
+release    : 7
 source     :
-    - https://github.com/ROCm/roctracer/archive/refs/tags/rocm-6.2.4.tar.gz : b94c7db8ac57a4a1d7f8115020c36551220c20f33289fd06830495b4914a7d7b
+    - git|https://github.com/ROCm/rocm-systems.git : fc0010cf6a5a972d42b276df946510f30343d493
 homepage   : https://github.com/ROCm-Developer-Tools/roctracer
 license    : MIT
 component  : programming.library
@@ -10,25 +11,26 @@ summary    : ROCm Tracer Callback/Activity Library for Performance tracing AMD G
 description: |
     Runtimes Generic Callback/Activity APIs. The goal of the implementation is to provide a generic independent from specific runtime profiler to trace API and asyncronous activity. The API provides functionality for registering the runtimes API callbacks and asyncronous activity records pool support.
 builddeps  :
+    - hsa-amd-aqlprofile-devel
+    - rocprofiler-devel
     - rocm-cmake
     - rocm-hip
-    - hsa-amd-aqlprofile-devel
     - rocprim
-    - rocprofiler-devel
     - python-ply
     - python-cppheaderparser
+checkdeps  :
+    - doxygen
 environment: |
     export CXXFLAGS="${CXXFLAGS/-D_FORTIFY_SOURCE=2 -fstack-protector-strong --param=ssp-buffer-size=32/-fcf-protection=none}"
     export GCC_IGNORE_WERROR=1
 
     export ROCM_PATH=/usr
-    export HIP_CLANG_PATH=/usr/lib64/llvm-rocm/bin
-    export DEVICE_LIB_PATH=/usr/lib64/amdgcn/bitcode
-    export CMAKE_PREFIX_PATH=/usr/lib64/llvm-rocm
 setup      : |
-    sed -i 's|add_subdirectory(test)||' CMakeLists.txt
+    pushd projects/roctracer
+        sed -i 's|add_subdirectory(test)||' CMakeLists.txt
+    popd
 
-    %cmake_ninja -L \
+    %cmake_ninja -S projects/roctracer -L \
       -DCMAKE_INSTALL_LIBDIR=lib%LIBSUFFIX% \
       -DROCM_SYMLINK_LIBS=OFF \
       -DAMDGPU_TARGETS="%AMDGPUTARGETS%"

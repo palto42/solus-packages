@@ -2,8 +2,8 @@ libc.so.6:__assert_fail
 libc.so.6:__ctype_b_loc
 libc.so.6:__errno_location
 libc.so.6:__fdelt_chk
+libc.so.6:__isoc23_sscanf
 libc.so.6:__isoc23_strtol
-libc.so.6:__isoc99_sscanf
 libc.so.6:__libc_start_main
 libc.so.6:__sprintf_chk
 libc.so.6:__stack_chk_fail
@@ -87,7 +87,9 @@ libgdk-3.so.0:gdk_display_get_name
 libgdk-3.so.0:gdk_drag_context_get_source_window
 libgdk-3.so.0:gdk_drag_status
 libgdk-3.so.0:gdk_property_change
+libgdk-3.so.0:gdk_property_delete
 libgdk-3.so.0:gdk_property_get
+libgdk-3.so.0:gdk_window_get_pointer
 libgdk_pixbuf-2.0.so.0:gdk_pixbuf_fill
 libgdk_pixbuf-2.0.so.0:gdk_pixbuf_get_type
 libgdk_pixbuf-2.0.so.0:gdk_pixbuf_new
@@ -103,13 +105,15 @@ libglib-2.0.so.0:g_error_free
 libglib-2.0.so.0:g_file_get_contents
 libglib-2.0.so.0:g_file_set_contents
 libglib-2.0.so.0:g_file_test
+libglib-2.0.so.0:g_filename_display_basename
 libglib-2.0.so.0:g_filename_display_name
 libglib-2.0.so.0:g_filename_from_uri
 libglib-2.0.so.0:g_filename_from_utf8
-libglib-2.0.so.0:g_filename_to_utf8
+libglib-2.0.so.0:g_filename_to_uri
 libglib-2.0.so.0:g_find_program_in_path
 libglib-2.0.so.0:g_fprintf
 libglib-2.0.so.0:g_free
+libglib-2.0.so.0:g_free_sized
 libglib-2.0.so.0:g_get_current_dir
 libglib-2.0.so.0:g_get_home_dir
 libglib-2.0.so.0:g_get_language_names
@@ -143,10 +147,8 @@ libglib-2.0.so.0:g_key_file_set_integer
 libglib-2.0.so.0:g_key_file_set_integer_list
 libglib-2.0.so.0:g_key_file_set_string
 libglib-2.0.so.0:g_key_file_to_data
-libglib-2.0.so.0:g_list_append
 libglib-2.0.so.0:g_list_first
 libglib-2.0.so.0:g_list_free
-libglib-2.0.so.0:g_list_free_full
 libglib-2.0.so.0:g_locale_to_utf8
 libglib-2.0.so.0:g_malloc
 libglib-2.0.so.0:g_malloc0
@@ -211,6 +213,7 @@ libglib-2.0.so.0:g_timeout_add
 libglib-2.0.so.0:g_timeout_add_full
 libglib-2.0.so.0:g_unichar_tolower
 libglib-2.0.so.0:g_usleep
+libglib-2.0.so.0:g_utf8_collate
 libglib-2.0.so.0:g_utf8_get_char
 libglib-2.0.so.0:g_utf8_prev_char
 libglib-2.0.so.0:g_utf8_skip
@@ -229,7 +232,6 @@ libgobject-2.0.so.0:g_signal_connect_data
 libgobject-2.0.so.0:g_signal_handler_block
 libgobject-2.0.so.0:g_signal_handler_unblock
 libgobject-2.0.so.0:g_type_check_instance_is_a
-libgobject-2.0.so.0:g_type_check_instance_is_fundamentally_a
 libgtk-3.so.0:gtk_about_dialog_new
 libgtk-3.so.0:gtk_accel_group_new
 libgtk-3.so.0:gtk_adjustment_get_value
@@ -338,6 +340,7 @@ libgtk-3.so.0:gtk_main_iteration
 libgtk-3.so.0:gtk_main_quit
 libgtk-3.so.0:gtk_menu_bar_new
 libgtk-3.so.0:gtk_menu_item_new_with_mnemonic
+libgtk-3.so.0:gtk_menu_item_set_label
 libgtk-3.so.0:gtk_menu_item_set_submenu
 libgtk-3.so.0:gtk_menu_new
 libgtk-3.so.0:gtk_menu_popup
@@ -481,6 +484,7 @@ libgtk-3.so.0:gtk_widget_add_accelerator
 libgtk-3.so.0:gtk_widget_destroy
 libgtk-3.so.0:gtk_widget_get_sensitive
 libgtk-3.so.0:gtk_widget_get_visible
+libgtk-3.so.0:gtk_widget_get_window
 libgtk-3.so.0:gtk_widget_grab_default
 libgtk-3.so.0:gtk_widget_grab_focus
 libgtk-3.so.0:gtk_widget_hide

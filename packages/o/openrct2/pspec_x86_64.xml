@@ -42,6 +42,7 @@
             <Path fileType="data">/usr/share/icons/hicolor/64x64/apps/openrct2.png</Path>
             <Path fileType="data">/usr/share/icons/hicolor/96x96/apps/openrct2.png</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/openrct2.svg</Path>
+            <Path fileType="data">/usr/share/licenses/openrct2/licence.txt</Path>
             <Path fileType="man">/usr/share/man/man6/openrct2-cli.6.zst</Path>
             <Path fileType="man">/usr/share/man/man6/openrct2.6.zst</Path>
             <Path fileType="data">/usr/share/metainfo/io.openrct2.openrct2.appdata.xml</Path>
@@ -170,8 +171,8 @@
             <Path fileType="data">/usr/share/openrct2/object/official/scenery_wall/official.scenery_wall.post_flipped.json</Path>
             <Path fileType="data">/usr/share/openrct2/object/official/scenery_wall/official.scenery_wall.support_structure_full.parkobj</Path>
             <Path fileType="data">/usr/share/openrct2/object/official/scenery_wall/official.scenery_wall.support_structure_half.parkobj</Path>
-            <Path fileType="data">/usr/share/openrct2/object/official/station/openrct2.station.noentrance.json</Path>
-            <Path fileType="data">/usr/share/openrct2/object/official/station/openrct2.station.noplatformnoentrance.json</Path>
+            <Path fileType="data">/usr/share/openrct2/object/official/station/openrct2.station.noentrance.parkobj</Path>
+            <Path fileType="data">/usr/share/openrct2/object/official/station/openrct2.station.noplatformnoentrance.parkobj</Path>
             <Path fileType="data">/usr/share/openrct2/object/official/terrain_edge/official.terrain_edge.void.parkobj</Path>
             <Path fileType="data">/usr/share/openrct2/object/official/terrain_edge/rct1beta.terrain_edge.brick.parkobj</Path>
             <Path fileType="data">/usr/share/openrct2/object/official/terrain_edge/rct1beta.terrain_edge.rock.parkobj</Path>
@@ -222,6 +223,7 @@
             <Path fileType="data">/usr/share/openrct2/object/rct1/ride/rct1.ride.rocket_cars.parkobj</Path>
             <Path fileType="data">/usr/share/openrct2/object/rct1/ride/rct1.ride.single_person_swinging_cars.parkobj</Path>
             <Path fileType="data">/usr/share/openrct2/object/rct1/ride/rct1.ride.small_monorail_cars.parkobj</Path>
+            <Path fileType="data">/usr/share/openrct2/object/rct1/ride/rct1.ride.spinning_cars.parkobj</Path>
             <Path fileType="data">/usr/share/openrct2/object/rct1/ride/rct1.ride.sports_cars.parkobj</Path>
             <Path fileType="data">/usr/share/openrct2/object/rct1/ride/rct1.ride.stand_up_trains.parkobj</Path>
             <Path fileType="data">/usr/share/openrct2/object/rct1/ride/rct1.ride.steam_trains.parkobj</Path>
@@ -1198,18 +1200,18 @@
             <Path fileType="data">/usr/share/openrct2/object/rct2/scenery_wall/rct2.scenery_wall.wswg.json</Path>
             <Path fileType="data">/usr/share/openrct2/object/rct2/scenery_wall/rct2.scenery_wall.wwtw.json</Path>
             <Path fileType="data">/usr/share/openrct2/object/rct2/scenery_wall/rct2.scenery_wall.wwtwa.json</Path>
-            <Path fileType="data">/usr/share/openrct2/object/rct2/station/rct2.station.abstract.json</Path>
-            <Path fileType="data">/usr/share/openrct2/object/rct2/station/rct2.station.canvas_tent.json</Path>
-            <Path fileType="data">/usr/share/openrct2/object/rct2/station/rct2.station.castle_brown.json</Path>
-            <Path fileType="data">/usr/share/openrct2/object/rct2/station/rct2.station.castle_grey.json</Path>
-            <Path fileType="data">/usr/share/openrct2/object/rct2/station/rct2.station.classical.json</Path>
-            <Path fileType="data">/usr/share/openrct2/object/rct2/station/rct2.station.jungle.json</Path>
-            <Path fileType="data">/usr/share/openrct2/object/rct2/station/rct2.station.log.json</Path>
-            <Path fileType="data">/usr/share/openrct2/object/rct2/station/rct2.station.pagoda.json</Path>
-            <Path fileType="data">/usr/share/openrct2/object/rct2/station/rct2.station.plain.json</Path>
-            <Path fileType="data">/usr/share/openrct2/object/rct2/station/rct2.station.snow.json</Path>
-            <Path fileType="data">/usr/share/openrct2/object/rct2/station/rct2.station.space.json</Path>
-            <Path fileType="data">/usr/share/openrct2/object/rct2/station/rct2.station.wooden.json</Path>
+            <Path fileType="data">/usr/share/openrct2/object/rct2/station/rct2.station.abstract.parkobj</Path>
+            <Path fileType="data">/usr/share/openrct2/object/rct2/station/rct2.station.canvas_tent.parkobj</Path>
+            <Path fileType="data">/usr/share/openrct2/object/rct2/station/rct2.station.castle_brown.parkobj</Path>
+            <Path fileType="data">/usr/share/openrct2/object/rct2/station/rct2.station.castle_grey.parkobj</Path>
+            <Path fileType="data">/usr/share/openrct2/object/rct2/station/rct2.station.classical.parkobj</Path>
+            <Path fileType="data">/usr/share/openrct2/object/rct2/station/rct2.station.jungle.parkobj</Path>
+            <Path fileType="data">/usr/share/openrct2/object/rct2/station/rct2.station.log.parkobj</Path>
+            <Path fileType="data">/usr/share/openrct2/object/rct2/station/rct2.station.pagoda.parkobj</Path>
+            <Path fileType="data">/usr/share/openrct2/object/rct2/station/rct2.station.plain.parkobj</Path>
+            <Path fileType="data">/usr/share/openrct2/object/rct2/station/rct2.station.snow.parkobj</Path>
+            <Path fileType="data">/usr/share/openrct2/object/rct2/station/rct2.station.space.parkobj</Path>
+            <Path fileType="data">/usr/share/openrct2/object/rct2/station/rct2.station.wooden.parkobj</Path>
             <Path fileType="data">/usr/share/openrct2/object/rct2/terrain_edge/rct2.terrain_edge.ice.parkobj</Path>
             <Path fileType="data">/usr/share/openrct2/object/rct2/terrain_edge/rct2.terrain_edge.rock.parkobj</Path>
             <Path fileType="data">/usr/share/openrct2/object/rct2/terrain_edge/rct2.terrain_edge.wood_black.parkobj</Path>
@@ -1386,7 +1388,7 @@
             <Path fileType="data">/usr/share/openrct2/object/rct2tt/scenery_large/rct2tt.scenery_large.jailxx17.json</Path>
             <Path fileType="data">/usr/share/openrct2/object/rct2tt/scenery_large/rct2tt.scenery_large.jailxx18.json</Path>
             <Path fileType="data">/usr/share/openrct2/object/rct2tt/scenery_large/rct2tt.scenery_large.jetplan1.json</Path>
-            <Path fileType="data">/usr/share/openrct2/object/rct2tt/scenery_large/rct2tt.scenery_large.jetplan2.json</Path>
+            <Path fileType="data">/usr/share/openrct2/object/rct2tt/scenery_large/rct2tt.scenery_large.jetplan2.parkobj</Path>
             <Path fileType="data">/usr/share/openrct2/object/rct2tt/scenery_large/rct2tt.scenery_large.jetplan3.json</Path>
             <Path fileType="data">/usr/share/openrct2/object/rct2tt/scenery_large/rct2tt.scenery_large.majoroak.json</Path>
             <Path fileType="data">/usr/share/openrct2/object/rct2tt/scenery_large/rct2tt.scenery_large.mcastl01.json</Path>
@@ -1987,11 +1989,11 @@
             <Path fileType="data">/usr/share/openrct2/object/rct2ww/scenery_large/rct2ww.scenery_large.3x3mantr.json</Path>
             <Path fileType="data">/usr/share/openrct2/object/rct2ww/scenery_large/rct2ww.scenery_large.50rocket.json</Path>
             <Path fileType="data">/usr/share/openrct2/object/rct2ww/scenery_large/rct2ww.scenery_large.adultele.json</Path>
-            <Path fileType="data">/usr/share/openrct2/object/rct2ww/scenery_large/rct2ww.scenery_large.afrclion.json</Path>
-            <Path fileType="data">/usr/share/openrct2/object/rct2ww/scenery_large/rct2ww.scenery_large.afrrhino.json</Path>
-            <Path fileType="data">/usr/share/openrct2/object/rct2ww/scenery_large/rct2ww.scenery_large.afrzebra.json</Path>
+            <Path fileType="data">/usr/share/openrct2/object/rct2ww/scenery_large/rct2ww.scenery_large.afrclion.parkobj</Path>
+            <Path fileType="data">/usr/share/openrct2/object/rct2ww/scenery_large/rct2ww.scenery_large.afrrhino.parkobj</Path>
+            <Path fileType="data">/usr/share/openrct2/object/rct2ww/scenery_large/rct2ww.scenery_large.afrzebra.parkobj</Path>
             <Path fileType="data">/usr/share/openrct2/object/rct2ww/scenery_large/rct2ww.scenery_large.atomium.json</Path>
-            <Path fileType="data">/usr/share/openrct2/object/rct2ww/scenery_large/rct2ww.scenery_large.atractor.json</Path>
+            <Path fileType="data">/usr/share/openrct2/object/rct2ww/scenery_large/rct2ww.scenery_large.atractor.parkobj</Path>
             <Path fileType="data">/usr/share/openrct2/object/rct2ww/scenery_large/rct2ww.scenery_large.bamborf1.json</Path>
             <Path fileType="data">/usr/share/openrct2/object/rct2ww/scenery_large/rct2ww.scenery_large.bamborf2.json</Path>
             <Path fileType="data">/usr/share/openrct2/object/rct2ww/scenery_large/rct2ww.scenery_large.bamborf3.json</Path>
@@ -2018,8 +2020,8 @@
             <Path fileType="data">/usr/share/openrct2/object/rct2ww/scenery_large/rct2ww.scenery_large.gwoctur1.json</Path>
             <Path fileType="data">/usr/share/openrct2/object/rct2ww/scenery_large/rct2ww.scenery_large.gwoctur2.json</Path>
             <Path fileType="data">/usr/share/openrct2/object/rct2ww/scenery_large/rct2ww.scenery_large.helipad.json</Path>
-            <Path fileType="data">/usr/share/openrct2/object/rct2ww/scenery_large/rct2ww.scenery_large.hippo01.json</Path>
-            <Path fileType="data">/usr/share/openrct2/object/rct2ww/scenery_large/rct2ww.scenery_large.hippo02.json</Path>
+            <Path fileType="data">/usr/share/openrct2/object/rct2ww/scenery_large/rct2ww.scenery_large.hippo01.parkobj</Path>
+            <Path fileType="data">/usr/share/openrct2/object/rct2ww/scenery_large/rct2ww.scenery_large.hippo02.parkobj</Path>
             <Path fileType="data">/usr/share/openrct2/object/rct2ww/scenery_large/rct2ww.scenery_large.icefor01.json</Path>
             <Path fileType="data">/usr/share/openrct2/object/rct2ww/scenery_large/rct2ww.scenery_large.icefor02.json</Path>
             <Path fileType="data">/usr/share/openrct2/object/rct2ww/scenery_large/rct2ww.scenery_large.indianst.json</Path>
@@ -2592,6 +2594,7 @@
             <Path fileType="data">/usr/share/openrct2/object/rct2ww/scenery_wall/rct2ww.scenery_wall.wwind04.json</Path>
             <Path fileType="data">/usr/share/openrct2/object/rct2ww/scenery_wall/rct2ww.scenery_wall.wwind05.json</Path>
             <Path fileType="data">/usr/share/openrct2/object/rct2ww/scenery_wall/rct2ww.scenery_wall.wwind06.json</Path>
+            <Path fileType="data">/usr/share/openrct2/palettes.dat</Path>
             <Path fileType="data">/usr/share/openrct2/scenario_patches/0153987.parkpatch</Path>
             <Path fileType="data">/usr/share/openrct2/scenario_patches/020ed74.parkpatch</Path>
             <Path fileType="data">/usr/share/openrct2/scenario_patches/081feb1.parkpatch</Path>
@@ -2726,9 +2729,9 @@
         </Files>
     </Package>
     <History>
-        <Update release="60">
-            <Date>2025-10-04</Date>
-            <Version>0.4.27</Version>
+        <Update release="68">
+            <Date>2026-05-17</Date>
+            <Version>0.5.1</Version>
             <Comment>Packaging update</Comment>
             <Name>David Harder</Name>
             <Email>david@davidjharder.ca</Email>

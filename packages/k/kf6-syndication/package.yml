@@ -1,11 +1,13 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kf6-syndication
-version    : 6.19.0
-release    : 26
+version    : 6.26.0
+release    : 33
 source     :
-    - https://download.kde.org/stable/frameworks/6.19/syndication-6.19.0.tar.xz : 161110744d5bc7b9b0f86068d85018da6129c8c07aa4749c9a18bdeb75c17166
+    - https://download.kde.org/stable/frameworks/6.26/syndication-6.26.0.tar.xz : 6130b8bc976cb078eda34b833ecd558a156b4e6bc4cb55e57ac362cb2998ba47
 homepage   : https://community.kde.org/Frameworks
 license    :
     - BSD-2-Clause
+    - CC0-1.0
     - GPL-2.0-or-later
     - LGPL-2.0-or-later
 component  : programming.library
@@ -22,3 +24,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*

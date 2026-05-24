@@ -1,13 +1,15 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : libmpdclient
-version    : '2.19'
-release    : 8
+version    : '2.24'
+release    : 10
 homepage   : https://www.musicpd.org/libs/libmpdclient/
 source     :
-    - https://github.com/MusicPlayerDaemon/libmpdclient/archive/refs/tags/v2.19.tar.gz : 12b566b75c3b6789ff8fc94698497d1f3fbaf0cbf9fa6c3a1e3906ef0d2bcbbb
-license    : BSD-3-Clause
+    - https://github.com/MusicPlayerDaemon/libmpdclient/archive/refs/tags/v2.24.tar.gz : b19ec4c10314f5b55e1bca2a34c299effbbb2f1f9b5113b331b7ba789f0c17d1
+license    :
+    - BSD-2-Clause
+    - BSD-3-Clause
 component  : multimedia.library
-summary    : A stable, documented, asynchronous API library for interfacing MPD in
-    the C, C++ & Objective C languages.
+summary    : A stable, documented, asynchronous API library for interfacing MPD in the C, C++ & Objective C languages.
 description: |
     A stable, documented, asynchronous API library for interfacing MPD in the C, C++ & Objective C languages.
 setup      : |
@@ -16,3 +18,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*

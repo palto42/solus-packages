@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : fooyin
-version    : 0.9.2
-release    : 14
+version    : 0.10.7
+release    : 23
 source     :
-    - https://github.com/fooyin/fooyin/archive/refs/tags/v0.9.2.tar.gz : a3b0e880047790d169223983d4f9a26a2196499275d57321b15e9578dd716a94
+    - https://github.com/fooyin/fooyin/archive/refs/tags/v0.10.7.tar.gz : 7830c129e3bff940b12e2325da3580a54ac45d8653d3a2d43548d46b5d315467
 homepage   : https://www.fooyin.org/
 license    : GPL-3.0-or-later
 component  : multimedia.audio
@@ -22,9 +23,11 @@ builddeps  :
     - pkgconfig(sndfile)
     - pkgconfig(taglib)
     - kdsingleapplication-devel
+    - qcoro-qt6-devel
 setup      : |
     %cmake_ninja
 build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license COPYING

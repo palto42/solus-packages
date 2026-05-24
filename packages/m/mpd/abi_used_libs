@@ -6,10 +6,10 @@ libasound.so.2
 libaudiofile.so.1
 libavahi-client.so.3
 libavahi-common.so.3
-libavcodec.so.61
-libavfilter.so.10
-libavformat.so.61
-libavutil.so.59
+libavcodec.so.62
+libavfilter.so.11
+libavformat.so.62
+libavutil.so.60
 libbz2.so.1.0
 libc.so.6
 libcdio.so.19
@@ -23,10 +23,10 @@ libfaad.so.2
 libfluidsynth.so.3
 libfmt.so.12
 libgcc_s.so.1
-libicui18n.so.76
-libicuuc.so.76
-libid3tag.so.0.16.2
-libiso9660.so.11
+libicui18n.so.78
+libicuuc.so.78
+libid3tag.so.0
+libiso9660.so.12
 libixml.so.11
 libjack.so.0
 libm.so.6
@@ -47,7 +47,6 @@ libpipewire-0.3.so.0
 libpulse.so.0
 libsamplerate.so.0
 libshout.so.3
-libsndfile.so.1
 libsndio.so.7
 libsoxr.so.0
 libsqlite3.so.0

@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : ffmpegthumbnailer
-version    : 2.2.2
-release    : 12
+version    : 2.3.0
+release    : 13
 source     :
-    - https://github.com/dirkvdb/ffmpegthumbnailer/releases/download/2.2.2/ffmpegthumbnailer-2.2.2.tar.bz2 : 1cb24059c38223f657b300c84dd80491b7040d4b69471c4fea69be862bc99b5b
+    - https://github.com/dirkvdb/ffmpegthumbnailer/archive/refs/tags/v2.3.0.tar.gz : ddf561e294385f07d0bd5a28d0aab9de79b8dbaed29b576f206d58f3df79b508
 license    : GPL-2.0-or-later
 component  : multimedia.library
 homepage   : https://github.com/dirkvdb/ffmpegthumbnailer
@@ -14,8 +15,6 @@ builddeps  :
     - pkgconfig(libpng)
     - pkgconfig(libturbojpeg)
 setup      : |
-    %patch -p1 -i $pkgfiles/ffmpeg-5.patch
-    %patch -p1 -i $pkgfiles/ffmpeg-5-1.patch
     %cmake_ninja -DENABLE_GIO=ON -DENABLE_THUMBNAILER=ON
 build      : |
     %ninja_build

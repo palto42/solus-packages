@@ -1,3 +1,4 @@
+hypridle:_IO_stdin_used
 hypridle:wl_buffer_interface
 hypridle:wl_callback_interface
 hypridle:wl_compositor_interface

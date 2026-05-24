@@ -1,11 +1,13 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kf6-prison
-version    : 6.19.0
-release    : 25
+version    : 6.26.0
+release    : 35
 source     :
-    - https://download.kde.org/stable/frameworks/6.19/prison-6.19.0.tar.xz : bfd623f95e00af25ec49966679010c411ef8798b7c1a31c258484c31067d5356
+    - https://download.kde.org/stable/frameworks/6.26/prison-6.26.0.tar.xz : 0414ddc310bca5eecfc1a6f9d4463b8a6d81894db4128ac43b4f8c1e14b73b5b
 homepage   : https://community.kde.org/Frameworks
 license    :
     - BSD-3-Clause
+    - CC0-1.0
     - MIT
 component  : desktop.library
 summary    : Qt api to produce QRCode barcode
@@ -32,3 +34,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*

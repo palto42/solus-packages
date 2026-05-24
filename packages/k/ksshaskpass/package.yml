@@ -1,10 +1,13 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : ksshaskpass
-version    : 6.4.5
-release    : 125
+version    : 6.6.5
+release    : 138
 source     :
-    - https://download.kde.org/stable/plasma/6.4.5/ksshaskpass-6.4.5.tar.xz : 5b2da11937079c61919755c3d55ff9bfc5bf97ed1dbf080b43c0c2af50e354da
+    - https://download.kde.org/stable/plasma/6.6.5/ksshaskpass-6.6.5.tar.xz : b0e88a2546a39a269578eedef5ea28149a719a7ac9757019e9ff3f9254d75a42
 homepage   : https://www.kde.org/workspaces/plasmadesktop/
-license    : GPL-2.0-or-later
+license    :
+    - CC0-1.0
+    - GPL-2.0-or-later
 component  : desktop.kde.core
 summary    : Front-end for ssh-add which stores the password of the ssh key in KWallet
 description: |
@@ -15,6 +18,8 @@ builddeps  :
     - kf6-ki18n-devel
     - kf6-kwallet-devel
     - kf6-kwidgetsaddons-devel
+    - qt6-base-private-devel
+    - qtkeychain-qt6-devel
 clang      : true
 optimize   :
     - speed
@@ -25,3 +30,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*

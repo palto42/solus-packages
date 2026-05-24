@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : libadwaita
-version    : 1.7.7
-release    : 32
+version    : 1.9.0
+release    : 38
 source     :
-    - https://download.gnome.org/sources/libadwaita/1.7/libadwaita-1.7.7.tar.xz : 62d1f54c6ce6e9f48d72437e151e4404f6cfa21eb0b41dbc20563700940b295b
+    - https://download.gnome.org/sources/libadwaita/1.9/libadwaita-1.9.0.tar.xz : 817837bf06363db5bbfce66085136eff1436af6625dfabff3ca08b87bfca1b6b
 homepage   : https://gnome.pages.gitlab.gnome.org/libadwaita/
 license    : LGPL-2.1-or-later
 component  : desktop.library

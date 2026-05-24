@@ -1,13 +1,13 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 # Updating this package? Run the create-vpx-testdata.sh script and if the hash of the test data changes
 # then let Solus staff know so they can update the new test data to sources.getsol.us
 name       : libvpx
-version    : 1.14.1
-release    : 20
+version    : 1.16.0
+release    : 23
 source     :
-    - https://github.com/webmproject/libvpx/archive/refs/tags/v1.14.1.tar.gz : 901747254d80a7937c933d03bd7c5d41e8e6c883e0665fadcb172542167c7977
-    # - git|https://github.com/webmproject/libvpx.git : 4ac9c4ba32bde8beb86da2553f5e75a9c124fcc7
-    - https://sources.getsol.us/libvpx/libvpx-test-data-58786a964d522f66.tar.zst : 58786a964d522f667c64d67c9fbcbf27bea7a5077e9f328b5a02c067f489d4c2
-homepage   : http://www.webmproject.org/
+    - https://github.com/webmproject/libvpx/archive/refs/tags/v1.16.0.tar.gz : 7a479a3c66b9f5d5542a4c6a1b7d3768a983b1e5c14c60a9396edc9b649e015c
+    - https://sources.getsol.us/libvpx/libvpx-test-data-23e5b86ce37d7cef.tar.zst : 23e5b86ce37d7cef8571fdd66d743de5906ee3e481dbbf6d17a5b0cc031bd61f
+homepage   : https://www.webmproject.org/
 license    : MIT
 component  : multimedia.codecs
 summary    : Reference implementation of the VP8 & VP9 codec
@@ -15,7 +15,6 @@ description: |
     Reference implementation of the VP8 & VP9 codec
 emul32     : true
 avx2       : true
-clang      : true
 optimize   :
     - lto
 builddeps  :
@@ -50,9 +49,7 @@ profile    : |
     LD_LIBRARY_PATH="$workdir:$LD_LIBRARY_PATH" %make exampletest-no-data-check
 install    : |
     %make_install
-
-    # No point in this file
-    rm -v $installdir/%libdir%/libvpx.so.9.0
+    %install_license AUTHORS LICENSE
 check      : |
     unset LD_PRELOAD
     LD_LIBRARY_PATH="$workdir:$LD_LIBRARY_PATH" %make exampletest-no-data-check

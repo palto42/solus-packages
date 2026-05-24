@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : v4l2loopback
-version    : 0.15.1
-release    : 325
+version    : 0.15.3
+release    : 347
 source     :
-    - https://github.com/umlaeute/v4l2loopback/archive/v0.15.1.tar.gz : 710e087bc786b7d9cdca48322494c360ef59d48c6a26f6c0053ea8e71efd3ee1
+    - https://github.com/umlaeute/v4l2loopback/archive/v0.15.3.tar.gz : 2758ea287da8dd34a0421c0dd50094a0342d22414e1bbccbbe92f41bbaa26b2d
 license    : GPL-2.0-or-later
 component  :
     - kernel.drivers

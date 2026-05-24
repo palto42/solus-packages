@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 # If you are updating this package please update nvidia-beta-driver as well if that package is on a lesser version than this one.
 # nvidia-beta-driver should always be ahead of nvidia-glx-driver version-wise or at the same version, never behind.
 name       : nvidia-glx-driver
-version    : '570.190'
-release    : 577
+version    : 580.159.03
+release    : 607
 source     :
-    - https://us.download.nvidia.com/XFree86/Linux-x86_64/570.190/NVIDIA-Linux-x86_64-570.190.run : a86058a7ed203bf769ea05b270fed279445f5d4e833eafefdfa7fa45feaab8fc
+    - https://us.download.nvidia.com/XFree86/Linux-x86_64/580.159.03/NVIDIA-Linux-x86_64-580.159.03.run : 32c85d99b0f640c9501f61b39ddad208fd0288d015c4fbc5fd0435c07783fa77
 extract    : false
 homepage   : https://nvidia.com
 license    :
@@ -72,13 +73,11 @@ patterns   :
         - /usr/lib64/kernel/initrd-com.solus-project.lts.*
         - /usr/lib64/modules/*.lts
         - /usr/share/metainfo/nvidia-lts.metainfo.xml
-        - /usr/share/icons/hicolor/64x64/apps/nvidia-lts.png
     - current :
         - /lib64/modules/*.current
         - /usr/lib64/kernel/initrd-com.solus-project.current.*
         - /usr/lib64/modules/*.current
         - /usr/share/metainfo/nvidia-current.metainfo.xml
-        - /usr/share/icons/hicolor/64x64/apps/nvidia-current.png
 strip      : false
 debug      : false
 builddeps  :
@@ -86,7 +85,6 @@ builddeps  :
     - pkgconfig(gtk+-3.0)
     - pkgconfig(libelf)
     - pkgconfig(xorg-server)
-    - appstream-glib
     - libglvnd-32bit
     - linux-current
     - linux-current-headers
@@ -102,6 +100,7 @@ setup      : |
 
     pushd kernel
     %patch -p2 -i $pkgfiles/make-modeset-fbdev-default.diff
+    %patch -p1 -i $pkgfiles/fix-hw-cursor-kde.patch
     popd
 
     # Prepare kernel trees
@@ -116,12 +115,12 @@ build      : |
     %make -C current_kernel SYSSRC="/lib/modules/%kernel_version_current%/build"
 install    : |
     # Install LTS kernel drivers
-    install -D -d -m 00755 $installdir/usr/lib64/modules/%kernel_version_lts%/kernel/drivers/video
-    install -m 00644 lts_kernel/*.ko $installdir/usr/lib64/modules/%kernel_version_lts%/kernel/drivers/video/.
+    install -D -d -m 00755 $installdir/usr/lib64/modules/%kernel_version_lts%/extra/drivers/video
+    install -m 00644 lts_kernel/*.ko $installdir/usr/lib64/modules/%kernel_version_lts%/extra/drivers/video/.
 
     # Install current kernel drivers
-    install -D -d -m 00755 $installdir/usr/lib64/modules/%kernel_version_current%/kernel/drivers/video
-    install -m 00644 current_kernel/*.ko $installdir/usr/lib64/modules/%kernel_version_current%/kernel/drivers/video/.
+    install -D -d -m 00755 $installdir/usr/lib64/modules/%kernel_version_current%/extra/drivers/video
+    install -m 00644 current_kernel/*.ko $installdir/usr/lib64/modules/%kernel_version_current%/extra/drivers/video/.
 
     # Prepare modaliases from the LTS kernel
     sh -e $pkgfiles/nvidia_supported nvidia ${package} README.txt lts_kernel/nvidia/nv-kernel.o_binary > modalias
@@ -201,12 +200,9 @@ install    : |
     install -Dm00644 $pkgfiles/nvidia-current.metainfo.xml $installdir/usr/share/metainfo/nvidia-current.metainfo.xml
     install -Dm00644 $pkgfiles/nvidia-lts.metainfo.xml $installdir/usr/share/metainfo/nvidia-lts.metainfo.xml
     install -Dm00644 $pkgfiles/nvidia-32bit.metainfo.xml $installdir/usr/share/metainfo/nvidia-32bit.metainfo.xml
-    # TODO: Can we not duplicate the icon? https://www.freedesktop.org/software/appstream/docs/chap-CatalogData.html#tag-ct-icon
-    install -D -m 00644 nvidia-settings.png $installdir/usr/share/icons/hicolor/64x64/apps/nvidia-lts.png
-    install -D -m 00644 nvidia-settings.png $installdir/usr/share/icons/hicolor/64x64/apps/nvidia-current.png
     # Add modalias provides to appstream metainfo
-    python3 $pkgfiles/parse-supported-gpus.py supported-gpus/supported-gpus.json | xargs appstream-util add-provide $installdir/usr/share/metainfo/nvidia-current.metainfo.xml modalias
-    python3 $pkgfiles/parse-supported-gpus.py supported-gpus/supported-gpus.json | xargs appstream-util add-provide $installdir/usr/share/metainfo/nvidia-lts.metainfo.xml modalias
+    python3 $pkgfiles/parse-supported-gpus.py supported-gpus/supported-gpus.json | $pkgfiles/modalias-util.py $installdir/usr/share/metainfo/nvidia-current.metainfo.xml
+    python3 $pkgfiles/parse-supported-gpus.py supported-gpus/supported-gpus.json | $pkgfiles/modalias-util.py $installdir/usr/share/metainfo/nvidia-lts.metainfo.xml
 
     # Vulkan
     install -Dm00644 nvidia_icd.json $installdir/usr/share/vulkan/icd.d/10_nvidia.json
@@ -227,14 +223,19 @@ install    : |
 
     # Install NVIDIA NGX dll for use with Proton and Wine
     install -D -d -m 00755 $installdir/%libdir%/nvidia/wine
-    install -m 00644 *nvngx.dll $installdir/%libdir%/nvidia/wine/.
+    install -m 00644 *nvngx*.dll $installdir/%libdir%/nvidia/wine/.
 
-    # Blacklist nouveau
-    install -D -d -m 00755 $installdir/usr/lib64/modprobe.d
-    echo "blacklist nouveau" > $installdir/usr/lib64/modprobe.d/nvidia.conf
+    # Blacklist nouveau/nova
+    install -D -m 00644 $pkgfiles/nvidia-blacklist.conf $installdir/usr/lib64/modprobe.d/nvidia-blacklist.conf
+
+    # Nvidia module parameters
+    install -D -m 00644 $pkgfiles/nvidia.conf $installdir/usr/lib64/modprobe.d/nvidia.conf
+
+    # Force uvm load
+    install -D -m 00644 $pkgfiles/nvidia-uvm.conf $installdir/usr/lib64/modules-load.d/nvidia-uvm.conf
 
     # Fixes Wayland sleep
-    install -D -m 00644 $pkgfiles/nvidia-sleep.modprobe $installdir/usr/lib64/modprobe.d/nvidia-sleep.conf
+    install -D -m 00644 $pkgfiles/nvidia-sleep.conf $installdir/usr/lib64/modprobe.d/nvidia-sleep.conf
 
     # Init
     install -D -m 00644 nvidia-persistenced-init/systemd/nvidia-persistenced.service.template \
@@ -280,13 +281,24 @@ install    : |
 
     # Generate per-kernel initrd with embedded nvidia kernel drivers
     for i in current lts; do
-        mkdir -p init-$i/dracut-nvidia
+        if [[ ${i} == "current" ]]; then
+            _kernel=%kernel_version_current%
+        else
+            _kernel=%kernel_version_lts%
+        fi
+
+        mkdir -p init-$i/usr/lib64/modules/${_kernel}/extra/drivers/video
 
         # This file triggers a dracut service that regenerates the depmod index files
         touch init-$i/.dracut-depmod-invalidate
+        # Blacklist nouveau/nova
+        install -D -m 00644 $pkgfiles/nvidia-blacklist.conf init-$i/usr/lib64/modprobe.d/nvidia-blacklist.conf
+
+        # Nvidia module parameters
+        install -D -m 00644 $pkgfiles/nvidia.conf init-$i/usr/lib64/modprobe.d/nvidia.conf
 
         pushd $installdir/usr/lib64/modules/*.$i
-        find . -name "*.ko" -print -exec install -Dm0644 "{}" "${workdir}/init-$i/dracut-nvidia" \;
+        find . -name "*.ko" -print -exec cp -v "{}" "${workdir}/init-$i/usr/lib64/modules/${_kernel}/extra/drivers/video" \;
         popd
 
         # Strip the debug symobls (we can get them from the normal kernel modules).
@@ -310,28 +322,11 @@ install    : |
     install -D -m 00644 $workdir/initrd-lts $installdir/usr/lib64/kernel/initrd-com.solus-project.lts.$lts_string.nvidia
 
     # Generate single initrd (to be shared between current and lts) with the GSP firmware
-    mkdir -p init-firmware/dracut-firmware-nvidia-proprietary && pushd init-firmware
-    cp -rav $installdir/usr/lib64/firmware/nvidia/* dracut-firmware-nvidia-proprietary/
+    mkdir -p init-firmware/usr/lib64/firmware/nvidia && pushd init-firmware/
+    cp -rav $installdir/usr/lib64/firmware/nvidia/* usr/lib64/firmware/nvidia/
     find . | cpio --create --format='newc' | zstd -19 > $workdir/initrd-firmware
     popd
     install -D -m 00644 $workdir/initrd-firmware $installdir/usr/lib64/kernel/initrd.d/com.solus-project.nvidia-firmware
 
     # Compress modules with zstd. TODO fix this so that we're able to capture the debug symbols (needs ypkg changes)
     find "$installdir" -name '*.ko' -exec strip --strip-unneeded {} \; -exec zstd -19 {} \; -exec rm -v {} \;
-
-    # Usr-merge
-    install -dm00755 $installdir/lib64
-    pushd $installdir/usr
-    file_list=()
-    while IFS=  read -r -d $'\0'; do
-        file_list+=("$REPLY")
-    done < <(find lib64/modules -type f -print0)
-    while IFS=  read -r -d $'\0'; do
-        file_list+=("$REPLY")
-    done < <(find lib64/firmware -type f -print0)
-    for file in "${file_list[@]}"; do
-        parent=$(dirname "$file")
-        install -dm00755 "$installdir/$parent"
-        ln -srv "$installdir/usr/$file" "$installdir/$file"
-    done
-    popd

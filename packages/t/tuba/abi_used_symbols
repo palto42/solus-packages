@@ -60,7 +60,6 @@ libadwaita-1.so.0:adw_breakpoint_bin_get_type
 libadwaita-1.so.0:adw_breakpoint_bin_new
 libadwaita-1.so.0:adw_breakpoint_bin_remove_breakpoint
 libadwaita-1.so.0:adw_breakpoint_bin_set_child
-libadwaita-1.so.0:adw_breakpoint_condition_get_type
 libadwaita-1.so.0:adw_breakpoint_condition_new_length
 libadwaita-1.so.0:adw_breakpoint_new
 libadwaita-1.so.0:adw_button_content_get_label
@@ -1241,12 +1240,12 @@ libgtksourceview-5.so.0:gtk_source_view_get_completion
 libgtksourceview-5.so.0:gtk_source_view_get_type
 libgtksourceview-5.so.0:gtk_source_view_new
 libgtksourceview-5.so.0:gtk_source_view_set_tab_width
-libicuuc.so.76:ubrk_close_76
-libicuuc.so.76:ubrk_next_76
-libicuuc.so.76:ubrk_open_76
-libicuuc.so.76:ubrk_setUText_76
-libicuuc.so.76:utext_close_76
-libicuuc.so.76:utext_openUTF8_76
+libicuuc.so.78:ubrk_close_78
+libicuuc.so.78:ubrk_next_78
+libicuuc.so.78:ubrk_open_78
+libicuuc.so.78:ubrk_setUText_78
+libicuuc.so.78:utext_close_78
+libicuuc.so.78:utext_openUTF8_78
 libjson-glib-1.0.so.0:json_array_add_element
 libjson-glib-1.0.so.0:json_array_foreach_element
 libjson-glib-1.0.so.0:json_array_get_element
@@ -1276,6 +1275,7 @@ libjson-glib-1.0.so.0:json_gobject_serialize
 libjson-glib-1.0.so.0:json_gobject_to_data
 libjson-glib-1.0.so.0:json_node_get_array
 libjson-glib-1.0.so.0:json_node_get_int
+libjson-glib-1.0.so.0:json_node_get_node_type
 libjson-glib-1.0.so.0:json_node_get_object
 libjson-glib-1.0.so.0:json_node_get_string
 libjson-glib-1.0.so.0:json_node_get_type

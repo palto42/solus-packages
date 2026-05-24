@@ -1,14 +1,19 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : bluedevil
-version    : 6.4.5
-release    : 127
+version    : 6.6.5
+release    : 140
 source     :
-    - https://download.kde.org/stable/plasma/6.4.5/bluedevil-6.4.5.tar.xz : fb3a07c79ea980cd55f92ad03b8ceb2595fd7a18d70f6fd2c4d9e3538a84d71e
+    - https://download.kde.org/stable/plasma/6.6.5/bluedevil-6.6.5.tar.xz : 4396447a83b5dab5c4867690824180c36f4f3922107463722fed42202d8a45ff
 homepage   : https://www.kde.org/workspaces/plasmadesktop/
 license    :
-    - BSD-3-Clause
+    - CC0-1.0
+    - GPL-2.0-only
     - GPL-2.0-or-later
+    - GPL-3.0-only
+    - GPL-3.0-or-later
     - LGPL-2.0-or-later
     - LGPL-2.1-only
+    - LGPL-3.0-only
 component  : desktop.kde.core
 summary    : Bluetooth stack for KDE Plasma
 description: |
@@ -40,3 +45,5 @@ build      : |
 install    : |
     %ninja_install
     rm -rf $installdir/usr/share/doc
+
+    %install_license LICENSES/*

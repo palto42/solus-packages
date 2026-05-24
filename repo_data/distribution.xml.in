@@ -367,10 +367,8 @@
 		<Package>libykneomgr-dbginfo</Package>
 		<Package>libykneomgr-devel</Package>
 
-		<!-- Qt4 support dropped, Qt5 support folded into main packages. //-->
-		<Package>qscintilla-qt5</Package>
+		<!-- Qt4 support dropped //-->
 		<Package>qscintilla-qt5-devel</Package>
-		<Package>python-qscintilla-qt5</Package>
 
 		<!-- Qt4 only library which nothing uses, part of Qt5. //-->
 		<Package>qjson</Package>
@@ -3191,10 +3189,6 @@
 		<Package>kitematic</Package>
 		<Package>kitematic-dbginfo</Package>
 
-		<!-- Has major unresolved security issues, has a flatpak for those who don't care about that -->
-		<Package>mailspring</Package>
-		<Package>mailspring-dbginfo</Package>
-
 		<!-- Requires an EOL nodejs version, has a flatpak -->
 		<Package>mongosh</Package>
 		<Package>mongosh-dbginfo</Package>
@@ -3836,8 +3830,11 @@
 		<!-- Renamed to steam-devices -->
 		<Package>steam-udev-rules</Package>
 
-		<!-- Merged into main package -->
+		<!-- ROCm packages that are merged into main package -->
 		<Package>rocm-hip-devel</Package>
+		<Package>hsakmt</Package>
+		<Package>hsakmt-dbginfo</Package>
+		<Package>hsakmt-devel</Package>
 
 		<!-- No longer built by our package -->
 		<Package>libxfce4windowing-docs</Package>
@@ -3915,6 +3912,11 @@
 		<Package>python-importlib-metadata</Package>
 		<Package>python-pyppeteer</Package>
 
+		<!-- Archived upstream -->
+		<Package>libtimezonemap</Package>
+		<Package>libtimezonemap-dbginfo</Package>
+		<Package>libtimezonemap-devel</Package>
+
 		<!-- Replace by python-pyliblo3 -->
 		<Package>python-pyliblo</Package>
 		<Package>python-pyliblo-dbginfo</Package>
@@ -3976,6 +3978,15 @@
 		<Package>transgui</Package>
 		<Package>transgui-dbginfo</Package>
 
+		<!-- Archived upstream -->
+		<Package>gamehub</Package>
+		<Package>gamehub-dbginfo</Package>
+
+		<!-- All users moved to appstream -->
+		<Package>appstream-glib</Package>
+		<Package>appstream-glib-dbginfo</Package>
+		<Package>appstream-glib-devel</Package>
+
 		<!-- We can't get updates for this anymore -->
 		<Package>openssl-11</Package>
 		<Package>openssl-11-32bit</Package>
@@ -3984,5 +3995,411 @@
 		<Package>openssl-11-dbginfo</Package>
 		<Package>openssl-11-devel</Package>
 
+		<!-- Dead upstream -->
+		<Package>python-d2to1</Package>
+
+		<!-- Intermediary package, no longer needed -->
+		<Package>dotnet-cli</Package>
+
+		<!-- Declared upstream, This plugin is obsolete -->
+		<Package>python-setuptools-scm-git-archive</Package>
+
+		<!-- Python2 is DEAD -->
+		<Package>python</Package>
+		<Package>python-devel</Package>
+		<Package>python-dbginfo</Package>
+		<Package>python-tkinter</Package>
+		<Package>python-test</Package>
+		<Package>python-dbus</Package>
+		<Package>python-dbus-dbginfo</Package>
+		<Package>python-dbus-devel</Package>
+		<Package>python2-ordered-set</Package>
+		<Package>python2-cffi-dbginfo</Package>
+		<Package>python2-cffi</Package>
+		<Package>python2-gobject-dbginfo</Package>
+		<Package>python2-gobject-devel</Package>
+		<Package>python2-gobject</Package>
+		<Package>doflicky</Package>
+		<Package>python2-xattr</Package>
+		<Package>python2-xattr-dbginfo</Package>
+		<Package>python-pyliblzma</Package>
+		<Package>python-pyliblzma-dbginfo</Package>
+		<Package>comar</Package>
+		<Package>comar-api</Package>
+		<Package>comar-dbginfo</Package>
+		<Package>piksemel</Package>
+		<Package>piksemel-dbginfo</Package>
+		<Package>pisi</Package>
+		<Package>solus-sc-icons</Package>
+		<Package>solus-sc</Package>
+		<Package>pip2</Package>
+		<Package>python2-cairo</Package>
+		<Package>python2-cairo-dbginfo</Package>
+		<Package>python2-cairo-devel</Package>
+		<Package>python2-cparser</Package>
+		<Package>python2-setuptools</Package>
+
+		<!-- Merged back into plasma-workspace -->
+		<Package>sddm-wayland-experimental</Package>
+
+		<!-- Removed upstream for being Python -->
+		<Package>gedit-plugin-bracketcompletion</Package>
+		<Package>gedit-plugin-charmap</Package>
+		<Package>gedit-plugin-codecomment</Package>
+		<Package>gedit-plugin-colorpicker</Package>
+		<Package>gedit-plugin-joinlines</Package>
+		<Package>gedit-plugin-multiedit</Package>
+		<Package>gedit-plugin-sessionsaver</Package>
+		<Package>gedit-plugin-terminal</Package>
+
+		<!-- Dead upstream -->
+		<Package>python-appdirs</Package>
+
+		<!-- Static haskell-cabal-install build -->
+		<Package>haskell-async</Package>
+		<Package>haskell-base16-bytestring</Package>
+		<Package>haskell-base64-bytestring</Package>
+		<Package>haskell-cabal-install-solver</Package>
+		<Package>haskell-cabal-syntax</Package>
+		<Package>haskell-cryptohash-sha256</Package>
+		<Package>haskell-echo</Package>
+		<Package>haskell-ed25519</Package>
+		<Package>haskell-edit-distance</Package>
+		<Package>haskell-hackage-security</Package>
+		<Package>haskell-hashable</Package>
+		<Package>haskell-http</Package>
+		<Package>haskell-lukko</Package>
+		<Package>haskell-network</Package>
+		<Package>haskell-network-uri</Package>
+		<Package>haskell-regex-base</Package>
+		<Package>haskell-regex-posix</Package>
+		<Package>haskell-resolv</Package>
+		<Package>haskell-safe-exceptions</Package>
+		<Package>haskell-tar</Package>
+		<Package>haskell-th-compat</Package>
+		<Package>haskell-zlib</Package>
+
+		<!-- Replaced by hyprland-guiutils -->
+		<Package>hyprland-qutils</Package>
+		<Package>hyprland-qutils-dbginfo</Package>
+
+		<!-- Replaced by iproute2, deprecated upstream -->
+		<Package>bridge-utils</Package>
+		<Package>bridge-utils-dbginfo</Package>
+
+		<!-- Deprecated upstream -->
+		<Package>xwaylandvideobridge</Package>
+		<Package>xwaylandvideobridge-dbginfo</Package>
+
+		<!-- No longer produced -->
+		<Package>appstream-generator-devel</Package>
+
+		<!-- Devel package should be included in main package -->
+		<Package>lsfg-vk-devel</Package>
+
+		<!-- All packages have been moved to libwebkitgtk-4.1 -->
+		<Package>libwebkit-gtk</Package>
+		<Package>libwebkit-gtk-devel</Package>
+		<Package>libwebkit-gtk-dbginfo</Package>
+
+		<!-- Dead upstream, use rawtherapee -->
+		<Package>rawstudio</Package>
+		<Package>rawstudio-dbginfo</Package>
+		<Package>rawstudio-devel</Package>
+
+		<!-- Dead upstream -->
+		<Package>uget</Package>
+		<Package>uget-dbginfo</Package>
+
+		<!-- Deprecated upstream -->
+		<Package>pywal</Package>
+
+		<!-- Moved to different package name -->
+		<Package>network-manager-32bit</Package>
+		<Package>network-manager-32bit-devel</Package>
+		<Package>network-manager-32bit-dbginfo</Package>
+
+		<!-- Functionaility merged to python-proton-vpn-core-api -->
+		<Package>python-proton-vpn-network-manager</Package>
+
+		<!-- No longer builds in Package -->
+		<Package>enca-docs</Package>
+
+		<!-- Dead upstream, use yubikey-manager -->
+		<Package>yubikey-personalization-gui</Package>
+		<Package>yubikey-personalization-gui-dbginfo</Package>
+
+		<!-- No release since 2017, minimal activity, doesn't run -->
+		<Package>mkchromecast</Package>
+
+		<!-- Dead Upstream, no deps -->
+		<Package>unity-gtk-module</Package>
+		<Package>unity-gtk-module-dbginfo</Package>
+		<Package>unity-gtk-module-devel</Package>
+
+		<!-- Unmaintained, does not build -->
+		<Package>emscripten</Package>
+
+		<!-- Replaced by arduinio-ide -->
+		<Package>arduino</Package>
+		<Package>arduino-dbginfo</Package>
+
+		<!-- Unmaintained -->
+		<Package>ipcalc</Package>
+
+		<!-- Not used by anything -->
+		<Package>opencl-clang</Package>
+		<Package>opencl-clang-dbginfo</Package>
+		<Package>opencl-clang-devel</Package>
+
+		<Package>alan</Package>
+		<Package>alan-dbginfo</Package>
+
+		<!-- Deprecated Upstream -->
+		<Package>cantata</Package>
+		<Package>cantata-dbginfo</Package>
+
+		<!-- No maintainer, hard to package -->
+		<Package>wraith-master</Package>
+		<Package>wraith-master-dbginfo</Package>
+
+		<!-- No longer used to build anything -->
+		<Package>kotlin</Package>
+		<Package>kotlin-dbginfo</Package>
+		<Package>kotlin-native</Package>
+		<Package>kotlin-native-dbginfo</Package>
+
+		<!-- Remove all cosmic components -->
+		<Package>cosmic-app-library</Package>
+		<Package>cosmic-app-library-dbginfo</Package>
+		<Package>cosmic-applets </Package>
+		<Package>cosmic-applets-dbginfo</Package>
+		<Package>cosmic-comp</Package>
+		<Package>cosmic-comp-dbginfo</Package>
+		<Package>cosmic-icons</Package>
+		<Package>cosmic-panel</Package>
+		<Package>cosmic-panel-dbginfo</Package>
+
+		<!-- No longer provided with wine >= 11.0 -->
+        <Package>wine-32bit</Package>
+        <Package>wine-32bit-devel</Package>
+
+        <!-- No release since 2020 and requires ancient Python -->
+        <Package>playonlinux</Package>
+
+        <!-- Uses removed VapourSynth API -->
+        <Package>avidemux</Package>
+        <Package>avidemux-dbginfo</Package>
+        <Package>avidemux-devel</Package>
+
+        <!-- Prefer Bazelisk instead, maintaining is a pain -->
+        <Package>bazel</Package>
+
+        <!-- There is no reason for us to package this -->
+        <Package>python-django</Package>
+
+        <!-- No longer exists -->
+        <Package>scx-scheds-devel</Package>
+
+		<!-- .net 8 EOL -->
+		<Package>dotnet-8</Package>
+		<Package>dotnet-8-sdk</Package>
+		<Package>dotnet-8-source-built-artifacts</Package>
+
+		<!-- Too difficult to build & maintain -->
+		<Package>rstudio</Package>
+		<Package>rstudio-dbginfo</Package>
+
+		<!-- No longer needed separately -->
+		<Package>python-cryptography-vectors</Package>
+
+		<!-- No longer builds, Not updated in over a decade -->
+		<Package>ninvaders</Package>
+		<Package>ninvaders-dbginfo</Package>
+
+		<!-- This probably hasn't built in years -->
+		<Package>opentoonz</Package>
+		<Package>opentoonz-dbginfo</Package>
+
+		<!-- Archived upstream -->
+		<Package>vinagre</Package>
+		<Package>vinagre-dbginfo</Package>
+
+		<!-- Replaced by Azahar -->
+		<Package>lime3ds</Package>
+		<Package>lime3ds-dbginfo</Package>
+
+		<!-- Constant build issues -->
+		<Package>cura</Package>
+		<Package>curaengine</Package>
+		<Package>curaengine-dbginfo</Package>
+		<Package>fdm-materials</Package>
+		<Package>libarcus-dbginfo</Package>
+		<Package>libarcus-devel</Package>
+		<Package>libarcus</Package>
+		<Package>libsavitar-dbginfo</Package>
+		<Package>libsavitar-devel</Package>
+		<Package>libsavitar</Package>
+		<Package>python-arcus</Package>
+		<Package>python-savitar</Package>
+		<Package>python-shapely</Package>
+		<Package>python-uranium</Package>
+
+		<!-- D bindings no longer needed -->
+		<Package>gir-to-d</Package>
+		<Package>gir-to-d-dbginfo</Package>
+		<Package>glibd</Package>
+		<Package>glibd-dbginfo</Package>
+		<Package>glibd-devel</Package>
+
+		<!-- Removed in favor of Fcitx5 support -->
+		<Package>fcitx-mozc</Package>
+
+		<!-- devel package no longer exists -->
+		<Package>bsdiff-devel</Package>
+
+		<!-- Abandoned upstream, no longer builds -->
+		<Package>vocal</Package>
+		<Package>vocal-dbginfo</Package>
+
+		<!-- GNOME X11 is dead jim -->
+		<Package>gnome-session-shell-x11</Package>
+
+		<!-- All users have updated -->
+		<Package>libgnome-games-support-1</Package>
+		<Package>libgnome-games-support-1-dbginfo</Package>
+		<Package>libgnome-games-support-1-devel</Package>
+
+		<!-- Nothing uses these anymore -->
+		<Package>gstreamer-0.10</Package>
+		<Package>gstreamer-0.10-32bit</Package>
+		<Package>gstreamer-0.10-32bit-dbginfo</Package>
+		<Package>gstreamer-0.10-32bit-devel</Package>
+		<Package>gstreamer-0.10-devel</Package>
+		<Package>gstreamer-0.10-docs</Package>
+		<Package>gst-plugins-base</Package>
+		<Package>gst-plugins-base-32bit</Package>
+		<Package>gst-plugins-base-32bit-dbginfo</Package>
+		<Package>gst-plugins-base-32bit-devel</Package>
+		<Package>gst-plugins-base-devel</Package>
+		<Package>gst-plugins-base-docs</Package>
+
+		<!-- Renamed -->
+		<Package>gstreamer-1.0</Package>
+		<Package>gstreamer-1.0-32bit</Package>
+		<Package>gstreamer-1.0-32bit-dbginfo</Package>
+		<Package>gstreamer-1.0-32bit-devel</Package>
+		<Package>gstreamer-1.0-dbginfo</Package>
+		<Package>gstreamer-1.0-devel</Package>
+		<Package>gstreamer-1.0-plugin-libav</Package>
+		<Package>gstreamer-1.0-plugin-opencv</Package>
+		<Package>gstreamer-1.0-plugin-opencv-devel</Package>
+		<Package>gstreamer-1.0-plugins-bad</Package>
+		<Package>gstreamer-1.0-plugins-bad-dbginfo</Package>
+		<Package>gstreamer-1.0-plugins-bad-devel</Package>
+		<Package>gstreamer-1.0-plugins-bad-extras</Package>
+		<Package>gstreamer-1.0-plugins-bad-libs</Package>
+		<Package>gstreamer-1.0-plugins-base</Package>
+		<Package>gstreamer-1.0-plugins-base-32bit</Package>
+		<Package>gstreamer-1.0-plugins-base-32bit-dbginfo</Package>
+		<Package>gstreamer-1.0-plugins-base-32bit-devel</Package>
+		<Package>gstreamer-1.0-plugins-base-dbginfo</Package>
+		<Package>gstreamer-1.0-plugins-base-devel</Package>
+		<Package>gstreamer-1.0-plugins-good</Package>
+		<Package>gstreamer-1.0-plugins-good-dbginfo</Package>
+		<Package>gstreamer-1.0-plugins-rs</Package>
+		<Package>gstreamer-1.0-plugins-rs-dbginfo</Package>
+		<Package>gstreamer-1.0-plugins-rs-devel</Package>
+		<Package>gstreamer-1.0-plugins-ugly</Package>
+		<Package>gstreamer-1.0-plugins-ugly-dbginfo</Package>
+		<Package>gstreamer-1.0-plugins-ugly-devel</Package>
+
+		<!-- Removed upstream -->
+		<Package>gstreamer-vaapi</Package>
+
+		<!-- Renamed -->
+		<Package>network-manager-devel</Package>
+
+		<Package>libxfce4util-docs</Package>
+		<Package>xfce4-panel-docs</Package>
+
+		<!-- No longer used -->
+		<Package>webrtc-audio-processing</Package>
+		<Package>webrtc-audio-processing-32bit</Package>
+		<Package>webrtc-audio-processing-32bit-dbginfo</Package>
+		<Package>webrtc-audio-processing-32bit-devel</Package>
+		<Package>webrtc-audio-processing-dbginfo</Package>
+		<Package>webrtc-audio-processing-devel</Package>
+		<Package>webrtc-audio-processing03</Package>
+		<Package>webrtc-audio-processing03-dbginfo</Package>
+		<Package>webrtc-audio-processing03-devel</Package>
+
+		<!-- Package deprecated and replaced by tetro-tui -->
+		<Package>tetrs</Package>
+		<Package>tetrs-dbginfo</Package>
+		
+		<Package>pulseaudio-equalizer</Package>
+		<Package>pulseaudio-module-jack</Package>
+		<Package>pulseaudio-module-jack-32bit</Package>
+
+		<!-- Seems dead upstream, doubt it still works -->
+		<Package>cadence</Package>
+		<Package>cadence-dbginfo</Package>
+
+		<!-- Deprecate botan2 as no packages use it any longer -->
+		<Package>botan2</Package>
+		<Package>botan2-devel</Package>
+		<Package>botan2-dbginfo</Package>
+
+		<!-- Renamed to python-bsddb3 -->
+		<Package>python3-bsddb3</Package>
+		<Package>python3-bsddb3-dbginfo</Package>
+		<Package>python3-bsddb3-devel</Package>
+
+		<!-- Merged back into packagekit-qt -->
+		<Package>packagekit-qt-qt5</Package>
+		<Package>packagekit-qt-qt5-devel</Package>
+		<Package>packagekit-qt-qt6</Package>
+		<Package>packagekit-qt-qt6-devel</Package>
+
+		<!-- 470 driver is no longer supported on linux-current -->
+		<Package>nvidia-470-glx-driver-current</Package>
+
+		<!-- Deprecate nvidia vulkan developer driver -->
+		<Package>nvidia-developer-driver</Package>
+		<Package>nvidia-developer-driver-32bit</Package>
+		<Package>nvidia-developer-driver-common</Package>
+		<Package>nvidia-developer-driver-current</Package>
+		<Package>nvidia-developer-driver-modaliases</Package>
+
+		<!-- Stale packages no longer produced or missed deprecations -->
+		<Package>pandoc-crossref-devel</Package>
+		<Package>ptlib-devel</Package>
+		<Package>shellcheck-devel</Package>
+		<Package>webvfx-devel</Package>
+		<Package>xmonad-contrib-devel</Package>
+		<Package>pandoc-citeproc-devel</Package>
+		<Package>openjfx</Package>
+		<Package>libquvi-scripts-devel</Package>
+		<Package>libquvi-devel</Package>
+		<Package>liboobs-devel</Package>
+		<Package>haskell-http-devel</Package>
+		<Package>cosmic-applets</Package>
+
+		<!-- Replaced with mypaint-brushes -->
+		<Package>mypaint-brushes1</Package>
+
+		<!-- Removed with gpgme 2.0 -->
+		<Package>gpgme-qt</Package>
+		<Package>gpgme-qt-devel</Package>
+
+		<!-- Moved into VTK -->
+		<Package>VTK-qt6</Package>
+
+		<!-- Replaced by python-qscintilla-qt5 -->
+		<Package>python-qscintilla</Package>
+
+		<!-- Everything has been Split into subpackages -->
+		<Package>qscintilla</Package>
 	</Obsoletes>
 </PISI>

@@ -1,13 +1,16 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kf6-kfilemetadata
-version    : 6.19.0
-release    : 28
+version    : 6.26.0
+release    : 38
 source     :
-    - https://download.kde.org/stable/frameworks/6.19/kfilemetadata-6.19.0.tar.xz : 5d465225826a06607234f29a6444883167ed2a921c7115c22e308343211541c1
+    - https://download.kde.org/stable/frameworks/6.26/kfilemetadata-6.26.0.tar.xz : f75942b9a3d1be0b0910cd50a22c3c432ededdc506858c8d5511ddf5498051f2
 homepage   : https://community.kde.org/Frameworks
 license    :
     - BSD-3-Clause
+    - CC0-1.0
     - LGPL-2.1-only
     - LGPL-2.1-or-later
+    - LGPL-3.0-only
 component  : desktop.library
 summary    : Simple library for extracting the text and metadata
 description: |
@@ -37,3 +40,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*

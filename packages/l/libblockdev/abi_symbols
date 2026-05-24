@@ -77,6 +77,7 @@ libbd_crypto.so.3:bd_crypto_luks_remove_key
 libbd_crypto.so.3:bd_crypto_luks_resize
 libbd_crypto.so.3:bd_crypto_luks_resume
 libbd_crypto.so.3:bd_crypto_luks_set_label
+libbd_crypto.so.3:bd_crypto_luks_set_persistent_flags
 libbd_crypto.so.3:bd_crypto_luks_set_uuid
 libbd_crypto.so.3:bd_crypto_luks_status
 libbd_crypto.so.3:bd_crypto_luks_suspend
@@ -260,6 +261,7 @@ libbd_loop.so.3:bd_loop_info_free
 libbd_loop.so.3:bd_loop_init
 libbd_loop.so.3:bd_loop_is_tech_avail
 libbd_loop.so.3:bd_loop_set_autoclear
+libbd_loop.so.3:bd_loop_set_capacity
 libbd_loop.so.3:bd_loop_setup
 libbd_loop.so.3:bd_loop_setup_from_fd
 libbd_loop.so.3:bd_loop_teardown
@@ -349,6 +351,8 @@ libbd_lvm-dbus.so.3:bd_lvm_vdo_pool_resize
 libbd_lvm-dbus.so.3:bd_lvm_vdo_resize
 libbd_lvm-dbus.so.3:bd_lvm_vdolvpoolname
 libbd_lvm-dbus.so.3:bd_lvm_vgactivate
+libbd_lvm-dbus.so.3:bd_lvm_vgcfgbackup
+libbd_lvm-dbus.so.3:bd_lvm_vgcfgrestore
 libbd_lvm-dbus.so.3:bd_lvm_vgcreate
 libbd_lvm-dbus.so.3:bd_lvm_vgdata_copy
 libbd_lvm-dbus.so.3:bd_lvm_vgdata_free
@@ -454,6 +458,8 @@ libbd_lvm.so.3:bd_lvm_vdolvpoolname
 libbd_lvm.so.3:bd_lvm_vdopooldata_copy
 libbd_lvm.so.3:bd_lvm_vdopooldata_free
 libbd_lvm.so.3:bd_lvm_vgactivate
+libbd_lvm.so.3:bd_lvm_vgcfgbackup
+libbd_lvm.so.3:bd_lvm_vgcfgrestore
 libbd_lvm.so.3:bd_lvm_vgcreate
 libbd_lvm.so.3:bd_lvm_vgdata_copy
 libbd_lvm.so.3:bd_lvm_vgdata_free
@@ -613,6 +619,7 @@ libbd_swap.so.3:bd_swap_set_uuid
 libbd_swap.so.3:bd_swap_swapoff
 libbd_swap.so.3:bd_swap_swapon
 libbd_swap.so.3:bd_swap_swapstatus
+libbd_utils.so.3:_get_linux_version
 libbd_utils.so.3:bd_extra_arg_copy
 libbd_utils.so.3:bd_extra_arg_free
 libbd_utils.so.3:bd_extra_arg_get_type
@@ -739,6 +746,7 @@ libblockdev.so.3:bd_crypto_luks_remove_key
 libblockdev.so.3:bd_crypto_luks_resize
 libblockdev.so.3:bd_crypto_luks_resume
 libblockdev.so.3:bd_crypto_luks_set_label
+libblockdev.so.3:bd_crypto_luks_set_persistent_flags
 libblockdev.so.3:bd_crypto_luks_set_uuid
 libblockdev.so.3:bd_crypto_luks_status
 libblockdev.so.3:bd_crypto_luks_suspend
@@ -943,6 +951,7 @@ libblockdev.so.3:bd_loop_info_free
 libblockdev.so.3:bd_loop_info_get_type
 libblockdev.so.3:bd_loop_is_tech_avail
 libblockdev.so.3:bd_loop_set_autoclear
+libblockdev.so.3:bd_loop_set_capacity
 libblockdev.so.3:bd_loop_setup
 libblockdev.so.3:bd_loop_setup_from_fd
 libblockdev.so.3:bd_loop_teardown
@@ -1042,6 +1051,8 @@ libblockdev.so.3:bd_lvm_vdopooldata_copy
 libblockdev.so.3:bd_lvm_vdopooldata_free
 libblockdev.so.3:bd_lvm_vdopooldata_get_type
 libblockdev.so.3:bd_lvm_vgactivate
+libblockdev.so.3:bd_lvm_vgcfgbackup
+libblockdev.so.3:bd_lvm_vgcfgrestore
 libblockdev.so.3:bd_lvm_vgcreate
 libblockdev.so.3:bd_lvm_vgdata_copy
 libblockdev.so.3:bd_lvm_vgdata_free

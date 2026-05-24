@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : crun
-version    : '1.21'
-release    : 2
+version    : '1.27'
+release    : 3
 source     :
-    - https://github.com/containers/crun/releases/download/1.21/crun-1.21.tar.zst : d3a4ce8af89125851b2bbfe2375f4050c7eca837021043c5628172feacdb88a4
+    - https://github.com/containers/crun/releases/download/1.27/crun-1.27.tar.zst : bfe10f9201f71191b9339f56560b60f097cffb6b4d2a4d68da8e2e5b3ab16017
 homepage   : https://github.com/containers/crun
 license    :
     - GPL-2.0-only
@@ -25,3 +26,4 @@ build      : |
     %make
 install    : |
     %make_install
+    %install_license COPYING*

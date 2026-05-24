@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kidentitymanagement
-version    : 25.08.2
-release    : 95
+version    : 26.04.1
+release    : 103
 source     :
-    - https://download.kde.org/stable/release-service/25.08.2/src/kidentitymanagement-25.08.2.tar.xz : d7923913a4d8b0d9feecbe2d8783dde0f71170b351233ce47ddacbddb0bdeb91
+    - https://download.kde.org/stable/release-service/26.04.1/src/kidentitymanagement-26.04.1.tar.xz : 4e93a35a2bb34e47c9d27f90c70365d38ead10b334249946225abb91cbfe5590
 homepage   : https://kde.org/
 license    : LGPL-2.1-or-later
 component  : desktop.library

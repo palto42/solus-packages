@@ -1,5 +1,5 @@
 calamares
-libcalamares.so.3.3
+libcalamares.so.3.4
 libcalamares_job_contextualprocess.so
 libcalamares_job_dracutlukscfg.so
 libcalamares_job_dummycpp.so
@@ -37,4 +37,4 @@ libcalamares_viewmodule_users.so
 libcalamares_viewmodule_usersq.so
 libcalamares_viewmodule_welcome.so
 libcalamares_viewmodule_welcomeq.so
-libcalamaresui.so.3.3
+libcalamaresui.so.3.4

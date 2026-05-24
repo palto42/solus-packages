@@ -1,11 +1,14 @@
 libc.so.6:__assert_fail
 libc.so.6:__ctype_b_loc
+libc.so.6:__ctype_get_mb_cur_max
 libc.so.6:__ctype_tolower_loc
 libc.so.6:__ctype_toupper_loc
 libc.so.6:__cxa_atexit
 libc.so.6:__environ
 libc.so.6:__errno_location
 libc.so.6:__fdelt_chk
+libc.so.6:__fprintf_chk
+libc.so.6:__fread_unlocked_chk
 libc.so.6:__isoc23_sscanf
 libc.so.6:__isoc23_strtol
 libc.so.6:__isoc23_strtoull
@@ -13,8 +16,10 @@ libc.so.6:__libc_single_threaded
 libc.so.6:__libc_start_main
 libc.so.6:__longjmp_chk
 libc.so.6:__memcpy_chk
+libc.so.6:__memset_explicit_chk
 libc.so.6:__open_2
 libc.so.6:__overflow
+libc.so.6:__printf_chk
 libc.so.6:__progname
 libc.so.6:__progname_full
 libc.so.6:__snprintf_chk
@@ -23,6 +28,9 @@ libc.so.6:__stack_chk_fail
 libc.so.6:__strcpy_chk
 libc.so.6:__strncpy_chk
 libc.so.6:__uflow
+libc.so.6:__vfprintf_chk
+libc.so.6:__vsnprintf_chk
+libc.so.6:__vsprintf_chk
 libc.so.6:_exit
 libc.so.6:_setjmp
 libc.so.6:abort
@@ -51,6 +59,7 @@ libc.so.6:ferror
 libc.so.6:fflush
 libc.so.6:fflush_unlocked
 libc.so.6:fileno
+libc.so.6:fileno_unlocked
 libc.so.6:fopen
 libc.so.6:fork
 libc.so.6:fputc
@@ -60,6 +69,8 @@ libc.so.6:fread
 libc.so.6:fread_unlocked
 libc.so.6:free
 libc.so.6:fseek
+libc.so.6:fseeko
+libc.so.6:fseeko64
 libc.so.6:fstat
 libc.so.6:ftello
 libc.so.6:fwrite
@@ -84,6 +95,7 @@ libc.so.6:iswalnum
 libc.so.6:iswalpha
 libc.so.6:iswblank
 libc.so.6:iswcntrl
+libc.so.6:iswctype
 libc.so.6:iswdigit
 libc.so.6:iswgraph
 libc.so.6:iswlower
@@ -113,6 +125,7 @@ libc.so.6:mkdtemp
 libc.so.6:mktime
 libc.so.6:newlocale
 libc.so.6:nl_langinfo
+libc.so.6:nl_langinfo_l
 libc.so.6:open
 libc.so.6:optarg
 libc.so.6:opterr
@@ -136,6 +149,7 @@ libc.so.6:pthread_rwlockattr_destroy
 libc.so.6:pthread_rwlockattr_init
 libc.so.6:pthread_rwlockattr_setkind_np
 libc.so.6:putc
+libc.so.6:putchar
 libc.so.6:puts
 libc.so.6:qsort
 libc.so.6:raise
@@ -143,7 +157,6 @@ libc.so.6:rand
 libc.so.6:read
 libc.so.6:readlink
 libc.so.6:realloc
-libc.so.6:reallocarray
 libc.so.6:regcomp
 libc.so.6:regerror
 libc.so.6:regexec
@@ -177,6 +190,7 @@ libc.so.6:strcpy
 libc.so.6:strcspn
 libc.so.6:strdup
 libc.so.6:strerror
+libc.so.6:strerrorname_np
 libc.so.6:strftime
 libc.so.6:strlen
 libc.so.6:strncat
@@ -202,6 +216,8 @@ libc.so.6:unsetenv
 libc.so.6:uselocale
 libc.so.6:waitpid
 libc.so.6:wcrtomb
+libc.so.6:wcslen
+libc.so.6:wctype
 libc.so.6:wcwidth
 libc.so.6:write
 libcairo.so.2:cairo_arc
@@ -281,7 +297,6 @@ libgio-2.0.so.0:g_action_map_lookup_action
 libgio-2.0.so.0:g_application_add_main_option_entries
 libgio-2.0.so.0:g_application_get_default
 libgio-2.0.so.0:g_application_get_flags
-libgio-2.0.so.0:g_application_quit
 libgio-2.0.so.0:g_application_run
 libgio-2.0.so.0:g_application_set_flags
 libgio-2.0.so.0:g_file_get_parse_name
@@ -854,6 +869,7 @@ libgtk-3.so.0:gtk_entry_set_max_length
 libgtk-3.so.0:gtk_entry_set_max_width_chars
 libgtk-3.so.0:gtk_entry_set_text
 libgtk-3.so.0:gtk_event_box_get_type
+libgtk-3.so.0:gtk_events_pending
 libgtk-3.so.0:gtk_file_chooser_add_filter
 libgtk-3.so.0:gtk_file_chooser_add_shortcut_folder
 libgtk-3.so.0:gtk_file_chooser_dialog_new
@@ -905,7 +921,7 @@ libgtk-3.so.0:gtk_list_store_newv
 libgtk-3.so.0:gtk_list_store_remove
 libgtk-3.so.0:gtk_list_store_set
 libgtk-3.so.0:gtk_list_store_set_value
-libgtk-3.so.0:gtk_main_quit
+libgtk-3.so.0:gtk_main_iteration
 libgtk-3.so.0:gtk_menu_attach
 libgtk-3.so.0:gtk_menu_bar_new_from_model
 libgtk-3.so.0:gtk_menu_item_new_with_mnemonic
@@ -982,7 +998,7 @@ libgtk-3.so.0:gtk_style_context_get
 libgtk-3.so.0:gtk_style_context_get_color
 libgtk-3.so.0:gtk_style_context_get_state
 libgtk-3.so.0:gtk_target_list_add_image_targets
-libgtk-3.so.0:gtk_target_list_add_text_targets
+libgtk-3.so.0:gtk_target_list_add_table
 libgtk-3.so.0:gtk_target_list_new
 libgtk-3.so.0:gtk_target_list_unref
 libgtk-3.so.0:gtk_target_table_free
@@ -1239,6 +1255,7 @@ libm.so.6:sin
 libm.so.6:sincos
 libm.so.6:sqrt
 libm.so.6:tan
+libm.so.6:trunc
 libpango-1.0.so.0:pango_attr_font_desc_new
 libpango-1.0.so.0:pango_attr_list_insert
 libpango-1.0.so.0:pango_attr_list_new

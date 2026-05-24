@@ -1,6 +1,7 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : libva1
 version    : 1.8.3
-release    : 3
+release    : 4
 source     :
     - https://github.com/intel/libva/releases/download/1.8.3/libva-1.8.3.tar.bz2 : 56ee129deba99b06eb4a8d4f746b117c5d1dc2ec5b7a0bfc06971fca1598ab9b
 homepage   : https://github.com/intel/libva
@@ -19,6 +20,8 @@ builddeps  :
     - pkgconfig32(xext)
     - pkgconfig32(xfixes)
 emul32     : true
+environment: |
+    export CFLAGS="${CFLAGS} -std=gnu17"
 setup      : |
     %configure --disable-static
 build      : |
@@ -28,3 +31,4 @@ install    : |
     rm -rf $installdir/usr/include
     rm -rf $installdir/%libdir%/pkgconfig
     rm $installdir/%libdir%/*.so
+    %install_license COPYING

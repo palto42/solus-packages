@@ -139,6 +139,7 @@ libglib-2.0.so.0:g_get_current_dir
 libglib-2.0.so.0:g_get_host_name
 libglib-2.0.so.0:g_get_real_time
 libglib-2.0.so.0:g_getenv
+libglib-2.0.so.0:g_idle_add
 libglib-2.0.so.0:g_intern_static_string
 libglib-2.0.so.0:g_list_free
 libglib-2.0.so.0:g_list_free_full
@@ -198,6 +199,7 @@ libglib-2.0.so.0:g_strconcat
 libglib-2.0.so.0:g_strdup
 libglib-2.0.so.0:g_strdup_printf
 libglib-2.0.so.0:g_strdupv
+libglib-2.0.so.0:g_strescape
 libglib-2.0.so.0:g_strfreev
 libglib-2.0.so.0:g_string_append_len
 libglib-2.0.so.0:g_string_append_printf
@@ -357,6 +359,7 @@ libgtk-3.so.0:gtk_dialog_add_action_widget
 libgtk-3.so.0:gtk_dialog_add_button
 libgtk-3.so.0:gtk_dialog_get_content_area
 libgtk-3.so.0:gtk_dialog_new
+libgtk-3.so.0:gtk_dialog_response
 libgtk-3.so.0:gtk_dialog_run
 libgtk-3.so.0:gtk_drag_dest_set
 libgtk-3.so.0:gtk_drag_finish

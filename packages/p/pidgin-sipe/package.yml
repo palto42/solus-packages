@@ -1,6 +1,7 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : pidgin-sipe
 version    : 1.25.0
-release    : 14
+release    : 15
 source     :
     - https://sourceforge.net/projects/sipe/files/sipe/pidgin-sipe-1.25.0/pidgin-sipe-1.25.0.tar.xz : 738b121b11f2b3f1744150c00cb381222eb6cf67161a7742797eb4f03e64a2ba
 homepage   : https://sourceforge.net/projects/sipe/
@@ -21,9 +22,12 @@ builddeps  :
     - pkgconfig(purple)
     - pkgconfig(telepathy-glib)
 setup      : |
-    %patch -p1 -i $pkgfiles/pidgin-sipe-1.25.0-fix-glib-2.68-build.patch
+    %patch -p1 -i ${pkgfiles}/pidgin-sipe-1.25.0-fix-glib-2.68-build.patch
+    %patch -p1 -i ${pkgfiles}/pidgin-sipe-1.25.0-fix-libxml2-2.12-build.patch
+
     %configure_no_runstatedir
 build      : |
     %make
 install    : |
     %make_install
+    %install_license COPYING

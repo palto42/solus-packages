@@ -6,7 +6,7 @@ libexif.so.12
 libgdk-3.so.0
 libgdk_pixbuf-2.0.so.0
 libgio-2.0.so.0
-libgirepository-1.0.so.1
+libgirepository-2.0.so.0
 libglib-2.0.so.0
 libgnome-desktop-3.so.20
 libgobject-2.0.so.0
@@ -15,8 +15,8 @@ libhandy-1.so.0
 libjpeg.so.8
 liblcms2.so.2
 libm.so.6
-libpeas-1.0.so.0
-libpeas-gtk-1.0.so.0
+libpeas-1.0.so.1
+libpeas-gtk-1.0.so.1
 libportal-gtk3.so.1
 libportal.so.1
 librsvg-2.so.2

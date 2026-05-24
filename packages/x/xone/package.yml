@@ -1,9 +1,10 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : xone
-version    : '0.4.4'
-release    : 96
+version    : 0.5.8
+release    : 117
 source     :
-    - https://github.com/dlundqvist/xone/archive/refs/tags/v0.4.4.tar.gz : a11fd31e0ac86e2d6961c3be098c79e8fc13658f070a8d3eb30e4a8acf15c46f
-    - git|https://github.com/medusalix/xpad-noone.git : d02737f7eab1e17a7748fbe550dd982e3808525d
+    - https://github.com/dlundqvist/xone/archive/refs/tags/v0.5.8.tar.gz : f1905d5046ce79b94df0501045008203c4ae4ce6f43dbcf8bd04d7c944bf420e
+    - git|https://github.com/forkymcforkface/xpad-noone : 7b5361475c719b03b9e0152e44cf7fca0b85af60
 homepage   : https://github.com/dlundqvist/xone
 license    : GPL-2.0-or-later
 component  :
@@ -39,10 +40,13 @@ permanent  :
 rundeps    :
     - common :
         - cabextract
+        - libarchive-bin
         - upower
     - current :
         - xone-common
     - xone-common
+#environment:
+#    export CFLAGS="${CFLAGS} -Wno-implicit-function-declaration" # gcc 14
 setup      : |
     # Prep build dirs for each kernel version
     pushd ../
@@ -80,15 +84,15 @@ install    : |
 
     # Install xone
     pushd xone
-    install -D -d -m 00644 $installdir/usr/lib64/modules/$KVER/drivers/input/joystick
-    install -D -m 00644 *.ko $installdir/usr/lib64/modules/$KVER/drivers/input/joystick/.
-    install -D -m 00644 install/modprobe.conf $installdir/usr/lib/modprobe.d/xone-blacklist.conf 
+    install -D -d -m 00644 $installdir/usr/lib64/modules/$KVER/extra/drivers/input/joystick
+    install -D -m 00644 *.ko $installdir/usr/lib64/modules/$KVER/extra/drivers/input/joystick/.
+    install -D -m 00644 install/modprobe.conf $installdir/usr/lib/modprobe.d/xone-blacklist.conf
     install -D -m 00755 install/firmware.sh $installdir/usr/bin/xone-get-firmware.sh
     popd
 
     # Install xpad-noone
     pushd xpad-noone
-    install -D -m 00644 *.ko $installdir/usr/lib64/modules/$KVER/drivers/input/joystick/.
+    install -D -m 00644 *.ko $installdir/usr/lib64/modules/$KVER/extra/drivers/input/joystick/.
     popd
 
     # Install modaliases for hardware detection

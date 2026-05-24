@@ -1,14 +1,22 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : plasma-desktop
-version    : 6.4.5
-release    : 163
+version    : 6.6.5
+release    : 180
 source     :
-    - https://download.kde.org/stable/plasma/6.4.5/plasma-desktop-6.4.5.tar.xz : 7552e4c7c7ccbf5b7756726bb9aaabd344630977aaf13f5f305b4477caa17bb7
+    - https://download.kde.org/stable/plasma/6.6.5/plasma-desktop-6.6.5.tar.xz : 1d758dffcc42e1d3fbbfea0500009d3dc795cf1313b93b574da83624177085f3
 homepage   : https://www.kde.org/workspaces/plasmadesktop/
 license    :
+    - BSD-3-Clause
+    - CC0-1.0
+    - GFDL-1.2-or-later
     - GPL-2.0-only
     - GPL-2.0-or-later
+    - GPL-3.0-only
     - LGPL-2.0-only
+    - LGPL-2.0-or-later
     - LGPL-2.1-only
+    - LGPL-2.1-or-later
+    - Unicode-DFS-2016
 component  : desktop.kde.core
 summary    : KDE's next generation desktop
 description: |
@@ -16,6 +24,7 @@ description: |
 builddeps  :
     - pkgconfig(KF6GuiAddons)
     - pkgconfig(Qt6Core5Compat)
+    - pkgconfig(Qt6ShaderTools)
     - pkgconfig(Qt6Svg)
     - pkgconfig(Qt6WaylandClient)
     - pkgconfig(accounts-qt6)
@@ -77,6 +86,7 @@ rundeps    :
     - kf6-kded
     - kf6-qqc2-desktop-style
     - kirigami-addons
+    - plasma5support
 clang      : true
 optimize   :
     - speed
@@ -89,6 +99,7 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*
     rm -rfv $installdir/usr/share/doc
 
     # Replace with ours

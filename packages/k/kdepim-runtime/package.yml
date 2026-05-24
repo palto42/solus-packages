@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kdepim-runtime
-version    : 25.08.2
-release    : 99
+version    : 26.04.1
+release    : 104
 source     :
-    - https://download.kde.org/stable/release-service/25.08.2/src/kdepim-runtime-25.08.2.tar.xz : c030f98854e31d927071cd4b4bbc2d97792d4cefbac548aa6cd75db0602512ca
+    - https://download.kde.org/stable/release-service/26.04.1/src/kdepim-runtime-26.04.1.tar.xz : 22c9683792b7a6d536b545afdc52bb9ef7d0bd7b4b01be7d5cfd50c7dbc50bcd
 homepage   : https://community.kde.org/PIM
 license    : GPL-2.0-or-later
 component  : desktop.kde
@@ -45,7 +46,7 @@ optimize   :
     - speed
     - thin-lto
 setup      : |
-    %cmake_kf6
+    %cmake_kf6 -DCMAKE_DISABLE_FIND_PACKAGE_Libkolabxml=ON
 build      : |
     %ninja_build
 install    : |

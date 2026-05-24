@@ -1,14 +1,16 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kf6-ktexteditor
-version    : 6.19.0
-release    : 25
+version    : 6.26.0
+release    : 32
 source     :
-    - https://download.kde.org/stable/frameworks/6.19/ktexteditor-6.19.0.tar.xz : f2382910fe32e92bfd07def4e8f53d58d85725194a244123d938ab0c42a807f1
+    - https://download.kde.org/stable/frameworks/6.26/ktexteditor-6.26.0.tar.xz : ec7bc094f93d514b5f675ae95c274dd24acc47769d971606d8708cc88f811341
 homepage   : https://community.kde.org/Frameworks
 license    :
     - BSD-2-Clause
+    - CC0-1.0
+    - LGPL-2.0-only
     - LGPL-2.0-or-later
-    - LGPL-2.1-only
-    - LGPL-2.1-or-later
+    - MIT
 component  : desktop.library
 summary    : Full text editor component.
 description: |
@@ -39,6 +41,7 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*
 patterns   :
     - devel :
         - /usr/share/kdevappwizard

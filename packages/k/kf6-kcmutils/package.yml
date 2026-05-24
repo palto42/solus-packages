@@ -1,12 +1,18 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kf6-kcmutils
-version    : 6.19.0
-release    : 26
+version    : 6.26.0
+release    : 36
 source     :
-    - https://download.kde.org/stable/frameworks/6.19/kcmutils-6.19.0.tar.xz : 3760a46ccf196cc50d0d0b00d4471bec7468f136be57a190358bc3e437a48f53
+    - https://download.kde.org/stable/frameworks/6.26/kcmutils-6.26.0.tar.xz : 6d0810649b71528124cdf9dbdeb8b3c6c6d31d787325ca3e4a20c536ecbdf2d9
 homepage   : https://community.kde.org/Frameworks
 license    :
+    - BSD-2-Clause
+    - BSD-3-Clause
+    - CC0-1.0
+    - GPL-2.0-or-later
     - LGPL-2.0-only
     - LGPL-2.0-or-later
+    - LGPL-3.0-only
 component  : desktop.library
 summary    : Utilities for interacting with KCModules
 description: |
@@ -18,6 +24,7 @@ builddeps  :
     - kf6-kdeclarative-devel
     - kf6-ki18n-devel
     - kf6-kio-devel
+    - kf6-kirigami-devel
     - kf6-kitemviews-devel
     - kf6-kpackage-devel
     - kf6-kservice-devel
@@ -40,3 +47,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*

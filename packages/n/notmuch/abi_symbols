@@ -106,6 +106,7 @@ libnotmuch.so.5:notmuch_messages_collect_tags
 libnotmuch.so.5:notmuch_messages_destroy
 libnotmuch.so.5:notmuch_messages_get
 libnotmuch.so.5:notmuch_messages_move_to_next
+libnotmuch.so.5:notmuch_messages_status
 libnotmuch.so.5:notmuch_messages_valid
 libnotmuch.so.5:notmuch_query_add_tag_exclude
 libnotmuch.so.5:notmuch_query_count_messages
@@ -144,6 +145,7 @@ libnotmuch.so.5:notmuch_thread_get_total_messages
 libnotmuch.so.5:notmuch_threads_destroy
 libnotmuch.so.5:notmuch_threads_get
 libnotmuch.so.5:notmuch_threads_move_to_next
+libnotmuch.so.5:notmuch_threads_status
 libnotmuch.so.5:notmuch_threads_valid
 notmuch.so:ID_call
 notmuch.so:Init_notmuch

@@ -44,6 +44,7 @@
             <Path fileType="localedata">/usr/share/locale/hi/LC_MESSAGES/libadwaita.mo</Path>
             <Path fileType="localedata">/usr/share/locale/hr/LC_MESSAGES/libadwaita.mo</Path>
             <Path fileType="localedata">/usr/share/locale/hu/LC_MESSAGES/libadwaita.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/ia/LC_MESSAGES/libadwaita.mo</Path>
             <Path fileType="localedata">/usr/share/locale/id/LC_MESSAGES/libadwaita.mo</Path>
             <Path fileType="localedata">/usr/share/locale/it/LC_MESSAGES/libadwaita.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ja/LC_MESSAGES/libadwaita.mo</Path>
@@ -56,6 +57,7 @@
             <Path fileType="localedata">/usr/share/locale/nb/LC_MESSAGES/libadwaita.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ne/LC_MESSAGES/libadwaita.mo</Path>
             <Path fileType="localedata">/usr/share/locale/nl/LC_MESSAGES/libadwaita.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/nn/LC_MESSAGES/libadwaita.mo</Path>
             <Path fileType="localedata">/usr/share/locale/oc/LC_MESSAGES/libadwaita.mo</Path>
             <Path fileType="localedata">/usr/share/locale/pa/LC_MESSAGES/libadwaita.mo</Path>
             <Path fileType="localedata">/usr/share/locale/pl/LC_MESSAGES/libadwaita.mo</Path>
@@ -66,10 +68,13 @@
             <Path fileType="localedata">/usr/share/locale/sk/LC_MESSAGES/libadwaita.mo</Path>
             <Path fileType="localedata">/usr/share/locale/sl/LC_MESSAGES/libadwaita.mo</Path>
             <Path fileType="localedata">/usr/share/locale/sr/LC_MESSAGES/libadwaita.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/sr@latin/LC_MESSAGES/libadwaita.mo</Path>
             <Path fileType="localedata">/usr/share/locale/sv/LC_MESSAGES/libadwaita.mo</Path>
             <Path fileType="localedata">/usr/share/locale/th/LC_MESSAGES/libadwaita.mo</Path>
             <Path fileType="localedata">/usr/share/locale/tr/LC_MESSAGES/libadwaita.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/ug/LC_MESSAGES/libadwaita.mo</Path>
             <Path fileType="localedata">/usr/share/locale/uk/LC_MESSAGES/libadwaita.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/uz/LC_MESSAGES/libadwaita.mo</Path>
             <Path fileType="localedata">/usr/share/locale/vi/LC_MESSAGES/libadwaita.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_CN/LC_MESSAGES/libadwaita.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_TW/LC_MESSAGES/libadwaita.mo</Path>
@@ -82,7 +87,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="32">libadwaita</Dependency>
+            <Dependency release="38">libadwaita</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/libadwaita-1/adw-about-dialog.h</Path>
@@ -137,6 +142,13 @@
             <Path fileType="header">/usr/include/libadwaita-1/adw-preferences-page.h</Path>
             <Path fileType="header">/usr/include/libadwaita-1/adw-preferences-row.h</Path>
             <Path fileType="header">/usr/include/libadwaita-1/adw-preferences-window.h</Path>
+            <Path fileType="header">/usr/include/libadwaita-1/adw-shortcut-label.h</Path>
+            <Path fileType="header">/usr/include/libadwaita-1/adw-shortcuts-dialog.h</Path>
+            <Path fileType="header">/usr/include/libadwaita-1/adw-shortcuts-item.h</Path>
+            <Path fileType="header">/usr/include/libadwaita-1/adw-shortcuts-section.h</Path>
+            <Path fileType="header">/usr/include/libadwaita-1/adw-sidebar-item.h</Path>
+            <Path fileType="header">/usr/include/libadwaita-1/adw-sidebar-section.h</Path>
+            <Path fileType="header">/usr/include/libadwaita-1/adw-sidebar.h</Path>
             <Path fileType="header">/usr/include/libadwaita-1/adw-spin-row.h</Path>
             <Path fileType="header">/usr/include/libadwaita-1/adw-spinner-paintable.h</Path>
             <Path fileType="header">/usr/include/libadwaita-1/adw-spinner.h</Path>
@@ -161,6 +173,7 @@
             <Path fileType="header">/usr/include/libadwaita-1/adw-version.h</Path>
             <Path fileType="header">/usr/include/libadwaita-1/adw-view-stack.h</Path>
             <Path fileType="header">/usr/include/libadwaita-1/adw-view-switcher-bar.h</Path>
+            <Path fileType="header">/usr/include/libadwaita-1/adw-view-switcher-sidebar.h</Path>
             <Path fileType="header">/usr/include/libadwaita-1/adw-view-switcher-title.h</Path>
             <Path fileType="header">/usr/include/libadwaita-1/adw-view-switcher.h</Path>
             <Path fileType="header">/usr/include/libadwaita-1/adw-window-title.h</Path>
@@ -176,9 +189,9 @@
         </Files>
     </Package>
     <History>
-        <Update release="32">
-            <Date>2025-09-14</Date>
-            <Version>1.7.7</Version>
+        <Update release="38">
+            <Date>2026-03-20</Date>
+            <Version>1.9.0</Version>
             <Comment>Packaging update</Comment>
             <Name>Joey Riches</Name>
             <Email>josephriches@gmail.com</Email>

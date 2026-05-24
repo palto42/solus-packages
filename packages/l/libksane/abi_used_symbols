@@ -128,7 +128,6 @@ libQt6Core.so.6:_ZN8QVariantC1Ef
 libQt6Core.so.6:_ZN8QVariantC1Ei
 libQt6Core.so.6:_ZN8QVariantD1Ev
 libQt6Core.so.6:_ZN9QHashSeed10globalSeedEv
-libQt6Core.so.6:_ZN9QMetaType14registerHelperEPKN9QtPrivate18QMetaTypeInterfaceE
 libQt6Core.so.6:_ZN9QTimeLine12setDirectionENS_9DirectionE
 libQt6Core.so.6:_ZN9QTimeLine13setFrameRangeEii
 libQt6Core.so.6:_ZN9QTimeLine5startEv
@@ -164,7 +163,6 @@ libQt6Core.so.6:_ZNK8QVariant6toBoolEv
 libQt6Core.so.6:_ZNK8QVariant6toListEv
 libQt6Core.so.6:_ZNK8QVariant7toFloatEPb
 libQt6Core.so.6:_ZNK8QVariant7toSizeFEv
-libQt6Core.so.6:_ZNK8QVariant8metaTypeEv
 libQt6Core.so.6:_ZNK8QVariant8toDoubleEPb
 libQt6Core.so.6:_ZNK8QVariant8toStringEv
 libQt6Core.so.6:_ZNK9QTimeLine10startFrameEv
@@ -212,8 +210,8 @@ libQt6Gui.so.6:_ZN7QCursorD1Ev
 libQt6Gui.so.6:_ZN8QPainter10setOpacityEd
 libQt6Gui.so.6:_ZN8QPainter13setRenderHintENS_10RenderHintEb
 libQt6Gui.so.6:_ZN8QPainter5beginEP12QPaintDevice
-libQt6Gui.so.6:_ZN8QPainter6setPenERK4QPen
 libQt6Gui.so.6:_ZN8QPainter6setPenERK6QColor
+libQt6Gui.so.6:_ZN8QPainter8doSetPenERK4QPenPS0_
 libQt6Gui.so.6:_ZN8QPainter8fillRectERK5QRectRK6QBrush
 libQt6Gui.so.6:_ZN8QPainter8fillRectERK6QRectFRK6QBrush
 libQt6Gui.so.6:_ZN8QPainter8fillRectERK6QRectFRK6QColor

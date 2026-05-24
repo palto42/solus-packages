@@ -1,11 +1,12 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : doctl
-version    : 1.141.0
-release    : 24
+version    : 1.159.0
+release    : 36
 source     :
-    - https://github.com/digitalocean/doctl/archive/refs/tags/v1.141.0.tar.gz : 148ad29a07d1974838b49b76e32a14c84688f726eda96933e758c9a9eecc55f4
+    - https://github.com/digitalocean/doctl/archive/refs/tags/v1.159.0.tar.gz : 9710b60ce38cdcd1b1354fe349a2c01c319f84f581ec03722320d49cfc2af66e
 homepage   : https://github.com/digitalocean/doctl/
 license    : Apache-2.0
-component  : network.client
+component  : network.clients
 summary    : The official command line interface for the DigitalOcean API.
 description: |
     The official command line interface for the DigitalOcean API.
@@ -33,4 +34,4 @@ install    : |
     install -Dm00644 completions/doctl $installdir/usr/share/bash-completion/completions/doctl
     install -Dm00644 completions/doctl.fish $installdir/usr/share/fish/vendor_completions.d/doctl.fish
     install -Dm00644 completions/_doctl $installdir/usr/share/zsh/site-functions/_doctl
-
+    %install_license LICENSE.txt

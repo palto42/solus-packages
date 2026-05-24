@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : octave
-version    : 10.3.0
-release    : 52
+version    : 11.1.0
+release    : 57
 source     :
-    - https://ftpmirror.gnu.org/gnu/octave/octave-10.3.0.tar.xz : 92ae9bf2edcd288bd2df9fd0b4f7aa719b49d3940fceb154c5fdcd846f254da1
+    - https://ftpmirror.gnu.org/gnu/octave/octave-11.1.0.tar.xz : 8b3e2d0ec1809e8a2bed11de779014b6eb6a469c0caad1b339d29a6126e3cb6a
 homepage   : https://octave.org/
 license    : GPL-3.0-or-later
 component  : programming.tools
@@ -30,6 +31,7 @@ builddeps  :
     - pkgconfig(sndfile)
     - pkgconfig(xfixes)
     - pkgconfig(xft)
+    - pkgconfig(xinerama)
     - arpack-devel
     - fltk-devel
     - ghostscript-devel
@@ -38,13 +40,13 @@ builddeps  :
     - gnuplot
     - gperf
     - icoutils
-    - openjdk-17-devel
+    - openjdk-21-devel
     - qrupdate-devel
     - qscintilla-devel
     - suitesparse-devel
     - texlive-fonts-extra
 environment: |
-    export JAVA_HOME=/usr/lib64/openjdk-17/
+    export JAVA_HOME=/usr/lib64/openjdk-21/
     export PATH=$PATH:$JAVA_HOME/bin
 setup      : |
     %configure --with-qt=6
@@ -52,5 +54,6 @@ build      : |
     %make
 install    : |
     %make_install
+    %install_license COPYING
 check      : |
     %make check

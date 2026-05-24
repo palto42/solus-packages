@@ -1,0 +1,176 @@
+<PISI>
+    <Source>
+        <Name>reuse</Name>
+        <Homepage>https://reuse.software/</Homepage>
+        <Packager>
+            <Name>Evan Maddock</Name>
+            <Email>maddock.evan@vivaldi.net</Email>
+        </Packager>
+        <License>Apache-2.0</License>
+        <License>CC-BY-SA-4.0</License>
+        <License>CC0-1.0</License>
+        <License>GPL-3.0-or-later</License>
+        <PartOf>programming.python</PartOf>
+        <Summary xml:lang="en">A tool for compliance with the REUSE recommendations</Summary>
+        <Description xml:lang="en">reuse is a tool for compliance with the REUSE recommendations.
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>reuse</Name>
+        <Summary xml:lang="en">A tool for compliance with the REUSE recommendations</Summary>
+        <Description xml:lang="en">reuse is a tool for compliance with the REUSE recommendations.
+</Description>
+        <PartOf>programming.python</PartOf>
+        <Files>
+            <Path fileType="executable">/usr/bin/reuse</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse-6.2.0.dist-info/AUTHORS.rst</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse-6.2.0.dist-info/LICENSES/Apache-2.0.txt</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse-6.2.0.dist-info/LICENSES/CC-BY-SA-4.0.txt</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse-6.2.0.dist-info/LICENSES/CC0-1.0.txt</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse-6.2.0.dist-info/LICENSES/GPL-3.0-or-later.txt</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse-6.2.0.dist-info/METADATA</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse-6.2.0.dist-info/RECORD</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse-6.2.0.dist-info/WHEEL</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse-6.2.0.dist-info/entry_points.txt</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/__init__.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/__main__.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/__pycache__/__init__.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/__pycache__/__init__.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/__pycache__/__main__.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/__pycache__/__main__.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/__pycache__/_annotate.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/__pycache__/_annotate.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/__pycache__/_licenses.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/__pycache__/_licenses.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/__pycache__/_util.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/__pycache__/_util.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/__pycache__/comment.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/__pycache__/comment.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/__pycache__/convert_dep5.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/__pycache__/convert_dep5.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/__pycache__/copyright.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/__pycache__/copyright.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/__pycache__/covered_files.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/__pycache__/covered_files.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/__pycache__/download.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/__pycache__/download.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/__pycache__/exceptions.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/__pycache__/exceptions.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/__pycache__/extract.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/__pycache__/extract.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/__pycache__/global_licensing.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/__pycache__/global_licensing.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/__pycache__/header.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/__pycache__/header.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/__pycache__/i18n.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/__pycache__/i18n.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/__pycache__/lint.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/__pycache__/lint.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/__pycache__/project.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/__pycache__/project.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/__pycache__/report.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/__pycache__/report.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/__pycache__/types.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/__pycache__/types.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/__pycache__/vcs.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/__pycache__/vcs.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/_annotate.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/_licenses.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/_util.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/cli/__init__.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/cli/__pycache__/__init__.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/cli/__pycache__/__init__.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/cli/__pycache__/annotate.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/cli/__pycache__/annotate.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/cli/__pycache__/common.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/cli/__pycache__/common.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/cli/__pycache__/convert_dep5.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/cli/__pycache__/convert_dep5.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/cli/__pycache__/download.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/cli/__pycache__/download.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/cli/__pycache__/lint.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/cli/__pycache__/lint.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/cli/__pycache__/lint_file.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/cli/__pycache__/lint_file.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/cli/__pycache__/main.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/cli/__pycache__/main.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/cli/__pycache__/spdx.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/cli/__pycache__/spdx.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/cli/__pycache__/supported_licenses.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/cli/__pycache__/supported_licenses.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/cli/annotate.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/cli/common.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/cli/convert_dep5.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/cli/download.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/cli/lint.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/cli/lint_file.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/cli/main.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/cli/spdx.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/cli/supported_licenses.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/comment.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/convert_dep5.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/copyright.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/covered_files.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/download.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/exceptions.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/extract.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/global_licensing.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/header.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/i18n.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/lint.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/locale/aln/LC_MESSAGES/reuse.mo</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/locale/cs/LC_MESSAGES/reuse.mo</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/locale/de/LC_MESSAGES/reuse.mo</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/locale/eo/LC_MESSAGES/reuse.mo</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/locale/es/LC_MESSAGES/reuse.mo</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/locale/fr/LC_MESSAGES/reuse.mo</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/locale/gl/LC_MESSAGES/reuse.mo</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/locale/it/LC_MESSAGES/reuse.mo</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/locale/ja/LC_MESSAGES/reuse.mo</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/locale/nl/LC_MESSAGES/reuse.mo</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/locale/pt/LC_MESSAGES/reuse.mo</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/locale/ru/LC_MESSAGES/reuse.mo</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/locale/sq/LC_MESSAGES/reuse.mo</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/locale/sv/LC_MESSAGES/reuse.mo</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/locale/tr/LC_MESSAGES/reuse.mo</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/locale/uk/LC_MESSAGES/reuse.mo</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/locale/zh_Hant/LC_MESSAGES/reuse.mo</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/project.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/py.typed</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/report.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/resources/exceptions.json</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/resources/exceptions.json.license</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/resources/licenses.json</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/resources/licenses.json.license</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/templates/default_template.jinja2</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/templates/default_template.jinja2.license</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/types.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/reuse/vcs.py</Path>
+            <Path fileType="data">/usr/share/bash-completion/completions/reuse</Path>
+            <Path fileType="data">/usr/share/fish/vendor_completions.d/reuse.fish</Path>
+            <Path fileType="data">/usr/share/licenses/reuse/Apache-2.0.txt</Path>
+            <Path fileType="data">/usr/share/licenses/reuse/CC-BY-SA-4.0.txt</Path>
+            <Path fileType="data">/usr/share/licenses/reuse/CC0-1.0.txt</Path>
+            <Path fileType="data">/usr/share/licenses/reuse/GPL-3.0-or-later.txt</Path>
+            <Path fileType="man">/usr/share/man/man1/reuse-annotate.1.zst</Path>
+            <Path fileType="man">/usr/share/man/man1/reuse-convert-dep5.1.zst</Path>
+            <Path fileType="man">/usr/share/man/man1/reuse-download.1.zst</Path>
+            <Path fileType="man">/usr/share/man/man1/reuse-lint-file.1.zst</Path>
+            <Path fileType="man">/usr/share/man/man1/reuse-lint.1.zst</Path>
+            <Path fileType="man">/usr/share/man/man1/reuse-spdx.1.zst</Path>
+            <Path fileType="man">/usr/share/man/man1/reuse-supported-licenses.1.zst</Path>
+            <Path fileType="man">/usr/share/man/man1/reuse.1.zst</Path>
+            <Path fileType="data">/usr/share/zsh/site-functions/_reuse</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2026-03-31</Date>
+            <Version>6.2.0</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Evan Maddock</Name>
+            <Email>maddock.evan@vivaldi.net</Email>
+        </Update>
+    </History>
+</PISI>

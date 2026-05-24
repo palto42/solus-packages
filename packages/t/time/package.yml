@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : time
-version    : '1.9'
-release    : 4
+version    : '1.10'
+release    : 6
 source     :
-    - https://ftp.gnu.org/gnu/time/time-1.9.tar.gz : fbacf0c81e62429df3e33bda4cee38756604f18e01d977338e23306a3e3b521e
+    - https://ftpmirror.gnu.org/gnu/time/time-1.10.tar.gz : e8c29fb4ab599d8478e41e8618f50db8aede9c90af27d0d2ef28ae50d5de09c3
 homepage   : https://www.gnu.org/software/time
 license    : GPL-3.0
 component  : system.base
@@ -15,5 +16,6 @@ build      : |
     %make
 install    : |
     %make_install
+    %install_license COPYING
 check      : |
     %make check

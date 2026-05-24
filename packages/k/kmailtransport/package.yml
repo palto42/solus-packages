@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kmailtransport
-version    : 25.08.2
-release    : 97
+version    : 26.04.1
+release    : 102
 source     :
-    - https://download.kde.org/stable/release-service/25.08.2/src/kmailtransport-25.08.2.tar.xz : f6f9d8aff2654c6aa31358059689b9b10846cfe05e53445fcb958b2b0fe5b794
+    - https://download.kde.org/stable/release-service/26.04.1/src/kmailtransport-26.04.1.tar.xz : c906f54252fa8005f3f1a80fb1d81b98b0a837631348ffd77d125310d0079f44
 homepage   : https://kde.org/
 license    : LGPL-2.1-or-later
 component  : desktop.library

@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : gnome-mines
-version    : '48.1'
-release    : 23
+version    : '50.0'
+release    : 25
 source     :
-    - https://download.gnome.org/sources/gnome-mines/48/gnome-mines-48.1.tar.xz : ef4b2d2dde3bec614157edde4d9189cc6afe692952a2dd55b2870e2e62ed8104
+    - https://download.gnome.org/sources/gnome-mines/50/gnome-mines-50.0.tar.xz : 9d3a44122d04af787c64a869ef90dd54ea7500e5b48be457c6d64d9b2773fb9f
 homepage   : https://gitlab.gnome.org/GNOME/gnome-mines
 license    : GPL-3.0-or-later
 component  : games.puzzle

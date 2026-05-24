@@ -1,0 +1,84 @@
+<PISI>
+    <Source>
+        <Name>solseek</Name>
+        <Homepage>https://github.com/clintre/solseek</Homepage>
+        <Packager>
+            <Name>clintre</Name>
+            <Email>clint@eschberger.info</Email>
+        </Packager>
+        <License>GPL-3.0-or-later</License>
+        <PartOf>system.utils</PartOf>
+        <Summary xml:lang="en">A TUI Package Manager for Solus</Summary>
+        <Description xml:lang="en">Solseek is a simple terminal user interface that allows you to browse, search, and manage packages from the Solus packages.
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>solseek</Name>
+        <Summary xml:lang="en">A TUI Package Manager for Solus</Summary>
+        <Description xml:lang="en">Solseek is a simple terminal user interface that allows you to browse, search, and manage packages from the Solus packages.
+</Description>
+        <PartOf>system.utils</PartOf>
+        <Files>
+            <Path fileType="executable">/usr/bin/solseek</Path>
+            <Path fileType="data">/usr/share/applications/Solseek.desktop</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/solseek.svg</Path>
+            <Path fileType="data">/usr/share/licenses/solseek/LICENSE</Path>
+            <Path fileType="data">/usr/share/metainfo/solseek.metainfo.xml</Path>
+            <Path fileType="data">/usr/share/solseek/LICENSE-solseek.txt</Path>
+            <Path fileType="data">/usr/share/solseek/config</Path>
+            <Path fileType="data">/usr/share/solseek/core/boot</Path>
+            <Path fileType="data">/usr/share/solseek/core/core_functions</Path>
+            <Path fileType="data">/usr/share/solseek/core/defaults</Path>
+            <Path fileType="data">/usr/share/solseek/core/menus</Path>
+            <Path fileType="data">/usr/share/solseek/core/pkg_functions</Path>
+            <Path fileType="data">/usr/share/solseek/helpers/eopkg-info.py</Path>
+            <Path fileType="data">/usr/share/solseek/helpers/solseek-tray.py</Path>
+            <Path fileType="data">/usr/share/solseek/lang/de.ini</Path>
+            <Path fileType="data">/usr/share/solseek/lang/en.ini</Path>
+            <Path fileType="data">/usr/share/solseek/lang/es.ini</Path>
+            <Path fileType="data">/usr/share/solseek/lang/fr.ini</Path>
+            <Path fileType="data">/usr/share/solseek/lang/pl.ini</Path>
+            <Path fileType="data">/usr/share/solseek/lang/pt.ini</Path>
+            <Path fileType="data">/usr/share/solseek/lang/sl.ini</Path>
+            <Path fileType="data">/usr/share/solseek/modules/install-flatpak</Path>
+            <Path fileType="data">/usr/share/solseek/modules/install-pkg</Path>
+            <Path fileType="data">/usr/share/solseek/modules/list-packages</Path>
+            <Path fileType="data">/usr/share/solseek/modules/notify</Path>
+            <Path fileType="data">/usr/share/solseek/modules/panel-drivers</Path>
+            <Path fileType="data">/usr/share/solseek/modules/panel-fpinfo</Path>
+            <Path fileType="data">/usr/share/solseek/modules/panel-help</Path>
+            <Path fileType="data">/usr/share/solseek/modules/panel-pkginfo</Path>
+            <Path fileType="data">/usr/share/solseek/modules/tools</Path>
+            <Path fileType="data">/usr/share/solseek/modules/ui_appstream_catalog</Path>
+            <Path fileType="data">/usr/share/solseek/modules/ui_appstream_category</Path>
+            <Path fileType="data">/usr/share/solseek/modules/ui_drivers</Path>
+            <Path fileType="data">/usr/share/solseek/modules/ui_eopkg</Path>
+            <Path fileType="data">/usr/share/solseek/modules/ui_flatpak</Path>
+            <Path fileType="data">/usr/share/solseek/modules/ui_main</Path>
+            <Path fileType="data">/usr/share/solseek/modules/ui_rollback</Path>
+            <Path fileType="data">/usr/share/solseek/modules/ui_tools</Path>
+            <Path fileType="data">/usr/share/solseek/modules/ui_update</Path>
+            <Path fileType="data">/usr/share/solseek/modules/update-runner</Path>
+            <Path fileType="data">/usr/share/solseek/solseek-uc.service</Path>
+            <Path fileType="data">/usr/share/solseek/solseek-uc.timer</Path>
+            <Path fileType="data">/usr/share/solseek/solseek_fastfetch_1.jsonc</Path>
+            <Path fileType="data">/usr/share/solseek/solseek_fastfetch_2.jsonc</Path>
+            <Path fileType="data">/usr/share/solseek/solseek_fastfetch_3.jsonc</Path>
+            <Path fileType="data">/usr/share/solseek/solseek_fastfetch_4.jsonc</Path>
+            <Path fileType="data">/usr/share/solseek/solseek_fastfetch_5.jsonc</Path>
+            <Path fileType="data">/usr/share/solseek/solseek_fastfetch_6.jsonc</Path>
+            <Path fileType="data">/usr/share/solseek/themes/base.theme</Path>
+            <Path fileType="data">/usr/share/solseek/themes/solus.theme</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="37">
+            <Date>2026-05-18</Date>
+            <Version>1.4.5</Version>
+            <Comment>Packaging update</Comment>
+            <Name>clintre</Name>
+            <Email>clint@eschberger.info</Email>
+        </Update>
+    </History>
+</PISI>

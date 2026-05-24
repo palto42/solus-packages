@@ -11,6 +11,8 @@ libtevent.so.0:TEVENT_0.15.0
 libtevent.so.0:TEVENT_0.16.0
 libtevent.so.0:TEVENT_0.16.1
 libtevent.so.0:TEVENT_0.16.2
+libtevent.so.0:TEVENT_0.17.0
+libtevent.so.0:TEVENT_0.17.1
 libtevent.so.0:TEVENT_0.9.10
 libtevent.so.0:TEVENT_0.9.11
 libtevent.so.0:TEVENT_0.9.12
@@ -88,6 +90,7 @@ libtevent.so.0:tevent_common_fd_get_flags
 libtevent.so.0:tevent_common_fd_set_close_fn
 libtevent.so.0:tevent_common_fd_set_flags
 libtevent.so.0:tevent_common_have_events
+libtevent.so.0:tevent_common_immediate_cancel
 libtevent.so.0:tevent_common_invoke_fd_handler
 libtevent.so.0:tevent_common_invoke_immediate_handler
 libtevent.so.0:tevent_common_invoke_signal_handler
@@ -105,6 +108,7 @@ libtevent.so.0:tevent_context_init_byname
 libtevent.so.0:tevent_context_init_ops
 libtevent.so.0:tevent_context_is_wrapper
 libtevent.so.0:tevent_context_same_loop
+libtevent.so.0:tevent_context_set_wait_timeout
 libtevent.so.0:tevent_debug
 libtevent.so.0:tevent_fd_get_flags
 libtevent.so.0:tevent_fd_get_tag
@@ -167,6 +171,7 @@ libtevent.so.0:tevent_req_set_cleanup_fn
 libtevent.so.0:tevent_req_set_endtime
 libtevent.so.0:tevent_req_set_print_fn
 libtevent.so.0:tevent_req_set_profile
+libtevent.so.0:tevent_reset_immediate
 libtevent.so.0:tevent_sa_info_queue_count
 libtevent.so.0:tevent_set_abort_fn
 libtevent.so.0:tevent_set_debug

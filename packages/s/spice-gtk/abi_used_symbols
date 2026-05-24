@@ -26,7 +26,9 @@ libc.so.6:__ctype_b_loc
 libc.so.6:__ctype_toupper_loc
 libc.so.6:__errno_location
 libc.so.6:__fprintf_chk
-libc.so.6:__isoc99_sscanf
+libc.so.6:__isoc23_sscanf
+libc.so.6:__isoc23_strtol
+libc.so.6:__isoc23_strtoul
 libc.so.6:__libc_start_main
 libc.so.6:__longjmp_chk
 libc.so.6:__printf_chk
@@ -97,8 +99,6 @@ libc.so.6:strncpy
 libc.so.6:strnlen
 libc.so.6:strstr
 libc.so.6:strtok_r
-libc.so.6:strtol
-libc.so.6:strtoul
 libc.so.6:swapcontext
 libc.so.6:tcgetattr
 libc.so.6:tcsetattr
@@ -989,6 +989,8 @@ liblz4.so.1:LZ4_createStreamDecode
 liblz4.so.1:LZ4_decompress_safe
 liblz4.so.1:LZ4_decompress_safe_continue
 liblz4.so.1:LZ4_freeStreamDecode
+libm.so.6:ceil
+libm.so.6:floor
 libm.so.6:hypot
 libm.so.6:sqrt
 libopus.so.0:opus_decode
@@ -1142,8 +1144,6 @@ libwayland-client.so.0:wl_proxy_marshal_flags
 libwayland-client.so.0:wl_region_interface
 libwayland-client.so.0:wl_registry_interface
 libwayland-client.so.0:wl_surface_interface
-libwayland-server.so.0:wl_pointer_interface
-libwayland-server.so.0:wl_region_interface
 libz.so.1:inflate
 libz.so.1:inflateEnd
 libz.so.1:inflateInit_

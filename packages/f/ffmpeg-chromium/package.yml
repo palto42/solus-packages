@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : ffmpeg-chromium
-version    : '140'
-release    : 36
+version    : '148'
+release    : 40
 source     :
-    - git|https://chromium.googlesource.com/chromium/third_party/ffmpeg.git : d2d06b12c22d27af58114e779270521074ff1f85
+    - git|https://chromium.googlesource.com/chromium/third_party/ffmpeg.git : b5e18fb9da84e26ceef30d4e4886696bf59337c0
 homepage   : https://chromium.googlesource.com/chromium/third_party/ffmpeg
 license    :
     - BSD-3-Clause

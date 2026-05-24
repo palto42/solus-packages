@@ -1,6 +1,7 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : mailnag
 version    : 2.2.0
-release    : 13
+release    : 14
 source     :
     - https://github.com/pulb/mailnag/archive/refs/tags/v2.2.0.tar.gz : 27cff6844f3601cf903505fcd50c2443a7b39720429737583f1b2392bc69a3e9
 homepage   : https://github.com/pulb/mailnag
@@ -12,7 +13,7 @@ description: |
 builddeps  :
     - python-setuptools
 rundeps    :
-    - gstreamer-1.0-plugins-base
+    - gstreamer-plugins-base
     - libnotify
     - libsecret
     - python-gobject

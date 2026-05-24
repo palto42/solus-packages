@@ -14,6 +14,7 @@ libc.so.6:__vsnprintf_chk
 libc.so.6:_setjmp
 libc.so.6:abort
 libc.so.6:calloc
+libc.so.6:clearenv
 libc.so.6:clone
 libc.so.6:close
 libc.so.6:execve
@@ -58,6 +59,7 @@ libc.so.6:pthread_sigmask
 libc.so.6:read
 libc.so.6:realloc
 libc.so.6:res_search
+libc.so.6:sched_getaffinity
 libc.so.6:setegid
 libc.so.6:setenv
 libc.so.6:seteuid
@@ -81,6 +83,8 @@ libc.so.6:strchr
 libc.so.6:strcmp
 libc.so.6:strdup
 libc.so.6:strerror
+libc.so.6:strlen
+libc.so.6:strncat
 libc.so.6:strncpy
 libc.so.6:strpbrk
 libc.so.6:strspn

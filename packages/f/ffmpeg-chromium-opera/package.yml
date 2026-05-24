@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : ffmpeg-chromium-opera
-version    : '138'
-release    : 35
+version    : '147'
+release    : 43
 source     :
-    - git|https://chromium.googlesource.com/chromium/third_party/ffmpeg.git : dcdd0fa51b65a0b1688ff6b8f0cc81908f09ded2
+    - git|https://chromium.googlesource.com/chromium/third_party/ffmpeg.git : 946d97db8d906277085e361892b7efda5152e2f1
 homepage   : https://chromium.googlesource.com/chromium/third_party/ffmpeg
 license    :
     - BSD-3-Clause
@@ -62,4 +63,4 @@ build      : |
 install    : |
     %make DESTDIR=tmp install-libffmpeg
 
-    install -Dm00644 tmp/usr/local/lib/chromium/libffmpeg.so. $installdir/usr/lib/opera/libffmpeg.so
+    install -Dm00644 tmp/usr/local/lib/chromium/libffmpeg.so. $installdir/usr/lib/opera-stable/libffmpeg.so

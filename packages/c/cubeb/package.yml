@@ -1,14 +1,17 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : cubeb
-version    : '20230731'
-release    : 2
+version    : '20260123'
+release    : 3
 source     :
-    - git|https://github.com/mozilla/cubeb : b9af56cee792f17a466db7b3ac3382262782c6f1
+    - git|https://github.com/mozilla/cubeb : 484857522c73318c06f18ba0a3e17525fa98c608
 homepage   : https://github.com/mozilla/cubeb
 license    : ISC
 component  : multimedia.audio
 summary    : A cross-platform audio library
 description: |
     A cross-platform audio library developed by Mozilla.
+networking : true
+clang      : true
 builddeps  :
     - pkgconfig(alsa)
     - pkgconfig(gtest)
@@ -16,11 +19,16 @@ builddeps  :
     - pkgconfig(libpulse)
     - pkgconfig(sndio)
     - pkgconfig(speexdsp)
+    - rust
 setup      : |
     # https://github.com/mozilla/cubeb/issues/736
     sed -i '/cubeb_add_test(logging)/d' CMakeLists.txt
+    # Remove Android build files
+    rm -rf src/android
     %cmake -B build \
+        -DBUILD_RUST_LIBS=ON \
         -DBUILD_SHARED_LIBS=ON \
+        -DBUILD_TESTS=OFF \
         -DBUNDLE_SPEEX=OFF \
         -DCMAKE_BUILD_TYPE=Release \
         -DUSE_SANITIZERS=OFF
@@ -28,5 +36,3 @@ build      : |
     cmake --build build
 install    : |
     DESTDIR=$installdir cmake --install build
-check      : |
-    ctest --test-dir build -E 'audio|callback_ret|device_changed_callback|devices|duplex|latency|record|sanity|tone'

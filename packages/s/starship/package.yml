@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : starship
-version    : 1.23.0
-release    : 23
+version    : 1.25.1
+release    : 29
 source     :
-    - https://github.com/starship/starship/archive/refs/tags/v1.23.0.tar.gz : be3ba025a64bd808899dce256e1511145b55cc5eefc5fca82bf5537cd8e09c72
+    - https://github.com/starship/starship/archive/refs/tags/v1.25.1.tar.gz : 521306b14066ee7e332d998ef5b5b6455fdc6085c52e86b6316a7cdc37bae1d8
 homepage   : https://starship.rs/
 license    : ISC
 component  : system.utils
@@ -19,11 +20,26 @@ builddeps  :
 checkdeps  :
     - git
 setup      : |
+    cp $pkgfiles/aeryn-os.toml docs/public/presets/toml/aeryn-os.toml
+
     %cargo_fetch
 build      : |
     %cargo_build
 install    : |
     %cargo_install
+    %install_license LICENSE
+
+    # Install completions
+    install -dm00755 $installdir/usr/share/bash-completion/completions
+    install -dm00755 $installdir/usr/share/zsh/site-functions
+    install -dm00755 $installdir/usr/share/fish/vendor_completions.d
+
+    target/release/starship completions bash > $installdir/usr/share/bash-completion/completions/starship.bash
+    target/release/starship completions zsh > $installdir/usr/share/zsh/site-functions/_starship
+    target/release/starship completions fish > $installdir/usr/share/fish/vendor_completions.d/starship.fish
+
+    # Default initialization
+    install -Dm00644 $pkgfiles/50-starship.sh $installdir/usr/share/defaults/etc/profile.d/50-starship.sh
 check      : |
     export TERM=xterm-256color
     %cargo_test -- --skip "modules::username::tests::show_always_false"

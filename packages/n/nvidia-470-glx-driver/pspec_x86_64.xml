@@ -3,8 +3,8 @@
         <Name>nvidia-470-glx-driver</Name>
         <Homepage>https://nvidia.com</Homepage>
         <Packager>
-            <Name>Reilly Brogan</Name>
-            <Email>solus@reillybrogan.com</Email>
+            <Name>Troy Harvey</Name>
+            <Email>harvey@getsol.us</Email>
         </Packager>
         <License>EULA</License>
         <PartOf>kernel.drivers</PartOf>
@@ -18,20 +18,15 @@
         <Description xml:lang="en">NVIDIA 470.xx Binary Driver (LTS Kernel)</Description>
         <PartOf>kernel.drivers</PartOf>
         <RuntimeDependencies>
-            <Dependency releaseFrom="120">nvidia-470-glx-driver-common</Dependency>
+            <Dependency releaseFrom="143">nvidia-470-glx-driver-common</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="data">/lib64/modules/6.12.45-272.lts/kernel/drivers/video/nvidia-drm.ko.zst</Path>
-            <Path fileType="data">/lib64/modules/6.12.45-272.lts/kernel/drivers/video/nvidia-modeset.ko.zst</Path>
-            <Path fileType="data">/lib64/modules/6.12.45-272.lts/kernel/drivers/video/nvidia-peermem.ko.zst</Path>
-            <Path fileType="data">/lib64/modules/6.12.45-272.lts/kernel/drivers/video/nvidia-uvm.ko.zst</Path>
-            <Path fileType="data">/lib64/modules/6.12.45-272.lts/kernel/drivers/video/nvidia.ko.zst</Path>
-            <Path fileType="library">/usr/lib64/kernel/initrd-com.solus-project.lts.6.12.45-272.nvidia</Path>
-            <Path fileType="library">/usr/lib64/modules/6.12.45-272.lts/kernel/drivers/video/nvidia-drm.ko.zst</Path>
-            <Path fileType="library">/usr/lib64/modules/6.12.45-272.lts/kernel/drivers/video/nvidia-modeset.ko.zst</Path>
-            <Path fileType="library">/usr/lib64/modules/6.12.45-272.lts/kernel/drivers/video/nvidia-peermem.ko.zst</Path>
-            <Path fileType="library">/usr/lib64/modules/6.12.45-272.lts/kernel/drivers/video/nvidia-uvm.ko.zst</Path>
-            <Path fileType="library">/usr/lib64/modules/6.12.45-272.lts/kernel/drivers/video/nvidia.ko.zst</Path>
+            <Path fileType="library">/usr/lib64/kernel/initrd-com.solus-project.lts.6.18.33-292.nvidia</Path>
+            <Path fileType="library">/usr/lib64/modules/6.18.33-292.lts/extra/drivers/video/nvidia-drm.ko.zst</Path>
+            <Path fileType="library">/usr/lib64/modules/6.18.33-292.lts/extra/drivers/video/nvidia-modeset.ko.zst</Path>
+            <Path fileType="library">/usr/lib64/modules/6.18.33-292.lts/extra/drivers/video/nvidia-peermem.ko.zst</Path>
+            <Path fileType="library">/usr/lib64/modules/6.18.33-292.lts/extra/drivers/video/nvidia-uvm.ko.zst</Path>
+            <Path fileType="library">/usr/lib64/modules/6.18.33-292.lts/extra/drivers/video/nvidia.ko.zst</Path>
             <Path fileType="data">/usr/share/icons/hicolor/64x64/apps/nvidia-lts.png</Path>
             <Path fileType="data">/usr/share/metainfo/nvidia-470-lts.metainfo.xml</Path>
         </Files>
@@ -47,7 +42,7 @@
         <Description xml:lang="en">32-bit libraries for NVIDIA 470.xx Binary Driver</Description>
         <PartOf>xorg.driver</PartOf>
         <RuntimeDependencies>
-            <Dependency releaseFrom="120">nvidia-470-glx-driver-common</Dependency>
+            <Dependency releaseFrom="143">nvidia-470-glx-driver-common</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib32/libEGL_nvidia.so</Path>
@@ -208,8 +203,9 @@
             <Path fileType="library">/usr/lib64/libnvoptix.so</Path>
             <Path fileType="library">/usr/lib64/libnvoptix.so.1</Path>
             <Path fileType="library">/usr/lib64/libnvoptix.so.470.256.02</Path>
+            <Path fileType="library">/usr/lib64/modprobe.d/nvidia-blacklist.conf</Path>
             <Path fileType="library">/usr/lib64/modprobe.d/nvidia-sleep.conf</Path>
-            <Path fileType="library">/usr/lib64/modprobe.d/nvidia.conf</Path>
+            <Path fileType="library">/usr/lib64/modules-load.d/nvidia-uvm.conf</Path>
             <Path fileType="library">/usr/lib64/nvidia/modules/libglxserver_nvidia.so</Path>
             <Path fileType="library">/usr/lib64/nvidia/modules/libglxserver_nvidia.so.470.256.02</Path>
             <Path fileType="library">/usr/lib64/nvidia/wine/_nvngx.dll</Path>
@@ -237,6 +233,7 @@
             <Path fileType="data">/usr/share/nvidia/nvidia-application-profiles-470.256.02-key-documentation</Path>
             <Path fileType="data">/usr/share/nvidia/nvidia-application-profiles-470.256.02-rc</Path>
             <Path fileType="data">/usr/share/pixmaps/nvidia-settings.png</Path>
+            <Path fileType="data">/usr/share/sddm/sddm.conf.d/99_nvidia_470.conf</Path>
             <Path fileType="data">/usr/share/vulkan/icd.d/10_nvidia.json</Path>
             <Path fileType="data">/usr/share/vulkan/implicit_layer.d/nvidia_layers.json</Path>
         </Files>
@@ -244,35 +241,6 @@
             <Package>nvidia-beta-driver-common</Package>
             <Package>nvidia-developer-driver-common</Package>
             <Package>nvidia-glx-driver-common</Package>
-        </Conflicts>
-    </Package>
-    <Package>
-        <Name>nvidia-470-glx-driver-current</Name>
-        <Summary xml:lang="en">NVIDIA 470.xx Binary Driver (Current Kernel)</Summary>
-        <Description xml:lang="en">NVIDIA 470.xx Binary Driver (Current Kernel)</Description>
-        <PartOf>kernel.drivers</PartOf>
-        <RuntimeDependencies>
-            <Dependency releaseFrom="120">nvidia-470-glx-driver-common</Dependency>
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="data">/lib64/modules/6.16.5-322.current/kernel/drivers/video/nvidia-drm.ko.zst</Path>
-            <Path fileType="data">/lib64/modules/6.16.5-322.current/kernel/drivers/video/nvidia-modeset.ko.zst</Path>
-            <Path fileType="data">/lib64/modules/6.16.5-322.current/kernel/drivers/video/nvidia-peermem.ko.zst</Path>
-            <Path fileType="data">/lib64/modules/6.16.5-322.current/kernel/drivers/video/nvidia-uvm.ko.zst</Path>
-            <Path fileType="data">/lib64/modules/6.16.5-322.current/kernel/drivers/video/nvidia.ko.zst</Path>
-            <Path fileType="library">/usr/lib64/kernel/initrd-com.solus-project.current.6.16.5-322.nvidia</Path>
-            <Path fileType="library">/usr/lib64/modules/6.16.5-322.current/kernel/drivers/video/nvidia-drm.ko.zst</Path>
-            <Path fileType="library">/usr/lib64/modules/6.16.5-322.current/kernel/drivers/video/nvidia-modeset.ko.zst</Path>
-            <Path fileType="library">/usr/lib64/modules/6.16.5-322.current/kernel/drivers/video/nvidia-peermem.ko.zst</Path>
-            <Path fileType="library">/usr/lib64/modules/6.16.5-322.current/kernel/drivers/video/nvidia-uvm.ko.zst</Path>
-            <Path fileType="library">/usr/lib64/modules/6.16.5-322.current/kernel/drivers/video/nvidia.ko.zst</Path>
-            <Path fileType="data">/usr/share/icons/hicolor/64x64/apps/nvidia-current.png</Path>
-            <Path fileType="data">/usr/share/metainfo/nvidia-470-current.metainfo.xml</Path>
-        </Files>
-        <Conflicts>
-            <Package>nvidia-beta-driver-current</Package>
-            <Package>nvidia-developer-driver-current</Package>
-            <Package>nvidia-glx-driver-current</Package>
         </Conflicts>
     </Package>
     <Package>
@@ -286,12 +254,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="120">
-            <Date>2025-09-10</Date>
+        <Update release="143">
+            <Date>2026-05-24</Date>
             <Version>470.256.02</Version>
             <Comment>Packaging update</Comment>
-            <Name>Reilly Brogan</Name>
-            <Email>solus@reillybrogan.com</Email>
+            <Name>Troy Harvey</Name>
+            <Email>harvey@getsol.us</Email>
         </Update>
     </History>
 </PISI>

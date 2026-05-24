@@ -1,6 +1,7 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : gst-validate
 version    : 1.16.3
-release    : 19
+release    : 20
 source     :
     - https://gstreamer.freedesktop.org/src/gst-validate/gst-validate-1.16.3.tar.xz : c2064e887324af6aa476ca669234936711f253b29042f617f1d9f2597c4bf92b
 homepage   : https://gstreamer.freedesktop.org/
@@ -14,8 +15,8 @@ builddeps  :
     - pkgconfig(gtk+-3.0)
     - pkgconfig(json-glib-1.0)
 rundeps    :
-    - gstreamer-1.0
-    - gstreamer-1.0-plugins-base
+    - gstreamer
+    - gstreamer-plugins-base
 setup      : |
     %configure \
         --disable-static \
@@ -25,5 +26,6 @@ build      : |
     %make
 install    : |
     %make_install
+    %install_license COPYING
 check      : |
     %make check || :

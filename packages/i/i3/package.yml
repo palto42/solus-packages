@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : i3
-version    : 4.21.1
-release    : 51
+version    : 4.25.1
+release    : 55
 source     :
-    - https://github.com/Airblader/i3/releases/download/4.21.1/i3-4.21.1.tar.xz : b85f2c58b89d40b330b7f7362bf5c9e63579f705d0f7f87a69aa1bac43ffdfb1
+    - https://github.com/i3/i3/archive/refs/tags/4.25.1.tar.gz : c4bc2a40796caf40e98deb968c26a48e2ed6e240d40384d4d0f68b4136b11cef
     - https://github.com/i3-gnome/i3-gnome/archive/refs/tags/40.4.tar.gz : 8cf578390ce98b4f7c14d7f49ce4eb2f7255119a685c99ded68b276521ab25f4
 homepage   : https://i3wm.org/
 license    :
@@ -43,7 +44,7 @@ rundeps    :
 setup      : |
     tar xf $sources/40.4.tar.gz
     %patch -p1 -i $pkgfiles/0001-Implement-statelessness.patch
-    %meson_configure
+    %meson_configure -Ddocs=true -Dmans=true
     cd AnyEvent-I3
     perl Makefile.PL INSTALLDIRS=vendor
 build      : |
@@ -52,6 +53,8 @@ build      : |
     %make
 install    : |
     %ninja_install
+    %install_license LICENSE
+
     pushd AnyEvent-I3
     %make_install
     popd
@@ -65,4 +68,6 @@ install    : |
     # Install GNOME Integration
     pushd $workdir/i3-gnome-40.4
         %make_install
+        install -dm00755 $installdir/usr/share/licenses/i3-gnome
+        install -Dm00644 LICENSE $installdir/usr/share/licenses/i3-gnome/LICENSE
     popd

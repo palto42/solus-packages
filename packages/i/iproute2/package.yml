@@ -1,9 +1,10 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : iproute2
 homepage   : https://github.com/shemminger/iproute2
-version    : 6.16.0
-release    : 32
+version    : 7.0.0
+release    : 37
 source     :
-    - https://www.kernel.org/pub/linux/utils/net/iproute2/iproute2-6.16.0.tar.gz : 2b90c310b371c6e0ab5d40effca0117acac775a431a97571f3ded13be3ffe5ee
+    - https://www.kernel.org/pub/linux/utils/net/iproute2/iproute2-7.0.0.tar.gz : cf9cf8b9892e54566a3fa50e70445546e6b3e202da7ea626cc724eec2856bbfc
 license    : GPL-2.0-only
 summary    : Utilities for controlling TCP / IP networking
 component  : network.base
@@ -18,23 +19,16 @@ builddeps  :
     - db5-devel
 setup      : |
     # BBRv3 feature patches
-    %patch -p1 -i $pkgfiles/0001-ss-output-TCP-BBRv3-diag-information.patch
-    %patch -p1 -i $pkgfiles/0002-ip-introduce-the-ecn_low-per-route-feature.patch
-    %patch -p1 -i $pkgfiles/0003-ss-display-ecn_low-if-tcp_info-tcpi_options-TCPI_OPT.patch
+    #%patch -p1 -i $pkgfiles/0001-ss-output-TCP-BBRv3-diag-information.patch
+    #%patch -p1 -i $pkgfiles/0002-ip-introduce-the-ecn_low-per-route-feature.patch
+    #%patch -p1 -i $pkgfiles/0003-ss-display-ecn_low-if-tcp_info-tcpi_options-TCPI_OPT.patch
 
     %configure
 build      : |
     %make
 install    : |
     %make_install SBINDIR="/usr/sbin"
+    %install_license COPYING
     install -D -m 00644 $pkgfiles/iproute2.tmpfiles $installdir/%libdir%/iproute2.tmpfiles
-
-    # usr-merge
-    install -D -d -m 00755 $installdir/sbin
-    pushd $installdir/usr/sbin
-    for FILE in *; do
-        ln -srv $installdir/usr/sbin/$FILE $installdir/sbin/$FILE
-    done
-    popd
 
     rm -rfv $installdir/var

@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : openssl
-version    : 3.3.5
-release    : 55
+version    : 3.6.2
+release    : 58
 source     :
-    - https://github.com/openssl/openssl/releases/download/openssl-3.3.5/openssl-3.3.5.tar.gz : 9d62c00a5a6903740c8703f0e006257f429d565d3b91ac1a9bd4a4c700002e01
+    - https://github.com/openssl/openssl/releases/download/openssl-3.6.2/openssl-3.6.2.tar.gz : aaf51a1fe064384f811daeaeb4ec4dce7340ec8bd893027eee676af31e83a04f
 homepage   : https://www.openssl.org/
 license    : OpenSSL
 summary    : Cryptographic tools required by many packages
@@ -31,6 +32,7 @@ build      : |
     %make
 install    : |
     %make install_sw install_ssldirs install_man_docs DESTDIR="$installdir" INSTALL_PREFIX="$installdir"
+    %install_license LICENSE.txt
 
     # Stateless (kinda)
     install -dm755 $installdir/usr/share/defaults/etc/ssl

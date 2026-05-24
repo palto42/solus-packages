@@ -58,6 +58,7 @@ libglib-2.0.so.0:g_build_filename
 libglib-2.0.so.0:g_byte_array_append
 libglib-2.0.so.0:g_byte_array_free_to_bytes
 libglib-2.0.so.0:g_byte_array_new
+libglib-2.0.so.0:g_byte_array_sized_new
 libglib-2.0.so.0:g_byte_array_unref
 libglib-2.0.so.0:g_bytes_get_data
 libglib-2.0.so.0:g_bytes_get_size
@@ -176,7 +177,6 @@ libglib-2.0.so.0:g_strndup
 libglib-2.0.so.0:g_strrstr
 libglib-2.0.so.0:g_strsplit
 libglib-2.0.so.0:g_strstr_len
-libglib-2.0.so.0:g_strv_contains
 libglib-2.0.so.0:g_strv_length
 libglib-2.0.so.0:g_test_add_func
 libglib-2.0.so.0:g_test_build_filename
@@ -224,10 +224,10 @@ libgobject-2.0.so.0:g_value_set_string
 liblzma.so.5:lzma_auto_decoder
 liblzma.so.5:lzma_code
 liblzma.so.5:lzma_end
-libstemmer.so.2:sb_stemmer_delete
-libstemmer.so.2:sb_stemmer_length
-libstemmer.so.2:sb_stemmer_new
-libstemmer.so.2:sb_stemmer_stem
+libstemmer.so.0:sb_stemmer_delete
+libstemmer.so.0:sb_stemmer_length
+libstemmer.so.0:sb_stemmer_new
+libstemmer.so.0:sb_stemmer_stem
 libzstd.so.1:ZSTD_createDStream
 libzstd.so.1:ZSTD_decompressStream
 libzstd.so.1:ZSTD_freeDStream

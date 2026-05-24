@@ -3,10 +3,13 @@
         <Name>dolphin-emu</Name>
         <Homepage>https://dolphin-emu.org/</Homepage>
         <Packager>
-            <Name>Evan Maddock</Name>
-            <Email>maddock.evan@vivaldi.net</Email>
+            <Name>Joey Riches</Name>
+            <Email>josephriches@gmail.com</Email>
         </Packager>
+        <License>BSD-3-Clause</License>
+        <License>CC0-1.0</License>
         <License>GPL-2.0-or-later</License>
+        <License>MIT</License>
         <PartOf>games.emulator</PartOf>
         <Summary xml:lang="en">GameCube / Wii emulator</Summary>
         <Description xml:lang="en">GameCube / Wii emulator, allowing you to play games for these two platforms on your PC.
@@ -227,6 +230,7 @@
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GAA.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GAF.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GAFE01.ini</Path>
+            <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GAHEGG.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GAK.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GAL.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GALE01r0.ini</Path>
@@ -282,7 +286,9 @@
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GCP.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GCVEEB.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GCZ.ini</Path>
+            <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GD7.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GD7E70.ini</Path>
+            <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GD7PB2.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GDD.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GDDE41.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GDE.ini</Path>
@@ -321,7 +327,6 @@
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GF7E01.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GF7P01.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GF8E69.ini</Path>
-            <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GFB.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GFD.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GFEE01.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GFEJ01.ini</Path>
@@ -329,6 +334,7 @@
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GFG.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GFH.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GFO.ini</Path>
+            <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GFP.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GFQEA4.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GFTE01.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GFW.ini</Path>
@@ -363,6 +369,11 @@
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GHAJ08.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GHAP08.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GHK.ini</Path>
+            <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GHKD7D.ini</Path>
+            <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GHKE7D.ini</Path>
+            <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GHKF7D.ini</Path>
+            <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GHKP7D.ini</Path>
+            <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GHKS7D.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GHLE69.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GHME4F.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GHN.ini</Path>
@@ -386,6 +397,7 @@
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GICP78.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GIGJ8P.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GIH.ini</Path>
+            <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GIHP78.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GIL.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GINE69.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GIQ.ini</Path>
@@ -404,6 +416,7 @@
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GJN.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GJUE78.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GJWE78.ini</Path>
+            <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GJXP51.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GJY.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GK2.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GK2E52.ini</Path>
@@ -465,6 +478,8 @@
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GMH.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GMI.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GMN.ini</Path>
+            <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GMNE78.ini</Path>
+            <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GMNP78.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GMOP70.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GMPE01.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GMPJ01.ini</Path>
@@ -556,6 +571,7 @@
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GR2J52.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GR2P52.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GR6.ini</Path>
+            <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GRA.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GRB.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GREE08.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GREJ08.ini</Path>
@@ -607,6 +623,10 @@
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GTO.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GTOJAF.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GTR.ini</Path>
+            <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GTRE78r0.ini</Path>
+            <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GTRE78r1.ini</Path>
+            <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GTRJ8N.ini</Path>
+            <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GTRP78.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GTSE4F.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GTW.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GTY.ini</Path>
@@ -641,6 +661,7 @@
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GVL.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GVO.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GVPE69.ini</Path>
+            <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GVR.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GVS.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GVSE8P.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GW2.ini</Path>
@@ -664,6 +685,7 @@
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GX3.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GXCE01.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GXG.ini</Path>
+            <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GXL.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GXM.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GXN.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GXS.ini</Path>
@@ -683,6 +705,7 @@
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GZ2E01.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GZ2J01.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GZ2P01.ini</Path>
+            <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GZ3.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GZ3E70.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GZD.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/GZDP70.ini</Path>
@@ -829,6 +852,11 @@
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/R4F.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/R4L.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/R4M.ini</Path>
+            <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/R4QE01.ini</Path>
+            <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/R4QJ01.ini</Path>
+            <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/R4QK01.ini</Path>
+            <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/R4QP01r1.ini</Path>
+            <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/R4QP01r2.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/R4V.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/R4Z.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/R55.ini</Path>
@@ -846,6 +874,7 @@
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/R64.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/R66.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/R67.ini</Path>
+            <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/R6APPU.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/R6B.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/R6C.INI</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/R6E.ini</Path>
@@ -870,6 +899,9 @@
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/R7PP01.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/R7S.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/R7X.ini</Path>
+            <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/R7XE69.ini</Path>
+            <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/R7XJ13.ini</Path>
+            <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/R7XP69.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/R82.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/R84.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/R86.ini</Path>
@@ -900,6 +932,8 @@
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/RB2.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/RB5.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/RB7.ini</Path>
+            <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/RB7E54.ini</Path>
+            <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/RB7P54.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/RB8.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/RB9.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/RBB.ini</Path>
@@ -1080,6 +1114,10 @@
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/RM8P01.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/RM9.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/RMC.ini</Path>
+            <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/RMCE01.ini</Path>
+            <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/RMCJ01.ini</Path>
+            <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/RMCK01.ini</Path>
+            <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/RMCP01.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/RME.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/RMG.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/RMH.ini</Path>
@@ -1180,6 +1218,11 @@
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/RR5.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/RRA.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/RRB.ini</Path>
+            <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/RRBE41r0.ini</Path>
+            <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/RRBE41r1.ini</Path>
+            <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/RRBE41r2.ini</Path>
+            <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/RRBJ41.ini</Path>
+            <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/RRBP41.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/RRF.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/RRK.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/RRL.ini</Path>
@@ -1332,8 +1375,10 @@
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/S5S.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/S72.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/S75.ini</Path>
+            <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/S7B.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/S7E.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/SAG.ini</Path>
+            <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/SAH.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/SAK.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/SAL.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/SAN.ini</Path>
@@ -1347,12 +1392,15 @@
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/SBE.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/SBF.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/SBK.ini</Path>
+            <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/SBLE5G.ini</Path>
+            <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/SBLP5G.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/SBQ.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/SBR.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/SBV.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/SBX.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/SBY.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/SBZ.ini</Path>
+            <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/SC2.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/SC2E8P.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/SC7.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/SCA.ini</Path>
@@ -1364,6 +1412,12 @@
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/SCK.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/SCT.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/SCY.ini</Path>
+            <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/SCYE4Q.ini</Path>
+            <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/SCYP4Q.ini</Path>
+            <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/SCYR4Q.ini</Path>
+            <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/SCYX4Q.ini</Path>
+            <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/SCYY4Q.ini</Path>
+            <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/SCYZ4Q.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/SD2.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/SD2J01.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/SD8.ini</Path>
@@ -1375,6 +1429,8 @@
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/SDN.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/SDO.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/SDV.ini</Path>
+            <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/SDVE41.ini</Path>
+            <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/SDVP41.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/SDW.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/SDZ.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/SE2.ini</Path>
@@ -1486,6 +1542,7 @@
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/SOS.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/SOU.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/SP3.ini</Path>
+            <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/SP4.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/SP7.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/SP8.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/SP9.ini</Path>
@@ -1502,6 +1559,9 @@
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/SPZ.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/SQD.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/SQI.ini</Path>
+            <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/SQIE4Q.ini</Path>
+            <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/SQIP4Q.ini</Path>
+            <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/SQIY4Q.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/SR4.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/SR5.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/SR6.ini</Path>
@@ -1533,6 +1593,13 @@
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/STN.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/STR.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/STS.ini</Path>
+            <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/STSE4Q.ini</Path>
+            <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/STSP4Qr1.ini</Path>
+            <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/STSP4Qr2.ini</Path>
+            <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/STSX4Q.ini</Path>
+            <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/STSY4Qr0.ini</Path>
+            <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/STSY4Qr1.ini</Path>
+            <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/STSZ4Q.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/STV.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/STZ.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/GameSettings/SU3.ini</Path>
@@ -1837,12 +1904,15 @@
             <Path fileType="data">/usr/share/dolphin-emu/sys/Load/GraphicMods/The House of the Dead Overkill/metadata.json</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/Load/GraphicMods/The Last Story/SLS.txt</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/Load/GraphicMods/The Last Story/metadata.json</Path>
-            <Path fileType="data">/usr/share/dolphin-emu/sys/Load/GraphicMods/The Legend of Zelda Twilight Princess/RZD.txt</Path>
-            <Path fileType="data">/usr/share/dolphin-emu/sys/Load/GraphicMods/The Legend of Zelda Twilight Princess/metadata.json</Path>
+            <Path fileType="data">/usr/share/dolphin-emu/sys/Load/GraphicMods/The Legend of Zelda Twilight Princess GC/GZ2.txt</Path>
+            <Path fileType="data">/usr/share/dolphin-emu/sys/Load/GraphicMods/The Legend of Zelda Twilight Princess GC/metadata.json</Path>
+            <Path fileType="data">/usr/share/dolphin-emu/sys/Load/GraphicMods/The Legend of Zelda Twilight Princess Wii/RZD.txt</Path>
+            <Path fileType="data">/usr/share/dolphin-emu/sys/Load/GraphicMods/The Legend of Zelda Twilight Princess Wii/metadata.json</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/Load/GraphicMods/Wii Play/RHA.txt</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/Load/GraphicMods/Wii Play/metadata.json</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/Load/GraphicMods/Xenoblade Chronicles/SX4.txt</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/Load/GraphicMods/Xenoblade Chronicles/metadata.json</Path>
+            <Path fileType="data">/usr/share/dolphin-emu/sys/Profiles/GCPad/SDL Gamepad.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/Profiles/Wiimote/Wii Remote with MotionPlus Pointing.ini</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/Resources/Flag_Australia.png</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/Resources/Flag_Australia@2x.png</Path>
@@ -1886,6 +1956,8 @@
             <Path fileType="data">/usr/share/dolphin-emu/sys/Resources/Flag_Unknown.png</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/Resources/Flag_Unknown@2x.png</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/Resources/Flag_Unknown@4x.png</Path>
+            <Path fileType="data">/usr/share/dolphin-emu/sys/Resources/OSD_Font.ttf</Path>
+            <Path fileType="data">/usr/share/dolphin-emu/sys/Resources/OSD_Font_VeraMono_Copyright.txt</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/Resources/Platform_File.png</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/Resources/Platform_File@2x.png</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/Resources/Platform_File@4x.png</Path>
@@ -2463,6 +2535,11 @@
             <Path fileType="data">/usr/share/dolphin-emu/sys/wiitdb-zh_CN.txt</Path>
             <Path fileType="data">/usr/share/dolphin-emu/sys/wiitdb-zh_TW.txt</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/dolphin-emu.svg</Path>
+            <Path fileType="data">/usr/share/licenses/dolphin-emu/BSD-3-Clause.txt</Path>
+            <Path fileType="data">/usr/share/licenses/dolphin-emu/CC0-1.0.txt</Path>
+            <Path fileType="data">/usr/share/licenses/dolphin-emu/COPYING</Path>
+            <Path fileType="data">/usr/share/licenses/dolphin-emu/GPL-2.0-or-later.txt</Path>
+            <Path fileType="data">/usr/share/licenses/dolphin-emu/MIT.txt</Path>
             <Path fileType="localedata">/usr/share/locale/ar/LC_MESSAGES/dolphin-emu.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ca/LC_MESSAGES/dolphin-emu.mo</Path>
             <Path fileType="localedata">/usr/share/locale/cs/LC_MESSAGES/dolphin-emu.mo</Path>
@@ -2498,12 +2575,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="78">
-            <Date>2025-10-09</Date>
-            <Version>2506a</Version>
+        <Update release="90">
+            <Date>2026-05-20</Date>
+            <Version>2512</Version>
             <Comment>Packaging update</Comment>
-            <Name>Evan Maddock</Name>
-            <Email>maddock.evan@vivaldi.net</Email>
+            <Name>Joey Riches</Name>
+            <Email>josephriches@gmail.com</Email>
         </Update>
     </History>
 </PISI>

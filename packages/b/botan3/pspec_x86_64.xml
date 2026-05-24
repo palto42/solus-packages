@@ -1,0 +1,364 @@
+<PISI>
+    <Source>
+        <Name>botan3</Name>
+        <Homepage>https://botan.randombit.net/</Homepage>
+        <Packager>
+            <Name>Jared Cervantes</Name>
+            <Email>jared@jaredcervantes.com</Email>
+        </Packager>
+        <License>BSD-2-Clause</License>
+        <PartOf>programming.library</PartOf>
+        <Summary xml:lang="en">Crypto and TLS library for C++20</Summary>
+        <Description xml:lang="en">Botan&apos;s goal is to be the best option for cryptography in C++ by offering the tools necessary to implement a range of practical systems, such as TLS protocol, X.509 certificates, modern AEAD ciphers, PKCS#11 and TPM hardware support, password hashing, and post quantum crypto schemes. A Python binding is included.
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>botan3</Name>
+        <Summary xml:lang="en">Crypto and TLS library for C++20</Summary>
+        <Description xml:lang="en">Botan&apos;s goal is to be the best option for cryptography in C++ by offering the tools necessary to implement a range of practical systems, such as TLS protocol, X.509 certificates, modern AEAD ciphers, PKCS#11 and TPM hardware support, password hashing, and post quantum crypto schemes. A Python binding is included.
+</Description>
+        <PartOf>programming.library</PartOf>
+        <Files>
+            <Path fileType="executable">/usr/bin/botan3</Path>
+            <Path fileType="library">/usr/lib64/libbotan-3.so.12</Path>
+            <Path fileType="library">/usr/lib64/libbotan-3.so.12.12.0</Path>
+            <Path fileType="data">/usr/share/licenses/botan3/license.txt</Path>
+            <Path fileType="man">/usr/share/man/man1/botan3.1.zst</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>python-botan3</Name>
+        <Summary xml:lang="en">Python bindings for botan3</Summary>
+        <Description xml:lang="en">Botan&apos;s goal is to be the best option for cryptography in C++ by offering the tools necessary to implement a range of practical systems, such as TLS protocol, X.509 certificates, modern AEAD ciphers, PKCS#11 and TPM hardware support, password hashing, and post quantum crypto schemes. A Python binding is included.
+</Description>
+        <PartOf>programming.python</PartOf>
+        <RuntimeDependencies>
+            <Dependency releaseFrom="3">botan3</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/__pycache__/botan3.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/__pycache__/botan3.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/botan3-3.12.0.dist-info/METADATA</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/botan3-3.12.0.dist-info/RECORD</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/botan3-3.12.0.dist-info/WHEEL</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/botan3-3.12.0.dist-info/licenses/license.txt</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/botan3-3.12.0.dist-info/top_level.txt</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/botan3.py</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>botan3-devel</Name>
+        <Summary xml:lang="en">Development files for botan3</Summary>
+        <Description xml:lang="en">Botan&apos;s goal is to be the best option for cryptography in C++ by offering the tools necessary to implement a range of practical systems, such as TLS protocol, X.509 certificates, modern AEAD ciphers, PKCS#11 and TPM hardware support, password hashing, and post quantum crypto schemes. A Python binding is included.
+</Description>
+        <PartOf>programming.devel</PartOf>
+        <RuntimeDependencies>
+            <Dependency release="3">botan3</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include/botan-3/botan/aead.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/allocator.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/api.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/argon2.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/argon2fmt.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/asn1_obj.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/asn1_print.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/asn1_time.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/assert.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/auto_rng.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/base32.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/base58.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/base64.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/bcrypt.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/bcrypt_pbkdf.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/ber_dec.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/bigint.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/block_cipher.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/buf_comp.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/build.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/bzip2.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/certstor.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/certstor_flatfile.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/certstor_sql.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/certstor_sqlite.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/certstor_system.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/chacha_rng.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/cipher_mode.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/cmce.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/cmce_parameter_set.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/compiler.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/compression.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/concepts.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/credentials_manager.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/cryptobox.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/curve25519.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/curve_gfp.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/data_snk.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/data_src.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/database.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/der_enc.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/dh.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/dilithium.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/dl_group.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/dlies.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/dsa.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/ec_apoint.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/ec_group.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/ec_point.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/ec_point_format.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/ec_scalar.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/ecc_key.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/ecdh.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/ecdsa.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/ecgdsa.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/ecies.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/eckcdsa.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/ed25519.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/ed448.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/elgamal.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/entropy_src.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/exceptn.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/fd_unix.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/ffi.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/filter.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/filters.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/fpe_fe1.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/frodo_mode.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/frodokem.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/gost_3410.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/hash.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/hex.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/hmac_drbg.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/hss_lms.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/ipv4_address.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/ipv6_address.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/kdf.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/kyber.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/mac.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/mceliece.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/mem_ops.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/ml_dsa.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/ml_kem.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/mutex.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/nist_keywrap.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/numthry.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/ocsp.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/oids.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/otp.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/p11.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/p11_ecc_key.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/p11_ecdh.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/p11_ecdsa.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/p11_mechanism.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/p11_object.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/p11_randomgenerator.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/p11_rsa.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/p11_types.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/p11_x509.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/passhash9.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/pbkdf.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/pbkdf2.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/pem.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/pgp_s2k.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/pipe.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/pk_algs.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/pk_keys.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/pk_ops.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/pk_ops_fwd.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/pkcs10.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/pkcs11.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/pkcs8.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/pkix_enums.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/pkix_types.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/processor_rng.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/psk_db.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/pss_params.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/pubkey.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/pwdhash.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/range_concepts.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/reducer.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/rfc3394.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/rfc4880.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/rng.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/roughtime.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/rsa.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/scrypt.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/secmem.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/slh_dsa.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/sm2.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/sodium.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/sp_parameters.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/sphincsplus.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/sqlite3.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/srp6.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/stateful_rng.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/stream_cipher.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/strong_type.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/sym_algo.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/symkey.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/system_rng.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/tls.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/tls_alert.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/tls_algos.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/tls_callbacks.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/tls_channel.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/tls_ciphersuite.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/tls_client.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/tls_exceptn.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/tls_extensions.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/tls_extensions_12.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/tls_extensions_13.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/tls_external_psk.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/tls_handshake_msg.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/tls_magic.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/tls_messages.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/tls_messages_12.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/tls_messages_13.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/tls_policy.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/tls_psk_13.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/tls_psk_identity_13.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/tls_server.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/tls_server_info.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/tls_session.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/tls_session_id.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/tls_session_manager.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/tls_session_manager_hybrid.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/tls_session_manager_memory.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/tls_session_manager_noop.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/tls_session_manager_sql.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/tls_session_manager_sqlite.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/tls_session_manager_stateless.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/tls_signature_scheme.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/tls_version.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/tpm2_context.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/tpm2_crypto_backend.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/tpm2_ecc.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/tpm2_error.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/tpm2_key.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/tpm2_object.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/tpm2_rng.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/tpm2_rsa.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/tpm2_session.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/tss.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/types.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/uuid.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/version.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/x25519.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/x448.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/x509_ca.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/x509_crl.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/x509_ext.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/x509_key.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/x509_obj.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/x509cert.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/x509path.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/x509self.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/xmss.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/xmss_parameters.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/xof.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/zfec.h</Path>
+            <Path fileType="header">/usr/include/botan-3/botan/zlib.h</Path>
+            <Path fileType="library">/usr/lib64/cmake/Botan-3.12.0/botan-config-version.cmake</Path>
+            <Path fileType="library">/usr/lib64/cmake/Botan-3.12.0/botan-config.cmake</Path>
+            <Path fileType="library">/usr/lib64/libbotan-3.so</Path>
+            <Path fileType="data">/usr/lib64/pkgconfig/botan-3.pc</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>botan3-docs</Name>
+        <Summary xml:lang="en">Documentation for botan3</Summary>
+        <Description xml:lang="en">Botan&apos;s goal is to be the best option for cryptography in C++ by offering the tools necessary to implement a range of practical systems, such as TLS protocol, X.509 certificates, modern AEAD ciphers, PKCS#11 and TPM hardware support, password hashing, and post quantum crypto schemes. A Python binding is included.
+</Description>
+        <PartOf>programming.docs</PartOf>
+        <Files>
+            <Path fileType="doc">/usr/share/doc/botan3/authors.txt</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/abi.rst</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/api_ref/bigint.rst</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/api_ref/block_cipher.rst</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/api_ref/cipher_modes.rst</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/api_ref/compression.rst</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/api_ref/contents.rst</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/api_ref/credentials_manager.rst</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/api_ref/cryptobox.rst</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/api_ref/ec_group.rst</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/api_ref/ecc.rst</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/api_ref/env_vars.rst</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/api_ref/ffi.rst</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/api_ref/filters.rst</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/api_ref/footguns.rst</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/api_ref/fpe.rst</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/api_ref/hash.rst</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/api_ref/kdf.rst</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/api_ref/keywrap.rst</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/api_ref/message_auth_codes.rst</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/api_ref/otp.rst</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/api_ref/passhash.rst</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/api_ref/pbkdf.rst</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/api_ref/pkcs11.rst</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/api_ref/providers.rst</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/api_ref/psk_db.rst</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/api_ref/pubkey.rst</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/api_ref/python.rst</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/api_ref/rng.rst</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/api_ref/roughtime.rst</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/api_ref/secmem.rst</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/api_ref/sodium.rst</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/api_ref/srp.rst</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/api_ref/stream_ciphers.rst</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/api_ref/tls.rst</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/api_ref/tpm.rst</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/api_ref/tss.rst</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/api_ref/versions.rst</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/api_ref/x509.rst</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/api_ref/zfec.rst</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/authors.txt</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/building.rst</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/cli.rst</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/contents.rst</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/credits.rst</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/deprecated.rst</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/dev_ref/configure.rst</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/dev_ref/contents.rst</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/dev_ref/continuous_integration.rst</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/dev_ref/contributing.rst</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/dev_ref/fuzzing.rst</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/dev_ref/mistakes.rst</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/dev_ref/next_major.rst</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/dev_ref/oids.rst</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/dev_ref/os.rst</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/dev_ref/pcurves.rst</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/dev_ref/reading_list.rst</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/dev_ref/release_process.rst</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/dev_ref/test_framework.rst</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/dev_ref/todo.rst</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/goals.rst</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/hardware_acceleration.rst</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/index.rst</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/migration_guide.rst</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/news_2x.rst</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/old_news.rst</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/openssl_migration_guide.rst</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/packaging.rst</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/pgpkey.txt</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/roadmap.rst</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/security.rst</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/sem_ver.rst</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/side_channels.rst</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/support.rst</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/handbook/threat_model.rst</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/license.txt</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/news.txt</Path>
+            <Path fileType="doc">/usr/share/doc/botan3/pgpkey.txt</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="3">
+            <Date>2026-05-18</Date>
+            <Version>3.12.0</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Jared Cervantes</Name>
+            <Email>jared@jaredcervantes.com</Email>
+        </Update>
+    </History>
+</PISI>

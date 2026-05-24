@@ -12,6 +12,7 @@ libgtk-frdp-0.2.so:frdp_display_certificate_verify_ex_finish
 libgtk-frdp-0.2.so:frdp_display_close
 libgtk-frdp-0.2.so:frdp_display_get_pixbuf
 libgtk-frdp-0.2.so:frdp_display_get_type
+libgtk-frdp-0.2.so:frdp_display_is_keyboard_grabbed
 libgtk-frdp-0.2.so:frdp_display_is_open
 libgtk-frdp-0.2.so:frdp_display_new
 libgtk-frdp-0.2.so:frdp_display_open_host

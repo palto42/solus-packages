@@ -34,6 +34,7 @@ libc.so:__fwritable
 libc.so:__fwriting
 libc.so:__fxstat
 libc.so:__fxstatat
+libc.so:__getauxval
 libc.so:__h_errno_location
 libc.so:__isalnum_l
 libc.so:__isalpha_l
@@ -228,6 +229,7 @@ libc.so:cfgetospeed
 libc.so:cfmakeraw
 libc.so:cfsetispeed
 libc.so:cfsetospeed
+libc.so:cfsetspeed
 libc.so:chdir
 libc.so:chmod
 libc.so:chown
@@ -857,6 +859,7 @@ libc.so:popen
 libc.so:posix_close
 libc.so:posix_fadvise
 libc.so:posix_fallocate
+libc.so:posix_getdents
 libc.so:posix_madvise
 libc.so:posix_memalign
 libc.so:posix_openpt
@@ -1035,6 +1038,7 @@ libc.so:remquof
 libc.so:remquol
 libc.so:rename
 libc.so:renameat
+libc.so:renameat2
 libc.so:res_init
 libc.so:res_query
 libc.so:res_querydomain

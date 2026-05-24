@@ -1,7 +1,7 @@
 <PISI>
     <Source>
         <Name>kanshi</Name>
-        <Homepage>https://git.sr.ht/~emersion/kanshi</Homepage>
+        <Homepage>https://gitlab.freedesktop.org/emersion/kanshi</Homepage>
         <Packager>
             <Name>Evan Maddock</Name>
             <Email>maddock.evan@vivaldi.net</Email>
@@ -26,15 +26,16 @@ This is a Wayland equivalent for tools like autorandr. kanshi can be used on Way
         <Files>
             <Path fileType="executable">/usr/bin/kanshi</Path>
             <Path fileType="executable">/usr/bin/kanshictl</Path>
-            <Path fileType="man">/usr/share/man/man1/kanshi.1</Path>
-            <Path fileType="man">/usr/share/man/man1/kanshictl.1</Path>
-            <Path fileType="man">/usr/share/man/man5/kanshi.5</Path>
+            <Path fileType="data">/usr/share/licenses/kanshi/LICENSE</Path>
+            <Path fileType="man">/usr/share/man/man1/kanshi.1.zst</Path>
+            <Path fileType="man">/usr/share/man/man1/kanshictl.1.zst</Path>
+            <Path fileType="man">/usr/share/man/man5/kanshi.5.zst</Path>
         </Files>
     </Package>
     <History>
-        <Update release="1">
-            <Date>2024-12-31</Date>
-            <Version>1.7.0</Version>
+        <Update release="2">
+            <Date>2026-04-02</Date>
+            <Version>1.9.0</Version>
             <Comment>Packaging update</Comment>
             <Name>Evan Maddock</Name>
             <Email>maddock.evan@vivaldi.net</Email>

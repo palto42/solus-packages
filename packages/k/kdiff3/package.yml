@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kdiff3
-version    : 1.10.7
-release    : 4
+version    : 1.12.4
+release    : 7
 source     :
-    - https://download.kde.org/stable/kdiff3/kdiff3-1.10.7.tar.xz : ba3f4acbf4ac748aebefc85f59caf653d45fe859a48c34af89918224a767c5e3
+    - https://download.kde.org/stable/kdiff3/kdiff3-1.12.4.tar.xz : 4690a35aa933b192751dd590a6b4f53fef3aa950246371112ad6e872f6b26ecb
 license    : GPL-2.0-or-later
 component  : programming.tools
 homepage   : https://apps.kde.org/kdiff3
@@ -12,12 +13,15 @@ description: |
 optimize   :
     - lto
 builddeps  :
-    - pkgconfig(Qt5Gui)
-    - kcrash-devel
-    - kdoctools-devel
-    - ki18n-devel
-    - kparts-devel
-    - kwindowsystem-devel
+    - pkgconfig(Qt6Gui)
+    - pkgconfig(cups)
+    - kf6-kconfig
+    - kf6-kcoreaddons-devel
+    - kf6-kcrash-devel
+    - kf6-kdoctools-devel
+    - kf6-ki18n-devel
+    - kf6-kio-devel
+    - kf6-kxmlgui-devel
     - libboost-devel
 setup      : |
     %cmake_ninja

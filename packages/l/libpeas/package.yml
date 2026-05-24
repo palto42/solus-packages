@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : libpeas
-version    : 1.36.0
-release    : 32
+version    : 1.38.1
+release    : 34
 source     :
-    - https://download.gnome.org/sources/libpeas/1.36/libpeas-1.36.0.tar.xz : 297cb9c2cccd8e8617623d1a3e8415b4530b8e5a893e3527bbfd1edd13237b4c
+    - https://download.gnome.org/sources/libpeas/1.38/libpeas-1.38.1.tar.xz : e82fd328adcac1aba34b64136bdfcbbacf2b3258a8bc4e5f480a72502a611ae9
 homepage   : https://gitlab.gnome.org/GNOME/libpeas
 license    : LGPL-2.1-or-later
 component  : desktop.gnome.core

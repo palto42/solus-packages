@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kontactinterface
-version    : 25.08.2
-release    : 94
+version    : 26.04.1
+release    : 102
 source     :
-    - https://download.kde.org/stable/release-service/25.08.2/src/kontactinterface-25.08.2.tar.xz : ea5eb22feb8754c50ed4a1a7e16598676c06b52d79fe63259fefe21e52c97329
+    - https://download.kde.org/stable/release-service/26.04.1/src/kontactinterface-26.04.1.tar.xz : aecc871809676d6a70f963a80e8b75f31e527f6533e6b5a6b9c409b29d0a1ab5
 homepage   : https://kde.org/
 license    : LGPL-2.1-or-later
 component  : desktop.library

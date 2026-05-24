@@ -25,9 +25,9 @@
             <Path fileType="library">/usr/lib64/gnome-system-monitor/gnome-system-monitor/gsm-renice</Path>
             <Path fileType="library">/usr/lib64/gnome-system-monitor/gnome-system-monitor/gsm-taskset</Path>
             <Path fileType="data">/usr/share/applications/org.gnome.SystemMonitor.desktop</Path>
+            <Path fileType="data">/usr/share/dbus-1/services/org.gnome.SystemMonitor.service</Path>
             <Path fileType="data">/usr/share/glib-2.0/schemas/org.gnome.gnome-system-monitor.enums.xml</Path>
             <Path fileType="data">/usr/share/glib-2.0/schemas/org.gnome.gnome-system-monitor.gschema.xml</Path>
-            <Path fileType="data">/usr/share/gnome-system-monitor/gsm.gresource</Path>
             <Path fileType="doc">/usr/share/help/C/gnome-system-monitor/commandline.page</Path>
             <Path fileType="doc">/usr/share/help/C/gnome-system-monitor/cpu-check.page</Path>
             <Path fileType="doc">/usr/share/help/C/gnome-system-monitor/cpu-mem-normal.page</Path>
@@ -56,6 +56,34 @@
             <Path fileType="doc">/usr/share/help/C/gnome-system-monitor/process-update-speed.page</Path>
             <Path fileType="doc">/usr/share/help/C/gnome-system-monitor/solaris-mode.page</Path>
             <Path fileType="doc">/usr/share/help/C/gnome-system-monitor/units.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-system-monitor/commandline.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-system-monitor/cpu-check.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-system-monitor/cpu-mem-normal.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-system-monitor/cpu-multicore.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-system-monitor/figures/org.gnome.SystemMonitor.svg</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-system-monitor/fs-device.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-system-monitor/fs-diskusage.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-system-monitor/fs-info.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-system-monitor/fs-showall.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-system-monitor/index.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-system-monitor/legal.xml</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-system-monitor/mem-check.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-system-monitor/mem-swap.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-system-monitor/memory-map-use.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-system-monitor/memory-map-what.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-system-monitor/net-bits.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-system-monitor/process-explain.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-system-monitor/process-files.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-system-monitor/process-identify-file.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-system-monitor/process-identify-hog.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-system-monitor/process-kill.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-system-monitor/process-many.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-system-monitor/process-priority-change.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-system-monitor/process-priority-what.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-system-monitor/process-status.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-system-monitor/process-update-speed.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-system-monitor/solaris-mode.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-system-monitor/units.page</Path>
             <Path fileType="doc">/usr/share/help/ca/gnome-system-monitor/commandline.page</Path>
             <Path fileType="doc">/usr/share/help/ca/gnome-system-monitor/cpu-check.page</Path>
             <Path fileType="doc">/usr/share/help/ca/gnome-system-monitor/cpu-mem-normal.page</Path>
@@ -392,6 +420,34 @@
             <Path fileType="doc">/usr/share/help/it/gnome-system-monitor/process-update-speed.page</Path>
             <Path fileType="doc">/usr/share/help/it/gnome-system-monitor/solaris-mode.page</Path>
             <Path fileType="doc">/usr/share/help/it/gnome-system-monitor/units.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-system-monitor/commandline.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-system-monitor/cpu-check.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-system-monitor/cpu-mem-normal.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-system-monitor/cpu-multicore.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-system-monitor/figures/org.gnome.SystemMonitor.svg</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-system-monitor/fs-device.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-system-monitor/fs-diskusage.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-system-monitor/fs-info.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-system-monitor/fs-showall.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-system-monitor/index.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-system-monitor/legal.xml</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-system-monitor/mem-check.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-system-monitor/mem-swap.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-system-monitor/memory-map-use.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-system-monitor/memory-map-what.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-system-monitor/net-bits.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-system-monitor/process-explain.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-system-monitor/process-files.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-system-monitor/process-identify-file.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-system-monitor/process-identify-hog.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-system-monitor/process-kill.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-system-monitor/process-many.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-system-monitor/process-priority-change.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-system-monitor/process-priority-what.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-system-monitor/process-status.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-system-monitor/process-update-speed.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-system-monitor/solaris-mode.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-system-monitor/units.page</Path>
             <Path fileType="doc">/usr/share/help/ko/gnome-system-monitor/commandline.page</Path>
             <Path fileType="doc">/usr/share/help/ko/gnome-system-monitor/cpu-check.page</Path>
             <Path fileType="doc">/usr/share/help/ko/gnome-system-monitor/cpu-mem-normal.page</Path>
@@ -780,9 +836,9 @@
         </Files>
     </Package>
     <History>
-        <Update release="33">
-            <Date>2025-04-25</Date>
-            <Version>48.1</Version>
+        <Update release="35">
+            <Date>2026-03-21</Date>
+            <Version>50.0</Version>
             <Comment>Packaging update</Comment>
             <Name>Joey Riches</Name>
             <Email>josephriches@gmail.com</Email>

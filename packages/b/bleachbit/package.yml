@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : bleachbit
-version    : 5.0.0
-release    : 22
+version    : 6.0.0
+release    : 24
 source     :
-    - https://github.com/bleachbit/bleachbit/archive/refs/tags/v5.0.0.tar.gz : e1cba661a80f34240e3c01a47edc8319c0e588e2b0bcfc3a0f4c84d3f979f813
+    - https://github.com/bleachbit/bleachbit/archive/refs/tags/v6.0.0.tar.gz : a3853d503a72c54f58b3237e29396ddfe29332a9a0abe77bc5cd4331eb74f3b7
 homepage   : https://www.bleachbit.org
 license    : GPL-3.0-or-later
 component  : security

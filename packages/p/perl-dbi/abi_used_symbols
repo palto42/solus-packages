@@ -25,7 +25,6 @@ UNKNOWN:Perl_croak_sv
 UNKNOWN:Perl_croak_xs_usage
 UNKNOWN:Perl_cvgv_from_hek
 UNKNOWN:Perl_die_nocontext
-UNKNOWN:Perl_dowantarray
 UNKNOWN:Perl_get_sv
 UNKNOWN:Perl_grok_number
 UNKNOWN:Perl_gv_add_by_type

@@ -54,6 +54,8 @@ UNKNOWN:php_combined_lcg
 UNKNOWN:php_error_docref
 UNKNOWN:php_escape_html_entities
 UNKNOWN:php_get_module_initialized
+UNKNOWN:php_glob
+UNKNOWN:php_globfree
 UNKNOWN:php_info_print_table_colspan_header
 UNKNOWN:php_info_print_table_end
 UNKNOWN:php_info_print_table_header
@@ -74,9 +76,11 @@ UNKNOWN:sapi_header_op
 UNKNOWN:sapi_module
 UNKNOWN:tsrm_realpath
 UNKNOWN:virtual_file_ex
+UNKNOWN:virtual_getcwd_ex
 UNKNOWN:zend_alter_ini_entry
 UNKNOWN:zend_array_destroy
 UNKNOWN:zend_array_dup
+UNKNOWN:zend_binary_strcasecmp
 UNKNOWN:zend_ce_closure
 UNKNOWN:zend_ce_error
 UNKNOWN:zend_ce_throwable
@@ -103,6 +107,7 @@ UNKNOWN:zend_get_module_version
 UNKNOWN:zend_get_parameter_attribute_str
 UNKNOWN:zend_get_parameters_array_ex
 UNKNOWN:zend_get_properties_for
+UNKNOWN:zend_get_properties_no_lazy_init
 UNKNOWN:zend_get_property_info
 UNKNOWN:zend_get_resource_handle
 UNKNOWN:zend_get_user_opcode_handler
@@ -117,6 +122,7 @@ UNKNOWN:zend_hash_sort_ex
 UNKNOWN:zend_hash_str_find
 UNKNOWN:zend_html_puts
 UNKNOWN:zend_ini_boolean_displayer_cb
+UNKNOWN:zend_ini_get_value
 UNKNOWN:zend_ini_string
 UNKNOWN:zend_ini_string_ex
 UNKNOWN:zend_is_auto_global_str
@@ -159,6 +165,7 @@ UNKNOWN:zend_wrong_parameter_error
 UNKNOWN:zend_wrong_parameters_count_error
 UNKNOWN:zval_get_string_func
 UNKNOWN:zval_ptr_dtor
+libc.so.6:__assert_fail
 libc.so.6:__ctype_b_loc
 libc.so.6:__ctype_tolower_loc
 libc.so.6:__errno_location
@@ -170,10 +177,10 @@ libc.so.6:__isoc23_strtoull
 libc.so.6:__printf_chk
 libc.so.6:__res_nclose
 libc.so.6:__res_ninit
+libc.so.6:__sigsetjmp
 libc.so.6:__sprintf_chk
 libc.so.6:__stack_chk_fail
 libc.so.6:__vfprintf_chk
-libc.so.6:_setjmp
 libc.so.6:abort
 libc.so.6:accept
 libc.so.6:bind
@@ -210,7 +217,6 @@ libc.so.6:malloc
 libc.so.6:memchr
 libc.so.6:memcmp
 libc.so.6:memcpy
-libc.so.6:memmove
 libc.so.6:memset
 libc.so.6:poll
 libc.so.6:putchar

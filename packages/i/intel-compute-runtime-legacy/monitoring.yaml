@@ -1,0 +1,8 @@
+# This package is on the 24.35 branch,
+# See https://github.com/intel/compute-runtime/blob/master/LEGACY_PLATFORMS.md
+releases:
+  id: 229527
+  rss: https://github.com/intel/compute-runtime/releases.atom
+# No known CPE, checked 2025-10-09
+security:
+  cpe: ~

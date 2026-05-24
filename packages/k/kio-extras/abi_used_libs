@@ -8,7 +8,6 @@ libKF5CoreAddons.so.5
 libKF5DBusAddons.so.5
 libKF5DNSSD.so.5
 libKF5I18n.so.5
-libKF5KExiv2.so.15.0.0
 libKF5KIOCore.so.5
 libKF5KIOFileWidgets.so.5
 libKF5KIOGui.so.5
@@ -25,7 +24,6 @@ libKF6I18n.so.6
 libKF6KCMUtils.so.6
 libKF6KCMUtilsCore.so.6
 libKF6KIOCore.so.6
-libKF6KIOFileWidgets.so.6
 libKF6KIOGui.so.6
 libKF6KIOWidgets.so.6
 libKF6Notifications.so.6
@@ -33,8 +31,8 @@ libKF6Service.so.6
 libKF6Solid.so.6
 libKF6SyntaxHighlighting.so.6
 libKF6WidgetsAddons.so.6
-libOpenEXR-3_1.so.30
-libPlasmaActivities.so.6
+libOpenEXR-3_4.so.33
+libPlasmaActivities.so.7
 libPlasmaActivitiesStats.so.1
 libQt5Core.so.5
 libQt5DBus.so.5
@@ -43,7 +41,6 @@ libQt5Network.so.5
 libQt5Svg.so.5
 libQt5Widgets.so.5
 libQt6Core.so.6
-libQt6Core5Compat.so.6
 libQt6DBus.so.6
 libQt6Gui.so.6
 libQt6Network.so.6
@@ -57,11 +54,10 @@ libkdsoap-qt6.so.2
 libkdsoap.so.2
 libmtp.so.9
 libphonon4qt5.so.4
-libphonon4qt6.so.4
 libplist-2.0.so.4
 libproxy.so.1
 libsmbclient.so.0
 libssh.so.4
 libstdc++.so.6
-libtag.so.1
+libtag.so.2
 libtirpc.so.3

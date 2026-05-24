@@ -1,15 +1,16 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : openvpn
-version    : 2.6.14
-release    : 37
+version    : 2.7.2
+release    : 40
 source     :
-    - https://github.com/OpenVPN/openvpn/archive/v2.6.14.tar.gz : a48131afa86ad7c90d16748ecea76ae519a81f2dc37521941a373c54d41f4c77
+    - https://github.com/OpenVPN/openvpn/archive/v2.7.2.tar.gz : a65cdcb2c4d911fab73daf13a4cf109dc9664e28c094f77aafcd39c7e9d5023e
+homepage   : https://openvpn.net/community/
 license    :
     - GPL-2.0-only
     - BSD-4-Clause
     - OpenSSL
     - Zlib
 component  : network.clients
-homepage   : https://openvpn.net/community/
 summary    : OpenVPN Client
 description: |
     An easy-to-use, robust, and highly configurable VPN (Virtual Private Network)
@@ -29,6 +30,7 @@ build      : |
     %make
 install    : |
     %make_install
+    %install_license COPYING COPYRIGHT.GPL
 
     rm -rf $installdir/usr/share/doc
 check      : |

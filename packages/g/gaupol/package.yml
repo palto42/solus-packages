@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : gaupol
-version    : '1.15'
-release    : 24
+version    : '1.16'
+release    : 26
 source     :
-    - https://github.com/otsaloma/gaupol/archive/refs/tags/1.15.tar.gz : 4128aa01f2ed3ecbcf12676e99087351251a9f105c14567786b31e77ba9fbfd7
+    - https://github.com/otsaloma/gaupol/archive/refs/tags/1.16.tar.gz : ea45025d8de5f5a089d4626085a4f1ed7d7e021462a30aa777728e32327d71ca
 license    : GPL-3.0-or-later
 homepage   : https://otsaloma.io/gaupol/
 component  : multimedia.video
@@ -14,8 +15,8 @@ builddeps  :
     - python-setuptools
 rundeps    :
     - gspell
-    - gstreamer-1.0-plugins-bad
-    - gstreamer-1.0-plugins-good
+    - gstreamer-plugins-bad
+    - gstreamer-plugins-good
     - iso-codes
     - python-charset-normalizer
     - python-gobject
@@ -23,3 +24,4 @@ build      : |
     %python3_setup
 install    : |
     %python3_install
+    %install_license COPYING

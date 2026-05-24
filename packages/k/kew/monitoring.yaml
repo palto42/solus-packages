@@ -1,0 +1,6 @@
+releases:
+  id: 377319
+  rss: https://codeberg.org/ravachol/kew/tags.atom
+ # No known CPE, checked 2026-03-07
+security:
+  cpe: ~

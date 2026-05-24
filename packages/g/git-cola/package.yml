@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : git-cola
-version    : 4.15.0
-release    : 46
+version    : 4.18.2
+release    : 50
 source     :
-    - https://github.com/git-cola/git-cola/archive/refs/tags/v4.15.0.tar.gz : 24174fe48a1693037f83965c340424c85fd9e1e3e5bade3c32d3f3bd8ffa97bc
+    - https://github.com/git-cola/git-cola/archive/refs/tags/v4.18.2.tar.gz : 31a69fbd4235acb36f604f0eba379de0cb3f808e64e64996787a0c2c291ffe59
 homepage   : https://git-cola.github.io
 license    : GPL-2.0-or-later
 component  : programming.tools

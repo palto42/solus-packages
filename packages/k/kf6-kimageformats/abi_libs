@@ -21,4 +21,5 @@ kimg_raw.so
 kimg_rgb.so
 kimg_sct.so
 kimg_tga.so
+kimg_tim.so
 kimg_xcf.so

@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
+name       : nanopb
+version    : 0.4.9.1
+release    : 1
+source     :
+    - https://github.com/nanopb/nanopb/releases/download/nanopb-0.4.9.1/nanopb-0.4.9.1.tar.gz : 882cd8473ad932b24787e676a808e4fb29c12e086d20bcbfbacc66c183094b5c
+homepage   : https://jpa.kapsi.fi/nanopb/
+license    : Zlib
+component  :
+    - ^python-nanopb : programming.python
+    - programming.library
+summary    :
+    - ^python-nanopb : Small code-size Protocol Buffers implementation in Python
+    - Protocol Buffers with small code size
+description:
+    - ^python-nanopb: Small code-size Protocol Buffers implementation in Python. It includes the protoc-based generator, which converts .proto files to .pb.h files for inclusion in a project.
+    - Nanopb is a small code-size Protocol Buffers implementation in ansi C. It is especially suitable for use in microcontrollers, but fits any memory restricted system.
+builddeps  :
+    - pkgconfig(protobuf)
+    - python-protobuf
+rundeps    :
+    - ^python-nanopb :
+        - nanopb
+checkdeps  :
+    - scons
+setup      : |
+    %cmake_ninja \
+        -DBUILD_SHARED_LIBS:FEAT=ON \
+        -DBUILD_STATIC_LIBS:FEAT=OFF
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install
+    %install_license LICENSE.txt
+check      : |
+    pushd tests
+    scons
+    popd
+patterns   :
+    - ^python-nanopb :
+        - /usr/bin/nanopb_generator
+        - /usr/bin/nanopb_generator.py
+        - /usr/bin/protoc-gen-nanopb
+        - /usr/lib/python3.*/site-packages/nanopb

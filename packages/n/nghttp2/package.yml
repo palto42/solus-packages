@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : nghttp2
-version    : 1.65.0
-release    : 18
+version    : 1.68.1
+release    : 19
 source     :
-    - https://github.com/nghttp2/nghttp2/releases/download/v1.65.0/nghttp2-1.65.0.tar.xz : f1b9df5f02e9942b31247e3d415483553bc4ac501c87aa39340b6d19c92a9331
+    - https://github.com/nghttp2/nghttp2/releases/download/v1.68.1/nghttp2-1.68.1.tar.xz : 6abd7ab0a7f1580d5914457cb3c85eb80455657ee5119206edbd7f848c14f0b2
 license    : MIT
 component  : system.base
 emul32     : true
@@ -20,6 +21,7 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license COPYING
 
     rm -rf $installdir/usr/share/doc \
            $installdir/usr/share/man

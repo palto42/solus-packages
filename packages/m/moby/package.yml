@@ -1,17 +1,19 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : moby
-version    : 28.0.4
-release    : 26
+version    : 29.5.2
+release    : 32
 source     :
-    - https://github.com/moby/moby/archive/v28.0.4.tar.gz : 4b347a2b83221952cab93197f6e9bc7ffe54dd4bd0a9644c176aecde551721ca
+    - https://github.com/moby/moby/archive/refs/tags/docker-v29.5.2.tar.gz : 1235ed325d324c76f52e52beaa1dac85c92a073bf2f9fcc5bb9f67e35a668028
+homepage   : https://www.docker.com
 license    : Apache-2.0
 component  : virt
-homepage   : https://www.docker.com
 summary    : The open-source application container engine
 description: |
-    The open-source application container engine. This package contains the Docker server
+    The open-source application container engine. This package contains the Docker server.
 strip      : false
 networking : true
 builddeps  :
+    - pkgconfig(libnftables)
     - pkgconfig(libsystemd)
     - git
     - go-md2man
@@ -20,50 +22,50 @@ builddeps  :
 rundeps    :
     - containerd
     - dnsmasq
+    - nftables
     - tini
-build      : |
+environment: |
     export AUTO_GOPATH=1
     export GO111MODULE=auto
 
     export GOFLAGS="-buildmode=pie -trimpath -mod=readonly -modcacherw -ldflags=-linkmode=external"
+    export CGO_CFLAGS="${CFLAGS}"
+    export CGO_LDFLAGS="${LDFLAGS}"
 
-    export GITCOMMIT="$(git ls-remote https://github.com/moby/moby.git refs/tags/v$version^{} | awk '{print $1}')"
+    export VERSION="$version"
+    export PLATFORM="Docker Engine - Community"
+    export DOCKER_BUILDTAGS="journald"
+    export DISABLE_WARN_OUTSIDE_CONTAINER=1
+
+    export GO_MD2MAN=/usr/bin/go-md2man
+build      : |
+    # Git commit corresponding to the version tag
+    export GITCOMMIT="$(git ls-remote https://github.com/moby/moby.git refs/tags/docker-v$version | awk '{print $1}')"
     export DOCKER_GITCOMMIT=$GITCOMMIT
 
-    # Build daemon
-    PLATFORM="Docker Engine - Community" \
-    VERSION=${version} \
-    DOCKER_BUILDTAGS="journald" \
-    DISABLE_WARN_OUTSIDE_CONTAINER=1 \
-      ./hack/make.sh dynbinary
+    ./hack/make.sh dynbinary
 
-    # Build manpages
-    make -C man GO_MD2MAN=/usr/bin/go-md2man
+    make -C man
 install    : |
     # Main docker daemon
-    install -Dm00755 bundles/dynbinary-daemon/dockerd $installdir/usr/bin/dockerd
+    install -Dm00755 bundles/dynbinary-daemon/dockerd ${installdir}/usr/bin/dockerd
 
     # Now install docker-init
-    ln -s tini-static $installdir/usr/bin/docker-init
+    ln -s tini-static ${installdir}/usr/bin/docker-init
 
     # Now install proxy service
-    install -Dm00755 $workdir/bundles/dynbinary-daemon/docker-proxy $installdir/usr/bin/docker-proxy
+    install -Dm00755 ${workdir}/bundles/dynbinary-daemon/docker-proxy ${installdir}/usr/bin/docker-proxy
 
     # Now install systemd units
-    install -Dm00644 $pkgfiles/docker.service -t $installdir/%libdir%/systemd/system/
-    install -Dm00644 contrib/init/systemd/docker.socket -t $installdir/%libdir%/systemd/system/
+    install -Dm00644 ${pkgfiles}/docker.service -t ${installdir}/%libdir%/systemd/system/
+    install -Dm00644 contrib/init/systemd/docker.socket -t ${installdir}/%libdir%/systemd/system/
 
-    install -Dm644 $pkgfiles/docker.preset $installdir/usr/lib/systemd/system-preset/docker.preset
-
-    # udev rules
-    install -Dm00644 contrib/udev/80-docker.rules -t $installdir/%libdir%/udev/rules.d
-
-    # Enable socket activation by default
-    install -Ddm00755 $installdir/%libdir%/systemd/system/sockets.target.wants
-    ln -sv ../docker.socket $installdir/%libdir%/systemd/system/sockets.target.wants/docker.socket
+    install -Dm644 ${pkgfiles}/docker.preset ${installdir}/%libdir%/systemd/system-preset/20-docker.preset
 
     # Add the docker group
-    install -Dm00644 $pkgfiles/docker.sysusers $installdir/%libdir%/sysusers.d/docker.conf
+    install -Dm00644 ${pkgfiles}/docker.sysusers ${installdir}/%libdir%/sysusers.d/docker.conf
 
     # Install manpage
-    install -Dm00644 man/man8/dockerd.8 -t $installdir/usr/share/man/man8/
+    install -Dm00644 man/man8/dockerd.8 -t ${installdir}/usr/share/man/man8/
+
+    %install_license LICENSE

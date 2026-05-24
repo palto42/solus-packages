@@ -1,9 +1,10 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : libcanberra
 version    : '0.30'
-release    : 21
+release    : 23
 source     :
-    - http://0pointer.de/lennart/projects/libcanberra/libcanberra-0.30.tar.xz : c2b671e67e0c288a69fc33dc1b6f1b534d07882c2aceed37004bf48c601afa72
-homepage   : http://0pointer.de/lennart/projects/libcanberra/
+    - https://0pointer.de/lennart/projects/libcanberra/libcanberra-0.30.tar.xz : c2b671e67e0c288a69fc33dc1b6f1b534d07882c2aceed37004bf48c601afa72
+homepage   : https://0pointer.de/lennart/projects/libcanberra/
 license    : LGPL-2.1-only
 component  : desktop.library
 summary    : XDG Sound Theme and Name implementation
@@ -35,6 +36,7 @@ build      : |
     %make -j1
 install    : |
     %make_install -j1
+    %install_license LGPL
 
     # Remove login, logout and system-ready sounds.
     rm -rfv $installdir/usr/share/{gnome,gdm}

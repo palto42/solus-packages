@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : gnome-remote-desktop
-version    : '48.1'
-release    : 26
+version    : '50.1'
+release    : 33
 source     :
-    - https://download.gnome.org/sources/gnome-remote-desktop/48/gnome-remote-desktop-48.1.tar.xz : bcf3770fca0faeda2fae3b1a3ff6f2e90a02778f76a42e8fd103cae18628f4f2
+    - https://download.gnome.org/sources/gnome-remote-desktop/50/gnome-remote-desktop-50.1.tar.xz : 089049119e1f2442fe9773f0285365cedc207f4cbc7ce9af388e153668e2b171
 homepage   : https://gitlab.gnome.org/GNOME/gnome-remote-desktop
 license    : GPL-2.0-or-later
 component  : desktop.gnome
@@ -18,7 +19,7 @@ builddeps  :
     - pkgconfig(gtk+-3.0)
     - pkgconfig(libdrm)
     - pkgconfig(libei-1.0)
-    - pkgconfig(libmutter-16)
+    - pkgconfig(libmutter-18)
     - pkgconfig(libnotify)
     - pkgconfig(libpipewire-0.3)
     - pkgconfig(libsecret-1)

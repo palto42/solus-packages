@@ -1,9 +1,10 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : syncthing
-version    : 2.0.3
-release    : 104
+version    : 2.0.16
+release    : 108
 homepage   : https://syncthing.net
 source     :
-    - https://github.com/syncthing/syncthing/archive/refs/tags/v2.0.3.tar.gz : ccb5524e27f0c19c225275603bf2390bb0a1663ae63863f766303204a62cdce0
+    - https://github.com/syncthing/syncthing/archive/refs/tags/v2.0.16.tar.gz : 30ab1917025de0d057ae53b3568e721bbea652b4b3d7bd96b04a6ef9bfb28bab
 license    : MPL-2.0
 component  : network.util
 networking : true

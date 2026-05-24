@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : libgit2
-version    : 1.9.1
-release    : 38
+version    : 1.9.3
+release    : 40
 source     :
-    - https://github.com/libgit2/libgit2/archive/refs/tags/v1.9.1.tar.gz : 14cab3014b2b7ad75970ff4548e83615f74d719afe00aa479b4a889c1e13fc00
+    - https://github.com/libgit2/libgit2/archive/refs/tags/v1.9.3.tar.gz : d532172d7ab24d2a25944e2434212d63ee85f3650e97b5f7579e7f201a78ad64
 homepage   : https://libgit2.org/
 license    : GPL-2.0-or-later
 component  : programming.library
@@ -26,3 +27,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license COPYING

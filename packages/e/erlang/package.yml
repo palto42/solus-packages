@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : erlang
-version    : 27.3.3
-release    : 48
+version    : '28.5'
+release    : 50
 source     :
-    - https://github.com/erlang/otp/archive/refs/tags/OTP-27.3.3.tar.gz : 1ecd443b3ba832148f4644ebc7722024b66bf1ab4fa70823c4c86f3801f50baf
+    - https://github.com/erlang/otp/archive/refs/tags/OTP-28.5.tar.gz : 7d0a43be4ee5c3965509c0c20cf0b28afa0ab9573f0cc49631f2858165335a5a
 homepage   : https://www.erlang.org/
 license    : Apache-2.0
 component  : programming

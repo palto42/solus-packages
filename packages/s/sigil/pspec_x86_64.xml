@@ -98,6 +98,7 @@
             <Path fileType="data">/usr/share/sigil/python3lib/__pycache__/functionrep.cpython-312.pyc</Path>
             <Path fileType="data">/usr/share/sigil/python3lib/__pycache__/functionsearch.cpython-312.pyc</Path>
             <Path fileType="data">/usr/share/sigil/python3lib/__pycache__/gencheck.cpython-312.pyc</Path>
+            <Path fileType="data">/usr/share/sigil/python3lib/__pycache__/getcodepointname.cpython-312.pyc</Path>
             <Path fileType="data">/usr/share/sigil/python3lib/__pycache__/metadata_utils.cpython-312.pyc</Path>
             <Path fileType="data">/usr/share/sigil/python3lib/__pycache__/metaproc2.cpython-312.pyc</Path>
             <Path fileType="data">/usr/share/sigil/python3lib/__pycache__/metaproc3.cpython-312.pyc</Path>
@@ -121,6 +122,7 @@
             <Path fileType="data">/usr/share/sigil/python3lib/functionrep.py</Path>
             <Path fileType="data">/usr/share/sigil/python3lib/functionsearch.py</Path>
             <Path fileType="data">/usr/share/sigil/python3lib/gencheck.py</Path>
+            <Path fileType="data">/usr/share/sigil/python3lib/getcodepointname.py</Path>
             <Path fileType="data">/usr/share/sigil/python3lib/metadata_utils.py</Path>
             <Path fileType="data">/usr/share/sigil/python3lib/metaproc2.py</Path>
             <Path fileType="data">/usr/share/sigil/python3lib/metaproc3.py</Path>
@@ -527,6 +529,8 @@
             <Path fileType="data">/usr/share/sigil/python3lib/xmlprocessor.py</Path>
             <Path fileType="data">/usr/share/sigil/python3lib/xmlsanitycheck.py</Path>
             <Path fileType="data">/usr/share/sigil/translations/sigil_ar.qm</Path>
+            <Path fileType="data">/usr/share/sigil/translations/sigil_ca.qm</Path>
+            <Path fileType="data">/usr/share/sigil/translations/sigil_cs.qm</Path>
             <Path fileType="data">/usr/share/sigil/translations/sigil_de.qm</Path>
             <Path fileType="data">/usr/share/sigil/translations/sigil_en.qm</Path>
             <Path fileType="data">/usr/share/sigil/translations/sigil_es.qm</Path>
@@ -547,9 +551,9 @@
         </Files>
     </Package>
     <History>
-        <Update release="49">
-            <Date>2025-09-26</Date>
-            <Version>2.6.2</Version>
+        <Update release="52">
+            <Date>2026-04-04</Date>
+            <Version>2.7.6</Version>
             <Comment>Packaging update</Comment>
             <Name>Algent Albrahimi</Name>
             <Email>algent@protonmail.com</Email>

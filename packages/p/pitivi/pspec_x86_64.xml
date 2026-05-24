@@ -569,6 +569,7 @@
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.pitivi.Pitivi.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/mimetypes/text-x-xges.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/symbolic/apps/org.pitivi.Pitivi-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/licenses/pitivi/COPYING</Path>
             <Path fileType="localedata">/usr/share/locale/ar/LC_MESSAGES/pitivi.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ast/LC_MESSAGES/pitivi.mo</Path>
             <Path fileType="localedata">/usr/share/locale/bg/LC_MESSAGES/pitivi.mo</Path>
@@ -922,8 +923,8 @@
         </Files>
     </Package>
     <History>
-        <Update release="31">
-            <Date>2025-09-09</Date>
+        <Update release="34">
+            <Date>2026-03-17</Date>
             <Version>2023.03</Version>
             <Comment>Packaging update</Comment>
             <Name>Evan Maddock</Name>

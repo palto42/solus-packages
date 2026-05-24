@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : flask
-version    : 3.1.0
-release    : 16
+version    : 3.1.3
+release    : 18
 source     :
-    - https://github.com/pallets/flask/archive/3.1.0.tar.gz : 2b362a35e92c72df6da86b4ca2fdc2bc86d667a79e8a1791dc5bda97f5cbb060
+    - https://github.com/pallets/flask/archive/3.1.3.tar.gz : 36a6183d453925f09bc37b2a8bffdb1eb1b5f18eae384c037c179b07aac88477
 homepage   : https://palletsprojects.com/p/flask/
 license    : BSD-3-Clause
 component  : programming.python
@@ -14,6 +15,7 @@ builddeps  :
     - python-flit-core
     - python-installer
 checkdeps  :
+    - python-asgiref
     - python-blinker
     - python-click
     - python-itsdangerous
@@ -21,6 +23,7 @@ checkdeps  :
     - python-pytest
     - python-werkzeug
 rundeps    :
+    - python-asgiref
     - python-blinker
     - python-click
     - python-itsdangerous
@@ -31,4 +34,5 @@ build      : |
 install    : |
     %python3_install
 check      : |
-    %python3_test pytest
+    # https://github.com/pallets/flask/issues/5961
+    %python3_test pytest -k 'not test_environ_for_valid_idna_completes'

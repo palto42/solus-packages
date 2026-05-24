@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : highlight
-version    : '4.17'
-release    : 20
+version    : '4.19'
+release    : 22
 source     :
-    - https://gitlab.com/saalen/highlight/-/archive/v4.17/highlight-v4.17.tar.gz : 22e9526e93cc0068fda7cfd50405bbed3b01e61a75ca5d26444014d6b90ef97c
+    - https://gitlab.com/saalen/highlight/-/archive/v4.19/highlight-v4.19.tar.gz : 0f243a9fb72da88148db473c9411c92c4988bf940bff32eef939bc1efa0017c8
 homepage   : https://gitlab.com/saalen/highlight
 license    : GPL-3.0-or-later
 component  : programming.tools
@@ -16,6 +17,7 @@ build      : |
     %make
 install    : |
     %make_install
+    %install_license COPYING
 
     # remove documentation files
     rm -r $installdir/usr/share/doc

@@ -1,5 +1,5 @@
 0001-Disable-update.patch
 0001-upate-xclient-script.patch
 ftbfs-gcc-15.patch
-new-curl.patch
 python-3-12.patch
+virtualbox-7.2.8-fix-build-linux-7.0.patch

@@ -20,22 +20,16 @@
 </Description>
         <PartOf>desktop.gnome</PartOf>
         <Files>
-            <Path fileType="config">/etc/gdm/Init/Default</Path>
-            <Path fileType="config">/etc/gdm/PostLogin/Default.sample</Path>
-            <Path fileType="config">/etc/gdm/PostSession/Default</Path>
-            <Path fileType="config">/etc/gdm/PreSession/Default</Path>
             <Path fileType="config">/etc/gdm/Xsession</Path>
             <Path fileType="config">/etc/gdm/custom.conf</Path>
             <Path fileType="executable">/usr/bin/gdm-config</Path>
-            <Path fileType="executable">/usr/bin/gdmflexiserver</Path>
             <Path fileType="library">/usr/lib/systemd/system/display-manager.service</Path>
             <Path fileType="library">/usr/lib/systemd/system/gdm.service</Path>
-            <Path fileType="library">/usr/lib/systemd/user/gnome-session@gnome-login.target.d/session.conf</Path>
-            <Path fileType="library">/usr/lib/udev/rules.d/61-gdm.rules</Path>
-            <Path fileType="library">/usr/lib64/gdm/gdm-host-chooser</Path>
+            <Path fileType="library">/usr/lib/systemd/system/gnome-headless-session@.service</Path>
+            <Path fileType="library">/usr/lib/systemd/user/gnome-session@gnome-login.target.d/gnome-login.session.conf</Path>
+            <Path fileType="library">/usr/lib64/gdm/gdm-new-session</Path>
             <Path fileType="library">/usr/lib64/gdm/gdm-runtime-config</Path>
             <Path fileType="library">/usr/lib64/gdm/gdm-session-worker</Path>
-            <Path fileType="library">/usr/lib64/gdm/gdm-simple-chooser</Path>
             <Path fileType="library">/usr/lib64/gdm/gdm-wayland-session</Path>
             <Path fileType="library">/usr/lib64/gdm/gdm-x-session</Path>
             <Path fileType="library">/usr/lib64/girepository-1.0/Gdm-1.0.typelib</Path>
@@ -44,6 +38,10 @@
             <Path fileType="library">/usr/lib64/security/pam_gdm.so</Path>
             <Path fileType="library">/usr/lib64/sysusers.d/gdm.conf</Path>
             <Path fileType="library">/usr/lib64/tmpfiles.d/gdm.conf</Path>
+            <Path fileType="library">/usr/lib64/userdb/21.group</Path>
+            <Path fileType="library">/usr/lib64/userdb/21.user</Path>
+            <Path fileType="library">/usr/lib64/userdb/gdm.group</Path>
+            <Path fileType="library">/usr/lib64/userdb/gdm.user</Path>
             <Path fileType="executable">/usr/sbin/gdm</Path>
             <Path fileType="data">/usr/share/dbus-1/system.d/gdm.conf</Path>
             <Path fileType="data">/usr/share/dconf/profile/gdm</Path>
@@ -58,7 +56,8 @@
             <Path fileType="data">/usr/share/gdm/greeter-dconf-defaults</Path>
             <Path fileType="data">/usr/share/gdm/greeter/applications/mime-dummy-handler.desktop</Path>
             <Path fileType="data">/usr/share/gdm/greeter/applications/mimeapps.list</Path>
-            <Path fileType="data">/usr/share/gdm/greeter/autostart/orca-autostart.desktop</Path>
+            <Path fileType="data">/usr/share/gdm/greeter/wayland-sessions/gnome-greeter.desktop</Path>
+            <Path fileType="data">/usr/share/gdm/greeter/wayland-sessions/gnome-initial-setup.desktop</Path>
             <Path fileType="data">/usr/share/gdm/locale.alias</Path>
             <Path fileType="data">/usr/share/glib-2.0/schemas/org.gnome.login-screen.gschema.xml</Path>
             <Path fileType="data">/usr/share/gnome-session/sessions/gnome-login.session</Path>
@@ -92,6 +91,8 @@
             <Path fileType="doc">/usr/share/help/it/gdm/legal.xml</Path>
             <Path fileType="doc">/usr/share/help/ka/gdm/index.docbook</Path>
             <Path fileType="doc">/usr/share/help/ka/gdm/legal.xml</Path>
+            <Path fileType="doc">/usr/share/help/kk/gdm/index.docbook</Path>
+            <Path fileType="doc">/usr/share/help/kk/gdm/legal.xml</Path>
             <Path fileType="doc">/usr/share/help/ko/gdm/index.docbook</Path>
             <Path fileType="doc">/usr/share/help/ko/gdm/legal.xml</Path>
             <Path fileType="doc">/usr/share/help/nl/gdm/index.docbook</Path>
@@ -164,6 +165,7 @@
             <Path fileType="localedata">/usr/share/locale/hr/LC_MESSAGES/gdm.mo</Path>
             <Path fileType="localedata">/usr/share/locale/hu/LC_MESSAGES/gdm.mo</Path>
             <Path fileType="localedata">/usr/share/locale/hy/LC_MESSAGES/gdm.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/ia/LC_MESSAGES/gdm.mo</Path>
             <Path fileType="localedata">/usr/share/locale/id/LC_MESSAGES/gdm.mo</Path>
             <Path fileType="localedata">/usr/share/locale/is/LC_MESSAGES/gdm.mo</Path>
             <Path fileType="localedata">/usr/share/locale/it/LC_MESSAGES/gdm.mo</Path>
@@ -175,6 +177,7 @@
             <Path fileType="localedata">/usr/share/locale/kn/LC_MESSAGES/gdm.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ko/LC_MESSAGES/gdm.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ku/LC_MESSAGES/gdm.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/kw/LC_MESSAGES/gdm.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ky/LC_MESSAGES/gdm.mo</Path>
             <Path fileType="localedata">/usr/share/locale/lt/LC_MESSAGES/gdm.mo</Path>
             <Path fileType="localedata">/usr/share/locale/lv/LC_MESSAGES/gdm.mo</Path>
@@ -227,6 +230,7 @@
             <Path fileType="localedata">/usr/share/locale/zh_HK/LC_MESSAGES/gdm.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_TW/LC_MESSAGES/gdm.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zu/LC_MESSAGES/gdm.mo</Path>
+            <Path fileType="data">/usr/share/polkit-1/actions/org.gnome.displaymanager.policy</Path>
             <Path fileType="data">/usr/share/polkit-1/rules.d/20-gdm.rules</Path>
         </Files>
         <Conflicts>
@@ -243,7 +247,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="80">gdm</Dependency>
+            <Dependency release="85">gdm</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/gdm/gdm-choice-list-pam-extension.h</Path>
@@ -261,9 +265,9 @@
         </Files>
     </Package>
     <History>
-        <Update release="80">
-            <Date>2025-04-04</Date>
-            <Version>48.0</Version>
+        <Update release="85">
+            <Date>2026-03-21</Date>
+            <Version>50.0</Version>
             <Comment>Packaging update</Comment>
             <Name>Joey Riches</Name>
             <Email>josephriches@gmail.com</Email>

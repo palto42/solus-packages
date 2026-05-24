@@ -3,8 +3,8 @@
         <Name>libgtk-4</Name>
         <Homepage>https://www.gtk.org/</Homepage>
         <Packager>
-            <Name>Muhammad Alfi Syahrin</Name>
-            <Email>malfisya.dev@hotmail.com</Email>
+            <Name>Joey Riches</Name>
+            <Email>josephriches@gmail.com</Email>
         </Packager>
         <License>LGPL-2.0-or-later</License>
         <PartOf>desktop.gtk</PartOf>
@@ -31,11 +31,16 @@
             <Path fileType="library">/usr/lib64/girepository-1.0/GdkX11-4.0.typelib</Path>
             <Path fileType="library">/usr/lib64/girepository-1.0/Gsk-4.0.typelib</Path>
             <Path fileType="library">/usr/lib64/girepository-1.0/Gtk-4.0.typelib</Path>
-            <Path fileType="library">/usr/lib64/gtk-4.0/4.0.0/media/libmedia-gstreamer.so</Path>
-            <Path fileType="library">/usr/lib64/gtk-4.0/4.0.0/printbackends/libprintbackend-cups.so</Path>
-            <Path fileType="library">/usr/lib64/gtk-4.0/4.0.0/printbackends/libprintbackend-file.so</Path>
             <Path fileType="library">/usr/lib64/libgtk-4.so.1</Path>
-            <Path fileType="library">/usr/lib64/libgtk-4.so.1.1800.6</Path>
+            <Path fileType="library">/usr/lib64/libgtk-4.so.1.2200.2</Path>
+            <Path fileType="data">/usr/share/bash-completion/completions/gtk4-builder-tool</Path>
+            <Path fileType="data">/usr/share/bash-completion/completions/gtk4-demo</Path>
+            <Path fileType="data">/usr/share/bash-completion/completions/gtk4-image-tool</Path>
+            <Path fileType="data">/usr/share/bash-completion/completions/gtk4-node-editor</Path>
+            <Path fileType="data">/usr/share/bash-completion/completions/gtk4-path-tool</Path>
+            <Path fileType="data">/usr/share/bash-completion/completions/gtk4-print-editor</Path>
+            <Path fileType="data">/usr/share/bash-completion/completions/gtk4-rendernode-tool</Path>
+            <Path fileType="data">/usr/share/bash-completion/completions/gtk4-widget-factory</Path>
             <Path fileType="data">/usr/share/gettext/its/gtk4builder.its</Path>
             <Path fileType="data">/usr/share/gettext/its/gtk4builder.loc</Path>
             <Path fileType="data">/usr/share/glib-2.0/schemas/org.gtk.gtk4.Inspector.gschema.xml</Path>
@@ -68,6 +73,7 @@
             <Path fileType="data">/usr/share/gtk-4.0/emoji/zh.gresource</Path>
             <Path fileType="data">/usr/share/gtk-4.0/gtk4builder.rng</Path>
             <Path fileType="data">/usr/share/gtk-4.0/valgrind/gtk.supp</Path>
+            <Path fileType="data">/usr/share/licenses/libgtk-4/COPYING</Path>
             <Path fileType="localedata">/usr/share/locale/ab/LC_MESSAGES/gtk40.mo</Path>
             <Path fileType="localedata">/usr/share/locale/af/LC_MESSAGES/gtk40.mo</Path>
             <Path fileType="localedata">/usr/share/locale/am/LC_MESSAGES/gtk40.mo</Path>
@@ -124,7 +130,6 @@
             <Path fileType="localedata">/usr/share/locale/ja/LC_MESSAGES/gtk40.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ka/LC_MESSAGES/gtk40.mo</Path>
             <Path fileType="localedata">/usr/share/locale/kab/LC_MESSAGES/gtk40.mo</Path>
-            <Path fileType="localedata">/usr/share/locale/kg/LC_MESSAGES/gtk40.mo</Path>
             <Path fileType="localedata">/usr/share/locale/kk/LC_MESSAGES/gtk40.mo</Path>
             <Path fileType="localedata">/usr/share/locale/km/LC_MESSAGES/gtk40.mo</Path>
             <Path fileType="localedata">/usr/share/locale/kn/LC_MESSAGES/gtk40.mo</Path>
@@ -172,7 +177,6 @@
             <Path fileType="localedata">/usr/share/locale/te/LC_MESSAGES/gtk40.mo</Path>
             <Path fileType="localedata">/usr/share/locale/tg/LC_MESSAGES/gtk40.mo</Path>
             <Path fileType="localedata">/usr/share/locale/th/LC_MESSAGES/gtk40.mo</Path>
-            <Path fileType="localedata">/usr/share/locale/tk/LC_MESSAGES/gtk40.mo</Path>
             <Path fileType="localedata">/usr/share/locale/tr/LC_MESSAGES/gtk40.mo</Path>
             <Path fileType="localedata">/usr/share/locale/tt/LC_MESSAGES/gtk40.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ug/LC_MESSAGES/gtk40.mo</Path>
@@ -187,6 +191,7 @@
             <Path fileType="localedata">/usr/share/locale/zh_CN/LC_MESSAGES/gtk40.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_HK/LC_MESSAGES/gtk40.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_TW/LC_MESSAGES/gtk40.mo</Path>
+            <Path fileType="data">/usr/share/mime/packages/gtk-mime.xml</Path>
         </Files>
     </Package>
     <Package>
@@ -195,27 +200,32 @@
         <Description xml:lang="en">Demonstrations of major GTK4 features.</Description>
         <PartOf>desktop.gtk</PartOf>
         <RuntimeDependencies>
-            <Dependency release="52">libgtk-4</Dependency>
+            <Dependency release="58">libgtk-4</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin/gtk4-demo</Path>
             <Path fileType="executable">/usr/bin/gtk4-demo-application</Path>
+            <Path fileType="executable">/usr/bin/gtk4-icon-editor</Path>
             <Path fileType="executable">/usr/bin/gtk4-node-editor</Path>
             <Path fileType="executable">/usr/bin/gtk4-print-editor</Path>
             <Path fileType="executable">/usr/bin/gtk4-widget-factory</Path>
             <Path fileType="data">/usr/share/applications/org.gtk.Demo4.desktop</Path>
             <Path fileType="data">/usr/share/applications/org.gtk.PrintEditor4.desktop</Path>
+            <Path fileType="data">/usr/share/applications/org.gtk.Shaper.desktop</Path>
             <Path fileType="data">/usr/share/applications/org.gtk.WidgetFactory4.desktop</Path>
             <Path fileType="data">/usr/share/applications/org.gtk.gtk4.NodeEditor.desktop</Path>
             <Path fileType="data">/usr/share/glib-2.0/schemas/org.gtk.Demo4.gschema.xml</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.gtk.Demo4.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.gtk.PrintEditor4.Devel.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.gtk.PrintEditor4.svg</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.gtk.Shaper.Devel.svg</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.gtk.Shaper.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.gtk.WidgetFactory4.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.gtk.gtk4.NodeEditor.Devel.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.gtk.gtk4.NodeEditor.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/symbolic/apps/org.gtk.Demo4-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/symbolic/apps/org.gtk.PrintEditor4-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/symbolic/apps/org.gtk.Shaper-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/symbolic/apps/org.gtk.WidgetFactory4-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/symbolic/apps/org.gtk.gtk4.NodeEditor-symbolic.svg</Path>
             <Path fileType="data">/usr/share/metainfo/org.gtk.Demo4.appdata.xml</Path>
@@ -230,7 +240,7 @@
         <Description xml:lang="en">libgtk-4 contains the libraries used for creating graphical user interfaces and applications.</Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="52">libgtk-4</Dependency>
+            <Dependency release="58">libgtk-4</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/gtk-4.0/gdk/deprecated/gdkpixbuf.h</Path>
@@ -321,19 +331,54 @@
             <Path fileType="header">/usr/include/gtk-4.0/gsk/gpu/gskglrenderer.h</Path>
             <Path fileType="header">/usr/include/gtk-4.0/gsk/gpu/gskvulkanrenderer.h</Path>
             <Path fileType="header">/usr/include/gtk-4.0/gsk/gsk.h</Path>
+            <Path fileType="header">/usr/include/gtk-4.0/gsk/gskblendnode.h</Path>
+            <Path fileType="header">/usr/include/gtk-4.0/gsk/gskblurnode.h</Path>
+            <Path fileType="header">/usr/include/gtk-4.0/gsk/gskbordernode.h</Path>
+            <Path fileType="header">/usr/include/gtk-4.0/gsk/gskcaironode.h</Path>
             <Path fileType="header">/usr/include/gtk-4.0/gsk/gskcairorenderer.h</Path>
+            <Path fileType="header">/usr/include/gtk-4.0/gsk/gskclipnode.h</Path>
+            <Path fileType="header">/usr/include/gtk-4.0/gsk/gskcolormatrixnode.h</Path>
+            <Path fileType="header">/usr/include/gtk-4.0/gsk/gskcolornode.h</Path>
+            <Path fileType="header">/usr/include/gtk-4.0/gsk/gskcomponenttransfer.h</Path>
+            <Path fileType="header">/usr/include/gtk-4.0/gsk/gskcomponenttransfernode.h</Path>
+            <Path fileType="header">/usr/include/gtk-4.0/gsk/gskcompositenode.h</Path>
+            <Path fileType="header">/usr/include/gtk-4.0/gsk/gskconicgradientnode.h</Path>
+            <Path fileType="header">/usr/include/gtk-4.0/gsk/gskcontainernode.h</Path>
+            <Path fileType="header">/usr/include/gtk-4.0/gsk/gskcopynode.h</Path>
+            <Path fileType="header">/usr/include/gtk-4.0/gsk/gskcrossfadenode.h</Path>
+            <Path fileType="header">/usr/include/gtk-4.0/gsk/gskdebugnode.h</Path>
             <Path fileType="header">/usr/include/gtk-4.0/gsk/gskenums.h</Path>
             <Path fileType="header">/usr/include/gtk-4.0/gsk/gskenumtypes.h</Path>
+            <Path fileType="header">/usr/include/gtk-4.0/gsk/gskfillnode.h</Path>
             <Path fileType="header">/usr/include/gtk-4.0/gsk/gskglshader.h</Path>
+            <Path fileType="header">/usr/include/gtk-4.0/gsk/gskglshadernode.h</Path>
+            <Path fileType="header">/usr/include/gtk-4.0/gsk/gskinsetshadownode.h</Path>
+            <Path fileType="header">/usr/include/gtk-4.0/gsk/gskisolationnode.h</Path>
+            <Path fileType="header">/usr/include/gtk-4.0/gsk/gsklineargradientnode.h</Path>
+            <Path fileType="header">/usr/include/gtk-4.0/gsk/gskmasknode.h</Path>
+            <Path fileType="header">/usr/include/gtk-4.0/gsk/gskopacitynode.h</Path>
+            <Path fileType="header">/usr/include/gtk-4.0/gsk/gskoutsetshadownode.h</Path>
+            <Path fileType="header">/usr/include/gtk-4.0/gsk/gskpastenode.h</Path>
             <Path fileType="header">/usr/include/gtk-4.0/gsk/gskpath.h</Path>
             <Path fileType="header">/usr/include/gtk-4.0/gsk/gskpathbuilder.h</Path>
             <Path fileType="header">/usr/include/gtk-4.0/gsk/gskpathmeasure.h</Path>
             <Path fileType="header">/usr/include/gtk-4.0/gsk/gskpathpoint.h</Path>
+            <Path fileType="header">/usr/include/gtk-4.0/gsk/gskradialgradientnode.h</Path>
             <Path fileType="header">/usr/include/gtk-4.0/gsk/gskrenderer.h</Path>
             <Path fileType="header">/usr/include/gtk-4.0/gsk/gskrendernode.h</Path>
+            <Path fileType="header">/usr/include/gtk-4.0/gsk/gskrenderreplay.h</Path>
+            <Path fileType="header">/usr/include/gtk-4.0/gsk/gskrepeatnode.h</Path>
+            <Path fileType="header">/usr/include/gtk-4.0/gsk/gskroundedclipnode.h</Path>
             <Path fileType="header">/usr/include/gtk-4.0/gsk/gskroundedrect.h</Path>
+            <Path fileType="header">/usr/include/gtk-4.0/gsk/gskshadownode.h</Path>
             <Path fileType="header">/usr/include/gtk-4.0/gsk/gskstroke.h</Path>
+            <Path fileType="header">/usr/include/gtk-4.0/gsk/gskstrokenode.h</Path>
+            <Path fileType="header">/usr/include/gtk-4.0/gsk/gsksubsurfacenode.h</Path>
+            <Path fileType="header">/usr/include/gtk-4.0/gsk/gsktextnode.h</Path>
+            <Path fileType="header">/usr/include/gtk-4.0/gsk/gsktexturenode.h</Path>
+            <Path fileType="header">/usr/include/gtk-4.0/gsk/gsktexturescalenode.h</Path>
             <Path fileType="header">/usr/include/gtk-4.0/gsk/gsktransform.h</Path>
+            <Path fileType="header">/usr/include/gtk-4.0/gsk/gsktransformnode.h</Path>
             <Path fileType="header">/usr/include/gtk-4.0/gsk/gsktypes.h</Path>
             <Path fileType="header">/usr/include/gtk-4.0/gtk/a11y/gtkatspi.h</Path>
             <Path fileType="header">/usr/include/gtk-4.0/gtk/a11y/gtkatspisocket.h</Path>
@@ -407,6 +452,7 @@
             <Path fileType="header">/usr/include/gtk-4.0/gtk/gtkaboutdialog.h</Path>
             <Path fileType="header">/usr/include/gtk-4.0/gtk/gtkaccelgroup.h</Path>
             <Path fileType="header">/usr/include/gtk-4.0/gtk/gtkaccessible.h</Path>
+            <Path fileType="header">/usr/include/gtk-4.0/gtk/gtkaccessiblehypertext.h</Path>
             <Path fileType="header">/usr/include/gtk-4.0/gtk/gtkaccessiblerange.h</Path>
             <Path fileType="header">/usr/include/gtk-4.0/gtk/gtkaccessibletext.h</Path>
             <Path fileType="header">/usr/include/gtk-4.0/gtk/gtkactionable.h</Path>
@@ -501,6 +547,7 @@
             <Path fileType="header">/usr/include/gtk-4.0/gtk/gtkgridlayout.h</Path>
             <Path fileType="header">/usr/include/gtk-4.0/gtk/gtkgridview.h</Path>
             <Path fileType="header">/usr/include/gtk-4.0/gtk/gtkheaderbar.h</Path>
+            <Path fileType="header">/usr/include/gtk-4.0/gtk/gtkiconpaintable.h</Path>
             <Path fileType="header">/usr/include/gtk-4.0/gtk/gtkicontheme.h</Path>
             <Path fileType="header">/usr/include/gtk-4.0/gtk/gtkimage.h</Path>
             <Path fileType="header">/usr/include/gtk-4.0/gtk/gtkimcontext.h</Path>
@@ -543,6 +590,7 @@
             <Path fileType="header">/usr/include/gtk-4.0/gtk/gtkpasswordentrybuffer.h</Path>
             <Path fileType="header">/usr/include/gtk-4.0/gtk/gtkpicture.h</Path>
             <Path fileType="header">/usr/include/gtk-4.0/gtk/gtkpopover.h</Path>
+            <Path fileType="header">/usr/include/gtk-4.0/gtk/gtkpopoverbin.h</Path>
             <Path fileType="header">/usr/include/gtk-4.0/gtk/gtkpopovermenu.h</Path>
             <Path fileType="header">/usr/include/gtk-4.0/gtk/gtkpopovermenubar.h</Path>
             <Path fileType="header">/usr/include/gtk-4.0/gtk/gtkprintdialog.h</Path>
@@ -586,6 +634,7 @@
             <Path fileType="header">/usr/include/gtk-4.0/gtk/gtkstringlist.h</Path>
             <Path fileType="header">/usr/include/gtk-4.0/gtk/gtkstringsorter.h</Path>
             <Path fileType="header">/usr/include/gtk-4.0/gtk/gtkstyleprovider.h</Path>
+            <Path fileType="header">/usr/include/gtk-4.0/gtk/gtksvg.h</Path>
             <Path fileType="header">/usr/include/gtk-4.0/gtk/gtkswitch.h</Path>
             <Path fileType="header">/usr/include/gtk-4.0/gtk/gtksymbolicpaintable.h</Path>
             <Path fileType="header">/usr/include/gtk-4.0/gtk/gtktestatcontext.h</Path>
@@ -640,12 +689,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="52">
-            <Date>2025-07-02</Date>
-            <Version>4.18.6</Version>
+        <Update release="58">
+            <Date>2026-04-14</Date>
+            <Version>4.22.2</Version>
             <Comment>Packaging update</Comment>
-            <Name>Muhammad Alfi Syahrin</Name>
-            <Email>malfisya.dev@hotmail.com</Email>
+            <Name>Joey Riches</Name>
+            <Email>josephriches@gmail.com</Email>
         </Update>
     </History>
 </PISI>

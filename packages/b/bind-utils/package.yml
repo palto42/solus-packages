@@ -1,9 +1,10 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 # Make sure to update the Anitya ID if changing this from the 9.20.x LTS series
 name       : bind-utils
-version    : 9.20.11
-release    : 37
+version    : 9.20.23
+release    : 40
 source     :
-    - https://gitlab.isc.org/isc-projects/bind9/-/archive/v9.20.11/bind9-v9.20.11.tar.gz : d54f927381798f02adf346d643d0703e7519338d227848cad1cae0d1eb9119fd
+    - https://downloads.isc.org/isc/bind9/9.20.23/bind-9.20.23.tar.xz : 5d4475aed3f9e500ef554b2b14d972bdb83d33de214a9b3be92918ea46908371
 homepage   : https://www.isc.org/bind/
 license    : MPL-2.0
 component  : network.util
@@ -26,7 +27,10 @@ setup      : |
     %reconfigure \
         --disable-static \
         --with-readline=libedit \
-        --with-libidn2
+        --with-json-c \
+        --with-libidn2 \
+        --with-libxml2 \
+        --with-zlib
 build      : |
     %make -C lib
     %make bind.keys.h
@@ -39,6 +43,7 @@ install    : |
     %make_install -C bin/delv
     %make_install -C bin/dig
     %make_install -C bin/nsupdate
+    %install_license COPYING COPYRIGHT LICENSE
 
     rm -rfv $installdir/usr/include
 

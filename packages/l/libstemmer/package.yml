@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : libstemmer
-version    : 2.2.0
-release    : 2
+version    : 3.0.1
+release    : 3
 source     :
-    - https://github.com/snowballstem/snowball/archive/refs/tags/v2.2.0.tar.gz : 425cdb5fba13a01db59a1713780f0662e984204f402d3dae1525bda9e6d30f1a
+    - https://github.com/snowballstem/snowball/archive/refs/tags/v3.0.1.tar.gz : 80ac10ce40dc4fcfbfed8d085c457b5613da0e86a73611a3d5527d044a142d60
 homepage   : https://snowballstem.org/
 license    : BSD-3-Clause
 component  : programming.library
@@ -10,7 +11,7 @@ summary    : Snowball compiler and stemming algorithms
 description: |
     Snowball is a small string processing language for creating stemming algorithms for use in Information Retrieval, plus a collection of stemming algorithms implemented using it.
 setup      : |
-    %patch -p1 -i $pkgfiles/0001-Compile-dynamic-lib.patch
+    %patch -p1 -i $pkgfiles/0001-Make-libstemmer-a-shared-library.patch
 build      : |
     %make
 install    : |
@@ -18,6 +19,7 @@ install    : |
     install -Dm00755 snowball $installdir/usr/bin/snowball
     install -Dm00755 stemwords $installdir/usr/bin/stemwords
     install -Dm00644 include/libstemmer.h $installdir/usr/include/libstemmer.h
-    install -Dm00644 libstemmer.so.%version% $installdir/usr/lib64
-    ln -s libstemmer.so.%version% $installdir/usr/lib64/libstemmer.so.2
-    ln -s libstemmer.so.%version% $installdir/usr/lib64/libstemmer.so
+    install -Dm00644 libstemmer.so.0 $installdir/usr/lib64
+    ln -s libstemmer.so.0 $installdir/usr/lib64/libstemmer.so.0.0
+    ln -s libstemmer.so.0 $installdir/usr/lib64/libstemmer.so
+    %install_license COPYING

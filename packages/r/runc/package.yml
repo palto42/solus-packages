@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : runc
-version    : 1.2.6
-release    : 37
+version    : 1.4.2
+release    : 39
 source     :
-    - https://github.com/opencontainers/runc/archive/refs/tags/v1.2.6.tar.gz : 19b280702341f33ff353fa254d1dbdb67f6aab2c74395f6d651a17524f68e752
+    - https://github.com/opencontainers/runc/archive/refs/tags/v1.4.2.tar.gz : 9e1dcd513e28fac99e7b47fec38ce4f1969a9a9693b80619e9009286e2d0d584
 homepage   : https://opencontainers.org/
 license    : Apache-2.0
 component  : virt
@@ -32,9 +33,10 @@ build      : |
     %make runc man
 install    : |
     cd src/github.com/opencontainers/runc/
-    install -Dm00755 runc $installdir/usr/bin/runc
+    install -Dm00755 runc ${installdir}/usr/bin/runc
+    %install_license LICENSE
 
-    install -Dm00644 contrib/completions/bash/runc $installdir/usr/share/bash-completion/completions/runc
+    install -Dm00644 contrib/completions/bash/runc ${installdir}/usr/share/bash-completion/completions/runc
 
-    install -d $installdir/usr/share/man/man8
-    install -m644 man/man8/*.8 $installdir/usr/share/man/man8
+    install -d ${installdir}/usr/share/man/man8
+    install -m644 man/man8/*.8 ${installdir}/usr/share/man/man8

@@ -1,0 +1,10 @@
+ead:__start___ell_debug
+ead:__stop___ell_debug
+hwsim:__start___ell_debug
+hwsim:__stop___ell_debug
+iwctl:__start___ell_debug
+iwctl:__stop___ell_debug
+iwd:__start___ell_debug
+iwd:__stop___ell_debug
+iwmon:__start___ell_debug
+iwmon:__stop___ell_debug

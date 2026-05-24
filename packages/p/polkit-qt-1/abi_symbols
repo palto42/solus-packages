@@ -139,6 +139,7 @@ libpolkit-qt5-core-1.so.1:_ZN9PolkitQt17DetailsD2Ev
 libpolkit-qt5-core-1.so.1:_ZN9PolkitQt17DetailsaSERKS0_
 libpolkit-qt5-core-1.so.1:_ZN9PolkitQt17Subject10fromStringERK7QString
 libpolkit-qt5-core-1.so.1:_ZN9PolkitQt17Subject10setSubjectEP14_PolkitSubject
+libpolkit-qt5-core-1.so.1:_ZN9PolkitQt17Subject11fromSubjectEP14_PolkitSubject
 libpolkit-qt5-core-1.so.1:_ZN9PolkitQt17SubjectC1EP14_PolkitSubject
 libpolkit-qt5-core-1.so.1:_ZN9PolkitQt17SubjectC1ERKS0_
 libpolkit-qt5-core-1.so.1:_ZN9PolkitQt17SubjectC1Ev
@@ -457,6 +458,7 @@ libpolkit-qt6-core-1.so.1:_ZN9PolkitQt17DetailsD2Ev
 libpolkit-qt6-core-1.so.1:_ZN9PolkitQt17DetailsaSERKS0_
 libpolkit-qt6-core-1.so.1:_ZN9PolkitQt17Subject10fromStringERK7QString
 libpolkit-qt6-core-1.so.1:_ZN9PolkitQt17Subject10setSubjectEP14_PolkitSubject
+libpolkit-qt6-core-1.so.1:_ZN9PolkitQt17Subject11fromSubjectEP14_PolkitSubject
 libpolkit-qt6-core-1.so.1:_ZN9PolkitQt17SubjectC1EP14_PolkitSubject
 libpolkit-qt6-core-1.so.1:_ZN9PolkitQt17SubjectC1ERKS0_
 libpolkit-qt6-core-1.so.1:_ZN9PolkitQt17SubjectC1Ev

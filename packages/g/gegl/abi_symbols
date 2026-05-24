@@ -15,19 +15,6 @@ ff-save.so:gegl_module_query
 ff-save.so:gegl_module_register
 ff-save.so:gegl_op_ff_save_get_type
 ff-save.so:gegl_op_ff_save_register_type
-gegl:_IO_stdin_used
-gegl:__bss_start
-gegl:__data_start
-gegl:_edata
-gegl:_end
-gegl:_start
-gegl:gegl_options_next_file
-gegl:gegl_options_parse
-gegl:gegl_options_previous_file
-gegl:gegl_path_smooth_init
-gegl:gegl_str_has_image_suffix
-gegl:gegl_str_has_video_suffix
-gegl:main
 gegl-common-cxx-x86_64-v2.so:gegl_module_query
 gegl-common-cxx-x86_64-v2.so:gegl_module_register
 gegl-common-cxx-x86_64-v2.so:gegl_op_denoise_dct_get_type
@@ -615,6 +602,8 @@ gegl-common-x86_64-v2.so:gegl_op_unsharp_mask_get_type
 gegl-common-x86_64-v2.so:gegl_op_unsharp_mask_register_type
 gegl-common-x86_64-v2.so:gegl_op_value_invert_get_type
 gegl-common-x86_64-v2.so:gegl_op_value_invert_register_type
+gegl-common-x86_64-v2.so:gegl_op_vibrance_get_type
+gegl-common-x86_64-v2.so:gegl_op_vibrance_register_type
 gegl-common-x86_64-v2.so:gegl_op_vignette_get_type
 gegl-common-x86_64-v2.so:gegl_op_vignette_register_type
 gegl-common-x86_64-v2.so:gegl_op_waterpixels_get_type
@@ -868,6 +857,8 @@ gegl-common-x86_64-v3.so:gegl_op_unsharp_mask_get_type
 gegl-common-x86_64-v3.so:gegl_op_unsharp_mask_register_type
 gegl-common-x86_64-v3.so:gegl_op_value_invert_get_type
 gegl-common-x86_64-v3.so:gegl_op_value_invert_register_type
+gegl-common-x86_64-v3.so:gegl_op_vibrance_get_type
+gegl-common-x86_64-v3.so:gegl_op_vibrance_register_type
 gegl-common-x86_64-v3.so:gegl_op_vignette_get_type
 gegl-common-x86_64-v3.so:gegl_op_vignette_register_type
 gegl-common-x86_64-v3.so:gegl_op_waterpixels_get_type
@@ -1121,6 +1112,8 @@ gegl-common.so:gegl_op_unsharp_mask_get_type
 gegl-common.so:gegl_op_unsharp_mask_register_type
 gegl-common.so:gegl_op_value_invert_get_type
 gegl-common.so:gegl_op_value_invert_register_type
+gegl-common.so:gegl_op_vibrance_get_type
+gegl-common.so:gegl_op_vibrance_register_type
 gegl-common.so:gegl_op_vignette_get_type
 gegl-common.so:gegl_op_vignette_register_type
 gegl-common.so:gegl_op_waterpixels_get_type
@@ -1436,7 +1429,6 @@ libgegl-0.4.so.0:_gegl_tile_handler_get_cache
 libgegl-0.4.so.0:_gegl_tile_handler_get_tile_storage
 libgegl-0.4.so.0:_gegl_tile_handler_set_cache
 libgegl-0.4.so.0:_gegl_tile_handler_set_tile_storage
-libgegl-0.4.so.0:algorithms
 libgegl-0.4.so.0:gegl_abyss_policy_get_type
 libgegl-0.4.so.0:gegl_access_mode_get_type
 libgegl-0.4.so.0:gegl_apply_op
@@ -1651,7 +1643,6 @@ libgegl-0.4.so.0:gegl_compression_init
 libgegl-0.4.so.0:gegl_compression_list
 libgegl-0.4.so.0:gegl_compression_nop_init
 libgegl-0.4.so.0:gegl_compression_register
-libgegl-0.4.so.0:gegl_compression_register_alias
 libgegl-0.4.so.0:gegl_compression_rle_init
 libgegl-0.4.so.0:gegl_compression_zlib_init
 libgegl-0.4.so.0:gegl_config
@@ -2318,7 +2309,6 @@ libgegl-0.4.so.0:gegl_visitor_traverse_reverse_topological
 libgegl-0.4.so.0:gegl_visitor_traverse_topological
 libgegl-0.4.so.0:gegl_visitor_visit_node
 libgegl-0.4.so.0:gegl_visitor_visit_pad
-libgegl-0.4.so.0:real_gegl_instrument
 libgegl-npd-0.4.so:npd_SED
 libgegl-npd-0.4.so:npd_add_control_point
 libgegl-npd-0.4.so:npd_apply_transformation
@@ -2841,12 +2831,12 @@ v4l.so:v4ltrylock
 v4l.so:v4lunlock
 vector-fill.so:CTX_STATE
 vector-fill.so:_ctx_depth
-vector-fill.so:_ctx_device_to_user_distance
 vector-fill.so:_ctx_font
 vector-fill.so:_ctx_font_from_no
 vector-fill.so:_ctx_glyph
 vector-fill.so:_ctx_glyph_target
 vector-fill.so:_ctx_max_threads
+vector-fill.so:_ctx_resolve_font_exact
 vector-fill.so:_ctx_set_transformation
 vector-fill.so:_ctx_subpixel_layout
 vector-fill.so:_ctx_text
@@ -2857,7 +2847,6 @@ vector-fill.so:_ctx_user_to_device
 vector-fill.so:_ctx_user_to_device_distance
 vector-fill.so:_ctx_user_to_device_prepped
 vector-fill.so:_ctx_user_to_device_prepped_fixed
-vector-fill.so:cb_clear_jobs
 vector-fill.so:ctx_RGBA8_source_over_normal_full_cov_fragment_generic
 vector-fill.so:ctx_a85dec
 vector-fill.so:ctx_a85len
@@ -2867,6 +2856,7 @@ vector-fill.so:ctx_apply_matrix
 vector-fill.so:ctx_apply_transform
 vector-fill.so:ctx_arc
 vector-fill.so:ctx_arc_to
+vector-fill.so:ctx_atof
 vector-fill.so:ctx_backend_type
 vector-fill.so:ctx_base642bin
 vector-fill.so:ctx_bin2base64
@@ -2882,7 +2872,7 @@ vector-fill.so:ctx_cb_destroy
 vector-fill.so:ctx_cb_get_flags
 vector-fill.so:ctx_cb_set_flags
 vector-fill.so:ctx_cb_set_memory_budget
-vector-fill.so:ctx_client_feed_keystring
+vector-fill.so:ctx_client_feed_event
 vector-fill.so:ctx_client_rev
 vector-fill.so:ctx_client_rev_inc
 vector-fill.so:ctx_clip
@@ -2962,6 +2952,7 @@ vector-fill.so:ctx_drgba_stroke
 vector-fill.so:ctx_drop_eid
 vector-fill.so:ctx_end_frame
 vector-fill.so:ctx_end_group
+vector-fill.so:ctx_event_source_name
 vector-fill.so:ctx_exit
 vector-fill.so:ctx_extend
 vector-fill.so:ctx_feather
@@ -3018,11 +3009,15 @@ vector-fill.so:ctx_get_wrap_left
 vector-fill.so:ctx_get_wrap_right
 vector-fill.so:ctx_global_alpha
 vector-fill.so:ctx_glyph_allocate
+vector-fill.so:ctx_glyph_ctx
 vector-fill.so:ctx_glyph_free
 vector-fill.so:ctx_glyph_id
+vector-fill.so:ctx_glyph_kern_inferred
 vector-fill.so:ctx_glyph_lookup
+vector-fill.so:ctx_glyph_lookup_ctx
 vector-fill.so:ctx_glyph_unichar
 vector-fill.so:ctx_glyph_width
+vector-fill.so:ctx_glyph_width_ctx
 vector-fill.so:ctx_glyphs
 vector-fill.so:ctx_glyphs_stroke
 vector-fill.so:ctx_gradient_add_stop_rgba
@@ -3066,6 +3061,7 @@ vector-fill.so:ctx_linear_gradient
 vector-fill.so:ctx_load_font
 vector-fill.so:ctx_load_font_ctx
 vector-fill.so:ctx_logo
+vector-fill.so:ctx_logo_stroke
 vector-fill.so:ctx_matrix_apply_transform
 vector-fill.so:ctx_matrix_apply_transform_distance
 vector-fill.so:ctx_matrix_identity
@@ -3091,6 +3087,7 @@ vector-fill.so:ctx_parser_feed_byte
 vector-fill.so:ctx_parser_feed_bytes
 vector-fill.so:ctx_parser_neutral
 vector-fill.so:ctx_parser_new
+vector-fill.so:ctx_parser_new_frame
 vector-fill.so:ctx_parser_set_size
 vector-fill.so:ctx_path_extents
 vector-fill.so:ctx_path_extents_path

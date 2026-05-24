@@ -1,0 +1,6 @@
+releases:
+  id: 19547
+  rss: https://pypi.org/rss/project/jaraco_text/releases.xml
+ # No known CPE, checked 2026-02-28
+security:
+  cpe: ~

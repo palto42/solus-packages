@@ -1,14 +1,17 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kde-gtk-config
-version    : 6.4.5
-release    : 128
+version    : 6.6.5
+release    : 138
 source     :
-    - https://download.kde.org/stable/plasma/6.4.5/kde-gtk-config-6.4.5.tar.xz : f7a81c1efd539b608cc640a999fdb184bbb83cfc9600d407d1a4f332c3880ec2
+    - https://download.kde.org/stable/plasma/6.6.5/kde-gtk-config-6.6.5.tar.xz : 2902a012ba85d2d201f879d17f0b4f51910e43a1cb0d761788b063b0c17d7b10
 homepage   : https://www.kde.org/workspaces/plasmadesktop/
 license    :
     - BSD-2-Clause
     - BSD-3-Clause
+    - CC0-1.0
     - GPL-2.0-only
     - GPL-2.0-or-later
+    - GPL-3.0-only
 component  : desktop.kde.core
 summary    : KDE settings to set GTK look and feel
 description: |
@@ -32,10 +35,9 @@ rundeps    :
 clang      : true
 optimize   : thin-lto
 setup      : |
-    %patch -p1 -i $pkgfiles/0001-Set-monospace-font-name-and-document-font-name.patch
-
     %cmake_kf6
 build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*

@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : pandoc-crossref
-version    : 0.3.14.0
-release    : 5
+version    : 0.3.23
+release    : 13
 source     :
-    - https://github.com/lierdakil/pandoc-crossref/archive/refs/tags/v0.3.14.0.tar.gz : 6ed275f6972ab216a623dea70f92a875132afcf500a4c710a752d26c13cccf88
+    - https://github.com/lierdakil/pandoc-crossref/archive/refs/tags/v0.3.23a.tar.gz : 7b3638c8b8d416f28e950cf650c52d3e961f53ce6cc640133caf8ee99b2efade
 homepage   : https://lierdakil.github.io/pandoc-crossref/
 license    : GPL-2.0-only
 component  : office
@@ -12,13 +13,17 @@ description: |
 builddeps  :
     - ghc
     - haskell-cabal-install
+rundeps    :
+    - pandoc
 networking : true
 setup      : |
-    %cabal_configure --enable-tests
+    rm $workdir/cabal.project.freeze
+    %cabal_configure --enable-tests --constraint="pandoc == 3.9.0.2"
 build      : |
     %haskell_build
 install    : |
     %haskell_install exe:pandoc-crossref
-    rm -rf $installdir/{%libdir%,usr/share/pandoc-crossref}
+    %install_license LICENSE
+    rm -rf $installdir/{%libdir%,usr/share/pandoc-crossref,usr/share/doc}
 check      : |
     %haskell_check

@@ -19,6 +19,7 @@
         <PartOf>desktop</PartOf>
         <Files>
             <Path fileType="executable">/usr/bin/lab-sensible-terminal</Path>
+            <Path fileType="executable">/usr/bin/labnag</Path>
             <Path fileType="executable">/usr/bin/labwc</Path>
             <Path fileType="doc">/usr/share/doc/labwc/README</Path>
             <Path fileType="doc">/usr/share/doc/labwc/autostart</Path>
@@ -28,6 +29,7 @@
             <Path fileType="doc">/usr/share/doc/labwc/rc.xml.all</Path>
             <Path fileType="doc">/usr/share/doc/labwc/shutdown</Path>
             <Path fileType="doc">/usr/share/doc/labwc/themerc</Path>
+            <Path fileType="data">/usr/share/licenses/labwc/LICENSE</Path>
             <Path fileType="localedata">/usr/share/locale/ar/LC_MESSAGES/labwc.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ca/LC_MESSAGES/labwc.mo</Path>
             <Path fileType="localedata">/usr/share/locale/cs/LC_MESSAGES/labwc.mo</Path>
@@ -41,11 +43,14 @@
             <Path fileType="localedata">/usr/share/locale/fi/LC_MESSAGES/labwc.mo</Path>
             <Path fileType="localedata">/usr/share/locale/fr/LC_MESSAGES/labwc.mo</Path>
             <Path fileType="localedata">/usr/share/locale/gl/LC_MESSAGES/labwc.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/he/LC_MESSAGES/labwc.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/hr/LC_MESSAGES/labwc.mo</Path>
             <Path fileType="localedata">/usr/share/locale/hu/LC_MESSAGES/labwc.mo</Path>
             <Path fileType="localedata">/usr/share/locale/id/LC_MESSAGES/labwc.mo</Path>
             <Path fileType="localedata">/usr/share/locale/it/LC_MESSAGES/labwc.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ja/LC_MESSAGES/labwc.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ka/LC_MESSAGES/labwc.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/kk/LC_MESSAGES/labwc.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ko/LC_MESSAGES/labwc.mo</Path>
             <Path fileType="localedata">/usr/share/locale/lt/LC_MESSAGES/labwc.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ms/LC_MESSAGES/labwc.mo</Path>
@@ -59,12 +64,15 @@
             <Path fileType="localedata">/usr/share/locale/sv/LC_MESSAGES/labwc.mo</Path>
             <Path fileType="localedata">/usr/share/locale/tr/LC_MESSAGES/labwc.mo</Path>
             <Path fileType="localedata">/usr/share/locale/uk/LC_MESSAGES/labwc.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/vi/LC_MESSAGES/labwc.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_CN/LC_MESSAGES/labwc.mo</Path>
-            <Path fileType="man">/usr/share/man/man1/labwc.1</Path>
-            <Path fileType="man">/usr/share/man/man5/labwc-actions.5</Path>
-            <Path fileType="man">/usr/share/man/man5/labwc-config.5</Path>
-            <Path fileType="man">/usr/share/man/man5/labwc-menu.5</Path>
-            <Path fileType="man">/usr/share/man/man5/labwc-theme.5</Path>
+            <Path fileType="localedata">/usr/share/locale/zh_TW/LC_MESSAGES/labwc.mo</Path>
+            <Path fileType="man">/usr/share/man/man1/labnag.1.zst</Path>
+            <Path fileType="man">/usr/share/man/man1/labwc.1.zst</Path>
+            <Path fileType="man">/usr/share/man/man5/labwc-actions.5.zst</Path>
+            <Path fileType="man">/usr/share/man/man5/labwc-config.5.zst</Path>
+            <Path fileType="man">/usr/share/man/man5/labwc-menu.5.zst</Path>
+            <Path fileType="man">/usr/share/man/man5/labwc-theme.5.zst</Path>
             <Path fileType="data">/usr/share/xdg-desktop-portal/labwc-portals.conf</Path>
         </Files>
     </Package>
@@ -73,7 +81,7 @@
         <Summary xml:lang="en">Labwc session</Summary>
         <Description xml:lang="en">Labwc session</Description>
         <RuntimeDependencies>
-            <Dependency releaseFrom="12">labwc</Dependency>
+            <Dependency releaseFrom="16">labwc</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/labwc-symbolic.svg</Path>
@@ -82,9 +90,9 @@
         </Files>
     </Package>
     <History>
-        <Update release="12">
-            <Date>2025-08-02</Date>
-            <Version>0.9.1</Version>
+        <Update release="16">
+            <Date>2026-04-19</Date>
+            <Version>0.9.7</Version>
             <Comment>Packaging update</Comment>
             <Name>Evan Maddock</Name>
             <Email>maddock.evan@vivaldi.net</Email>

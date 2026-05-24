@@ -1,6 +1,7 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : adapta-gtk-theme
 version    : 3.95.0.11
-release    : 182
+release    : 183
 source     :
     - https://github.com/adapta-project/adapta-gtk-theme/archive/refs/tags/3.95.0.11.tar.gz : fb8fc11b770be59e1673b8f2d917704fc34e53aee5fb02fed70d83909d3309bd
 homepage   : https://github.com/adapta-project/adapta-gtk-theme
@@ -36,3 +37,4 @@ build      : |
     %make
 install    : |
     %make_install
+    %install_license COPYING LICENSE_CC_BY_SA4

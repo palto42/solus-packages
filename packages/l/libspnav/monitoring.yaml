@@ -1,0 +1,6 @@
+releases:
+  id: 9632
+  rss: https://github.com/FreeSpacenav/libspnav/tags.atom
+ # No known CPE, checked 2026-04-09
+security:
+  cpe: ~

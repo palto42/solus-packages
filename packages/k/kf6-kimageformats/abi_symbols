@@ -44,5 +44,7 @@ kimg_sct.so:qt_plugin_instance
 kimg_sct.so:qt_plugin_query_metadata_v2
 kimg_tga.so:qt_plugin_instance
 kimg_tga.so:qt_plugin_query_metadata_v2
+kimg_tim.so:qt_plugin_instance
+kimg_tim.so:qt_plugin_query_metadata_v2
 kimg_xcf.so:qt_plugin_instance
 kimg_xcf.so:qt_plugin_query_metadata_v2

@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : gnome-weather
-version    : '48.0'
-release    : 30
+version    : '50.0'
+release    : 32
 source     :
-    - https://download.gnome.org/sources/gnome-weather/48/gnome-weather-48.0.tar.xz : 4c0569b3d815ae2f9416d47134cbd3056340640ff186d31a94c865813b4bdbb5
+    - https://download.gnome.org/sources/gnome-weather/50/gnome-weather-50.0.tar.xz : 57de7578605f91f9ab400551ce7738db7505bc88f42a33c70ce7a70167fdb513
 homepage   : https://apps.gnome.org/Weather/
 license    : GPL-2.0-or-later
 component  : desktop.gnome
@@ -13,11 +14,11 @@ optimize   :
     - lto
 builddeps  :
     - pkgconfig(gjs-1.0)
-    - pkgconfig(gtk4)
     - pkgconfig(gweather4)
     - pkgconfig(libadwaita-1)
     - pkgconfig(libgeoclue-2.0)
     - desktop-file-utils
+    - typescript
 rundeps    :
     - gjs
 setup      : |

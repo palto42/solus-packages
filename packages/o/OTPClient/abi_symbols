@@ -1,3 +1,1 @@
-otpclient:g_ascii_table
-otpclient:protobuf_c_empty_string
-otpclient-cli:stdin
+otpclient:_IO_stdin_used

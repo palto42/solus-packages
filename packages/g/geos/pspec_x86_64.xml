@@ -3,15 +3,15 @@
         <Name>geos</Name>
         <Homepage>https://trac.osgeo.org/geos</Homepage>
         <Packager>
-            <Name>Martin Reboredo</Name>
-            <Email>yakoyoku@gmail.com</Email>
+            <Name>David Harder</Name>
+            <Email>david@davidjharder.ca</Email>
         </Packager>
         <License>LGPL-2.1-only</License>
         <PartOf>programming</PartOf>
         <Summary xml:lang="en">GEOS - Geometry Engine, Open Source</Summary>
         <Description xml:lang="en">GEOS (Geometry Engine - Open Source) is a C++ port of the JTS Topology Suite (JTS). It includes the OpenGIS Simple Features for SQL spatial predicate functions and spatial operators, as well as specific JTS enhanced topology functions.
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>geos</Name>
@@ -22,10 +22,11 @@
         <Files>
             <Path fileType="executable">/usr/bin/geosop</Path>
             <Path fileType="library">/usr/lib64/libgeos.so</Path>
-            <Path fileType="library">/usr/lib64/libgeos.so.3.10.1</Path>
+            <Path fileType="library">/usr/lib64/libgeos.so.3.14.1</Path>
             <Path fileType="library">/usr/lib64/libgeos_c.so</Path>
             <Path fileType="library">/usr/lib64/libgeos_c.so.1</Path>
-            <Path fileType="library">/usr/lib64/libgeos_c.so.1.16.0</Path>
+            <Path fileType="library">/usr/lib64/libgeos_c.so.1.20.5</Path>
+            <Path fileType="data">/usr/share/licenses/geos/COPYING</Path>
         </Files>
     </Package>
     <Package>
@@ -35,28 +36,29 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="5">geos</Dependency>
+            <Dependency release="6">geos</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin/geos-config</Path>
+            <Path fileType="header">/usr/include/geos.h</Path>
             <Path fileType="header">/usr/include/geos/algorithm/Angle.h</Path>
             <Path fileType="header">/usr/include/geos/algorithm/Area.h</Path>
             <Path fileType="header">/usr/include/geos/algorithm/BoundaryNodeRule.h</Path>
             <Path fileType="header">/usr/include/geos/algorithm/CGAlgorithmsDD.h</Path>
-            <Path fileType="header">/usr/include/geos/algorithm/CGAlgorithmsDD.inl</Path>
             <Path fileType="header">/usr/include/geos/algorithm/CentralEndpointIntersector.h</Path>
             <Path fileType="header">/usr/include/geos/algorithm/Centroid.h</Path>
+            <Path fileType="header">/usr/include/geos/algorithm/CircularArcs.h</Path>
             <Path fileType="header">/usr/include/geos/algorithm/ConvexHull.h</Path>
-            <Path fileType="header">/usr/include/geos/algorithm/ConvexHull.inl</Path>
             <Path fileType="header">/usr/include/geos/algorithm/Distance.h</Path>
             <Path fileType="header">/usr/include/geos/algorithm/HCoordinate.h</Path>
             <Path fileType="header">/usr/include/geos/algorithm/InteriorPointArea.h</Path>
             <Path fileType="header">/usr/include/geos/algorithm/InteriorPointLine.h</Path>
             <Path fileType="header">/usr/include/geos/algorithm/InteriorPointPoint.h</Path>
+            <Path fileType="header">/usr/include/geos/algorithm/Interpolate.h</Path>
             <Path fileType="header">/usr/include/geos/algorithm/Intersection.h</Path>
             <Path fileType="header">/usr/include/geos/algorithm/Length.h</Path>
             <Path fileType="header">/usr/include/geos/algorithm/LineIntersector.h</Path>
-            <Path fileType="header">/usr/include/geos/algorithm/LineIntersector.inl</Path>
+            <Path fileType="header">/usr/include/geos/algorithm/MinimumAreaRectangle.h</Path>
             <Path fileType="header">/usr/include/geos/algorithm/MinimumBoundingCircle.h</Path>
             <Path fileType="header">/usr/include/geos/algorithm/MinimumDiameter.h</Path>
             <Path fileType="header">/usr/include/geos/algorithm/NotRepresentableException.h</Path>
@@ -64,67 +66,92 @@
             <Path fileType="header">/usr/include/geos/algorithm/PointInRing.h</Path>
             <Path fileType="header">/usr/include/geos/algorithm/PointLocation.h</Path>
             <Path fileType="header">/usr/include/geos/algorithm/PointLocator.h</Path>
+            <Path fileType="header">/usr/include/geos/algorithm/PolygonNodeTopology.h</Path>
             <Path fileType="header">/usr/include/geos/algorithm/RayCrossingCounter.h</Path>
-            <Path fileType="header">/usr/include/geos/algorithm/RayCrossingCounterDD.h</Path>
+            <Path fileType="header">/usr/include/geos/algorithm/Rectangle.h</Path>
             <Path fileType="header">/usr/include/geos/algorithm/RobustDeterminant.h</Path>
-            <Path fileType="header">/usr/include/geos/algorithm/SimplePointInRing.h</Path>
+            <Path fileType="header">/usr/include/geos/algorithm/construct/ExactMaxInscribedCircle.h</Path>
+            <Path fileType="header">/usr/include/geos/algorithm/construct/IndexedDistanceToPoint.h</Path>
+            <Path fileType="header">/usr/include/geos/algorithm/construct/IndexedPointInPolygonsLocator.h</Path>
             <Path fileType="header">/usr/include/geos/algorithm/construct/LargestEmptyCircle.h</Path>
             <Path fileType="header">/usr/include/geos/algorithm/construct/MaximumInscribedCircle.h</Path>
             <Path fileType="header">/usr/include/geos/algorithm/distance/DiscreteFrechetDistance.h</Path>
             <Path fileType="header">/usr/include/geos/algorithm/distance/DiscreteHausdorffDistance.h</Path>
             <Path fileType="header">/usr/include/geos/algorithm/distance/DistanceToPoint.h</Path>
             <Path fileType="header">/usr/include/geos/algorithm/distance/PointPairDistance.h</Path>
+            <Path fileType="header">/usr/include/geos/algorithm/hull/ConcaveHull.h</Path>
+            <Path fileType="header">/usr/include/geos/algorithm/hull/ConcaveHullOfPolygons.h</Path>
+            <Path fileType="header">/usr/include/geos/algorithm/hull/HullTri.h</Path>
+            <Path fileType="header">/usr/include/geos/algorithm/hull/HullTriangulation.h</Path>
+            <Path fileType="header">/usr/include/geos/algorithm/hull/OuterShellsExtracter.h</Path>
             <Path fileType="header">/usr/include/geos/algorithm/locate/IndexedPointInAreaLocator.h</Path>
             <Path fileType="header">/usr/include/geos/algorithm/locate/PointOnGeometryLocator.h</Path>
             <Path fileType="header">/usr/include/geos/algorithm/locate/SimplePointInAreaLocator.h</Path>
             <Path fileType="header">/usr/include/geos/constants.h</Path>
+            <Path fileType="header">/usr/include/geos/coverage/CleanCoverage.h</Path>
+            <Path fileType="header">/usr/include/geos/coverage/Corner.h</Path>
+            <Path fileType="header">/usr/include/geos/coverage/CoverageBoundarySegmentFinder.h</Path>
+            <Path fileType="header">/usr/include/geos/coverage/CoverageCleaner.h</Path>
+            <Path fileType="header">/usr/include/geos/coverage/CoverageEdge.h</Path>
+            <Path fileType="header">/usr/include/geos/coverage/CoverageGapFinder.h</Path>
+            <Path fileType="header">/usr/include/geos/coverage/CoveragePolygon.h</Path>
+            <Path fileType="header">/usr/include/geos/coverage/CoveragePolygonValidator.h</Path>
+            <Path fileType="header">/usr/include/geos/coverage/CoverageRing.h</Path>
+            <Path fileType="header">/usr/include/geos/coverage/CoverageRingEdges.h</Path>
+            <Path fileType="header">/usr/include/geos/coverage/CoverageSimplifier.h</Path>
+            <Path fileType="header">/usr/include/geos/coverage/CoverageUnion.h</Path>
+            <Path fileType="header">/usr/include/geos/coverage/CoverageValidator.h</Path>
+            <Path fileType="header">/usr/include/geos/coverage/InvalidSegmentDetector.h</Path>
+            <Path fileType="header">/usr/include/geos/coverage/TPVWSimplifier.h</Path>
+            <Path fileType="header">/usr/include/geos/coverage/VertexRingCounter.h</Path>
+            <Path fileType="header">/usr/include/geos/dissolve/DissolveEdgeGraph.h</Path>
+            <Path fileType="header">/usr/include/geos/dissolve/DissolveHalfEdge.h</Path>
+            <Path fileType="header">/usr/include/geos/dissolve/LineDissolver.h</Path>
             <Path fileType="header">/usr/include/geos/edgegraph/EdgeGraph.h</Path>
             <Path fileType="header">/usr/include/geos/edgegraph/EdgeGraphBuilder.h</Path>
             <Path fileType="header">/usr/include/geos/edgegraph/HalfEdge.h</Path>
             <Path fileType="header">/usr/include/geos/edgegraph/MarkHalfEdge.h</Path>
             <Path fileType="header">/usr/include/geos/export.h</Path>
             <Path fileType="header">/usr/include/geos/geom.h</Path>
+            <Path fileType="header">/usr/include/geos/geom/CircularArc.h</Path>
+            <Path fileType="header">/usr/include/geos/geom/CircularString.h</Path>
+            <Path fileType="header">/usr/include/geos/geom/CompoundCurve.h</Path>
             <Path fileType="header">/usr/include/geos/geom/Coordinate.h</Path>
-            <Path fileType="header">/usr/include/geos/geom/Coordinate.inl</Path>
-            <Path fileType="header">/usr/include/geos/geom/CoordinateArraySequence.h</Path>
-            <Path fileType="header">/usr/include/geos/geom/CoordinateArraySequenceFactory.h</Path>
-            <Path fileType="header">/usr/include/geos/geom/CoordinateArraySequenceFactory.inl</Path>
             <Path fileType="header">/usr/include/geos/geom/CoordinateFilter.h</Path>
             <Path fileType="header">/usr/include/geos/geom/CoordinateList.h</Path>
             <Path fileType="header">/usr/include/geos/geom/CoordinateSequence.h</Path>
-            <Path fileType="header">/usr/include/geos/geom/CoordinateSequenceFactory.h</Path>
             <Path fileType="header">/usr/include/geos/geom/CoordinateSequenceFilter.h</Path>
-            <Path fileType="header">/usr/include/geos/geom/DefaultCoordinateSequenceFactory.h</Path>
+            <Path fileType="header">/usr/include/geos/geom/CoordinateSequenceIterator.h</Path>
+            <Path fileType="header">/usr/include/geos/geom/CoordinateSequences.h</Path>
+            <Path fileType="header">/usr/include/geos/geom/Curve.h</Path>
+            <Path fileType="header">/usr/include/geos/geom/CurvePolygon.h</Path>
             <Path fileType="header">/usr/include/geos/geom/Dimension.h</Path>
             <Path fileType="header">/usr/include/geos/geom/Envelope.h</Path>
-            <Path fileType="header">/usr/include/geos/geom/Envelope.inl</Path>
-            <Path fileType="header">/usr/include/geos/geom/FixedSizeCoordinateSequence.h</Path>
             <Path fileType="header">/usr/include/geos/geom/Geometry.h</Path>
             <Path fileType="header">/usr/include/geos/geom/GeometryCollection.h</Path>
-            <Path fileType="header">/usr/include/geos/geom/GeometryCollection.inl</Path>
             <Path fileType="header">/usr/include/geos/geom/GeometryComponentFilter.h</Path>
             <Path fileType="header">/usr/include/geos/geom/GeometryFactory.h</Path>
-            <Path fileType="header">/usr/include/geos/geom/GeometryFactory.inl</Path>
             <Path fileType="header">/usr/include/geos/geom/GeometryFilter.h</Path>
+            <Path fileType="header">/usr/include/geos/geom/GeometryTypeName.h</Path>
             <Path fileType="header">/usr/include/geos/geom/HeuristicOverlay.h</Path>
             <Path fileType="header">/usr/include/geos/geom/IntersectionMatrix.h</Path>
             <Path fileType="header">/usr/include/geos/geom/LineSegment.h</Path>
-            <Path fileType="header">/usr/include/geos/geom/LineSegment.inl</Path>
             <Path fileType="header">/usr/include/geos/geom/LineString.h</Path>
             <Path fileType="header">/usr/include/geos/geom/LinearRing.h</Path>
             <Path fileType="header">/usr/include/geos/geom/Location.h</Path>
+            <Path fileType="header">/usr/include/geos/geom/MultiCurve.h</Path>
             <Path fileType="header">/usr/include/geos/geom/MultiLineString.h</Path>
-            <Path fileType="header">/usr/include/geos/geom/MultiLineString.inl</Path>
             <Path fileType="header">/usr/include/geos/geom/MultiPoint.h</Path>
             <Path fileType="header">/usr/include/geos/geom/MultiPolygon.h</Path>
-            <Path fileType="header">/usr/include/geos/geom/MultiPolygon.inl</Path>
+            <Path fileType="header">/usr/include/geos/geom/MultiSurface.h</Path>
             <Path fileType="header">/usr/include/geos/geom/Point.h</Path>
             <Path fileType="header">/usr/include/geos/geom/Polygon.h</Path>
             <Path fileType="header">/usr/include/geos/geom/Position.h</Path>
             <Path fileType="header">/usr/include/geos/geom/PrecisionModel.h</Path>
-            <Path fileType="header">/usr/include/geos/geom/PrecisionModel.inl</Path>
             <Path fileType="header">/usr/include/geos/geom/Quadrant.h</Path>
-            <Path fileType="header">/usr/include/geos/geom/Quadrant.inl</Path>
+            <Path fileType="header">/usr/include/geos/geom/SimpleCurve.h</Path>
+            <Path fileType="header">/usr/include/geos/geom/Surface.h</Path>
+            <Path fileType="header">/usr/include/geos/geom/SurfaceImpl.h</Path>
             <Path fileType="header">/usr/include/geos/geom/Triangle.h</Path>
             <Path fileType="header">/usr/include/geos/geom/prep/AbstractPreparedPolygonContains.h</Path>
             <Path fileType="header">/usr/include/geos/geom/prep/BasicPreparedGeometry.h</Path>
@@ -150,17 +177,18 @@
             <Path fileType="header">/usr/include/geos/geom/util/GeometryEditorOperation.h</Path>
             <Path fileType="header">/usr/include/geos/geom/util/GeometryExtracter.h</Path>
             <Path fileType="header">/usr/include/geos/geom/util/GeometryFixer.h</Path>
+            <Path fileType="header">/usr/include/geos/geom/util/GeometryLister.h</Path>
+            <Path fileType="header">/usr/include/geos/geom/util/GeometryMapper.h</Path>
             <Path fileType="header">/usr/include/geos/geom/util/GeometryTransformer.h</Path>
             <Path fileType="header">/usr/include/geos/geom/util/LinearComponentExtracter.h</Path>
             <Path fileType="header">/usr/include/geos/geom/util/NoOpGeometryOperation.h</Path>
             <Path fileType="header">/usr/include/geos/geom/util/PointExtracter.h</Path>
             <Path fileType="header">/usr/include/geos/geom/util/PolygonExtracter.h</Path>
+            <Path fileType="header">/usr/include/geos/geom/util/PolygonalExtracter.h</Path>
             <Path fileType="header">/usr/include/geos/geom/util/ShortCircuitedGeometryVisitor.h</Path>
             <Path fileType="header">/usr/include/geos/geom/util/SineStarFactory.h</Path>
             <Path fileType="header">/usr/include/geos/geomgraph/Depth.h</Path>
-            <Path fileType="header">/usr/include/geos/geomgraph/Depth.inl</Path>
             <Path fileType="header">/usr/include/geos/geomgraph/DirectedEdge.h</Path>
-            <Path fileType="header">/usr/include/geos/geomgraph/DirectedEdge.inl</Path>
             <Path fileType="header">/usr/include/geos/geomgraph/DirectedEdgeStar.h</Path>
             <Path fileType="header">/usr/include/geos/geomgraph/Edge.h</Path>
             <Path fileType="header">/usr/include/geos/geomgraph/EdgeEnd.h</Path>
@@ -171,22 +199,18 @@
             <Path fileType="header">/usr/include/geos/geomgraph/EdgeNodingValidator.h</Path>
             <Path fileType="header">/usr/include/geos/geomgraph/EdgeRing.h</Path>
             <Path fileType="header">/usr/include/geos/geomgraph/GeometryGraph.h</Path>
-            <Path fileType="header">/usr/include/geos/geomgraph/GeometryGraph.inl</Path>
             <Path fileType="header">/usr/include/geos/geomgraph/GraphComponent.h</Path>
             <Path fileType="header">/usr/include/geos/geomgraph/Label.h</Path>
-            <Path fileType="header">/usr/include/geos/geomgraph/Label.inl</Path>
             <Path fileType="header">/usr/include/geos/geomgraph/Node.h</Path>
             <Path fileType="header">/usr/include/geos/geomgraph/NodeFactory.h</Path>
             <Path fileType="header">/usr/include/geos/geomgraph/NodeMap.h</Path>
             <Path fileType="header">/usr/include/geos/geomgraph/PlanarGraph.h</Path>
             <Path fileType="header">/usr/include/geos/geomgraph/TopologyLocation.h</Path>
-            <Path fileType="header">/usr/include/geos/geomgraph/TopologyLocation.inl</Path>
             <Path fileType="header">/usr/include/geos/geomgraph/index/EdgeSetIntersector.h</Path>
             <Path fileType="header">/usr/include/geos/geomgraph/index/MonotoneChain.h</Path>
             <Path fileType="header">/usr/include/geos/geomgraph/index/MonotoneChainEdge.h</Path>
             <Path fileType="header">/usr/include/geos/geomgraph/index/MonotoneChainIndexer.h</Path>
             <Path fileType="header">/usr/include/geos/geomgraph/index/SegmentIntersector.h</Path>
-            <Path fileType="header">/usr/include/geos/geomgraph/index/SegmentIntersector.inl</Path>
             <Path fileType="header">/usr/include/geos/geomgraph/index/SimpleEdgeSetIntersector.h</Path>
             <Path fileType="header">/usr/include/geos/geomgraph/index/SimpleMCSweepLineIntersector.h</Path>
             <Path fileType="header">/usr/include/geos/geomgraph/index/SimpleSweepLineIntersector.h</Path>
@@ -195,6 +219,7 @@
             <Path fileType="header">/usr/include/geos/geomgraph/index/SweepLineSegment.h</Path>
             <Path fileType="header">/usr/include/geos/index/ItemVisitor.h</Path>
             <Path fileType="header">/usr/include/geos/index/SpatialIndex.h</Path>
+            <Path fileType="header">/usr/include/geos/index/VertexSequencePackedRtree.h</Path>
             <Path fileType="header">/usr/include/geos/index/bintree/Bintree.h</Path>
             <Path fileType="header">/usr/include/geos/index/bintree/Interval.h</Path>
             <Path fileType="header">/usr/include/geos/index/bintree/Key.h</Path>
@@ -240,21 +265,23 @@
             <Path fileType="header">/usr/include/geos/index/sweepline/SweepLineIndex.h</Path>
             <Path fileType="header">/usr/include/geos/index/sweepline/SweepLineInterval.h</Path>
             <Path fileType="header">/usr/include/geos/index/sweepline/SweepLineOverlapAction.h</Path>
-            <Path fileType="header">/usr/include/geos/inline.h</Path>
             <Path fileType="header">/usr/include/geos/io/ByteOrderDataInStream.h</Path>
-            <Path fileType="header">/usr/include/geos/io/ByteOrderDataInStream.inl</Path>
             <Path fileType="header">/usr/include/geos/io/ByteOrderValues.h</Path>
             <Path fileType="header">/usr/include/geos/io/CLocalizer.h</Path>
+            <Path fileType="header">/usr/include/geos/io/CheckOrdinatesFilter.h</Path>
             <Path fileType="header">/usr/include/geos/io/GeoJSON.h</Path>
             <Path fileType="header">/usr/include/geos/io/GeoJSONReader.h</Path>
             <Path fileType="header">/usr/include/geos/io/GeoJSONWriter.h</Path>
+            <Path fileType="header">/usr/include/geos/io/OrdinateSet.h</Path>
             <Path fileType="header">/usr/include/geos/io/ParseException.h</Path>
             <Path fileType="header">/usr/include/geos/io/StringTokenizer.h</Path>
             <Path fileType="header">/usr/include/geos/io/WKBConstants.h</Path>
             <Path fileType="header">/usr/include/geos/io/WKBReader.h</Path>
+            <Path fileType="header">/usr/include/geos/io/WKBStreamReader.h</Path>
             <Path fileType="header">/usr/include/geos/io/WKBWriter.h</Path>
+            <Path fileType="header">/usr/include/geos/io/WKTFileReader.h</Path>
             <Path fileType="header">/usr/include/geos/io/WKTReader.h</Path>
-            <Path fileType="header">/usr/include/geos/io/WKTReader.inl</Path>
+            <Path fileType="header">/usr/include/geos/io/WKTStreamReader.h</Path>
             <Path fileType="header">/usr/include/geos/io/WKTWriter.h</Path>
             <Path fileType="header">/usr/include/geos/io/Writer.h</Path>
             <Path fileType="header">/usr/include/geos/linearref/ExtractLineByLocation.h</Path>
@@ -270,7 +297,7 @@
             <Path fileType="header">/usr/include/geos/math/DD.h</Path>
             <Path fileType="header">/usr/include/geos/namespaces.h</Path>
             <Path fileType="header">/usr/include/geos/noding/BasicSegmentString.h</Path>
-            <Path fileType="header">/usr/include/geos/noding/BasicSegmentString.inl</Path>
+            <Path fileType="header">/usr/include/geos/noding/BoundaryChainNoder.h</Path>
             <Path fileType="header">/usr/include/geos/noding/FastNodingValidator.h</Path>
             <Path fileType="header">/usr/include/geos/noding/FastSegmentSetIntersectionFinder.h</Path>
             <Path fileType="header">/usr/include/geos/noding/GeometryNoder.h</Path>
@@ -278,22 +305,19 @@
             <Path fileType="header">/usr/include/geos/noding/IntersectionFinderAdder.h</Path>
             <Path fileType="header">/usr/include/geos/noding/IteratedNoder.h</Path>
             <Path fileType="header">/usr/include/geos/noding/MCIndexNoder.h</Path>
-            <Path fileType="header">/usr/include/geos/noding/MCIndexNoder.inl</Path>
             <Path fileType="header">/usr/include/geos/noding/MCIndexSegmentSetMutualIntersector.h</Path>
             <Path fileType="header">/usr/include/geos/noding/NodableSegmentString.h</Path>
             <Path fileType="header">/usr/include/geos/noding/NodedSegmentString.h</Path>
-            <Path fileType="header">/usr/include/geos/noding/NodedSegmentString.inl</Path>
             <Path fileType="header">/usr/include/geos/noding/Noder.h</Path>
             <Path fileType="header">/usr/include/geos/noding/NodingIntersectionFinder.h</Path>
-            <Path fileType="header">/usr/include/geos/noding/NodingIntersectionFinder.inl</Path>
             <Path fileType="header">/usr/include/geos/noding/NodingValidator.h</Path>
             <Path fileType="header">/usr/include/geos/noding/Octant.h</Path>
             <Path fileType="header">/usr/include/geos/noding/OrientedCoordinateArray.h</Path>
             <Path fileType="header">/usr/include/geos/noding/ScaledNoder.h</Path>
+            <Path fileType="header">/usr/include/geos/noding/SegmentExtractingNoder.h</Path>
             <Path fileType="header">/usr/include/geos/noding/SegmentIntersectionDetector.h</Path>
             <Path fileType="header">/usr/include/geos/noding/SegmentIntersector.h</Path>
             <Path fileType="header">/usr/include/geos/noding/SegmentNode.h</Path>
-            <Path fileType="header">/usr/include/geos/noding/SegmentNode.inl</Path>
             <Path fileType="header">/usr/include/geos/noding/SegmentNodeList.h</Path>
             <Path fileType="header">/usr/include/geos/noding/SegmentPointComparator.h</Path>
             <Path fileType="header">/usr/include/geos/noding/SegmentSetMutualIntersector.h</Path>
@@ -306,24 +330,41 @@
             <Path fileType="header">/usr/include/geos/noding/snap/SnappingNoder.h</Path>
             <Path fileType="header">/usr/include/geos/noding/snap/SnappingPointIndex.h</Path>
             <Path fileType="header">/usr/include/geos/noding/snapround/HotPixel.h</Path>
-            <Path fileType="header">/usr/include/geos/noding/snapround/HotPixel.inl</Path>
             <Path fileType="header">/usr/include/geos/noding/snapround/HotPixelIndex.h</Path>
             <Path fileType="header">/usr/include/geos/noding/snapround/MCIndexPointSnapper.h</Path>
             <Path fileType="header">/usr/include/geos/noding/snapround/MCIndexSnapRounder.h</Path>
             <Path fileType="header">/usr/include/geos/noding/snapround/SnapRoundingIntersectionAdder.h</Path>
             <Path fileType="header">/usr/include/geos/noding/snapround/SnapRoundingNoder.h</Path>
+            <Path fileType="header">/usr/include/geos/operation/BoundaryOp.h</Path>
             <Path fileType="header">/usr/include/geos/operation/GeometryGraphOperation.h</Path>
             <Path fileType="header">/usr/include/geos/operation/buffer/BufferBuilder.h</Path>
+            <Path fileType="header">/usr/include/geos/operation/buffer/BufferCurveSetBuilder.h</Path>
             <Path fileType="header">/usr/include/geos/operation/buffer/BufferInputLineSimplifier.h</Path>
+            <Path fileType="header">/usr/include/geos/operation/buffer/BufferNodeFactory.h</Path>
             <Path fileType="header">/usr/include/geos/operation/buffer/BufferOp.h</Path>
             <Path fileType="header">/usr/include/geos/operation/buffer/BufferParameters.h</Path>
             <Path fileType="header">/usr/include/geos/operation/buffer/BufferSubgraph.h</Path>
+            <Path fileType="header">/usr/include/geos/operation/buffer/MaximalEdgeRing.h</Path>
+            <Path fileType="header">/usr/include/geos/operation/buffer/MinimalEdgeRing.h</Path>
+            <Path fileType="header">/usr/include/geos/operation/buffer/OffsetCurve.h</Path>
             <Path fileType="header">/usr/include/geos/operation/buffer/OffsetCurveBuilder.h</Path>
-            <Path fileType="header">/usr/include/geos/operation/buffer/OffsetCurveSetBuilder.h</Path>
+            <Path fileType="header">/usr/include/geos/operation/buffer/OffsetCurveSection.h</Path>
             <Path fileType="header">/usr/include/geos/operation/buffer/OffsetSegmentGenerator.h</Path>
             <Path fileType="header">/usr/include/geos/operation/buffer/OffsetSegmentString.h</Path>
+            <Path fileType="header">/usr/include/geos/operation/buffer/PolygonBuilder.h</Path>
             <Path fileType="header">/usr/include/geos/operation/buffer/RightmostEdgeFinder.h</Path>
+            <Path fileType="header">/usr/include/geos/operation/buffer/SegmentMCIndex.h</Path>
             <Path fileType="header">/usr/include/geos/operation/buffer/SubgraphDepthLocater.h</Path>
+            <Path fileType="header">/usr/include/geos/operation/cluster/AbstractClusterFinder.h</Path>
+            <Path fileType="header">/usr/include/geos/operation/cluster/Clusters.h</Path>
+            <Path fileType="header">/usr/include/geos/operation/cluster/DBSCANClusterFinder.h</Path>
+            <Path fileType="header">/usr/include/geos/operation/cluster/DisjointOperation.h</Path>
+            <Path fileType="header">/usr/include/geos/operation/cluster/EnvelopeDistanceClusterFinder.h</Path>
+            <Path fileType="header">/usr/include/geos/operation/cluster/EnvelopeIntersectsClusterFinder.h</Path>
+            <Path fileType="header">/usr/include/geos/operation/cluster/GeometryDistanceClusterFinder.h</Path>
+            <Path fileType="header">/usr/include/geos/operation/cluster/GeometryFlattener.h</Path>
+            <Path fileType="header">/usr/include/geos/operation/cluster/GeometryIntersectsClusterFinder.h</Path>
+            <Path fileType="header">/usr/include/geos/operation/cluster/UnionFind.h</Path>
             <Path fileType="header">/usr/include/geos/operation/distance/ConnectedElementLocationFilter.h</Path>
             <Path fileType="header">/usr/include/geos/operation/distance/ConnectedElementPointFilter.h</Path>
             <Path fileType="header">/usr/include/geos/operation/distance/DistanceOp.h</Path>
@@ -331,6 +372,16 @@
             <Path fileType="header">/usr/include/geos/operation/distance/FacetSequenceTreeBuilder.h</Path>
             <Path fileType="header">/usr/include/geos/operation/distance/GeometryLocation.h</Path>
             <Path fileType="header">/usr/include/geos/operation/distance/IndexedFacetDistance.h</Path>
+            <Path fileType="header">/usr/include/geos/operation/grid/Cell.h</Path>
+            <Path fileType="header">/usr/include/geos/operation/grid/Crossing.h</Path>
+            <Path fileType="header">/usr/include/geos/operation/grid/FloodFill.h</Path>
+            <Path fileType="header">/usr/include/geos/operation/grid/Grid.h</Path>
+            <Path fileType="header">/usr/include/geos/operation/grid/GridIntersection.h</Path>
+            <Path fileType="header">/usr/include/geos/operation/grid/Matrix.h</Path>
+            <Path fileType="header">/usr/include/geos/operation/grid/PerimeterDistance.h</Path>
+            <Path fileType="header">/usr/include/geos/operation/grid/Side.h</Path>
+            <Path fileType="header">/usr/include/geos/operation/grid/Traversal.h</Path>
+            <Path fileType="header">/usr/include/geos/operation/grid/TraversalAreas.h</Path>
             <Path fileType="header">/usr/include/geos/operation/intersection/Rectangle.h</Path>
             <Path fileType="header">/usr/include/geos/operation/intersection/RectangleIntersection.h</Path>
             <Path fileType="header">/usr/include/geos/operation/intersection/RectangleIntersectionBuilder.h</Path>
@@ -340,27 +391,15 @@
             <Path fileType="header">/usr/include/geos/operation/linemerge/LineMergeGraph.h</Path>
             <Path fileType="header">/usr/include/geos/operation/linemerge/LineMerger.h</Path>
             <Path fileType="header">/usr/include/geos/operation/linemerge/LineSequencer.h</Path>
-            <Path fileType="header">/usr/include/geos/operation/overlay/EdgeSetNoder.h</Path>
-            <Path fileType="header">/usr/include/geos/operation/overlay/ElevationMatrix.h</Path>
-            <Path fileType="header">/usr/include/geos/operation/overlay/ElevationMatrixCell.h</Path>
-            <Path fileType="header">/usr/include/geos/operation/overlay/LineBuilder.h</Path>
-            <Path fileType="header">/usr/include/geos/operation/overlay/MaximalEdgeRing.h</Path>
-            <Path fileType="header">/usr/include/geos/operation/overlay/MinimalEdgeRing.h</Path>
-            <Path fileType="header">/usr/include/geos/operation/overlay/MinimalEdgeRing.inl</Path>
-            <Path fileType="header">/usr/include/geos/operation/overlay/OverlayNodeFactory.h</Path>
-            <Path fileType="header">/usr/include/geos/operation/overlay/OverlayOp.h</Path>
-            <Path fileType="header">/usr/include/geos/operation/overlay/PointBuilder.h</Path>
-            <Path fileType="header">/usr/include/geos/operation/overlay/PolygonBuilder.h</Path>
             <Path fileType="header">/usr/include/geos/operation/overlay/snap/GeometrySnapper.h</Path>
             <Path fileType="header">/usr/include/geos/operation/overlay/snap/LineStringSnapper.h</Path>
             <Path fileType="header">/usr/include/geos/operation/overlay/snap/SnapOverlayOp.h</Path>
             <Path fileType="header">/usr/include/geos/operation/overlay/validate/FuzzyPointLocator.h</Path>
             <Path fileType="header">/usr/include/geos/operation/overlay/validate/OffsetPointGenerator.h</Path>
             <Path fileType="header">/usr/include/geos/operation/overlay/validate/OverlayResultValidator.h</Path>
+            <Path fileType="header">/usr/include/geos/operation/overlayng/CoverageUnion.h</Path>
             <Path fileType="header">/usr/include/geos/operation/overlayng/Edge.h</Path>
-            <Path fileType="header">/usr/include/geos/operation/overlayng/Edge.inl</Path>
             <Path fileType="header">/usr/include/geos/operation/overlayng/EdgeKey.h</Path>
-            <Path fileType="header">/usr/include/geos/operation/overlayng/EdgeKey.inl</Path>
             <Path fileType="header">/usr/include/geos/operation/overlayng/EdgeMerger.h</Path>
             <Path fileType="header">/usr/include/geos/operation/overlayng/EdgeNodingBuilder.h</Path>
             <Path fileType="header">/usr/include/geos/operation/overlayng/EdgeSourceInfo.h</Path>
@@ -372,11 +411,9 @@
             <Path fileType="header">/usr/include/geos/operation/overlayng/LineLimiter.h</Path>
             <Path fileType="header">/usr/include/geos/operation/overlayng/MaximalEdgeRing.h</Path>
             <Path fileType="header">/usr/include/geos/operation/overlayng/OverlayEdge.h</Path>
-            <Path fileType="header">/usr/include/geos/operation/overlayng/OverlayEdge.inl</Path>
             <Path fileType="header">/usr/include/geos/operation/overlayng/OverlayEdgeRing.h</Path>
             <Path fileType="header">/usr/include/geos/operation/overlayng/OverlayGraph.h</Path>
             <Path fileType="header">/usr/include/geos/operation/overlayng/OverlayLabel.h</Path>
-            <Path fileType="header">/usr/include/geos/operation/overlayng/OverlayLabel.inl</Path>
             <Path fileType="header">/usr/include/geos/operation/overlayng/OverlayLabeller.h</Path>
             <Path fileType="header">/usr/include/geos/operation/overlayng/OverlayMixedPoints.h</Path>
             <Path fileType="header">/usr/include/geos/operation/overlayng/OverlayNG.h</Path>
@@ -407,14 +444,38 @@
             <Path fileType="header">/usr/include/geos/operation/relate/RelateNodeFactory.h</Path>
             <Path fileType="header">/usr/include/geos/operation/relate/RelateNodeGraph.h</Path>
             <Path fileType="header">/usr/include/geos/operation/relate/RelateOp.h</Path>
+            <Path fileType="header">/usr/include/geos/operation/relateng/AdjacentEdgeLocator.h</Path>
+            <Path fileType="header">/usr/include/geos/operation/relateng/BasicPredicate.h</Path>
+            <Path fileType="header">/usr/include/geos/operation/relateng/DimensionLocation.h</Path>
+            <Path fileType="header">/usr/include/geos/operation/relateng/EdgeSegmentIntersector.h</Path>
+            <Path fileType="header">/usr/include/geos/operation/relateng/EdgeSegmentOverlapAction.h</Path>
+            <Path fileType="header">/usr/include/geos/operation/relateng/EdgeSetIntersector.h</Path>
+            <Path fileType="header">/usr/include/geos/operation/relateng/IMPatternMatcher.h</Path>
+            <Path fileType="header">/usr/include/geos/operation/relateng/IMPredicate.h</Path>
+            <Path fileType="header">/usr/include/geos/operation/relateng/IntersectionMatrixPattern.h</Path>
+            <Path fileType="header">/usr/include/geos/operation/relateng/LineStringExtracter.h</Path>
+            <Path fileType="header">/usr/include/geos/operation/relateng/LinearBoundary.h</Path>
+            <Path fileType="header">/usr/include/geos/operation/relateng/NodeSection.h</Path>
+            <Path fileType="header">/usr/include/geos/operation/relateng/NodeSections.h</Path>
+            <Path fileType="header">/usr/include/geos/operation/relateng/PolygonNodeConverter.h</Path>
+            <Path fileType="header">/usr/include/geos/operation/relateng/RelateEdge.h</Path>
+            <Path fileType="header">/usr/include/geos/operation/relateng/RelateGeometry.h</Path>
+            <Path fileType="header">/usr/include/geos/operation/relateng/RelateMatrixPredicate.h</Path>
+            <Path fileType="header">/usr/include/geos/operation/relateng/RelateNG.h</Path>
+            <Path fileType="header">/usr/include/geos/operation/relateng/RelateNode.h</Path>
+            <Path fileType="header">/usr/include/geos/operation/relateng/RelatePointLocator.h</Path>
+            <Path fileType="header">/usr/include/geos/operation/relateng/RelatePredicate.h</Path>
+            <Path fileType="header">/usr/include/geos/operation/relateng/RelateSegmentString.h</Path>
+            <Path fileType="header">/usr/include/geos/operation/relateng/TopologyComputer.h</Path>
+            <Path fileType="header">/usr/include/geos/operation/relateng/TopologyPredicate.h</Path>
             <Path fileType="header">/usr/include/geos/operation/sharedpaths/SharedPathsOp.h</Path>
             <Path fileType="header">/usr/include/geos/operation/union/CascadedPolygonUnion.h</Path>
             <Path fileType="header">/usr/include/geos/operation/union/CoverageUnion.h</Path>
+            <Path fileType="header">/usr/include/geos/operation/union/DisjointSubsetUnion.h</Path>
             <Path fileType="header">/usr/include/geos/operation/union/OverlapUnion.h</Path>
             <Path fileType="header">/usr/include/geos/operation/union/PointGeometryUnion.h</Path>
             <Path fileType="header">/usr/include/geos/operation/union/UnaryUnionOp.h</Path>
             <Path fileType="header">/usr/include/geos/operation/union/UnionStrategy.h</Path>
-            <Path fileType="header">/usr/include/geos/operation/valid/ConnectedInteriorTester.h</Path>
             <Path fileType="header">/usr/include/geos/operation/valid/ConsistentAreaTester.h</Path>
             <Path fileType="header">/usr/include/geos/operation/valid/IndexedNestedHoleTester.h</Path>
             <Path fileType="header">/usr/include/geos/operation/valid/IndexedNestedPolygonTester.h</Path>
@@ -422,7 +483,6 @@
             <Path fileType="header">/usr/include/geos/operation/valid/IsValidOp.h</Path>
             <Path fileType="header">/usr/include/geos/operation/valid/MakeValid.h</Path>
             <Path fileType="header">/usr/include/geos/operation/valid/PolygonIntersectionAnalyzer.h</Path>
-            <Path fileType="header">/usr/include/geos/operation/valid/PolygonNode.h</Path>
             <Path fileType="header">/usr/include/geos/operation/valid/PolygonRing.h</Path>
             <Path fileType="header">/usr/include/geos/operation/valid/PolygonRingSelfNode.h</Path>
             <Path fileType="header">/usr/include/geos/operation/valid/PolygonRingTouch.h</Path>
@@ -446,16 +506,21 @@
             <Path fileType="header">/usr/include/geos/precision/GeometryPrecisionReducer.h</Path>
             <Path fileType="header">/usr/include/geos/precision/MinimumClearance.h</Path>
             <Path fileType="header">/usr/include/geos/precision/PointwisePrecisionReducerTransformer.h</Path>
-            <Path fileType="header">/usr/include/geos/precision/PrecisionReducerCoordinateOperation.h</Path>
             <Path fileType="header">/usr/include/geos/precision/PrecisionReducerTransformer.h</Path>
             <Path fileType="header">/usr/include/geos/precision/SimpleGeometryPrecisionReducer.h</Path>
             <Path fileType="header">/usr/include/geos/profiler.h</Path>
             <Path fileType="header">/usr/include/geos/shape/fractal/HilbertCode.h</Path>
             <Path fileType="header">/usr/include/geos/shape/fractal/HilbertEncoder.h</Path>
             <Path fileType="header">/usr/include/geos/shape/fractal/MortonCode.h</Path>
+            <Path fileType="header">/usr/include/geos/simplify/ComponentJumpChecker.h</Path>
             <Path fileType="header">/usr/include/geos/simplify/DouglasPeuckerLineSimplifier.h</Path>
             <Path fileType="header">/usr/include/geos/simplify/DouglasPeuckerSimplifier.h</Path>
             <Path fileType="header">/usr/include/geos/simplify/LineSegmentIndex.h</Path>
+            <Path fileType="header">/usr/include/geos/simplify/LinkedLine.h</Path>
+            <Path fileType="header">/usr/include/geos/simplify/LinkedRing.h</Path>
+            <Path fileType="header">/usr/include/geos/simplify/PolygonHullSimplifier.h</Path>
+            <Path fileType="header">/usr/include/geos/simplify/RingHull.h</Path>
+            <Path fileType="header">/usr/include/geos/simplify/RingHullIndex.h</Path>
             <Path fileType="header">/usr/include/geos/simplify/TaggedLineSegment.h</Path>
             <Path fileType="header">/usr/include/geos/simplify/TaggedLineString.h</Path>
             <Path fileType="header">/usr/include/geos/simplify/TaggedLineStringSimplifier.h</Path>
@@ -467,9 +532,9 @@
             <Path fileType="header">/usr/include/geos/triangulate/polygon/ConstrainedDelaunayTriangulator.h</Path>
             <Path fileType="header">/usr/include/geos/triangulate/polygon/PolygonEarClipper.h</Path>
             <Path fileType="header">/usr/include/geos/triangulate/polygon/PolygonHoleJoiner.h</Path>
+            <Path fileType="header">/usr/include/geos/triangulate/polygon/PolygonNoder.h</Path>
             <Path fileType="header">/usr/include/geos/triangulate/polygon/PolygonTriangulator.h</Path>
             <Path fileType="header">/usr/include/geos/triangulate/polygon/TriDelaunayImprover.h</Path>
-            <Path fileType="header">/usr/include/geos/triangulate/polygon/VertexSequencePackedRtree.h</Path>
             <Path fileType="header">/usr/include/geos/triangulate/quadedge/LastFoundQuadEdgeLocator.h</Path>
             <Path fileType="header">/usr/include/geos/triangulate/quadedge/LocateFailureException.h</Path>
             <Path fileType="header">/usr/include/geos/triangulate/quadedge/QuadEdge.h</Path>
@@ -483,7 +548,6 @@
             <Path fileType="header">/usr/include/geos/triangulate/tri/TriEdge.h</Path>
             <Path fileType="header">/usr/include/geos/triangulate/tri/TriList.h</Path>
             <Path fileType="header">/usr/include/geos/triangulate/tri/TriangulationBuilder.h</Path>
-            <Path fileType="header">/usr/include/geos/unload.h</Path>
             <Path fileType="header">/usr/include/geos/util.h</Path>
             <Path fileType="header">/usr/include/geos/util/Assert.h</Path>
             <Path fileType="header">/usr/include/geos/util/AssertionFailedException.h</Path>
@@ -498,7 +562,9 @@
             <Path fileType="header">/usr/include/geos/util/UniqueCoordinateArrayFilter.h</Path>
             <Path fileType="header">/usr/include/geos/util/UnsupportedOperationException.h</Path>
             <Path fileType="header">/usr/include/geos/util/math.h</Path>
-            <Path fileType="header">/usr/include/geos/vend</Path>
+            <Path fileType="header">/usr/include/geos/util/string.h</Path>
+            <Path fileType="header">/usr/include/geos/vend/include_nlohmann_json.hpp</Path>
+            <Path fileType="header">/usr/include/geos/vend/json.hpp</Path>
             <Path fileType="header">/usr/include/geos/version.h</Path>
             <Path fileType="header">/usr/include/geos_c.h</Path>
             <Path fileType="library">/usr/lib64/cmake/GEOS/geos-config-version.cmake</Path>
@@ -509,12 +575,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="5">
-            <Date>2021-11-14</Date>
-            <Version>3.10.1</Version>
+        <Update release="6">
+            <Date>2026-03-22</Date>
+            <Version>3.14.1</Version>
             <Comment>Packaging update</Comment>
-            <Name>Martin Reboredo</Name>
-            <Email>yakoyoku@gmail.com</Email>
+            <Name>David Harder</Name>
+            <Email>david@davidjharder.ca</Email>
         </Update>
     </History>
 </PISI>

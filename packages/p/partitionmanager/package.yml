@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : partitionmanager
-version    : 25.08.2
-release    : 63
+version    : 26.04.1
+release    : 68
 source     :
-    - https://download.kde.org/stable/release-service/25.08.2/src/partitionmanager-25.08.2.tar.xz : 8117e24e8038e5d324ee93429f17ac964960e346854c262eb7830d856ad9047b
+    - https://download.kde.org/stable/release-service/26.04.1/src/partitionmanager-26.04.1.tar.xz : 4b0f2fd3883f6b8fa5607ed620dc7b422b33b87829c11e6597a869ea2cd5aa74
 homepage   : https://apps.kde.org/partitionmanager/
 license    : GPL-3.0-or-later
 component  : system.utils

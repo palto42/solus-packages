@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : less
-version    : '668'
-release    : 22
+version    : '692'
+release    : 23
 source     :
-    - https://www.greenwoodsoftware.com/less/less-668.tar.gz : 2819f55564d86d542abbecafd82ff61e819a3eec967faa36cd3e68f1596a44b8
+    - https://www.greenwoodsoftware.com/less/less-692.tar.gz : 61300f603798ecf1d7786570789f0ff3f5a1acf075a6fb9f756837d166e37d14
 license    :
     - GPL-3.0-only
     - BSD-2-Clause
@@ -17,4 +18,4 @@ build      : |
     %make
 install    : |
     %make_install
-
+    %install_license COPYING

@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : python-requests
-version    : 2.32.3
-release    : 22
+version    : 2.33.1
+release    : 24
 source     :
-    - https://files.pythonhosted.org/packages/source/r/requests/requests-2.32.3.tar.gz : 55365417734eb18255590a9ff9eb97e9e1da868d4ccd6402399eaf68af20a760
+    - https://files.pythonhosted.org/packages/source/r/requests/requests-2.33.1.tar.gz : 18817f8c57c6263968bc123d237e3b8b08ac046f5456bd1e307ee8f4250d3517
 homepage   : https://requests.readthedocs.io/en/latest/
 license    : Apache-2.0
 component  : programming.python

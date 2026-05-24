@@ -1,5 +1,6 @@
 libc.so.6
 libcairo.so.2
+libdrm.so.2
 libei.so.1
 libepoxy.so.0
 libfdk-aac.so.2
@@ -9,6 +10,8 @@ libfuse3.so.4
 libgio-2.0.so.0
 libglib-2.0.so.0
 libgobject-2.0.so.0
+libkrb5.so.3
+libm.so.6
 libnotify.so.4
 libopus.so.0
 libpipewire-0.3.so.0

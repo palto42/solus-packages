@@ -3,8 +3,8 @@
         <Name>qcoro</Name>
         <Homepage>https://qcoro.dvratil.cz/</Homepage>
         <Packager>
-            <Name>Reilly Brogan</Name>
-            <Email>solus@reillybrogan.com</Email>
+            <Name>Troy Harvey</Name>
+            <Email>harvey@getsol.us</Email>
         </Packager>
         <License>MIT</License>
         <PartOf>debug</PartOf>
@@ -21,17 +21,17 @@
         <PartOf>programming.library</PartOf>
         <Files>
             <Path fileType="library">/usr/lib64/libQCoro5Core.so.0</Path>
-            <Path fileType="library">/usr/lib64/libQCoro5Core.so.0.10.0</Path>
+            <Path fileType="library">/usr/lib64/libQCoro5Core.so.0.13.0</Path>
             <Path fileType="library">/usr/lib64/libQCoro5DBus.so.0</Path>
-            <Path fileType="library">/usr/lib64/libQCoro5DBus.so.0.10.0</Path>
+            <Path fileType="library">/usr/lib64/libQCoro5DBus.so.0.13.0</Path>
             <Path fileType="library">/usr/lib64/libQCoro5Network.so.0</Path>
-            <Path fileType="library">/usr/lib64/libQCoro5Network.so.0.10.0</Path>
+            <Path fileType="library">/usr/lib64/libQCoro5Network.so.0.13.0</Path>
             <Path fileType="library">/usr/lib64/libQCoro5Qml.so.0</Path>
-            <Path fileType="library">/usr/lib64/libQCoro5Qml.so.0.10.0</Path>
+            <Path fileType="library">/usr/lib64/libQCoro5Qml.so.0.13.0</Path>
             <Path fileType="library">/usr/lib64/libQCoro5Quick.so.0</Path>
-            <Path fileType="library">/usr/lib64/libQCoro5Quick.so.0.10.0</Path>
+            <Path fileType="library">/usr/lib64/libQCoro5Quick.so.0.13.0</Path>
             <Path fileType="library">/usr/lib64/libQCoro5WebSockets.so.0</Path>
-            <Path fileType="library">/usr/lib64/libQCoro5WebSockets.so.0.10.0</Path>
+            <Path fileType="library">/usr/lib64/libQCoro5WebSockets.so.0.13.0</Path>
         </Files>
     </Package>
     <Package>
@@ -41,7 +41,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency releaseFrom="5">qcoro-qt5</Dependency>
+            <Dependency releaseFrom="8">qcoro-qt5</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/qcoro5/QCoro/QCoro</Path>
@@ -56,6 +56,7 @@
             <Path fileType="header">/usr/include/qcoro5/QCoro/QCoroGenerator</Path>
             <Path fileType="header">/usr/include/qcoro5/QCoro/QCoroIODevice</Path>
             <Path fileType="header">/usr/include/qcoro5/QCoro/QCoroImageProvider</Path>
+            <Path fileType="header">/usr/include/qcoro5/QCoro/QCoroLazyTask</Path>
             <Path fileType="header">/usr/include/qcoro5/QCoro/QCoroLocalSocket</Path>
             <Path fileType="header">/usr/include/qcoro5/QCoro/QCoroNetwork</Path>
             <Path fileType="header">/usr/include/qcoro5/QCoro/QCoroNetworkReply</Path>
@@ -77,13 +78,17 @@
             <Path fileType="header">/usr/include/qcoro5/qcoro/coroutine.h</Path>
             <Path fileType="header">/usr/include/qcoro5/qcoro/impl/connect.h</Path>
             <Path fileType="header">/usr/include/qcoro5/qcoro/impl/isqprivatesignal.h</Path>
+            <Path fileType="header">/usr/include/qcoro5/qcoro/impl/lazytask.h</Path>
+            <Path fileType="header">/usr/include/qcoro5/qcoro/impl/mixins.h</Path>
             <Path fileType="header">/usr/include/qcoro5/qcoro/impl/task.h</Path>
             <Path fileType="header">/usr/include/qcoro5/qcoro/impl/taskawaiterbase.h</Path>
+            <Path fileType="header">/usr/include/qcoro5/qcoro/impl/taskbase.h</Path>
             <Path fileType="header">/usr/include/qcoro5/qcoro/impl/taskfinalsuspend.h</Path>
             <Path fileType="header">/usr/include/qcoro5/qcoro/impl/taskpromise.h</Path>
             <Path fileType="header">/usr/include/qcoro5/qcoro/impl/taskpromisebase.h</Path>
             <Path fileType="header">/usr/include/qcoro5/qcoro/impl/waitfor.h</Path>
             <Path fileType="header">/usr/include/qcoro5/qcoro/macros_p.h</Path>
+            <Path fileType="header">/usr/include/qcoro5/qcoro/mixins_p.h</Path>
             <Path fileType="header">/usr/include/qcoro5/qcoro/qcoro.h</Path>
             <Path fileType="header">/usr/include/qcoro5/qcoro/qcoroabstractsocket.h</Path>
             <Path fileType="header">/usr/include/qcoro5/qcoro/qcoroasyncgenerator.h</Path>
@@ -98,6 +103,7 @@
             <Path fileType="header">/usr/include/qcoro5/qcoro/qcorogenerator.h</Path>
             <Path fileType="header">/usr/include/qcoro5/qcoro/qcoroimageprovider.h</Path>
             <Path fileType="header">/usr/include/qcoro5/qcoro/qcoroiodevice.h</Path>
+            <Path fileType="header">/usr/include/qcoro5/qcoro/qcorolazytask.h</Path>
             <Path fileType="header">/usr/include/qcoro5/qcoro/qcorolocalsocket.h</Path>
             <Path fileType="header">/usr/include/qcoro5/qcoro/qcoronetwork.h</Path>
             <Path fileType="header">/usr/include/qcoro5/qcoro/qcoronetwork_export.h</Path>
@@ -176,17 +182,17 @@
         <PartOf>programming.library</PartOf>
         <Files>
             <Path fileType="library">/usr/lib64/libQCoro6Core.so.0</Path>
-            <Path fileType="library">/usr/lib64/libQCoro6Core.so.0.10.0</Path>
+            <Path fileType="library">/usr/lib64/libQCoro6Core.so.0.13.0</Path>
             <Path fileType="library">/usr/lib64/libQCoro6DBus.so.0</Path>
-            <Path fileType="library">/usr/lib64/libQCoro6DBus.so.0.10.0</Path>
+            <Path fileType="library">/usr/lib64/libQCoro6DBus.so.0.13.0</Path>
             <Path fileType="library">/usr/lib64/libQCoro6Network.so.0</Path>
-            <Path fileType="library">/usr/lib64/libQCoro6Network.so.0.10.0</Path>
+            <Path fileType="library">/usr/lib64/libQCoro6Network.so.0.13.0</Path>
             <Path fileType="library">/usr/lib64/libQCoro6Qml.so.0</Path>
-            <Path fileType="library">/usr/lib64/libQCoro6Qml.so.0.10.0</Path>
+            <Path fileType="library">/usr/lib64/libQCoro6Qml.so.0.13.0</Path>
             <Path fileType="library">/usr/lib64/libQCoro6Quick.so.0</Path>
-            <Path fileType="library">/usr/lib64/libQCoro6Quick.so.0.10.0</Path>
+            <Path fileType="library">/usr/lib64/libQCoro6Quick.so.0.13.0</Path>
             <Path fileType="library">/usr/lib64/libQCoro6WebSockets.so.0</Path>
-            <Path fileType="library">/usr/lib64/libQCoro6WebSockets.so.0.10.0</Path>
+            <Path fileType="library">/usr/lib64/libQCoro6WebSockets.so.0.13.0</Path>
         </Files>
     </Package>
     <Package>
@@ -196,7 +202,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency releaseFrom="5">qcoro-qt6</Dependency>
+            <Dependency releaseFrom="8">qcoro-qt6</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/qcoro6/QCoro/QCoro</Path>
@@ -211,6 +217,7 @@
             <Path fileType="header">/usr/include/qcoro6/QCoro/QCoroGenerator</Path>
             <Path fileType="header">/usr/include/qcoro6/QCoro/QCoroIODevice</Path>
             <Path fileType="header">/usr/include/qcoro6/QCoro/QCoroImageProvider</Path>
+            <Path fileType="header">/usr/include/qcoro6/QCoro/QCoroLazyTask</Path>
             <Path fileType="header">/usr/include/qcoro6/QCoro/QCoroLocalSocket</Path>
             <Path fileType="header">/usr/include/qcoro6/QCoro/QCoroNetwork</Path>
             <Path fileType="header">/usr/include/qcoro6/QCoro/QCoroNetworkReply</Path>
@@ -232,13 +239,17 @@
             <Path fileType="header">/usr/include/qcoro6/qcoro/coroutine.h</Path>
             <Path fileType="header">/usr/include/qcoro6/qcoro/impl/connect.h</Path>
             <Path fileType="header">/usr/include/qcoro6/qcoro/impl/isqprivatesignal.h</Path>
+            <Path fileType="header">/usr/include/qcoro6/qcoro/impl/lazytask.h</Path>
+            <Path fileType="header">/usr/include/qcoro6/qcoro/impl/mixins.h</Path>
             <Path fileType="header">/usr/include/qcoro6/qcoro/impl/task.h</Path>
             <Path fileType="header">/usr/include/qcoro6/qcoro/impl/taskawaiterbase.h</Path>
+            <Path fileType="header">/usr/include/qcoro6/qcoro/impl/taskbase.h</Path>
             <Path fileType="header">/usr/include/qcoro6/qcoro/impl/taskfinalsuspend.h</Path>
             <Path fileType="header">/usr/include/qcoro6/qcoro/impl/taskpromise.h</Path>
             <Path fileType="header">/usr/include/qcoro6/qcoro/impl/taskpromisebase.h</Path>
             <Path fileType="header">/usr/include/qcoro6/qcoro/impl/waitfor.h</Path>
             <Path fileType="header">/usr/include/qcoro6/qcoro/macros_p.h</Path>
+            <Path fileType="header">/usr/include/qcoro6/qcoro/mixins_p.h</Path>
             <Path fileType="header">/usr/include/qcoro6/qcoro/qcoro.h</Path>
             <Path fileType="header">/usr/include/qcoro6/qcoro/qcoroabstractsocket.h</Path>
             <Path fileType="header">/usr/include/qcoro6/qcoro/qcoroasyncgenerator.h</Path>
@@ -253,6 +264,7 @@
             <Path fileType="header">/usr/include/qcoro6/qcoro/qcorogenerator.h</Path>
             <Path fileType="header">/usr/include/qcoro6/qcoro/qcoroimageprovider.h</Path>
             <Path fileType="header">/usr/include/qcoro6/qcoro/qcoroiodevice.h</Path>
+            <Path fileType="header">/usr/include/qcoro6/qcoro/qcorolazytask.h</Path>
             <Path fileType="header">/usr/include/qcoro6/qcoro/qcorolocalsocket.h</Path>
             <Path fileType="header">/usr/include/qcoro6/qcoro/qcoronetwork.h</Path>
             <Path fileType="header">/usr/include/qcoro6/qcoro/qcoronetwork_export.h</Path>
@@ -324,12 +336,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="5">
-            <Date>2024-01-13</Date>
-            <Version>0.10.0</Version>
+        <Update release="8">
+            <Date>2026-05-15</Date>
+            <Version>0.13.0</Version>
             <Comment>Packaging update</Comment>
-            <Name>Reilly Brogan</Name>
-            <Email>solus@reillybrogan.com</Email>
+            <Name>Troy Harvey</Name>
+            <Email>harvey@getsol.us</Email>
         </Update>
     </History>
 </PISI>

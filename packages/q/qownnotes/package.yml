@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : qownnotes
-version    : 25.4.1
-release    : 292
+version    : 26.4.19
+release    : 295
 source     :
-    - https://github.com/pbek/QOwnNotes/releases/download/v25.4.1/qownnotes-25.4.1.tar.xz : d4096cf22bfd2fd7ce2fd24d5d1b0ce6295f497c1dfe5e2413ac275a4cf50411
+    - https://github.com/pbek/QOwnNotes/releases/download/v26.4.19/qownnotes-26.4.19.tar.xz : 86f58dc2cf5455becf3656c64439ce6b1e1efcb7975da01d6c1643f41b726221
+homepage   : https://www.qownnotes.org/
 license    : GPL-2.0-or-later
-homepage   : http://www.qownnotes.org
 component  : office.notes
 summary    : QOwnNotes is a plain-text file notepad and todo-list manager with markdown support and ownCloud integration.
 description: |
@@ -14,23 +15,25 @@ builddeps  :
     - pkgconfig(Qt6Qml)
     - pkgconfig(Qt6Svg)
     - pkgconfig(Qt6WebSockets)
-    - pkgconfig(botan-2)
+    - pkgconfig(botan-3)
     - pkgconfig(x11)
 rundeps    :
-    - qt5-svg
+    - qt6-svg
 setup      : |
+    # botan-3 requires C++20; the Qt6 branch of QOwnNotes.pro hardcodes c++17
+    sed -i 's/CONFIG += c++17/CONFIG += c++20/' QOwnNotes.pro
     echo "#define RELEASE \"Solus\"" > release.h
 build      : |
     qmake6 USE_SYSTEM_BOTAN=1
     %make
 install    : |
-    install -Dm00755 QOwnNotes $installdir/usr/bin/QOwnNotes
+    install -Dm00755 QOwnNotes ${installdir}/usr/bin/QOwnNotes
     # Keep this as QOwnNotes. Breaks Budgie otherwise.
-    install -Dm00644 PBE.QOwnNotes.desktop $installdir/usr/share/applications/org.qownnotes.QOwnNotes.desktop
+    install -Dm00644 PBE.QOwnNotes.desktop ${installdir}/usr/share/applications/org.qownnotes.QOwnNotes.desktop
     for size in {16x16,24x24,32x32,48x48,64x64,96x96,128x128,256x256,512x512}; do
-        install -Dm00644 images/icons/$size/apps/QOwnNotes.png $installdir/usr/share/icons/hicolor/$size/apps/QOwnNotes.png
+        install -Dm00644 images/icons/$size/apps/QOwnNotes.png ${installdir}/usr/share/icons/hicolor/$size/apps/QOwnNotes.png
     done
-    install -Dm00644 images/icons/scalable/apps/QOwnNotes.svg $installdir/usr/share/icons/hicolor/scalable/apps/QOwnNotes.svg
-    install -Dm00644 $pkgfiles/qownnotes.appdata.xml -t $installdir/usr/share/metainfo/
-    install -dm00644 $installdir/usr/share/qt5/translations
-    install -Dm00644 languages/*.qm $installdir/usr/share/qt5/translations
+    install -Dm00644 images/icons/scalable/apps/QOwnNotes.svg ${installdir}/usr/share/icons/hicolor/scalable/apps/QOwnNotes.svg
+    install -Dm00644 ${pkgfiles}/qownnotes.appdata.xml -t ${installdir}/usr/share/metainfo/
+    install -dm00644 ${installdir}/usr/share/qt6/translations
+    install -Dm00644 languages/*.qm ${installdir}/usr/share/qt6/translations

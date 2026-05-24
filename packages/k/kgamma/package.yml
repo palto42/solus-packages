@@ -1,10 +1,13 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kgamma
-version    : 6.4.5
-release    : 37
+version    : 6.6.5
+release    : 47
 source     :
-    - https://download.kde.org/stable/plasma/6.4.5/kgamma-6.4.5.tar.xz : 996ebd60bf508248edc293d9ec9da4c9b838b3fb1bccd82a4db3059ef27abb16
+    - https://download.kde.org/stable/plasma/6.6.5/kgamma-6.6.5.tar.xz : fab70445c88c98ce907e896d8c71cbf7771044880b5ef116fee969863e53360a
 homepage   : https://www.kde.org/workspaces/plasmadesktop/
-license    : GPL-2.0-or-later
+license    :
+    - CC0-1.0
+    - GPL-2.0-or-later
 component  : desktop.kde.core
 summary    : Adjust your monitor's gamma settings
 description: |
@@ -27,6 +30,8 @@ build      : |
 install    : |
     %ninja_install
     rm -rfv $installdir/usr/share/doc
+
+    %install_license LICENSES/*
 replaces   :
     - kgamma5
     - dbginfo : kgamma5-dbginfo

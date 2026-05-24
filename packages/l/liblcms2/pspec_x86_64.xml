@@ -3,8 +3,8 @@
         <Name>liblcms2</Name>
         <Homepage>https://www.littlecms.com/</Homepage>
         <Packager>
-            <Name>Reilly Brogan</Name>
-            <Email>solus@reillybrogan.com</Email>
+            <Name>Jared Cervantes</Name>
+            <Email>jared@jaredcervantes.com</Email>
         </Packager>
         <License>GPL-3.0-or-later</License>
         <License>MIT</License>
@@ -21,20 +21,13 @@
 </Description>
         <PartOf>desktop.core</PartOf>
         <Files>
-            <Path fileType="executable">/usr/bin/jpgicc</Path>
-            <Path fileType="executable">/usr/bin/linkicc</Path>
-            <Path fileType="executable">/usr/bin/psicc</Path>
-            <Path fileType="executable">/usr/bin/tificc</Path>
-            <Path fileType="executable">/usr/bin/transicc</Path>
             <Path fileType="library">/usr/lib64/liblcms2.so.2</Path>
-            <Path fileType="library">/usr/lib64/liblcms2.so.2.0.16</Path>
-            <Path fileType="library">/usr/lib64/liblcms2_fast_float.so</Path>
-            <Path fileType="library">/usr/lib64/liblcms2_threaded.so</Path>
-            <Path fileType="man">/usr/share/man/man1/jpgicc.1</Path>
-            <Path fileType="man">/usr/share/man/man1/linkicc.1</Path>
-            <Path fileType="man">/usr/share/man/man1/psicc.1</Path>
-            <Path fileType="man">/usr/share/man/man1/tificc.1</Path>
-            <Path fileType="man">/usr/share/man/man1/transicc.1</Path>
+            <Path fileType="library">/usr/lib64/liblcms2.so.2.0.19</Path>
+            <Path fileType="library">/usr/lib64/liblcms2_fast_float.so.2</Path>
+            <Path fileType="library">/usr/lib64/liblcms2_fast_float.so.2.0.19</Path>
+            <Path fileType="library">/usr/lib64/liblcms2_threaded.so.2</Path>
+            <Path fileType="library">/usr/lib64/liblcms2_threaded.so.2.0.19</Path>
+            <Path fileType="data">/usr/share/licenses/liblcms2/LICENSE</Path>
         </Files>
     </Package>
     <Package>
@@ -44,13 +37,15 @@
 </Description>
         <PartOf>emul32</PartOf>
         <RuntimeDependencies>
-            <Dependency release="20">liblcms2</Dependency>
+            <Dependency release="21">liblcms2</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib32/liblcms2.so.2</Path>
-            <Path fileType="library">/usr/lib32/liblcms2.so.2.0.16</Path>
-            <Path fileType="library">/usr/lib32/liblcms2_fast_float.so</Path>
-            <Path fileType="library">/usr/lib32/liblcms2_threaded.so</Path>
+            <Path fileType="library">/usr/lib32/liblcms2.so.2.0.19</Path>
+            <Path fileType="library">/usr/lib32/liblcms2_fast_float.so.2</Path>
+            <Path fileType="library">/usr/lib32/liblcms2_fast_float.so.2.0.19</Path>
+            <Path fileType="library">/usr/lib32/liblcms2_threaded.so.2</Path>
+            <Path fileType="library">/usr/lib32/liblcms2_threaded.so.2.0.19</Path>
         </Files>
     </Package>
     <Package>
@@ -60,11 +55,13 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="20">liblcms2-32bit</Dependency>
-            <Dependency release="20">liblcms2-devel</Dependency>
+            <Dependency release="21">liblcms2-devel</Dependency>
+            <Dependency release="21">liblcms2-32bit</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib32/liblcms2.so</Path>
+            <Path fileType="library">/usr/lib32/liblcms2_fast_float.so</Path>
+            <Path fileType="library">/usr/lib32/liblcms2_threaded.so</Path>
             <Path fileType="data">/usr/lib32/pkgconfig/lcms2.pc</Path>
         </Files>
     </Package>
@@ -75,7 +72,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="20">liblcms2</Dependency>
+            <Dependency release="21">liblcms2</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/lcms2.h</Path>
@@ -83,16 +80,41 @@
             <Path fileType="header">/usr/include/lcms2_plugin.h</Path>
             <Path fileType="header">/usr/include/lcms2_threaded.h</Path>
             <Path fileType="library">/usr/lib64/liblcms2.so</Path>
+            <Path fileType="library">/usr/lib64/liblcms2_fast_float.so</Path>
+            <Path fileType="library">/usr/lib64/liblcms2_threaded.so</Path>
             <Path fileType="data">/usr/lib64/pkgconfig/lcms2.pc</Path>
         </Files>
     </Package>
+    <Package>
+        <Name>liblcms2-utils</Name>
+        <Summary xml:lang="en">Small-footprint color management engine - Utilities</Summary>
+        <Description xml:lang="en">The Little Color Management System is a small-footprint color management engine, with special focus on accuracy and performance. It uses the International Color Consortium standard (ICC), which is the modern standard for color management.
+</Description>
+        <PartOf>desktop.core</PartOf>
+        <RuntimeDependencies>
+            <Dependency release="21">liblcms2</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/jpgicc</Path>
+            <Path fileType="executable">/usr/bin/linkicc</Path>
+            <Path fileType="executable">/usr/bin/psicc</Path>
+            <Path fileType="executable">/usr/bin/tifdiff</Path>
+            <Path fileType="executable">/usr/bin/tificc</Path>
+            <Path fileType="executable">/usr/bin/transicc</Path>
+            <Path fileType="man">/usr/share/man/man1/jpgicc.1.zst</Path>
+            <Path fileType="man">/usr/share/man/man1/linkicc.1.zst</Path>
+            <Path fileType="man">/usr/share/man/man1/psicc.1.zst</Path>
+            <Path fileType="man">/usr/share/man/man1/tificc.1.zst</Path>
+            <Path fileType="man">/usr/share/man/man1/transicc.1.zst</Path>
+        </Files>
+    </Package>
     <History>
-        <Update release="20">
-            <Date>2024-03-12</Date>
-            <Version>2.16</Version>
+        <Update release="21">
+            <Date>2026-04-26</Date>
+            <Version>2.19</Version>
             <Comment>Packaging update</Comment>
-            <Name>Reilly Brogan</Name>
-            <Email>solus@reillybrogan.com</Email>
+            <Name>Jared Cervantes</Name>
+            <Email>jared@jaredcervantes.com</Email>
         </Update>
     </History>
 </PISI>

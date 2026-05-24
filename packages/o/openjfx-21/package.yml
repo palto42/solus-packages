@@ -1,6 +1,7 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : openjfx-21
 version    : 21.0.5
-release    : 2
+release    : 6
 source     :
     - https://github.com/openjdk/jfx21u/archive/refs/tags/21.0.5+0.tar.gz : 5766291a589fb7a5334b266016f5b47a6fe35b71c39346896385ecd449cd0274
 license    : GPL-2.0-only WITH Classpath-exception-2.0
@@ -15,7 +16,7 @@ builddeps  :
     - pkgconfig(gtk+-3.0)
     - pkgconfig(libavcodec)
     - pkgconfig(libjpeg)
-    - pkgconfig(ruby-3.2)
+    - pkgconfig(ruby-4.0)
     - pkgconfig(xxf86vm)
     - apache-ant
     - gperf
@@ -34,7 +35,10 @@ setup      : |
     %patch -p1 -i $pkgfiles/0001-8323078-Incorrect-length-argument-to-g_utf8_strlen-i.patch
     %patch -p1 -i $pkgfiles/0001-8323077-C-type-error-incompatible-function-pointer-i.patch
     %patch -p1 -i $pkgfiles/0001-ftbfs-jfx11u-llvm-17.patch
-    %patch -p1 -i $pkgfiles/0001-8338701-Provide-media-support-for-libavcodec-version.patch
+    %patch -p1 -i $pkgfiles/0001-8378510-Provide-media-support-for-libavcodec-version.patch
+
+    # Gradle 9 support
+    %patch -p1 -i $pkgfiles/0001-Gradle-9.x.x-fixes.patch
 
     if [[ " ${PATH[*]} " =~ "ccache" ]]; then
         ccache --zero-stats
@@ -43,6 +47,10 @@ build      : |
     export JAVA_HOME=/usr/lib64/openjdk-21
     export GRADLE_USER_HOME=$workdir/.gradle_home
     export TERM=xterm
+
+    # Fix build with Clang 19: error on .template foo() calls without template arguments
+    export CXXFLAGS="$CXXFLAGS -Wno-missing-template-arg-list-after-template-kw"
+    export CFLAGS="$CFLAGS -Wno-missing-template-arg-list-after-template-kw"
 
     gradle zips \
         --no-daemon \
@@ -58,6 +66,7 @@ build      : |
     fi
 install    : |
     install -dm00755 $installdir/usr/lib64/openjdk-21
+    %install_license LICENSE
     cp -dr --no-preserve=ownership build/sdk/lib $installdir/usr/lib64/openjdk-21/
     cp -dr --no-preserve=ownership build/jmods $installdir/usr/lib64/openjdk-21/
 

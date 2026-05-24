@@ -1,10 +1,14 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kf6-kcalendarcore
-version    : 6.19.0
-release    : 26
+version    : 6.26.0
+release    : 36
 source     :
-    - https://download.kde.org/stable/frameworks/6.19/kcalendarcore-6.19.0.tar.xz : 9e65636c32cd4bc8cbf660c4dd81b0732197ef6f593f6ba0af8a61788708b6fc
+    - https://download.kde.org/stable/frameworks/6.26/kcalendarcore-6.26.0.tar.xz : 386be0eee392d8432b6b7fafd3dead95dd1fc74f81790928c580f81e6222a17c
 homepage   : https://community.kde.org/Frameworks
-license    : LGPL-2.0-or-later
+license    :
+    - BSD-3-Clause
+    - LGPL-2.0-or-later
+    - LGPL-3.0-or-later
 component  : desktop.library
 summary    : Provides access to and handling of calendar data
 description: |
@@ -22,8 +26,10 @@ rundeps    :
 clang      : true
 optimize   : thin-lto
 setup      : |
-    %cmake_kf6
+    %cmake_kf6 \
+        -DBUILD_PYTHON_BINDINGS=OFF
 build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*

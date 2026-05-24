@@ -1,9 +1,10 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : gnumeric
-version    : 1.12.59
-release    : 46
+version    : 1.12.60
+release    : 48
 source     :
-    - https://download.gnome.org/sources/gnumeric/1.12/gnumeric-1.12.59.tar.xz : cb3750b176d641f9423df721b831658c829557552f8887fedf8a53d907eceb51
-homepage   : http://www.gnumeric.org/
+    - https://download.gnome.org/sources/gnumeric/1.12/gnumeric-1.12.60.tar.xz : bb02feb286062805564438534e1fea459f97cebac8a090b1a7e47ca251e07467
+homepage   : https://gnome.pages.gitlab.gnome.org/gnumeric-web/
 license    :
     - GPL-2.0-only
     - GPL-3.0-only

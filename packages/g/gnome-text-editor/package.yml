@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : gnome-text-editor
-version    : '48.3'
-release    : 14
+version    : '50.0'
+release    : 17
 source     :
-    - https://download.gnome.org/sources/gnome-text-editor/48/gnome-text-editor-48.3.tar.xz : 3f9e9722394edb4d2145c06d69210b3d3fca5cd2b90d632643be750843d556ba
+    - https://download.gnome.org/sources/gnome-text-editor/50/gnome-text-editor-50.0.tar.xz : 9dc299da4daa085423b5d48db59f0021ad55e74143a5cb8ab2e5ffe17967f45b
 homepage   : https://apps.gnome.org/TextEditor/
 license    : GPL-3.0-or-later
 component  : desktop.gnome

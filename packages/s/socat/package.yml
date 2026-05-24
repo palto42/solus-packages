@@ -1,9 +1,10 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : socat
-version    : 1.8.0.3
-release    : 8
+version    : 1.8.1.1
+release    : 12
 source     :
-    - http://www.dest-unreach.org/socat/download/socat-1.8.0.3.tar.gz : a9f9eb6cfb9aa6b1b4b8fe260edbac3f2c743f294db1e362b932eb3feca37ba4
-homepage   : http://www.dest-unreach.org/socat/
+    - http://www.dest-unreach.org/socat/download/socat-1.8.1.1.tar.gz : f68b602c80e94b4b7498d74ec408785536fe33534b39467977a82ab2f7f01ddb
+homepage   : https://repo.or.cz/socat.git
 license    : GPL-2.0-or-later
 component  : network.util
 summary    : Bidirectional data transfer relay
@@ -17,3 +18,4 @@ build      : |
     %make
 install    : |
     %make_install
+    %install_license COPYING*

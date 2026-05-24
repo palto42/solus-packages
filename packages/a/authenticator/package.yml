@@ -1,6 +1,7 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : authenticator
 version    : 4.6.2
-release    : 3
+release    : 5
 source     :
     - https://gitlab.gnome.org/World/Authenticator/-/archive/4.6.2/Authenticator-4.6.2.tar.bz2 : 42d2da3f83ba50a2429ed0baa424a318f049f9c96dfca13a1dc96145347d172c
 homepage   : https://apps.gnome.org/Authenticator/
@@ -14,12 +15,17 @@ builddeps  :
     - pkgconfig(gstreamer-plugins-bad-1.0)
     - pkgconfig(gstreamer-plugins-base-1.0)
     - pkgconfig(libadwaita-1)
+    - pkgconfig(sqlite3)
     - pkgconfig(zbar)
     - desktop-file-utils
     - rust
+rundeps    :
+    - gst-plugins-rs
+    - gstreamer-plugin-gtk4
 setup      : |
     %meson_configure
 build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSE

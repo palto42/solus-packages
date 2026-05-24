@@ -1,9 +1,10 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : tigervnc
-version    : 1.13.1
-release    : 25
+version    : 1.16.2
+release    : 31
 source     :
-    - https://github.com/TigerVNC/tigervnc/archive/refs/tags/v1.13.1.tar.gz : b7c5b8ed9e4e2c2f48c7b2c9f21927db345e542243b4be88e066b2daa3d1ae25
-    - https://www.x.org/releases/individual/xserver/xorg-server-21.1.18.tar.xz : c878d1930d87725d4a5bf498c24f4be8130d5b2646a9fd0f2994deff90116352
+    - https://github.com/TigerVNC/tigervnc/archive/refs/tags/v1.16.2.tar.gz : b107c0c8b8a962594281690366c24186e95c2ea4a169acbc0076aa62ed01f467
+    - https://www.x.org/releases/individual/xserver/xorg-server-21.1.22.tar.xz : 1a242c8917c49ba29ccc1f6021613d8a2b9805dd0d271a66ae9d09f4b0bb06b3
 homepage   : https://tigervnc.org/
 license    :
     - GPL-2.0-or-later
@@ -13,9 +14,11 @@ summary    : High performance, multi-platform VNC client and server
 description: |
     TigerVNC is a high-performance, platform-neutral implementation of VNC (Virtual Network Computing), a client/server application that allows users to launch and interact with graphical applications on remote machines. TigerVNC provides the levels of performance necessary to run 3D and video applications, and it attempts to maintain a common look and feel and re-use components, where possible, across the various platforms that it supports. TigerVNC also provides extensions for advanced authentication methods and TLS encryption.
 builddeps  :
-    - pkgconfig(d3d)
+    - pkgconfig(dri)
     - pkgconfig(fontutil)
+    - pkgconfig(gl)
     - pkgconfig(libavcodec)
+    - pkgconfig(libdrm)
     - pkgconfig(libturbojpeg)
     - pkgconfig(libxcvt)
     - pkgconfig(nettle)
@@ -40,11 +43,13 @@ setup      : |
     done
 
     # Patch tigervnc PAM
-    %patch -p1 -i $pkgfiles/remove-selinux.patch
+    %patch -p1 -i $pkgfiles/0001-unix-Remove-SELinux-support.patch
+    # Accept FLTK 1.4 (CMake defaults to 1.3 only); ref BLFS #20666, upstream PR #1887
+    %patch -p1 -i $pkgfiles/0002-CMake-Accept-FLTK-1.4-in-addition-to-1.3.patch
 
     #patch xorg
     cp -r $workdir/unix/xserver/xorg-server-*/* $workdir/unix/xserver
-    %patch --directory=$workdir/unix/xserver -p1 < $workdir/unix/xserver21.1.1.patch
+    %patch --directory=$workdir/unix/xserver -p1 -i $workdir/unix/xserver21.patch
 
     #deleted old xorg-server folder
     rm -r $workdir/unix/xserver/xorg-server-*
@@ -87,6 +92,7 @@ build      : |
 install    : |
     #install tigervnc
     %make_install
+    %install_license LICENCE.TXT
 
     #install tigervnc-server
     cd unix/xserver/hw/vnc

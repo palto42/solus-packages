@@ -1,8 +1,7 @@
 ---
 name: Report a bug or defect
 description: Report problems, defects and bugs with Solus, the installer, or software we ship.
-labels:
-  - Bug
+type: bug
 body:
   - type: checkboxes
     id: search
@@ -51,7 +50,7 @@ body:
     attributes:
       label: Repo
       options:
-        - Shannon (stable)
+        - Polaris (stable)
         - Unstable
     validations:
       required: true

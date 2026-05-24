@@ -1,0 +1,22 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
+name       : libspnav
+version    : '1.2'
+release    : 1
+source     :
+    - https://github.com/FreeSpacenav/libspnav/archive/refs/tags/v1.2.tar.gz : e675a2476bd407b8d97a33f93c6651ad3ecdfd422916f260bd620f2aec7ca45f
+homepage   : https://spacenav.sourceforge.net/
+license    : BSD-3-Clause
+component  : programming.library
+summary    : A free, compatible alternative for 3Dconnexion's 3D input device drivers and SDK.
+description: |
+    The spacenav project provides a free, compatible alternative to the proprietary 3Dconnexion device driver and SDK, for their 3D input devices (called "space navigator", "space pilot", "space traveller", "space mouse", etc).
+builddeps  :
+    - pkgconfig(x11)
+setup      : |
+    %configure
+build      : |
+    %make
+install    : |
+    %make_install
+    %install_license LICENSE
+    rm $installdir/usr/lib/libspnav.a

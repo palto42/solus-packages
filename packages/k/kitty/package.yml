@@ -1,16 +1,16 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kitty
-version    : 0.43.1
-release    : 87
+version    : 0.47.0
+release    : 94
 source     :
-    - https://github.com/kovidgoyal/kitty/releases/download/v0.43.1/kitty-0.43.1.tar.xz : 44a875e34e6a5f9b8f599b25b0796c07a1506fec2b2310573e03077ef1ae159f
-    - git|https://github.com/simd-everywhere/simde.git : v0.8.2
+    - https://github.com/kovidgoyal/kitty/releases/download/v0.47.0/kitty-0.47.0.tar.xz : 72eefbf18abfcd5538a8f3aa53cc9783692eb8e077521f49744bd96ee1f1e4dd
     - https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/NerdFontsSymbolsOnly.tar.xz : 7f8c090da3b0eaa7108646bf34cbbb6ed13d5358a72460522108b06c7ecd716a
+homepage   : https://sw.kovidgoyal.net/kitty/
 license    :
     - GPL-3.0-only
     - MIT
-component  : system.utils
-homepage   : https://sw.kovidgoyal.net/kitty/
 summary    : A fast and featureful GPU-based terminal emulator
+component  : system.utils
 description: |
     Kitty is designed for power keyboard users. To that end all its controls work with the keyboard (although it fully supports mouse interactions as well). Its configuration is a simple, human editable, single file for easy reproducibility.
 
@@ -20,9 +20,11 @@ builddeps  :
     - pkgconfig(cairo-fc)
     - pkgconfig(fontconfig)
     - pkgconfig(gl)
+    - pkgconfig(harfbuzz)
     - pkgconfig(lcms2)
     - pkgconfig(libxxhash)
     - pkgconfig(python3)
+    - pkgconfig(simde)
     - pkgconfig(wayland-protocols)
     - pkgconfig(wayland-scanner)
     - pkgconfig(xcursor)
@@ -35,19 +37,22 @@ rundeps    :
     - libcanberra
     - libpng
     - pygments
-environment: |
-    export CFLAGS="$CFLAGS -I$workdir/include"
 setup      : |
-    mkdir -p $workdir/include
-    cp -R $sources/simde.git/simde $workdir/include/simde
-    mkdir -p $workdir/fonts
-    tar xf $sources/NerdFontsSymbolsOnly.tar.xz -C $workdir/fonts
+    mkdir -p ${workdir}/fonts
+    tar xf ${sources}/NerdFontsSymbolsOnly.tar.xz -C ${workdir}/fonts
 build      : |
     %make
 install    : |
-    python3 setup.py linux-package --prefix $installdir/usr --update-check-interval=0
-    # install bash completion
-    install -dm 00644 $installdir/usr/share/bash-completion/completions/
-    echo "source <(kitty + complete setup bash)" > $installdir/usr/share/bash-completion/completions/kitty
-    # remove HTML docs
-    rm -rf $installdir/usr/share/doc/
+    python3 setup.py linux-package --prefix ${installdir}/usr --update-check-interval=0
+    %install_license LICENSE
+
+    # install license for fonts
+    install -Dm00644 ${workdir}/fonts/LICENSE ${installdir}/usr/share/licenses/kitty/NerdFontsSymbolsOnly.LICENSE
+
+    # install shell completions
+    linux-package/bin/kitten __complete__ setup bash | install -Dm00644 /dev/stdin ${installdir}/usr/share/bash-completion/completions/kitty
+    linux-package/bin/kitten __complete__ setup fish | install -Dm00644 /dev/stdin ${installdir}/usr/share/fish/vendor_completions.d/kitty.fish
+    linux-package/bin/kitten __complete__ setup zsh  | install -Dm00644 /dev/stdin ${installdir}/usr/share/zsh/site-functions/_kitty
+
+    # install AppStream metainfo
+    install -Dm00644 ${pkgfiles}/net.kovidgoyal.kitty.metainfo.xml -t ${installdir}/usr/share/metainfo

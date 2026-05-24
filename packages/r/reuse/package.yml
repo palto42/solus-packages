@@ -1,0 +1,81 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
+name       : reuse
+version    : 6.2.0
+release    : 1
+source     :
+    - https://codeberg.org/fsfe/reuse-tool/archive/v6.2.0.tar.gz : beff91ef9a138d830a6562808a3fb1c5411101988136062784d7e50bdb65023e
+homepage   : https://reuse.software/
+license    :
+    - Apache-2.0
+    - CC-BY-SA-4.0
+    - CC0-1.0
+    - GPL-3.0-or-later
+component  : programming.python
+summary    : A tool for compliance with the REUSE recommendations
+description: |
+    reuse is a tool for compliance with the REUSE recommendations.
+builddeps  :
+    - python-build
+    - python-installer
+    - python-myst-parser
+    - python-poetry
+    - python-setuptools
+    - python-sphinxcontrib-apidoc
+rundeps    :
+    - python-attrs
+    - python-binaryornot
+    - python-boolean.py
+    - python-chardet
+    - python-charset-normalizer
+    - python-click
+    - python-debian
+    - python-jinja
+    - python-license-expression
+    - python-magic
+    - python-tomlkit
+checkdeps  :
+    - git
+    - mercurial
+    - python-attrs
+    - python-binaryornot
+    - python-boolean.py
+    - python-chardet
+    - python-charset-normalizer
+    - python-click
+    - python-debian
+    - python-freezegun
+    - python-jinja
+    - python-license-expression
+    - python-magic
+    - python-pytest
+    - python-tomlkit
+build      : |
+    %python3_setup
+
+    pushd docs
+    PBR_VERSION=${version} sphinx-build -b man . manpages
+    rm -rf man/.{doctrees,buildinfo}
+    popd
+install    : |
+    %python3_install
+
+    install -Dm00644 -t ${installdir}/usr/share/man/man1/ docs/manpages/*.1
+
+    %install_license LICENSES/*
+
+    # Make and install completions
+    export PATH="${installdir}/usr/bin:${PATH}"
+    export PYTHONPATH="${installdir}/usr/lib/python%python3_version%/site-packages:${PYTHONPATH}"
+    mkdir completions
+    _REUSE_COMPLETE=bash_source reuse > completions/bash
+    _REUSE_COMPLETE=fish_source reuse > completions/fish
+    _REUSE_COMPLETE=zsh_source  reuse > completions/zsh
+
+    install -Dm00644 completions/bash ${installdir}/usr/share/bash-completion/completions/reuse
+    install -Dm00644 completions/fish ${installdir}/usr/share/fish/vendor_completions.d/reuse.fish
+    install -Dm00644 completions/zsh ${installdir}/usr/share/zsh/site-functions/_reuse
+check      : |
+    # The de-selected tests don't work in solbuild containers
+    %python3_test pytest -v \
+        -k "not test_to_read_only_file_forbidden and not test_lint_read_errors and not test_read_errors and not test_read_error" \
+        tests/ "${installdir}/usr/lib/python%python3_version%/site-packages/reuse"

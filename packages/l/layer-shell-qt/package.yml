@@ -1,12 +1,15 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : layer-shell-qt
-version    : 6.4.5
-release    : 67
+version    : 6.6.5
+release    : 80
 source     :
-    - https://download.kde.org/stable/plasma/6.4.5/layer-shell-qt-6.4.5.tar.xz : ef6baae22114f038af89029f3f0075ee29c3b91fd49100828c4c3a32e1496e95
+    - https://download.kde.org/stable/plasma/6.6.5/layer-shell-qt-6.6.5.tar.xz : e8c145545ac49d5325f16ff710b521deab6e5b9745fcc18ab431252224a8f982
 homepage   : https://kde.org/plasma-desktop/
 license    :
     - BSD-3-Clause
     - CC0-1.0
+    - LGPL-2.1-only
+    - LGPL-3.0-only
     - LGPL-3.0-or-later
     - MIT
 component  : system.utils
@@ -30,3 +33,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*

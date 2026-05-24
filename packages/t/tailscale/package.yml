@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : tailscale
-version    : 1.86.4
-release    : 37
+version    : 1.98.3
+release    : 56
 source     :
-    - https://github.com/tailscale/tailscale/archive/refs/tags/v1.86.4.tar.gz : 6500ba4a4bce8b903121167cc2755c669cf9e7c0edc64c48e75ee8c12596a031
+    - https://github.com/tailscale/tailscale/archive/refs/tags/v1.98.3.tar.gz : 9283ddbbf0a21ad37c725e09ac302aa96b37f00ca4b4142c00519cf983de0aa1
 homepage   : https://tailscale.com
 license    : BSD-3-Clause
 component  : network.clients
@@ -11,18 +12,26 @@ description: |
     The easiest, most secure way to use WireGuard and 2FA.
 networking : true
 builddeps  :
-    - git
     - golang
 environment: |
     export VERSION_LONG=%version%
     export VERSION_SHORT=%version%
 setup      : |
-    %patch -p1 -i $pkgfiles/defaults.patch
+    %patch -p1 -i ${pkgfiles}/defaults.patch
 build      : |
     ./build_dist.sh tailscale.com/cmd/tailscale
     ./build_dist.sh tailscale.com/cmd/tailscaled
 install    : |
-    install -Dm00755 $workdir/tailscale $installdir/usr/bin/tailscale
-    install -Dm00755 $workdir/tailscaled $installdir/usr/sbin/tailscaled
-    install -Dm00644 $workdir/cmd/tailscaled/tailscaled.service $installdir/usr/lib64/systemd/system/tailscaled.service
-    install -Dm00644 $workdir/cmd/tailscaled/tailscaled.defaults $installdir/usr/share/defaults/tailscale/tailscaled
+    %install_license LICENSE
+    install -Dm00755 ${workdir}/tailscale ${installdir}/usr/bin/tailscale
+    install -Dm00755 ${workdir}/tailscaled ${installdir}/usr/sbin/tailscaled
+    install -Dm00644 ${workdir}/cmd/tailscaled/tailscaled.service ${installdir}/%libdir%/systemd/system/tailscaled.service
+    install -Dm00644 ${workdir}/cmd/tailscaled/tailscaled.defaults ${installdir}/usr/share/defaults/tailscale/tailscaled
+
+    # Install service preset file
+    install -Dm00644 -t ${installdir}/%libdir%/systemd/system-preset/ ${pkgfiles}/60-tailscale.preset
+
+    # Shell completions
+    ${workdir}/tailscale completion bash | install -Dm00644 /dev/stdin ${installdir}/usr/share/bash-completion/completions/tailscale
+    ${workdir}/tailscale completion zsh | install -Dm00644 /dev/stdin ${installdir}/usr/share/zsh/site-functions/_tailscale
+    ${workdir}/tailscale completion fish | install -Dm00644 /dev/stdin ${installdir}/usr/share/fish/vendor_completions.d/tailscale.fish

@@ -3,15 +3,15 @@
         <Name>hnterm</Name>
         <Homepage>https://hnterm.ggerganov.com/</Homepage>
         <Packager>
-            <Name>Nazar Stasiv</Name>
-            <Email>nazar@autistici.org</Email>
+            <Name>David Harder</Name>
+            <Email>david@davidjharder.ca</Email>
         </Packager>
         <License>MIT</License>
         <PartOf>network.news</PartOf>
         <Summary xml:lang="en">Hacker News in the terminal</Summary>
         <Description xml:lang="en">Browse Hacker News interactively in your terminal.
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>hnterm</Name>
@@ -21,15 +21,16 @@
         <PartOf>network.news</PartOf>
         <Files>
             <Path fileType="executable">/usr/bin/hnterm</Path>
+            <Path fileType="data">/usr/share/licenses/hnterm/LICENSE</Path>
         </Files>
     </Package>
     <History>
-        <Update release="1">
-            <Date>2022-08-16</Date>
+        <Update release="2">
+            <Date>2026-04-01</Date>
             <Version>0.4</Version>
             <Comment>Packaging update</Comment>
-            <Name>Nazar Stasiv</Name>
-            <Email>nazar@autistici.org</Email>
+            <Name>David Harder</Name>
+            <Email>david@davidjharder.ca</Email>
         </Update>
     </History>
 </PISI>

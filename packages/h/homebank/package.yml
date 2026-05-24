@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : homebank
-version    : 5.9.5
-release    : 41
+version    : '5.10'
+release    : 42
 source     :
-    - https://www.gethomebank.org/public/sources/homebank-5.9.5.tar.gz : ff6c8b0f6da411133e29b848e91f48fdb88de40ad02cba20a8840930a3e7ed43
+    - https://www.gethomebank.org/public/sources/homebank-5.10.tar.gz : 783fd8bb2ebba09713e5d7c183d454f4a4393e828af5763f768b48afabc54386
 homepage   : https://www.gethomebank.org/en/index.php
 license    : GPL-2.0-or-later
 component  : office.finance
@@ -19,3 +20,4 @@ build      : |
     %make
 install    : |
     %make_install
+    %install_license COPYING

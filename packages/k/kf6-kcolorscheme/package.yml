@@ -1,12 +1,17 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kf6-kcolorscheme
-version    : 6.19.0
-release    : 27
+version    : 6.26.0
+release    : 37
 source     :
-    - https://download.kde.org/stable/frameworks/6.19/kcolorscheme-6.19.0.tar.xz : c278cf086d4499dcebd3aa0e6190716578dc06ec80c63d95de6b0c40457653f0
+    - https://download.kde.org/stable/frameworks/6.26/kcolorscheme-6.26.0.tar.xz : 74149a0379bd8bf6590d3c1f7f8c503665e0f3adafc2adbd44fc6bb764c969f1
 homepage   : https://community.kde.org/Frameworks
 license    :
-    - GPL-3.0-only
+    - BSD-2-Clause
+    - CC-BY-SA-4.0
+    - CC0-1.0
     - LGPL-2.0-or-later
+    - LGPL-2.1-only
+    - LGPL-3.0-only
 component  : multimedia.graphics
 summary    : Classes to read and interact with KColorScheme
 description: |
@@ -30,3 +35,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*

@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : hwdata
-version    : '0.400'
-release    : 45
+version    : '0.407'
+release    : 52
 source     :
-    - https://github.com/vcrhonek/hwdata/archive/refs/tags/v0.400.tar.gz : 05d96821aaae04be4e684eaf9ac22e08efe646321bc64be323b91b66e7e2095c
+    - https://github.com/vcrhonek/hwdata/archive/refs/tags/v0.407.tar.gz : 6a88f6f5cb510fbfaa9c49488348b7fcd7aa209b0a331f24dfebb1c8c339568b
 homepage   : https://github.com/vcrhonek/hwdata/
 license    : GPL-2.0-or-later
 component  : system.base
@@ -15,3 +16,4 @@ setup      : |
     %configure
 install    : |
     %make_install
+    %install_license COPYING

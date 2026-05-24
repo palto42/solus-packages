@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : libfprint
-version    : 1.94.9
-release    : 9
+version    : 1.94.10
+release    : 10
 source     :
-    - https://gitlab.freedesktop.org/libfprint/libfprint/-/archive/v1.94.9/libfprint-v1.94.9.tar.bz2 : 6f51d9b154c1874b22fff50c288a86584a59dd23b0f6b0a9aa4cdaffb3847ab1
+    - https://gitlab.freedesktop.org/libfprint/libfprint/-/archive/v1.94.10/libfprint-v1.94.10.tar.bz2 : 3c781e7920c9af5313d1a51101aadbd18e6e8edb35df3532850477fd96a0e952
 homepage   : https://fprint.freedesktop.org/
 license    : LGPL-2.1-or-later
 component  : desktop.library
@@ -12,7 +13,7 @@ description: |
 builddeps  :
     - pkgconfig(cairo)
     - pkgconfig(gtk-doc)
-    - pkgconfig(gudev-1.0) 
+    - pkgconfig(gudev-1.0)
     - pkgconfig(gusb)
     - pkgconfig(libcrypto)
     - pkgconfig(pixman-1)
@@ -24,6 +25,7 @@ setup      : |
 build      : |
     %ninja_build
 install    : |
+    %install_license COPYING
     %ninja_install
 check      : |
     # work around for buildserver

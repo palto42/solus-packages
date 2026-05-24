@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : opensta
-version    : 25.04.18
-release    : 1
+version    : 26.04.17
+release    : 3
 source     :
-    - git|https://github.com/The-OpenROAD-Project/OpenSTA.git : ce98bde188e7b330c86b913d9def696c950a4130
+    - git|https://github.com/The-OpenROAD-Project/OpenSTA.git : e71e5d7bf72f28a8e96ba088e33adf60373a80b0
 homepage   : https://github.com/The-OpenROAD-Project/OpenSTA
 license    : GPL-3.0-or-later
 component  : office.scientific
@@ -16,6 +17,7 @@ builddeps  :
     - pkgconfig(tcl)
     - pkgconfig(zlib)
     - cudd-devel
+    - gtest
     - swig
 setup      : |
     %cmake_ninja \
@@ -34,3 +36,5 @@ install    : |
     done
 
     sed -i "s|#include <Eigen|#include <eigen3/Eigen|g" $datadir/*/*.hh
+
+    %install_license LICENSE

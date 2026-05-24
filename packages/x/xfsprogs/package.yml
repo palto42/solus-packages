@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : xfsprogs
-version    : 6.14.0
-release    : 30
+version    : 7.0.0
+release    : 34
 source     :
-    - https://mirrors.edge.kernel.org/pub/linux/utils/fs/xfs/xfsprogs/xfsprogs-6.14.0.tar.xz : fa5ab77f8b5169ce48dd8de09446ad7e29834a05b8f52012bae411cf53ec1f58
+    - https://mirrors.edge.kernel.org/pub/linux/utils/fs/xfs/xfsprogs/xfsprogs-7.0.0.tar.xz : c05930b04e7a0e6c9115cf891cd4e973231d7066b2d6b2993d23705089678988
 license    :
     - GPL-2.0-only
     - LGPL-2.1-only

@@ -22,6 +22,7 @@
         <Files>
             <Path fileType="executable">/usr/bin/sta</Path>
             <Path fileType="library">/usr/lib/libOpenSTA.so</Path>
+            <Path fileType="data">/usr/share/licenses/opensta/LICENSE</Path>
             <Path fileType="data">/usr/share/opensta/dcalc/ArcDcalcWaveforms.cc</Path>
             <Path fileType="data">/usr/share/opensta/dcalc/ArcDcalcWaveforms.hh</Path>
             <Path fileType="data">/usr/share/opensta/dcalc/ArcDelayCalc.cc</Path>
@@ -33,11 +34,15 @@
             <Path fileType="data">/usr/share/opensta/dcalc/CcsCeffDelayCalc.cc</Path>
             <Path fileType="data">/usr/share/opensta/dcalc/CcsCeffDelayCalc.hh</Path>
             <Path fileType="data">/usr/share/opensta/dcalc/DcalcAnalysisPt.cc</Path>
+            <Path fileType="data">/usr/share/opensta/dcalc/Delay.cc</Path>
             <Path fileType="data">/usr/share/opensta/dcalc/DelayCalc.cc</Path>
             <Path fileType="data">/usr/share/opensta/dcalc/DelayCalc.i</Path>
             <Path fileType="data">/usr/share/opensta/dcalc/DelayCalc.tcl</Path>
             <Path fileType="data">/usr/share/opensta/dcalc/DelayCalcBase.cc</Path>
             <Path fileType="data">/usr/share/opensta/dcalc/DelayCalcBase.hh</Path>
+            <Path fileType="data">/usr/share/opensta/dcalc/DelayNormal.cc</Path>
+            <Path fileType="data">/usr/share/opensta/dcalc/DelayScalar.cc</Path>
+            <Path fileType="data">/usr/share/opensta/dcalc/DelaySkewNormal.cc</Path>
             <Path fileType="data">/usr/share/opensta/dcalc/DmpCeff.cc</Path>
             <Path fileType="data">/usr/share/opensta/dcalc/DmpCeff.hh</Path>
             <Path fileType="data">/usr/share/opensta/dcalc/DmpDelayCalc.cc</Path>
@@ -55,10 +60,6 @@
             <Path fileType="data">/usr/share/opensta/dcalc/PrimaDelayCalc.hh</Path>
             <Path fileType="data">/usr/share/opensta/dcalc/UnitDelayCalc.cc</Path>
             <Path fileType="data">/usr/share/opensta/dcalc/UnitDelayCalc.hh</Path>
-            <Path fileType="data">/usr/share/opensta/graph/Delay.cc</Path>
-            <Path fileType="data">/usr/share/opensta/graph/DelayFloat.cc</Path>
-            <Path fileType="data">/usr/share/opensta/graph/DelayNormal1.cc</Path>
-            <Path fileType="data">/usr/share/opensta/graph/DelayNormal2.cc</Path>
             <Path fileType="data">/usr/share/opensta/graph/Graph.cc</Path>
             <Path fileType="data">/usr/share/opensta/graph/Graph.i</Path>
             <Path fileType="data">/usr/share/opensta/graph/Graph.tcl</Path>
@@ -128,6 +129,8 @@
             <Path fileType="data">/usr/share/opensta/power/Power.hh</Path>
             <Path fileType="data">/usr/share/opensta/power/Power.i</Path>
             <Path fileType="data">/usr/share/opensta/power/Power.tcl</Path>
+            <Path fileType="data">/usr/share/opensta/power/ReportPower.cc</Path>
+            <Path fileType="data">/usr/share/opensta/power/ReportPower.hh</Path>
             <Path fileType="data">/usr/share/opensta/power/SaifReader.cc</Path>
             <Path fileType="data">/usr/share/opensta/power/SaifReader.hh</Path>
             <Path fileType="data">/usr/share/opensta/power/SaifReaderPvt.hh</Path>
@@ -146,6 +149,7 @@
             <Path fileType="data">/usr/share/opensta/sdc/DeratingFactors.cc</Path>
             <Path fileType="data">/usr/share/opensta/sdc/DisabledPorts.cc</Path>
             <Path fileType="data">/usr/share/opensta/sdc/ExceptionPath.cc</Path>
+            <Path fileType="data">/usr/share/opensta/sdc/FilterObjects.cc</Path>
             <Path fileType="data">/usr/share/opensta/sdc/InputDrive.cc</Path>
             <Path fileType="data">/usr/share/opensta/sdc/PinPair.cc</Path>
             <Path fileType="data">/usr/share/opensta/sdc/PortDelay.cc</Path>
@@ -154,9 +158,9 @@
             <Path fileType="data">/usr/share/opensta/sdc/Sdc.i</Path>
             <Path fileType="data">/usr/share/opensta/sdc/Sdc.tcl</Path>
             <Path fileType="data">/usr/share/opensta/sdc/SdcCmdComment.cc</Path>
-            <Path fileType="data">/usr/share/opensta/sdc/SdcGraph.cc</Path>
             <Path fileType="data">/usr/share/opensta/sdc/Variables.cc</Path>
             <Path fileType="data">/usr/share/opensta/sdc/WriteSdc.cc</Path>
+            <Path fileType="data">/usr/share/opensta/sdc/WriteSdc.hh</Path>
             <Path fileType="data">/usr/share/opensta/sdc/WriteSdcPvt.hh</Path>
             <Path fileType="data">/usr/share/opensta/sdf/ReportAnnotation.cc</Path>
             <Path fileType="data">/usr/share/opensta/sdf/ReportAnnotation.hh</Path>
@@ -170,18 +174,18 @@
             <Path fileType="data">/usr/share/opensta/sdf/SdfWriter.hh</Path>
             <Path fileType="data">/usr/share/opensta/search/Bdd.cc</Path>
             <Path fileType="data">/usr/share/opensta/search/Bfs.cc</Path>
-            <Path fileType="data">/usr/share/opensta/search/CheckCapacitanceLimits.cc</Path>
-            <Path fileType="data">/usr/share/opensta/search/CheckCapacitanceLimits.hh</Path>
-            <Path fileType="data">/usr/share/opensta/search/CheckFanoutLimits.cc</Path>
-            <Path fileType="data">/usr/share/opensta/search/CheckFanoutLimits.hh</Path>
+            <Path fileType="data">/usr/share/opensta/search/CheckCapacitances.cc</Path>
+            <Path fileType="data">/usr/share/opensta/search/CheckCapacitances.hh</Path>
+            <Path fileType="data">/usr/share/opensta/search/CheckFanouts.cc</Path>
+            <Path fileType="data">/usr/share/opensta/search/CheckFanouts.hh</Path>
             <Path fileType="data">/usr/share/opensta/search/CheckMaxSkews.cc</Path>
             <Path fileType="data">/usr/share/opensta/search/CheckMaxSkews.hh</Path>
             <Path fileType="data">/usr/share/opensta/search/CheckMinPeriods.cc</Path>
             <Path fileType="data">/usr/share/opensta/search/CheckMinPeriods.hh</Path>
             <Path fileType="data">/usr/share/opensta/search/CheckMinPulseWidths.cc</Path>
             <Path fileType="data">/usr/share/opensta/search/CheckMinPulseWidths.hh</Path>
-            <Path fileType="data">/usr/share/opensta/search/CheckSlewLimits.cc</Path>
-            <Path fileType="data">/usr/share/opensta/search/CheckSlewLimits.hh</Path>
+            <Path fileType="data">/usr/share/opensta/search/CheckSlews.cc</Path>
+            <Path fileType="data">/usr/share/opensta/search/CheckSlews.hh</Path>
             <Path fileType="data">/usr/share/opensta/search/CheckTiming.cc</Path>
             <Path fileType="data">/usr/share/opensta/search/CheckTiming.hh</Path>
             <Path fileType="data">/usr/share/opensta/search/ClkDelays.hh</Path>
@@ -208,6 +212,7 @@
             <Path fileType="data">/usr/share/opensta/search/MakeTimingModel.cc</Path>
             <Path fileType="data">/usr/share/opensta/search/MakeTimingModel.hh</Path>
             <Path fileType="data">/usr/share/opensta/search/MakeTimingModelPvt.hh</Path>
+            <Path fileType="data">/usr/share/opensta/search/Mode.cc</Path>
             <Path fileType="data">/usr/share/opensta/search/Path.cc</Path>
             <Path fileType="data">/usr/share/opensta/search/PathAnalysisPt.cc</Path>
             <Path fileType="data">/usr/share/opensta/search/PathEnd.cc</Path>
@@ -215,9 +220,12 @@
             <Path fileType="data">/usr/share/opensta/search/PathEnum.hh</Path>
             <Path fileType="data">/usr/share/opensta/search/PathExpanded.cc</Path>
             <Path fileType="data">/usr/share/opensta/search/PathGroup.cc</Path>
+            <Path fileType="data">/usr/share/opensta/search/PocvMode.cc</Path>
             <Path fileType="data">/usr/share/opensta/search/Property.cc</Path>
+            <Path fileType="data">/usr/share/opensta/search/Property.i</Path>
             <Path fileType="data">/usr/share/opensta/search/ReportPath.cc</Path>
             <Path fileType="data">/usr/share/opensta/search/ReportPath.hh</Path>
+            <Path fileType="data">/usr/share/opensta/search/Scene.cc</Path>
             <Path fileType="data">/usr/share/opensta/search/Search.cc</Path>
             <Path fileType="data">/usr/share/opensta/search/Search.i</Path>
             <Path fileType="data">/usr/share/opensta/search/Search.tcl</Path>
@@ -232,8 +240,6 @@
             <Path fileType="data">/usr/share/opensta/search/TagGroup.hh</Path>
             <Path fileType="data">/usr/share/opensta/search/VertexVisitor.cc</Path>
             <Path fileType="data">/usr/share/opensta/search/VisitPathEnds.cc</Path>
-            <Path fileType="data">/usr/share/opensta/search/VisitPathGroupVertices.cc</Path>
-            <Path fileType="data">/usr/share/opensta/search/VisitPathGroupVertices.hh</Path>
             <Path fileType="data">/usr/share/opensta/search/WorstSlack.cc</Path>
             <Path fileType="data">/usr/share/opensta/search/WorstSlack.hh</Path>
             <Path fileType="data">/usr/share/opensta/spice/WritePathSpice.cc</Path>
@@ -273,12 +279,10 @@
             <Path fileType="data">/usr/share/opensta/util/ReportStd.cc</Path>
             <Path fileType="data">/usr/share/opensta/util/ReportTcl.cc</Path>
             <Path fileType="data">/usr/share/opensta/util/RiseFallMinMax.cc</Path>
+            <Path fileType="data">/usr/share/opensta/util/RiseFallMinMaxDelay.cc</Path>
             <Path fileType="data">/usr/share/opensta/util/RiseFallValues.cc</Path>
             <Path fileType="data">/usr/share/opensta/util/Stats.cc</Path>
-            <Path fileType="data">/usr/share/opensta/util/StringSeq.cc</Path>
-            <Path fileType="data">/usr/share/opensta/util/StringSet.cc</Path>
             <Path fileType="data">/usr/share/opensta/util/StringUtil.cc</Path>
-            <Path fileType="data">/usr/share/opensta/util/TokenParser.cc</Path>
             <Path fileType="data">/usr/share/opensta/util/Transition.cc</Path>
             <Path fileType="data">/usr/share/opensta/util/Util.i</Path>
             <Path fileType="data">/usr/share/opensta/util/gzstream.hh</Path>
@@ -291,12 +295,13 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="1">opensta</Dependency>
+            <Dependency release="3">opensta</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/sta/ArcDelayCalc.hh</Path>
             <Path fileType="header">/usr/include/sta/Bdd.hh</Path>
             <Path fileType="header">/usr/include/sta/Bfs.hh</Path>
+            <Path fileType="header">/usr/include/sta/BoundedHeap.hh</Path>
             <Path fileType="header">/usr/include/sta/CircuitSim.hh</Path>
             <Path fileType="header">/usr/include/sta/ClkNetwork.hh</Path>
             <Path fileType="header">/usr/include/sta/Clock.hh</Path>
@@ -306,16 +311,15 @@
             <Path fileType="header">/usr/include/sta/ClockLatency.hh</Path>
             <Path fileType="header">/usr/include/sta/ConcreteLibrary.hh</Path>
             <Path fileType="header">/usr/include/sta/ConcreteNetwork.hh</Path>
-            <Path fileType="header">/usr/include/sta/Corner.hh</Path>
+            <Path fileType="header">/usr/include/sta/ContainerHelpers.hh</Path>
             <Path fileType="header">/usr/include/sta/CycleAccting.hh</Path>
             <Path fileType="header">/usr/include/sta/DataCheck.hh</Path>
-            <Path fileType="header">/usr/include/sta/DcalcAnalysisPt.hh</Path>
             <Path fileType="header">/usr/include/sta/Debug.hh</Path>
             <Path fileType="header">/usr/include/sta/Delay.hh</Path>
             <Path fileType="header">/usr/include/sta/DelayCalc.hh</Path>
-            <Path fileType="header">/usr/include/sta/DelayFloat.hh</Path>
-            <Path fileType="header">/usr/include/sta/DelayNormal1.hh</Path>
-            <Path fileType="header">/usr/include/sta/DelayNormal2.hh</Path>
+            <Path fileType="header">/usr/include/sta/DelayNormal.hh</Path>
+            <Path fileType="header">/usr/include/sta/DelayScalar.hh</Path>
+            <Path fileType="header">/usr/include/sta/DelaySkewNormal.hh</Path>
             <Path fileType="header">/usr/include/sta/DeratingFactors.hh</Path>
             <Path fileType="header">/usr/include/sta/DisabledPorts.hh</Path>
             <Path fileType="header">/usr/include/sta/DispatchQueue.hh</Path>
@@ -323,6 +327,8 @@
             <Path fileType="header">/usr/include/sta/EquivCells.hh</Path>
             <Path fileType="header">/usr/include/sta/Error.hh</Path>
             <Path fileType="header">/usr/include/sta/ExceptionPath.hh</Path>
+            <Path fileType="header">/usr/include/sta/FilterObjects.hh</Path>
+            <Path fileType="header">/usr/include/sta/Format.hh</Path>
             <Path fileType="header">/usr/include/sta/FuncExpr.hh</Path>
             <Path fileType="header">/usr/include/sta/Fuzzy.hh</Path>
             <Path fileType="header">/usr/include/sta/Graph.hh</Path>
@@ -341,10 +347,9 @@
             <Path fileType="header">/usr/include/sta/LinearModel.hh</Path>
             <Path fileType="header">/usr/include/sta/Machine.hh</Path>
             <Path fileType="header">/usr/include/sta/MakeConcreteNetwork.hh</Path>
-            <Path fileType="header">/usr/include/sta/MakeConcreteParasitics.hh</Path>
-            <Path fileType="header">/usr/include/sta/Map.hh</Path>
             <Path fileType="header">/usr/include/sta/MinMax.hh</Path>
             <Path fileType="header">/usr/include/sta/MinMaxValues.hh</Path>
+            <Path fileType="header">/usr/include/sta/Mode.hh</Path>
             <Path fileType="header">/usr/include/sta/Mutex.hh</Path>
             <Path fileType="header">/usr/include/sta/Network.hh</Path>
             <Path fileType="header">/usr/include/sta/NetworkClass.hh</Path>
@@ -355,12 +360,12 @@
             <Path fileType="header">/usr/include/sta/ParasiticsClass.hh</Path>
             <Path fileType="header">/usr/include/sta/ParseBus.hh</Path>
             <Path fileType="header">/usr/include/sta/Path.hh</Path>
-            <Path fileType="header">/usr/include/sta/PathAnalysisPt.hh</Path>
             <Path fileType="header">/usr/include/sta/PathEnd.hh</Path>
             <Path fileType="header">/usr/include/sta/PathExpanded.hh</Path>
             <Path fileType="header">/usr/include/sta/PathGroup.hh</Path>
             <Path fileType="header">/usr/include/sta/PatternMatch.hh</Path>
             <Path fileType="header">/usr/include/sta/PinPair.hh</Path>
+            <Path fileType="header">/usr/include/sta/PocvMode.hh</Path>
             <Path fileType="header">/usr/include/sta/PortDelay.hh</Path>
             <Path fileType="header">/usr/include/sta/PortDirection.hh</Path>
             <Path fileType="header">/usr/include/sta/PortExtCap.hh</Path>
@@ -370,7 +375,9 @@
             <Path fileType="header">/usr/include/sta/ReportStd.hh</Path>
             <Path fileType="header">/usr/include/sta/ReportTcl.hh</Path>
             <Path fileType="header">/usr/include/sta/RiseFallMinMax.hh</Path>
+            <Path fileType="header">/usr/include/sta/RiseFallMinMaxDelay.hh</Path>
             <Path fileType="header">/usr/include/sta/RiseFallValues.hh</Path>
+            <Path fileType="header">/usr/include/sta/Scene.hh</Path>
             <Path fileType="header">/usr/include/sta/Sdc.hh</Path>
             <Path fileType="header">/usr/include/sta/SdcClass.hh</Path>
             <Path fileType="header">/usr/include/sta/SdcCmdComment.hh</Path>
@@ -379,27 +386,21 @@
             <Path fileType="header">/usr/include/sta/SearchClass.hh</Path>
             <Path fileType="header">/usr/include/sta/SearchPred.hh</Path>
             <Path fileType="header">/usr/include/sta/Sequential.hh</Path>
-            <Path fileType="header">/usr/include/sta/Set.hh</Path>
             <Path fileType="header">/usr/include/sta/Sta.hh</Path>
             <Path fileType="header">/usr/include/sta/StaConfig.hh</Path>
             <Path fileType="header">/usr/include/sta/StaMain.hh</Path>
             <Path fileType="header">/usr/include/sta/StaState.hh</Path>
             <Path fileType="header">/usr/include/sta/Stats.hh</Path>
-            <Path fileType="header">/usr/include/sta/StringSeq.hh</Path>
-            <Path fileType="header">/usr/include/sta/StringSet.hh</Path>
             <Path fileType="header">/usr/include/sta/StringUtil.hh</Path>
             <Path fileType="header">/usr/include/sta/TableModel.hh</Path>
             <Path fileType="header">/usr/include/sta/TclTypeHelpers.hh</Path>
             <Path fileType="header">/usr/include/sta/TimingArc.hh</Path>
             <Path fileType="header">/usr/include/sta/TimingModel.hh</Path>
             <Path fileType="header">/usr/include/sta/TimingRole.hh</Path>
-            <Path fileType="header">/usr/include/sta/TokenParser.hh</Path>
             <Path fileType="header">/usr/include/sta/Transition.hh</Path>
             <Path fileType="header">/usr/include/sta/Units.hh</Path>
-            <Path fileType="header">/usr/include/sta/UnorderedMap.hh</Path>
-            <Path fileType="header">/usr/include/sta/UnorderedSet.hh</Path>
             <Path fileType="header">/usr/include/sta/Variables.hh</Path>
-            <Path fileType="header">/usr/include/sta/Vector.hh</Path>
+            <Path fileType="header">/usr/include/sta/VectorMap.hh</Path>
             <Path fileType="header">/usr/include/sta/VerilogNamespace.hh</Path>
             <Path fileType="header">/usr/include/sta/VerilogReader.hh</Path>
             <Path fileType="header">/usr/include/sta/VerilogWriter.hh</Path>
@@ -407,14 +408,13 @@
             <Path fileType="header">/usr/include/sta/VertexVisitor.hh</Path>
             <Path fileType="header">/usr/include/sta/VisitPathEnds.hh</Path>
             <Path fileType="header">/usr/include/sta/Wireload.hh</Path>
-            <Path fileType="header">/usr/include/sta/WriteSdc.hh</Path>
             <Path fileType="header">/usr/include/sta/Zlib.hh</Path>
         </Files>
     </Package>
     <History>
-        <Update release="1">
-            <Date>2025-05-06</Date>
-            <Version>25.04.18</Version>
+        <Update release="3">
+            <Date>2026-04-22</Date>
+            <Version>26.04.17</Version>
             <Comment>Packaging update</Comment>
             <Name>Marcus Mellor</Name>
             <Email>marcus@infinitymdm.dev</Email>

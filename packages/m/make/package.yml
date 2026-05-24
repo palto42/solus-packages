@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : make
-version    : '4.4.1'
-release    : 10
+version    : 4.4.1
+release    : 12
 source     :
-    - https://ftp.gnu.org/gnu/make/make-4.4.1.tar.gz : dd16fb1d67bfab79a72f5e8390735c49e3e8e70b4945a15ab1f81ddb78658fb3
+    - https://ftpmirror.gnu.org/gnu/make/make-4.4.1.tar.gz : dd16fb1d67bfab79a72f5e8390735c49e3e8e70b4945a15ab1f81ddb78658fb3
 homepage   : https://www.gnu.org/software/make/
 license    : GPL-3.0-or-later
 component  : system.devel
@@ -12,6 +13,7 @@ description: |
 patterns   :
     - /usr/include
 setup      : |
+    %patch -p1 -i $pkgfiles/0001-workaround-root-test-failures.patch
     %configure --program-prefix=g
 build      : |
     %make

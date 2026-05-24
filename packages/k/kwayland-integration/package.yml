@@ -1,10 +1,15 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kwayland-integration
-version    : 6.4.5
-release    : 128
+version    : 6.6.5
+release    : 138
 source     :
-    - https://download.kde.org/stable/plasma/6.4.5/kwayland-integration-6.4.5.tar.xz : fd2bd63053763bbd370c9e5782058330ad73a14241b7a6e3e1b8d24303ded503
+    - https://download.kde.org/stable/plasma/6.6.5/kwayland-integration-6.6.5.tar.xz : 2720764c73963fe06bd78e2eca329eba61fb625dff6d3dcf4a68ec167766ce6e
 homepage   : https://www.kde.org/workspaces/plasmadesktop/
-license    : LGPL-2.1-only
+license    :
+    - CC0-1.0
+    - LGPL-2.0-or-later
+    - LGPL-2.1-only
+    - LGPL-3.0-only
 component  : desktop.kde.core
 summary    : Provides integration plugins for various KDE frameworks
 description: |
@@ -26,3 +31,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*

@@ -1,11 +1,13 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kf6-kdnssd
-version    : 6.19.0
-release    : 25
+version    : 6.26.0
+release    : 32
 source     :
-    - https://download.kde.org/stable/frameworks/6.19/kdnssd-6.19.0.tar.xz : 9a4e9e653c6670b4681516ceade3d2664d577f5e6f0173d7bb9bbe5dd009c271
+    - https://download.kde.org/stable/frameworks/6.26/kdnssd-6.26.0.tar.xz : 8439daed9c4b942a74393daf23c8d97fdaabd81b93dc347f91bbb45a2bf85248
 homepage   : https://community.kde.org/Frameworks
 license    :
     - BSD-3-Clause
+    - CC0-1.0
     - LGPL-2.0-or-later
 component  : desktop.library
 summary    : Network service discovery using Zeroconf
@@ -27,3 +29,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*

@@ -1,10 +1,13 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kf6-threadweaver
-version    : 6.19.0
-release    : 25
+version    : 6.26.0
+release    : 32
 source     :
-    - https://download.kde.org/stable/frameworks/6.19/threadweaver-6.19.0.tar.xz : d8d4d0b6e62b067a8ce4fed7aefeed02ed43a43f97f085db3baedf9210070da1
+    - https://download.kde.org/stable/frameworks/6.26/threadweaver-6.26.0.tar.xz : ad32daeafac62077590885f3abc4bcac1abbc6faeb34c20b32f6040648f7de1b
 homepage   : https://community.kde.org/Frameworks
-license    : LGPL-2.0-or-later
+license    :
+    - CC0-1.0
+    - LGPL-2.0-or-later
 component  : desktop.library
 summary    : Helper for multithreaded programming
 description: |
@@ -24,3 +27,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*

@@ -3,8 +3,8 @@
         <Name>pandoc-crossref</Name>
         <Homepage>https://lierdakil.github.io/pandoc-crossref/</Homepage>
         <Packager>
-            <Name>David Harder</Name>
-            <Email>david@davidjharder.ca</Email>
+            <Name>Ivan Trepakov</Name>
+            <Email>liontiger23@gmail.com</Email>
         </Packager>
         <License>GPL-2.0-only</License>
         <PartOf>office</PartOf>
@@ -21,16 +21,16 @@
         <PartOf>office</PartOf>
         <Files>
             <Path fileType="executable">/usr/bin/pandoc-crossref</Path>
-            <Path fileType="doc">/usr/share/doc/pandoc-crossref/LICENSE</Path>
+            <Path fileType="data">/usr/share/licenses/pandoc-crossref/LICENSE</Path>
         </Files>
     </Package>
     <History>
-        <Update release="5">
-            <Date>2024-12-13</Date>
-            <Version>0.3.14.0</Version>
+        <Update release="13">
+            <Date>2026-05-10</Date>
+            <Version>0.3.23</Version>
             <Comment>Packaging update</Comment>
-            <Name>David Harder</Name>
-            <Email>david@davidjharder.ca</Email>
+            <Name>Ivan Trepakov</Name>
+            <Email>liontiger23@gmail.com</Email>
         </Update>
     </History>
 </PISI>

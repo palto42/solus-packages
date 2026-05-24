@@ -1,0 +1,54 @@
+<PISI>
+    <Source>
+        <Name>python-license-expression</Name>
+        <Homepage>https://github.com/aboutcode-org/license-expression</Homepage>
+        <Packager>
+            <Name>Evan Maddock</Name>
+            <Email>maddock.evan@vivaldi.net</Email>
+        </Packager>
+        <License>Apache-2.0</License>
+        <PartOf>programming.python</PartOf>
+        <Summary xml:lang="en">Utility library to parse, normalize and compare License expressions for Python using a boolean logic engine</Summary>
+        <Description xml:lang="en">license-expression is a comprehensive utility library to parse, compare, simplify and normalize license expressions (such as SPDX license expressions) using boolean logic.
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>python-license-expression</Name>
+        <Summary xml:lang="en">Utility library to parse, normalize and compare License expressions for Python using a boolean logic engine</Summary>
+        <Description xml:lang="en">license-expression is a comprehensive utility library to parse, compare, simplify and normalize license expressions (such as SPDX license expressions) using boolean logic.
+</Description>
+        <PartOf>programming.python</PartOf>
+        <Files>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/license_expression-30.4.4.dist-info/METADATA</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/license_expression-30.4.4.dist-info/RECORD</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/license_expression-30.4.4.dist-info/WHEEL</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/license_expression-30.4.4.dist-info/licenses/AUTHORS.rst</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/license_expression-30.4.4.dist-info/licenses/CHANGELOG.rst</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/license_expression-30.4.4.dist-info/licenses/CODE_OF_CONDUCT.rst</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/license_expression-30.4.4.dist-info/licenses/NOTICE</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/license_expression-30.4.4.dist-info/licenses/README.rst</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/license_expression-30.4.4.dist-info/licenses/apache-2.0.LICENSE</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/license_expression-30.4.4.dist-info/top_level.txt</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/license_expression/__init__.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/license_expression/__pycache__/__init__.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/license_expression/__pycache__/__init__.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/license_expression/__pycache__/_pyahocorasick.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/license_expression/__pycache__/_pyahocorasick.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/license_expression/_pyahocorasick.ABOUT</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/license_expression/_pyahocorasick.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/license_expression/data/cc-by-4.0.LICENSE</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/license_expression/data/license_key_index.json.ABOUT</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/license_expression/data/scancode-licensedb-index.json</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2026-03-31</Date>
+            <Version>30.4.4</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Evan Maddock</Name>
+            <Email>maddock.evan@vivaldi.net</Email>
+        </Update>
+    </History>
+</PISI>

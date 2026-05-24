@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : umbrello
-version    : 25.08.2
-release    : 109
+version    : 26.04.1
+release    : 114
 source     :
-    - https://download.kde.org/stable/release-service/25.08.2/src/umbrello-25.08.2.tar.xz : ec141b83348514a5f14596ed57d2ade49f737b4edafd8e86f02bf5154e794c7e
+    - https://download.kde.org/stable/release-service/26.04.1/src/umbrello-26.04.1.tar.xz : d5ccce924091558d76b6bf0245deb342cb7afcc8dbfae5205bb3668114ed2060
 homepage   : https://kde.org/applications/development/org.kde.umbrello
 license    :
     - GFDL-1.2-or-later

@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : libinput
-version    : 1.28.1
-release    : 51
+version    : 1.31.2
+release    : 55
 source     :
-    - https://gitlab.freedesktop.org/libinput/libinput/-/archive/1.28.1/libinput-1.28.1.tar.gz : a13f8c9a7d93df3c85c66afd135f0296701d8d32f911991b7aa4273fdd6a42a3
+    - https://gitlab.freedesktop.org/libinput/libinput/-/archive/1.31.2/libinput-1.31.2.tar.gz : 507a40b8a74568ed7c2bd05acf2e15ee3d9f4703102dca86d4f6a804e73bf1f6
 license    : MIT
 component  : desktop.library
 homepage   : https://www.freedesktop.org/wiki/Software/libinput/
@@ -17,8 +18,8 @@ builddeps  :
     - pyparsing
     - python-pytest
 setup      : |
-    %patch -p1 -i $pkgfiles/0001-quirks-Disable-quirk-removing-two-finger-scrolling-f.patch
-    %meson_configure -Ddebug-gui=false \
+    %meson_configure \
+        -Ddebug-gui=false \
         -Ddocumentation=false \
         -Dtests=false \
         -Dudev-dir=%libdir%/udev
@@ -26,6 +27,8 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license COPYING
+
     # Empty
     rm -fr $installdir/etc/
 check      : |

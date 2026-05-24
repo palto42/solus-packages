@@ -3,8 +3,8 @@
         <Name>twolame</Name>
         <Homepage>https://www.twolame.org</Homepage>
         <Packager>
-            <Name>Martin Reboredo</Name>
-            <Email>yakoyoku@gmail.com</Email>
+            <Name>David Harder</Name>
+            <Email>david@davidjharder.ca</Email>
         </Packager>
         <License>LGPL-2.1-or-later</License>
         <PartOf>multimedia.codecs</PartOf>
@@ -13,7 +13,7 @@
 
 TwoLAME should be able to be used as a drop-in replacement for LAME (a MPEG Layer 3 encoder). The frontend takes very similar command line options to LAME, and the backend library has a very similar API to LAME.
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>twolame</Name>
@@ -27,7 +27,8 @@ TwoLAME should be able to be used as a drop-in replacement for LAME (a MPEG Laye
             <Path fileType="executable">/usr/bin/twolame</Path>
             <Path fileType="library">/usr/lib64/libtwolame.so.0</Path>
             <Path fileType="library">/usr/lib64/libtwolame.so.0.0.0</Path>
-            <Path fileType="man">/usr/share/man/man1/twolame.1</Path>
+            <Path fileType="data">/usr/share/licenses/twolame/COPYING</Path>
+            <Path fileType="man">/usr/share/man/man1/twolame.1.zst</Path>
         </Files>
     </Package>
     <Package>
@@ -39,7 +40,7 @@ TwoLAME should be able to be used as a drop-in replacement for LAME (a MPEG Laye
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="3">twolame</Dependency>
+            <Dependency release="4">twolame</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/twolame.h</Path>
@@ -48,12 +49,12 @@ TwoLAME should be able to be used as a drop-in replacement for LAME (a MPEG Laye
         </Files>
     </Package>
     <History>
-        <Update release="3">
-            <Date>2020-09-28</Date>
+        <Update release="4">
+            <Date>2026-03-22</Date>
             <Version>0.4.0</Version>
             <Comment>Packaging update</Comment>
-            <Name>Martin Reboredo</Name>
-            <Email>yakoyoku@gmail.com</Email>
+            <Name>David Harder</Name>
+            <Email>david@davidjharder.ca</Email>
         </Update>
     </History>
 </PISI>

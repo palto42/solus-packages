@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : mimetreeparser
-version    : 25.08.2
-release    : 24
+version    : 26.04.1
+release    : 33
 source     :
-    - https://download.kde.org/stable/release-service/25.08.2/src/mimetreeparser-25.08.2.tar.xz : fa32d41c268474c0e4524f565c48325e5d1d9082796dd67608a9bea5146bedb2
+    - https://download.kde.org/stable/release-service/26.04.1/src/mimetreeparser-26.04.1.tar.xz : 5aeec9af9b3d589a948350d32f8724b142a8c82ad0c5465b4e934b6159f68219
 homepage   : https://invent.kde.org/pim/mimetreeparser
 license    :
     - BSD-2-Clause
@@ -27,6 +28,7 @@ builddeps  :
     - kf6-kcolorscheme-devel
     - kf6-kconfig-devel
     - kf6-ki18n-devel
+    - kf6-kio-devel
     - kf6-kwidgetsaddons-devel
     - kmbox-devel
     - kmime-devel
@@ -47,3 +49,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*

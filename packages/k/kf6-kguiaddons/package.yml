@@ -1,12 +1,20 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kf6-kguiaddons
-version    : 6.19.0
-release    : 29
+version    : 6.26.0
+release    : 40
 source     :
-    - https://download.kde.org/stable/frameworks/6.19/kguiaddons-6.19.0.tar.xz : ac43416c5ba790c898cd3b806c6babe45b41df72ecc65a4328cc1a532ca8a1e6
+    - https://download.kde.org/stable/frameworks/6.26/kguiaddons-6.26.0.tar.xz : 8375342f852104f36fd72a6870eb9795183af4516592cd6fa73445ea6b813172
 homepage   : https://community.kde.org/Frameworks
 license    :
+    - BSD-2-Clause
+    - CC0-1.0
+    - GPL-2.0-only
+    - GPL-2.0-or-later
     - GPL-3.0-only
+    - LGPL-2.0-only
     - LGPL-2.0-or-later
+    - LGPL-2.1-only
+    - LGPL-3.0-only
 component  : programming.tools
 summary    : Utilities for graphical user interfaces.
 description: |
@@ -14,10 +22,11 @@ description: |
 builddeps  :
     - pkgconfig(Qt6Designer)
     - pkgconfig(Qt6WaylandClient)
+    - pkgconfig(wayland-protocols)
     - pkgconfig(x11)
     - extra-cmake-modules
-    - qt6-base-private-devel
     - plasma-wayland-protocols-devel
+    - qt6-base-private-devel
 rundeps    :
     - devel :
         - extra-cmake-modules
@@ -30,3 +39,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*

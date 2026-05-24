@@ -4,11 +4,14 @@
         <Homepage>https://community.kde.org/Frameworks</Homepage>
         <Packager>
             <Name>Troy Harvey</Name>
-            <Email>harveydevel@gmail.com</Email>
+            <Email>harvey@getsol.us</Email>
         </Packager>
         <License>BSD-3-Clause</License>
+        <License>CC0-1.0</License>
         <License>GPL-2.0-only</License>
+        <License>GPL-3.0-only</License>
         <License>LGPL-2.1-only</License>
+        <License>LGPL-3.0-only</License>
         <PartOf>desktop.library</PartOf>
         <Summary xml:lang="en">Qt wrapper for ModemManager DBus API</Summary>
         <Description xml:lang="en">ModemManagerQt provides access to all ModemManager features exposed on DBus. It allows you to manage modem devices and access to information available for your modem devices, like signal, location and messages.
@@ -23,7 +26,15 @@
         <PartOf>desktop.library</PartOf>
         <Files>
             <Path fileType="library">/usr/lib64/libKF6ModemManagerQt.so.6</Path>
-            <Path fileType="library">/usr/lib64/libKF6ModemManagerQt.so.6.19.0</Path>
+            <Path fileType="library">/usr/lib64/libKF6ModemManagerQt.so.6.26.0</Path>
+            <Path fileType="data">/usr/share/licenses/kf6-modemmanager-qt/BSD-3-Clause.txt</Path>
+            <Path fileType="data">/usr/share/licenses/kf6-modemmanager-qt/CC0-1.0.txt</Path>
+            <Path fileType="data">/usr/share/licenses/kf6-modemmanager-qt/GPL-2.0-only.txt</Path>
+            <Path fileType="data">/usr/share/licenses/kf6-modemmanager-qt/GPL-3.0-only.txt</Path>
+            <Path fileType="data">/usr/share/licenses/kf6-modemmanager-qt/LGPL-2.1-only.txt</Path>
+            <Path fileType="data">/usr/share/licenses/kf6-modemmanager-qt/LGPL-3.0-only.txt</Path>
+            <Path fileType="data">/usr/share/licenses/kf6-modemmanager-qt/LicenseRef-KDE-Accepted-GPL.txt</Path>
+            <Path fileType="data">/usr/share/licenses/kf6-modemmanager-qt/LicenseRef-KDE-Accepted-LGPL.txt</Path>
             <Path fileType="data">/usr/share/qlogging-categories6/modemmanagerqt.categories</Path>
             <Path fileType="data">/usr/share/qlogging-categories6/modemmanagerqt.renamecategories</Path>
         </Files>
@@ -35,11 +46,12 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="26">kf6-modemmanager-qt</Dependency>
+            <Dependency release="33">kf6-modemmanager-qt</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/KF6/ModemManagerQt/ModemManagerQt/Bearer</Path>
             <Path fileType="header">/usr/include/KF6/ModemManagerQt/ModemManagerQt/Call</Path>
+            <Path fileType="header">/usr/include/KF6/ModemManagerQt/ModemManagerQt/Cbm</Path>
             <Path fileType="header">/usr/include/KF6/ModemManagerQt/ModemManagerQt/GenericTypes</Path>
             <Path fileType="header">/usr/include/KF6/ModemManagerQt/ModemManagerQt/Interface</Path>
             <Path fileType="header">/usr/include/KF6/ModemManagerQt/ModemManagerQt/Manager</Path>
@@ -47,6 +59,7 @@
             <Path fileType="header">/usr/include/KF6/ModemManagerQt/ModemManagerQt/Modem3Gpp</Path>
             <Path fileType="header">/usr/include/KF6/ModemManagerQt/ModemManagerQt/Modem3GppUssd</Path>
             <Path fileType="header">/usr/include/KF6/ModemManagerQt/ModemManagerQt/ModemCdma</Path>
+            <Path fileType="header">/usr/include/KF6/ModemManagerQt/ModemManagerQt/ModemCellBroadcast</Path>
             <Path fileType="header">/usr/include/KF6/ModemManagerQt/ModemManagerQt/ModemDevice</Path>
             <Path fileType="header">/usr/include/KF6/ModemManagerQt/ModemManagerQt/ModemFirmware</Path>
             <Path fileType="header">/usr/include/KF6/ModemManagerQt/ModemManagerQt/ModemLocation</Path>
@@ -60,6 +73,7 @@
             <Path fileType="header">/usr/include/KF6/ModemManagerQt/ModemManagerQt/Sms</Path>
             <Path fileType="header">/usr/include/KF6/ModemManagerQt/modemmanagerqt/bearer.h</Path>
             <Path fileType="header">/usr/include/KF6/ModemManagerQt/modemmanagerqt/call.h</Path>
+            <Path fileType="header">/usr/include/KF6/ModemManagerQt/modemmanagerqt/cbm.h</Path>
             <Path fileType="header">/usr/include/KF6/ModemManagerQt/modemmanagerqt/generictypes.h</Path>
             <Path fileType="header">/usr/include/KF6/ModemManagerQt/modemmanagerqt/interface.h</Path>
             <Path fileType="header">/usr/include/KF6/ModemManagerQt/modemmanagerqt/manager.h</Path>
@@ -67,6 +81,7 @@
             <Path fileType="header">/usr/include/KF6/ModemManagerQt/modemmanagerqt/modem3gpp.h</Path>
             <Path fileType="header">/usr/include/KF6/ModemManagerQt/modemmanagerqt/modem3gppussd.h</Path>
             <Path fileType="header">/usr/include/KF6/ModemManagerQt/modemmanagerqt/modemcdma.h</Path>
+            <Path fileType="header">/usr/include/KF6/ModemManagerQt/modemmanagerqt/modemcellbroadcast.h</Path>
             <Path fileType="header">/usr/include/KF6/ModemManagerQt/modemmanagerqt/modemdevice.h</Path>
             <Path fileType="header">/usr/include/KF6/ModemManagerQt/modemmanagerqt/modemfirmware.h</Path>
             <Path fileType="header">/usr/include/KF6/ModemManagerQt/modemmanagerqt/modemlocation.h</Path>
@@ -88,12 +103,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="26">
-            <Date>2025-10-11</Date>
-            <Version>6.19.0</Version>
+        <Update release="33">
+            <Date>2026-05-12</Date>
+            <Version>6.26.0</Version>
             <Comment>Packaging update</Comment>
             <Name>Troy Harvey</Name>
-            <Email>harveydevel@gmail.com</Email>
+            <Email>harvey@getsol.us</Email>
         </Update>
     </History>
 </PISI>

@@ -1,10 +1,15 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : dolphin-emu
-version    : 2506a
-release    : 78
+version    : '2512'
+release    : 90
 source     :
-    - git|https://github.com/dolphin-emu/dolphin.git : 9843115ad8414970312c954d83145300d7cdbec3
+    - git|https://github.com/dolphin-emu/dolphin.git : 2512
 homepage   : https://dolphin-emu.org/
-license    : GPL-2.0-or-later
+license    :
+    - BSD-3-Clause
+    - CC0-1.0
+    - GPL-2.0-or-later
+    - MIT
 component  : games.emulator
 summary    : GameCube / Wii emulator
 description: |
@@ -18,6 +23,7 @@ builddeps  :
     - pkgconfig(gtk+-2.0)
     - pkgconfig(hidapi-libusb)
     - pkgconfig(libavcodec)
+    - pkgconfig(libcubeb)
     - pkgconfig(libcurl)
     - pkgconfig(libenet)
     - pkgconfig(libevdev)
@@ -33,14 +39,13 @@ builddeps  :
     - pkgconfig(openal)
     - pkgconfig(portaudio-2.0)
     - pkgconfig(pugixml)
-    - pkgconfig(sdl2)
+    - pkgconfig(sdl3)
     - pkgconfig(sfml-all)
     - pkgconfig(soundtouch)
     - pkgconfig(speexdsp)
     - pkgconfig(spng)
     - pkgconfig(xi)
     - pkgconfig(xrandr)
-    - cubeb-devel
     - llvm-devel
     - qt6-base-private-devel
 optimize   :
@@ -49,7 +54,6 @@ clang      : true
 setup      : |
     %patch -p1 -i $pkgfiles/0001-Desktop-integration-fixes.patch
     %patch -p1 -i $pkgfiles/0001-solus-Suppress-dirty-from-version-string.patch
-    %patch -p1 -i $pkgfiles/fmt-12.patch
 
     # Use system zlib (upstream doesn't like this for performance reasons):
     sed -i 's/add_subdirectory(\(.*zlib\)/dolphin_find_optional_system_library_pkgconfig(ZLIB zlib-ng ZLIB::ZLIB \1/' CMakeLists.txt
@@ -62,6 +66,8 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license COPYING
+    %install_license LICENSES/*
 
     # Install udev rule
     install -Dm00644 Data/51-usb-device.rules $installdir/%libdir%/udev/rules.d/51-usb-device.rules

@@ -3,8 +3,8 @@
         <Name>opentabletdriver</Name>
         <Homepage>https://opentabletdriver.net/</Homepage>
         <Packager>
-            <Name>nelson</Name>
-            <Email>nelson@truran.dev</Email>
+            <Name>Evan Maddock</Name>
+            <Email>maddock.evan@vivaldi.net</Email>
         </Packager>
         <License>LGPL-3.0-only</License>
         <PartOf>multimedia.graphics</PartOf>
@@ -28,7 +28,7 @@
             <Path fileType="library">/usr/lib64/opentabletdriver/OpenTabletDriver.Console</Path>
             <Path fileType="library">/usr/lib64/opentabletdriver/OpenTabletDriver.Daemon</Path>
             <Path fileType="library">/usr/lib64/opentabletdriver/OpenTabletDriver.UX.Gtk</Path>
-            <Path fileType="library">/usr/lib64/systemd/user/graphical-session.target.wants/opentabletdriver.service</Path>
+            <Path fileType="library">/usr/lib64/systemd/user-preset/20-opentabletdriver.preset</Path>
             <Path fileType="library">/usr/lib64/systemd/user/opentabletdriver.service</Path>
             <Path fileType="library">/usr/lib64/udev/rules.d/70-opentabletdriver.rules</Path>
             <Path fileType="data">/usr/share/applications/opentabletdriver.desktop</Path>
@@ -41,12 +41,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="6">
-            <Date>2025-06-23</Date>
+        <Update release="8">
+            <Date>2026-03-17</Date>
             <Version>0.6.5.1</Version>
             <Comment>Packaging update</Comment>
-            <Name>nelson</Name>
-            <Email>nelson@truran.dev</Email>
+            <Name>Evan Maddock</Name>
+            <Email>maddock.evan@vivaldi.net</Email>
         </Update>
     </History>
 </PISI>

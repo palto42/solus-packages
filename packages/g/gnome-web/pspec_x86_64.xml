@@ -3,8 +3,8 @@
         <Name>gnome-web</Name>
         <Homepage>https://apps.gnome.org/Epiphany/</Homepage>
         <Packager>
-            <Name>Muhammad Alfi Syahrin</Name>
-            <Email>malfisya.dev@hotmail.com</Email>
+            <Name>Joey Riches</Name>
+            <Email>josephriches@gmail.com</Email>
         </Packager>
         <License>GPL-3.0-or-later</License>
         <PartOf>network.web.browser</PartOf>
@@ -63,6 +63,33 @@
             <Path fileType="doc">/usr/share/help/C/epiphany/pref-passwords.page</Path>
             <Path fileType="doc">/usr/share/help/C/epiphany/prob-restore-closed-page.page</Path>
             <Path fileType="doc">/usr/share/help/C/epiphany/proxy.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/epiphany/browse-local.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/epiphany/browse-private.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/epiphany/browse-tab.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/epiphany/browse-web.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/epiphany/browse-webapps-del.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/epiphany/browse-webapps.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/epiphany/cert.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/epiphany/cookies.xml</Path>
+            <Path fileType="doc">/usr/share/help/bg/epiphany/data-cookies.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/epiphany/data-passwords.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/epiphany/data-personal-data.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/epiphany/history-delete.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/epiphany/history.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/epiphany/index.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/epiphany/introduction.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/epiphany/legal.xml</Path>
+            <Path fileType="doc">/usr/share/help/bg/epiphany/media/epiphany-plain-3-36.png</Path>
+            <Path fileType="doc">/usr/share/help/bg/epiphany/media/epiphany-private-3-36.png</Path>
+            <Path fileType="doc">/usr/share/help/bg/epiphany/media/org.gnome.Epiphany.svg</Path>
+            <Path fileType="doc">/usr/share/help/bg/epiphany/pref-cookies.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/epiphany/pref-css.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/epiphany/pref-downloads.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/epiphany/pref-font.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/epiphany/pref-mouse-gestures.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/epiphany/pref-passwords.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/epiphany/prob-restore-closed-page.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/epiphany/proxy.page</Path>
             <Path fileType="doc">/usr/share/help/ca/epiphany/browse-local.page</Path>
             <Path fileType="doc">/usr/share/help/ca/epiphany/browse-private.page</Path>
             <Path fileType="doc">/usr/share/help/ca/epiphany/browse-tab.page</Path>
@@ -414,6 +441,33 @@
             <Path fileType="doc">/usr/share/help/it/epiphany/pref-passwords.page</Path>
             <Path fileType="doc">/usr/share/help/it/epiphany/prob-restore-closed-page.page</Path>
             <Path fileType="doc">/usr/share/help/it/epiphany/proxy.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/epiphany/browse-local.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/epiphany/browse-private.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/epiphany/browse-tab.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/epiphany/browse-web.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/epiphany/browse-webapps-del.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/epiphany/browse-webapps.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/epiphany/cert.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/epiphany/cookies.xml</Path>
+            <Path fileType="doc">/usr/share/help/kk/epiphany/data-cookies.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/epiphany/data-passwords.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/epiphany/data-personal-data.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/epiphany/history-delete.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/epiphany/history.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/epiphany/index.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/epiphany/introduction.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/epiphany/legal.xml</Path>
+            <Path fileType="doc">/usr/share/help/kk/epiphany/media/epiphany-plain-3-36.png</Path>
+            <Path fileType="doc">/usr/share/help/kk/epiphany/media/epiphany-private-3-36.png</Path>
+            <Path fileType="doc">/usr/share/help/kk/epiphany/media/org.gnome.Epiphany.svg</Path>
+            <Path fileType="doc">/usr/share/help/kk/epiphany/pref-cookies.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/epiphany/pref-css.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/epiphany/pref-downloads.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/epiphany/pref-font.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/epiphany/pref-mouse-gestures.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/epiphany/pref-passwords.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/epiphany/prob-restore-closed-page.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/epiphany/proxy.page</Path>
             <Path fileType="doc">/usr/share/help/ko/epiphany/browse-local.page</Path>
             <Path fileType="doc">/usr/share/help/ko/epiphany/browse-private.page</Path>
             <Path fileType="doc">/usr/share/help/ko/epiphany/browse-tab.page</Path>
@@ -686,6 +740,7 @@
             <Path fileType="doc">/usr/share/help/zh_CN/epiphany/proxy.page</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.gnome.Epiphany.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/symbolic/apps/org.gnome.Epiphany-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/licenses/gnome-web/COPYING</Path>
             <Path fileType="localedata">/usr/share/locale/ab/LC_MESSAGES/epiphany.mo</Path>
             <Path fileType="localedata">/usr/share/locale/af/LC_MESSAGES/epiphany.mo</Path>
             <Path fileType="localedata">/usr/share/locale/am/LC_MESSAGES/epiphany.mo</Path>
@@ -756,6 +811,7 @@
             <Path fileType="localedata">/usr/share/locale/mn/LC_MESSAGES/epiphany.mo</Path>
             <Path fileType="localedata">/usr/share/locale/mr/LC_MESSAGES/epiphany.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ms/LC_MESSAGES/epiphany.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/my/LC_MESSAGES/epiphany.mo</Path>
             <Path fileType="localedata">/usr/share/locale/nb/LC_MESSAGES/epiphany.mo</Path>
             <Path fileType="localedata">/usr/share/locale/nds/LC_MESSAGES/epiphany.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ne/LC_MESSAGES/epiphany.mo</Path>
@@ -794,20 +850,19 @@
             <Path fileType="localedata">/usr/share/locale/zh_CN/LC_MESSAGES/epiphany.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_HK/LC_MESSAGES/epiphany.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_TW/LC_MESSAGES/epiphany.mo</Path>
-            <Path fileType="man">/usr/share/man/man1/epiphany.1</Path>
-            <Path fileType="data">/usr/share/metainfo/org.gnome.Epiphany.appdata.xml</Path>
+            <Path fileType="data">/usr/share/metainfo/org.gnome.Epiphany.metainfo.xml</Path>
         </Files>
         <Replaces>
             <Package>epiphany</Package>
         </Replaces>
     </Package>
     <History>
-        <Update release="76">
-            <Date>2025-07-02</Date>
-            <Version>48.5</Version>
+        <Update release="82">
+            <Date>2026-04-14</Date>
+            <Version>50.3</Version>
             <Comment>Packaging update</Comment>
-            <Name>Muhammad Alfi Syahrin</Name>
-            <Email>malfisya.dev@hotmail.com</Email>
+            <Name>Joey Riches</Name>
+            <Email>josephriches@gmail.com</Email>
         </Update>
     </History>
 </PISI>

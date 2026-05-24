@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : decibels
-version    : '48.0'
-release    : 3
+version    : 49.6.1
+release    : 5
 source     :
-    - https://download.gnome.org/sources/decibels/48/decibels-48.0.tar.xz : 229b11a9263147bcb8c3e21ff0d4af659fb26262f8aece547adcf8c65e031f74
+    - https://download.gnome.org/sources/decibels/49/decibels-49.6.1.tar.xz : 9a67ba14df23517c849fcfdea764c73a241e59055299b125e98aeab2a7801ad5
 homepage   : https://apps.gnome.org/Decibels/
 license    : GPL-3.0-or-later
 component  : multimedia.audio

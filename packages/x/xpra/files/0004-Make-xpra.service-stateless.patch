@@ -1,4 +1,4 @@
-From c5746d7c4d821303305b7fb1af24fc456c444d9d Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Maik=20W=C3=B6hl?= <maik.woehl@outlook.de>
 Date: Tue, 27 Feb 2024 22:44:12 +0100
 Subject: [PATCH 4/6] Make xpra.service stateless
@@ -15,10 +15,10 @@ Signed-off-by: Maik Wöhl <maik.woehl@outlook.de>
  1 file changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/fs/lib/systemd/system/xpra.service b/fs/lib/systemd/system/xpra.service
-index 75ca2e57e..f457fa360 100644
+index 25d2aff6ca..3b18e0ab1e 100644
 --- a/fs/lib/systemd/system/xpra.service
 +++ b/fs/lib/systemd/system/xpra.service
-@@ -7,10 +7,10 @@ Requires=xpra.socket
+@@ -7,12 +7,12 @@ Requires=xpra.socket
  
  [Service]
  Type=simple
@@ -26,11 +26,10 @@ index 75ca2e57e..f457fa360 100644
 +EnvironmentFile=-/usr/share/defaults/xpra/xpra.env
  ExecStart=/usr/bin/xpra proxy :14500 --daemon=no \
      --tcp-auth=${TCP_AUTH} \
--    --ssl-cert=/etc/xpra/ssl-cert.pem --ssl=on \
-+    --ssl-cert=/usr/share/defaults/xpra/ssl-cert.pem --ssl=on \
      --bind=none --auth=${AUTH} --socket-permissions=666 \
+     --bind-quic=*:10000 --quic-auth=${QUIC_AUTH} \
+-    --ssl-cert=/etc/xpra/ssl-cert.pem --ssl-key=/etc/xpra/key.pem --ssl=on \
++    --ssl-cert=/usr/share/defaults/xpra/ssl-cert.pem --ssl-key=/usr/share/defaults/xpra/key.pem --ssl=on \
      --log-dir=/var/log --pidfile=/run/xpra/proxy/server.pid --debug=${DEBUG}
  #rely on SIGKILL which returns 128+15=143
--- 
-2.44.0
-
+ SuccessExitStatus=0 143

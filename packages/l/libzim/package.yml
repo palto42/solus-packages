@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : libzim
-version    : 9.2.3
-release    : 14
+version    : 9.7.0
+release    : 18
 source     :
-    - https://github.com/openzim/libzim/archive/refs/tags/9.2.3.tar.gz : 7c6e7fcaf5bc82447edb12c6c573779af6d77b3b79227da57586e81c4e13f1bf
+    - https://github.com/openzim/libzim/archive/refs/tags/9.7.0.tar.gz : 2c40143fd3a365e08f6861587789b9976f66992f5e941d82b6db8f3bb41e085e
 homepage   : https://wiki.openzim.org/wiki/Libzim
 license    : GPL-2.0-or-later
 component  : programming.library
@@ -22,3 +23,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license COPYING

@@ -1,9 +1,9 @@
 Adapt to our amdgpu kernel argument
 diff --git a/lact-client/src/lib.rs b/lact-client/src/lib.rs
-index c068280..a566b7e 100644
+index 3132190..dc45a0a 100644
 --- a/lact-client/src/lib.rs
 +++ b/lact-client/src/lib.rs
-@@ -125,8 +125,6 @@ impl DaemonClient {
+@@ -127,8 +127,6 @@ impl DaemonClient {
      }
  
      request_plain!(get_system_info, SystemInfo, SystemInfo);
@@ -13,11 +13,11 @@ index c068280..a566b7e 100644
      request_plain!(reset_config, RestConfig, ());
      request_with_id!(get_device_info, DeviceInfo, DeviceInfo);
 diff --git a/lact-daemon/src/server.rs b/lact-daemon/src/server.rs
-index 58ade69..46382a2 100644
+index 8f2a80d..ce44a0f 100644
 --- a/lact-daemon/src/server.rs
 +++ b/lact-daemon/src/server.rs
-@@ -201,8 +201,6 @@ async fn handle_request<'a>(request: Request<'a>, handler: &'a Handler) -> anyho
-             ok_response(handler.set_gpu_config(id, config).await?)
+@@ -208,8 +208,6 @@ async fn handle_request<'a>(request: Request<'a>, handler: &'a Handler) -> anyho
+             ok_response(handler.set_gpu_config(id, *config).await?)
          }
          Request::ProcessList { id } => ok_response(handler.process_list(id).await?),
 -        Request::EnableOverdrive => ok_response(system::enable_overdrive().await?),
@@ -26,10 +26,43 @@ index 58ade69..46382a2 100644
          Request::ConfirmPendingConfig(command) => {
              ok_response(handler.confirm_pending_config(command)?)
 diff --git a/lact-daemon/src/system.rs b/lact-daemon/src/system.rs
-index 34b286c..af2d8ef 100644
+index 8645795..8d0a2b5 100644
 --- a/lact-daemon/src/system.rs
 +++ b/lact-daemon/src/system.rs
-@@ -29,6 +29,7 @@ static OC_TOGGLED: AtomicBool = AtomicBool::new(false);
+@@ -1,6 +1,6 @@
+ pub mod power_profiles_daemon;
+ 
+-use anyhow::{Context, anyhow, bail, ensure};
++use anyhow::{Context, anyhow};
+ use lact_schema::{
+     AmdgpuParamsConfigurator, BootArgConfigurator, GIT_COMMIT, InitramfsType, SystemInfo,
+ };
+@@ -13,36 +13,27 @@ use nix::sys::{
+ use os_release::OsRelease;
+ use std::{
+     env,
+-    fs::{self, File, Permissions},
+-    io::{self, Write},
++    fs::{self},
++    io::{self},
+     iter,
+-    os::{fd::AsRawFd, unix::prelude::PermissionsExt},
+-    path::{Path, PathBuf},
++    os::{fd::AsRawFd},
++    path::{Path},
+     process::{self, Output},
+     sync::{
+-        LazyLock,
+-        atomic::{AtomicBool, Ordering},
++        LazyLock
+     },
+ };
+ use tokio::{process::Command, sync::Notify};
+-use tracing::{debug, error, info};
+-
+-static OC_TOGGLED: AtomicBool = AtomicBool::new(false);
++use tracing::{debug, error};
+ 
  const PP_OVERDRIVE_MASK: u64 = 0x4000;
  pub const PP_FEATURE_MASK_PATH: &str = "/sys/module/amdgpu/parameters/ppfeaturemask";
  pub const BASE_MODULE_CONF_PATH: &str = "/etc/modprobe.d/99-amdgpu-overdrive.conf";
@@ -37,20 +70,33 @@ index 34b286c..af2d8ef 100644
  pub const DAEMON_VERSION: &str = env!("CARGO_PKG_VERSION");
  
  pub static IS_FLATBOX: LazyLock<bool> =
-@@ -60,8 +61,10 @@ pub async fn info() -> anyhow::Result<SystemInfo> {
-         .trim()
-         .to_owned();
+     LazyLock::new(|| env::var("FLATBOX_ENV").as_deref() == Ok("1"));
+-static MODULE_CONF_PATH: LazyLock<PathBuf> = LazyLock::new(|| {
+-    if *IS_FLATBOX {
+-        Path::new("/run/host/root").join(BASE_MODULE_CONF_PATH.strip_prefix('/').unwrap())
+-    } else {
+-        PathBuf::from(BASE_MODULE_CONF_PATH)
+-    }
+-});
+ 
+ pub async fn info() -> anyhow::Result<SystemInfo> {
+     let version = DAEMON_VERSION.to_owned();
+@@ -61,10 +52,12 @@ pub async fn info() -> anyhow::Result<SystemInfo> {
+         |info| info.release().to_string_lossy().into_owned(),
+     );
  
 -    let amdgpu_overdrive_enabled = if let Ok(mask) = read_current_mask() {
--        Some((mask & PP_OVERDRIVE_MASK) > 0)
 +    let amdgpu_overdrive_enabled = if let Ok(true) = is_overdrive_enabled_flag() {
 +        Some(true)
 +    } else if let Ok(mask) = read_current_mask() {
-+    	Some((mask & PP_OVERDRIVE_MASK) > 0)
+         Some((mask & PP_OVERDRIVE_MASK) > 0)
      } else {
-         None
+-        None
++    	None
      };
-@@ -82,109 +85,15 @@ pub async fn info() -> anyhow::Result<SystemInfo> {
+ 
+     let os_release = get_os_release().inspect_err(|err| error!("Could not detect distro: {err}"));
+@@ -83,109 +76,15 @@ pub async fn info() -> anyhow::Result<SystemInfo> {
      })
  }
  
@@ -59,9 +105,7 @@ index 34b286c..af2d8ef 100644
 -        !OC_TOGGLED.load(Ordering::SeqCst),
 -        "Overdrive support was already toggled - please reboot to apply the changes"
 -    );
-+fn is_overdrive_enabled_flag() -> anyhow::Result<bool> {
-+    let overdrive_enabled = fs::read_to_string(OVERDRIVE_ENABLED_PATH)?;
- 
+-
 -    let current_mask = read_current_mask().context("Could not get current amdgpu feature mask")?;
 -
 -    let new_mask = current_mask | PP_OVERDRIVE_MASK;
@@ -158,21 +202,104 @@ index 34b286c..af2d8ef 100644
 -    };
 -    result.context("Initramfs generation command failed")?;
 -    Ok(())
--}
-+    if overdrive_enabled.trim() != "0" {
-+        Ok(true)
-+    } else {
-+        Ok(false)
-+     }
-+ }
++fn is_overdrive_enabled_flag() -> anyhow::Result<bool> {
++	let overdrive_enabled = fs::read_to_string(OVERDRIVE_ENABLED_PATH)?;
++	if overdrive_enabled.trim() != "0" {
++		Ok(true)
++	} else {
++		Ok(false)
++	}
+ }
++ 
  
  fn read_current_mask() -> anyhow::Result<u64> {
      let ppfeaturemask = fs::read_to_string(PP_FEATURE_MASK_PATH)?;
 diff --git a/lact-gui/src/app.rs b/lact-gui/src/app.rs
-index a9f7dea..1f83a78 100644
+index 46ba0d4..df01f21 100644
 --- a/lact-gui/src/app.rs
 +++ b/lact-gui/src/app.rs
-@@ -508,18 +508,6 @@ impl AppModel {
+@@ -7,7 +7,6 @@ pub mod graphs_window;
+ mod info_row;
+ mod info_row_level;
+ pub(crate) mod msg;
+-mod overdrive_dialog;
+ mod page_section;
+ mod page_section_expander;
+ pub(crate) mod pages;
+@@ -21,7 +20,6 @@ use crate::{
+     app::{
+         about_dialog::{AboutDialog, AboutDialogMsg},
+         gpu_selector::GpuSelector,
+-        overdrive_dialog::{OverdriveDialog, OverdriveDialogMsg},
+         preferences_dialog::{PreferencesDialog, PreferencesDialogMsg},
+         process_monitor::{ProcessMonitorWindow, ProcessMonitorWindowMsg},
+         profiles::{
+@@ -102,7 +100,6 @@ pub struct AppModel {
+     daemon_client: DaemonClient,
+     graphs_window: relm4::Controller<GraphsWindow>,
+     process_monitor_window: relm4::Controller<ProcessMonitorWindow>,
+-    overdrive_dialog: relm4::Controller<OverdriveDialog>,
+     preferences_dialog: relm4::Controller<PreferencesDialog>,
+     about_dialog: relm4::Controller<AboutDialog>,
+ 
+@@ -121,7 +118,7 @@ pub struct AppModel {
+ 
+     settings_changed: BoolBinding,
+ 
+-    system_info: SystemInfo,
++	system_info: SystemInfo,
+     device_flags: Vec<DeviceFlag>,
+     device_driver: String,
+ }
+@@ -292,17 +289,7 @@ impl AsyncComponent for AppModel {
+                                         set_label: &fl!(I18N, "show-historical-charts"),
+                                         connect_clicked => move |_| APP_BROKER.send(AppMsg::ShowGraphsWindow),
+                                     },
+-                                },
+-
+-                                add_top_bar = &adw::Banner {
+-                                    #[watch]
+-                                    set_revealed: model.system_info.amdgpu_overdrive_enabled == Some(false) && model.device_driver == "amdgpu",
+-                                    set_title: &fl!(I18N, "amd-oc-disabled"),
+-                                    set_use_markup: true,
+-                                    set_button_label: Some(&fl!(I18N, "enable-amd-oc")),
+-
+-                                    connect_button_clicked => AppMsg::ShowOverdriveDialog,
+-                                },
++                                },                             
+ 
+                                 #[wrap(Some)]
+                                 set_content = &gtk::ScrolledWindow {
+@@ -445,10 +432,6 @@ impl AsyncComponent for AppModel {
+             .launch(String::new())
+             .forward(sender.input_sender(), |msg| msg);
+ 
+-        let overdrive_dialog = OverdriveDialog::builder()
+-            .launch((system_info.clone(), root.clone().upcast()))
+-            .detach();
+-
+         let preferences_dialog = PreferencesDialog::builder()
+             .launch((system_info.clone(), root.clone()))
+             .detach();
+@@ -472,7 +455,6 @@ impl AsyncComponent for AppModel {
+             daemon_client,
+             graphs_window,
+             process_monitor_window,
+-            overdrive_dialog,
+             preferences_dialog,
+             about_dialog,
+             info_page,
+@@ -586,9 +568,6 @@ impl AppModel {
+             AppMsg::ShowAboutDialog => {
+                 self.about_dialog.emit(AboutDialogMsg::Show);
+             }
+-            AppMsg::ShowOverdriveDialog => {
+-                self.overdrive_dialog.emit(OverdriveDialogMsg::Show);
+-            }
+             AppMsg::SelectProfile {
+                 profile,
+                 auto_switch,
+@@ -742,18 +721,6 @@ impl AppModel {
              AppMsg::DebugSnapshot => {
                  self.generate_debug_snapshot(root).await;
              }
@@ -191,96 +318,48 @@ index a9f7dea..1f83a78 100644
              AppMsg::ResetConfig => {
                  self.daemon_client.reset_config().await?;
                  sender.input(AppMsg::ReloadData { full: true });
-@@ -1136,16 +1124,6 @@ fn register_actions(sender: &AsyncComponentSender<AppModel>) {
-         (ShowProcessMonitor, AppMsg::ShowProcessMonitor),
-         (DumpVBios, AppMsg::DumpVBios),
-         (DebugSnapshot, AppMsg::DebugSnapshot),
--        (DisableOverdrive, AppMsg::ShowOverdriveDialog),
--        (
--            ResetConfig,
--            AppMsg::ask_confirmation(
--                AppMsg::ResetConfig,
--                fl!(I18N, "reset-config"),
--                fl!(I18N, "reset-config-description"),
--                gtk::ButtonsType::YesNo,
--            )
--        ),
-     };
- 
-     group.register_for_main_application();
-@@ -1156,7 +1134,6 @@ relm4::new_stateless_action!(ShowGraphsWindow, AppActionGroup, "show-graphs-wind
- relm4::new_stateless_action!(ShowProcessMonitor, AppActionGroup, "show-process-monitor");
- relm4::new_stateless_action!(DumpVBios, AppActionGroup, "dump-vbios");
- relm4::new_stateless_action!(DebugSnapshot, AppActionGroup, "generate-debug-snapshot");
--relm4::new_stateless_action!(DisableOverdrive, AppActionGroup, "disable-overdrive");
- relm4::new_stateless_action!(ResetConfig, AppActionGroup, "reset-config");
- 
- async fn create_connection() -> anyhow::Result<(DaemonClient, Option<anyhow::Error>)> {
-diff --git a/lact-gui/src/app/header.rs b/lact-gui/src/app/header.rs
-index 514589a..c1c1852 100644
---- a/lact-gui/src/app/header.rs
-+++ b/lact-gui/src/app/header.rs
-@@ -8,7 +8,7 @@ use crate::{
-     CONFIG, I18N,
- };
- 
--use super::{AppMsg, DebugSnapshot, DisableOverdrive, DumpVBios, ResetConfig, ShowGraphsWindow};
-+use super::{AppMsg, DebugSnapshot, DumpVBios, ResetConfig, ShowGraphsWindow};
- use glib::clone;
- use gtk::prelude::*;
- use gtk::*;
-@@ -162,7 +162,6 @@ impl Component for Header {
-                 "Dump VBIOS" => DumpVBios,
-             } ,
-             section! {
--                "Disable AMD overclocking support" => DisableOverdrive,
-                 "Reset all configuration" => ResetConfig,
-             }
-         }
 diff --git a/lact-gui/src/app/msg.rs b/lact-gui/src/app/msg.rs
-index 1e8a352..0bba9e5 100644
+index 8db14d0..552a0cc 100644
 --- a/lact-gui/src/app/msg.rs
 +++ b/lact-gui/src/app/msg.rs
-@@ -23,8 +23,6 @@ pub enum AppMsg {
-     DumpVBios,
+@@ -25,9 +25,6 @@ pub enum AppMsg {
      DebugSnapshot,
-     ShowOverdriveDialog,
+     ShowPreferencesDialog,
+     ShowAboutDialog,
+-    ShowOverdriveDialog,
 -    EnableOverdrive,
 -    DisableOverdrive,
      ResetConfig,
      FetchProcessList,
      ReloadProfiles {
-diff --git a/lact-gui/src/app/overdrive_dialog.rs b/lact-gui/src/app/overdrive_dialog.rs
-index 12ca98a..f2a6612 100644
---- a/lact-gui/src/app/overdrive_dialog.rs
-+++ b/lact-gui/src/app/overdrive_dialog.rs
-@@ -79,24 +79,6 @@ impl relm4::Component for OverdriveDialog {
-                 gtk::Box {
-                     set_spacing: 10,
-                     set_orientation: gtk::Orientation::Horizontal,
--
--                    gtk::Button {
--                        #[watch]
--                        set_sensitive: model.system_info.amdgpu_overdrive_enabled == Some(false) && !model.is_loading && !model.is_done,
--                        set_label: &fl!(I18N, "enable-amd-oc"),
--                        connect_clicked => move |_| {
--                            APP_BROKER.send(AppMsg::EnableOverdrive);
--                        },
--                    },
--
--                    gtk::Button {
--                        #[watch]
--                        set_sensitive: model.system_info.amdgpu_overdrive_enabled == Some(true) && !model.is_loading && !model.is_done,
--                        set_label: &fl!(I18N, "disable-amd-oc"),
--                        connect_clicked => move |_| {
--                            APP_BROKER.send(AppMsg::DisableOverdrive);
--                        },
--                    },
-                 },
+diff --git a/lact-gui/src/app/preferences_dialog.rs b/lact-gui/src/app/preferences_dialog.rs
+index 6050795..77f26e8 100644
+--- a/lact-gui/src/app/preferences_dialog.rs
++++ b/lact-gui/src/app/preferences_dialog.rs
+@@ -108,21 +108,6 @@ impl relm4::Component for PreferencesDialog {
+                 add = &adw::PreferencesGroup {
+                     set_title: &fl!(I18N, "daemon"),
  
-                 gtk::Label {
+-                    adw::ActionRow {
+-                        set_title: &fl!(I18N, "disable-amd-oc"),
+-                        set_activatable: true,
+-                        add_suffix = &gtk::Image {
+-                            set_icon_name: Some("go-next-symbolic"),
+-                        },
+-
+-                        #[watch]
+-                        set_visible: model.system_info.amdgpu_overdrive_enabled.is_some(),
+-
+-                        connect_activated => move |_| {
+-                            APP_BROKER.send(AppMsg::ShowOverdriveDialog);
+-                        },
+-                    },
+-
+                     adw::ActionRow {
+                         set_title: &fl!(I18N, "reset-all-config"),
+                         set_activatable: true,
 diff --git a/lact-schema/src/request.rs b/lact-schema/src/request.rs
-index 891d21d..8e84684 100644
+index 7c7c0c7..6fb7ccc 100644
 --- a/lact-schema/src/request.rs
 +++ b/lact-schema/src/request.rs
 @@ -104,8 +104,6 @@ pub enum Request<'a> {

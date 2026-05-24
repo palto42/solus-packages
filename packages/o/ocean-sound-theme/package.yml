@@ -1,13 +1,14 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : ocean-sound-theme
-version    : 6.4.5
-release    : 36
+version    : 6.6.5
+release    : 46
 source     :
-    - https://download.kde.org/stable/plasma/6.4.5/ocean-sound-theme-6.4.5.tar.xz : 5f5e34918ec69f44c1021da5260e1a5d656436460c9fe01a5d4884913016fa25
+    - https://download.kde.org/stable/plasma/6.6.5/ocean-sound-theme-6.6.5.tar.xz : 46b76160e6998e03b3990c669d6da166bd785da356841193eb548b35811dc6df
 homepage   : https://kde.org/plasma-desktop
 license    :
     - BSD-2-Clause
-    - CC-BY-SA-4.0
     - CC0-1.0
+    - CC-BY-SA-4.0
 component  : desktop
 summary    : Ocean Sound Theme for Plasma
 description: |
@@ -21,3 +22,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*

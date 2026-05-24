@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kmahjongg
-version    : 25.08.2
-release    : 73
+version    : 26.04.1
+release    : 78
 source     :
-    - https://download.kde.org/stable/release-service/25.08.2/src/kmahjongg-25.08.2.tar.xz : ec447948d2a99a0739a638e9248562e454503978051255d332508e9e84e1df06
+    - https://download.kde.org/stable/release-service/26.04.1/src/kmahjongg-26.04.1.tar.xz : 6744388b03c4bbece7f77514b4e96afffeb31baee1385132c73cdbf480b77426
 homepage   : https://kde.org/applications/games/org.kde.kmahjongg
 license    : GPL-2.0-or-later
 component  : games.puzzle

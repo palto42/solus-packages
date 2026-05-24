@@ -1,10 +1,14 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kf6-kpeople
-version    : 6.19.0
-release    : 25
+version    : 6.26.0
+release    : 35
 source     :
-    - https://download.kde.org/stable/frameworks/6.19/kpeople-6.19.0.tar.xz : 540fc643997c4a1c4d07e6c3c5bb2bc5e11f5ad6102e0957f943422aa922f731
+    - https://download.kde.org/stable/frameworks/6.26/kpeople-6.26.0.tar.xz : bd1092cd9900d0ee3b3d08d0971e669a82d1a11c9bec6e2322d713b59191b873
 homepage   : https://community.kde.org/Frameworks
-license    : LGPL-2.1-or-later
+license    :
+    - BSD-3-Clause
+    - CC0-1.0
+    - LGPL-2.1-or-later
 component  : programming.tools
 summary    : Provides access to all contacts and aggregates them by person
 description: |
@@ -30,3 +34,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*

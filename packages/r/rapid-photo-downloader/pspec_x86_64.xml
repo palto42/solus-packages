@@ -247,14 +247,14 @@
             <Path fileType="localedata">/usr/share/locale/tr/LC_MESSAGES/rapid-photo-downloader.mo</Path>
             <Path fileType="localedata">/usr/share/locale/uk/LC_MESSAGES/rapid-photo-downloader.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_CN/LC_MESSAGES/rapid-photo-downloader.mo</Path>
-            <Path fileType="man">/usr/share/man/man1/rapid-photo-downloader.1</Path>
+            <Path fileType="man">/usr/share/man/man1/rapid-photo-downloader.1.zst</Path>
             <Path fileType="data">/usr/share/metainfo/net.damonlynch.rapid_photo_downloader.metainfo.xml</Path>
             <Path fileType="data">/usr/share/solid/actions/net.damonlynch.rapid_photo_downloader.desktop</Path>
         </Files>
     </Package>
     <History>
-        <Update release="30">
-            <Date>2025-05-08</Date>
+        <Update release="31">
+            <Date>2026-03-21</Date>
             <Version>0.9.36</Version>
             <Comment>Packaging update</Comment>
             <Name>Joey Riches</Name>

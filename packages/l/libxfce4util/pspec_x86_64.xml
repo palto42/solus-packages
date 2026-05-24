@@ -24,6 +24,7 @@
             <Path fileType="library">/usr/lib64/libxfce4util.so.7</Path>
             <Path fileType="library">/usr/lib64/libxfce4util.so.7.0.0</Path>
             <Path fileType="executable">/usr/sbin/xfce4-kiosk-query</Path>
+            <Path fileType="data">/usr/share/licenses/libxfce4util/COPYING</Path>
             <Path fileType="localedata">/usr/share/locale/am/LC_MESSAGES/libxfce4util.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ar/LC_MESSAGES/libxfce4util.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ast/LC_MESSAGES/libxfce4util.mo</Path>
@@ -100,7 +101,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="13">libxfce4util</Dependency>
+            <Dependency release="14">libxfce4util</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/xfce4/libxfce4util/libxfce4util-config.h</Path>
@@ -123,49 +124,13 @@
             <Path fileType="library">/usr/lib64/libxfce4util.so</Path>
             <Path fileType="data">/usr/lib64/pkgconfig/libxfce4util-1.0.pc</Path>
             <Path fileType="data">/usr/share/gir-1.0/Libxfce4util-1.0.gir</Path>
-        </Files>
-    </Package>
-    <Package>
-        <Name>libxfce4util-docs</Name>
-        <Summary xml:lang="en">Documentation for libxfce4util</Summary>
-        <Description xml:lang="en">Libxfce4util is used to share commonly used non-GTK+ utilities among the Xfce applications.
-</Description>
-        <PartOf>programming.docs</PartOf>
-        <Files>
-            <Path fileType="doc">/usr/share/gtk-doc/html/libxfce4util/XfceConsolekit.html</Path>
-            <Path fileType="doc">/usr/share/gtk-doc/html/libxfce4util/XfceSystemd.html</Path>
-            <Path fileType="doc">/usr/share/gtk-doc/html/libxfce4util/annotation-glossary.html</Path>
-            <Path fileType="doc">/usr/share/gtk-doc/html/libxfce4util/api-index-full.html</Path>
-            <Path fileType="doc">/usr/share/gtk-doc/html/libxfce4util/ch01.html</Path>
-            <Path fileType="doc">/usr/share/gtk-doc/html/libxfce4util/home.png</Path>
-            <Path fileType="doc">/usr/share/gtk-doc/html/libxfce4util/index.html</Path>
-            <Path fileType="doc">/usr/share/gtk-doc/html/libxfce4util/left-insensitive.png</Path>
-            <Path fileType="doc">/usr/share/gtk-doc/html/libxfce4util/left.png</Path>
-            <Path fileType="doc">/usr/share/gtk-doc/html/libxfce4util/libxfce4util-File-Utilities.html</Path>
-            <Path fileType="doc">/usr/share/gtk-doc/html/libxfce4util/libxfce4util-GIO-Extensions.html</Path>
-            <Path fileType="doc">/usr/share/gtk-doc/html/libxfce4util/libxfce4util-Internationalisation.html</Path>
-            <Path fileType="doc">/usr/share/gtk-doc/html/libxfce4util/libxfce4util-Miscellaneous-Utilities.html</Path>
-            <Path fileType="doc">/usr/share/gtk-doc/html/libxfce4util/libxfce4util-POSIX-Signal-Handling.html</Path>
-            <Path fileType="doc">/usr/share/gtk-doc/html/libxfce4util/libxfce4util-Resource-Config-File-Support.html</Path>
-            <Path fileType="doc">/usr/share/gtk-doc/html/libxfce4util/libxfce4util-Resource-lookup-functions.html</Path>
-            <Path fileType="doc">/usr/share/gtk-doc/html/libxfce4util/libxfce4util-Software-Licenses.html</Path>
-            <Path fileType="doc">/usr/share/gtk-doc/html/libxfce4util/libxfce4util-Unicode-Support-Functions.html</Path>
-            <Path fileType="doc">/usr/share/gtk-doc/html/libxfce4util/libxfce4util-Version-Information.html</Path>
-            <Path fileType="doc">/usr/share/gtk-doc/html/libxfce4util/libxfce4util-Xfce-Generics.html</Path>
-            <Path fileType="doc">/usr/share/gtk-doc/html/libxfce4util/libxfce4util-Xfce-Kiosk-functions.html</Path>
-            <Path fileType="doc">/usr/share/gtk-doc/html/libxfce4util/libxfce4util-Xfce-String-Functions.html</Path>
-            <Path fileType="doc">/usr/share/gtk-doc/html/libxfce4util/libxfce4util.devhelp2</Path>
-            <Path fileType="doc">/usr/share/gtk-doc/html/libxfce4util/object-tree.html</Path>
-            <Path fileType="doc">/usr/share/gtk-doc/html/libxfce4util/right-insensitive.png</Path>
-            <Path fileType="doc">/usr/share/gtk-doc/html/libxfce4util/right.png</Path>
-            <Path fileType="doc">/usr/share/gtk-doc/html/libxfce4util/style.css</Path>
-            <Path fileType="doc">/usr/share/gtk-doc/html/libxfce4util/up-insensitive.png</Path>
-            <Path fileType="doc">/usr/share/gtk-doc/html/libxfce4util/up.png</Path>
+            <Path fileType="data">/usr/share/vala/vapi/libxfce4util-1.0.deps</Path>
+            <Path fileType="data">/usr/share/vala/vapi/libxfce4util-1.0.vapi</Path>
         </Files>
     </Package>
     <History>
-        <Update release="13">
-            <Date>2025-03-24</Date>
+        <Update release="14">
+            <Date>2026-03-31</Date>
             <Version>4.20.1</Version>
             <Comment>Packaging update</Comment>
             <Name>Evan Maddock</Name>

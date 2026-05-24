@@ -1,13 +1,24 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kwin-x11
-version    : 6.4.5
-release    : 8
+version    : 6.6.5
+release    : 23
 source     :
-    - https://download.kde.org/stable/plasma/6.4.5/kwin-x11-6.4.5.tar.xz : cea91879467afdfa2caf0ec6dd7256eae78defa970cdc9a947fefd85d417acb1
+    - https://download.kde.org/stable/plasma/6.6.5/kwin-x11-6.6.5.tar.xz : d5172772d5b9dd6ef0f3230cb5f8a78df9148dd07019d8f282a0931cad946b24
 homepage   : https://www.kde.org/workspaces/plasmadesktop/
 license    :
-    - GFDL-1.2-only
+    - BSD-3-Clause
+    - CC0-1.0
     - GPL-2.0-only
-component  : desktop.kde.core
+    - GPL-2.0-or-later
+    - GPL-3.0-only
+    - GPL-3.0-or-later
+    - LGPL-2.0-only
+    - LGPL-2.0-or-later
+    - LGPL-2.1-only
+    - LGPL-2.1-or-later
+    - LGPL-3.0-only
+    - MIT
+component  : desktop.kde
 summary    : An easy to use, but flexible, X Window Manager
 description: |-
     An easy to use, but flexible, X Window Manager
@@ -22,6 +33,7 @@ builddeps  :
     - pkgconfig(libcanberra)
     - pkgconfig(libcap)
     - pkgconfig(libdisplay-info)
+    - pkgconfig(wayland-protocols)
     - pkgconfig(xcb-cursor)
     - pkgconfig(xcb-event)
     - pkgconfig(xcb-icccm)
@@ -53,6 +65,7 @@ builddeps  :
     - kf6-kwindowsystem-devel
     - kf6-kxmlgui-devel
     - kglobalacceld-devel
+    - knighttime-devel
     - kscreenlocker-devel
     - libplasma-devel
     - libqaccessibilityclient-devel
@@ -72,6 +85,7 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*
 
     # https://invent.kde.org/plasma/kwin/-/commit/e6d217960e4fee82785da98c336aa7407e21e62d
     setcap 'CAP_SYS_NICE=+ep' $installdir/usr/bin/kwin_x11

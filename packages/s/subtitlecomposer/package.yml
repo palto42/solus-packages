@@ -1,6 +1,7 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : subtitlecomposer
 version    : 0.8.1
-release    : 17
+release    : 19
 source     :
     - https://download.kde.org/stable/subtitlecomposer/subtitlecomposer-0.8.1.tar.xz : 23c022768d7422c092149f41d51ebea80f54b27655573cf43f736efb88c30027
 license    : GPL-2.0-or-later
@@ -20,11 +21,16 @@ builddeps  :
     - kf6-ktextwidgets-devel
     - kf6-kxmlgui-devel
     - kf6-sonnet-devel
+    - qt6-base-private-devel
 optimize   : lto
 setup      : |
     %patch -p1 -i $pkgfiles/ffmpeg-7.patch
+    %patch -p1 -i $pkgfiles/fix-build.patch
+    %patch -p1 -i $pkgfiles/fix-ffmpeg8.patch
 
-    %cmake_ninja -DQT_MAJOR_VERSION=6
+    %cmake_ninja \
+        -DQT_MAJOR_VERSION=6 \
+        -DBUILD_TESTING=OFF
 build      : |
     %ninja_build
 install    : |

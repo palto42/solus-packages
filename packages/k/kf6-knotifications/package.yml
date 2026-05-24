@@ -1,14 +1,18 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kf6-knotifications
-version    : 6.19.0
-release    : 27
+version    : 6.26.0
+release    : 37
 source     :
-    - https://download.kde.org/stable/frameworks/6.19/knotifications-6.19.0.tar.xz : 86f2645f2bc43440f119099bf25aa5329e8457761a855e4bd5f08a5f7809b2b6
+    - https://download.kde.org/stable/frameworks/6.26/knotifications-6.26.0.tar.xz : 2033a798856a9d2776e6e4cef6f3eb3bc24b938c0d00b06b2f6e71be44e1446a
 homepage   : https://community.kde.org/Frameworks
 license    :
+    - BSD-2-Clause
     - BSD-3-Clause
+    - CC0-1.0
     - LGPL-2.0-only
     - LGPL-2.0-or-later
     - LGPL-2.1-only
+    - LGPL-3.0-only
 component  : desktop.library
 summary    : Desktop notifications.
 description: |
@@ -28,3 +32,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*

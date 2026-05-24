@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kldap
-version    : 25.08.2
-release    : 94
+version    : 26.04.1
+release    : 100
 source     :
-    - https://download.kde.org/stable/release-service/25.08.2/src/kldap-25.08.2.tar.xz : 92067b9cd063c3fd97f6706178781951b9a62861bf31604afbf3fd04c4b7e549
+    - https://download.kde.org/stable/release-service/26.04.1/src/kldap-26.04.1.tar.xz : 4a63ce62cbb12d9c0dfc7502f1f83cf79296e2ee6785ba283e7872c527c3dc59
 homepage   : https://kde.org/
 license    : LGPL-2.1-or-later
 component  : desktop.library

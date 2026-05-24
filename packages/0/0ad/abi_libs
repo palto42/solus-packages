@@ -1,7 +1,7 @@
 libAtlasUI.so
 libCollada.so
-libmozjs115-debug.so
-libmozjs115-release.so
+libmozjs128-debug.so
+libmozjs128-release.so
 libnvcore.so
 libnvimage.so
 libnvmath.so

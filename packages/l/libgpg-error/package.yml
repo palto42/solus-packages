@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : libgpg-error
-version    : '1.51'
-release    : 25
+version    : '1.61'
+release    : 29
 source     :
-    - https://www.gnupg.org/ftp/gcrypt/libgpg-error/libgpg-error-1.51.tar.gz : 2a3ca8568c1f767eb9a80380145a2d35d72db44cf0e3b8537d90ae15164d20a9
+    - https://gnupg.org/ftp/gcrypt/gpgrt/libgpg-error-1.61.tar.bz2 : 7a85413f2bc354f4f8aa832b718af122e48965e9e0eb9012ee659c13c6385c93
 license    : LGPL-2.1-or-later
 component  : system.base
 devel      : true
@@ -19,6 +20,7 @@ build      : |
     %make
 install    : |
     %make_install
+    %install_license COPYING COPYING.LIB
 check      : |
     %make check
 patterns   :

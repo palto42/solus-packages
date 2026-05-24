@@ -7,9 +7,12 @@ libc.so.6:__errno_location
 libc.so.6:__fdelt_chk
 libc.so.6:__fprintf_chk
 libc.so.6:__h_errno_location
+libc.so.6:__isoc23_strtol
+libc.so.6:__isoc23_strtoll
 libc.so.6:__libc_start_main
 libc.so.6:__longjmp_chk
 libc.so.6:__memcpy_chk
+libc.so.6:__memmove_chk
 libc.so.6:__memset_chk
 libc.so.6:__sprintf_chk
 libc.so.6:__stack_chk_fail
@@ -59,6 +62,7 @@ libc.so.6:fflush
 libc.so.6:fgetc
 libc.so.6:fgets
 libc.so.6:fileno
+libc.so.6:flock
 libc.so.6:fopen
 libc.so.6:fork
 libc.so.6:fpathconf
@@ -168,8 +172,6 @@ libc.so.6:strrchr
 libc.so.6:strstr
 libc.so.6:strtod
 libc.so.6:strtod_l
-libc.so.6:strtol
-libc.so.6:strtoll
 libc.so.6:symlink
 libc.so.6:sysconf
 libc.so.6:tcdrain
@@ -179,6 +181,7 @@ libc.so.6:tcgetattr
 libc.so.6:tcgetpgrp
 libc.so.6:tcsendbreak
 libc.so.6:tcsetattr
+libc.so.6:tcsetpgrp
 libc.so.6:time
 libc.so.6:times
 libc.so.6:ttyname_r
@@ -195,12 +198,16 @@ libm.so.6:asinh
 libm.so.6:atan
 libm.so.6:atan2
 libm.so.6:atanh
+libm.so.6:ceil
+libm.so.6:ceilf
 libm.so.6:cos
 libm.so.6:cosh
 libm.so.6:erf
 libm.so.6:exp
 libm.so.6:feclearexcept
 libm.so.6:fetestexcept
+libm.so.6:floor
+libm.so.6:floorf
 libm.so.6:fmod
 libm.so.6:frexp
 libm.so.6:frexpf
@@ -220,12 +227,6 @@ libm.so.6:sqrt
 libm.so.6:sqrtf
 libm.so.6:tan
 libm.so.6:tanh
-libpcre.so.1:pcre_compile
-libpcre.so.1:pcre_exec
-libpcre.so.1:pcre_free
-libpcre.so.1:pcre_fullinfo
-libpcre.so.1:pcre_malloc
-libpcre.so.1:pcre_study
 libpng16.so.16:png_create_info_struct
 libpng16.so.16:png_create_read_struct
 libpng16.so.16:png_create_write_struct
@@ -261,4 +262,5 @@ libz.so.1:deflateReset
 libz.so.1:inflate
 libz.so.1:inflateEnd
 libz.so.1:inflateInit2_
+libz.so.1:inflateReset
 libz.so.1:zlibVersion

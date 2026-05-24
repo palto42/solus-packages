@@ -1,10 +1,14 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : sddm-kcm
-version    : 6.4.5
-release    : 123
+version    : 6.6.5
+release    : 133
 source     :
-    - https://download.kde.org/stable/plasma/6.4.5/sddm-kcm-6.4.5.tar.xz : 04523f382bfce9259c473c57da4472be4faf92f98b6ed40ab24ab663a337c9ad
+    - https://download.kde.org/stable/plasma/6.6.5/sddm-kcm-6.6.5.tar.xz : 449811823f1f68add9642eae2127e2aa1f0761cf8ce3c37db7c27e616e8bffd8
 homepage   : https://www.kde.org/workspaces/plasmadesktop/
-license    : GPL-2.0-or-later
+license    :
+    - CC0-1.0
+    - GPL-2.0-or-later
+    - GPL-3.0-only
 component  : desktop.kde.core
 summary    : Config module for SDDM
 description: |
@@ -27,3 +31,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*

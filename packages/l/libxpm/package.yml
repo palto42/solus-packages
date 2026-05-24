@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : libxpm
-version    : 3.5.17
-release    : 14
+version    : 3.5.19
+release    : 15
 source     :
-    - https://www.x.org/releases/individual/lib/libXpm-3.5.17.tar.gz : 959466c7dfcfcaa8a65055bfc311f74d4c43d9257900f85ab042604d286df0c6
+    - https://www.x.org/releases/individual/lib/libXpm-3.5.19.tar.xz : ad3576d689221a39dc728f0e0dc02ca7bb6a0d724c9a77fd1bfa1e9af83be900
 homepage   : https://gitlab.freedesktop.org/xorg/lib/libxpm
 license    : MIT
 summary    : X Pixmap (XPM) image file format library
@@ -15,12 +16,14 @@ optimize   : speed
 description: |
     libXpm provides support and common operations for the XPM pixmap format, which is commonly used in legacy X applications. XPM is an extension of the monochrome XBM bitmap specified in the X protocol.
 setup      : |
-    %configure --disable-open-zfile \
-               --disable-static \
-               --enable-unit-tests
+    %configure \
+        --disable-open-zfile \
+        --disable-static \
+        --enable-unit-tests
 build      : |
     %make
 install    : |
     %make_install
+    %install_license COPYING
 check      : |
     %make check

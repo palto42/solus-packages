@@ -1,6 +1,7 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : libsass
 version    : 3.6.6
-release    : 15
+release    : 16
 source     :
     - https://github.com/sass/libsass/archive/3.6.6.tar.gz : 11f0bb3709a4f20285507419d7618f3877a425c0131ea8df40fe6196129df15d
 homepage   : https://sass-lang.com/libsass
@@ -15,3 +16,4 @@ build      : |
     %make
 install    : |
     %make_install
+    %install_license COPYING LICENSE

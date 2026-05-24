@@ -2,7 +2,6 @@ ld-linux-x86-64.so.2:__tls_get_addr
 libatasmart.so.4:sk_disk_free
 libatasmart.so.4:sk_disk_open
 libatasmart.so.4:sk_disk_set_blob
-libatasmart.so.4:sk_disk_smart_get_overall
 libatasmart.so.4:sk_disk_smart_get_power_cycle
 libatasmart.so.4:sk_disk_smart_get_power_on
 libatasmart.so.4:sk_disk_smart_is_available
@@ -124,6 +123,7 @@ libcryptsetup.so.12:crypt_keyslot_change_by_passphrase
 libcryptsetup.so.12:crypt_keyslot_destroy
 libcryptsetup.so.12:crypt_keyslot_max
 libcryptsetup.so.12:crypt_load
+libcryptsetup.so.12:crypt_persistent_flags_set
 libcryptsetup.so.12:crypt_resize
 libcryptsetup.so.12:crypt_resume_by_passphrase
 libcryptsetup.so.12:crypt_safe_free

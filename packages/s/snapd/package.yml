@@ -1,9 +1,10 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : snapd
-version    : '2.69'
+version    : 2.75.2
 homepage   : https://snapcraft.io/
-release    : 89
+release    : 95
 source     :
-    - https://github.com/canonical/snapd/releases/download/2.69/snapd_2.69.vendor.tar.xz : e887f14d4dcd332e7dae65111932cbdd62a31d229f1527be38e660883e35e59f
+    - https://github.com/canonical/snapd/releases/download/2.75.2/snapd_2.75.2.vendor.tar.xz : b59998e0e7f2b683d04999d968ef29f9b9933cdb2c85ffc83cf1505bc3efccf1
 license    : GPL-3.0-only
 component  : desktop
 summary    : The snapd and snap tools enable systems to work with .snap files
@@ -85,12 +86,15 @@ install    : |
     # satisfy bindmounts in confinement
     install -Ddm00755 $installdir/usr/src
 
-    install -dm00755 $installdir/%libdir%/systemd/system/sockets.target.wants
-    ln -sv ../snapd.socket $installdir/%libdir%/systemd/system/sockets.target.wants/snapd.socket
+    install -Dm00644 -t ${installdir}/%libdir%/systemd/system-preset/ ${pkgfiles}/20-snap.preset
 
     install -Dm00644 data/info $installdir/%libdir%/$package/info
     install -Dm00644 data/polkit/io.snapcraft.snapd.policy $installdir/usr/share/polkit-1/actions/io.snapcraft.snapd.policy
     install -Dm00644 $pkgfiles/snapd.tmpfiles $installdir/%libdir%/tmpfiles.d/snapd.conf
+
+    # Capabilities
+    setcap -q - $installdir/%libdir%/snapd/snap-confine < $installdir/%libdir%/snapd/snap-confine.caps
+    rm $installdir/%libdir%/snapd/snap-confine.caps
 
     # Completions
     install -Dm00644 data/completion/bash/snap $installdir/usr/share/bash-completion/completions/snap
@@ -114,7 +118,10 @@ install    : |
 
     # remove unneeded stuff
     rm -rvf $installdir/var
+
     # Even though it's empty it still needs to mount /usr/src ...
     rm -rvf $installdir/usr/bin/ubuntu-core-launcher
     rm -rvf $installdir/%libdir%/snapd/{system-shutdown,snapd.core-fixup.sh}
     rm -rvf $installdir/%libdir%/systemd/system/{snapd.system-shutdown.service,snapd.autoimport.service,snapd.snap-repair.*,snapd.core-fixup.*}
+
+    %install_license COPYING

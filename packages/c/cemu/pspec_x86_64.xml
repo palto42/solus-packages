@@ -283,12 +283,13 @@
             <Path fileType="data">/usr/share/cemu/resources/uk/cemu.mo</Path>
             <Path fileType="data">/usr/share/cemu/resources/zh/cemu.mo</Path>
             <Path fileType="data">/usr/share/icons/hicolor/128x128/apps/info.cemu.Cemu.png</Path>
+            <Path fileType="data">/usr/share/licenses/cemu/LICENSE.txt</Path>
             <Path fileType="data">/usr/share/metainfo/info.cemu.Cemu.metainfo.xml</Path>
         </Files>
     </Package>
     <History>
-        <Update release="16">
-            <Date>2025-08-10</Date>
+        <Update release="19">
+            <Date>2026-03-27</Date>
             <Version>2.6</Version>
             <Comment>Packaging update</Comment>
             <Name>Marcus Mellor</Name>

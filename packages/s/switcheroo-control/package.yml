@@ -1,17 +1,23 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : switcheroo-control
-version    : 2.6
-release    : 3
+version    : '3.0'
+release    : 4
 source     :
-    - https://gitlab.freedesktop.org/hadess/switcheroo-control/uploads/86ea54ac7ddb901b6bf6e915209151f8/switcheroo-control-2.6.tar.xz : 5d9f952924d969b4c036c806d4175b10d160f9d3598c6b255941e9c943493ca2
+    - https://gitlab.freedesktop.org/hadess/switcheroo-control/-/releases/3.0/downloads/switcheroo-control-3.0.tar.xz : dddcb43c58acb334b529387da8f3abfee57346099dce8f438a167f5ebc34a9da
 homepage   : https://gitlab.freedesktop.org/hadess/switcheroo-control/
 license    : GPL-3.0-or-later
 component  : system.utils
 summary    : D-Bus service to check the availability of dual-GPU
 description: |
     D-Bus service to check the availability of dual-GPU
+builddeps  :
+    - pkgconfig(libdrm)
 setup      : |
     %meson_configure
 build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license COPYING
+
+    install -Dm00644 -t ${installdir}/%libdir%/systemd/system-preset/ ${pkgfiles}/60-switcheroo-control.preset

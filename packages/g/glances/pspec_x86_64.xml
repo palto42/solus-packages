@@ -3,8 +3,8 @@
         <Name>glances</Name>
         <Homepage>https://nicolargo.github.io/glances/</Homepage>
         <Packager>
-            <Name>Algent Albrahimi</Name>
-            <Email>algent@protonmail.com</Email>
+            <Name>Clint Eschberger</Name>
+            <Email>clint@eschberger.info</Email>
         </Packager>
         <License>LGPL-3.0-or-later</License>
         <PartOf>system.utils</PartOf>
@@ -21,13 +21,13 @@
         <PartOf>system.utils</PartOf>
         <Files>
             <Path fileType="executable">/usr/bin/glances</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/glances-4.3.2.dist-info/METADATA</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/glances-4.3.2.dist-info/RECORD</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/glances-4.3.2.dist-info/WHEEL</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/glances-4.3.2.dist-info/entry_points.txt</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/glances-4.3.2.dist-info/licenses/AUTHORS</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/glances-4.3.2.dist-info/licenses/COPYING</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/glances-4.3.2.dist-info/top_level.txt</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances-4.5.4.dist-info/METADATA</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances-4.5.4.dist-info/RECORD</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances-4.5.4.dist-info/WHEEL</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances-4.5.4.dist-info/entry_points.txt</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances-4.5.4.dist-info/licenses/AUTHORS</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances-4.5.4.dist-info/licenses/COPYING</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances-4.5.4.dist-info/top_level.txt</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/__init__.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/__main__.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/__pycache__/__init__.cpython-312.opt-1.pyc</Path>
@@ -38,6 +38,8 @@
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/__pycache__/actions.cpython-312.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/__pycache__/amps_list.cpython-312.opt-1.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/__pycache__/amps_list.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/__pycache__/api.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/__pycache__/api.cpython-312.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/__pycache__/attribute.cpython-312.opt-1.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/__pycache__/attribute.cpython-312.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/__pycache__/client.cpython-312.opt-1.pyc</Path>
@@ -60,6 +62,8 @@
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/__pycache__/globals.cpython-312.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/__pycache__/history.cpython-312.opt-1.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/__pycache__/history.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/__pycache__/jwt_utils.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/__pycache__/jwt_utils.cpython-312.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/__pycache__/logger.cpython-312.opt-1.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/__pycache__/logger.cpython-312.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/__pycache__/main.cpython-312.opt-1.pyc</Path>
@@ -128,6 +132,7 @@
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/amps/systemv/__pycache__/__init__.cpython-312.opt-1.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/amps/systemv/__pycache__/__init__.cpython-312.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/amps_list.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/api.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/attribute.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/client.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/client_browser.py</Path>
@@ -140,16 +145,25 @@
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/exports/__pycache__/__init__.cpython-312.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/exports/__pycache__/export.cpython-312.opt-1.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/exports/__pycache__/export.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/exports/__pycache__/export_asyncio.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/exports/__pycache__/export_asyncio.cpython-312.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/exports/export.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/exports/export_asyncio.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/exports/glances_cassandra/__init__.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/exports/glances_cassandra/__pycache__/__init__.cpython-312.opt-1.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/exports/glances_cassandra/__pycache__/__init__.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/exports/glances_clickhouse/__init__.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/exports/glances_clickhouse/__pycache__/__init__.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/exports/glances_clickhouse/__pycache__/__init__.cpython-312.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/exports/glances_couchdb/__init__.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/exports/glances_couchdb/__pycache__/__init__.cpython-312.opt-1.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/exports/glances_couchdb/__pycache__/__init__.cpython-312.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/exports/glances_csv/__init__.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/exports/glances_csv/__pycache__/__init__.cpython-312.opt-1.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/exports/glances_csv/__pycache__/__init__.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/exports/glances_duckdb/__init__.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/exports/glances_duckdb/__pycache__/__init__.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/exports/glances_duckdb/__pycache__/__init__.cpython-312.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/exports/glances_elasticsearch/__init__.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/exports/glances_elasticsearch/__pycache__/__init__.cpython-312.opt-1.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/exports/glances_elasticsearch/__pycache__/__init__.cpython-312.pyc</Path>
@@ -180,6 +194,9 @@
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/exports/glances_mqtt/__init__.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/exports/glances_mqtt/__pycache__/__init__.cpython-312.opt-1.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/exports/glances_mqtt/__pycache__/__init__.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/exports/glances_nats/__init__.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/exports/glances_nats/__pycache__/__init__.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/exports/glances_nats/__pycache__/__init__.cpython-312.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/exports/glances_opentsdb/__init__.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/exports/glances_opentsdb/__pycache__/__init__.cpython-312.opt-1.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/exports/glances_opentsdb/__pycache__/__init__.cpython-312.pyc</Path>
@@ -208,6 +225,7 @@
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/folder_list.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/globals.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/history.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/jwt_utils.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/logger.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/main.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/outdated.py</Path>
@@ -222,16 +240,24 @@
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/outputs/__pycache__/glances_curses.cpython-312.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/outputs/__pycache__/glances_curses_browser.cpython-312.opt-1.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/outputs/__pycache__/glances_curses_browser.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/outputs/__pycache__/glances_json_serializer.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/outputs/__pycache__/glances_json_serializer.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/outputs/__pycache__/glances_mcp.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/outputs/__pycache__/glances_mcp.cpython-312.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/outputs/__pycache__/glances_restful_api.cpython-312.opt-1.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/outputs/__pycache__/glances_restful_api.cpython-312.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/outputs/__pycache__/glances_sparklines.cpython-312.opt-1.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/outputs/__pycache__/glances_sparklines.cpython-312.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/outputs/__pycache__/glances_stdout.cpython-312.opt-1.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/outputs/__pycache__/glances_stdout.cpython-312.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/outputs/__pycache__/glances_stdout_apidoc.cpython-312.opt-1.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/outputs/__pycache__/glances_stdout_apidoc.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/outputs/__pycache__/glances_stdout_api_doc.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/outputs/__pycache__/glances_stdout_api_doc.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/outputs/__pycache__/glances_stdout_api_restful_doc.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/outputs/__pycache__/glances_stdout_api_restful_doc.cpython-312.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/outputs/__pycache__/glances_stdout_csv.cpython-312.opt-1.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/outputs/__pycache__/glances_stdout_csv.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/outputs/__pycache__/glances_stdout_fetch.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/outputs/__pycache__/glances_stdout_fetch.cpython-312.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/outputs/__pycache__/glances_stdout_issue.cpython-312.opt-1.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/outputs/__pycache__/glances_stdout_issue.cpython-312.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/outputs/__pycache__/glances_stdout_json.cpython-312.opt-1.pyc</Path>
@@ -242,11 +268,15 @@
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/outputs/glances_colors.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/outputs/glances_curses.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/outputs/glances_curses_browser.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/outputs/glances_json_serializer.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/outputs/glances_mcp.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/outputs/glances_restful_api.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/outputs/glances_sparklines.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/outputs/glances_stdout.py</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/outputs/glances_stdout_apidoc.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/outputs/glances_stdout_api_doc.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/outputs/glances_stdout_api_restful_doc.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/outputs/glances_stdout_csv.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/outputs/glances_stdout_fetch.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/outputs/glances_stdout_issue.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/outputs/glances_stdout_json.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/outputs/glances_unicode.py</Path>
@@ -278,8 +308,10 @@
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/outputs/static/js/components/plugin-load.vue</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/outputs/static/js/components/plugin-mem.vue</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/outputs/static/js/components/plugin-memswap.vue</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/outputs/static/js/components/plugin-mpp.vue</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/outputs/static/js/components/plugin-network.vue</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/outputs/static/js/components/plugin-now.vue</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/outputs/static/js/components/plugin-npu.vue</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/outputs/static/js/components/plugin-percpu.vue</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/outputs/static/js/components/plugin-ports.vue</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/outputs/static/js/components/plugin-process.vue</Path>
@@ -310,9 +342,6 @@
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/__init__.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/__pycache__/__init__.cpython-312.opt-1.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/__pycache__/__init__.cpython-312.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/__pycache__/__init__.py</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/__pycache__/__pycache__/__init__.cpython-312.opt-1.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/__pycache__/__pycache__/__init__.cpython-312.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/alert/__init__.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/alert/__pycache__/__init__.cpython-312.opt-1.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/alert/__pycache__/__init__.cpython-312.pyc</Path>
@@ -333,9 +362,12 @@
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/containers/engines/__pycache__/__init__.cpython-312.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/containers/engines/__pycache__/docker.cpython-312.opt-1.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/containers/engines/__pycache__/docker.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/containers/engines/__pycache__/lxd.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/containers/engines/__pycache__/lxd.cpython-312.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/containers/engines/__pycache__/podman.cpython-312.opt-1.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/containers/engines/__pycache__/podman.cpython-312.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/containers/engines/docker.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/containers/engines/lxd.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/containers/engines/podman.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/core/__init__.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/core/__pycache__/__init__.cpython-312.opt-1.pyc</Path>
@@ -352,6 +384,9 @@
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/fs/__init__.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/fs/__pycache__/__init__.cpython-312.opt-1.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/fs/__pycache__/__init__.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/fs/__pycache__/zfs.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/fs/__pycache__/zfs.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/fs/zfs.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/gpu/__init__.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/gpu/__pycache__/__init__.cpython-312.opt-1.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/gpu/__pycache__/__init__.cpython-312.pyc</Path>
@@ -360,9 +395,12 @@
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/gpu/cards/__pycache__/__init__.cpython-312.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/gpu/cards/__pycache__/amd.cpython-312.opt-1.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/gpu/cards/__pycache__/amd.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/gpu/cards/__pycache__/intel.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/gpu/cards/__pycache__/intel.cpython-312.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/gpu/cards/__pycache__/nvidia.cpython-312.opt-1.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/gpu/cards/__pycache__/nvidia.cpython-312.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/gpu/cards/amd.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/gpu/cards/intel.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/gpu/cards/nvidia.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/help/__init__.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/help/__pycache__/__init__.cpython-312.opt-1.pyc</Path>
@@ -382,20 +420,50 @@
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/memswap/__init__.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/memswap/__pycache__/__init__.cpython-312.opt-1.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/memswap/__pycache__/__init__.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/mpp/__init__.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/mpp/__pycache__/__init__.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/mpp/__pycache__/__init__.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/mpp/cards/__pycache__/mpp.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/mpp/cards/__pycache__/mpp.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/mpp/cards/__pycache__/rockchip_mpp.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/mpp/cards/__pycache__/rockchip_mpp.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/mpp/cards/mpp.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/mpp/cards/rockchip_mpp.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/network/__init__.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/network/__pycache__/__init__.cpython-312.opt-1.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/network/__pycache__/__init__.cpython-312.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/now/__init__.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/now/__pycache__/__init__.cpython-312.opt-1.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/now/__pycache__/__init__.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/npu/__init__.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/npu/__pycache__/__init__.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/npu/__pycache__/__init__.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/npu/cards/__init__.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/npu/cards/__pycache__/__init__.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/npu/cards/__pycache__/__init__.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/npu/cards/__pycache__/amd.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/npu/cards/__pycache__/amd.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/npu/cards/__pycache__/intel.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/npu/cards/__pycache__/intel.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/npu/cards/__pycache__/npu.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/npu/cards/__pycache__/npu.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/npu/cards/__pycache__/rockchip.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/npu/cards/__pycache__/rockchip.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/npu/cards/amd.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/npu/cards/intel.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/npu/cards/npu.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/npu/cards/rockchip.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/percpu/__init__.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/percpu/__pycache__/__init__.cpython-312.opt-1.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/percpu/__pycache__/__init__.cpython-312.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/plugin/__init__.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/plugin/__pycache__/__init__.cpython-312.opt-1.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/plugin/__pycache__/__init__.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/plugin/__pycache__/dag.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/plugin/__pycache__/dag.cpython-312.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/plugin/__pycache__/model.cpython-312.opt-1.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/plugin/__pycache__/model.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/plugin/dag.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/plugin/model.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/ports/__init__.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/plugins/ports/__pycache__/__init__.cpython-312.opt-1.pyc</Path>
@@ -476,18 +544,22 @@
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/timer.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/web_list.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/glances/webserver.py</Path>
+            <Path fileType="doc">/usr/share/doc/glances/README-pypi.rst</Path>
             <Path fileType="doc">/usr/share/doc/glances/SECURITY.md</Path>
             <Path fileType="doc">/usr/share/doc/glances/glances.conf</Path>
-            <Path fileType="man">/usr/share/man/man1/glances.1</Path>
+            <Path fileType="doc">/usr/share/doc/glances/short.jinja</Path>
+            <Path fileType="doc">/usr/share/doc/glances/with-logo.jinja</Path>
+            <Path fileType="data">/usr/share/licenses/glances/COPYING</Path>
+            <Path fileType="man">/usr/share/man/man1/glances.1.zst</Path>
         </Files>
     </Package>
     <History>
-        <Update release="56">
-            <Date>2025-07-06</Date>
-            <Version>4.3.2</Version>
+        <Update release="61">
+            <Date>2026-05-13</Date>
+            <Version>4.5.4</Version>
             <Comment>Packaging update</Comment>
-            <Name>Algent Albrahimi</Name>
-            <Email>algent@protonmail.com</Email>
+            <Name>Clint Eschberger</Name>
+            <Email>clint@eschberger.info</Email>
         </Update>
     </History>
 </PISI>

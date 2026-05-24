@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : libde265
-version    : 1.0.15
-release    : 12
+version    : 1.0.19
+release    : 15
 source     :
-    - https://github.com/strukturag/libde265/releases/download/v1.0.15/libde265-1.0.15.tar.gz : 00251986c29d34d3af7117ed05874950c875dd9292d016be29d3b3762666511d
+    - https://github.com/strukturag/libde265/releases/download/v1.0.19/libde265-1.0.19.tar.gz : bb19a0b485d2643e0eeb7e91f3ab32d1ad617e7c487dbedc91214ca3dbd8d7eb
 homepage   : https://www.libde265.org/
 license    : LGPL-3.0-or-later
 component  : multimedia.codecs
@@ -11,14 +12,12 @@ description: |
     libde265 is an open source implementation of the h.265 video codec. It is written from scratch and has a plain C API to enable a simple integration into other software. libde265 supports WPP and tile-based multithreading and includes SSE optimizations. The decoder includes all features of the Main profile and correctly decodes almost all conformance streams.
 setup      : |
     # disable dec265 & sherlock265 examples so we don't need any build dependencies
-    # Add a prefix because one of the binaries is named 'tests', duh !
-    %configure \
-        --enable-encoder \
-        --disable-static \
-        --disable-dec265 \
-        --disable-sherlock265 \
-        --program-prefix=de265-
+    %cmake_ninja \
+        -DBUILD_SHARED_LIBS=ON \
+        -DENABLE_DECODER=OFF \
+        -DENABLE_SHERLOCK265=OFF
 build      : |
-    %make
+    %ninja_build
 install    : |
-    %make_install
+    %ninja_install
+    %install_license COPYING

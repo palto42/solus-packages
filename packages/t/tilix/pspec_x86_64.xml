@@ -68,25 +68,25 @@
             <Path fileType="localedata">/usr/share/locale/vi/LC_MESSAGES/tilix.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_CN/LC_MESSAGES/tilix.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_TW/LC_MESSAGES/tilix.mo</Path>
-            <Path fileType="man">/usr/share/man/ca/man1/tilix.1</Path>
-            <Path fileType="man">/usr/share/man/cs/man1/tilix.1</Path>
-            <Path fileType="man">/usr/share/man/de/man1/tilix.1</Path>
-            <Path fileType="man">/usr/share/man/es/man1/tilix.1</Path>
-            <Path fileType="man">/usr/share/man/fr/man1/tilix.1</Path>
-            <Path fileType="man">/usr/share/man/hr/man1/tilix.1</Path>
-            <Path fileType="man">/usr/share/man/it/man1/tilix.1</Path>
-            <Path fileType="man">/usr/share/man/man1/tilix.1</Path>
-            <Path fileType="man">/usr/share/man/nl/man1/tilix.1</Path>
-            <Path fileType="man">/usr/share/man/oc/man1/tilix.1</Path>
-            <Path fileType="man">/usr/share/man/pl/man1/tilix.1</Path>
-            <Path fileType="man">/usr/share/man/pt/man1/tilix.1</Path>
-            <Path fileType="man">/usr/share/man/pt_BR/man1/tilix.1</Path>
-            <Path fileType="man">/usr/share/man/ro/man1/tilix.1</Path>
-            <Path fileType="man">/usr/share/man/ru/man1/tilix.1</Path>
-            <Path fileType="man">/usr/share/man/sr/man1/tilix.1</Path>
-            <Path fileType="man">/usr/share/man/tr/man1/tilix.1</Path>
-            <Path fileType="man">/usr/share/man/uk/man1/tilix.1</Path>
-            <Path fileType="man">/usr/share/man/zh_Hant/man1/tilix.1</Path>
+            <Path fileType="man">/usr/share/man/ca/man1/tilix.1.zst</Path>
+            <Path fileType="man">/usr/share/man/cs/man1/tilix.1.zst</Path>
+            <Path fileType="man">/usr/share/man/de/man1/tilix.1.zst</Path>
+            <Path fileType="man">/usr/share/man/es/man1/tilix.1.zst</Path>
+            <Path fileType="man">/usr/share/man/fr/man1/tilix.1.zst</Path>
+            <Path fileType="man">/usr/share/man/hr/man1/tilix.1.zst</Path>
+            <Path fileType="man">/usr/share/man/it/man1/tilix.1.zst</Path>
+            <Path fileType="man">/usr/share/man/man1/tilix.1.zst</Path>
+            <Path fileType="man">/usr/share/man/nl/man1/tilix.1.zst</Path>
+            <Path fileType="man">/usr/share/man/oc/man1/tilix.1.zst</Path>
+            <Path fileType="man">/usr/share/man/pl/man1/tilix.1.zst</Path>
+            <Path fileType="man">/usr/share/man/pt/man1/tilix.1.zst</Path>
+            <Path fileType="man">/usr/share/man/pt_BR/man1/tilix.1.zst</Path>
+            <Path fileType="man">/usr/share/man/ro/man1/tilix.1.zst</Path>
+            <Path fileType="man">/usr/share/man/ru/man1/tilix.1.zst</Path>
+            <Path fileType="man">/usr/share/man/sr/man1/tilix.1.zst</Path>
+            <Path fileType="man">/usr/share/man/tr/man1/tilix.1.zst</Path>
+            <Path fileType="man">/usr/share/man/uk/man1/tilix.1.zst</Path>
+            <Path fileType="man">/usr/share/man/zh_Hant/man1/tilix.1.zst</Path>
             <Path fileType="data">/usr/share/metainfo/com.gexperts.Tilix.appdata.xml</Path>
             <Path fileType="data">/usr/share/nautilus-python/extensions/open-tilix.py</Path>
             <Path fileType="data">/usr/share/tilix/resources/tilix.gresource</Path>
@@ -103,8 +103,8 @@
         </Files>
     </Package>
     <History>
-        <Update release="48">
-            <Date>2024-10-18</Date>
+        <Update release="51">
+            <Date>2026-03-15</Date>
             <Version>1.9.6</Version>
             <Comment>Packaging update</Comment>
             <Name>Joey Riches</Name>

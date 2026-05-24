@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : brave
-version    : 1.83.109
-release    : 240
+version    : 1.90.124
+release    : 270
 source     :
-    - https://github.com/brave/brave-browser/releases/download/v1.83.109/brave-browser_1.83.109_amd64.deb : 6690740615de4dad120518760e3fea2c38bc7000545665bca3968ad2444f1143
+    - https://github.com/brave/brave-browser/releases/download/v1.90.124/brave-browser_1.90.124_amd64.deb : 99ca9ee77d45a9d05522066b40b3950e0222d8904f48a69d0f87c22d03229b02
 homepage   : https://brave.com
 license    :
     - GPL-2.0-or-later # Privacy Badger
@@ -31,23 +32,20 @@ builddeps  :
 rundeps    :
     - libgnome-keyring
 setup      : |
-    ar x $sources/brave-browser_${version}_amd64.deb
+    ar x ${sources}/brave-browser_${version}_amd64.deb
     tar xf data.tar.*
-    mv usr/share/man/man1/brave-browser-stable.1.gz usr/share/man/man1/brave-browser.1.gz
 install    : |
-    mkdir -p $installdir
-    cp -r usr $installdir/
-    cp -r opt/brave.com/brave $installdir/usr/share/
-    ln -sfn /usr/share/brave/brave $installdir/usr/bin/brave-browser
-    install -Dm00644 opt/brave.com/brave/product_logo_128.png $installdir/usr/share/pixmaps/brave-browser.png
+    install -Ddm00755 ${installdir}
+    cp -r usr ${installdir}/
+    cp -r opt/brave.com/brave ${installdir}/usr/share/
+    install -Dm00644 opt/brave.com/brave/product_logo_128.png ${installdir}/usr/share/icons/hicolor/128x128/apps/brave-browser.png
 
-    # Remove stuff that aren't necessary on Solus
-    sed -i 's/brave-browser-stable/brave-browser/g' $installdir/usr/share/applications/brave-browser.desktop
-    rm -f $installdir/usr/bin/brave-browser-stable
-    rm -f $installdir/usr/share/brave/LICENSE
+    # Fix symlink
+    rm ${installdir}/usr/bin/brave-browser-stable
+    ln -s /usr/share/brave/brave ${installdir}/usr/bin/brave-browser-stable
 
     # Fix appdata
-    rm -f $installdir/usr/share/appdata/brave-browser.appdata.xml
-    rmdir $installdir/usr/share/appdata
-    install -dm00755 $installdir/usr/share/metainfo
-    install -Dm00644 $pkgfiles/com.brave.Browser.metainfo.xml $installdir/usr/share/metainfo/brave-browser.metainfo.xml
+    rm -f ${installdir}/usr/share/appdata/brave-browser.appdata.xml
+    rmdir ${installdir}/usr/share/appdata
+    install -dm00755 ${installdir}/usr/share/metainfo
+    install -Dm00644 ${pkgfiles}/com.brave.Browser.metainfo.xml -t ${installdir}/usr/share/metainfo

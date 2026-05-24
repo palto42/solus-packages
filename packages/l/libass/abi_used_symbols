@@ -22,6 +22,7 @@ libc.so.6:malloc
 libc.so.6:memchr
 libc.so.6:memcmp
 libc.so.6:memcpy
+libc.so.6:memmove
 libc.so.6:memset
 libc.so.6:opendir
 libc.so.6:qsort
@@ -143,5 +144,5 @@ libm.so.6:log1p
 libm.so.6:lround
 libm.so.6:pow
 libm.so.6:sincos
-libunibreak.so.5:init_linebreak
-libunibreak.so.5:set_linebreaks_utf32
+libunibreak.so.7:init_linebreak
+libunibreak.so.7:set_linebreaks_utf32

@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : github-cli
-version    : 2.81.0
-release    : 83
+version    : 2.92.0
+release    : 94
 source     :
-    - https://github.com/cli/cli/archive/refs/tags/v2.81.0.tar.gz : 11550fd0e06043f29d03fd973dd67cb77b2fee462a76084e0812c2099c6689dc
+    - https://github.com/cli/cli/archive/refs/tags/v2.92.0.tar.gz : ad18928ce4e2695d7fc1adefa0f5e0496e570a430016cee4c22d7bf87e5d9c1d
 homepage   : https://cli.github.com
 license    : MIT
 component  : system.utils
@@ -15,6 +16,16 @@ builddeps  :
     - golang
 rundeps    :
     - git
+environment: |
+    export CGO_CPPFLAGS="${CPPFLAGS}"
+    export CGO_CFLAGS="${CFLAGS}"
+    export CGO_CXXFLAGS="${CXXFLAGS}"
+    export CGO_LDFLAGS="${LDFLAGS}"
+    export GOFLAGS='-buildmode=pie -trimpath -mod=readonly -modcacherw'
+    export GO_BUILDTAGS='noupdateable,notelemetry'
+setup      : |
+    # As-yet unmerged telemetry patch, see https://github.com/cli/cli/issues/13260
+    %patch -p1 -i ${pkgfiles}/cb2509cb612cf9111a12a7960afd10b0c9d2dede.patch
 build      : |
     make GH_VERSION="v$version" bin/gh manpages
     bin/gh completion -s bash | install -Dm644 /dev/stdin share/bash-completion/completions/gh
@@ -23,3 +34,5 @@ build      : |
 install    : |
     install -Dm00755 $workdir/bin/gh $installdir/usr/bin/gh
     cp -r $workdir/share/ $installdir/usr
+
+    %install_license LICENSE

@@ -22,12 +22,15 @@
         <Files>
             <Path fileType="data">/usr/.info/version</Path>
             <Path fileType="data">/usr/.info/version-dev</Path>
+            <Path fileType="executable">/usr/bin/rdhc</Path>
             <Path fileType="library">/usr/lib64/librocm-core.so.1</Path>
-            <Path fileType="library">/usr/lib64/librocm-core.so.1.0.60204</Path>
+            <Path fileType="library">/usr/lib64/librocm-core.so.1.0.70200</Path>
             <Path fileType="library">/usr/lib64/rocmmod</Path>
+            <Path fileType="executable">/usr/libexec/rocm-core/rdhc.py</Path>
             <Path fileType="executable">/usr/libexec/rocm-core/runpath_to_rpath.py</Path>
-            <Path fileType="doc">/usr/share/doc/rocm-core-asan/LICENSE.txt</Path>
-            <Path fileType="doc">/usr/share/doc/rocm-core/LICENSE.txt</Path>
+            <Path fileType="doc">/usr/share/doc/rocm-core/LICENSE.md</Path>
+            <Path fileType="data">/usr/share/rdhc/README.md</Path>
+            <Path fileType="data">/usr/share/rdhc/requirements.txt</Path>
         </Files>
     </Package>
     <Package>
@@ -37,19 +40,23 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="6">rocm-core</Dependency>
+            <Dependency release="8">rocm-core</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/rocm-core/rocm_getpath.h</Path>
             <Path fileType="header">/usr/include/rocm-core/rocm_version.h</Path>
             <Path fileType="header">/usr/include/rocm_version.h</Path>
+            <Path fileType="library">/usr/lib64/cmake/rocm-core/rocm-core-config-version.cmake</Path>
+            <Path fileType="library">/usr/lib64/cmake/rocm-core/rocm-core-config.cmake</Path>
+            <Path fileType="library">/usr/lib64/cmake/rocm-core/rocmCoreTargets-relwithdebinfo.cmake</Path>
+            <Path fileType="library">/usr/lib64/cmake/rocm-core/rocmCoreTargets.cmake</Path>
             <Path fileType="library">/usr/lib64/librocm-core.so</Path>
         </Files>
     </Package>
     <History>
-        <Update release="6">
-            <Date>2024-11-27</Date>
-            <Version>6.2.4</Version>
+        <Update release="8">
+            <Date>2026-02-14</Date>
+            <Version>7.2.0</Version>
             <Comment>Packaging update</Comment>
             <Name>Gavin Zhao</Name>
             <Email>me@gzgz.dev</Email>

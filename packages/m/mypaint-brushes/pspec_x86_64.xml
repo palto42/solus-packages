@@ -3,8 +3,8 @@
         <Name>mypaint-brushes</Name>
         <Homepage>https://github.com/mypaint/mypaint-brushes</Homepage>
         <Packager>
-            <Name>Algent Albrahimi</Name>
-            <Email>algent@protonmail.com</Email>
+            <Name>David Harder</Name>
+            <Email>david@davidjharder.ca</Email>
         </Packager>
         <License>CC0-1.0</License>
         <License>GPL-2.0-or-later</License>
@@ -12,7 +12,7 @@
         <Summary xml:lang="en">Brushes to be used with the MyPaint library</Summary>
         <Description xml:lang="en">Brushes used by MyPaint and other software using libmypaint.
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>mypaint-brushes</Name>
@@ -21,6 +21,7 @@
 </Description>
         <PartOf>multimedia.graphics</PartOf>
         <Files>
+            <Path fileType="data">/usr/share/licenses/mypaint-brushes/COPYING</Path>
             <Path fileType="data">/usr/share/mypaint-data/2.0/brushes/Dieterle/8B_Pencil#1.myb</Path>
             <Path fileType="data">/usr/share/mypaint-data/2.0/brushes/Dieterle/8B_Pencil#1_prev.png</Path>
             <Path fileType="data">/usr/share/mypaint-data/2.0/brushes/Dieterle/Blender.myb</Path>
@@ -420,12 +421,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="5">
-            <Date>2022-08-25</Date>
+        <Update release="6">
+            <Date>2026-03-29</Date>
             <Version>2.0.2</Version>
             <Comment>Packaging update</Comment>
-            <Name>Algent Albrahimi</Name>
-            <Email>algent@protonmail.com</Email>
+            <Name>David Harder</Name>
+            <Email>david@davidjharder.ca</Email>
         </Update>
     </History>
 </PISI>

@@ -1,6 +1,7 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : vlc-pause-click-plugin
 version    : 2.2.0
-release    : 2
+release    : 3
 source     :
     - https://github.com/nurupo/vlc-pause-click-plugin/archive/2.2.0.tar.gz : 2a2cd76bc0bc10cb5f7c2143ae8508008c5a100f9a9c19b4fbc2c517983ded4c
 homepage   : https://github.com/nurupo/vlc-pause-click-plugin
@@ -15,3 +16,4 @@ build      : |
     %make
 install    : |
     %make_install
+    %install_license LICENSE

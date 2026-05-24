@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : zim
-version    : 0.75.2
-release    : 29
+version    : 0.76.3
+release    : 30
 source     :
-    - https://github.com/zim-desktop-wiki/zim-desktop-wiki/archive/refs/tags/0.75.2.tar.gz : 79d20946d2c51fb1285b8a80b8afedb39402d6e4f1349ebe4be945318f275493
+    - https://github.com/zim-desktop-wiki/zim-desktop-wiki/archive/refs/tags/0.76.3.tar.gz : cb97c48740c140fb851c0ac16a93db9f8df54fcf307bf9e2a948043df8fce479
 homepage   : https://www.zim-wiki.org
 license    : GPL-2.0-or-later
 component  : office.notes
@@ -16,6 +17,7 @@ builddeps  :
 rundeps    :
     - gnuplot
     - graphviz
+    - gspell
     - python-gobject
     - pyxdg
     - scrot
@@ -24,4 +26,5 @@ build      : |
     %python3_setup
 install    : |
     %python3_install --skip-build
-    sed -i 's/Utility;TextEditor;GTK;/Office;/g' $installdir/usr/share/applications/zim.desktop
+    sed -i 's/Utility;TextEditor;GTK;/Office;/g' $installdir/usr/share/applications/org.zim_wiki.Zim.desktop
+    %install_license LICENSE

@@ -1,0 +1,31 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
+name       : fresh
+version    : 0.3.0
+release    : 5
+source     :
+    - https://github.com/sinelaw/fresh/archive/refs/tags/v0.3.0.tar.gz : 3504d47cd0ae3d37e397d46088ff2c7096405498ed4079b2df16e399a1b36608
+homepage   : https://getfresh.dev
+license    : GPL-2.0-or-later
+component  : editor
+summary    : Terminal-based IDE and text editor with familiar UX
+description: |
+    Fresh is a terminal-based text editor that brings the intuitive, conventional
+    UX of editors like VS Code and Sublime Text to the terminal. It features
+    native menus, command palette, full mouse support, multi-cursor editing,
+    LSP integration, TypeScript plugins in a sandboxed Deno environment, and
+    efficient handling of very large files with low memory overhead.
+networking : true
+builddeps  :
+    - rust
+setup      : |
+    %cargo_fetch
+build      : |
+    %cargo_build
+install    : |
+    %cargo_install
+    install -Dm00644 crates/fresh-editor/flatpak/io.github.sinelaw.fresh.desktop $installdir/usr/share/applications/io.github.sinelaw.fresh.desktop
+    install -Dm00644 crates/fresh-editor/flatpak/io.github.sinelaw.fresh.metainfo.xml $installdir/usr/share/metainfo/io.github.sinelaw.fresh.metainfo.xml
+    install -Dm00644 crates/fresh-editor/flatpak/io.github.sinelaw.fresh.svg $installdir/usr/share/icons/hicolor/scalable/apps/io.github.sinelaw.fresh.svg
+    %install_license LICENSE
+check      : |
+    %cargo_test --lib

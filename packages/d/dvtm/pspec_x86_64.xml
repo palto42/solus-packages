@@ -3,15 +3,15 @@
         <Name>dvtm</Name>
         <Homepage>https://www.brain-dump.org/projects/dvtm</Homepage>
         <Packager>
-            <Name>Joey Riches</Name>
-            <Email>josephriches@gmail.com</Email>
+            <Name>David Harder</Name>
+            <Email>david@davidjharder.ca</Email>
         </Packager>
         <License>MIT</License>
         <PartOf>system.utils</PartOf>
         <Summary xml:lang="en">Tiling window manager for the console</Summary>
         <Description xml:lang="en">dvtm brings the concept of tiling window management to the console.
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>dvtm</Name>
@@ -22,16 +22,17 @@
         <Files>
             <Path fileType="executable">/usr/bin/dvtm</Path>
             <Path fileType="executable">/usr/bin/dvtm-status</Path>
-            <Path fileType="man">/usr/share/man/man1/dvtm.1</Path>
+            <Path fileType="data">/usr/share/licenses/dvtm/LICENSE</Path>
+            <Path fileType="man">/usr/share/man/man1/dvtm.1.zst</Path>
         </Files>
     </Package>
     <History>
-        <Update release="5">
-            <Date>2022-03-24</Date>
+        <Update release="6">
+            <Date>2026-03-28</Date>
             <Version>0.15</Version>
             <Comment>Packaging update</Comment>
-            <Name>Joey Riches</Name>
-            <Email>josephriches@gmail.com</Email>
+            <Name>David Harder</Name>
+            <Email>david@davidjharder.ca</Email>
         </Update>
     </History>
 </PISI>

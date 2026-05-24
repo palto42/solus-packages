@@ -1,0 +1,46 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
+name       : plasma-keyboard
+version    : 6.6.5
+release    : 6
+source     :
+    - https://download.kde.org/stable/plasma/6.6.5/plasma-keyboard-6.6.5.tar.xz : 3bb8be109cc449af54d03f28cc1c1a9e4d4150cb01b9af916a5516ed64740671
+homepage   : https://kde.org/plasma-desktop/
+license    :
+    - BSD-2-Clause
+    - BSD-3-Clause
+    - CC0-1.0
+    - FSFAP
+    - GPL-2.0-only
+    - GPL-2.0-or-later
+    - GPL-3.0-only
+    - GPL-3.0-or-later
+    - LGPL-2.1-only
+    - LGPL-3.0-only
+component  : desktop.kde
+summary    : Virtual keyboard for Plasma
+description: |
+    Virtual keyboard for Plasma
+builddeps  :
+    - pkgconfig(Qt6Qml)
+    - pkgconfig(Qt6VirtualKeyboard)
+    - pkgconfig(Qt6WaylandClient)
+    - pkgconfig(wayland-protocols)
+    - extra-cmake-modules
+    - kf6-kcmutils-devel
+    - kf6-kconfig-devel
+    - kf6-kcoreaddons-devel
+    - kf6-kcrash-devel
+    - kf6-ki18n-devel
+    - qt6-base-private-devel
+clang      : true
+optimize   :
+    - speed
+    - thin-lto
+setup      : |
+    %cmake_kf6
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install
+
+    %install_license LICENSES/*

@@ -3,8 +3,8 @@
         <Name>gleam</Name>
         <Homepage>https://gleam.run</Homepage>
         <Packager>
-            <Name>Ian M. Jones</Name>
-            <Email>ian@ianmjones.com</Email>
+            <Name>Jared Cervantes</Name>
+            <Email>jared@jaredcervantes.com</Email>
         </Packager>
         <License>Apache-2.0</License>
         <PartOf>programming</PartOf>
@@ -29,15 +29,16 @@ Gleam can additionally compile to JavaScript, enabling you to use your code in t
         <PartOf>programming</PartOf>
         <Files>
             <Path fileType="executable">/usr/bin/gleam</Path>
+            <Path fileType="data">/usr/share/licenses/gleam/LICENCE</Path>
         </Files>
     </Package>
     <History>
-        <Update release="12">
-            <Date>2025-06-06</Date>
-            <Version>1.11.1</Version>
+        <Update release="14">
+            <Date>2026-04-24</Date>
+            <Version>1.16.0</Version>
             <Comment>Packaging update</Comment>
-            <Name>Ian M. Jones</Name>
-            <Email>ian@ianmjones.com</Email>
+            <Name>Jared Cervantes</Name>
+            <Email>jared@jaredcervantes.com</Email>
         </Update>
     </History>
 </PISI>

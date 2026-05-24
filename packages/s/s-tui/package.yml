@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : s-tui
-version    : 1.2.0
-release    : 8
+version    : 1.4.0
+release    : 10
 source     :
-    - https://github.com/amanusk/s-tui/archive/refs/tags/v1.2.0.tar.gz : bc02128cd8236d4e8ee9d5e01363c96402accb8310d1ada49e3fa6904f10d6c4
+    - https://github.com/amanusk/s-tui/archive/refs/tags/v1.4.0.tar.gz : 92ca86bc7b3c95a573678d0d6ac7b88609c5355762d0278a78bbae998a2f4a39
 license    : GPL-2.0-or-later
 homepage   : https://amanusk.github.io/s-tui
 component  : system.utils
@@ -24,3 +25,4 @@ build      : |
     %python3_setup
 install    : |
     %python3_install
+    %install_license LICENSE

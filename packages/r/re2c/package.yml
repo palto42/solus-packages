@@ -1,9 +1,10 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : re2c
-version    : 4.1
-release    : 9
+version    : 4.5.1
+release    : 12
 homepage   : https://re2c.org/
 source     :
-    - https://github.com/skvadrik/re2c/releases/download/4.1/re2c-4.1.tar.lz : 5d61b92a0bf6c13e2bb2e719394b237a76fb6be118846d2e8d3e21c846aca36d
+    - https://github.com/skvadrik/re2c/releases/download/4.5.1/re2c-4.5.1.tar.lz : af85de20a6d780f2ef345eac81b35786eded075dc468384f79a65ad1059dc50d
 license    : Public-Domain
 component  : programming.tools
 summary    : A tool for generating C, C++ or Go based recognizers from regular expressions
@@ -15,3 +16,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSE

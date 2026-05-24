@@ -3,7 +3,7 @@ libc.so.6:__ctype_b_loc
 libc.so.6:__ctype_tolower_loc
 libc.so.6:__fprintf_chk
 libc.so.6:__fread_chk
-libc.so.6:__isoc99_sscanf
+libc.so.6:__isoc23_sscanf
 libc.so.6:__libc_start_main
 libc.so.6:__longjmp_chk
 libc.so.6:__memcpy_chk
@@ -82,6 +82,7 @@ libc.so.6:strcmp
 libc.so.6:strcoll
 libc.so.6:strcpy
 libc.so.6:strdup
+libc.so.6:strlcpy
 libc.so.6:strlen
 libc.so.6:strncasecmp
 libc.so.6:strncpy

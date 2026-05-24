@@ -37,6 +37,7 @@ libpcre2-16.so.0:pcre2_match_context_free_16
 libpcre2-16.so.0:pcre2_match_data_create_16
 libpcre2-16.so.0:pcre2_match_data_create_from_pattern_16
 libpcre2-16.so.0:pcre2_match_data_free_16
+libpcre2-16.so.0:pcre2_next_match_16
 libpcre2-16.so.0:pcre2_pattern_convert_16
 libpcre2-16.so.0:pcre2_pattern_info_16
 libpcre2-16.so.0:pcre2_serialize_decode_16
@@ -58,10 +59,12 @@ libpcre2-16.so.0:pcre2_set_max_pattern_length_16
 libpcre2-16.so.0:pcre2_set_max_varlookbehind_16
 libpcre2-16.so.0:pcre2_set_newline_16
 libpcre2-16.so.0:pcre2_set_offset_limit_16
+libpcre2-16.so.0:pcre2_set_optimize_16
 libpcre2-16.so.0:pcre2_set_parens_nest_limit_16
 libpcre2-16.so.0:pcre2_set_recursion_limit_16
 libpcre2-16.so.0:pcre2_set_recursion_memory_management_16
 libpcre2-16.so.0:pcre2_set_substitute_callout_16
+libpcre2-16.so.0:pcre2_set_substitute_case_callout_16
 libpcre2-16.so.0:pcre2_substitute_16
 libpcre2-16.so.0:pcre2_substring_copy_byname_16
 libpcre2-16.so.0:pcre2_substring_copy_bynumber_16
@@ -113,6 +116,7 @@ libpcre2-32.so.0:pcre2_match_context_free_32
 libpcre2-32.so.0:pcre2_match_data_create_32
 libpcre2-32.so.0:pcre2_match_data_create_from_pattern_32
 libpcre2-32.so.0:pcre2_match_data_free_32
+libpcre2-32.so.0:pcre2_next_match_32
 libpcre2-32.so.0:pcre2_pattern_convert_32
 libpcre2-32.so.0:pcre2_pattern_info_32
 libpcre2-32.so.0:pcre2_serialize_decode_32
@@ -134,10 +138,12 @@ libpcre2-32.so.0:pcre2_set_max_pattern_length_32
 libpcre2-32.so.0:pcre2_set_max_varlookbehind_32
 libpcre2-32.so.0:pcre2_set_newline_32
 libpcre2-32.so.0:pcre2_set_offset_limit_32
+libpcre2-32.so.0:pcre2_set_optimize_32
 libpcre2-32.so.0:pcre2_set_parens_nest_limit_32
 libpcre2-32.so.0:pcre2_set_recursion_limit_32
 libpcre2-32.so.0:pcre2_set_recursion_memory_management_32
 libpcre2-32.so.0:pcre2_set_substitute_callout_32
+libpcre2-32.so.0:pcre2_set_substitute_case_callout_32
 libpcre2-32.so.0:pcre2_substitute_32
 libpcre2-32.so.0:pcre2_substring_copy_byname_32
 libpcre2-32.so.0:pcre2_substring_copy_bynumber_32
@@ -189,6 +195,7 @@ libpcre2-8.so.0:pcre2_match_context_free_8
 libpcre2-8.so.0:pcre2_match_data_create_8
 libpcre2-8.so.0:pcre2_match_data_create_from_pattern_8
 libpcre2-8.so.0:pcre2_match_data_free_8
+libpcre2-8.so.0:pcre2_next_match_8
 libpcre2-8.so.0:pcre2_pattern_convert_8
 libpcre2-8.so.0:pcre2_pattern_info_8
 libpcre2-8.so.0:pcre2_serialize_decode_8
@@ -210,10 +217,12 @@ libpcre2-8.so.0:pcre2_set_max_pattern_length_8
 libpcre2-8.so.0:pcre2_set_max_varlookbehind_8
 libpcre2-8.so.0:pcre2_set_newline_8
 libpcre2-8.so.0:pcre2_set_offset_limit_8
+libpcre2-8.so.0:pcre2_set_optimize_8
 libpcre2-8.so.0:pcre2_set_parens_nest_limit_8
 libpcre2-8.so.0:pcre2_set_recursion_limit_8
 libpcre2-8.so.0:pcre2_set_recursion_memory_management_8
 libpcre2-8.so.0:pcre2_set_substitute_callout_8
+libpcre2-8.so.0:pcre2_set_substitute_case_callout_8
 libpcre2-8.so.0:pcre2_substitute_8
 libpcre2-8.so.0:pcre2_substring_copy_byname_8
 libpcre2-8.so.0:pcre2_substring_copy_bynumber_8

@@ -3,8 +3,8 @@
         <Name>xgamma</Name>
         <Homepage>https://www.x.org/</Homepage>
         <Packager>
-            <Name>Reilly Brogan</Name>
-            <Email>solus@reillybrogan.com</Email>
+            <Name>Joey Riches</Name>
+            <Email>josephriches@gmail.com</Email>
         </Packager>
         <License>MIT</License>
         <PartOf>xorg.apps</PartOf>
@@ -23,16 +23,16 @@
         <PartOf>xorg.apps</PartOf>
         <Files>
             <Path fileType="executable">/usr/bin/xgamma</Path>
-            <Path fileType="man">/usr/share/man/man1/xgamma.1</Path>
+            <Path fileType="man">/usr/share/man/man1/xgamma.1.zst</Path>
         </Files>
     </Package>
     <History>
-        <Update release="10">
-            <Date>2023-10-20</Date>
-            <Version>1.0.7</Version>
+        <Update release="11">
+            <Date>2026-02-25</Date>
+            <Version>1.0.8</Version>
             <Comment>Packaging update</Comment>
-            <Name>Reilly Brogan</Name>
-            <Email>solus@reillybrogan.com</Email>
+            <Name>Joey Riches</Name>
+            <Email>josephriches@gmail.com</Email>
         </Update>
     </History>
 </PISI>

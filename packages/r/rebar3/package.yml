@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : rebar3
-version    : 3.25.0
-release    : 3
+version    : 3.27.0
+release    : 4
 source     :
-    - https://github.com/erlang/rebar3/archive/refs/tags/3.25.0.tar.gz : 7d3f42dc0e126e18fb73e4366129f11dd37bad14d404f461e0a3129ce8903440
+    - https://github.com/erlang/rebar3/archive/refs/tags/3.27.0.tar.gz : 985cae6e957334cfa549190b9f5efb9185c184a18fc181c87b8dde096ba79f38
 homepage   : https://rebar3.org
 license    : Apache-2.0
 component  : programming.tools
@@ -16,8 +17,9 @@ rundeps    :
 build      : |
     escript bootstrap
 install    : |
-    install -Dm00755 $workdir/rebar3 $installdir/usr/bin/rebar3
-    install -Dm00644 $workdir/manpages/rebar3.1 $installdir/usr/share/man/man1/rebar3.1
-    install -Dm00644 $workdir/apps/rebar/priv/shell-completion/bash/rebar3 $installdir/usr/share/bash-completion/completions/rebar3
-    install -Dm00644 $workdir/apps/rebar/priv/shell-completion/fish/rebar3.fish $installdir/usr/share/fish/vendor_completions.d/rebar3.fish
-    install -Dm00644 $workdir/apps/rebar/priv/shell-completion/zsh/_rebar3 $installdir/usr/share/zsh/site-functions/_rebar3
+    %install_license LICENSE
+    install -Dm00755 "${workdir}/rebar3" "${installdir}/usr/bin/rebar3"
+    install -Dm00644 "${workdir}/manpages/rebar3.1" "${installdir}/usr/share/man/man1/rebar3.1"
+    install -Dm00644 "${workdir}/apps/rebar/priv/shell-completion/bash/rebar3" "${installdir}/usr/share/bash-completion/completions/rebar3"
+    install -Dm00644 "${workdir}/apps/rebar/priv/shell-completion/fish/rebar3.fish" "${installdir}/usr/share/fish/vendor_completions.d/rebar3.fish"
+    install -Dm00644 "${workdir}/apps/rebar/priv/shell-completion/zsh/_rebar3" "${installdir}/usr/share/zsh/site-functions/_rebar3"

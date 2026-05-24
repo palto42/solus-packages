@@ -3,8 +3,8 @@
         <Name>pcre2</Name>
         <Homepage>https://github.com/PCRE2Project/pcre2</Homepage>
         <Packager>
-            <Name>Reilly Brogan</Name>
-            <Email>solus@reillybrogan.com</Email>
+            <Name>Robert Gonzalez</Name>
+            <Email>uni.dos12@outlook.com</Email>
         </Packager>
         <License>BSD-3-Clause</License>
         <PartOf>system.base</PartOf>
@@ -21,13 +21,16 @@
         <PartOf>system.base</PartOf>
         <Files>
             <Path fileType="library">/usr/lib64/libpcre2-16.so.0</Path>
-            <Path fileType="library">/usr/lib64/libpcre2-16.so.0.13.0</Path>
+            <Path fileType="library">/usr/lib64/libpcre2-16.so.0.15.0</Path>
             <Path fileType="library">/usr/lib64/libpcre2-32.so.0</Path>
-            <Path fileType="library">/usr/lib64/libpcre2-32.so.0.13.0</Path>
+            <Path fileType="library">/usr/lib64/libpcre2-32.so.0.15.0</Path>
             <Path fileType="library">/usr/lib64/libpcre2-8.so.0</Path>
-            <Path fileType="library">/usr/lib64/libpcre2-8.so.0.13.0</Path>
+            <Path fileType="library">/usr/lib64/libpcre2-8.so.0.15.0</Path>
             <Path fileType="library">/usr/lib64/libpcre2-posix.so.3</Path>
-            <Path fileType="library">/usr/lib64/libpcre2-posix.so.3.0.5</Path>
+            <Path fileType="library">/usr/lib64/libpcre2-posix.so.3.0.7</Path>
+            <Path fileType="data">/usr/share/licenses/pcre2/LICENCE.md</Path>
+            <Path fileType="data">/usr/share/licenses/pcre2/sljit/LICENSE</Path>
+            <Path fileType="man">/usr/share/man/man1/pcre2-config.1.zst</Path>
         </Files>
     </Package>
     <Package>
@@ -37,17 +40,17 @@
 </Description>
         <PartOf>emul32</PartOf>
         <RuntimeDependencies>
-            <Dependency release="15">pcre2</Dependency>
+            <Dependency release="16">pcre2</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib32/libpcre2-16.so.0</Path>
-            <Path fileType="library">/usr/lib32/libpcre2-16.so.0.13.0</Path>
+            <Path fileType="library">/usr/lib32/libpcre2-16.so.0.15.0</Path>
             <Path fileType="library">/usr/lib32/libpcre2-32.so.0</Path>
-            <Path fileType="library">/usr/lib32/libpcre2-32.so.0.13.0</Path>
+            <Path fileType="library">/usr/lib32/libpcre2-32.so.0.15.0</Path>
             <Path fileType="library">/usr/lib32/libpcre2-8.so.0</Path>
-            <Path fileType="library">/usr/lib32/libpcre2-8.so.0.13.0</Path>
+            <Path fileType="library">/usr/lib32/libpcre2-8.so.0.15.0</Path>
             <Path fileType="library">/usr/lib32/libpcre2-posix.so.3</Path>
-            <Path fileType="library">/usr/lib32/libpcre2-posix.so.3.0.5</Path>
+            <Path fileType="library">/usr/lib32/libpcre2-posix.so.3.0.7</Path>
         </Files>
     </Package>
     <Package>
@@ -57,8 +60,8 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="15">pcre2-devel</Dependency>
-            <Dependency release="15">pcre2-32bit</Dependency>
+            <Dependency release="16">pcre2-devel</Dependency>
+            <Dependency release="16">pcre2-32bit</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib32/libpcre2-16.so</Path>
@@ -78,7 +81,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="15">pcre2</Dependency>
+            <Dependency release="16">pcre2</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin/pcre2-config</Path>
@@ -92,7 +95,6 @@
             <Path fileType="data">/usr/lib64/pkgconfig/libpcre2-32.pc</Path>
             <Path fileType="data">/usr/lib64/pkgconfig/libpcre2-8.pc</Path>
             <Path fileType="data">/usr/lib64/pkgconfig/libpcre2-posix.pc</Path>
-            <Path fileType="man">/usr/share/man/man1/pcre2-config.1</Path>
         </Files>
     </Package>
     <Package>
@@ -102,12 +104,13 @@
 </Description>
         <PartOf>programming.docs</PartOf>
         <Files>
-            <Path fileType="doc">/usr/share/doc/pcre2/AUTHORS</Path>
+            <Path fileType="doc">/usr/share/doc/pcre2/AUTHORS.md</Path>
             <Path fileType="doc">/usr/share/doc/pcre2/COPYING</Path>
             <Path fileType="doc">/usr/share/doc/pcre2/ChangeLog</Path>
-            <Path fileType="doc">/usr/share/doc/pcre2/LICENCE</Path>
+            <Path fileType="doc">/usr/share/doc/pcre2/LICENCE.md</Path>
             <Path fileType="doc">/usr/share/doc/pcre2/NEWS</Path>
             <Path fileType="doc">/usr/share/doc/pcre2/README</Path>
+            <Path fileType="doc">/usr/share/doc/pcre2/SECURITY.md</Path>
             <Path fileType="doc">/usr/share/doc/pcre2/html/NON-AUTOTOOLS-BUILD.txt</Path>
             <Path fileType="doc">/usr/share/doc/pcre2/html/README.txt</Path>
             <Path fileType="doc">/usr/share/doc/pcre2/html/index.html</Path>
@@ -152,6 +155,7 @@
             <Path fileType="doc">/usr/share/doc/pcre2/html/pcre2_match_data_create.html</Path>
             <Path fileType="doc">/usr/share/doc/pcre2/html/pcre2_match_data_create_from_pattern.html</Path>
             <Path fileType="doc">/usr/share/doc/pcre2/html/pcre2_match_data_free.html</Path>
+            <Path fileType="doc">/usr/share/doc/pcre2/html/pcre2_next_match.html</Path>
             <Path fileType="doc">/usr/share/doc/pcre2/html/pcre2_pattern_convert.html</Path>
             <Path fileType="doc">/usr/share/doc/pcre2/html/pcre2_pattern_info.html</Path>
             <Path fileType="doc">/usr/share/doc/pcre2/html/pcre2_serialize_decode.html</Path>
@@ -173,10 +177,12 @@
             <Path fileType="doc">/usr/share/doc/pcre2/html/pcre2_set_max_varlookbehind.html</Path>
             <Path fileType="doc">/usr/share/doc/pcre2/html/pcre2_set_newline.html</Path>
             <Path fileType="doc">/usr/share/doc/pcre2/html/pcre2_set_offset_limit.html</Path>
+            <Path fileType="doc">/usr/share/doc/pcre2/html/pcre2_set_optimize.html</Path>
             <Path fileType="doc">/usr/share/doc/pcre2/html/pcre2_set_parens_nest_limit.html</Path>
             <Path fileType="doc">/usr/share/doc/pcre2/html/pcre2_set_recursion_limit.html</Path>
             <Path fileType="doc">/usr/share/doc/pcre2/html/pcre2_set_recursion_memory_management.html</Path>
             <Path fileType="doc">/usr/share/doc/pcre2/html/pcre2_set_substitute_callout.html</Path>
+            <Path fileType="doc">/usr/share/doc/pcre2/html/pcre2_set_substitute_case_callout.html</Path>
             <Path fileType="doc">/usr/share/doc/pcre2/html/pcre2_substitute.html</Path>
             <Path fileType="doc">/usr/share/doc/pcre2/html/pcre2_substring_copy_byname.html</Path>
             <Path fileType="doc">/usr/share/doc/pcre2/html/pcre2_substring_copy_bynumber.html</Path>
@@ -212,109 +218,112 @@
             <Path fileType="doc">/usr/share/doc/pcre2/pcre2.txt</Path>
             <Path fileType="doc">/usr/share/doc/pcre2/pcre2grep.txt</Path>
             <Path fileType="doc">/usr/share/doc/pcre2/pcre2test.txt</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_callout_enumerate.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_code_copy.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_code_copy_with_tables.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_code_free.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_compile.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_compile_context_copy.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_compile_context_create.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_compile_context_free.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_config.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_convert_context_copy.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_convert_context_create.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_convert_context_free.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_converted_pattern_free.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_dfa_match.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_general_context_copy.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_general_context_create.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_general_context_free.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_get_error_message.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_get_mark.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_get_match_data_heapframes_size.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_get_match_data_size.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_get_ovector_count.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_get_ovector_pointer.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_get_startchar.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_jit_compile.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_jit_free_unused_memory.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_jit_match.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_jit_stack_assign.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_jit_stack_create.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_jit_stack_free.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_maketables.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_maketables_free.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_match.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_match_context_copy.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_match_context_create.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_match_context_free.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_match_data_create.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_match_data_create_from_pattern.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_match_data_free.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_pattern_convert.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_pattern_info.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_serialize_decode.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_serialize_encode.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_serialize_free.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_serialize_get_number_of_codes.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_set_bsr.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_set_callout.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_set_character_tables.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_set_compile_extra_options.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_set_compile_recursion_guard.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_set_depth_limit.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_set_glob_escape.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_set_glob_separator.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_set_heap_limit.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_set_match_limit.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_set_max_pattern_compiled_length.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_set_max_pattern_length.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_set_max_varlookbehind.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_set_newline.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_set_offset_limit.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_set_parens_nest_limit.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_set_recursion_limit.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_set_recursion_memory_management.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_set_substitute_callout.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_substitute.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_substring_copy_byname.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_substring_copy_bynumber.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_substring_free.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_substring_get_byname.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_substring_get_bynumber.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_substring_length_byname.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_substring_length_bynumber.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_substring_list_free.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_substring_list_get.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_substring_nametable_scan.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2_substring_number_from_name.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2api.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2build.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2callout.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2compat.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2convert.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2demo.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2jit.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2limits.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2matching.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2partial.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2pattern.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2perform.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2posix.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2sample.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2serialize.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2syntax.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pcre2unicode.3</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_callout_enumerate.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_code_copy.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_code_copy_with_tables.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_code_free.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_compile.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_compile_context_copy.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_compile_context_create.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_compile_context_free.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_config.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_convert_context_copy.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_convert_context_create.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_convert_context_free.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_converted_pattern_free.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_dfa_match.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_general_context_copy.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_general_context_create.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_general_context_free.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_get_error_message.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_get_mark.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_get_match_data_heapframes_size.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_get_match_data_size.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_get_ovector_count.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_get_ovector_pointer.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_get_startchar.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_jit_compile.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_jit_free_unused_memory.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_jit_match.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_jit_stack_assign.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_jit_stack_create.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_jit_stack_free.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_maketables.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_maketables_free.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_match.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_match_context_copy.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_match_context_create.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_match_context_free.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_match_data_create.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_match_data_create_from_pattern.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_match_data_free.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_next_match.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_pattern_convert.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_pattern_info.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_serialize_decode.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_serialize_encode.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_serialize_free.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_serialize_get_number_of_codes.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_set_bsr.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_set_callout.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_set_character_tables.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_set_compile_extra_options.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_set_compile_recursion_guard.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_set_depth_limit.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_set_glob_escape.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_set_glob_separator.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_set_heap_limit.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_set_match_limit.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_set_max_pattern_compiled_length.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_set_max_pattern_length.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_set_max_varlookbehind.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_set_newline.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_set_offset_limit.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_set_optimize.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_set_parens_nest_limit.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_set_recursion_limit.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_set_recursion_memory_management.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_set_substitute_callout.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_set_substitute_case_callout.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_substitute.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_substring_copy_byname.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_substring_copy_bynumber.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_substring_free.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_substring_get_byname.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_substring_get_bynumber.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_substring_length_byname.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_substring_length_bynumber.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_substring_list_free.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_substring_list_get.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_substring_nametable_scan.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2_substring_number_from_name.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2api.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2build.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2callout.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2compat.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2convert.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2demo.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2jit.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2limits.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2matching.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2partial.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2pattern.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2perform.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2posix.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2sample.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2serialize.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2syntax.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pcre2unicode.3.zst</Path>
         </Files>
     </Package>
     <History>
-        <Update release="15">
-            <Date>2024-06-15</Date>
-            <Version>10.44</Version>
+        <Update release="16">
+            <Date>2026-04-26</Date>
+            <Version>10.47</Version>
             <Comment>Packaging update</Comment>
-            <Name>Reilly Brogan</Name>
-            <Email>solus@reillybrogan.com</Email>
+            <Name>Robert Gonzalez</Name>
+            <Email>uni.dos12@outlook.com</Email>
         </Update>
     </History>
 </PISI>

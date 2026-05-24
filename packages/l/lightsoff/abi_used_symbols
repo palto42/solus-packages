@@ -146,5 +146,6 @@ libgtk-4.so.1:gtk_window_maximize
 libgtk-4.so.1:gtk_window_present
 libgtk-4.so.1:gtk_window_set_default_size
 libgtk-4.so.1:gtk_window_set_focus_visible
+libm.so.6:floor
 libm.so.6:log
 libm.so.6:round

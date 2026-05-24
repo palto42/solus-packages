@@ -3,8 +3,8 @@
         <Name>gnome-software</Name>
         <Homepage>https://apps.gnome.org/Software/</Homepage>
         <Packager>
-            <Name>Muhammad Alfi Syahrin</Name>
-            <Email>malfisya.dev@hotmail.com</Email>
+            <Name>Joey Riches</Name>
+            <Email>josephriches@gmail.com</Email>
         </Packager>
         <License>GPL-2.0-or-later</License>
         <PartOf>desktop.gnome</PartOf>
@@ -21,29 +21,30 @@
         <PartOf>desktop.gnome</PartOf>
         <Files>
             <Path fileType="executable">/usr/bin/gnome-software</Path>
+            <Path fileType="library">/usr/lib/systemd/user/gnome-software.service</Path>
             <Path fileType="library">/usr/lib64/gnome-software/gnome-software-cmd</Path>
-            <Path fileType="library">/usr/lib64/gnome-software/gnome-software-restarter</Path>
             <Path fileType="library">/usr/lib64/gnome-software/libgnomesoftware.so</Path>
-            <Path fileType="library">/usr/lib64/gnome-software/libgnomesoftware.so.22</Path>
-            <Path fileType="library">/usr/lib64/gnome-software/plugins-22/libgs_plugin_appstream.so</Path>
-            <Path fileType="library">/usr/lib64/gnome-software/plugins-22/libgs_plugin_dpkg.so</Path>
-            <Path fileType="library">/usr/lib64/gnome-software/plugins-22/libgs_plugin_dummy.so</Path>
-            <Path fileType="library">/usr/lib64/gnome-software/plugins-22/libgs_plugin_epiphany.so</Path>
-            <Path fileType="library">/usr/lib64/gnome-software/plugins-22/libgs_plugin_fedora-langpacks.so</Path>
-            <Path fileType="library">/usr/lib64/gnome-software/plugins-22/libgs_plugin_fedora-pkgdb-collections.so</Path>
-            <Path fileType="library">/usr/lib64/gnome-software/plugins-22/libgs_plugin_flatpak.so</Path>
-            <Path fileType="library">/usr/lib64/gnome-software/plugins-22/libgs_plugin_fwupd.so</Path>
-            <Path fileType="library">/usr/lib64/gnome-software/plugins-22/libgs_plugin_generic-updates.so</Path>
-            <Path fileType="library">/usr/lib64/gnome-software/plugins-22/libgs_plugin_hardcoded-blocklist.so</Path>
-            <Path fileType="library">/usr/lib64/gnome-software/plugins-22/libgs_plugin_icons.so</Path>
-            <Path fileType="library">/usr/lib64/gnome-software/plugins-22/libgs_plugin_modalias.so</Path>
-            <Path fileType="library">/usr/lib64/gnome-software/plugins-22/libgs_plugin_os-release.so</Path>
-            <Path fileType="library">/usr/lib64/gnome-software/plugins-22/libgs_plugin_packagekit.so</Path>
-            <Path fileType="library">/usr/lib64/gnome-software/plugins-22/libgs_plugin_provenance-license.so</Path>
-            <Path fileType="library">/usr/lib64/gnome-software/plugins-22/libgs_plugin_provenance.so</Path>
-            <Path fileType="library">/usr/lib64/gnome-software/plugins-22/libgs_plugin_repos.so</Path>
+            <Path fileType="library">/usr/lib64/gnome-software/libgnomesoftware.so.23</Path>
+            <Path fileType="library">/usr/lib64/gnome-software/plugins-23/libgs_plugin_appstream.so</Path>
+            <Path fileType="library">/usr/lib64/gnome-software/plugins-23/libgs_plugin_dpkg.so</Path>
+            <Path fileType="library">/usr/lib64/gnome-software/plugins-23/libgs_plugin_dummy.so</Path>
+            <Path fileType="library">/usr/lib64/gnome-software/plugins-23/libgs_plugin_epiphany.so</Path>
+            <Path fileType="library">/usr/lib64/gnome-software/plugins-23/libgs_plugin_fedora-langpacks.so</Path>
+            <Path fileType="library">/usr/lib64/gnome-software/plugins-23/libgs_plugin_fedora-pkgdb-collections.so</Path>
+            <Path fileType="library">/usr/lib64/gnome-software/plugins-23/libgs_plugin_flatpak.so</Path>
+            <Path fileType="library">/usr/lib64/gnome-software/plugins-23/libgs_plugin_fwupd.so</Path>
+            <Path fileType="library">/usr/lib64/gnome-software/plugins-23/libgs_plugin_generic-updates.so</Path>
+            <Path fileType="library">/usr/lib64/gnome-software/plugins-23/libgs_plugin_hardcoded-blocklist.so</Path>
+            <Path fileType="library">/usr/lib64/gnome-software/plugins-23/libgs_plugin_icons.so</Path>
+            <Path fileType="library">/usr/lib64/gnome-software/plugins-23/libgs_plugin_modalias.so</Path>
+            <Path fileType="library">/usr/lib64/gnome-software/plugins-23/libgs_plugin_os-release.so</Path>
+            <Path fileType="library">/usr/lib64/gnome-software/plugins-23/libgs_plugin_packagekit.so</Path>
+            <Path fileType="library">/usr/lib64/gnome-software/plugins-23/libgs_plugin_provenance-license.so</Path>
+            <Path fileType="library">/usr/lib64/gnome-software/plugins-23/libgs_plugin_provenance.so</Path>
+            <Path fileType="library">/usr/lib64/gnome-software/plugins-23/libgs_plugin_repos.so</Path>
             <Path fileType="data">/usr/share/applications/gnome-software-local-file-flatpak.desktop</Path>
             <Path fileType="data">/usr/share/applications/gnome-software-local-file-fwupd.desktop</Path>
+            <Path fileType="data">/usr/share/applications/gnome-software-local-file-metainfo.desktop</Path>
             <Path fileType="data">/usr/share/applications/gnome-software-local-file-packagekit.desktop</Path>
             <Path fileType="data">/usr/share/applications/org.gnome.Software.desktop</Path>
             <Path fileType="data">/usr/share/bash-completion/completions/gnome-software</Path>
@@ -74,6 +75,48 @@
             <Path fileType="doc">/usr/share/help/C/gnome-software/legal.xml</Path>
             <Path fileType="doc">/usr/share/help/C/gnome-software/software-licensing.page</Path>
             <Path fileType="doc">/usr/share/help/C/gnome-software/software-metadata.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-software/figures/app-context-bar.png</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-software/figures/app-screenshot.png</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-software/figures/carousel.png</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-software/figures/install-webapp-from-gnome-web.png</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-software/figures/scalable/license-community-built.svg</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-software/figures/scalable/license-proprietary-and-special.svg</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-software/figures/scalable/license-unknown.svg</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-software/figures/scalable/links.svg</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-software/figures/scalable/no-links.svg</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-software/figures/scalable/symbolic/computer-fail-symbolic.svg</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-software/figures/scalable/symbolic/contact-symbolic.svg</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-software/figures/scalable/symbolic/donate-symbolic.svg</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-software/figures/scalable/symbolic/help-link-symbolic.svg</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-software/figures/scalable/symbolic/image-missing-symbolic.svg</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-software/figures/scalable/symbolic/translations-symbolic.svg</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-software/figures/scalable/symbolic/webpage-symbolic.svg</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-software/how-to-reinstall-a-web-app.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-software/index.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-software/legal.xml</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-software/software-licensing.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-software/software-metadata.page</Path>
+            <Path fileType="doc">/usr/share/help/ca/gnome-software/figures/app-context-bar.png</Path>
+            <Path fileType="doc">/usr/share/help/ca/gnome-software/figures/app-screenshot.png</Path>
+            <Path fileType="doc">/usr/share/help/ca/gnome-software/figures/carousel.png</Path>
+            <Path fileType="doc">/usr/share/help/ca/gnome-software/figures/install-webapp-from-gnome-web.png</Path>
+            <Path fileType="doc">/usr/share/help/ca/gnome-software/figures/scalable/license-community-built.svg</Path>
+            <Path fileType="doc">/usr/share/help/ca/gnome-software/figures/scalable/license-proprietary-and-special.svg</Path>
+            <Path fileType="doc">/usr/share/help/ca/gnome-software/figures/scalable/license-unknown.svg</Path>
+            <Path fileType="doc">/usr/share/help/ca/gnome-software/figures/scalable/links.svg</Path>
+            <Path fileType="doc">/usr/share/help/ca/gnome-software/figures/scalable/no-links.svg</Path>
+            <Path fileType="doc">/usr/share/help/ca/gnome-software/figures/scalable/symbolic/computer-fail-symbolic.svg</Path>
+            <Path fileType="doc">/usr/share/help/ca/gnome-software/figures/scalable/symbolic/contact-symbolic.svg</Path>
+            <Path fileType="doc">/usr/share/help/ca/gnome-software/figures/scalable/symbolic/donate-symbolic.svg</Path>
+            <Path fileType="doc">/usr/share/help/ca/gnome-software/figures/scalable/symbolic/help-link-symbolic.svg</Path>
+            <Path fileType="doc">/usr/share/help/ca/gnome-software/figures/scalable/symbolic/image-missing-symbolic.svg</Path>
+            <Path fileType="doc">/usr/share/help/ca/gnome-software/figures/scalable/symbolic/translations-symbolic.svg</Path>
+            <Path fileType="doc">/usr/share/help/ca/gnome-software/figures/scalable/symbolic/webpage-symbolic.svg</Path>
+            <Path fileType="doc">/usr/share/help/ca/gnome-software/how-to-reinstall-a-web-app.page</Path>
+            <Path fileType="doc">/usr/share/help/ca/gnome-software/index.page</Path>
+            <Path fileType="doc">/usr/share/help/ca/gnome-software/legal.xml</Path>
+            <Path fileType="doc">/usr/share/help/ca/gnome-software/software-licensing.page</Path>
+            <Path fileType="doc">/usr/share/help/ca/gnome-software/software-metadata.page</Path>
             <Path fileType="doc">/usr/share/help/cs/gnome-software/figures/app-context-bar.png</Path>
             <Path fileType="doc">/usr/share/help/cs/gnome-software/figures/app-screenshot.png</Path>
             <Path fileType="doc">/usr/share/help/cs/gnome-software/figures/carousel.png</Path>
@@ -95,6 +138,27 @@
             <Path fileType="doc">/usr/share/help/cs/gnome-software/legal.xml</Path>
             <Path fileType="doc">/usr/share/help/cs/gnome-software/software-licensing.page</Path>
             <Path fileType="doc">/usr/share/help/cs/gnome-software/software-metadata.page</Path>
+            <Path fileType="doc">/usr/share/help/da/gnome-software/figures/app-context-bar.png</Path>
+            <Path fileType="doc">/usr/share/help/da/gnome-software/figures/app-screenshot.png</Path>
+            <Path fileType="doc">/usr/share/help/da/gnome-software/figures/carousel.png</Path>
+            <Path fileType="doc">/usr/share/help/da/gnome-software/figures/install-webapp-from-gnome-web.png</Path>
+            <Path fileType="doc">/usr/share/help/da/gnome-software/figures/scalable/license-community-built.svg</Path>
+            <Path fileType="doc">/usr/share/help/da/gnome-software/figures/scalable/license-proprietary-and-special.svg</Path>
+            <Path fileType="doc">/usr/share/help/da/gnome-software/figures/scalable/license-unknown.svg</Path>
+            <Path fileType="doc">/usr/share/help/da/gnome-software/figures/scalable/links.svg</Path>
+            <Path fileType="doc">/usr/share/help/da/gnome-software/figures/scalable/no-links.svg</Path>
+            <Path fileType="doc">/usr/share/help/da/gnome-software/figures/scalable/symbolic/computer-fail-symbolic.svg</Path>
+            <Path fileType="doc">/usr/share/help/da/gnome-software/figures/scalable/symbolic/contact-symbolic.svg</Path>
+            <Path fileType="doc">/usr/share/help/da/gnome-software/figures/scalable/symbolic/donate-symbolic.svg</Path>
+            <Path fileType="doc">/usr/share/help/da/gnome-software/figures/scalable/symbolic/help-link-symbolic.svg</Path>
+            <Path fileType="doc">/usr/share/help/da/gnome-software/figures/scalable/symbolic/image-missing-symbolic.svg</Path>
+            <Path fileType="doc">/usr/share/help/da/gnome-software/figures/scalable/symbolic/translations-symbolic.svg</Path>
+            <Path fileType="doc">/usr/share/help/da/gnome-software/figures/scalable/symbolic/webpage-symbolic.svg</Path>
+            <Path fileType="doc">/usr/share/help/da/gnome-software/how-to-reinstall-a-web-app.page</Path>
+            <Path fileType="doc">/usr/share/help/da/gnome-software/index.page</Path>
+            <Path fileType="doc">/usr/share/help/da/gnome-software/legal.xml</Path>
+            <Path fileType="doc">/usr/share/help/da/gnome-software/software-licensing.page</Path>
+            <Path fileType="doc">/usr/share/help/da/gnome-software/software-metadata.page</Path>
             <Path fileType="doc">/usr/share/help/de/gnome-software/figures/app-context-bar.png</Path>
             <Path fileType="doc">/usr/share/help/de/gnome-software/figures/app-screenshot.png</Path>
             <Path fileType="doc">/usr/share/help/de/gnome-software/figures/carousel.png</Path>
@@ -116,6 +180,27 @@
             <Path fileType="doc">/usr/share/help/de/gnome-software/legal.xml</Path>
             <Path fileType="doc">/usr/share/help/de/gnome-software/software-licensing.page</Path>
             <Path fileType="doc">/usr/share/help/de/gnome-software/software-metadata.page</Path>
+            <Path fileType="doc">/usr/share/help/el/gnome-software/figures/app-context-bar.png</Path>
+            <Path fileType="doc">/usr/share/help/el/gnome-software/figures/app-screenshot.png</Path>
+            <Path fileType="doc">/usr/share/help/el/gnome-software/figures/carousel.png</Path>
+            <Path fileType="doc">/usr/share/help/el/gnome-software/figures/install-webapp-from-gnome-web.png</Path>
+            <Path fileType="doc">/usr/share/help/el/gnome-software/figures/scalable/license-community-built.svg</Path>
+            <Path fileType="doc">/usr/share/help/el/gnome-software/figures/scalable/license-proprietary-and-special.svg</Path>
+            <Path fileType="doc">/usr/share/help/el/gnome-software/figures/scalable/license-unknown.svg</Path>
+            <Path fileType="doc">/usr/share/help/el/gnome-software/figures/scalable/links.svg</Path>
+            <Path fileType="doc">/usr/share/help/el/gnome-software/figures/scalable/no-links.svg</Path>
+            <Path fileType="doc">/usr/share/help/el/gnome-software/figures/scalable/symbolic/computer-fail-symbolic.svg</Path>
+            <Path fileType="doc">/usr/share/help/el/gnome-software/figures/scalable/symbolic/contact-symbolic.svg</Path>
+            <Path fileType="doc">/usr/share/help/el/gnome-software/figures/scalable/symbolic/donate-symbolic.svg</Path>
+            <Path fileType="doc">/usr/share/help/el/gnome-software/figures/scalable/symbolic/help-link-symbolic.svg</Path>
+            <Path fileType="doc">/usr/share/help/el/gnome-software/figures/scalable/symbolic/image-missing-symbolic.svg</Path>
+            <Path fileType="doc">/usr/share/help/el/gnome-software/figures/scalable/symbolic/translations-symbolic.svg</Path>
+            <Path fileType="doc">/usr/share/help/el/gnome-software/figures/scalable/symbolic/webpage-symbolic.svg</Path>
+            <Path fileType="doc">/usr/share/help/el/gnome-software/how-to-reinstall-a-web-app.page</Path>
+            <Path fileType="doc">/usr/share/help/el/gnome-software/index.page</Path>
+            <Path fileType="doc">/usr/share/help/el/gnome-software/legal.xml</Path>
+            <Path fileType="doc">/usr/share/help/el/gnome-software/software-licensing.page</Path>
+            <Path fileType="doc">/usr/share/help/el/gnome-software/software-metadata.page</Path>
             <Path fileType="doc">/usr/share/help/eu/gnome-software/figures/app-context-bar.png</Path>
             <Path fileType="doc">/usr/share/help/eu/gnome-software/figures/app-screenshot.png</Path>
             <Path fileType="doc">/usr/share/help/eu/gnome-software/figures/carousel.png</Path>
@@ -200,6 +285,69 @@
             <Path fileType="doc">/usr/share/help/id/gnome-software/legal.xml</Path>
             <Path fileType="doc">/usr/share/help/id/gnome-software/software-licensing.page</Path>
             <Path fileType="doc">/usr/share/help/id/gnome-software/software-metadata.page</Path>
+            <Path fileType="doc">/usr/share/help/it/gnome-software/figures/app-context-bar.png</Path>
+            <Path fileType="doc">/usr/share/help/it/gnome-software/figures/app-screenshot.png</Path>
+            <Path fileType="doc">/usr/share/help/it/gnome-software/figures/carousel.png</Path>
+            <Path fileType="doc">/usr/share/help/it/gnome-software/figures/install-webapp-from-gnome-web.png</Path>
+            <Path fileType="doc">/usr/share/help/it/gnome-software/figures/scalable/license-community-built.svg</Path>
+            <Path fileType="doc">/usr/share/help/it/gnome-software/figures/scalable/license-proprietary-and-special.svg</Path>
+            <Path fileType="doc">/usr/share/help/it/gnome-software/figures/scalable/license-unknown.svg</Path>
+            <Path fileType="doc">/usr/share/help/it/gnome-software/figures/scalable/links.svg</Path>
+            <Path fileType="doc">/usr/share/help/it/gnome-software/figures/scalable/no-links.svg</Path>
+            <Path fileType="doc">/usr/share/help/it/gnome-software/figures/scalable/symbolic/computer-fail-symbolic.svg</Path>
+            <Path fileType="doc">/usr/share/help/it/gnome-software/figures/scalable/symbolic/contact-symbolic.svg</Path>
+            <Path fileType="doc">/usr/share/help/it/gnome-software/figures/scalable/symbolic/donate-symbolic.svg</Path>
+            <Path fileType="doc">/usr/share/help/it/gnome-software/figures/scalable/symbolic/help-link-symbolic.svg</Path>
+            <Path fileType="doc">/usr/share/help/it/gnome-software/figures/scalable/symbolic/image-missing-symbolic.svg</Path>
+            <Path fileType="doc">/usr/share/help/it/gnome-software/figures/scalable/symbolic/translations-symbolic.svg</Path>
+            <Path fileType="doc">/usr/share/help/it/gnome-software/figures/scalable/symbolic/webpage-symbolic.svg</Path>
+            <Path fileType="doc">/usr/share/help/it/gnome-software/how-to-reinstall-a-web-app.page</Path>
+            <Path fileType="doc">/usr/share/help/it/gnome-software/index.page</Path>
+            <Path fileType="doc">/usr/share/help/it/gnome-software/legal.xml</Path>
+            <Path fileType="doc">/usr/share/help/it/gnome-software/software-licensing.page</Path>
+            <Path fileType="doc">/usr/share/help/it/gnome-software/software-metadata.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-software/figures/app-context-bar.png</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-software/figures/app-screenshot.png</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-software/figures/carousel.png</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-software/figures/install-webapp-from-gnome-web.png</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-software/figures/scalable/license-community-built.svg</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-software/figures/scalable/license-proprietary-and-special.svg</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-software/figures/scalable/license-unknown.svg</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-software/figures/scalable/links.svg</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-software/figures/scalable/no-links.svg</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-software/figures/scalable/symbolic/computer-fail-symbolic.svg</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-software/figures/scalable/symbolic/contact-symbolic.svg</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-software/figures/scalable/symbolic/donate-symbolic.svg</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-software/figures/scalable/symbolic/help-link-symbolic.svg</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-software/figures/scalable/symbolic/image-missing-symbolic.svg</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-software/figures/scalable/symbolic/translations-symbolic.svg</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-software/figures/scalable/symbolic/webpage-symbolic.svg</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-software/how-to-reinstall-a-web-app.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-software/index.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-software/legal.xml</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-software/software-licensing.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-software/software-metadata.page</Path>
+            <Path fileType="doc">/usr/share/help/nl/gnome-software/figures/app-context-bar.png</Path>
+            <Path fileType="doc">/usr/share/help/nl/gnome-software/figures/app-screenshot.png</Path>
+            <Path fileType="doc">/usr/share/help/nl/gnome-software/figures/carousel.png</Path>
+            <Path fileType="doc">/usr/share/help/nl/gnome-software/figures/install-webapp-from-gnome-web.png</Path>
+            <Path fileType="doc">/usr/share/help/nl/gnome-software/figures/scalable/license-community-built.svg</Path>
+            <Path fileType="doc">/usr/share/help/nl/gnome-software/figures/scalable/license-proprietary-and-special.svg</Path>
+            <Path fileType="doc">/usr/share/help/nl/gnome-software/figures/scalable/license-unknown.svg</Path>
+            <Path fileType="doc">/usr/share/help/nl/gnome-software/figures/scalable/links.svg</Path>
+            <Path fileType="doc">/usr/share/help/nl/gnome-software/figures/scalable/no-links.svg</Path>
+            <Path fileType="doc">/usr/share/help/nl/gnome-software/figures/scalable/symbolic/computer-fail-symbolic.svg</Path>
+            <Path fileType="doc">/usr/share/help/nl/gnome-software/figures/scalable/symbolic/contact-symbolic.svg</Path>
+            <Path fileType="doc">/usr/share/help/nl/gnome-software/figures/scalable/symbolic/donate-symbolic.svg</Path>
+            <Path fileType="doc">/usr/share/help/nl/gnome-software/figures/scalable/symbolic/help-link-symbolic.svg</Path>
+            <Path fileType="doc">/usr/share/help/nl/gnome-software/figures/scalable/symbolic/image-missing-symbolic.svg</Path>
+            <Path fileType="doc">/usr/share/help/nl/gnome-software/figures/scalable/symbolic/translations-symbolic.svg</Path>
+            <Path fileType="doc">/usr/share/help/nl/gnome-software/figures/scalable/symbolic/webpage-symbolic.svg</Path>
+            <Path fileType="doc">/usr/share/help/nl/gnome-software/how-to-reinstall-a-web-app.page</Path>
+            <Path fileType="doc">/usr/share/help/nl/gnome-software/index.page</Path>
+            <Path fileType="doc">/usr/share/help/nl/gnome-software/legal.xml</Path>
+            <Path fileType="doc">/usr/share/help/nl/gnome-software/software-licensing.page</Path>
+            <Path fileType="doc">/usr/share/help/nl/gnome-software/software-metadata.page</Path>
             <Path fileType="doc">/usr/share/help/pt_BR/gnome-software/figures/app-context-bar.png</Path>
             <Path fileType="doc">/usr/share/help/pt_BR/gnome-software/figures/app-screenshot.png</Path>
             <Path fileType="doc">/usr/share/help/pt_BR/gnome-software/figures/carousel.png</Path>
@@ -242,6 +390,27 @@
             <Path fileType="doc">/usr/share/help/ru/gnome-software/legal.xml</Path>
             <Path fileType="doc">/usr/share/help/ru/gnome-software/software-licensing.page</Path>
             <Path fileType="doc">/usr/share/help/ru/gnome-software/software-metadata.page</Path>
+            <Path fileType="doc">/usr/share/help/sr/gnome-software/figures/app-context-bar.png</Path>
+            <Path fileType="doc">/usr/share/help/sr/gnome-software/figures/app-screenshot.png</Path>
+            <Path fileType="doc">/usr/share/help/sr/gnome-software/figures/carousel.png</Path>
+            <Path fileType="doc">/usr/share/help/sr/gnome-software/figures/install-webapp-from-gnome-web.png</Path>
+            <Path fileType="doc">/usr/share/help/sr/gnome-software/figures/scalable/license-community-built.svg</Path>
+            <Path fileType="doc">/usr/share/help/sr/gnome-software/figures/scalable/license-proprietary-and-special.svg</Path>
+            <Path fileType="doc">/usr/share/help/sr/gnome-software/figures/scalable/license-unknown.svg</Path>
+            <Path fileType="doc">/usr/share/help/sr/gnome-software/figures/scalable/links.svg</Path>
+            <Path fileType="doc">/usr/share/help/sr/gnome-software/figures/scalable/no-links.svg</Path>
+            <Path fileType="doc">/usr/share/help/sr/gnome-software/figures/scalable/symbolic/computer-fail-symbolic.svg</Path>
+            <Path fileType="doc">/usr/share/help/sr/gnome-software/figures/scalable/symbolic/contact-symbolic.svg</Path>
+            <Path fileType="doc">/usr/share/help/sr/gnome-software/figures/scalable/symbolic/donate-symbolic.svg</Path>
+            <Path fileType="doc">/usr/share/help/sr/gnome-software/figures/scalable/symbolic/help-link-symbolic.svg</Path>
+            <Path fileType="doc">/usr/share/help/sr/gnome-software/figures/scalable/symbolic/image-missing-symbolic.svg</Path>
+            <Path fileType="doc">/usr/share/help/sr/gnome-software/figures/scalable/symbolic/translations-symbolic.svg</Path>
+            <Path fileType="doc">/usr/share/help/sr/gnome-software/figures/scalable/symbolic/webpage-symbolic.svg</Path>
+            <Path fileType="doc">/usr/share/help/sr/gnome-software/how-to-reinstall-a-web-app.page</Path>
+            <Path fileType="doc">/usr/share/help/sr/gnome-software/index.page</Path>
+            <Path fileType="doc">/usr/share/help/sr/gnome-software/legal.xml</Path>
+            <Path fileType="doc">/usr/share/help/sr/gnome-software/software-licensing.page</Path>
+            <Path fileType="doc">/usr/share/help/sr/gnome-software/software-metadata.page</Path>
             <Path fileType="doc">/usr/share/help/sv/gnome-software/figures/app-context-bar.png</Path>
             <Path fileType="doc">/usr/share/help/sv/gnome-software/figures/app-screenshot.png</Path>
             <Path fileType="doc">/usr/share/help/sv/gnome-software/figures/carousel.png</Path>
@@ -326,6 +495,7 @@
             <Path fileType="localedata">/usr/share/locale/hi/LC_MESSAGES/gnome-software.mo</Path>
             <Path fileType="localedata">/usr/share/locale/hr/LC_MESSAGES/gnome-software.mo</Path>
             <Path fileType="localedata">/usr/share/locale/hu/LC_MESSAGES/gnome-software.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/ia/LC_MESSAGES/gnome-software.mo</Path>
             <Path fileType="localedata">/usr/share/locale/id/LC_MESSAGES/gnome-software.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ie/LC_MESSAGES/gnome-software.mo</Path>
             <Path fileType="localedata">/usr/share/locale/is/LC_MESSAGES/gnome-software.mo</Path>
@@ -360,20 +530,20 @@
             <Path fileType="localedata">/usr/share/locale/te/LC_MESSAGES/gnome-software.mo</Path>
             <Path fileType="localedata">/usr/share/locale/th/LC_MESSAGES/gnome-software.mo</Path>
             <Path fileType="localedata">/usr/share/locale/tr/LC_MESSAGES/gnome-software.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/ug/LC_MESSAGES/gnome-software.mo</Path>
             <Path fileType="localedata">/usr/share/locale/uk/LC_MESSAGES/gnome-software.mo</Path>
             <Path fileType="localedata">/usr/share/locale/uz/LC_MESSAGES/gnome-software.mo</Path>
             <Path fileType="localedata">/usr/share/locale/vi/LC_MESSAGES/gnome-software.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_CN/LC_MESSAGES/gnome-software.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_HK/LC_MESSAGES/gnome-software.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_TW/LC_MESSAGES/gnome-software.mo</Path>
-            <Path fileType="man">/usr/share/man/man1/gnome-software.1</Path>
+            <Path fileType="man">/usr/share/man/man1/gnome-software.1.zst</Path>
             <Path fileType="data">/usr/share/metainfo/org.gnome.Software.Plugin.Epiphany.metainfo.xml</Path>
             <Path fileType="data">/usr/share/metainfo/org.gnome.Software.Plugin.Flatpak.metainfo.xml</Path>
             <Path fileType="data">/usr/share/metainfo/org.gnome.Software.Plugin.Fwupd.metainfo.xml</Path>
             <Path fileType="data">/usr/share/metainfo/org.gnome.Software.metainfo.xml</Path>
             <Path fileType="data">/usr/share/swcatalog/xml/gnome-pwa-list-foss.xml</Path>
             <Path fileType="data">/usr/share/swcatalog/xml/gnome-pwa-list-proprietary.xml</Path>
-            <Path fileType="data">/usr/share/xdg/autostart/org.gnome.Software.desktop</Path>
         </Files>
     </Package>
     <Package>
@@ -383,7 +553,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="30">gnome-software</Dependency>
+            <Dependency release="37">gnome-software</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/gnome-software/gnome-software.h</Path>
@@ -412,6 +582,7 @@
             <Path fileType="header">/usr/include/gnome-software/gs-plugin-job-cancel-offline-update.h</Path>
             <Path fileType="header">/usr/include/gnome-software/gs-plugin-job-download-upgrade.h</Path>
             <Path fileType="header">/usr/include/gnome-software/gs-plugin-job-file-to-app.h</Path>
+            <Path fileType="header">/usr/include/gnome-software/gs-plugin-job-get-offline-update-state.h</Path>
             <Path fileType="header">/usr/include/gnome-software/gs-plugin-job-install-apps.h</Path>
             <Path fileType="header">/usr/include/gnome-software/gs-plugin-job-launch.h</Path>
             <Path fileType="header">/usr/include/gnome-software/gs-plugin-job-list-apps.h</Path>
@@ -420,6 +591,7 @@
             <Path fileType="header">/usr/include/gnome-software/gs-plugin-job-manage-repository.h</Path>
             <Path fileType="header">/usr/include/gnome-software/gs-plugin-job-refine.h</Path>
             <Path fileType="header">/usr/include/gnome-software/gs-plugin-job-refresh-metadata.h</Path>
+            <Path fileType="header">/usr/include/gnome-software/gs-plugin-job-set-offline-update-action.h</Path>
             <Path fileType="header">/usr/include/gnome-software/gs-plugin-job-trigger-upgrade.h</Path>
             <Path fileType="header">/usr/include/gnome-software/gs-plugin-job-uninstall-apps.h</Path>
             <Path fileType="header">/usr/include/gnome-software/gs-plugin-job-update-apps.h</Path>
@@ -432,6 +604,7 @@
             <Path fileType="header">/usr/include/gnome-software/gs-plugin.h</Path>
             <Path fileType="header">/usr/include/gnome-software/gs-remote-icon.h</Path>
             <Path fileType="header">/usr/include/gnome-software/gs-rewrite-resources.h</Path>
+            <Path fileType="header">/usr/include/gnome-software/gs-silo-wrapper.h</Path>
             <Path fileType="header">/usr/include/gnome-software/gs-test.h</Path>
             <Path fileType="header">/usr/include/gnome-software/gs-utils.h</Path>
             <Path fileType="header">/usr/include/gnome-software/gs-worker-thread.h</Path>
@@ -501,12 +674,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="30">
-            <Date>2025-08-07</Date>
-            <Version>48.4</Version>
+        <Update release="37">
+            <Date>2026-05-09</Date>
+            <Version>50.1</Version>
             <Comment>Packaging update</Comment>
-            <Name>Muhammad Alfi Syahrin</Name>
-            <Email>malfisya.dev@hotmail.com</Email>
+            <Name>Joey Riches</Name>
+            <Email>josephriches@gmail.com</Email>
         </Update>
     </History>
 </PISI>

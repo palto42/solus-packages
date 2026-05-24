@@ -165,6 +165,7 @@ libportal.so.1:xdp_portal_dynamic_launcher_prepare_install_finish
 libportal.so.1:xdp_portal_dynamic_launcher_request_install_token
 libportal.so.1:xdp_portal_dynamic_launcher_uninstall
 libportal.so.1:xdp_portal_get_settings
+libportal.so.1:xdp_portal_get_supported_notification_options
 libportal.so.1:xdp_portal_get_type
 libportal.so.1:xdp_portal_get_user_information
 libportal.so.1:xdp_portal_get_user_information_finish

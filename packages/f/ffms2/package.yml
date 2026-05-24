@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : ffms2
-version    : '2.40'
-release    : 6
+version    : '5.0'
+release    : 7
 source     :
-    - https://github.com/FFMS/ffms2/archive/2.40.tar.gz : 82e95662946f3d6e1b529eadbd72bed196adfbc41368b2d50493efce6e716320
+    - https://github.com/FFMS/ffms2/archive/5.0.tar.gz : 7770af0bbc0063f9580a6a5c8e7c51f1788f171d7da0b352e48a1e60943a8c3c
 license    : MIT
 component  : multimedia.library
 homepage   : https://github.com/FFMS/ffms2
@@ -12,9 +13,6 @@ description: |
 builddeps  :
     - pkgconfig(libavcodec)
 setup      : |
-    %patch -p1 -i $pkgfiles/ffmpeg-5.patch
-    %patch -p1 -i $pkgfiles/ffmpeg-5-2.patch
-    %patch -p1 -i $pkgfiles/ffmpeg-5.1.patch
     %autogen
 build      : |
     %make

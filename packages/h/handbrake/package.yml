@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : handbrake
-version    : 1.10.2
-release    : 46
+version    : 1.11.1
+release    : 50
 source     :
-    - https://github.com/HandBrake/HandBrake/releases/download/1.10.2/HandBrake-1.10.2-source.tar.bz2 : c65e1cc4f8cfc36c24107b92c28d60e71ef185ec983e9a5841facffafea5f8db
+    - https://github.com/HandBrake/HandBrake/releases/download/1.11.1/HandBrake-1.11.1-source.tar.bz2 : 4ff6a8a57c9b1cea51025306e313eee423b0fa1a8b7799aeaa8d4d7c457a7310
 license    :
     - GPL-2.0-or-later
     - LGPL-2.1-or-later
@@ -51,3 +52,4 @@ build      : |
     %make -C x86_64-solus-linux
 install    : |
     %make_install -C x86_64-solus-linux
+    %install_license AUTHORS.markdown COPYING LICENSE THANKS.markdown

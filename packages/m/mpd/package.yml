@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : mpd
-version    : 0.24.5
-release    : 97
+version    : 0.24.9
+release    : 104
 source     :
-    - https://github.com/MusicPlayerDaemon/MPD/archive/refs/tags/v0.24.5.tar.gz : ab7f9a2315eff97cc47dff5da9b9c675b1764cd50f161dc295b8a0d1956a6244
+    - https://github.com/MusicPlayerDaemon/MPD/archive/refs/tags/v0.24.9.tar.gz : 8a3e7af8e203e561527e07be09aa98b94fb8f6befd7ec4c884e3bbac6bc8c744
 homepage   : https://www.musicpd.org
 license    : GPL-2.0-or-later
 component  : multimedia.audio
@@ -64,5 +65,6 @@ build      : |
 install    : |
     %ninja_install
     install -Dm00644 doc/mpdconf.example $installdir/usr/share/doc/mpd/mpd.conf
+    %install_license COPYING
 check      : |
     %ninja_check

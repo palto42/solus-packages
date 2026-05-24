@@ -1,10 +1,18 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kscreenlocker
-version    : 6.4.5
-release    : 134
+version    : 6.6.5
+release    : 146
 source     :
-    - https://download.kde.org/stable/plasma/6.4.5/kscreenlocker-6.4.5.tar.xz : fac4f9d53d63cb9b06e90feb82c28f471971d15defd4a068bb1e7d2886b7090d
+    - https://download.kde.org/stable/plasma/6.6.5/kscreenlocker-6.6.5.tar.xz : 9ba0aee32364051eeb213d48dd3c208ae0ce7062190a30f855735ba4efe389cc
 homepage   : https://www.kde.org/workspaces/plasmadesktop/
-license    : GPL-2.0-or-later
+license    :
+    - BSD-3-Clause
+    - CC0-1.0
+    - GPL-2.0-only
+    - GPL-2.0-or-later
+    - GPL-3.0-only
+    - LGPL-2.1-only
+    - LGPL-3.0-only
 component  : desktop.kde.core
 summary    : Library and components for secure lock screen architecture
 description: |
@@ -22,12 +30,14 @@ builddeps  :
     - kf6-ki18n-devel
     - kf6-kidletime-devel
     - kf6-kio-devel
+    - kf6-kirigami-devel
     - kf6-knotifications-devel
     - kf6-kpackage-devel
     - kf6-ksvg-devel
     - kf6-kxmlgui-devel
     - layer-shell-qt-devel
     - libplasma-devel
+    - qt6-base-private-devel
 clang      : true
 optimize   :
     - speed
@@ -39,3 +49,5 @@ build      : |
 install    : |
     %ninja_install
     install -Dm00644 $pkgfiles/pam.d/* -t $installdir/usr/share/defaults/etc/pam.d/
+
+    %install_license LICENSES/*

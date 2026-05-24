@@ -1,6 +1,7 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : dvtm
 version    : '0.15'
-release    : 5
+release    : 6
 source     :
     - https://github.com/martanne/dvtm/archive/refs/tags/v0.15.tar.gz : 496eada13d8abaa8d772279746f78b0c6fed11b560599490f3e70ebc21197bf0
 homepage   : https://www.brain-dump.org/projects/dvtm
@@ -15,3 +16,4 @@ install    : |
     %make_install PREFIX=/usr
     # Terminfo is mainlined in ncurses.
     rm -rf $installdir/usr/share/terminfo
+    %install_license LICENSE

@@ -1,3 +1,5 @@
+hyprland-share-picker:_IO_stdin_used
+xdg-desktop-portal-hyprland:_IO_stdin_used
 xdg-desktop-portal-hyprland:wl_buffer_interface
 xdg-desktop-portal-hyprland:wl_callback_interface
 xdg-desktop-portal-hyprland:wl_compositor_interface

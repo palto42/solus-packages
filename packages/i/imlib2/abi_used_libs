@@ -10,14 +10,14 @@ libgif.so.7
 libglib-2.0.so.0
 libgobject-2.0.so.0
 libheif.so.1
-libid3tag.so.0.16.2
+libid3tag.so.0
 libjpeg.so.8
 libjxl.so.0.11
 libjxl_threads.so.0.11
 liblzma.so.5
 libm.so.6
 libpng16.so.16
-libraw.so.23
+libraw.so.25
 librsvg-2.so.2
 libspectre.so.1
 libtiff.so.6

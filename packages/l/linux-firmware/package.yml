@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : linux-firmware
-version    : '20250917'
-release    : 97
+version    : '20260519'
+release    : 105
 source     :
-    - git|https://gitlab.com/kernel-firmware/linux-firmware.git : 20250917
+    - git|https://gitlab.com/kernel-firmware/linux-firmware.git : d962a6a309b78778f458dc94713845eee105be14
 license    :
     - GPL-2.0-or-later
     - Distributable
@@ -29,14 +30,14 @@ rundeps    :
     - linux-firmware-libertas
     - linux-firmware-mlxsw-spectrum
     - linux-firmware-qcom
-setup      : |
-    git config --global user.email "solus@getsol.us"
-    git config --global user.name "Solus"
+# setup      : |
+#     git config --global user.email "solus@getsol.us"
+#     git config --global user.name "Solus"
 
-    # https://lore.kernel.org/linux-firmware/87bjn6fgr6.fsf@gentoo.org/
-    git checkout 50bbf75a5c547e6e71c27b42ca9472a85eeb5ee4 -- mediatek/BT_RAM_CODE_MT7922_1_1_hdr.bin
-    git checkout 59df6ceeb259a81eb13cae36a44179981e95abde -- mediatek/WIFI_MT7922_patch_mcu_1_1_hdr.bin
-    git checkout 59df6ceeb259a81eb13cae36a44179981e95abde -- mediatek/WIFI_RAM_CODE_MT7922_1.bin
+#     # https://lore.kernel.org/linux-firmware/87bjn6fgr6.fsf@gentoo.org/
+#     git checkout 50bbf75a5c547e6e71c27b42ca9472a85eeb5ee4 -- mediatek/BT_RAM_CODE_MT7922_1_1_hdr.bin
+#     git checkout 59df6ceeb259a81eb13cae36a44179981e95abde -- mediatek/WIFI_MT7922_patch_mcu_1_1_hdr.bin
+#     git checkout 59df6ceeb259a81eb13cae36a44179981e95abde -- mediatek/WIFI_RAM_CODE_MT7922_1.bin
 install    : |
     %make install-zst DESTDIR="$installdir" FIRMWAREDIR="/usr/lib64/firmware"
 
@@ -80,9 +81,8 @@ install    : |
     popd
 
     # Stick docs in
-    install -dDm00755 $installdir/usr/share/doc/${package}
-    install -m00644 LICENSE* $installdir/usr/share/doc/${package}/.
-    install -m00644 LICENCE* $installdir/usr/share/doc/${package}/.
+    %install_license LICENSE*
+    %install_license LICENCE*
 patterns   :
     - amdgpu :
         - /lib64/firmware/amdgpu
@@ -91,9 +91,9 @@ patterns   :
         - /usr/lib64/firmware/amdgpu
         - /usr/lib64/firmware/amdnpu
         - /usr/lib64/firmware/radeon
-        - /usr/share/doc/linux-firmware/LICENSE.amdgpu
-        - /usr/share/doc/linux-firmware/LICENSE.amdnpu
-        - /usr/share/doc/linux-firmware/LICENSE.radeon
+        - /usr/share/licenses/linux-firmware/LICENSE.amdgpu
+        - /usr/share/licenses/linux-firmware/LICENSE.amdnpu
+        - /usr/share/licenses/linux-firmware/LICENSE.radeon
     - intel-graphics :
         - /lib64/firmware/i915
         - /lib64/firmware/intel/ipu
@@ -105,14 +105,14 @@ patterns   :
         - /usr/lib64/firmware/intel/irci_*
         - /usr/lib64/firmware/intel/vsc
         - /usr/lib64/firmware/xe
-        - /usr/share/doc/linux-firmware/LICENSE.i915
+        - /usr/share/licenses/linux-firmware/LICENSE.i915
     - libertas : # Fedora has this additionally split into a mrvlprestera firmware package, maybe we want that?
         - /lib64/firmware/libertas
         - /lib64/firmware/mrvl
         - /usr/lib64/firmware/libertas
         - /usr/lib64/firmware/mrvl
-        - /usr/share/doc/linux-firmware/LICENCE.Marvell
-        - /usr/share/doc/linux-firmware/LICENCE.OLPC
+        - /usr/share/licenses/linux-firmware/LICENCE.Marvell
+        - /usr/share/licenses/linux-firmware/LICENCE.OLPC
     - mlxsw-spectrum :
         - /lib64/firmware/mellanox
         - /usr/lib64/firmware/mellanox
@@ -123,10 +123,10 @@ patterns   :
         - /usr/lib64/firmware/nvidia/ad*/gsp
         - /usr/lib64/firmware/nvidia/ga*/gsp
         - /usr/lib64/firmware/nvidia/tu*/gsp
-        - /usr/share/doc/linux-firmware/LICENCE.nvidia
+        - /usr/share/licenses/linux-firmware/LICENCE.nvidia
     - qcom :
         - /lib64/firmware/qcom
         - /usr/lib64/firmware/qcom
-        - /usr/share/doc/linux-firmware/LICENSE.qcom
-        - /usr/share/doc/linux-firmware/LICENSE.qcom-2
-        - /usr/share/doc/linux-firmware/LICENSE.qcom_yamato
+        - /usr/share/licenses/linux-firmware/LICENSE.qcom
+        - /usr/share/licenses/linux-firmware/LICENSE.qcom-2
+        - /usr/share/licenses/linux-firmware/LICENSE.qcom_yamato

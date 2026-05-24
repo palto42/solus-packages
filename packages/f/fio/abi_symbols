@@ -58,6 +58,7 @@ fio:blkzoned_finish_zone
 fio:blkzoned_get_max_active_zones
 fio:blkzoned_get_max_open_zones
 fio:blkzoned_get_zoned_model
+fio:blkzoned_move_zone_wp
 fio:blkzoned_report_zones
 fio:blkzoned_reset_wp
 fio:bloom_free
@@ -67,6 +68,7 @@ fio:bloom_string
 fio:buf_output_add
 fio:buf_output_free
 fio:buf_output_init
+fio:bytes2str_simple
 fio:calc_clat_percentiles
 fio:calc_lat
 fio:calc_log_samples
@@ -77,6 +79,7 @@ fio:check_for_running_stats
 fio:check_str_bytes
 fio:check_str_time
 fio:check_trigger_file
+fio:clear_inflight
 fio:clear_io_state
 fio:clear_io_u
 fio:clear_rusage_stat
@@ -124,7 +127,6 @@ fio:exec_trigger
 fio:exists_and_not_regfile
 fio:exit_backend
 fio:exitall_on_terminate
-fio:expand_variables
 fio:f_err
 fio:f_out
 fio:fdp_free_ruhs_info
@@ -225,6 +227,7 @@ fio:fio_net_recv_cmd
 fio:fio_net_send_cmd
 fio:fio_net_send_quit
 fio:fio_net_send_simple_cmd
+fio:fio_nvme_generate_guard
 fio:fio_nvme_get_info
 fio:fio_nvme_get_max_open_zones
 fio:fio_nvme_get_zoned_model
@@ -234,7 +237,6 @@ fio:fio_nvme_pi_verify
 fio:fio_nvme_report_zones
 fio:fio_nvme_reset_wp
 fio:fio_nvme_uring_cmd_prep
-fio:fio_nvme_uring_cmd_trim_prep
 fio:fio_option_dup_subs
 fio:fio_option_find
 fio:fio_option_mark_set
@@ -277,7 +279,6 @@ fio:fio_server_set_arg
 fio:fio_server_text_output
 fio:fio_set_directio
 fio:fio_set_fd_nonblocking
-fio:fio_sgio_close
 fio:fio_sha1_final
 fio:fio_sha1_init
 fio:fio_sha1_update
@@ -290,8 +291,11 @@ fio:fio_sha3_384_init
 fio:fio_sha3_512_init
 fio:fio_sha3_final
 fio:fio_sha3_update
+fio:fio_sha512_final
 fio:fio_sha512_init
 fio:fio_sha512_update
+fio:fio_shared_sem_init
+fio:fio_shared_sem_remove
 fio:fio_show_ioengine_help
 fio:fio_show_option_help
 fio:fio_start_all_clients
@@ -370,6 +374,7 @@ fio:init_random_map
 fio:init_thread_stat
 fio:init_thread_stat_min_vals
 fio:initialize_fio
+fio:invalidate_inflight
 fio:invalidate_profile_options
 fio:io_queue_event
 fio:io_u_block_info
@@ -425,6 +430,7 @@ fio:log_chunk_sizes
 fio:log_err
 fio:log_file
 fio:log_get_level
+fio:log_inflight
 fio:log_info
 fio:log_info_buf
 fio:log_info_flush
@@ -433,7 +439,6 @@ fio:log_io_u
 fio:log_prevalist
 fio:log_syslog
 fio:log_valist
-fio:longest_existing_path
 fio:lookup_file_hash
 fio:main
 fio:merge_blktrace_iologs
@@ -463,7 +468,6 @@ fio:murmurhash3
 fio:mutex_cond_init_pshared
 fio:mutex_init_pshared
 fio:mutex_init_pshared_with_type
-fio:mwc32
 fio:nr_clients
 fio:nr_segments
 fio:ntime_since
@@ -509,7 +513,6 @@ fio:prune_io_piece_log
 fio:put_file
 fio:put_file_log
 fio:put_io_u
-fio:qsort_size
 fio:queue_full
 fio:queue_io_piece
 fio:ramp_time_over
@@ -545,10 +548,8 @@ fio:setup_log
 fio:setup_zbd_zone_mode
 fio:sfree
 fio:show_cmd_help
-fio:show_disk_util
 fio:show_group_stats
 fio:show_idle_prof_stats
-fio:show_mixed_group_stats
 fio:show_running_run_stats
 fio:show_thread_status
 fio:sig_show_status
@@ -562,6 +563,9 @@ fio:smalloc_strdup
 fio:sort_options
 fio:split_parse_ddir
 fio:split_parse_prio_ddir
+fio:sprandom_free
+fio:sprandom_get_next_offset
+fio:sprandom_init
 fio:ss_check_interval
 fio:stat_calc_dist
 fio:stat_calc_lat_m
@@ -578,7 +582,6 @@ fio:steadystate_enabled
 fio:steadystate_free
 fio:steadystate_iops_mean
 fio:steadystate_setup
-fio:str_replace
 fio:str_split_parse
 fio:str_to_decimal
 fio:str_to_float
@@ -661,6 +664,7 @@ fio:zbd_free_zone_info
 fio:zbd_init_files
 fio:zbd_log_err
 fio:zbd_recalc_options_with_zone_granularity
+fio:zbd_recover_write_error
 fio:zbd_setup_files
 fio:zbd_unaligned_write
 fio:zbd_write_status
@@ -876,6 +880,7 @@ gfio:blkzoned_finish_zone
 gfio:blkzoned_get_max_active_zones
 gfio:blkzoned_get_max_open_zones
 gfio:blkzoned_get_zoned_model
+gfio:blkzoned_move_zone_wp
 gfio:blkzoned_report_zones
 gfio:blkzoned_reset_wp
 gfio:bloom_free
@@ -885,6 +890,7 @@ gfio:bloom_string
 gfio:buf_output_add
 gfio:buf_output_free
 gfio:buf_output_init
+gfio:bytes2str_simple
 gfio:calc_clat_percentiles
 gfio:calc_lat
 gfio:calc_log_samples
@@ -897,6 +903,7 @@ gfio:check_str_bytes
 gfio:check_str_time
 gfio:check_trigger_file
 gfio:clear_ge_ui_info
+gfio:clear_inflight
 gfio:clear_io_state
 gfio:clear_io_u
 gfio:clear_rusage_stat
@@ -950,7 +957,6 @@ gfio:exec_trigger
 gfio:exists_and_not_regfile
 gfio:exit_backend
 gfio:exitall_on_terminate
-gfio:expand_variables
 gfio:f_err
 gfio:f_out
 gfio:fdp_free_ruhs_info
@@ -1051,6 +1057,7 @@ gfio:fio_net_recv_cmd
 gfio:fio_net_send_cmd
 gfio:fio_net_send_quit
 gfio:fio_net_send_simple_cmd
+gfio:fio_nvme_generate_guard
 gfio:fio_nvme_get_info
 gfio:fio_nvme_get_max_open_zones
 gfio:fio_nvme_get_zoned_model
@@ -1060,7 +1067,6 @@ gfio:fio_nvme_pi_verify
 gfio:fio_nvme_report_zones
 gfio:fio_nvme_reset_wp
 gfio:fio_nvme_uring_cmd_prep
-gfio:fio_nvme_uring_cmd_trim_prep
 gfio:fio_option_dup_subs
 gfio:fio_option_find
 gfio:fio_option_mark_set
@@ -1103,7 +1109,6 @@ gfio:fio_server_set_arg
 gfio:fio_server_text_output
 gfio:fio_set_directio
 gfio:fio_set_fd_nonblocking
-gfio:fio_sgio_close
 gfio:fio_sha1_final
 gfio:fio_sha1_init
 gfio:fio_sha1_update
@@ -1116,8 +1121,11 @@ gfio:fio_sha3_384_init
 gfio:fio_sha3_512_init
 gfio:fio_sha3_final
 gfio:fio_sha3_update
+gfio:fio_sha512_final
 gfio:fio_sha512_init
 gfio:fio_sha512_update
+gfio:fio_shared_sem_init
+gfio:fio_shared_sem_remove
 gfio:fio_show_ioengine_help
 gfio:fio_show_option_help
 gfio:fio_start_all_clients
@@ -1234,6 +1242,7 @@ gfio:init_random_map
 gfio:init_thread_stat
 gfio:init_thread_stat_min_vals
 gfio:initialize_fio
+gfio:invalidate_inflight
 gfio:invalidate_profile_options
 gfio:io_queue_event
 gfio:io_u_block_info
@@ -1292,6 +1301,7 @@ gfio:log_chunk_sizes
 gfio:log_err
 gfio:log_file
 gfio:log_get_level
+gfio:log_inflight
 gfio:log_info
 gfio:log_info_buf
 gfio:log_info_flush
@@ -1300,7 +1310,6 @@ gfio:log_io_u
 gfio:log_prevalist
 gfio:log_syslog
 gfio:log_valist
-gfio:longest_existing_path
 gfio:lookup_file_hash
 gfio:main
 gfio:main_ui
@@ -1335,7 +1344,6 @@ gfio:murmurhash3
 gfio:mutex_cond_init_pshared
 gfio:mutex_init_pshared
 gfio:mutex_init_pshared_with_type
-gfio:mwc32
 gfio:new_combo_entry_in_frame
 gfio:new_info_entry_in_frame
 gfio:new_info_entry_in_frame_rgb
@@ -1385,7 +1393,6 @@ gfio:prune_io_piece_log
 gfio:put_file
 gfio:put_file_log
 gfio:put_io_u
-gfio:qsort_size
 gfio:queue_full
 gfio:queue_io_piece
 gfio:ramp_time_over
@@ -1421,10 +1428,8 @@ gfio:setup_log
 gfio:setup_zbd_zone_mode
 gfio:sfree
 gfio:show_cmd_help
-gfio:show_disk_util
 gfio:show_group_stats
 gfio:show_idle_prof_stats
-gfio:show_mixed_group_stats
 gfio:show_running_run_stats
 gfio:show_thread_status
 gfio:sig_show_status
@@ -1438,6 +1443,9 @@ gfio:smalloc_strdup
 gfio:sort_options
 gfio:split_parse_ddir
 gfio:split_parse_prio_ddir
+gfio:sprandom_free
+gfio:sprandom_get_next_offset
+gfio:sprandom_init
 gfio:ss_check_interval
 gfio:stat_calc_dist
 gfio:stat_calc_lat_m
@@ -1454,7 +1462,6 @@ gfio:steadystate_enabled
 gfio:steadystate_free
 gfio:steadystate_iops_mean
 gfio:steadystate_setup
-gfio:str_replace
 gfio:str_split_parse
 gfio:str_to_decimal
 gfio:str_to_float
@@ -1538,6 +1545,7 @@ gfio:zbd_free_zone_info
 gfio:zbd_init_files
 gfio:zbd_log_err
 gfio:zbd_recalc_options_with_zone_granularity
+gfio:zbd_recover_write_error
 gfio:zbd_setup_files
 gfio:zbd_unaligned_write
 gfio:zbd_write_status

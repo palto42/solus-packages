@@ -3,8 +3,8 @@
         <Name>tzdata</Name>
         <Homepage>https://www.iana.org/time-zones</Homepage>
         <Packager>
-            <Name>Joey Riches</Name>
-            <Email>josephriches@gmail.com</Email>
+            <Name>David Harder</Name>
+            <Email>david@davidjharder.ca</Email>
         </Packager>
         <License>Public-Domain</License>
         <PartOf>system.base</PartOf>
@@ -20,6 +20,7 @@
 </Description>
         <PartOf>system.base</PartOf>
         <Files>
+            <Path fileType="data">/usr/share/licenses/tzdata/LICENSE</Path>
             <Path fileType="data">/usr/share/zoneinfo/Africa/Abidjan</Path>
             <Path fileType="data">/usr/share/zoneinfo/Africa/Accra</Path>
             <Path fileType="data">/usr/share/zoneinfo/Africa/Addis_Ababa</Path>
@@ -119,6 +120,7 @@
             <Path fileType="data">/usr/share/zoneinfo/America/Coral_Harbour</Path>
             <Path fileType="data">/usr/share/zoneinfo/America/Cordoba</Path>
             <Path fileType="data">/usr/share/zoneinfo/America/Costa_Rica</Path>
+            <Path fileType="data">/usr/share/zoneinfo/America/Coyhaique</Path>
             <Path fileType="data">/usr/share/zoneinfo/America/Creston</Path>
             <Path fileType="data">/usr/share/zoneinfo/America/Cuiaba</Path>
             <Path fileType="data">/usr/share/zoneinfo/America/Curacao</Path>
@@ -718,6 +720,7 @@
             <Path fileType="data">/usr/share/zoneinfo/posix/America/Coral_Harbour</Path>
             <Path fileType="data">/usr/share/zoneinfo/posix/America/Cordoba</Path>
             <Path fileType="data">/usr/share/zoneinfo/posix/America/Costa_Rica</Path>
+            <Path fileType="data">/usr/share/zoneinfo/posix/America/Coyhaique</Path>
             <Path fileType="data">/usr/share/zoneinfo/posix/America/Creston</Path>
             <Path fileType="data">/usr/share/zoneinfo/posix/America/Cuiaba</Path>
             <Path fileType="data">/usr/share/zoneinfo/posix/America/Curacao</Path>
@@ -1316,6 +1319,7 @@
             <Path fileType="data">/usr/share/zoneinfo/right/America/Coral_Harbour</Path>
             <Path fileType="data">/usr/share/zoneinfo/right/America/Cordoba</Path>
             <Path fileType="data">/usr/share/zoneinfo/right/America/Costa_Rica</Path>
+            <Path fileType="data">/usr/share/zoneinfo/right/America/Coyhaique</Path>
             <Path fileType="data">/usr/share/zoneinfo/right/America/Creston</Path>
             <Path fileType="data">/usr/share/zoneinfo/right/America/Cuiaba</Path>
             <Path fileType="data">/usr/share/zoneinfo/right/America/Curacao</Path>
@@ -1819,12 +1823,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="29">
-            <Date>2024-02-13</Date>
-            <Version>2024a</Version>
+        <Update release="32">
+            <Date>2026-04-27</Date>
+            <Version>2026b</Version>
             <Comment>Packaging update</Comment>
-            <Name>Joey Riches</Name>
-            <Email>josephriches@gmail.com</Email>
+            <Name>David Harder</Name>
+            <Email>david@davidjharder.ca</Email>
         </Update>
     </History>
 </PISI>

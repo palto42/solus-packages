@@ -167,13 +167,13 @@ libQt6Core.so.6:_ZNK7QObject10metaObjectEv
 libQt6Core.so.6:_ZNK7QObject6senderEv
 libQt6Core.so.6:_ZNK7QObject6threadEv
 libQt6Core.so.6:_ZNK7QObject8propertyEPKc
+libQt6Core.so.6:_ZNK7QString10startsWithERKS_N2Qt15CaseSensitivityE
 libQt6Core.so.6:_ZNK7QString5splitE5QChar6QFlagsIN2Qt18SplitBehaviorFlagsEENS2_15CaseSensitivityE
 libQt6Core.so.6:_ZNK7QString8endsWithE13QLatin1StringN2Qt15CaseSensitivityE
 libQt6Core.so.6:_ZNK8QVariant12qdebugHelperE6QDebug
 libQt6Core.so.6:_ZNK8QVariant12toStringListEv
 libQt6Core.so.6:_ZNK8QVariant6equalsERKS_
 libQt6Core.so.6:_ZNK8QVariant6toBoolEv
-libQt6Core.so.6:_ZNK8QVariant8metaTypeEv
 libQt6Core.so.6:_ZTI7QObject
 libQt6Core.so.6:_Zls6QDebugRK4QUrl
 libQt6Core.so.6:_ZlsR11QDataStreamRK4QUrl
@@ -188,7 +188,6 @@ libQt6DBus.so.6:_Z40qRegisterNormalizedMetaType_QDBusVariantRK10QByteArray
 libQt6DBus.so.6:_Z41qRegisterNormalizedMetaType_QDBusArgumentRK10QByteArray
 libQt6DBus.so.6:_ZN10QDBusErrorC1ERKS_
 libQt6DBus.so.6:_ZN10QDBusErrorC1Ev
-libQt6DBus.so.6:_ZN10QDBusErroraSERKS_
 libQt6DBus.so.6:_ZN12QDBusMessage12setArgumentsERK5QListI8QVariantE
 libQt6DBus.so.6:_ZN12QDBusMessage16createMethodCallERK7QStringS2_S2_S2_
 libQt6DBus.so.6:_ZN12QDBusMessageC1Ev

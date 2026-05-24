@@ -3,8 +3,8 @@
         <Name>cmus</Name>
         <Homepage>https://cmus.github.io/</Homepage>
         <Packager>
-            <Name>Muhammad Alfi Syahrin</Name>
-            <Email>malfisya.dev@hotmail.com</Email>
+            <Name>Jakob Gezelius</Name>
+            <Email>jakob@knugen.nu</Email>
         </Packager>
         <License>GPL-2.0-or-later</License>
         <PartOf>multimedia.audio</PartOf>
@@ -24,7 +24,6 @@
             <Path fileType="executable">/usr/bin/cmus-remote</Path>
             <Path fileType="library">/usr/lib64/cmus/ip/aac.so</Path>
             <Path fileType="library">/usr/lib64/cmus/ip/cue.so</Path>
-            <Path fileType="library">/usr/lib64/cmus/ip/ffmpeg.so</Path>
             <Path fileType="library">/usr/lib64/cmus/ip/flac.so</Path>
             <Path fileType="library">/usr/lib64/cmus/ip/mad.so</Path>
             <Path fileType="library">/usr/lib64/cmus/ip/modplug.so</Path>
@@ -55,18 +54,18 @@
             <Path fileType="data">/usr/share/cmus/xterm-white.theme</Path>
             <Path fileType="data">/usr/share/cmus/zenburn.theme</Path>
             <Path fileType="doc">/usr/share/doc/cmus/examples/cmus-status-display</Path>
-            <Path fileType="man">/usr/share/man/man1/cmus-remote.1</Path>
-            <Path fileType="man">/usr/share/man/man1/cmus.1</Path>
-            <Path fileType="man">/usr/share/man/man7/cmus-tutorial.7</Path>
+            <Path fileType="man">/usr/share/man/man1/cmus-remote.1.zst</Path>
+            <Path fileType="man">/usr/share/man/man1/cmus.1.zst</Path>
+            <Path fileType="man">/usr/share/man/man7/cmus-tutorial.7.zst</Path>
         </Files>
     </Package>
     <History>
-        <Update release="24">
-            <Date>2024-12-12</Date>
+        <Update release="25">
+            <Date>2026-04-02</Date>
             <Version>2.12.0</Version>
             <Comment>Packaging update</Comment>
-            <Name>Muhammad Alfi Syahrin</Name>
-            <Email>malfisya.dev@hotmail.com</Email>
+            <Name>Jakob Gezelius</Name>
+            <Email>jakob@knugen.nu</Email>
         </Update>
     </History>
 </PISI>

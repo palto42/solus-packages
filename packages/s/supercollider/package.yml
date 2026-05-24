@@ -1,6 +1,7 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : supercollider
 version    : 3.13.1
-release    : 18
+release    : 19
 source     :
     - https://github.com/supercollider/supercollider/releases/download/Version-3.13.1/SuperCollider-3.13.1-Source.tar.bz2 : 6979c015daacfdb559328be80d5d4fe26bf63ed7450f642e5c78e7b27132312b
 homepage   : https://supercollider.github.io/

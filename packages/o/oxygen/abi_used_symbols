@@ -132,6 +132,7 @@ libKF5WindowSystem.so.5:_ZN13KWindowShadow7destroyEv
 libKF5WindowSystem.so.5:_ZN13KWindowShadow9setWindowEP7QWindow
 libKF5WindowSystem.so.5:_ZN13KWindowShadowC1EP7QObject
 libKF5WindowSystem.so.5:_ZN13KWindowSystem13isPlatformX11Ev
+libKF5WindowSystem.so.5:_ZN13KWindowSystem17isPlatformWaylandEv
 libKF5WindowSystem.so.5:_ZN17KWindowShadowTile8setImageERK6QImage
 libKF5WindowSystem.so.5:_ZN17KWindowShadowTileC1Ev
 libKF5WindowSystem.so.5:_ZN17KWindowShadowTileD1Ev
@@ -391,6 +392,7 @@ libQt5Gui.so.5:_ZN15QLinearGradientC1Ev
 libQt5Gui.so.5:_ZN15QLinearGradientD1Ev
 libQt5Gui.so.5:_ZN15QRadialGradientC1Eddd
 libQt5Gui.so.5:_ZN15QRadialGradientD1Ev
+libQt5Gui.so.5:_ZN4QPen11setCosmeticEb
 libQt5Gui.so.5:_ZN4QPen14setDashPatternERK7QVectorIdE
 libQt5Gui.so.5:_ZN4QPen8setColorERK6QColor
 libQt5Gui.so.5:_ZN4QPen9setWidthFEd
@@ -1205,7 +1207,7 @@ libQt6Core.so.6:_ZN7QObject11eventFilterEPS_P6QEvent
 libQt6Core.so.6:_ZN7QObject11qt_metacallEN11QMetaObject4CallEiPPv
 libQt6Core.so.6:_ZN7QObject11qt_metacastEPKc
 libQt6Core.so.6:_ZN7QObject13connectNotifyERK11QMetaMethod
-libQt6Core.so.6:_ZN7QObject13doSetPropertyEPKcPK8QVariantPS2_
+libQt6Core.so.6:_ZN7QObject13doSetPropertyEPKcRK8QVariantPS2_
 libQt6Core.so.6:_ZN7QObject13setObjectNameE14QAnyStringView
 libQt6Core.so.6:_ZN7QObject16disconnectNotifyERK11QMetaMethod
 libQt6Core.so.6:_ZN7QObject16staticMetaObjectE
@@ -1293,7 +1295,6 @@ libQt6Core.so.6:_ZNK7QString8arg_implExii5QChar
 libQt6Core.so.6:_ZNK7QString8containsERK18QRegularExpressionP23QRegularExpressionMatch
 libQt6Core.so.6:_ZNK8QVariant5toIntEPb
 libQt6Core.so.6:_ZNK8QVariant6toBoolEv
-libQt6Core.so.6:_ZNK8QVariant8metaTypeEv
 libQt6Core.so.6:_ZNK8QVariant8toStringEv
 libQt6Core.so.6:_ZNKR7QString3midExx
 libQt6Core.so.6:_ZTI18QAbstractItemModel
@@ -1347,6 +1348,7 @@ libQt6Gui.so.6:_ZN15QLinearGradientD1Ev
 libQt6Gui.so.6:_ZN15QPointingDevice21primaryPointingDeviceERK7QString
 libQt6Gui.so.6:_ZN15QRadialGradientC1Eddd
 libQt6Gui.so.6:_ZN15QRadialGradientD1Ev
+libQt6Gui.so.6:_ZN4QPen11setCosmeticEb
 libQt6Gui.so.6:_ZN4QPen14setDashPatternERK5QListIdE
 libQt6Gui.so.6:_ZN4QPen8setColorERK6QColor
 libQt6Gui.so.6:_ZN4QPen9setWidthFEd
@@ -1358,6 +1360,7 @@ libQt6Gui.so.6:_ZN5QFontC1ERKS_
 libQt6Gui.so.6:_ZN5QFontC1Ev
 libQt6Gui.so.6:_ZN5QFontD1Ev
 libQt6Gui.so.6:_ZN5QFontaSERKS_
+libQt6Gui.so.6:_ZN5QIcon16staticMetaObjectE
 libQt6Gui.so.6:_ZN5QIcon9addPixmapERK7QPixmapNS_4ModeENS_5StateE
 libQt6Gui.so.6:_ZN5QIcon9fromThemeERK7QString
 libQt6Gui.so.6:_ZN5QIconC1ERK7QPixmap
@@ -1402,6 +1405,7 @@ libQt6Gui.so.6:_ZN7QRegionD1Ev
 libQt6Gui.so.6:_ZN7QRegionmIERKS_
 libQt6Gui.so.6:_ZN7QRegionpLERKS_
 libQt6Gui.so.6:_ZN7QWindow15startSystemMoveEv
+libQt6Gui.so.6:_ZN8QPainter10doSetBrushERK6QBrushPS0_
 libQt6Gui.so.6:_ZN8QPainter10drawPixmapERK6QRectFRK7QPixmapS2_
 libQt6Gui.so.6:_ZN8QPainter10drawPixmapERK7QPointFRK7QPixmap
 libQt6Gui.so.6:_ZN8QPainter10drawPointsEPK6QPointi
@@ -1429,11 +1433,11 @@ libQt6Gui.so.6:_ZN8QPainter5beginEP12QPaintDevice
 libQt6Gui.so.6:_ZN8QPainter5scaleEdd
 libQt6Gui.so.6:_ZN8QPainter6rotateEd
 libQt6Gui.so.6:_ZN8QPainter6setPenEN2Qt8PenStyleE
-libQt6Gui.so.6:_ZN8QPainter6setPenERK4QPen
 libQt6Gui.so.6:_ZN8QPainter6setPenERK6QColor
 libQt6Gui.so.6:_ZN8QPainter7drawArcERK6QRectFii
 libQt6Gui.so.6:_ZN8QPainter7restoreEv
 libQt6Gui.so.6:_ZN8QPainter7setFontERK5QFont
+libQt6Gui.so.6:_ZN8QPainter8doSetPenERK4QPenPS0_
 libQt6Gui.so.6:_ZN8QPainter8drawPathERK12QPainterPath
 libQt6Gui.so.6:_ZN8QPainter8drawTextERK5QRectiRK7QStringPS0_
 libQt6Gui.so.6:_ZN8QPainter8fillRectERK5QRectRK6QBrush
@@ -1441,7 +1445,6 @@ libQt6Gui.so.6:_ZN8QPainter8fillRectERK5QRectRK6QColor
 libQt6Gui.so.6:_ZN8QPainter8fillRectERK6QRectFRK6QColor
 libQt6Gui.so.6:_ZN8QPainter8setBrushE6QColor
 libQt6Gui.so.6:_ZN8QPainter8setBrushEN2Qt10BrushStyleE
-libQt6Gui.so.6:_ZN8QPainter8setBrushERK6QBrush
 libQt6Gui.so.6:_ZN8QPainter9drawLinesEPK5QLinei
 libQt6Gui.so.6:_ZN8QPainter9drawLinesEPK6QLineFi
 libQt6Gui.so.6:_ZN8QPainter9drawRectsEPK5QRecti
@@ -1474,6 +1477,7 @@ libQt6Gui.so.6:_ZNK12QFontMetrics17horizontalAdvanceERK7QStringi
 libQt6Gui.so.6:_ZNK12QFontMetrics4sizeEiRK7QStringiPi
 libQt6Gui.so.6:_ZNK12QFontMetrics6heightEv
 libQt6Gui.so.6:_ZNK12QKeySequenceixEj
+libQt6Gui.so.6:_ZNK12QPaintDevice16devicePixelRatioEv
 libQt6Gui.so.6:_ZNK13QFontMetricsF12boundingRectERK7QString
 libQt6Gui.so.6:_ZNK15QGuiApplication16devicePixelRatioEv
 libQt6Gui.so.6:_ZNK15QRadialGradient6centerEv

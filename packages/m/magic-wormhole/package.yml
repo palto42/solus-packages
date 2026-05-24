@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : magic-wormhole
-version    : 0.19.1
-release    : 13
+version    : 0.24.0
+release    : 19
 source     :
-    - https://github.com/magic-wormhole/magic-wormhole/archive/refs/tags/0.19.1.tar.gz : 52e7e114f56364b638c6b9e6d809162ca7fdacc9525a38c57dc917ad02b17ee5
+    - https://github.com/magic-wormhole/magic-wormhole/archive/refs/tags/0.24.0.tar.gz : b69f8f25c3462e1e3205bd1e581564f0a0fbdb530ad33f9d9625def7fd34e135
 homepage   : https://github.com/magic-wormhole/magic-wormhole
 license    : MIT
 component  : network
@@ -32,6 +33,7 @@ setup      : |
     %python3_setup
 install    : |
     %python3_install
+    %install_license LICENSE
 
     # install completions
     install wormhole_complete.bash -Dm00644 $installdir/usr/share/bash-completion/completions/wormhole

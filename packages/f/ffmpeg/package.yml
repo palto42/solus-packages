@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : ffmpeg
-version    : 7.1.1
-release    : 166
+version    : '8.1'
+release    : 175
 source     :
-    - https://ffmpeg.org/releases/ffmpeg-7.1.1.tar.gz : 9a6e57a446b671012612aaeb9df5126794d5ac8f2015ca220934f99a6a4e0601
+    - https://ffmpeg.org/releases/ffmpeg-8.1.tar.gz : b13510e7a6a4ca28fa04307f2be54ef5a31e168eb2bbe055a7f4e4d2cadd51b1
 homepage   : https://www.ffmpeg.org/
 license    :
     - GPL-3.0-or-later
@@ -19,6 +20,8 @@ builddeps  :
     - pkgconfig(aom)
     - pkgconfig(bzip2)
     - pkgconfig(dav1d)
+    - pkgconfig(dvdnav)
+    - pkgconfig(dvdread)
     - pkgconfig(ffnvcodec)
     - pkgconfig(gl)
     - pkgconfig(gnutls)
@@ -66,7 +69,6 @@ clang      : true
 optimize   : thin-lto
 setup      : |
     %patch -p1 -i $pkgfiles/add-av_stream_get_first_dts-for-chromium.patch
-    %patch -p1 -i $pkgfiles/svt-av1-3.0.0.patch
 
     ./configure \
         --enable-gcrypt \
@@ -77,6 +79,8 @@ setup      : |
         --enable-libbluray \
         --enable-libcdio \
         --enable-libdav1d \
+        --enable-libdvdnav \
+        --enable-libdvdread \
         --enable-libfontconfig \
         --enable-libfreetype \
         --enable-libfribidi \
@@ -132,6 +136,7 @@ build      : |
     %make
 install    : |
     %make_install
+    %install_license COPYING.* CREDITS LICENSE.md
 patterns   :
     - docs :
         - /usr/share/doc

@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : libolm
-version    : 3.2.14
-release    : 2
+version    : 3.2.16
+release    : 3
 source     :
-    - https://gitlab.matrix.org/matrix-org/olm/-/archive/3.2.14/olm-3.2.14.tar.gz : 221e2e33230e8644da89d2064851124b04e9caf846cad2aaa3626b876b42d14a
+    - https://gitlab.matrix.org/matrix-org/olm/-/archive/3.2.16/olm-3.2.16.tar.gz : 1e90f9891009965fd064be747616da46b232086fe270b77605ec9bda34272a68
 license    : Apache-2.0
 homepage   : https://gitlab.matrix.org/matrix-org/olm
 component  : security.library
@@ -13,8 +14,12 @@ builddeps  :
     - pkgconfig(libsodium)
 clang      : true
 setup      : |
-    %cmake_ninja
+    %patch -p1 -i ${pkgfiles}/fix-clang.patch
+
+    %cmake_ninja \
+        -DCMAKE_POLICY_VERSION_MINIMUM=3.5
 build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSE

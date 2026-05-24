@@ -3,8 +3,8 @@
         <Name>raqm</Name>
         <Homepage>https://host-oman.github.io/libraqm/</Homepage>
         <Packager>
-            <Name>Martin Reboredo</Name>
-            <Email>yakoyoku@gmail.com</Email>
+            <Name>David Harder</Name>
+            <Email>david@davidjharder.ca</Email>
         </Packager>
         <License>MIT</License>
         <PartOf>multimedia.library</PartOf>
@@ -12,7 +12,7 @@
         <Description xml:lang="en">Raqm is a small library that encapsulates the logic for complex text layout.
 It currently provides bidirectional text support (using FriBiDi), shaping (using HarfBuzz), and proper script itemization. As a result, Raqm can support most writing systems covered by Unicode.
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>raqm</Name>
@@ -23,7 +23,8 @@ It currently provides bidirectional text support (using FriBiDi), shaping (using
         <PartOf>multimedia.library</PartOf>
         <Files>
             <Path fileType="library">/usr/lib64/libraqm.so.0</Path>
-            <Path fileType="library">/usr/lib64/libraqm.so.0.700.1</Path>
+            <Path fileType="library">/usr/lib64/libraqm.so.0.10.4</Path>
+            <Path fileType="data">/usr/share/licenses/raqm/COPYING</Path>
         </Files>
     </Package>
     <Package>
@@ -34,11 +35,11 @@ It currently provides bidirectional text support (using FriBiDi), shaping (using
 </Description>
         <PartOf>emul32</PartOf>
         <RuntimeDependencies>
-            <Dependency release="1">raqm</Dependency>
+            <Dependency release="3">raqm</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib32/libraqm.so.0</Path>
-            <Path fileType="library">/usr/lib32/libraqm.so.0.700.1</Path>
+            <Path fileType="library">/usr/lib32/libraqm.so.0.10.4</Path>
         </Files>
     </Package>
     <Package>
@@ -49,8 +50,8 @@ It currently provides bidirectional text support (using FriBiDi), shaping (using
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="1">raqm-32bit</Dependency>
-            <Dependency release="1">raqm-devel</Dependency>
+            <Dependency release="3">raqm-32bit</Dependency>
+            <Dependency release="3">raqm-devel</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib32/libraqm.so</Path>
@@ -65,7 +66,7 @@ It currently provides bidirectional text support (using FriBiDi), shaping (using
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="1">raqm</Dependency>
+            <Dependency release="3">raqm</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/raqm-version.h</Path>
@@ -75,12 +76,12 @@ It currently provides bidirectional text support (using FriBiDi), shaping (using
         </Files>
     </Package>
     <History>
-        <Update release="1">
-            <Date>2021-01-15</Date>
-            <Version>0.7.1</Version>
+        <Update release="3">
+            <Date>2026-03-27</Date>
+            <Version>0.10.4</Version>
             <Comment>Packaging update</Comment>
-            <Name>Martin Reboredo</Name>
-            <Email>yakoyoku@gmail.com</Email>
+            <Name>David Harder</Name>
+            <Email>david@davidjharder.ca</Email>
         </Update>
     </History>
 </PISI>

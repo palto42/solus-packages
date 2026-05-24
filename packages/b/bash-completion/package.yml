@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : bash-completion
-version    : 2.16.0
-release    : 26
+version    : 2.17.0
+release    : 27
 source     :
-    - https://github.com/scop/bash-completion/archive/refs/tags/2.16.0.tar.gz : c4d7edf0b035d8f6ed33294380326bde1fb8a4a8e24699566d545b4276141cc2
+    - https://github.com/scop/bash-completion/archive/refs/tags/2.17.0.tar.gz : 529374d730caf3c8911438c5d13663fbb6134d01253012fcb865f9d68744d276
 homepage   : https://github.com/scop/bash-completion
 license    : GPL-2.0-or-later
 component  :
@@ -23,5 +24,6 @@ install    : |
     install -dDm00755 $installdir/usr/share/bash-completion/completions
     %make_install
 
+    %install_license COPYING
     # provided by libsecret
     rm -fv $installdir/usr/share/bash-completion/completions/secret-tool

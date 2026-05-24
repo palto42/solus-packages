@@ -11,9 +11,9 @@ libc.so.6:fileno
 libc.so.6:fopen
 libc.so.6:fread
 libc.so.6:free
-libc.so.6:fseek
+libc.so.6:fseeko
 libc.so.6:fsetpos
-libc.so.6:ftell
+libc.so.6:ftello
 libc.so.6:ftruncate
 libc.so.6:fwrite
 libc.so.6:malloc

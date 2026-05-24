@@ -1,6 +1,6 @@
 UNKNOWN
-libOpenEXR-3_1.so.30
-libOpenEXRCore-3_1.so.30
+libOpenEXR-3_4.so.33
+libOpenEXRCore-3_4.so.33
 libX11.so.6
 libXext.so.6
 libbz2.so.1.0
@@ -15,7 +15,7 @@ libgcc_s.so.1
 libglib-2.0.so.0
 libgobject-2.0.so.0
 libgomp.so.1
-libgs.so.9
+libgs.so.10
 libgvc.so.6
 libheif.so.1
 libjpeg.so.8
@@ -29,7 +29,7 @@ libpango-1.0.so.0
 libpangocairo-1.0.so.0
 libpng16.so.16
 libraqm.so.0
-libraw_r.so.23
+libraw_r.so.25
 librsvg-2.so.2
 libstdc++.so.6
 libtiff.so.6

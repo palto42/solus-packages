@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : openrazer
-version    : 3.10.3
-release    : 355
+version    : 3.12.3
+release    : 378
 source     :
-    - https://github.com/openrazer/openrazer/archive/refs/tags/v3.10.3.tar.gz : 2ae218e6f46a573af50084fb4612eec5f25b641bedec29da7d435419b8d240c0
+    - https://github.com/openrazer/openrazer/archive/refs/tags/v3.12.3.tar.gz : d569700a71ca0dd2ec7a578c5fb986b16c89a298fb281ca1da2f33480b542e42
 license    : GPL-2.0-or-later
 component  :
     - kernel.drivers
@@ -70,11 +71,11 @@ setup      : |
 build      : |
     pushd lts-build
     KVER=%kernel_version_lts%
-    %make KERNELDIR=/usr/lib64/modules/$KVER/build MODULEDIR=/usr/lib64/modules/$KVER/kernel/drivers/hid
+    %make KERNELDIR=/usr/lib64/modules/$KVER/build MODULEDIR=/usr/lib64/modules/$KVER/extra/drivers/hid
     popd
     pushd current-build
     KVER=%kernel_version_current%
-    %make KERNELDIR=/usr/lib64/modules/$KVER/build MODULEDIR=/usr/lib64/modules/$KVER/kernel/drivers/hid
+    %make KERNELDIR=/usr/lib64/modules/$KVER/build MODULEDIR=/usr/lib64/modules/$KVER/extra/drivers/hid
     popd
 
     # Generate modaliases from the LTS tree
@@ -84,15 +85,15 @@ build      : |
 install    : |
     pushd lts-build
     KVER=%kernel_version_lts%
-    install -d -m 00644 $installdir/usr/lib64/modules/$KVER/kernel/drivers/hid
-    %make install_i_know_what_i_am_doing KERNELDIR=/usr/lib64/modules/$KVER/build MODULEDIR=/usr/lib64/modules/$KVER/kernel/drivers/hid DESTDIR=$installdir
+    install -d -m 00644 $installdir/usr/lib64/modules/$KVER/extra/drivers/hid
+    %make install_i_know_what_i_am_doing KERNELDIR=/usr/lib64/modules/$KVER/build MODULEDIR=/usr/lib64/modules/$KVER/extra/drivers/hid DESTDIR=$installdir
     popd
     # Razer's build system really flops when things already exist.. Autotools wouldn't hurt.
     rm -rfv $installdir/usr/{lib,share}
     pushd current-build
     KVER=%kernel_version_current%
-    install -d -m 00644 $installdir/usr/lib64/modules/$KVER/kernel/drivers/hid
-    %make install_i_know_what_i_am_doing KERNELDIR=/usr/lib64/modules/$KVER/build MODULEDIR=/usr/lib64/modules/$KVER/kernel/drivers/hid DESTDIR=$installdir
+    install -d -m 00644 $installdir/usr/lib64/modules/$KVER/extra/drivers/hid
+    %make install_i_know_what_i_am_doing KERNELDIR=/usr/lib64/modules/$KVER/build MODULEDIR=/usr/lib64/modules/$KVER/extra/drivers/hid DESTDIR=$installdir
     popd
 
     # Use example file as default configuration
@@ -103,6 +104,9 @@ install    : |
 
     # Compress modules with zstd
     find "$installdir" -name '*.ko' -exec strip --strip-debug {} \; -exec zstd {} \; -exec rm -v {} \;
+
+    # License
+    %install_license openrazer-${version}/LICENSES/*.txt
 
     # Usr-merge
     install -dm00755 $installdir/lib64

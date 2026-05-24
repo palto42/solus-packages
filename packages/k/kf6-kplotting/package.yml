@@ -1,10 +1,12 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kf6-kplotting
-version    : 6.19.0
-release    : 25
+version    : 6.26.0
+release    : 32
 source     :
-    - https://download.kde.org/stable/frameworks/6.19/kplotting-6.19.0.tar.xz : 5203347d5439a33d1c2c331c5ae21fbc329404aa7c01692b2c1c48b9508d8292
+    - https://download.kde.org/stable/frameworks/6.26/kplotting-6.26.0.tar.xz : bb120f446e6bfc376129e03663e4b3b9e7146abc948ccc68da19187840f9f181
 homepage   : https://community.kde.org/Frameworks
 license    :
+    - CC0-1.0
     - GPL-2.0-or-later
     - LGPL-2.0-or-later
 component  : desktop.library
@@ -26,3 +28,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*

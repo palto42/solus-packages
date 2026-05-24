@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : 0ad-data
-version    : 0.27.1
-release    : 12
+version    : 0.28.0
+release    : 13
 source     :
-    - https://releases.wildfiregames.com/0ad-0.27.1-unix-data.tar.xz : 837e2d6ddf138b025fc02017245d7581a4bb84fd94b42c0e605d321b7017a998
+    - https://releases.wildfiregames.com/0ad-0.28.0-unix-data.tar.xz : e844b30ae2102c47e0a4fff2f0e0ef05ba0cebb1890aa72276fa12457c39526f
 homepage   : https://play0ad.com
 license    :
     - GPL-2.0-or-later

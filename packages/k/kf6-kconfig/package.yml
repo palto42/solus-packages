@@ -1,16 +1,20 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kf6-kconfig
-version    : 6.19.0
-release    : 27
+version    : 6.26.0
+release    : 37
 source     :
-    - https://download.kde.org/stable/frameworks/6.19/kconfig-6.19.0.tar.xz : d4ffbecd0690807122374927f196eb6b65f3753f22a6a16109e04aa7e98b32eb
+    - https://download.kde.org/stable/frameworks/6.26/kconfig-6.26.0.tar.xz : 8bb5aa918d8e60ec140a33db3c329414d2319dc97a1644b368da5576125c92b5
 homepage   : https://community.kde.org/Frameworks
 license    :
     - BSD-2-Clause
     - BSD-3-Clause
+    - CC0-1.0
+    - CC-BY-SA-4.0
     - GPL-2.0-or-later
     - LGPL-2.0-only
     - LGPL-2.0-or-later
     - LGPL-2.1-only
+    - LGPL-3.0-only
     - MIT
 component  : desktop.library
 summary    : Persistent platform-independent application settings.
@@ -33,3 +37,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*

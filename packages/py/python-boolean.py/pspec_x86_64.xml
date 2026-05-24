@@ -1,0 +1,50 @@
+<PISI>
+    <Source>
+        <Name>python-boolean.py</Name>
+        <Homepage>https://pypi.org/project/boolean.py/</Homepage>
+        <Packager>
+            <Name>Evan Maddock</Name>
+            <Email>maddock.evan@vivaldi.net</Email>
+        </Packager>
+        <License>BSD-2-Clause</License>
+        <PartOf>programming.python</PartOf>
+        <Summary xml:lang="en">Implements boolean algebra in one module</Summary>
+        <Description xml:lang="en">boolean.py is a small library implementing a boolean algebra. It defines two base elements, TRUE and FALSE, and a Symbol class that can take on one of these two values. Calculations are done in terms of AND, OR and NOT - other compositions like XOR and NAND are not implemented but can be emulated with AND or and NOT.
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>python-boolean.py</Name>
+        <Summary xml:lang="en">Implements boolean algebra in one module</Summary>
+        <Description xml:lang="en">boolean.py is a small library implementing a boolean algebra. It defines two base elements, TRUE and FALSE, and a Symbol class that can take on one of these two values. Calculations are done in terms of AND, OR and NOT - other compositions like XOR and NAND are not implemented but can be emulated with AND or and NOT.
+</Description>
+        <PartOf>programming.python</PartOf>
+        <Files>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/boolean/__init__.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/boolean/__pycache__/__init__.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/boolean/__pycache__/__init__.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/boolean/__pycache__/boolean.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/boolean/__pycache__/boolean.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/boolean/__pycache__/test_boolean.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/boolean/__pycache__/test_boolean.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/boolean/boolean.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/boolean/test_boolean.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/boolean_py-5.0.dist-info/METADATA</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/boolean_py-5.0.dist-info/RECORD</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/boolean_py-5.0.dist-info/WHEEL</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/boolean_py-5.0.dist-info/licenses/CHANGELOG.rst</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/boolean_py-5.0.dist-info/licenses/LICENSE.txt</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/boolean_py-5.0.dist-info/licenses/README.rst</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/boolean_py-5.0.dist-info/top_level.txt</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2026-03-31</Date>
+            <Version>5.0</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Evan Maddock</Name>
+            <Email>maddock.evan@vivaldi.net</Email>
+        </Update>
+    </History>
+</PISI>

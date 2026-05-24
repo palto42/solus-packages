@@ -1,12 +1,23 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kwin
-version    : 6.4.5
-release    : 169
+version    : 6.6.5
+release    : 185
 source     :
-    - https://download.kde.org/stable/plasma/6.4.5/kwin-6.4.5.tar.xz : decf1cb79127c285c7eda768e7ff4f97c72f314735c82685758f0b956ac151f7
+    - https://download.kde.org/stable/plasma/6.6.5/kwin-6.6.5.tar.xz : 6c187ce7a5506090b438ef900103836fa0537674dde8b31e5b497ef321643cb4
 homepage   : https://www.kde.org/workspaces/plasmadesktop/
 license    :
-    - GFDL-1.2-only
+    - BSD-3-Clause
+    - CC0-1.0
     - GPL-2.0-only
+    - GPL-2.0-or-later
+    - GPL-3.0-only
+    - GPL-3.0-or-later
+    - LGPL-2.0-only
+    - LGPL-2.0-or-later
+    - LGPL-2.1-only
+    - LGPL-2.1-or-later
+    - LGPL-3.0-only
+    - MIT
 component  : desktop.kde.core
 summary    : KDE window manager
 description: |-
@@ -27,6 +38,7 @@ builddeps  :
     - pkgconfig(libinput)
     - pkgconfig(libpipewire-0.3)
     - pkgconfig(libxcvt)
+    - pkgconfig(wayland-protocols)
     - pkgconfig(xcb-cursor)
     - pkgconfig(xcb-event)
     - pkgconfig(xcb-icccm)
@@ -55,6 +67,7 @@ builddeps  :
     - kf6-ksvg-devel
     - kf6-kxmlgui-devel
     - kglobalacceld-devel
+    - knighttime-devel
     - kscreenlocker-devel
     - libplasma-devel
     - libqaccessibilityclient-devel
@@ -71,11 +84,14 @@ optimize   :
     - speed
     - thin-lto
 setup      : |
+    %patch -p1 -i $pkgfiles/upstream-01.patch
+
     %cmake_kf6
 build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*
 
     # https://invent.kde.org/plasma/kwin/-/commit/e6d217960e4fee82785da98c336aa7407e21e62d
     setcap 'CAP_SYS_NICE=+ep' $installdir/usr/bin/kwin_wayland

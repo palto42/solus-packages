@@ -1,25 +1,33 @@
 From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: Silke Hofstra <silke@slxh.eu>
 Date: Wed, 9 Aug 2023 16:42:41 +0200
-Subject: [PATCH 2/3] Hardcode Solus UEFI ID
+Subject: [PATCH 2/4] Hardcode Solus UEFI ID
 
 ---
- plugins/uefi-capsule/fu-uefi-common.c | 5 +----
- 1 file changed, 1 insertion(+), 4 deletions(-)
+ plugins/uefi-capsule/fu-uefi-capsule-device.c | 6 ++++++
+ 1 file changed, 6 insertions(+)
 
-diff --git a/plugins/uefi-capsule/fu-uefi-common.c b/plugins/uefi-capsule/fu-uefi-common.c
-index bfd6657ff..40ef17187 100644
---- a/plugins/uefi-capsule/fu-uefi-common.c
-+++ b/plugins/uefi-capsule/fu-uefi-common.c
-@@ -203,10 +203,7 @@ fu_uefi_get_esp_path_for_os(const gchar *esp_base)
- 		return g_steal_pointer(&systemd_path);
+diff --git a/plugins/uefi-capsule/fu-uefi-capsule-device.c b/plugins/uefi-capsule/fu-uefi-capsule-device.c
+index 2745c0d08..9e7b8a802 100644
+--- a/plugins/uefi-capsule/fu-uefi-capsule-device.c
++++ b/plugins/uefi-capsule/fu-uefi-capsule-device.c
+@@ -737,6 +737,7 @@ fu_uefi_capsule_device_build_efi_path(FuUefiCapsuleDevice *self,
+ 	g_autofree gchar *os_release_id = NULL;
+ 	g_autofree gchar *os_release_id_like = NULL;
+ 	g_autofree gchar *systemd_path = NULL;
++	g_autofree gchar *solus_path = NULL;
+ #endif
  
- 	/* try to lookup /etc/os-release ID key */
--	os_release_id = g_get_os_info(G_OS_INFO_KEY_ID);
--	if (os_release_id == NULL)
--		os_release_id = g_strdup("unknown");
--
-+	os_release_id = "com.solus-project";
- 	/* if ID key points at something existing return it */
- 	esp_path = g_build_filename("EFI", os_release_id, NULL);
- 	full_path = g_build_filename(esp_base, esp_path, NULL);
+ 	/* sanity check */
+@@ -753,6 +754,11 @@ fu_uefi_capsule_device_build_efi_path(FuUefiCapsuleDevice *self,
+ 	va_end(args);
+ 
+ #ifndef EFI_OS_DIR
++	/* Solus default ID */
++	solus_path = g_build_filename(esp_path, "EFI", "com.solus-project", NULL);
++	if (g_file_test(solus_path, G_FILE_TEST_IS_DIR))
++		return g_build_filename(solus_path, filename_built, NULL);
++
+ 	/* distro (or user) is using systemd-boot */
+ 	systemd_path = g_build_filename(esp_path, "EFI", "systemd", NULL);
+ 	if (g_file_test(systemd_path, G_FILE_TEST_IS_DIR))

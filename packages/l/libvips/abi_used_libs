@@ -1,5 +1,5 @@
 libMagickCore-7.Q16HDRI.so.10
-libOpenEXR-3_1.so.30
+libOpenEXR-3_4.so.33
 libarchive.so.13
 libc.so.6
 libcairo.so.2
@@ -20,14 +20,17 @@ libjxl.so.0.11
 libjxl_threads.so.0.11
 liblcms2.so.2
 libm.so.6
+libopenjp2.so.7
 libpango-1.0.so.0
 libpangocairo-1.0.so.0
 libpangoft2-1.0.so.0
 libpng16.so.16
 libpoppler-glib.so.8
+libraw_r.so.25
 librsvg-2.so.2
 libstdc++.so.6
 libtiff.so.6
+libuhdr.so.1
 libwebp.so.7
 libwebpdemux.so.2
 libwebpmux.so.3

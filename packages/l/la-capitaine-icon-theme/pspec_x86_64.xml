@@ -3,8 +3,8 @@
         <Name>la-capitaine-icon-theme</Name>
         <Homepage>https://krourke.org/projects/art/la-capitaine-icon-theme</Homepage>
         <Packager>
-            <Name>Algent Albrahimi</Name>
-            <Email>algent@protonmail.com</Email>
+            <Name>David Harder</Name>
+            <Email>david@davidjharder.ca</Email>
         </Packager>
         <License>GPL-3.0-or-later</License>
         <License>MIT</License>
@@ -12,7 +12,7 @@
         <Summary xml:lang="en">La Capitaine is an icon pack inspired by macOS and Google&apos;s Material Design</Summary>
         <Description xml:lang="en">The set of icons takes inspiration from the latest iterations of macOS and Google&apos;s Material Design through the use of visually pleasing gradients, shadowing, and simple icon geometry.
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>la-capitaine-icon-theme</Name>
@@ -10017,15 +10017,17 @@
             <Path fileType="data">/usr/share/icons/la-capitaine-icon-theme/status/symbolic/weather-showers-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/la-capitaine-icon-theme/status/symbolic/weather-snow-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/la-capitaine-icon-theme/status/symbolic/weather-storm-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/licenses/la-capitaine-icon-theme/COPYING</Path>
+            <Path fileType="data">/usr/share/licenses/la-capitaine-icon-theme/LICENSE</Path>
         </Files>
     </Package>
     <History>
-        <Update release="7">
-            <Date>2021-04-30</Date>
+        <Update release="8">
+            <Date>2026-03-25</Date>
             <Version>0.6.2</Version>
             <Comment>Packaging update</Comment>
-            <Name>Algent Albrahimi</Name>
-            <Email>algent@protonmail.com</Email>
+            <Name>David Harder</Name>
+            <Email>david@davidjharder.ca</Email>
         </Update>
     </History>
 </PISI>

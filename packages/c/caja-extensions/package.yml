@@ -1,6 +1,7 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : caja-extensions
 version    : 1.28.0
-release    : 23
+release    : 24
 source     :
     - https://github.com/mate-desktop/caja-extensions/releases/download/v1.28.0/caja-extensions-1.28.0.tar.xz : d2986c5e0740835fe271cfbd5823eeeaf03291af1763203f4700abb8109e3175
 homepage   : https://www.mate-desktop.org/
@@ -21,3 +22,4 @@ build      : |
     %make
 install    : |
     %make_install
+    %install_license COPYING

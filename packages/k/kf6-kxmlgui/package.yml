@@ -1,13 +1,18 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kf6-kxmlgui
-version    : 6.19.0
-release    : 26
+version    : 6.26.0
+release    : 35
 source     :
-    - https://download.kde.org/stable/frameworks/6.19/kxmlgui-6.19.0.tar.xz : 29c29dc71c1668aef18dcd0a8c865739f5dcc2e2f5cea66bec75d240807fd9ee
+    - https://download.kde.org/stable/frameworks/6.26/kxmlgui-6.26.0.tar.xz : 4383855cea5a7f9a269c72dda15490b8d70c1d23d17950963937332fc5d6b7a0
 homepage   : https://community.kde.org/Frameworks
 license    :
+    - BSD-2-Clause
+    - CC0-1.0
     - LGPL-2.0-only
     - LGPL-2.0-or-later
+    - LGPL-2.1-only
     - LGPL-2.1-or-later
+    - LGPL-3.0-only
 component  : desktop.library
 summary    : Framework for managing menu and toolbar actions.
 description: |
@@ -43,3 +48,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*

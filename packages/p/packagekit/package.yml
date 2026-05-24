@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : packagekit
-version    : 1.3.1
-release    : 36
+version    : 1.3.5
+release    : 41
 source     :
-    - git|https://github.com/getsolus/PackageKit.git : dd7ff1c2d345e9bb190596db3210c0fb0dd9101a
+    - git|https://github.com/PackageKit/PackageKit.git : 44ffaf148050ee66e6407394f0dc41de2f818e32
 license    : GPL-2.0-or-later
 component  : programming.library
 homepage   : https://www.freedesktop.org/software/PackageKit/
@@ -11,12 +12,12 @@ description: |
     PackageKit is a DBUS abstraction layer that allows the session user to manage packages in a secure way using a cross-distro, cross-architecture API.
 builddeps  :
     - pkgconfig(appstream)
-    - pkgconfig(appstream-glib)
     - pkgconfig(bash-completion)
     - pkgconfig(gio-2.0)
     - pkgconfig(gmodule-2.0)
     - pkgconfig(gstreamer-plugins-base-1.0)
     - pkgconfig(gtk+-3.0)
+    - pkgconfig(jansson)
     - pkgconfig(libsystemd)
     - pkgconfig(polkit-gobject-1)
     - pkgconfig(python3)
@@ -27,16 +28,12 @@ builddeps  :
 setup      : |
     %meson_configure \
         -Dpackaging_backend=eopkg \
-        -Dpythonpackagedir=/usr/lib/python%python3_version%/site-packages/ \
         -Dbash_command_not_found=false
 build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license COPYING
 
     # Reproducibility /var/lib/PackageKit/transactions.db
     rm -rv $installdir/var/
-
-    # temporary python 2 + 3 interoperablity
-    install -D -d $installdir/usr/lib/python2.7/site-packages
-    ln -sv /usr/lib/python%python3_version%/site-packages/packagekit $installdir/usr/lib/python2.7/site-packages/

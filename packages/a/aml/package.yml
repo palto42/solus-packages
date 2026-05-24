@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
+name       : aml
+version    : 1.0.0
+release    : 1
+source     :
+    - https://github.com/any1/aml/archive/refs/tags/v1.0.0.tar.gz : b2b8f743213af39f40e8bc611147d69e2ea9e010b9b19cb65246582338f28d96
+homepage   : https://github.com/any1/aml
+license    : ISC
+component  : programming.library
+summary    : Another Main Loop
+description: |
+    Another Main Loop
+setup      : |
+    %meson_configure
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install
+    %install_license COPYING

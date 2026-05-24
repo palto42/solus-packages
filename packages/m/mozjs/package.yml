@@ -1,9 +1,10 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : mozjs
-version    : 128.9.0
-release    : 34
+version    : 140.7.0
+release    : 41
 source     :
-    - https://archive.mozilla.org/pub/firefox/releases/128.9.0esr/source/firefox-128.9.0esr.source.tar.xz : 4d04661c6cc0bfdd0f280b62f81d2fb79ab3cbd7f9e8a7b34042db1cf8cc6805
-homepage   : http://mozilla.org
+    - https://archive.mozilla.org/pub/firefox/releases/140.7.0esr/source/firefox-140.7.0esr.source.tar.xz : 608a739071726f30236f7100ec5e30e1b8ec342d4e91e715948c287909cb1529
+homepage   : https://spidermonkey.dev/
 license    :
     - GPL-2.0-or-later
     - MPL-1.1
@@ -29,6 +30,8 @@ setup      : |
     head -n -1 config/milestone.txt > config/milestone.txt
     echo "${version}" >> config/milestone.txt
 
+    %patch -p1 -i $pkgfiles/0001-Bug-1973994-mozjs-140.pc-does-not-contain-DXP_UNIX-o.patch
+
     mkdir $workdir/building
     cd $workdir/building
 
@@ -53,6 +56,7 @@ install    : |
     cd $workdir/building
     %make_install
     rm -r $installdir/%libdir%/*.ajs
+    %install_license $workdir/toolkit/content/license.html
 patterns   :
     - devel :
         - /usr/bin/js*-config

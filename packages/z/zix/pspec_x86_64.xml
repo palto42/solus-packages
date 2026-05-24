@@ -22,9 +22,10 @@
         <PartOf>programming.library</PartOf>
         <Files>
             <Path fileType="library">/usr/lib64/glibc-hwcaps/x86-64-v3/libzix-0.so.0</Path>
-            <Path fileType="library">/usr/lib64/glibc-hwcaps/x86-64-v3/libzix-0.so.0.6.2</Path>
+            <Path fileType="library">/usr/lib64/glibc-hwcaps/x86-64-v3/libzix-0.so.0.8.0</Path>
             <Path fileType="library">/usr/lib64/libzix-0.so.0</Path>
-            <Path fileType="library">/usr/lib64/libzix-0.so.0.6.2</Path>
+            <Path fileType="library">/usr/lib64/libzix-0.so.0.8.0</Path>
+            <Path fileType="data">/usr/share/licenses/zix/COPYING</Path>
         </Files>
     </Package>
     <Package>
@@ -34,7 +35,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="3">zix</Dependency>
+            <Dependency release="4">zix</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/zix-0/zix/allocator.h</Path>
@@ -52,15 +53,16 @@
             <Path fileType="header">/usr/include/zix-0/zix/string_view.h</Path>
             <Path fileType="header">/usr/include/zix-0/zix/thread.h</Path>
             <Path fileType="header">/usr/include/zix-0/zix/tree.h</Path>
+            <Path fileType="header">/usr/include/zix-0/zix/warnings.h</Path>
             <Path fileType="header">/usr/include/zix-0/zix/zix.h</Path>
             <Path fileType="library">/usr/lib64/libzix-0.so</Path>
             <Path fileType="data">/usr/lib64/pkgconfig/zix-0.pc</Path>
         </Files>
     </Package>
     <History>
-        <Update release="3">
-            <Date>2025-04-15</Date>
-            <Version>0.6.2</Version>
+        <Update release="4">
+            <Date>2026-04-10</Date>
+            <Version>0.8.0</Version>
             <Comment>Packaging update</Comment>
             <Name>Robert Gonzalez</Name>
             <Email>uni.dos12@outlook.com</Email>

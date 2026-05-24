@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : chezmoi
-version    : 2.66.0
-release    : 10
+version    : 2.70.4
+release    : 24
 source     :
-    - https://github.com/twpayne/chezmoi/archive/refs/tags/v2.66.0.tar.gz : b76261f399ee828524713f2c83d13cd2d2592f20ff5b2536d6c15edc0483be86
+    - https://github.com/twpayne/chezmoi/archive/refs/tags/v2.70.4.tar.gz : a184d87b2891e8ec5645d4a28a0e2f78c1a4e7738ad64fdfe07e8f7ce7782d59
 homepage   : https://www.chezmoi.io
 license    : MIT
 component  : programming.tools
@@ -16,3 +17,4 @@ build      : |
     %make
 install    : |
     %make_install PREFIX=/usr
+    %install_license LICENSE

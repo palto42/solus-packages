@@ -40,7 +40,9 @@ libc.so.6:optarg
 libc.so.6:opterr
 libc.so.6:optind
 libc.so.6:posix_fadvise
+libc.so.6:posix_memalign
 libc.so.6:pread
+libc.so.6:puts
 libc.so.6:pwrite
 libc.so.6:read
 libc.so.6:setlocale

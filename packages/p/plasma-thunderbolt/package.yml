@@ -1,14 +1,15 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : plasma-thunderbolt
-version    : 6.4.5
-release    : 88
+version    : 6.6.5
+release    : 98
 source     :
-    - https://download.kde.org/stable/plasma/6.4.5/plasma-thunderbolt-6.4.5.tar.xz : 7c1d04395b84a3687c43d9404a57da89d64d6a13667107bbc243a61d9f065f35
+    - https://download.kde.org/stable/plasma/6.6.5/plasma-thunderbolt-6.6.5.tar.xz : 56e3a2833096279c3a9ec1dbb4b53a5fa4bc36b3569e3f7ec191f002f40bf71f
 homepage   : https://www.kde.org/workspaces/plasmadesktop/
 license    :
-    - GPL-2.0-or-later
-    - GPL-3.0-or-later
-    - LGPL-2.0-or-later
-    - LGPL-2.1-or-later
+    - BSD-3-Clause
+    - CC0-1.0
+    - GPL-2.0-only
+    - GPL-3.0-only
 component  : desktop.kde.core
 summary    : Plasma integration for controlling Thunderbolt devices
 description: |-
@@ -34,3 +35,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*

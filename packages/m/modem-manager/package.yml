@@ -1,6 +1,7 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : modem-manager
 version    : 1.22.0
-release    : 22
+release    : 23
 source     :
     - https://gitlab.freedesktop.org/mobile-broadband/ModemManager/-/archive/1.22.0/ModemManager-1.22.0.tar.gz : 6c8f8720737a3788e394c700f36236278c9de09d76069a079e6f1daaf08b2768
 license    :
@@ -24,8 +25,9 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license COPYING COPYING.LIB
 
-    # Enable modemmanager service by default
-    install -dm00755 $installdir/%libdir%/systemd/system/multi-user.target.wants
+    install -Dm00644 -t ${installdir}/%libdir%/systemd/system-preset/ ${pkgfiles}/20-modem-manager.preset
+
+    install -dm00755 ${installdir}/%libdir%/systemd/system/
     ln -sv ModemManager.service $installdir/%libdir%/systemd/system/dbus-org.freedesktop.ModemManager1.service
-    ln -sv ../ModemManager.service $installdir/%libdir%/systemd/system/multi-user.target.wants

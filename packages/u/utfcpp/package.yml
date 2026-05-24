@@ -1,11 +1,12 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : utfcpp
-version    : 4.0.5
-release    : 4
+version    : 4.1.0
+release    : 8
 source     :
-    - https://github.com/nemtrif/utfcpp/archive/refs/tags/v4.0.5.tar.gz : ffc668a310e77607d393f3c18b32715f223da1eac4c4d6e0579a11df8e6b59cf
+    - https://github.com/nemtrif/utfcpp/archive/refs/tags/v4.1.0.tar.gz : 9a45cbeefacf512879971eaf57fe52133b73a0152d5354f3adeaf8d103cff0f3
 license    : BSL-1.0
 component  : programming.library
-homepage   : http://utfcpp.sourceforge.net/
+homepage   : https://github.com/nemtrif/utfcpp
 summary    : UTF-8 with C++ in a Portable Way.
 description: |
     UTF-8 with C++ in a Portable Way.
@@ -17,3 +18,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSE

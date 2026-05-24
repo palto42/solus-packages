@@ -8,7 +8,7 @@ libc.so.6:__libc_start_main
 libc.so.6:__printf_chk
 libc.so.6:__snprintf_chk
 libc.so.6:__stack_chk_fail
-libc.so.6:__strncat_chk
+libc.so.6:__strcat_chk
 libc.so.6:__vsnprintf_chk
 libc.so.6:accept
 libc.so.6:access
@@ -89,6 +89,7 @@ libncursesw.so.6:nodelay
 libncursesw.so.6:noecho
 libncursesw.so.6:nonl
 libncursesw.so.6:printw
+libncursesw.so.6:redrawwin
 libncursesw.so.6:resizeterm
 libncursesw.so.6:scrollok
 libncursesw.so.6:start_color
@@ -104,7 +105,6 @@ libncursesw.so.6:whline
 libncursesw.so.6:wmove
 libncursesw.so.6:wnoutrefresh
 libncursesw.so.6:wprintw
-libncursesw.so.6:wredrawln
 libncursesw.so.6:wrefresh
 libncursesw.so.6:wresize
 libncursesw.so.6:wvline

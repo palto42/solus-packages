@@ -1,6 +1,7 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : deluge
 version    : 2.2.0
-release    : 29
+release    : 31
 source     :
     # We need to use the ftp source or the package fails to build
     - https://ftp.osuosl.org/pub/deluge/source/2.2/deluge-2.2.0.tar.xz : b9ba272b5ba42aaf1c694e6c29628ab816cc1a700a37bac08aacb52571606acd
@@ -11,12 +12,10 @@ summary    : A full-featured BitTorrent client
 description: |
     Deluge is a full-featured BitTorrent client written in Python and GTK.
 builddeps  :
-    - intltool
     - python-build
     - python-installer
     - python-setuptools
     - python-wheel
-    - python-zope.interface
 rundeps    :
     - libayatana-appindicator
     - librsvg
@@ -28,13 +27,13 @@ rundeps    :
     - python-pillow
     - python-rencode
     - python-setproctitle
-    - python-setuptools
-    - python-six
     - python-twisted
+    - python-zope.interface
     - python3-dbus
     - pyxdg
     - xdg-utils
 setup      : |
+    patch -p1 -i $pkgfiles/no-pkg_resources.patch
     # Mako is a dep of the Web UI. We don't need it
     sed "/'mako'/d" -i setup.py
 

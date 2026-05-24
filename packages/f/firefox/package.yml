@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : firefox
-version    : 143.0.4
-release    : 376
+version    : '151.0.1'
+release    : 402
 source     :
-    - https://ftp.mozilla.org/pub/firefox/releases/143.0.4/source/firefox-143.0.4.source.tar.xz : 9e47c9f24c0e01a67f7fb03349ac8021a692f088f54bd127c356be0835c8b61a
+    - https://ftp.mozilla.org/pub/firefox/releases/151.0.1/source/firefox-151.0.1.source.tar.xz : a80ae34238cbf83a507274bc25d215ccac00934ddf26190b02a34fdce60584c0
 homepage   : https://www.mozilla.org/firefox/
 license    :
     - GPL-2.0-or-later
@@ -13,6 +14,7 @@ description: |
     Mozilla Firefox is an open-source web browser, designed for standards compliance, performance and portability. Its functionality can be enhanced via a plethora of extensions.
 clang      : true
 optimize   : icf-safe
+networking : true
 builddeps  :
     - pkgconfig(alsa)
     # Temporarily disabled until Fedora patch is updated
@@ -55,12 +57,21 @@ rundeps    :
     - firefox-langpacks
 environment: |
     export MOZ_NOSPAM=1
-    export MACH_BUILD_PYTHON_NATIVE_PACKAGE_SOURCE=system
+    # Causes error mozshellutil not found with v148
+    # export MACH_BUILD_PYTHON_NATIVE_PACKAGE_SOURCE=system
     export MOZBUILD_STATE_PATH=$PWD
     export MOZ_BUILD_DATE="$(date -u${SOURCE_DATE_EPOCH:+d @$SOURCE_DATE_EPOCH} +%Y%m%d%H%M%S)"
 setup      : |
     %patch -p1 -i $pkgfiles/0001-Fix-Firefox-Thunderbird-envvar-conflicts.patch
     %patch -p1 -i $pkgfiles/0001-Allow-installing-addons-from-user-scope.patch
+
+    # Try to remove this in Firefox 152
+    %patch -p1 -i $pkgfiles/ftbfs-glibc-2.43-2.patch
+    sed -i 's/f8ad2b69fa472e332b50572c1b2dcc1c8a0fa783a1199aad245398d3df421b4b/dfdde6b4d42603fd3fe087a96bc0e7258ed38891154132a55b1eeac504f6f3c6/g' third_party/rust/glslopt/.cargo-checksum.json
+
+    # v144.0.2 would not build with python-zstandard v0.25.0
+    # Fix not needed since we had to remove MACH_BUILD_PYTHON_NATIVE_PACKAGE_SOURCE=system
+    # sed -i 's/zstandard>=0.11.1,<=0.24.0/zstandard>=0.11.1,<=0.25.0/' python/sites/mach.txt
 
     # Temporarily disabled until Fedora patch is updated
     # %patch -p1 -i $pkgfiles/bmo-1559213-Support-system-av1.patch
@@ -117,6 +128,7 @@ build      : |
     fi
 install    : |
     DESTDIR=$installdir ./mach install
+    %install_license LICENSE
 
     # Desktop file, icons, appdata
     for s in 16 22 24 32 48 256; do

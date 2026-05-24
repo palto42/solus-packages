@@ -3,8 +3,8 @@
         <Name>cheese</Name>
         <Homepage>https://gitlab.gnome.org/GNOME/cheese</Homepage>
         <Packager>
-            <Name>Troy Harvey</Name>
-            <Email>harveydevel@gmail.com</Email>
+            <Name>Evan Maddock</Name>
+            <Email>maddock.evan@vivaldi.net</Email>
         </Packager>
         <License>GPL-2.0-or-later</License>
         <PartOf>multimedia.video</PartOf>
@@ -20,7 +20,7 @@
 </Description>
         <PartOf>multimedia.video</PartOf>
         <RuntimeDependencies>
-            <Dependency release="25">libcheese</Dependency>
+            <Dependency release="26">libcheese</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin/cheese</Path>
@@ -443,6 +443,7 @@
             <Path fileType="doc">/usr/share/help/zh_CN/cheese/video-record.page</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.gnome.Cheese.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/symbolic/apps/org.gnome.Cheese-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/licenses/cheese/COPYING</Path>
             <Path fileType="localedata">/usr/share/locale/ab/LC_MESSAGES/cheese.mo</Path>
             <Path fileType="localedata">/usr/share/locale/af/LC_MESSAGES/cheese.mo</Path>
             <Path fileType="localedata">/usr/share/locale/an/LC_MESSAGES/cheese.mo</Path>
@@ -534,7 +535,7 @@
             <Path fileType="localedata">/usr/share/locale/zh_HK/LC_MESSAGES/cheese.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_TW/LC_MESSAGES/cheese.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zu/LC_MESSAGES/cheese.mo</Path>
-            <Path fileType="man">/usr/share/man/man1/cheese.1</Path>
+            <Path fileType="man">/usr/share/man/man1/cheese.1.zst</Path>
             <Path fileType="data">/usr/share/metainfo/org.gnome.Cheese.appdata.xml</Path>
         </Files>
     </Package>
@@ -560,7 +561,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="25">cheese</Dependency>
+            <Dependency release="26">cheese</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/cheese/cheese-avatar-chooser.h</Path>
@@ -619,12 +620,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="25">
-            <Date>2024-11-01</Date>
+        <Update release="26">
+            <Date>2026-03-17</Date>
             <Version>44.1</Version>
             <Comment>Packaging update</Comment>
-            <Name>Troy Harvey</Name>
-            <Email>harveydevel@gmail.com</Email>
+            <Name>Evan Maddock</Name>
+            <Email>maddock.evan@vivaldi.net</Email>
         </Update>
     </History>
 </PISI>

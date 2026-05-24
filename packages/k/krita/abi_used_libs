@@ -14,8 +14,8 @@ libKF5WidgetsAddons.so.5
 libKF5WindowSystem.so.5
 libKSeExpr.so.4
 libKSeExprUI.so.4
-libOpenColorIO.so.2.2
-libOpenEXR-3_1.so.30
+libOpenColorIO.so.2.5
+libOpenEXR-3_4.so.33
 libQt5Core.so.5
 libQt5DBus.so.5
 libQt5Gui.so.5
@@ -28,7 +28,7 @@ libQt5X11Extras.so.5
 libQt5Xml.so.5
 libX11.so.6
 libc.so.6
-libexiv2.so.27
+libexiv2.so.28
 libfftw3.so.3
 libfftw3_threads.so.3
 libfontconfig.so.1
@@ -37,6 +37,7 @@ libfribidi.so.0
 libgcc_s.so.1
 libgif.so.7
 libgmic.so.1
+libgomp.so.1
 libgsl.so.25
 libharfbuzz.so.0
 libheif.so.1
@@ -44,7 +45,7 @@ libjpeg.so.8
 libjxl.so.0.11
 libjxl_threads.so.0.11
 liblcms2.so.2
-liblcms2_fast_float.so
+liblcms2_fast_float.so.2
 libm.so.6
 libmlt++-7.so.7
 libmlt-7.so.7
@@ -57,7 +58,7 @@ libquazip1-qt5.so.1.4.0
 libstdc++.so.6
 libtiff.so.6
 libturbojpeg.so.0
-libunibreak.so.5
+libunibreak.so.7
 libwebp.so.7
 libwebpdemux.so.2
 libwebpmux.so.3

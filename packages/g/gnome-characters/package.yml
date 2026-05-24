@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : gnome-characters
-version    : '48.0'
-release    : 14
+version    : '50.0'
+release    : 16
 source     :
-    - https://download.gnome.org/sources/gnome-characters/48/gnome-characters-48.0.tar.xz : a2c32ca54d911db2404420350d3442e691a2dce8b0f5d00899f66cff8c3c8d71
+    - https://download.gnome.org/sources/gnome-characters/50/gnome-characters-50.0.tar.xz : 4070734dd639b3094be467bb055a5461b2fc301cdfc9feddcb4a68f476ed5aad
 homepage   : https://apps.gnome.org/Characters/
 license    :
     - BSD-3-Clause

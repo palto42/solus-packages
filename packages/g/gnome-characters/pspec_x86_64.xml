@@ -33,6 +33,7 @@
             <Path fileType="localedata">/usr/share/locale/ab/LC_MESSAGES/org.gnome.Characters.mo</Path>
             <Path fileType="localedata">/usr/share/locale/af/LC_MESSAGES/org.gnome.Characters.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ar/LC_MESSAGES/org.gnome.Characters.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/az/LC_MESSAGES/org.gnome.Characters.mo</Path>
             <Path fileType="localedata">/usr/share/locale/be/LC_MESSAGES/org.gnome.Characters.mo</Path>
             <Path fileType="localedata">/usr/share/locale/bg/LC_MESSAGES/org.gnome.Characters.mo</Path>
             <Path fileType="localedata">/usr/share/locale/bn/LC_MESSAGES/org.gnome.Characters.mo</Path>
@@ -69,6 +70,7 @@
             <Path fileType="localedata">/usr/share/locale/kab/LC_MESSAGES/org.gnome.Characters.mo</Path>
             <Path fileType="localedata">/usr/share/locale/kk/LC_MESSAGES/org.gnome.Characters.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ko/LC_MESSAGES/org.gnome.Characters.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/kw/LC_MESSAGES/org.gnome.Characters.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ln/LC_MESSAGES/org.gnome.Characters.mo</Path>
             <Path fileType="localedata">/usr/share/locale/lt/LC_MESSAGES/org.gnome.Characters.mo</Path>
             <Path fileType="localedata">/usr/share/locale/lv/LC_MESSAGES/org.gnome.Characters.mo</Path>
@@ -95,10 +97,12 @@
             <Path fileType="localedata">/usr/share/locale/tg/LC_MESSAGES/org.gnome.Characters.mo</Path>
             <Path fileType="localedata">/usr/share/locale/th/LC_MESSAGES/org.gnome.Characters.mo</Path>
             <Path fileType="localedata">/usr/share/locale/tr/LC_MESSAGES/org.gnome.Characters.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/ug/LC_MESSAGES/org.gnome.Characters.mo</Path>
             <Path fileType="localedata">/usr/share/locale/uk/LC_MESSAGES/org.gnome.Characters.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/uz/LC_MESSAGES/org.gnome.Characters.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_CN/LC_MESSAGES/org.gnome.Characters.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_TW/LC_MESSAGES/org.gnome.Characters.mo</Path>
-            <Path fileType="data">/usr/share/metainfo/org.gnome.Characters.appdata.xml</Path>
+            <Path fileType="data">/usr/share/metainfo/org.gnome.Characters.metainfo.xml</Path>
             <Path fileType="data">/usr/share/org.gnome.Characters/gir-1.0/Gc-1.0.gir</Path>
             <Path fileType="data">/usr/share/org.gnome.Characters/org.gnome.Characters</Path>
             <Path fileType="data">/usr/share/org.gnome.Characters/org.gnome.Characters.data.gresource</Path>
@@ -106,9 +110,9 @@
         </Files>
     </Package>
     <History>
-        <Update release="14">
-            <Date>2025-04-04</Date>
-            <Version>48.0</Version>
+        <Update release="16">
+            <Date>2026-03-21</Date>
+            <Version>50.0</Version>
             <Comment>Packaging update</Comment>
             <Name>Joey Riches</Name>
             <Email>josephriches@gmail.com</Email>

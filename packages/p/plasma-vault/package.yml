@@ -1,10 +1,16 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : plasma-vault
-version    : 6.4.5
-release    : 99
+version    : 6.6.5
+release    : 110
 source     :
-    - https://download.kde.org/stable/plasma/6.4.5/plasma-vault-6.4.5.tar.xz : 3a5105be995f0923145038867ea6fcfe45a82e9537eef5a85643db24ffef70f5
+    - https://download.kde.org/stable/plasma/6.6.5/plasma-vault-6.6.5.tar.xz : 68a4e3cd160db15646882c5a40aec3aa3eb709701a3b4274d02b6393feabb268
 homepage   : https://www.kde.org/workspaces/plasmadesktop/
-license    : GPL-2.0-or-later
+license    :
+    - CC0-1.0
+    - GPL-2.0-only
+    - GPL-3.0-only
+    - LGPL-2.1-only
+    - LGPL-3.0-only
 component  : desktop.kde
 summary    : Plasma applet and services for creating encrypted vaults
 description: |
@@ -14,6 +20,7 @@ builddeps  :
     - pkgconfig(libnm)
     - kf6-kdbusaddons-devel
     - kf6-kio-devel
+    - kf6-kirigami-devel
     - kf6-kitemmodels-devel
     - kf6-networkmanager-qt-devel
     - libksysguard-devel
@@ -21,6 +28,7 @@ builddeps  :
     - plasma-activities-devel
 rundeps    :
     - cryfs
+    - gocryptfs
 clang      : true
 optimize   :
     - speed
@@ -31,3 +39,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*

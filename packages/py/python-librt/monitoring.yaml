@@ -1,0 +1,8 @@
+# No Anitya release
+releases:
+  id: 388232
+  rss: https://github.com/mypyc/librt/tags.atom
+
+# No known CPE, checked 2025-12-27
+security:
+  cpe: ~

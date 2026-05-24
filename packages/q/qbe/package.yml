@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
+name       : qbe
+version    : 1.2
+release    : 1
+source     :
+    - https://c9x.me/compile/release/qbe-1.2.tar.xz : a6d50eb952525a234bf76ba151861f73b7a382ac952d985f2b9af1df5368225d
+homepage   : https://c9x.me/compile/
+license    : MIT
+component  : programming.tools
+summary    : QBE a compiler backend
+description: |
+    QBE is a compiler backend that aims to provide 70% of the performance of industrial optimizing compilers in 10% of the code.
+build      : |
+    %make
+install    : |
+    %make_install PREFIX=%PREFIX%
+    %install_license LICENSE
+    install -Dm00644 $workdir/doc/* -t $installdir/usr/share/doc/qbe
+check      : |
+    make check

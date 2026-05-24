@@ -1,5 +1,6 @@
 libc.so.6:__errno_location
-libc.so.6:__isoc99_sscanf
+libc.so.6:__isoc23_sscanf
+libc.so.6:__isoc23_strtol
 libc.so.6:__snprintf_chk
 libc.so.6:__stack_chk_fail
 libc.so.6:bind
@@ -16,7 +17,6 @@ libc.so.6:strlen
 libc.so.6:strncmp
 libc.so.6:strncpy
 libc.so.6:strstr
-libc.so.6:strtol
 libc.so.6:write
 libgio-2.0.so.0:g_inet_address_equal
 libgio-2.0.so.0:g_inet_address_get_family

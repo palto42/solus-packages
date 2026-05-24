@@ -1,9 +1,10 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : google-cloud-sdk
-version    : 477.0.0
-release    : 35
+version    : 550.0.0
+release    : 37
 source     :
-    - https://dl.google.com/dl/cloudsdk/release/downloads/for_packagers/linux/google-cloud-cli_477.0.0.orig_amd64.tar.gz : ab5c00bca7bfa80efe96c4813784f27640d086bbe98b06b5ef595e031c566b38
-    - https://dl.google.com/dl/cloudsdk/release/downloads/for_packagers/linux/google-cloud-cli-gke-gcloud-auth-plugin_477.0.0.orig_amd64.tar.gz : 1c9a9268c0b865fb88325e2de0718da7d6ce2b3c5eb02c4a3c0d1bd1f7818f41
+    - https://dl.google.com/dl/cloudsdk/release/downloads/for_packagers/linux/google-cloud-cli_550.0.0.orig_amd64.tar.gz : db4bfb7d01cfaf3a520f526234f5f9745dea5064753f4b01f9c84a402e31cd28
+    - https://dl.google.com/dl/cloudsdk/release/downloads/for_packagers/linux/google-cloud-cli-gke-gcloud-auth-plugin_550.0.0.orig_amd64.tar.gz : d554128621096d81466eda8b814830e5fe33da7f5ac49ed89f09c4b8eb261008
 extract    : false
 strip      : false
 license    : Apache-2.0
@@ -48,3 +49,8 @@ install    : |
 
     # Install profile.d script sets up needed environment variables
     install -D -m 00644 $pkgfiles/50-google-cloud-sdk.sh $installdir/usr/share/defaults/etc/profile.d/50-google-cloud-sdk.sh
+
+    %install_license LICENSE
+patterns   :
+    - docs :
+        - /usr/share/man

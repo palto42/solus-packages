@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : apitrace
-version    : '13.0'
-release    : 12
+version    : '14.0'
+release    : 13
 source     :
-    - git|https://github.com/apitrace/apitrace.git : 13.0
+    - git|https://github.com/apitrace/apitrace.git : 14.0
 homepage   : https://apitrace.github.io/
 license    : MIT
 component  : programming.tools
@@ -26,7 +27,7 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
-
+    %install_license LICENSE
     # Install desktop file and AppStream metainfo
     install -Dm00644 $pkgfiles/io.github.apitrace.ApiTrace.desktop -t $installdir/usr/share/applications/
     install -Dm00644 $pkgfiles/io.github.apitrace.ApiTrace.metainfo.xml -t $installdir/usr/share/metainfo/

@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : mkvtoolnix
-version    : '95.0'
-release    : 108
+version    : '98.0'
+release    : 112
 source     :
-    - https://codeberg.org/mbunkus/mkvtoolnix/archive/release-95.0.tar.gz : f21ed76b4096fc7d282026616afd8556d5076b621563b5642bff8e03ee5c49c7
+    - https://codeberg.org/mbunkus/mkvtoolnix/archive/release-98.0.tar.gz : 39d6b7a414336b1be374a723c3ccb50b66fa4b86b816b8635fc44781d34e49f4
 homepage   : https://codeberg.org/mbunkus/mkvtoolnix
 license    : GPL-2.0-or-later
 component  : multimedia.video
@@ -23,7 +24,7 @@ builddeps  :
     - pkgconfig(libebml)
     - pkgconfig(libmatroska)
     - pkgconfig(libpcre2-posix)
-    - pkgconfig(ruby-3.4)
+    - pkgconfig(ruby-4.0)
     - pkgconfig(vorbis)
     - docbook-xml
     - libboost-devel
@@ -33,5 +34,6 @@ build      : |
     rake %JOBS% --libdir %libdir%
 install    : |
     rake install DESTDIR=$installdir
+    %install_license COPYING
 check      : |
     rake tests:run_unit

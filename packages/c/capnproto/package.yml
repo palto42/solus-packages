@@ -1,17 +1,27 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : capnproto
-version    : 1.0.2
-release    : 6
+version    : 1.4.0
+release    : 7
 source     :
-    - https://github.com/capnproto/capnproto/archive/refs/tags/v1.0.2.tar.gz : 3cfd0ed58080d78b3a3381305489f2175cdaf1ef1cb55425d8fc8246a76bdff3
+    - https://github.com/capnproto/capnproto/archive/refs/tags/v1.4.0.tar.gz : d14a9149b79c055fee9d5aa778defe8e8cee0d2a11f0729865cd30dcc345eef2
 homepage   : https://capnproto.org/
 license    : MIT
-component  : programming
-summary    : Cap’n Proto is an insanely fast data interchange format and capability-based RPC system
+component  :
+    - programming
+    - libs : programming.library
+summary    :
+    - Cap’n Proto is an insanely fast data interchange format and capability-based RPC system
+    - libs : Shared libraries for Cap’n Proto
 description: |
     Cap’n Proto is an insanely fast data interchange format and capability-based RPC system. Think JSON, except binary. Or think Protocol Buffers, except faster. In fact, in benchmarks, Cap’n Proto is INFINITY TIMES faster than Protocol Buffers.
 setup      : |
-    %cmake
+    %cmake \
+        -DBUILD_SHARED_LIBS:FEAT=ON \
+        -DCMAKE_POSITION_INDEPENDENT_CODE=ON
 build      : |
     %make
 install    : |
     %make_install
+    %install_license LICENSE
+patterns   :
+    - libs : /usr/lib64/lib*.so.*

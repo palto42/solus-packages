@@ -1,0 +1,6 @@
+releases:
+  id: 388499
+  rss: https://github.com/vala-lang/vala-lint/tags.atom
+ # No known CPE, checked 2026-02-22
+security:
+  cpe: ~

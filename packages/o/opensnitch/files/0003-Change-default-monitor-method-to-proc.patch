@@ -1,0 +1,22 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Silke Hofstra <silke@slxh.eu>
+Date: Mon, 6 Apr 2026 16:34:29 +0200
+Subject: [PATCH 3/5] Change default monitor method to `proc`
+
+---
+ daemon/data/default-config.json | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/daemon/data/default-config.json b/daemon/data/default-config.json
+index 98159259..7eca7182 100644
+--- a/daemon/data/default-config.json
++++ b/daemon/data/default-config.json
+@@ -18,7 +18,7 @@
+     "DefaultAction": "allow",
+     "DefaultDuration": "once",
+     "InterceptUnknown": false,
+-    "ProcMonitorMethod": "ebpf",
++    "ProcMonitorMethod": "proc",
+     "LogLevel": 2,
+     "LogUTC": true,
+     "LogMicro": false,

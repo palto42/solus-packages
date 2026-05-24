@@ -1,13 +1,17 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kf6-networkmanager-qt
-version    : 6.19.0
-release    : 25
+version    : 6.26.0
+release    : 36
 source     :
-    - https://download.kde.org/stable/frameworks/6.19/networkmanager-qt-6.19.0.tar.xz : 83ba1060080dc193c62837421e1cb796500abb3931b505ae8275c440674affc4
+    - https://download.kde.org/stable/frameworks/6.26/networkmanager-qt-6.26.0.tar.xz : a5cfed06af6156161f7fee56efe1521a6e9e26119327069f1799986f90b432e5
 homepage   : https://community.kde.org/Frameworks
 license    :
     - BSD-3-Clause
+    - CC0-1.0
     - GPL-2.0-only
+    - GPL-3.0-only
     - LGPL-2.1-only
+    - LGPL-3.0-only
 component  : desktop.library
 summary    : Qt wrapper for NetworkManager DBus API
 description: |
@@ -19,7 +23,7 @@ builddeps  :
     - qt6-base-private-devel
 rundeps    :
     - devel :
-        - network-manager-devel
+        - network-manager-libnm-devel
         - qt6-base-devel
 clang      : true
 optimize   : thin-lto
@@ -29,3 +33,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*

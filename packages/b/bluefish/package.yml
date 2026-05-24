@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : bluefish
-version    : 2.2.17
-release    : 20
+version    : 2.4.1
+release    : 23
 source     :
-    - https://sourceforge.net/projects/bluefish/files/bluefish/2.2.17/bluefish-2.2.17.tar.bz2 : 3a79f6425e14939ea134f96c1424e3aac05bee95904be434581883078a7b7253
+    - https://sourceforge.net/projects/bluefish/files/bluefish/2.4.1/bluefish-2.4.1.tar.bz2 : 540b0e4f5a595fc418c41125a6a282b69f10cf01513bedde80906d25a56d0cc9
 license    : GPL-3.0-or-later
 homepage   : https://bluefish.openoffice.nl/index.html
 component  : programming.ide
@@ -20,3 +21,4 @@ build      : |
     %make
 install    : |
     %make_install
+    %install_license COPYING

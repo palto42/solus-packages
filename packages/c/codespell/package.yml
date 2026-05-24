@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : codespell
-version    : 2.4.1
-release    : 5
+version    : 2.4.2
+release    : 6
 source     :
-    - https://files.pythonhosted.org/packages/source/c/codespell/codespell-2.4.1.tar.gz : 299fcdcb09d23e81e35a671bbe746d5ad7e8385972e65dbb833a2eaac33c01e5
+    - https://files.pythonhosted.org/packages/source/c/codespell/codespell-2.4.2.tar.gz : 3c33be9ae34543807f088aeb4832dfad8cb2dae38da61cac0a7045dd376cfdf3
 homepage   : https://github.com/codespell-project/codespell
 license    : GPL-2.0-only
 component  : programming.python

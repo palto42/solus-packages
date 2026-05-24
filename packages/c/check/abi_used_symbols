@@ -1,5 +1,6 @@
 libc.so.6:__assert_fail
 libc.so.6:__errno_location
+libc.so.6:__isoc23_strtoul
 libc.so.6:__pthread_register_cancel
 libc.so.6:__pthread_unregister_cancel
 libc.so.6:__sigsetjmp
@@ -48,7 +49,6 @@ libc.so.6:strrchr
 libc.so.6:strsignal
 libc.so.6:strtod
 libc.so.6:strtok
-libc.so.6:strtoul
 libc.so.6:timer_create
 libc.so.6:timer_delete
 libc.so.6:timer_settime

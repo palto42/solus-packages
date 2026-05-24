@@ -3,8 +3,8 @@
         <Name>bbswitch</Name>
         <Homepage>https://github.com/Bumblebee-Project/bbswitch</Homepage>
         <Packager>
-            <Name>Reilly Brogan</Name>
-            <Email>solus@reillybrogan.com</Email>
+            <Name>Troy Harvey</Name>
+            <Email>harvey@getsol.us</Email>
         </Packager>
         <License>GPL-2.0-or-later</License>
         <PartOf>kernel.drivers</PartOf>
@@ -20,8 +20,8 @@
 </Description>
         <PartOf>kernel.drivers</PartOf>
         <Files>
-            <Path fileType="data">/lib64/modules/6.12.45-272.lts/misc/bbswitch.ko.zst</Path>
-            <Path fileType="library">/usr/lib64/modules/6.12.45-272.lts/misc/bbswitch.ko.zst</Path>
+            <Path fileType="data">/lib64/modules/6.18.33-292.lts/extra/misc/bbswitch.ko.zst</Path>
+            <Path fileType="library">/usr/lib64/modules/6.18.33-292.lts/extra/misc/bbswitch.ko.zst</Path>
         </Files>
     </Package>
     <Package>
@@ -31,17 +31,17 @@
 </Description>
         <PartOf>kernel.drivers</PartOf>
         <Files>
-            <Path fileType="data">/lib64/modules/6.16.5-322.current/misc/bbswitch.ko.zst</Path>
-            <Path fileType="library">/usr/lib64/modules/6.16.5-322.current/misc/bbswitch.ko.zst</Path>
+            <Path fileType="data">/lib64/modules/7.0.10-342.current/extra/misc/bbswitch.ko.zst</Path>
+            <Path fileType="library">/usr/lib64/modules/7.0.10-342.current/extra/misc/bbswitch.ko.zst</Path>
         </Files>
     </Package>
     <History>
-        <Update release="363">
-            <Date>2025-09-10</Date>
+        <Update release="383">
+            <Date>2026-05-24</Date>
             <Version>0.8</Version>
             <Comment>Packaging update</Comment>
-            <Name>Reilly Brogan</Name>
-            <Email>solus@reillybrogan.com</Email>
+            <Name>Troy Harvey</Name>
+            <Email>harvey@getsol.us</Email>
         </Update>
     </History>
 </PISI>

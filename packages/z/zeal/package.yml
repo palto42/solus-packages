@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : zeal
-version    : 0.7.2
-release    : 22
+version    : 0.8.1
+release    : 27
 source     :
-    - https://github.com/zealdocs/zeal/archive/refs/tags/v0.7.2.tar.gz : 9c4ce9ab5700985f4c562e995301f98767f14cd045f047dee2520ec4ce1855cf
+    - https://github.com/zealdocs/zeal/archive/refs/tags/v0.8.1.tar.gz : 468a2410a5edbbaa3b508f297b64fbfc725bb1477cc9a786687d24e9eb297d97
 homepage   : https://zealdocs.org/
 license    : GPL-3.0-or-later
 component  : programming.tools
@@ -10,6 +11,7 @@ summary    : Offline documentation browser inspired by Dash
 description: |
     Zeal is a simple offline documentation browser inspired by Dash.
 builddeps  :
+    - pkgconfig(Qt6WebChannel)
     - pkgconfig(Qt6WebEngineWidgets)
     - pkgconfig(libarchive)
     - pkgconfig(sqlite3)
@@ -18,12 +20,11 @@ builddeps  :
     - extra-cmake-modules
     - qt6-base-private-devel
 setup      : |
-    %patch -p1 -i $pkgfiles/0001-dont-check-for-updates.patch
-    # Apply fedora patches
-    %patch -p1 -i $pkgfiles/0001-apply-websettings.patch
-
-    %cmake_ninja
+    # Avoid duplicate menu entries in Help and Development.
+    sed -i 's/Categories=.*/Categories=Development;/' assets/freedesktop/org.zealdocs.zeal.desktop
+    %cmake_ninja -DZEAL_FEATURE_UPDATE_CHECK=OFF
 build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license COPYING LICENSES/*

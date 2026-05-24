@@ -4,6 +4,7 @@ libc.so.6:__environ
 libc.so.6:__errno_location
 libc.so.6:__fprintf_chk
 libc.so.6:__isoc23_sscanf
+libc.so.6:__isoc23_strtol
 libc.so.6:__isoc23_strtoul
 libc.so.6:__isoc99_sscanf
 libc.so.6:__libc_start_main
@@ -13,9 +14,8 @@ libc.so.6:__realpath_chk
 libc.so.6:__snprintf_chk
 libc.so.6:__sprintf_chk
 libc.so.6:__stack_chk_fail
-libc.so.6:__syslog_chk
 libc.so.6:__vfprintf_chk
-libc.so.6:__vsnprintf_chk
+libc.so.6:__vsyslog_chk
 libc.so.6:_exit
 libc.so.6:abort
 libc.so.6:access
@@ -165,7 +165,6 @@ libc.so.6:strrchr
 libc.so.6:strstr
 libc.so.6:strtok
 libc.so.6:strtok_r
-libc.so.6:strtol
 libc.so.6:syscall
 libc.so.6:sysconf
 libc.so.6:umask

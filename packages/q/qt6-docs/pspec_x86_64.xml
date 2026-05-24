@@ -4,7 +4,7 @@
         <Homepage>https://www.qt.io</Homepage>
         <Packager>
             <Name>Troy Harvey</Name>
-            <Email>harveydevel@gmail.com</Email>
+            <Email>harvey@getsol.us</Email>
         </Packager>
         <License>GFDL-1.3-or-later</License>
         <License>GPL-3.0-or-later</License>
@@ -56,6 +56,7 @@
             <Path fileType="doc">/usr/share/doc/qt6/qmake/style/offline-dark.css</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qmake/style/offline-simple.css</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qmake/style/offline.css</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qmake/style/tech_preview.svg</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtconcurrent.qch</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtconcurrent/concurrent-changes-qt6.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtconcurrent/examples-manifest.xml</Path>
@@ -90,6 +91,7 @@
             <Path fileType="doc">/usr/share/doc/qt6/qtconcurrent/style/offline-dark.css</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtconcurrent/style/offline-simple.css</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtconcurrent/style/offline.css</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtconcurrent/style/tech_preview.svg</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore.qch</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/android-deploy-qt-tool.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/android-manifest-file-configuration.html</Path>
@@ -114,6 +116,7 @@
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/cmake-target-property-qt-android-deployment-settings-file.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/cmake-target-property-qt-android-extra-libs.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/cmake-target-property-qt-android-extra-plugins.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtcore/cmake-target-property-qt-android-legacy-packaging.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/cmake-target-property-qt-android-min-sdk-version.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/cmake-target-property-qt-android-no-deploy-qt-libs.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/cmake-target-property-qt-android-package-name.html</Path>
@@ -137,9 +140,11 @@
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/cmake-variable-qt-android-abis.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/cmake-variable-qt-android-application-arguments.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/cmake-variable-qt-android-build-all-abis.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtcore/cmake-variable-qt-android-create-symlinks-only.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/cmake-variable-qt-android-deployment-type.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/cmake-variable-qt-android-generate-java-qml-components.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/cmake-variable-qt-android-multi-abi-forward-vars.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtcore/cmake-variable-qt-android-post-build-gradle-cleanup.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/cmake-variable-qt-android-sign-aab.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/cmake-variable-qt-android-sign-apk.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/cmake-variable-qt-deploy-bin-dir.html</Path>
@@ -166,6 +171,7 @@
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/cmake-variables-qtcore.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/comparison-types.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/containers.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtcore/corelib-examples.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/cpp20-overview.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/custom-types.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/datastreamformat.html</Path>
@@ -173,7 +179,7 @@
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/eventsandfilters.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/examples-manifest.xml</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/foreach-keyword.html</Path>
-            <Path fileType="doc">/usr/share/doc/qt6/qtcore/images/abstract-connections.png</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtcore/images/abstract-connections.svg</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/images/androidnotifier.png</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/images/animations-architecture.png</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/images/arrow_bc.png</Path>
@@ -210,6 +216,7 @@
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/images/home.png</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/images/ico_out.png</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/images/javaiterators1.png</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtcore/images/javaiterators1.svg</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/images/javaiterators2.png</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/images/localfortuneclient-example.png</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/images/localfortuneserver-example.png</Path>
@@ -298,7 +305,7 @@
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/images/qrect-diagram-two.png</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/images/qrect-diagram-zero.png</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/images/qrect-intersect.png</Path>
-            <Path fileType="doc">/usr/share/doc/qt6/qtcore/images/qrect-unite.png</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtcore/images/qrect-unite.webp</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/images/qrectf-coordinates.png</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/images/qrectf-diagram-one.png</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/images/qrectf-diagram-three.png</Path>
@@ -468,6 +475,7 @@
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qcryptographichash-obsolete.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qcryptographichash.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qdatastream-members.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtcore/qdatastream-obsolete.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qdatastream.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qdate-members.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qdate-obsolete.html</Path>
@@ -525,6 +533,7 @@
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qflags-members.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qflags.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qfloat16-members.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtcore/qfloat16-obsolete.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qfloat16.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qforeach.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qfunctionpointer.html</Path>
@@ -542,7 +551,6 @@
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qglobalstatic-members.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qglobalstatic-obsolete.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qglobalstatic.html</Path>
-            <Path fileType="doc">/usr/share/doc/qt6/qtcore/qgregoriancalendar.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qhash-const-iterator-members.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qhash-const-iterator.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qhash-iterator-members.html</Path>
@@ -574,7 +582,6 @@
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qiterable.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qiterator-members.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qiterator.html</Path>
-            <Path fileType="doc">/usr/share/doc/qt6/qtcore/qjalalicalendar.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qjniarray-members.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qjniarray.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qjniarraybase-members.html</Path>
@@ -602,7 +609,6 @@
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qjsonparseerror.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qjsonvalue-members.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qjsonvalue.html</Path>
-            <Path fileType="doc">/usr/share/doc/qt6/qtcore/qjuliancalendar.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qkeycombination-members.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qkeycombination-obsolete.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qkeycombination.html</Path>
@@ -664,6 +670,14 @@
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qmessagelogcontext.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qmessagelogger-members.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qmessagelogger.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtcore/qmetaassociation-iterable-constiterator-members.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtcore/qmetaassociation-iterable-constiterator.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtcore/qmetaassociation-iterable-iterator-members.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtcore/qmetaassociation-iterable-iterator.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtcore/qmetaassociation-iterable-members.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtcore/qmetaassociation-iterable.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtcore/qmetaassociation-members.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtcore/qmetaassociation.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qmetaclassinfo-members.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qmetaclassinfo.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qmetacontainer-members.html</Path>
@@ -681,13 +695,18 @@
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qmetaproperty-members.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qmetaproperty-obsolete.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qmetaproperty.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtcore/qmetasequence-iterable-constiterator-members.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtcore/qmetasequence-iterable-constiterator.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtcore/qmetasequence-iterable-iterator-members.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtcore/qmetasequence-iterable-iterator.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtcore/qmetasequence-iterable-members.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtcore/qmetasequence-iterable.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qmetasequence-members.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qmetasequence.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qmetatype-members.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qmetatype-obsolete.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qmetatype.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qmicrophonepermission.html</Path>
-            <Path fileType="doc">/usr/share/doc/qt6/qtcore/qmilankoviccalendar.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qmimedata-members.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qmimedata.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qmimedatabase-members.html</Path>
@@ -768,6 +787,8 @@
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qpointer.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qpointf-members.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qpointf.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtcore/qprocess-members.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtcore/qprocess.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qprocessenvironment-members.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qprocessenvironment.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qpromise.html</Path>
@@ -787,6 +808,24 @@
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qrandomgenerator.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qrandomgenerator64-members.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qrandomgenerator64.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtcore/qrangemodel-itemaccess.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtcore/qrangemodel-members.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtcore/qrangemodel-rowoptions.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtcore/qrangemodel.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtcore/qrangemodeladapter-columniterator.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtcore/qrangemodeladapter-constcolumniterator.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtcore/qrangemodeladapter-constrowiterator.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtcore/qrangemodeladapter-constrowreference-members.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtcore/qrangemodeladapter-constrowreference.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtcore/qrangemodeladapter-datareference-members.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtcore/qrangemodeladapter-datareference.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtcore/qrangemodeladapter-members.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtcore/qrangemodeladapter-rowiterator.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtcore/qrangemodeladapter-rowreference-members.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtcore/qrangemodeladapter-rowreference.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtcore/qrangemodeladapter-rowreferencebase-members.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtcore/qrangemodeladapter-rowreferencebase.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtcore/qrangemodeladapter.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qrect-members.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qrect.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qrectf-members.html</Path>
@@ -802,7 +841,6 @@
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qregularexpressionmatchiterator.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qresource-members.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qresource.html</Path>
-            <Path fileType="doc">/usr/share/doc/qt6/qtcore/qromancalendar.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qrunnable-members.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qrunnable.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qscopedarraypointer-members.html</Path>
@@ -819,6 +857,7 @@
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qscopeguard.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qsemaphore-members.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qsemaphore.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtcore/qsemaphorereleaser-members.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qsemaphorereleaser.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qsequentialanimationgroup-members.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qsequentialanimationgroup.html</Path>
@@ -870,6 +909,8 @@
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qstring-members.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qstring-obsolete.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qstring.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtcore/qstringconverter-finalizeresultchar-members.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtcore/qstringconverter-finalizeresultchar.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qstringconverter-members.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qstringconverter.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qstringdecoder-members.html</Path>
@@ -889,6 +930,7 @@
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qstringview.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qsysinfo-members.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qsysinfo.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtcore/qt-add-android-dynamic-feature-java-source-dirs.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qt-add-android-permission.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qt-add-bigresources.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qt-add-binary-resources.html</Path>
@@ -960,6 +1002,7 @@
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qtcore-attribution-siphash.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qtcore-attribution-tika-mimetypes.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qtcore-attribution-tinycbor.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtcore/qtcore-attribution-tlexpected.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qtcore-attribution-unicode-character-database.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qtcore-attribution-unicode-cldr.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qtcore-attribution-zlib.html</Path>
@@ -1018,6 +1061,8 @@
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qtimerevent.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qtimezone-members.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qtimezone.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtcore/qtjnitypes-jobject-members.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtcore/qtjnitypes-jobject.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qtjnitypes.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qtliterals-obsolete.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qtliterals.html</Path>
@@ -1049,6 +1094,8 @@
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qunhandledexception.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/quntypedbindable-members.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/quntypedbindable.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtcore/quntypedpropertybinding-members.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtcore/quntypedpropertybinding.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qurl-members.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qurl.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qurlquery-members.html</Path>
@@ -1059,8 +1106,16 @@
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/quuid-id128bytes.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/quuid-members.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/quuid.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtcore/qvariant-constpointer-members.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtcore/qvariant-constpointer.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtcore/qvariant-constreference-members.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtcore/qvariant-constreference.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qvariant-members.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qvariant-obsolete.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtcore/qvariant-pointer-members.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtcore/qvariant-pointer.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtcore/qvariant-reference-members.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtcore/qvariant-reference.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qvariant.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qvariantanimation-members.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/qvariantanimation.html</Path>
@@ -1091,6 +1146,7 @@
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/style/offline-dark.css</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/style/offline-simple.css</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/style/offline.css</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtcore/style/tech_preview.svg</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtcore/timers.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtdbus.qch</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtdbus/cmake-commands-qtdbus.html</Path>
@@ -1180,6 +1236,7 @@
             <Path fileType="doc">/usr/share/doc/qt6/qtdbus/style/offline-dark.css</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtdbus/style/offline-simple.css</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtdbus/style/offline.css</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtdbus/style/tech_preview.svg</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtdbus/usingadaptors.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtgui.qch</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtgui/coordsys.html</Path>
@@ -1197,12 +1254,12 @@
             <Path fileType="doc">/usr/share/doc/qt6/qtgui/images/bullet_dn.png</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtgui/images/bullet_sq.png</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtgui/images/coordinatesystem-analogclock.png</Path>
-            <Path fileType="doc">/usr/share/doc/qt6/qtgui/images/coordinatesystem-line-antialias.png</Path>
-            <Path fileType="doc">/usr/share/doc/qt6/qtgui/images/coordinatesystem-line-raster.png</Path>
-            <Path fileType="doc">/usr/share/doc/qt6/qtgui/images/coordinatesystem-line.png</Path>
-            <Path fileType="doc">/usr/share/doc/qt6/qtgui/images/coordinatesystem-rect-antialias.png</Path>
-            <Path fileType="doc">/usr/share/doc/qt6/qtgui/images/coordinatesystem-rect-raster.png</Path>
-            <Path fileType="doc">/usr/share/doc/qt6/qtgui/images/coordinatesystem-rect.png</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtgui/images/coordinatesystem-line-antialias.svg</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtgui/images/coordinatesystem-line-raster.svg</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtgui/images/coordinatesystem-line.svg</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtgui/images/coordinatesystem-rect-antialias.svg</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtgui/images/coordinatesystem-rect-raster.svg</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtgui/images/coordinatesystem-rect.svg</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtgui/images/coordinatesystem-transformations.png</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtgui/images/cursor-arrow.png</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtgui/images/cursor-busy.png</Path>
@@ -1237,7 +1294,7 @@
             <Path fileType="doc">/usr/share/doc/qt6/qtgui/images/paintsystem-movie.png</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtgui/images/paintsystem-painterpath.png</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtgui/images/palette.png</Path>
-            <Path fileType="doc">/usr/share/doc/qt6/qtgui/images/plaintext-layout.png</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtgui/images/plaintext-layout.webp</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtgui/images/qcolor-cmyk.png</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtgui/images/qcolor-hsv.png</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtgui/images/qcolor-hue.png</Path>
@@ -1303,7 +1360,6 @@
             <Path fileType="doc">/usr/share/doc/qt6/qtgui/images/qpen-roundjoin.png</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtgui/images/qpen-solid.png</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtgui/images/qpen-square.png</Path>
-            <Path fileType="doc">/usr/share/doc/qt6/qtgui/images/qpixelformat-argb32buffer.png</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtgui/images/qradialgradient-pad.png</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtgui/images/qradialgradient-reflect.png</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtgui/images/qradialgradient-repeat.png</Path>
@@ -1346,6 +1402,8 @@
             <Path fileType="doc">/usr/share/doc/qt6/qtgui/qabstracttextdocumentlayout-selection-members.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtgui/qabstracttextdocumentlayout-selection.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtgui/qabstracttextdocumentlayout.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtgui/qaccessibilityhints-members.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtgui/qaccessibilityhints.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtgui/qaction-members.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtgui/qaction.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtgui/qactiongroup-members.html</Path>
@@ -1496,6 +1554,8 @@
             <Path fileType="doc">/usr/share/doc/qt6/qtgui/qnativeinterface-qandroidscreen.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtgui/qnativeinterface-qcocoaglcontext-members.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtgui/qnativeinterface-qcocoaglcontext.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtgui/qnativeinterface-qcocoascreen-members.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtgui/qnativeinterface-qcocoascreen.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtgui/qnativeinterface-qwglcontext-members.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtgui/qnativeinterface-qwglcontext.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtgui/qnativeinterface-qwindowsscreen-members.html</Path>
@@ -1568,6 +1628,7 @@
             <Path fileType="doc">/usr/share/doc/qt6/qtgui/qpointerevent-members.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtgui/qpointerevent.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtgui/qpointingdevice-members.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtgui/qpointingdevice-obsolete.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtgui/qpointingdevice.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtgui/qpointingdeviceuniqueid-members.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtgui/qpointingdeviceuniqueid.html</Path>
@@ -1593,6 +1654,8 @@
             <Path fileType="doc">/usr/share/doc/qt6/qtgui/qrgbafloat.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtgui/qrhi-members.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtgui/qrhi.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtgui/qrhiadapter-members.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtgui/qrhiadapter.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtgui/qrhibuffer-members.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtgui/qrhibuffer-nativebuffer-members.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtgui/qrhibuffer-nativebuffer.html</Path>
@@ -1895,6 +1958,7 @@
             <Path fileType="doc">/usr/share/doc/qt6/qtgui/style/offline-dark.css</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtgui/style/offline-simple.css</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtgui/style/offline.css</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtgui/style/tech_preview.svg</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtnetwork.qch</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtnetwork/examples-manifest.xml</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtnetwork/examples-network.html</Path>
@@ -2084,6 +2148,7 @@
             <Path fileType="doc">/usr/share/doc/qt6/qtnetwork/style/offline-dark.css</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtnetwork/style/offline-simple.css</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtnetwork/style/offline.css</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtnetwork/style/tech_preview.svg</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtopengl.qch</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtopengl/examples-manifest.xml</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtopengl/examples-widgets-opengl.html</Path>
@@ -2159,6 +2224,7 @@
             <Path fileType="doc">/usr/share/doc/qt6/qtopengl/style/offline-dark.css</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtopengl/style/offline-simple.css</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtopengl/style/offline.css</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtopengl/style/tech_preview.svg</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtprintsupport.qch</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtprintsupport/images/arrow_bc.png</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtprintsupport/images/bgrContent.png</Path>
@@ -2199,6 +2265,7 @@
             <Path fileType="doc">/usr/share/doc/qt6/qtprintsupport/style/offline-dark.css</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtprintsupport/style/offline-simple.css</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtprintsupport/style/offline.css</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtprintsupport/style/tech_preview.svg</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtsql.qch</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtsql/database.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtsql/examples-manifest.xml</Path>
@@ -2289,6 +2356,7 @@
             <Path fileType="doc">/usr/share/doc/qt6/qtsql/style/offline-dark.css</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtsql/style/offline-simple.css</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtsql/style/offline.css</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtsql/style/tech_preview.svg</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qttestlib.qch</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qttestlib/cmake-target-properties-qttest.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qttestlib/cmake-target-property-qt-skip-default-testcase-dirs.html</Path>
@@ -2325,7 +2393,7 @@
             <Path fileType="doc">/usr/share/doc/qt6/qttestlib/qtest.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qttestlib/qtesteventlist-members.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qttestlib/qtesteventlist.html</Path>
-            <Path fileType="doc">/usr/share/doc/qt6/qttestlib/qttest-best-practices-qdoc.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qttestlib/qttest-best-practices.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qttestlib/qttest-index.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qttestlib/qttest-module.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qttestlib/qttest-toc.html</Path>
@@ -2345,7 +2413,31 @@
             <Path fileType="doc">/usr/share/doc/qt6/qttestlib/style/offline-dark.css</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qttestlib/style/offline-simple.css</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qttestlib/style/offline.css</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qttestlib/style/tech_preview.svg</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qttestlib/testlib-changes-qt6.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtwaylandclient.qch</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtwaylandclient/images/arrow_bc.png</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtwaylandclient/images/bgrContent.png</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtwaylandclient/images/btn_next.png</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtwaylandclient/images/btn_prev.png</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtwaylandclient/images/bullet_dn.png</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtwaylandclient/images/bullet_sq.png</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtwaylandclient/images/home.png</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtwaylandclient/images/ico_out.png</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtwaylandclient/images/logo.png</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtwaylandclient/qt-generate-wayland-protocol-client-sources.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtwaylandclient/qtwaylandclient-index.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtwaylandclient/qtwaylandclient-module.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtwaylandclient/qtwaylandclient.index</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtwaylandclient/qtwaylandclient.qhp</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtwaylandclient/qwaylandclientextension-members.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtwaylandclient/qwaylandclientextension.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtwaylandclient/qwaylandclientextensiontemplate-members.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtwaylandclient/qwaylandclientextensiontemplate.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtwaylandclient/style/offline-dark.css</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtwaylandclient/style/offline-simple.css</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtwaylandclient/style/offline.css</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtwaylandclient/style/tech_preview.svg</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtwidgets.qch</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/application-windows.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/dialogs.html</Path>
@@ -2357,6 +2449,7 @@
             <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/examples-manifest.xml</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/examples-painting.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/examples-richtext.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/examples-user-input.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/examples-widgets-tools.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/examples-widgets.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/focus.html</Path>
@@ -2422,9 +2515,9 @@
             <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/images/customcompleter-insertcompletion.png</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/images/customsortfiltermodel-example.png</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/images/deform-demo.png</Path>
-            <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/images/designer-stylesheet-options.png</Path>
-            <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/images/designer-stylesheet-usage.png</Path>
-            <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/images/designer-validator-highlighter.png</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/images/designer-stylesheet-options.webp</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/images/designer-stylesheet-usage.webp</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/images/designer-validator-highlighter.webp</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/images/desktop-examples.png</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/images/diagramscene.png</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/images/dialog-examples.png</Path>
@@ -2539,11 +2632,11 @@
             <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/images/menus-example.png</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/images/modelview-combobox.png</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/images/modelview-header.png</Path>
-            <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/images/modelview-models.png</Path>
-            <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/images/modelview-overview.png</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/images/modelview-models.svg</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/images/modelview-overview.svg</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/images/modelview-roles.png</Path>
-            <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/images/modelview-tablemodel.png</Path>
-            <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/images/modelview-treemodel.png</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/images/modelview-tablemodel.svg</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/images/modelview-treemodel.svg</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/images/modelview.png</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/images/msgbox1.png</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/images/msgbox2.png</Path>
@@ -2576,6 +2669,7 @@
             <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/images/qcolumnview.png</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/images/qcompleter.png</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/images/qerrormessage.png</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/images/qfiledialog.png</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/images/qformlayout-kde.png</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/images/qformlayout-mac.png</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/images/qformlayout-qpe.png</Path>
@@ -2600,7 +2694,6 @@
             <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/images/qspinbox-updown.png</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/images/qstyle-comboboxes.png</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/images/qtableview-resized.png</Path>
-            <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/images/qtquickdialogs-filedialog-gtk.png</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/images/qtwizard-aero1.png</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/images/qtwizard-aero2.png</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/images/qtwizard-classic1.png</Path>
@@ -2694,7 +2787,7 @@
             <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/images/touch-knobs-example.png</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/images/transformations-example.png</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/images/tree_2_with_algorithm.png</Path>
-            <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/images/treemodel-structure.png</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/images/treemodel-structure.svg</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/images/treemodelcompleter-example.png</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/images/treeview.png</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/images/trivialwizard-example-conclusion.png</Path>
@@ -2769,6 +2862,7 @@
             <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/qdateedit-members.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/qdateedit.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/qdatetimeedit-members.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/qdatetimeedit-obsolete.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/qdatetimeedit.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/qdial-members.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/qdial.html</Path>
@@ -3023,6 +3117,8 @@
             <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/qstyleoptionheaderv2.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/qstyleoptionmenuitem-members.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/qstyleoptionmenuitem.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/qstyleoptionmenuitemv2-members.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/qstyleoptionmenuitemv2.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/qstyleoptionprogressbar-members.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/qstyleoptionprogressbar.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/qstyleoptionsizegrip-members.html</Path>
@@ -3177,6 +3273,7 @@
             <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/style/offline-dark.css</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/style/offline-simple.css</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/style/offline.css</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/style/tech_preview.svg</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/stylesheet-customizing.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/stylesheet-designer.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtwidgets/stylesheet-examples.html</Path>
@@ -3210,21 +3307,60 @@
             <Path fileType="doc">/usr/share/doc/qt6/qtxml/style/offline-dark.css</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtxml/style/offline-simple.css</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtxml/style/offline.css</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtxml/style/tech_preview.svg</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtxml/xml-changes-qt6.html</Path>
-            <Path fileType="doc">/usr/share/doc/qt6/qtxml/xml-dom-tml.html</Path>
+            <Path fileType="doc">/usr/share/doc/qt6/qtxml/xml-dom.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtxml/xml-namespaces.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtxml/xml-processing.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtxml/xml-streaming.html</Path>
             <Path fileType="doc">/usr/share/doc/qt6/qtxml/xml-tools.html</Path>
+            <Path fileType="data">/usr/share/licenses/qt6-docs/AFL-2.1.txt</Path>
+            <Path fileType="data">/usr/share/licenses/qt6-docs/Apache-2.0.txt</Path>
+            <Path fileType="data">/usr/share/licenses/qt6-docs/BSD-2-Clause.txt</Path>
+            <Path fileType="data">/usr/share/licenses/qt6-docs/BSD-3-Clause.txt</Path>
+            <Path fileType="data">/usr/share/licenses/qt6-docs/BSD-4-Clause.txt</Path>
+            <Path fileType="data">/usr/share/licenses/qt6-docs/BSL-1.0.txt</Path>
+            <Path fileType="data">/usr/share/licenses/qt6-docs/Bitstream-Vera.txt</Path>
+            <Path fileType="data">/usr/share/licenses/qt6-docs/CC0-1.0.txt</Path>
+            <Path fileType="data">/usr/share/licenses/qt6-docs/FTL.txt</Path>
+            <Path fileType="data">/usr/share/licenses/qt6-docs/GFDL-1.3-no-invariants-only.txt</Path>
+            <Path fileType="data">/usr/share/licenses/qt6-docs/GPL-2.0-only.txt</Path>
+            <Path fileType="data">/usr/share/licenses/qt6-docs/GPL-2.0-or-later.txt</Path>
+            <Path fileType="data">/usr/share/licenses/qt6-docs/GPL-3.0-only.txt</Path>
+            <Path fileType="data">/usr/share/licenses/qt6-docs/HPND.txt</Path>
+            <Path fileType="data">/usr/share/licenses/qt6-docs/IJG.txt</Path>
+            <Path fileType="data">/usr/share/licenses/qt6-docs/IPL-1.0.txt</Path>
+            <Path fileType="data">/usr/share/licenses/qt6-docs/Imlib2.txt</Path>
+            <Path fileType="data">/usr/share/licenses/qt6-docs/LGPL-2.1-or-later.txt</Path>
+            <Path fileType="data">/usr/share/licenses/qt6-docs/LGPL-3.0-only.txt</Path>
+            <Path fileType="data">/usr/share/licenses/qt6-docs/Libpng.txt</Path>
+            <Path fileType="data">/usr/share/licenses/qt6-docs/LicenseRef-BSD-3-Clause-with-PCRE2-Binary-Like-Packages-Exception.txt</Path>
+            <Path fileType="data">/usr/share/licenses/qt6-docs/LicenseRef-ICC-License.txt</Path>
+            <Path fileType="data">/usr/share/licenses/qt6-docs/LicenseRef-Lcs-Telegraphics.txt</Path>
+            <Path fileType="data">/usr/share/licenses/qt6-docs/LicenseRef-Qt-Commercial.txt</Path>
+            <Path fileType="data">/usr/share/licenses/qt6-docs/LicenseRef-SHA1-Public-Domain.txt</Path>
+            <Path fileType="data">/usr/share/licenses/qt6-docs/Linux-syscall-note.txt</Path>
+            <Path fileType="data">/usr/share/licenses/qt6-docs/MIT-Khronos-old.txt</Path>
+            <Path fileType="data">/usr/share/licenses/qt6-docs/MIT-open-group.txt</Path>
+            <Path fileType="data">/usr/share/licenses/qt6-docs/MIT.txt</Path>
+            <Path fileType="data">/usr/share/licenses/qt6-docs/MPL-2.0.txt</Path>
+            <Path fileType="data">/usr/share/licenses/qt6-docs/Qt-GPL-exception-1.0.txt</Path>
+            <Path fileType="data">/usr/share/licenses/qt6-docs/SPL-1.0.txt</Path>
+            <Path fileType="data">/usr/share/licenses/qt6-docs/Unicode-3.0.txt</Path>
+            <Path fileType="data">/usr/share/licenses/qt6-docs/X11.txt</Path>
+            <Path fileType="data">/usr/share/licenses/qt6-docs/Xerox.txt</Path>
+            <Path fileType="data">/usr/share/licenses/qt6-docs/Zlib.txt</Path>
+            <Path fileType="data">/usr/share/licenses/qt6-docs/blessing.txt</Path>
+            <Path fileType="data">/usr/share/licenses/qt6-docs/libpng-2.0.txt</Path>
         </Files>
     </Package>
     <History>
-        <Update release="14">
-            <Date>2025-10-01</Date>
-            <Version>6.9.3</Version>
+        <Update release="19">
+            <Date>2026-05-12</Date>
+            <Version>6.11.1</Version>
             <Comment>Packaging update</Comment>
             <Name>Troy Harvey</Name>
-            <Email>harveydevel@gmail.com</Email>
+            <Email>harvey@getsol.us</Email>
         </Update>
     </History>
 </PISI>

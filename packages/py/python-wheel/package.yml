@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : python-wheel
-version    : 0.45.1
-release    : 23
+version    : 0.46.3
+release    : 24
 source     :
-    - https://pypi.debian.net/wheel/wheel-0.45.1.tar.gz : 661e1abd9198507b1409a20c02106d9670b2576e916d58f520316666abca6729
+    - https://pypi.debian.net/wheel/wheel-0.46.3.tar.gz : e3e79874b07d776c40bd6033f8ddf76a7dad46a7b8aa1b2787a83083519a1803
 homepage   : https://wheel.readthedocs.io/
 license    : MIT
 component  : programming.python

@@ -1,3 +1,6 @@
+capsh:_IO_stdin_used
+getcap:_IO_stdin_used
+getpcaps:_IO_stdin_used
 libcap.so.2:__execable_dl_loader
 libcap.so.2:cap_clear
 libcap.so.2:cap_clear_flag
@@ -68,7 +71,6 @@ libcap.so.2:capsetp
 libpsx.so.2:__execable_dl_loader
 libpsx.so.2:__psx_syscall
 libpsx.so.2:__wrap_pthread_create
-libpsx.so.2:psx_action_key
 libpsx.so.2:psx_load_syscalls
 libpsx.so.2:psx_set_sensitivity
 libpsx.so.2:psx_syscall3
@@ -76,3 +78,4 @@ libpsx.so.2:psx_syscall6
 pam_cap.so:__execable_dl_loader
 pam_cap.so:pam_sm_authenticate
 pam_cap.so:pam_sm_setcred
+setcap:_IO_stdin_used

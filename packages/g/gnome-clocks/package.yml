@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : gnome-clocks
-version    : '48.0'
-release    : 23
+version    : '50.0'
+release    : 25
 source     :
-    - https://download.gnome.org/sources/gnome-clocks/48/gnome-clocks-48.0.tar.xz : 616ee1fb75300b1f26b9766219e954751360ca0fa0f491311bcf83bf38087c62
+    - https://download.gnome.org/sources/gnome-clocks/50/gnome-clocks-50.0.tar.xz : bf167f7f44f4f2fb424d4716652c9ba1f29e16e49071e26a1bb833f8dce794c6
 homepage   : https://apps.gnome.org/Clocks/
 license    : GPL-2.0-or-later
 component  : desktop.gnome
@@ -19,6 +20,7 @@ builddeps  :
     - desktop-file-utils
     - itstool
     - vala
+    - vorbis-tools
 setup      : |
     %meson_configure
 build      : |

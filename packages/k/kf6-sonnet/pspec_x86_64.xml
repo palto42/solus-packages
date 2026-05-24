@@ -4,9 +4,10 @@
         <Homepage>https://community.kde.org/Frameworks</Homepage>
         <Packager>
             <Name>Troy Harvey</Name>
-            <Email>harveydevel@gmail.com</Email>
+            <Email>harvey@getsol.us</Email>
         </Packager>
         <License>BSD-3-Clause</License>
+        <License>CC0-1.0</License>
         <License>LGPL-2.0-or-later</License>
         <License>LGPL-2.1-or-later</License>
         <PartOf>programming.tools</PartOf>
@@ -24,15 +25,19 @@
         <Files>
             <Path fileType="executable">/usr/bin/parsetrigrams6</Path>
             <Path fileType="library">/usr/lib64/libKF6SonnetCore.so.6</Path>
-            <Path fileType="library">/usr/lib64/libKF6SonnetCore.so.6.19.0</Path>
+            <Path fileType="library">/usr/lib64/libKF6SonnetCore.so.6.26.0</Path>
             <Path fileType="library">/usr/lib64/libKF6SonnetUi.so.6</Path>
-            <Path fileType="library">/usr/lib64/libKF6SonnetUi.so.6.19.0</Path>
+            <Path fileType="library">/usr/lib64/libKF6SonnetUi.so.6.26.0</Path>
             <Path fileType="library">/usr/lib64/qt6/plugins/kf6/sonnet/sonnet_hunspell.so</Path>
             <Path fileType="library">/usr/lib64/qt6/plugins/kf6/sonnet/sonnet_voikko.so</Path>
             <Path fileType="library">/usr/lib64/qt6/qml/org/kde/sonnet/kde-qmlmodule.version</Path>
             <Path fileType="library">/usr/lib64/qt6/qml/org/kde/sonnet/libsonnetquickplugin.so</Path>
             <Path fileType="library">/usr/lib64/qt6/qml/org/kde/sonnet/qmldir</Path>
             <Path fileType="library">/usr/lib64/qt6/qml/org/kde/sonnet/sonnetquickplugin.qmltypes</Path>
+            <Path fileType="data">/usr/share/licenses/kf6-sonnet/BSD-3-Clause.txt</Path>
+            <Path fileType="data">/usr/share/licenses/kf6-sonnet/CC0-1.0.txt</Path>
+            <Path fileType="data">/usr/share/licenses/kf6-sonnet/LGPL-2.0-or-later.txt</Path>
+            <Path fileType="data">/usr/share/licenses/kf6-sonnet/LGPL-2.1-or-later.txt</Path>
             <Path fileType="localedata">/usr/share/locale/af/LC_MESSAGES/sonnet6_qt.qm</Path>
             <Path fileType="localedata">/usr/share/locale/ar/LC_MESSAGES/sonnet6_qt.qm</Path>
             <Path fileType="localedata">/usr/share/locale/as/LC_MESSAGES/sonnet6_qt.qm</Path>
@@ -146,7 +151,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="26">kf6-sonnet</Dependency>
+            <Dependency release="36">kf6-sonnet</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/KF6/Sonnet/sonnet_version.h</Path>
@@ -184,12 +189,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="26">
-            <Date>2025-10-11</Date>
-            <Version>6.19.0</Version>
+        <Update release="36">
+            <Date>2026-05-12</Date>
+            <Version>6.26.0</Version>
             <Comment>Packaging update</Comment>
             <Name>Troy Harvey</Name>
-            <Email>harveydevel@gmail.com</Email>
+            <Email>harvey@getsol.us</Email>
         </Update>
     </History>
 </PISI>

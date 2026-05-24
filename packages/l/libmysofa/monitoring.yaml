@@ -1,0 +1,8 @@
+releases:
+  id: 380832
+  rss: https://github.com/hoene/libmysofa/tags.atom
+# Verify successful cpe hits by visiting https://cve.circl.lu/search?vendor=$VENDOR&product=$PRODUCT
+security:
+  cpe:
+  - vendor: symonics
+    product: libmysofa

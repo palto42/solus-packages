@@ -1,11 +1,11 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : gvfs
-version    : 1.57.2
-release    : 103
+version    : 1.60.0
+release    : 111
 source     :
-    - https://download.gnome.org/sources/gvfs/1.57/gvfs-1.57.2.tar.xz : f16bef8eca1fd6c117e85db011d21e915669790d55867349c5f1b291299e9585
+    - https://download.gnome.org/sources/gvfs/1.60/gvfs-1.60.0.tar.xz : 648273f069e92c7e3c013b92148e82c901f08044e2b3b14c6cfbd52269f6b646
 homepage   : https://gitlab.gnome.org/GNOME/gvfs
-license    :
-    - GPL-2.0-only
+license    : GPL-2.0-only
 component  :
     - desktop.gnome.core
     - goa : desktop.gnome.core
@@ -51,8 +51,7 @@ rundeps    :
     - goa : gvfs
     - lsof
 setup      : |
-    %patch -p1 -i $pkgfiles/0002-monitor-Do-not-load-monitors-when-GIO_USE_VFS-local.patch
-    %meson_configure -Dprivileged_group=sudo
+    %meson_configure -Dprivileged_group=wheel -Dgoogle=true
 build      : |
     %ninja_build
 install    : |

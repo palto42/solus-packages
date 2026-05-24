@@ -1,9 +1,10 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : mesalib
-version    : 25.2.4
-release    : 281
+version    : 26.1.1
+release    : 303
 source     :
-    - https://archive.mesa3d.org/mesa-25.2.4.tar.xz : a370b4c549cbfbe646b319e34d73edb50ed883978f5e95133f282f0eae39ab52
-homepage   : http://mesa3d.org/
+    - https://archive.mesa3d.org/mesa-26.1.1.tar.xz : 8bd36c031cc6d0edfec04617527609454ee3a09ad53bdf983b45fc2c1e129b2e
+homepage   : https://mesa3d.org/
 license    :
     - BSL-1.0
     - MIT
@@ -40,6 +41,8 @@ builddeps  :
     - pkgconfig32(xxf86vm)
     - pkgconfig32(zlib)
     - pkgconfig(libclc)
+    - pkgconfig(libdisplay-info)
+    - pkgconfig(sysprof-capture-4)
     - pkgconfig(wayland-protocols)
     - pkgconfig(xproto)
     - cbindgen
@@ -65,8 +68,6 @@ optimize   :
     - no-symbolic
     # - thin-lto
 environment: |
-    export PYTHON=/usr/bin/python3
-
     export PE_CODECS=0
     if [[ ! -z $PE_CODECS ]]; then
           export PT_ARGS="-Dvideo-codecs=all"
@@ -75,32 +76,46 @@ environment: |
     fi
 
     if [[ ! -z $EMUL32BUILD ]]; then
-          export EXTRA_ARGS="--cross-file $pkgfiles/llvm32.native --libdir=/usr/lib32"
-          export BINDGEN_EXTRA_CLANG_ARGS="--target=i686-unknown-linux-gnu"
+          _IS_64BIT_BOOL="false"
+          _IS_64BIT_FEAT="disabled"
+          export LLVM_CONFIG="llvm-config32"
+          export RUSTC="rustc --target=%(target_triple)"
+          export BINDGEN_EXTRA_CLANG_ARGS="--target=%(target_triple)"
     else
+          _IS_64BIT_BOOL="true"
+          _IS_64BIT_FEAT="enabled"
+          export EXTRA_VK_DRIVERS=",gfxstream,nouveau"
           export EXTRA_ARGS=""
     fi
 setup      : |
+    %patch -p1 -i $pkgfiles/0001-Install-opencl-ICD-to-datadir.patch
+
     %meson_configure \
         $EXTRA_ARGS \
         $PT_ARGS \
+        -Ddisplay-info=${_IS_64BIT_FEAT} \
         -Degl=enabled \
         -Dgallium-drivers=crocus,iris,llvmpipe,nouveau,r300,r600,radeonsi,softpipe,svga,virgl,zink \
         -Dgallium-extra-hud=true \
         -Dgallium-va=enabled \
-        -Dgallium-vdpau=enabled \
+        -Dgallium-rusticl=${_IS_64BIT_BOOL} \
         -Dgbm=enabled \
         -Dgles1=disabled \
         -Dglvnd=enabled \
         -Dllvm=enabled \
         -Dmicrosoft-clc=disabled \
         -Dplatforms=x11,wayland \
-        -Dvulkan-drivers=amd,intel,intel_hasvk,nouveau,swrast,virtio \
-        -Dvulkan-layers=device-select,overlay,screenshot
+        -Dsysprof=${_IS_64BIT_BOOL} \
+        -Dvulkan-drivers=amd,intel,intel_hasvk,swrast,virtio$EXTRA_VK_DRIVERS \
+        -Dvulkan-layers=anti-lag,device-select,overlay,screenshot
 build      : |
     %ninja_build
 install    : |
     %ninja_install
+
+    # Install licenses manually due to nested dir
+    install -dm00755 ${installdir}/usr/share/licenses/mesalib
+    cp -R licenses/* ${installdir}/usr/share/licenses/mesalib/
 
     # Add missing symlink
     ln -s libGLX_mesa.so.0 $installdir/%libdir%/libGLX_indirect.so.0

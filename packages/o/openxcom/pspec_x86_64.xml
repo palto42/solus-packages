@@ -3,8 +3,8 @@
         <Name>openxcom</Name>
         <Homepage>https://openxcom.org/</Homepage>
         <Packager>
-            <Name>David Harder</Name>
-            <Email>david@davidjharder.ca</Email>
+            <Name>Joey Riches</Name>
+            <Email>josephriches@gmail.com</Email>
         </Packager>
         <License>GPL-3.0-or-later</License>
         <PartOf>games.strategy</PartOf>
@@ -27,7 +27,7 @@ It was originally founded by SupSuper in February 2010, and has since grown into
             <Path fileType="data">/usr/share/icons/hicolor/128x128/apps/openxcom.png</Path>
             <Path fileType="data">/usr/share/icons/hicolor/48x48/apps/openxcom.png</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/openxcom.svg</Path>
-            <Path fileType="man">/usr/share/man/man6/openxcom.6</Path>
+            <Path fileType="man">/usr/share/man/man6/openxcom.6.zst</Path>
             <Path fileType="data">/usr/share/metainfo/org.openxcom.openxcom.metainfo.xml</Path>
             <Path fileType="data">/usr/share/openxcom/TFTD/README.txt</Path>
             <Path fileType="data">/usr/share/openxcom/UFO/README.txt</Path>
@@ -290,12 +290,12 @@ It was originally founded by SupSuper in February 2010, and has since grown into
         </Files>
     </Package>
     <History>
-        <Update release="10">
-            <Date>2024-05-20</Date>
+        <Update release="11">
+            <Date>2026-02-25</Date>
             <Version>1.0</Version>
             <Comment>Packaging update</Comment>
-            <Name>David Harder</Name>
-            <Email>david@davidjharder.ca</Email>
+            <Name>Joey Riches</Name>
+            <Email>josephriches@gmail.com</Email>
         </Update>
     </History>
 </PISI>

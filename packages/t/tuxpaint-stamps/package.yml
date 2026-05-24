@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : tuxpaint-stamps
-version    : 2024.01.29
-release    : 3
+version    : 2025.05.26
+release    : 4
 source     :
-    - https://sourceforge.net/projects/tuxpaint/files/tuxpaint-stamps/2024-01-29/tuxpaint-stamps-2024.01.29.tar.gz : 1b0271f6da9a5fb23adb7b494183b9de289a02966d62c4cb430da9b4120594a9
+    - https://sourceforge.net/projects/tuxpaint/files/tuxpaint-stamps/2025-05-26/tuxpaint-stamps-2025.05.26.tar.gz : 09f4a29f8036c93a64c28134e3afaefb4b9d95a09a71e68fb7537f3c5f82949f
 homepage   : https://tuxpaint.org/
 license    : GPL-2.0-or-later
 component  : games.learning
@@ -15,3 +16,4 @@ build      : |
     %make
 install    : |
     %make DATA_PREFIX=$installdir/usr/share/tuxpaint/ install-all
+    %install_license docs/COPYING.txt

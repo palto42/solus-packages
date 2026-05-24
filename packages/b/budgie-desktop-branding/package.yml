@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : budgie-desktop-branding
-version    : '23.1'
-release    : 81
+version    : 23.3.1
+release    : 83
 source     :
-    - https://github.com/getsolus/budgie-desktop-branding/archive/refs/tags/v23.1.tar.gz : e5605da107e5f3a6659c323571d085381ee1021e5c4ce69f53635f651e1a9281
+    - https://github.com/getsolus/budgie-desktop-branding/releases/download/v23.3.1/budgie-desktop-branding-v23.3.1.tar.xz : c029f0c25b6967a391bc7b7543c8d23848536f1950fae8d8605fe1d52ce5d1ba
 homepage   : https://github.com/getsolus/budgie-desktop-branding
 license    : GPL-2.0-only
 summary    :
@@ -38,7 +39,6 @@ rundeps    :
     - livecd :
         - budgie-desktop-branding
 setup      : |
-    %patch -p1 -i $pkgfiles/0001-schemas-Set-Pocillo-dark-as-the-default-GTK-theme.patch
     %meson_configure
 build      : |
     %ninja_build

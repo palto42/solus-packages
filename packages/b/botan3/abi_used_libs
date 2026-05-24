@@ -1,0 +1,13 @@
+UNKNOWN
+ld-linux-x86-64.so.2
+libbz2.so.1.0
+libc.so.6
+libgcc_s.so.1
+libm.so.6
+libsqlite3.so.0
+libstdc++.so.6
+libtss2-esys.so.0
+libtss2-mu.so.0
+libtss2-rc.so.0
+libtss2-tctildr.so.0
+libz.so.1

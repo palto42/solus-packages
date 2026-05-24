@@ -1,8 +1,10 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : budgie-control-center
-version    : 1.4.0
-release    : 28
+version    : 1.4.1
+release    : 35
 source     :
-    - https://github.com/BuddiesOfBudgie/budgie-control-center/releases/download/v1.4.0/budgie-control-center-1.4.0.tar.xz : 120d760b6c1190e937cc7f3b3c50227682960123ff0bccfe3ff4902785550d82
+    - https://github.com/BuddiesOfBudgie/budgie-control-center/releases/download/v1.4.1/budgie-control-center-1.4.1.tar.xz : 6184b30ccf939686a22101dd82d943fcfd8b7585261b656e633278b66227510e
+    - git|https://gitlab.gnome.org/GNOME/libgnome-volume-control.git : d2442f455844e5292cb4a74ffc66ecc8d7595a9f
 homepage   : https://buddiesofbudgie.org
 license    : GPL-2.0-or-later
 component  : desktop.budgie
@@ -23,6 +25,7 @@ builddeps  :
     - pkgconfig(gnome-bluetooth-1.0)
     - pkgconfig(gnome-desktop-3.0)
     - pkgconfig(gnome-settings-daemon)
+    - pkgconfig(gnutls)
     - pkgconfig(gsettings-desktop-schemas)
     - pkgconfig(gsound)
     - pkgconfig(ibus-1.0)
@@ -49,17 +52,19 @@ rundeps    :
     - gnome-color-manager
     - gnome-keyring
     - libgnomekbd
-    - power-profiles-daemon
     - sound-theme-freedesktop
 networking : true
 setup      : |
-    # Fixes https://github.com/getsolus/packages/issues/4136
-    %patch -p1 -i $pkgfiles/fix-FTBFS-with-incompatible-pointer-types.patch
-    %meson_configure -Ddocumentation=true -Dprivileged_group=sudo
+    # Fix https://github.com/getsolus/packages/issues/8302
+    rm -vrf subprojects/gvc
+    cp -r ${sources}/libgnome-volume-control.git subprojects/gvc
+
+    %meson_configure -Ddocumentation=true -Dprivileged_group=wheel
 build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSE
 
     # Consistent polkit rules naming
     mv $installdir/usr/share/polkit-1/rules.d/budgie-control-center.rules $installdir/usr/share/polkit-1/rules.d/org.buddiesofbudgie.controlcenter.rules

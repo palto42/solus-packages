@@ -154,7 +154,6 @@ libfreetype.so.6:FT_Done_Face
 libfreetype.so.6:FT_Get_Char_Index
 libfreetype.so.6:FT_Init_FreeType
 libfreetype.so.6:FT_Library_SetLcdFilter
-libfreetype.so.6:FT_Library_SetLcdFilterWeights
 libfreetype.so.6:FT_Load_Char
 libfreetype.so.6:FT_Load_Glyph
 libfreetype.so.6:FT_Open_Face

@@ -1,6 +1,6 @@
 releases:
-  id: 49973
+  id: 6472
   rss: https://github.com/mesonbuild/meson/releases.atom
+ # No known CPE, checked 2026-04-16
 security:
-  # No known CPE, last checked 2024-02-10
   cpe: ~

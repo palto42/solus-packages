@@ -1,0 +1,79 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
+name       : botan3
+version    : 3.12.0
+release    : 3
+source     :
+    - https://botan.randombit.net/releases/Botan-3.12.0.tar.xz : 5370f98dc15f8c222ee1ce52cd61c8756a53be0dc57cc4c1b0714d5a09ad74fb
+homepage   : https://botan.randombit.net/
+license    : BSD-2-Clause
+component  :
+    - programming.library
+    - docs : programming.docs
+    - ^python-botan3 : programming.python
+summary    :
+    - Crypto and TLS library for C++20
+    - docs : Documentation for botan3
+    - ^python-botan3 : Python bindings for botan3
+description: |
+    Botan's goal is to be the best option for cryptography in C++ by offering the tools necessary to implement a range of practical systems, such as TLS protocol, X.509 certificates, modern AEAD ciphers, PKCS#11 and TPM hardware support, password hashing, and post quantum crypto schemes. A Python binding is included.
+optimize   :
+    - speed
+builddeps  :
+    - pkgconfig(bzip2)
+    - pkgconfig(sqlite3)
+    - pkgconfig(tss2-rc)
+    - pkgconfig(zlib-ng)
+    - python-build
+    - python-docutils
+    - python-installer
+    - python-setuptools-scm
+    - python-wheel
+rundeps    :
+    - ^python-botan3 :
+        - botan3
+environment: |
+    export SETUPTOOLS_SCM_PRETEND_VERSION="${version}"
+setup      : |
+    # https://github.com/randombit/botan/pull/5040
+    %patch -p1 -i ${pkgfiles}/pyproject.patch
+
+    python3 ./configure.py \
+        --cc=gcc \
+        --disable-static-library \
+        --distribution-info=Solus \
+        --enable-modules=bzip2,zlib \
+        --enable-stack-scrubbing \
+        --libdir=%libdir% \
+        --no-install-python-module \
+        --os=linux \
+        --prefix=%PREFIX% \
+        --with-cmake-config \
+        --with-debug-info \
+        --with-rst2man \
+        --with-sqlite3 \
+        --with-tpm2
+build      : |
+    %make
+    %python3_setup
+install    : |
+    %make_install
+    %python3_install
+    %install_license license.txt
+
+    # Fix docs path
+    mv ${installdir}/usr/share/doc/botan-${version} ${installdir}/usr/share/doc/${package}
+    rm -rf ${installdir}/usr/share/doc/${package}/handbook/{.doctrees,.buildinfo}
+
+    # Prevent conflict with botan2
+    mv ${installdir}/usr/bin/botan ${installdir}/usr/bin/${package}
+    mv ${installdir}/usr/share/man/man1/botan.1 ${installdir}/usr/share/man/man1/${package}.1
+check      : |
+    LD_LIBRARY_PATH=${installdir}/%libdir% ./botan-test
+    LD_LIBRARY_PATH=${installdir}/%libdir% \
+        PYTHONPATH=${installdir}/usr/lib/python%python3_version%/site-packages:"$PWD" \
+        python src/scripts/test_python_packaging.py
+patterns   :
+    - docs :
+        - /usr/share/doc
+    - ^python-botan3 :
+        - /usr/lib/python3*/site-packages

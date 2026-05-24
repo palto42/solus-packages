@@ -3,8 +3,8 @@
         <Name>mc</Name>
         <Homepage>https://midnight-commander.org</Homepage>
         <Packager>
-            <Name>Joey Riches</Name>
-            <Email>josephriches@gmail.com</Email>
+            <Name>David Harder</Name>
+            <Email>david@davidjharder.ca</Email>
         </Packager>
         <License>GPL-3.0-or-later</License>
         <PartOf>system.utils</PartOf>
@@ -20,15 +20,6 @@
 </Description>
         <PartOf>system.utils</PartOf>
         <Files>
-            <Path fileType="config">/etc/mc/edit.indent.rc</Path>
-            <Path fileType="config">/etc/mc/filehighlight.ini</Path>
-            <Path fileType="config">/etc/mc/mc.default.keymap</Path>
-            <Path fileType="config">/etc/mc/mc.emacs.keymap</Path>
-            <Path fileType="config">/etc/mc/mc.ext</Path>
-            <Path fileType="config">/etc/mc/mc.keymap</Path>
-            <Path fileType="config">/etc/mc/mc.menu</Path>
-            <Path fileType="config">/etc/mc/mcedit.menu</Path>
-            <Path fileType="config">/etc/mc/sfs.ini</Path>
             <Path fileType="executable">/usr/bin/mc</Path>
             <Path fileType="executable">/usr/bin/mcdiff</Path>
             <Path fileType="executable">/usr/bin/mcedit</Path>
@@ -64,6 +55,7 @@
             <Path fileType="library">/usr/lib64/mc/mc/extfs.d/rpm</Path>
             <Path fileType="library">/usr/lib64/mc/mc/extfs.d/rpms+</Path>
             <Path fileType="library">/usr/lib64/mc/mc/extfs.d/s3+</Path>
+            <Path fileType="library">/usr/lib64/mc/mc/extfs.d/torrent</Path>
             <Path fileType="library">/usr/lib64/mc/mc/extfs.d/trpm</Path>
             <Path fileType="library">/usr/lib64/mc/mc/extfs.d/u7z</Path>
             <Path fileType="library">/usr/lib64/mc/mc/extfs.d/uace</Path>
@@ -81,26 +73,27 @@
             <Path fileType="library">/usr/lib64/mc/mc/extfs.d/uwim</Path>
             <Path fileType="library">/usr/lib64/mc/mc/extfs.d/uzip</Path>
             <Path fileType="library">/usr/lib64/mc/mc/extfs.d/uzoo</Path>
-            <Path fileType="library">/usr/lib64/mc/mc/fish/README.fish</Path>
-            <Path fileType="library">/usr/lib64/mc/mc/fish/append</Path>
-            <Path fileType="library">/usr/lib64/mc/mc/fish/chmod</Path>
-            <Path fileType="library">/usr/lib64/mc/mc/fish/chown</Path>
-            <Path fileType="library">/usr/lib64/mc/mc/fish/fexists</Path>
-            <Path fileType="library">/usr/lib64/mc/mc/fish/get</Path>
-            <Path fileType="library">/usr/lib64/mc/mc/fish/hardlink</Path>
-            <Path fileType="library">/usr/lib64/mc/mc/fish/info</Path>
-            <Path fileType="library">/usr/lib64/mc/mc/fish/ln</Path>
-            <Path fileType="library">/usr/lib64/mc/mc/fish/ls</Path>
-            <Path fileType="library">/usr/lib64/mc/mc/fish/mkdir</Path>
-            <Path fileType="library">/usr/lib64/mc/mc/fish/mv</Path>
-            <Path fileType="library">/usr/lib64/mc/mc/fish/rmdir</Path>
-            <Path fileType="library">/usr/lib64/mc/mc/fish/send</Path>
-            <Path fileType="library">/usr/lib64/mc/mc/fish/unlink</Path>
-            <Path fileType="library">/usr/lib64/mc/mc/fish/utime</Path>
             <Path fileType="library">/usr/lib64/mc/mc/mc-wrapper.csh</Path>
             <Path fileType="library">/usr/lib64/mc/mc/mc-wrapper.sh</Path>
             <Path fileType="library">/usr/lib64/mc/mc/mc.csh</Path>
             <Path fileType="library">/usr/lib64/mc/mc/mc.sh</Path>
+            <Path fileType="library">/usr/lib64/mc/mc/shell/README.shell</Path>
+            <Path fileType="library">/usr/lib64/mc/mc/shell/append</Path>
+            <Path fileType="library">/usr/lib64/mc/mc/shell/chmod</Path>
+            <Path fileType="library">/usr/lib64/mc/mc/shell/chown</Path>
+            <Path fileType="library">/usr/lib64/mc/mc/shell/fexists</Path>
+            <Path fileType="library">/usr/lib64/mc/mc/shell/get</Path>
+            <Path fileType="library">/usr/lib64/mc/mc/shell/hardlink</Path>
+            <Path fileType="library">/usr/lib64/mc/mc/shell/info</Path>
+            <Path fileType="library">/usr/lib64/mc/mc/shell/ln</Path>
+            <Path fileType="library">/usr/lib64/mc/mc/shell/ls</Path>
+            <Path fileType="library">/usr/lib64/mc/mc/shell/mkdir</Path>
+            <Path fileType="library">/usr/lib64/mc/mc/shell/mv</Path>
+            <Path fileType="library">/usr/lib64/mc/mc/shell/rmdir</Path>
+            <Path fileType="library">/usr/lib64/mc/mc/shell/send</Path>
+            <Path fileType="library">/usr/lib64/mc/mc/shell/unlink</Path>
+            <Path fileType="library">/usr/lib64/mc/mc/shell/utime</Path>
+            <Path fileType="data">/usr/share/licenses/mc/COPYING</Path>
             <Path fileType="localedata">/usr/share/locale/af/LC_MESSAGES/mc.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ar/LC_MESSAGES/mc.mo</Path>
             <Path fileType="localedata">/usr/share/locale/az/LC_MESSAGES/mc.mo</Path>
@@ -161,15 +154,17 @@
             <Path fileType="localedata">/usr/share/locale/wa/LC_MESSAGES/mc.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_CN/LC_MESSAGES/mc.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_TW/LC_MESSAGES/mc.mo</Path>
-            <Path fileType="man">/usr/share/man/es/man1/mc.1</Path>
-            <Path fileType="man">/usr/share/man/hu/man1/mc.1</Path>
-            <Path fileType="man">/usr/share/man/it/man1/mc.1</Path>
-            <Path fileType="man">/usr/share/man/man1/mc.1</Path>
-            <Path fileType="man">/usr/share/man/man1/mcedit.1</Path>
-            <Path fileType="man">/usr/share/man/man1/mcview.1</Path>
-            <Path fileType="man">/usr/share/man/pl/man1/mc.1</Path>
-            <Path fileType="man">/usr/share/man/ru/man1/mc.1</Path>
-            <Path fileType="man">/usr/share/man/sr/man1/mc.1</Path>
+            <Path fileType="man">/usr/share/man/es/man1/mc.1.zst</Path>
+            <Path fileType="man">/usr/share/man/hu/man1/mc.1.zst</Path>
+            <Path fileType="man">/usr/share/man/it/man1/mc.1.zst</Path>
+            <Path fileType="man">/usr/share/man/man1/mc.1.zst</Path>
+            <Path fileType="man">/usr/share/man/man1/mcdiff.1.zst</Path>
+            <Path fileType="man">/usr/share/man/man1/mcedit.1.zst</Path>
+            <Path fileType="man">/usr/share/man/man1/mcview.1.zst</Path>
+            <Path fileType="man">/usr/share/man/pl/man1/mc.1.zst</Path>
+            <Path fileType="man">/usr/share/man/ru/man1/mc.1.zst</Path>
+            <Path fileType="man">/usr/share/man/sr/man1/mc.1.zst</Path>
+            <Path fileType="data">/usr/share/mc/edit.indent.rc</Path>
             <Path fileType="data">/usr/share/mc/examples/macros.d/macro.0.sh</Path>
             <Path fileType="data">/usr/share/mc/examples/macros.d/macro.1.sh</Path>
             <Path fileType="data">/usr/share/mc/examples/macros.d/macro.3.sh</Path>
@@ -177,6 +172,7 @@
             <Path fileType="data">/usr/share/mc/examples/macros.d/macro.5.sh</Path>
             <Path fileType="data">/usr/share/mc/examples/macros.d/macro.6.sh</Path>
             <Path fileType="data">/usr/share/mc/examples/macros.d/macro.7.sh</Path>
+            <Path fileType="data">/usr/share/mc/filehighlight.ini</Path>
             <Path fileType="data">/usr/share/mc/help/mc.hlp</Path>
             <Path fileType="data">/usr/share/mc/help/mc.hlp.es</Path>
             <Path fileType="data">/usr/share/mc/help/mc.hlp.hu</Path>
@@ -191,7 +187,6 @@
             <Path fileType="data">/usr/share/mc/hints/mc.hint.cs</Path>
             <Path fileType="data">/usr/share/mc/hints/mc.hint.da</Path>
             <Path fileType="data">/usr/share/mc/hints/mc.hint.de</Path>
-            <Path fileType="data">/usr/share/mc/hints/mc.hint.de_CH</Path>
             <Path fileType="data">/usr/share/mc/hints/mc.hint.el</Path>
             <Path fileType="data">/usr/share/mc/hints/mc.hint.en_GB</Path>
             <Path fileType="data">/usr/share/mc/hints/mc.hint.eo</Path>
@@ -200,14 +195,13 @@
             <Path fileType="data">/usr/share/mc/hints/mc.hint.eu</Path>
             <Path fileType="data">/usr/share/mc/hints/mc.hint.fa</Path>
             <Path fileType="data">/usr/share/mc/hints/mc.hint.fr</Path>
-            <Path fileType="data">/usr/share/mc/hints/mc.hint.fr_CA</Path>
             <Path fileType="data">/usr/share/mc/hints/mc.hint.ga</Path>
             <Path fileType="data">/usr/share/mc/hints/mc.hint.gl</Path>
             <Path fileType="data">/usr/share/mc/hints/mc.hint.hu</Path>
             <Path fileType="data">/usr/share/mc/hints/mc.hint.id</Path>
             <Path fileType="data">/usr/share/mc/hints/mc.hint.it</Path>
-            <Path fileType="data">/usr/share/mc/hints/mc.hint.it_IT</Path>
             <Path fileType="data">/usr/share/mc/hints/mc.hint.ja</Path>
+            <Path fileType="data">/usr/share/mc/hints/mc.hint.ka</Path>
             <Path fileType="data">/usr/share/mc/hints/mc.hint.ko</Path>
             <Path fileType="data">/usr/share/mc/hints/mc.hint.lt</Path>
             <Path fileType="data">/usr/share/mc/hints/mc.hint.nb</Path>
@@ -220,14 +214,20 @@
             <Path fileType="data">/usr/share/mc/hints/mc.hint.sk</Path>
             <Path fileType="data">/usr/share/mc/hints/mc.hint.sr</Path>
             <Path fileType="data">/usr/share/mc/hints/mc.hint.sv</Path>
-            <Path fileType="data">/usr/share/mc/hints/mc.hint.sv_SE</Path>
             <Path fileType="data">/usr/share/mc/hints/mc.hint.tr</Path>
             <Path fileType="data">/usr/share/mc/hints/mc.hint.uk</Path>
-            <Path fileType="data">/usr/share/mc/hints/mc.hint.zh</Path>
             <Path fileType="data">/usr/share/mc/hints/mc.hint.zh_CN</Path>
             <Path fileType="data">/usr/share/mc/hints/mc.hint.zh_TW</Path>
             <Path fileType="data">/usr/share/mc/mc.charsets</Path>
+            <Path fileType="data">/usr/share/mc/mc.default.keymap</Path>
+            <Path fileType="data">/usr/share/mc/mc.emacs.keymap</Path>
+            <Path fileType="data">/usr/share/mc/mc.ext.ini</Path>
+            <Path fileType="data">/usr/share/mc/mc.keymap</Path>
             <Path fileType="data">/usr/share/mc/mc.lib</Path>
+            <Path fileType="data">/usr/share/mc/mc.menu</Path>
+            <Path fileType="data">/usr/share/mc/mc.vim.keymap</Path>
+            <Path fileType="data">/usr/share/mc/mcedit.menu</Path>
+            <Path fileType="data">/usr/share/mc/sfs.ini</Path>
             <Path fileType="data">/usr/share/mc/skins/dark.ini</Path>
             <Path fileType="data">/usr/share/mc/skins/darkfar.ini</Path>
             <Path fileType="data">/usr/share/mc/skins/default.ini</Path>
@@ -238,14 +238,23 @@
             <Path fileType="data">/usr/share/mc/skins/gray-green-purple256.ini</Path>
             <Path fileType="data">/usr/share/mc/skins/gray-orange-blue256.ini</Path>
             <Path fileType="data">/usr/share/mc/skins/julia256.ini</Path>
+            <Path fileType="data">/usr/share/mc/skins/julia256root.ini</Path>
             <Path fileType="data">/usr/share/mc/skins/mc46.ini</Path>
+            <Path fileType="data">/usr/share/mc/skins/modarcon16-defbg-thin.ini</Path>
             <Path fileType="data">/usr/share/mc/skins/modarcon16-defbg.ini</Path>
+            <Path fileType="data">/usr/share/mc/skins/modarcon16-thin.ini</Path>
             <Path fileType="data">/usr/share/mc/skins/modarcon16.ini</Path>
+            <Path fileType="data">/usr/share/mc/skins/modarcon16root-defbg-thin.ini</Path>
             <Path fileType="data">/usr/share/mc/skins/modarcon16root-defbg.ini</Path>
+            <Path fileType="data">/usr/share/mc/skins/modarcon16root-thin.ini</Path>
             <Path fileType="data">/usr/share/mc/skins/modarcon16root.ini</Path>
+            <Path fileType="data">/usr/share/mc/skins/modarin256-defbg-thin.ini</Path>
             <Path fileType="data">/usr/share/mc/skins/modarin256-defbg.ini</Path>
+            <Path fileType="data">/usr/share/mc/skins/modarin256-thin.ini</Path>
             <Path fileType="data">/usr/share/mc/skins/modarin256.ini</Path>
+            <Path fileType="data">/usr/share/mc/skins/modarin256root-defbg-thin.ini</Path>
             <Path fileType="data">/usr/share/mc/skins/modarin256root-defbg.ini</Path>
+            <Path fileType="data">/usr/share/mc/skins/modarin256root-thin.ini</Path>
             <Path fileType="data">/usr/share/mc/skins/modarin256root.ini</Path>
             <Path fileType="data">/usr/share/mc/skins/nicedark.ini</Path>
             <Path fileType="data">/usr/share/mc/skins/sand256.ini</Path>
@@ -253,7 +262,9 @@
             <Path fileType="data">/usr/share/mc/skins/seasons-spring16M.ini</Path>
             <Path fileType="data">/usr/share/mc/skins/seasons-summer16M.ini</Path>
             <Path fileType="data">/usr/share/mc/skins/seasons-winter16M.ini</Path>
+            <Path fileType="data">/usr/share/mc/skins/xoria256-thin.ini</Path>
             <Path fileType="data">/usr/share/mc/skins/xoria256.ini</Path>
+            <Path fileType="data">/usr/share/mc/skins/xoria256root-thin.ini</Path>
             <Path fileType="data">/usr/share/mc/skins/yadt256-defbg.ini</Path>
             <Path fileType="data">/usr/share/mc/skins/yadt256.ini</Path>
             <Path fileType="data">/usr/share/mc/syntax/PKGBUILD.syntax</Path>
@@ -263,6 +274,7 @@
             <Path fileType="data">/usr/share/mc/syntax/aspx.syntax</Path>
             <Path fileType="data">/usr/share/mc/syntax/assembler.syntax</Path>
             <Path fileType="data">/usr/share/mc/syntax/awk.syntax</Path>
+            <Path fileType="data">/usr/share/mc/syntax/b.syntax</Path>
             <Path fileType="data">/usr/share/mc/syntax/c.syntax</Path>
             <Path fileType="data">/usr/share/mc/syntax/cabal.syntax</Path>
             <Path fileType="data">/usr/share/mc/syntax/changelog.syntax</Path>
@@ -323,6 +335,7 @@
             <Path fileType="data">/usr/share/mc/syntax/php.syntax</Path>
             <Path fileType="data">/usr/share/mc/syntax/po.syntax</Path>
             <Path fileType="data">/usr/share/mc/syntax/povray.syntax</Path>
+            <Path fileType="data">/usr/share/mc/syntax/privoxy.syntax</Path>
             <Path fileType="data">/usr/share/mc/syntax/procmail.syntax</Path>
             <Path fileType="data">/usr/share/mc/syntax/properties.syntax</Path>
             <Path fileType="data">/usr/share/mc/syntax/protobuf.syntax</Path>
@@ -343,6 +356,7 @@
             <Path fileType="data">/usr/share/mc/syntax/syntax.syntax</Path>
             <Path fileType="data">/usr/share/mc/syntax/tcl.syntax</Path>
             <Path fileType="data">/usr/share/mc/syntax/texinfo.syntax</Path>
+            <Path fileType="data">/usr/share/mc/syntax/toml.syntax</Path>
             <Path fileType="data">/usr/share/mc/syntax/ts.syntax</Path>
             <Path fileType="data">/usr/share/mc/syntax/tt.syntax</Path>
             <Path fileType="data">/usr/share/mc/syntax/unknown.syntax</Path>
@@ -356,12 +370,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="20">
-            <Date>2024-02-23</Date>
-            <Version>4.8.28</Version>
+        <Update release="21">
+            <Date>2026-03-30</Date>
+            <Version>4.8.33</Version>
             <Comment>Packaging update</Comment>
-            <Name>Joey Riches</Name>
-            <Email>josephriches@gmail.com</Email>
+            <Name>David Harder</Name>
+            <Email>david@davidjharder.ca</Email>
         </Update>
     </History>
 </PISI>

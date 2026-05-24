@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : libspelling
-version    : 0.4.8
-release    : 5
+version    : 0.4.10
+release    : 8
 source     :
-    - https://download.gnome.org/sources/libspelling/0.4/libspelling-0.4.8.tar.xz : 277646285818da7b295ef007b2c5ebd815d0930b3ad097505b3ced96965af517
+    - https://download.gnome.org/sources/libspelling/0.4/libspelling-0.4.10.tar.xz : 56e3f01a3a18b575beea4c34349f99cdaba316e1f7c271b1231f7bcf5d9af73b
 homepage   : https://gitlab.gnome.org/GNOME/libspelling/
 license    : LGPL-2.1-or-later
 component  : desktop.gnome.core

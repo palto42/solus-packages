@@ -3,8 +3,8 @@
         <Name>libnice</Name>
         <Homepage>https://nice.freedesktop.org</Homepage>
         <Packager>
-            <Name>Reilly Brogan</Name>
-            <Email>solus@reillybrogan.com</Email>
+            <Name>Joey Riches</Name>
+            <Email>josephriches@gmail.com</Email>
         </Packager>
         <License>MPL-1.1</License>
         <License>LGPL-2.1-or-later</License>
@@ -26,8 +26,10 @@
             <Path fileType="library">/usr/lib64/girepository-1.0/Nice-0.1.typelib</Path>
             <Path fileType="library">/usr/lib64/gstreamer-1.0/libgstnice.so</Path>
             <Path fileType="library">/usr/lib64/libnice.so.10</Path>
-            <Path fileType="library">/usr/lib64/libnice.so.10.14.0</Path>
-            <Path fileType="data">/usr/share/gir-1.0/Nice-0.1.gir</Path>
+            <Path fileType="library">/usr/lib64/libnice.so.10.15.0</Path>
+            <Path fileType="data">/usr/share/licenses/libnice/COPYING</Path>
+            <Path fileType="data">/usr/share/licenses/libnice/COPYING.LGPL</Path>
+            <Path fileType="data">/usr/share/licenses/libnice/COPYING.MPL</Path>
         </Files>
     </Package>
     <Package>
@@ -37,7 +39,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="7">libnice</Dependency>
+            <Dependency release="9">libnice</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/nice/address.h</Path>
@@ -59,15 +61,16 @@
             <Path fileType="header">/usr/include/stun/win32_common.h</Path>
             <Path fileType="library">/usr/lib64/libnice.so</Path>
             <Path fileType="data">/usr/lib64/pkgconfig/nice.pc</Path>
+            <Path fileType="data">/usr/share/gir-1.0/Nice-0.1.gir</Path>
         </Files>
     </Package>
     <History>
-        <Update release="7">
-            <Date>2024-06-28</Date>
-            <Version>0.1.22</Version>
+        <Update release="9">
+            <Date>2026-05-18</Date>
+            <Version>0.1.23</Version>
             <Comment>Packaging update</Comment>
-            <Name>Reilly Brogan</Name>
-            <Email>solus@reillybrogan.com</Email>
+            <Name>Joey Riches</Name>
+            <Email>josephriches@gmail.com</Email>
         </Update>
     </History>
 </PISI>

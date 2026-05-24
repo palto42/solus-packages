@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : akregator
-version    : 25.08.2
-release    : 92
+version    : 26.04.1
+release    : 97
 source     :
-    - https://download.kde.org/stable/release-service/25.08.2/src/akregator-25.08.2.tar.xz : d0a66f71c5159cbbfe37e0762d15570515692f8646fb55a19180d6d529acfcee
+    - https://download.kde.org/stable/release-service/26.04.1/src/akregator-26.04.1.tar.xz : 6353081c047618f8ed0e22ce5147152c3270c616b4141ed50375599787c36cf0
 homepage   : https://kde.org/applications/internet/org.kde.akregator
 license    :
     - GFDL-1.2-or-later

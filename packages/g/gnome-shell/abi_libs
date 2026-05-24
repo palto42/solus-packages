@@ -1,6 +1,8 @@
+gnome-shell
 gnome-shell-calendar-server
+gnome-shell-perf-helper
 libgnome-shell-menu.so
 libgvc.so
-libshell-16.so
+libshell-18.so
 libshew-0.so
-libst-16.so
+libst-18.so

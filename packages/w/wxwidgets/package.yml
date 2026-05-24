@@ -1,6 +1,7 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : wxwidgets
 version    : 3.2.8
-release    : 40
+release    : 41
 source     :
     - https://github.com/wxWidgets/wxWidgets/releases/download/v3.2.8/wxWidgets-3.2.8.tar.bz2 : c74784904109d7229e6894c85cfa068f1106a4a07c144afd78af41f373ee0fe6
 homepage   : https://wxwidgets.org
@@ -82,6 +83,7 @@ build      : |
     %make
 install    : |
     %make_install
+    %install_license docs/licence.txt docs/licendoc.txt docs/gpl.txt docs/lgpl.txt
 
     # Ensure wx-config supports multilib.
     install -dm00755 $installdir/usr/share/wxwidgets

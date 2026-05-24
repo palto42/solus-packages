@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : pandoc
-version    : 3.6.3
-release    : 9
+version    : 3.9.0.2
+release    : 16
 source     :
-    - https://github.com/jgm/pandoc/archive/refs/tags/3.6.3.tar.gz : 5e5d78b79f86454cb542246d318682f26e0959e8f1aa068b3645832f8d5ed170
+    - https://github.com/jgm/pandoc/archive/refs/tags/3.9.0.2.tar.gz : c300c60ae4d47da6e5d265e93f89b896324cdc84ccbb504b88a9855bacd6b5d7
 homepage   : https://pandoc.org
-license    : BSD-3-Clause
+license    : GPL-2.0-or-later
 component  : office
 summary    : Pandoc is a Haskell library for converting from one markup format to another, and a command-line tool that uses this library
 description: |
@@ -24,5 +25,6 @@ build      : |
 install    : |
     mkdir -p $installdir/usr/bin
     cabal install --installdir=$installdir/usr/bin --install-method=copy pandoc-cli 
+    %install_license COPYING.md
 check      : |
     cabal test

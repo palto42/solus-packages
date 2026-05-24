@@ -1,9 +1,10 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : python-poetry
-version    : 2.1.1
-release    : 18
+version    : 2.3.4
+release    : 19
 source     :
     # The bootstrap source needs to be from pypi as it's the only source with a setup.py
-    - https://files.pythonhosted.org/packages/source/p/poetry/poetry-2.1.1.tar.gz : d82673865bf13d6cd0dacf28c69a89670456d8df2f9e5da82bfb5f833ba00efc
+    - https://files.pythonhosted.org/packages/source/p/poetry/poetry-2.3.4.tar.gz : b293572d366569360c79d7caa6980c9b404d2b89530ed451a5b4570d248de3af
 homepage   : https://python-poetry.org/
 license    : MIT
 component  : programming.python

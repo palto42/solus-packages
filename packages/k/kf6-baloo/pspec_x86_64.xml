@@ -4,11 +4,17 @@
         <Homepage>https://community.kde.org/Frameworks</Homepage>
         <Packager>
             <Name>Troy Harvey</Name>
-            <Email>harveydevel@gmail.com</Email>
+            <Email>harvey@getsol.us</Email>
         </Packager>
+        <License>BSD-3-Clause</License>
+        <License>CC0-1.0</License>
+        <License>GPL-2.0-only</License>
         <License>GPL-2.0-or-later</License>
+        <License>GPL-3.0-only</License>
         <License>LGPL-2.0-or-later</License>
+        <License>LGPL-2.1-only</License>
         <License>LGPL-2.1-or-later</License>
+        <License>LGPL-3.0-only</License>
         <PartOf>desktop.library</PartOf>
         <Summary xml:lang="en">Baloo provides file searching and indexing</Summary>
         <Description xml:lang="en">Baloo provides file searching and indexing.
@@ -29,9 +35,9 @@
             <Path fileType="library">/usr/lib64/kf6/baloo_file</Path>
             <Path fileType="library">/usr/lib64/kf6/baloo_file_extractor</Path>
             <Path fileType="library">/usr/lib64/libKF6Baloo.so.6</Path>
-            <Path fileType="library">/usr/lib64/libKF6Baloo.so.6.19.0</Path>
+            <Path fileType="library">/usr/lib64/libKF6Baloo.so.6.26.0</Path>
             <Path fileType="library">/usr/lib64/libKF6BalooEngine.so.6</Path>
-            <Path fileType="library">/usr/lib64/libKF6BalooEngine.so.6.19.0</Path>
+            <Path fileType="library">/usr/lib64/libKF6BalooEngine.so.6.26.0</Path>
             <Path fileType="library">/usr/lib64/qt6/plugins/kf6/kded/baloosearchmodule.so</Path>
             <Path fileType="library">/usr/lib64/qt6/plugins/kf6/kio/baloosearch.so</Path>
             <Path fileType="library">/usr/lib64/qt6/plugins/kf6/kio/tags.so</Path>
@@ -49,6 +55,18 @@
             <Path fileType="data">/usr/share/dbus-1/interfaces/org.kde.baloo.fileindexer.xml</Path>
             <Path fileType="data">/usr/share/dbus-1/interfaces/org.kde.baloo.main.xml</Path>
             <Path fileType="data">/usr/share/dbus-1/interfaces/org.kde.baloo.scheduler.xml</Path>
+            <Path fileType="data">/usr/share/licenses/kf6-baloo/BSD-3-Clause.txt</Path>
+            <Path fileType="data">/usr/share/licenses/kf6-baloo/CC0-1.0.txt</Path>
+            <Path fileType="data">/usr/share/licenses/kf6-baloo/GPL-2.0-only.txt</Path>
+            <Path fileType="data">/usr/share/licenses/kf6-baloo/GPL-2.0-or-later.txt</Path>
+            <Path fileType="data">/usr/share/licenses/kf6-baloo/GPL-3.0-only.txt</Path>
+            <Path fileType="data">/usr/share/licenses/kf6-baloo/LGPL-2.0-or-later.txt</Path>
+            <Path fileType="data">/usr/share/licenses/kf6-baloo/LGPL-2.1-only.txt</Path>
+            <Path fileType="data">/usr/share/licenses/kf6-baloo/LGPL-2.1-or-later.txt</Path>
+            <Path fileType="data">/usr/share/licenses/kf6-baloo/LGPL-3.0-only.txt</Path>
+            <Path fileType="data">/usr/share/licenses/kf6-baloo/LicenseRef-KDE-Accepted-GPL.txt</Path>
+            <Path fileType="data">/usr/share/licenses/kf6-baloo/LicenseRef-KDE-Accepted-LGPL.txt</Path>
+            <Path fileType="data">/usr/share/licenses/kf6-baloo/bzip2-1.0.6.txt</Path>
             <Path fileType="localedata">/usr/share/locale/ar/LC_MESSAGES/baloo_file6.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ar/LC_MESSAGES/baloo_file_extractor6.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ar/LC_MESSAGES/balooctl6.mo</Path>
@@ -221,6 +239,16 @@
             <Path fileType="localedata">/usr/share/locale/fr/LC_MESSAGES/kio6_baloosearch.mo</Path>
             <Path fileType="localedata">/usr/share/locale/fr/LC_MESSAGES/kio6_tags.mo</Path>
             <Path fileType="localedata">/usr/share/locale/fr/LC_MESSAGES/kio6_timeline.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/ga/LC_MESSAGES/baloo_file6.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/ga/LC_MESSAGES/baloo_file_extractor6.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/ga/LC_MESSAGES/balooctl6.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/ga/LC_MESSAGES/baloodb6.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/ga/LC_MESSAGES/balooengine6.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/ga/LC_MESSAGES/baloosearch6.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/ga/LC_MESSAGES/balooshow6.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/ga/LC_MESSAGES/kio6_baloosearch.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/ga/LC_MESSAGES/kio6_tags.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/ga/LC_MESSAGES/kio6_timeline.mo</Path>
             <Path fileType="localedata">/usr/share/locale/gd/LC_MESSAGES/balooctl6.mo</Path>
             <Path fileType="localedata">/usr/share/locale/gd/LC_MESSAGES/baloosearch6.mo</Path>
             <Path fileType="localedata">/usr/share/locale/gd/LC_MESSAGES/balooshow6.mo</Path>
@@ -588,7 +616,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="29">kf6-baloo</Dependency>
+            <Dependency release="39">kf6-baloo</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/KF6/Baloo/Baloo/File</Path>
@@ -617,12 +645,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="29">
-            <Date>2025-10-11</Date>
-            <Version>6.19.0</Version>
+        <Update release="39">
+            <Date>2026-05-12</Date>
+            <Version>6.26.0</Version>
             <Comment>Packaging update</Comment>
             <Name>Troy Harvey</Name>
-            <Email>harveydevel@gmail.com</Email>
+            <Email>harvey@getsol.us</Email>
         </Update>
     </History>
 </PISI>

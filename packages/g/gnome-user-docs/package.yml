@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : gnome-user-docs
-version    : '48.5'
-release    : 35
+version    : '50.0'
+release    : 39
 source     :
-    - https://download.gnome.org/sources/gnome-user-docs/48/gnome-user-docs-48.5.tar.xz : d062d7fd1c36aaeae97c482ef37e2b1cd950d743ebcc5979eea7fa497eb202c6
+    - https://download.gnome.org/sources/gnome-user-docs/50/gnome-user-docs-50.0.tar.xz : e8e23324184c7e985c504f05f6d9c63420c9a9d1f64efde5da2a811236072f78
 homepage   : https://gitlab.gnome.org/GNOME/gnome-user-docs
 license    : CC-BY-3.0
 component  : desktop.gnome.doc

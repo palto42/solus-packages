@@ -1,5 +1,4 @@
 libKF6ConfigCore.so.6:_ZN11KConfigBase5groupERK7QString
-libKF6ConfigCore.so.6:_ZN12KConfigGroup10writeEntryEPKcRK5QListI7QStringE6QFlagsIN11KConfigBase15WriteConfigFlagEE
 libKF6ConfigCore.so.6:_ZN12KConfigGroup10writeEntryERK7QStringRK5QListIS0_E6QFlagsIN11KConfigBase15WriteConfigFlagEE
 libKF6ConfigCore.so.6:_ZN12KConfigGroup4syncEv
 libKF6ConfigCore.so.6:_ZN12KConfigGroup6configEv
@@ -77,7 +76,7 @@ libQt6Core.so.6:_ZN10QJsonValueC1Eb
 libQt6Core.so.6:_ZN10QJsonValueC1Ei
 libQt6Core.so.6:_ZN10QJsonValueD1Ev
 libQt6Core.so.6:_ZN11QBasicMutex12lockInternalEv
-libQt6Core.so.6:_ZN11QBasicMutex14unlockInternalEv
+libQt6Core.so.6:_ZN11QBasicMutex19unlockInternalFutexEPv
 libQt6Core.so.6:_ZN11QDataStream11resetStatusEv
 libQt6Core.so.6:_ZN11QDataStream9setStatusENS_6StatusE
 libQt6Core.so.6:_ZN11QDataStreamlsEi
@@ -100,10 +99,7 @@ libQt6Core.so.6:_ZN11QThreadPool14globalInstanceEv
 libQt6Core.so.6:_ZN11QThreadPool5startEP9QRunnablei
 libQt6Core.so.6:_ZN13QElapsedTimer5startEv
 libQt6Core.so.6:_ZN13QElapsedTimer7restartEv
-libQt6Core.so.6:_ZN14QReadWriteLock14tryLockForReadE14QDeadlineTimer
-libQt6Core.so.6:_ZN14QReadWriteLock15tryLockForWriteE14QDeadlineTimer
 libQt6Core.so.6:_ZN14QReadWriteLock16destroyRecursiveEP21QReadWriteLockPrivate
-libQt6Core.so.6:_ZN14QReadWriteLock6unlockEv
 libQt6Core.so.6:_ZN14QStandardPaths9locateAllENS_16StandardLocationERK7QString6QFlagsINS_12LocateOptionEE
 libQt6Core.so.6:_ZN15QtSharedPointer20ExternalRefCountData9getAndRefEPK7QObject
 libQt6Core.so.6:_ZN16QDebugStateSaverC1ER6QDebug
@@ -151,10 +147,14 @@ libQt6Core.so.6:_ZN19QAbstractProxyModel11setItemDataERK11QModelIndexRK4QMapIi8Q
 libQt6Core.so.6:_ZN19QAbstractProxyModel13clearItemDataERK11QModelIndex
 libQt6Core.so.6:_ZN19QAbstractProxyModel6revertEv
 libQt6Core.so.6:_ZN19QAbstractProxyModel6submitEv
+libQt6Core.so.6:_ZN19QBasicReadWriteLock15contendedUnlockEPv
+libQt6Core.so.6:_ZN19QBasicReadWriteLock23contendedTryLockForReadE14QDeadlineTimerPv
+libQt6Core.so.6:_ZN19QBasicReadWriteLock24contendedTryLockForWriteE14QDeadlineTimerPv
 libQt6Core.so.6:_ZN20QFutureInterfaceBase13reportStartedEv
 libQt6Core.so.6:_ZN20QFutureInterfaceBase13waitForResultEi
 libQt6Core.so.6:_ZN20QFutureInterfaceBase14reportFinishedEv
 libQt6Core.so.6:_ZN20QFutureInterfaceBase15resultStoreBaseEv
+libQt6Core.so.6:_ZN20QFutureInterfaceBase15setContinuationEPK7QObjectSt8functionIFvvEERK8QVariantNS_16ContinuationTypeE
 libQt6Core.so.6:_ZN20QFutureInterfaceBase17cleanContinuationEv
 libQt6Core.so.6:_ZN20QFutureInterfaceBase6cancelENS_10CancelModeE
 libQt6Core.so.6:_ZN20QFutureInterfaceBase6cancelEv
@@ -218,12 +218,10 @@ libQt6Core.so.6:_ZN7QObjectC2EPS_
 libQt6Core.so.6:_ZN7QObjectD2Ev
 libQt6Core.so.6:_ZN7QString13toUtf8_helperERKS_
 libQt6Core.so.6:_ZN7QString14trimmed_helperERKS_
-libQt6Core.so.6:_ZN7QString17toIntegral_helperE11QStringViewPbi
 libQt6Core.so.6:_ZN7QString4chopEx
 libQt6Core.so.6:_ZN7QString6_emptyE
 libQt6Core.so.6:_ZN7QString6appendE5QChar
 libQt6Core.so.6:_ZN7QString6appendERKS_
-libQt6Core.so.6:_ZN7QString6numberEii
 libQt6Core.so.6:_ZN7QString6numberExi
 libQt6Core.so.6:_ZN7QString7replaceE13QLatin1StringRKS_N2Qt15CaseSensitivityE
 libQt6Core.so.6:_ZN7QString8fromUtf8E14QByteArrayView
@@ -254,6 +252,7 @@ libQt6Core.so.6:_ZN9QMetaType27registerMutableViewFunctionERKSt8functionIFbPvS1_
 libQt6Core.so.6:_ZN9QMetaType27unregisterConverterFunctionES_S_
 libQt6Core.so.6:_ZN9QMetaType29unregisterMutableViewFunctionES_S_
 libQt6Core.so.6:_ZN9QMetaType7convertES_PKvS_Pv
+libQt6Core.so.6:_ZN9QMimeData16staticMetaObjectE
 libQt6Core.so.6:_ZN9QMimeData7setUrlsERK5QListI4QUrlE
 libQt6Core.so.6:_ZN9QMimeDataC1Ev
 libQt6Core.so.6:_ZN9QtPrivate12argToQStringE14QAnyStringViewmPPKNS_7ArgBaseE
@@ -262,7 +261,6 @@ libQt6Core.so.6:_ZN9QtPrivate12equalStringsE11QStringViewS0_
 libQt6Core.so.6:_ZN9QtPrivate14compareStringsE11QStringViewS0_N2Qt15CaseSensitivityE
 libQt6Core.so.6:_ZN9QtPrivate19QStringList_indexOfERK5QListI7QStringE11QStringViewxN2Qt15CaseSensitivityE
 libQt6Core.so.6:_ZN9QtPrivate20QStringList_containsEPK5QListI7QStringE11QStringViewN2Qt15CaseSensitivityE
-libQt6Core.so.6:_ZN9QtPrivate21watchContinuationImplEPK7QObjectPNS_15QSlotObjectBaseER20QFutureInterfaceBase
 libQt6Core.so.6:_ZN9QtPrivate25QMetaTypeInterfaceWrapperI11QModelIndexE8metaTypeE
 libQt6Core.so.6:_ZN9QtPrivate25QMetaTypeInterfaceWrapperI4QMapI7QString8QVariantEE8metaTypeE
 libQt6Core.so.6:_ZN9QtPrivate25QMetaTypeInterfaceWrapperI4QUrlE8metaTypeE
@@ -270,9 +268,9 @@ libQt6Core.so.6:_ZN9QtPrivate25QMetaTypeInterfaceWrapperI5QListI7QStringEE8metaT
 libQt6Core.so.6:_ZN9QtPrivate25QMetaTypeInterfaceWrapperI7QStringE8metaTypeE
 libQt6Core.so.6:_ZN9QtPrivate25QMetaTypeInterfaceWrapperIbE8metaTypeE
 libQt6Core.so.6:_ZN9QtPrivate25QMetaTypeInterfaceWrapperIiE8metaTypeE
+libQt6Core.so.6:_ZN9QtPrivate26qfutureWarnIfUnusedResultsEx
 libQt6Core.so.6:_ZN9QtPrivate52hasRegisteredConverterFunctionToIterableMetaSequenceE9QMetaType
 libQt6Core.so.6:_ZN9QtPrivate54hasRegisteredMutableViewFunctionToIterableMetaSequenceE9QMetaType
-libQt6Core.so.6:_ZN9QtPrivate8qustrchrE11QStringViewDs
 libQt6Core.so.6:_ZNK11QDataStream26isDeviceTransactionStartedEv
 libQt6Core.so.6:_ZNK11QMetaObject2trEPKcS1_i
 libQt6Core.so.6:_ZNK11QMetaObject4castEPK7QObject
@@ -306,6 +304,7 @@ libQt6Core.so.6:_ZNK19QAbstractProxyModel15canDropMimeDataEPK9QMimeDataN2Qt10Dro
 libQt6Core.so.6:_ZNK19QAbstractProxyModel20supportedDragActionsEv
 libQt6Core.so.6:_ZNK19QAbstractProxyModel8itemDataERK11QModelIndex
 libQt6Core.so.6:_ZNK19QAbstractProxyModel9roleNamesEv
+libQt6Core.so.6:_ZNK20QFutureInterfaceBase11resultCountEv
 libQt6Core.so.6:_ZNK20QFutureInterfaceBase12hasExceptionEv
 libQt6Core.so.6:_ZNK20QFutureInterfaceBase15isChainCanceledEv
 libQt6Core.so.6:_ZNK20QFutureInterfaceBase15resultStoreBaseEv
@@ -351,10 +350,8 @@ libQt6Core.so.6:_ZNK8QVariant6equalsERKS_
 libQt6Core.so.6:_ZNK8QVariant6toBoolEv
 libQt6Core.so.6:_ZNK8QVariant6toListEv
 libQt6Core.so.6:_ZNK8QVariant6toRealEPb
-libQt6Core.so.6:_ZNK8QVariant8metaTypeEv
 libQt6Core.so.6:_ZNK8QVariant8toStringEv
 libQt6Core.so.6:_ZNK9QtPrivate15ResultStoreBase8resultAtEi
-libQt6Core.so.6:_ZNKR7QString3midExx
 libQt6Core.so.6:_ZNO7QString3midExx
 libQt6Core.so.6:_ZTI18QAbstractItemModel
 libQt6Core.so.6:_ZTI20QFutureInterfaceBase
@@ -457,7 +454,6 @@ libc.so.6:memmove
 libc.so.6:strcmp
 libc.so.6:strlen
 libm.so.6:ceil
-libm.so.6:exp
 libstdc++.so.6:_ZSt18_Rb_tree_decrementPSt18_Rb_tree_node_base
 libstdc++.so.6:_ZSt18_Rb_tree_incrementPSt18_Rb_tree_node_base
 libstdc++.so.6:_ZSt25__throw_bad_function_callv

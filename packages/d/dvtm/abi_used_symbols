@@ -76,6 +76,10 @@ libncursesw.so.6:curs_set
 libncursesw.so.6:delwin
 libncursesw.so.6:doupdate
 libncursesw.so.6:endwin
+libncursesw.so.6:getcurx
+libncursesw.so.6:getcury
+libncursesw.so.6:getmaxx
+libncursesw.so.6:getmaxy
 libncursesw.so.6:getmouse
 libncursesw.so.6:init_pair
 libncursesw.so.6:initscr
@@ -90,6 +94,7 @@ libncursesw.so.6:nonl
 libncursesw.so.6:pair_content
 libncursesw.so.6:printw
 libncursesw.so.6:raw
+libncursesw.so.6:redrawwin
 libncursesw.so.6:resizeterm
 libncursesw.so.6:set_escdelay
 libncursesw.so.6:start_color
@@ -98,6 +103,7 @@ libncursesw.so.6:use_default_colors
 libncursesw.so.6:waddch
 libncursesw.so.6:waddnstr
 libncursesw.so.6:waddnwstr
+libncursesw.so.6:wattrset
 libncursesw.so.6:wclear
 libncursesw.so.6:wclrtoeol
 libncursesw.so.6:wcolor_set
@@ -106,6 +112,5 @@ libncursesw.so.6:wgetch
 libncursesw.so.6:whline
 libncursesw.so.6:wmove
 libncursesw.so.6:wnoutrefresh
-libncursesw.so.6:wredrawln
 libncursesw.so.6:wresize
 libncursesw.so.6:wvline

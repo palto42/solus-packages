@@ -3,8 +3,8 @@
         <Name>deluge</Name>
         <Homepage>https://deluge-torrent.org/</Homepage>
         <Packager>
-            <Name>Joey Riches</Name>
-            <Email>josephriches@gmail.com</Email>
+            <Name>Silke Hofstra</Name>
+            <Email>silke@slxh.eu</Email>
         </Packager>
         <License>GPL-3.0-or-later</License>
         <PartOf>network.download</PartOf>
@@ -742,20 +742,20 @@
             <Path fileType="data">/usr/share/icons/hicolor/72x72/apps/deluge.png</Path>
             <Path fileType="data">/usr/share/icons/hicolor/96x96/apps/deluge.png</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/deluge.svg</Path>
-            <Path fileType="man">/usr/share/man/man1/deluge-console.1</Path>
-            <Path fileType="man">/usr/share/man/man1/deluge-gtk.1</Path>
-            <Path fileType="man">/usr/share/man/man1/deluge.1</Path>
+            <Path fileType="man">/usr/share/man/man1/deluge-console.1.zst</Path>
+            <Path fileType="man">/usr/share/man/man1/deluge-gtk.1.zst</Path>
+            <Path fileType="man">/usr/share/man/man1/deluge.1.zst</Path>
             <Path fileType="data">/usr/share/metainfo/deluge.metainfo.xml</Path>
             <Path fileType="data">/usr/share/pixmaps/deluge.png</Path>
         </Files>
     </Package>
     <History>
-        <Update release="29">
-            <Date>2025-05-29</Date>
+        <Update release="31">
+            <Date>2026-04-11</Date>
             <Version>2.2.0</Version>
             <Comment>Packaging update</Comment>
-            <Name>Joey Riches</Name>
-            <Email>josephriches@gmail.com</Email>
+            <Name>Silke Hofstra</Name>
+            <Email>silke@slxh.eu</Email>
         </Update>
     </History>
 </PISI>

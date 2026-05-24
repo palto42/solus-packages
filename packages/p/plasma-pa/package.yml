@@ -1,12 +1,18 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : plasma-pa
-version    : 6.4.5
-release    : 129
+version    : 6.6.5
+release    : 142
 source     :
-    - https://download.kde.org/stable/plasma/6.4.5/plasma-pa-6.4.5.tar.xz : 14c2bacff0f01c0b528d7b71b5062c68b2972bb415b5c27387dd35cee4441b1a
+    - https://download.kde.org/stable/plasma/6.6.5/plasma-pa-6.6.5.tar.xz : b63c01981ea0d329fd08013eff24b247b60922abe1497be01234660c15cb3826
 homepage   : https://www.kde.org/workspaces/plasmadesktop/
 license    :
+    - BSD-3-Clause
+    - CC0-1.0
+    - GPL-2.0-only
     - GPL-2.0-or-later
+    - GPL-3.0-only
     - LGPL-2.1-only
+    - LGPL-3.0-only
 component  : desktop.kde.core
 summary    : Plasma applet for audio volume management using PulseAudio.
 description: |
@@ -47,3 +53,5 @@ build      : |
 install    : |
     %ninja_install
     rm -rfv $installdir/usr/share/doc
+
+    %install_license LICENSES/*

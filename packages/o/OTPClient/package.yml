@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : OTPClient
-version    : 4.0.2
-release    : 13
+version    : 5.0.3
+release    : 15
 source     :
-    - https://github.com/paolostivanin/OTPClient/archive/refs/tags/v4.0.2.tar.gz : b5666983c30f775b2b95413b441c6e2c6ad98ed1dbe0d2973647a511af50f224
+    - https://github.com/paolostivanin/OTPClient/archive/refs/tags/v5.0.3.tar.gz : 0ea8e9016e46e30e7080420906d1d69da892d3fe9c1033cd050fd72c4bd6b3a5
 homepage   : https://github.com/paolostivanin/OTPClient
 license    : GPL-3.0-or-later
 component  : security
@@ -11,8 +12,8 @@ description: |
     Highly secure and easy to use GTK+ software for two-factor authentication that supports both Time-based One-time Passwords (TOTP) and HMAC-Based One-Time Passwords (HOTP).
 builddeps  :
     - pkgconfig(cotp)
-    - pkgconfig(gtk+-3.0)
     - pkgconfig(jansson)
+    - pkgconfig(libadwaita-1)
     - pkgconfig(libgcrypt)
     - pkgconfig(libpng)
     - pkgconfig(libprotobuf-c)
@@ -27,3 +28,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSE

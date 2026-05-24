@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : quickemu
-version    : 4.9.7
-release    : 2
+version    : 4.9.9
+release    : 3
 source     :
-    - https://github.com/quickemu-project/quickemu/archive/refs/tags/4.9.7.tar.gz : 38a93301a2b233bc458c62d1228d310a9c29c63c10d008c2905029ca66188606
+    - https://github.com/quickemu-project/quickemu/archive/refs/tags/4.9.9.tar.gz : ef5c5015e91c4fef6797c4961c400d18e1ae8191a8d1eae6e3512823dd2ff2a8
 homepage   : https://github.com/quickemu-project/quickemu
 license    : MIT
 component  : virt

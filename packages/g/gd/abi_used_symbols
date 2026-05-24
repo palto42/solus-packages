@@ -23,7 +23,8 @@ libavif.so.16:avifResultToString
 libc.so.6:__ctype_b_loc
 libc.so.6:__errno_location
 libc.so.6:__fprintf_chk
-libc.so.6:__isoc99_sscanf
+libc.so.6:__isoc23_sscanf
+libc.so.6:__isoc23_strtol
 libc.so.6:__libc_start_main
 libc.so.6:__longjmp_chk
 libc.so.6:__printf_chk
@@ -87,7 +88,6 @@ libc.so.6:strncpy
 libc.so.6:strrchr
 libc.so.6:strstr
 libc.so.6:strtok
-libc.so.6:strtol
 libc.so.6:time
 libc.so.6:tmpfile
 libc.so.6:unlink
@@ -156,8 +156,11 @@ libjpeg.so.8:jpeg_std_error
 libjpeg.so.8:jpeg_write_marker
 libjpeg.so.8:jpeg_write_scanlines
 libm.so.6:atan2
+libm.so.6:ceil
 libm.so.6:cos
 libm.so.6:exp
+libm.so.6:floor
+libm.so.6:floorf
 libm.so.6:fmod
 libm.so.6:log2
 libm.so.6:pow

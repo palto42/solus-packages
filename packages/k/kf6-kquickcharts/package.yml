@@ -1,11 +1,15 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kf6-kquickcharts
-version    : 6.19.0
-release    : 25
+version    : 6.26.0
+release    : 35
 source     :
-    - https://download.kde.org/stable/frameworks/6.19/kquickcharts-6.19.0.tar.xz : 50f0470e961f95fab75cb4ae888bdd4239b462f187d725a476ef1ba0ce6af435
+    - https://download.kde.org/stable/frameworks/6.26/kquickcharts-6.26.0.tar.xz : ae3e0784a2a2d1396cb751cc61f43a567e066d6434971246b1a18365481a1b52
 homepage   : https://community.kde.org/Frameworks
 license    :
+    - BSD-2-Clause
+    - CC0-1.0
     - LGPL-2.1-only
+    - LGPL-3.0-only
     - MIT
 component  : desktop.library
 summary    : A QtQuick plugin providing high-performance charts
@@ -29,3 +33,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*

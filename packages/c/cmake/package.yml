@@ -1,40 +1,76 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : cmake
-version    : 3.30.3
-release    : 67
+version    : 4.3.1
+release    : 68
 source     :
-    - https://gitlab.kitware.com/cmake/cmake/-/archive/v3.30.3/cmake-v3.30.3.tar.gz : 5fd95fd5d33cd4b29cdf2e8522490f3d0009497d9e4bb3014a09b9915025f48c
+    - https://gitlab.kitware.com/cmake/cmake/-/archive/v4.3.1/cmake-v4.3.1.tar.gz : 23e25ea1d8ec3fcf82c0d9db4704c6ccd76dd6bea1ee48ba73b86db0b24a1ee8
 homepage   : https://www.cmake.org/
 license    : BSD-3-Clause
-component  : system.devel
-summary    : CMake is a cross-platform, open-source build system.
-description: |
-    CMake, the cross-platform, open-source make system. CMake is used to control the software compilation process using simple platform and compiler independent configuration files. CMake generates native makefiles and workspaces that can be used in the compiler environment of your choice.
+component  :
+    - gui : programming.tools
+    - system.devel
+summary    :
+    - gui : Qt-based GUI for CMake
+    - CMake is a cross-platform, open-source build system.
+description:
+    - gui : Qt-based GUI for CMake.
+    - CMake, the cross-platform, open-source make system. CMake is used to control the software compilation process using simple platform and compiler independent configuration files. CMake generates native makefiles and workspaces that can be used in the compiler environment of your choice.
 builddeps  :
+    - pkgconfig(Qt6Gui)
+    - pkgconfig(expat)
+    - pkgconfig(jsoncpp)
     - pkgconfig(libarchive)
     - pkgconfig(libcurl)
     - pkgconfig(libuv)
+    - pkgconfig(ncurses)
+    - pkgconfig(zlib)
     - python-sphinx
+    - rhash-devel
+rundeps    :
+    - gui :
+        - cmake
+        - qt6-wayland
+setup      : |
+    %cmake_ninja \
+        -DBUILD_QtDialog=ON \
+        -DBUILD_TESTING=ON \
+        -DCMAKE_DOC_DIR=share/doc/cmake \
+        -DCMAKE_INSTALL_DO_STRIP=OFF \
+        -DCMAKE_MAN_DIR=share/man \
+        -DCMAKE_USE_SYSTEM_CURL=ON \
+        -DCMAKE_USE_SYSTEM_EXPAT=ON \
+        -DCMAKE_USE_SYSTEM_JSONCPP=ON \
+        -DCMAKE_USE_SYSTEM_LIBARCHIVE=ON \
+        -DCMAKE_USE_SYSTEM_LIBRHASH=ON \
+        -DCMAKE_USE_SYSTEM_LIBUV=ON \
+        -DCMAKE_USE_SYSTEM_ZLIB=ON \
+        -DCMake_TEST_NO_NETWORK=ON \
+        -DSPHINX_MAN=ON
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install
+    %install_license LICENSE.rst
+
+    install -Dm00644 -t ${installdir}/usr/share/metainfo/ ${pkgfiles}/org.cmake.CMake-GUI.metainfo.xml
+check      : |
+    # CTestTestUpload requires internet access
+    _excluded_tests="CTestTestUpload"
+    # Fails in solbuild, probably due to hardening
+    _excluded_tests="${_excluded_tests}|RunCMake.Configure|RunCMake.ParseImplicitLinkInfo|RunCMake.file-CHMOD|RunCMake.find_program|RunCMake.if|RunCMake.CommandLine"
+
+    pushd solusBuildDir
+    ./bin/ctest -E "${_excluded_tests}" --output-on-failure --parallel=$(/usr/bin/getconf _NPROCESSORS_ONLN)
+    popd
 patterns   :
     - /usr/share/cmake*
     - /usr/share/aclocal*
-    - docs : /usr/share/cmake*/Help
-setup      : |
-    # Unable to find use for jsoncpp in Solus yet, + circle deps..
-    ./configure --prefix=%PREFIX% \
-                --system-libs \
-                --no-system-cppdap \
-                --no-system-jsoncpp \
-                --no-system-librhash \
-                --no-qt-gui \
-                --docdir=/share/doc/cmake \
-                --mandir=/share/man \
-                --sphinx-man \
-                --parallel=%YJOBS%
-build      : |
-    %make
-install    : |
-    %make_install
-    rm -rf $installdir/usr/share/doc
-check      : |
-    unset LD_PRELOAD
-    ./bin/ctest --parallel %YJOBS% --force-new-ctest-process --output-on-failure -E "(CTestTestUpload|RunCMake.ParseImplicitLinkInfo|RunCMake.file-CHMOD|RunCMake.find_program|RunCMake.CommandLine)"
+    - docs :
+        - /usr/share/cmake*/Help
+    - gui :
+        - /usr/bin/cmake-gui
+        - /usr/share/applications
+        - /usr/share/icons
+        - /usr/share/mime
+        - /usr/share/man/man1/cmake-gui*
+        - /usr/share/metainfo/org.cmake.CMake-GUI.metainfo.xml

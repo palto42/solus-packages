@@ -1,0 +1,33 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
+name       : rhash
+version    : 1.4.6
+release    : 1
+source     :
+    - https://github.com/rhash/RHash/archive/refs/tags/v1.4.6.tar.gz : 9f6019cfeeae8ace7067ad22da4e4f857bb2cfa6c2deaa2258f55b2227ec937a
+homepage   : https://github.com/rhash/RHash
+license    : 0BSD
+component  : programming.library
+summary    : Great utility for computing hash sums
+description: |
+    RHash (Recursive Hasher) is a console utility for calculation and verification of magnet links and various message digests, including CRC32, CRC32C, MD4, MD5, SHA1, SHA256, SHA512, SHA3, AICH, ED2K, DC++ TTH, BitTorrent BTIH, Tiger, GOST R 34.11-94, GOST R 34.11-2012, RIPEMD-160, HAS-160, EDON-R, and Whirlpool.
+builddeps  :
+    - pkgconfig(openssl)
+setup      : |
+    # Their configure doesn't work with all of
+    # our options.
+    ./configure \
+        --prefix=%PREFIX% \
+        --sysconfdir=/etc \
+        --extra-cflags="${CFLAGS}" \
+        --extra-ldflags="${LDFLAGS}"
+build      : |
+    %make
+install    : |
+    # Only install the library portion
+    %make -C librhash DESTDIR="${installdir}" \
+        install-lib-headers \
+        install-lib-shared \
+        install-so-link
+    %install_license COPYING
+check      : |
+    %make test test-lib

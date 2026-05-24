@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : ghostscript
-version    : 9.56.1
-release    : 27
+version    : 10.07.0
+release    : 28
 source     :
-    - https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs9561/ghostpdl-9.56.1.tar.xz : 05e64c19853e475290fd608a415289dc21892c4d08ee9086138284b6addcb299
+    - https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs10070/ghostscript-10.07.0.tar.xz : ddace4e1721f967a55039baff564840225e0baa1d4f5432247ca1ccd1473b7c1
 homepage   : https://www.ghostscript.com/
 license    : AGPL-3.0-or-later
 component  : office
@@ -11,43 +12,62 @@ description: |
     Ghostscript is an interpreter for the PostScript language and for PDF. Many other software programs use it in order to convert documentation into various formats.
 builddeps  :
     - pkgconfig(cups)
+    - pkgconfig(dbus-1)
     - pkgconfig(fontconfig)
+    - pkgconfig(freetype2)
+    - pkgconfig(gl)
     - pkgconfig(glu)
+    - pkgconfig(glut)
     - pkgconfig(jbig2dec)
     - pkgconfig(lcms2)
+    - pkgconfig(libidn2)
+    - pkgconfig(libjxl)
     - pkgconfig(libopenjp2)
     - pkgconfig(libpng)
     - pkgconfig(libtiff-4)
     - pkgconfig(libturbojpeg)
+    - pkgconfig(libwebp)
     - pkgconfig(x11)
+    - pkgconfig(xext)
+    - pkgconfig(xt)
+    - pkgconfig(zlib)
     - libpaper-devel
+rundeps    :
+    - poppler-data
 setup      : |
-    # Backported security patches because we haven't updated to ghostscript 10.x
-    %apply_patches
+    # Remove built-in versions of these so we can use the system versions
+    rm -rf cups/libs expat freetype lcms2* libpng jpeg zlib tiff expat openjpeg jbig2dec windows
 
-    for i in freetype lcms2mt jpeg libpng expat cups/libs jpeg jbig2dec openjpeg tiff zlib expat ; do
-        rm -rf $i
-    done
+    # These are used for OCR and bloat the libs by a fair bit. Eventually we want to link against system libs instead
+    rm -r tesseract leptonica
 
-    # http://git.ghostscript.com/?p=ghostpdl.git;a=commit;h=40dc5b409c6262b18b4bf5386b5482ead4c511e3
-    # libs link unwanted to libgpdl that isn't installed
-    rm -rf gpdl
+    # Remove internal CMaps (CMaps from poppler-data are used instead)
+    rm -rf Resource/CMap
 
-    sed -i 's/ZLIBDIR=src/ZLIBDIR=$includedir/' configure.ac
-    %reconfigure --with-drivers=ALL \
-                 --disable-compile-inits \
-                 --enable-dynamic \
-                 --enable-freetype \
-                 --with-system-libtiff
+    %reconfigure \
+        --disable-compile-inits \
+        --enable-fontconfig \
+        --enable-freetype \
+        --with-fontpath=/usr/share/fonts/urw-base35 \
+        --with-system-libtiff \
+        --without-local-zlib \
+        --without-versioned-path
 build      : |
     %make
     %make so
 install    : |
     %make_install
-    %make soinstall DESTDIR=$installdir
-    install -d -m00755 $installdir/usr/include/ghostscript
-    install -m00655 base/*.h $installdir/usr/include/ghostscript
-    ln -sv ghostscript $installdir/usr/include/ps
+    %make soinstall DESTDIR=${installdir}
+
+    mv ${installdir}/usr/bin/{gsc,gs}
+    ln -srv ${installdir}/usr/bin/gs ${installdir}/usr/bin/ghostscript
+    ln -srv ${installdir}/usr/share/man/man1/gs.1.gz ${installdir}/usr/share/man/man1/ghostscript.1
+
+    # Remove obsolete lpr bsd/Unix-related files
+    rm -rf ${installdir}/usr/bin/{lprsetup.sh,unix-lpr.sh}
+
+    # Use the cMaps from poppler-data
+    ln -srv ${installdir}/usr/share/poppler/cMap ${installdir}/usr/share/ghostscript/Resource/CMap
 patterns   :
     - docs :
         - /usr/share/doc

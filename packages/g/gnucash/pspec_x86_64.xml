@@ -4,7 +4,7 @@
         <Homepage>https://www.gnucash.org/</Homepage>
         <Packager>
             <Name>Muhammad Alfi Syahrin</Name>
-            <Email>malfisya.dev@hotmail.com</Email>
+            <Email>alfi@getsol.us</Email>
         </Packager>
         <License>GPL-2.0-or-later</License>
         <PartOf>office.finance</PartOf>
@@ -191,6 +191,7 @@
             <Path fileType="doc">/usr/share/doc/gnucash/ChangeLog.2022</Path>
             <Path fileType="doc">/usr/share/doc/gnucash/ChangeLog.2023</Path>
             <Path fileType="doc">/usr/share/doc/gnucash/ChangeLog.2024</Path>
+            <Path fileType="doc">/usr/share/doc/gnucash/ChangeLog.2025</Path>
             <Path fileType="doc">/usr/share/doc/gnucash/DOCUMENTERS</Path>
             <Path fileType="doc">/usr/share/doc/gnucash/HACKING</Path>
             <Path fileType="doc">/usr/share/doc/gnucash/LICENSE</Path>
@@ -930,6 +931,8 @@
             <Path fileType="data">/usr/share/icons/hicolor/64x64/apps/gnucash-icon.png</Path>
             <Path fileType="data">/usr/share/icons/hicolor/96x96/apps/gnucash-icon.png</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/gnucash-icon.svg</Path>
+            <Path fileType="data">/usr/share/licenses/gnucash/AUTHORS</Path>
+            <Path fileType="data">/usr/share/licenses/gnucash/LICENSE</Path>
             <Path fileType="localedata">/usr/share/locale/ar/LC_MESSAGES/gnucash.mo</Path>
             <Path fileType="localedata">/usr/share/locale/as/LC_MESSAGES/gnucash.mo</Path>
             <Path fileType="localedata">/usr/share/locale/az/LC_MESSAGES/gnucash.mo</Path>
@@ -1007,7 +1010,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="61">gnucash</Dependency>
+            <Dependency release="65">gnucash</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/gnucash/Account.h</Path>
@@ -1224,12 +1227,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="61">
-            <Date>2025-10-07</Date>
-            <Version>5.13</Version>
+        <Update release="65">
+            <Date>2026-05-03</Date>
+            <Version>5.15</Version>
             <Comment>Packaging update</Comment>
             <Name>Muhammad Alfi Syahrin</Name>
-            <Email>malfisya.dev@hotmail.com</Email>
+            <Email>alfi@getsol.us</Email>
         </Update>
     </History>
 </PISI>

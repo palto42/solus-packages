@@ -4,9 +4,11 @@
         <Homepage>https://community.kde.org/Frameworks</Homepage>
         <Packager>
             <Name>Troy Harvey</Name>
-            <Email>harveydevel@gmail.com</Email>
+            <Email>harvey@getsol.us</Email>
         </Packager>
+        <License>BSD-3-Clause</License>
         <License>LGPL-2.0-or-later</License>
+        <License>LGPL-3.0-or-later</License>
         <PartOf>desktop.library</PartOf>
         <Summary xml:lang="en">Provides access to and handling of calendar data</Summary>
         <Description xml:lang="en">This library provides access to and handling of calendar data. It supports the standard formats iCalendar and vCalendar and the group scheduling standard iTIP.
@@ -21,11 +23,14 @@
         <PartOf>desktop.library</PartOf>
         <Files>
             <Path fileType="library">/usr/lib64/libKF6CalendarCore.so.6</Path>
-            <Path fileType="library">/usr/lib64/libKF6CalendarCore.so.6.19.0</Path>
+            <Path fileType="library">/usr/lib64/libKF6CalendarCore.so.6.26.0</Path>
             <Path fileType="library">/usr/lib64/qt6/qml/org/kde/calendarcore/kcalendarcoreqml.qmltypes</Path>
             <Path fileType="library">/usr/lib64/qt6/qml/org/kde/calendarcore/kde-qmlmodule.version</Path>
             <Path fileType="library">/usr/lib64/qt6/qml/org/kde/calendarcore/libkcalendarcoreqml.so</Path>
             <Path fileType="library">/usr/lib64/qt6/qml/org/kde/calendarcore/qmldir</Path>
+            <Path fileType="data">/usr/share/licenses/kf6-kcalendarcore/BSD-3-Clause.txt</Path>
+            <Path fileType="data">/usr/share/licenses/kf6-kcalendarcore/LGPL-2.0-or-later.txt</Path>
+            <Path fileType="data">/usr/share/licenses/kf6-kcalendarcore/LGPL-3.0-or-later.txt</Path>
             <Path fileType="data">/usr/share/qlogging-categories6/kcalendarcore.categories</Path>
             <Path fileType="data">/usr/share/qlogging-categories6/kcalendarcore.renamecategories</Path>
         </Files>
@@ -37,7 +42,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="26">kf6-kcalendarcore</Dependency>
+            <Dependency release="36">kf6-kcalendarcore</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/KF6/KCalendarCore/KCalendarCore/Alarm</Path>
@@ -120,12 +125,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="26">
-            <Date>2025-10-11</Date>
-            <Version>6.19.0</Version>
+        <Update release="36">
+            <Date>2026-05-12</Date>
+            <Version>6.26.0</Version>
             <Comment>Packaging update</Comment>
             <Name>Troy Harvey</Name>
-            <Email>harveydevel@gmail.com</Email>
+            <Email>harvey@getsol.us</Email>
         </Update>
     </History>
 </PISI>

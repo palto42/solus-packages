@@ -3,8 +3,8 @@
         <Name>gnome-music</Name>
         <Homepage>https://apps.gnome.org/Music/</Homepage>
         <Packager>
-            <Name>Joey Riches</Name>
-            <Email>josephriches@gmail.com</Email>
+            <Name>Evan Maddock</Name>
+            <Email>maddock.evan@vivaldi.net</Email>
         </Packager>
         <License>GPL-2.0-or-later</License>
         <PartOf>multimedia.audio</PartOf>
@@ -162,6 +162,7 @@
             <Path fileType="library">/usr/lib/python3.12/site-packages/gnomemusic/window.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/gnomemusic/windowplacement.py</Path>
             <Path fileType="data">/usr/share/applications/org.gnome.Music.desktop</Path>
+            <Path fileType="data">/usr/share/dbus-1/services/org.gnome.Music.service</Path>
             <Path fileType="data">/usr/share/glib-2.0/schemas/org.gnome.Music.gschema.xml</Path>
             <Path fileType="doc">/usr/share/help/C/gnome-music/figures/org.gnome.Music.svg</Path>
             <Path fileType="doc">/usr/share/help/C/gnome-music/index.page</Path>
@@ -477,6 +478,7 @@
             <Path fileType="doc">/usr/share/help/zh_CN/gnome-music/search.page</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.gnome.Music.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/symbolic/apps/org.gnome.Music-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/licenses/gnome-music/LICENSE</Path>
             <Path fileType="localedata">/usr/share/locale/ab/LC_MESSAGES/org.gnome.Music.mo</Path>
             <Path fileType="localedata">/usr/share/locale/af/LC_MESSAGES/org.gnome.Music.mo</Path>
             <Path fileType="localedata">/usr/share/locale/an/LC_MESSAGES/org.gnome.Music.mo</Path>
@@ -543,6 +545,7 @@
             <Path fileType="localedata">/usr/share/locale/tg/LC_MESSAGES/org.gnome.Music.mo</Path>
             <Path fileType="localedata">/usr/share/locale/th/LC_MESSAGES/org.gnome.Music.mo</Path>
             <Path fileType="localedata">/usr/share/locale/tr/LC_MESSAGES/org.gnome.Music.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/ug/LC_MESSAGES/org.gnome.Music.mo</Path>
             <Path fileType="localedata">/usr/share/locale/uk/LC_MESSAGES/org.gnome.Music.mo</Path>
             <Path fileType="localedata">/usr/share/locale/uz/LC_MESSAGES/org.gnome.Music.mo</Path>
             <Path fileType="localedata">/usr/share/locale/vi/LC_MESSAGES/org.gnome.Music.mo</Path>
@@ -554,12 +557,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="54">
-            <Date>2025-09-14</Date>
-            <Version>48.2</Version>
+        <Update release="57">
+            <Date>2026-03-17</Date>
+            <Version>49.1</Version>
             <Comment>Packaging update</Comment>
-            <Name>Joey Riches</Name>
-            <Email>josephriches@gmail.com</Email>
+            <Name>Evan Maddock</Name>
+            <Email>maddock.evan@vivaldi.net</Email>
         </Update>
     </History>
 </PISI>

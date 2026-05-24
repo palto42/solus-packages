@@ -1,6 +1,7 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : spek
 version    : 0.8.5
-release    : 10
+release    : 11
 source     :
     - https://github.com/alexkay/spek/releases/download/v0.8.5/spek-0.8.5.tar.xz : 1bccf85a14a01af8f2f30476cbad004e8bf6031f500e562bbe5bbd1e5eb16c59
 license    : GPL-3.0-or-later
@@ -13,6 +14,7 @@ builddeps  :
     - pkgconfig(libavformat)
     - wxwidgets-devel
 setup      : |
+    %patch -p1 -i $pkgfiles/ffmpeg-8.patch
     %configure
 build      : |
     %make

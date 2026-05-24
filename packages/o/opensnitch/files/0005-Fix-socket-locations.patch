@@ -1,0 +1,91 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: uni-dos <uni.dos12@outlook.com>
+Date: Thu, 9 Jan 2025 19:59:34 -0600
+Subject: [PATCH 5/5] Fix socket locations
+
+---
+ daemon/data/default-config.json      | 2 +-
+ ui/bin/opensnitch-ui                 | 4 ++--
+ ui/opensnitch/dialogs/preferences.py | 4 ++--
+ ui/opensnitch/res/preferences.ui     | 6 +++---
+ 4 files changed, 8 insertions(+), 8 deletions(-)
+
+diff --git a/daemon/data/default-config.json b/daemon/data/default-config.json
+index 7eca7182..bb335089 100644
+--- a/daemon/data/default-config.json
++++ b/daemon/data/default-config.json
+@@ -1,7 +1,7 @@
+ {
+     "Server":
+     {
+-        "Address":"unix:///tmp/osui.sock",
++        "Address":"unix:///run/opensnitch/osui.sock",
+         "Authentication": {
+             "Type": "simple",
+             "TLSOptions": {
+diff --git a/ui/bin/opensnitch-ui b/ui/bin/opensnitch-ui
+index e6a1ee18..3388c51e 100755
+--- a/ui/bin/opensnitch-ui
++++ b/ui/bin/opensnitch-ui
+@@ -195,13 +195,13 @@ Examples:
+ 
+         if args.socket is None:
+             # default
+-            args.socket = "unix:///tmp/osui.sock"
++            args.socket = "unix:///run/opensnitch/osui.sock"
+ 
+             addr = cfg.getSettings(Config.DEFAULT_SERVER_ADDR)
+             if addr is not None and addr != "":
+                 if addr.startswith("unix://"):
+                     if not os.path.exists(os.path.dirname(addr[7:])):
+-                        print("WARNING: unix socket path does not exist, using unix:///tmp/osui.sock, ", addr)
++                        print("WARNING: unix socket path does not exist, using unix:///run/opensnitch/osui.sock, ", addr)
+                     else:
+                         args.socket = addr
+                 else:
+diff --git a/ui/opensnitch/dialogs/preferences.py b/ui/opensnitch/dialogs/preferences.py
+index 7454d449..108853aa 100644
+--- a/ui/opensnitch/dialogs/preferences.py
++++ b/ui/opensnitch/dialogs/preferences.py
+@@ -185,8 +185,8 @@ class PreferencesDialog(QtWidgets.QDialog, uic.loadUiType(DIALOG_UI_PATH)[0]):
+             self.comboServerAddr.clear()
+             run_path = "/run/user/{0}/opensnitch/".format(os.getuid())
+             var_run_path = "/var{0}".format(run_path)
+-            self.comboNodeAddress.addItem("unix:///tmp/osui.sock")
+-            self.comboServerAddr.addItem("unix:///tmp/osui.sock")
++            self.comboNodeAddress.addItem("unix:///run/opensnitch/osui.sock")
++            self.comboServerAddr.addItem("unix:///run/opensnitch/osui.sock")
+             if os.path.exists(run_path):
+                 self.comboNodeAddress.addItem("unix://%s/osui.sock" % run_path)
+                 self.comboServerAddr.addItem("unix://%s/osui.sock" % run_path)
+diff --git a/ui/opensnitch/res/preferences.ui b/ui/opensnitch/res/preferences.ui
+index 42652a98..7aff40f5 100644
+--- a/ui/opensnitch/res/preferences.ui
++++ b/ui/opensnitch/res/preferences.ui
+@@ -906,7 +906,7 @@ or a network socket: 127.0.0.1:50051</string>
+              </property>
+              <item>
+               <property name="text">
+-               <string>unix:///tmp/osui.sock</string>
++               <string>unix:///run/opensnitch/osui.sock</string>
+               </property>
+              </item>
+             </widget>
+@@ -1801,7 +1801,7 @@ Temporary rules will still be valid, and you can use them when prompted to allow
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_15">
+              <property name="toolTip">
+-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Address of the node.&lt;/p&gt;&lt;p&gt;Default: unix:///tmp/osui.sock (unix:// is mandatory if it's a Unix socket)&lt;/p&gt;&lt;p&gt;It can also be an IP address with the port: 127.0.0.1:50051&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
++              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Address of the node.&lt;/p&gt;&lt;p&gt;Default: unix:///run/opensnitch/osui.sock (unix:// is mandatory if it's a Unix socket)&lt;/p&gt;&lt;p&gt;It can also be an IP address with the port: 127.0.0.1:50051&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="text">
+               <string>Address</string>
+@@ -1815,7 +1815,7 @@ Temporary rules will still be valid, and you can use them when prompted to allow
+              </property>
+              <item>
+               <property name="text">
+-               <string>unix:///tmp/osui.sock</string>
++               <string>unix:///run/opensnitch/osui.sock</string>
+               </property>
+              </item>
+             </widget>

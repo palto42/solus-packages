@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : xarchiver
-version    : 0.5.4.23
-release    : 2
+version    : 0.5.4.26
+release    : 3
 source     :
-    - https://github.com/ib/xarchiver/archive/refs/tags/0.5.4.23.tar.gz : 319935cd323e865d8aa12023b5286c314c128491ac58e853e63f6d6ea3da2a27
+    - https://github.com/ib/xarchiver/archive/refs/tags/0.5.4.26.tar.gz : 58e4fb2c1fb8421573a31cf3b4dfec301076d61f48ac5720df632986c87e9573
 homepage   : https://github.com/ib/xarchiver
 license    : GPL-2.0-or-later
 component  : system.utils
@@ -17,6 +18,7 @@ build      : |
     %make
 install    : |
     %make_install
+    %install_license COPYING
 
     install -Dm00644 $pkgfiles/xarchiver.metainfo.xml -t $installdir/usr/share/metainfo
 

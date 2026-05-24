@@ -101,6 +101,7 @@ gnome-contacts:contacts_bin_chunk_get_abstract_field_details
 gnome-contacts:contacts_bin_chunk_get_item_type
 gnome-contacts:contacts_bin_chunk_get_n_items
 gnome-contacts:contacts_bin_chunk_get_type
+gnome-contacts:contacts_bin_chunk_update_original_elements
 gnome-contacts:contacts_birthday_chunk_construct
 gnome-contacts:contacts_birthday_chunk_get_birthday
 gnome-contacts:contacts_birthday_chunk_get_type
@@ -486,6 +487,8 @@ gnome-contacts:contacts_thumbnail_for_chunk
 gnome-contacts:contacts_thumbnail_for_chunk_finish
 gnome-contacts:contacts_thumbnail_for_file
 gnome-contacts:contacts_thumbnail_for_file_finish
+gnome-contacts:contacts_thumbnail_for_stream
+gnome-contacts:contacts_thumbnail_for_stream_finish
 gnome-contacts:contacts_thumbnail_get_texture
 gnome-contacts:contacts_thumbnail_get_type
 gnome-contacts:contacts_thumbnail_set_texture
@@ -612,6 +615,7 @@ gnome-contacts-parser:contacts_bin_chunk_get_abstract_field_details
 gnome-contacts-parser:contacts_bin_chunk_get_item_type
 gnome-contacts-parser:contacts_bin_chunk_get_n_items
 gnome-contacts-parser:contacts_bin_chunk_get_type
+gnome-contacts-parser:contacts_bin_chunk_update_original_elements
 gnome-contacts-parser:contacts_birthday_chunk_construct
 gnome-contacts-parser:contacts_birthday_chunk_get_birthday
 gnome-contacts-parser:contacts_birthday_chunk_get_type

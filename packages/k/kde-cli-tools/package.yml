@@ -1,12 +1,19 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kde-cli-tools
-version    : 6.4.5
-release    : 127
+version    : 6.6.5
+release    : 140
 source     :
-    - https://download.kde.org/stable/plasma/6.4.5/kde-cli-tools-6.4.5.tar.xz : 3cc327470efd63ce6798f31000234674d6949872c8571c072dcb23956a277b26
+    - https://download.kde.org/stable/plasma/6.6.5/kde-cli-tools-6.6.5.tar.xz : 17eca02cf3d50d266c85f444bfef3b7c1c07a59b2cdebf6ca24e6fd81b80d122
 homepage   : https://www.kde.org/workspaces/plasmadesktop/
 license    :
+    - Artistic-2.0
+    - GPL-2.0-only
     - GPL-2.0-or-later
+    - GPL-3.0-only
+    - LGPL-2.0-only
+    - LGPL-2.0-or-later
     - LGPL-2.1-only
+    - LGPL-3.0-only
 component  : desktop.kde.core
 summary    : Tools to better interact with the system
 description: |
@@ -36,3 +43,5 @@ build      : |
 install    : |
     %ninja_install
     rm -rfv $installdir/usr/share/doc
+
+    %install_license LICENSES/*

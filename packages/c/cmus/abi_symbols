@@ -788,12 +788,6 @@ cue.so:ip_mime_types
 cue.so:ip_ops
 cue.so:ip_options
 cue.so:ip_priority
-ffmpeg.so:ip_abi_version
-ffmpeg.so:ip_extensions
-ffmpeg.so:ip_mime_types
-ffmpeg.so:ip_ops
-ffmpeg.so:ip_options
-ffmpeg.so:ip_priority
 flac.so:ip_abi_version
 flac.so:ip_extensions
 flac.so:ip_mime_types

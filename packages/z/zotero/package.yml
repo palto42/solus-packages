@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : zotero
-version    : 7.0.15
-release    : 25
+version    : 9.0.2
+release    : 27
 source     :
-    - https://download.zotero.org/client/release/7.0.15/Zotero-7.0.15_linux-x86_64.tar.bz2 : d16a8aca23562c025e07e274524fbf7cc1225f67f6075b1958ec896eeb4523bf
+    - https://download.zotero.org/client/release/9.0.2/Zotero-9.0.2_linux-x86_64.tar.xz : a5e69bf4ea45a92824e0e74a624c8c8227a38214e3b5c45dcab2b5d77cc280cf
 homepage   : https://www.zotero.org/
 license    : AGPL-3.0-or-later
 component  : office.scientific
@@ -13,19 +14,29 @@ builddeps  :
     - pkgconfig(alsa)
     - pkgconfig(dbus-1)
     - pkgconfig(glib-2.0)
-    - pkgconfig(gtk+-2.0)
     - pkgconfig(gtk+-3.0)
-    - pkgconfig(xt)
 install    : |
-    install -dDm00755 $installdir/usr/lib/zotero
-    mv $workdir/* $installdir/usr/lib/zotero
-    install -dDm00755 $installdir/usr/bin
-    ln -s /usr/lib/zotero/zotero $installdir/usr/bin/zotero
-    sed -i 's/zotero.ico/zotero/g' $installdir/usr/lib/zotero/zotero.desktop
-    sed -i 's/Exec=.*/Exec=zotero/g' $installdir/usr/lib/zotero/zotero.desktop
-    install -Dm00644 $installdir/usr/lib/zotero/zotero.desktop $installdir/usr/share/applications/zotero.desktop
-    install -Dm00644 $installdir/usr/lib/zotero/icons/icon128.png $installdir/usr/share/icons/hicolor/128x128/apps/zotero.png
-    install -Dm00644 $installdir/usr/lib/zotero/icons/icon32.png $installdir/usr/share/icons/hicolor/32x32/apps/zotero.png
-    install -Dm00644 $installdir/usr/lib/zotero/icons/icon64.png $installdir/usr/share/icons/hicolor/64x64/apps/zotero.png
-    install -Dm00644 $pkgfiles/org.zotero.Zotero.appdata.xml $installdir/usr/share/metainfo/org.zotero.Zotero.appdata.xml
-    rm $installdir/usr/lib/zotero/zotero.desktop
+    # Install upstream binary bundle under /usr/lib/zotero
+    install -dm00755 "${installdir}/usr/lib/zotero"
+    mv "${workdir}"/* "${installdir}/usr/lib/zotero"
+
+    # Launcher on PATH (real binary lives under /usr/lib/zotero)
+    install -dm00755 "${installdir}/usr/bin"
+    ln -s /usr/lib/zotero/zotero "${installdir}/usr/bin/zotero"
+
+    # Fix vendor .desktop: theme icon name and Exec= for packaged layout
+    sed -i 's/zotero.ico/zotero/g' "${installdir}/usr/lib/zotero/zotero.desktop"
+    sed -i 's/Exec=.*/Exec=zotero/g' "${installdir}/usr/lib/zotero/zotero.desktop"
+
+    # Freedesktop menu entry, hicolor icons, AppStream metainfo
+    install -Dm00644 "${installdir}/usr/lib/zotero/zotero.desktop" "${installdir}/usr/share/applications/zotero.desktop"
+    install -Dm00644 "${installdir}/usr/lib/zotero/icons/icon128.png" "${installdir}/usr/share/icons/hicolor/128x128/apps/zotero.png"
+    install -Dm00644 "${installdir}/usr/lib/zotero/icons/icon32.png" "${installdir}/usr/share/icons/hicolor/32x32/apps/zotero.png"
+    install -Dm00644 "${installdir}/usr/lib/zotero/icons/icon64.png" "${installdir}/usr/share/icons/hicolor/64x64/apps/zotero.png"
+    install -Dm00644 "${pkgfiles}/org.zotero.Zotero.appdata.xml" "${installdir}/usr/share/metainfo/org.zotero.Zotero.appdata.xml"
+
+    # Drop duplicate .desktop left inside the bundle (system copy lives in share/applications)
+    rm "${installdir}/usr/lib/zotero/zotero.desktop"
+
+    # COPYING is vendored from the upstream Git tag matching this version; not shipped in the tarball
+    %install_license ${pkgfiles}/COPYING

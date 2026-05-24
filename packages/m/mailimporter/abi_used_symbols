@@ -67,7 +67,7 @@ libKPim6AkonadiMime.so.6:_ZNK7Akonadi13MessageStatus11statusFlagsEv
 libKPim6AkonadiMime.so.6:_ZNK7Akonadi13MessageStatus17isOfUnknownStatusEv
 libKPim6Mime.so.6:_ZN5KMime7Content10setContentERK10QByteArray
 libKPim6Mime.so.6:_ZN5KMime7Content5parseEv
-libKPim6Mime.so.6:_ZN5KMime7Message9messageIDEb
+libKPim6Mime.so.6:_ZN5KMime7Message9messageIDENS_12CreatePolicyE
 libKPim6Mime.so.6:_ZN5KMime7MessageC1Ev
 libKPim6Mime.so.6:_ZNK5KMime7Content12headerByTypeE14QByteArrayView
 libKPim6PimCommon.so.6:_ZN9PimCommon15CustomLogWidget15addInfoLogEntryERK7QString
@@ -216,7 +216,6 @@ libQt6Core.so.6:_ZNK7QString7indexOfERK18QRegularExpressionxP23QRegularExpressio
 libQt6Core.so.6:_ZNK7QString7indexOfERKS_xN2Qt15CaseSensitivityE
 libQt6Core.so.6:_ZNK7QString8arg_implE14QAnyStringViewi5QChar
 libQt6Core.so.6:_ZNK7QString8endsWithE13QLatin1StringN2Qt15CaseSensitivityE
-libQt6Core.so.6:_ZNK8QVariant8metaTypeEv
 libQt6Core.so.6:_ZNK8QVariant8toStringEv
 libQt6Core.so.6:_ZNK9QFileInfo10isReadableEv
 libQt6Core.so.6:_ZNK9QFileInfo16completeBaseNameEv
@@ -357,6 +356,7 @@ libQt6Xml.so.6:_ZNK8QDomNode17firstChildElementERK7QStringS2_
 libQt6Xml.so.6:_ZNK8QDomNode18nextSiblingElementERK7QStringS2_
 libQt6Xml.so.6:_ZNK8QDomNode6isNullEv
 libc.so.6:__cxa_atexit
+libc.so.6:__libc_single_threaded
 libc.so.6:__stack_chk_fail
 libc.so.6:memchr
 libc.so.6:memcmp

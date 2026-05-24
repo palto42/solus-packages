@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : ansible
-version    : 2.19.3
-release    : 65
+version    : 2.20.4
+release    : 69
 source     :
-    - https://github.com/ansible/ansible/archive/refs/tags/v2.19.3.tar.gz : 1846b74da9cc7a359c8d302eefb78f6cb39557410380150b18cb33e07628be00
+    - https://github.com/ansible/ansible/archive/refs/tags/v2.20.4.tar.gz : 253c90c6cacf95b3ee04ca8401805170562e2b72294454ccb97468a205990781
 license    : GPL-3.0-or-later
 homepage   : https://www.ansible.com/
 component  : system.utils
@@ -28,3 +29,4 @@ build      : |
     %python3_setup
 install    : |
     %python3_install
+    %install_license COPYING

@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : solvespace
-version    : 3.1
-release    : 1
+version    : '3.2'
+release    : 2
 source     :
-    - git|https://github.com/solvespace/solvespace.git : v3.1
+    - git|https://github.com/solvespace/solvespace.git : v3.2
 homepage   : https://solvespace.com/index.pl
 license    : GPL-3.0-or-later
 component  : office
@@ -10,12 +11,20 @@ summary    : Parametric 2d/3d CAD
 description: |
     SOLVESPACE is a free (GPLv3) parametric 3d CAD tool.
 builddeps  :
+    - pkgconfig(Qt6Core)
+    - pkgconfig(cairo)
+    - pkgconfig(freetype2)
     - pkgconfig(glu)
-    - pkgconfig(gtkmm-3.0)
     - pkgconfig(json-c)
+    - pkgconfig(libpng)
 setup      : |
-    %cmake_ninja -DCMAKE_BUILD_TYPE=Release -DENABLE_OPENMP=ON
+    %cmake_ninja \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DENABLE_OPENMP=ON \
+        -DENABLE_LTO=ON \
+        -DUSE_QT_GUI=ON
 build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license COPYING.txt THIRD_PARTIES.txt

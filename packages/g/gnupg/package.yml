@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : gnupg
-version    : 2.4.7
-release    : 46
+version    : 2.5.20
+release    : 51
 source     :
-    - https://gnupg.org/ftp/gcrypt/gnupg/gnupg-2.4.7.tar.bz2 : 7b24706e4da7e0e3b06ca068231027401f238102c41c909631349dcc3b85eb46
+    - https://gnupg.org/ftp/gcrypt/gnupg/gnupg-2.5.20.tar.bz2 : 6461266e99c308419a379abe6c356d54c214136c4589bd65951091138989ffc6
 license    : GPL-3.0-or-later
 homepage   : https://www.gnupg.org
 summary    : Complete and free implementation of OpenPGP
@@ -30,6 +31,7 @@ build      : |
     %make
 install    : |
     %make_install DESTDIR=$installdir
+    %install_license COPYING*
     ln -s /usr/bin/gpg $installdir/usr/bin/gpg2
 check      : |
     # If tests last too long, you can remove --enable-all-tests

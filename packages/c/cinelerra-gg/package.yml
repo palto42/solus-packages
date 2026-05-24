@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : cinelerra-gg
-version    : 5.1.20250630
-release    : 43
+version    : 2026.05
+release    : 50
 source     :
-    - https://cinelerra-gg.org/download/src/cin_5.1.20250630-src.tgz : 197e267f0c6ed77551f1869ed6e7f56030bfbf963c12c91053b2cc39af58bb70
+    - git|https://git.cinelerra-gg.org/goodguy/cinelerra.git : 4979d3e1d305e8f65b7c3b9430e2ff2fc7e8924d # 2026-05
 homepage   : https://cinelerra-gg.org
 license    : GPL-2.0-or-later
 component  : multimedia.video
@@ -62,11 +63,14 @@ rundeps    :
     - dvdauthor
     - libva-intel-driver
     - udftools
+environment: |
+    pushd cinelerra-5.1
 setup      : |
     %autogen
 build      : |
     %make
 install    : |
+    %install_license COPYING
     unset LD_PRELOAD
     make -j1 install DESTDIR="$installdir" # it fails with DESTDIR="%installroot%"
     # Install appstream metainfo

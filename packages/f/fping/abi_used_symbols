@@ -3,14 +3,14 @@ libc.so.6:__errno_location
 libc.so.6:__fdelt_chk
 libc.so.6:__fprintf_chk
 libc.so.6:__isoc23_sscanf
-libc.so.6:__isoc23_strtol
+libc.so.6:__isoc23_strtoul
 libc.so.6:__libc_start_main
 libc.so.6:__memcpy_chk
 libc.so.6:__memset_chk
 libc.so.6:__printf_chk
 libc.so.6:__snprintf_chk
-libc.so.6:__sprintf_chk
 libc.so.6:__stack_chk_fail
+libc.so.6:__strncat_chk
 libc.so.6:__vfprintf_chk
 libc.so.6:bind
 libc.so.6:calloc
@@ -22,6 +22,7 @@ libc.so.6:fdopen
 libc.so.6:fgets
 libc.so.6:fopen
 libc.so.6:fputc
+libc.so.6:fputs
 libc.so.6:freeaddrinfo
 libc.so.6:fwrite
 libc.so.6:gai_strerror
@@ -63,5 +64,6 @@ libc.so.6:strdup
 libc.so.6:strerror
 libc.so.6:strftime
 libc.so.6:strlen
+libc.so.6:strrchr
 libc.so.6:strstr
 libc.so.6:strtod

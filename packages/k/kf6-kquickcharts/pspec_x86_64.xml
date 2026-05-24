@@ -4,9 +4,12 @@
         <Homepage>https://community.kde.org/Frameworks</Homepage>
         <Packager>
             <Name>Troy Harvey</Name>
-            <Email>harveydevel@gmail.com</Email>
+            <Email>harvey@getsol.us</Email>
         </Packager>
+        <License>BSD-2-Clause</License>
+        <License>CC0-1.0</License>
         <License>LGPL-2.1-only</License>
+        <License>LGPL-3.0-only</License>
         <License>MIT</License>
         <PartOf>desktop.library</PartOf>
         <Summary xml:lang="en">A QtQuick plugin providing high-performance charts</Summary>
@@ -22,9 +25,9 @@
         <PartOf>desktop.library</PartOf>
         <Files>
             <Path fileType="library">/usr/lib64/libQuickCharts.so.1</Path>
-            <Path fileType="library">/usr/lib64/libQuickCharts.so.6.19.0</Path>
+            <Path fileType="library">/usr/lib64/libQuickCharts.so.6.26.0</Path>
             <Path fileType="library">/usr/lib64/libQuickChartsControls.so.1</Path>
-            <Path fileType="library">/usr/lib64/libQuickChartsControls.so.6.19.0</Path>
+            <Path fileType="library">/usr/lib64/libQuickChartsControls.so.6.26.0</Path>
             <Path fileType="library">/usr/lib64/qt6/qml/org/kde/quickcharts/QuickCharts.qmltypes</Path>
             <Path fileType="library">/usr/lib64/qt6/qml/org/kde/quickcharts/controls/KirigamiTheme.qml</Path>
             <Path fileType="library">/usr/lib64/qt6/qml/org/kde/quickcharts/controls/Legend.qml</Path>
@@ -39,6 +42,12 @@
             <Path fileType="library">/usr/lib64/qt6/qml/org/kde/quickcharts/kde-qmlmodule.version</Path>
             <Path fileType="library">/usr/lib64/qt6/qml/org/kde/quickcharts/libQuickChartsplugin.so</Path>
             <Path fileType="library">/usr/lib64/qt6/qml/org/kde/quickcharts/qmldir</Path>
+            <Path fileType="data">/usr/share/licenses/kf6-kquickcharts/BSD-2-Clause.txt</Path>
+            <Path fileType="data">/usr/share/licenses/kf6-kquickcharts/CC0-1.0.txt</Path>
+            <Path fileType="data">/usr/share/licenses/kf6-kquickcharts/LGPL-2.1-only.txt</Path>
+            <Path fileType="data">/usr/share/licenses/kf6-kquickcharts/LGPL-3.0-only.txt</Path>
+            <Path fileType="data">/usr/share/licenses/kf6-kquickcharts/LicenseRef-KDE-Accepted-LGPL.txt</Path>
+            <Path fileType="data">/usr/share/licenses/kf6-kquickcharts/MIT.txt</Path>
             <Path fileType="data">/usr/share/qlogging-categories6/kquickcharts.categories</Path>
         </Files>
     </Package>
@@ -49,7 +58,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="25">kf6-kquickcharts</Dependency>
+            <Dependency release="35">kf6-kquickcharts</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib64/cmake/KF6QuickCharts/KF6QuickChartsConfig.cmake</Path>
@@ -61,12 +70,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="25">
-            <Date>2025-10-11</Date>
-            <Version>6.19.0</Version>
+        <Update release="35">
+            <Date>2026-05-12</Date>
+            <Version>6.26.0</Version>
             <Comment>Packaging update</Comment>
             <Name>Troy Harvey</Name>
-            <Email>harveydevel@gmail.com</Email>
+            <Email>harvey@getsol.us</Email>
         </Update>
     </History>
 </PISI>

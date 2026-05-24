@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : akonadiconsole
-version    : 25.08.2
-release    : 44
+version    : 26.04.1
+release    : 50
 source     :
-    - https://download.kde.org/stable/release-service/25.08.2/src/akonadiconsole-25.08.2.tar.xz : 3853f11ae4146521764a89733e7089c667e9ca7b43fdc913b264ca5937552291
+    - https://download.kde.org/stable/release-service/26.04.1/src/akonadiconsole-26.04.1.tar.xz : 7c6d0eece3a18f1defd9f9e577a8eb05784dfdc28542513db3cc8aee82961b00
 homepage   : https://invent.kde.org/pim/akonadiconsole
 license    :
     - GPL-2.0-or-later
@@ -43,3 +44,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*

@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : nodejs-20
-version    : 20.19.4
-release    : 6
+version    : 20.20.2
+release    : 11
 source     :
-    - https://github.com/nodejs/node/archive/refs/tags/v20.19.4.tar.gz : a87cf69f4df8deece34165ebf668e3279e12352c4f077a9cc87641f4c9d21a96
+    - https://github.com/nodejs/node/archive/refs/tags/v20.20.2.tar.gz : d95677dd27eb1cd94342c082b3c96ad67270ffa688193086441b1161277dd9f5
 homepage   : https://nodejs.org/en
 license    : MIT
 component  : programming
@@ -18,7 +19,6 @@ builddeps  :
     - pkgconfig(libnghttp3)
     - pkgconfig(libuv)
     - pkgconfig(openssl)
-    - mold
     - patchelf
 clang      : true
 environment: |
@@ -26,8 +26,6 @@ environment: |
     NODEJS_SONAME=115
     NODEJS_PRIVATE_SITELIB=/usr/lib64/node_modules_$NODEJS_MAJOR
 
-    # Shaves a few minutes off the build
-    export LDFLAGS="$LDFLAGS -fuse-ld=mold"
 setup      : |
     %patch -p1 -i $pkgfiles/0001-Disable-running-gyp-on-shared-deps.patch
 

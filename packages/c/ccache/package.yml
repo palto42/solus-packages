@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : ccache
-version    : 4.12.1
-release    : 31
+version    : 4.12.3
+release    : 32
 source     :
-    - https://github.com/ccache/ccache/releases/download/v4.12.1/ccache-4.12.1.tar.xz : 42e6c4b260cffd92dfa755e26390f45f5842e8c1a5f64f2b2e68adfbe82d1542
+    - https://github.com/ccache/ccache/releases/download/v4.12.3/ccache-4.12.3.tar.xz : c8e3ef79531966ecfa05bd1666c483b473df9af00896935cc468cb5ed573c16e
 homepage   : https://ccache.dev/
 license    : GPL-3.0-or-later
 component  : programming.tools

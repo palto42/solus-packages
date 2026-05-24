@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : mlt
-version    : 7.32.0
-release    : 49
+version    : 7.38.0
+release    : 54
 source     :
-    - https://github.com/mltframework/mlt/releases/download/v7.32.0/mlt-7.32.0.tar.gz : 1ca5aadfe27995c879b9253b3a48d1dcc3b1247ea0b5620b087d58f5521be028
+    - https://github.com/mltframework/mlt/releases/download/v7.38.0/mlt-7.38.0.tar.gz : b8f0a23c89e9250edc5038d745537c382367bf2ad3dad5d5c7cd13b0fe1c4144
 homepage   : https://www.mltframework.org/
 license    :
     - GPL-2.0-or-later
@@ -16,14 +17,14 @@ patterns   :
     - python :
         - /usr/lib/python3.*/site-packages/*
 builddeps  :
-    - pkgconfig(Qt5Svg)
-    - pkgconfig(Qt6Core5Compat)
+    - pkgconfig(Qt6Core)
     - pkgconfig(Qt6Svg)
     - pkgconfig(SDL2_image)
     - pkgconfig(alsa)
     - pkgconfig(fftw3)
     - pkgconfig(frei0r)
     - pkgconfig(gl)
+    - pkgconfig(jack)
     - pkgconfig(libarchive)
     - pkgconfig(libavformat)
     - pkgconfig(libexif)
@@ -31,9 +32,13 @@ builddeps  :
     - pkgconfig(movit)
     - pkgconfig(opencv4)
     - pkgconfig(python3)
+    - pkgconfig(rubberband)
     - pkgconfig(samplerate)
+    - pkgconfig(sox)
     - pkgconfig(vidstab)
+    - pkgconfig(vorbis)
     - pkgconfig(x11)
+    - ladspa-devel
     - swig
 rundeps    :
     - frei0r
@@ -49,3 +54,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license COPYING GPL GPLv3

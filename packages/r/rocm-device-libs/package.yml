@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : rocm-device-libs
-version    : 6.2.4
-release    : 7
+version    : 7.2.0
+release    : 9
 source     :
-    - https://github.com/ROCm/llvm-project/archive/refs/tags/rocm-6.2.4.tar.gz : 7af782bf5835fcd0928047dbf558f5000e7f0207ca39cf04570969343e789528
+    - https://github.com/ROCm/llvm-project/archive/refs/tags/rocm-7.2.0.tar.gz : e86138d2a63fbcbdf64668d55573b26ae944d0f0ae5a3f5bb59bf7bdb3124d3f
 homepage   : https://github.com/RadeonOpenCompute/ROCm-Device-Libs
 license    : NCSA
 component  : xorg.driver
@@ -14,10 +15,9 @@ builddeps  :
     - rocm-llvm
 environment: |
     export CMAKE_PREFIX_PATH=/usr/lib64/llvm-rocm
-    cd amd/device-libs
 setup      : |
-    %patch -p1 -i $pkgfiles/0001-Use-FHS-compliant-install.patch
-    %cmake_ninja
+    %apply_patches
+    %cmake_ninja -S amd/device-libs
 build      : |
     %ninja_build
 install    : |

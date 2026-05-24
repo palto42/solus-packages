@@ -1,13 +1,13 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kf6-kglobalaccel
-version    : 6.19.0
-release    : 27
+version    : 6.26.0
+release    : 37
 source     :
-    - https://download.kde.org/stable/frameworks/6.19/kglobalaccel-6.19.0.tar.xz : 1bbe7502658319767c048039e8dac2bd17bc120422d8e58ef6f22ba63840ae49
+    - https://download.kde.org/stable/frameworks/6.26/kglobalaccel-6.26.0.tar.xz : 3f19d22d143577e5ddcc883170fe19a56f8f65766e41c4f9c011c4dfbde17a61
 homepage   : https://community.kde.org/Frameworks
 license    :
-    - LGPL-2.0-only
+    - CC0-1.0
     - LGPL-2.0-or-later
-    - LGPL-2.1-only
 component  : desktop.library
 summary    : Global desktop keyboard shortcuts
 description: |
@@ -28,3 +28,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*

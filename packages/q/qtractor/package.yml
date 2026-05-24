@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : qtractor
-version    : 1.5.8
-release    : 43
+version    : 1.6.0
+release    : 49
 source     :
-    - https://sourceforge.net/projects/qtractor/files/qtractor/1.5.8/qtractor-1.5.8.tar.gz : 9c737e6c47ec8451c1a6640bb90c5f7c8ec170a8a06298f71f3b058c65a52ed4
+    - https://sourceforge.net/projects/qtractor/files/qtractor/1.6.0/qtractor-1.6.0.tar.gz : d22315756963456c32a7361343eb64fb2e900baf2e62021d05ff88ba31a5b794
 homepage   : https://qtractor.org/
 license    : GPL-2.0-or-later
 component  : multimedia.audio
@@ -14,7 +15,6 @@ builddeps  :
     - pkgconfig(Qt6Designer)
     - pkgconfig(Qt6Svg)
     - pkgconfig(alsa)
-    - pkgconfig(aubio)
     - pkgconfig(jack)
     - pkgconfig(liblo)
     - pkgconfig(lilv-0)
@@ -35,3 +35,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSE

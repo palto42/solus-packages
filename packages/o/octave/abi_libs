@@ -10,7 +10,9 @@ audioread.so
 convhulln.so
 fftw.so
 gzip.so
-liboctave.so.12
-liboctgui.so.13
-liboctinterp.so.13
+liboctave.so.13
+liboctgui.so.14
+liboctinterp.so.15
 liboctmex.so.1
+octave-gui
+octave-svgconvert

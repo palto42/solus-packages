@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : composer
-version    : 2.6.6
-release    : 7
+version    : 2.9.7
+release    : 10
 source     :
-    - git|https://github.com/composer/composer.git : 2.6.6
+    - git|https://github.com/composer/composer.git : 2.9.7
 homepage   : https://getcomposer.org/
 license    : MIT
 component  : programming.tools
@@ -21,4 +22,5 @@ setup      : |
 build      : |
     composer run-script compile
 install    : |
-    install -Dm00755 $workdir/composer.phar $installdir/usr/bin/composer
+    install -Dm00755 ${workdir}/composer.phar ${installdir}/usr/bin/composer
+    %install_license LICENSE

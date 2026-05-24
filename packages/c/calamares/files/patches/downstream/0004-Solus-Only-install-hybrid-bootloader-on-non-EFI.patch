@@ -1,0 +1,57 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Evan Maddock <maddock.evan@vivaldi.net>
+Date: Thu, 14 Mar 2024 13:08:44 -0400
+Subject: [PATCH 4/4] Solus: Only install hybrid bootloader on non-EFI
+
+Signed-off-by: Evan Maddock <maddock.evan@vivaldi.net>
+---
+ src/modules/bootloader/main.py                  | 4 ++--
+ src/modules/partition/core/PartitionActions.cpp | 6 +++++-
+ 2 files changed, 7 insertions(+), 3 deletions(-)
+
+diff --git a/src/modules/bootloader/main.py b/src/modules/bootloader/main.py
+index b76084c5c..00dc4da0e 100644
+--- a/src/modules/bootloader/main.py
++++ b/src/modules/bootloader/main.py
+@@ -684,7 +684,7 @@ def run_grub_install(fw_type, partitions, efi_directory, install_hybrid_grub):
+             boot_loader_install_path = boot_loader["installPath"]
+             if boot_loader_install_path is None:
+                 return
+-            
++
+         # boot_loader_install_path points to the physical disk to install GRUB
+         # to. It should start with "/dev/", and be at least as long as the
+         # string "/dev/sda".
+@@ -936,7 +936,7 @@ def prepare_bootloader(fw_type, install_hybrid_grub):
+     if efi_boot_loader == "clr-boot-manager":
+         if fw_type != "efi":
+             # Grub has to be installed first on non-EFI systems
+-            install_grub(efi_directory, fw_type)
++            install_grub(efi_directory, fw_type, install_hybrid_grub)
+         install_clr_boot_manager()
+     elif efi_boot_loader == "systemd-boot" and fw_type == "efi":
+         install_systemd_boot(efi_directory)
+diff --git a/src/modules/partition/core/PartitionActions.cpp b/src/modules/partition/core/PartitionActions.cpp
+index f572e94eb..10735c5f8 100644
+--- a/src/modules/partition/core/PartitionActions.cpp
++++ b/src/modules/partition/core/PartitionActions.cpp
+@@ -158,7 +158,7 @@ doAutopartition( PartitionCoreModule* core, Device* dev, Choices::AutoPartitionO
+         core->createPartition( dev, efiPartition, KPM_PARTITION_FLAG_ESP );
+         firstFreeSector = lastSector + 1;
+ 
+-        if ( createHybridBootloaderLayout )
++        if ( createHybridBootloaderLayout && !isEfi )
+         {
+             qint64 bios_part_sizeB = 8_MiB;
+             qint64 biosSectorCount = Calamares::bytesToSectors( bios_part_sizeB, dev->logicalSize() );
+@@ -173,6 +173,10 @@ doAutopartition( PartitionCoreModule* core, Device* dev, Choices::AutoPartitionO
+                                                                        firstFreeSector,
+                                                                        lastSector,
+                                                                        KPM_PARTITION_FLAG( None ) );
++            if ( gs->contains( "bootPartitionName" ) )
++            {
++                biosPartition->setLabel( gs->value( "bootPartitionName" ).toString() );
++            }
+             core->createPartition( dev, biosPartition, KPM_PARTITION_FLAG( BiosGrub ) );
+             firstFreeSector = lastSector + 1;
+         }

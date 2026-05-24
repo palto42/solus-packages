@@ -3,3 +3,7 @@ This file is used to indicate primary maintainership for this package. A package
 - Ian M. Jones
   - Matrix: @ianmjones:matrix.org
   - Email: ian@ianmjones.com
+
+- Jared Cervantes
+  - Matrix: @jaredy89:matrix.org
+  - Email: jared@jaredcervantes.com

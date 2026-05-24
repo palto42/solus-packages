@@ -1,7 +1,5 @@
 libc.so.6:__errno_location
 libc.so.6:__fprintf_chk
-libc.so.6:__getdelim
-libc.so.6:__isoc23_strtol
 libc.so.6:__libc_start_main
 libc.so.6:__printf_chk
 libc.so.6:__stack_chk_fail
@@ -12,7 +10,7 @@ libc.so.6:errx
 libc.so.6:exit
 libc.so.6:fclose
 libc.so.6:ferror
-libc.so.6:fopen
+libc.so.6:fopen64
 libc.so.6:fputc
 libc.so.6:free
 libc.so.6:fwrite
@@ -20,6 +18,7 @@ libc.so.6:getenv
 libc.so.6:getgrgid
 libc.so.6:getgroups
 libc.so.6:gethostname
+libc.so.6:getline
 libc.so.6:getopt
 libc.so.6:getpid
 libc.so.6:getpwnam
@@ -34,7 +33,7 @@ libc.so.6:readlink
 libc.so.6:rename
 libc.so.6:setlocale
 libc.so.6:sigaction
-libc.so.6:stat
+libc.so.6:stat64
 libc.so.6:stderr
 libc.so.6:stdout
 libc.so.6:strchr
@@ -44,6 +43,7 @@ libc.so.6:strlen
 libc.so.6:strncmp
 libc.so.6:strncpy
 libc.so.6:strrchr
+libc.so.6:strtol
 libc.so.6:textdomain
 libc.so.6:umask
 libc.so.6:unlink

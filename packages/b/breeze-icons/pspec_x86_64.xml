@@ -4,8 +4,11 @@
         <Homepage>https://community.kde.org/Frameworks</Homepage>
         <Packager>
             <Name>Troy Harvey</Name>
-            <Email>harveydevel@gmail.com</Email>
+            <Email>harvey@getsol.us</Email>
         </Packager>
+        <License>CC-BY-SA-4.0</License>
+        <License>LGPL-2.0-or-later</License>
+        <License>LGPL-2.1-or-later</License>
         <License>LGPL-3.0-or-later</License>
         <PartOf>desktop.theme</PartOf>
         <Summary xml:lang="en">Breeze icon theme</Summary>
@@ -21,7 +24,8 @@
         <PartOf>desktop.theme</PartOf>
         <Files>
             <Path fileType="library">/usr/lib64/libKF6BreezeIcons.so.6</Path>
-            <Path fileType="library">/usr/lib64/libKF6BreezeIcons.so.6.19.0</Path>
+            <Path fileType="library">/usr/lib64/libKF6BreezeIcons.so.6.26.0</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/actions/12/external-link-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/12/mobile-close-app.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/12/mobile-task-switcher.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/12/object-fill.svg</Path>
@@ -634,6 +638,8 @@
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/16/document-save.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/16/document-scan-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/16/document-scan.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/actions/16/document-send-rtl.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/actions/16/document-send-symbolic-rtl.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/16/document-send-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/16/document-send.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/16/document-share-symbolic.svg</Path>
@@ -934,6 +940,7 @@
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/16/expand.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/16/export-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/16/extension-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/actions/16/external-link-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/16/favorite-genres-amarok-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/16/favorite-genres-amarok.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/16/feed-subscribe-symbolic.svg</Path>
@@ -1698,6 +1705,7 @@
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/16/keyframe-remove-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/16/keyframe-remove.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/16/keyframe-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/actions/16/keyframe-warn.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/16/keyframe.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/16/kmousetool_off-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/16/kmousetool_off.svg</Path>
@@ -2001,6 +2009,9 @@
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/16/mark-location.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/16/markasblank-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/16/markasblank.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/actions/16/mask-alpha.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/actions/16/mask-invert.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/actions/16/mask-luma.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/16/math0-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/16/math0.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/16/math1-symbolic.svg</Path>
@@ -2307,6 +2318,8 @@
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/16/online.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/16/open-for-editing-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/16/open-for-editing.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/actions/16/open-link-rtl.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/actions/16/open-link-symbolic-rtl.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/16/open-link-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/16/open-link.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/16/open-menu-symbolic.svg</Path>
@@ -2326,6 +2339,8 @@
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/16/page-simple.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/16/page-zoom-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/16/page-zoom.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/actions/16/paint-gradient-conic-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/actions/16/paint-gradient-conic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/16/paint-gradient-linear-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/16/paint-gradient-linear.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/16/paint-gradient-radial-symbolic.svg</Path>
@@ -3465,6 +3480,8 @@
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/16/view-time-schedule-insert.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/16/view-time-schedule-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/16/view-time-schedule.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/actions/16/view-visible-off-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/actions/16/view-visible-off.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/16/view-visible-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/16/view-visible.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/16/view-web-browser-dom-tree-symbolic.svg</Path>
@@ -4262,6 +4279,8 @@
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/22/document-save.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/22/document-scan-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/22/document-scan.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/actions/22/document-send-rtl.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/actions/22/document-send-symbolic-rtl.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/22/document-send-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/22/document-send.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/22/document-share-symbolic.svg</Path>
@@ -4568,6 +4587,7 @@
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/22/expand-all.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/22/expand-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/22/expand.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/actions/22/external-link-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/22/favorite-favorited-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/22/favorite-favorited.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/22/favorite-genres-amarok-symbolic.svg</Path>
@@ -5405,6 +5425,7 @@
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/22/keyframe-remove-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/22/keyframe-remove.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/22/keyframe-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/actions/22/keyframe-warn.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/22/keyframe.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/22/kmousetool_off-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/22/kmousetool_off.svg</Path>
@@ -5812,6 +5833,9 @@
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/22/map-mercator.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/22/markasblank-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/22/markasblank.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/actions/22/mask-alpha.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/actions/22/mask-invert.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/actions/22/mask-luma.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/22/math0-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/22/math0.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/22/mathmode-symbolic.svg</Path>
@@ -6121,6 +6145,8 @@
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/22/online.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/22/open-for-editing-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/22/open-for-editing.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/actions/22/open-link-rtl.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/actions/22/open-link-symbolic-rtl.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/22/open-link-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/22/open-link.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/22/open-menu-symbolic.svg</Path>
@@ -6146,6 +6172,8 @@
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/22/page-simple.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/22/page-zoom-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/22/page-zoom.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/actions/22/paint-gradient-conic-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/actions/22/paint-gradient-conic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/22/paint-none-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/22/paint-none.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/22/panel-fit-height.svg</Path>
@@ -7358,6 +7386,8 @@
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/22/view-time-schedule.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/22/view-unsplit-effect-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/22/view-unsplit-effect.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/actions/22/view-visible-off-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/actions/22/view-visible-off.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/22/view-visible-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/22/view-visible.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/22/view-web-browser-dom-tree-symbolic.svg</Path>
@@ -8157,6 +8187,8 @@
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/24/document-save.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/24/document-scan-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/24/document-scan.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/actions/24/document-send-rtl.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/actions/24/document-send-symbolic-rtl.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/24/document-send-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/24/document-send.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/24/document-share-symbolic.svg</Path>
@@ -8463,6 +8495,7 @@
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/24/expand-all.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/24/expand-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/24/expand.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/actions/24/external-link-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/24/favorite-favorited-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/24/favorite-favorited.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/24/favorite-genres-amarok-symbolic.svg</Path>
@@ -9300,6 +9333,7 @@
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/24/keyframe-remove-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/24/keyframe-remove.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/24/keyframe-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/actions/24/keyframe-warn.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/24/keyframe.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/24/kmousetool_off-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/24/kmousetool_off.svg</Path>
@@ -9707,6 +9741,9 @@
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/24/map-mercator.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/24/markasblank-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/24/markasblank.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/actions/24/mask-alpha.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/actions/24/mask-invert.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/actions/24/mask-luma.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/24/math0-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/24/math0.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/24/mathmode-symbolic.svg</Path>
@@ -10016,6 +10053,8 @@
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/24/online.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/24/open-for-editing-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/24/open-for-editing.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/actions/24/open-link-rtl.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/actions/24/open-link-symbolic-rtl.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/24/open-link-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/24/open-link.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/24/open-menu-symbolic.svg</Path>
@@ -10041,6 +10080,8 @@
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/24/page-simple.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/24/page-zoom-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/24/page-zoom.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/actions/24/paint-gradient-conic-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/actions/24/paint-gradient-conic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/24/paint-none-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/24/paint-none.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/24/panel-fit-height.svg</Path>
@@ -11253,6 +11294,8 @@
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/24/view-time-schedule.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/24/view-unsplit-effect-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/24/view-unsplit-effect.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/actions/24/view-visible-off-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/actions/24/view-visible-off.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/24/view-visible-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/24/view-visible.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/24/view-web-browser-dom-tree-symbolic.svg</Path>
@@ -11665,6 +11708,8 @@
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/32/games-config-custom.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/32/games-config-options-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/32/games-config-options.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/actions/32/globe-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/actions/32/globe.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/32/gnumeric-format-halign-distributed-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/32/gnumeric-format-halign-distributed.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/actions/32/gnumeric-format-valign-bottom-symbolic.svg</Path>
@@ -12328,10 +12373,13 @@
             <Path fileType="data">/usr/share/icons/breeze-dark/applets/64/preferences-system-windows-effect-zoom.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/apps/16/accessories-text-editor.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/apps/16/elisa-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/apps/16/fifteenpuzzle-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/apps/16/hotspot-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/apps/16/kate-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/apps/16/kde-builder.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/apps/16/kdeconnect-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/apps/16/kdesrc-build.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/apps/16/krfb-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/apps/16/plasmavault-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/apps/16/preferences-system-bluetooth-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/apps/16/preferences-system.svg</Path>
@@ -12349,6 +12397,7 @@
             <Path fileType="data">/usr/share/icons/breeze-dark/apps/22/amarok-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/apps/22/cantata-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/apps/22/elisa-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/apps/22/fifteenpuzzle-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/apps/22/graphics-viewer-document-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/apps/22/homerun.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/apps/22/hotspot-symbolic.svg</Path>
@@ -12367,6 +12416,7 @@
             <Path fileType="data">/usr/share/icons/breeze-dark/apps/22/kopete-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/apps/22/korg-todo-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/apps/22/korgac-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/apps/22/krfb-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/apps/22/kruler-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/apps/22/kteatime-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/apps/22/ktorrent-symbolic.svg</Path>
@@ -12412,6 +12462,7 @@
             <Path fileType="data">/usr/share/icons/breeze-dark/apps/24/kopete-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/apps/24/korg-todo-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/apps/24/korgac-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/apps/24/krfb-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/apps/24/kruler-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/apps/24/kteatime-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/apps/24/ktorrent-symbolic.svg</Path>
@@ -12439,13 +12490,16 @@
             <Path fileType="data">/usr/share/icons/breeze-dark/apps/32/amarok-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/apps/32/cantata-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/apps/32/elisa-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/apps/32/fifteenpuzzle-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/apps/32/hotspot-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/apps/32/hwinfo.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/apps/32/kate-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/apps/32/kdeconnect-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/apps/32/klipper-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/apps/32/knotes-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/apps/32/krfb-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/apps/32/kup.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/apps/32/org.kde.kjournaldbrowser.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/apps/32/plasmavault-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/apps/32/plasmavault.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/apps/32/preferences-system.svg</Path>
@@ -12493,6 +12547,7 @@
             <Path fileType="data">/usr/share/icons/breeze-dark/apps/48/elisa-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/apps/48/elisa.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/apps/48/falkon.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/apps/48/fifteenpuzzle.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/apps/48/filelight.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/apps/48/fingerprint-gui.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/apps/48/firewall-config.svg</Path>
@@ -12533,6 +12588,7 @@
             <Path fileType="data">/usr/share/icons/breeze-dark/apps/48/kcalc.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/apps/48/kchart.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/apps/48/kcolorchooser.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/apps/48/kde-builder.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/apps/48/kde-frameworks.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/apps/48/kde-im-log-viewer.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/apps/48/kde.svg</Path>
@@ -12688,6 +12744,7 @@
             <Path fileType="data">/usr/share/icons/breeze-dark/apps/48/org.kde.kile.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/apps/48/org.kde.kiriki.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/apps/48/org.kde.kiten.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/apps/48/org.kde.kjournaldbrowser.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/apps/48/org.kde.kjumpingcube.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/apps/48/org.kde.kmplot.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/apps/48/org.kde.knights.svg</Path>
@@ -14049,6 +14106,7 @@
             <Path fileType="data">/usr/share/icons/breeze-dark/mimetypes/16/text-x-microdvd.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/mimetypes/16/text-x-mpsub.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/mimetypes/16/text-x-nfo.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/mimetypes/16/text-x-nim.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/mimetypes/16/text-x-objchdr.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/mimetypes/16/text-x-objcsrc.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/mimetypes/16/text-x-opml+xml.svg</Path>
@@ -14563,6 +14621,7 @@
             <Path fileType="data">/usr/share/icons/breeze-dark/mimetypes/22/text-x-microdvd.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/mimetypes/22/text-x-mpsub.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/mimetypes/22/text-x-nfo.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/mimetypes/22/text-x-nim.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/mimetypes/22/text-x-objchdr.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/mimetypes/22/text-x-objcsrc.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/mimetypes/22/text-x-opml+xml.svg</Path>
@@ -15075,6 +15134,7 @@
             <Path fileType="data">/usr/share/icons/breeze-dark/mimetypes/24/text-x-microdvd.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/mimetypes/24/text-x-mpsub.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/mimetypes/24/text-x-nfo.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/mimetypes/24/text-x-nim.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/mimetypes/24/text-x-objchdr.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/mimetypes/24/text-x-objcsrc.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/mimetypes/24/text-x-opml+xml.svg</Path>
@@ -15590,6 +15650,7 @@
             <Path fileType="data">/usr/share/icons/breeze-dark/mimetypes/32/text-x-microdvd.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/mimetypes/32/text-x-mpsub.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/mimetypes/32/text-x-nfo.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/mimetypes/32/text-x-nim.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/mimetypes/32/text-x-objchdr.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/mimetypes/32/text-x-objcsrc.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/mimetypes/32/text-x-opml+xml.svg</Path>
@@ -16102,6 +16163,7 @@
             <Path fileType="data">/usr/share/icons/breeze-dark/mimetypes/64/text-x-microdvd.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/mimetypes/64/text-x-mpsub.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/mimetypes/64/text-x-nfo.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/mimetypes/64/text-x-nim.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/mimetypes/64/text-x-objchdr.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/mimetypes/64/text-x-objcsrc.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/mimetypes/64/text-x-opml+xml.svg</Path>
@@ -17331,6 +17393,7 @@
             <Path fileType="data">/usr/share/icons/breeze-dark/preferences/22/preferences-system-network-proxy.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/preferences/22/preferences-system-network-share-windows.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/preferences/22/preferences-system-network-sharing.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/preferences/22/preferences-system-network-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/preferences/22/preferences-system-network-vpn.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/preferences/22/preferences-system-network-wakeonlan.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/preferences/22/preferences-system-power-management.svg</Path>
@@ -17433,6 +17496,7 @@
             <Path fileType="data">/usr/share/icons/breeze-dark/preferences/24/preferences-system-network-proxy.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/preferences/24/preferences-system-network-share-windows.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/preferences/24/preferences-system-network-sharing.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/preferences/24/preferences-system-network-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/preferences/24/preferences-system-network-vpn.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/preferences/24/preferences-system-network-wakeonlan.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/preferences/24/preferences-system-power-management.svg</Path>
@@ -17876,6 +17940,7 @@
             <Path fileType="data">/usr/share/icons/breeze-dark/status/16/crow-translate-tray.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/status/16/data-error.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/status/16/data-information.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/status/16/data-question.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/status/16/data-warning.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/status/16/device-notifier-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/status/16/dialog-error.svg</Path>
@@ -17943,6 +18008,7 @@
             <Path fileType="data">/usr/share/icons/breeze-dark/status/16/microphone-sensitivity-muted.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/status/16/network-offline-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/status/16/non-starred-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/status/16/non-starred.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/status/16/org.kde.CrowTranslate-tray-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/status/16/org.kde.CrowTranslate-tray.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/status/16/pidgin-tray-available-symbolic.svg</Path>
@@ -17980,9 +18046,12 @@
             <Path fileType="data">/usr/share/icons/breeze-dark/status/16/security-low.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/status/16/security-medium-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/status/16/security-medium.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/status/16/semi-starred-rtl.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/status/16/semi-starred-symbolic-rtl.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/status/16/semi-starred-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/status/16/semi-starred.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/status/16/starred-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/status/16/starred.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/status/16/state-download-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/status/16/state-download.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/status/16/state-error-symbolic.svg</Path>
@@ -18256,6 +18325,7 @@
             <Path fileType="data">/usr/share/icons/breeze-dark/status/22/com.github.ztefn.haguichi-disconnected.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/status/22/data-error.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/status/22/data-information.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/status/22/data-question.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/status/22/data-success.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/status/22/data-warning.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/status/22/device-notifier-symbolic.svg</Path>
@@ -18754,6 +18824,8 @@
             <Path fileType="data">/usr/share/icons/breeze-dark/status/22/nm-signal-50.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/status/22/nm-signal-75-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/status/22/nm-signal-75.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/status/22/non-starred-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/status/22/non-starred.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/status/22/org.telegram.desktop-attention-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/status/22/org.telegram.desktop-mute-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/status/22/org.telegram.desktop-symbolic.svg</Path>
@@ -18784,6 +18856,8 @@
             <Path fileType="data">/usr/share/icons/breeze-dark/status/22/snap.telegram.desktop.-mute-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/status/22/snap.telegram.desktop.-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/status/22/software-update-available.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/status/22/starred-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/status/22/starred.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/status/22/state-download-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/status/22/state-download.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/status/22/state-error-symbolic.svg</Path>
@@ -18838,6 +18912,8 @@
             <Path fileType="data">/usr/share/icons/breeze-dark/status/22/transmission-tray-icon.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/status/22/uninstall-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/status/22/uninstall.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/status/22/update-busy-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/status/22/update-busy.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/status/22/update-high-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/status/22/update-high.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/status/22/update-low-symbolic.svg</Path>
@@ -19079,6 +19155,7 @@
             <Path fileType="data">/usr/share/icons/breeze-dark/status/24/com.github.ztefn.haguichi-disconnected.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/status/24/data-error.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/status/24/data-information.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/status/24/data-question.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/status/24/data-success.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/status/24/data-warning.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/status/24/device-notifier-symbolic.svg</Path>
@@ -19577,6 +19654,8 @@
             <Path fileType="data">/usr/share/icons/breeze-dark/status/24/nm-signal-50.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/status/24/nm-signal-75-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/status/24/nm-signal-75.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/status/24/non-starred-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/status/24/non-starred.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/status/24/org.telegram.desktop-attention-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/status/24/org.telegram.desktop-mute-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/status/24/org.telegram.desktop-symbolic.svg</Path>
@@ -19606,6 +19685,8 @@
             <Path fileType="data">/usr/share/icons/breeze-dark/status/24/snap.telegram.desktop.-attention-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/status/24/snap.telegram.desktop.-mute-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/status/24/snap.telegram.desktop.-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/status/24/starred-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/status/24/starred.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/status/24/state-download-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/status/24/state-download.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/status/24/state-error-symbolic.svg</Path>
@@ -19660,6 +19741,8 @@
             <Path fileType="data">/usr/share/icons/breeze-dark/status/24/transmission-tray-icon.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/status/24/uninstall-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/status/24/uninstall.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/status/24/update-busy-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze-dark/status/24/update-busy.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/status/24/update-high-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/status/24/update-high.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/status/24/update-low-symbolic.svg</Path>
@@ -19875,6 +19958,7 @@
             <Path fileType="data">/usr/share/icons/breeze-dark/status/64/security-high.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/status/64/security-low.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze-dark/status/64/security-medium.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/actions/12/external-link-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/12/mobile-close-app.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/12/mobile-task-switcher.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/12/object-fill.svg</Path>
@@ -20487,6 +20571,8 @@
             <Path fileType="data">/usr/share/icons/breeze/actions/16/document-save.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/16/document-scan-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/16/document-scan.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/actions/16/document-send-rtl.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/actions/16/document-send-symbolic-rtl.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/16/document-send-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/16/document-send.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/16/document-share-symbolic.svg</Path>
@@ -20787,6 +20873,7 @@
             <Path fileType="data">/usr/share/icons/breeze/actions/16/expand.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/16/export-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/16/extension-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/actions/16/external-link-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/16/favorite-genres-amarok-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/16/favorite-genres-amarok.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/16/feed-subscribe-symbolic.svg</Path>
@@ -21551,6 +21638,7 @@
             <Path fileType="data">/usr/share/icons/breeze/actions/16/keyframe-remove-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/16/keyframe-remove.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/16/keyframe-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/actions/16/keyframe-warn.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/16/keyframe.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/16/kmousetool_off-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/16/kmousetool_off.svg</Path>
@@ -21854,6 +21942,9 @@
             <Path fileType="data">/usr/share/icons/breeze/actions/16/mark-location.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/16/markasblank-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/16/markasblank.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/actions/16/mask-alpha.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/actions/16/mask-invert.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/actions/16/mask-luma.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/16/math0-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/16/math0.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/16/math1-symbolic.svg</Path>
@@ -22160,6 +22251,8 @@
             <Path fileType="data">/usr/share/icons/breeze/actions/16/online.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/16/open-for-editing-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/16/open-for-editing.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/actions/16/open-link-rtl.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/actions/16/open-link-symbolic-rtl.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/16/open-link-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/16/open-link.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/16/open-menu-symbolic.svg</Path>
@@ -22179,6 +22272,8 @@
             <Path fileType="data">/usr/share/icons/breeze/actions/16/page-simple.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/16/page-zoom-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/16/page-zoom.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/actions/16/paint-gradient-conic-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/actions/16/paint-gradient-conic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/16/paint-gradient-linear-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/16/paint-gradient-linear.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/16/paint-gradient-radial-symbolic.svg</Path>
@@ -23318,6 +23413,8 @@
             <Path fileType="data">/usr/share/icons/breeze/actions/16/view-time-schedule-insert.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/16/view-time-schedule-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/16/view-time-schedule.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/actions/16/view-visible-off-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/actions/16/view-visible-off.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/16/view-visible-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/16/view-visible.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/16/view-web-browser-dom-tree-symbolic.svg</Path>
@@ -24115,6 +24212,8 @@
             <Path fileType="data">/usr/share/icons/breeze/actions/22/document-save.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/22/document-scan-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/22/document-scan.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/actions/22/document-send-rtl.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/actions/22/document-send-symbolic-rtl.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/22/document-send-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/22/document-send.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/22/document-share-symbolic.svg</Path>
@@ -24421,6 +24520,7 @@
             <Path fileType="data">/usr/share/icons/breeze/actions/22/expand-all.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/22/expand-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/22/expand.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/actions/22/external-link-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/22/favorite-favorited-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/22/favorite-favorited.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/22/favorite-genres-amarok-symbolic.svg</Path>
@@ -25258,6 +25358,7 @@
             <Path fileType="data">/usr/share/icons/breeze/actions/22/keyframe-remove-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/22/keyframe-remove.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/22/keyframe-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/actions/22/keyframe-warn.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/22/keyframe.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/22/kmousetool_off-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/22/kmousetool_off.svg</Path>
@@ -25665,6 +25766,9 @@
             <Path fileType="data">/usr/share/icons/breeze/actions/22/map-mercator.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/22/markasblank-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/22/markasblank.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/actions/22/mask-alpha.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/actions/22/mask-invert.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/actions/22/mask-luma.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/22/math0-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/22/math0.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/22/mathmode-symbolic.svg</Path>
@@ -25974,6 +26078,8 @@
             <Path fileType="data">/usr/share/icons/breeze/actions/22/online.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/22/open-for-editing-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/22/open-for-editing.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/actions/22/open-link-rtl.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/actions/22/open-link-symbolic-rtl.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/22/open-link-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/22/open-link.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/22/open-menu-symbolic.svg</Path>
@@ -25999,6 +26105,8 @@
             <Path fileType="data">/usr/share/icons/breeze/actions/22/page-simple.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/22/page-zoom-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/22/page-zoom.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/actions/22/paint-gradient-conic-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/actions/22/paint-gradient-conic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/22/paint-none-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/22/paint-none.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/22/panel-fit-height.svg</Path>
@@ -27211,6 +27319,8 @@
             <Path fileType="data">/usr/share/icons/breeze/actions/22/view-time-schedule.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/22/view-unsplit-effect-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/22/view-unsplit-effect.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/actions/22/view-visible-off-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/actions/22/view-visible-off.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/22/view-visible-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/22/view-visible.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/22/view-web-browser-dom-tree-symbolic.svg</Path>
@@ -28010,6 +28120,8 @@
             <Path fileType="data">/usr/share/icons/breeze/actions/24/document-save.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/24/document-scan-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/24/document-scan.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/actions/24/document-send-rtl.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/actions/24/document-send-symbolic-rtl.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/24/document-send-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/24/document-send.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/24/document-share-symbolic.svg</Path>
@@ -28316,6 +28428,7 @@
             <Path fileType="data">/usr/share/icons/breeze/actions/24/expand-all.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/24/expand-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/24/expand.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/actions/24/external-link-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/24/favorite-favorited-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/24/favorite-favorited.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/24/favorite-genres-amarok-symbolic.svg</Path>
@@ -29153,6 +29266,7 @@
             <Path fileType="data">/usr/share/icons/breeze/actions/24/keyframe-remove-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/24/keyframe-remove.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/24/keyframe-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/actions/24/keyframe-warn.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/24/keyframe.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/24/kmousetool_off-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/24/kmousetool_off.svg</Path>
@@ -29560,6 +29674,9 @@
             <Path fileType="data">/usr/share/icons/breeze/actions/24/map-mercator.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/24/markasblank-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/24/markasblank.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/actions/24/mask-alpha.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/actions/24/mask-invert.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/actions/24/mask-luma.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/24/math0-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/24/math0.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/24/mathmode-symbolic.svg</Path>
@@ -29869,6 +29986,8 @@
             <Path fileType="data">/usr/share/icons/breeze/actions/24/online.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/24/open-for-editing-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/24/open-for-editing.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/actions/24/open-link-rtl.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/actions/24/open-link-symbolic-rtl.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/24/open-link-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/24/open-link.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/24/open-menu-symbolic.svg</Path>
@@ -29894,6 +30013,8 @@
             <Path fileType="data">/usr/share/icons/breeze/actions/24/page-simple.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/24/page-zoom-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/24/page-zoom.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/actions/24/paint-gradient-conic-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/actions/24/paint-gradient-conic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/24/paint-none-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/24/paint-none.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/24/panel-fit-height.svg</Path>
@@ -31106,6 +31227,8 @@
             <Path fileType="data">/usr/share/icons/breeze/actions/24/view-time-schedule.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/24/view-unsplit-effect-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/24/view-unsplit-effect.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/actions/24/view-visible-off-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/actions/24/view-visible-off.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/24/view-visible-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/24/view-visible.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/24/view-web-browser-dom-tree-symbolic.svg</Path>
@@ -31518,6 +31641,8 @@
             <Path fileType="data">/usr/share/icons/breeze/actions/32/games-config-custom.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/32/games-config-options-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/32/games-config-options.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/actions/32/globe-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/actions/32/globe.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/32/gnumeric-format-halign-distributed-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/32/gnumeric-format-halign-distributed.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/actions/32/gnumeric-format-valign-bottom-symbolic.svg</Path>
@@ -32181,10 +32306,13 @@
             <Path fileType="data">/usr/share/icons/breeze/applets/64/preferences-system-windows-effect-zoom.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/apps/16/accessories-text-editor.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/apps/16/elisa-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/apps/16/fifteenpuzzle-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/apps/16/hotspot-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/apps/16/kate-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/apps/16/kde-builder.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/apps/16/kdeconnect-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/apps/16/kdesrc-build.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/apps/16/krfb-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/apps/16/plasmavault-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/apps/16/preferences-system-bluetooth-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/apps/16/preferences-system.svg</Path>
@@ -32202,6 +32330,7 @@
             <Path fileType="data">/usr/share/icons/breeze/apps/22/amarok-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/apps/22/cantata-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/apps/22/elisa-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/apps/22/fifteenpuzzle-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/apps/22/graphics-viewer-document-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/apps/22/homerun.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/apps/22/hotspot-symbolic.svg</Path>
@@ -32220,6 +32349,7 @@
             <Path fileType="data">/usr/share/icons/breeze/apps/22/kopete-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/apps/22/korg-todo-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/apps/22/korgac-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/apps/22/krfb-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/apps/22/kruler-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/apps/22/kteatime-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/apps/22/ktorrent-symbolic.svg</Path>
@@ -32265,6 +32395,7 @@
             <Path fileType="data">/usr/share/icons/breeze/apps/24/kopete-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/apps/24/korg-todo-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/apps/24/korgac-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/apps/24/krfb-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/apps/24/kruler-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/apps/24/kteatime-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/apps/24/ktorrent-symbolic.svg</Path>
@@ -32292,13 +32423,16 @@
             <Path fileType="data">/usr/share/icons/breeze/apps/32/amarok-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/apps/32/cantata-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/apps/32/elisa-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/apps/32/fifteenpuzzle-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/apps/32/hotspot-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/apps/32/hwinfo.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/apps/32/kate-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/apps/32/kdeconnect-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/apps/32/klipper-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/apps/32/knotes-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/apps/32/krfb-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/apps/32/kup.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/apps/32/org.kde.kjournaldbrowser.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/apps/32/plasmavault-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/apps/32/plasmavault.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/apps/32/preferences-system.svg</Path>
@@ -32346,6 +32480,7 @@
             <Path fileType="data">/usr/share/icons/breeze/apps/48/elisa-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/apps/48/elisa.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/apps/48/falkon.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/apps/48/fifteenpuzzle.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/apps/48/filelight.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/apps/48/fingerprint-gui.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/apps/48/firewall-config.svg</Path>
@@ -32386,6 +32521,7 @@
             <Path fileType="data">/usr/share/icons/breeze/apps/48/kcalc.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/apps/48/kchart.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/apps/48/kcolorchooser.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/apps/48/kde-builder.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/apps/48/kde-frameworks.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/apps/48/kde-im-log-viewer.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/apps/48/kde.svg</Path>
@@ -32541,6 +32677,7 @@
             <Path fileType="data">/usr/share/icons/breeze/apps/48/org.kde.kile.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/apps/48/org.kde.kiriki.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/apps/48/org.kde.kiten.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/apps/48/org.kde.kjournaldbrowser.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/apps/48/org.kde.kjumpingcube.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/apps/48/org.kde.kmplot.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/apps/48/org.kde.knights.svg</Path>
@@ -33902,6 +34039,7 @@
             <Path fileType="data">/usr/share/icons/breeze/mimetypes/16/text-x-microdvd.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/mimetypes/16/text-x-mpsub.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/mimetypes/16/text-x-nfo.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/mimetypes/16/text-x-nim.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/mimetypes/16/text-x-objchdr.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/mimetypes/16/text-x-objcsrc.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/mimetypes/16/text-x-opml+xml.svg</Path>
@@ -34416,6 +34554,7 @@
             <Path fileType="data">/usr/share/icons/breeze/mimetypes/22/text-x-microdvd.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/mimetypes/22/text-x-mpsub.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/mimetypes/22/text-x-nfo.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/mimetypes/22/text-x-nim.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/mimetypes/22/text-x-objchdr.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/mimetypes/22/text-x-objcsrc.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/mimetypes/22/text-x-opml+xml.svg</Path>
@@ -34928,6 +35067,7 @@
             <Path fileType="data">/usr/share/icons/breeze/mimetypes/24/text-x-microdvd.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/mimetypes/24/text-x-mpsub.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/mimetypes/24/text-x-nfo.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/mimetypes/24/text-x-nim.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/mimetypes/24/text-x-objchdr.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/mimetypes/24/text-x-objcsrc.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/mimetypes/24/text-x-opml+xml.svg</Path>
@@ -35443,6 +35583,7 @@
             <Path fileType="data">/usr/share/icons/breeze/mimetypes/32/text-x-microdvd.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/mimetypes/32/text-x-mpsub.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/mimetypes/32/text-x-nfo.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/mimetypes/32/text-x-nim.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/mimetypes/32/text-x-objchdr.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/mimetypes/32/text-x-objcsrc.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/mimetypes/32/text-x-opml+xml.svg</Path>
@@ -35955,6 +36096,7 @@
             <Path fileType="data">/usr/share/icons/breeze/mimetypes/64/text-x-microdvd.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/mimetypes/64/text-x-mpsub.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/mimetypes/64/text-x-nfo.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/mimetypes/64/text-x-nim.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/mimetypes/64/text-x-objchdr.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/mimetypes/64/text-x-objcsrc.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/mimetypes/64/text-x-opml+xml.svg</Path>
@@ -37184,6 +37326,7 @@
             <Path fileType="data">/usr/share/icons/breeze/preferences/22/preferences-system-network-proxy.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/preferences/22/preferences-system-network-share-windows.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/preferences/22/preferences-system-network-sharing.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/preferences/22/preferences-system-network-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/preferences/22/preferences-system-network-vpn.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/preferences/22/preferences-system-network-wakeonlan.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/preferences/22/preferences-system-power-management.svg</Path>
@@ -37286,6 +37429,7 @@
             <Path fileType="data">/usr/share/icons/breeze/preferences/24/preferences-system-network-proxy.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/preferences/24/preferences-system-network-share-windows.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/preferences/24/preferences-system-network-sharing.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/preferences/24/preferences-system-network-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/preferences/24/preferences-system-network-vpn.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/preferences/24/preferences-system-network-wakeonlan.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/preferences/24/preferences-system-power-management.svg</Path>
@@ -37729,6 +37873,7 @@
             <Path fileType="data">/usr/share/icons/breeze/status/16/crow-translate-tray.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/status/16/data-error.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/status/16/data-information.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/status/16/data-question.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/status/16/data-warning.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/status/16/device-notifier-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/status/16/dialog-error.svg</Path>
@@ -37796,6 +37941,7 @@
             <Path fileType="data">/usr/share/icons/breeze/status/16/microphone-sensitivity-muted.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/status/16/network-offline-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/status/16/non-starred-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/status/16/non-starred.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/status/16/org.kde.CrowTranslate-tray-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/status/16/org.kde.CrowTranslate-tray.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/status/16/pidgin-tray-available-symbolic.svg</Path>
@@ -37833,9 +37979,12 @@
             <Path fileType="data">/usr/share/icons/breeze/status/16/security-low.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/status/16/security-medium-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/status/16/security-medium.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/status/16/semi-starred-rtl.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/status/16/semi-starred-symbolic-rtl.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/status/16/semi-starred-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/status/16/semi-starred.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/status/16/starred-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/status/16/starred.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/status/16/state-download-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/status/16/state-download.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/status/16/state-error-symbolic.svg</Path>
@@ -38109,6 +38258,7 @@
             <Path fileType="data">/usr/share/icons/breeze/status/22/com.github.ztefn.haguichi-disconnected.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/status/22/data-error.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/status/22/data-information.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/status/22/data-question.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/status/22/data-success.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/status/22/data-warning.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/status/22/device-notifier-symbolic.svg</Path>
@@ -38607,6 +38757,8 @@
             <Path fileType="data">/usr/share/icons/breeze/status/22/nm-signal-50.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/status/22/nm-signal-75-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/status/22/nm-signal-75.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/status/22/non-starred-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/status/22/non-starred.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/status/22/org.telegram.desktop-attention-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/status/22/org.telegram.desktop-mute-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/status/22/org.telegram.desktop-symbolic.svg</Path>
@@ -38637,6 +38789,8 @@
             <Path fileType="data">/usr/share/icons/breeze/status/22/snap.telegram.desktop.-mute-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/status/22/snap.telegram.desktop.-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/status/22/software-update-available.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/status/22/starred-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/status/22/starred.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/status/22/state-download-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/status/22/state-download.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/status/22/state-error-symbolic.svg</Path>
@@ -38691,6 +38845,8 @@
             <Path fileType="data">/usr/share/icons/breeze/status/22/transmission-tray-icon.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/status/22/uninstall-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/status/22/uninstall.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/status/22/update-busy-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/status/22/update-busy.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/status/22/update-high-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/status/22/update-high.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/status/22/update-low-symbolic.svg</Path>
@@ -38932,6 +39088,7 @@
             <Path fileType="data">/usr/share/icons/breeze/status/24/com.github.ztefn.haguichi-disconnected.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/status/24/data-error.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/status/24/data-information.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/status/24/data-question.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/status/24/data-success.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/status/24/data-warning.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/status/24/device-notifier-symbolic.svg</Path>
@@ -39430,6 +39587,8 @@
             <Path fileType="data">/usr/share/icons/breeze/status/24/nm-signal-50.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/status/24/nm-signal-75-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/status/24/nm-signal-75.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/status/24/non-starred-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/status/24/non-starred.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/status/24/org.telegram.desktop-attention-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/status/24/org.telegram.desktop-mute-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/status/24/org.telegram.desktop-symbolic.svg</Path>
@@ -39459,6 +39618,8 @@
             <Path fileType="data">/usr/share/icons/breeze/status/24/snap.telegram.desktop.-attention-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/status/24/snap.telegram.desktop.-mute-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/status/24/snap.telegram.desktop.-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/status/24/starred-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/status/24/starred.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/status/24/state-download-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/status/24/state-download.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/status/24/state-error-symbolic.svg</Path>
@@ -39513,6 +39674,8 @@
             <Path fileType="data">/usr/share/icons/breeze/status/24/transmission-tray-icon.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/status/24/uninstall-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/status/24/uninstall.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/status/24/update-busy-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/breeze/status/24/update-busy.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/status/24/update-high-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/status/24/update-high.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/status/24/update-low-symbolic.svg</Path>
@@ -39728,6 +39891,8 @@
             <Path fileType="data">/usr/share/icons/breeze/status/64/security-high.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/status/64/security-low.svg</Path>
             <Path fileType="data">/usr/share/icons/breeze/status/64/security-medium.svg</Path>
+            <Path fileType="data">/usr/share/licenses/breeze-icons/COPYING-ICONS</Path>
+            <Path fileType="data">/usr/share/licenses/breeze-icons/COPYING.LIB</Path>
         </Files>
     </Package>
     <Package>
@@ -39737,7 +39902,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="101">breeze-icons</Dependency>
+            <Dependency release="111">breeze-icons</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/KF6/BreezeIcons/BreezeIcons</Path>
@@ -39752,12 +39917,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="101">
-            <Date>2025-10-11</Date>
-            <Version>6.19.0</Version>
+        <Update release="111">
+            <Date>2026-05-12</Date>
+            <Version>6.26.0</Version>
             <Comment>Packaging update</Comment>
             <Name>Troy Harvey</Name>
-            <Email>harveydevel@gmail.com</Email>
+            <Email>harvey@getsol.us</Email>
         </Update>
     </History>
 </PISI>

@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : serd
-version    : 0.32.4
-release    : 7
+version    : 0.32.8
+release    : 8
 source     :
-    - https://gitlab.com/drobilla/serd/-/archive/v0.32.4/serd-v0.32.4.tar.gz : a9b2faf6d0dece28c99cfda7138394c40f136e9e2c0e965c6b6f2df9ee18ba9a
+    - https://gitlab.com/drobilla/serd/-/archive/v0.32.8/serd-v0.32.8.tar.gz : c0133d878b4b1abf5cb4b2ec4501ebf688edcfefb12a602e3cc26d9e6577a01c
 homepage   : https://gitlab.com/drobilla/serd
 license    : ISC
 component  : programming.library
@@ -20,3 +21,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license COPYING

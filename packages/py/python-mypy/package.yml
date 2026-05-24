@@ -1,28 +1,40 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : python-mypy
-version    : 1.18.2
-release    : 31
+version    : 1.20.0
+release    : 33
 source     :
-    - https://github.com/python/mypy/archive/refs/tags/v1.18.2.tar.gz : 4f0b58727dc296b92cfa3c404d31d52597de8bab0530c697f01f0d4397d6120c
-homepage   : http://www.mypy-lang.org/
+    - https://github.com/python/mypy/archive/refs/tags/v1.20.0.tar.gz : 0f05a2704b61638c4433b21dbe19af50f959e7c584161b40073f56dbfa7ece4e
+homepage   : https://www.mypy-lang.org/
 license    : MIT
 component  : programming.python
 summary    : Optional static typing for Python 3 (PEP484)
 description: |
     Mypy is an optional static type checker for Python that aims to combine the benefits of dynamic (or "duck") typing and static typing. Mypy combines the expressive power and convenience of Python with a powerful type system and compile-time type checking. Mypy type checks standard Python programs; run them using any Python VM with basically no runtime overhead.
+clang      : true
+ccache     : false # see https://github.com/mypyc/mypyc/issues/1014
 builddeps  :
+    - pkgconfig(python3)
     - python-build
     - python-installer
+    - python-librt
     - python-mypy_extensions
     - python-pathspec
     - python-setuptools
+    - python-types-psutil
+    - python-types-setuptools
     - python-typing-extensions
     - python-wheel
 rundeps    :
+    - python-librt
     - python-mypy_extensions
     - python-pathspec
     - python-typing-extensions
+environment: |
+    export MYPY_USE_MYPYC=1
+    export MYPYC_MULTI_FILE=1
+    # from pyconfig.h, fixes compiliation error
+    export CFLAGS="$CFLAGS -D_POSIX_C_SOURCE=200809L"
 build      : |
-    sed -e '/types-setuptools/d;/types-psutil/d' -i pyproject.toml
     %python3_setup
 install    : |
     %python3_install

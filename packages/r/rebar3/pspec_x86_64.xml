@@ -3,8 +3,8 @@
         <Name>rebar3</Name>
         <Homepage>https://rebar3.org</Homepage>
         <Packager>
-            <Name>Ian M. Jones</Name>
-            <Email>ian@ianmjones.com</Email>
+            <Name>Jared Cervantes</Name>
+            <Email>jared@jaredcervantes.com</Email>
         </Packager>
         <License>Apache-2.0</License>
         <PartOf>programming.tools</PartOf>
@@ -23,17 +23,18 @@
             <Path fileType="executable">/usr/bin/rebar3</Path>
             <Path fileType="data">/usr/share/bash-completion/completions/rebar3</Path>
             <Path fileType="data">/usr/share/fish/vendor_completions.d/rebar3.fish</Path>
-            <Path fileType="man">/usr/share/man/man1/rebar3.1</Path>
+            <Path fileType="data">/usr/share/licenses/rebar3/LICENSE</Path>
+            <Path fileType="man">/usr/share/man/man1/rebar3.1.zst</Path>
             <Path fileType="data">/usr/share/zsh/site-functions/_rebar3</Path>
         </Files>
     </Package>
     <History>
-        <Update release="3">
-            <Date>2025-06-03</Date>
-            <Version>3.25.0</Version>
+        <Update release="4">
+            <Date>2026-03-28</Date>
+            <Version>3.27.0</Version>
             <Comment>Packaging update</Comment>
-            <Name>Ian M. Jones</Name>
-            <Email>ian@ianmjones.com</Email>
+            <Name>Jared Cervantes</Name>
+            <Email>jared@jaredcervantes.com</Email>
         </Update>
     </History>
 </PISI>

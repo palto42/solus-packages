@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : ghex
-version    : '46.2'
-release    : 13
+version    : '50.0'
+release    : 16
 source     :
-    - https://download.gnome.org/sources/ghex/46/ghex-46.2.tar.xz : a8f276a36397a70d20b862ff7c664243d9cf2891deb9be06d745a4f1ac661f31
+    - https://download.gnome.org/sources/ghex/50/ghex-50.0.tar.xz : 8325ca4b1fa75375cf8951e62f867fa6a842822c2dd5a46a9877360818b30212
 homepage   : https://gitlab.gnome.org/GNOME/ghex
 license    :
     - GPL-2.0-or-later

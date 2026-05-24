@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : stellarium
-version    : '25.3'
-release    : 38
+version    : '26.1'
+release    : 44
 source     :
-    - https://github.com/Stellarium/stellarium/releases/download/v25.3/stellarium-25.3.tar.xz : 1cdebfa04220656a956270425e06c6c522579c07d61c3440f6b11ac3f09f6db5
+    - https://github.com/Stellarium/stellarium/releases/download/v26.1/stellarium-26.1.tar.xz : 578bada2531e39146ccefcf6a0d202867e403b559f54239e8db9f9c003e04443
 homepage   : https://stellarium.org/
 license    : GPL-2.0-or-later
 component  : office.scientific
@@ -17,12 +18,15 @@ builddeps  :
     - pkgconfig(Qt6Multimedia)
     - pkgconfig(Qt6Positioning)
     - pkgconfig(Qt6SerialPort)
+    - pkgconfig(Qt6SvgWidgets)
     - pkgconfig(Qt6WebChannel)
     - pkgconfig(Qt6WebEngineCore)
     - qt6-base-private-devel
 rundeps    :
     - dejavu-fonts-ttf
 setup      : |
+    %patch -p1 -i $pkgfiles/qt-6.10.patch
+
     %cmake_ninja
 build      : |
     %ninja_build

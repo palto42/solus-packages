@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : burn-my-windows
-version    : '46'
-release    : 9
+version    : '48'
+release    : 11
 source     :
-    - https://github.com/Schneegans/Burn-My-Windows/archive/refs/tags/v46.tar.gz : 0f80bdc5732708bac41a3d2c39f44e6b4e541f578ab9489701fa4f20d0e9311d
+    - https://github.com/Schneegans/Burn-My-Windows/archive/refs/tags/v48.tar.gz : e25a91dcfd35a06a6f1acadce63ea5d92c975e9855e6d023b8f04d525d681e2d
 homepage   : https://github.com/Schneegans/Burn-My-Windows
 license    : GPL-3.0-or-later
 component  :

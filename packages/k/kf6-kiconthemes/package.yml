@@ -1,14 +1,18 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kf6-kiconthemes
-version    : 6.19.0
-release    : 27
+version    : 6.26.0
+release    : 37
 source     :
-    - https://download.kde.org/stable/frameworks/6.19/kiconthemes-6.19.0.tar.xz : b0b67371ba61874976a84fefe592e786fc7ffb9c54543914abc20a32241be2e9
+    - https://download.kde.org/stable/frameworks/6.26/kiconthemes-6.26.0.tar.xz : ed6c0c0bfed517dd5b6462d9b1c84ebe7bc99c7a75214921b5978f086df8653d
 homepage   : https://community.kde.org/Frameworks
 license    :
+    - CC0-1.0
     - GPL-2.0-only
+    - GPL-3.0-only
     - LGPL-2.0-only
     - LGPL-2.0-or-later
     - LGPL-2.1-only
+    - LGPL-3.0-only
 component  : desktop.library
 summary    : Icon GUI utilities.
 description: |
@@ -34,3 +38,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*

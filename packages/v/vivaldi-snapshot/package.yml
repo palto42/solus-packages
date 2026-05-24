@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : vivaldi-snapshot
-version    : 7.7.3832.3
-release    : 523
+version    : 8.0.4033.32
+release    : 583
 source     :
-    - https://downloads.vivaldi.com/snapshot/vivaldi-snapshot_7.7.3832.3-1_amd64.deb : e41032d4afbf7a4dadc25dea24c7e51f79518ad4c0a2c4d436800258ccd7d2e9
+    - https://downloads.vivaldi.com/snapshot/vivaldi-snapshot_8.0.4033.32-1_amd64.deb : 452df864a4060dd092a9322da14d9cb1e5f2969be6e7b0fe8ed4bc492204297c
 license    : Distributable
 homepage   : https://vivaldi.com
 component  : network.web.browser
@@ -52,8 +53,9 @@ install    : |
     # Ensure we symlink to expected directory as expected file.
     # See https://gist.github.com/ruario/55a6671b155fe1da35a8d8a5b2352008
     majMin=$(echo '%version%' | cut -c-3)
+    rm $installdir/usr/share/vivaldi-snapshot/libffmpeg.so
     ln -s /usr/share/vivaldi-snapshot/libffmpeg.so $installdir/usr/share/vivaldi-snapshot/libffmpeg.so.${majMin}
 
-    for icon_size in 16 22 24 32 48 64 128 256; do
+    for icon_size in 16 24 32 48 64 128 256; do
         install -D -m 00644 root/opt/vivaldi-snapshot/product_logo_${icon_size}.png $installdir/usr/share/icons/hicolor/${icon_size}x${icon_size}/apps/vivaldi-snapshot.png
     done

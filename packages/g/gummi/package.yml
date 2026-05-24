@@ -1,6 +1,7 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : gummi
 version    : 0.8.3
-release    : 4
+release    : 5
 source     :
     - https://github.com/alexandervdm/gummi/releases/download/0.8.3/gummi-0.8.3.tar.gz : c1769fea45c23bf892bdbf524c92ddf83eae21b1ddba358d4173155aadea898e
 homepage   : https://gummi.app/
@@ -11,15 +12,19 @@ description: |
     The simple LaTeX editor.
 builddeps  :
     - pkgconfig(gtksourceview-3.0)
-    - pkgconfig(poppler-glib)
     - pkgconfig(gtkspell3-3.0)
+    - pkgconfig(poppler-glib)
     - pkgconfig(synctex)
 rundeps    :
     - texlive
+environment:
+    export CFLAGS="$CFLAGS -std=gnu17"
 setup      : |
     %patch -p1 -i $pkgfiles/fix_synctex_version.patch
+    touch $workdir/*
     %configure
 build      : |
     %make
 install    : |
     %make_install
+    %install_license COPYING

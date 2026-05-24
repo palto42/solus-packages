@@ -1,12 +1,13 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kf6-kholidays
-version    : 6.19.0
-release    : 25
+version    : 6.26.0
+release    : 35
 source     :
-    - https://download.kde.org/stable/frameworks/6.19/kholidays-6.19.0.tar.xz : 7876116dc022fe722294305cd58dde53fd21bcd664188ad26aceed63e55ddc86
+    - https://download.kde.org/stable/frameworks/6.26/kholidays-6.26.0.tar.xz : fc4f46cb5bb8e4766f550fe1a8b401731d797fcf6afa7cb53679048c215a60be
 homepage   : https://community.kde.org/Frameworks
 license    :
     - BSD-2-Clause
-    - BSD-3-Clause
+    - CC0-1.0
     - GPL-3.0-or-later
     - LGPL-2.0-or-later
 component  : desktop.library
@@ -30,3 +31,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*

@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kicad
-version    : 9.0.5
-release    : 44
+version    : 10.0.3
+release    : 50
 source     :
-    - https://github.com/KiCad/kicad-source-mirror/archive/refs/tags/9.0.5.tar.gz : f03be225ffca6a04733188c582bee97de8222cac5c9edcb5ed6bf629360438e8
+    - https://github.com/KiCad/kicad-source-mirror/archive/refs/tags/10.0.3.tar.gz : 5107670d1bd15a8e8a4b587be27c7e316565d27cc0af2167b47542efe637b44f
 homepage   : https://www.kicad.org/
 license    : GPL-3.0-or-later
 component  : office.scientific
@@ -21,8 +22,10 @@ builddeps  :
     - pkgconfig(libgit2)
     - pkgconfig(libsecret-1)
     - pkgconfig(odbc)
+    - pkgconfig(poppler)
     - pkgconfig(protobuf)
     - pkgconfig(python3)
+    - pkgconfig(spnav)
     - pkgconfig(x11)
     - libboost-devel
     - ngspice-devel
@@ -49,4 +52,5 @@ build      : |
     %make -C build
 install    : |
     %make_install -C build
+    %install_license LICENSE*
     rm -rf $installdir/usr/share/mimelnk

@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : meson
-version    : 1.8.3
-release    : 69
+version    : 1.11.0
+release    : 70
 source     :
-    - https://github.com/mesonbuild/meson/releases/download/1.8.3/meson-1.8.3.tar.gz : f118aa910fc0a137cc2dd0122232dbf82153d9a12fb5b0f5bb64896f6a157abf
+    - https://github.com/mesonbuild/meson/releases/download/1.11.0/meson-1.11.0.tar.gz : dffdd0915ceb028541fe3bed77d63ba35e78514591c043736b450d62634eeb31
 homepage   : https://mesonbuild.com/
 license    : Apache-2.0
 component  : system.devel

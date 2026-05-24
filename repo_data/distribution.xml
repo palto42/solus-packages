@@ -237,9 +237,7 @@
 		<Package>libykneomgr</Package>
 		<Package>libykneomgr-dbginfo</Package>
 		<Package>libykneomgr-devel</Package>
-		<Package>qscintilla-qt5</Package>
 		<Package>qscintilla-qt5-devel</Package>
-		<Package>python-qscintilla-qt5</Package>
 		<Package>qjson</Package>
 		<Package>qjson-devel</Package>
 		<Package>corebird</Package>
@@ -2414,8 +2412,6 @@
 		<Package>beekeeper-studio-dbginfo</Package>
 		<Package>kitematic</Package>
 		<Package>kitematic-dbginfo</Package>
-		<Package>mailspring</Package>
-		<Package>mailspring-dbginfo</Package>
 		<Package>mongosh</Package>
 		<Package>mongosh-dbginfo</Package>
 		<Package>sxiv</Package>
@@ -2840,6 +2836,9 @@
 		<Package>onboard-dbginfo</Package>
 		<Package>steam-udev-rules</Package>
 		<Package>rocm-hip-devel</Package>
+		<Package>hsakmt</Package>
+		<Package>hsakmt-dbginfo</Package>
+		<Package>hsakmt-devel</Package>
 		<Package>libxfce4windowing-docs</Package>
 		<Package>gfbgraph</Package>
 		<Package>gfbgraph-dbginfo</Package>
@@ -2890,6 +2889,9 @@
 		<Package>python-exceptiongroup</Package>
 		<Package>python-importlib-metadata</Package>
 		<Package>python-pyppeteer</Package>
+		<Package>libtimezonemap</Package>
+		<Package>libtimezonemap-dbginfo</Package>
+		<Package>libtimezonemap-devel</Package>
 		<Package>python-pyliblo</Package>
 		<Package>python-pyliblo-dbginfo</Package>
 		<Package>nuget</Package>
@@ -2923,11 +2925,282 @@
 		<Package>bzr-dbginfo</Package>
 		<Package>transgui</Package>
 		<Package>transgui-dbginfo</Package>
+		<Package>gamehub</Package>
+		<Package>gamehub-dbginfo</Package>
+		<Package>appstream-glib</Package>
+		<Package>appstream-glib-dbginfo</Package>
+		<Package>appstream-glib-devel</Package>
 		<Package>openssl-11</Package>
 		<Package>openssl-11-32bit</Package>
 		<Package>openssl-11-32bit-dbginfo</Package>
 		<Package>openssl-11-32bit-devel</Package>
 		<Package>openssl-11-dbginfo</Package>
 		<Package>openssl-11-devel</Package>
+		<Package>python-d2to1</Package>
+		<Package>dotnet-cli</Package>
+		<Package>python-setuptools-scm-git-archive</Package>
+		<Package>python</Package>
+		<Package>python-devel</Package>
+		<Package>python-dbginfo</Package>
+		<Package>python-tkinter</Package>
+		<Package>python-test</Package>
+		<Package>python-dbus</Package>
+		<Package>python-dbus-dbginfo</Package>
+		<Package>python-dbus-devel</Package>
+		<Package>python2-ordered-set</Package>
+		<Package>python2-cffi-dbginfo</Package>
+		<Package>python2-cffi</Package>
+		<Package>python2-gobject-dbginfo</Package>
+		<Package>python2-gobject-devel</Package>
+		<Package>python2-gobject</Package>
+		<Package>doflicky</Package>
+		<Package>python2-xattr</Package>
+		<Package>python2-xattr-dbginfo</Package>
+		<Package>python-pyliblzma</Package>
+		<Package>python-pyliblzma-dbginfo</Package>
+		<Package>comar</Package>
+		<Package>comar-api</Package>
+		<Package>comar-dbginfo</Package>
+		<Package>piksemel</Package>
+		<Package>piksemel-dbginfo</Package>
+		<Package>pisi</Package>
+		<Package>solus-sc-icons</Package>
+		<Package>solus-sc</Package>
+		<Package>pip2</Package>
+		<Package>python2-cairo</Package>
+		<Package>python2-cairo-dbginfo</Package>
+		<Package>python2-cairo-devel</Package>
+		<Package>python2-cparser</Package>
+		<Package>python2-setuptools</Package>
+		<Package>sddm-wayland-experimental</Package>
+		<Package>gedit-plugin-bracketcompletion</Package>
+		<Package>gedit-plugin-charmap</Package>
+		<Package>gedit-plugin-codecomment</Package>
+		<Package>gedit-plugin-colorpicker</Package>
+		<Package>gedit-plugin-joinlines</Package>
+		<Package>gedit-plugin-multiedit</Package>
+		<Package>gedit-plugin-sessionsaver</Package>
+		<Package>gedit-plugin-terminal</Package>
+		<Package>python-appdirs</Package>
+		<Package>haskell-async</Package>
+		<Package>haskell-base16-bytestring</Package>
+		<Package>haskell-base64-bytestring</Package>
+		<Package>haskell-cabal-install-solver</Package>
+		<Package>haskell-cabal-syntax</Package>
+		<Package>haskell-cryptohash-sha256</Package>
+		<Package>haskell-echo</Package>
+		<Package>haskell-ed25519</Package>
+		<Package>haskell-edit-distance</Package>
+		<Package>haskell-hackage-security</Package>
+		<Package>haskell-hashable</Package>
+		<Package>haskell-http</Package>
+		<Package>haskell-lukko</Package>
+		<Package>haskell-network</Package>
+		<Package>haskell-network-uri</Package>
+		<Package>haskell-regex-base</Package>
+		<Package>haskell-regex-posix</Package>
+		<Package>haskell-resolv</Package>
+		<Package>haskell-safe-exceptions</Package>
+		<Package>haskell-tar</Package>
+		<Package>haskell-th-compat</Package>
+		<Package>haskell-zlib</Package>
+		<Package>hyprland-qutils</Package>
+		<Package>hyprland-qutils-dbginfo</Package>
+		<Package>bridge-utils</Package>
+		<Package>bridge-utils-dbginfo</Package>
+		<Package>xwaylandvideobridge</Package>
+		<Package>xwaylandvideobridge-dbginfo</Package>
+		<Package>appstream-generator-devel</Package>
+		<Package>lsfg-vk-devel</Package>
+		<Package>libwebkit-gtk</Package>
+		<Package>libwebkit-gtk-devel</Package>
+		<Package>libwebkit-gtk-dbginfo</Package>
+		<Package>rawstudio</Package>
+		<Package>rawstudio-dbginfo</Package>
+		<Package>rawstudio-devel</Package>
+		<Package>uget</Package>
+		<Package>uget-dbginfo</Package>
+		<Package>pywal</Package>
+		<Package>network-manager-32bit</Package>
+		<Package>network-manager-32bit-devel</Package>
+		<Package>network-manager-32bit-dbginfo</Package>
+		<Package>python-proton-vpn-network-manager</Package>
+		<Package>enca-docs</Package>
+		<Package>yubikey-personalization-gui</Package>
+		<Package>yubikey-personalization-gui-dbginfo</Package>
+		<Package>mkchromecast</Package>
+		<Package>unity-gtk-module</Package>
+		<Package>unity-gtk-module-dbginfo</Package>
+		<Package>unity-gtk-module-devel</Package>
+		<Package>emscripten</Package>
+		<Package>arduino</Package>
+		<Package>arduino-dbginfo</Package>
+		<Package>ipcalc</Package>
+		<Package>opencl-clang</Package>
+		<Package>opencl-clang-dbginfo</Package>
+		<Package>opencl-clang-devel</Package>
+		<Package>alan</Package>
+		<Package>alan-dbginfo</Package>
+		<Package>cantata</Package>
+		<Package>cantata-dbginfo</Package>
+		<Package>wraith-master</Package>
+		<Package>wraith-master-dbginfo</Package>
+		<Package>kotlin</Package>
+		<Package>kotlin-dbginfo</Package>
+		<Package>kotlin-native</Package>
+		<Package>kotlin-native-dbginfo</Package>
+		<Package>cosmic-app-library</Package>
+		<Package>cosmic-app-library-dbginfo</Package>
+		<Package>cosmic-applets </Package>
+		<Package>cosmic-applets-dbginfo</Package>
+		<Package>cosmic-comp</Package>
+		<Package>cosmic-comp-dbginfo</Package>
+		<Package>cosmic-icons</Package>
+		<Package>cosmic-panel</Package>
+		<Package>cosmic-panel-dbginfo</Package>
+        <Package>wine-32bit</Package>
+        <Package>wine-32bit-devel</Package>
+        <Package>playonlinux</Package>
+        <Package>avidemux</Package>
+        <Package>avidemux-dbginfo</Package>
+        <Package>avidemux-devel</Package>
+        <Package>bazel</Package>
+        <Package>python-django</Package>
+        <Package>scx-scheds-devel</Package>
+		<Package>dotnet-8</Package>
+		<Package>dotnet-8-sdk</Package>
+		<Package>dotnet-8-source-built-artifacts</Package>
+		<Package>rstudio</Package>
+		<Package>rstudio-dbginfo</Package>
+		<Package>python-cryptography-vectors</Package>
+		<Package>ninvaders</Package>
+		<Package>ninvaders-dbginfo</Package>
+		<Package>opentoonz</Package>
+		<Package>opentoonz-dbginfo</Package>
+		<Package>vinagre</Package>
+		<Package>vinagre-dbginfo</Package>
+		<Package>lime3ds</Package>
+		<Package>lime3ds-dbginfo</Package>
+		<Package>cura</Package>
+		<Package>curaengine</Package>
+		<Package>curaengine-dbginfo</Package>
+		<Package>fdm-materials</Package>
+		<Package>libarcus-dbginfo</Package>
+		<Package>libarcus-devel</Package>
+		<Package>libarcus</Package>
+		<Package>libsavitar-dbginfo</Package>
+		<Package>libsavitar-devel</Package>
+		<Package>libsavitar</Package>
+		<Package>python-arcus</Package>
+		<Package>python-savitar</Package>
+		<Package>python-shapely</Package>
+		<Package>python-uranium</Package>
+		<Package>gir-to-d</Package>
+		<Package>gir-to-d-dbginfo</Package>
+		<Package>glibd</Package>
+		<Package>glibd-dbginfo</Package>
+		<Package>glibd-devel</Package>
+		<Package>fcitx-mozc</Package>
+		<Package>bsdiff-devel</Package>
+		<Package>vocal</Package>
+		<Package>vocal-dbginfo</Package>
+		<Package>gnome-session-shell-x11</Package>
+		<Package>libgnome-games-support-1</Package>
+		<Package>libgnome-games-support-1-dbginfo</Package>
+		<Package>libgnome-games-support-1-devel</Package>
+		<Package>gstreamer-0.10</Package>
+		<Package>gstreamer-0.10-32bit</Package>
+		<Package>gstreamer-0.10-32bit-dbginfo</Package>
+		<Package>gstreamer-0.10-32bit-devel</Package>
+		<Package>gstreamer-0.10-devel</Package>
+		<Package>gstreamer-0.10-docs</Package>
+		<Package>gst-plugins-base</Package>
+		<Package>gst-plugins-base-32bit</Package>
+		<Package>gst-plugins-base-32bit-dbginfo</Package>
+		<Package>gst-plugins-base-32bit-devel</Package>
+		<Package>gst-plugins-base-devel</Package>
+		<Package>gst-plugins-base-docs</Package>
+		<Package>gstreamer-1.0</Package>
+		<Package>gstreamer-1.0-32bit</Package>
+		<Package>gstreamer-1.0-32bit-dbginfo</Package>
+		<Package>gstreamer-1.0-32bit-devel</Package>
+		<Package>gstreamer-1.0-dbginfo</Package>
+		<Package>gstreamer-1.0-devel</Package>
+		<Package>gstreamer-1.0-plugin-libav</Package>
+		<Package>gstreamer-1.0-plugin-opencv</Package>
+		<Package>gstreamer-1.0-plugin-opencv-devel</Package>
+		<Package>gstreamer-1.0-plugins-bad</Package>
+		<Package>gstreamer-1.0-plugins-bad-dbginfo</Package>
+		<Package>gstreamer-1.0-plugins-bad-devel</Package>
+		<Package>gstreamer-1.0-plugins-bad-extras</Package>
+		<Package>gstreamer-1.0-plugins-bad-libs</Package>
+		<Package>gstreamer-1.0-plugins-base</Package>
+		<Package>gstreamer-1.0-plugins-base-32bit</Package>
+		<Package>gstreamer-1.0-plugins-base-32bit-dbginfo</Package>
+		<Package>gstreamer-1.0-plugins-base-32bit-devel</Package>
+		<Package>gstreamer-1.0-plugins-base-dbginfo</Package>
+		<Package>gstreamer-1.0-plugins-base-devel</Package>
+		<Package>gstreamer-1.0-plugins-good</Package>
+		<Package>gstreamer-1.0-plugins-good-dbginfo</Package>
+		<Package>gstreamer-1.0-plugins-rs</Package>
+		<Package>gstreamer-1.0-plugins-rs-dbginfo</Package>
+		<Package>gstreamer-1.0-plugins-rs-devel</Package>
+		<Package>gstreamer-1.0-plugins-ugly</Package>
+		<Package>gstreamer-1.0-plugins-ugly-dbginfo</Package>
+		<Package>gstreamer-1.0-plugins-ugly-devel</Package>
+		<Package>gstreamer-vaapi</Package>
+		<Package>network-manager-devel</Package>
+		<Package>libxfce4util-docs</Package>
+		<Package>xfce4-panel-docs</Package>
+		<Package>webrtc-audio-processing</Package>
+		<Package>webrtc-audio-processing-32bit</Package>
+		<Package>webrtc-audio-processing-32bit-dbginfo</Package>
+		<Package>webrtc-audio-processing-32bit-devel</Package>
+		<Package>webrtc-audio-processing-dbginfo</Package>
+		<Package>webrtc-audio-processing-devel</Package>
+		<Package>webrtc-audio-processing03</Package>
+		<Package>webrtc-audio-processing03-dbginfo</Package>
+		<Package>webrtc-audio-processing03-devel</Package>
+		<Package>tetrs</Package>
+		<Package>tetrs-dbginfo</Package>
+		<Package>pulseaudio-equalizer</Package>
+		<Package>pulseaudio-module-jack</Package>
+		<Package>pulseaudio-module-jack-32bit</Package>
+		<Package>cadence</Package>
+		<Package>cadence-dbginfo</Package>
+		<Package>botan2</Package>
+		<Package>botan2-devel</Package>
+		<Package>botan2-dbginfo</Package>
+		<Package>python3-bsddb3</Package>
+		<Package>python3-bsddb3-dbginfo</Package>
+		<Package>python3-bsddb3-devel</Package>
+		<Package>packagekit-qt-qt5</Package>
+		<Package>packagekit-qt-qt5-devel</Package>
+		<Package>packagekit-qt-qt6</Package>
+		<Package>packagekit-qt-qt6-devel</Package>
+		<Package>nvidia-470-glx-driver-current</Package>
+		<Package>nvidia-developer-driver</Package>
+		<Package>nvidia-developer-driver-32bit</Package>
+		<Package>nvidia-developer-driver-common</Package>
+		<Package>nvidia-developer-driver-current</Package>
+		<Package>nvidia-developer-driver-modaliases</Package>
+		<Package>pandoc-crossref-devel</Package>
+		<Package>ptlib-devel</Package>
+		<Package>shellcheck-devel</Package>
+		<Package>webvfx-devel</Package>
+		<Package>xmonad-contrib-devel</Package>
+		<Package>pandoc-citeproc-devel</Package>
+		<Package>openjfx</Package>
+		<Package>libquvi-scripts-devel</Package>
+		<Package>libquvi-devel</Package>
+		<Package>liboobs-devel</Package>
+		<Package>haskell-http-devel</Package>
+		<Package>cosmic-applets</Package>
+		<Package>mypaint-brushes1</Package>
+		<Package>gpgme-qt</Package>
+		<Package>gpgme-qt-devel</Package>
+		<Package>VTK-qt6</Package>
+		<Package>python-qscintilla</Package>
+		<Package>qscintilla</Package>
 	</Obsoletes>
 </PISI>

@@ -1,12 +1,13 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : libjxl
-version    : 0.11.1
-release    : 7
+version    : 0.11.2
+release    : 9
 source     :
-    - https://github.com/libjxl/libjxl/archive/refs/tags/v0.11.1.tar.gz : 1492dfef8dd6c3036446ac3b340005d92ab92f7d48ee3271b5dac1d36945d3d9
-    - git|https://skia.googlesource.com/skcms.git : 42030a771244ba67f86b1c1c76a6493f873c5f91
-    - https://github.com/webmproject/sjpeg/archive/e5ab13008bb214deb66d5f3e17ca2f8dbff150bf.tar.gz#sjpeg.tar.gz : 35c5ad32fd422d279f394dced490208674284ae2f58221c1dfb981dbbdf695b5
+    - https://github.com/libjxl/libjxl/archive/refs/tags/v0.11.2.tar.gz : ab38928f7f6248e2a98cc184956021acb927b16a0dee71b4d260dc040a4320ea
+    - git|https://skia.googlesource.com/skcms.git : b2e692629c1fb19342517d7fb61f1cf83d075492
+    - https://github.com/webmproject/sjpeg/archive/94e0df6d0f8b44228de5be0ff35efb9f946a13c9.tar.gz#sjpeg.tar.gz : ac94917fe745a674eabf1e044f23ec55cd5a548c9869c06ec4b19da14ee0227d
     # Test data. Keep this in sync with the commit expected by the version tag
-    - git|https://github.com/libjxl/testdata.git : ff8d743aaba05b3014f17e5475e576242fa979fc
+    - git|https://github.com/libjxl/testdata.git : 873045a9c42ed60721756e26e2a6b32e17415205
 homepage   : https://jpeg.org/jpegxl
 license    : BSD-3-Clause
 component  : multimedia.codecs
@@ -17,7 +18,6 @@ description: |
     JPEG XL offers significantly better image quality and compression ratios than legacy JPEG
 builddeps  :
     - pkgconfig(OpenEXR)
-    - pkgconfig(gdk-pixbuf-2.0)
     - pkgconfig(glut)
     - pkgconfig(lcms2)
     - pkgconfig(libbrotlicommon)

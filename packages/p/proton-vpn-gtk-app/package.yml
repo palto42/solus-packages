@@ -1,11 +1,12 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : proton-vpn-gtk-app
-version    : 4.11.0
-release    : 22
+version    : 4.15.1
+release    : 35
 source     :
-    - https://github.com/ProtonVPN/proton-vpn-gtk-app/archive/refs/tags/v4.11.0.tar.gz : 4effcf9d1025b522dbcbd323c3c81299f2a40a0007a5d8f44504cc7dac43b14c
+    - https://github.com/ProtonVPN/proton-vpn-gtk-app/archive/refs/tags/v4.15.1.tar.gz : b6f50486e593846810ba385ff298f5c0fec66c6d278db110b345e9e206d1b6e7
 homepage   : https://protonvpn.com/download-linux
 license    : GPL-3.0-or-later
-component  : programming.python
+component  : network.clients
 summary    : Official ProtonVPN Linux app
 description: |
     The Proton VPN GTK app is intended for every Proton VPN service user, it provides full access to all functionalities available to authenticated users, with the user signup process handled on the website.
@@ -16,26 +17,30 @@ builddeps  :
     - python-wheel
 rundeps    :
     - libayatana-appindicator
-    - libgtk-3
-    - libwebkit-gtk
+    - libgtk-4
+    - proton-vpn-daemon
     - python-aiohttp
     - python-bcrypt
     - python-cairo
-    - python-dbus
+    - python-dbus-fast
     - python-distro
     - python-gnupg
     - python-gobject
     - python-jinja
-    - python-openssl
     - python-packaging
     - python-proton-core
     - python-proton-keyring-linux
     - python-proton-vpn-core-api
     - python-proton-vpn-local-agent
-    - python-proton-vpn-network-manager
     - python-pynacl
     - python-requests
     - python-sentry-sdk
+    - python3-dbus
+setup      : |
+    %patch -p1 -i ${pkgfiles}/0001-fix-sni-and-dbusmenu-typing.patch
+    %patch -p1 -i ${pkgfiles}/0002-improve-tray-host-detection.patch
+    %patch -p1 -i ${pkgfiles}/0003-clean-up-tray-menu-state.patch
+    %patch -p1 -i ${pkgfiles}/0004-re-register-tray-item-when-tray-host-restarts.patch
 build      : |
     %python3_setup
 install    : |
@@ -46,6 +51,8 @@ install    : |
     install -Dm00644 rpmbuild/SOURCES/proton-vpn-logo.svg -t $installdir/usr/share/icons/hicolor/36x36/apps
     install -Dm00644 rpmbuild/SOURCES/proton-vpn-logo.svg -t $installdir/usr/share/icons/hicolor/scalable/apps
     install -Dm00644 $pkgfiles/com.protonvpn.www.metainfo.xml -t $installdir/usr/share/metainfo
+
+    %install_license COPYING.md LICENSE
 replaces   :
     - protonvpn-cli
     - protonvpn-gui

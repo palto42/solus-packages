@@ -1,14 +1,22 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kf6-kio
-version    : 6.19.0
-release    : 30
+version    : 6.26.0
+release    : 42
 source     :
-    - https://download.kde.org/stable/frameworks/6.19/kio-6.19.0.tar.xz : 06de4ce5c91aac91a127c50bd9caad6fbdef26c6c86164ed28a546a8e4cf0567
+    - https://download.kde.org/stable/frameworks/6.26/kio-6.26.0.tar.xz : 567f64db9766986b5535d884a5db30203685c33e67f56892bceff30e1bd5cc8a
 homepage   : https://community.kde.org/Frameworks
 license    :
+    - BSD-2-Clause
+    - BSD-3-Clause
+    - CC0-1.0
     - GPL-2.0-only
+    - GPL-2.0-or-later
+    - GPL-3.0-only
     - LGPL-2.0-only
     - LGPL-2.0-or-later
     - LGPL-2.1-only
+    - LGPL-2.1-or-later
+    - LGPL-3.0-only
 component  : desktop.library
 summary    : Network transparent access to files and data.
 description: |
@@ -64,6 +72,7 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*
     rm -rfv $installdir/usr/share/doc
 patterns   :
     - main :

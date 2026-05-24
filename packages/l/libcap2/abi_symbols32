@@ -68,7 +68,6 @@ libcap.so.2:capsetp
 libpsx.so.2:__execable_dl_loader
 libpsx.so.2:__psx_syscall
 libpsx.so.2:__wrap_pthread_create
-libpsx.so.2:psx_action_key
 libpsx.so.2:psx_load_syscalls
 libpsx.so.2:psx_set_sensitivity
 libpsx.so.2:psx_syscall3

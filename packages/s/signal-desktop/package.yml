@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : signal-desktop
-version    : 7.73.0
-release    : 198
+version    : 8.8.0
+release    : 207
 source     :
-    - https://updates.signal.org/desktop/apt/pool/s/signal-desktop/signal-desktop_7.73.0_amd64.deb : 9ebeb0167f1defd61410b025521f543ff6b3bf8d3f53a5c6a4791fb50a4d21b0
+    - https://updates.signal.org/desktop/apt/pool/s/signal-desktop/signal-desktop_8.8.0_amd64.deb : 8e9c4a4e188c541daf01a402b5ac3c9f8c068f99adc6022c946a00ea68665d09
 homepage   : https://signal.org
 license    : AGPL-3.0-or-later
 component  : network.im
@@ -33,4 +34,5 @@ install    : |
     ln -sv /usr/share/signal-desktop/signal-desktop $installdir/usr/bin/signal-desktop
 
     install -Dm00644 root/usr/share/icons/hicolor/512x512/apps/signal-desktop.png $installdir/usr/share/pixmaps/signal-desktop.png
-    install -Dm00644 $pkgfiles/signal-desktop.desktop $installdir/usr/share/applications/signal-desktop.desktop
+    install -Dm00644 $pkgfiles/org.signal.Signal.desktop $installdir/usr/share/applications/org.signal.Signal.desktop
+    install -Dm00644 $pkgfiles/org.signal.Signal.metainfo.xml $installdir/usr/share/metainfo/org.signal.Signal.metainfo.xml

@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : linux-lts
-version    : 6.12.45
-release    : 272
+version    : 6.18.33
+release    : 292
 source     :
-    - https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.12.45.tar.xz : 8f95a8549cfbdfb89c1181a1f55a971f04dfcd629508a2ed70b777ab92f9db3e
+    - https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.18.33.tar.xz : 6f16ff302599f6fe34742890322cf0775703105fbd8767449682fca6af0fb782
 license    : GPL-2.0-only
 component  :
     - kernel.image
@@ -55,7 +56,17 @@ environment: |
     export CCACHE_BASEDIR=$workdir
     export CCACHE_HASHDIR=yes
 setup      : |
-    %apply_patches
+    if [[ -f $pkgfiles/patches/series ]]
+    then
+        # This retains patch order while removings blank lines
+        # and lines starting with a # character (with any number of preceding blanks)
+        # which should make the patch series file nicer to maintain due to comment support
+        PATCHES=($(sed -E -e '/^\s*$/d' -e '/^[[:space:]]*#.*$/d' $pkgfiles/patches/series))
+        for p in "${PATCHES[@]}"
+        do
+            %patch -p1 -i "$pkgfiles/patches/${p}"
+        done
+    fi
 
     # Make sure the kernel version is consistent with the package version, even if we set the package version to something different
     # We might do this if we're bisecting and don't want to mess with creating many different module dirs.
@@ -123,22 +134,23 @@ install    : |
     find "decompressed-modules" -name '*.ko' -exec strip --strip-unneeded {} \;
 
     # We can make the initrd smaller by decompressing the firmware prior to compressing the entire initrd.
-    mkdir -p kernel-firmware/
-    cp -ra /usr/lib64/firmware/* kernel-firmware
+    mkdir -p usr/lib/firmware/
+    cp -ra /usr/lib64/firmware/* usr/lib/firmware
     file_list=()
     while IFS=  read -r -d $'\0'; do
         file_list+=("$REPLY")
-    done < <(find kernel-firmware -type f -print0)
+    done < <(find usr/lib/firmware -type f -print0)
     for file in "${file_list[@]}"; do
         if [ -z ${file##*.zst} ]; then
             unzstd --rm "$file"
         fi
     done
 
+    # Update symlinks
     link_list=()
     while IFS=  read -r -d $'\0'; do
         link_list+=("$REPLY")
-    done < <(find kernel-firmware -type l -print0)
+    done < <(find usr/lib/firmware -type l -print0)
     for file in "${link_list[@]}"; do
         link=$(readlink "$file")
         if [ -z ${link##*.zst} ]; then
@@ -155,15 +167,16 @@ install    : |
     # 2021-01-20: Force early KMS for everything except Nouveau (this will not work with Nvidia propretary)
     # 2024-04-21: Add vfio kernel modules to initrd as they need to be loaded very early in the boot process
     # 2024-10-14: Add modprobe configuration for Nvidia sleep options to cover early KMS module loading
+    # 2026-04-22: Add nouveau back as well as vboxvideo and vmwgfx. The nvidia initrd extensions should suffice for nvidia users
+    drm_modules="amdgpu hyperv_drm i915 nouveau qxl radeon simpledrm vboxvideo virtio-gpu vmwgfx xe"
     vfio_modules="vfio_pci vfio_iommu_type1"
     LD_PRELOAD='' dracut --tmpdir /tmp -N -f  \
-        --kmoddir decompressed-modules/lib/modules/${kversion} --kver $kversion --fwdir kernel-firmware/ \
+        --kmoddir decompressed-modules/lib/modules/${kversion} --kver $kversion --fwdir usr/lib/firmware/ \
         --add "bash systemd lvm dm rescue resume fido2 tpm2-tss qemu virtiofs zz-init-extension" --omit "nvmf" \
         --strip --hardlink --zstd --reproducible --nomdadmconf --early-microcode \
-        --add-drivers "amdgpu hyperv_drm i915 qxl radeon simpledrm virtio-gpu xe $vfio_modules" \
+        --add-drivers "${drm_modules} ${vfio_modules}" \
         --include $pkgfiles/initrd/timeouts.conf /usr/lib/systemd/system.conf.d/timeouts.conf \
-        --include $pkgfiles/initrd/depmod.conf /usr/lib/depmod.d/depmod.conf \
-        --include $pkgfiles/initrd/nvidia-sleep.modprobe /usr/lib/modprobe.d/nvidia-sleep.conf \
+        --include $pkgfiles/initrd/50-protectsystem-off.conf /usr/lib/systemd/system.conf.d/50-protectsystem-off.conf \
         $installdir/usr/lib64/kernel/initrd-$kernID.${version}-${release}
 
     # Sign with our MOK if we have the secureboot-keys submodule checked out.

@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : qt6gtk2
-version    : '0.5'
-release    : 15
+version    : '0.7'
+release    : 19
 source     :
-    - https://www.opencode.net/trialuser/qt6gtk2/-/archive/0.4/qt6gtk2-0.5.tar.gz : ed403793a2597127b89c2dc579eaeadb3356f1f8ce8b34649cc8229e3dcb80af
+    - https://www.opencode.net/trialuser/qt6gtk2/-/archive/0.7/qt6gtk2-0.7.tar.gz : 72569c42c060cfce847533cd18395b080cf404e54dac1c45e29c97d33ca93013
 homepage   : https://www.opencode.net/trialuser/qt6gtk2
 license    : GPL-2.0-or-later
 component  : desktop.qt

@@ -21,12 +21,12 @@
         <PartOf>desktop</PartOf>
         <Files>
             <Path fileType="executable">/usr/bin/ulauncher</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher-6.0.0b27.dist-info/METADATA</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher-6.0.0b27.dist-info/RECORD</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher-6.0.0b27.dist-info/WHEEL</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher-6.0.0b27.dist-info/licenses/AUTHORS</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher-6.0.0b27.dist-info/licenses/LICENSE</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher-6.0.0b27.dist-info/top_level.txt</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher-6.0.0b30.dist-info/METADATA</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher-6.0.0b30.dist-info/RECORD</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher-6.0.0b30.dist-info/WHEEL</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher-6.0.0b30.dist-info/licenses/AUTHORS</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher-6.0.0b30.dist-info/licenses/LICENSE</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher-6.0.0b30.dist-info/top_level.txt</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/__init__.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/__pycache__/__init__.cpython-312.opt-1.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/__pycache__/__init__.cpython-312.pyc</Path>
@@ -121,23 +121,24 @@
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/internals/__init__.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/internals/__pycache__/__init__.cpython-312.opt-1.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/internals/__pycache__/__init__.cpython-312.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/internals/__pycache__/actions.cpython-312.opt-1.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/internals/__pycache__/actions.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/internals/__pycache__/effect_utils.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/internals/__pycache__/effect_utils.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/internals/__pycache__/effects.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/internals/__pycache__/effects.cpython-312.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/internals/__pycache__/query.cpython-312.opt-1.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/internals/__pycache__/query.cpython-312.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/internals/__pycache__/result.cpython-312.opt-1.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/internals/__pycache__/result.cpython-312.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/internals/actions.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/internals/effect_utils.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/internals/effects.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/internals/query.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/internals/result.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/main.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/__init__.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/__pycache__/__init__.cpython-312.opt-1.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/__pycache__/__init__.cpython-312.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/__pycache__/base_mode.cpython-312.opt-1.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/__pycache__/base_mode.cpython-312.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/__pycache__/mode_handler.cpython-312.opt-1.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/__pycache__/mode_handler.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/__pycache__/mode.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/__pycache__/mode.cpython-312.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/apps/__init__.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/apps/__pycache__/__init__.cpython-312.opt-1.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/apps/__pycache__/__init__.cpython-312.pyc</Path>
@@ -150,7 +151,6 @@
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/apps/app_mode.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/apps/app_result.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/apps/launch_app.py</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/base_mode.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/calc/__init__.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/calc/__pycache__/__init__.cpython-312.opt-1.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/calc/__pycache__/__init__.cpython-312.pyc</Path>
@@ -163,6 +163,8 @@
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/extensions/__init__.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/extensions/__pycache__/__init__.cpython-312.opt-1.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/extensions/__pycache__/__init__.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/extensions/__pycache__/ext_exceptions.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/extensions/__pycache__/ext_exceptions.cpython-312.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/extensions/__pycache__/extension_cli_handlers.cpython-312.opt-1.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/extensions/__pycache__/extension_cli_handlers.cpython-312.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/extensions/__pycache__/extension_controller.cpython-312.opt-1.pyc</Path>
@@ -175,24 +177,22 @@
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/extensions/__pycache__/extension_manifest.cpython-312.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/extensions/__pycache__/extension_mode.cpython-312.opt-1.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/extensions/__pycache__/extension_mode.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/extensions/__pycache__/extension_registry.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/extensions/__pycache__/extension_registry.cpython-312.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/extensions/__pycache__/extension_remote.cpython-312.opt-1.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/extensions/__pycache__/extension_remote.cpython-312.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/extensions/__pycache__/extension_runtime.cpython-312.opt-1.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/extensions/__pycache__/extension_runtime.cpython-312.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/extensions/__pycache__/extension_socket_controller.cpython-312.opt-1.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/extensions/__pycache__/extension_socket_controller.cpython-312.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/extensions/__pycache__/extension_socket_server.cpython-312.opt-1.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/extensions/__pycache__/extension_socket_server.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/extensions/ext_exceptions.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/extensions/extension_cli_handlers.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/extensions/extension_controller.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/extensions/extension_dependencies.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/extensions/extension_finder.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/extensions/extension_manifest.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/extensions/extension_mode.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/extensions/extension_registry.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/extensions/extension_remote.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/extensions/extension_runtime.py</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/extensions/extension_socket_controller.py</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/extensions/extension_socket_server.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/file_browser/__init__.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/file_browser/__pycache__/__init__.cpython-312.opt-1.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/file_browser/__pycache__/__init__.cpython-312.pyc</Path>
@@ -205,27 +205,24 @@
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/file_browser/file_browser_mode.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/file_browser/get_icon_from_path.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/file_browser/results.py</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/mode_handler.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/mode.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/shortcuts/__init__.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/shortcuts/__pycache__/__init__.cpython-312.opt-1.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/shortcuts/__pycache__/__init__.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/shortcuts/__pycache__/results.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/shortcuts/__pycache__/results.cpython-312.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/shortcuts/__pycache__/run_script.cpython-312.opt-1.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/shortcuts/__pycache__/run_script.cpython-312.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/shortcuts/__pycache__/run_shortcut.cpython-312.opt-1.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/shortcuts/__pycache__/run_shortcut.cpython-312.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/shortcuts/__pycache__/shortcut_mode.cpython-312.opt-1.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/shortcuts/__pycache__/shortcut_mode.cpython-312.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/shortcuts/__pycache__/shortcut_result.cpython-312.opt-1.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/shortcuts/__pycache__/shortcut_result.cpython-312.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/shortcuts/__pycache__/shortcut_trigger.cpython-312.opt-1.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/shortcuts/__pycache__/shortcut_trigger.cpython-312.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/shortcuts/__pycache__/shortcuts_db.cpython-312.opt-1.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/shortcuts/__pycache__/shortcuts_db.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/shortcuts/results.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/shortcuts/run_script.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/shortcuts/run_shortcut.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/shortcuts/shortcut_mode.py</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/shortcuts/shortcut_result.py</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/shortcuts/shortcut_trigger.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/modes/shortcuts/shortcuts_db.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/paths.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/ui/__init__.py</Path>
@@ -235,15 +232,12 @@
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/ui/__pycache__/item_navigation.cpython-312.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/ui/__pycache__/layer_shell.cpython-312.opt-1.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/ui/__pycache__/layer_shell.cpython-312.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/ui/__pycache__/preferences_server.cpython-312.opt-1.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/ui/__pycache__/preferences_server.cpython-312.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/ui/__pycache__/result_widget.cpython-312.opt-1.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/ui/__pycache__/result_widget.cpython-312.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/ui/__pycache__/tray_icon.cpython-312.opt-1.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/ui/__pycache__/tray_icon.cpython-312.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/ui/item_navigation.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/ui/layer_shell.py</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/ui/preferences_server.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/ui/result_widget.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/ui/tray_icon.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/ui/windows/__init__.py</Path>
@@ -251,12 +245,45 @@
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/ui/windows/__pycache__/__init__.cpython-312.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/ui/windows/__pycache__/hotkey_dialog.cpython-312.opt-1.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/ui/windows/__pycache__/hotkey_dialog.cpython-312.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/ui/windows/__pycache__/preferences_window.cpython-312.opt-1.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/ui/windows/__pycache__/preferences_window.cpython-312.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/ui/windows/__pycache__/ulauncher_window.cpython-312.opt-1.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/ui/windows/__pycache__/ulauncher_window.cpython-312.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/ui/windows/hotkey_dialog.py</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/ui/windows/preferences_window.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/ui/windows/preferences/__init__.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/ui/windows/preferences/__pycache__/__init__.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/ui/windows/preferences/__pycache__/__init__.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/ui/windows/preferences/__pycache__/preferences_window.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/ui/windows/preferences/__pycache__/preferences_window.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/ui/windows/preferences/preferences_window.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/ui/windows/preferences/utils/__init__.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/ui/windows/preferences/utils/__pycache__/__init__.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/ui/windows/preferences/utils/__pycache__/__init__.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/ui/windows/preferences/utils/__pycache__/ext_handlers.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/ui/windows/preferences/utils/__pycache__/ext_handlers.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/ui/windows/preferences/utils/__pycache__/ext_utils.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/ui/windows/preferences/utils/__pycache__/ext_utils.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/ui/windows/preferences/utils/__pycache__/sidebar_layout.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/ui/windows/preferences/utils/__pycache__/sidebar_layout.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/ui/windows/preferences/utils/ext_handlers.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/ui/windows/preferences/utils/ext_utils.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/ui/windows/preferences/utils/sidebar_layout.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/ui/windows/preferences/views/__init__.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/ui/windows/preferences/views/__pycache__/__init__.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/ui/windows/preferences/views/__pycache__/__init__.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/ui/windows/preferences/views/__pycache__/about.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/ui/windows/preferences/views/__pycache__/about.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/ui/windows/preferences/views/__pycache__/extensions.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/ui/windows/preferences/views/__pycache__/extensions.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/ui/windows/preferences/views/__pycache__/help.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/ui/windows/preferences/views/__pycache__/help.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/ui/windows/preferences/views/__pycache__/preferences.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/ui/windows/preferences/views/__pycache__/preferences.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/ui/windows/preferences/views/__pycache__/shortcuts.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/ui/windows/preferences/views/__pycache__/shortcuts.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/ui/windows/preferences/views/about.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/ui/windows/preferences/views/extensions.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/ui/windows/preferences/views/help.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/ui/windows/preferences/views/preferences.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/ui/windows/preferences/views/shortcuts.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/ui/windows/ulauncher_window.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/utils/__init__.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/utils/__pycache__/__init__.cpython-312.opt-1.pyc</Path>
@@ -275,12 +302,12 @@
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/utils/__pycache__/ewmh.cpython-312.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/utils/__pycache__/fold_user_path.cpython-312.opt-1.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/utils/__pycache__/fold_user_path.cpython-312.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/utils/__pycache__/framer.cpython-312.opt-1.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/utils/__pycache__/framer.cpython-312.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/utils/__pycache__/fuzzy_search.cpython-312.opt-1.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/utils/__pycache__/fuzzy_search.cpython-312.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/utils/__pycache__/get_icon_path.cpython-312.opt-1.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/utils/__pycache__/get_icon_path.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/utils/__pycache__/gio_compat.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/utils/__pycache__/gio_compat.cpython-312.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/utils/__pycache__/hotkey_controller.cpython-312.opt-1.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/utils/__pycache__/hotkey_controller.cpython-312.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/utils/__pycache__/json_conf.cpython-312.opt-1.pyc</Path>
@@ -299,8 +326,10 @@
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/utils/__pycache__/settings.cpython-312.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/utils/__pycache__/singleton.cpython-312.opt-1.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/utils/__pycache__/singleton.cpython-312.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/utils/__pycache__/socket_path.cpython-312.opt-1.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/utils/__pycache__/socket_path.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/utils/__pycache__/socket_msg_controller.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/utils/__pycache__/socket_msg_controller.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/utils/__pycache__/system_theme.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/utils/__pycache__/system_theme.cpython-312.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/utils/__pycache__/systemd_controller.cpython-312.opt-1.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/utils/__pycache__/systemd_controller.cpython-312.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/utils/__pycache__/text_highlighter.cpython-312.opt-1.pyc</Path>
@@ -315,8 +344,6 @@
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/utils/__pycache__/v5_killer.cpython-312.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/utils/__pycache__/version.cpython-312.opt-1.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/utils/__pycache__/version.cpython-312.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/utils/__pycache__/webkit2.cpython-312.opt-1.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/utils/__pycache__/webkit2.cpython-312.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/utils/__pycache__/wm.cpython-312.opt-1.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/utils/__pycache__/wm.cpython-312.pyc</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/utils/__pycache__/xinit.cpython-312.opt-1.pyc</Path>
@@ -337,9 +364,9 @@
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/utils/eventbus.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/utils/ewmh.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/utils/fold_user_path.py</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/utils/framer.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/utils/fuzzy_search.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/utils/get_icon_path.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/utils/gio_compat.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/utils/hotkey_controller.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/utils/json_conf.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/utils/json_utils.py</Path>
@@ -349,7 +376,8 @@
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/utils/migrate.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/utils/settings.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/utils/singleton.py</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/utils/socket_path.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/utils/socket_msg_controller.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/utils/system_theme.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/utils/systemd_controller.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/utils/text_highlighter.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/utils/theme.py</Path>
@@ -357,7 +385,6 @@
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/utils/untar.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/utils/v5_killer.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/utils/version.py</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/utils/webkit2.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/utils/wm.py</Path>
             <Path fileType="library">/usr/lib/python3.12/site-packages/ulauncher/utils/xinit.py</Path>
             <Path fileType="library">/usr/lib/systemd/user/ulauncher.service</Path>
@@ -377,11 +404,7 @@
             <Path fileType="data">/usr/share/ulauncher/icons/system/status/ulauncher-indicator-symbolic-dark.svg</Path>
             <Path fileType="data">/usr/share/ulauncher/icons/system/status/ulauncher-indicator-symbolic.svg</Path>
             <Path fileType="data">/usr/share/ulauncher/icons/wikipedia.png</Path>
-            <Path fileType="data">/usr/share/ulauncher/preferences/app.js</Path>
-            <Path fileType="data">/usr/share/ulauncher/preferences/index.html</Path>
-            <Path fileType="data">/usr/share/ulauncher/preferences/static/font-awesome.min.css</Path>
-            <Path fileType="data">/usr/share/ulauncher/preferences/static/font-awesome.woff2</Path>
-            <Path fileType="data">/usr/share/ulauncher/preferences/static/variables.css</Path>
+            <Path fileType="data">/usr/share/ulauncher/preferences.css</Path>
             <Path fileType="data">/usr/share/ulauncher/themes/adwaita.css</Path>
             <Path fileType="data">/usr/share/ulauncher/themes/dark.css</Path>
             <Path fileType="data">/usr/share/ulauncher/themes/light.css</Path>
@@ -389,9 +412,9 @@
         </Files>
     </Package>
     <History>
-        <Update release="25">
-            <Date>2025-10-05</Date>
-            <Version>6.0.0_27b</Version>
+        <Update release="27">
+            <Date>2026-03-25</Date>
+            <Version>6.0.0_30b</Version>
             <Comment>Packaging update</Comment>
             <Name>Algent Albrahimi</Name>
             <Email>algent@protonmail.com</Email>

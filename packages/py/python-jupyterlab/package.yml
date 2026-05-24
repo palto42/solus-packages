@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : python-jupyterlab
-version    : 4.3.5
-release    : 6
+version    : 4.5.6
+release    : 7
 source     :
-    - https://files.pythonhosted.org/packages/source/j/jupyterlab/jupyterlab-4.3.5.tar.gz : c779bf72ced007d7d29d5bcef128e7fdda96ea69299e19b04a43635a7d641f9d
+    - https://files.pythonhosted.org/packages/source/j/jupyterlab/jupyterlab-4.5.6.tar.gz : 642fe2cfe7f0f5922a8a558ba7a0d246c7bc133b708dfe43f7b3a826d163cf42
 homepage   : https://github.com/jupyterlab/jupyterlab
 license    : BSD-3-Clause
 component  : programming.python

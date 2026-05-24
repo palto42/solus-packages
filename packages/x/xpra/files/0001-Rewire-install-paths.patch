@@ -1,4 +1,4 @@
-From 8e4fc0c5d25aeb0d8fccb7681c735ede838543b5 Mon Sep 17 00:00:00 2001
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Maik=20W=C3=B6hl?= <maik.woehl@outlook.de>
 Date: Tue, 27 Feb 2024 22:38:31 +0100
 Subject: [PATCH 1/6] Rewire install paths
@@ -10,16 +10,16 @@ Rewiring install paths to solus /usr/share/defaults concept.
 
 Signed-off-by: Maik Wöhl <maik.woehl@outlook.de>
 ---
- setup.py | 28 +++++++++++++++-------------
- 1 file changed, 15 insertions(+), 13 deletions(-)
+ setup.py | 30 ++++++++++++++++--------------
+ 1 file changed, 16 insertions(+), 14 deletions(-)
 
 diff --git a/setup.py b/setup.py
-index e91018022..5f1caa9fb 100755
+index 26d2662b3e..ffcd0c979e 100755
 --- a/setup.py
 +++ b/setup.py
-@@ -1002,8 +1002,12 @@ def get_base_conf_dir(install_dir, stripbuildroot=True):
+@@ -1445,8 +1445,12 @@ def get_base_conf_dir(install_dir: str, stripbuildroot=True) -> list[str]:
  
- def get_conf_dir(install_dir, stripbuildroot=True):
+ def get_conf_dir(install_dir: str, stripbuildroot=True) -> str:
      dirs = get_base_conf_dir(install_dir, stripbuildroot)
 -    if "etc" not in dirs:
 -        dirs.append("etc")
@@ -32,36 +32,36 @@ index e91018022..5f1caa9fb 100755
      dirs.append("xpra")
      return os.path.join(*dirs)
  
-@@ -1733,7 +1737,7 @@ if WIN32:
-     if data_ENABLED:
+@@ -2220,7 +2224,7 @@ if WIN32:
+     if data_ENABLED and shadow_ENABLED:
          add_data_files("share/metainfo",      ["fs/share/metainfo/xpra.appdata.xml"])
          for d in ("http-headers", "content-type", "content-categories", "content-parent"):
--            add_data_files(f"etc/xpra/{d}", glob.glob(f"fs/etc/xpra/{d}/*"))
-+            add_data_files(f"usr/share/defaults/xpra/{d}", glob.glob(f"fs/etc/xpra/{d}/*"))
+-            add_data_files(f"etc/xpra/{d}", glob(f"fs/etc/xpra/{d}/*"))
++            add_data_files(f"usr/share/defaults/xpra/{d}", glob(f"fs/etc/xpra/{d}/*"))
  
-     #END OF win32
+     # END OF win32
  #*******************************************************************************
-@@ -1876,13 +1880,13 @@ else:
-                 else:
-                     addconf("xorg.conf")
+@@ -2381,13 +2385,13 @@ else:
+                     addconf("xorg-uinput.conf")
+                 addconf("xorg.conf")
                  for src, dst_name in etc_xpra_files.items():
--                    copytodir(f"fs/etc/xpra/{src}", "/etc/xpra", dst_name=dst_name)
--                copytodir("fs/etc/X11/xorg.conf.d/90-xpra-virtual.conf", "/etc/X11/xorg.conf.d/")
-+                    copytodir(f"fs/etc/xpra/{src}", "/usr/share/defaults/xpra", dst_name=dst_name)
-+                copytodir("fs/etc/X11/xorg.conf.d/90-xpra-virtual.conf", "/usr/share/X11/xorg.conf.d/")
+-                    self.copytodir(f"fs/etc/xpra/{src}", "/etc/xpra", dst_name=dst_name)
+-                self.copytodir("fs/etc/X11/xorg.conf.d/90-xpra-virtual.conf", "/etc/X11/xorg.conf.d/")
++                    self.copytodir(f"fs/etc/xpra/{src}", "/usr/share/defaults/xpra", dst_name=dst_name)
++                self.copytodir("fs/etc/X11/xorg.conf.d/90-xpra-virtual.conf", "/usr/share/X11/xorg.conf.d/")
  
              if pam_ENABLED:
--                copytodir("fs/etc/pam.d/xpra", "/etc/pam.d")
-+                copytodir("fs/etc/pam.d/xpra", "/usr/share/defaults/pam.d")
+-                self.copytodir("fs/etc/pam.d/xpra", "/etc/pam.d")
++                self.copytodir("fs/etc/pam.d/xpra", "/usr/share/defaults/pam.d")
  
 -            systemd_dir = "/lib/systemd/system"
 +            systemd_dir = "/usr/lib64/systemd/system"
              if is_openSUSE():
                  systemd_dir = "__UNITDIR__"
              if service_ENABLED:
-@@ -1892,10 +1896,8 @@ else:
+@@ -2397,10 +2401,8 @@ else:
                      cdir = "/etc/sysconfig"
-                 elif is_Debian() or is_Ubuntu():
+                 elif is_DEB():
                      cdir = "/etc/default"
 -                elif os.path.exists("/etc/sysconfig"):
 -                    cdir = "/etc/sysconfig"
@@ -69,35 +69,35 @@ index e91018022..5f1caa9fb 100755
 -                    cdir = "/etc/default"
 +                    cdir = "/usr/share/defaults/xpra"
                  if is_openSUSE():
-                     #openSUSE does things differently:
+                     # openSUSE does things differently:
                      cdir = "__FILLUPDIR__"
-@@ -1903,7 +1905,7 @@ else:
+@@ -2408,7 +2410,7 @@ else:
                      os.chmod("fs/etc/sysconfig/sysconfig.xpra", 0o644)
-                     copytodir("fs/etc/sysconfig/sysconfig.xpra", cdir)
+                     self.copytodir("fs/etc/sysconfig/sysconfig.xpra", cdir)
                  else:
--                    copytodir("fs/etc/sysconfig/xpra", cdir)
-+                    copytodir("fs/etc/sysconfig/xpra.env", cdir)
+-                    self.copytodir("fs/etc/sysconfig/xpra", cdir)
++                    self.copytodir("fs/etc/sysconfig/xpra.env", cdir)
                  if cdir!="/etc/sysconfig":
-                     #also replace the reference to it in the service file below
+                     # also replace the reference to it in the service file below
                      subs[b"/etc/sysconfig"] = cdir.encode()
-@@ -1919,7 +1921,7 @@ else:
-             if sd_listen_ENABLED:
-                 copytodir("fs/lib/systemd/system/xpra.socket", systemd_dir)
-             if dbus_ENABLED and proxy_ENABLED:
--                copytodir("fs/etc/dbus-1/system.d/xpra.conf", "/etc/dbus-1/system.d")
-+                copytodir("fs/etc/dbus-1/system.d/xpra.conf", "/usr/share/dbus-1/system.d")
+@@ -2425,7 +2427,7 @@ else:
+                 self.copytodir("fs/lib/systemd/system/xpra.socket", systemd_dir)
+                 self.copytodir("fs/lib/systemd/system/xpra-encoder.socket", systemd_dir)
+             if POSIX and dbus_ENABLED and proxy_ENABLED:
+-                self.copytodir("fs/etc/dbus-1/system.d/xpra.conf", "/etc/dbus-1/system.d")
++                self.copytodir("fs/etc/dbus-1/system.d/xpra.conf", "/usr/share/dbus-1/system.d")
  
              if docs_ENABLED:
-                 doc_dir = f"{install_dir}/share/doc/xpra/"
-@@ -1927,7 +1929,7 @@ else:
+                 doc_dir = f"{self.actual_install_dir}/share/doc/xpra/"
+@@ -2433,9 +2435,9 @@ else:
  
              if data_ENABLED:
                  for etc_dir in ("http-headers", "content-type", "content-categories", "content-parent"):
--                    dirtodir(f"fs/etc/xpra/{etc_dir}", f"/etc/xpra/{etc_dir}")
-+                    dirtodir(f"fs/etc/xpra/{etc_dir}", f"/usr/share/defaults/xpra/{etc_dir}")
- 
+-                    self.dirtodir(f"fs/etc/xpra/{etc_dir}", f"/etc/xpra/{etc_dir}")
++                    self.dirtodir(f"fs/etc/xpra/{etc_dir}", f"/usr/share/defaults/xpra/{etc_dir}")
+                 if audio_ENABLED:
+-                    self.dirtodir("fs/etc/xpra/pulse", "/etc/xpra/pulse")
++                    self.dirtodir("fs/etc/xpra/pulse", "/usr/share/defaults/xpra/pulse")
      # add build_conf to build step
-     cmdclass.update({
--- 
-2.44.0
-
+     cmdclass |= {
+         'build'        : build_override,

@@ -17,8 +17,8 @@ UNKNOWN:pluma_window_get_active_view
 UNKNOWN:pluma_window_get_message_bus
 UNKNOWN:pluma_window_get_ui_manager
 UNKNOWN:pluma_window_get_views
+libc.so.6:__isoc23_strtol
 libc.so.6:__stack_chk_fail
-libc.so.6:strtol
 libgdk-3.so.0:gdk_rgba_parse
 libgdk-3.so.0:gdk_threads_add_idle_full
 libgio-2.0.so.0:g_settings_bind
@@ -129,7 +129,7 @@ libgtksourceview-4.so.0:gtk_source_view_get_mark_attributes
 libgtksourceview-4.so.0:gtk_source_view_get_type
 libgtksourceview-4.so.0:gtk_source_view_set_mark_attributes
 libgtksourceview-4.so.0:gtk_source_view_set_show_line_marks
-libpeas-1.0.so.0:peas_extension_base_get_data_dir
-libpeas-1.0.so.0:peas_extension_base_get_type
-libpeas-1.0.so.0:peas_object_module_register_extension_type
-libpeas-gtk-1.0.so.0:peas_gtk_configurable_get_type
+libpeas-1.0.so.1:peas_extension_base_get_data_dir
+libpeas-1.0.so.1:peas_extension_base_get_type
+libpeas-1.0.so.1:peas_object_module_register_extension_type
+libpeas-gtk-1.0.so.1:peas_gtk_configurable_get_type

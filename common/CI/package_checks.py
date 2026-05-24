@@ -143,6 +143,9 @@ class Git:
     def commit_refs(self, base: str, head: str) -> List[str]:
         return self.run_lines('log', '--no-merges', '--pretty=%H', base + '..' + head)
 
+    def commit_summary(self, ref: str) -> str:
+        return self.run('log', '-1', '--format=%s', ref)
+
     def fetch(self, remote: List[str]) -> None:
         self.run('fetch', *remote)
 
@@ -263,6 +266,7 @@ class Result:
 
 class PullRequestCheck:
     _package_files = ['package.yml']
+    _pspec_files = ['pspec_x86_64.xml']
     _two_letter_dirs = ['py']
     _config: Optional[Config] = None
 
@@ -286,6 +290,10 @@ class PullRequestCheck:
     @property
     def package_files(self) -> List[str]:
         return self.filter_files(*self._package_files)
+
+    @property
+    def pspec_files(self) -> List[str]:
+        return self.filter_files(*self._pspec_files)
 
     def filter_files(self, *allowed: str) -> List[str]:
         return [f for f in self.files
@@ -455,6 +463,26 @@ class Monitoring(PullRequestCheck):
         return self._exists(os.path.join(os.path.dirname(file), 'monitoring.yaml'))
 
 
+class License(PullRequestCheck):
+    _error = 'Package is missing license files'
+    _level = Level.WARNING
+    _globs = [
+        '**/licenses/**',
+        '/usr/lib/python*/site-packages/*.dist-info/LICENSE',
+    ]
+
+    def run(self) -> List[Result]:
+        return [Result(message=self._error, file=f, level=self._level)
+                for f in self.pspec_files
+                if not self._has_license(f)]
+
+    def _has_license(self, file: str) -> bool:
+        return any(self._match_globs(f) for f in PspecXML(self._read(file)).files)
+
+    def _match_globs(self, path: str) -> bool:
+        return any(fnmatch.fnmatch(path, pattern) for pattern in self._globs)
+
+
 class PackageBumped(PullRequestCheck):
     _msg = 'Package release is not incremented by 1'
     _msg_new = 'Package release is not 1'
@@ -479,16 +507,28 @@ class PackageBumped(PullRequestCheck):
             case _:
                 return None
 
+    def _is_fixup_commit(self, commit_msg: str) -> bool:
+        return commit_msg.startswith('fixup! ')
+
     def _check(self, ref: Optional[str], file: str, loader: Callable[[str], Package], level: Level) -> Optional[Result]:
         if ref is not None:
             new = loader(self.git.file_from_commit(ref, file))
             prev = f'{ref}~1'
+
+            commit_msg = self.git.commit_message(ref)
+            # Skip fixup commits entirely
+            if self._is_fixup_commit(commit_msg):
+                return None
         else:
             new = loader(self._read(file))
             prev = 'HEAD'
 
         try:
             old = loader(self.git.file_from_commit(prev, file))
+            # Skip if this is effectively an amended commit with no release change
+            if ref is not None and self.git.commit_message(ref) == self.git.commit_message(prev):
+                return None
+
             if old.release + 1 != new.release:
                 return Result(level=level, file=file, message=f'{self._msg} (ref: {ref})')
 
@@ -832,6 +872,7 @@ class Checker:
         FrozenPackage,
         Homepage,
         Monitoring,
+        License,
         PackageBumped,
         PackageDependenciesOrder,
         PackageDirectory,

@@ -1,12 +1,21 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kf6-ksvg
-version    : 6.19.0
-release    : 26
+version    : 6.26.0
+release    : 36
 source     :
-    - https://download.kde.org/stable/frameworks/6.19/ksvg-6.19.0.tar.xz : 92a2cbc4604a3ea86d9b8ad921adff93646156017bc8fa5c75958ef324b5e9ef
+    - https://download.kde.org/stable/frameworks/6.26/ksvg-6.26.0.tar.xz : f3a7412e227d13b1cafec91c1b58dd3f86980abefc08b2535b46bef362b4c07e
 homepage   : https://community.kde.org/Frameworks
 license    :
+    - BSD-2-Clause
+    - BSD-3-Clause
+    - CC0-1.0
+    - GPL-2.0-only
     - GPL-2.0-or-later
+    - GPL-3.0-only
     - LGPL-2.0-or-later
+    - LGPL-2.1-only
+    - LGPL-2.1-or-later
+    - LGPL-3.0-only
 component  : desktop.library
 summary    : Components for handling SVGs
 description: |
@@ -33,3 +42,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*

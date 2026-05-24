@@ -1,9 +1,10 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : dash
-version    : 0.5.13
-release    : 14
+version    : 0.5.13.4
+release    : 20
 source     :
-    - http://gondor.apana.org.au/~herbert/dash/files/dash-0.5.13.tar.gz : fd8da121e306b27f59330613417b182b8844f11e269531cc4720bf523e3e06d7
-homepage   : http://gondor.apana.org.au/~herbert/dash/
+    - https://git.kernel.org/pub/scm/utils/dash/dash.git/snapshot/dash-0.5.13.4.tar.gz : 652e95024b75758dcd141b64a0d3973a026cc6aaee1aec81ce03e76dc3e6a267
+homepage   : https://git.kernel.org/pub/scm/utils/dash/dash.git/
 license    : GPL-3.0-or-later
 component  : system.utils
 summary    : POSIX compliant shell
@@ -15,10 +16,9 @@ optimize   :
 builddeps  :
     - pkgconfig(libedit)
 setup      : |
-    %configure --with-libedit
+    %reconfigure --with-libedit
 build      : |
     %make
 install    : |
     %make_install
-    install -dm00755 $installdir/bin
-    ln -srv $installdir/usr/bin/dash $installdir/bin/dash
+    %install_license COPYING

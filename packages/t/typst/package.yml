@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : typst
-version    : 0.13.1
-release    : 7
+version    : 0.14.2
+release    : 9
 source     :
-    - https://github.com/typst/typst/archive/refs/tags/v0.13.1.tar.gz : 2ffd8443668bc0adb59e9893f7904fd9f64dce8799a1930569f56a91305e8b71
+    - https://github.com/typst/typst/archive/refs/tags/v0.14.2.tar.gz : 70a56445020ca05efc571c7b07a1a9f52eb93842d420518693c077ae74e54142
 homepage   : https://typst.app
 license    : Apache-2.0
 component  : office
@@ -18,3 +19,4 @@ build      : |
     %cargo_build -p typst-cli
 install    : |
     %cargo_install
+    %install_license LICENSE

@@ -1,0 +1,32 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: uni-dos <uni.dos12@outlook.com>
+Date: Thu, 9 Jan 2025 19:59:34 -0600
+Subject: [PATCH 4/5] Build using system Python
+
+---
+ ui/Makefile | 7 ++-----
+ 1 file changed, 2 insertions(+), 5 deletions(-)
+
+diff --git a/ui/Makefile b/ui/Makefile
+index a9ea6868..de2caf35 100644
+--- a/ui/Makefile
++++ b/ui/Makefile
+@@ -3,16 +3,13 @@ all: opensnitch/resources_rc.py
+ install:
+ 	@pip3 install --upgrade .
+ 
+-opensnitch/resources_rc.py: translations deps
+-	#@pyrcc5 -o opensnitch/resources_rc.py opensnitch/res/resources.qrc
++opensnitch/resources_rc.py: translations
+ 	@find opensnitch/proto/ -name 'ui_pb2_grpc.py' -exec sed -i 's/^import ui_pb2/from . import ui_pb2/' {} \;
+ 
+ translations:
+ 	@cd i18n ; make
+-	
+-deps:
+-	@pip3 install -r requirements.txt
+ 
+ clean:
+ 	@rm -rf *.pyc
+ 	@rm -rf opensnitch/resources_rc.py
++	@find i18n/ -name '*.qm' -delete

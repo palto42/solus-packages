@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : gnome-shell-extensions
-version    : '48.3'
-release    : 58
+version    : '50.1'
+release    : 61
 source     :
-    - https://download.gnome.org/sources/gnome-shell-extensions/48/gnome-shell-extensions-48.3.tar.xz : adde34c08f40b63411be6f1d17e235550a0090494871e6481c312989d7f4a2d4
+    - https://download.gnome.org/sources/gnome-shell-extensions/50/gnome-shell-extensions-50.1.tar.xz : 46a5e4a5e6c458d39fb4235a6d8833cbdfbc6be60b09e0f0d780f1be6d5a1261
 homepage   : https://apps.gnome.org/Extensions/
 license    : GPL-2.0-or-later
 component  : desktop.gnome

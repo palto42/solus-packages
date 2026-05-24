@@ -1,9 +1,10 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : gnuplot
-version    : 6.0.3
-release    : 28
+version    : 6.0.4
+release    : 30
 source     :
-    - https://sourceforge.net/projects/gnuplot/files/gnuplot/6.0.3/gnuplot-6.0.3.tar.gz : ec52e3af8c4083d4538152b3f13db47f6d29929a3f6ecec5365c834e77f251ab
-homepage   : http://www.gnuplot.info/
+    - https://sourceforge.net/projects/gnuplot/files/gnuplot/6.0.4/gnuplot-6.0.4.tar.gz : 458d94769625e73d5f6232500f49cbadcb2b183380d43d2266a0f9701aeb9c5b
+homepage   : https://sourceforge.net/projects/gnuplot/
 license    : gnuplot
 component  : programming
 summary    : Gnuplot is a portable command-line driven graphing utility

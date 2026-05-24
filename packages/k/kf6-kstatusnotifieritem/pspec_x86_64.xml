@@ -4,8 +4,9 @@
         <Homepage>https://community.kde.org/Frameworks</Homepage>
         <Packager>
             <Name>Troy Harvey</Name>
-            <Email>harveydevel@gmail.com</Email>
+            <Email>harvey@getsol.us</Email>
         </Packager>
+        <License>CC0-1.0</License>
         <License>LGPL-2.0-or-later</License>
         <PartOf>desktop.library</PartOf>
         <Summary xml:lang="en">Implementation of Status Notifier Items</Summary>
@@ -21,9 +22,11 @@
         <PartOf>desktop.library</PartOf>
         <Files>
             <Path fileType="library">/usr/lib64/libKF6StatusNotifierItem.so.6</Path>
-            <Path fileType="library">/usr/lib64/libKF6StatusNotifierItem.so.6.19.0</Path>
+            <Path fileType="library">/usr/lib64/libKF6StatusNotifierItem.so.6.26.0</Path>
             <Path fileType="data">/usr/share/dbus-1/interfaces/kf6_org.kde.StatusNotifierItem.xml</Path>
             <Path fileType="data">/usr/share/dbus-1/interfaces/kf6_org.kde.StatusNotifierWatcher.xml</Path>
+            <Path fileType="data">/usr/share/licenses/kf6-kstatusnotifieritem/CC0-1.0.txt</Path>
+            <Path fileType="data">/usr/share/licenses/kf6-kstatusnotifieritem/LGPL-2.0-or-later.txt</Path>
             <Path fileType="localedata">/usr/share/locale/ar/LC_MESSAGES/kstatusnotifieritem6_qt.qm</Path>
             <Path fileType="localedata">/usr/share/locale/ast/LC_MESSAGES/kstatusnotifieritem6_qt.qm</Path>
             <Path fileType="localedata">/usr/share/locale/bg/LC_MESSAGES/kstatusnotifieritem6_qt.qm</Path>
@@ -37,6 +40,7 @@
             <Path fileType="localedata">/usr/share/locale/eu/LC_MESSAGES/kstatusnotifieritem6_qt.qm</Path>
             <Path fileType="localedata">/usr/share/locale/fi/LC_MESSAGES/kstatusnotifieritem6_qt.qm</Path>
             <Path fileType="localedata">/usr/share/locale/fr/LC_MESSAGES/kstatusnotifieritem6_qt.qm</Path>
+            <Path fileType="localedata">/usr/share/locale/ga/LC_MESSAGES/kstatusnotifieritem6_qt.qm</Path>
             <Path fileType="localedata">/usr/share/locale/gl/LC_MESSAGES/kstatusnotifieritem6_qt.qm</Path>
             <Path fileType="localedata">/usr/share/locale/he/LC_MESSAGES/kstatusnotifieritem6_qt.qm</Path>
             <Path fileType="localedata">/usr/share/locale/hi/LC_MESSAGES/kstatusnotifieritem6_qt.qm</Path>
@@ -74,7 +78,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="25">kf6-kstatusnotifieritem</Dependency>
+            <Dependency release="35">kf6-kstatusnotifieritem</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/KF6/KStatusNotifierItem/KStatusNotifierItem</Path>
@@ -89,12 +93,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="25">
-            <Date>2025-10-11</Date>
-            <Version>6.19.0</Version>
+        <Update release="35">
+            <Date>2026-05-12</Date>
+            <Version>6.26.0</Version>
             <Comment>Packaging update</Comment>
             <Name>Troy Harvey</Name>
-            <Email>harveydevel@gmail.com</Email>
+            <Email>harvey@getsol.us</Email>
         </Update>
     </History>
 </PISI>

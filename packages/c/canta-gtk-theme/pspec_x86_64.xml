@@ -3,15 +3,15 @@
         <Name>canta-gtk-theme</Name>
         <Homepage>https://github.com/vinceliuice/Canta-theme</Homepage>
         <Packager>
-            <Name>Algent Albrahimi</Name>
-            <Email>algent@protonmail.com</Email>
+            <Name>David Harder</Name>
+            <Email>david@davidjharder.ca</Email>
         </Packager>
         <License>GPL-2.0-or-later</License>
         <PartOf>desktop.theme</PartOf>
         <Summary xml:lang="en">Canta is a flat Material Design theme</Summary>
         <Description xml:lang="en">Canta is a flat Material Design theme for GTK 4, GTK 3, GTK 2 and Gnome-Shell. This theme is based on materia gtk theme of nana-4.
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>canta-gtk-theme</Name>
@@ -20,6 +20,7 @@
 </Description>
         <PartOf>desktop.theme</PartOf>
         <Files>
+            <Path fileType="data">/usr/share/themes/Canta/COPYING</Path>
             <Path fileType="data">/usr/share/themes/Canta/gnome-shell/assets/activities-active.svg</Path>
             <Path fileType="data">/usr/share/themes/Canta/gnome-shell/assets/activities.svg</Path>
             <Path fileType="data">/usr/share/themes/Canta/gnome-shell/assets/calendar-arrow-left.svg</Path>
@@ -1077,6 +1078,7 @@
 </Description>
         <PartOf>desktop.theme</PartOf>
         <Files>
+            <Path fileType="data">/usr/share/themes/Canta-compact/COPYING</Path>
             <Path fileType="data">/usr/share/themes/Canta-compact/gnome-shell/assets/activities-active.svg</Path>
             <Path fileType="data">/usr/share/themes/Canta-compact/gnome-shell/assets/activities.svg</Path>
             <Path fileType="data">/usr/share/themes/Canta-compact/gnome-shell/assets/calendar-arrow-left.svg</Path>
@@ -2134,6 +2136,7 @@
 </Description>
         <PartOf>desktop.theme</PartOf>
         <Files>
+            <Path fileType="data">/usr/share/themes/Canta-dark/COPYING</Path>
             <Path fileType="data">/usr/share/themes/Canta-dark/gnome-shell/assets/activities-active.svg</Path>
             <Path fileType="data">/usr/share/themes/Canta-dark/gnome-shell/assets/activities.svg</Path>
             <Path fileType="data">/usr/share/themes/Canta-dark/gnome-shell/assets/calendar-arrow-left.svg</Path>
@@ -3189,6 +3192,7 @@
 </Description>
         <PartOf>desktop.theme</PartOf>
         <Files>
+            <Path fileType="data">/usr/share/themes/Canta-dark-compact/COPYING</Path>
             <Path fileType="data">/usr/share/themes/Canta-dark-compact/gnome-shell/assets/activities-active.svg</Path>
             <Path fileType="data">/usr/share/themes/Canta-dark-compact/gnome-shell/assets/activities.svg</Path>
             <Path fileType="data">/usr/share/themes/Canta-dark-compact/gnome-shell/assets/calendar-arrow-left.svg</Path>
@@ -4244,6 +4248,7 @@
 </Description>
         <PartOf>desktop.theme</PartOf>
         <Files>
+            <Path fileType="data">/usr/share/themes/Canta-light/COPYING</Path>
             <Path fileType="data">/usr/share/themes/Canta-light/gnome-shell/assets/activities-active.svg</Path>
             <Path fileType="data">/usr/share/themes/Canta-light/gnome-shell/assets/activities.svg</Path>
             <Path fileType="data">/usr/share/themes/Canta-light/gnome-shell/assets/calendar-arrow-left.svg</Path>
@@ -5301,6 +5306,7 @@
 </Description>
         <PartOf>desktop.theme</PartOf>
         <Files>
+            <Path fileType="data">/usr/share/themes/Canta-light-compact/COPYING</Path>
             <Path fileType="data">/usr/share/themes/Canta-light-compact/gnome-shell/assets/activities-active.svg</Path>
             <Path fileType="data">/usr/share/themes/Canta-light-compact/gnome-shell/assets/activities.svg</Path>
             <Path fileType="data">/usr/share/themes/Canta-light-compact/gnome-shell/assets/calendar-arrow-left.svg</Path>
@@ -6352,12 +6358,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="3">
-            <Date>2022-08-22</Date>
+        <Update release="4">
+            <Date>2026-03-28</Date>
             <Version>2021.09.08</Version>
             <Comment>Packaging update</Comment>
-            <Name>Algent Albrahimi</Name>
-            <Email>algent@protonmail.com</Email>
+            <Name>David Harder</Name>
+            <Email>david@davidjharder.ca</Email>
         </Update>
     </History>
 </PISI>

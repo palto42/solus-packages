@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : libcinnamon-desktop
-version    : 6.4.1
-release    : 7
+version    : 6.6.2
+release    : 9
 source     :
-    - https://github.com/linuxmint/cinnamon-desktop/archive/refs/tags/6.4.1.tar.gz : 0e9af48b97910302a1130424a05c63b2e7aacb4ce6ae7a1d53c71bcd157a3a8f
+    - https://github.com/linuxmint/cinnamon-desktop/archive/refs/tags/6.6.2.tar.gz : 4ed0d52a072551c6d536f1be68d4fcdb4166454fc9e48567ab2550282086b0f4
 homepage   : https://github.com/linuxmint/cinnamon-desktop
 license    : LGPL-2.0-or-later
 component  : desktop.library
@@ -20,3 +21,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license COPYING COPYING.LIB

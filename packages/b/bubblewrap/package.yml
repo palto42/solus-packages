@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : bubblewrap
-version    : 0.11.0
-release    : 21
+version    : 0.11.2
+release    : 22
 source     :
-    - https://github.com/containers/bubblewrap/releases/download/v0.11.0/bubblewrap-0.11.0.tar.xz : 988fd6b232dafa04b8b8198723efeaccdb3c6aa9c1c7936219d5791a8b7a8646
+    - https://github.com/containers/bubblewrap/releases/download/v0.11.2/bubblewrap-0.11.2.tar.xz : 69abc30005d2186baf7737feacd8da35633b93cf5af38838ecff17c5f8e924f6
 license    : LGPL-2.0-or-later
 component  : security
 homepage   : https://github.com/containers/bubblewrap/
@@ -19,3 +20,6 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license COPYING
+check      : |
+    %ninja_check

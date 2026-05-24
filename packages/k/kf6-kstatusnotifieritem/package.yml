@@ -1,10 +1,13 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kf6-kstatusnotifieritem
-version    : 6.19.0
-release    : 25
+version    : 6.26.0
+release    : 35
 source     :
-    - https://download.kde.org/stable/frameworks/6.19/kstatusnotifieritem-6.19.0.tar.xz : 5e40cb3eee9ad5695d504c790475223601e8569cfe5fbc3717480da2f3556949
+    - https://download.kde.org/stable/frameworks/6.26/kstatusnotifieritem-6.26.0.tar.xz : 898914c94820f99889d879f33cabbb5fbe7b9f4e24a6a1d9a9b4439489bc3266
 homepage   : https://community.kde.org/Frameworks
-license    : LGPL-2.0-or-later
+license    :
+    - CC0-1.0
+    - LGPL-2.0-or-later
 component  : desktop.library
 summary    : Implementation of Status Notifier Items
 description: |
@@ -28,3 +31,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*

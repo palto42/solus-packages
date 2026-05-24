@@ -1,9 +1,10 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : hyphen-fr
 version    : 3.0
-release    : 1
+release    : 2
 source     :
-    - https://grammalecte.net/download/fr/hyph-fr-v3.0.zip : c36e530bbd12d7b36b1238feaf4055dcb05fee0e139ed441953557857de4f363
-homepage   : https://grammalecte.net/
+    - git|https://anongit.freedesktop.org/git/libreoffice/dictionaries.git : 3fc3d99f071693dd40a78ba1f729ef47dc189692
+homepage   : https://wiki.documentfoundation.org/Development/Dictionaries
 license    : LGPL-2.0-or-later
 component  : office
 summary    : French hyphenation rules
@@ -11,8 +12,9 @@ description: |
     French hyphenation rules.
 rundeps    :
     - hyphen
-install    : |
-    install -Dm00644 hyph_fr.dic $installdir/usr/share/hyphen/hyph_fr_FR.dic
+install    : | 
+    install -Dm00644 fr_FR/hyph_fr.dic $installdir/usr/share/hyphen/hyph_fr_FR.dic
+    %install_license fr_FR/README_hyph_fr.txt
 
     pushd $installdir/usr/share/hyphen/
         fr_FR_aliases="fr_BE fr_CA fr_CH fr_LU fr_MC"

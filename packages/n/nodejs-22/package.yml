@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : nodejs-22
-version    : 22.17.1
-release    : 7
+version    : 22.22.3
+release    : 14
 source     :
-    - https://github.com/nodejs/node/archive/refs/tags/v22.17.1.tar.gz : 7a1dbcd53b7152df5592624698f987fd626d9240c33d59dfef13812e4c168eb2
+    - https://github.com/nodejs/node/archive/refs/tags/v22.22.3.tar.gz : 5b1cfc9d141ec3f76c808ff761fbe866759c2d1e4d38306417c708f591af23cb
 homepage   : https://nodejs.org/en
 license    : MIT
 component  : programming
@@ -19,7 +20,6 @@ builddeps  :
     - pkgconfig(libuv)
     - pkgconfig(openssl)
     - pkgconfig(sqlite3)
-    - mold
     - patchelf
 clang      : true
 environment: |
@@ -27,8 +27,6 @@ environment: |
     NODEJS_SONAME=127
     NODEJS_PRIVATE_SITELIB=/usr/lib64/node_modules_$NODEJS_MAJOR
 
-    # Shaves a few minutes off the build
-    export LDFLAGS="$LDFLAGS -fuse-ld=mold"
 setup      : |
     python3 configure.py \
             --ninja \
@@ -114,6 +112,7 @@ install    : |
     # The above command is a little overzealous. Add a few permissions back.
     chmod +x $installdir/$NODEJS_PRIVATE_SITELIB/npm/node_modules/@npmcli/run-script/lib/node-gyp-bin/node-gyp
     chmod +x $installdir/$NODEJS_PRIVATE_SITELIB/npm/node_modules/node-gyp/bin/node-gyp.js
+    chmod +x $installdir/$NODEJS_PRIVATE_SITELIB/npm/node_modules/node-gyp/gyp/gyp_main.py
 
     # Fix node-gyp
     sed --in-place --regexp-extended \

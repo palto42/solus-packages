@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : gjs
-version    : 1.84.2
-release    : 65
+version    : 1.88.0
+release    : 68
 source     :
-    - https://download.gnome.org/sources/gjs/1.84/gjs-1.84.2.tar.xz : 35142edf345705636300291ec3a7d583f14969ff3fae0ff30f4a95b1e6740166
+    - https://download.gnome.org/sources/gjs/1.88/gjs-1.88.0.tar.xz : 30a0b9f3317e8e60b1896db2903c70e8b0cd33df953c328755803a75191dc453
 component  : desktop.gnome.core
 homepage   : https://gjs.guide/
 license    :
@@ -15,10 +16,11 @@ optimize   :
 builddeps  :
     - pkgconfig(cairo)
     - pkgconfig(gtk4)
-    - pkgconfig(mozjs-128)
+    - pkgconfig(mozjs-140)
 rundeps    :
     - mozjs
 setup      : |
+    %patch -p1 -i $pkgfiles/0001-gi-Allow-optional-inout-arguments-to-be-null.patch
     %meson_configure -Dinstalled_tests=false
 build      : |
     %ninja_build

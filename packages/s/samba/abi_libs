@@ -111,6 +111,8 @@ libndr.so.6
 libnet-keytab-private-samba.so
 libnetapi.so.1
 libnetif-private-samba.so
+libngtcp2-crypto-gnutls-private-samba.so
+libngtcp2-private-samba.so
 libnpa-tstream-private-samba.so
 libnss-info-private-samba.so
 libnss_winbind.so.2
@@ -118,6 +120,7 @@ libnss_wins.so.2
 libposix-eadb-private-samba.so
 libprinter-driver-private-samba.so
 libprinting-migrate-private-samba.so
+libquic-private-samba.so
 libregistry-private-samba.so
 libreplace-private-samba.so
 libsamba-cluster-support-private-samba.so
@@ -130,6 +133,7 @@ libsamba-net-private-samba.so
 libsamba-passdb.so.0
 libsamba-policy-private-samba.so
 libsamba-security-private-samba.so
+libsamba-security-trusts-private-samba.so
 libsamba-sockets-private-samba.so
 libsamba-util.so.0
 libsamba3-util-private-samba.so
@@ -139,7 +143,6 @@ libsecrets3-private-samba.so
 libserver-id-db-private-samba.so
 libserver-role-private-samba.so
 libshares-private-samba.so
-libsmb-transport-private-samba.so
 libsmbclient-raw-private-samba.so
 libsmbclient.so.0
 libsmbconf.so.0

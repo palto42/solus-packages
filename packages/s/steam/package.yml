@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : steam
-version    : 1.0.0.84
-release    : 101
+version    : 1.0.0.85
+release    : 106
 source     :
-    - https://repo.steampowered.com/steam/pool/steam/s/steam/steam_1.0.0.84.tar.gz : 31fa762d58793f1aa8ea9df0122c3469c253fc8acb6daa7140fb7433fe077b44
+    - https://repo.steampowered.com/steam/pool/steam/s/steam/steam_1.0.0.85.tar.gz : 7f2d374a2fb413ced5b8125151456219d918a255872b4bb77016cbccf38bb7f1
 homepage   : https://store.steampowered.com
 license    : Distributable
 component  :
@@ -14,9 +15,6 @@ summary    :
 description:
     - Launcher for the Steam software distribution service
     - devices : udev rules for Steam and SteamVR
-patterns   :
-    - devices :
-        - /usr/lib64/udev/rules.d/
 rundeps    :
     - acl-32bit
     - alsa-plugins-32bit
@@ -31,7 +29,7 @@ rundeps    :
     - glew110-32bit
     - gnome-themes-extra-32bit
     - gperftools-32bit
-    - gst-plugins-base-32bit
+    - gstreamer-plugins-base-32bit
     - gtk2-engine-murrine-32bit
     - hidapi-32bit
     - intel-tbb-32bit
@@ -67,14 +65,13 @@ rundeps    :
     - libxmu-32bit
     - libxscrnsaver-32bit
     - libxxf86dga-32bit
-    - linux-steam-integration
     - mesalib-32bit
     - minigbm-32bit
     - mpg123-32bit
     - nas-32bit
     - ncurses-32bit
     - ncurses5-32bit
-    - network-manager-32bit
+    - network-manager-libnm-32bit
     - openal-soft-32bit
     - openldap-32bit
     - openssl-32bit
@@ -98,13 +95,14 @@ rundeps    :
 install    : |
     %patch -p1 -i $pkgfiles/fix-udev-rules.patch
     %make_install
+    %install_license COPYING steam_subscriber_agreement.txt
     install -Ddm00755 $installdir/%libdir%/udev/rules.d
     install -m00644 subprojects/steam-devices/* $installdir/%libdir%/udev/rules.d/.
 
-    # Remove license
-    rm -v $installdir/%libdir%/udev/rules.d/LICENSE
-
-    # Integrate with LSI.
-    mv $installdir/usr/bin/steam $installdir/usr/lib/steam/.
+    # Load ntsync module
+    install -Dm00644 $pkgfiles/10-steam.conf $installdir/%libdir%/modules-load.d/10-steam.conf
+patterns   :
+    - devices :
+        - /usr/lib64/udev/rules.d/
 replaces   :
     - devices : steam-udev-rules

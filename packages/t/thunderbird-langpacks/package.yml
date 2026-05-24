@@ -1,81 +1,82 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : thunderbird-langpacks
 #### Don't modify the version manually, use the update.py script
 #### This package MUST have the same major version as the Thunderbird package, and should be updated in sync
 ##@@BEGIN_VERSION
-version    : "140.3.1"
+version     : "151.0"
 ##@@END_VERSION
-release    : 5
+release    : 20
 homepage   : https://www.mozilla.org/
 upstreams  :
 #### DO NOT MANUALLY MODIFY ANYTHING BETWEEN THE BEGIN_UPSTREAMS AND END_UPSTREAMS COMMENTS
 source     :
 ##@@BEGIN_UPSTREAMS
-    - https://ftp.mozilla.org/pub/thunderbird/releases/140.3.1esr/linux-x86_64/xpi/af.xpi#langpack-af@thunderbird.mozilla.org.xpi : bdb506dc1e1a7b90b3f71c039a2e461bab933dbe2236f549e93ab59a3379e8f8
-    - https://ftp.mozilla.org/pub/thunderbird/releases/140.3.1esr/linux-x86_64/xpi/ar.xpi#langpack-ar@thunderbird.mozilla.org.xpi : c2eb912eff813edaf053155cc37320f99c2854a538d97c5a23ee36d35d21cb97
-    - https://ftp.mozilla.org/pub/thunderbird/releases/140.3.1esr/linux-x86_64/xpi/ast.xpi#langpack-ast@thunderbird.mozilla.org.xpi : eaddad697e410aedcbd037d498290e4437bbd331f04663acc6d3027fdf008b6a
-    - https://ftp.mozilla.org/pub/thunderbird/releases/140.3.1esr/linux-x86_64/xpi/be.xpi#langpack-be@thunderbird.mozilla.org.xpi : 0bac515b16a8bbbbe127232eb5805bd5d3172f7efb8a35305b8707f7837b56ab
-    - https://ftp.mozilla.org/pub/thunderbird/releases/140.3.1esr/linux-x86_64/xpi/bg.xpi#langpack-bg@thunderbird.mozilla.org.xpi : 8a3af4aa8793e1b84a206b434e1f001eb769760b9cc73b0a4a16d21996c0bf2f
-    - https://ftp.mozilla.org/pub/thunderbird/releases/140.3.1esr/linux-x86_64/xpi/br.xpi#langpack-br@thunderbird.mozilla.org.xpi : 0d8f9b3b790615e12e710436e72a4a6d2cba7845c805b9570138ec04d08646c1
-    - https://ftp.mozilla.org/pub/thunderbird/releases/140.3.1esr/linux-x86_64/xpi/ca.xpi#langpack-ca@thunderbird.mozilla.org.xpi : b939fff594476b8f62014a835198f7092f1d273d47b93d5b3d6d773c2c4c5a1f
-    - https://ftp.mozilla.org/pub/thunderbird/releases/140.3.1esr/linux-x86_64/xpi/cak.xpi#langpack-cak@thunderbird.mozilla.org.xpi : 28138c9ab156a7eebe4f331bc3b0900b61cdbc9f5e9819ff30ac34c6c38c0780
-    - https://ftp.mozilla.org/pub/thunderbird/releases/140.3.1esr/linux-x86_64/xpi/cs.xpi#langpack-cs@thunderbird.mozilla.org.xpi : fa3f552270106a9212191e5cdf349743efa746a10bbd42d717a8cfdef78eaec5
-    - https://ftp.mozilla.org/pub/thunderbird/releases/140.3.1esr/linux-x86_64/xpi/cy.xpi#langpack-cy@thunderbird.mozilla.org.xpi : bf8aca579ddaee64450b968cfa96c346a077ab68be5d4ddae101bd3bf3c8da72
-    - https://ftp.mozilla.org/pub/thunderbird/releases/140.3.1esr/linux-x86_64/xpi/da.xpi#langpack-da@thunderbird.mozilla.org.xpi : 15bc72f2724b75ae20e373868b06eddc9946cd44fa9d8e43445456ce6098616a
-    - https://ftp.mozilla.org/pub/thunderbird/releases/140.3.1esr/linux-x86_64/xpi/de.xpi#langpack-de@thunderbird.mozilla.org.xpi : 2d02ef01ed8f4706dbed50bc61ec0b3f4a02d7ee0cf0f9ce5cec2aa9b7403b6e
-    - https://ftp.mozilla.org/pub/thunderbird/releases/140.3.1esr/linux-x86_64/xpi/dsb.xpi#langpack-dsb@thunderbird.mozilla.org.xpi : 31dabdd94a3dea337a65706d6112ef452520bcc0480af8947ed22239f3c5d8a6
-    - https://ftp.mozilla.org/pub/thunderbird/releases/140.3.1esr/linux-x86_64/xpi/el.xpi#langpack-el@thunderbird.mozilla.org.xpi : 15fabc2fb5390fe757522141ff730e79c0f0dc941edab079cf5430c352386a73
-    - https://ftp.mozilla.org/pub/thunderbird/releases/140.3.1esr/linux-x86_64/xpi/en-CA.xpi#langpack-en-CA@thunderbird.mozilla.org.xpi : eff3d141e6cf1dae8b82ba201b789d83d6946949f477cd84c4a02bb62e23d688
-    - https://ftp.mozilla.org/pub/thunderbird/releases/140.3.1esr/linux-x86_64/xpi/en-GB.xpi#langpack-en-GB@thunderbird.mozilla.org.xpi : 7817a03e90e7d7b4d367698d86993b8615ad58c4f72921acd557efe262fbe761
-    - https://ftp.mozilla.org/pub/thunderbird/releases/140.3.1esr/linux-x86_64/xpi/en-US.xpi#langpack-en-US@thunderbird.mozilla.org.xpi : c461f33ecf347043b3b908f30b5fa4284ce6206b84ee3a8d713124b257dadf79
-    - https://ftp.mozilla.org/pub/thunderbird/releases/140.3.1esr/linux-x86_64/xpi/es-AR.xpi#langpack-es-AR@thunderbird.mozilla.org.xpi : 49f0c55cce5c0a278baac10973d448545cc2f54304ff064786591552dbf13bda
-    - https://ftp.mozilla.org/pub/thunderbird/releases/140.3.1esr/linux-x86_64/xpi/es-ES.xpi#langpack-es-ES@thunderbird.mozilla.org.xpi : 9798015a9cf60d0f00a4a68b93ba87420e4a56f87f6ee7309161856b6f8a9204
-    - https://ftp.mozilla.org/pub/thunderbird/releases/140.3.1esr/linux-x86_64/xpi/es-MX.xpi#langpack-es-MX@thunderbird.mozilla.org.xpi : 35c6464e25d0f1432c0aefd28af9d3631c79a7b15a077cab0d2031ec0675fd53
-    - https://ftp.mozilla.org/pub/thunderbird/releases/140.3.1esr/linux-x86_64/xpi/et.xpi#langpack-et@thunderbird.mozilla.org.xpi : 6ca7f6d9f70e1c143b7af4c0d5665c632d488cc50456e1a8b6d0f4d6a4dc900f
-    - https://ftp.mozilla.org/pub/thunderbird/releases/140.3.1esr/linux-x86_64/xpi/eu.xpi#langpack-eu@thunderbird.mozilla.org.xpi : d07ae7cf33bdbe2a743725674397a7ef0e63a2d343cbce47c3849f17b98a6dad
-    - https://ftp.mozilla.org/pub/thunderbird/releases/140.3.1esr/linux-x86_64/xpi/fi.xpi#langpack-fi@thunderbird.mozilla.org.xpi : 3fab9d20b197b1706fde76821f5e4855800bf7a76fc16578acc1a7db813175f4
-    - https://ftp.mozilla.org/pub/thunderbird/releases/140.3.1esr/linux-x86_64/xpi/fr.xpi#langpack-fr@thunderbird.mozilla.org.xpi : 3940be55078dc1f0822e812e53decb9f87cf19d305cdd415341b98cdd607380a
-    - https://ftp.mozilla.org/pub/thunderbird/releases/140.3.1esr/linux-x86_64/xpi/fy-NL.xpi#langpack-fy-NL@thunderbird.mozilla.org.xpi : 5ee3f842d3f2e9d0a20f7cf2564d3db39bf3ae2fae9388b5f03af08a0b79d3f0
-    - https://ftp.mozilla.org/pub/thunderbird/releases/140.3.1esr/linux-x86_64/xpi/ga-IE.xpi#langpack-ga-IE@thunderbird.mozilla.org.xpi : 4c6ea060c30115a2dfbdf7fca644b9453cbb674f074a6f1eb30b90a4f190f74e
-    - https://ftp.mozilla.org/pub/thunderbird/releases/140.3.1esr/linux-x86_64/xpi/gd.xpi#langpack-gd@thunderbird.mozilla.org.xpi : 1a6a172b67f4d9d0ea287a237109204826eb7a06abf8f2469de063cf287dc6e3
-    - https://ftp.mozilla.org/pub/thunderbird/releases/140.3.1esr/linux-x86_64/xpi/gl.xpi#langpack-gl@thunderbird.mozilla.org.xpi : cb28ea405edcabb7a9e0eb76cbebe10c0fb4170cfadba42c03459ff4659e87ae
-    - https://ftp.mozilla.org/pub/thunderbird/releases/140.3.1esr/linux-x86_64/xpi/he.xpi#langpack-he@thunderbird.mozilla.org.xpi : 153c245a4d2bc3a1b8652ed3d98c10a780bfad6d047f38512f833a24bb52e25d
-    - https://ftp.mozilla.org/pub/thunderbird/releases/140.3.1esr/linux-x86_64/xpi/hr.xpi#langpack-hr@thunderbird.mozilla.org.xpi : 2a353830ecf690f53d254907e5dfe3bfa35735004f5a397fa8a4101d5d1e8b47
-    - https://ftp.mozilla.org/pub/thunderbird/releases/140.3.1esr/linux-x86_64/xpi/hsb.xpi#langpack-hsb@thunderbird.mozilla.org.xpi : 6f0414ae218f19f326cb850c8d81f7d06feb8276eccfebcd78bd6cdc2e65ce64
-    - https://ftp.mozilla.org/pub/thunderbird/releases/140.3.1esr/linux-x86_64/xpi/hu.xpi#langpack-hu@thunderbird.mozilla.org.xpi : 4ddb6291a7cfba421155a677fc4fcfeb6b0a97b7f7417165c1eb77ac6e6a31a3
-    - https://ftp.mozilla.org/pub/thunderbird/releases/140.3.1esr/linux-x86_64/xpi/hy-AM.xpi#langpack-hy-AM@thunderbird.mozilla.org.xpi : e9f28c32b2b21c085a6665754449a071fa0e0a876230c23cd228657cd16c8d98
-    - https://ftp.mozilla.org/pub/thunderbird/releases/140.3.1esr/linux-x86_64/xpi/id.xpi#langpack-id@thunderbird.mozilla.org.xpi : 87c748b01af67d8467c50282990463390d7f7d58d289dd42f2e659f9699701e8
-    - https://ftp.mozilla.org/pub/thunderbird/releases/140.3.1esr/linux-x86_64/xpi/is.xpi#langpack-is@thunderbird.mozilla.org.xpi : 7c07bc621c544bb2052439173454cdd6faec5fdd5dd6cdd6ee841bc0d321c9fa
-    - https://ftp.mozilla.org/pub/thunderbird/releases/140.3.1esr/linux-x86_64/xpi/it.xpi#langpack-it@thunderbird.mozilla.org.xpi : 19d50ec651e5f2f4e3a758733c4f99ec7a1304496aed090816df35978e26d7d0
-    - https://ftp.mozilla.org/pub/thunderbird/releases/140.3.1esr/linux-x86_64/xpi/ja.xpi#langpack-ja@thunderbird.mozilla.org.xpi : f99d085af81e2011df2085bf17bc68406a027f3ea8b08b9e327709d7ff84fc41
-    - https://ftp.mozilla.org/pub/thunderbird/releases/140.3.1esr/linux-x86_64/xpi/ka.xpi#langpack-ka@thunderbird.mozilla.org.xpi : a9320a8b015f0a821eaf20059087d83add80bf107794bdd269d461eb830fef2f
-    - https://ftp.mozilla.org/pub/thunderbird/releases/140.3.1esr/linux-x86_64/xpi/kab.xpi#langpack-kab@thunderbird.mozilla.org.xpi : 1d99e8359a19b9ec0fec9298287493703bf89ff6b16b51401e52b62cdb0b86d7
-    - https://ftp.mozilla.org/pub/thunderbird/releases/140.3.1esr/linux-x86_64/xpi/kk.xpi#langpack-kk@thunderbird.mozilla.org.xpi : 41f9763c665ce3de53ded19e4c575d9b43f575ad94c38cb8a79aa604591ba5d1
-    - https://ftp.mozilla.org/pub/thunderbird/releases/140.3.1esr/linux-x86_64/xpi/ko.xpi#langpack-ko@thunderbird.mozilla.org.xpi : 4281cc421b10748bc8224f5819ce12be769090aeb6fb4d77f6df87ae382c3fae
-    - https://ftp.mozilla.org/pub/thunderbird/releases/140.3.1esr/linux-x86_64/xpi/lt.xpi#langpack-lt@thunderbird.mozilla.org.xpi : 5b6ee91ff187342c11cb54b7311b127290e7613cc809ee0bfe37e06843bb3bb8
-    - https://ftp.mozilla.org/pub/thunderbird/releases/140.3.1esr/linux-x86_64/xpi/lv.xpi#langpack-lv@thunderbird.mozilla.org.xpi : d0655328ecace0b802cda007544e7d6b1082074eb44be1c64049b707a28642b6
-    - https://ftp.mozilla.org/pub/thunderbird/releases/140.3.1esr/linux-x86_64/xpi/ms.xpi#langpack-ms@thunderbird.mozilla.org.xpi : a915cd567d0aa94fb09a4c7f180e0020fefa5e52e02346d68d22d7eabc5156de
-    - https://ftp.mozilla.org/pub/thunderbird/releases/140.3.1esr/linux-x86_64/xpi/nb-NO.xpi#langpack-nb-NO@thunderbird.mozilla.org.xpi : c9de33b677170f67a3d468eb636e91603f1c45392e1ed8e2241bb707765270ff
-    - https://ftp.mozilla.org/pub/thunderbird/releases/140.3.1esr/linux-x86_64/xpi/nl.xpi#langpack-nl@thunderbird.mozilla.org.xpi : 4417db246dfc90d4b66285314fb4b9e2785e9615650dbdc93d552bc6af317201
-    - https://ftp.mozilla.org/pub/thunderbird/releases/140.3.1esr/linux-x86_64/xpi/nn-NO.xpi#langpack-nn-NO@thunderbird.mozilla.org.xpi : 840ebeaba099f0bf1532e006839d3dbb95386330356ffe0e6b180a662bdec9c5
-    - https://ftp.mozilla.org/pub/thunderbird/releases/140.3.1esr/linux-x86_64/xpi/pa-IN.xpi#langpack-pa-IN@thunderbird.mozilla.org.xpi : 706e895491ebe017c31e052d71394a65b298019471bf04635bac76a3444a1beb
-    - https://ftp.mozilla.org/pub/thunderbird/releases/140.3.1esr/linux-x86_64/xpi/pl.xpi#langpack-pl@thunderbird.mozilla.org.xpi : 1f9f4450e16aed0e84f8ea98664123cd1c2ce231bae551673d55d0e63869a9e2
-    - https://ftp.mozilla.org/pub/thunderbird/releases/140.3.1esr/linux-x86_64/xpi/pt-BR.xpi#langpack-pt-BR@thunderbird.mozilla.org.xpi : be22f8378030aa37b52f94ae7626fdb4792ad14734c048423e0b071a7e258486
-    - https://ftp.mozilla.org/pub/thunderbird/releases/140.3.1esr/linux-x86_64/xpi/pt-PT.xpi#langpack-pt-PT@thunderbird.mozilla.org.xpi : e2067e4e750288f85f22b2bedc52ed6736d700a808244ec1864dbf89fc268252
-    - https://ftp.mozilla.org/pub/thunderbird/releases/140.3.1esr/linux-x86_64/xpi/rm.xpi#langpack-rm@thunderbird.mozilla.org.xpi : 69c724181d1a4e9bc1c769b5223f273ff9a5de5c0d2e6b20b1819f16d4ce5b5b
-    - https://ftp.mozilla.org/pub/thunderbird/releases/140.3.1esr/linux-x86_64/xpi/ro.xpi#langpack-ro@thunderbird.mozilla.org.xpi : a2ef1434a8b32295623294ad0f604e733d95a022691492a2b3f2b5ed9ef56b21
-    - https://ftp.mozilla.org/pub/thunderbird/releases/140.3.1esr/linux-x86_64/xpi/ru.xpi#langpack-ru@thunderbird.mozilla.org.xpi : bba63279c258237a01126c12f54bbc6fcafaf77725fee7a193927e5d676dce58
-    - https://ftp.mozilla.org/pub/thunderbird/releases/140.3.1esr/linux-x86_64/xpi/sk.xpi#langpack-sk@thunderbird.mozilla.org.xpi : 9197010b229ad2d1d9396368d82dfcfbe9489fc8e73c6b649363780dd2257499
-    - https://ftp.mozilla.org/pub/thunderbird/releases/140.3.1esr/linux-x86_64/xpi/sl.xpi#langpack-sl@thunderbird.mozilla.org.xpi : 5a173a9780c69d0c8af59b60737a94a317c115b22fbbe0a530c7eb198532f86d
-    - https://ftp.mozilla.org/pub/thunderbird/releases/140.3.1esr/linux-x86_64/xpi/sq.xpi#langpack-sq@thunderbird.mozilla.org.xpi : 505a085d71ab35dc54f38bdcf51a1f4fa0f152dd50ab4dfa00a7ff89d4f7c93c
-    - https://ftp.mozilla.org/pub/thunderbird/releases/140.3.1esr/linux-x86_64/xpi/sr.xpi#langpack-sr@thunderbird.mozilla.org.xpi : b9f89c881d767ad53e1d07be8d56dea8fa330cdd3a8d25927d7a7fd9d5680301
-    - https://ftp.mozilla.org/pub/thunderbird/releases/140.3.1esr/linux-x86_64/xpi/sv-SE.xpi#langpack-sv-SE@thunderbird.mozilla.org.xpi : 29c1cfd0fdd80b5bbce294c047e1acd07fa70fe358e9ea7c1cd7227b50fea12b
-    - https://ftp.mozilla.org/pub/thunderbird/releases/140.3.1esr/linux-x86_64/xpi/th.xpi#langpack-th@thunderbird.mozilla.org.xpi : e3232d7a2dca178141baad7b328c63b67f53491e3c665aa5761f97dbda7f9723
-    - https://ftp.mozilla.org/pub/thunderbird/releases/140.3.1esr/linux-x86_64/xpi/tr.xpi#langpack-tr@thunderbird.mozilla.org.xpi : 1a2fa715065552780f399fce87418cdf816b1c782cde0547b24efc5fc2cf54f5
-    - https://ftp.mozilla.org/pub/thunderbird/releases/140.3.1esr/linux-x86_64/xpi/uk.xpi#langpack-uk@thunderbird.mozilla.org.xpi : b451f2b516d69e4d7b82d8dddc8723e0334b8760430545ad636ce29e0ca381e9
-    - https://ftp.mozilla.org/pub/thunderbird/releases/140.3.1esr/linux-x86_64/xpi/uz.xpi#langpack-uz@thunderbird.mozilla.org.xpi : 5ab33223dd687b4bfb21dc2f5a65d908bd0040f224fd761a801fff08631d0680
-    - https://ftp.mozilla.org/pub/thunderbird/releases/140.3.1esr/linux-x86_64/xpi/vi.xpi#langpack-vi@thunderbird.mozilla.org.xpi : 321dd07dcf1d91c392ba96235e0073aa179e179fe867b21bd7165966d962697c
-    - https://ftp.mozilla.org/pub/thunderbird/releases/140.3.1esr/linux-x86_64/xpi/zh-CN.xpi#langpack-zh-CN@thunderbird.mozilla.org.xpi : fd4b3cabccc8da52a44bcefd511bdd23c1bc8862092bff7042c06dc19cf7583a
-    - https://ftp.mozilla.org/pub/thunderbird/releases/140.3.1esr/linux-x86_64/xpi/zh-TW.xpi#langpack-zh-TW@thunderbird.mozilla.org.xpi : f12643e7ef205463e12cb937038160d06388b8a884ea98bcfb2bd5e423c90ebe
+    - https://ftp.mozilla.org/pub/thunderbird/releases/151.0/linux-x86_64/xpi/af.xpi#langpack-af@thunderbird.mozilla.org.xpi : 10840c4283181accba58aea11d1b177a49ad8bf4db9803b89800fd978bb57699
+    - https://ftp.mozilla.org/pub/thunderbird/releases/151.0/linux-x86_64/xpi/ar.xpi#langpack-ar@thunderbird.mozilla.org.xpi : 1a9d6c6e1a89b921aebe304856d2dc9be35c36ab13e656fae925617287488f5c
+    - https://ftp.mozilla.org/pub/thunderbird/releases/151.0/linux-x86_64/xpi/ast.xpi#langpack-ast@thunderbird.mozilla.org.xpi : 5fe1ac29b1b00c82bcc1f3f599f5e4abeb868c3d770df060a09e12ff3388e648
+    - https://ftp.mozilla.org/pub/thunderbird/releases/151.0/linux-x86_64/xpi/be.xpi#langpack-be@thunderbird.mozilla.org.xpi : b360fc2d060792cc57ff7910f711703f9aa49d8505e0c2c89f9ad1f4b2e013f9
+    - https://ftp.mozilla.org/pub/thunderbird/releases/151.0/linux-x86_64/xpi/bg.xpi#langpack-bg@thunderbird.mozilla.org.xpi : 0f94c110540f6558d7656a0be30b34647ccb9728d2d386f93046e97bcd34a7fe
+    - https://ftp.mozilla.org/pub/thunderbird/releases/151.0/linux-x86_64/xpi/br.xpi#langpack-br@thunderbird.mozilla.org.xpi : 7d01c4e8a5255c44e786f6d3b6bb2fc2f8c83165d3bb379fff901d26fbfd7575
+    - https://ftp.mozilla.org/pub/thunderbird/releases/151.0/linux-x86_64/xpi/ca.xpi#langpack-ca@thunderbird.mozilla.org.xpi : e823581138bc0ff35004b8f8d1b2b3ac3905eedf3bb8ea9e9228b3404a144027
+    - https://ftp.mozilla.org/pub/thunderbird/releases/151.0/linux-x86_64/xpi/cak.xpi#langpack-cak@thunderbird.mozilla.org.xpi : a5f4c004a0c762de13e0a93564826ef9cd2621706a5dbd98308c71c75f74b043
+    - https://ftp.mozilla.org/pub/thunderbird/releases/151.0/linux-x86_64/xpi/cs.xpi#langpack-cs@thunderbird.mozilla.org.xpi : 997b9c59c05b4fcd2286b6998e7b2d681939e07f362f387b69ff41565a90a864
+    - https://ftp.mozilla.org/pub/thunderbird/releases/151.0/linux-x86_64/xpi/cy.xpi#langpack-cy@thunderbird.mozilla.org.xpi : 105ec2aeba246731cdab674d5f3a0da00ad5f44c1a1848a5f57577fb5851ae60
+    - https://ftp.mozilla.org/pub/thunderbird/releases/151.0/linux-x86_64/xpi/da.xpi#langpack-da@thunderbird.mozilla.org.xpi : d926f613b8fe61dfa2dbe480aa3fa724a1627d30824f68437390c42977d6448a
+    - https://ftp.mozilla.org/pub/thunderbird/releases/151.0/linux-x86_64/xpi/de.xpi#langpack-de@thunderbird.mozilla.org.xpi : 9da0fa85343542d5fa924ab22bbbac7c2c7cd652b988a5f6658950823eec493f
+    - https://ftp.mozilla.org/pub/thunderbird/releases/151.0/linux-x86_64/xpi/dsb.xpi#langpack-dsb@thunderbird.mozilla.org.xpi : b7892eeab7a96df1c510e45a21c17f7def0cb28756099ac7a080f4d6495befa0
+    - https://ftp.mozilla.org/pub/thunderbird/releases/151.0/linux-x86_64/xpi/el.xpi#langpack-el@thunderbird.mozilla.org.xpi : befa1826afc141d2ec4a7c425a0c88a414b47084e059ea5ae9e275425b1c4421
+    - https://ftp.mozilla.org/pub/thunderbird/releases/151.0/linux-x86_64/xpi/en-CA.xpi#langpack-en-CA@thunderbird.mozilla.org.xpi : 324a8b60b109107d1d0b7478901e1b3616bc75f2c064d74c94c2836c8f580327
+    - https://ftp.mozilla.org/pub/thunderbird/releases/151.0/linux-x86_64/xpi/en-GB.xpi#langpack-en-GB@thunderbird.mozilla.org.xpi : cb2358336438306080d10d57c70716aec7d70df2997f08deb0e03dc8c0ae49fa
+    - https://ftp.mozilla.org/pub/thunderbird/releases/151.0/linux-x86_64/xpi/en-US.xpi#langpack-en-US@thunderbird.mozilla.org.xpi : 8c0ac75bdfaef2c478ba324ffc1660b00261a64318127c1639298dc8736c2959
+    - https://ftp.mozilla.org/pub/thunderbird/releases/151.0/linux-x86_64/xpi/es-AR.xpi#langpack-es-AR@thunderbird.mozilla.org.xpi : 1b012135064cfd63c74ba46894ee0d54c799af1f7a7dd4692e9b381be5304e5c
+    - https://ftp.mozilla.org/pub/thunderbird/releases/151.0/linux-x86_64/xpi/es-ES.xpi#langpack-es-ES@thunderbird.mozilla.org.xpi : cd47b7bdaf98f2f137059fd3df97d5d7c5fb8bb221e9f75e276f23a8b309c12f
+    - https://ftp.mozilla.org/pub/thunderbird/releases/151.0/linux-x86_64/xpi/es-MX.xpi#langpack-es-MX@thunderbird.mozilla.org.xpi : 5d66d81176b8612d9b9b5dfabcdd30b65eb4a7fe17449d208276b425142e97e4
+    - https://ftp.mozilla.org/pub/thunderbird/releases/151.0/linux-x86_64/xpi/et.xpi#langpack-et@thunderbird.mozilla.org.xpi : f40be7fbf66bf3e281e8227976433433f2cc5cc735ce4a006e89ed4751557693
+    - https://ftp.mozilla.org/pub/thunderbird/releases/151.0/linux-x86_64/xpi/eu.xpi#langpack-eu@thunderbird.mozilla.org.xpi : 5fdf74888b4afafef5cd237b7659ac19098121b6a74d82e3c3a7b8b696acf503
+    - https://ftp.mozilla.org/pub/thunderbird/releases/151.0/linux-x86_64/xpi/fi.xpi#langpack-fi@thunderbird.mozilla.org.xpi : ca90c3b078449737a5d8ed57cd2c07ac7d41bbb7783949f3b3229a0849e45d46
+    - https://ftp.mozilla.org/pub/thunderbird/releases/151.0/linux-x86_64/xpi/fr.xpi#langpack-fr@thunderbird.mozilla.org.xpi : 08027d1cc07a7a7064637e0f0e12bc25b634c76114af82afb28c00519d083bd2
+    - https://ftp.mozilla.org/pub/thunderbird/releases/151.0/linux-x86_64/xpi/fy-NL.xpi#langpack-fy-NL@thunderbird.mozilla.org.xpi : 991206b1bc120567fb2b8a89b9e0337dd3273d010923c02f36597b5c97a79d8b
+    - https://ftp.mozilla.org/pub/thunderbird/releases/151.0/linux-x86_64/xpi/ga-IE.xpi#langpack-ga-IE@thunderbird.mozilla.org.xpi : 5ac28485d5e52ddedf3ede19f0455bda35d0fb0f619b0257b5e388f599964d39
+    - https://ftp.mozilla.org/pub/thunderbird/releases/151.0/linux-x86_64/xpi/gd.xpi#langpack-gd@thunderbird.mozilla.org.xpi : 7d1c294773869a35e9bdacd865fefae8a516a658089c42c898112aef38a7f433
+    - https://ftp.mozilla.org/pub/thunderbird/releases/151.0/linux-x86_64/xpi/gl.xpi#langpack-gl@thunderbird.mozilla.org.xpi : 01379d78ab353788bdea9fda3c511ec5958b8f6af6b3a9c22bfad0a95ecef096
+    - https://ftp.mozilla.org/pub/thunderbird/releases/151.0/linux-x86_64/xpi/he.xpi#langpack-he@thunderbird.mozilla.org.xpi : 2e80228bf2bc1b296d65c5258a1e1051cdcf5293bce7a35b2df3090ca5bd50fb
+    - https://ftp.mozilla.org/pub/thunderbird/releases/151.0/linux-x86_64/xpi/hr.xpi#langpack-hr@thunderbird.mozilla.org.xpi : e7e07baf13fad36755d71f57234afbbcb843eafd1622ae39f4e945f49033ddad
+    - https://ftp.mozilla.org/pub/thunderbird/releases/151.0/linux-x86_64/xpi/hsb.xpi#langpack-hsb@thunderbird.mozilla.org.xpi : 2be83a34510eb6ffb8d0f2cd3f1290b4ff795f4b367664657cb56e2a9de35b96
+    - https://ftp.mozilla.org/pub/thunderbird/releases/151.0/linux-x86_64/xpi/hu.xpi#langpack-hu@thunderbird.mozilla.org.xpi : 88c45501327c303da066713bb50ad598a92533208cfa94dcb01a0a7ccdf32a13
+    - https://ftp.mozilla.org/pub/thunderbird/releases/151.0/linux-x86_64/xpi/hy-AM.xpi#langpack-hy-AM@thunderbird.mozilla.org.xpi : ab4c492a5695de66dd2fcce06015e442fce4d9e01117456752da645c2989dd98
+    - https://ftp.mozilla.org/pub/thunderbird/releases/151.0/linux-x86_64/xpi/id.xpi#langpack-id@thunderbird.mozilla.org.xpi : 0d895523a5a2d4947c648b94c17408cc9ed9b258c0c96abb83c1d8b7120e9939
+    - https://ftp.mozilla.org/pub/thunderbird/releases/151.0/linux-x86_64/xpi/is.xpi#langpack-is@thunderbird.mozilla.org.xpi : e70c6bf87a05dba8afb8201b8dc744504185daff0f1030d26823d858095fbcff
+    - https://ftp.mozilla.org/pub/thunderbird/releases/151.0/linux-x86_64/xpi/it.xpi#langpack-it@thunderbird.mozilla.org.xpi : 6c6b310a4d97e579d7ee04db5a3369cdbab0db7d15a036a140061174afd31e75
+    - https://ftp.mozilla.org/pub/thunderbird/releases/151.0/linux-x86_64/xpi/ja.xpi#langpack-ja@thunderbird.mozilla.org.xpi : 2c81d295da0dc024a80a158d2c7f708bdbcadfb089795c1ee1c80211f4ad17f2
+    - https://ftp.mozilla.org/pub/thunderbird/releases/151.0/linux-x86_64/xpi/ka.xpi#langpack-ka@thunderbird.mozilla.org.xpi : 3505fa6e2d9eebeb422cc74b4116f3c0f0a982fb07f4583f243f68bea27b18d0
+    - https://ftp.mozilla.org/pub/thunderbird/releases/151.0/linux-x86_64/xpi/kab.xpi#langpack-kab@thunderbird.mozilla.org.xpi : 7c623b6a3be40aeb9a4b04c26e5e16e447445fe75b558cb9f522872cd52e1068
+    - https://ftp.mozilla.org/pub/thunderbird/releases/151.0/linux-x86_64/xpi/kk.xpi#langpack-kk@thunderbird.mozilla.org.xpi : 3b03f793944ed1e1b9a13867fbc598b329e982de6c8074700c2c326c95ad360a
+    - https://ftp.mozilla.org/pub/thunderbird/releases/151.0/linux-x86_64/xpi/ko.xpi#langpack-ko@thunderbird.mozilla.org.xpi : 507fad12eaabff2505b696a89805e03d2c5cf3763abcbd2c974a6ad371f2d856
+    - https://ftp.mozilla.org/pub/thunderbird/releases/151.0/linux-x86_64/xpi/lt.xpi#langpack-lt@thunderbird.mozilla.org.xpi : f6cbf5d5c29c579e86327942fcaa137a84bc469002ab0a14e2f3c693cbcf730c
+    - https://ftp.mozilla.org/pub/thunderbird/releases/151.0/linux-x86_64/xpi/lv.xpi#langpack-lv@thunderbird.mozilla.org.xpi : bd0aea6669a6f6a2a901345b91620583e3bc32525d8375ad295a29f3fd2ab284
+    - https://ftp.mozilla.org/pub/thunderbird/releases/151.0/linux-x86_64/xpi/ms.xpi#langpack-ms@thunderbird.mozilla.org.xpi : cdec02522d675d3e66d5c61c0e2a8b4bedc24fdc3b1541684c294d739c3485b1
+    - https://ftp.mozilla.org/pub/thunderbird/releases/151.0/linux-x86_64/xpi/nb-NO.xpi#langpack-nb-NO@thunderbird.mozilla.org.xpi : 91f6076d9953e5eed0f2752e47cda5d75a4b9b54bacefe1eaba5c1de029cf407
+    - https://ftp.mozilla.org/pub/thunderbird/releases/151.0/linux-x86_64/xpi/nl.xpi#langpack-nl@thunderbird.mozilla.org.xpi : 80412a3c755aa581c6da38e8dab73f74f084e2b03061c7183767630baf7c2456
+    - https://ftp.mozilla.org/pub/thunderbird/releases/151.0/linux-x86_64/xpi/nn-NO.xpi#langpack-nn-NO@thunderbird.mozilla.org.xpi : 7ca5ce9e9bf9b2811b9f4b9e35dde0d5de84efee9091947740f7ca309dcdb622
+    - https://ftp.mozilla.org/pub/thunderbird/releases/151.0/linux-x86_64/xpi/pa-IN.xpi#langpack-pa-IN@thunderbird.mozilla.org.xpi : e990e2510e0b7243437c221968c6cd45c9773e5d4ceacb85a3c1fdb9ab578a9a
+    - https://ftp.mozilla.org/pub/thunderbird/releases/151.0/linux-x86_64/xpi/pl.xpi#langpack-pl@thunderbird.mozilla.org.xpi : c54cbd703baa7414adea58bd355667d731149bc882a6ce142e07dfcfb3e5d31c
+    - https://ftp.mozilla.org/pub/thunderbird/releases/151.0/linux-x86_64/xpi/pt-BR.xpi#langpack-pt-BR@thunderbird.mozilla.org.xpi : 343756e1248ce84e4f4627f9b2ff9f5b479c011f8f89998a6f572aab6c5bd409
+    - https://ftp.mozilla.org/pub/thunderbird/releases/151.0/linux-x86_64/xpi/pt-PT.xpi#langpack-pt-PT@thunderbird.mozilla.org.xpi : 0804e77a722d546bea036d063a786f596f8152d75320c3cdcd9143d3ea26e5f4
+    - https://ftp.mozilla.org/pub/thunderbird/releases/151.0/linux-x86_64/xpi/rm.xpi#langpack-rm@thunderbird.mozilla.org.xpi : 45dbbb099830aa6b17d61b8d2ca05b61dc30bebd09fc2869fe7b018e417b1612
+    - https://ftp.mozilla.org/pub/thunderbird/releases/151.0/linux-x86_64/xpi/ro.xpi#langpack-ro@thunderbird.mozilla.org.xpi : e2d44ee0e37c7cbba1e8e5636e5e7c5d14e89fa5cae9c4b868f7ebdc5f8f7d8c
+    - https://ftp.mozilla.org/pub/thunderbird/releases/151.0/linux-x86_64/xpi/ru.xpi#langpack-ru@thunderbird.mozilla.org.xpi : e5115ae512834960944b9a9bc4b7fc77335897732ea6537ead9787cfff1a75ae
+    - https://ftp.mozilla.org/pub/thunderbird/releases/151.0/linux-x86_64/xpi/sk.xpi#langpack-sk@thunderbird.mozilla.org.xpi : 273132f78017af2b2d187a617b8c57b3ecc322f01a5af0635cda9149db52df9a
+    - https://ftp.mozilla.org/pub/thunderbird/releases/151.0/linux-x86_64/xpi/sl.xpi#langpack-sl@thunderbird.mozilla.org.xpi : 5b1f1729bea342916d3058ad1b221df107e7de7748b7b095c674657100919b6a
+    - https://ftp.mozilla.org/pub/thunderbird/releases/151.0/linux-x86_64/xpi/sq.xpi#langpack-sq@thunderbird.mozilla.org.xpi : f4693f5f94041d0c4668f30b1e872b95c8315034cf1932b4a6600fc4ab8b3a08
+    - https://ftp.mozilla.org/pub/thunderbird/releases/151.0/linux-x86_64/xpi/sr.xpi#langpack-sr@thunderbird.mozilla.org.xpi : 33aa43b1b9ebe9fbb4fd8d8a91668120a5a6f708cbe5c75d53ceb89f7d5436e7
+    - https://ftp.mozilla.org/pub/thunderbird/releases/151.0/linux-x86_64/xpi/sv-SE.xpi#langpack-sv-SE@thunderbird.mozilla.org.xpi : 0743272a6ffe0ff71bd03df5dfff721237c24de76e1ebc047158b368b249c86d
+    - https://ftp.mozilla.org/pub/thunderbird/releases/151.0/linux-x86_64/xpi/th.xpi#langpack-th@thunderbird.mozilla.org.xpi : 0e588f70fd39c10f178821260a62759ca1c6076375adbe747bb5b73b8b1e411c
+    - https://ftp.mozilla.org/pub/thunderbird/releases/151.0/linux-x86_64/xpi/tr.xpi#langpack-tr@thunderbird.mozilla.org.xpi : e4188163c3da6bf86f0d8ca13c709515bac193f79fa9f7f5a44db7e888e63d69
+    - https://ftp.mozilla.org/pub/thunderbird/releases/151.0/linux-x86_64/xpi/uk.xpi#langpack-uk@thunderbird.mozilla.org.xpi : 3a7a22937cfcb69582af333246a3a4d2ae5e584f577015223ddad948083cb62f
+    - https://ftp.mozilla.org/pub/thunderbird/releases/151.0/linux-x86_64/xpi/uz.xpi#langpack-uz@thunderbird.mozilla.org.xpi : 8bbfc095119a2d9eb62b8cd5043f5195c87d720383afbefa7fa30e0cd1688bd1
+    - https://ftp.mozilla.org/pub/thunderbird/releases/151.0/linux-x86_64/xpi/vi.xpi#langpack-vi@thunderbird.mozilla.org.xpi : 0b74196dd28bbd886cb3692226cf91423e58da21f64cb4a432144ec8d5a20c73
+    - https://ftp.mozilla.org/pub/thunderbird/releases/151.0/linux-x86_64/xpi/zh-CN.xpi#langpack-zh-CN@thunderbird.mozilla.org.xpi : 65560273ca1564c3c30855c0226a780597931cf155d9fd34628a824b0fd7513a
+    - https://ftp.mozilla.org/pub/thunderbird/releases/151.0/linux-x86_64/xpi/zh-TW.xpi#langpack-zh-TW@thunderbird.mozilla.org.xpi : be8400a59827f5fbf2d68dff19d6ac943e367de73d8989c9444deb44f5479932
 ##@@END_UPSTREAMS
 summary    : Thunderbird Email Client - langpacks
 description: |

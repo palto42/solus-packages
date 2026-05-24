@@ -33,11 +33,6 @@ cat:error_at_line
 cat:error_message_count
 cat:error_one_per_line
 cat:error_print_progname
-chcon:error
-chcon:error_at_line
-chcon:error_message_count
-chcon:error_one_per_line
-chcon:error_print_progname
 chgrp:error
 chgrp:error_at_line
 chgrp:error_message_count
@@ -98,6 +93,7 @@ df:error_at_line
 df:error_message_count
 df:error_one_per_line
 df:error_print_progname
+dir:_IO_stdin_used
 dir:error
 dir:error_at_line
 dir:error_message_count
@@ -205,6 +201,7 @@ logname:error_at_line
 logname:error_message_count
 logname:error_one_per_line
 logname:error_print_progname
+ls:_IO_stdin_used
 ls:error
 ls:error_at_line
 ls:error_message_count
@@ -331,11 +328,6 @@ rmdir:error_at_line
 rmdir:error_message_count
 rmdir:error_one_per_line
 rmdir:error_print_progname
-runcon:error
-runcon:error_at_line
-runcon:error_message_count
-runcon:error_one_per_line
-runcon:error_print_progname
 seq:error
 seq:error_at_line
 seq:error_message_count
@@ -497,6 +489,7 @@ users:error_at_line
 users:error_message_count
 users:error_one_per_line
 users:error_print_progname
+vdir:_IO_stdin_used
 vdir:error
 vdir:error_at_line
 vdir:error_message_count

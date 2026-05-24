@@ -1,9 +1,10 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : scribus
-version    : 1.6.4
-release    : 61
+version    : 1.6.6
+release    : 67
 source     :
-    - https://sourceforge.net/projects/scribus/files/scribus/1.6.4/scribus-1.6.4.tar.gz : d7cee18376a36817e510a3e8d1bb4dddbd0480a99a66111615987361907abab5
-homepage   : http://www.scribus.net
+    - https://sourceforge.net/projects/scribus/files/scribus/1.6.6/scribus-1.6.6.tar.gz : ebeb1f4442d1a8714e87964963fca409d4befc7788a779d8186faffc206ffe02
+homepage   : https://www.scribus.net/
 license    :
     - LGPL-2.0-or-later
     - BSD-3-Clause
@@ -19,6 +20,7 @@ builddeps  :
     - pkgconfig(GraphicsMagick)
     - pkgconfig(Qt5UiTools)
     - pkgconfig(cups)
+    - pkgconfig(harfbuzz)
     - pkgconfig(hunspell)
     - pkgconfig(lcms2)
     - pkgconfig(libjpeg)
@@ -28,6 +30,8 @@ builddeps  :
     - pkgconfig(python3)
     - libboost-devel
 setup      : |
+    %patch -p1 -i ${pkgfiles}/scribus-1.6.6-build-with-poppler-26.05.patch
+
     %cmake_ninja \
         -DWANT_NORPATH=1 \
         -DWANT_GRAPHICSMAGICK=1 \
@@ -37,3 +41,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license COPYING

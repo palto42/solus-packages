@@ -1,0 +1,6 @@
+releases:
+  id: 389622
+  rss: https://git.pika-os.com/general-packages/falcond/releases.rss
+ # No known CPE, checked 2026-04-14
+security:
+  cpe: ~

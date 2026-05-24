@@ -51,6 +51,12 @@ kio_bluetooth.so:qt_plugin_query_metadata_v2
 kio_obexftp.so:kdemain
 kio_obexftp.so:qt_plugin_instance
 kio_obexftp.so:qt_plugin_query_metadata_v2
+libbluedevilcomponents.so:_Z47qml_register_types_org_kde_bluedevil_componentsv
+libbluedevilcomponents.so:qt_plugin_instance
+libbluedevilcomponents.so:qt_plugin_query_metadata_v2
 libbluetoothplugin.so:_Z51qml_register_types_org_kde_plasma_private_bluetoothv
 libbluetoothplugin.so:qt_plugin_instance
 libbluetoothplugin.so:qt_plugin_query_metadata_v2
+org.kde.plasma.bluetooth.so:_Z57qml_register_types_plasma_applet_org_kde_plasma_bluetoothv
+org.kde.plasma.bluetooth.so:qt_plugin_instance
+org.kde.plasma.bluetooth.so:qt_plugin_query_metadata_v2

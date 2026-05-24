@@ -3,8 +3,8 @@
         <Name>openexr</Name>
         <Homepage>https://www.openexr.com/</Homepage>
         <Packager>
-            <Name>Algent Albrahimi</Name>
-            <Email>algent@protonmail.com</Email>
+            <Name>Jared Cervantes</Name>
+            <Email>jared@jaredcervantes.com</Email>
         </Packager>
         <License>BSD-3-Clause</License>
         <PartOf>multimedia.library</PartOf>
@@ -15,7 +15,7 @@ The purpose of EXR format is to accurately and efficiently represent high-dynami
 
 OpenEXR is widely used in host application software where accuracy is critical, such as photorealistic rendering, texture access, image compositing, deep compositing, and DI.
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>openexr</Name>
@@ -27,6 +27,9 @@ The purpose of EXR format is to accurately and efficiently represent high-dynami
 OpenEXR is widely used in host application software where accuracy is critical, such as photorealistic rendering, texture access, image compositing, deep compositing, and DI.
 </Description>
         <PartOf>multimedia.library</PartOf>
+        <RuntimeDependencies>
+            <Dependency release="14">openexr-libs</Dependency>
+        </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin/exr2aces</Path>
             <Path fileType="executable">/usr/bin/exrenvmap</Path>
@@ -34,35 +37,12 @@ OpenEXR is widely used in host application software where accuracy is critical, 
             <Path fileType="executable">/usr/bin/exrinfo</Path>
             <Path fileType="executable">/usr/bin/exrmakepreview</Path>
             <Path fileType="executable">/usr/bin/exrmaketiled</Path>
+            <Path fileType="executable">/usr/bin/exrmanifest</Path>
+            <Path fileType="executable">/usr/bin/exrmetrics</Path>
             <Path fileType="executable">/usr/bin/exrmultipart</Path>
             <Path fileType="executable">/usr/bin/exrmultiview</Path>
             <Path fileType="executable">/usr/bin/exrstdattr</Path>
-            <Path fileType="library">/usr/lib64/libIex-3_1.so.30</Path>
-            <Path fileType="library">/usr/lib64/libIex-3_1.so.30.5.1</Path>
-            <Path fileType="library">/usr/lib64/libIlmThread-3_1.so.30</Path>
-            <Path fileType="library">/usr/lib64/libIlmThread-3_1.so.30.5.1</Path>
-            <Path fileType="library">/usr/lib64/libOpenEXR-3_1.so.30</Path>
-            <Path fileType="library">/usr/lib64/libOpenEXR-3_1.so.30.5.1</Path>
-            <Path fileType="library">/usr/lib64/libOpenEXRCore-3_1.so.30</Path>
-            <Path fileType="library">/usr/lib64/libOpenEXRCore-3_1.so.30.5.1</Path>
-            <Path fileType="library">/usr/lib64/libOpenEXRUtil-3_1.so.30</Path>
-            <Path fileType="library">/usr/lib64/libOpenEXRUtil-3_1.so.30.5.1</Path>
-            <Path fileType="doc">/usr/share/doc/OpenEXR/examples/drawImage.cpp</Path>
-            <Path fileType="doc">/usr/share/doc/OpenEXR/examples/drawImage.h</Path>
-            <Path fileType="doc">/usr/share/doc/OpenEXR/examples/generalInterfaceExamples.cpp</Path>
-            <Path fileType="doc">/usr/share/doc/OpenEXR/examples/generalInterfaceExamples.h</Path>
-            <Path fileType="doc">/usr/share/doc/OpenEXR/examples/generalInterfaceTiledExamples.cpp</Path>
-            <Path fileType="doc">/usr/share/doc/OpenEXR/examples/generalInterfaceTiledExamples.h</Path>
-            <Path fileType="doc">/usr/share/doc/OpenEXR/examples/lowLevelIoExamples.cpp</Path>
-            <Path fileType="doc">/usr/share/doc/OpenEXR/examples/lowLevelIoExamples.h</Path>
-            <Path fileType="doc">/usr/share/doc/OpenEXR/examples/main.cpp</Path>
-            <Path fileType="doc">/usr/share/doc/OpenEXR/examples/namespaceAlias.h</Path>
-            <Path fileType="doc">/usr/share/doc/OpenEXR/examples/previewImageExamples.cpp</Path>
-            <Path fileType="doc">/usr/share/doc/OpenEXR/examples/previewImageExamples.h</Path>
-            <Path fileType="doc">/usr/share/doc/OpenEXR/examples/rgbaInterfaceExamples.cpp</Path>
-            <Path fileType="doc">/usr/share/doc/OpenEXR/examples/rgbaInterfaceExamples.h</Path>
-            <Path fileType="doc">/usr/share/doc/OpenEXR/examples/rgbaInterfaceTiledExamples.cpp</Path>
-            <Path fileType="doc">/usr/share/doc/OpenEXR/examples/rgbaInterfaceTiledExamples.h</Path>
+            <Path fileType="data">/usr/share/licenses/openexr/LICENSE.md</Path>
         </Files>
     </Package>
     <Package>
@@ -76,7 +56,8 @@ OpenEXR is widely used in host application software where accuracy is critical, 
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="12">openexr</Dependency>
+            <Dependency release="14">openexr</Dependency>
+            <Dependency releaseFrom="14">openexr-libs</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/OpenEXR/Iex.h</Path>
@@ -98,11 +79,13 @@ OpenEXR is widely used in host application software where accuracy is critical, 
             <Path fileType="header">/usr/include/OpenEXR/IlmThreadMutex.h</Path>
             <Path fileType="header">/usr/include/OpenEXR/IlmThreadNamespace.h</Path>
             <Path fileType="header">/usr/include/OpenEXR/IlmThreadPool.h</Path>
+            <Path fileType="header">/usr/include/OpenEXR/IlmThreadProcessGroup.h</Path>
             <Path fileType="header">/usr/include/OpenEXR/IlmThreadSemaphore.h</Path>
             <Path fileType="header">/usr/include/OpenEXR/ImfAcesFile.h</Path>
             <Path fileType="header">/usr/include/OpenEXR/ImfArray.h</Path>
             <Path fileType="header">/usr/include/OpenEXR/ImfAttribute.h</Path>
             <Path fileType="header">/usr/include/OpenEXR/ImfBoxAttribute.h</Path>
+            <Path fileType="header">/usr/include/OpenEXR/ImfBytesAttribute.h</Path>
             <Path fileType="header">/usr/include/OpenEXR/ImfCRgbaFile.h</Path>
             <Path fileType="header">/usr/include/OpenEXR/ImfChannelList.h</Path>
             <Path fileType="header">/usr/include/OpenEXR/ImfChannelListAttribute.h</Path>
@@ -112,6 +95,9 @@ OpenEXR is widely used in host application software where accuracy is critical, 
             <Path fileType="header">/usr/include/OpenEXR/ImfCompositeDeepScanLine.h</Path>
             <Path fileType="header">/usr/include/OpenEXR/ImfCompression.h</Path>
             <Path fileType="header">/usr/include/OpenEXR/ImfCompressionAttribute.h</Path>
+            <Path fileType="header">/usr/include/OpenEXR/ImfCompressor.h</Path>
+            <Path fileType="header">/usr/include/OpenEXR/ImfContext.h</Path>
+            <Path fileType="header">/usr/include/OpenEXR/ImfContextInit.h</Path>
             <Path fileType="header">/usr/include/OpenEXR/ImfConvert.h</Path>
             <Path fileType="header">/usr/include/OpenEXR/ImfDeepCompositing.h</Path>
             <Path fileType="header">/usr/include/OpenEXR/ImfDeepFrameBuffer.h</Path>
@@ -144,6 +130,7 @@ OpenEXR is widely used in host application software where accuracy is critical, 
             <Path fileType="header">/usr/include/OpenEXR/ImfFramesPerSecond.h</Path>
             <Path fileType="header">/usr/include/OpenEXR/ImfGenericInputFile.h</Path>
             <Path fileType="header">/usr/include/OpenEXR/ImfGenericOutputFile.h</Path>
+            <Path fileType="header">/usr/include/OpenEXR/ImfHTCompressor.h</Path>
             <Path fileType="header">/usr/include/OpenEXR/ImfHeader.h</Path>
             <Path fileType="header">/usr/include/OpenEXR/ImfHuf.h</Path>
             <Path fileType="header">/usr/include/OpenEXR/ImfIDManifest.h</Path>
@@ -165,6 +152,7 @@ OpenEXR is widely used in host application software where accuracy is critical, 
             <Path fileType="header">/usr/include/OpenEXR/ImfLineOrderAttribute.h</Path>
             <Path fileType="header">/usr/include/OpenEXR/ImfLut.h</Path>
             <Path fileType="header">/usr/include/OpenEXR/ImfMatrixAttribute.h</Path>
+            <Path fileType="header">/usr/include/OpenEXR/ImfMisc.h</Path>
             <Path fileType="header">/usr/include/OpenEXR/ImfMultiPartInputFile.h</Path>
             <Path fileType="header">/usr/include/OpenEXR/ImfMultiPartOutputFile.h</Path>
             <Path fileType="header">/usr/include/OpenEXR/ImfMultiView.h</Path>
@@ -210,7 +198,8 @@ OpenEXR is widely used in host application software where accuracy is critical, 
             <Path fileType="header">/usr/include/OpenEXR/openexr_base.h</Path>
             <Path fileType="header">/usr/include/OpenEXR/openexr_chunkio.h</Path>
             <Path fileType="header">/usr/include/OpenEXR/openexr_coding.h</Path>
-            <Path fileType="header">/usr/include/OpenEXR/openexr_conf.h</Path>
+            <Path fileType="header">/usr/include/OpenEXR/openexr_compression.h</Path>
+            <Path fileType="header">/usr/include/OpenEXR/openexr_config.h</Path>
             <Path fileType="header">/usr/include/OpenEXR/openexr_context.h</Path>
             <Path fileType="header">/usr/include/OpenEXR/openexr_debug.h</Path>
             <Path fileType="header">/usr/include/OpenEXR/openexr_decode.h</Path>
@@ -218,30 +207,89 @@ OpenEXR is widely used in host application software where accuracy is critical, 
             <Path fileType="header">/usr/include/OpenEXR/openexr_errors.h</Path>
             <Path fileType="header">/usr/include/OpenEXR/openexr_part.h</Path>
             <Path fileType="header">/usr/include/OpenEXR/openexr_std_attr.h</Path>
+            <Path fileType="header">/usr/include/OpenEXR/openexr_version.h</Path>
             <Path fileType="library">/usr/lib64/cmake/OpenEXR/OpenEXRConfig.cmake</Path>
             <Path fileType="library">/usr/lib64/cmake/OpenEXR/OpenEXRConfigVersion.cmake</Path>
             <Path fileType="library">/usr/lib64/cmake/OpenEXR/OpenEXRTargets-relwithdebinfo.cmake</Path>
             <Path fileType="library">/usr/lib64/cmake/OpenEXR/OpenEXRTargets.cmake</Path>
-            <Path fileType="library">/usr/lib64/libIex-3_1.so</Path>
+            <Path fileType="library">/usr/lib64/libIex-3_4.so</Path>
             <Path fileType="library">/usr/lib64/libIex.so</Path>
-            <Path fileType="library">/usr/lib64/libIlmThread-3_1.so</Path>
+            <Path fileType="library">/usr/lib64/libIlmThread-3_4.so</Path>
             <Path fileType="library">/usr/lib64/libIlmThread.so</Path>
-            <Path fileType="library">/usr/lib64/libOpenEXR-3_1.so</Path>
+            <Path fileType="library">/usr/lib64/libOpenEXR-3_4.so</Path>
             <Path fileType="library">/usr/lib64/libOpenEXR.so</Path>
-            <Path fileType="library">/usr/lib64/libOpenEXRCore-3_1.so</Path>
+            <Path fileType="library">/usr/lib64/libOpenEXRCore-3_4.so</Path>
             <Path fileType="library">/usr/lib64/libOpenEXRCore.so</Path>
-            <Path fileType="library">/usr/lib64/libOpenEXRUtil-3_1.so</Path>
+            <Path fileType="library">/usr/lib64/libOpenEXRUtil-3_4.so</Path>
             <Path fileType="library">/usr/lib64/libOpenEXRUtil.so</Path>
             <Path fileType="data">/usr/lib64/pkgconfig/OpenEXR.pc</Path>
         </Files>
     </Package>
+    <Package>
+        <Name>openexr-examples</Name>
+        <Summary xml:lang="en">OpenEXR code examples</Summary>
+        <Description xml:lang="en">OpenEXR provides the specification and reference implementation of the EXR file format, the professional-grade image storage format of the motion picture industry.
+
+The purpose of EXR format is to accurately and efficiently represent high-dynamic-range scene-linear image data and associated metadata, with strong support for multi-part, multi-channel use cases.
+
+OpenEXR is widely used in host application software where accuracy is critical, such as photorealistic rendering, texture access, image compositing, deep compositing, and DI.
+</Description>
+        <PartOf>programming.library</PartOf>
+        <Files>
+            <Path fileType="doc">/usr/share/doc/OpenEXR/examples/deepExamples.cpp</Path>
+            <Path fileType="doc">/usr/share/doc/OpenEXR/examples/deepExamples.h</Path>
+            <Path fileType="doc">/usr/share/doc/OpenEXR/examples/deepTiledExamples.cpp</Path>
+            <Path fileType="doc">/usr/share/doc/OpenEXR/examples/deepTiledExamples.h</Path>
+            <Path fileType="doc">/usr/share/doc/OpenEXR/examples/drawImage.cpp</Path>
+            <Path fileType="doc">/usr/share/doc/OpenEXR/examples/drawImage.h</Path>
+            <Path fileType="doc">/usr/share/doc/OpenEXR/examples/generalInterfaceExamples.cpp</Path>
+            <Path fileType="doc">/usr/share/doc/OpenEXR/examples/generalInterfaceExamples.h</Path>
+            <Path fileType="doc">/usr/share/doc/OpenEXR/examples/generalInterfaceTiledExamples.cpp</Path>
+            <Path fileType="doc">/usr/share/doc/OpenEXR/examples/generalInterfaceTiledExamples.h</Path>
+            <Path fileType="doc">/usr/share/doc/OpenEXR/examples/lowLevelIoExamples.cpp</Path>
+            <Path fileType="doc">/usr/share/doc/OpenEXR/examples/lowLevelIoExamples.h</Path>
+            <Path fileType="doc">/usr/share/doc/OpenEXR/examples/main.cpp</Path>
+            <Path fileType="doc">/usr/share/doc/OpenEXR/examples/multipartExamples.cpp</Path>
+            <Path fileType="doc">/usr/share/doc/OpenEXR/examples/multipartExamples.h</Path>
+            <Path fileType="doc">/usr/share/doc/OpenEXR/examples/namespaceAlias.h</Path>
+            <Path fileType="doc">/usr/share/doc/OpenEXR/examples/previewImageExamples.cpp</Path>
+            <Path fileType="doc">/usr/share/doc/OpenEXR/examples/previewImageExamples.h</Path>
+            <Path fileType="doc">/usr/share/doc/OpenEXR/examples/rgbaInterfaceExamples.cpp</Path>
+            <Path fileType="doc">/usr/share/doc/OpenEXR/examples/rgbaInterfaceExamples.h</Path>
+            <Path fileType="doc">/usr/share/doc/OpenEXR/examples/rgbaInterfaceTiledExamples.cpp</Path>
+            <Path fileType="doc">/usr/share/doc/OpenEXR/examples/rgbaInterfaceTiledExamples.h</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>openexr-libs</Name>
+        <Summary xml:lang="en">Shared libraries for OpenEXR</Summary>
+        <Description xml:lang="en">OpenEXR provides the specification and reference implementation of the EXR file format, the professional-grade image storage format of the motion picture industry.
+
+The purpose of EXR format is to accurately and efficiently represent high-dynamic-range scene-linear image data and associated metadata, with strong support for multi-part, multi-channel use cases.
+
+OpenEXR is widely used in host application software where accuracy is critical, such as photorealistic rendering, texture access, image compositing, deep compositing, and DI.
+</Description>
+        <PartOf>multimedia.library</PartOf>
+        <Files>
+            <Path fileType="library">/usr/lib64/libIex-3_4.so.33</Path>
+            <Path fileType="library">/usr/lib64/libIex-3_4.so.33.3.4.11</Path>
+            <Path fileType="library">/usr/lib64/libIlmThread-3_4.so.33</Path>
+            <Path fileType="library">/usr/lib64/libIlmThread-3_4.so.33.3.4.11</Path>
+            <Path fileType="library">/usr/lib64/libOpenEXR-3_4.so.33</Path>
+            <Path fileType="library">/usr/lib64/libOpenEXR-3_4.so.33.3.4.11</Path>
+            <Path fileType="library">/usr/lib64/libOpenEXRCore-3_4.so.33</Path>
+            <Path fileType="library">/usr/lib64/libOpenEXRCore-3_4.so.33.3.4.11</Path>
+            <Path fileType="library">/usr/lib64/libOpenEXRUtil-3_4.so.33</Path>
+            <Path fileType="library">/usr/lib64/libOpenEXRUtil-3_4.so.33.3.4.11</Path>
+        </Files>
+    </Package>
     <History>
-        <Update release="12">
-            <Date>2022-10-30</Date>
-            <Version>3.1.5</Version>
+        <Update release="14">
+            <Date>2026-05-01</Date>
+            <Version>3.4.11</Version>
             <Comment>Packaging update</Comment>
-            <Name>Algent Albrahimi</Name>
-            <Email>algent@protonmail.com</Email>
+            <Name>Jared Cervantes</Name>
+            <Email>jared@jaredcervantes.com</Email>
         </Update>
     </History>
 </PISI>

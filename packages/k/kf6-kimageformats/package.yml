@@ -1,14 +1,19 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kf6-kimageformats
-version    : 6.19.0
-release    : 29
+version    : 6.26.0
+release    : 38
 source     :
-    - https://download.kde.org/stable/frameworks/6.19/kimageformats-6.19.0.tar.xz : fc825326aa6b8c1321947ff523d3d006eef4c65fde40f379c6900d06967fae1c
+    - https://download.kde.org/stable/frameworks/6.26/kimageformats-6.26.0.tar.xz : c192552ee1831fd5e09af4e3633bb24726dfb4031170c4285024683bedaf9972
 homepage   : https://community.kde.org/Frameworks
 license    :
-    - GPL-2.0-only
+    - Apache-2.0
+    - BSD-2-Clause
+    - BSD-3-Clause
+    - CC0-1.0
     - LGPL-2.0-or-later
-    - LGPL-2.1-or-later
     - LGPL-2.1-only
+    - LGPL-2.1-or-later
+    - LGPL-3.0-only
 component  : desktop.library
 summary    : A fast and easy to use image viewer
 description: |
@@ -31,3 +36,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*

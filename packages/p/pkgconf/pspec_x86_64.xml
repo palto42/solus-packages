@@ -1,10 +1,10 @@
 <PISI>
     <Source>
         <Name>pkgconf</Name>
-        <Homepage>http://pkgconf.org/</Homepage>
+        <Homepage>https://github.com/pkgconf/pkgconf</Homepage>
         <Packager>
-            <Name>Reilly Brogan</Name>
-            <Email>solus@reillybrogan.com</Email>
+            <Name>Robert Gonzalez</Name>
+            <Email>uni.dos12@outlook.com</Email>
         </Packager>
         <License>ISC</License>
         <PartOf>system.devel</PartOf>
@@ -20,20 +20,23 @@
 </Description>
         <PartOf>system.devel</PartOf>
         <Files>
+            <Path fileType="executable">/usr/bin/bomtool</Path>
             <Path fileType="executable">/usr/bin/i686-pc-linux-gnu-pkg-config</Path>
             <Path fileType="executable">/usr/bin/pkg-config</Path>
             <Path fileType="executable">/usr/bin/pkgconf</Path>
             <Path fileType="executable">/usr/bin/x86_64-solus-linux-pkg-config</Path>
-            <Path fileType="library">/usr/lib64/libpkgconf.so.5</Path>
-            <Path fileType="library">/usr/lib64/libpkgconf.so.5.0.0</Path>
+            <Path fileType="library">/usr/lib64/libpkgconf.so.7</Path>
+            <Path fileType="library">/usr/lib64/libpkgconf.so.7.0.0</Path>
             <Path fileType="data">/usr/share/aclocal/pkg.m4</Path>
             <Path fileType="doc">/usr/share/doc/pkgconf/AUTHORS</Path>
             <Path fileType="doc">/usr/share/doc/pkgconf/README.md</Path>
+            <Path fileType="data">/usr/share/licenses/pkgconf/COPYING</Path>
+            <Path fileType="man">/usr/share/man/man1/bomtool.1.zst</Path>
             <Path fileType="man">/usr/share/man/man1/pkg-config.1</Path>
-            <Path fileType="man">/usr/share/man/man1/pkgconf.1</Path>
-            <Path fileType="man">/usr/share/man/man5/pc.5</Path>
-            <Path fileType="man">/usr/share/man/man5/pkgconf-personality.5</Path>
-            <Path fileType="man">/usr/share/man/man7/pkg.m4.7</Path>
+            <Path fileType="man">/usr/share/man/man1/pkgconf.1.zst</Path>
+            <Path fileType="man">/usr/share/man/man5/pc.5.zst</Path>
+            <Path fileType="man">/usr/share/man/man5/pkgconf-personality.5.zst</Path>
+            <Path fileType="man">/usr/share/man/man7/pkg.m4.7.zst</Path>
             <Path fileType="data">/usr/share/pkgconfig/personality.d/i686-pc-linux-gnu.personality</Path>
             <Path fileType="data">/usr/share/pkgconfig/personality.d/x86_64-solus-linux.personality</Path>
         </Files>
@@ -48,7 +51,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="2">pkgconf</Dependency>
+            <Dependency release="4">pkgconf</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/pkgconf/libpkgconf/bsdstubs.h</Path>
@@ -61,12 +64,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="2">
-            <Date>2024-08-08</Date>
-            <Version>2.3.0</Version>
+        <Update release="4">
+            <Date>2026-04-23</Date>
+            <Version>2.5.1</Version>
             <Comment>Packaging update</Comment>
-            <Name>Reilly Brogan</Name>
-            <Email>solus@reillybrogan.com</Email>
+            <Name>Robert Gonzalez</Name>
+            <Email>uni.dos12@outlook.com</Email>
         </Update>
     </History>
 </PISI>

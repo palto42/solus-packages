@@ -1,3 +1,4 @@
+libc.so.6:__isoc23_strtol
 libc.so.6:__libc_start_main
 libc.so.6:__stack_chk_fail
 libc.so.6:exit
@@ -5,7 +6,6 @@ libc.so.6:memcpy
 libc.so.6:memmove
 libc.so.6:setlocale
 libc.so.6:strlen
-libc.so.6:strtol
 libglib-2.0.so.0:g_ascii_strcasecmp
 libglib-2.0.so.0:g_ascii_strdown
 libglib-2.0.so.0:g_assertion_message_expr

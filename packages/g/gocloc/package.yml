@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : gocloc
-version    : 0.4.1
-release    : 1
+version    : 0.7.0
+release    : 2
 source     :
-    - https://github.com/hhatto/gocloc/archive/refs/tags/v0.4.1.tar.gz : 528be5009996b4177936be508aa494c289adddf58e4694b1a36067bda433f783
+    - https://github.com/hhatto/gocloc/archive/refs/tags/v0.7.0.tar.gz : 9375f6699a7bffad42da661b4ba7988af23dd01191da4a4b21eca8f9bb676d9a
 homepage   : https://github.com/hhatto/gocloc
 license    : MIT
 component  : programming.tools
@@ -18,3 +19,4 @@ install    : |
     install -Dm00755 bin/gocloc $installdir/usr/bin/gocloc
 check      : |
     %make test
+    %install_license LICENSE

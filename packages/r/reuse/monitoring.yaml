@@ -1,0 +1,6 @@
+releases:
+  id: 49615
+  rss: https://codeberg.org/fsfe/reuse-tool/tags.atom
+ # No known CPE, checked 2026-03-31
+security:
+  cpe: ~

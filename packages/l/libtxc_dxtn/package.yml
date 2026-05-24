@@ -1,6 +1,7 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : libtxc_dxtn
 version    : 1.0.1
-release    : 5
+release    : 6
 source     :
     - git|https://github.com/divVerent/s2tc.git : f6ec862d7594e29ae80a6e49f66ad4c76cf09abc
 homepage   : https://dri.freedesktop.org/wiki/S3TC/
@@ -23,3 +24,4 @@ build      : |
 install    : |
     %make_install
     %make clean
+    %install_license COPYING

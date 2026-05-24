@@ -130,7 +130,6 @@ libc.so.6:getspnam
 libc.so.6:gettimeofday
 libc.so.6:getuid
 libc.so.6:gmtime
-libc.so.6:inet_ntoa
 libc.so.6:inet_ntop
 libc.so.6:initgroups
 libc.so.6:innetgr
@@ -253,6 +252,7 @@ libc.so.6:strsep
 libc.so.6:strsignal
 libc.so.6:strspn
 libc.so.6:strstr
+libc.so.6:strtod
 libc.so.6:strtok
 libc.so.6:symlink
 libc.so.6:sysconf
@@ -282,6 +282,8 @@ libcrypt.so.2:crypt
 libcrypto.so.3:AES_encrypt
 libcrypto.so.3:AES_set_encrypt_key
 libcrypto.so.3:ASN1_OCTET_STRING_free
+libcrypto.so.3:ASN1_STRING_get0_data
+libcrypto.so.3:ASN1_STRING_length
 libcrypto.so.3:BIO_ctrl
 libcrypto.so.3:BIO_free
 libcrypto.so.3:BIO_new
@@ -303,6 +305,7 @@ libcrypto.so.3:BN_free
 libcrypto.so.3:BN_hex2bn
 libcrypto.so.3:BN_is_bit_set
 libcrypto.so.3:BN_is_negative
+libcrypto.so.3:BN_is_one
 libcrypto.so.3:BN_is_prime_ex
 libcrypto.so.3:BN_lshift
 libcrypto.so.3:BN_mod_word
@@ -332,6 +335,7 @@ libcrypto.so.3:ECDSA_SIG_new
 libcrypto.so.3:ECDSA_SIG_set0
 libcrypto.so.3:EC_GROUP_cmp
 libcrypto.so.3:EC_GROUP_free
+libcrypto.so.3:EC_GROUP_get_cofactor
 libcrypto.so.3:EC_GROUP_get_curve_name
 libcrypto.so.3:EC_GROUP_get_degree
 libcrypto.so.3:EC_GROUP_get_order
@@ -360,9 +364,12 @@ libcrypto.so.3:EC_POINT_set_affine_coordinates
 libcrypto.so.3:ENGINE_load_builtin_engines
 libcrypto.so.3:ENGINE_register_all_complete
 libcrypto.so.3:ERR_error_string
+libcrypto.so.3:ERR_error_string_n
 libcrypto.so.3:ERR_get_error
+libcrypto.so.3:ERR_get_error_line_data
 libcrypto.so.3:ERR_peek_error
 libcrypto.so.3:ERR_peek_last_error
+libcrypto.so.3:ERR_reason_error_string
 libcrypto.so.3:EVP_CIPHER_CTX_ctrl
 libcrypto.so.3:EVP_CIPHER_CTX_free
 libcrypto.so.3:EVP_CIPHER_CTX_get_iv_length
@@ -405,6 +412,8 @@ libcrypto.so.3:EVP_PKEY_get_size
 libcrypto.so.3:EVP_PKEY_keygen
 libcrypto.so.3:EVP_PKEY_keygen_init
 libcrypto.so.3:EVP_PKEY_new
+libcrypto.so.3:EVP_PKEY_new_raw_private_key
+libcrypto.so.3:EVP_PKEY_new_raw_public_key
 libcrypto.so.3:EVP_PKEY_set1_EC_KEY
 libcrypto.so.3:EVP_PKEY_set1_RSA
 libcrypto.so.3:EVP_PKEY_up_ref
@@ -423,7 +432,6 @@ libcrypto.so.3:EVP_sha1
 libcrypto.so.3:EVP_sha256
 libcrypto.so.3:EVP_sha384
 libcrypto.so.3:EVP_sha512
-libcrypto.so.3:OPENSSL_config
 libcrypto.so.3:OPENSSL_init_crypto
 libcrypto.so.3:OpenSSL_version
 libcrypto.so.3:OpenSSL_version_num

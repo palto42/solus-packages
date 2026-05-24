@@ -1,0 +1,54 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
+name       : gst-plugins-rs
+version    : 1.28.1
+release    : 4
+source     :
+    - https://gitlab.freedesktop.org/gstreamer/gst-plugins-rs/-/archive/gstreamer-1.28.1/gst-plugins-rs-gstreamer-1.28.1.tar.gz : fe56a64f6a8d45aea79470850bdd873fb3a98482379280bf3c921b295842c954
+homepage   : https://gitlab.freedesktop.org/gstreamer/gst-plugins-rs
+license    :
+    - Apache-2.0
+    - LGPL-2.1-or-later
+    - MIT
+    - MPL-2.0
+component  :
+    - multimedia.gstreamer
+    - ^gstreamer-plugin-gtk4 : multimedia.gstreamer
+summary    :
+    - ^gstreamer-plugin-gtk4 : GStreamer GTK4 plugin
+    - GStreamer plugins written in Rust.
+description:
+    - ^gstreamer-plugin-gtk4 : GStreamer GTK4 plugin
+    - Repository containing various GStreamer plugins and elements written in the Rust programming language. The plugins build upon the GStreamer Rust bindings.
+networking : true
+builddeps  :
+    - pkgconfig(dav1d)
+    - pkgconfig(gstreamer-video-1.0)
+    - pkgconfig(gstreamer-webrtc-1.0)
+    - pkgconfig(gtk4)
+    - pkgconfig(libsodium)
+    - pkgconfig(libwebp)
+    - cargo-c
+    - git
+    - rust-devel
+rundeps    :
+    - devel :
+        - gstreamer-plugin-gtk4
+environment: |
+    # Force it to use the system libsodium
+    export SODIUM_USE_PKG_CONFIG=1
+setup      : |
+    # Enable validate if we ever enable devtools in gstreamer
+    %meson_configure \
+        -Dvalidate=disabled
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install
+    %install_license LICENSE-*
+patterns   :
+    - ^gstreamer-plugin-gtk4 :
+        - /usr/lib64/gstreamer-1.0/libgstgtk4.so
+replaces   :
+    - gstreamer-1.0-plugins-rs
+    - dbginfo :
+        - gstreamer-1.0-plugins-rs-dbginfo

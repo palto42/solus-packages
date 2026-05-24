@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : hyprutils
-version    : 0.10.0
-release    : 17
+version    : 0.13.1
+release    : 26
 source     :
-    - https://github.com/hyprwm/hyprutils/archive/refs/tags/v0.10.0.tar.gz : 0e2d2495166e314a4ef52d97bcae6f82ee10a1247a60e42b2087d876a7563b0c
+    - https://github.com/hyprwm/hyprutils/archive/refs/tags/v0.13.1.tar.gz : 480ee026105deea64a24eb96d80cabe54b357594ce36cb05c021ea226c69aede
 homepage   : https://github.com/hyprwm/hyprutils
 license    : BSD-3-Clause
 component  : desktop.hyprland
@@ -10,6 +11,7 @@ summary    : Small C++ library for the Hypr* ecosystem.
 description: |
     Hyprutils is a small C++ library for utilities used across the Hypr* ecosystem.
 builddeps  :
+    - pkgconfig(gtest)
     - pkgconfig(pixman-1)
 setup      : |
     %cmake_ninja
@@ -17,3 +19,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSE

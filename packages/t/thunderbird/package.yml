@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : thunderbird
-version    : 140.3.1
-release    : 240
+version    : '151.0'
+release    : 258
 source     :
-    - https://ftp.mozilla.org/pub/thunderbird/releases/140.3.1esr/source/thunderbird-140.3.1esr.source.tar.xz : 5981260076790dae80c8190c2f4109e33843c70fd7d19ec64f1d3ec8a38ff2e6
+    - https://ftp.mozilla.org/pub/thunderbird/releases/151.0/source/thunderbird-151.0.source.tar.xz : c8a8ca3ca31dffa75eca3f330e03c390bff6fa24333f180d9e9a994dfb4306ae
 license    :
     - GPL-2.0-or-later
     - LGPL-2.1-or-later
@@ -16,7 +17,7 @@ description: |
     Thunderbird is a free email application that’s easy to set up and customize - and it’s loaded with great features!
 builddeps  :
     - pkgconfig(alsa)
-    - pkgconfig(botan-2)
+    - pkgconfig(botan-3)
     - pkgconfig(dbus-glib-1)
     - pkgconfig(gconf-2.0)
     - pkgconfig(gstreamer-plugins-base-1.0)
@@ -24,6 +25,7 @@ builddeps  :
     - pkgconfig(gtk+-3.0)
     - pkgconfig(json-c)
     - pkgconfig(libevent)
+    - pkgconfig(libjpeg)
     - pkgconfig(libnotify)
     - pkgconfig(libpulse)
     - pkgconfig(libstartup-notification-1.0)
@@ -42,17 +44,30 @@ builddeps  :
 rundeps    :
     - thunderbird-langpacks
 environment: |
-    export MACH_BUILD_PYTHON_NATIVE_PACKAGE_SOURCE=system
+    # Causes error mozshellutil not found with v148
+    # export MACH_BUILD_PYTHON_NATIVE_PACKAGE_SOURCE=system
     export MOZBUILD_STATE_PATH=$PWD
 setup      : |
     cp $pkgfiles/*-api-key .
     cp $pkgfiles/config mozconfig
     sed -e 's|##JOBCOUNT##|%JOBS%|' -e 's|##LIBDIR##|%libdir%|' -e 's|##WORKDIR##|%workdir%|' -i mozconfig
 
+    # v140.5.0 would not build with python-zstandard v0.25.0
+    # Fix not needed since we had to remove MACH_BUILD_PYTHON_NATIVE_PACKAGE_SOURCE=system
+    # sed -i 's/zstandard>=0.11.1,<=0.24.0/zstandard>=0.11.1,<=0.25.0/' python/sites/mach.txt
+
     %patch -p1 -i $pkgfiles/0001-Fix-Firefox-Thunderbird-envvar-conflicts.patch
     %patch -p1 -i $pkgfiles/0002-Fix-appstream-metainfo.patch
     %patch -p1 -i $pkgfiles/0001-Allow-installing-addons-from-user-scope.patch
-    %patch -p1 -i $pkgfiles/0001-Fix-build-with-rust-1.89.0.patch
+
+    %patch -p1 -i ${pkgfiles}/ftbfs-glibc-2.43-2.patch
+    sed -i -e 's/\("files":{\)[^}]*/\1/' third_party/rust/glslopt/.cargo-checksum.json
+    sed -i -e 's/\("files":{\)[^}]*/\1/' comm/third_party/rust/glslopt/.cargo-checksum.json
+
+    # Corrupt sourcestamp.txt
+    # https://bugzilla.mozilla.org/show_bug.cgi?id=2041134
+    sed -i 's/log\.warn(/log.warning(/' \
+        comm/build/moz.configure/gecko_source.configure
 
     ./mach configure
     ./mach busted
@@ -61,6 +76,7 @@ build      : |
     ./mach buildsymbols
 install    : |
     DESTDIR=$installdir ./mach install
+    %install_license LICENSE
 
     # NOTE: For appstream-builder, it can't handle symlinks.
     #       Don't remove me without running `appstream-builder --packages-dir=. --include-failed -v` first and checking example-failed.xml.gz

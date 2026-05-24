@@ -1,0 +1,22 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: uni-dos <uni.dos12@outlook.com>
+Date: Thu, 9 Jan 2025 19:59:34 -0600
+Subject: [PATCH 2/5] Fix paths in systemd service
+
+---
+ daemon/data/init/opensnitchd.service | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/daemon/data/init/opensnitchd.service b/daemon/data/init/opensnitchd.service
+index 0717485d..70dc163e 100644
+--- a/daemon/data/init/opensnitchd.service
++++ b/daemon/data/init/opensnitchd.service
+@@ -4,7 +4,7 @@ Documentation=https://github.com/evilsocket/opensnitch/wiki
+ 
+ [Service]
+ Type=simple
+-ExecStart=/usr/local/bin/opensnitchd
++ExecStart=/usr/bin/opensnitchd
+ ExecStartPre=/bin/mkdir -p /etc/opensnitchd/rules
+ Restart=always
+ RestartSec=30

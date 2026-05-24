@@ -3,8 +3,8 @@
         <Name>mangohud</Name>
         <Homepage>https://github.com/flightlessmango/MangoHud</Homepage>
         <Packager>
-            <Name>Evan Maddock</Name>
-            <Email>maddock.evan@vivaldi.net</Email>
+            <Name>Robert Gonzalez</Name>
+            <Email>uni.dos12@outlook.com</Email>
         </Packager>
         <License>MIT</License>
         <PartOf>system.utils</PartOf>
@@ -32,6 +32,7 @@
             <Path fileType="doc">/usr/share/doc/mangohud/MangoHud.conf.example</Path>
             <Path fileType="doc">/usr/share/doc/mangohud/presets.conf.example</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/io.github.flightlessmango.mangohud.svg</Path>
+            <Path fileType="data">/usr/share/licenses/mangohud/LICENSE</Path>
             <Path fileType="man">/usr/share/man/man1/mangoapp.1.zst</Path>
             <Path fileType="man">/usr/share/man/man1/mangohud.1.zst</Path>
             <Path fileType="man">/usr/share/mangohud/MangoHud.conf</Path>
@@ -41,12 +42,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="26">
-            <Date>2025-10-09</Date>
-            <Version>0.8.1</Version>
+        <Update release="30">
+            <Date>2026-04-24</Date>
+            <Version>0.8.3</Version>
             <Comment>Packaging update</Comment>
-            <Name>Evan Maddock</Name>
-            <Email>maddock.evan@vivaldi.net</Email>
+            <Name>Robert Gonzalez</Name>
+            <Email>uni.dos12@outlook.com</Email>
         </Update>
     </History>
 </PISI>

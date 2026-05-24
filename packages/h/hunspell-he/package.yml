@@ -1,9 +1,10 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : hunspell-he
-version    : 1.3
-release    : 3
+version    : '1.4'
+release    : 5
 source     :
-    - http://hspell.ivrix.org.il/hspell-1.3.tar.gz : 603c25dcbaa65d171d9065da7369cfe0dc21bda8378bade13b42eda69c8b2fe7
-homepage   : http://www.ivrix.org.il/projects/spell-checker/
+    - https://hspell.sourceforge.net/hspell-1.4.tar.gz : 7310f5d58740d21d6d215c1179658602ef7da97a816bc1497c8764be97aabea3
+homepage   : https://hspell.sourceforge.net/
 license    : GPL-2.0-or-later
 component  : office.spelling
 summary    : Hebrew hunspell dictionaries

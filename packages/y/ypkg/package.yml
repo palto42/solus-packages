@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : ypkg
-version    : 35.0.0
-release    : 210
+version    : 35.1.1
+release    : 216
 source     :
-    - https://github.com/getsolus/ypkg/archive/refs/tags/v35.0.0.tar.gz : 8939f09d2453627e7873a9ddf2a9ee95e76d787374059b4f88350f6d32ef0e1c
+    - https://github.com/getsolus/ypkg/archive/refs/tags/v35.1.1.tar.gz : 6ace7e7ebad31b2d871d2564daf8a8000c1831777468815e418d3354bb9b5e3a
 homepage   : https://github.com/getsolus/ypkg
 license    : GPL-3.0-or-later
 component  : system.devel

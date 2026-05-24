@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : efl
-version    : 1.28.0
-release    : 38
+version    : 1.28.1
+release    : 41
 source     :
-    - https://download.enlightenment.org/rel/libs/efl/efl-1.28.0.tar.xz : f09a43d6b4861be06cc0e2849c53296413d4e52c8e31f52fc95e9ea5f1c59a36
+    - https://download.enlightenment.org/rel/libs/efl/efl-1.28.1.tar.xz : 84cf6145f9cc82bfff690005be24392c8f3c52f8e00ff04d8eea371429c09424
 homepage   : https://www.enlightenment.org/about-efl
 license    :
     - BSD-2-Clause
@@ -75,6 +76,8 @@ builddeps  :
     - gettext-devel
     - giflib-devel
     - libiconv-devel
+environment: |
+    export CFLAGS+=" -std=gnu17"
 setup      : |
     %meson_configure \
         -Davahi=true \
@@ -90,3 +93,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license COPYING licenses/*

@@ -1,20 +1,32 @@
+From 95fb0f6ed8f8f8f7a88fe1773217db61ece466ad Mon Sep 17 00:00:00 2001
+From: Joey Riches <josephriches@gmail.com>
+Date: Sat, 21 Mar 2026 14:37:39 +0000
+Subject: [PATCH 1/1] schemas: Set default value to 0.75
+
+---
+ ...rg.gnome.shell.extensions.moe.liam.speedinator.gschema.xml | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
 diff --git a/schemas/org.gnome.shell.extensions.moe.liam.speedinator.gschema.xml b/schemas/org.gnome.shell.extensions.moe.liam.speedinator.gschema.xml
-index 1e40cab..5a3c649 100644
+index 91c3533..047b5a1 100644
 --- a/schemas/org.gnome.shell.extensions.moe.liam.speedinator.gschema.xml
 +++ b/schemas/org.gnome.shell.extensions.moe.liam.speedinator.gschema.xml
-@@ -2,9 +2,9 @@
+@@ -2,7 +2,7 @@
  <schemalist>
- 	<schema id="org.gnome.shell.extensions.moe.liam.speedinator" path="/org/gnome/shell/extensions/moe/liam/speedinator/">
- 		<key type="d" name="speed">
--			<default>0.5</default>
-+			<default>0.75</default>
- 			<summary>speed</summary>
- 			<description/>
- 		</key>
- 	</schema>
+     <schema id="org.gnome.shell.extensions.moe.liam.speedinator" path="/org/gnome/shell/extensions/moe/liam/speedinator/">
+         <key type="d" name="speed">
+-            <default>0.5</default>
++            <default>0.75</default>
+             <summary>Speed</summary>
+             <description>Multiplier for GNOME Shell animation speed. Values &lt;1.0 speed up animations; values &gt;1.0 slow them down.</description>
+         </key>
+@@ -12,4 +12,4 @@
+             <description>Extra time after opening overview to still switch to app grid</description>
+         </key>
+     </schema>
 -</schemalist>
 \ No newline at end of file
 +</schemalist>
 -- 
-2.42.0
+2.53.0
 

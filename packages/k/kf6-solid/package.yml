@@ -1,13 +1,16 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kf6-solid
-version    : 6.19.0
-release    : 29
+version    : 6.26.0
+release    : 36
 source     :
-    - https://download.kde.org/stable/frameworks/6.19/solid-6.19.0.tar.xz : 3ac9a98b201eede1ae0782b1a320a27557672be8d3c5c81bba446751793ca3cb
+    - https://download.kde.org/stable/frameworks/6.26/solid-6.26.0.tar.xz : 85cfab9b0787f59478661140997c485fadab62cec535ffcef2953d312f736c4a
 homepage   : https://community.kde.org/Frameworks
 license    :
     - BSD-3-Clause
+    - CC0-1.0
     - LGPL-2.1-only
     - LGPL-2.1-or-later
+    - LGPL-3.0-only
 component  : desktop.library
 summary    : Desktop hardware abstraction.
 description: |
@@ -31,3 +34,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*

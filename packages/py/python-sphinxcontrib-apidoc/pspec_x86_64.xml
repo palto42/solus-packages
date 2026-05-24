@@ -1,0 +1,49 @@
+<PISI>
+    <Source>
+        <Name>python-sphinxcontrib-apidoc</Name>
+        <Homepage>https://github.com/sphinx-contrib/apidoc</Homepage>
+        <Packager>
+            <Name>Evan Maddock</Name>
+            <Email>maddock.evan@vivaldi.net</Email>
+        </Packager>
+        <License>BSD-2-Clause</License>
+        <PartOf>programming.python</PartOf>
+        <Summary xml:lang="en">A Sphinx extension for running sphinx-apidoc on each build</Summary>
+        <Description xml:lang="en">A Sphinx extension for running sphinx-apidoc on each build.
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>python-sphinxcontrib-apidoc</Name>
+        <Summary xml:lang="en">A Sphinx extension for running sphinx-apidoc on each build</Summary>
+        <Description xml:lang="en">A Sphinx extension for running sphinx-apidoc on each build.
+</Description>
+        <PartOf>programming.python</PartOf>
+        <Files>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/sphinxcontrib/apidoc/__init__.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/sphinxcontrib/apidoc/__pycache__/__init__.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/sphinxcontrib/apidoc/__pycache__/__init__.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/sphinxcontrib/apidoc/__pycache__/ext.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/sphinxcontrib/apidoc/__pycache__/ext.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/sphinxcontrib/apidoc/ext.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/sphinxcontrib_apidoc-0.6.0-py3.12-nspkg.pth</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/sphinxcontrib_apidoc-0.6.0.dist-info/METADATA</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/sphinxcontrib_apidoc-0.6.0.dist-info/RECORD</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/sphinxcontrib_apidoc-0.6.0.dist-info/WHEEL</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/sphinxcontrib_apidoc-0.6.0.dist-info/licenses/AUTHORS</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/sphinxcontrib_apidoc-0.6.0.dist-info/licenses/LICENSE</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/sphinxcontrib_apidoc-0.6.0.dist-info/namespace_packages.txt</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/sphinxcontrib_apidoc-0.6.0.dist-info/pbr.json</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/sphinxcontrib_apidoc-0.6.0.dist-info/top_level.txt</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2026-03-31</Date>
+            <Version>0.6.0</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Evan Maddock</Name>
+            <Email>maddock.evan@vivaldi.net</Email>
+        </Update>
+    </History>
+</PISI>

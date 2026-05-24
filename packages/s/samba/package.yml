@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : samba
-version    : 4.22.2
-release    : 110
+version    : 4.23.6
+release    : 114
 source     :
-    - https://download.samba.org/pub/samba/stable/samba-4.22.2.tar.gz : d9ac8e224a200159e62c651cf42307dc162212ec25d04eb6800b9a7ccfbcc3c1
+    - https://download.samba.org/pub/samba/stable/samba-4.23.6.tar.gz : e3dabd8b5e42dc97669fa0faef032510a94e496b58f7067082e5036d88f0e702
 homepage   : https://samba.org
 license    : GPL-3.0-or-later
 summary    : Provides file and print services to SMB/CIFS clients and Windows networking to Linux clients
@@ -80,6 +81,7 @@ build      : |
     %make
 install    : |
     %make_install
+    %install_license COPYING
 
     # solus-controlled standard smb.conf file which attempts to include /etc/samba/smb.conf
     install -D -m00644 $pkgfiles/smb.conf.solus $installdir/usr/share/defaults/samba/smb.conf

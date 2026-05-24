@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : broot
-version    : 1.45.1
-release    : 26
+version    : 1.56.3
+release    : 34
 source     :
-    - https://github.com/Canop/broot/archive/refs/tags/v1.45.1.tar.gz : 3ce8dcfdc64f03e64547b4413c3d94f47003054aa3e779089393d3e8a7ed3837
+    - https://github.com/Canop/broot/archive/refs/tags/v1.56.3.tar.gz : 48f7fdc6e68539a951207d892916824bb08e8752d2c6aa414ef994f08b6ba43c
 homepage   : https://dystroy.org/broot/
 license    : MIT
 component  : system.utils
@@ -11,16 +12,24 @@ description: |
     A new way to see and navigate directory trees using cd, tree, and fuzzy search.
 networking : true
 builddeps  :
+    - pkgconfig(libgit2)
+    - pkgconfig(xcb)
     - rust
 setup      : |
     %cargo_fetch
 build      : |
-    %cargo_build
+    export LIBGIT2_NOVENDOR=1
+    %cargo_build --features clipboard
 install    : |
     %cargo_install
+    %install_license LICENSE
 
-    # install manpage
+    # Install manpage
     sed -i "s/#date//" man/page
     sed -i "s/#version/%version%/" man/page
-    install -Dm00644 resources/icons/vscode/vscode.ttf $installdir/usr/share/fonts/truetype/vscode.ttf
     install -Dm00644 man/page $installdir/usr/share/man/man1/broot.1
+
+    # Install font
+    install -Dm00644 resources/icons/vscode/vscode.ttf $installdir/usr/share/fonts/truetype/vscode.ttf
+check      : |
+    %cargo_test

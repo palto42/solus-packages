@@ -1,0 +1,6 @@
+releases:
+  id: 91473
+  rss: https://pypi.org/rss/project/python-debian/releases.xml
+# No known CPE, checked 2026-03-31
+security:
+  cpe: ~

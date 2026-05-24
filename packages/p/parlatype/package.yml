@@ -1,6 +1,7 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : parlatype
 version    : '4.2'
-release    : 6
+release    : 7
 source     :
     - https://github.com/gkarsay/parlatype/releases/download/v4.2/parlatype-4.2.tar.gz : 1d1e0aaac795249ab95ca393a17a99d9f721d7a99905acadc794eb16f8f5b538
 homepage   : https://www.parlatype.xyz
@@ -19,11 +20,12 @@ builddeps  :
     - pkgconfig(libadwaita-1)
     - itstool
 rundeps    :
-    - gstreamer-1.0-plugins-good
-    - gstreamer-1.0-plugins-ugly
+    - gstreamer-plugins-good
+    - gstreamer-plugins-ugly
 setup      : |
     %meson_configure -Dgir=true -Dgtk-doc=true
 build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license COPYING COPYING_CCBYSA

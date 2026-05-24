@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : neovim
-version    : 0.11.4
-release    : 53
+version    : 0.12.2
+release    : 60
 source     :
-    - https://github.com/neovim/neovim/archive/refs/tags/v0.11.4.tar.gz : 83cf9543bedab8bec8c11cd50ccd9a4bf1570420a914b9a28f83ad100ca6d524
+    - https://github.com/neovim/neovim/archive/refs/tags/v0.12.2.tar.gz : ef9f58da7d687ed4d1dad9715542bf0dabdeedbfe8089e2ce17fff21b920a268
 homepage   : https://neovim.io
 license    : Apache-2.0
 component  : editor
@@ -19,7 +20,6 @@ builddeps  :
     - pkgconfig(unibilium)
     - gperf
     - libmpack
-    - libpth-devel
     - lpeg
 rundeps    :
     - lpeg
@@ -42,6 +42,8 @@ build      : |
 install    : |
     %ninja_install
     ln -s /usr/bin/nvim $installdir/usr/bin/neovim
+
+    %install_license LICENSE.txt
 
     # Install Appstream data
     install -Dm00644 runtime/nvim.appdata.xml $installdir/usr/share/metainfo/io.neovim.nvim.metainfo.xml

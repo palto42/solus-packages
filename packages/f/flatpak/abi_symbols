@@ -1,3 +1,7 @@
+flatpak:_IO_stdin_used
+flatpak-oci-authenticator:_IO_stdin_used
+flatpak-portal:_IO_stdin_used
+flatpak-system-helper:_IO_stdin_used
 libflatpak.so.0:flatpak_bundle_ref_get_appstream
 libflatpak.so.0:flatpak_bundle_ref_get_file
 libflatpak.so.0:flatpak_bundle_ref_get_icon

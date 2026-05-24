@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : hipsparse
-version    : 3.1.1
-release    : 5
+version    : 7.2.0
+release    : 7
 source     :
-    - https://github.com/ROCm/hipSPARSE/archive/refs/tags/rocm-6.2.4.tar.gz : 0ecc0ff1eeb99e9a9ac419e49e9be9ec4cd23a117d819710114ee2f35aefe88b
+    - https://github.com/ROCm/rocm-libraries/archive/refs/tags/rocm-7.2.0.tar.gz : 8ad5f4a11f1ed8a7b927f2e65f24083ca6ce902a42021a66a815190a91ccb654
 homepage   : https://github.com/ROCmSoftwarePlatform/hipSPARSE
 license    : MIT
 component  : programming.library
@@ -13,14 +14,20 @@ builddeps  :
     - rocsparse-devel
     - rocm-cmake
     - rocm-hip
+    - rocm-llvm
 environment: |
     export CXXFLAGS="${CXXFLAGS/-D_FORTIFY_SOURCE=2 -fstack-protector-strong --param=ssp-buffer-size=32/-fcf-protection=none}"
 
     export ROCM_PATH=/usr
     export HIP_CLANG_PATH=/usr/lib64/llvm-rocm/bin
-    export DEVICE_LIB_PATH=/usr/lib64/amdgcn/bitcode
+    export HIP_DEVICE_LIB_PATH=/usr/lib64/amdgcn/bitcode
+
+    if [ -e /usr/bin/sccache ]; then
+        export CMAKE_CXX_COMPILER_LAUNCHER=/usr/bin/sccache
+    fi
 setup      : |
-    %cmake_ninja -L \
+    %cmake_ninja -L projects/hipsparse \
+      -DCMAKE_CXX_COMPILER=$HIP_CLANG_PATH/clang++ \
       -DBUILD_CLIENTS_TESTS=OFF \
       -DBUILD_CLIENTS_SAMPLES=OFF \
       -DCMAKE_INSTALL_LIBDIR=lib%LIBSUFFIX% \

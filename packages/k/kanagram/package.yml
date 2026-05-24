@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kanagram
-version    : 25.08.2
-release    : 95
+version    : 26.04.1
+release    : 100
 source     :
-    - https://download.kde.org/stable/release-service/25.08.2/src/kanagram-25.08.2.tar.xz : e7bbe6015f360cf57347fa526806b941ec03437018183d448b3464fbedf86a97
+    - https://download.kde.org/stable/release-service/26.04.1/src/kanagram-26.04.1.tar.xz : e39e7ebbeee0dce822334e7b6ea2f1314826299b73eaff3173ef3b5754e22065
 homepage   : https://kde.org/applications/education/org.kde.kanagram
 license    :
     - GFDL-1.2-or-later
@@ -35,7 +36,6 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
-    %qml6_cache
 
     # remove doc
     rm -rfv $installdir/usr/share/doc

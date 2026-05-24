@@ -110,6 +110,9 @@ libpackagekit-glib2.so.18:pk_client_what_provides
 libpackagekit-glib2.so.18:pk_client_what_provides_async
 libpackagekit-glib2.so.18:pk_console_get_number
 libpackagekit-glib2.so.18:pk_console_get_prompt
+libpackagekit-glib2.so.18:pk_console_str_width
+libpackagekit-glib2.so.18:pk_console_strpad
+libpackagekit-glib2.so.18:pk_console_text_truncate
 libpackagekit-glib2.so.18:pk_control_can_authorize_async
 libpackagekit-glib2.so.18:pk_control_can_authorize_finish
 libpackagekit-glib2.so.18:pk_control_error_get_type
@@ -318,7 +321,7 @@ libpackagekit-glib2.so.18:pk_polkit_agent_open
 libpackagekit-glib2.so.18:pk_progress_bar_end
 libpackagekit-glib2.so.18:pk_progress_bar_get_type
 libpackagekit-glib2.so.18:pk_progress_bar_new
-libpackagekit-glib2.so.18:pk_progress_bar_set_padding
+libpackagekit-glib2.so.18:pk_progress_bar_set_allow_restart
 libpackagekit-glib2.so.18:pk_progress_bar_set_percentage
 libpackagekit-glib2.so.18:pk_progress_bar_set_size
 libpackagekit-glib2.so.18:pk_progress_bar_start
@@ -578,7 +581,6 @@ libpk_backend_eopkg.so:pk_backend_get_categories
 libpk_backend_eopkg.so:pk_backend_get_description
 libpk_backend_eopkg.so:pk_backend_get_details
 libpk_backend_eopkg.so:pk_backend_get_details_local
-libpk_backend_eopkg.so:pk_backend_get_distro_upgrades
 libpk_backend_eopkg.so:pk_backend_get_files
 libpk_backend_eopkg.so:pk_backend_get_filters
 libpk_backend_eopkg.so:pk_backend_get_groups
@@ -720,7 +722,6 @@ packagekit-direct:pk_backend_is_online
 packagekit-direct:pk_backend_is_transaction_inhibited
 packagekit-direct:pk_backend_job_category
 packagekit-direct:pk_backend_job_details
-packagekit-direct:pk_backend_job_details_full
 packagekit-direct:pk_backend_job_disconnect_vfuncs
 packagekit-direct:pk_backend_job_distro_upgrade
 packagekit-direct:pk_backend_job_error_code
@@ -852,6 +853,7 @@ packagekit-direct:pk_strlen
 packagekit-direct:pk_strtoint
 packagekit-direct:pk_strtouint
 packagekit-direct:pk_strtouint64
+packagekit-direct:pk_strtoulong
 packagekit-direct:pk_strzero
 packagekit-direct:pk_util_get_config_filename
 packagekit-direct:pk_util_set_auto_backend
@@ -899,7 +901,6 @@ packagekitd:pk_backend_is_online
 packagekitd:pk_backend_is_transaction_inhibited
 packagekitd:pk_backend_job_category
 packagekitd:pk_backend_job_details
-packagekitd:pk_backend_job_details_full
 packagekitd:pk_backend_job_disconnect_vfuncs
 packagekitd:pk_backend_job_distro_upgrade
 packagekitd:pk_backend_job_error_code
@@ -1058,6 +1059,7 @@ packagekitd:pk_strlen
 packagekitd:pk_strtoint
 packagekitd:pk_strtouint
 packagekitd:pk_strtouint64
+packagekitd:pk_strtoulong
 packagekitd:pk_strzero
 packagekitd:pk_transaction_cancel_bg
 packagekitd:pk_transaction_db_action_time_reset
@@ -1104,3 +1106,4 @@ packagekitd:pk_transaction_state_to_string
 packagekitd:pk_transaction_strvalidate
 packagekitd:pk_util_get_config_filename
 packagekitd:pk_util_set_auto_backend
+pk-offline-update:_IO_stdin_used

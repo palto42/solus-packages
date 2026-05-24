@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : assimp
-version    : 5.3.1
-release    : 5
+version    : 6.0.4
+release    : 7
 source     :
-    - https://github.com/assimp/assimp/archive/refs/tags/v5.3.1.tar.gz : a07666be71afe1ad4bc008c2336b7c688aca391271188eb9108d0c6db1be53f1
+    - https://github.com/assimp/assimp/archive/refs/tags/v6.0.4.tar.gz : afa5487efdd285661afa842c85187cd8c541edad92e8d4aa85be4fca7476eccc
 homepage   : https://www.assimp.org/
 license    : BSD-3-Clause
 component  : programming
@@ -11,7 +12,8 @@ description: |
     A library to import and export various 3d-model-formats including scene-post-processing to generate missing render data.
 setup      : |
     %cmake -B build \
-        -DASSIMP_BUILD_ZLIB=OFF
+        -DASSIMP_BUILD_ZLIB=OFF \
+        -DASSIMP_WARNINGS_AS_ERRORS=OFF
 build      : |
     %make -C build
 install    : |

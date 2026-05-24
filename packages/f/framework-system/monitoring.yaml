@@ -1,0 +1,6 @@
+releases:
+  id: 377455
+  rss: https://github.com/FrameworkComputer/framework-system/tags.atom
+ # No known CPE, checked 2026-04-23
+security:
+  cpe: ~

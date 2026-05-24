@@ -3,8 +3,8 @@
         <Name>gmusicbrowser</Name>
         <Homepage>https://gmusicbrowser.org/</Homepage>
         <Packager>
-            <Name>Jakob Gezelius</Name>
-            <Email>jakob@knugen.nu</Email>
+            <Name>Evan Maddock</Name>
+            <Email>maddock.evan@vivaldi.net</Email>
         </Packager>
         <License>GPL-3.0-only</License>
         <PartOf>multimedia.audio</PartOf>
@@ -359,6 +359,7 @@ Main features
             <Path fileType="data">/usr/share/icons/hicolor/48x48/apps/gmusicbrowser.png</Path>
             <Path fileType="data">/usr/share/icons/hicolor/64x64/apps/gmusicbrowser.png</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/gmusicbrowser.svg</Path>
+            <Path fileType="data">/usr/share/licenses/gmusicbrowser/COPYING</Path>
             <Path fileType="localedata">/usr/share/locale/cs/LC_MESSAGES/gmusicbrowser.mo</Path>
             <Path fileType="localedata">/usr/share/locale/de/LC_MESSAGES/gmusicbrowser.mo</Path>
             <Path fileType="localedata">/usr/share/locale/el/LC_MESSAGES/gmusicbrowser.mo</Path>
@@ -382,17 +383,17 @@ Main features
             <Path fileType="localedata">/usr/share/locale/tr_TR/LC_MESSAGES/gmusicbrowser.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_CN/LC_MESSAGES/gmusicbrowser.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_TW/LC_MESSAGES/gmusicbrowser.mo</Path>
-            <Path fileType="man">/usr/share/man/man1/gmusicbrowser.1</Path>
+            <Path fileType="man">/usr/share/man/man1/gmusicbrowser.1.zst</Path>
             <Path fileType="data">/usr/share/metainfo/org.gmusicbrowser.metainfo.xml</Path>
         </Files>
     </Package>
     <History>
-        <Update release="3">
-            <Date>2024-04-13</Date>
+        <Update release="4">
+            <Date>2026-03-17</Date>
             <Version>1.1.16</Version>
             <Comment>Packaging update</Comment>
-            <Name>Jakob Gezelius</Name>
-            <Email>jakob@knugen.nu</Email>
+            <Name>Evan Maddock</Name>
+            <Email>maddock.evan@vivaldi.net</Email>
         </Update>
     </History>
 </PISI>

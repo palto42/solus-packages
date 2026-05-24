@@ -10,7 +10,7 @@ libglib-2.0.so.0
 libgmodule-2.0.so.0
 libgnutls.so.30
 libgobject-2.0.so.0
-libgpgme.so.11
+libgpgme.so.45
 libgraphene-1.0.so.0
 libgstapp-1.0.so.0
 libgstaudio-1.0.so.0
@@ -19,7 +19,7 @@ libgstreamer-1.0.so.0
 libgstrtp-1.0.so.0
 libgstvideo-1.0.so.0
 libgtk-4.so.1
-libicuuc.so.76
+libicuuc.so.78
 libm.so.6
 libnice.so.10
 libomemo-c.so.0
@@ -29,4 +29,4 @@ libsoup-3.0.so.0
 libsqlite3.so.0
 libsrtp2.so.1
 libstdc++.so.6
-libwebrtc-audio-processing-1.so.3
+libwebrtc-audio-processing-2.so.1

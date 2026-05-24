@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : egl-x11
-version    : 1.0.2
-release    : 3
+version    : 1.0.5
+release    : 5
 source     :
-    - https://github.com/NVIDIA/egl-x11/archive/refs/tags/v1.0.2.tar.gz : 021d0b01b50b6500a4c97ddc43827ebfd10e8ca041a46a9cb00b63c9a07a67cb
+    - https://github.com/NVIDIA/egl-x11/archive/refs/tags/v1.0.5.tar.gz : 92e22178b3aba63be4cb2bf8953991bdf52ad3e5ec26212143b2df46d16e82d7
 homepage   : https://github.com/NVIDIA/egl-x11
 license    : Apache-2.0
 component  : programming.library

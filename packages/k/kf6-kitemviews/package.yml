@@ -1,12 +1,13 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kf6-kitemviews
-version    : 6.19.0
-release    : 26
+version    : 6.26.0
+release    : 33
 source     :
-    - https://download.kde.org/stable/frameworks/6.19/kitemviews-6.19.0.tar.xz : d5865512eee33997e97b766acaccb32236b93e0f81a1a7912065cc7c02b3f252
+    - https://download.kde.org/stable/frameworks/6.26/kitemviews-6.26.0.tar.xz : e76cc9d7561d0aae22b07a77552fbcddf61c8066bac5cfac9958ac065b617e74
 homepage   : https://community.kde.org/Frameworks
 license    :
+    - CC0-1.0
     - GPL-2.0-or-later
-    - LGPL-2.0-only
     - LGPL-2.0-or-later
 component  : programming.library
 summary    : Set of item views extending the Qt model-view framework.
@@ -27,3 +28,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*

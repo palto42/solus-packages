@@ -3,8 +3,8 @@
         <Name>brasero</Name>
         <Homepage>https://gitlab.gnome.org/GNOME/brasero</Homepage>
         <Packager>
-            <Name>Muhammad Alfi Syahrin</Name>
-            <Email>malfisya.dev@hotmail.com</Email>
+            <Name>Evan Maddock</Name>
+            <Email>maddock.evan@vivaldi.net</Email>
         </Packager>
         <License>GPL-2.0-or-later</License>
         <PartOf>multimedia.audio</PartOf>
@@ -20,7 +20,7 @@
 </Description>
         <PartOf>multimedia.audio</PartOf>
         <RuntimeDependencies>
-            <Dependency release="19">brasero-libs</Dependency>
+            <Dependency release="20">brasero-libs</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin/brasero</Path>
@@ -708,6 +708,7 @@
             <Path fileType="data">/usr/share/icons/hicolor/32x32/apps/brasero.png</Path>
             <Path fileType="data">/usr/share/icons/hicolor/48x48/apps/brasero.png</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/brasero-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/licenses/brasero/COPYING</Path>
             <Path fileType="localedata">/usr/share/locale/af/LC_MESSAGES/brasero.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ar/LC_MESSAGES/brasero.mo</Path>
             <Path fileType="localedata">/usr/share/locale/as/LC_MESSAGES/brasero.mo</Path>
@@ -792,7 +793,7 @@
             <Path fileType="localedata">/usr/share/locale/zh_CN/LC_MESSAGES/brasero.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_HK/LC_MESSAGES/brasero.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_TW/LC_MESSAGES/brasero.mo</Path>
-            <Path fileType="man">/usr/share/man/man1/brasero.1</Path>
+            <Path fileType="man">/usr/share/man/man1/brasero.1.zst</Path>
             <Path fileType="data">/usr/share/metainfo/brasero.appdata.xml</Path>
             <Path fileType="data">/usr/share/mime/packages/brasero.xml</Path>
         </Files>
@@ -804,8 +805,8 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="19">brasero-libs</Dependency>
-            <Dependency release="19">brasero</Dependency>
+            <Dependency release="20">brasero</Dependency>
+            <Dependency release="20">brasero-libs</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/brasero3/brasero-blank-dialog.h</Path>
@@ -934,12 +935,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="19">
-            <Date>2025-06-27</Date>
+        <Update release="20">
+            <Date>2026-03-16</Date>
             <Version>3.12.3</Version>
             <Comment>Packaging update</Comment>
-            <Name>Muhammad Alfi Syahrin</Name>
-            <Email>malfisya.dev@hotmail.com</Email>
+            <Name>Evan Maddock</Name>
+            <Email>maddock.evan@vivaldi.net</Email>
         </Update>
     </History>
 </PISI>

@@ -15,8 +15,8 @@ libXext.so.6
 libXinerama.so.1
 libXpm.so.4
 liba52.so.0
-libabsl_log_internal_check_op.so.2401.0.0
-libabsl_log_internal_message.so.2401.0.0
+libabsl_log_internal_check_op.so.2601.0.0
+libabsl_log_internal_message.so.2601.0.0
 libaom.so.3
 libarchive.so.13
 libasound.so.2
@@ -27,7 +27,7 @@ libavc1394.so.0
 libavcodec.so.58
 libavformat.so.58
 libavutil.so.56
-libbluray.so.2
+libbluray.so.3
 libc.so.6
 libcairo.so.2
 libcddb.so.2
@@ -78,7 +78,7 @@ libogg.so.0
 libopus.so.0
 libpng16.so.16
 libpostproc.so.55
-libprotobuf-lite.so.27.2.0
+libprotobuf-lite.so.34.0.0
 libpulse.so.0
 libraw1394.so.11
 librom1394.so.0
@@ -96,7 +96,7 @@ libssl.so.3
 libstdc++.so.6
 libswscale.so.5
 libsystemd.so.0
-libtag.so.1
+libtag.so.2
 libtheoradec.so.1
 libtheoraenc.so.1
 libtwolame.so.0
@@ -109,7 +109,7 @@ libva.so.2
 libvorbis.so.0
 libvorbisenc.so.2
 libvpl.so.2
-libvpx.so.9
+libvpx.so.12
 libwayland-client.so.0
 libwayland-egl.so.1
 libx264.so.164

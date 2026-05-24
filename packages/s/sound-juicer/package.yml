@@ -1,6 +1,7 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : sound-juicer
 version    : 3.40.0
-release    : 15
+release    : 16
 source     :
     - https://download.gnome.org/sources/sound-juicer/3.40/sound-juicer-3.40.0.tar.xz : 2ee882744391beb4c6d64a0f6825fb765510b706ec2b704bfb42e42afaae1de6
 homepage   : https://gitlab.gnome.org/GNOME/sound-juicer
@@ -18,7 +19,7 @@ builddeps  :
     - pkgconfig(libcanberra-gtk3)
     - pkgconfig(libdiscid)
     - pkgconfig(libmusicbrainz5)
-    - gstreamer-1.0-plugins-good
+    - gstreamer-plugins-good
     - itstool
 setup      : |
     %meson_configure
@@ -26,4 +27,6 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license COPYING
+
     rm -rf $installdir/usr/doc

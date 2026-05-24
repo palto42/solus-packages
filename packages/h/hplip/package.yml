@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : hplip
-version    : 3.25.2
-release    : 68
+version    : 3.25.8
+release    : 72
 source     :
-    - https://sourceforge.net/projects/hplip/files/hplip/3.25.2/hplip-3.25.2.tar.gz : e872ff28eb2517705a95f6e1839efa1e50a77a33aae8905278df2bd820919653
+    - https://downloads.sourceforge.net/project/hplip/hplip/3.25.8/hplip-3.25.8.tar.gz : 1cf6d6c28735435c8eb6646e83bcfb721e51c4b1f0e8cf9105a6faf96dc9ad25
 homepage   : https://developers.hp.com/hp-linux-imaging-and-printing/gethplip
 license    :
     - GPL-2.0-or-later
@@ -60,10 +61,6 @@ setup      : |
 
     # Force recognition of Solus distro by hp-check
     sed -i -e "s|open('/etc/issue', 'r').read().lower().strip()|'Solus'|" installer/core_install.py
-
-    # No shebang and python3 everywhere
-    export PYTHON=/usr/bin/python3
-    sed -i -e "s:/usr/bin/\(env python\|python\):$PYTHON:" $(find . -type f -exec grep -l "#! \?/usr/bin.*python" {} +)
 
     # If AUTOMAKE='automake --foreign' is not set, autoreconf complains about missing files
     # like NEWS, README, AUTHORS, ChangeLog in each directory where a Makefile.am exists

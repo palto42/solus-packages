@@ -1,0 +1,21 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
+name       : python-grpcio-tools
+version    : 1.72.0
+release    : 1
+source     :
+    - https://pypi.io/packages/source/g/grpcio-tools/grpcio_tools-1.72.0.tar.gz : 23144adf063fad5665160bcdc397220f2dc29e11b7dde88ae69bd9672ff8d9db
+homepage   : https://github.com/grpc/grpc
+license    : Apache-2.0
+component  : programming.python
+summary    : gRPC Python tools.
+description: |
+    gRPC is a modern open source high performance Remote Procedure Call (RPC) framework that can run in any environment.
+builddeps  :
+    - pkgconfig(python3)
+    - python-build
+    - python-installer
+    - python-setuptools
+build      : |
+    %python3_setup
+install    : |
+    %python3_install

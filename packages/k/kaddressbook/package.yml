@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kaddressbook
-version    : 25.08.2
-release    : 89
+version    : 26.04.1
+release    : 94
 source     :
-    - https://download.kde.org/stable/release-service/25.08.2/src/kaddressbook-25.08.2.tar.xz : 45b3fc9e2539ed1fcbbccd45ce45e9c36b7501089265998209155fbce71a58d5
+    - https://download.kde.org/stable/release-service/26.04.1/src/kaddressbook-26.04.1.tar.xz : 1b9f6f78f60a3044164a6b0b7fae5a9608925969d8c71541a61d84ab6d3caa2b
 homepage   : https://kde.org/applications/office/org.kde.kaddressbook
 license    :
     - GFDL-1.2-or-later

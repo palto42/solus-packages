@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kmbox
-version    : 25.08.2
-release    : 91
+version    : 26.04.1
+release    : 96
 source     :
-    - https://download.kde.org/stable/release-service/25.08.2/src/kmbox-25.08.2.tar.xz : 2889b033804b9bbbc4ce89c91263f1d661e65195fd3e7cb029ccdaeaf2e1b92b
+    - https://download.kde.org/stable/release-service/26.04.1/src/kmbox-26.04.1.tar.xz : 3f45c677859e15ec16be4c710811022931629cccf29999282ecf63583233bccc
 homepage   : https://kde.org/
 license    : LGPL-2.1-or-later
 component  : desktop.library

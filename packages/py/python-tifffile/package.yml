@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : python-tifffile
-version    : 2025.2.18
-release    : 6
+version    : 2025.10.16
+release    : 8
 source     :
-    - https://files.pythonhosted.org/packages/source/t/tifffile/tifffile-2025.2.18.tar.gz : 8d731789e691b468746c1615d989bc550ac93cf753e9210865222e90a5a95d11
+    - https://files.pythonhosted.org/packages/source/t/tifffile/tifffile-2025.10.16.tar.gz : 425179ec7837ac0e07bc95d2ea5bea9b179ce854967c12ba07fc3f093e58efc1
 homepage   : https://github.com/cgohlke/tifffile/
 license    : BSD-3-Clause
 component  : programming.python

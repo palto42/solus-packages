@@ -1,13 +1,20 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kf6-baloo
-version    : 6.19.0
-release    : 29
+version    : 6.26.0
+release    : 39
 source     :
-    - https://download.kde.org/stable/frameworks/6.19/baloo-6.19.0.tar.xz : af3d5d85d4ed22963564fa6cc5557d489f17cba30d58308bba8c4c93d4e84688
+    - https://download.kde.org/stable/frameworks/6.26/baloo-6.26.0.tar.xz : 702f5b868aaef48153c6c3828111b3b335403079491a8f37043ebd89c6995b30
 homepage   : https://community.kde.org/Frameworks
 license    :
+    - BSD-3-Clause
+    - CC0-1.0
+    - GPL-2.0-only
     - GPL-2.0-or-later
+    - GPL-3.0-only
     - LGPL-2.0-or-later
+    - LGPL-2.1-only
     - LGPL-2.1-or-later
+    - LGPL-3.0-only
 component  : desktop.library
 summary    : Baloo provides file searching and indexing
 description: |
@@ -38,3 +45,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*

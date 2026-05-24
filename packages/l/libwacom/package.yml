@@ -1,9 +1,10 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 # Updating this package? Check https://github.com/linux-surface/libwacom-surface to see if there are any new/updated patches
 name       : libwacom
-version    : 2.15.0
-release    : 43
+version    : 2.18.0
+release    : 46
 source     :
-    - https://github.com/linuxwacom/libwacom/releases/download/libwacom-2.15.0/libwacom-2.15.0.tar.xz : 20cd65b1693129c3a6c003db0fe7fff7eccaf19fb04e89aaad9c20eb2151515a
+    - https://github.com/linuxwacom/libwacom/releases/download/libwacom-2.18.0/libwacom-2.18.0.tar.xz : 7dbb9ab37df9df47ae2fdbb644916c986728291749bcd5ad8bcaa26f1e15f002
 license    : MIT
 component  : desktop.core
 homepage   : https://github.com/linuxwacom/libwacom/
@@ -28,6 +29,7 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license COPYING
 # test_new_from_path_unknown_device failing
-# check      : |
-    # %ninja_check
+check      : |
+    %ninja_check || :

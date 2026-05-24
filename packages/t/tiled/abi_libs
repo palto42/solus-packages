@@ -9,6 +9,7 @@ libjson1.so
 liblua.so
 libpython.so
 libreplicaisland.so
+librpd.so
 librpmap.so
 libtbin.so
 libtengine.so
@@ -16,3 +17,7 @@ libtiled.so
 libtilededitor.so
 libtscn.so
 libyy.so
+terraingenerator
+tiled
+tmxrasterizer
+tmxviewer

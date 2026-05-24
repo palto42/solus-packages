@@ -37,6 +37,7 @@
             <Path fileType="data">/usr/share/dbus-1/interfaces/org.gnome.Sysprof.Agent.xml</Path>
             <Path fileType="data">/usr/share/dbus-1/interfaces/org.gnome.Sysprof3.Profiler.xml</Path>
             <Path fileType="data">/usr/share/dbus-1/interfaces/org.gnome.Sysprof3.Service.xml</Path>
+            <Path fileType="data">/usr/share/dbus-1/services/org.gnome.Sysprof.service</Path>
             <Path fileType="data">/usr/share/dbus-1/system-services/org.gnome.Sysprof3.service</Path>
             <Path fileType="data">/usr/share/dbus-1/system.d/org.gnome.Sysprof3.conf</Path>
             <Path fileType="doc">/usr/share/help/C/sysprof/faq.page</Path>
@@ -45,6 +46,12 @@
             <Path fileType="doc">/usr/share/help/C/sysprof/introduction.page</Path>
             <Path fileType="doc">/usr/share/help/C/sysprof/legal.xml</Path>
             <Path fileType="doc">/usr/share/help/C/sysprof/profiling.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/sysprof/faq.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/sysprof/figures/Sysprof.svg</Path>
+            <Path fileType="doc">/usr/share/help/bg/sysprof/index.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/sysprof/introduction.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/sysprof/legal.xml</Path>
+            <Path fileType="doc">/usr/share/help/bg/sysprof/profiling.page</Path>
             <Path fileType="doc">/usr/share/help/ca/sysprof/faq.page</Path>
             <Path fileType="doc">/usr/share/help/ca/sysprof/figures/Sysprof.svg</Path>
             <Path fileType="doc">/usr/share/help/ca/sysprof/index.page</Path>
@@ -105,6 +112,12 @@
             <Path fileType="doc">/usr/share/help/id/sysprof/introduction.page</Path>
             <Path fileType="doc">/usr/share/help/id/sysprof/legal.xml</Path>
             <Path fileType="doc">/usr/share/help/id/sysprof/profiling.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/sysprof/faq.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/sysprof/figures/Sysprof.svg</Path>
+            <Path fileType="doc">/usr/share/help/kk/sysprof/index.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/sysprof/introduction.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/sysprof/legal.xml</Path>
+            <Path fileType="doc">/usr/share/help/kk/sysprof/profiling.page</Path>
             <Path fileType="doc">/usr/share/help/ko/sysprof/faq.page</Path>
             <Path fileType="doc">/usr/share/help/ko/sysprof/figures/Sysprof.svg</Path>
             <Path fileType="doc">/usr/share/help/ko/sysprof/index.page</Path>
@@ -175,8 +188,10 @@
             <Path fileType="localedata">/usr/share/locale/hu/LC_MESSAGES/sysprof.mo</Path>
             <Path fileType="localedata">/usr/share/locale/id/LC_MESSAGES/sysprof.mo</Path>
             <Path fileType="localedata">/usr/share/locale/it/LC_MESSAGES/sysprof.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/ja/LC_MESSAGES/sysprof.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ka/LC_MESSAGES/sysprof.mo</Path>
             <Path fileType="localedata">/usr/share/locale/kab/LC_MESSAGES/sysprof.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/kk/LC_MESSAGES/sysprof.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ko/LC_MESSAGES/sysprof.mo</Path>
             <Path fileType="localedata">/usr/share/locale/lt/LC_MESSAGES/sysprof.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ne/LC_MESSAGES/sysprof.mo</Path>
@@ -191,12 +206,15 @@
             <Path fileType="localedata">/usr/share/locale/sk/LC_MESSAGES/sysprof.mo</Path>
             <Path fileType="localedata">/usr/share/locale/sl/LC_MESSAGES/sysprof.mo</Path>
             <Path fileType="localedata">/usr/share/locale/sr/LC_MESSAGES/sysprof.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/sr@latin/LC_MESSAGES/sysprof.mo</Path>
             <Path fileType="localedata">/usr/share/locale/sv/LC_MESSAGES/sysprof.mo</Path>
             <Path fileType="localedata">/usr/share/locale/tr/LC_MESSAGES/sysprof.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/ug/LC_MESSAGES/sysprof.mo</Path>
             <Path fileType="localedata">/usr/share/locale/uk/LC_MESSAGES/sysprof.mo</Path>
             <Path fileType="localedata">/usr/share/locale/uz/LC_MESSAGES/sysprof.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_CN/LC_MESSAGES/sysprof.mo</Path>
-            <Path fileType="data">/usr/share/metainfo/org.gnome.Sysprof.appdata.xml</Path>
+            <Path fileType="localedata">/usr/share/locale/zh_TW/LC_MESSAGES/sysprof.mo</Path>
+            <Path fileType="data">/usr/share/metainfo/org.gnome.Sysprof.metainfo.xml</Path>
             <Path fileType="data">/usr/share/mime/packages/sysprof-mime.xml</Path>
             <Path fileType="data">/usr/share/polkit-1/actions/org.gnome.sysprof3.policy</Path>
         </Files>
@@ -208,7 +226,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="18">sysprof</Dependency>
+            <Dependency release="20">sysprof</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/sysprof-6/sysprof-address.h</Path>
@@ -296,9 +314,9 @@
         </Files>
     </Package>
     <History>
-        <Update release="18">
-            <Date>2025-09-01</Date>
-            <Version>48.1</Version>
+        <Update release="20">
+            <Date>2026-03-21</Date>
+            <Version>50.0</Version>
             <Comment>Packaging update</Comment>
             <Name>Joey Riches</Name>
             <Email>josephriches@gmail.com</Email>

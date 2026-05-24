@@ -3,15 +3,15 @@
         <Name>clisp</Name>
         <Homepage>https://clisp.sourceforge.io/</Homepage>
         <Packager>
-            <Name>Joey Riches</Name>
-            <Email>josephriches@gmail.com</Email>
+            <Name>David Harder</Name>
+            <Email>david@davidjharder.ca</Email>
         </Packager>
         <License>GPL-2.0-or-later</License>
         <PartOf>programming.tools</PartOf>
         <Summary xml:lang="en">CLISP - an ANSI Common Lisp Implementation</Summary>
         <Description xml:lang="en">CLISP is a Common Lisp implementation by Bruno Haible, then of Karlsruhe University, and Michael Stoll, then of Munich University, both in Germany. It implements the language described in the ANSI Common Lisp standard with many extensions.
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>clisp</Name>
@@ -24,9 +24,6 @@
             <Path fileType="executable">/usr/bin/clisp-link</Path>
             <Path fileType="library">/usr/lib/clisp-2.49.92/base/calls.o</Path>
             <Path fileType="library">/usr/lib/clisp-2.49.92/base/gettext.o</Path>
-            <Path fileType="library">/usr/lib/clisp-2.49.92/base/libgnu.a</Path>
-            <Path fileType="library">/usr/lib/clisp-2.49.92/base/libnoreadline.a</Path>
-            <Path fileType="library">/usr/lib/clisp-2.49.92/base/lisp.a</Path>
             <Path fileType="library">/usr/lib/clisp-2.49.92/base/lisp.run</Path>
             <Path fileType="library">/usr/lib/clisp-2.49.92/base/lispinit.mem</Path>
             <Path fileType="library">/usr/lib/clisp-2.49.92/base/makevars</Path>
@@ -71,6 +68,8 @@
             <Path fileType="data">/usr/share/emacs/site-lisp/clisp-ffi.el</Path>
             <Path fileType="data">/usr/share/emacs/site-lisp/clisp-indent.el</Path>
             <Path fileType="data">/usr/share/emacs/site-lisp/clisp-indent.lisp</Path>
+            <Path fileType="data">/usr/share/licenses/clisp/COPYRIGHT</Path>
+            <Path fileType="data">/usr/share/licenses/clisp/GNU-GPL</Path>
             <Path fileType="localedata">/usr/share/locale/da/LC_MESSAGES/clisp.mo</Path>
             <Path fileType="localedata">/usr/share/locale/da/LC_MESSAGES/clisplow.mo</Path>
             <Path fileType="localedata">/usr/share/locale/de/LC_MESSAGES/clisp.mo</Path>
@@ -87,18 +86,18 @@
             <Path fileType="localedata">/usr/share/locale/ru/LC_MESSAGES/clisplow.mo</Path>
             <Path fileType="localedata">/usr/share/locale/sv/LC_MESSAGES/clisp.mo</Path>
             <Path fileType="localedata">/usr/share/locale/sv/LC_MESSAGES/clisplow.mo</Path>
-            <Path fileType="man">/usr/share/man/man1/clisp-link.1</Path>
-            <Path fileType="man">/usr/share/man/man1/clisp.1</Path>
+            <Path fileType="man">/usr/share/man/man1/clisp-link.1.zst</Path>
+            <Path fileType="man">/usr/share/man/man1/clisp.1.zst</Path>
             <Path fileType="data">/usr/share/vim/vimfiles/after/syntax/lisp.vim</Path>
         </Files>
     </Package>
     <History>
-        <Update release="4">
-            <Date>2022-11-15</Date>
+        <Update release="5">
+            <Date>2026-03-31</Date>
             <Version>2.49.92</Version>
             <Comment>Packaging update</Comment>
-            <Name>Joey Riches</Name>
-            <Email>josephriches@gmail.com</Email>
+            <Name>David Harder</Name>
+            <Email>david@davidjharder.ca</Email>
         </Update>
     </History>
 </PISI>

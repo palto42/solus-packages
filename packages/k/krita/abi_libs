@@ -1,3 +1,4 @@
+krita
 krita.so
 krita_colorspaces_extensions.so
 krita_flaketools.so
@@ -7,6 +8,7 @@ krita_raw_import.so
 krita_shape_image.so
 krita_shape_paths.so
 krita_tool_svgtext.so
+krita_version
 kritaanimationdocker.so
 kritaarrangedocker.so
 kritaartisticcolorselector.so
@@ -121,6 +123,7 @@ kritaresourcemanager.so
 kritarotateimage.so
 kritaroundcornersfilter.so
 kritaroundmarkerpaintop.so
+kritarunner
 kritasamplescreencolor.so
 kritascreentonegenerator.so
 kritaseexprgenerator.so

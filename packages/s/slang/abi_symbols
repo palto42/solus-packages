@@ -2,8 +2,13 @@ base64-module.so:SLmodule_base64_api_version
 base64-module.so:deinit_base64_module
 base64-module.so:init_base64_module_ns
 chksum-module.so:SLmodule_chksum_api_version
+chksum-module.so:_pSLchksum_crc16_new
+chksum-module.so:_pSLchksum_crc32_new
+chksum-module.so:_pSLchksum_crc8_new
 chksum-module.so:_pSLchksum_md5_new
 chksum-module.so:_pSLchksum_sha1_new
+chksum-module.so:_pSLchksum_sha256_new
+chksum-module.so:_pSLchksum_sha512_new
 chksum-module.so:deinit_chksum_module
 chksum-module.so:init_chksum_module_ns
 csv-module.so:SLmodule_csv_api_version
@@ -740,9 +745,6 @@ libslang.so.2:SLwchar_toupper
 libslang.so.2:SLwchar_wcwidth
 libslang.so.2:_pSLChg_LCase_Lut
 libslang.so.2:_pSLChg_UCase_Lut
-pcre-module.so:SLmodule_pcre_api_version
-pcre-module.so:deinit_pcre_module
-pcre-module.so:init_pcre_module_ns
 png-module.so:SLmodule_png_api_version
 png-module.so:deinit_png_module
 png-module.so:init_png_module_ns

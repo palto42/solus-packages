@@ -21,48 +21,48 @@
         <PartOf>office.notes</PartOf>
         <Files>
             <Path fileType="executable">/usr/bin/gnote</Path>
-            <Path fileType="library">/usr/lib64/gnote/plugins/48/backlinks.desktop</Path>
-            <Path fileType="library">/usr/lib64/gnote/plugins/48/bugzilla.desktop</Path>
-            <Path fileType="library">/usr/lib64/gnote/plugins/48/exporttogtg.desktop</Path>
-            <Path fileType="library">/usr/lib64/gnote/plugins/48/exporttohtml.desktop</Path>
-            <Path fileType="library">/usr/lib64/gnote/plugins/48/filesystemsyncservice.desktop</Path>
-            <Path fileType="library">/usr/lib64/gnote/plugins/48/fixedwidth.desktop</Path>
-            <Path fileType="library">/usr/lib64/gnote/plugins/48/gvfssyncservice.desktop</Path>
-            <Path fileType="library">/usr/lib64/gnote/plugins/48/inserttimestamp.desktop</Path>
-            <Path fileType="library">/usr/lib64/gnote/plugins/48/libbacklinks.so</Path>
-            <Path fileType="library">/usr/lib64/gnote/plugins/48/libbugzilla.so</Path>
-            <Path fileType="library">/usr/lib64/gnote/plugins/48/libexporttogtg.so</Path>
-            <Path fileType="library">/usr/lib64/gnote/plugins/48/libexporttohtml.so</Path>
-            <Path fileType="library">/usr/lib64/gnote/plugins/48/libfilesystemsyncservice.so</Path>
-            <Path fileType="library">/usr/lib64/gnote/plugins/48/libfixedwidth.so</Path>
-            <Path fileType="library">/usr/lib64/gnote/plugins/48/libgvfssyncservice.so</Path>
-            <Path fileType="library">/usr/lib64/gnote/plugins/48/libinserttimestamp.so</Path>
-            <Path fileType="library">/usr/lib64/gnote/plugins/48/libnotedirectorywatcher.so</Path>
-            <Path fileType="library">/usr/lib64/gnote/plugins/48/libnoteoftheday.so</Path>
-            <Path fileType="library">/usr/lib64/gnote/plugins/48/libprintnotes.so</Path>
-            <Path fileType="library">/usr/lib64/gnote/plugins/48/libreadonly.so</Path>
-            <Path fileType="library">/usr/lib64/gnote/plugins/48/libreplacetitle.so</Path>
-            <Path fileType="library">/usr/lib64/gnote/plugins/48/libspecialnotes.so</Path>
-            <Path fileType="library">/usr/lib64/gnote/plugins/48/libstatistics.so</Path>
-            <Path fileType="library">/usr/lib64/gnote/plugins/48/libtableofcontents.so</Path>
-            <Path fileType="library">/usr/lib64/gnote/plugins/48/libtodo.so</Path>
-            <Path fileType="library">/usr/lib64/gnote/plugins/48/libtomboyimport.so</Path>
-            <Path fileType="library">/usr/lib64/gnote/plugins/48/libunderline.so</Path>
-            <Path fileType="library">/usr/lib64/gnote/plugins/48/libwebdavsyncservice.so</Path>
-            <Path fileType="library">/usr/lib64/gnote/plugins/48/notedirectorywatcher.desktop</Path>
-            <Path fileType="library">/usr/lib64/gnote/plugins/48/noteoftheday.desktop</Path>
-            <Path fileType="library">/usr/lib64/gnote/plugins/48/printnotes.desktop</Path>
-            <Path fileType="library">/usr/lib64/gnote/plugins/48/readonly.desktop</Path>
-            <Path fileType="library">/usr/lib64/gnote/plugins/48/replacetitle.desktop</Path>
-            <Path fileType="library">/usr/lib64/gnote/plugins/48/specialnotes.desktop</Path>
-            <Path fileType="library">/usr/lib64/gnote/plugins/48/statistics.desktop</Path>
-            <Path fileType="library">/usr/lib64/gnote/plugins/48/tableofcontents.desktop</Path>
-            <Path fileType="library">/usr/lib64/gnote/plugins/48/todo.desktop</Path>
-            <Path fileType="library">/usr/lib64/gnote/plugins/48/tomboyimport.desktop</Path>
-            <Path fileType="library">/usr/lib64/gnote/plugins/48/underline.desktop</Path>
-            <Path fileType="library">/usr/lib64/gnote/plugins/48/webdavsyncservice.desktop</Path>
-            <Path fileType="library">/usr/lib64/libgnote-48.so.1</Path>
-            <Path fileType="library">/usr/lib64/libgnote-48.so.1.0.0</Path>
+            <Path fileType="library">/usr/lib64/gnote/plugins/50/backlinks.desktop</Path>
+            <Path fileType="library">/usr/lib64/gnote/plugins/50/bugzilla.desktop</Path>
+            <Path fileType="library">/usr/lib64/gnote/plugins/50/exporttogtg.desktop</Path>
+            <Path fileType="library">/usr/lib64/gnote/plugins/50/exporttohtml.desktop</Path>
+            <Path fileType="library">/usr/lib64/gnote/plugins/50/filesystemsyncservice.desktop</Path>
+            <Path fileType="library">/usr/lib64/gnote/plugins/50/fixedwidth.desktop</Path>
+            <Path fileType="library">/usr/lib64/gnote/plugins/50/gvfssyncservice.desktop</Path>
+            <Path fileType="library">/usr/lib64/gnote/plugins/50/inserttimestamp.desktop</Path>
+            <Path fileType="library">/usr/lib64/gnote/plugins/50/libbacklinks.so</Path>
+            <Path fileType="library">/usr/lib64/gnote/plugins/50/libbugzilla.so</Path>
+            <Path fileType="library">/usr/lib64/gnote/plugins/50/libexporttogtg.so</Path>
+            <Path fileType="library">/usr/lib64/gnote/plugins/50/libexporttohtml.so</Path>
+            <Path fileType="library">/usr/lib64/gnote/plugins/50/libfilesystemsyncservice.so</Path>
+            <Path fileType="library">/usr/lib64/gnote/plugins/50/libfixedwidth.so</Path>
+            <Path fileType="library">/usr/lib64/gnote/plugins/50/libgvfssyncservice.so</Path>
+            <Path fileType="library">/usr/lib64/gnote/plugins/50/libinserttimestamp.so</Path>
+            <Path fileType="library">/usr/lib64/gnote/plugins/50/libnotedirectorywatcher.so</Path>
+            <Path fileType="library">/usr/lib64/gnote/plugins/50/libnoteoftheday.so</Path>
+            <Path fileType="library">/usr/lib64/gnote/plugins/50/libprintnotes.so</Path>
+            <Path fileType="library">/usr/lib64/gnote/plugins/50/libreadonly.so</Path>
+            <Path fileType="library">/usr/lib64/gnote/plugins/50/libreplacetitle.so</Path>
+            <Path fileType="library">/usr/lib64/gnote/plugins/50/libspecialnotes.so</Path>
+            <Path fileType="library">/usr/lib64/gnote/plugins/50/libstatistics.so</Path>
+            <Path fileType="library">/usr/lib64/gnote/plugins/50/libtableofcontents.so</Path>
+            <Path fileType="library">/usr/lib64/gnote/plugins/50/libtodo.so</Path>
+            <Path fileType="library">/usr/lib64/gnote/plugins/50/libtomboyimport.so</Path>
+            <Path fileType="library">/usr/lib64/gnote/plugins/50/libunderline.so</Path>
+            <Path fileType="library">/usr/lib64/gnote/plugins/50/libwebdavsyncservice.so</Path>
+            <Path fileType="library">/usr/lib64/gnote/plugins/50/notedirectorywatcher.desktop</Path>
+            <Path fileType="library">/usr/lib64/gnote/plugins/50/noteoftheday.desktop</Path>
+            <Path fileType="library">/usr/lib64/gnote/plugins/50/printnotes.desktop</Path>
+            <Path fileType="library">/usr/lib64/gnote/plugins/50/readonly.desktop</Path>
+            <Path fileType="library">/usr/lib64/gnote/plugins/50/replacetitle.desktop</Path>
+            <Path fileType="library">/usr/lib64/gnote/plugins/50/specialnotes.desktop</Path>
+            <Path fileType="library">/usr/lib64/gnote/plugins/50/statistics.desktop</Path>
+            <Path fileType="library">/usr/lib64/gnote/plugins/50/tableofcontents.desktop</Path>
+            <Path fileType="library">/usr/lib64/gnote/plugins/50/todo.desktop</Path>
+            <Path fileType="library">/usr/lib64/gnote/plugins/50/tomboyimport.desktop</Path>
+            <Path fileType="library">/usr/lib64/gnote/plugins/50/underline.desktop</Path>
+            <Path fileType="library">/usr/lib64/gnote/plugins/50/webdavsyncservice.desktop</Path>
+            <Path fileType="library">/usr/lib64/libgnote-50.so.0</Path>
+            <Path fileType="library">/usr/lib64/libgnote-50.so.0.0.1</Path>
             <Path fileType="data">/usr/share/applications/org.gnome.Gnote.desktop</Path>
             <Path fileType="data">/usr/share/dbus-1/services/org.gnome.Gnote.service</Path>
             <Path fileType="data">/usr/share/glib-2.0/schemas/org.gnome.gnote.gschema.xml</Path>
@@ -587,6 +587,56 @@
             <Path fileType="doc">/usr/share/help/id/gnote/gnote-template-notes.page</Path>
             <Path fileType="doc">/usr/share/help/id/gnote/gnote-working-with-notebooks.page</Path>
             <Path fileType="doc">/usr/share/help/id/gnote/index.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnote/figures/add-notebook-search.png</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnote/figures/add-to-notebook.png</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnote/figures/delete-notebook.png</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnote/figures/gnote-addin-table-of-contents.png</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnote/figures/gnote-new-note.png</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnote/figures/gnote-pindown.png</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnote/figures/gnote-pinup.png</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnote/figures/gnote-preferences-add-ins.png</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnote/figures/gnote-preferences-editing.png</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnote/figures/gnote-preferences-synchronization.png</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnote/figures/gnote-search-all-notes.png</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnote/figures/gnote-sync-progress.png</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnote/figures/gnote-syncprefs-advanced.png</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnote/figures/gnote-syncprefs-gvfs.png</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnote/figures/gnote-syncprefs-local.png</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnote/figures/gnote-syncprefs-webdav.png</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnote/figures/gnote-template-note.png</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnote/figures/gnote-tools.png</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnote/figures/logo32.png</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnote/figures/note-template.png</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnote/figures/notebook-icon.png</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnote/gnote-addin-bugzillalink.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnote/gnote-addin-fixedwidth.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnote/gnote-addin-html.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnote/gnote-addin-notedirwatcher.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnote/gnote-addin-noteoftheday.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnote/gnote-addin-print.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnote/gnote-addin-readonly.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnote/gnote-addin-replacetitle.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnote/gnote-addin-specialnotes.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnote/gnote-addin-sync-gvfs.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnote/gnote-addin-sync-local.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnote/gnote-addin-sync-webdav.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnote/gnote-addin-tableofcontents.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnote/gnote-addin-timestamp.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnote/gnote-addin-underline.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnote/gnote-addins-preferences.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnote/gnote-bulleted-lists.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnote/gnote-common-problems.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnote/gnote-creating-notes.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnote/gnote-deleting-notes.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnote/gnote-editing-notes.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnote/gnote-introduction.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnote/gnote-links.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnote/gnote-notes-preferences.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnote/gnote-searching-notes.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnote/gnote-synchronization.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnote/gnote-template-notes.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnote/gnote-working-with-notebooks.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnote/index.page</Path>
             <Path fileType="doc">/usr/share/help/lt/gnote/figures/add-notebook-search.png</Path>
             <Path fileType="doc">/usr/share/help/lt/gnote/figures/add-to-notebook.png</Path>
             <Path fileType="doc">/usr/share/help/lt/gnote/figures/delete-notebook.png</Path>
@@ -787,6 +837,56 @@
             <Path fileType="doc">/usr/share/help/sl/gnote/gnote-template-notes.page</Path>
             <Path fileType="doc">/usr/share/help/sl/gnote/gnote-working-with-notebooks.page</Path>
             <Path fileType="doc">/usr/share/help/sl/gnote/index.page</Path>
+            <Path fileType="doc">/usr/share/help/sr/gnote/figures/add-notebook-search.png</Path>
+            <Path fileType="doc">/usr/share/help/sr/gnote/figures/add-to-notebook.png</Path>
+            <Path fileType="doc">/usr/share/help/sr/gnote/figures/delete-notebook.png</Path>
+            <Path fileType="doc">/usr/share/help/sr/gnote/figures/gnote-addin-table-of-contents.png</Path>
+            <Path fileType="doc">/usr/share/help/sr/gnote/figures/gnote-new-note.png</Path>
+            <Path fileType="doc">/usr/share/help/sr/gnote/figures/gnote-pindown.png</Path>
+            <Path fileType="doc">/usr/share/help/sr/gnote/figures/gnote-pinup.png</Path>
+            <Path fileType="doc">/usr/share/help/sr/gnote/figures/gnote-preferences-add-ins.png</Path>
+            <Path fileType="doc">/usr/share/help/sr/gnote/figures/gnote-preferences-editing.png</Path>
+            <Path fileType="doc">/usr/share/help/sr/gnote/figures/gnote-preferences-synchronization.png</Path>
+            <Path fileType="doc">/usr/share/help/sr/gnote/figures/gnote-search-all-notes.png</Path>
+            <Path fileType="doc">/usr/share/help/sr/gnote/figures/gnote-sync-progress.png</Path>
+            <Path fileType="doc">/usr/share/help/sr/gnote/figures/gnote-syncprefs-advanced.png</Path>
+            <Path fileType="doc">/usr/share/help/sr/gnote/figures/gnote-syncprefs-gvfs.png</Path>
+            <Path fileType="doc">/usr/share/help/sr/gnote/figures/gnote-syncprefs-local.png</Path>
+            <Path fileType="doc">/usr/share/help/sr/gnote/figures/gnote-syncprefs-webdav.png</Path>
+            <Path fileType="doc">/usr/share/help/sr/gnote/figures/gnote-template-note.png</Path>
+            <Path fileType="doc">/usr/share/help/sr/gnote/figures/gnote-tools.png</Path>
+            <Path fileType="doc">/usr/share/help/sr/gnote/figures/logo32.png</Path>
+            <Path fileType="doc">/usr/share/help/sr/gnote/figures/note-template.png</Path>
+            <Path fileType="doc">/usr/share/help/sr/gnote/figures/notebook-icon.png</Path>
+            <Path fileType="doc">/usr/share/help/sr/gnote/gnote-addin-bugzillalink.page</Path>
+            <Path fileType="doc">/usr/share/help/sr/gnote/gnote-addin-fixedwidth.page</Path>
+            <Path fileType="doc">/usr/share/help/sr/gnote/gnote-addin-html.page</Path>
+            <Path fileType="doc">/usr/share/help/sr/gnote/gnote-addin-notedirwatcher.page</Path>
+            <Path fileType="doc">/usr/share/help/sr/gnote/gnote-addin-noteoftheday.page</Path>
+            <Path fileType="doc">/usr/share/help/sr/gnote/gnote-addin-print.page</Path>
+            <Path fileType="doc">/usr/share/help/sr/gnote/gnote-addin-readonly.page</Path>
+            <Path fileType="doc">/usr/share/help/sr/gnote/gnote-addin-replacetitle.page</Path>
+            <Path fileType="doc">/usr/share/help/sr/gnote/gnote-addin-specialnotes.page</Path>
+            <Path fileType="doc">/usr/share/help/sr/gnote/gnote-addin-sync-gvfs.page</Path>
+            <Path fileType="doc">/usr/share/help/sr/gnote/gnote-addin-sync-local.page</Path>
+            <Path fileType="doc">/usr/share/help/sr/gnote/gnote-addin-sync-webdav.page</Path>
+            <Path fileType="doc">/usr/share/help/sr/gnote/gnote-addin-tableofcontents.page</Path>
+            <Path fileType="doc">/usr/share/help/sr/gnote/gnote-addin-timestamp.page</Path>
+            <Path fileType="doc">/usr/share/help/sr/gnote/gnote-addin-underline.page</Path>
+            <Path fileType="doc">/usr/share/help/sr/gnote/gnote-addins-preferences.page</Path>
+            <Path fileType="doc">/usr/share/help/sr/gnote/gnote-bulleted-lists.page</Path>
+            <Path fileType="doc">/usr/share/help/sr/gnote/gnote-common-problems.page</Path>
+            <Path fileType="doc">/usr/share/help/sr/gnote/gnote-creating-notes.page</Path>
+            <Path fileType="doc">/usr/share/help/sr/gnote/gnote-deleting-notes.page</Path>
+            <Path fileType="doc">/usr/share/help/sr/gnote/gnote-editing-notes.page</Path>
+            <Path fileType="doc">/usr/share/help/sr/gnote/gnote-introduction.page</Path>
+            <Path fileType="doc">/usr/share/help/sr/gnote/gnote-links.page</Path>
+            <Path fileType="doc">/usr/share/help/sr/gnote/gnote-notes-preferences.page</Path>
+            <Path fileType="doc">/usr/share/help/sr/gnote/gnote-searching-notes.page</Path>
+            <Path fileType="doc">/usr/share/help/sr/gnote/gnote-synchronization.page</Path>
+            <Path fileType="doc">/usr/share/help/sr/gnote/gnote-template-notes.page</Path>
+            <Path fileType="doc">/usr/share/help/sr/gnote/gnote-working-with-notebooks.page</Path>
+            <Path fileType="doc">/usr/share/help/sr/gnote/index.page</Path>
             <Path fileType="doc">/usr/share/help/sv/gnote/figures/add-notebook-search.png</Path>
             <Path fileType="doc">/usr/share/help/sv/gnote/figures/add-to-notebook.png</Path>
             <Path fileType="doc">/usr/share/help/sv/gnote/figures/delete-notebook.png</Path>
@@ -971,6 +1071,8 @@
             <Path fileType="localedata">/usr/share/locale/it/LC_MESSAGES/gnote.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ja/LC_MESSAGES/gnote.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ka/LC_MESSAGES/gnote.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/kab/LC_MESSAGES/gnote.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/kk/LC_MESSAGES/gnote.mo</Path>
             <Path fileType="localedata">/usr/share/locale/kn/LC_MESSAGES/gnote.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ko/LC_MESSAGES/gnote.mo</Path>
             <Path fileType="localedata">/usr/share/locale/lt/LC_MESSAGES/gnote.mo</Path>
@@ -978,6 +1080,7 @@
             <Path fileType="localedata">/usr/share/locale/ml/LC_MESSAGES/gnote.mo</Path>
             <Path fileType="localedata">/usr/share/locale/mr/LC_MESSAGES/gnote.mo</Path>
             <Path fileType="localedata">/usr/share/locale/nb/LC_MESSAGES/gnote.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/ne/LC_MESSAGES/gnote.mo</Path>
             <Path fileType="localedata">/usr/share/locale/nl/LC_MESSAGES/gnote.mo</Path>
             <Path fileType="localedata">/usr/share/locale/oc/LC_MESSAGES/gnote.mo</Path>
             <Path fileType="localedata">/usr/share/locale/or/LC_MESSAGES/gnote.mo</Path>
@@ -1000,7 +1103,7 @@
             <Path fileType="localedata">/usr/share/locale/zh_CN/LC_MESSAGES/gnote.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_HK/LC_MESSAGES/gnote.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_TW/LC_MESSAGES/gnote.mo</Path>
-            <Path fileType="man">/usr/share/man/man1/gnote.1</Path>
+            <Path fileType="man">/usr/share/man/man1/gnote.1.zst</Path>
             <Path fileType="data">/usr/share/metainfo/org.gnome.Gnote.appdata.xml</Path>
         </Files>
     </Package>
@@ -1011,16 +1114,16 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="34">gnote</Dependency>
+            <Dependency release="38">gnote</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="library">/usr/lib64/libgnote-48.so</Path>
+            <Path fileType="library">/usr/lib64/libgnote-50.so</Path>
         </Files>
     </Package>
     <History>
-        <Update release="34">
-            <Date>2025-05-27</Date>
-            <Version>48.1</Version>
+        <Update release="38">
+            <Date>2026-04-20</Date>
+            <Version>50.1</Version>
             <Comment>Packaging update</Comment>
             <Name>Joey Riches</Name>
             <Email>josephriches@gmail.com</Email>

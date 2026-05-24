@@ -1,8 +1,8 @@
 libao.so.4
-libavcodec.so.61
-libavfilter.so.10
-libavformat.so.61
-libavutil.so.59
+libavcodec.so.62
+libavfilter.so.11
+libavformat.so.62
+libavutil.so.60
 libc.so.6
 libcurl.so.4
 libgcrypt.so.20

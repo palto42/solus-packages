@@ -7,7 +7,6 @@ histogram-module.so
 iconv-module.so
 json-module.so
 libslang.so.2
-pcre-module.so
 png-module.so
 rand-module.so
 select-module.so

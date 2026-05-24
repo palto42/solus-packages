@@ -1,0 +1,59 @@
+<PISI>
+    <Source>
+        <Name>libmysofa</Name>
+        <Homepage>https://github.com/hoene/libmysofa</Homepage>
+        <Packager>
+            <Name>Gavin Zhao</Name>
+            <Email>me@gzgz.dev</Email>
+        </Packager>
+        <License>BSD-3-Clause</License>
+        <PartOf>programming.library</PartOf>
+        <Summary xml:lang="en">Reader for AES SOFA files to get better HRTFs</Summary>
+        <Description xml:lang="en">A simple set of C functions to read AES SOFA files, if they contain HRTFs stored according to the AES69-2015 standard.
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>libmysofa</Name>
+        <Summary xml:lang="en">Reader for AES SOFA files to get better HRTFs</Summary>
+        <Description xml:lang="en">A simple set of C functions to read AES SOFA files, if they contain HRTFs stored according to the AES69-2015 standard.
+</Description>
+        <PartOf>programming.library</PartOf>
+        <Files>
+            <Path fileType="library">/usr/lib64/libmysofa.so.1</Path>
+            <Path fileType="library">/usr/lib64/libmysofa.so.1.3.3</Path>
+            <Path fileType="data">/usr/share/libmysofa/MIT_KEMAR_normal_pinna.sofa</Path>
+            <Path fileType="data">/usr/share/libmysofa/default.sofa</Path>
+            <Path fileType="data">/usr/share/licenses/libmysofa/LICENSE</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>libmysofa-devel</Name>
+        <Summary xml:lang="en">Development files for libmysofa</Summary>
+        <Description xml:lang="en">A simple set of C functions to read AES SOFA files, if they contain HRTFs stored according to the AES69-2015 standard.
+</Description>
+        <PartOf>programming.devel</PartOf>
+        <RuntimeDependencies>
+            <Dependency release="1">libmysofa</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include/mysofa.h</Path>
+            <Path fileType="header">/usr/include/mysofa_export.h</Path>
+            <Path fileType="library">/usr/lib64/cmake/mysofa/mysofaConfig.cmake</Path>
+            <Path fileType="library">/usr/lib64/cmake/mysofa/mysofaConfigVersion.cmake</Path>
+            <Path fileType="library">/usr/lib64/cmake/mysofa/mysofaTargets-relwithdebinfo.cmake</Path>
+            <Path fileType="library">/usr/lib64/cmake/mysofa/mysofaTargets.cmake</Path>
+            <Path fileType="library">/usr/lib64/libmysofa.so</Path>
+            <Path fileType="data">/usr/lib64/pkgconfig/libmysofa.pc</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2026-04-09</Date>
+            <Version>1.3.4</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Gavin Zhao</Name>
+            <Email>me@gzgz.dev</Email>
+        </Update>
+    </History>
+</PISI>

@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : xkill
-version    : 1.0.6
-release    : 11
+version    : 1.0.7
+release    : 12
 source     :
-    - https://www.x.org/releases/individual/app/xkill-1.0.6.tar.gz : 3b35a2f4b67dda1e98b6541488cd7f7343eb6e3dbe613aeff3d5a5a4c4c64b58
+    - https://www.x.org/releases/individual/app/xkill-1.0.7.tar.gz : aec5674d48d1749742e87dfbff30f1abacabe5e2a10c0679c3996882444c9f6d
 license    : MIT
 component  : xorg.apps
 homepage   : https://www.x.org/

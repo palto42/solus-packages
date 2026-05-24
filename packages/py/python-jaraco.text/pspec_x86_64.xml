@@ -1,0 +1,59 @@
+<PISI>
+    <Source>
+        <Name>python-jaraco.text</Name>
+        <Homepage>https://github.com/jaraco/jaraco.text</Homepage>
+        <Packager>
+            <Name>Evan Maddock</Name>
+            <Email>maddock.evan@vivaldi.net</Email>
+        </Packager>
+        <License>MIT</License>
+        <PartOf>programming.python</PartOf>
+        <Summary xml:lang="en">Provides handy routines for dealing with text.</Summary>
+        <Description xml:lang="en">Provides handy routines for dealing with text, such as wrapping, substitution, trimming, stripping, prefix and suffix removal, line continuation, indentation, comment processing, identifier processing, values parsing, case insensitive comparison, and more.
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>python-jaraco.text</Name>
+        <Summary xml:lang="en">Provides handy routines for dealing with text.</Summary>
+        <Description xml:lang="en">Provides handy routines for dealing with text, such as wrapping, substitution, trimming, stripping, prefix and suffix removal, line continuation, indentation, comment processing, identifier processing, values parsing, case insensitive comparison, and more.
+</Description>
+        <PartOf>programming.python</PartOf>
+        <Files>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/jaraco/text/Lorem ipsum.txt</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/jaraco/text/__init__.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/jaraco/text/__pycache__/__init__.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/jaraco/text/__pycache__/__init__.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/jaraco/text/__pycache__/layouts.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/jaraco/text/__pycache__/layouts.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/jaraco/text/__pycache__/show-newlines.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/jaraco/text/__pycache__/show-newlines.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/jaraco/text/__pycache__/strip-prefix.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/jaraco/text/__pycache__/strip-prefix.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/jaraco/text/__pycache__/to-dvorak.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/jaraco/text/__pycache__/to-dvorak.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/jaraco/text/__pycache__/to-qwerty.cpython-312.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/jaraco/text/__pycache__/to-qwerty.cpython-312.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/jaraco/text/layouts.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/jaraco/text/py.typed</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/jaraco/text/show-newlines.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/jaraco/text/strip-prefix.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/jaraco/text/to-dvorak.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/jaraco/text/to-qwerty.py</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/jaraco_text-4.2.0.dist-info/METADATA</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/jaraco_text-4.2.0.dist-info/RECORD</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/jaraco_text-4.2.0.dist-info/WHEEL</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/jaraco_text-4.2.0.dist-info/licenses/LICENSE</Path>
+            <Path fileType="library">/usr/lib/python3.12/site-packages/jaraco_text-4.2.0.dist-info/top_level.txt</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2026-02-28</Date>
+            <Version>4.2.0</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Evan Maddock</Name>
+            <Email>maddock.evan@vivaldi.net</Email>
+        </Update>
+    </History>
+</PISI>

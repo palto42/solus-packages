@@ -1,4 +1,5 @@
 libc.so.6:__cxa_atexit
+libc.so.6:__isoc23_strtol
 libc.so.6:__libc_start_main
 libc.so.6:__stack_chk_fail
 libc.so.6:free
@@ -13,7 +14,6 @@ libc.so.6:perror
 libc.so.6:rand
 libc.so.6:strcmp
 libc.so.6:strlen
-libc.so.6:strtol
 libgcc_s.so.1:_Unwind_Resume
 libgmp.so.10:__gmpn_add_n
 libgmp.so.10:__gmpn_addmul_1
@@ -41,21 +41,20 @@ libstdc++.so.6:_ZNSt13runtime_errorD2Ev
 libstdc++.so.6:_ZNSt14basic_ofstreamIcSt11char_traitsIcEEC1EPKcSt13_Ios_Openmode
 libstdc++.so.6:_ZNSt6localeC1Ev
 libstdc++.so.6:_ZNSt6localeD1Ev
+libstdc++.so.6:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv
 libstdc++.so.6:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_replaceEmmPKcm
-libstdc++.so.6:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE13_S_copy_charsEPcPKcS7_
 libstdc++.so.6:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_assignERKS4_
 libstdc++.so.6:_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_createERmm
 libstdc++.so.6:_ZNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEC1Ev
 libstdc++.so.6:_ZNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEED1Ev
 libstdc++.so.6:_ZNSt7__cxx1119basic_ostringstreamIcSt11char_traitsIcESaIcEED1Ev
-libstdc++.so.6:_ZNSt8ios_base4InitC1Ev
-libstdc++.so.6:_ZNSt8ios_base4InitD1Ev
 libstdc++.so.6:_ZNSt8ios_baseC2Ev
 libstdc++.so.6:_ZNSt8ios_baseD2Ev
 libstdc++.so.6:_ZNSt9basic_iosIcSt11char_traitsIcEE4initEPSt15basic_streambufIcS1_E
 libstdc++.so.6:_ZNSt9basic_iosIcSt11char_traitsIcEE5clearESt12_Ios_Iostate
 libstdc++.so.6:_ZSt16__ostream_insertIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_PKS3_l
 libstdc++.so.6:_ZSt16__throw_bad_castv
+libstdc++.so.6:_ZSt21ios_base_library_initv
 libstdc++.so.6:_ZSt4cerr
 libstdc++.so.6:_ZSt4cout
 libstdc++.so.6:_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc

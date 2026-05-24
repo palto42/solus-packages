@@ -1,17 +1,17 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : intel-graphics-compiler
-version    : 1.0.17791.9
-release    : 18
+version    : 2.32.7
+release    : 20
 source     :
-    - git|https://github.com/intel/intel-graphics-compiler.git : igc-1.0.17791.9
-    - git|https://github.com/intel/vc-intrinsics.git : v0.19.0
-    # branch: llvm_release_140
-    - git|https://github.com/KhronosGroup/SPIRV-LLVM-Translator.git : a53b216b970cd101e5019c35d3f3f096459073de
-    # branch: ocl-open-140
-    - git|https://github.com/intel/opencl-clang.git : 470cf0018e1ef6fc92eda1356f5f31f7da452abc
+    - git|https://github.com/intel/intel-graphics-compiler.git : v2.32.7
+    - git|https://github.com/intel/vc-intrinsics.git : v0.25.0
+    # branch: llvm_release_160
+    - git|https://github.com/KhronosGroup/SPIRV-LLVM-Translator.git : 5ce79a51725fdca7f12045a51c01956663b4cec8
+    # branch: ocl-open-160
+    - git|https://github.com/intel/opencl-clang.git : 897ba7f885fe34c9ae9818f205e67f7b0a8628c0
     # For now Git source must be used, because the build system needs to do some
     # Git trickery
-    - git|https://github.com/llvm/llvm-project.git : llvmorg-14.0.6
-    # - https://github.com/llvm/llvm-project/releases/download/llvmorg-14.0.6/llvm-project-14.0.6.src.tar.xz : 8b3cfd7bc695bd6cea0f37f53f0981f34f87496e79e2529874fd03a2f9dd3a8a
+    - git|https://github.com/llvm/llvm-project.git : llvmorg-16.0.6
 license    : MIT
 component  : programming.tools
 homepage   : https://github.com/intel/intel-graphics-compiler/
@@ -27,8 +27,8 @@ builddeps  :
     - mako
     - spirv-headers
 environment: |
+    export IGC_WORKSPACE_DIR=$workdir/..
     export LLVM_DIR=$workdir/../llvm-project
-    export CXXFLAGS="$CXXFLAGS -I$LLVM_DIR/llvm/projects/llvm-spirv/include"
 setup      : |
     # Allow the build system to perform Git operatios
     export EMAIL="build@getsol.us"
@@ -38,13 +38,15 @@ setup      : |
     cp -R $sources/SPIRV-LLVM-Translator.git $LLVM_DIR/llvm/projects/llvm-spirv
     cp -R $sources/opencl-clang.git $LLVM_DIR/llvm/projects/opencl-clang
 
-    pushd $LLVM_DIR/llvm/projects/opencl-clang
-    %patch -p1 -i $pkgfiles/0001-ftbfs-llvm-17.patch
-    popd
-
     # disable warnings as errors and less noise
     sed -i 's|-Werror|-w|g' IGC/CMakeLists.txt
-    %cmake_ninja -L -Wno-dev -DCMAKE_BUILD_TYPE=Release \
+
+    # Work around LLVMSPIRVLib.h not being found
+    ln -s $LLVM_DIR/llvm/projects/llvm-spirv IGC/../../../SPIRV-LLVM-Translator
+
+    %cmake_ninja -L -Wno-dev \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
         -DIGC_OPTION__ARCHITECTURE_TARGET='Linux64' \
         -DIGC_OPTION__USE_PREINSTALLED_SPIRV_HEADERS=ON \
         -DINSTALL_GENX_IR=ON \
@@ -56,17 +58,16 @@ setup      : |
         -DIGC_OPTION__LLD_MODE=Source \
         -DIGC_OPTION__LLVM_SOURCES_DIR=$LLVM_DIR \
         -DIGC_OPTION__LLVM_STOCK_SOURCES=OFF \
-        -DIGC_OPTION__LLVM_PREFERRED_VERSION=14.0.6 \
         -DCCLANG_FROM_SYSTEM=OFF \
         -DIGC_OPTION__LINK_KHRONOS_SPIRV_TRANSLATOR=OFF \
         -DIGC_OPTION__SPIRV_TOOLS_MODE=Prebuilds \
         -DIGC_OPTION__SPIRV_TRANSLATOR_MODE=Source \
-        -DLLVM_EXTERNAL_SPIRV_HEADERS_SOURCE_DIR=/usr/include/spirv/ \
+        -DLLVM_EXTERNAL_SPIRV_HEADERS_SOURCE_DIR=/usr/include/spirv/
 build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license NOTICES.txt LICENSE.md
 
-    rm -r $installdir/usr/lib64/igc
+    rm $installdir/usr/lib64/igc2/NOTICES.txt
     rm $installdir/usr/include/opencl-*
-    rm $installdir/usr/bin/lld

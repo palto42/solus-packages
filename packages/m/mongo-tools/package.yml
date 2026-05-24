@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : mongo-tools
-version    : 100.3.1
-release    : 15
+version    : 100.17.0
+release    : 18
 source     :
-    - git|https://github.com/mongodb/mongo-tools.git : 100.3.1
+    - git|https://github.com/mongodb/mongo-tools.git : 100.17.0
 homepage   : https://docs.mongodb.com/database-tools/
 license    : Apache-2.0
 component  : programming.tools
@@ -33,6 +34,7 @@ install    : |
     for i in bsondump mongostat mongofiles mongoexport mongoimport mongorestore mongodump mongotop; do
         install -Dm00755 bin/$i $installdir/usr/bin/$i
     done
+    %install_license LICENSE.md
 #check      : |
 #    export GOPATH=`pwd`
 #    for i in bsondump mongostat mongofiles mongoexport mongoimport mongodump; do

@@ -2,7 +2,6 @@ libc.so.6:__cxa_atexit
 libc.so.6:__environ
 libc.so.6:__errno_location
 libc.so.6:__fdelt_chk
-libc.so.6:__libc_single_threaded
 libc.so.6:__libc_start_main
 libc.so.6:__realpath_chk
 libc.so.6:__stack_chk_fail
@@ -44,7 +43,6 @@ libc.so.6:iswalnum
 libc.so.6:iswalpha
 libc.so.6:iswdigit
 libc.so.6:iswlower
-libc.so.6:iswprint
 libc.so.6:iswupper
 libc.so.6:kill
 libc.so.6:killpg
@@ -107,7 +105,6 @@ libstdc++.so.6:_ZSt17__throw_bad_allocv
 libstdc++.so.6:_ZSt19uncaught_exceptionsv
 libstdc++.so.6:_ZSt20__throw_length_errorPKc
 libstdc++.so.6:_ZSt24__throw_out_of_range_fmtPKcz
-libstdc++.so.6:_ZSt25__throw_bad_function_callv
 libstdc++.so.6:_ZSt28__throw_bad_array_new_lengthv
 libstdc++.so.6:_ZSt8to_charsPcS_fSt12chars_format
 libstdc++.so.6:_ZTISt13runtime_error
@@ -115,8 +112,6 @@ libstdc++.so.6:_ZTISt9exception
 libstdc++.so.6:_ZTIb
 libstdc++.so.6:_ZTIi
 libstdc++.so.6:_ZTVN10__cxxabiv117__class_type_infoE
-libstdc++.so.6:_ZTVN10__cxxabiv119__pointer_type_infoE
-libstdc++.so.6:_ZTVN10__cxxabiv120__function_type_infoE
 libstdc++.so.6:_ZTVN10__cxxabiv120__si_class_type_infoE
 libstdc++.so.6:_ZTVN10__cxxabiv121__vmi_class_type_infoE
 libstdc++.so.6:_ZdaPv

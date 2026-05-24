@@ -1,9 +1,10 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : nvidia-vaapi-driver
-version    : 0.0.14
-release    : 18
+version    : 0.0.17
+release    : 22
 homepage   : https://github.com/elFarto/nvidia-vaapi-driver
 source     :
-    - https://github.com/elFarto/nvidia-vaapi-driver/archive/refs/tags/v0.0.14.tar.gz : 4ded132ec4164f3e05656061675dffce677327e4af0d8da33da5f8527609ad2a
+    - https://github.com/elFarto/nvidia-vaapi-driver/archive/refs/tags/v0.0.17.tar.gz : 4e4bed9acef9881de8705c8e0286901f13f6b43c2df1b0c8b6a2f8ba2a186ac9
 license    : MIT
 component  : xorg.display
 summary    : A VA-API implemention using NVIDIA's NVDEC as the backend (UNSUPPORTED)
@@ -21,5 +22,6 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license COPYING
 conflicts  :
     - libva-vdpau-driver
