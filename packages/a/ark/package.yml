@@ -1,10 +1,16 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : ark
-version    : 25.08.2
-release    : 102
+version    : 26.04.2
+release    : 109
 source     :
-    - https://download.kde.org/stable/release-service/25.08.2/src/ark-25.08.2.tar.xz : 763eabec1e80050f3443bb7a0bc36d777b28ab07200efb16630bf33f7db0cbca
+    - https://download.kde.org/stable/release-service/26.04.2/src/ark-26.04.2.tar.xz : b81c4055486c99f4f21ff228bf12485bc73e8e6b0064edee1043a11ad5d1e555
 homepage   : https://kde.org/applications/utilities/org.kde.ark
-license    : GPL-2.0-or-later
+license    :
+    - BSD-2-Clause
+    - CC0-1.0
+    - GPL-2.0-or-later
+    - LGPL-3.0-only
+    - MIT
 component  : desktop.kde.core
 summary    : A graphical file compression/decompression utility
 description: |
@@ -12,6 +18,7 @@ description: |
 builddeps  :
     - pkgconfig(libarchive)
     - pkgconfig(libzip)
+    - 7zip
     - breeze-icons-devel
     - kf6-kcrash-devel
     - kf6-kdbusaddons-devel
@@ -21,11 +28,10 @@ builddeps  :
     - kf6-kparts-devel
     - kf6-kpty-devel
     - lrzip
-    - p7zip
     - unrar
 rundeps    :
+    - 7zip
     - lrzip
-    - p7zip
     - unrar
 clang      : true
 optimize   :
@@ -37,6 +43,7 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*
 
     # remove docs
     rm -rf $installdir/usr/share/doc

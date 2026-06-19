@@ -1,3 +1,5 @@
 libnautilus-extension.so.4
 libnautilus-image-properties.so
 libtotem-properties-page.so
+nautilus
+nautilus-autorun-software

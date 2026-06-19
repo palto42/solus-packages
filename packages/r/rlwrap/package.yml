@@ -1,17 +1,23 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : rlwrap
-version    : 0.45.2
-release    : 6
+version    : '0.48'
+release    : 7
 source     :
-    - https://github.com/hanslub42/rlwrap/releases/download/v0.45.2/rlwrap-0.45.2.tar.gz : 9f8870deb46e473d21b5db89d709b6497f4ef9fa06d44eebc5f821daa00c8eca
+    - https://github.com/hanslub42/rlwrap/releases/download/v0.48/rlwrap-0.48.tar.gz : cdf69074a216a8284574dddd145dd046c904ad5330a616e0eed53c9043f2ecbc
 license    : GPL-2.0-or-later
-component  : system.util
+component  : system.utils
 homepage   : https://github.com/hanslub42/rlwrap
 summary    : rlwrap is a readline wrapper
 description: |
     rlwrap is a readline wrapper, a small utility that uses the GNU readline library to allow the editing of keyboard input for any command
+builddeps  :
+    - pkgconfig(libptytty)
 setup      : |
     %configure
 build      : |
     %make
 install    : |
     %make_install
+    %install_license COPYING
+patterns   :
+    - /*

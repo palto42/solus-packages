@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : feh
-version    : 3.10.3
-release    : 49
+version    : 3.12.2
+release    : 55
 source     :
-    - git|https://github.com/derf/feh.git : 3.10.3
+    - https://feh.finalrewind.org/feh-3.12.2.tar.bz2 : 7ce358b18a7f37bcc97a09b4efd89fdadd54cd8e7032db345f61e66dd04b1c3f
 homepage   : https://feh.finalrewind.org/
 license    : MIT
 component  : multimedia.graphics
@@ -17,7 +18,8 @@ builddeps  :
     - pkgconfig(xinerama)
     - pkgconfig(xt)
 build      : |
-    %make PREFIX=/usr app=1 exif=1 inotify=1
+    %make PREFIX=/usr exif=1 inotify=1
 install    : |
     %make_install PREFIX=/usr
-    install -Dm00644 $pkgfiles/org.finalrewind.feh.feh.metainfo.xml -t $installdir/usr/share/metainfo
+    %install_license COPYING
+    install -Dm00644 ${pkgfiles}/org.finalrewind.feh.feh.metainfo.xml -t ${installdir}/usr/share/metainfo

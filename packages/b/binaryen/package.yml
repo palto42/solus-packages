@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : binaryen
-version    : '102'
-release    : 7
+version    : '126'
+release    : 8
 source     :
-    - https://github.com/WebAssembly/binaryen/archive/refs/tags/version_102.tar.gz : 6197a8d7220d1510bb0694a2984bfae4f8b38abd6bdf4c724551c831786992f6
+    - https://github.com/WebAssembly/binaryen/archive/refs/tags/version_126.tar.gz : f1c53762abae21cb6bc3e55d4e96d4ca4ea261f83a51d2aa47abc75d60e683e7
 license    : Apache-2.0
 homepage   : https://github.com/WebAssembly/binaryen
 component  : programming
@@ -12,9 +13,10 @@ description: |
 setup      : |
     %patch -p1 -i $pkgfiles/libbinaryen-soname.patch
     sed -i "s/bin\/wasm-opt test/bin\/wasm-opt ..\/test/g" CMakeLists.txt
-    %cmake_ninja
+    %cmake_ninja -DBUILD_TESTS=OFF
 build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSE
     install -Dm00755 $pkgfiles/50-binaryen.sh $installdir/usr/share/defaults/etc/profile.d/50-binaryen.sh

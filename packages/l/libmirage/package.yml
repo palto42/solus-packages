@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : libmirage
-version    : 3.2.10
-release    : 11
+version    : 3.3.2
+release    : 13
 source     :
-    - https://sourceforge.net/projects/cdemu/files/libmirage/libmirage-3.2.10.tar.xz : f93e46bb755ca6b0a448972afe44f24919cd23b9dcf866d1b5cb4b9333e180ae
+    - https://sourceforge.net/projects/cdemu/files/libmirage/libmirage-3.3.2.tar.xz : c0c03326912e7b54270e595685e164dd95fef294a4630d77b3e194d06fc039fb
 homepage   : https://cdemu.sourceforge.io/
 license    : GPL-2.0-or-later
 component  : programming.library
@@ -33,3 +34,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license COPYING

@@ -29,7 +29,6 @@ libKF6NotifyConfig.so.6
 libKF6Parts.so.6
 libKF6Purpose.so.6
 libKF6PurposeWidgets.so.6
-libKF6Runner.so.6
 libKF6Service.so.6
 libKF6SonnetUi.so.6
 libKF6SyntaxHighlighting.so.6
@@ -46,14 +45,13 @@ libQt6DBus.so.6
 libQt6Gui.so.6
 libQt6Help.so.6
 libQt6Network.so.6
-libQt6Qml.so.6
 libQt6WebEngineCore.so.6
 libQt6WebEngineWidgets.so.6
 libQt6Widgets.so.6
 libQt6Xml.so.6
 libapr-1.so.0
 libc.so.6
-libclang.so.19.1
+libclang.so.21.1
 libgcc_s.so.1
 libkomparediff2.so.6
 libm.so.6

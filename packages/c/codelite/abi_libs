@@ -28,14 +28,11 @@ SpellCheck.so
 Subversion.so
 Tail.so
 UnitTestsPP.so
-WebTools.so
 Wizards.so
 WordCompletion.so
 ZoomNavigator.so
 abbreviation.so
-cc-wrapper
 codelite
-codelite-echo
 codelite-generate-themes
 codelite-make
 codelite_vim.so
@@ -48,7 +45,6 @@ libdapcxx.so
 libdatabaselayersqlite.so
 liblibcodelite.so
 libplugin.so
-libwxshapeframework.so
 libwxsqlite3.so
 wxCrafter.so
 wxFormBuilder.so

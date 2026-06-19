@@ -1,6 +1,7 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : mcrypt
 version    : 2.6.8
-release    : 3
+release    : 4
 source     :
     - https://sourceforge.net/projects/mcrypt/files/MCrypt/2.6.8/mcrypt-2.6.8.tar.gz : 5145aa844e54cca89ddab6fb7dd9e5952811d8d787c4f4bf27eb261e6c182098
 homepage   : https://sourceforge.net/projects/mcrypt/
@@ -12,12 +13,16 @@ description: |
 builddeps  :
     - libmcrypt-devel
     - libmhash-devel
+environment: |
+    export CFLAGS="${CFLAGS} -Wno-implicit-function-declaration"
 setup      : |
     %patch -p1 -i $pkgfiles/security/cve-2012-4409.patch
     %patch -p1 -i $pkgfiles/security/cve-2012-4426.patch
     %patch -p1 -i $pkgfiles/security/cve-2012-4527.patch
-    %configure --disable-static
+    %patch -p1 -i $pkgfiles/mcrypt-2.6.8-c23.patch
+    %configure_no_runstatedir --disable-static
 build      : |
     %make
 install    : |
     %make_install
+    %install_license COPYING

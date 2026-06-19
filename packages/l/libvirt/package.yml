@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : libvirt
-version    : 11.2.0
-release    : 79
+version    : 12.3.0
+release    : 84
 source     :
-    - https://libvirt.org/sources/libvirt-11.2.0.tar.xz : 07b91052b4e44cf2e5c21bfe1a8095f98db47a917b38d95d2a7ec50ff6bdade9
+    - https://libvirt.org/sources/libvirt-12.3.0.tar.xz : 0d2b548d1b732d1ae21cfefacc204a2c8dabada80ea1edfbd528bfb73b9d2d27
 license    :
     - GPL-2.0-or-later
     - LGPL-2.1-or-later
@@ -59,6 +60,7 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license COPYING COPYING.LESSER
 
     # Install sysusers and tmpfiles, overriding the files that libvirt ships
     install -Dm00644 $pkgfiles/libvirt.sysusers $installdir/usr/lib/sysusers.d/libvirt-qemu.conf
@@ -72,60 +74,12 @@ install    : |
 
     rm -rf $installdir/usr/share/doc
 
-    # ensure that .sockets will be always be activated after a (re)boot
-    # TODO: .sockets currently stay de-activated even after a `systemctl daemon-reexec`
-    install -dm00755 $installdir/usr/lib/systemd/system/sockets.target.wants
-    ln -svf ../virtlockd.socket $installdir/usr/lib/systemd/system/sockets.target.wants/
-    ln -svf ../virtlogd.socket $installdir/usr/lib/systemd/system/sockets.target.wants/
-    ln -svf ../libvirtd.socket $installdir/usr/lib/systemd/system/sockets.target.wants/
-    ln -svf ../libvirtd-ro.socket $installdir/usr/lib/systemd/system/sockets.target.wants/
+    install -Dm00644 -t ${installdir}/%libdir%/systemd/system-preset/ ${pkgfiles}/20-libvirt.preset
+
+    # Fix virt-secret-init-encryption.service not starting because of a missing directory
+    install -Dm0644 $pkgfiles/virt-secret-init-encryption.service \
+        $installdir/usr/lib/systemd/system/virt-secret-init-encryption.service.d/50-create-dir.conf
 
     # Stateless
-    rmdir -v $installdir/run/libvirt/common \
-             $installdir/run/libvirt/interface \
-             $installdir/run/libvirt/lockd \
-             $installdir/run/libvirt/lxc \
-             $installdir/run/libvirt/network \
-             $installdir/run/libvirt/nodedev \
-             $installdir/run/libvirt/nwfilter \
-             $installdir/run/libvirt/nwfilter-binding \
-             $installdir/run/libvirt/qemu/dbus \
-             $installdir/run/libvirt/qemu/passt \
-             $installdir/run/libvirt/qemu/slirp \
-             $installdir/run/libvirt/qemu/swtpm \
-             $installdir/run/libvirt/qemu \
-             $installdir/run/libvirt/secrets \
-             $installdir/run/libvirt/storage \
-             $installdir/run/libvirt \
-             $installdir/run \
-             $installdir/var/cache/libvirt/qemu \
-             $installdir/var/cache/libvirt \
-             $installdir/var/cache \
-             $installdir/var/lib/libvirt/boot \
-             $installdir/var/lib/libvirt/dnsmasq \
-             $installdir/var/lib/libvirt/filesystems \
-             $installdir/var/lib/libvirt/images \
-             $installdir/var/lib/libvirt/lockd/files \
-             $installdir/var/lib/libvirt/lockd \
-             $installdir/var/lib/libvirt/lxc \
-             $installdir/var/lib/libvirt/network \
-             $installdir/var/lib/libvirt/qemu/channel/target \
-             $installdir/var/lib/libvirt/qemu/channel \
-             $installdir/var/lib/libvirt/qemu/checkpoint \
-             $installdir/var/lib/libvirt/qemu/dump \
-             $installdir/var/lib/libvirt/qemu/nvram \
-             $installdir/var/lib/libvirt/qemu/ram \
-             $installdir/var/lib/libvirt/qemu/save \
-             $installdir/var/lib/libvirt/qemu/snapshot \
-             $installdir/var/lib/libvirt/qemu \
-             $installdir/var/lib/libvirt/swtpm \
-             $installdir/var/lib/libvirt \
-             $installdir/var/lib \
-             $installdir/var/log/libvirt/lxc \
-             $installdir/var/log/libvirt/qemu \
-             $installdir/var/log/libvirt \
-             $installdir/var/log/swtpm/libvirt/qemu \
-             $installdir/var/log/swtpm/libvirt \
-             $installdir/var/log/swtpm \
-             $installdir/var/log \
-             $installdir/var
+    rm -rfv $installdir/run \
+            $installdir/var

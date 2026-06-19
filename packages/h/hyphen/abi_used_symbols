@@ -1,8 +1,11 @@
 libc.so.6:__fprintf_chk
+libc.so.6:__isoc23_strtol
 libc.so.6:__stack_chk_fail
 libc.so.6:calloc
 libc.so.6:exit
 libc.so.6:fclose
+libc.so.6:feof
+libc.so.6:fgetc
 libc.so.6:fgets
 libc.so.6:fopen
 libc.so.6:free
@@ -15,6 +18,6 @@ libc.so.6:stderr
 libc.so.6:strchr
 libc.so.6:strcmp
 libc.so.6:strlen
+libc.so.6:strncmp
 libc.so.6:strncpy
 libc.so.6:strstr
-libc.so.6:strtol

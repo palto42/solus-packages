@@ -3,8 +3,8 @@
         <Name>kquickimageeditor</Name>
         <Homepage>https://invent.kde.org/libraries/kquickimageeditor</Homepage>
         <Packager>
-            <Name>Reilly Brogan</Name>
-            <Email>solus@reillybrogan.com</Email>
+            <Name>Troy Harvey</Name>
+            <Email>harvey@getsol.us</Email>
         </Packager>
         <License>BSD-2-Clause</License>
         <License>CC0-1.0</License>
@@ -22,22 +22,33 @@
 </Description>
         <PartOf>programming.library</PartOf>
         <Files>
+            <Path fileType="library">/usr/lib64/libKQuickImageEditor.so.0.6.1</Path>
+            <Path fileType="library">/usr/lib64/libKQuickImageEditor.so.1</Path>
+            <Path fileType="library">/usr/lib64/qt6/qml/org/kde/kquickimageeditor/AnnotationSelectionTool.qml</Path>
             <Path fileType="library">/usr/lib64/qt6/qml/org/kde/kquickimageeditor/BasicResizeHandle.qml</Path>
-            <Path fileType="library">/usr/lib64/qt6/qml/org/kde/kquickimageeditor/BasicResizeHandle.qmlc</Path>
             <Path fileType="library">/usr/lib64/qt6/qml/org/kde/kquickimageeditor/CropBackground.qml</Path>
-            <Path fileType="library">/usr/lib64/qt6/qml/org/kde/kquickimageeditor/CropBackground.qmlc</Path>
+            <Path fileType="library">/usr/lib64/qt6/qml/org/kde/kquickimageeditor/CropTool.qml</Path>
+            <Path fileType="library">/usr/lib64/qt6/qml/org/kde/kquickimageeditor/HoverOutline.qml</Path>
+            <Path fileType="library">/usr/lib64/qt6/qml/org/kde/kquickimageeditor/KQuickImageEditor.qmltypes</Path>
             <Path fileType="library">/usr/lib64/qt6/qml/org/kde/kquickimageeditor/RectangleCutout.qml</Path>
-            <Path fileType="library">/usr/lib64/qt6/qml/org/kde/kquickimageeditor/RectangleCutout.qmlc</Path>
             <Path fileType="library">/usr/lib64/qt6/qml/org/kde/kquickimageeditor/SelectionBackground.qml</Path>
-            <Path fileType="library">/usr/lib64/qt6/qml/org/kde/kquickimageeditor/SelectionBackground.qmlc</Path>
             <Path fileType="library">/usr/lib64/qt6/qml/org/kde/kquickimageeditor/SelectionHandle.qml</Path>
-            <Path fileType="library">/usr/lib64/qt6/qml/org/kde/kquickimageeditor/SelectionHandle.qmlc</Path>
             <Path fileType="library">/usr/lib64/qt6/qml/org/kde/kquickimageeditor/SelectionTool.qml</Path>
-            <Path fileType="library">/usr/lib64/qt6/qml/org/kde/kquickimageeditor/SelectionTool.qmlc</Path>
+            <Path fileType="library">/usr/lib64/qt6/qml/org/kde/kquickimageeditor/TextTool.qml</Path>
             <Path fileType="library">/usr/lib64/qt6/qml/org/kde/kquickimageeditor/kde-qmlmodule.version</Path>
-            <Path fileType="library">/usr/lib64/qt6/qml/org/kde/kquickimageeditor/kquickimageeditorplugin.qmltypes</Path>
-            <Path fileType="library">/usr/lib64/qt6/qml/org/kde/kquickimageeditor/libkquickimageeditorplugin.so</Path>
+            <Path fileType="library">/usr/lib64/qt6/qml/org/kde/kquickimageeditor/libKQuickImageEditorplugin.so</Path>
+            <Path fileType="library">/usr/lib64/qt6/qml/org/kde/kquickimageeditor/private/AnimatedLoader.qml</Path>
+            <Path fileType="library">/usr/lib64/qt6/qml/org/kde/kquickimageeditor/private/DashedOutline.qml</Path>
+            <Path fileType="library">/usr/lib64/qt6/qml/org/kde/kquickimageeditor/private/Handle.qml</Path>
+            <Path fileType="library">/usr/lib64/qt6/qml/org/kde/kquickimageeditor/private/Outline.qml</Path>
+            <Path fileType="library">/usr/lib64/qt6/qml/org/kde/kquickimageeditor/private/TextContextMenu.qml</Path>
             <Path fileType="library">/usr/lib64/qt6/qml/org/kde/kquickimageeditor/qmldir</Path>
+            <Path fileType="data">/usr/share/licenses/kquickimageeditor/BSD-2-Clause.txt</Path>
+            <Path fileType="data">/usr/share/licenses/kquickimageeditor/CC0-1.0.txt</Path>
+            <Path fileType="data">/usr/share/licenses/kquickimageeditor/LGPL-2.1-only.txt</Path>
+            <Path fileType="data">/usr/share/licenses/kquickimageeditor/LGPL-2.1-or-later.txt</Path>
+            <Path fileType="data">/usr/share/licenses/kquickimageeditor/LGPL-3.0-only.txt</Path>
+            <Path fileType="data">/usr/share/licenses/kquickimageeditor/LicenseRef-KDE-Accepted-LGPL.txt</Path>
         </Files>
     </Package>
     <Package>
@@ -47,21 +58,32 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="7">kquickimageeditor</Dependency>
+            <Dependency release="11">kquickimageeditor</Dependency>
         </RuntimeDependencies>
         <Files>
+            <Path fileType="header">/usr/include/KQuickImageEditor/KQuickImageEditor/AnnotationDocument</Path>
+            <Path fileType="header">/usr/include/KQuickImageEditor/KQuickImageEditor/AnnotationTool</Path>
+            <Path fileType="header">/usr/include/KQuickImageEditor/KQuickImageEditor/AnnotationViewport</Path>
+            <Path fileType="header">/usr/include/KQuickImageEditor/kquickimageeditor/annotationdocument.h</Path>
+            <Path fileType="header">/usr/include/KQuickImageEditor/kquickimageeditor/annotationtool.h</Path>
+            <Path fileType="header">/usr/include/KQuickImageEditor/kquickimageeditor/annotationviewport.h</Path>
+            <Path fileType="header">/usr/include/KQuickImageEditor/kquickimageeditor/kquickimageeditor_export.h</Path>
+            <Path fileType="header">/usr/include/KQuickImageEditor/kquickimageeditor_version.h</Path>
             <Path fileType="library">/usr/lib64/cmake/KQuickImageEditor/KQuickImageEditorConfig.cmake</Path>
             <Path fileType="library">/usr/lib64/cmake/KQuickImageEditor/KQuickImageEditorConfigVersion.cmake</Path>
+            <Path fileType="library">/usr/lib64/cmake/KQuickImageEditor/KQuickImageEditorTargets-relwithdebinfo.cmake</Path>
+            <Path fileType="library">/usr/lib64/cmake/KQuickImageEditor/KQuickImageEditorTargets.cmake</Path>
+            <Path fileType="library">/usr/lib64/libKQuickImageEditor.so</Path>
             <Path fileType="library">/usr/lib64/qt6/mkspecs/modules/qt_KQuickImageEditor.pri</Path>
         </Files>
     </Package>
     <History>
-        <Update release="7">
-            <Date>2024-10-02</Date>
-            <Version>0.4.0</Version>
+        <Update release="11">
+            <Date>2026-05-15</Date>
+            <Version>0.6.1</Version>
             <Comment>Packaging update</Comment>
-            <Name>Reilly Brogan</Name>
-            <Email>solus@reillybrogan.com</Email>
+            <Name>Troy Harvey</Name>
+            <Email>harvey@getsol.us</Email>
         </Update>
     </History>
 </PISI>

@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : gnome-contacts
-version    : '48.0'
-release    : 23
+version    : '50.0'
+release    : 26
 source     :
-    - https://download.gnome.org/sources/gnome-contacts/48/gnome-contacts-48.0.tar.xz : a2762995b59427ec3f185f28b5594e37077b72a70cd7c19217ed634637ecc1b5
+    - https://download.gnome.org/sources/gnome-contacts/50/gnome-contacts-50.0.tar.xz : 2a3bea343171be244f12b7c21a40ca38e9a92dea9890393af5e8ac139bc0dab3
 homepage   : https://apps.gnome.org/Contacts/
 license    : GPL-2.0-or-later
 component  : office
@@ -16,9 +17,11 @@ builddeps  :
     - pkgconfig(clutter-gtk-1.0)
     - pkgconfig(folks)
     - pkgconfig(gee-0.8)
+    - pkgconfig(glycin-gtk4-2)
     - pkgconfig(gnome-desktop-3.0)
     - pkgconfig(goa-1.0)
     - pkgconfig(gobject-introspection-1.0)
+    - pkgconfig(gstreamer-1.0)
     - pkgconfig(gtk+-3.0)
     - pkgconfig(libadwaita-1)
     - pkgconfig(libcanberra)
@@ -27,6 +30,7 @@ builddeps  :
     - pkgconfig(libqrencode)
     - pkgconfig(libsecret-1)
     - pkgconfig(telepathy-glib)
+    - blueprint-compiler
     - desktop-file-utils
     - docbook-xml
     - vala
@@ -36,3 +40,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license COPYING

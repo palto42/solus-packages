@@ -20,7 +20,7 @@
 </Description>
         <PartOf>desktop.gnome</PartOf>
         <RuntimeDependencies>
-            <Dependency release="97">nautilus-extension</Dependency>
+            <Dependency release="108">nautilus-extension</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin/nautilus</Path>
@@ -31,11 +31,12 @@
             <Path fileType="data">/usr/share/applications/org.gnome.Nautilus.desktop</Path>
             <Path fileType="data">/usr/share/dbus-1/services/org.freedesktop.FileManager1.service</Path>
             <Path fileType="data">/usr/share/dbus-1/services/org.gnome.Nautilus.service</Path>
-            <Path fileType="data">/usr/share/gir-1.0/Nautilus-4.0.gir</Path>
+            <Path fileType="data">/usr/share/gir-1.0/Nautilus-4.1.gir</Path>
             <Path fileType="data">/usr/share/glib-2.0/schemas/org.gnome.nautilus.gschema.xml</Path>
             <Path fileType="data">/usr/share/gnome-shell/search-providers/org.gnome.Nautilus.search-provider.ini</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.gnome.Nautilus.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/symbolic/apps/org.gnome.Nautilus-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/licenses/nautilus/LICENSE</Path>
             <Path fileType="localedata">/usr/share/locale/ab/LC_MESSAGES/nautilus.mo</Path>
             <Path fileType="localedata">/usr/share/locale/af/LC_MESSAGES/nautilus.mo</Path>
             <Path fileType="localedata">/usr/share/locale/am/LC_MESSAGES/nautilus.mo</Path>
@@ -86,6 +87,7 @@
             <Path fileType="localedata">/usr/share/locale/hr/LC_MESSAGES/nautilus.mo</Path>
             <Path fileType="localedata">/usr/share/locale/hu/LC_MESSAGES/nautilus.mo</Path>
             <Path fileType="localedata">/usr/share/locale/hy/LC_MESSAGES/nautilus.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/ia/LC_MESSAGES/nautilus.mo</Path>
             <Path fileType="localedata">/usr/share/locale/id/LC_MESSAGES/nautilus.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ie/LC_MESSAGES/nautilus.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ig/LC_MESSAGES/nautilus.mo</Path>
@@ -103,6 +105,7 @@
             <Path fileType="localedata">/usr/share/locale/ky/LC_MESSAGES/nautilus.mo</Path>
             <Path fileType="localedata">/usr/share/locale/li/LC_MESSAGES/nautilus.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ln/LC_MESSAGES/nautilus.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/lo/LC_MESSAGES/nautilus.mo</Path>
             <Path fileType="localedata">/usr/share/locale/lt/LC_MESSAGES/nautilus.mo</Path>
             <Path fileType="localedata">/usr/share/locale/lv/LC_MESSAGES/nautilus.mo</Path>
             <Path fileType="localedata">/usr/share/locale/mai/LC_MESSAGES/nautilus.mo</Path>
@@ -172,8 +175,9 @@
 </Description>
         <PartOf>programming.library</PartOf>
         <Files>
-            <Path fileType="library">/usr/lib64/girepository-1.0/Nautilus-4.0.typelib</Path>
+            <Path fileType="library">/usr/lib64/girepository-1.0/Nautilus-4.1.typelib</Path>
             <Path fileType="library">/usr/lib64/libnautilus-extension.so.4</Path>
+            <Path fileType="library">/usr/lib64/libnautilus-extension.so.4.1</Path>
         </Files>
     </Package>
     <Package>
@@ -183,7 +187,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="97">nautilus-extension</Dependency>
+            <Dependency releaseFrom="108">nautilus-extension</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/nautilus/libnautilus-extension/nautilus-column-provider.h</Path>
@@ -205,9 +209,9 @@
         </Replaces>
     </Package>
     <History>
-        <Update release="97">
-            <Date>2025-09-17</Date>
-            <Version>48.4.1</Version>
+        <Update release="108">
+            <Date>2026-05-29</Date>
+            <Version>50.2.2</Version>
             <Comment>Packaging update</Comment>
             <Name>Joey Riches</Name>
             <Email>josephriches@gmail.com</Email>

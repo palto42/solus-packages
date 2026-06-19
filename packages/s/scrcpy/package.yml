@@ -1,9 +1,10 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : scrcpy
-version    : 3.3.2
-release    : 36
+version    : 3.3.4
+release    : 39
 source     :
-    - https://github.com/Genymobile/scrcpy/archive/v3.3.2.tar.gz : 08bc272ac8decf364fbefb8865eaf074ba600969494ea8ade08736a6a2e3c39a
-    - https://github.com/Genymobile/scrcpy/releases/download/v3.3.2/scrcpy-server-v3.3.2 : 2ee5ca0863ef440f5b7c75856bb475c5283d0a8359cb370b1c161314fd29dfd9
+    - https://github.com/Genymobile/scrcpy/archive/v3.3.4.tar.gz : 03b72d1f71ca7783cff2995ca7cd8c67b9b75038a3cc35e443a1913e951b49dd
+    - https://github.com/Genymobile/scrcpy/releases/download/v3.3.4/scrcpy-server-v3.3.4 : 8588238c9a5a00aa542906b6ec7e6d5541d9ffb9b5d0f6e1bc0e365e2303079e
 homepage   : https://github.com/Genymobile/scrcpy
 license    : Apache-2.0
 component  : network.util
@@ -22,3 +23,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSE

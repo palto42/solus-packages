@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : mir
-version    : 2.22.1
-release    : 6
+version    : 2.28.0
+release    : 14
 source     :
-    - https://github.com/canonical/mir/releases/download/v2.22.1/mir-2.22.1.tar.xz : 8eda88f51a9ced8a0f46d86fd1de5cdaca9727993e36243fd6402e2a3432e121
+    - https://github.com/canonical/mir/releases/download/v2.28.0/mir-2.28.0.tar.xz : 6b457b133f98cc4f56da45dc7716a8a4d4841288e670db57e743e6a3d4187b31
 homepage   : https://mir-server.io/
 license    :
     - GPL-2.0-only
@@ -41,10 +42,12 @@ builddeps  :
     - gtest
     - libboost-devel
     - python-pillow-devel
+    - rust
 rundeps    :
     - demos :
         - mir
 clang      : true
+networking : true
 environment: |
     export CFLAGS="${CFLAGS} -Wno-c23-extensions"
 setup      : |
@@ -57,6 +60,7 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license COPYING.*
 patterns   :
     - demos :
         - /usr/bin/mir_demo_*

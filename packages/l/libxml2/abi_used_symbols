@@ -1,3 +1,4 @@
+UNKNOWN:PyArg_ParseTuple
 UNKNOWN:PyBool_Type
 UNKNOWN:PyBytes_AsString
 UNKNOWN:PyBytes_Size
@@ -32,6 +33,8 @@ UNKNOWN:PyLong_FromVoidPtr
 UNKNOWN:PyLong_Type
 UNKNOWN:PyModule_Create2
 UNKNOWN:PyObject_AsFileDescriptor
+UNKNOWN:PyObject_CallFunction
+UNKNOWN:PyObject_CallMethod
 UNKNOWN:PyObject_CallObject
 UNKNOWN:PyObject_GetAttrString
 UNKNOWN:PyObject_HasAttrString
@@ -41,10 +44,7 @@ UNKNOWN:PyType_IsSubtype
 UNKNOWN:PyUnicode_AsUTF8AndSize
 UNKNOWN:PyUnicode_FromString
 UNKNOWN:PyUnicode_FromStringAndSize
-UNKNOWN:_PyArg_ParseTuple_SizeT
-UNKNOWN:_PyObject_CallFunction_SizeT
-UNKNOWN:_PyObject_CallMethod_SizeT
-UNKNOWN:_Py_BuildValue_SizeT
+UNKNOWN:Py_BuildValue
 UNKNOWN:_Py_Dealloc
 UNKNOWN:_Py_NoneStruct
 UNKNOWN:_Py_TrueStruct
@@ -155,13 +155,13 @@ libc.so.6:strncpy
 libc.so.6:strstr
 libc.so.6:time
 libc.so.6:write
-libicuuc.so.76:UCNV_FROM_U_CALLBACK_STOP_76
-libicuuc.so.76:UCNV_TO_U_CALLBACK_STOP_76
-libicuuc.so.76:ucnv_close_76
-libicuuc.so.76:ucnv_convertEx_76
-libicuuc.so.76:ucnv_open_76
-libicuuc.so.76:ucnv_setFromUCallBack_76
-libicuuc.so.76:ucnv_setToUCallBack_76
+libicuuc.so.78:UCNV_FROM_U_CALLBACK_STOP_78
+libicuuc.so.78:UCNV_TO_U_CALLBACK_STOP_78
+libicuuc.so.78:ucnv_close_78
+libicuuc.so.78:ucnv_convertEx_78
+libicuuc.so.78:ucnv_open_78
+libicuuc.so.78:ucnv_setFromUCallBack_78
+libicuuc.so.78:ucnv_setToUCallBack_78
 liblzma.so.5:lzma_auto_decoder
 liblzma.so.5:lzma_code
 liblzma.so.5:lzma_end

@@ -1,10 +1,14 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : libkmahjongg
-version    : 25.08.2
-release    : 72
+version    : 26.04.2
+release    : 78
 source     :
-    - https://download.kde.org/stable/release-service/25.08.2/src/libkmahjongg-25.08.2.tar.xz : c99975365dc3464bced7a467056dca43d5f1747017833d3f56ad115ca1a8070c
+    - https://download.kde.org/stable/release-service/26.04.2/src/libkmahjongg-26.04.2.tar.xz : 7189fae0a80c3cab9f34bc93f1733036183ea91b4b1b0da748522f65392d367b
 homepage   : https://kde.org/
-license    : GPL-2.0-or-later
+license    :
+    - BSD-3-Clause
+    - CC0-1.0
+    - GPL-2.0-or-later
 component  : desktop.library
 summary    : Common code and assets for Kmahjonhgg
 description: |
@@ -30,3 +34,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*

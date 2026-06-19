@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : dsp
-version    : '1.9'
-release    : 7
+version    : '2.0'
+release    : 8
 source     :
-    - https://github.com/bmc0/dsp/archive/v1.9.tar.gz : 0e98b9aea613b111c9d7cc2b9a0ce14c2b3ba4e90861b3cdcfcb8ec1ebfcab93
+    - https://github.com/bmc0/dsp/archive/refs/tags/v2.0.tar.gz : 1da8e1d4a560535c511283838ea2a22e5199c0945e9bb938dce890bdcb67ca8e
 license    :
     - ISC
     - LGPL-2.1
@@ -22,8 +23,6 @@ builddeps  :
     - pkgconfig(sndfile)
     - ladspa-devel
 setup      : |
-    %patch -p1 -i $pkgfiles/ftbfs-ffmpeg-7.patch
-
     # The default configure macro contains unsupported options
     ./configure --prefix=/usr --libdir=/lib64 --mandir=/share/man --datadir=/share
 build      : |

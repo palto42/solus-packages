@@ -1,14 +1,15 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : rocsolver
-version    : 3.26.2
-release    : 5
+version    : 7.2.0
+release    : 7
 source     :
-    - https://github.com/ROCm/rocSOLVER/archive/refs/tags/rocm-6.2.4.tar.gz : 022863df6a9d51bd216e56dd4dc7d437584e48304cfdbc9c5751be1abfd7c73f
+    - https://github.com/ROCm/rocm-libraries/archive/refs/tags/rocm-7.2.0.tar.gz : 8ad5f4a11f1ed8a7b927f2e65f24083ca6ce902a42021a66a815190a91ccb654
 homepage   : https://github.com/ROCmSoftwarePlatform/rocSOLVER
 license    : MIT
 component  : programming.library
 summary    : Next generation LAPACK implementation for ROCm platform
 description: |
-    rocSOLVER is a work-in-progress implementation of a subset of LAPACK functionality on the ROCm platform.
+    rocSOLVER is an implementation of a subset of LAPACK functionality on the ROCm platform.
 builddeps  :
     - pkgconfig(fmt)
     - rocblas-devel
@@ -16,23 +17,28 @@ builddeps  :
     - rocprim
     - rocm-cmake
     - rocm-hip
+    - rocm-llvm
 environment: |
     export CXXFLAGS="${CXXFLAGS/-D_FORTIFY_SOURCE=2 -fstack-protector-strong --param=ssp-buffer-size=32/-fcf-protection=none}"
 
     export ROCM_PATH=/usr
     export HIP_CLANG_PATH=/usr/lib64/llvm-rocm/bin
-    export DEVICE_LIB_PATH=/usr/lib64/amdgcn/bitcode
+    export HIP_DEVICE_LIB_PATH=/usr/lib64/amdgcn/bitcode
+    export CMAKE_PREFIX_PATH=/usr/lib64/llvm-rocm
     export OFFLOAD_BUNDLER_COMPRESS=1
+
+    if [ -e /usr/bin/sccache ]; then
+        export CMAKE_CXX_COMPILER_LAUNCHER=/usr/bin/sccache
+    fi
 setup      : |
     # Embed libfmt so that packagers don't need to waste time rebuilding this
     # chonker when libfmt is updated.
-    %cmake_ninja -L \
-      -DCMAKE_C_COMPILER=hipcc \
-      -DCMAKE_CXX_COMPILER=hipcc \
+    %cmake_ninja -S projects/rocsolver -L \
+      -DCMAKE_CXX_COMPILER=$HIP_CLANG_PATH/clang++ \
       -DCMAKE_INSTALL_LIBDIR=lib%LIBSUFFIX% \
       -DROCM_SYMLINK_LIBS=OFF \
       -DROCSOLVER_EMBED_FMT=ON \
-      -DAMDGPU_TARGETS="%AMDGPUTARGETS%"
+      -DGPU_TARGETS="%AMDGPUTARGETS_GENERIC%"
 build      : |
     %ninja_build
 install    : |

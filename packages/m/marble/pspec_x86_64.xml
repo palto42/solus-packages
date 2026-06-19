@@ -3,10 +3,21 @@
         <Name>marble</Name>
         <Homepage>https://kde.org/applications/education/org.kde.marble</Homepage>
         <Packager>
-            <Name>Troy Harvey</Name>
-            <Email>harveydevel@gmail.com</Email>
+            <Name>Jared Cervantes</Name>
+            <Email>jared@jaredcervantes.com</Email>
         </Packager>
+        <License>Apache-2.0</License>
+        <License>BSD-3-Clause</License>
+        <License>BSL-1.0</License>
+        <License>CC0-1.0</License>
+        <License>GPL-3.0-only</License>
+        <License>GPL-3.0-or-later</License>
+        <License>LGPL-2.0-or-later</License>
+        <License>LGPL-2.1-only</License>
         <License>LGPL-2.1-or-later</License>
+        <License>LGPL-3.0-only</License>
+        <License>MIT</License>
+        <License>ODbL-1.0</License>
         <PartOf>network.web</PartOf>
         <Summary xml:lang="en">Virtual Globe and World Atlas</Summary>
         <Description xml:lang="en">Marble is a Virtual Globe and World Atlas that you can use to learn more about Earth: You can pan and zoom around and you can look up places and roads.
@@ -20,15 +31,20 @@
 </Description>
         <PartOf>network.web</PartOf>
         <RuntimeDependencies>
-            <Dependency release="105">marble-libs</Dependency>
+            <Dependency release="116">marble-libs</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin/marble</Path>
             <Path fileType="executable">/usr/bin/marble-behaim</Path>
             <Path fileType="executable">/usr/bin/marble-maps</Path>
             <Path fileType="library">/usr/lib64/qt6/plugins/kf6/krunner/plasma_runner_marble.so</Path>
+            <Path fileType="library">/usr/lib64/qt6/plugins/kf6/thumbcreator/marble_thumbnail_geojson.so</Path>
+            <Path fileType="library">/usr/lib64/qt6/plugins/kf6/thumbcreator/marble_thumbnail_gpx.so</Path>
+            <Path fileType="library">/usr/lib64/qt6/plugins/kf6/thumbcreator/marble_thumbnail_kml.so</Path>
+            <Path fileType="library">/usr/lib64/qt6/plugins/kf6/thumbcreator/marble_thumbnail_kmz.so</Path>
+            <Path fileType="library">/usr/lib64/qt6/plugins/kf6/thumbcreator/marble_thumbnail_osm.so</Path>
+            <Path fileType="library">/usr/lib64/qt6/plugins/kf6/thumbcreator/marble_thumbnail_shp.so</Path>
             <Path fileType="library">/usr/lib64/qt6/plugins/libmarble_part.so</Path>
-            <Path fileType="library">/usr/lib64/qt6/plugins/marblethumbnail.so</Path>
             <Path fileType="library">/usr/lib64/qt6/qml/org/kde/marble/imageprovider/kde-qmlmodule.version</Path>
             <Path fileType="library">/usr/lib64/qt6/qml/org/kde/marble/imageprovider/libmarbleimageprovider.so</Path>
             <Path fileType="library">/usr/lib64/qt6/qml/org/kde/marble/imageprovider/marbleimageprovider.qmltypes</Path>
@@ -37,17 +53,11 @@
             <Path fileType="library">/usr/lib64/qt6/qml/org/kde/marble/libmarbledeclarative.so</Path>
             <Path fileType="library">/usr/lib64/qt6/qml/org/kde/marble/marbledeclarative.qmltypes</Path>
             <Path fileType="library">/usr/lib64/qt6/qml/org/kde/marble/qmldir</Path>
-            <Path fileType="data">/usr/share/applications/marble_geo.desktop</Path>
             <Path fileType="data">/usr/share/applications/marble_geojson.desktop</Path>
             <Path fileType="data">/usr/share/applications/marble_gpx.desktop</Path>
             <Path fileType="data">/usr/share/applications/marble_kml.desktop</Path>
             <Path fileType="data">/usr/share/applications/marble_kmz.desktop</Path>
             <Path fileType="data">/usr/share/applications/marble_shp.desktop</Path>
-            <Path fileType="data">/usr/share/applications/marble_thumbnail_kml.desktop</Path>
-            <Path fileType="data">/usr/share/applications/marble_thumbnail_kmz.desktop</Path>
-            <Path fileType="data">/usr/share/applications/marble_thumbnail_osm.desktop</Path>
-            <Path fileType="data">/usr/share/applications/marble_thumbnail_shp.desktop</Path>
-            <Path fileType="data">/usr/share/applications/marble_worldwind.desktop</Path>
             <Path fileType="data">/usr/share/applications/org.kde.marble.behaim.desktop</Path>
             <Path fileType="data">/usr/share/applications/org.kde.marble.desktop</Path>
             <Path fileType="data">/usr/share/applications/org.kde.marble.maps.desktop</Path>
@@ -62,6 +72,21 @@
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.kde.marble.maps.svg</Path>
             <Path fileType="data">/usr/share/kxmlgui5/marble/marble_part.rc</Path>
             <Path fileType="data">/usr/share/kxmlgui5/marble/marbleui.rc</Path>
+            <Path fileType="data">/usr/share/licenses/marble/Apache-2.0.txt</Path>
+            <Path fileType="data">/usr/share/licenses/marble/BSD-3-Clause.txt</Path>
+            <Path fileType="data">/usr/share/licenses/marble/BSL-1.0.txt</Path>
+            <Path fileType="data">/usr/share/licenses/marble/CC0-1.0.txt</Path>
+            <Path fileType="data">/usr/share/licenses/marble/GPL-3.0-only.txt</Path>
+            <Path fileType="data">/usr/share/licenses/marble/GPL-3.0-or-later.txt</Path>
+            <Path fileType="data">/usr/share/licenses/marble/LGPL-2.0-or-later.txt</Path>
+            <Path fileType="data">/usr/share/licenses/marble/LGPL-2.1-only.txt</Path>
+            <Path fileType="data">/usr/share/licenses/marble/LGPL-2.1-or-later.txt</Path>
+            <Path fileType="data">/usr/share/licenses/marble/LGPL-3.0-only.txt</Path>
+            <Path fileType="data">/usr/share/licenses/marble/LICENSE.txt</Path>
+            <Path fileType="data">/usr/share/licenses/marble/LicenseRef-Qt-Commercial.txt</Path>
+            <Path fileType="data">/usr/share/licenses/marble/MIT.txt</Path>
+            <Path fileType="data">/usr/share/licenses/marble/ODbL-1.0.txt</Path>
+            <Path fileType="data">/usr/share/licenses/marble/Qt-LGPL-exception-1.1.txt</Path>
             <Path fileType="localedata">/usr/share/locale/ar/LC_MESSAGES/marble-behaim.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ar/LC_MESSAGES/marble-maps.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ar/LC_MESSAGES/marble.mo</Path>
@@ -172,10 +197,13 @@
             <Path fileType="localedata">/usr/share/locale/fr/LC_MESSAGES/plasma_applet_org.kde.plasma.worldclock.mo</Path>
             <Path fileType="localedata">/usr/share/locale/fr/LC_MESSAGES/plasma_runner_marble.mo</Path>
             <Path fileType="localedata">/usr/share/locale/fr/LC_MESSAGES/plasma_wallpaper_org.kde.plasma.worldmap.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/ga/LC_MESSAGES/marble-behaim.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ga/LC_MESSAGES/marble-maps.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ga/LC_MESSAGES/marble.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ga/LC_MESSAGES/marble_qt.qm</Path>
+            <Path fileType="localedata">/usr/share/locale/ga/LC_MESSAGES/plasma_applet_org.kde.plasma.worldclock.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ga/LC_MESSAGES/plasma_runner_marble.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/ga/LC_MESSAGES/plasma_wallpaper_org.kde.plasma.worldmap.mo</Path>
             <Path fileType="localedata">/usr/share/locale/gl/LC_MESSAGES/marble-behaim.mo</Path>
             <Path fileType="localedata">/usr/share/locale/gl/LC_MESSAGES/marble-maps.mo</Path>
             <Path fileType="localedata">/usr/share/locale/gl/LC_MESSAGES/marble.mo</Path>
@@ -255,6 +283,7 @@
             <Path fileType="localedata">/usr/share/locale/ko/LC_MESSAGES/plasma_applet_org.kde.plasma.worldclock.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ko/LC_MESSAGES/plasma_runner_marble.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ko/LC_MESSAGES/plasma_wallpaper_org.kde.plasma.worldmap.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/lt/LC_MESSAGES/marble-behaim.mo</Path>
             <Path fileType="localedata">/usr/share/locale/lt/LC_MESSAGES/marble-maps.mo</Path>
             <Path fileType="localedata">/usr/share/locale/lt/LC_MESSAGES/marble.mo</Path>
             <Path fileType="localedata">/usr/share/locale/lt/LC_MESSAGES/marble_qt.qm</Path>
@@ -1686,10 +1715,6 @@
             <Path fileType="data">/usr/share/metainfo/org.kde.marble.behaim.appdata.xml</Path>
             <Path fileType="data">/usr/share/metainfo/org.kde.marble.maps.appdata.xml</Path>
             <Path fileType="data">/usr/share/mime/packages/geo.xml</Path>
-            <Path fileType="data">/usr/share/plasma/wallpapers/org.kde.plasma.worldmap/contents/config/main.xml</Path>
-            <Path fileType="data">/usr/share/plasma/wallpapers/org.kde.plasma.worldmap/contents/ui/config.qml</Path>
-            <Path fileType="data">/usr/share/plasma/wallpapers/org.kde.plasma.worldmap/contents/ui/main.qml</Path>
-            <Path fileType="data">/usr/share/plasma/wallpapers/org.kde.plasma.worldmap/metadata.json</Path>
             <Path fileType="data">/usr/share/qlogging-categories6/marble.categories</Path>
         </Files>
     </Package>
@@ -1700,8 +1725,8 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="105">marble</Dependency>
-            <Dependency release="105">marble-libs</Dependency>
+            <Dependency release="116">marble-libs</Dependency>
+            <Dependency release="116">marble</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/astro/astr2lib.h</Path>
@@ -1893,8 +1918,8 @@
         <PartOf>programming.library</PartOf>
         <Files>
             <Path fileType="library">/usr/lib64/libastro.so.1</Path>
-            <Path fileType="library">/usr/lib64/libastro.so.25.08.2</Path>
-            <Path fileType="library">/usr/lib64/libmarblewidget-qt6.so.25.08.2</Path>
+            <Path fileType="library">/usr/lib64/libastro.so.26.04.2</Path>
+            <Path fileType="library">/usr/lib64/libmarblewidget-qt6.so.26.04.2</Path>
             <Path fileType="library">/usr/lib64/libmarblewidget-qt6.so.28</Path>
             <Path fileType="library">/usr/lib64/marble/plugins/AnnotatePlugin.so</Path>
             <Path fileType="library">/usr/lib64/marble/plugins/AprsPlugin.so</Path>
@@ -1958,12 +1983,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="105">
-            <Date>2025-10-10</Date>
-            <Version>25.08.2</Version>
+        <Update release="116">
+            <Date>2026-06-15</Date>
+            <Version>26.04.2</Version>
             <Comment>Packaging update</Comment>
-            <Name>Troy Harvey</Name>
-            <Email>harveydevel@gmail.com</Email>
+            <Name>Jared Cervantes</Name>
+            <Email>jared@jaredcervantes.com</Email>
         </Update>
     </History>
 </PISI>

@@ -1,0 +1,38 @@
+From 91ee62803c4ee642ebe7b86594d0a9dc837c9a0c Mon Sep 17 00:00:00 2001
+From: hashworks <mail@hashworks.net>
+Date: Mon, 3 Nov 2025 19:21:03 +0100
+Subject: [PATCH] Fix build with ICU 76
+
+Due to unicode-org/icu@199bc82, ICU 76 no longer adds `icu-uc` by
+default. This causes linker errors for undefined symbols like
+`icu_76::UnicodeString::doReplace(...)`, referenced from:
+`zim::removeAccents(...)` in tools.cpp.o.
+
+Meson will automatically flatten the dependencies list as documented
+at https://mesonbuild.com/Reference-manual_functions.html#build_target
+
+Original commit from https://github.com/openzim/libzim/pull/936
+---
+ meson.build | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+diff --git a/meson.build b/meson.build
+index 2589124..bc0cd94 100644
+--- a/meson.build
++++ b/meson.build
+@@ -17,7 +17,11 @@ if static_linkage
+   endif
+ endif
+ 
+-libzim_dep = dependency('libzim', version:['>=9.2.0', '<10.0.0'], static:static_linkage)
++libzim_dep = [
++  dependency('libzim', version : ['>=9.2.0', '<10.0.0'], static:static_linkage),
++  dependency('icu-i18n', static:static_linkage),
++  dependency('icu-uc', static:static_linkage)
++]
+ 
+ with_xapian_support = compiler.has_header_symbol(
+   'zim/zim.h', 'LIBZIM_WITH_XAPIAN', dependencies: libzim_dep)
+-- 
+2.51.2
+

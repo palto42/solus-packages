@@ -3,8 +3,8 @@
         <Name>pahole</Name>
         <Homepage>https://git.kernel.org/pub/scm/devel/pahole/pahole.git</Homepage>
         <Packager>
-            <Name>Reilly Brogan</Name>
-            <Email>solus@reillybrogan.com</Email>
+            <Name>Joey Riches</Name>
+            <Email>josephriches@gmail.com</Email>
         </Packager>
         <License>GPL-2.0-only</License>
         <PartOf>system.utils</PartOf>
@@ -33,7 +33,7 @@
             <Path fileType="executable">/usr/bin/prefcnt</Path>
             <Path fileType="executable">/usr/bin/scncopy</Path>
             <Path fileType="executable">/usr/bin/syscse</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/ostra.py</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/ostra.py</Path>
             <Path fileType="library">/usr/lib64/libdwarves.so.1</Path>
             <Path fileType="library">/usr/lib64/libdwarves.so.1.0.0</Path>
             <Path fileType="library">/usr/lib64/libdwarves_emit.so.1</Path>
@@ -44,7 +44,7 @@
             <Path fileType="data">/usr/share/dwarves/runtime/ctracer_relay.c</Path>
             <Path fileType="data">/usr/share/dwarves/runtime/ctracer_relay.h</Path>
             <Path fileType="data">/usr/share/dwarves/runtime/linux.blacklist.cu</Path>
-            <Path fileType="man">/usr/share/man/man1/pahole.1</Path>
+            <Path fileType="man">/usr/share/man/man1/pahole.1.zst</Path>
         </Files>
     </Package>
     <Package>
@@ -54,7 +54,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="4">pahole</Dependency>
+            <Dependency release="6">pahole</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/dwarves/btf_encoder.h</Path>
@@ -77,12 +77,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="4">
-            <Date>2025-08-04</Date>
-            <Version>1.30</Version>
+        <Update release="6">
+            <Date>2026-06-07</Date>
+            <Version>1.31</Version>
             <Comment>Packaging update</Comment>
-            <Name>Reilly Brogan</Name>
-            <Email>solus@reillybrogan.com</Email>
+            <Name>Joey Riches</Name>
+            <Email>josephriches@gmail.com</Email>
         </Update>
     </History>
 </PISI>

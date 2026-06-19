@@ -154,6 +154,7 @@ libglib-2.0.so.0:g_file_test
 libglib-2.0.so.0:g_filename_from_uri
 libglib-2.0.so.0:g_filename_to_uri
 libglib-2.0.so.0:g_free
+libglib-2.0.so.0:g_free_sized
 libglib-2.0.so.0:g_get_application_name
 libglib-2.0.so.0:g_get_charset
 libglib-2.0.so.0:g_get_home_dir
@@ -422,6 +423,7 @@ libgtk-3.so.0:gtk_cell_layout_get_cells
 libgtk-3.so.0:gtk_cell_layout_pack_start
 libgtk-3.so.0:gtk_cell_layout_set_attributes
 libgtk-3.so.0:gtk_cell_layout_set_cell_data_func
+libgtk-3.so.0:gtk_cell_renderer_get_type
 libgtk-3.so.0:gtk_cell_renderer_pixbuf_new
 libgtk-3.so.0:gtk_cell_renderer_set_fixed_size
 libgtk-3.so.0:gtk_cell_renderer_set_padding
@@ -506,6 +508,7 @@ libgtk-3.so.0:gtk_events_pending
 libgtk-3.so.0:gtk_expander_new
 libgtk-3.so.0:gtk_expander_new_with_mnemonic
 libgtk-3.so.0:gtk_expander_set_expanded
+libgtk-3.so.0:gtk_expander_set_label
 libgtk-3.so.0:gtk_file_chooser_add_filter
 libgtk-3.so.0:gtk_file_chooser_button_new
 libgtk-3.so.0:gtk_file_chooser_dialog_new
@@ -578,6 +581,7 @@ libgtk-3.so.0:gtk_menu_button_new
 libgtk-3.so.0:gtk_menu_button_set_direction
 libgtk-3.so.0:gtk_menu_button_set_menu_model
 libgtk-3.so.0:gtk_menu_button_set_popover
+libgtk-3.so.0:gtk_menu_item_new_with_label
 libgtk-3.so.0:gtk_menu_item_new_with_mnemonic
 libgtk-3.so.0:gtk_menu_item_set_submenu
 libgtk-3.so.0:gtk_menu_new
@@ -942,6 +946,7 @@ libpango-1.0.so.0:pango_font_description_free
 libpango-1.0.so.0:pango_font_description_from_string
 libpango-1.0.so.0:pango_font_description_get_size
 libpango-1.0.so.0:pango_font_description_set_absolute_size
+libpango-1.0.so.0:pango_font_description_set_family
 libpango-1.0.so.0:pango_font_description_set_size
 libpango-1.0.so.0:pango_font_description_set_weight
 libpango-1.0.so.0:pango_font_description_to_string

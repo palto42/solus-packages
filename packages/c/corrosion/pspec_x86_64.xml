@@ -3,8 +3,8 @@
         <Name>corrosion</Name>
         <Homepage>https://github.com/corrosion-rs/corrosion</Homepage>
         <Packager>
-            <Name>Joey Riches</Name>
-            <Email>josephriches@gmail.com</Email>
+            <Name>Evan Maddock</Name>
+            <Email>maddock.evan@vivaldi.net</Email>
         </Packager>
         <License>MIT</License>
         <PartOf>programming.tools</PartOf>
@@ -25,15 +25,16 @@
             <Path fileType="data">/usr/share/cmake/Corrosion.cmake</Path>
             <Path fileType="data">/usr/share/cmake/CorrosionGenerator.cmake</Path>
             <Path fileType="data">/usr/share/cmake/FindRust.cmake</Path>
+            <Path fileType="data">/usr/share/licenses/corrosion/LICENSE</Path>
         </Files>
     </Package>
     <History>
-        <Update release="4">
-            <Date>2025-09-06</Date>
-            <Version>0.5.2</Version>
+        <Update release="5">
+            <Date>2026-04-16</Date>
+            <Version>0.6.1</Version>
             <Comment>Packaging update</Comment>
-            <Name>Joey Riches</Name>
-            <Email>josephriches@gmail.com</Email>
+            <Name>Evan Maddock</Name>
+            <Email>maddock.evan@vivaldi.net</Email>
         </Update>
     </History>
 </PISI>

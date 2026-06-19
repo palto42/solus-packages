@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : geos
-version    : 3.10.1
-release    : 5
+version    : 3.14.1
+release    : 6
 source     :
-    - https://github.com/libgeos/geos/archive/refs/tags/3.10.1.tar.gz : 15180d727df60ea2e61ece6273feaa3b2a4554db0a447bf6923054df676c78c0
+    - https://github.com/libgeos/geos/archive/refs/tags/3.14.1.tar.gz : 512118b3be3ccefbca66b36b0f3e895576d08d6ff330ba1511a31a306abbb477
 homepage   : https://trac.osgeo.org/geos
 license    : LGPL-2.1-only
 component  : programming
@@ -16,6 +17,7 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license COPYING
 check      : |
     %ninja_check
 patterns   :

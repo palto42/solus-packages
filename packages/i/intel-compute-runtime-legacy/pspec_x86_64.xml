@@ -1,0 +1,60 @@
+<PISI>
+    <Source>
+        <Name>intel-compute-runtime-legacy</Name>
+        <Homepage>https://github.com/intel/compute-runtime/</Homepage>
+        <Packager>
+            <Name>Silke Hofstra</Name>
+            <Email>silke@slxh.eu</Email>
+        </Packager>
+        <License>MIT</License>
+        <PartOf>programming.tools</PartOf>
+        <Summary xml:lang="en">Intel&#xae; Graphics Compute Runtime for legacy platforms</Summary>
+        <Description xml:lang="en">The Intel(R) Graphics Compute Runtime for oneAPI Level Zero and OpenCL(TM) Driver is an open source project providing compute API support (Level Zero, OpenCL) for Intel graphics hardware architectures (HD Graphics, Xe).
+This package supports Broadwell, Skylake, Kaby Lake, Coffee Lake, Apollo Lake, Gemini Lake, Ice Lake and Elkhart Lake.
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>intel-compute-runtime-legacy</Name>
+        <Summary xml:lang="en">Intel&#xae; Graphics Compute Runtime for legacy platforms</Summary>
+        <Description xml:lang="en">The Intel(R) Graphics Compute Runtime for oneAPI Level Zero and OpenCL(TM) Driver is an open source project providing compute API support (Level Zero, OpenCL) for Intel graphics hardware architectures (HD Graphics, Xe).
+This package supports Broadwell, Skylake, Kaby Lake, Coffee Lake, Apollo Lake, Gemini Lake, Ice Lake and Elkhart Lake.
+</Description>
+        <PartOf>programming.tools</PartOf>
+        <Files>
+            <Path fileType="executable">/usr/bin/ocloc-24.35.0</Path>
+            <Path fileType="library">/usr/lib64/intel-opencl/libigdrcl_legacy1.so</Path>
+            <Path fileType="library">/usr/lib64/libocloc_legacy1.so</Path>
+            <Path fileType="library">/usr/lib64/libze_intel_gpu_legacy1.so.1</Path>
+            <Path fileType="library">/usr/lib64/libze_intel_gpu_legacy1.so.1.5.30872</Path>
+            <Path fileType="data">/usr/share/OpenCL/vendors/intel_legacy1.icd</Path>
+            <Path fileType="data">/usr/share/licenses/intel-compute-runtime-legacy/LICENSE.md</Path>
+        </Files>
+        <Replaces>
+            <Package>beignet</Package>
+        </Replaces>
+    </Package>
+    <Package>
+        <Name>intel-compute-runtime-legacy-devel</Name>
+        <Summary xml:lang="en">Development files for intel-compute-runtime-legacy</Summary>
+        <Description xml:lang="en">The Intel(R) Graphics Compute Runtime for oneAPI Level Zero and OpenCL(TM) Driver is an open source project providing compute API support (Level Zero, OpenCL) for Intel graphics hardware architectures (HD Graphics, Xe).
+This package supports Broadwell, Skylake, Kaby Lake, Coffee Lake, Apollo Lake, Gemini Lake, Ice Lake and Elkhart Lake.
+</Description>
+        <PartOf>programming.devel</PartOf>
+        <RuntimeDependencies>
+            <Dependency release="1">intel-compute-runtime-legacy</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include/level_zero/zet_intel_gpu_debug.h</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2026-03-25</Date>
+            <Version>24.35.30872.45</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Silke Hofstra</Name>
+            <Email>silke@slxh.eu</Email>
+        </Update>
+    </History>
+</PISI>

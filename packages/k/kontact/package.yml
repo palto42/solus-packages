@@ -1,12 +1,18 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kontact
-version    : 25.08.2
-release    : 93
+version    : 26.04.2
+release    : 99
 source     :
-    - https://download.kde.org/stable/release-service/25.08.2/src/kontact-25.08.2.tar.xz : 1b7d5b7db42ed8ff03dde5a7a549bcfe78b9a3db7bf76ce7ed397e649ac07912
+    - https://download.kde.org/stable/release-service/26.04.2/src/kontact-26.04.2.tar.xz : 7ef5a8849f7c21f3c2146466b2c6ecdb4e20a6d28c11f7e7f170dc8bf07ef428
 homepage   : https://kde.org/applications/office/org.kde.kontact
 license    :
+    - BSD-3-Clause
+    - CC0-1.0
     - GFDL-1.2-or-later
     - GPL-2.0-or-later
+    - LGPL-2.0-only
+    - LGPL-2.0-or-later
+    - MIT
 component  : office
 summary    : Container application to unify several major PIM applications within one application
 description: |
@@ -37,6 +43,7 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*
 
     # remove doc
     rm -rfv $installdir/usr/share/doc

@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : deepin-icon-theme
-version    : 2025.9.11
-release    : 16
+version    : 2026.02.27
+release    : 17
 source     :
-    - https://github.com/linuxdeepin/deepin-icon-theme/archive/refs/tags/2025.9.11.tar.gz : 535ea85b9e7dc65171c3506fb6f9a7718e7ced5048e0e5f30f92d6633e1cebb0
+    - https://github.com/linuxdeepin/deepin-icon-theme/archive/refs/tags/2026.02.27.tar.gz : e4c9470d3f4f2064ff89eeafc3cc105f16ec1eddd8a97d75580639a21e115505
 homepage   : https://github.com/linuxdeepin/deepin-icon-theme
 license    : GPL-3.0-or-later
 component  :

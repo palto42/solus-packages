@@ -200,6 +200,7 @@
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/AR/GCModels/GCgames.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/AR/GCModels/GCgeneric.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/AR/GCModels/GCminicars.pm</Path>
+            <Path fileType="data">/usr/share/gcstar/lib/GCLang/AR/GCModels/GCmusiccourses.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/AR/GCModels/GCmusics.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/AR/GCModels/GCperiodicals.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/AR/GCModels/GCpostcards.pm</Path>
@@ -234,6 +235,7 @@
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/BG/GCModels/GCgames.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/BG/GCModels/GCgeneric.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/BG/GCModels/GCminicars.pm</Path>
+            <Path fileType="data">/usr/share/gcstar/lib/GCLang/BG/GCModels/GCmusiccourses.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/BG/GCModels/GCmusics.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/BG/GCModels/GCperiodicals.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/BG/GCModels/GCpostcards.pm</Path>
@@ -268,6 +270,7 @@
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/CA/GCModels/GCgames.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/CA/GCModels/GCgeneric.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/CA/GCModels/GCminicars.pm</Path>
+            <Path fileType="data">/usr/share/gcstar/lib/GCLang/CA/GCModels/GCmusiccourses.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/CA/GCModels/GCmusics.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/CA/GCModels/GCperiodicals.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/CA/GCModels/GCpostcards.pm</Path>
@@ -302,6 +305,7 @@
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/CS/GCModels/GCgames.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/CS/GCModels/GCgeneric.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/CS/GCModels/GCminicars.pm</Path>
+            <Path fileType="data">/usr/share/gcstar/lib/GCLang/CS/GCModels/GCmusiccourses.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/CS/GCModels/GCmusics.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/CS/GCModels/GCperiodicals.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/CS/GCModels/GCpostcards.pm</Path>
@@ -336,6 +340,7 @@
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/DE/GCModels/GCgames.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/DE/GCModels/GCgeneric.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/DE/GCModels/GCminicars.pm</Path>
+            <Path fileType="data">/usr/share/gcstar/lib/GCLang/DE/GCModels/GCmusiccourses.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/DE/GCModels/GCmusics.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/DE/GCModels/GCperiodicals.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/DE/GCModels/GCpostcards.pm</Path>
@@ -370,6 +375,7 @@
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/EL/GCModels/GCgames.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/EL/GCModels/GCgeneric.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/EL/GCModels/GCminicars.pm</Path>
+            <Path fileType="data">/usr/share/gcstar/lib/GCLang/EL/GCModels/GCmusiccourses.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/EL/GCModels/GCmusics.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/EL/GCModels/GCperiodicals.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/EL/GCModels/GCpostcards.pm</Path>
@@ -439,6 +445,7 @@
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/ES/GCModels/GCgames.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/ES/GCModels/GCgeneric.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/ES/GCModels/GCminicars.pm</Path>
+            <Path fileType="data">/usr/share/gcstar/lib/GCLang/ES/GCModels/GCmusiccourses.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/ES/GCModels/GCmusics.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/ES/GCModels/GCperiodicals.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/ES/GCModels/GCpostcards.pm</Path>
@@ -509,6 +516,7 @@
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/GL/GCModels/GCgames.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/GL/GCModels/GCgeneric.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/GL/GCModels/GCminicars.pm</Path>
+            <Path fileType="data">/usr/share/gcstar/lib/GCLang/GL/GCModels/GCmusiccourses.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/GL/GCModels/GCmusics.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/GL/GCModels/GCperiodicals.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/GL/GCModels/GCpostcards.pm</Path>
@@ -543,6 +551,7 @@
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/HU/GCModels/GCgames.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/HU/GCModels/GCgeneric.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/HU/GCModels/GCminicars.pm</Path>
+            <Path fileType="data">/usr/share/gcstar/lib/GCLang/HU/GCModels/GCmusiccourses.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/HU/GCModels/GCmusics.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/HU/GCModels/GCperiodicals.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/HU/GCModels/GCpostcards.pm</Path>
@@ -577,6 +586,7 @@
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/ID/GCModels/GCgames.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/ID/GCModels/GCgeneric.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/ID/GCModels/GCminicars.pm</Path>
+            <Path fileType="data">/usr/share/gcstar/lib/GCLang/ID/GCModels/GCmusiccourses.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/ID/GCModels/GCmusics.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/ID/GCModels/GCperiodicals.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/ID/GCModels/GCpostcards.pm</Path>
@@ -611,6 +621,7 @@
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/IT/GCModels/GCgames.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/IT/GCModels/GCgeneric.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/IT/GCModels/GCminicars.pm</Path>
+            <Path fileType="data">/usr/share/gcstar/lib/GCLang/IT/GCModels/GCmusiccourses.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/IT/GCModels/GCmusics.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/IT/GCModels/GCperiodicals.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/IT/GCModels/GCpostcards.pm</Path>
@@ -646,6 +657,7 @@
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/NL/GCModels/GCgames.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/NL/GCModels/GCgeneric.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/NL/GCModels/GCminicars.pm</Path>
+            <Path fileType="data">/usr/share/gcstar/lib/GCLang/NL/GCModels/GCmusiccourses.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/NL/GCModels/GCmusics.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/NL/GCModels/GCperiodicals.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/NL/GCModels/GCpostcards.pm</Path>
@@ -680,6 +692,7 @@
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/PL/GCModels/GCgames.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/PL/GCModels/GCgeneric.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/PL/GCModels/GCminicars.pm</Path>
+            <Path fileType="data">/usr/share/gcstar/lib/GCLang/PL/GCModels/GCmusiccourses.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/PL/GCModels/GCmusics.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/PL/GCModels/GCperiodicals.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/PL/GCModels/GCpostcards.pm</Path>
@@ -749,6 +762,7 @@
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/RO/GCModels/GCgames.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/RO/GCModels/GCgeneric.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/RO/GCModels/GCminicars.pm</Path>
+            <Path fileType="data">/usr/share/gcstar/lib/GCLang/RO/GCModels/GCmusiccourses.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/RO/GCModels/GCmusics.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/RO/GCModels/GCperiodicals.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/RO/GCModels/GCpostcards.pm</Path>
@@ -783,6 +797,7 @@
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/RU/GCModels/GCgames.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/RU/GCModels/GCgeneric.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/RU/GCModels/GCminicars.pm</Path>
+            <Path fileType="data">/usr/share/gcstar/lib/GCLang/RU/GCModels/GCmusiccourses.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/RU/GCModels/GCmusics.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/RU/GCModels/GCperiodicals.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/RU/GCModels/GCpostcards.pm</Path>
@@ -817,6 +832,7 @@
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/SR/GCModels/GCgames.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/SR/GCModels/GCgeneric.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/SR/GCModels/GCminicars.pm</Path>
+            <Path fileType="data">/usr/share/gcstar/lib/GCLang/SR/GCModels/GCmusiccourses.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/SR/GCModels/GCmusics.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/SR/GCModels/GCperiodicals.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/SR/GCModels/GCpostcards.pm</Path>
@@ -851,6 +867,7 @@
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/SV/GCModels/GCgames.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/SV/GCModels/GCgeneric.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/SV/GCModels/GCminicars.pm</Path>
+            <Path fileType="data">/usr/share/gcstar/lib/GCLang/SV/GCModels/GCmusiccourses.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/SV/GCModels/GCmusics.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/SV/GCModels/GCperiodicals.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/SV/GCModels/GCpostcards.pm</Path>
@@ -885,6 +902,7 @@
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/TR/GCModels/GCgames.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/TR/GCModels/GCgeneric.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/TR/GCModels/GCminicars.pm</Path>
+            <Path fileType="data">/usr/share/gcstar/lib/GCLang/TR/GCModels/GCmusiccourses.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/TR/GCModels/GCmusics.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/TR/GCModels/GCperiodicals.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/TR/GCModels/GCpostcards.pm</Path>
@@ -919,6 +937,7 @@
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/UK/GCModels/GCgames.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/UK/GCModels/GCgeneric.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/UK/GCModels/GCminicars.pm</Path>
+            <Path fileType="data">/usr/share/gcstar/lib/GCLang/UK/GCModels/GCmusiccourses.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/UK/GCModels/GCmusics.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/UK/GCModels/GCperiodicals.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/UK/GCModels/GCpostcards.pm</Path>
@@ -953,6 +972,7 @@
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/ZH/GCModels/GCgames.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/ZH/GCModels/GCgeneric.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/ZH/GCModels/GCminicars.pm</Path>
+            <Path fileType="data">/usr/share/gcstar/lib/GCLang/ZH/GCModels/GCmusiccourses.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/ZH/GCModels/GCmusics.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/ZH/GCModels/GCperiodicals.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/ZH/GCModels/GCpostcards.pm</Path>
@@ -987,6 +1007,7 @@
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/ZH_CN/GCModels/GCgames.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/ZH_CN/GCModels/GCgeneric.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/ZH_CN/GCModels/GCminicars.pm</Path>
+            <Path fileType="data">/usr/share/gcstar/lib/GCLang/ZH_CN/GCModels/GCmusiccourses.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/ZH_CN/GCModels/GCmusics.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/ZH_CN/GCModels/GCperiodicals.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCLang/ZH_CN/GCModels/GCpostcards.pm</Path>
@@ -1057,24 +1078,23 @@
             <Path fileType="data">/usr/share/gcstar/lib/GCPlugins/GCbooks/GCAmazonPL.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCPlugins/GCbooks/GCAmazonQC.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCPlugins/GCbooks/GCAmazonUK.pm</Path>
+            <Path fileType="data">/usr/share/gcstar/lib/GCPlugins/GCbooks/GCAmazonUS.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCPlugins/GCbooks/GCBdphile.pm</Path>
+            <Path fileType="data">/usr/share/gcstar/lib/GCPlugins/GCbooks/GCBedetheque.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCPlugins/GCbooks/GCBibliotekaNarodowa.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCPlugins/GCbooks/GCBokkilden.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCPlugins/GCbooks/GCBol.pm</Path>
-            <Path fileType="data">/usr/share/gcstar/lib/GCPlugins/GCbooks/GCBuscape.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCPlugins/GCbooks/GCCasadelibro.pm</Path>
-            <Path fileType="data">/usr/share/gcstar/lib/GCPlugins/GCbooks/GCChapitre.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCPlugins/GCbooks/GCDoubanbook.pm</Path>
-            <Path fileType="data">/usr/share/gcstar/lib/GCPlugins/GCbooks/GCFnac.pm</Path>
+            <Path fileType="data">/usr/share/gcstar/lib/GCPlugins/GCbooks/GCFnacCommon.pm</Path>
+            <Path fileType="data">/usr/share/gcstar/lib/GCPlugins/GCbooks/GCFnacES.pm</Path>
+            <Path fileType="data">/usr/share/gcstar/lib/GCPlugins/GCbooks/GCFnacFR.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCPlugins/GCbooks/GCFnacPT.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCPlugins/GCbooks/GCGBooks.pm</Path>
-            <Path fileType="data">/usr/share/gcstar/lib/GCPlugins/GCbooks/GCISBNdb.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCPlugins/GCbooks/GCInternetBookShop.pm</Path>
-            <Path fileType="data">/usr/share/gcstar/lib/GCPlugins/GCbooks/GCLeLivre.pm</Path>
+            <Path fileType="data">/usr/share/gcstar/lib/GCPlugins/GCbooks/GCLaLibrairie.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCPlugins/GCbooks/GCLeyaOnline.pm</Path>
-            <Path fileType="data">/usr/share/gcstar/lib/GCPlugins/GCbooks/GCNUKat.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCPlugins/GCbooks/GCNooSFere.pm</Path>
-            <Path fileType="data">/usr/share/gcstar/lib/GCPlugins/GCbooks/GCbedetheque.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCPlugins/GCbooks/GCbooksAdlibrisCommon.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCPlugins/GCbooks/GCbooksCommon.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCPlugins/GCbuildingtoys/GCBrickset.pm</Path>
@@ -1093,8 +1113,8 @@
             <Path fileType="data">/usr/share/gcstar/lib/GCPlugins/GCcomics/GCAmazonUK.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCPlugins/GCcomics/GCAmazonUS.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCPlugins/GCcomics/GCBdphile.pm</Path>
+            <Path fileType="data">/usr/share/gcstar/lib/GCPlugins/GCcomics/GCBedetheque.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCPlugins/GCcomics/GCSanctuary.pm</Path>
-            <Path fileType="data">/usr/share/gcstar/lib/GCPlugins/GCcomics/GCbedetheque.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCPlugins/GCcomics/GCcomicsCommon.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCPlugins/GCcomics/GCmangasanctuary.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCPlugins/GCfilms/GCAllmovie.pm</Path>
@@ -1109,11 +1129,11 @@
             <Path fileType="data">/usr/share/gcstar/lib/GCPlugins/GCfilms/GCAnimatorEN.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCPlugins/GCfilms/GCAnimeka.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCPlugins/GCfilms/GCBeyazPerde.pm</Path>
+            <Path fileType="data">/usr/share/gcstar/lib/GCPlugins/GCfilms/GCCDON.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCPlugins/GCfilms/GCCinemaClock.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCPlugins/GCfilms/GCCsfd.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCPlugins/GCfilms/GCDVDEmpire.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCPlugins/GCfilms/GCDVDFr.pm</Path>
-            <Path fileType="data">/usr/share/gcstar/lib/GCPlugins/GCfilms/GCDicshop.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCPlugins/GCfilms/GCDoubanfilm.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCPlugins/GCfilms/GCFilmAffinityCommon.pm</Path>
             <Path fileType="data">/usr/share/gcstar/lib/GCPlugins/GCfilms/GCFilmAffinityEN.pm</Path>
@@ -1448,9 +1468,9 @@
         </Files>
     </Package>
     <History>
-        <Update release="5">
-            <Date>2025-07-05</Date>
-            <Version>1.8.0.2025.07.02</Version>
+        <Update release="6">
+            <Date>2026-03-27</Date>
+            <Version>1.8.0.2026.03.26</Version>
             <Comment>Packaging update</Comment>
             <Name>Matthias Homann</Name>
             <Email>palto@mailbox.org</Email>

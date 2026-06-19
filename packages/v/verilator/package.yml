@@ -1,11 +1,12 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : verilator
-version    : '5.040'
-release    : 51
+version    : '5.048'
+release    : 55
 source     :
-    - https://github.com/verilator/verilator/archive/refs/tags/v5.040.tar.gz : 56c7c46314adfad06dd093b77823bfd9b49ebef72342549f790718199c3e8223
+    - https://github.com/verilator/verilator/archive/refs/tags/v5.048.tar.gz : 02d934b3f972c6d9b792350634d81eadfc9e61f347e3f3bdcaad40960b9fcb53
 license    :
-    - LGPL-3.0-only
     - Artistic-2.0
+    - LGPL-3.0-only
 homepage   : https://www.veripool.org/wiki/verilator
 component  : programming.tools
 summary    : Verilator converts synthesizable (generally not behavioral) Verilog code into C++ or SystemC code.
@@ -24,5 +25,6 @@ build      : |
     %make
 install    : |
     %make_install
+    %install_license LICENSE LICENSES/*
 check      : |
     make test

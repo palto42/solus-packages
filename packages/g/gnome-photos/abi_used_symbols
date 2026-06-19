@@ -671,6 +671,7 @@ libglib-2.0.so.0:g_variant_builder_clear
 libglib-2.0.so.0:g_variant_builder_close
 libglib-2.0.so.0:g_variant_builder_end
 libglib-2.0.so.0:g_variant_builder_init
+libglib-2.0.so.0:g_variant_builder_init_static
 libglib-2.0.so.0:g_variant_builder_open
 libglib-2.0.so.0:g_variant_dict_contains
 libglib-2.0.so.0:g_variant_dict_lookup
@@ -1258,6 +1259,7 @@ libjpeg.so.8:jpeg_simple_progression
 libjpeg.so.8:jpeg_start_compress
 libjpeg.so.8:jpeg_std_error
 libjpeg.so.8:jpeg_write_scanlines
+libm.so.6:floor
 libm.so.6:log2
 libm.so.6:pow
 libm.so.6:sqrt

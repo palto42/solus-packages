@@ -1,3 +1,9 @@
+aubiomfcc:_IO_stdin_used
+aubionotes:_IO_stdin_used
+aubioonset:_IO_stdin_used
+aubiopitch:_IO_stdin_used
+aubioquiet:_IO_stdin_used
+aubiotrack:_IO_stdin_used
 libaubio.so.5:aubio_autocorr
 libaubio.so.5:aubio_beattracking_checkstate
 libaubio.so.5:aubio_beattracking_do

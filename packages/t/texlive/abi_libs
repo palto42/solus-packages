@@ -4,7 +4,6 @@ axohelp
 dvibook
 dviconcat
 dvidvi
-dvipng
 dvips
 dviselect
 dvispc
@@ -32,8 +31,10 @@ prepmx
 tangle
 tex
 tex2aspc
+texprofile
 twill
 weave
 xdvi-xaw
+xdvipsk
 xetex
 xindy.run

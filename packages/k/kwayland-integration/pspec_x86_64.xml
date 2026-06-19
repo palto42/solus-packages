@@ -4,9 +4,12 @@
         <Homepage>https://www.kde.org/workspaces/plasmadesktop/</Homepage>
         <Packager>
             <Name>Troy Harvey</Name>
-            <Email>harveydevel@gmail.com</Email>
+            <Email>harvey@getsol.us</Email>
         </Packager>
+        <License>CC0-1.0</License>
+        <License>LGPL-2.0-or-later</License>
         <License>LGPL-2.1-only</License>
+        <License>LGPL-3.0-only</License>
         <PartOf>desktop.kde.core</PartOf>
         <Summary xml:lang="en">Provides integration plugins for various KDE frameworks</Summary>
         <Description xml:lang="en">Provides integration plugins for various KDE frameworks.
@@ -21,16 +24,21 @@
         <PartOf>desktop.kde.core</PartOf>
         <Files>
             <Path fileType="library">/usr/lib64/qt5/plugins/kf5/kwindowsystem/KF5WindowSystemKWaylandPlugin.so</Path>
+            <Path fileType="data">/usr/share/licenses/kwayland-integration/CC0-1.0.txt</Path>
+            <Path fileType="data">/usr/share/licenses/kwayland-integration/LGPL-2.0-or-later.txt</Path>
+            <Path fileType="data">/usr/share/licenses/kwayland-integration/LGPL-2.1-only.txt</Path>
+            <Path fileType="data">/usr/share/licenses/kwayland-integration/LGPL-3.0-only.txt</Path>
+            <Path fileType="data">/usr/share/licenses/kwayland-integration/LicenseRef-KDE-Accepted-LGPL.txt</Path>
             <Path fileType="data">/usr/share/qlogging-categories5/kwindowsystem.kwayland.categories</Path>
         </Files>
     </Package>
     <History>
-        <Update release="128">
-            <Date>2025-10-01</Date>
-            <Version>6.4.5</Version>
+        <Update release="138">
+            <Date>2026-05-12</Date>
+            <Version>6.6.5</Version>
             <Comment>Packaging update</Comment>
             <Name>Troy Harvey</Name>
-            <Email>harveydevel@gmail.com</Email>
+            <Email>harvey@getsol.us</Email>
         </Update>
     </History>
 </PISI>

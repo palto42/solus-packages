@@ -75,9 +75,12 @@ libgdk-3.so.0:gdk_atom_intern
 libgdk-3.so.0:gdk_atom_name
 libgdk-3.so.0:gdk_cursor_new_from_name
 libgdk-3.so.0:gdk_cursor_new_from_surface
+libgdk-3.so.0:gdk_display_get_default_seat
 libgdk-3.so.0:gdk_pixbuf_get_from_surface
 libgdk-3.so.0:gdk_screen_get_default
 libgdk-3.so.0:gdk_screen_get_rgba_visual
+libgdk-3.so.0:gdk_seat_grab
+libgdk-3.so.0:gdk_seat_ungrab
 libgdk-3.so.0:gdk_visual_get_depth
 libgdk-3.so.0:gdk_window_get_state
 libgdk-3.so.0:gdk_window_set_cursor
@@ -133,6 +136,7 @@ libgio-2.0.so.0:g_settings_schema_get_id
 libgio-2.0.so.0:g_settings_schema_source_get_default
 libgio-2.0.so.0:g_settings_schema_source_lookup
 libgio-2.0.so.0:g_settings_schema_unref
+libgio-2.0.so.0:g_settings_set
 libgio-2.0.so.0:g_settings_set_boolean
 libgio-2.0.so.0:g_simple_action_get_type
 libgio-2.0.so.0:g_simple_action_group_new
@@ -164,6 +168,7 @@ libglib-2.0.so.0:g_error_matches
 libglib-2.0.so.0:g_error_new_literal
 libglib-2.0.so.0:g_file_set_contents
 libglib-2.0.so.0:g_free
+libglib-2.0.so.0:g_free_sized
 libglib-2.0.so.0:g_get_user_config_dir
 libglib-2.0.so.0:g_get_user_runtime_dir
 libglib-2.0.so.0:g_get_user_special_dir
@@ -234,6 +239,7 @@ libglib-2.0.so.0:g_queue_pop_head
 libglib-2.0.so.0:g_queue_push_tail
 libglib-2.0.so.0:g_realloc_n
 libglib-2.0.so.0:g_return_if_fail_warning
+libglib-2.0.so.0:g_set_prgname
 libglib-2.0.so.0:g_slice_alloc
 libglib-2.0.so.0:g_slice_free1
 libglib-2.0.so.0:g_source_remove
@@ -257,6 +263,8 @@ libglib-2.0.so.0:g_variant_builder_end
 libglib-2.0.so.0:g_variant_builder_new
 libglib-2.0.so.0:g_variant_builder_unref
 libglib-2.0.so.0:g_variant_get_child
+libglib-2.0.so.0:g_variant_get_child_value
+libglib-2.0.so.0:g_variant_get_int32
 libglib-2.0.so.0:g_variant_lookup
 libglib-2.0.so.0:g_variant_n_children
 libglib-2.0.so.0:g_variant_new
@@ -426,6 +434,7 @@ libgtk-3.so.0:gtk_widget_get_display
 libgtk-3.so.0:gtk_widget_get_events
 libgtk-3.so.0:gtk_widget_get_name
 libgtk-3.so.0:gtk_widget_get_parent
+libgtk-3.so.0:gtk_widget_get_realized
 libgtk-3.so.0:gtk_widget_get_sensitive
 libgtk-3.so.0:gtk_widget_get_style_context
 libgtk-3.so.0:gtk_widget_get_type
@@ -449,8 +458,11 @@ libgtk-3.so.0:gtk_widget_show
 libgtk-3.so.0:gtk_widget_show_all
 libgtk-3.so.0:gtk_window_close
 libgtk-3.so.0:gtk_window_fullscreen
+libgtk-3.so.0:gtk_window_get_size
 libgtk-3.so.0:gtk_window_new
 libgtk-3.so.0:gtk_window_present
+libgtk-3.so.0:gtk_window_set_default_icon_name
+libgtk-3.so.0:gtk_window_set_default_size
 libgtk-3.so.0:gtk_window_set_modal
 libgtk-3.so.0:gtk_window_set_transient_for
 libgtk-3.so.0:gtk_window_unfullscreen
@@ -496,6 +508,7 @@ libhandy-1.so.0:hdy_status_page_set_icon_name
 libhandy-1.so.0:hdy_style_manager_get_default
 libhandy-1.so.0:hdy_style_manager_set_color_scheme
 libhandy-1.so.0:hdy_window_get_type
+libm.so.6:ceil
 libm.so.6:round
 libsecret-1.so.0:secret_password_clear
 libsecret-1.so.0:secret_password_clear_finish

@@ -3,15 +3,15 @@
         <Name>vc</Name>
         <Homepage>https://github.com/VcDevel/Vc</Homepage>
         <Packager>
-            <Name>Gavin Zhao</Name>
-            <Email>me@gzgz.dev</Email>
+            <Name>David Harder</Name>
+            <Email>david@davidjharder.ca</Email>
         </Packager>
         <License>BSD-3-Clause</License>
         <PartOf>programming</PartOf>
         <Summary xml:lang="en">SIMD Vector Classes for C++</Summary>
         <Description xml:lang="en">SIMD Vector Classes for C++
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>vc</Name>
@@ -183,16 +183,16 @@
             <Path fileType="library">/usr/lib64/cmake/Vc/VcMacros.cmake</Path>
             <Path fileType="library">/usr/lib64/cmake/Vc/VcTargets-relwithdebinfo.cmake</Path>
             <Path fileType="library">/usr/lib64/cmake/Vc/VcTargets.cmake</Path>
-            <Path fileType="library">/usr/lib64/libVc.a</Path>
+            <Path fileType="data">/usr/share/licenses/vc/LICENSE</Path>
         </Files>
     </Package>
     <History>
-        <Update release="6">
-            <Date>2022-10-26</Date>
-            <Version>1.4.3</Version>
+        <Update release="7">
+            <Date>2026-04-02</Date>
+            <Version>1.4.5</Version>
             <Comment>Packaging update</Comment>
-            <Name>Gavin Zhao</Name>
-            <Email>me@gzgz.dev</Email>
+            <Name>David Harder</Name>
+            <Email>david@davidjharder.ca</Email>
         </Update>
     </History>
 </PISI>

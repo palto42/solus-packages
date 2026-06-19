@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : ardour
-version    : '8.12'
-release    : 51
+version    : '9.7'
+release    : 56
 source     :
-    - git|https://github.com/Ardour/ardour.git : 8.12
+    - git|https://github.com/Ardour/ardour.git : 9.7
 homepage   : https://ardour.org/
 license    : GPL-3.0-or-later
 component  : multimedia.audio
@@ -21,6 +22,7 @@ builddeps  :
     - pkgconfig(jack)
     - pkgconfig(libarchive)
     - pkgconfig(libcurl)
+    - pkgconfig(libjpeg)
     - pkgconfig(liblo)
     - pkgconfig(libpulse-simple)
     - pkgconfig(libusb-1.0)
@@ -41,30 +43,36 @@ builddeps  :
     - pkgconfig(vamp)
     - itstool
     - libboost-devel
+environment: |
+    export LDFLAGS="${LDFLAGS} -Wl,-rpath=%libdir%/ardour9"
 setup      : |
     %apply_patches
-
+    
     %waf_configure \
         --use-external-libs \
-        --cxx11 \
-        --optimize \
-        --freedesktop \
-        --no-phone-home \
-        --libdir=%libdir% \
-        --no-ytk \
-        --with-backends=alsa,dummy,jack,pulseaudio
+            --optimize \
+            --freedesktop \
+            --no-phone-home \
+            --libdir=%libdir% \
+            --with-backends=alsa,dummy,jack,pulseaudio
 build      : |
     %waf_build
 install    : |
     %waf_install
 
+    # Fix utility symlinks
+    install -d $installdir/usr/bin
+    ln -sfv ../lib64/ardour9/utils/ardour9-export $installdir/usr/bin/ardour9-export
+    ln -sfv ../lib64/ardour9/utils/ardour9-new_empty_session $installdir/usr/bin/ardour9-new_empty_session
+    ln -sfv ../lib64/ardour9/utils/ardour9-new_session $installdir/usr/bin/ardour9-new_session
+    
+    %install_license COPYING
+
     for size in 16 22 32 48 256 512; do
         install -Dm0644 $workdir/gtk2_ardour/resources/Ardour-icon_${size}px.png $installdir/usr/share/icons/hicolor/${size}x${size}/apps/ardour.png
     done
 
-    sed -i 's/Icon=ardour8/Icon=ardour/g' $installdir/usr/share/applications/ardour8.desktop
-
-    install -Dm00644 $workdir/gtk2_ardour/resources/Ardour-icon_512px.png $installdir/usr/share/pixmaps/ardour.png
+    sed -i 's/Icon=ardour9/Icon=ardour/g' $installdir/usr/share/applications/ardour9.desktop
 
     # Add mimetype info for .ardour session files.
     install -Dm00644 build/gtk2_ardour/ardour.xml $installdir/usr/share/mime/packages/ardour.xml

@@ -1,9 +1,9 @@
 libFLAC.so.12
-libavformat.so.61
-libavutil.so.59
+libavformat.so.62
+libavutil.so.60
 libc.so.6
 libexif.so.12
-libid3tag.so.0.16.2
+libid3tag.so.0
 libjpeg.so.8
 libogg.so.0
 libsqlite3.so.0

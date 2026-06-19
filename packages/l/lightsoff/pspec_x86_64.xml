@@ -356,14 +356,14 @@
             <Path fileType="localedata">/usr/share/locale/zh_CN/LC_MESSAGES/lightsoff.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_HK/LC_MESSAGES/lightsoff.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_TW/LC_MESSAGES/lightsoff.mo</Path>
-            <Path fileType="man">/usr/share/man/man6/lightsoff.6</Path>
+            <Path fileType="man">/usr/share/man/man6/lightsoff.6.zst</Path>
             <Path fileType="data">/usr/share/metainfo/org.gnome.LightsOff.metainfo.xml</Path>
         </Files>
     </Package>
     <History>
-        <Update release="16">
-            <Date>2025-04-15</Date>
-            <Version>48.1</Version>
+        <Update release="17">
+            <Date>2026-03-20</Date>
+            <Version>50.0</Version>
             <Comment>Packaging update</Comment>
             <Name>Joey Riches</Name>
             <Email>josephriches@gmail.com</Email>

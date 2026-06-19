@@ -32,6 +32,9 @@ libGL.so.1:glFinish
 libGL.so.1:glGenTextures
 libGL.so.1:glGetString
 libGL.so.1:glPixelStorei
+libGL.so.1:glPopMatrix
+libGL.so.1:glPushMatrix
+libGL.so.1:glRotatef
 libGL.so.1:glTexCoord2f
 libGL.so.1:glTexImage2D
 libGL.so.1:glTexParameteri
@@ -49,6 +52,7 @@ libGLEW.so.2.2:__glewAttachShader
 libGLEW.so.2.2:__glewBindBuffer
 libGLEW.so.2.2:__glewBindVertexArray
 libGLEW.so.2.2:__glewBufferData
+libGLEW.so.2.2:__glewBufferSubData
 libGLEW.so.2.2:__glewCompileShader
 libGLEW.so.2.2:__glewCreateProgram
 libGLEW.so.2.2:__glewCreateShader
@@ -68,6 +72,7 @@ libGLEW.so.2.2:__glewShaderSource
 libGLEW.so.2.2:__glewUniform1i
 libGLEW.so.2.2:__glewUniform2f
 libGLEW.so.2.2:__glewUniform4f
+libGLEW.so.2.2:__glewUniformMatrix4fv
 libGLEW.so.2.2:__glewUseProgram
 libGLEW.so.2.2:__glewVertexAttribPointer
 libGLEW.so.2.2:__glewXSwapIntervalEXT
@@ -134,14 +139,18 @@ libc.so.6:__errno_location
 libc.so.6:__fdelt_chk
 libc.so.6:__fprintf_chk
 libc.so.6:__fread_chk
+libc.so.6:__isoc23_sscanf
+libc.so.6:__isoc23_strtol
+libc.so.6:__isoc23_strtoll
 libc.so.6:__isoc23_strtoul
-libc.so.6:__isoc99_sscanf
+libc.so.6:__isoc23_strtoull
 libc.so.6:__libc_start_main
 libc.so.6:__longjmp_chk
 libc.so.6:__memcpy_chk
 libc.so.6:__memmove_chk
 libc.so.6:__memset_chk
 libc.so.6:__printf_chk
+libc.so.6:__read_chk
 libc.so.6:__snprintf_chk
 libc.so.6:__sprintf_chk
 libc.so.6:__stack_chk_fail
@@ -209,6 +218,8 @@ libc.so.6:getpid
 libc.so.6:getpwuid
 libc.so.6:gettimeofday
 libc.so.6:getuid
+libc.so.6:glob
+libc.so.6:globfree
 libc.so.6:gmtime
 libc.so.6:in6addr_any
 libc.so.6:inet_addr
@@ -234,6 +245,8 @@ libc.so.6:open
 libc.so.6:opendir
 libc.so.6:perror
 libc.so.6:pipe
+libc.so.6:pthread_attr_init
+libc.so.6:pthread_attr_setstacksize
 libc.so.6:pthread_cond_signal
 libc.so.6:pthread_cond_wait
 libc.so.6:pthread_create
@@ -298,10 +311,6 @@ libc.so.6:strrchr
 libc.so.6:strstr
 libc.so.6:strtod
 libc.so.6:strtok
-libc.so.6:strtol
-libc.so.6:strtoll
-libc.so.6:strtoul
-libc.so.6:strtoull
 libc.so.6:system
 libc.so.6:tcgetattr
 libc.so.6:tcsetattr
@@ -309,7 +318,6 @@ libc.so.6:time
 libc.so.6:uname
 libc.so.6:ungetc
 libc.so.6:unlink
-libc.so.6:vfork
 libc.so.6:waitpid
 libc.so.6:write
 libcairo.so.2:cairo_arc
@@ -360,6 +368,7 @@ libcurl.so.4:curl_easy_getinfo
 libcurl.so.4:curl_easy_init
 libcurl.so.4:curl_easy_perform
 libcurl.so.4:curl_easy_recv
+libcurl.so.4:curl_easy_reset
 libcurl.so.4:curl_easy_send
 libcurl.so.4:curl_easy_setopt
 libcurl.so.4:curl_easy_strerror
@@ -375,13 +384,14 @@ libcurl.so.4:curl_multi_info_read
 libcurl.so.4:curl_multi_init
 libcurl.so.4:curl_multi_perform
 libcurl.so.4:curl_multi_poll
+libcurl.so.4:curl_multi_remove_handle
 libcurl.so.4:curl_multi_setopt
 libcurl.so.4:curl_multi_strerror
+libevdev.so.2:libevdev_event_code_get_name
 libevdev.so.2:libevdev_free
 libevdev.so.2:libevdev_get_abs_info
 libevdev.so.2:libevdev_get_id_product
 libevdev.so.2:libevdev_get_id_vendor
-libevdev.so.2:libevdev_get_id_version
 libevdev.so.2:libevdev_get_name
 libevdev.so.2:libevdev_has_event_code
 libevdev.so.2:libevdev_has_event_pending
@@ -765,8 +775,10 @@ libgtk-3.so.0:gtk_drawing_area_new
 libgtk-3.so.0:gtk_editable_set_editable
 libgtk-3.so.0:gtk_editable_set_position
 libgtk-3.so.0:gtk_entry_get_text
+libgtk-3.so.0:gtk_entry_get_visibility
 libgtk-3.so.0:gtk_entry_new
 libgtk-3.so.0:gtk_entry_set_icon_from_icon_name
+libgtk-3.so.0:gtk_entry_set_icon_sensitive
 libgtk-3.so.0:gtk_entry_set_icon_tooltip_markup
 libgtk-3.so.0:gtk_entry_set_icon_tooltip_text
 libgtk-3.so.0:gtk_entry_set_input_hints
@@ -774,6 +786,7 @@ libgtk-3.so.0:gtk_entry_set_input_purpose
 libgtk-3.so.0:gtk_entry_set_max_length
 libgtk-3.so.0:gtk_entry_set_placeholder_text
 libgtk-3.so.0:gtk_entry_set_text
+libgtk-3.so.0:gtk_entry_set_visibility
 libgtk-3.so.0:gtk_entry_set_width_chars
 libgtk-3.so.0:gtk_event_box_new
 libgtk-3.so.0:gtk_event_box_set_visible_window
@@ -1076,6 +1089,7 @@ libgtk-3.so.0:gtk_window_get_type
 libgtk-3.so.0:gtk_window_has_toplevel_focus
 libgtk-3.so.0:gtk_window_iconify
 libgtk-3.so.0:gtk_window_list_toplevels
+libgtk-3.so.0:gtk_window_maximize
 libgtk-3.so.0:gtk_window_move
 libgtk-3.so.0:gtk_window_new
 libgtk-3.so.0:gtk_window_present
@@ -1092,8 +1106,10 @@ libgtk-3.so.0:gtk_window_set_transient_for
 libgtk-3.so.0:gtk_window_unfullscreen
 libgtk-3.so.0:gtk_window_unmaximize
 libm.so.6:ceil
+libm.so.6:ceilf
 libm.so.6:cos
 libm.so.6:exp
+libm.so.6:floor
 libm.so.6:ldexp
 libm.so.6:log
 libm.so.6:log1p
@@ -1104,6 +1120,7 @@ libm.so.6:sin
 libm.so.6:sincos
 libm.so.6:sinf
 libm.so.6:sqrt
+libm.so.6:trunc
 libmpg123.so.0:mpg123_close
 libmpg123.so.0:mpg123_decode
 libmpg123.so.0:mpg123_delete
@@ -1116,8 +1133,10 @@ libmpg123.so.0:mpg123_length
 libmpg123.so.0:mpg123_new
 libmpg123.so.0:mpg123_open
 libmpg123.so.0:mpg123_open_feed
+libmpg123.so.0:mpg123_outblock
 libmpg123.so.0:mpg123_read
 libmpg123.so.0:mpg123_scan
+libmpg123.so.0:mpg123_volume
 libogg.so.0:ogg_page_eos
 libogg.so.0:ogg_stream_clear
 libogg.so.0:ogg_stream_flush
@@ -1184,6 +1203,7 @@ libpangocairo-1.0.so.0:pango_cairo_context_set_font_options
 libpangocairo-1.0.so.0:pango_cairo_font_get_scaled_font
 libpangocairo-1.0.so.0:pango_cairo_font_map_get_default
 libpangocairo-1.0.so.0:pango_cairo_font_map_get_type
+libpangocairo-1.0.so.0:pango_cairo_font_map_set_default
 libpangocairo-1.0.so.0:pango_cairo_show_glyph_string
 libpangocairo-1.0.so.0:pango_cairo_show_layout_line
 libpng16.so.16:png_create_info_struct

@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : gnome-sudoku
-version    : '48.1'
-release    : 27
+version    : '50.1'
+release    : 31
 source     :
-    - https://download.gnome.org/sources/gnome-sudoku/48/gnome-sudoku-48.1.tar.xz : 79713ad82a59904cd696ff02255eb6ed9364e88f3e783343b1f9d0ca09f2c7e3
+    - https://download.gnome.org/sources/gnome-sudoku/50/gnome-sudoku-50.1.tar.xz : 0b06c9777ecdb35a0fcd92d1649642549de816629f489f5d933315a34dcc7be2
 homepage   : https://gitlab.gnome.org/GNOME/gnome-sudoku/-/wikis/home
 license    : GPL-3.0-or-later
 component  : games.puzzle

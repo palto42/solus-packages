@@ -1,9 +1,10 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : groff
-version    : 1.22.4
-release    : 5
+version    : 1.24.1
+release    : 7
 source     :
-    - https://mirrors.rit.edu/gnu/groff/groff-1.22.4.tar.gz : e78e7b4cb7dec310849004fa88847c44701e8d133b5d4c13057d876c1bad0293
-homepage   : http://www.gnu.org/software/groff
+    - https://ftpmirror.gnu.org/gnu/groff/groff-1.24.1.tar.gz : 74e2819795b6aff431aeac983d63a9c8968eeaba2a2eba7df8ba4c7b41e7cfd8
+homepage   : https://www.gnu.org/software/groff/
 license    : GPL-3.0-or-later
 summary    : groff (Typesetting package to read formatted files)
 component  : desktop.base
@@ -22,3 +23,4 @@ install    : |
     %make_install
     ln -s eqn %installroot%/usr/bin/geqn
     ln -s tbl %installroot%/usr/bin/gtbl
+    %install_license COPYING LICENSES

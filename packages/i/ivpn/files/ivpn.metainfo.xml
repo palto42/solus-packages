@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+    <id>net.ivpn.desktop_app</id>
+
+    <name>IVPN</name>
+    <summary>Resist Online Surveillance</summary>
+
+    <metadata_license>CC0-1.0</metadata_license>
+    <project_license>GPL-3.0-or-later</project_license>
+
+    <url type="homepage">https://www.ivpn.net/en/apps-linux/</url>
+    <url type="bugtracker">https://github.com/ivpn/desktop-app/issues</url>
+    <url type="help">https://www.ivpn.net/knowledgebase/general/</url>
+    <url type="contact">https://www.ivpn.net/contactus/</url>
+    <url type="vcs-browser">https://github.com/ivpn/desktop-app</url>
+    <url type="contribute">https://github.com/ivpn/desktop-app?tab=contributing-ov-file</url>
+
+    <supports>
+        <control>pointing</control>
+        <control>keyboard</control>
+        <control>touch</control>
+    </supports>
+
+    <keywords>
+        <keyword translate="no">IVPN</keyword>
+        <keyword>vpn</keyword>
+        <keyword>system</keyword>
+    </keywords>
+
+    <requires>
+        <internet>always</internet>
+    </requires>
+
+    <developer id="net.ivpn.desktop_app">
+        <name>IVPN</name>
+    </developer>
+
+    <content_rating type="oars-1.1"/>
+
+    <description>
+        <p>
+            What you do online can be tracked by organizations you may not know or trust and become part of a permanent
+            record. A VPN can&apos;t solve this on its own, but can prevent your ISP from being able to share or sell
+            your data.
+        </p>
+        <p>
+            IVPN is an audited VPN service in operation since 2009. IVPN encrypts traffic between your device and VPN
+            servers, preventing your ISP, public Wi-Fi operators, and network observers from monitoring your activity.
+        </p>
+        <p>
+            Features
+        </p>
+        <ul>
+            <li>
+                Choice of WireGuard, OpenVPN or IPSec protocols using either the IVPN apps or any other compatible
+                VPN client
+            </li>
+            <li>
+                WireGuard privacy controls - Define a custom schedule for automatic key and IP address rotation.
+            </li>
+            <li>
+                AntiTracker that blocks ads, adware, malicious websites and data harvesting trackers.
+            </li>
+            <li>
+                Killswitch / Firewall option. Offers protection against DNS, IPv6, disconnection and WebRTC leaks.
+            </li>
+            <li>
+                Private non-logging DNS servers accessible through our VPN.
+            </li>
+            <li>
+                Multi-hop VPN routes. Connect through multiple servers in separate jurisdictions for enhanced
+                privacy.
+            </li>
+            <li>
+                Define trusted Wi-Fi networks and create rules for automatic connection / disconnection.
+            </li>
+            <li>
+                Pause VPN for when you need to disable the VPN temporarily after which connection is automatically
+                restored.
+            </li>
+            <li>
+                Obfsproxy to circumvent censorship
+            </li>
+        </ul>
+        <p>
+            Why choose IVPN?
+        </p>
+        <ul>
+            <li>
+                No Logs: We do not log any user activity relating to the use of the VPN service, as explained in our
+                clear privacy
+                policy.
+            </li>
+            <li>
+                No customer data: We&apos;re a privacy service, so we don&apos;t collect or store any personal data on
+                sign-up, not even your
+                email. We also accept cash, monero and bitcoin.
+            </li>
+            <li>
+                Open-source apps and website: The website and the IVPN app for all platforms are open-source for
+                additional transparency and security.
+            </li>
+            <li>
+                No cloud services or data storage: All servers managing the IVPN service are self-hosted and operated by
+                IVPN, including email and customer
+                service.
+            </li>
+            <li>
+                Independent security audits: We commit to annual security audits to improve our security practices and
+                transparency.
+            </li>
+            <li>
+                No fake reviews: We never pay for reviews and do not have an affiliate program, so you won&apos;t find
+                us on the &apos;top 10
+                best VPN&apos; lists.
+            </li>
+            <li>
+                No false promises or fluff: We don&apos;t promise anonymity or &apos;military grade encryption&apos;. We
+                publish extensive privacy
+                guides and educate our customers on what a VPN can realistically achieve.
+            </li>
+            <li>
+                Privacy advocates: We donate regularly to organizations fighting for the right to privacy like the EFF,
+                Open Rights Group, and
+                the Tor project.
+            </li>
+            <li>
+                Transparency: Our business model is exclusively based on paid subscriptions. We do not own any other VPN
+                services or VPN
+                review sites. Review the team operating IVPN and the company ownership.
+            </li>
+        </ul>
+    </description>
+
+    <releases>
+        <release version="3.15.6" date="2026-05-04">
+            <description>
+                <ul>
+                    <li>
+                        Improve portmaster compatibility
+                    </li>
+                    <li>
+                        Improve auto-connect to daemon
+                    </li>
+                </ul>
+            </description>
+        </release>
+        <release version="3.15.0" date="2025-12-04">
+            <description>
+                <ul>
+                    <li>
+                        Support multiple custom DNS servers
+                    </li>
+                    <li>
+                        Improve firewall rules
+                    </li>
+                    <li>
+                        Improve TTL when using custom DoH
+                    </li>
+                    <li>
+                        Fix connectivity loss after sleep
+                    </li>
+                    <li>
+                        General stability improvements
+                    </li>
+                </ul>
+            </description>
+        </release>
+    </releases>
+
+    <launchable type="desktop-id">IVPN.desktop</launchable>
+    <screenshots>
+        <screenshot type="default">
+            <image>
+                https://raw.githubusercontent.com/ivpn/desktop-app/refs/heads/development/.github/readme_images/ivpn_app_dark.png
+            </image>
+        </screenshot>
+        <screenshot>
+            <image>https://www.ivpn.net/images-static/uploads/apps/linux-app-3.3.7-dark@2x.png</image>
+        </screenshot>
+    </screenshots>
+</component>

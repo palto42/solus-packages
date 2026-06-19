@@ -15,7 +15,7 @@ libpugixml.so.1
 libsodium.so.26
 libsqlite3.so.0
 libstdc++.so.6
-libyaml-cpp.so.0.7
+libyaml-cpp.so.0.9
 libz.so.1
 libzfp.so.1
 libzmq.so.5

@@ -3,8 +3,8 @@
         <Name>sound-juicer</Name>
         <Homepage>https://gitlab.gnome.org/GNOME/sound-juicer</Homepage>
         <Packager>
-            <Name>Jakob Gezelius</Name>
-            <Email>jakob@knugen.nu</Email>
+            <Name>Evan Maddock</Name>
+            <Email>maddock.evan@vivaldi.net</Email>
         </Packager>
         <License>GPL-2.0-or-later</License>
         <PartOf>multimedia.audio</PartOf>
@@ -95,6 +95,7 @@
             <Path fileType="data">/usr/share/icons/hicolor/256x256/apps/org.gnome.SoundJuicer.png</Path>
             <Path fileType="data">/usr/share/icons/hicolor/32x32/apps/org.gnome.SoundJuicer.png</Path>
             <Path fileType="data">/usr/share/icons/hicolor/48x48/apps/org.gnome.SoundJuicer.png</Path>
+            <Path fileType="data">/usr/share/licenses/sound-juicer/COPYING</Path>
             <Path fileType="localedata">/usr/share/locale/ar/LC_MESSAGES/sound-juicer.mo</Path>
             <Path fileType="localedata">/usr/share/locale/as/LC_MESSAGES/sound-juicer.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ast/LC_MESSAGES/sound-juicer.mo</Path>
@@ -179,18 +180,18 @@
             <Path fileType="localedata">/usr/share/locale/zh_CN/LC_MESSAGES/sound-juicer.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_HK/LC_MESSAGES/sound-juicer.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_TW/LC_MESSAGES/sound-juicer.mo</Path>
-            <Path fileType="man">/usr/share/man/man1/sound-juicer.1</Path>
+            <Path fileType="man">/usr/share/man/man1/sound-juicer.1.zst</Path>
             <Path fileType="data">/usr/share/metainfo/org.gnome.SoundJuicer.metainfo.xml</Path>
             <Path fileType="data">/usr/share/sound-juicer/rhythmbox.gep</Path>
         </Files>
     </Package>
     <History>
-        <Update release="15">
-            <Date>2025-01-11</Date>
+        <Update release="16">
+            <Date>2026-03-17</Date>
             <Version>3.40.0</Version>
             <Comment>Packaging update</Comment>
-            <Name>Jakob Gezelius</Name>
-            <Email>jakob@knugen.nu</Email>
+            <Name>Evan Maddock</Name>
+            <Email>maddock.evan@vivaldi.net</Email>
         </Update>
     </History>
 </PISI>

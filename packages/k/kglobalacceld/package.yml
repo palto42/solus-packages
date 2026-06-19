@@ -1,10 +1,12 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kglobalacceld
-version    : 6.4.5
-release    : 37
+version    : 6.6.5
+release    : 50
 source     :
-    - https://download.kde.org/stable/plasma/6.4.5/kglobalacceld-6.4.5.tar.xz : a712d1f7a86960292feb6979fe2c92f2e7d5cfbcd107f4efe3979e1a4c32cd73
+    - https://download.kde.org/stable/plasma/6.6.5/kglobalacceld-6.6.5.tar.xz : 33c95fb7b3cddab5766e0cb063a721af5f796b2841114183a6246e0ef557edc3
 homepage   : https://kde.org/plasma-desktop/
 license    :
+    - CC0-1.0
     - LGPL-2.0-or-later
     - LGPL-2.1-only
     - LGPL-3.0-only
@@ -36,3 +38,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*

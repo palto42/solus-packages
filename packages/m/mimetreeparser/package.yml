@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : mimetreeparser
-version    : 25.08.2
-release    : 24
+version    : 26.04.2
+release    : 34
 source     :
-    - https://download.kde.org/stable/release-service/25.08.2/src/mimetreeparser-25.08.2.tar.xz : fa32d41c268474c0e4524f565c48325e5d1d9082796dd67608a9bea5146bedb2
+    - https://download.kde.org/stable/release-service/26.04.2/src/mimetreeparser-26.04.2.tar.xz : f15b6268261255888e3e986d67b8f39f0d57144e87d99b46e8fabe78cad300dc
 homepage   : https://invent.kde.org/pim/mimetreeparser
 license    :
     - BSD-2-Clause
@@ -15,7 +16,9 @@ license    :
     - LGPL-2.0-only
     - LGPL-2.0-or-later
     - LGPL-2.1-only
+    - LGPL-2.1-or-later
     - LGPL-3.0-only
+    - MIT
 component  : desktop.library
 summary    : Parser for MIME trees
 description: |
@@ -27,6 +30,7 @@ builddeps  :
     - kf6-kcolorscheme-devel
     - kf6-kconfig-devel
     - kf6-ki18n-devel
+    - kf6-kio-devel
     - kf6-kwidgetsaddons-devel
     - kmbox-devel
     - kmime-devel
@@ -47,3 +51,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*

@@ -1,5 +1,4 @@
 avicap32.so
-bcrypt.so
 crypt32.so
 ctapi32.so
 dnsapi.so
@@ -19,7 +18,7 @@ qcap.so
 sane.so
 secur32.so
 win32u.so
-wine64
+wine
 winealsa.so
 winebth.so
 winebus.so

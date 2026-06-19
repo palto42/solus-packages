@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : chromaprint
-version    : 1.5.1
-release    : 11
+version    : 1.6.0
+release    : 13
 source     :
-    - https://github.com/acoustid/chromaprint/archive/v1.5.1.tar.gz : a1aad8fa3b8b18b78d3755b3767faff9abb67242e01b478ec9a64e190f335e1c
+    - https://github.com/acoustid/chromaprint/archive/v1.6.0.tar.gz : 65bfce4a35b2e673dbcda917b6aa577e2f145cf805243d19e6a50fea2a520c2a
 license    : LGPL-2.1-or-later
 component  : programming.library
 homepage   : https://acoustid.org/chromaprint
@@ -16,16 +17,12 @@ builddeps  :
 checkdeps  :
     - pkgconfig(gtest)
 setup      : |
-    %patch -p1 -i $pkgfiles/ffmpeg-5-1.patch
-    %patch -p1 -i $pkgfiles/ffmpeg-5-2.patch
-    %patch -p1 -i $pkgfiles/ffmpeg-5-3.patch
-    %patch -p1 -i $pkgfiles/ffmpeg-7.patch
-
     %cmake_ninja -DBUILD_TESTS=ON \
                  -DBUILD_TOOLS=ON
 build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSE.md
 check      : |
-    ninja check %JOBS% -C solusBuildDir
+    %ninja_check %JOBS% -C solusBuildDir

@@ -1,0 +1,33 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Florian=20M=C3=BCllner?= <fmuellner@gnome.org>
+Date: Fri, 21 Nov 2025 19:40:43 +0100
+Subject: [PATCH] gi: Allow optional inout arguments to be null
+
+When checking whether a provided argument can be null, we currently
+only consider the `nullable` annotation.
+
+While that is correct for "in" parameters, for "inout" parameters
+it is the `optional` annotation that indicates that the argument
+itself can be null (like for "out" parameters), while `nullable`
+means that the argument may *point* to null.
+
+It should be valid to pass `null` for optional "inout" parameters
+(like it is in C), so explicitly handle this case.
+---
+ gi/arg-cache.cpp | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/gi/arg-cache.cpp b/gi/arg-cache.cpp
+index d11e8ed3a4ff..1bc325c07e4f 100644
+--- a/gi/arg-cache.cpp
++++ b/gi/arg-cache.cpp
+@@ -3642,6 +3642,9 @@ void ArgsCache::build_arg(uint8_t gi_index, GIDirection direction,
+     GjsArgumentFlags flags = GjsArgumentFlags::NONE;
+     if (arg.may_be_null())
+         flags |= GjsArgumentFlags::MAY_BE_NULL;
++    if ((direction == GI_DIRECTION_OUT || direction == GI_DIRECTION_INOUT) &&
++        arg.is_optional())
++        flags |= GjsArgumentFlags::MAY_BE_NULL;
+     if (arg.caller_allocates())
+         flags |= GjsArgumentFlags::CALLER_ALLOCATES;
+ 

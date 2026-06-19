@@ -1,9 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : hiprand
-version    : 2.11.1
-release    : 5
+version    : 7.2.0
+release    : 7
 source     :
-    # tag: rocm-6.2.4
-    - git|https://github.com/ROCmSoftwarePlatform/hipRAND.git : 9cb2d17f18662f8525f857a7c13ae5be233194c4
+    - https://github.com/ROCm/rocm-libraries/archive/refs/tags/rocm-7.2.0.tar.gz : 8ad5f4a11f1ed8a7b927f2e65f24083ca6ce902a42021a66a815190a91ccb654
 homepage   : https://github.com/ROCmSoftwarePlatform/hipRAND
 license    : MIT
 component  : programming.library
@@ -14,15 +14,16 @@ builddeps  :
     - rocrand-devel
     - rocm-cmake
     - rocm-hip
+    - rocm-llvm
 environment: |
     export CXXFLAGS="${CXXFLAGS/-D_FORTIFY_SOURCE=2 -fstack-protector-strong --param=ssp-buffer-size=32/-fcf-protection=none}"
 
     export ROCM_PATH=/usr
     export HIP_CLANG_PATH=/usr/lib64/llvm-rocm/bin
-    export DEVICE_LIB_PATH=/usr/lib64/amdgcn/bitcode
+    export HIP_DEVICE_LIB_PATH=/usr/lib64/amdgcn/bitcode
 setup      : |
-    %cmake_ninja -L \
-      -DCMAKE_CXX_COMPILER=hipcc \
+    %cmake_ninja -S projects/hiprand -L \
+      -DCMAKE_CXX_COMPILER=$HIP_CLANG_PATH/clang++ \
       -DCMAKE_INSTALL_LIBDIR=lib%LIBSUFFIX% \
       -DROCM_SYMLINK_LIBS=OFF \
       -DAMDGPU_TARGETS="%AMDGPUTARGETS%"

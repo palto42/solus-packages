@@ -1,6 +1,5 @@
 libc.so.6:__ctype_b_loc
 libc.so.6:__fprintf_chk
-libc.so.6:__isoc99_sscanf
 libc.so.6:__snprintf_chk
 libc.so.6:__stack_chk_fail
 libc.so.6:calloc
@@ -19,6 +18,7 @@ libserd-0.so.0:serd_env_new
 libserd-0.so.0:serd_env_set_base_uri
 libserd-0.so.0:serd_file_uri_parse
 libserd-0.so.0:serd_free
+libserd-0.so.0:serd_node_copy
 libserd-0.so.0:serd_node_free
 libserd-0.so.0:serd_node_from_string
 libserd-0.so.0:serd_node_new_blob

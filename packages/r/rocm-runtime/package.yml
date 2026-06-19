@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : rocm-runtime
-version    : 6.2.4
-release    : 7
+version    : 7.2.0
+release    : 10
 source     :
-    - https://github.com/ROCm/ROCR-Runtime/archive/refs/tags/rocm-6.2.4.tar.gz : b7aa0055855398d1228c39a6f4feb7d7be921af4f43d82855faf0b531394bb9b
+    - https://github.com/ROCm/rocm-systems/archive/refs/tags/rocm-7.2.0.tar.gz : 728ea7e9bf16e6ed217a0fd1a8c9afaba2dae2e7908fa4e27201e67c803c5638
 homepage   : https://github.com/RadeonOpenCompute/ROCR-Runtime
 license    : NCSA
 component  : programming.devel
@@ -12,9 +13,9 @@ description: |
 builddeps  :
     - pkgconfig(libdrm)
     - pkgconfig(libelf)
-    - pkgconfig(libhsakmt)
     - pkgconfig(numa)
     - rocm-device-libs-devel
+    - rocprofiler-register-devel
     - rocm-llvm
     - vim # they need the xxd executable during build
 environment: |
@@ -22,8 +23,10 @@ environment: |
     export CMAKE_PREFIX_PATH=/usr/lib64/llvm-rocm
     export HIP_DEVICE_LIB_PATH=/usr/lib64/amdgcn/bitcode
 setup      : |
-    %patch -p1 -i $pkgfiles/0004-extend-isa-compatibility-check.patch
-    %cmake_ninja -S src -L
+    %apply_patches
+
+    %cmake_ninja -S projects/rocr-runtime -L \
+      -DBUILD_SHARED_LIBS=ON
 build      : |
     %ninja_build
 install    : |

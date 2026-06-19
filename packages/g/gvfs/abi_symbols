@@ -1,3 +1,7 @@
+gvfs-udisks2-volume-monitor:_IO_stdin_used
+gvfsd-admin:_IO_stdin_used
+gvfsd-dav:_IO_stdin_used
+gvfsd-dnssd:_IO_stdin_used
 gvfsd-google:_IO_stdin_used
 gvfsd-google:__bss_start
 gvfsd-google:__data_start
@@ -10,6 +14,8 @@ gvfsd-google:daemon_parse_args
 gvfsd-google:daemon_setup
 gvfsd-google:g_vfs_backend_google_get_type
 gvfsd-google:main
+gvfsd-smb:_IO_stdin_used
+gvfsd-smb-browse:_IO_stdin_used
 libgioremote-volume-monitor.so:g_io_module_load
 libgioremote-volume-monitor.so:g_io_module_query
 libgioremote-volume-monitor.so:g_io_module_unload
@@ -54,6 +60,7 @@ libgvfscommon.so:g_mount_spec_copy
 libgvfscommon.so:g_mount_spec_equal
 libgvfscommon.so:g_mount_spec_from_dbus
 libgvfscommon.so:g_mount_spec_get
+libgvfscommon.so:g_mount_spec_get_is_valid
 libgvfscommon.so:g_mount_spec_get_type
 libgvfscommon.so:g_mount_spec_get_unique_for
 libgvfscommon.so:g_mount_spec_hash

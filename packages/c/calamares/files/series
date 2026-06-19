@@ -1,5 +1,4 @@
 patches/downstream/0001-Don-t-spawn-a-new-shell-when-starting.patch
-patches/downstream/0001-Solus-Skip-adding-boot-partition.patch
-patches/downstream/0001-Solus-Create-boot-partition-for-BIOS-installs.patch
-patches/downstream/0001-partition-Hide-Volume-Group-buttons.patch
-patches/downstream/0001-bootloader-Fix-clr-boot-manager-cmdline-parameters.patch
+patches/downstream/0002-Solus-Skip-adding-boot-partition.patch
+patches/downstream/0003-bootloader-Fix-clr-boot-manager-cmdline-parameters.patch
+patches/downstream/0004-Solus-Only-install-hybrid-bootloader-on-non-EFI.patch

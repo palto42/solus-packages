@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : glibmm-2.68
-version    : 2.84.0
-release    : 8
+version    : 2.88.0
+release    : 10
 source     :
-    - https://download.gnome.org/sources/glibmm/2.84/glibmm-2.84.0.tar.xz : 56ee5f51c8acfc0afdf46959316e4c8554cb50ed2b6bc5ce389d979cbb642509
+    - https://download.gnome.org/sources/glibmm/2.88/glibmm-2.88.0.tar.xz : a6549da3a6c43de83b8717dae5413c57a60d92f6ecc624615c612d0bb0ad0fe2
 homepage   : https://gtkmm.org
 license    : LGPL-2.1-or-later
 component  : desktop.gtk

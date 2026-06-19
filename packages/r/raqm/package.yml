@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : raqm
-version    : 0.7.1
-release    : 1
+version    : 0.10.4
+release    : 3
 source     :
-    - https://github.com/HOST-Oman/libraqm/releases/download/v0.7.1/raqm-0.7.1.tar.gz : 86488cf0b8ac736943fa748bd812000db63cc5ab6ad69c942e68e5187f4b9828
+    - https://github.com/HOST-Oman/libraqm/archive/refs/tags/v0.10.4.tar.gz : 6b583fb0eb159a3727a1e8c653bb0294173a14af8eb60195a775879de72320a3
 license    : MIT
 homepage   : https://host-oman.github.io/libraqm/
 component  : multimedia.library
@@ -16,9 +17,11 @@ builddeps  :
     - pkgconfig32(fribidi)
     - pkgconfig32(harfbuzz)
 setup      : |
-    %configure --disable-static
+    %meson_configure
 build      : |
-    %make
+    %ninja_build
 install    : |
-    %make_install
-    rm -r $installdir/usr/share
+    %ninja_install
+    %install_license COPYING
+check      : |
+    %ninja_check

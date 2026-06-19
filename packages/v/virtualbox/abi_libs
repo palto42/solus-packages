@@ -31,10 +31,12 @@ VBoxTraceLogDecoders.so
 VBoxVMM.so
 VBoxVMMArm.so
 VBoxVMMPreload.so
+VBoxVRDP.so
 VBoxXPCOM.so
 VBoxXPCOMIPCC.so
 VBoxXPCOMIPCD.so
 VMMR0.r0
+VirtualBox
 VirtualBoxVM.so
 mount.vboxsf
 pam_vbox.so

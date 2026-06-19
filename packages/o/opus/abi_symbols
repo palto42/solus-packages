@@ -1,4 +1,5 @@
 libopus.so.0:opus_custom_decode
+libopus.so.0:opus_custom_decode24
 libopus.so.0:opus_custom_decode_float
 libopus.so.0:opus_custom_decoder_create
 libopus.so.0:opus_custom_decoder_ctl
@@ -6,6 +7,7 @@ libopus.so.0:opus_custom_decoder_destroy
 libopus.so.0:opus_custom_decoder_get_size
 libopus.so.0:opus_custom_decoder_init
 libopus.so.0:opus_custom_encode
+libopus.so.0:opus_custom_encode24
 libopus.so.0:opus_custom_encode_float
 libopus.so.0:opus_custom_encoder_create
 libopus.so.0:opus_custom_encoder_ctl
@@ -15,11 +17,13 @@ libopus.so.0:opus_custom_encoder_init
 libopus.so.0:opus_custom_mode_create
 libopus.so.0:opus_custom_mode_destroy
 libopus.so.0:opus_decode
+libopus.so.0:opus_decode24
 libopus.so.0:opus_decode_float
 libopus.so.0:opus_decoder_create
 libopus.so.0:opus_decoder_ctl
 libopus.so.0:opus_decoder_destroy
 libopus.so.0:opus_decoder_dred_decode
+libopus.so.0:opus_decoder_dred_decode24
 libopus.so.0:opus_decoder_dred_decode_float
 libopus.so.0:opus_decoder_get_nb_samples
 libopus.so.0:opus_decoder_get_size
@@ -35,6 +39,7 @@ libopus.so.0:opus_dred_get_size
 libopus.so.0:opus_dred_parse
 libopus.so.0:opus_dred_process
 libopus.so.0:opus_encode
+libopus.so.0:opus_encode24
 libopus.so.0:opus_encode_float
 libopus.so.0:opus_encoder_create
 libopus.so.0:opus_encoder_ctl
@@ -43,6 +48,7 @@ libopus.so.0:opus_encoder_get_size
 libopus.so.0:opus_encoder_init
 libopus.so.0:opus_get_version_string
 libopus.so.0:opus_multistream_decode
+libopus.so.0:opus_multistream_decode24
 libopus.so.0:opus_multistream_decode_float
 libopus.so.0:opus_multistream_decoder_create
 libopus.so.0:opus_multistream_decoder_ctl
@@ -50,6 +56,7 @@ libopus.so.0:opus_multistream_decoder_destroy
 libopus.so.0:opus_multistream_decoder_get_size
 libopus.so.0:opus_multistream_decoder_init
 libopus.so.0:opus_multistream_encode
+libopus.so.0:opus_multistream_encode24
 libopus.so.0:opus_multistream_encode_float
 libopus.so.0:opus_multistream_encoder_create
 libopus.so.0:opus_multistream_encoder_ctl
@@ -75,6 +82,7 @@ libopus.so.0:opus_projection_ambisonics_encoder_create
 libopus.so.0:opus_projection_ambisonics_encoder_get_size
 libopus.so.0:opus_projection_ambisonics_encoder_init
 libopus.so.0:opus_projection_decode
+libopus.so.0:opus_projection_decode24
 libopus.so.0:opus_projection_decode_float
 libopus.so.0:opus_projection_decoder_create
 libopus.so.0:opus_projection_decoder_ctl
@@ -82,6 +90,7 @@ libopus.so.0:opus_projection_decoder_destroy
 libopus.so.0:opus_projection_decoder_get_size
 libopus.so.0:opus_projection_decoder_init
 libopus.so.0:opus_projection_encode
+libopus.so.0:opus_projection_encode24
 libopus.so.0:opus_projection_encode_float
 libopus.so.0:opus_projection_encoder_ctl
 libopus.so.0:opus_projection_encoder_destroy

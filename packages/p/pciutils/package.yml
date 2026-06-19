@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : pciutils
-version    : 3.13.0
-release    : 14
+version    : 3.15.0
+release    : 15
 source     :
-    - https://mirrors.edge.kernel.org/pub/software/utils/pciutils/pciutils-3.13.0.tar.xz : 77f11f78298502634d1af50308f15a5788629f6cf45cba376f5009aea4cb4926
+    - https://mj.ucw.cz/download/linux/pci/pciutils-3.15.0.tar.gz : a42e6e3f76fb6b1f6ac2e08cdd151f6bf78bc4f6312c591f4b6ec197582ede3a
 homepage   : https://mj.ucw.cz/sw/pciutils/
 license    : GPL-2.0-only
 component  : system.utils
@@ -45,3 +46,5 @@ install    : |
 
     # This is handled by hwdata package
     rm -rfv $installdir/usr/share/hwdata
+
+    %install_license COPYING

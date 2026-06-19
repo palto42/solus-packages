@@ -1,10 +1,15 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kdebugsettings
-version    : 25.08.2
-release    : 79
+version    : 26.04.2
+release    : 85
 source     :
-    - https://download.kde.org/stable/release-service/25.08.2/src/kdebugsettings-25.08.2.tar.xz : 06bb7e41dc45dbcc8a381c316d23f0fb200a9cc6c7f19aeb9b4db5760e1ef3ed
+    - https://download.kde.org/stable/release-service/26.04.2/src/kdebugsettings-26.04.2.tar.xz : d459d7d218e19ef9c9f0439bf0e409d5effb900efb30dcc829ff9bd49433bf73
 homepage   : https://kde.org/applications/development/org.kde.kdebugsettings
-license    : LGPL-2.0-or-later
+license    :
+    - BSD-3-Clause
+    - CC0-1.0
+    - LGPL-2.0-or-later
+    - MIT
 component  : desktop.kde
 summary    : Application to enable/disable qCDebug
 description: |
@@ -19,6 +24,7 @@ builddeps  :
     - kf6-ki18n-devel
     - kf6-kiconthemes-devel
     - kf6-kwidgetsaddons-devel
+    - kf6-kwindowsystem-devel
     - kf6-kxmlgui-devel
 clang      : true
 optimize   :
@@ -30,5 +36,7 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*
+
     # Fix appstream processing
     install -Dm00644 $workdir/logo.png $installdir/usr/share/icons/hicolor/128x128/apps/debug-run.png

@@ -1,10 +1,12 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kf6-kdav
-version    : 6.19.0
-release    : 25
+version    : 6.27.0
+release    : 33
 source     :
-    - https://download.kde.org/stable/frameworks/6.19/kdav-6.19.0.tar.xz : 7753b9a87d9b5a99ffc0a8c59e98dbd66acade5729d5ae2f0a6d3fbe66ea0a92
+    - https://download.kde.org/stable/frameworks/6.27/kdav-6.27.0.tar.xz : e0af4190960d65f5c8475f01213ea4e68a07763ffeaa6766de4b7f50529e0498
 homepage   : https://community.kde.org/Frameworks
 license    :
+    - CC0-1.0
     - GPL-2.0-or-later
     - LGPL-2.0-or-later
 component  : desktop.library
@@ -24,3 +26,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*

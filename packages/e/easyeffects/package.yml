@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : easyeffects
-version    : 7.2.5
-release    : 24
+version    : 8.2.2
+release    : 29
 source     :
-    - https://github.com/wwmm/easyeffects/archive/refs/tags/v7.2.5.tar.gz : d86877b12648a24b3b21a56d16d5680ee2585d575878ecdcea1b9bd9bb428191
+    - https://github.com/wwmm/easyeffects/archive/refs/tags/v8.2.2.tar.gz : 291b6b1913d828164dda77d37f74a3c2171884cecdcf8b29458dec78df62572f
 homepage   : https://github.com/wwmm/easyeffects
 license    : GPL-3.0-or-later
 component  : multimedia.audio
@@ -10,54 +11,63 @@ summary    : Audio effects for PipeWire applications
 description: |
     Limiter, compressor, convolver, equalizer and auto volume and many other plugins for PipeWire applications
 builddeps  :
+    - pkgconfig(Qt6Core)
+    - pkgconfig(Qt6DBus)
+    - pkgconfig(Qt6Graphs)
+    - pkgconfig(Qt6Gui)
+    - pkgconfig(Qt6Network)
+    - pkgconfig(Qt6Qml)
+    - pkgconfig(Qt6Quick)
+    - pkgconfig(Qt6QuickControls2)
+    - pkgconfig(Qt6Widgets)
     - pkgconfig(fftw3)
     - pkgconfig(fftw3f)
-    - pkgconfig(fmt)
-    - pkgconfig(glib-2.0)
     - pkgconfig(gsl)
-    - pkgconfig(gtk4)
-    - pkgconfig(libadwaita-1)
     - pkgconfig(libbs2b)
     - pkgconfig(libebur128)
-    - pkgconfig(libeconf)
+    - pkgconfig(libmysofa)
     - pkgconfig(libpipewire-0.3)
-    - pkgconfig(libportal-gtk4)
+    - pkgconfig(libportal)
+    - pkgconfig(libportal-qt6)
     - pkgconfig(lilv-0)
-    - pkgconfig(lv2)
     - pkgconfig(nlohmann_json)
     - pkgconfig(rnnoise)
-    - pkgconfig(rubberband)
-    - pkgconfig(samplerate)
-    - pkgconfig(sigc++-3.0)
     - pkgconfig(sndfile)
     - pkgconfig(soundtouch)
     - pkgconfig(speexdsp)
     - pkgconfig(tbb)
-    - appstream-glib
-    - desktop-file-utils
-    - itstool
+    - pkgconfig(webrtc-audio-processing-2)
+    - extra-cmake-modules
+    - kf6-kcolorscheme-devel
+    - kf6-kconfig-devel
+    - kf6-kconfigwidgets-devel
+    - kf6-kcoreaddons-devel
+    - kf6-ki18n-devel
+    - kf6-kiconthemes-devel
+    - kf6-kirigami-devel
+    - kf6-qqc2-desktop-style-devel
+    - kirigami-addons-devel
     - ladspa-devel
     - zita-convolver-devel
 rundeps    :
     - calf
     - deepfilternet
     - fmt
+    - kf6-qqc2-desktop-style
+    - kirigami-addons
     - lsp-plugins
     - mda-lv2
+    - qt6-graphs
     - yelp
     - zam-plugins
 clang      : true
 setup      : |
-    # https://github.com/llvm/llvm-project/issues/65125
-    # error: no member named 'par_unseq' in namespace 'std::execution'
-    export CXXFLAGS="${CXXFLAGS} -fexperimental-library"
-
-    %meson_configure \
-        -Denable-libcpp-workarounds=true
+    %cmake_ninja
 build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSE
 replaces   :
     - pulseeffects
     - dbginfo : pulseeffects-dbginfo

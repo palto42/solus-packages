@@ -24,12 +24,44 @@
             <Path fileType="executable">/usr/bin/gsr-kms-server</Path>
             <Path fileType="library">/usr/lib/modprobe.d/gsr-nvidia.conf</Path>
             <Path fileType="library">/usr/lib/systemd/user/gpu-screen-recorder.service</Path>
+            <Path fileType="data">/usr/share/gpu-screen-recorder/scripts/interactive.sh</Path>
+            <Path fileType="data">/usr/share/gpu-screen-recorder/scripts/list-sinks.sh</Path>
+            <Path fileType="data">/usr/share/gpu-screen-recorder/scripts/record-application-name.sh</Path>
+            <Path fileType="data">/usr/share/gpu-screen-recorder/scripts/record-save-application-name.sh</Path>
+            <Path fileType="data">/usr/share/gpu-screen-recorder/scripts/replay-application-name.sh</Path>
+            <Path fileType="data">/usr/share/gpu-screen-recorder/scripts/save-recording.sh</Path>
+            <Path fileType="data">/usr/share/gpu-screen-recorder/scripts/save-replay.sh</Path>
+            <Path fileType="data">/usr/share/gpu-screen-recorder/scripts/start-recording.sh</Path>
+            <Path fileType="data">/usr/share/gpu-screen-recorder/scripts/start-replay.sh</Path>
+            <Path fileType="data">/usr/share/gpu-screen-recorder/scripts/start-stop-recording.sh</Path>
+            <Path fileType="data">/usr/share/gpu-screen-recorder/scripts/stop-replay.sh</Path>
+            <Path fileType="data">/usr/share/gpu-screen-recorder/scripts/toggle-recording-selected.sh</Path>
+            <Path fileType="data">/usr/share/gpu-screen-recorder/scripts/toggle-recording.sh</Path>
+            <Path fileType="data">/usr/share/gpu-screen-recorder/scripts/twitch-stream-local-copy.sh</Path>
+            <Path fileType="data">/usr/share/gpu-screen-recorder/scripts/twitch-stream.sh</Path>
+            <Path fileType="data">/usr/share/gpu-screen-recorder/scripts/youtube-hls-stream.sh</Path>
+            <Path fileType="data">/usr/share/licenses/gpu-screen-recorder/LICENSE</Path>
+            <Path fileType="man">/usr/share/man/man1/gpu-screen-recorder.1.zst</Path>
+            <Path fileType="man">/usr/share/man/man1/gsr-kms-server.1.zst</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>gpu-screen-recorder-devel</Name>
+        <Summary xml:lang="en">Development files for gpu-screen-recorder</Summary>
+        <Description xml:lang="en">This is a screen recorder that has minimal impact on system performance by recording your monitor using the GPU only, similar to shadowplay on windows. This is the fastest screen recording tool for Linux.
+</Description>
+        <PartOf>programming.devel</PartOf>
+        <RuntimeDependencies>
+            <Dependency release="3">gpu-screen-recorder</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include/gsr/plugin.h</Path>
         </Files>
     </Package>
     <History>
-        <Update release="2">
-            <Date>2025-05-08</Date>
-            <Version>5.5.1</Version>
+        <Update release="3">
+            <Date>2026-04-27</Date>
+            <Version>5.13.3</Version>
             <Comment>Packaging update</Comment>
             <Name>Robert Gonzalez</Name>
             <Email>uni.dos12@outlook.com</Email>

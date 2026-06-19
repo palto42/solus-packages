@@ -17,6 +17,7 @@ libbrasero-media3.so.1:brasero_medium_monitor_get_drive
 libbrasero-media3.so.1:brasero_medium_monitor_get_drives
 libbrasero-media3.so.1:brasero_medium_monitor_is_probing
 libc.so.6:__errno_location
+libc.so.6:__isoc23_strtol
 libc.so.6:__libc_start_main
 libc.so.6:__stack_chk_fail
 libc.so.6:access
@@ -33,7 +34,6 @@ libc.so.6:strcasecmp
 libc.so.6:strcmp
 libc.so.6:strcpy
 libc.so.6:strlen
-libc.so.6:strtol
 libc.so.6:textdomain
 libcanberra-gtk3.so.0:ca_gtk_play_for_widget
 libdiscid.so.0:discid_free

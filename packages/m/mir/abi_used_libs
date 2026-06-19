@@ -6,11 +6,10 @@ libX11-xcb.so.1
 libX11.so.6
 libXcursor.so.1
 libapparmor.so.1
-libboost_filesystem.so.1.83.0
 libboost_iostreams.so.1.83.0
 libboost_program_options.so.1.83.0
 libc.so.6
-libdisplay-info.so.2
+libdisplay-info.so.3
 libdrm.so.2
 libepoxy.so.0
 libfreetype.so.6
@@ -41,4 +40,4 @@ libxcb.so.1
 libxkbcommon-x11.so.0
 libxkbcommon.so.0
 libxml++-2.6.so.2
-libyaml-cpp.so.0.7
+libyaml-cpp.so.0.9

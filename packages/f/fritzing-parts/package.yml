@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : fritzing-parts
-version    : 1.0.5
-release    : 8
+version    : 1.0.7
+release    : 11
 source     :
     # This must be a git clone according to: https://github.com/fritzing/fritzing-app/wiki/2.1-Part-file-format
-    # Use latest commit from branch "1.0.4"
-    - git|https://github.com/fritzing/fritzing-parts.git : 4f7d39b22a6c307e6cca62c7f78eae96696e8b2c
+    # Use latest commit from the release branch of the current version.
+    - git|https://github.com/fritzing/fritzing-parts.git : 70a1773402e8c76a77795637de482a83db3ca6d7
 homepage   : https://fritzing.org/
 license    : CC-BY-SA-3.0
 component  : programming
@@ -28,3 +29,5 @@ install    : |
     rm -r $installdir/usr/share/fritzing/fritzing-parts/.git*
     rm $installdir/usr/share/fritzing/fritzing-parts/*.md
     rm $installdir/usr/share/fritzing/fritzing-parts/*.txt
+
+    %install_license LICENSE.txt

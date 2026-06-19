@@ -6,7 +6,8 @@
             <Name>Robert Gonzalez</Name>
             <Email>uni.dos12@outlook.com</Email>
         </Packager>
-        <License>GPL-3.0-or-later</License>
+        <License>BSD-3-Clause</License>
+        <License>GPL-2.0-or-later</License>
         <PartOf>system.base</PartOf>
         <Summary xml:lang="en">Pluggable Authentication Modules library</Summary>
         <Description xml:lang="en">The Linux PAM package contains Pluggable Authentication Modules used to enable the local system administrator to choose how applications authenticate users.</Description>
@@ -91,6 +92,7 @@
             <Path fileType="data">/usr/share/defaults/etc/security/pwhistory.conf</Path>
             <Path fileType="data">/usr/share/defaults/etc/security/time.conf</Path>
             <Path fileType="data">/usr/share/defaults/etc/shells</Path>
+            <Path fileType="data">/usr/share/licenses/pam/COPYING</Path>
             <Path fileType="localedata">/usr/share/locale/af/LC_MESSAGES/Linux-PAM.mo</Path>
             <Path fileType="localedata">/usr/share/locale/am/LC_MESSAGES/Linux-PAM.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ar/LC_MESSAGES/Linux-PAM.mo</Path>
@@ -173,64 +175,64 @@
             <Path fileType="localedata">/usr/share/locale/zh_HK/LC_MESSAGES/Linux-PAM.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_TW/LC_MESSAGES/Linux-PAM.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zu/LC_MESSAGES/Linux-PAM.mo</Path>
-            <Path fileType="man">/usr/share/man/man5/access.conf.5</Path>
-            <Path fileType="man">/usr/share/man/man5/environment.5</Path>
-            <Path fileType="man">/usr/share/man/man5/faillock.conf.5</Path>
-            <Path fileType="man">/usr/share/man/man5/group.conf.5</Path>
-            <Path fileType="man">/usr/share/man/man5/limits.conf.5</Path>
-            <Path fileType="man">/usr/share/man/man5/namespace.conf.5</Path>
-            <Path fileType="man">/usr/share/man/man5/pam.conf.5</Path>
-            <Path fileType="man">/usr/share/man/man5/pam.d.5</Path>
-            <Path fileType="man">/usr/share/man/man5/pam_env.conf.5</Path>
-            <Path fileType="man">/usr/share/man/man5/pwhistory.conf.5</Path>
-            <Path fileType="man">/usr/share/man/man5/time.conf.5</Path>
-            <Path fileType="man">/usr/share/man/man8/PAM.8</Path>
-            <Path fileType="man">/usr/share/man/man8/faillock.8</Path>
-            <Path fileType="man">/usr/share/man/man8/mkhomedir_helper.8</Path>
-            <Path fileType="man">/usr/share/man/man8/pam.8</Path>
-            <Path fileType="man">/usr/share/man/man8/pam_access.8</Path>
-            <Path fileType="man">/usr/share/man/man8/pam_canonicalize_user.8</Path>
-            <Path fileType="man">/usr/share/man/man8/pam_debug.8</Path>
-            <Path fileType="man">/usr/share/man/man8/pam_deny.8</Path>
-            <Path fileType="man">/usr/share/man/man8/pam_echo.8</Path>
-            <Path fileType="man">/usr/share/man/man8/pam_env.8</Path>
-            <Path fileType="man">/usr/share/man/man8/pam_exec.8</Path>
-            <Path fileType="man">/usr/share/man/man8/pam_faildelay.8</Path>
-            <Path fileType="man">/usr/share/man/man8/pam_faillock.8</Path>
-            <Path fileType="man">/usr/share/man/man8/pam_filter.8</Path>
-            <Path fileType="man">/usr/share/man/man8/pam_ftp.8</Path>
-            <Path fileType="man">/usr/share/man/man8/pam_group.8</Path>
-            <Path fileType="man">/usr/share/man/man8/pam_issue.8</Path>
-            <Path fileType="man">/usr/share/man/man8/pam_keyinit.8</Path>
-            <Path fileType="man">/usr/share/man/man8/pam_limits.8</Path>
-            <Path fileType="man">/usr/share/man/man8/pam_listfile.8</Path>
-            <Path fileType="man">/usr/share/man/man8/pam_localuser.8</Path>
-            <Path fileType="man">/usr/share/man/man8/pam_loginuid.8</Path>
-            <Path fileType="man">/usr/share/man/man8/pam_mail.8</Path>
-            <Path fileType="man">/usr/share/man/man8/pam_mkhomedir.8</Path>
-            <Path fileType="man">/usr/share/man/man8/pam_motd.8</Path>
-            <Path fileType="man">/usr/share/man/man8/pam_namespace.8</Path>
-            <Path fileType="man">/usr/share/man/man8/pam_namespace_helper.8</Path>
-            <Path fileType="man">/usr/share/man/man8/pam_nologin.8</Path>
-            <Path fileType="man">/usr/share/man/man8/pam_permit.8</Path>
-            <Path fileType="man">/usr/share/man/man8/pam_pwhistory.8</Path>
-            <Path fileType="man">/usr/share/man/man8/pam_rhosts.8</Path>
-            <Path fileType="man">/usr/share/man/man8/pam_rootok.8</Path>
-            <Path fileType="man">/usr/share/man/man8/pam_securetty.8</Path>
-            <Path fileType="man">/usr/share/man/man8/pam_setquota.8</Path>
-            <Path fileType="man">/usr/share/man/man8/pam_shells.8</Path>
-            <Path fileType="man">/usr/share/man/man8/pam_stress.8</Path>
-            <Path fileType="man">/usr/share/man/man8/pam_succeed_if.8</Path>
-            <Path fileType="man">/usr/share/man/man8/pam_time.8</Path>
-            <Path fileType="man">/usr/share/man/man8/pam_timestamp.8</Path>
-            <Path fileType="man">/usr/share/man/man8/pam_timestamp_check.8</Path>
-            <Path fileType="man">/usr/share/man/man8/pam_umask.8</Path>
-            <Path fileType="man">/usr/share/man/man8/pam_unix.8</Path>
-            <Path fileType="man">/usr/share/man/man8/pam_usertype.8</Path>
-            <Path fileType="man">/usr/share/man/man8/pam_warn.8</Path>
-            <Path fileType="man">/usr/share/man/man8/pam_wheel.8</Path>
-            <Path fileType="man">/usr/share/man/man8/pam_xauth.8</Path>
-            <Path fileType="man">/usr/share/man/man8/unix_chkpwd.8</Path>
+            <Path fileType="man">/usr/share/man/man5/access.conf.5.zst</Path>
+            <Path fileType="man">/usr/share/man/man5/environment.5.zst</Path>
+            <Path fileType="man">/usr/share/man/man5/faillock.conf.5.zst</Path>
+            <Path fileType="man">/usr/share/man/man5/group.conf.5.zst</Path>
+            <Path fileType="man">/usr/share/man/man5/limits.conf.5.zst</Path>
+            <Path fileType="man">/usr/share/man/man5/namespace.conf.5.zst</Path>
+            <Path fileType="man">/usr/share/man/man5/pam.conf.5.zst</Path>
+            <Path fileType="man">/usr/share/man/man5/pam.d.5.zst</Path>
+            <Path fileType="man">/usr/share/man/man5/pam_env.conf.5.zst</Path>
+            <Path fileType="man">/usr/share/man/man5/pwhistory.conf.5.zst</Path>
+            <Path fileType="man">/usr/share/man/man5/time.conf.5.zst</Path>
+            <Path fileType="man">/usr/share/man/man8/PAM.8.zst</Path>
+            <Path fileType="man">/usr/share/man/man8/faillock.8.zst</Path>
+            <Path fileType="man">/usr/share/man/man8/mkhomedir_helper.8.zst</Path>
+            <Path fileType="man">/usr/share/man/man8/pam.8.zst</Path>
+            <Path fileType="man">/usr/share/man/man8/pam_access.8.zst</Path>
+            <Path fileType="man">/usr/share/man/man8/pam_canonicalize_user.8.zst</Path>
+            <Path fileType="man">/usr/share/man/man8/pam_debug.8.zst</Path>
+            <Path fileType="man">/usr/share/man/man8/pam_deny.8.zst</Path>
+            <Path fileType="man">/usr/share/man/man8/pam_echo.8.zst</Path>
+            <Path fileType="man">/usr/share/man/man8/pam_env.8.zst</Path>
+            <Path fileType="man">/usr/share/man/man8/pam_exec.8.zst</Path>
+            <Path fileType="man">/usr/share/man/man8/pam_faildelay.8.zst</Path>
+            <Path fileType="man">/usr/share/man/man8/pam_faillock.8.zst</Path>
+            <Path fileType="man">/usr/share/man/man8/pam_filter.8.zst</Path>
+            <Path fileType="man">/usr/share/man/man8/pam_ftp.8.zst</Path>
+            <Path fileType="man">/usr/share/man/man8/pam_group.8.zst</Path>
+            <Path fileType="man">/usr/share/man/man8/pam_issue.8.zst</Path>
+            <Path fileType="man">/usr/share/man/man8/pam_keyinit.8.zst</Path>
+            <Path fileType="man">/usr/share/man/man8/pam_limits.8.zst</Path>
+            <Path fileType="man">/usr/share/man/man8/pam_listfile.8.zst</Path>
+            <Path fileType="man">/usr/share/man/man8/pam_localuser.8.zst</Path>
+            <Path fileType="man">/usr/share/man/man8/pam_loginuid.8.zst</Path>
+            <Path fileType="man">/usr/share/man/man8/pam_mail.8.zst</Path>
+            <Path fileType="man">/usr/share/man/man8/pam_mkhomedir.8.zst</Path>
+            <Path fileType="man">/usr/share/man/man8/pam_motd.8.zst</Path>
+            <Path fileType="man">/usr/share/man/man8/pam_namespace.8.zst</Path>
+            <Path fileType="man">/usr/share/man/man8/pam_namespace_helper.8.zst</Path>
+            <Path fileType="man">/usr/share/man/man8/pam_nologin.8.zst</Path>
+            <Path fileType="man">/usr/share/man/man8/pam_permit.8.zst</Path>
+            <Path fileType="man">/usr/share/man/man8/pam_pwhistory.8.zst</Path>
+            <Path fileType="man">/usr/share/man/man8/pam_rhosts.8.zst</Path>
+            <Path fileType="man">/usr/share/man/man8/pam_rootok.8.zst</Path>
+            <Path fileType="man">/usr/share/man/man8/pam_securetty.8.zst</Path>
+            <Path fileType="man">/usr/share/man/man8/pam_setquota.8.zst</Path>
+            <Path fileType="man">/usr/share/man/man8/pam_shells.8.zst</Path>
+            <Path fileType="man">/usr/share/man/man8/pam_stress.8.zst</Path>
+            <Path fileType="man">/usr/share/man/man8/pam_succeed_if.8.zst</Path>
+            <Path fileType="man">/usr/share/man/man8/pam_time.8.zst</Path>
+            <Path fileType="man">/usr/share/man/man8/pam_timestamp.8.zst</Path>
+            <Path fileType="man">/usr/share/man/man8/pam_timestamp_check.8.zst</Path>
+            <Path fileType="man">/usr/share/man/man8/pam_umask.8.zst</Path>
+            <Path fileType="man">/usr/share/man/man8/pam_unix.8.zst</Path>
+            <Path fileType="man">/usr/share/man/man8/pam_usertype.8.zst</Path>
+            <Path fileType="man">/usr/share/man/man8/pam_warn.8.zst</Path>
+            <Path fileType="man">/usr/share/man/man8/pam_wheel.8.zst</Path>
+            <Path fileType="man">/usr/share/man/man8/pam_xauth.8.zst</Path>
+            <Path fileType="man">/usr/share/man/man8/unix_chkpwd.8.zst</Path>
         </Files>
     </Package>
     <Package>
@@ -239,7 +241,7 @@
         <Description xml:lang="en">The Linux PAM package contains Pluggable Authentication Modules used to enable the local system administrator to choose how applications authenticate users.</Description>
         <PartOf>emul32</PartOf>
         <RuntimeDependencies>
-            <Dependency release="38">pam</Dependency>
+            <Dependency release="39">pam</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib32/libpam.so.0</Path>
@@ -256,8 +258,8 @@
         <Description xml:lang="en">The Linux PAM package contains Pluggable Authentication Modules used to enable the local system administrator to choose how applications authenticate users.</Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="38">pam-32bit</Dependency>
-            <Dependency release="38">pam-devel</Dependency>
+            <Dependency release="39">pam-devel</Dependency>
+            <Dependency release="39">pam-32bit</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib32/libpam.so</Path>
@@ -274,7 +276,7 @@
         <Description xml:lang="en">The Linux PAM package contains Pluggable Authentication Modules used to enable the local system administrator to choose how applications authenticate users.</Description>
         <PartOf>system.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="38">pam</Dependency>
+            <Dependency release="39">pam</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/security/_pam_compat.h</Path>
@@ -293,48 +295,48 @@
             <Path fileType="data">/usr/lib64/pkgconfig/pam.pc</Path>
             <Path fileType="data">/usr/lib64/pkgconfig/pam_misc.pc</Path>
             <Path fileType="data">/usr/lib64/pkgconfig/pamc.pc</Path>
-            <Path fileType="man">/usr/share/man/man3/misc_conv.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pam.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pam_acct_mgmt.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pam_authenticate.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pam_chauthtok.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pam_close_session.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pam_conv.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pam_end.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pam_error.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pam_fail_delay.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pam_get_authtok.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pam_get_authtok_noverify.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pam_get_authtok_verify.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pam_get_data.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pam_get_item.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pam_get_user.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pam_getenv.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pam_getenvlist.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pam_info.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pam_misc_drop_env.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pam_misc_paste_env.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pam_misc_setenv.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pam_open_session.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pam_prompt.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pam_putenv.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pam_set_data.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pam_set_item.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pam_setcred.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pam_sm_acct_mgmt.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pam_sm_authenticate.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pam_sm_chauthtok.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pam_sm_close_session.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pam_sm_open_session.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pam_sm_setcred.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pam_start.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pam_strerror.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pam_syslog.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pam_verror.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pam_vinfo.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pam_vprompt.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pam_vsyslog.3</Path>
-            <Path fileType="man">/usr/share/man/man3/pam_xauth_data.3</Path>
+            <Path fileType="man">/usr/share/man/man3/misc_conv.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pam.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pam_acct_mgmt.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pam_authenticate.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pam_chauthtok.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pam_close_session.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pam_conv.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pam_end.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pam_error.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pam_fail_delay.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pam_get_authtok.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pam_get_authtok_noverify.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pam_get_authtok_verify.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pam_get_data.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pam_get_item.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pam_get_user.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pam_getenv.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pam_getenvlist.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pam_info.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pam_misc_drop_env.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pam_misc_paste_env.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pam_misc_setenv.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pam_open_session.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pam_prompt.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pam_putenv.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pam_set_data.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pam_set_item.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pam_setcred.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pam_sm_acct_mgmt.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pam_sm_authenticate.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pam_sm_chauthtok.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pam_sm_close_session.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pam_sm_open_session.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pam_sm_setcred.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pam_start.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pam_strerror.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pam_syslog.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pam_verror.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pam_vinfo.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pam_vprompt.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pam_vsyslog.3.zst</Path>
+            <Path fileType="man">/usr/share/man/man3/pam_xauth_data.3.zst</Path>
         </Files>
     </Package>
     <Package>
@@ -453,9 +455,9 @@
         </Files>
     </Package>
     <History>
-        <Update release="38">
-            <Date>2025-04-28</Date>
-            <Version>1.7.0</Version>
+        <Update release="39">
+            <Date>2026-04-10</Date>
+            <Version>1.7.2</Version>
             <Comment>Packaging update</Comment>
             <Name>Robert Gonzalez</Name>
             <Email>uni.dos12@outlook.com</Email>

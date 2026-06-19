@@ -271,7 +271,6 @@ libQt6Core.so.6:_ZNK7QString8endsWithE5QCharN2Qt15CaseSensitivityE
 libQt6Core.so.6:_ZNK8QVariant12toStringListEv
 libQt6Core.so.6:_ZNK8QVariant5toIntEPb
 libQt6Core.so.6:_ZNK8QVariant6equalsERKS_
-libQt6Core.so.6:_ZNK8QVariant8metaTypeEv
 libQt6Core.so.6:_ZNK9QFileInfo8baseNameEv
 libQt6Core.so.6:_ZNK9QMimeData4textEv
 libQt6Core.so.6:_ZNK9QMimeData7hasHtmlEv

@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : delve
-version    : 1.6.0
-release    : 8
+version    : 1.26.3
+release    : 11
 source     :
-    - https://github.com/go-delve/delve/archive/v1.6.0.tar.gz : a10a6fc40d87572c6d3f3becdb1a289269e17526d038749f2fa04dd9f591f26a
+    - https://github.com/go-delve/delve/archive/v1.26.3.tar.gz : c5abd02033d7601a41bb6748589c0be42080dc4f91c7e48fc8cbb7f558cc8748
 license    : MIT
 homepage   : https://github.com/go-delve/delve/
 component  : programming.tools
@@ -31,3 +32,4 @@ build      : |
     go build -o delvebin
 install    : |
     install -Dm00755 github.com/go-delve/delve/cmd/dlv/delvebin $installdir/usr/bin/dlv
+    %install_license github.com/go-delve/delve/LICENSE

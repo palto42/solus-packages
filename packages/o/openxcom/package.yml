@@ -1,6 +1,7 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : openxcom
 version    : '1.0'
-release    : 10
+release    : 11
 source     :
     - git|https://github.com/SupSuper/OpenXcom : f2e509c427a023f9f69850d52b7a164a6d29d823
 homepage   : https://openxcom.org/

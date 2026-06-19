@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : conmon
-version    : 2.1.12
-release    : 27
+version    : 2.2.1
+release    : 29
 source     :
-    - https://github.com/containers/conmon/archive/refs/tags/v2.1.12.tar.gz : 842f0b5614281f7e35eec2a4e35f9f7b9834819aa58ecdad8d0ff6a84f6796a6
+    - https://github.com/containers/conmon/archive/refs/tags/v2.2.1.tar.gz : 814fb5979a3a4b8576b1f901e606b482bebb41cb7e57926e6d5765ee786b96d3
 license    : Apache-2.0
 homepage   : https://github.com/containers/conmon
 component  : virt
@@ -13,6 +14,7 @@ networking : true
 builddeps  :
     - pkgconfig(libseccomp)
     - git
+    - go-md2man
     - golang
 rundeps    :
     - runc
@@ -24,3 +26,4 @@ build      : |
     %make GIT_COMMIT="$GIT_COMMIT"
 install    : |
     %make_install
+    %install_license LICENSE

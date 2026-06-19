@@ -1,6 +1,7 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : gmusicbrowser
 version    : 1.1.16
-release    : 3
+release    : 4
 source     :
     - https://github.com/squentin/gmusicbrowser/archive/v1.1.16.tar.gz : fa86235c0e39def45a061b66a92321f60eb3b054a79a0f010db101a427f2785c
 homepage   : https://gmusicbrowser.org/
@@ -21,9 +22,9 @@ description: |
 builddeps  :
     - discount
 rundeps    :
-    - gstreamer-1.0
-    - gstreamer-1.0-plugins-base
-    - gstreamer-1.0-plugins-good
+    - gstreamer
+    - gstreamer-plugins-base
+    - gstreamer-plugins-good
     - perl-cairo
     - perl-gettext
     - perl-glib
@@ -36,3 +37,4 @@ setup      : |
     %patch -p1 -i $pkgfiles/0002-set-notification-category.patch
 install    : |
     %make_install
+    %install_license COPYING

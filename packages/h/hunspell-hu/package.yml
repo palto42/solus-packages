@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : hunspell-hu
-version    : 1.8.1
-release    : 4
+version    : '1.9'
+release    : 5
 source     :
-    - git|https://git.libreoffice.org/dictionaries : c5b2a36bde02841590b8ccc490ca88bfdb69f153
+    - git|https://git.libreoffice.org/dictionaries : 74b6ae2a2df22fd9d6e253f0391ac3a67cb7b3f8
 homepage   : https://magyarispell.sourceforge.net/
 license    : GPL-2.0-or-later
 component  : office.spelling

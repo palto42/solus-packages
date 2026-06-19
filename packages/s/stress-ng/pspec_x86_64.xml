@@ -3,8 +3,8 @@
         <Name>stress-ng</Name>
         <Homepage>https://github.com/ColinIanKing/stress-ng</Homepage>
         <Packager>
-            <Name>Gavin Zhao</Name>
-            <Email>me@gzgz.dev</Email>
+            <Name>Robert Gonzalez</Name>
+            <Email>uni.dos12@outlook.com</Email>
         </Packager>
         <License>GPL-2.0-or-later</License>
         <PartOf>system.utils</PartOf>
@@ -22,6 +22,7 @@
         <Files>
             <Path fileType="executable">/usr/bin/stress-ng</Path>
             <Path fileType="data">/usr/share/bash-completion/completions/stress-ng</Path>
+            <Path fileType="data">/usr/share/licenses/stress-ng/COPYING</Path>
             <Path fileType="man">/usr/share/man/man1/stress-ng.1.gz</Path>
             <Path fileType="data">/usr/share/stress-ng/example-jobs/cpu-cache.job</Path>
             <Path fileType="data">/usr/share/stress-ng/example-jobs/cpu.job</Path>
@@ -41,12 +42,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="17">
-            <Date>2025-10-07</Date>
-            <Version>0.19.05</Version>
+        <Update release="18">
+            <Date>2026-04-04</Date>
+            <Version>0.21.00</Version>
             <Comment>Packaging update</Comment>
-            <Name>Gavin Zhao</Name>
-            <Email>me@gzgz.dev</Email>
+            <Name>Robert Gonzalez</Name>
+            <Email>uni.dos12@outlook.com</Email>
         </Update>
     </History>
 </PISI>

@@ -1,5 +1,7 @@
 libdefault.so
-libmutter-16.so.0
-libmutter-clutter-16.so.0
-libmutter-cogl-16.so.0
-libmutter-mtk-16.so.0
+libmutter-18.so.0
+libmutter-clutter-18.so.0
+libmutter-cogl-18.so.0
+libmutter-mtk-18.so.0
+mutter
+mutter-x11-frames

@@ -3,8 +3,8 @@
         <Name>eigen3</Name>
         <Homepage>https://eigen.tuxfamily.org/</Homepage>
         <Packager>
-            <Name>Alexander Vorobyev</Name>
-            <Email>avorobyev@protonmail.com</Email>
+            <Name>David Harder</Name>
+            <Email>david@davidjharder.ca</Email>
         </Packager>
         <License>BSD-3-Clause</License>
         <License>BSD-3-Clause-Attribution</License>
@@ -15,7 +15,7 @@
         <Summary xml:lang="en">Eigen is a C++ template library for linear algebra</Summary>
         <Description xml:lang="en">Eigen is a C++ template library for linear algebra: matrices, vectors, numerical solvers, and related algorithms.
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>eigen3</Name>
@@ -558,16 +558,23 @@
             <Path fileType="data">/usr/share/eigen3/cmake/Eigen3ConfigVersion.cmake</Path>
             <Path fileType="data">/usr/share/eigen3/cmake/Eigen3Targets.cmake</Path>
             <Path fileType="data">/usr/share/eigen3/cmake/UseEigen3.cmake</Path>
+            <Path fileType="data">/usr/share/licenses/eigen3/COPYING.APACHE</Path>
+            <Path fileType="data">/usr/share/licenses/eigen3/COPYING.BSD</Path>
+            <Path fileType="data">/usr/share/licenses/eigen3/COPYING.GPL</Path>
+            <Path fileType="data">/usr/share/licenses/eigen3/COPYING.LGPL</Path>
+            <Path fileType="data">/usr/share/licenses/eigen3/COPYING.MINPACK</Path>
+            <Path fileType="data">/usr/share/licenses/eigen3/COPYING.MPL2</Path>
+            <Path fileType="data">/usr/share/licenses/eigen3/COPYING.README</Path>
             <Path fileType="data">/usr/share/pkgconfig/eigen3.pc</Path>
         </Files>
     </Package>
     <History>
-        <Update release="11">
-            <Date>2021-09-01</Date>
+        <Update release="12">
+            <Date>2026-03-26</Date>
             <Version>3.4.0</Version>
             <Comment>Packaging update</Comment>
-            <Name>Alexander Vorobyev</Name>
-            <Email>avorobyev@protonmail.com</Email>
+            <Name>David Harder</Name>
+            <Email>david@davidjharder.ca</Email>
         </Update>
     </History>
 </PISI>

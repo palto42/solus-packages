@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : tecla
-version    : 48.0.2
-release    : 4
+version    : '50.0'
+release    : 6
 source     :
-    - https://download.gnome.org/sources/tecla/48/tecla-48.0.2.tar.xz : 783d3464d2a2cf7eb1507649dbd9ff09ce24852c2a6c9a0d365db84063d3d401
+    - https://download.gnome.org/sources/tecla/50/tecla-50.0.tar.xz : 2542acb24850082e0ccf6aa17af9651db71d22f0e233fdbf5ed0cffe2e45bc06
 homepage   : https://gitlab.gnome.org/GNOME/tecla
 license    : GPL-2.0-or-later
 component  : desktop.library

@@ -8,10 +8,9 @@ evolution-alarm-notify
 evolution-calendar-factory
 evolution-calendar-factory-subprocess
 evolution-oauth2-handler
-evolution-scan-gconf-tree-xml
 evolution-source-registry
 evolution-user-prompter
-libcamel-1.2.so.64
+libcamel-1.2.so.67
 libcamelimapx.so
 libcamellocal.so
 libcamelnntp.so
@@ -20,7 +19,7 @@ libcamelsendmail.so
 libcamelsmtp.so
 libebackend-1.2.so.11
 libebook-1.2.so.21
-libebook-contacts-1.2.so.4
+libebook-contacts-1.2.so.5
 libebookbackendcarddav.so
 libebookbackendfile.so
 libebookbackendldap.so

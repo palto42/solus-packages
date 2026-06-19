@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : docker-compose
-version    : 2.38.2
-release    : 59
+version    : 5.1.4
+release    : 62
 source     :
-    - https://github.com/docker/compose/archive/refs/tags/v2.38.2.tar.gz : 250e087aeb614c762e3cb7c5b0cacb964acfa90f3f1d158942fc06d22d5e1044
+    - https://github.com/docker/compose/archive/refs/tags/v5.1.4.tar.gz : 363ce6ccca46f836648f5f4ec9ecfdb6f631daa126570cc3fc69140edeed6794
 homepage   : https://docs.docker.com/compose/
 license    : Apache-2.0
 component  : virt
@@ -12,26 +13,28 @@ description: |
     With Compose, you use a Compose file to configure your application’s services. Then, using a single command, you create and start all the services from your configuration.
 networking : true
 builddeps  :
+    - git
     - golang
 rundeps    :
     - docker
 environment: |
-    export CGO_CPPFLAGS="${CPPFLAGS}"
+    export _compose_r=github.com/docker/compose/v5
+    export GO111MODULE=auto
+
     export CGO_CFLAGS="${CFLAGS}"
+    export CGO_CPPFLAGS="${CPPFLAGS}"
     export CGO_CXXFLAGS="${CXXFLAGS}"
     export CGO_LDFLAGS="${LDFLAGS}"
-
-    export GOFLAGS="-buildmode=pie -trimpath -ldflags=-linkmode=external -ldflags=-X=github.com/docker/compose/v2/internal.Version=v$version -mod=readonly -modcacherw"
-
-    export _cli_plugins_dir=/usr/lib/docker/cli-plugins
+    export GOFLAGS="-buildmode=pie -trimpath -mod=readonly -modcacherw -ldflags=-linkmode=external -ldflags=-X=${_compose_r}/internal.Version=v$version"
 setup      : |
     go mod vendor
 build      : |
-    go build -trimpath -tags "e2e,kube" -o compose ./cmd
+    go build -tags "e2e,kube" -o docker-compose ./cmd
 install    : |
-    install -dm00755 $installdir/$_cli_plugins_dir
-    install -m00755 compose $installdir/$_cli_plugins_dir/docker-compose
+    install -Ddm00755 ${installdir}/%libdir%/docker/cli-plugins
+    install -m00755 ${workdir}/docker-compose ${installdir}/%libdir%/docker/cli-plugins/docker-compose
 
-    # Compatibility symlink
-    install -dm00755 $installdir/usr/bin
-    ln -srf $installdir/usr/lib/docker/cli-plugins/docker-compose $installdir/usr/bin/docker-compose
+    install -dm00755 ${installdir}/usr/bin
+    ln -srv ${installdir}/%libdir%/docker/cli-plugins/docker-compose ${installdir}/usr/bin/docker-compose
+
+    %install_license LICENSE

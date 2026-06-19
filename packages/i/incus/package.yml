@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : incus
-version    : 6.0.3
-release    : 2
+version    : 6.0.6
+release    : 3
 source     :
-    - https://linuxcontainers.org/downloads/incus/incus-6.0.3.tar.xz : 63696e16ac2412aefe96d678b051232db643fbd92d61de7161ec777b5347298a
+    - https://linuxcontainers.org/downloads/incus/incus-6.0.6.tar.xz : 129a1323605d427c46c8358844f5f9447d7e2cebe0f4ada242c93cf002fb44ea
 license    : Apache-2.0
 homepage   : https://linuxcontainers.org/incus/
 component  : virt
@@ -24,9 +25,13 @@ rundeps    :
     - lxcfs
     - qemu
     - rsync
+    - squashfs-tools
 setup      : |
-    %patch -p1 -i $pkgfiles/0001-Fix-path-to-socket.patch
-
+    # Dynamically replace VarPath with RunPath for LXC hooks
+    sed -i '/callhook/s/internalUtil.VarPath/internalUtil.RunPath/g' internal/server/instance/drivers/driver_lxc.go
+    
+    # Dynamically replace VarDir with RunDir for the daemon UNIX socket
+    sed -i 's/s.VarDir, "unix.socket"/s.RunDir, "unix.socket"/g' internal/server/sys/os.go
     mkdir bin
 build      : |
     export GOFLAGS="-buildmode=pie -trimpath -modcacherw"
@@ -53,6 +58,7 @@ install    : |
     install -Dm00644 $pkgfiles/incus.tmpfiles $installdir/%libdir%/tmpfiles.d/incus.conf
     install -Dm00644 $pkgfiles/incus.service $installdir/%libdir%/systemd/system/incus.service
     install -Dm00644 $pkgfiles/incus.socket $installdir/%libdir%/systemd/system/incus.socket
+    %install_license COPYING
 replaces   :
     - lxd
     - dbginfo :

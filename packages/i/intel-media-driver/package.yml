@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : intel-media-driver
-version    : 24.4.4
-release    : 14
+version    : 26.1.5
+release    : 16
 source     :
-    - https://github.com/intel/media-driver/archive/refs/tags/intel-media-24.4.4.tar.gz : 3000723faf4dc56eb8276f402c4aa798459bbce860b408a0c480d863b28130ed
+    - https://github.com/intel/media-driver/archive/refs/tags/intel-media-26.1.5.tar.gz : c56899fecc003d047ce6afbdf471851512e0ceac66c2ef22ac36f1e6ce46170c
 license    :
     - BSD-3-Clause
     - MIT
@@ -22,10 +23,13 @@ setup      : |
     %patch -Np1 -i $pkgfiles/0001-Set-BUILD_TYPE-to-CMAKE_BUILD_TYPE-if-undefined.patch
 
     %cmake_ninja -Wno-dev \
+        -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
         -DCMAKE_INSTALL_LIBDIR="%libdir%" \
         -DBUILD_CMRTLIB:BOOL=False \
-        -DMEDIA_RUN_TEST_SUITE:BOOL=False
+        -DMEDIA_RUN_TEST_SUITE:BOOL=False \
+        -DMEDIA_BUILD_FATAL_WARNINGS=OFF
 build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSE.md

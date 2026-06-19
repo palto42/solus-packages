@@ -1,11 +1,12 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : upower
-version    : 1.90.10
-release    : 29
+version    : 1.91.2
+release    : 31
 source     :
-    - https://gitlab.freedesktop.org/upower/upower/-/archive/v1.90.10/upower-v1.90.10.tar.gz : 7fcd51bece2526dbee5170feb3ffd1adab5b0cd023575f1fd119d969b73f4b90
+    - https://gitlab.freedesktop.org/upower/upower/-/archive/v1.91.2/upower-v1.91.2.tar.gz : cd9a3a3f5e0aa21eac131253228757bbdc90ecd39768f46c325754e32daa3083
 homepage   : https://upower.freedesktop.org/
 license    :
-    - LGPL-2.0-or-later
+    - GPL-2.0-or-later
 component  : desktop.core
 summary    : UPower is an abstraction for enumerating power devices, listening to device events and querying history and statistics.
 description: |
@@ -15,25 +16,21 @@ builddeps  :
     - pkgconfig(libimobiledevice-1.0)
     - pkgconfig(libusb-1.0)
     - docbook-xml
-    - gtk-doc
     - python-packaging # Check
     - python3-dbus # Check
 setup      : |
     %apply_patches
     %meson_configure -Didevice=enabled \
                      -Dgtk-doc=false \
-                     -Dman=false
+                     -Dman=false \
+                     -Dinstalled_tests=false
 build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license COPYING
 
-    # Start it by default
-    install -dm00755 $installdir/usr/lib/systemd/system/graphical.target.wants
-    ln -sv ../upower.service $installdir/usr/lib/systemd/system/graphical.target.wants
-
-    # Remove installed tests
-    rm -rfv $installdir/usr/share/installed-tests
+    install -Dm00644 -t ${installdir}/%libdir%/systemd/system-preset/ ${pkgfiles}/20-upower.preset
 
     # Stateless (this data directory is created by the systemd service unit)
     rmdir -v $installdir/var/lib/upower \

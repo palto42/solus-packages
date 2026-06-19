@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : glab
-version    : 1.73.0
-release    : 33
+version    : 1.97.0
+release    : 40
 source     :
-    - git|https://gitlab.com/gitlab-org/cli.git : f3a36aa53a1b7679abf00f0b3d14f7858f552022
+    - git|https://gitlab.com/gitlab-org/cli.git : 3804f048b9c0df42b793c907d5159352fd86312a
 homepage   : https://docs.gitlab.com/ee/editor_extensions/gitlab_cli/
 license    : MIT
 component  : system.utils
@@ -30,3 +31,5 @@ install    : |
     install -Dm00644 bash.completions $installdir/usr/share/bash-completion/completions/glab
     install -Dm00644 fish.completions $installdir/usr/share/fish/vendor_completions.d/glab.fish
     install -Dm00644  zsh.completions $installdir/usr/share/zsh/site-functions/_glab
+
+    %install_license LICENSE

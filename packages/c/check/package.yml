@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : check
-version    : 0.14.0
-release    : 11
+version    : 0.15.2
+release    : 12
 source     :
-    - https://github.com/libcheck/check/releases/download/0.14.0/check-0.14.0.tar.gz : bd0f0ca1be65b70238b32f8e9fe5d36dc2fbf7a759b7edf28e75323a7d74f30b
+    - https://github.com/libcheck/check/releases/download/0.15.2/check-0.15.2.tar.gz : a8de4e0bacfb4d76dd1c618ded263523b53b85d92a146d8835eb1a52932fa20a
 homepage   : https://libcheck.github.io/check/
 license    : LGPL-2.1
 component  : programming.library
@@ -12,7 +13,7 @@ description: |
 setup      : |
     # Fix usage with musl
     export CFLAGS="${CFLAGS/-D_FORTIFY_SOURCE=2/}"
-    %configure
+    %configure_no_runstatedir
 build      : |
     %make
 install    : |
@@ -21,5 +22,6 @@ install    : |
     for i in $installdir/usr/include/check*.h ; do
         ln -sv ../$(basename $i) $installdir/usr/include/musl/.
     done
+    rm $installdir/usr/lib64/libcheck.a
 check      : |
     %make check

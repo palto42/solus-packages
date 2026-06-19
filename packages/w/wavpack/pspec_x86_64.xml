@@ -21,7 +21,8 @@
         <PartOf>multimedia.codecs</PartOf>
         <Files>
             <Path fileType="library">/usr/lib64/libwavpack.so.1</Path>
-            <Path fileType="library">/usr/lib64/libwavpack.so.1.2.7</Path>
+            <Path fileType="library">/usr/lib64/libwavpack.so.1.2.8</Path>
+            <Path fileType="data">/usr/share/licenses/wavpack/COPYING</Path>
         </Files>
     </Package>
     <Package>
@@ -31,7 +32,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="14">wavpack</Dependency>
+            <Dependency release="15">wavpack</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/wavpack/wavpack.h</Path>
@@ -46,23 +47,23 @@
 </Description>
         <PartOf>multimedia.codecs</PartOf>
         <RuntimeDependencies>
-            <Dependency release="14">wavpack</Dependency>
+            <Dependency release="15">wavpack</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin/wavpack</Path>
             <Path fileType="executable">/usr/bin/wvgain</Path>
             <Path fileType="executable">/usr/bin/wvtag</Path>
             <Path fileType="executable">/usr/bin/wvunpack</Path>
-            <Path fileType="man">/usr/share/man/man1/wavpack.1</Path>
-            <Path fileType="man">/usr/share/man/man1/wvgain.1</Path>
-            <Path fileType="man">/usr/share/man/man1/wvtag.1</Path>
-            <Path fileType="man">/usr/share/man/man1/wvunpack.1</Path>
+            <Path fileType="man">/usr/share/man/man1/wavpack.1.zst</Path>
+            <Path fileType="man">/usr/share/man/man1/wvgain.1.zst</Path>
+            <Path fileType="man">/usr/share/man/man1/wvtag.1.zst</Path>
+            <Path fileType="man">/usr/share/man/man1/wvunpack.1.zst</Path>
         </Files>
     </Package>
     <History>
-        <Update release="14">
-            <Date>2025-03-24</Date>
-            <Version>5.8.1</Version>
+        <Update release="15">
+            <Date>2026-03-22</Date>
+            <Version>5.9.0</Version>
             <Comment>Packaging update</Comment>
             <Name>David Harder</Name>
             <Email>david@davidjharder.ca</Email>

@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : libdecor
-version    : 0.2.2
-release    : 4
+version    : 0.2.5
+release    : 5
 source     :
-    - https://gitlab.freedesktop.org/libdecor/libdecor/-/archive/0.2.2/libdecor-0.2.2.tar.gz : 40a1d8be07d8b1f66e8fb98a1f4a84549ca6bf992407198a5055952be80a8525
+    - https://gitlab.freedesktop.org/libdecor/libdecor/-/archive/0.2.5/libdecor-0.2.5.tar.gz : 39c109a9a7eae943ba34d18a282c447d5729f9c486c8bc05ea305e4acd341522
 homepage   : https://gitlab.freedesktop.org/libdecor/libdecor
 license    : MIT
 component  : desktop.library
@@ -21,3 +22,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSE

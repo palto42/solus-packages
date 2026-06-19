@@ -5,6 +5,7 @@ libc.so.6:__isoc23_strtoul
 libc.so.6:__isoc23_strtoull
 libc.so.6:__libc_start_main
 libc.so.6:__stack_chk_fail
+libc.so.6:arc4random
 libc.so.6:arc4random_buf
 libc.so.6:close
 libc.so.6:exit
@@ -15,7 +16,9 @@ libc.so.6:fputs
 libc.so.6:free
 libc.so.6:fstat
 libc.so.6:fwrite
+libc.so.6:getentropy
 libc.so.6:getenv
+libc.so.6:getrandom
 libc.so.6:malloc
 libc.so.6:memcmp
 libc.so.6:memcpy

@@ -1,12 +1,17 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : lokalize
-version    : 25.08.2
-release    : 72
+version    : 26.04.2
+release    : 78
 source     :
-    - https://download.kde.org/stable/release-service/25.08.2/src/lokalize-25.08.2.tar.xz : 0e3ac5414803c8901ef4a48e8afa93e2a58736d5fd3b14c511d6d9d2018d30da
+    - https://download.kde.org/stable/release-service/26.04.2/src/lokalize-26.04.2.tar.xz : eb2001a3e1ef8b522d1a763a9082d3334c1e30fa787ded12b6be9d07f804292a
 homepage   : https://apps.kde.org/lokalize/
 license    :
-    - GPL-2.0-or-later
+    - BSD-3-Clause
     - GFDL-1.2-or-later
+    - GPL-2.0-only
+    - GPL-2.0-or-later
+    - GPL-3.0-only
+    - LGPL-2.1-or-later
 component  : desktop.kde
 summary    : Computer-Aided Translation System
 description: |
@@ -30,6 +35,7 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*
 
     # remove doc
     rm -rfv $installdir/usr/share/doc

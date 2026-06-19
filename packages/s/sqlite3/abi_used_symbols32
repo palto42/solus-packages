@@ -54,7 +54,6 @@ libc.so.6:realloc
 libc.so.6:rmdir
 libc.so.6:stat64
 libc.so.6:strchr
-libc.so.6:strchrnul
 libc.so.6:strcmp
 libc.so.6:strcspn
 libc.so.6:strlen

@@ -1,0 +1,37 @@
+<PISI>
+    <Source>
+        <Name>yosys-slang</Name>
+        <Homepage>https://github.com/povik/yosys-slang</Homepage>
+        <Packager>
+            <Name>Marcus Mellor</Name>
+            <Email>marcus@infinitymdm.dev</Email>
+        </Packager>
+        <License>ISC</License>
+        <PartOf>office.scientific</PartOf>
+        <Summary xml:lang="en">SystemVerilog frontend for Yosys</Summary>
+        <Description xml:lang="en">yosys-slang is a Yosys plugin providing a new command (read_slang) for elaborating SystemVerilog designs.
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>yosys-slang</Name>
+        <Summary xml:lang="en">SystemVerilog frontend for Yosys</Summary>
+        <Description xml:lang="en">yosys-slang is a Yosys plugin providing a new command (read_slang) for elaborating SystemVerilog designs.
+</Description>
+        <PartOf>office.scientific</PartOf>
+        <Files>
+            <Path fileType="data">/usr/share/licenses/yosys-slang/LICENSE</Path>
+            <Path fileType="data">/usr/share/licenses/yosys-slang/third-party/slang/LICENSE</Path>
+            <Path fileType="data">/usr/share/yosys/plugins/slang.so</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2026-04-28</Date>
+            <Version>26.04.22</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Marcus Mellor</Name>
+            <Email>marcus@infinitymdm.dev</Email>
+        </Update>
+    </History>
+</PISI>

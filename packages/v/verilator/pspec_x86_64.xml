@@ -6,8 +6,8 @@
             <Name>David Harder</Name>
             <Email>david@davidjharder.ca</Email>
         </Packager>
-        <License>LGPL-3.0-only</License>
         <License>Artistic-2.0</License>
+        <License>LGPL-3.0-only</License>
         <PartOf>programming.tools</PartOf>
         <Summary xml:lang="en">Verilator converts synthesizable (generally not behavioral) Verilog code into C++ or SystemC code.</Summary>
         <Description xml:lang="en">Verilator converts synthesizable (generally not behavioral) Verilog code into C++ or SystemC code. It is not a complete simulator, just a translator.
@@ -28,10 +28,22 @@
             <Path fileType="executable">/usr/bin/verilator_coverage_bin_dbg</Path>
             <Path fileType="executable">/usr/bin/verilator_gantt</Path>
             <Path fileType="executable">/usr/bin/verilator_profcfunc</Path>
-            <Path fileType="man">/usr/share/man/man1/verilator.1</Path>
-            <Path fileType="man">/usr/share/man/man1/verilator_coverage.1</Path>
-            <Path fileType="man">/usr/share/man/man1/verilator_gantt.1</Path>
-            <Path fileType="man">/usr/share/man/man1/verilator_profcfunc.1</Path>
+            <Path fileType="data">/usr/share/licenses/verilator/Apache-2.0.txt</Path>
+            <Path fileType="data">/usr/share/licenses/verilator/Artistic-2.0.txt</Path>
+            <Path fileType="data">/usr/share/licenses/verilator/BSD-2-Clause.txt</Path>
+            <Path fileType="data">/usr/share/licenses/verilator/BSD-3-Clause.txt</Path>
+            <Path fileType="data">/usr/share/licenses/verilator/CC0-1.0.txt</Path>
+            <Path fileType="data">/usr/share/licenses/verilator/ISC.txt</Path>
+            <Path fileType="data">/usr/share/licenses/verilator/LGPL-3.0-only.txt</Path>
+            <Path fileType="data">/usr/share/licenses/verilator/LICENSE</Path>
+            <Path fileType="data">/usr/share/licenses/verilator/LicenseRef-Altera-No-Warranty.txt</Path>
+            <Path fileType="data">/usr/share/licenses/verilator/LicenseRef-IEEE-1800.txt</Path>
+            <Path fileType="data">/usr/share/licenses/verilator/MIT.txt</Path>
+            <Path fileType="data">/usr/share/licenses/verilator/Unlicense.txt</Path>
+            <Path fileType="man">/usr/share/man/man1/verilator.1.zst</Path>
+            <Path fileType="man">/usr/share/man/man1/verilator_coverage.1.zst</Path>
+            <Path fileType="man">/usr/share/man/man1/verilator_gantt.1.zst</Path>
+            <Path fileType="man">/usr/share/man/man1/verilator_profcfunc.1.zst</Path>
             <Path fileType="data">/usr/share/verilator/bin/verilator</Path>
             <Path fileType="data">/usr/share/verilator/bin/verilator_bin</Path>
             <Path fileType="data">/usr/share/verilator/bin/verilator_bin_dbg</Path>
@@ -99,6 +111,7 @@
             <Path fileType="data">/usr/share/verilator/include/verilated_cov_key.h</Path>
             <Path fileType="data">/usr/share/verilator/include/verilated_dpi.cpp</Path>
             <Path fileType="data">/usr/share/verilator/include/verilated_dpi.h</Path>
+            <Path fileType="data">/usr/share/verilator/include/verilated_force.h</Path>
             <Path fileType="data">/usr/share/verilator/include/verilated_fst_c.cpp</Path>
             <Path fileType="data">/usr/share/verilator/include/verilated_fst_c.h</Path>
             <Path fileType="data">/usr/share/verilator/include/verilated_fst_sc.cpp</Path>
@@ -152,16 +165,16 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="51">verilator</Dependency>
+            <Dependency release="55">verilator</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="data">/usr/share/pkgconfig/verilator.pc</Path>
         </Files>
     </Package>
     <History>
-        <Update release="51">
-            <Date>2025-08-31</Date>
-            <Version>5.040</Version>
+        <Update release="55">
+            <Date>2026-04-27</Date>
+            <Version>5.048</Version>
             <Comment>Packaging update</Comment>
             <Name>David Harder</Name>
             <Email>david@davidjharder.ca</Email>

@@ -1,4 +1,6 @@
 libc.so.6
+libjson-c.so.5
+libm.so.6
 libscfg.so
-libvarlink.so.0
+libvali.so.1
 libwayland-client.so.0

@@ -1,9 +1,11 @@
 libc.so.6:__errno_location
+libc.so.6:__fprintf_chk
 libc.so.6:__libc_start_main
+libc.so.6:__vfprintf_chk
 libc.so.6:abort
+libc.so.6:clearenv
 libc.so.6:closedir
 libc.so.6:dirfd
-libc.so.6:fprintf
 libc.so.6:fputc
 libc.so.6:free
 libc.so.6:freeaddrinfo
@@ -57,7 +59,13 @@ libc.so.6:stderr
 libc.so.6:strerror
 libc.so.6:sysconf
 libc.so.6:unsetenv
-libc.so.6:vfprintf
+libnftables.so.1:nft_ctx_buffer_error
+libnftables.so.1:nft_ctx_buffer_output
+libnftables.so.1:nft_ctx_free
+libnftables.so.1:nft_ctx_get_error_buffer
+libnftables.so.1:nft_ctx_get_output_buffer
+libnftables.so.1:nft_ctx_new
+libnftables.so.1:nft_run_cmd_from_buffer
 libsystemd.so.0:sd_journal_add_match
 libsystemd.so.0:sd_journal_close
 libsystemd.so.0:sd_journal_enumerate_data

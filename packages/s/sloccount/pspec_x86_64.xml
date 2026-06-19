@@ -3,15 +3,15 @@
         <Name>sloccount</Name>
         <Homepage>https://dwheeler.com/sloccount/</Homepage>
         <Packager>
-            <Name>Algent Albrahimi</Name>
-            <Email>algent@protonmail.com</Email>
+            <Name>David Harder</Name>
+            <Email>david@davidjharder.ca</Email>
         </Packager>
         <License>GPL-2.0-or-later</License>
         <PartOf>programming.tools</PartOf>
         <Summary xml:lang="en">SLOCCount, a set of the programs for counting source lines of code (SLOC)</Summary>
         <Description xml:lang="en">SLOCCount, a set of the programs for counting source lines of code (SLOC)
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>sloccount</Name>
@@ -60,16 +60,17 @@
             <Path fileType="executable">/usr/bin/sloccount</Path>
             <Path fileType="executable">/usr/bin/sql_count</Path>
             <Path fileType="executable">/usr/bin/tcl_count</Path>
+            <Path fileType="data">/usr/share/licenses/sloccount/COPYING</Path>
             <Path fileType="man">/usr/share/man/man1/sloccount.1.gz</Path>
         </Files>
     </Package>
     <History>
-        <Update release="2">
-            <Date>2022-04-16</Date>
+        <Update release="3">
+            <Date>2026-03-28</Date>
             <Version>2.26</Version>
             <Comment>Packaging update</Comment>
-            <Name>Algent Albrahimi</Name>
-            <Email>algent@protonmail.com</Email>
+            <Name>David Harder</Name>
+            <Email>david@davidjharder.ca</Email>
         </Update>
     </History>
 </PISI>

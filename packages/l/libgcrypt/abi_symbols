@@ -42,6 +42,7 @@ libgcrypt.so.20:gcry_kdf_final
 libgcrypt.so.20:gcry_kdf_open
 libgcrypt.so.20:gcry_kem_decap
 libgcrypt.so.20:gcry_kem_encap
+libgcrypt.so.20:gcry_kem_genkey
 libgcrypt.so.20:gcry_kem_keypair
 libgcrypt.so.20:gcry_log_debug
 libgcrypt.so.20:gcry_log_debughex

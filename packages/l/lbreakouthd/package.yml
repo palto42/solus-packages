@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : lbreakouthd
-version    : '1.2'
-release    : 7
+version    : 1.2.2
+release    : 9
 source     :
-    - https://sourceforge.net/projects/lgames/files/lbreakouthd/lbreakouthd-1.2.tar.gz : 644cbf6f6656019bc335b02efc59e9b0fa3c5acbd21800db75a49753f8297419
+    - https://sourceforge.net/projects/lgames/files/lbreakouthd/lbreakouthd-1.2.2.tar.gz : 6f7ccb649f25b0f34aeb9774363c253f8f7fc40a9a1543b0f1d38d1a4b81a4de
 homepage   : https://lgames.sourceforge.io/LBreakoutHD/
 license    : GPL-3.0-or-later
 component  : games.arcade
@@ -14,7 +15,6 @@ builddeps  :
     - pkgconfig(SDL2_mixer)
     - pkgconfig(SDL2_ttf)
 setup      : |
-    %patch -p1 -i $pkgfiles/0001-Use-Standard-theme-instead-of-Classic.patch
     %configure
 build      : |
     %make

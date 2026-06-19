@@ -26,8 +26,8 @@ libgobject-2.0.so.0
 libgssapi_krb5.so.2
 libgtk-3.so.0
 libharfbuzz.so.0
-libicui18n.so.76
-libicuuc.so.76
+libicui18n.so.78
+libicuuc.so.78
 libinput.so.10
 libjpeg.so.8
 libm.so.6
@@ -46,6 +46,10 @@ libstdc++.so.6
 libsystemd.so.0
 libts.so.0
 libudev.so.1
+liburing.so.2
+libwayland-client.so.0
+libwayland-cursor.so.0
+libwayland-egl.so.1
 libxcb-cursor.so.0
 libxcb-glx.so.0
 libxcb-icccm.so.4

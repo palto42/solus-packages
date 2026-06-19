@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : gnome-shell-extension-dash-to-dock
-version    : '100'
-release    : 28
+version    : '103'
+release    : 30
 source     :
-    - https://github.com/micheleg/dash-to-dock/archive/refs/tags/extensions.gnome.org-v100.tar.gz : 078cacccc241428735debf905a5e8e742a737b4728353fc37f1c0859448a1910
+    - https://github.com/micheleg/dash-to-dock/archive/refs/tags/extensions.gnome.org-v103.tar.gz : 7528faff5b97f0298e5f6bf09c925893a2de5b0e38cd3f96b0fa4e51bda6ec9b
 homepage   : https://github.com/micheleg/dash-to-dock
 license    : GPL-2.0-only
 component  : desktop.gnome

@@ -1751,6 +1751,7 @@ lisp.run:safe_to_string
 lisp.run:savemem
 lisp.run:sec_usec
 lisp.run:sec_usec_number
+lisp.run:select
 lisp.run:set_terminalstream_external_format
 lisp.run:setq
 lisp.run:sha1_buffer

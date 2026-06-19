@@ -1,12 +1,20 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : libksysguard
-version    : 6.4.5
-release    : 127
+version    : 6.6.5
+release    : 140
 source     :
-    - https://download.kde.org/stable/plasma/6.4.5/libksysguard-6.4.5.tar.xz : c7cf8cd2f0a1e519201dc62889f1135967a850f932c252fd26ea3d88c6564a0f
+    - https://download.kde.org/stable/plasma/6.6.5/libksysguard-6.6.5.tar.xz : f088854a021028b7b0f6a735c89e9aa53bd13e903af11ed16a49c944e33b00df
 homepage   : https://www.kde.org/workspaces/plasmadesktop/
 license    :
+    - BSD-2-Clause
+    - BSD-3-Clause
+    - CC0-1.0
+    - GPL-2.0-only
     - GPL-2.0-or-later
+    - GPL-3.0-only
+    - LGPL-2.0-or-later
     - LGPL-2.1-only
+    - LGPL-3.0-only
 component  : programming.library
 summary    : Task management and system monitoring library
 description: |
@@ -33,3 +41,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*

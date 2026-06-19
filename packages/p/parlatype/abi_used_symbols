@@ -32,7 +32,7 @@ libadwaita-1.so.0:adw_style_manager_get_system_supports_color_schemes
 libadwaita-1.so.0:adw_style_manager_get_type
 libadwaita-1.so.0:adw_toast_new_format
 libadwaita-1.so.0:adw_toast_set_title
-libc.so.6:__isoc99_sscanf
+libc.so.6:__isoc23_sscanf
 libc.so.6:__libc_start_main
 libc.so.6:__stack_chk_fail
 libc.so.6:bind_textdomain_codeset

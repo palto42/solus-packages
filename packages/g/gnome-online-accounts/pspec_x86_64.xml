@@ -6,6 +6,7 @@
             <Name>Joey Riches</Name>
             <Email>josephriches@gmail.com</Email>
         </Packager>
+        <License>CC-BY-SA-4.0</License>
         <License>GPL-2.0-or-later</License>
         <PartOf>desktop.gnome.core</PartOf>
         <Summary xml:lang="en">The GNOME Online Accounts package contains a framework used to access the user&apos;s online accounts</Summary>
@@ -30,21 +31,21 @@
             <Path fileType="library">/usr/lib64/libgoa-backend-1.0.so.2</Path>
             <Path fileType="library">/usr/lib64/libgoa-backend-1.0.so.2.0.0</Path>
             <Path fileType="data">/usr/share/applications/org.gnome.OnlineAccounts.OAuth2.desktop</Path>
+            <Path fileType="data">/usr/share/applications/org.gnome.goa-daemon.desktop</Path>
             <Path fileType="data">/usr/share/dbus-1/services/org.gnome.Identity.service</Path>
             <Path fileType="data">/usr/share/dbus-1/services/org.gnome.OnlineAccounts.service</Path>
-            <Path fileType="data">/usr/share/glib-2.0/schemas/org.gnome.online-accounts.gschema.xml</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/goa-account-exchange.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/goa-account-fedora.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/goa-account-google.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/goa-account-ms365.svg</Path>
-            <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/goa-account-msn.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/goa-account-owncloud.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/goa-account.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/symbolic/apps/goa-account-exchange-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/symbolic/apps/goa-account-google-symbolic.svg</Path>
-            <Path fileType="data">/usr/share/icons/hicolor/symbolic/apps/goa-account-msn-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/symbolic/apps/goa-account-owncloud-symbolic.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/symbolic/apps/goa-account-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/symbolic/apps/org.gnome.goa-daemon-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/licenses/gnome-online-accounts/COPYING</Path>
             <Path fileType="localedata">/usr/share/locale/ab/LC_MESSAGES/gnome-online-accounts.mo</Path>
             <Path fileType="localedata">/usr/share/locale/af/LC_MESSAGES/gnome-online-accounts.mo</Path>
             <Path fileType="localedata">/usr/share/locale/an/LC_MESSAGES/gnome-online-accounts.mo</Path>
@@ -135,7 +136,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="61">gnome-online-accounts</Dependency>
+            <Dependency release="70">gnome-online-accounts</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/goa-1.0/goa/goa-generated.h</Path>
@@ -159,9 +160,9 @@
         </Files>
     </Package>
     <History>
-        <Update release="61">
-            <Date>2025-09-14</Date>
-            <Version>3.54.6</Version>
+        <Update release="70">
+            <Date>2026-04-14</Date>
+            <Version>3.58.1</Version>
             <Comment>Packaging update</Comment>
             <Name>Joey Riches</Name>
             <Email>josephriches@gmail.com</Email>

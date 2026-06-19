@@ -1,0 +1,57 @@
+<PISI>
+    <Source>
+        <Name>python-autocommand</Name>
+        <Homepage>https://github.com/Lucretiel/autocommand</Homepage>
+        <Packager>
+            <Name>Jared Cervantes</Name>
+            <Email>jared@jaredcervantes.com</Email>
+        </Packager>
+        <License>LGPL-3.0-or-later</License>
+        <PartOf>programming.python</PartOf>
+        <Summary xml:lang="en">Turns a Python function into a CLI program</Summary>
+        <Description xml:lang="en">A library to automatically generate and run simple argparse parsers from function signatures.
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>python-autocommand</Name>
+        <Summary xml:lang="en">Turns a Python function into a CLI program</Summary>
+        <Description xml:lang="en">A library to automatically generate and run simple argparse parsers from function signatures.
+</Description>
+        <PartOf>programming.python</PartOf>
+        <Files>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/autocommand-2.2.2.dist-info/METADATA</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/autocommand-2.2.2.dist-info/RECORD</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/autocommand-2.2.2.dist-info/WHEEL</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/autocommand-2.2.2.dist-info/licenses/LICENSE</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/autocommand-2.2.2.dist-info/top_level.txt</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/autocommand/__init__.py</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/autocommand/__pycache__/__init__.cpython-314.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/autocommand/__pycache__/__init__.cpython-314.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/autocommand/__pycache__/autoasync.cpython-314.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/autocommand/__pycache__/autoasync.cpython-314.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/autocommand/__pycache__/autocommand.cpython-314.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/autocommand/__pycache__/autocommand.cpython-314.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/autocommand/__pycache__/automain.cpython-314.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/autocommand/__pycache__/automain.cpython-314.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/autocommand/__pycache__/autoparse.cpython-314.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/autocommand/__pycache__/autoparse.cpython-314.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/autocommand/__pycache__/errors.cpython-314.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/autocommand/__pycache__/errors.cpython-314.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/autocommand/autoasync.py</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/autocommand/autocommand.py</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/autocommand/automain.py</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/autocommand/autoparse.py</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/autocommand/errors.py</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="3">
+            <Date>2026-06-12</Date>
+            <Version>2.2.2</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Jared Cervantes</Name>
+            <Email>jared@jaredcervantes.com</Email>
+        </Update>
+    </History>
+</PISI>

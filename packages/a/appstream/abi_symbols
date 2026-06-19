@@ -1953,13 +1953,14 @@ libappstream.so.5:as_video_set_locale
 libappstream.so.5:as_video_set_url
 libappstream.so.5:as_video_set_width
 libappstream.so.5:as_yaml_emit_entry
+libappstream.so.5:as_yaml_emit_entry_str
 libappstream.so.5:as_yaml_emit_entry_timestamp
 libappstream.so.5:as_yaml_emit_entry_uint64
 libappstream.so.5:as_yaml_emit_long_entry
 libappstream.so.5:as_yaml_emit_long_entry_literal
 libappstream.so.5:as_yaml_emit_scalar
 libappstream.so.5:as_yaml_emit_scalar_key
-libappstream.so.5:as_yaml_emit_scalar_raw
+libappstream.so.5:as_yaml_emit_scalar_str
 libappstream.so.5:as_yaml_emit_scalar_uint64
 libappstream.so.5:as_yaml_emit_sequence
 libappstream.so.5:as_yaml_mapping_end

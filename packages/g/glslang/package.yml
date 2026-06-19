@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : glslang
-version    : 15.3.0
-release    : 34
+version    : 16.2.0
+release    : 36
 source     :
-    - git|https://github.com/KhronosGroup/glslang.git : fc9889c889561c5882e83819dcaffef5ed45529b
+    - https://github.com/KhronosGroup/glslang/archive/refs/tags/vulkan-sdk-1.4.341.0.tar.gz : 18cdf7d40a39001dde842c6a1338b2c9321ac5e487139b9d52b4b9c666da3c86
 license    : BSD-3-Clause
 component  : xorg.display
 homepage   : https://github.com/KhronosGroup/glslang
@@ -23,14 +24,18 @@ rundeps    :
 # optimize   :
 #     - lto
 clang      : true
-environment:
+environment: |
     export CXXFLAGS="$CXXFLAGS -ffat-lto-objects"
 setup      : |
     %cmake_ninja \
-                 -DCMAKE_INSTALL_LIBDIR=%libdir% \
-                 -DBUILD_SHARED_LIBS=ON \
-                 -DALLOW_EXTERNAL_SPIRV_TOOLS=ON
+        -DCMAKE_INSTALL_LIBDIR=%libdir% \
+        -DBUILD_SHARED_LIBS=ON \
+        -DALLOW_EXTERNAL_SPIRV_TOOLS=ON \
+        -DGLSLANG_TESTS=ON
 build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSE.txt
+check      : |
+    %ninja_check

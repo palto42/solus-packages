@@ -34,8 +34,8 @@ Installation Guide: https://help.getsol.us/docs/user/software/camera/droidcam
         </Files>
     </Package>
     <History>
-        <Update release="6">
-            <Date>2025-10-04</Date>
+        <Update release="7">
+            <Date>2026-04-02</Date>
             <Version>2.1.4</Version>
             <Comment>Packaging update</Comment>
             <Name>Jakob Gezelius</Name>

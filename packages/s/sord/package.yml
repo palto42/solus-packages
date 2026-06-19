@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : sord
-version    : 0.16.18
-release    : 7
+version    : 0.16.22
+release    : 8
 source     :
-    - https://gitlab.com/drobilla/sord/-/archive/v0.16.18/sord-v0.16.18.tar.bz2 : ff5cccae607accf119015652890fe9e723691de4985a3f6b4817e83f6e33e712
+    - https://gitlab.com/drobilla/sord/-/archive/v0.16.22/sord-v0.16.22.tar.bz2 : 748ee305e5cfd5302604aa995e266a7e55c8a2f5c6359f4fb170419ae2cf84da
 homepage   : https://gitlab.com/drobilla/sord
 license    :
     - 0BSD
@@ -25,3 +26,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license COPYING

@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : haruna
-version    : 1.5.0
-release    : 28
+version    : 1.8.1
+release    : 38
 source     :
-    - https://download.kde.org/stable/haruna/1.5.0/haruna-1.5.0.tar.xz : d3e74e62f36808868a5ef5253b3ab080674eb702528cf56ab37f7a893e48ef5d
+    - https://download.kde.org/stable/haruna/1.8.1/haruna-1.8.1.tar.xz : 01f154e3161292da606899c3017f863362e00bb2402a2796be5e8d6849fc4b4b
 homepage   : https://invent.kde.org/multimedia/haruna/
 license    :
     - BSD-3-Clause
@@ -17,6 +18,7 @@ description: |
 builddeps  :
     - pkgconfig(Qt6Core5Compat)
     - pkgconfig(Qt6QuickControls2)
+    - pkgconfig(Qt6ShaderTools)
     - pkgconfig(libavformat)
     - pkgconfig(mpv)
     - breeze-devel
@@ -39,7 +41,6 @@ optimize   :
     - speed
     - thin-lto
 setup      : |
-    %patch -p1 -i $pkgfiles/0001-Force-opening-remote-files-with-kio-fuse.patch
     %cmake_kf6
 build      : |
     %ninja_build
@@ -48,3 +49,5 @@ install    : |
 
     #remove docs
     rm -rfv $installdir/usr/share/doc
+
+    %install_license LICENSES/*

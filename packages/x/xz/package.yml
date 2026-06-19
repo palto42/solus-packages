@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : xz
-version    : 5.8.1
-release    : 40
+version    : 5.8.3
+release    : 42
 source     :
-    - https://github.com/tukaani-project/xz/releases/download/v5.8.1/xz-5.8.1.tar.gz : 507825b599356c10dca1cd720c9d0d0c9d5400b9de300af00e4d1ea150795543
+    - https://github.com/tukaani-project/xz/releases/download/v5.8.3/xz-5.8.3.tar.xz : fff1ffcf2b0da84d308a14de513a1aa23d4e9aa3464d17e64b9714bfdd0bbfb6
 homepage   : https://tukaani.org/xz/
 license    :
     - 0BSD
@@ -21,6 +22,7 @@ build      : |
     %make
 install    : |
     %make_install
+    %install_license COPYING COPYING.*
 profile    : |
     %make check
 check      : |

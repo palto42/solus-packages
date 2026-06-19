@@ -1,0 +1,25 @@
+From b822331b386b28e68409c5e5154ad172891a4034 Mon Sep 17 00:00:00 2001
+From: Jiri Slaby <jslaby@suse.cz>
+Date: Thu, 12 Mar 2026 07:29:34 +0100
+Subject: [PATCH] Linux host: support kernel 7.0
+
+Fixes: https://github.com/VirtualBox/virtualbox/issues/582
+---
+ src/VBox/Additions/linux/drm/vbox_fb.c | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/src/VBox/Additions/linux/drm/vbox_fb.c b/src/VBox/Additions/linux/drm/vbox_fb.c
+index 9f56b5a7259..069c1a7aa56 100644
+--- a/src/VBox/Additions/linux/drm/vbox_fb.c
++++ b/src/VBox/Additions/linux/drm/vbox_fb.c
+@@ -216,8 +216,10 @@ static struct fb_ops vboxfb_ops = {
+ 	.fb_pan_display = drm_fb_helper_pan_display,
+ 	.fb_blank = drm_fb_helper_blank,
+ 	.fb_setcmap = drm_fb_helper_setcmap,
++#if RTLNX_VER_MAX(7,0,0)
+ 	.fb_debug_enter = drm_fb_helper_debug_enter,
+ 	.fb_debug_leave = drm_fb_helper_debug_leave,
++#endif
+ };
+ 
+ static int vboxfb_create_object(struct vbox_fbdev *fbdev,

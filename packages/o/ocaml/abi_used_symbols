@@ -9,8 +9,8 @@ libc.so.6:__environ
 libc.so.6:__errno_location
 libc.so.6:__fdelt_chk
 libc.so.6:__fprintf_chk
+libc.so.6:__isoc23_sscanf
 libc.so.6:__isoc23_strtol
-libc.so.6:__isoc99_sscanf
 libc.so.6:__libc_start_main
 libc.so.6:__longjmp_chk
 libc.so.6:__memmove_chk
@@ -118,6 +118,7 @@ libc.so.6:localtime
 libc.so.6:lseek64
 libc.so.6:lstat64
 libc.so.6:malloc
+libc.so.6:memchr
 libc.so.6:memcmp
 libc.so.6:memcpy
 libc.so.6:memmove
@@ -218,7 +219,6 @@ libc.so.6:strncmp
 libc.so.6:strncpy
 libc.so.6:strnlen
 libc.so.6:strtod_l
-libc.so.6:strtol
 libc.so.6:symlink
 libc.so.6:sysconf
 libc.so.6:system
@@ -274,3 +274,4 @@ libm.so.6:sinh
 libm.so.6:sqrt
 libm.so.6:tan
 libm.so.6:tanh
+libm.so.6:trunc

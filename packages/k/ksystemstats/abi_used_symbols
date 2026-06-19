@@ -209,6 +209,7 @@ libQt6Core.so.6:_ZN10QByteArray14toLower_helperERS_
 libQt6Core.so.6:_ZN10QByteArray14trimmed_helperERKS_
 libQt6Core.so.6:_ZN10QByteArray14trimmed_helperERS_
 libQt6Core.so.6:_ZN10QByteArray17simplified_helperERKS_
+libQt6Core.so.6:_ZN10QByteArray4chopEx
 libQt6Core.so.6:_ZN10QByteArray6_emptyE
 libQt6Core.so.6:_ZN10QByteArray6appendEc
 libQt6Core.so.6:_ZN10QByteArray6insertEx14QByteArrayView
@@ -369,6 +370,7 @@ libQt6Core.so.6:_ZNK10QByteArray5splitEc
 libQt6Core.so.6:_ZNK10QByteArray5toIntEPbi
 libQt6Core.so.6:_ZNK10QByteArray6toUIntEPbi
 libQt6Core.so.6:_ZNK10QByteArray8toDoubleEPb
+libQt6Core.so.6:_ZNK11QFileDevice5atEndEv
 libQt6Core.so.6:_ZNK11QMetaObject2trEPKcS1_i
 libQt6Core.so.6:_ZNK11QMetaObject4castEPK7QObject
 libQt6Core.so.6:_ZNK11QMetaObject9classNameEv
@@ -391,7 +393,6 @@ libQt6Core.so.6:_ZNK7QString8arg_implExii5QChar
 libQt6Core.so.6:_ZNK7QString8toDoubleEPb
 libQt6Core.so.6:_ZNK8QVariant11toULongLongEPb
 libQt6Core.so.6:_ZNK8QVariant6equalsERKS_
-libQt6Core.so.6:_ZNK8QVariant8metaTypeEv
 libQt6Core.so.6:_ZNK8QVariant8toDoubleEPb
 libQt6Core.so.6:_ZNK8QVariant8toStringEv
 libQt6Core.so.6:_ZNK9QIODevice11canReadLineEv
@@ -497,6 +498,7 @@ libQt6Network.so.6:_ZNK20QNetworkAddressEntry2ipEv
 libQt6Network.so.6:_ZNK20QNetworkAddressEntry7netmaskEv
 libc.so.6:__cxa_atexit
 libc.so.6:__errno_location
+libc.so.6:__inet_ntop_chk
 libc.so.6:__isoc23_sscanf
 libc.so.6:__isoc23_strtol
 libc.so.6:__isoc23_strtoll
@@ -507,7 +509,6 @@ libc.so.6:__stack_chk_fail
 libc.so.6:exit
 libc.so.6:free
 libc.so.6:getloadavg
-libc.so.6:inet_ntop
 libc.so.6:ioctl
 libc.so.6:memchr
 libc.so.6:memcmp

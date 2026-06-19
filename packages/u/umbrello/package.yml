@@ -1,12 +1,20 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : umbrello
-version    : 25.08.2
-release    : 109
+version    : 26.04.2
+release    : 115
 source     :
-    - https://download.kde.org/stable/release-service/25.08.2/src/umbrello-25.08.2.tar.xz : ec141b83348514a5f14596ed57d2ade49f737b4edafd8e86f02bf5154e794c7e
+    - https://download.kde.org/stable/release-service/26.04.2/src/umbrello-26.04.2.tar.xz : fcb3c64a7f25780d985aab76d6ecc0e5fa5e3c1e144ad1d5ab5e50eca714b670
 homepage   : https://kde.org/applications/development/org.kde.umbrello
 license    :
-    - GFDL-1.2-or-later
+    - BSD-3-Clause
+    - CC0-1.0
+    - GPL-2.0-only
     - GPL-2.0-or-later
+    - GPL-3.0-only
+    - GPL-3.0-or-later
+    - LGPL-2.0-only
+    - LGPL-2.0-or-later
+    - MIT
 component  : programming.tools
 summary    : Umbrello UML Modeller is a UML diagramming tool for KDE
 description: |
@@ -31,6 +39,7 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*
 
     #Remove docs
     rm -rfv $installdir/usr/share/doc

@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : gnome-maps
-version    : '48.7'
-release    : 67
+version    : '50.1'
+release    : 73
 source     :
-    - https://download.gnome.org/sources/gnome-maps/48/gnome-maps-48.7.tar.xz : e568c612657605ed26d1bc090f53b2d9225de9b71eb5c85cebe5107d3c2eda84
+    - https://download.gnome.org/sources/gnome-maps/50/gnome-maps-50.1.tar.xz : 42cdf0367f945ce3db1203a6bcfd1d5f5f36d9cac361c81c18567b93130de9eb
 homepage   : https://apps.gnome.org/Maps/
 license    : GPL-2.0-or-later
 component  : office
@@ -18,6 +19,7 @@ builddeps  :
     - pkgconfig(librsvg-2.0)
     - pkgconfig(rest-1.0)
     - pkgconfig(shumate-1.0)
+    - blueprint-compiler
     - desktop-file-utils
 rundeps    :
     - geoclue

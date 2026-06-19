@@ -3,8 +3,8 @@
         <Name>thin-provisioning-tools</Name>
         <Homepage>https://github.com/jthornber/thin-provisioning-tools</Homepage>
         <Packager>
-            <Name>Reilly Brogan</Name>
-            <Email>solus@reillybrogan.com</Email>
+            <Name>David Harder</Name>
+            <Email>david@davidjharder.ca</Email>
         </Packager>
         <License>GPL-3.0-or-later</License>
         <PartOf>system.utils</PartOf>
@@ -43,37 +43,37 @@
             <Path fileType="executable">/usr/sbin/thin_restore</Path>
             <Path fileType="executable">/usr/sbin/thin_rmap</Path>
             <Path fileType="executable">/usr/sbin/thin_trim</Path>
-            <Path fileType="man">/usr/share/man/man8/cache_check.8</Path>
-            <Path fileType="man">/usr/share/man/man8/cache_dump.8</Path>
-            <Path fileType="man">/usr/share/man/man8/cache_metadata_size.8</Path>
-            <Path fileType="man">/usr/share/man/man8/cache_repair.8</Path>
-            <Path fileType="man">/usr/share/man/man8/cache_restore.8</Path>
-            <Path fileType="man">/usr/share/man/man8/cache_writeback.8</Path>
-            <Path fileType="man">/usr/share/man/man8/era_check.8</Path>
-            <Path fileType="man">/usr/share/man/man8/era_dump.8</Path>
-            <Path fileType="man">/usr/share/man/man8/era_invalidate.8</Path>
-            <Path fileType="man">/usr/share/man/man8/era_restore.8</Path>
-            <Path fileType="man">/usr/share/man/man8/thin_check.8</Path>
-            <Path fileType="man">/usr/share/man/man8/thin_delta.8</Path>
-            <Path fileType="man">/usr/share/man/man8/thin_dump.8</Path>
-            <Path fileType="man">/usr/share/man/man8/thin_ls.8</Path>
-            <Path fileType="man">/usr/share/man/man8/thin_metadata_pack.8</Path>
-            <Path fileType="man">/usr/share/man/man8/thin_metadata_size.8</Path>
-            <Path fileType="man">/usr/share/man/man8/thin_metadata_unpack.8</Path>
-            <Path fileType="man">/usr/share/man/man8/thin_migrate.8</Path>
-            <Path fileType="man">/usr/share/man/man8/thin_repair.8</Path>
-            <Path fileType="man">/usr/share/man/man8/thin_restore.8</Path>
-            <Path fileType="man">/usr/share/man/man8/thin_rmap.8</Path>
-            <Path fileType="man">/usr/share/man/man8/thin_trim.8</Path>
+            <Path fileType="man">/usr/share/man/man8/cache_check.8.zst</Path>
+            <Path fileType="man">/usr/share/man/man8/cache_dump.8.zst</Path>
+            <Path fileType="man">/usr/share/man/man8/cache_metadata_size.8.zst</Path>
+            <Path fileType="man">/usr/share/man/man8/cache_repair.8.zst</Path>
+            <Path fileType="man">/usr/share/man/man8/cache_restore.8.zst</Path>
+            <Path fileType="man">/usr/share/man/man8/cache_writeback.8.zst</Path>
+            <Path fileType="man">/usr/share/man/man8/era_check.8.zst</Path>
+            <Path fileType="man">/usr/share/man/man8/era_dump.8.zst</Path>
+            <Path fileType="man">/usr/share/man/man8/era_invalidate.8.zst</Path>
+            <Path fileType="man">/usr/share/man/man8/era_restore.8.zst</Path>
+            <Path fileType="man">/usr/share/man/man8/thin_check.8.zst</Path>
+            <Path fileType="man">/usr/share/man/man8/thin_delta.8.zst</Path>
+            <Path fileType="man">/usr/share/man/man8/thin_dump.8.zst</Path>
+            <Path fileType="man">/usr/share/man/man8/thin_ls.8.zst</Path>
+            <Path fileType="man">/usr/share/man/man8/thin_metadata_pack.8.zst</Path>
+            <Path fileType="man">/usr/share/man/man8/thin_metadata_size.8.zst</Path>
+            <Path fileType="man">/usr/share/man/man8/thin_metadata_unpack.8.zst</Path>
+            <Path fileType="man">/usr/share/man/man8/thin_migrate.8.zst</Path>
+            <Path fileType="man">/usr/share/man/man8/thin_repair.8.zst</Path>
+            <Path fileType="man">/usr/share/man/man8/thin_restore.8.zst</Path>
+            <Path fileType="man">/usr/share/man/man8/thin_rmap.8.zst</Path>
+            <Path fileType="man">/usr/share/man/man8/thin_trim.8.zst</Path>
         </Files>
     </Package>
     <History>
-        <Update release="12">
-            <Date>2024-09-08</Date>
-            <Version>1.1.0</Version>
+        <Update release="13">
+            <Date>2026-04-28</Date>
+            <Version>1.3.2</Version>
             <Comment>Packaging update</Comment>
-            <Name>Reilly Brogan</Name>
-            <Email>solus@reillybrogan.com</Email>
+            <Name>David Harder</Name>
+            <Email>david@davidjharder.ca</Email>
         </Update>
     </History>
 </PISI>

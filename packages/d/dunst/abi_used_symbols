@@ -74,7 +74,6 @@ libc.so.6:__stack_chk_fail
 libc.so.6:__xpg_basename
 libc.so.6:access
 libc.so.6:alphasort
-libc.so.6:calloc
 libc.so.6:clock_gettime
 libc.so.6:close
 libc.so.6:execlp
@@ -87,11 +86,10 @@ libc.so.6:fopen
 libc.so.6:fork
 libc.so.6:fputc
 libc.so.6:fputs
-libc.so.6:free
 libc.so.6:ftruncate
-libc.so.6:fwrite
 libc.so.6:getenv
 libc.so.6:getline
+libc.so.6:getpid
 libc.so.6:getpwuid
 libc.so.6:getuid
 libc.so.6:memcpy
@@ -266,6 +264,9 @@ libglib-2.0.so.0:g_rc_box_alloc
 libglib-2.0.so.0:g_rc_box_release_full
 libglib-2.0.so.0:g_realloc
 libglib-2.0.so.0:g_realloc_n
+libglib-2.0.so.0:g_regex_match
+libglib-2.0.so.0:g_regex_new
+libglib-2.0.so.0:g_regex_unref
 libglib-2.0.so.0:g_return_if_fail_warning
 libglib-2.0.so.0:g_set_prgname
 libglib-2.0.so.0:g_shell_parse_argv
@@ -352,6 +353,7 @@ libnotify.so.4:notify_notification_close
 libnotify.so.4:notify_notification_get_closed_reason
 libnotify.so.4:notify_notification_new
 libnotify.so.4:notify_notification_set_category
+libnotify.so.4:notify_notification_set_hint
 libnotify.so.4:notify_notification_set_hint_byte
 libnotify.so.4:notify_notification_set_hint_double
 libnotify.so.4:notify_notification_set_hint_int32

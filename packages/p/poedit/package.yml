@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : poedit
-version    : 3.4.4
-release    : 49
+version    : 3.9.1
+release    : 52
 source     :
-    - https://github.com/vslavik/poedit/releases/download/v3.4.4-oss/poedit-3.4.4.tar.gz : 29cda1611e01af491e0c770a87cd6d24c5ccfe8737dfbc0f2f23847ba0d821ed
+    - https://github.com/vslavik/poedit/releases/download/v3.9.1-oss/poedit-3.9.1.tar.gz : d70c45e2ee3b4c8f7b6e2f61a09d4f720b23a09aeed1c44a58a0050634f260fd
 homepage   : https://poedit.net
 license    : MIT
 component  : editor
@@ -14,12 +15,17 @@ builddeps  :
     - pkgconfig(icu-uc)
     - pkgconfig(liblucene++)
     - pkgconfig(pugixml)
-    - pkgconfig(webkit2gtk-4.0)
+    - pkgconfig(webkit2gtk-4.1)
     - libboost-devel
     - wxwidgets-devel
+environment: |
+    # REMOVE me on libboost upgrade
+    export CFLAGS="${CFLAGS} -Wno-template-body"
+    export CXXFLAGS="${CXXFLAGS} -Wno-template-body"
 setup      : |
     %configure
 build      : |
     %make
 install    : |
     %make_install
+    %install_license COPYING

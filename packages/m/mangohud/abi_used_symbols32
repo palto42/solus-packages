@@ -44,6 +44,7 @@ libc.so.6:bind
 libc.so.6:bind_textdomain_codeset
 libc.so.6:bindtextdomain
 libc.so.6:btowc
+libc.so.6:calloc
 libc.so.6:clock_gettime
 libc.so.6:clock_nanosleep
 libc.so.6:close
@@ -51,6 +52,7 @@ libc.so.6:closedir
 libc.so.6:dgettext
 libc.so.6:dirname
 libc.so.6:dl_iterate_phdr
+libc.so.6:dladdr
 libc.so.6:dladdr1
 libc.so.6:dlclose
 libc.so.6:dlerror
@@ -58,6 +60,7 @@ libc.so.6:dlopen
 libc.so.6:dlsym
 libc.so.6:dup2
 libc.so.6:execl
+libc.so.6:execvp
 libc.so.6:exit
 libc.so.6:fclose
 libc.so.6:fcntl64
@@ -120,6 +123,7 @@ libc.so.6:mmap64
 libc.so.6:munmap
 libc.so.6:nanosleep
 libc.so.6:open
+libc.so.6:open64
 libc.so.6:opendir
 libc.so.6:pathconf
 libc.so.6:pclose
@@ -140,6 +144,7 @@ libc.so.6:pthread_mutex_lock
 libc.so.6:pthread_mutex_trylock
 libc.so.6:pthread_mutex_unlock
 libc.so.6:pthread_once
+libc.so.6:pthread_setname_np
 libc.so.6:pthread_setspecific
 libc.so.6:putc
 libc.so.6:putwc
@@ -229,6 +234,7 @@ libm.so.6:atan2f
 libm.so.6:cbrt
 libm.so.6:ceil
 libm.so.6:ceilf
+libm.so.6:cosf
 libm.so.6:floor
 libm.so.6:fmodf
 libm.so.6:log
@@ -240,6 +246,7 @@ libm.so.6:modff
 libm.so.6:pow
 libm.so.6:powf
 libm.so.6:round
+libm.so.6:roundf
 libm.so.6:sincos
 libm.so.6:sincosf
 libm.so.6:sinh
@@ -249,9 +256,11 @@ libwayland-client.so.0:wl_display_create_queue
 libwayland-client.so.0:wl_display_dispatch_queue_pending
 libwayland-client.so.0:wl_display_interface
 libwayland-client.so.0:wl_display_roundtrip_queue
+libwayland-client.so.0:wl_event_queue_destroy
 libwayland-client.so.0:wl_keyboard_interface
 libwayland-client.so.0:wl_proxy_add_listener
 libwayland-client.so.0:wl_proxy_create_wrapper
+libwayland-client.so.0:wl_proxy_destroy
 libwayland-client.so.0:wl_proxy_get_version
 libwayland-client.so.0:wl_proxy_marshal_flags
 libwayland-client.so.0:wl_proxy_set_queue
@@ -265,3 +274,4 @@ libxkbcommon.so.0:xkb_keysym_from_name
 libxkbcommon.so.0:xkb_state_key_get_one_sym
 libxkbcommon.so.0:xkb_state_new
 libxkbcommon.so.0:xkb_state_unref
+libxkbcommon.so.0:xkb_state_update_mask

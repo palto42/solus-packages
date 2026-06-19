@@ -1,3 +1,5 @@
+Xephyr:_IO_stdin_used
+Xnest:_IO_stdin_used
 Xorg:AccessUsingXdmcp
 Xorg:AccessXCancelRepeatKey
 Xorg:AccessXComputeCurveFactor
@@ -1998,6 +2000,7 @@ Xorg:xorgHWAccess
 Xorg:xorg_backtrace
 Xorg:xstrtokenize
 Xorg:xthread_sigmask
+Xvfb:_IO_stdin_used
 inputtest_drv.so:inputtestModuleData
 libexa.so:ExaOffscreenMarkUsed
 libexa.so:exaDrawableIsOffscreen

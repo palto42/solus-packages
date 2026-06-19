@@ -20,7 +20,8 @@
         <PartOf>programming.library</PartOf>
         <Files>
             <Path fileType="library">/usr/lib64/libsratom-0.so.0</Path>
-            <Path fileType="library">/usr/lib64/libsratom-0.so.0.6.18</Path>
+            <Path fileType="library">/usr/lib64/libsratom-0.so.0.6.22</Path>
+            <Path fileType="data">/usr/share/licenses/sratom/COPYING</Path>
         </Files>
     </Package>
     <Package>
@@ -29,7 +30,7 @@
         <Description xml:lang="en">A library for serialising LV2 atoms to or from RDF, particularly the Turtle syntax.</Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="6">sratom</Dependency>
+            <Dependency release="7">sratom</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/sratom-0/sratom/sratom.h</Path>
@@ -38,9 +39,9 @@
         </Files>
     </Package>
     <History>
-        <Update release="6">
-            <Date>2025-04-16</Date>
-            <Version>0.6.18</Version>
+        <Update release="7">
+            <Date>2026-04-10</Date>
+            <Version>0.6.22</Version>
             <Comment>Packaging update</Comment>
             <Name>Robert Gonzalez</Name>
             <Email>uni.dos12@outlook.com</Email>

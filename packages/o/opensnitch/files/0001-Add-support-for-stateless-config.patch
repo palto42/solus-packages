@@ -1,0 +1,289 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: uni-dos <uni.dos12@outlook.com>
+Date: Thu, 9 Jan 2025 19:59:34 -0600
+Subject: [PATCH 1/5] Add support for stateless config
+
+---
+ daemon/Makefile                      | 16 +++++-----
+ daemon/configpath/path.go            | 47 ++++++++++++++++++++++++++++
+ daemon/data/default-config.json      |  4 +--
+ daemon/data/init/opensnitchd.service |  1 +
+ daemon/firewall/config/config.go     | 12 ++++++-
+ daemon/main.go                       |  9 +++---
+ daemon/rule/loader.go                | 28 +++++++++++------
+ daemon/ui/client.go                  |  3 +-
+ 8 files changed, 94 insertions(+), 26 deletions(-)
+ create mode 100644 daemon/configpath/path.go
+
+diff --git a/daemon/Makefile b/daemon/Makefile
+index 20ac84d3..0cc61289 100644
+--- a/daemon/Makefile
++++ b/daemon/Makefile
+@@ -5,20 +5,20 @@ PREFIX?=/usr/local
+ all: opensnitchd
+ 
+ install:
+-	@mkdir -p $(DESTDIR)/etc/opensnitchd/rules
+-	@mkdir -p $(DESTDIR)/etc/opensnitchd/tasks
++	@mkdir -p $(DESTDIR)/usr/share/defaults/etc/opensnitchd/rules
++	@mkdir -p $(DESTDIR)/usr/share/defaults/etc/opensnitchd/tasks
+ 	@install -Dm755 opensnitchd \
+ 		-t $(DESTDIR)$(PREFIX)/bin/
+ 	@install -Dm644 data/init/opensnitchd.service \
+-		-t $(DESTDIR)/etc/systemd/system/
++		-t $(DESTDIR)/usr/lib/systemd/system/
+ 	@install -Dm644 data/default-config.json \
+-		-t $(DESTDIR)/etc/opensnitchd/
++		-t $(DESTDIR)/usr/share/defaults/etc/opensnitchd/
+ 	@install -Dm644 data/system-fw.json \
+-		-t $(DESTDIR)/etc/opensnitchd/
++		-t $(DESTDIR)/usr/share/defaults/etc/opensnitchd/
+ 	@install -Dm644 data/network_aliases.json \
+-		-t $(DESTDIR)/etc/opensnitchd/
+-	@install -Dm600 data/rules/* $(DESTDIR)/etc/opensnitchd/rules/
+-	@install -Dm600 data/tasks/tasks.json $(DESTDIR)/etc/opensnitchd/tasks/
++		-t $(DESTDIR)/usr/share/defaults/etc/opensnitchd/
++	@install -Dm600 data/rules/* $(DESTDIR)/usr/share/defaults/etc/opensnitchd/rules/
++	@install -Dm600 data/tasks/tasks.json $(DESTDIR)/usr/share/defaults/etc/opensnitchd/tasks/
+ 	@systemctl daemon-reload
+ 
+ opensnitchd: $(SRC)
+diff --git a/daemon/configpath/path.go b/daemon/configpath/path.go
+new file mode 100644
+index 00000000..15e22005
+--- /dev/null
++++ b/daemon/configpath/path.go
+@@ -0,0 +1,47 @@
++package configpath
++
++import (
++	"os"
++	"path/filepath"
++	"strings"
++)
++
++const (
++	DefaultConfigFile  = "default-config.json"
++	NetworkAliasesFile = "network_aliases.json"
++	SystemFWFile       = "system-fw.json"
++	RulesDir           = "rules"
++)
++
++const (
++	defaultConfigDir = "/usr/share/defaults/etc/opensnitchd/"
++	userConfigDir    = "/etc/opensnitchd/"
++)
++
++// Find returns the location of a configuration from either the user or default config directory.
++func Find(file string) string {
++	path := filepath.Join(userConfigDir, file)
++
++	if !Exists(path) {
++		return filepath.Join(defaultConfigDir, file)
++	}
++
++	return path
++}
++
++// User always returns the user path of a configuration file.
++func User(file string) string {
++	return filepath.Join(userConfigDir, file)
++}
++
++// IsDefault returns true if the given configuration file path is in the default configuration directory.
++func IsDefault(path string) bool {
++	return strings.HasPrefix(path, defaultConfigDir)
++}
++
++// Exists returns true if the given directory exists and is accesible.
++func Exists(path string) bool {
++	_, err := os.Stat(path)
++
++	return err == nil
++}
+diff --git a/daemon/data/default-config.json b/daemon/data/default-config.json
+index baa5d7ee..98159259 100644
+--- a/daemon/data/default-config.json
++++ b/daemon/data/default-config.json
+@@ -24,12 +24,12 @@
+     "LogMicro": false,
+     "Firewall": "nftables",
+     "FwOptions": {
+-        "ConfigPath": "/etc/opensnitchd/system-fw.json",
++        "ConfigPath": "",
+         "MonitorInterval": "15s",
+         "QueueBypass": true
+     },
+     "Rules": {
+-        "Path": "/etc/opensnitchd/rules/",
++        "Path": "",
+         "EnableChecksums": false
+     },
+     "Ebpf": {
+diff --git a/daemon/data/init/opensnitchd.service b/daemon/data/init/opensnitchd.service
+index 46e1c5c8..0717485d 100644
+--- a/daemon/data/init/opensnitchd.service
++++ b/daemon/data/init/opensnitchd.service
+@@ -5,6 +5,7 @@ Documentation=https://github.com/evilsocket/opensnitch/wiki
+ [Service]
+ Type=simple
+ ExecStart=/usr/local/bin/opensnitchd
++ExecStartPre=/bin/mkdir -p /etc/opensnitchd/rules
+ Restart=always
+ RestartSec=30
+ TimeoutStopSec=10
+diff --git a/daemon/firewall/config/config.go b/daemon/firewall/config/config.go
+index ca6a47e7..90f9084b 100644
+--- a/daemon/firewall/config/config.go
++++ b/daemon/firewall/config/config.go
+@@ -14,9 +14,11 @@ import (
+ 	"os"
+ 	"sync"
+ 
++	"github.com/fsnotify/fsnotify"
++
++	"github.com/evilsocket/opensnitch/daemon/configpath"
+ 	"github.com/evilsocket/opensnitch/daemon/firewall/common"
+ 	"github.com/evilsocket/opensnitch/daemon/log"
+-	"github.com/fsnotify/fsnotify"
+ )
+ 
+ var (
+@@ -147,6 +149,10 @@ func (c *Config) NewSystemFwConfig(configPath string, preLoadCb, reLoadCb func()
+ 	defer c.Unlock()
+ 
+ 	c.file = configPath
++	if !configpath.Exists(c.file) {
++		c.file = configpath.Find(configpath.SystemFWFile)
++	}
++
+ 	c.ctx, c.cancelMonitor = context.WithCancel(context.Background())
+ 	c.preloadCallback = preLoadCb
+ 	c.reloadCallback = reLoadCb
+@@ -218,6 +224,10 @@ func (c *Config) loadConfiguration(rawConfig []byte) error {
+ // SaveConfiguration saves configuration to disk.
+ // This event dispatches a reload of the configuration.
+ func (c *Config) SaveConfiguration(rawConfig string) error {
++	if configpath.IsDefault(c.file) {
++		c.file = configpath.User(configpath.SystemFWFile)
++	}
++
+ 	conf, err := json.MarshalIndent([]byte(rawConfig), "  ", "  ")
+ 	if err != nil {
+ 		log.Error("saving json firewall configuration: %s %s", err, conf)
+diff --git a/daemon/main.go b/daemon/main.go
+index f6247623..caf62bca 100644
+--- a/daemon/main.go
++++ b/daemon/main.go
+@@ -38,6 +38,7 @@ import (
+ 	"syscall"
+ 	"time"
+ 
++	"github.com/evilsocket/opensnitch/daemon/configpath"
+ 	"github.com/evilsocket/opensnitch/daemon/conman"
+ 	"github.com/evilsocket/opensnitch/daemon/core"
+ 	"github.com/evilsocket/opensnitch/daemon/dns"
+@@ -63,10 +64,10 @@ var (
+ 	logFile           = ""
+ 	logUTC            = true
+ 	logMicro          = false
+-	rulesPath         = ""
+-	configFile        = "/etc/opensnitchd/default-config.json"
+-	aliasFile         = "/etc/opensnitchd/network_aliases.json"
+-	fwConfigFile      = ""
++	rulesPath         = configpath.Find(configpath.RulesDir)
++	configFile        = configpath.Find(configpath.DefaultConfigFile)
++	aliasFile         = configpath.Find(configpath.NetworkAliasesFile)
++	fwConfigFile      = configpath.Find(configpath.SystemFWFile)
+ 	ebpfModPath       = "" // /usr/lib/opensnitchd/ebpf
+ 	noLiveReload      = false
+ 	queueNum          = 0
+diff --git a/daemon/rule/loader.go b/daemon/rule/loader.go
+index 3d743556..e80be521 100644
+--- a/daemon/rule/loader.go
++++ b/daemon/rule/loader.go
+@@ -12,12 +12,13 @@ import (
+ 	"sync"
+ 	"time"
+ 
++	"github.com/fsnotify/fsnotify"
++
++	"github.com/evilsocket/opensnitch/daemon/configpath"
+ 	"github.com/evilsocket/opensnitch/daemon/conman"
+ 	"github.com/evilsocket/opensnitch/daemon/core"
+ 	"github.com/evilsocket/opensnitch/daemon/log"
+ 	"github.com/evilsocket/opensnitch/daemon/procmon"
+-
+-	"github.com/fsnotify/fsnotify"
+ )
+ 
+ // Loader is the object that holds the rules loaded from disk, as well as the
+@@ -89,7 +90,7 @@ func (l *Loader) HasChecksums(op Operand) {
+ // rules from memory.
+ func (l *Loader) Reload(path string) error {
+ 	if path == "" {
+-		path = DefaultPath
++		path = configpath.Find(configpath.RulesDir)
+ 	}
+ 	log.Info("rules.Loader.Reload(): %s", path)
+ 
+@@ -159,8 +160,7 @@ func (l *Loader) Load(path string) error {
+ func (l *Loader) Add(rule *Rule, saveToDisk bool) error {
+ 	l.addUserRule(rule)
+ 	if saveToDisk {
+-		fileName := filepath.Join(l.Path, fmt.Sprintf("%s.json", rule.Name))
+-		return l.Save(rule, fileName)
++		return l.saveToDisk(rule)
+ 	}
+ 	return nil
+ }
+@@ -171,15 +171,23 @@ func (l *Loader) Replace(rule *Rule, saveToDisk bool) error {
+ 		return err
+ 	}
+ 	if saveToDisk {
+-		l.Lock()
+-		defer l.Unlock()
+-
+-		fileName := filepath.Join(l.Path, fmt.Sprintf("%s.json", rule.Name))
+-		return l.Save(rule, fileName)
++		return l.saveToDisk(rule)
+ 	}
+ 	return nil
+ }
+ 
++func (l *Loader) saveToDisk(rule *Rule) error {
++	l.Lock()
++	defer l.Unlock()
++
++	if configpath.IsDefault(l.Path) {
++		l.Path = configpath.User(configpath.RulesDir)
++	}
++
++	fileName := filepath.Join(l.Path, fmt.Sprintf("%s.json", rule.Name))
++	return l.Save(rule, fileName)
++}
++
+ // Save a rule to disk.
+ func (l *Loader) Save(rule *Rule, path string) error {
+ 	// When saving the rule, use always RFC3339 format for the Created field (#1140).
+diff --git a/daemon/ui/client.go b/daemon/ui/client.go
+index b4d6845b..d407b980 100644
+--- a/daemon/ui/client.go
++++ b/daemon/ui/client.go
+@@ -6,6 +6,7 @@ import (
+ 	"sync"
+ 	"time"
+ 
++	"github.com/evilsocket/opensnitch/daemon/configpath"
+ 	"github.com/evilsocket/opensnitch/daemon/conman"
+ 	"github.com/evilsocket/opensnitch/daemon/firewall/iptables"
+ 	"github.com/evilsocket/opensnitch/daemon/log"
+@@ -26,7 +27,7 @@ import (
+ )
+ 
+ var (
+-	configFile             = "/etc/opensnitchd/default-config.json"
++	configFile             = configpath.Find(configpath.DefaultConfigFile)
+ 	dummyOperator, _       = rule.NewOperator(rule.Simple, false, rule.OpTrue, "", make([]rule.Operator, 0))
+ 	clientDisconnectedRule = rule.Create("ui.client.disconnected", "", true, false, false, rule.Allow, rule.Once, dummyOperator)
+ 	// While the GUI is connected, deny by default everything until the user takes an action.

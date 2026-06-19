@@ -4,8 +4,14 @@
         <Homepage>https://community.kde.org/Elisa</Homepage>
         <Packager>
             <Name>Troy Harvey</Name>
-            <Email>harveydevel@gmail.com</Email>
+            <Email>harvey@getsol.us</Email>
         </Packager>
+        <License>BSD-2-Clause</License>
+        <License>BSD-3-Clause</License>
+        <License>CC0-1.0</License>
+        <License>GPL-3.0-or-later</License>
+        <License>LGPL-2.1-only</License>
+        <License>LGPL-3.0-only</License>
         <License>LGPL-3.0-or-later</License>
         <PartOf>multimedia.audio</PartOf>
         <Summary xml:lang="en">Music player from KDE</Summary>
@@ -32,6 +38,14 @@
             <Path fileType="data">/usr/share/icons/hicolor/48x48/apps/elisa.png</Path>
             <Path fileType="data">/usr/share/icons/hicolor/64x64/apps/elisa.png</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/elisa.svg</Path>
+            <Path fileType="data">/usr/share/licenses/elisa/BSD-2-Clause.txt</Path>
+            <Path fileType="data">/usr/share/licenses/elisa/BSD-3-Clause.txt</Path>
+            <Path fileType="data">/usr/share/licenses/elisa/CC0-1.0.txt</Path>
+            <Path fileType="data">/usr/share/licenses/elisa/GPL-3.0-or-later.txt</Path>
+            <Path fileType="data">/usr/share/licenses/elisa/LGPL-2.1-only.txt</Path>
+            <Path fileType="data">/usr/share/licenses/elisa/LGPL-3.0-only.txt</Path>
+            <Path fileType="data">/usr/share/licenses/elisa/LGPL-3.0-or-later.txt</Path>
+            <Path fileType="data">/usr/share/licenses/elisa/LicenseRef-KDE-Accepted-LGPL.txt</Path>
             <Path fileType="localedata">/usr/share/locale/ar/LC_MESSAGES/elisa.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ast/LC_MESSAGES/elisa.mo</Path>
             <Path fileType="localedata">/usr/share/locale/az/LC_MESSAGES/elisa.mo</Path>
@@ -51,6 +65,7 @@
             <Path fileType="localedata">/usr/share/locale/eu/LC_MESSAGES/elisa.mo</Path>
             <Path fileType="localedata">/usr/share/locale/fi/LC_MESSAGES/elisa.mo</Path>
             <Path fileType="localedata">/usr/share/locale/fr/LC_MESSAGES/elisa.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/ga/LC_MESSAGES/elisa.mo</Path>
             <Path fileType="localedata">/usr/share/locale/gl/LC_MESSAGES/elisa.mo</Path>
             <Path fileType="localedata">/usr/share/locale/he/LC_MESSAGES/elisa.mo</Path>
             <Path fileType="localedata">/usr/share/locale/hi/LC_MESSAGES/elisa.mo</Path>
@@ -64,6 +79,7 @@
             <Path fileType="localedata">/usr/share/locale/ko/LC_MESSAGES/elisa.mo</Path>
             <Path fileType="localedata">/usr/share/locale/lt/LC_MESSAGES/elisa.mo</Path>
             <Path fileType="localedata">/usr/share/locale/lv/LC_MESSAGES/elisa.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/nb/LC_MESSAGES/elisa.mo</Path>
             <Path fileType="localedata">/usr/share/locale/nl/LC_MESSAGES/elisa.mo</Path>
             <Path fileType="localedata">/usr/share/locale/nn/LC_MESSAGES/elisa.mo</Path>
             <Path fileType="localedata">/usr/share/locale/pa/LC_MESSAGES/elisa.mo</Path>
@@ -87,12 +103,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="68">
-            <Date>2025-10-10</Date>
-            <Version>25.08.2</Version>
+        <Update release="77">
+            <Date>2026-06-04</Date>
+            <Version>26.04.2</Version>
             <Comment>Packaging update</Comment>
             <Name>Troy Harvey</Name>
-            <Email>harveydevel@gmail.com</Email>
+            <Email>harvey@getsol.us</Email>
         </Update>
     </History>
 </PISI>

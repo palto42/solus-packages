@@ -3,8 +3,8 @@
         <Name>cubeb</Name>
         <Homepage>https://github.com/mozilla/cubeb</Homepage>
         <Packager>
-            <Name>Muhammad Alfi Syahrin</Name>
-            <Email>malfisya.dev@hotmail.com</Email>
+            <Name>Marcus Mellor</Name>
+            <Email>infinitymdm@gmail.com</Email>
         </Packager>
         <License>ISC</License>
         <PartOf>multimedia.audio</PartOf>
@@ -32,7 +32,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="2">cubeb</Dependency>
+            <Dependency release="3">cubeb</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/cubeb/cubeb.h</Path>
@@ -42,15 +42,16 @@
             <Path fileType="library">/usr/lib64/cmake/cubeb/cubebTargets-release.cmake</Path>
             <Path fileType="library">/usr/lib64/cmake/cubeb/cubebTargets.cmake</Path>
             <Path fileType="library">/usr/lib64/libcubeb.so</Path>
+            <Path fileType="data">/usr/lib64/pkgconfig/libcubeb.pc</Path>
         </Files>
     </Package>
     <History>
-        <Update release="2">
-            <Date>2024-03-27</Date>
-            <Version>20230731</Version>
+        <Update release="3">
+            <Date>2026-03-26</Date>
+            <Version>20260123</Version>
             <Comment>Packaging update</Comment>
-            <Name>Muhammad Alfi Syahrin</Name>
-            <Email>malfisya.dev@hotmail.com</Email>
+            <Name>Marcus Mellor</Name>
+            <Email>infinitymdm@gmail.com</Email>
         </Update>
     </History>
 </PISI>

@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : adwaita-icon-theme
-version    : '48.1'
-release    : 31
+version    : '50.0'
+release    : 33
 source     :
-    - https://download.gnome.org/sources/adwaita-icon-theme/48/adwaita-icon-theme-48.1.tar.xz : cbfe9b86ebcd14b03ba838c49829f7e86a7b132873803b90ac10be7d318a6e12
+    - https://download.gnome.org/sources/adwaita-icon-theme/50/adwaita-icon-theme-50.0.tar.xz : fac6e0401fca714780561a081b8f7e27c3bc1db34ebda4da175081f26b24d460
 homepage   : https://gitlab.gnome.org/GNOME/adwaita-icon-theme
 license    :
     - CC-BY-SA-3.0

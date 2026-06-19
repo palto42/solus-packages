@@ -1,12 +1,18 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kwayland
-version    : 6.4.5
-release    : 110
+version    : 6.6.5
+release    : 123
 source     :
-    - https://download.kde.org/stable/plasma/6.4.5/kwayland-6.4.5.tar.xz : 0b875d9e7cc5bac4d97d3443ff4311533e0d8dad401af1244d4758a5fa5428f3
+    - https://download.kde.org/stable/plasma/6.6.5/kwayland-6.6.5.tar.xz : afbcd53ca8a5fb501038415f1473c3d11556eb56ed8f653ece03f77d799cad01
 homepage   : https://community.kde.org/Frameworks
 license    :
     - BSD-3-Clause
+    - CC0-1.0
     - LGPL-2.1-only
+    - LGPL-2.1-or-later
+    - LGPL-3.0-only
+    - MIT
+    - MIT-CMU
 component  : programming.library
 summary    : Qt-style API to interact with wayland
 description: |
@@ -33,3 +39,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*

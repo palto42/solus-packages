@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : libva
-version    : 2.22.0
-release    : 30
+version    : 2.23.0
+release    : 31
 source     :
-    - https://github.com/intel/libva/archive/refs/tags/2.22.0.tar.gz : 467c418c2640a178c6baad5be2e00d569842123763b80507721ab87eb7af8735
+    - https://github.com/intel/libva/archive/refs/tags/2.23.0.tar.gz : b10aceb30e93ddf13b2030eb70079574ba437be9b3b76065caf28a72c07e23e7
 license    : MIT
 component  : xorg.display
 homepage   : https://github.com/intel/libva
@@ -23,3 +24,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license COPYING

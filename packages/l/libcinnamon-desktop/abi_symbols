@@ -195,9 +195,11 @@ libcinnamon-desktop.so.4:gnome_xkb_info_get_languages_for_layout
 libcinnamon-desktop.so.4:gnome_xkb_info_get_layout_info
 libcinnamon-desktop.so.4:gnome_xkb_info_get_layouts_for_country
 libcinnamon-desktop.so.4:gnome_xkb_info_get_layouts_for_language
+libcinnamon-desktop.so.4:gnome_xkb_info_get_option_group_allows_multiple_selection
 libcinnamon-desktop.so.4:gnome_xkb_info_get_options_for_group
 libcinnamon-desktop.so.4:gnome_xkb_info_get_type
 libcinnamon-desktop.so.4:gnome_xkb_info_new
+libcinnamon-desktop.so.4:gnome_xkb_info_new_with_extras
 libcinnamon-desktop.so.4:make_display_name
 libcinnamon-desktop.so.4:meta_dbus_display_config_call_apply_configuration
 libcinnamon-desktop.so.4:meta_dbus_display_config_call_apply_configuration_finish

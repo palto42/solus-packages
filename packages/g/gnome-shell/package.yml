@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : gnome-shell
-version    : '48.5'
-release    : 127
+version    : '50.2'
+release    : 142
 source     :
-    - https://download.gnome.org/sources/gnome-shell/48/gnome-shell-48.5.tar.xz : 87270785b290c824312004c6651432d2c7288bd8403c17d8e06f007019604cdf
+    - https://download.gnome.org/sources/gnome-shell/50/gnome-shell-50.2.tar.xz : 53215420e50efdd4d0611ba5b59e10cb4c89fa3f51e2addfd95cade061a09a29
 homepage   : https://gitlab.gnome.org/GNOME/gnome-shell
 license    : GPL-2.0-or-later
 component  : desktop.gnome
@@ -24,7 +25,7 @@ builddeps  :
     - pkgconfig(libcanberra-gtk3)
     - pkgconfig(libedataserver-1.2)
     - pkgconfig(libical)
-    - pkgconfig(libmutter-16)
+    - pkgconfig(libmutter-18)
     - pkgconfig(libnma)
     - pkgconfig(libpipewire-0.3)
     - pkgconfig(libpulse)
@@ -48,3 +49,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license COPYING

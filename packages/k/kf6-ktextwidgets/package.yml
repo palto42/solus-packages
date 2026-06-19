@@ -1,13 +1,16 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kf6-ktextwidgets
-version    : 6.19.0
-release    : 25
+version    : 6.27.0
+release    : 33
 source     :
-    - https://download.kde.org/stable/frameworks/6.19/ktextwidgets-6.19.0.tar.xz : d9fa49ee95cf03321d2b2d89bd6952734323b75a2d983b97702d14bce4809f16
+    - https://download.kde.org/stable/frameworks/6.27/ktextwidgets-6.27.0.tar.xz : 03c35d8899559efc17b4f74e86eefd8358dafd7aa9311c89b9c09f7b35700756
 homepage   : https://community.kde.org/Frameworks
 license    :
+    - CC0-1.0
     - LGPL-2.0-only
     - LGPL-2.0-or-later
     - LGPL-2.1-or-later
+    - LGPL-3.0-only
 component  : desktop.library
 summary    : Text editing widgets.
 description: |
@@ -32,3 +35,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*

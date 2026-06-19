@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : mutter
-version    : '48.5'
-release    : 136
+version    : '50.2'
+release    : 147
 source     :
-    - https://download.gnome.org/sources/mutter/48/mutter-48.5.tar.xz : 02ed0ab4194fc537540f9ee92acbf5af8209971a404df319c1cb7763294ae58b
+    - https://download.gnome.org/sources/mutter/50/mutter-50.2.tar.xz : fde8df8a746500c51f1c925b51e57c3dd87007233bef563079e831f53bfa3b56
 homepage   : https://gitlab.gnome.org/GNOME/mutter
 license    : GPL-2.0-or-later
 component  : desktop.gnome
@@ -13,6 +14,7 @@ ccache     : false
 builddeps  :
     - pkgconfig(colord)
     - pkgconfig(dri)
+    - pkgconfig(glycin-2)
     - pkgconfig(gnome-desktop-4)
     - pkgconfig(gnome-settings-daemon)
     - pkgconfig(gobject-introspection-1.0)
@@ -37,7 +39,6 @@ builddeps  :
     - pkgconfig(xcursor)
     - pkgconfig(xkbfile)
     - pkgconfig(xkeyboard-config)
-    - pkgconfig(xorg-server)
     - pkgconfig(xtst)
     - pkgconfig(xwayland)
     - python-argcomplete
@@ -51,6 +52,7 @@ rundeps    :
     - devel : mesalib-devel # Internal cogl requires EGL/eglmesaext.h from mesalib-devel
     - mutter-common
 setup      : |
+    %patch -p1 -i $pkgfiles/0001-wayland-Only-schedule-a-single-cursor-location-updat.patch
     %meson_configure \
         -Degl_device=true \
         -Dinstalled_tests=false \

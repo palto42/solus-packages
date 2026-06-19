@@ -1,0 +1,8 @@
+---
+releases:
+  id: 147830
+  rss: https://pypi.org/rss/project/types-markdown/releases.xml
+
+# Last checked 2026-04-08
+security:
+  cpe: ~

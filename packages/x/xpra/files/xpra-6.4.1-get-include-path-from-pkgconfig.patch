@@ -1,0 +1,157 @@
+From 2fb3adf792417b4a4d9b44090e9dc6b950e1d007 Mon Sep 17 00:00:00 2001
+From: Antoine Martin <antoine@xpra.org>
+Date: Thu, 12 Feb 2026 20:30:46 +0700
+Subject: [PATCH] let the pkgconfig file provide the include path
+
+---
+ setup.py                        |  5 +++--
+ xpra/gtk/bindings/atoms.pyx     |  4 ++--
+ xpra/gtk/bindings/gobject.pxd   |  2 +-
+ xpra/gtk/bindings/gobject.pyx   |  2 +-
+ xpra/x11/gtk/bindings.pyx       | 14 +++++++-------
+ xpra/x11/gtk/display_source.pyx |  9 ++++-----
+ 6 files changed, 18 insertions(+), 18 deletions(-)
+
+diff --git a/setup.py b/setup.py
+index 6a01588e85..6ce351ce37 100755
+--- a/setup.py
++++ b/setup.py
+@@ -2793,8 +2793,9 @@ def noop(*_args, **_kwargs):  # pylint: disable=function-redefined
+                 "xpra.x11.models", "xpra.x11.desktop", "xpra.x11.server", "xpra.x11.subsystem")
+ if gtk_x11_ENABLED:
+     add_packages("xpra.x11.bindings")
+-    ace("xpra.x11.gtk.display_source", "gdk-3.0")
+-    ace("xpra.x11.gtk.bindings,xpra/x11/gtk/gdk_x11_macros.c", "gdk-3.0,xdamage,xfixes")
++    ace("xpra.x11.gtk.display_source", "gdk-3.0,gtk+-3.0")
++    ace("xpra.x11.gtk.bindings", "gdk-3.0,gtk+-3.0,glib-2.0,pygobject-3.0")
++    ace("xpra/x11/gtk/gdk_x11_macros.c", "gdk-3.0")
+ 
+ toggle_packages(cairo_ENABLED, "xpra.cairo")
+ tace(cairo_ENABLED, "xpra.cairo.image", "py3cairo",
+diff --git a/xpra/gtk/bindings/atoms.pyx b/xpra/gtk/bindings/atoms.pyx
+index e3f088c763..85452d1325 100644
+--- a/xpra/gtk/bindings/atoms.pyx
++++ b/xpra/gtk/bindings/atoms.pyx
+@@ -17,11 +17,11 @@ cdef extern from "Python.h":
+     void PyBuffer_Release(Py_buffer *view)
+     int PyBUF_ANY_CONTIGUOUS
+ 
+-cdef extern from "gtk-3.0/gdk/gdk.h":
++cdef extern from "gdk/gdk.h":
+     ctypedef void* GdkAtom
+     GdkAtom GDK_NONE
+ 
+-cdef extern from "gtk-3.0/gdk/gdkproperty.h":
++cdef extern from "gdk/gdkproperty.h":
+     ctypedef char gchar
+     ctypedef int gint
+     ctypedef gint gboolean
+diff --git a/xpra/gtk/bindings/gobject.pxd b/xpra/gtk/bindings/gobject.pxd
+index f63d8bedf7..95d2353196 100644
+--- a/xpra/gtk/bindings/gobject.pxd
++++ b/xpra/gtk/bindings/gobject.pxd
+@@ -12,7 +12,7 @@ cdef extern from "gtk-3.0/gdk/gdk.h":
+     ctypedef struct GdkWindow:
+         pass
+ 
+-cdef extern from "glib-2.0/glib-object.h":
++cdef extern from "glib-object.h":
+     ctypedef struct cGObject "GObject":
+         pass
+ 
+diff --git a/xpra/gtk/bindings/gobject.pyx b/xpra/gtk/bindings/gobject.pyx
+index 94a64cdd1a..5149961b43 100644
+--- a/xpra/gtk/bindings/gobject.pyx
++++ b/xpra/gtk/bindings/gobject.pyx
+@@ -13,7 +13,7 @@ log = Logger("bindings", "gtk")
+ GObject = gi_import("GObject")
+ log(f"GObject={GObject}")
+ 
+-cdef extern from "glib-2.0/glib-object.h":
++cdef extern from "glib-object.h":
+     ctypedef struct cGObject "GObject":
+         pass
+ 
+diff --git a/xpra/x11/gtk/bindings.pyx b/xpra/x11/gtk/bindings.pyx
+index b8478757e8..a1f3b53c2a 100644
+--- a/xpra/x11/gtk/bindings.pyx
++++ b/xpra/x11/gtk/bindings.pyx
+@@ -61,25 +61,25 @@ def is_X11_Display(display=None) -> bool:
+ ###################################
+ # Headers, python magic
+ ###################################
+-cdef extern from "gtk-3.0/gdk/gdk.h":
++cdef extern from "gdk/gdk.h":
+     ctypedef struct GdkWindow:
+         pass
+     void gdk_display_flush(GdkDisplay *display)
+     void gdk_x11_display_error_trap_push(GdkDisplay *display)
+     int gdk_x11_display_error_trap_pop(GdkDisplay *display)
+ 
+-cdef extern from "gtk-3.0/gdk/gdkx.h":
++cdef extern from "gdk/gdkx.h":
+     pass
+ 
+-cdef extern from "gtk-3.0/gdk/gdkproperty.h":
++cdef extern from "gdk/gdkproperty.h":
+     ctypedef int gint
+     ctypedef gint gboolean
+ 
+-cdef extern from "glib-2.0/glib-object.h":
++cdef extern from "glib-object.h":
+     ctypedef struct cGObject "GObject":
+         pass
+ 
+-cdef extern from "pygobject-3.0/pygobject.h":
++cdef extern from "pygobject.h":
+     cGObject *pygobject_get(object box)
+     object pygobject_new(cGObject * contents)
+ 
+@@ -95,7 +95,7 @@ cdef extern from "pygobject-3.0/pygobject.h":
+ ######
+ 
+ # gdk_region_get_rectangles (pygtk bug #517099)
+-cdef extern from "gtk-3.0/gdk/gdktypes.h":
++cdef extern from "gdk/gdktypes.h":
+     ctypedef struct cGdkVisual "GdkVisual":
+         pass
+     Visual * GDK_VISUAL_XVISUAL(cGdkVisual   *visual)
+@@ -154,7 +154,7 @@ cdef Display * get_xdisplay() except? NULL:
+ #   -- Receive interesting signals on 'obj'.
+ 
+ 
+-cdef extern from "gtk-3.0/gdk/gdkevents.h":
++cdef extern from "gdk/gdkevents.h":
+     ctypedef enum GdkFilterReturn:
+         GDK_FILTER_CONTINUE   # If we ignore the event
+         GDK_FILTER_TRANSLATE  # If we converted the event to a GdkEvent
+diff --git a/xpra/x11/gtk/display_source.pyx b/xpra/x11/gtk/display_source.pyx
+index cc152ddc90..de6898ba23 100644
+--- a/xpra/x11/gtk/display_source.pyx
++++ b/xpra/x11/gtk/display_source.pyx
+@@ -13,21 +13,20 @@ from xpra.x11.bindings.xlib cimport Display
+ from xpra.x11.bindings.display_source cimport set_display   # pylint: disable=syntax-error
+ from xpra.x11.bindings.display_source import set_display_name  # @UnresolvedImport
+ 
+-
+ ###################################
+ # Headers, python magic
+ ###################################
+-cdef extern from "gtk-3.0/gdk/gdk.h":
++cdef extern from "gdk/gdk.h":
+     pass
+ 
+-cdef extern from "gtk-3.0/gdk/gdktypes.h":
++cdef extern from "gdk/gdktypes.h":
+     ctypedef struct GdkDisplay:
+         pass
+ 
+-cdef extern from "gtk-3.0/gdk/gdkdisplay.h":
++cdef extern from "gdk/gdkdisplay.h":
+     GdkDisplay *gdk_display_get_default()
+ 
+-cdef extern from "gtk-3.0/gdk/gdkx.h":
++cdef extern from "gdk/gdkx.h":
+     Display *gdk_x11_display_get_xdisplay(GdkDisplay *display)
+     const char *gdk_display_get_name(GdkDisplay *display)
+ 

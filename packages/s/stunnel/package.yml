@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : stunnel
-version    : '5.75'
-release    : 18
+version    : '5.78'
+release    : 21
 source     :
-    - https://www.stunnel.org/downloads/stunnel-5.75.tar.gz : 0c1ef0ed85240974dccb94fe74fb92d6383474c7c0d10e8796d1f781a3ba5683
+    - https://www.stunnel.org/downloads/stunnel-5.78.tar.gz : fada662282c73923ff1c39ae7089c487694ecea92098a0e3190a81a6f492d3a0
 homepage   : https://www.stunnel.org/
 license    : GPL-2.0-or-later
 component  : network.util
@@ -13,13 +14,13 @@ checkdeps  :
     - nmap
     - python-cryptography
 setup      : |
-    %patch -p1 -i $pkgfiles/0001-stunnel-service-privatetmp.patch
     %configure
 build      : |
     %make
 install    : |
     %make_install
     install -D -m00644 $installdir/usr/share/doc/stunnel/examples/stunnel.service -t $installdir/%libdir%/systemd/system
+    %install_license COPYING.md COPYRIGHT.md
 
     rm $installdir/usr/share/doc/stunnel/INSTALL*
     rm $installdir/usr/share/doc/stunnel/examples/stunnel.{rh.init,spec}

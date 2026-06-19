@@ -1,5 +1,6 @@
 UNKNOWN
 ld-linux-x86-64.so.2
+libBasicUsageEnvironment.so.2
 libEGL.so.1
 libFLAC.so.12
 libGL.so.1
@@ -10,13 +11,14 @@ libQt5Widgets.so.5
 libQt5X11Extras.so.5
 libSDL-1.2.so.0
 libSDL_image-1.2.so.0
+libUsageEnvironment.so.3
 libX11.so.6
 libXext.so.6
 libXinerama.so.1
 libXpm.so.4
 liba52.so.0
-libabsl_log_internal_check_op.so.2401.0.0
-libabsl_log_internal_message.so.2401.0.0
+libabsl_log_internal_check_op.so.2601.0.0
+libabsl_log_internal_message.so.2601.0.0
 libaom.so.3
 libarchive.so.13
 libasound.so.2
@@ -27,12 +29,11 @@ libavc1394.so.0
 libavcodec.so.58
 libavformat.so.58
 libavutil.so.56
-libbluray.so.2
+libbluray.so.3
 libc.so.6
 libcairo.so.2
 libcddb.so.2
 libchromaprint.so.1
-libcrypto.so.3
 libdav1d.so.7
 libdbus-1.so.3
 libdc1394.so.26
@@ -53,6 +54,7 @@ libglib-2.0.so.0
 libgnutls.so.30
 libgobject-2.0.so.0
 libgpg-error.so.0
+libgroupsock.so.33
 libgstapp-1.0.so.0
 libgstbase-1.0.so.0
 libgstreamer-1.0.so.0
@@ -64,6 +66,7 @@ libixml.so.11
 libjack.so.0
 libjpeg.so.8
 libkate.so.1
+libliveMedia.so.118
 liblua.so.5.4
 libm.so.6
 libmatroska.so.7
@@ -78,7 +81,7 @@ libogg.so.0
 libopus.so.0
 libpng16.so.16
 libpostproc.so.55
-libprotobuf-lite.so.27.2.0
+libprotobuf-lite.so.35.1.0
 libpulse.so.0
 libraw1394.so.11
 librom1394.so.0
@@ -92,11 +95,10 @@ libspeex.so.1
 libspeexdsp.so.1
 libsrt.so.1.5
 libssh2.so.1
-libssl.so.3
 libstdc++.so.6
 libswscale.so.5
 libsystemd.so.0
-libtag.so.1
+libtag.so.2
 libtheoradec.so.1
 libtheoraenc.so.1
 libtwolame.so.0
@@ -109,7 +111,7 @@ libva.so.2
 libvorbis.so.0
 libvorbisenc.so.2
 libvpl.so.2
-libvpx.so.9
+libvpx.so.12
 libwayland-client.so.0
 libwayland-egl.so.1
 libx264.so.164

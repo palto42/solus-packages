@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : cava
-version    : 0.10.6
-release    : 18
+version    : 1.0.0
+release    : 20
 source     :
-    - https://github.com/karlstav/cava/archive/refs/tags/0.10.6.tar.gz : b1ce6653659a138cbaebf0ef2643a1569525559c597162e90bf9304ac8781398
+    - https://github.com/karlstav/cava/archive/refs/tags/1.0.0.tar.gz : 2866cea11d0bd38406924ab2b47d5577f14909a7321ee928b6836391f375af7e
 homepage   : https://github.com/karlstav/cava
 license    : MIT
 component  : multimedia.audio
@@ -20,3 +21,4 @@ build      : |
     %make
 install    : |
     %make_install
+    %install_license LICENSE

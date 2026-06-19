@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : massif-visualizer
-version    : 25.08.2
-release    : 13
+version    : 26.04.2
+release    : 19
 source     :
-    - https://download.kde.org/stable/release-service/25.08.2/src/massif-visualizer-25.08.2.tar.xz : f3c9ea202c97e5a8c3435a5cd28a796e50d3f45a3b18dcc95f0590cbcb929a14
+    - https://download.kde.org/stable/release-service/26.04.2/src/massif-visualizer-26.04.2.tar.xz : a9e4755279a66c252f21fb27c53ceac757bd5ecf1bc0e9a5fc25f65c721c7af1
 homepage   : https://apps.kde.org/massif_visualizer/
 license    : GPL-2.0-or-later
 component  : system.utils
@@ -32,6 +33,7 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license COPYING
 
     # remove docs
     rm -rfv $installdir/usr/share/doc

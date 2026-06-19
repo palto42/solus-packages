@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : xorg-driver-input-wacom
-version    : 1.2.2
-release    : 33
+version    : 1.2.4
+release    : 34
 source     :
-    - https://github.com/linuxwacom/xf86-input-wacom/releases/download/xf86-input-wacom-1.2.2/xf86-input-wacom-1.2.2.tar.bz2 : 70771033543097e6c616a39ae8bb40fd0e991a25560ed10c65b33756c3061511
+    - https://github.com/linuxwacom/xf86-input-wacom/releases/download/xf86-input-wacom-1.2.4/xf86-input-wacom-1.2.4.tar.bz2 : cbc5fccda8994b9314e60da6933d8e5f901e4c3f208dd9fc09a611fe25b71a0d
 license    : GPL-2.0-or-later
 component  : xorg.driver
 homepage   : https://github.com/linuxwacom/xf86-input-wacom
@@ -14,12 +15,12 @@ optimize   :
     - no-symbolic
 builddeps  :
     - pkgconfig(pciaccess)
+    - pkgconfig(xi)
+    - pkgconfig(xinerama)
     - pkgconfig(xorg-macros)
     - pkgconfig(xorg-server)
-    - pkgconfig(xi)
-    - pkgconfig(xrandr)
-    - pkgconfig(xinerama)
     - pkgconfig(xproto)
+    - pkgconfig(xrandr)
 setup      : |
     %reconfigure --disable-static
 build      : |

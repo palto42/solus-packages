@@ -50,6 +50,7 @@ libexpat.so.1:XML_SetEntityDeclHandler
 libexpat.so.1:XML_SetExternalEntityRefHandler
 libexpat.so.1:XML_SetExternalEntityRefHandlerArg
 libexpat.so.1:XML_SetHashSalt
+libexpat.so.1:XML_SetHashSalt16Bytes
 libexpat.so.1:XML_SetNamespaceDeclHandler
 libexpat.so.1:XML_SetNotStandaloneHandler
 libexpat.so.1:XML_SetNotationDeclHandler
@@ -89,3 +90,8 @@ libexpat.so.1:g_reparseDeferralEnabledDefault
 libexpat.so.1:testingAccountingGetCountBytesDirect
 libexpat.so.1:testingAccountingGetCountBytesIndirect
 libexpat.so.1:unsignedCharToPrintable
+libexpat.so.1:writeRandomBytes_arc4random
+libexpat.so.1:writeRandomBytes_arc4random_buf
+libexpat.so.1:writeRandomBytes_dev_urandom
+libexpat.so.1:writeRandomBytes_getentropy
+libexpat.so.1:writeRandomBytes_getrandom_nonblock

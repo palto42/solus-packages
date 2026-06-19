@@ -1,11 +1,14 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : plasma-disks
-version    : 6.4.5
-release    : 72
+version    : 6.6.5
+release    : 82
 source     :
-    - https://download.kde.org/stable/plasma/6.4.5/plasma-disks-6.4.5.tar.xz : 8017c749fbc850a13d11d5b35343f85194ad4276a01cc05311dd69828f51fef3
+    - https://download.kde.org/stable/plasma/6.6.5/plasma-disks-6.6.5.tar.xz : 660609a1f489c197d35419aeacbc08ec724c5e13538a736eb3d81ac331b9f639
 homepage   : https://www.kde.org/workspaces/plasmadesktop/
 license    :
     - BSD-3-Clause
+    - CC0-1.0
+    - FSFAP
     - GPL-2.0-only
     - GPL-3.0-only
     - LGPL-3.0-only
@@ -32,3 +35,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*

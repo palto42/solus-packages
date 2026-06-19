@@ -3,8 +3,8 @@
         <Name>qol-assist</Name>
         <Homepage>https://github.com/getsolus/qol-assist</Homepage>
         <Packager>
-            <Name>Jakob Gezelius</Name>
-            <Email>jakob@knugen.nu</Email>
+            <Name>Evan Maddock</Name>
+            <Email>maddock.evan@vivaldi.net</Email>
         </Packager>
         <License>Apache-2.0</License>
         <PartOf>system.base</PartOf>
@@ -21,24 +21,28 @@
         <PartOf>system.base</PartOf>
         <Files>
             <Path fileType="library">/usr/lib/systemd/system/qol-assist-migration.service</Path>
-            <Path fileType="library">/usr/lib/systemd/system/sysinit.target.wants/qol-assist-migration.service</Path>
+            <Path fileType="library">/usr/lib64/systemd/system-preset/20-qol-assist.preset</Path>
             <Path fileType="executable">/usr/sbin/qol-assist</Path>
             <Path fileType="data">/usr/share/defaults/qol-assist.d/audio_group.toml</Path>
             <Path fileType="data">/usr/share/defaults/qol-assist.d/fuse_group.toml</Path>
+            <Path fileType="data">/usr/share/defaults/qol-assist.d/input_group.toml</Path>
             <Path fileType="data">/usr/share/defaults/qol-assist.d/plugdev_group.toml</Path>
             <Path fileType="data">/usr/share/defaults/qol-assist.d/scanner_group.toml</Path>
             <Path fileType="data">/usr/share/defaults/qol-assist.d/users_group_gid.toml</Path>
             <Path fileType="data">/usr/share/defaults/qol-assist.d/users_group_update.toml</Path>
-            <Path fileType="man">/usr/share/man/man1/qol-assist.1</Path>
+            <Path fileType="data">/usr/share/defaults/qol-assist.d/wheel_group_admin.toml</Path>
+            <Path fileType="data">/usr/share/defaults/qol-assist.d/wheel_group_gid.toml</Path>
+            <Path fileType="data">/usr/share/licenses/qol-assist/LICENSE</Path>
+            <Path fileType="man">/usr/share/man/man1/qol-assist.1.zst</Path>
         </Files>
     </Package>
     <History>
-        <Update release="17">
-            <Date>2024-04-03</Date>
+        <Update release="21">
+            <Date>2026-03-14</Date>
             <Version>0.9.0</Version>
             <Comment>Packaging update</Comment>
-            <Name>Jakob Gezelius</Name>
-            <Email>jakob@knugen.nu</Email>
+            <Name>Evan Maddock</Name>
+            <Email>maddock.evan@vivaldi.net</Email>
         </Update>
     </History>
 </PISI>

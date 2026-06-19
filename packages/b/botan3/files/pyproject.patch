@@ -1,0 +1,132 @@
+diff --git a/doc/building.rst b/doc/building.rst
+index da9f2aa6f..c532d1a31 100644
+--- a/doc/building.rst
++++ b/doc/building.rst
+@@ -595,11 +595,14 @@ Building the Python wrappers
+ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 
+ The Python wrappers for Botan use ctypes and the C89 API so no special
+-build step is required, just import botan3.py
++build step is required, just import botan3.py.
+ 
+ See :doc:`Python Bindings <api_ref/python>` for more information about
+ the Python bindings.
+ 
++Distributors and integrators may find the included ``pyproject.toml`` project
++definition helpful.
++
+ .. _minimized_builds:
+ 
+ Minimized Builds
+diff --git a/pyproject.toml b/pyproject.toml
+new file mode 100644
+index 000000000..dc5d4bd98
+--- /dev/null
++++ b/pyproject.toml
+@@ -0,0 +1,39 @@
++[project]
++name = "botan3"
++description = "Python bindings for Botan C++ cryptography library"
++readme = "readme.rst"
++license = "BSD-2-Clause"
++license-files = [ "license.txt" ]
++dynamic = [ "version" ]
++authors = [
++    {name = "Jack Lloyd", email = "jack@randombit.net"},
++    {name = "Botan contributors" }
++]
++maintainers = [ {name = "Jack Lloyd", email = "jack@randombit.net"} ]
++classifiers = [
++  "Development Status :: 5 - Production/Stable",
++  "Topic :: Security :: Cryptography",
++  "Operating System :: OS Independent",
++  "Programming Language :: Python",
++  "Programming Language :: Python :: Implementation :: CPython",
++  "Programming Language :: Python :: Implementation :: PyPy"
++]
++# adapt from time to time with the latest still supported version
++requires-python = ">=3.9"
++
++[project.urls]
++Homepage = "https://botan.randombit.net/"
++Issues = "https://github.com/randombit/botan/issues"
++
++[build-system]
++requires = [ "setuptools>=61", "setuptools-scm>=8" ]
++build-backend = "setuptools.build_meta"
++
++[tool.setuptools]
++py-modules = ["botan3"]
++
++# read version information from git
++[tool.setuptools_scm]
++
++[tool.setuptools.package-dir]
++"" = "src/python"
+diff --git a/src/scripts/ci_build.py b/src/scripts/ci_build.py
+index 580060436..f96df4997 100755
+--- a/src/scripts/ci_build.py
++++ b/src/scripts/ci_build.py
+@@ -769,6 +769,7 @@ def main(args=None):
+             'src/scripts/website.py',
+             'src/scripts/bench.py',
+             'src/scripts/test_python.py',
++            'src/scripts/test_python_packaging.py',
+             'src/scripts/test_strubbed_symbols.py',
+             'src/scripts/test_fuzzers.py',
+             'src/scripts/test_cli.py',
+@@ -946,6 +947,11 @@ def main(args=None):
+         if target in ['shared', 'coverage'] and not (options.os == 'windows' and options.cpu == 'x86'):
+             cmds.append([py_interp, '-b'] + python_tests)
+ 
++        if target in ['shared'] and options.os == 'linux':
++            cmds.append([py_interp, '-m', 'venv', 'test-venv'])
++            cmds.append([os.path.join('test-venv', 'bin/python'), '-m', 'pip', 'install', root_dir])
++            cmds.append([os.path.join('test-venv', 'bin/python'), os.path.join(root_dir, 'src/scripts/test_python_packaging.py')])
++
+         if target in ['shared', 'static']:
+             cmds.append(make_cmd + ['install'])
+             build_config = os.path.join(build_dir, 'build', 'build_config.json')
+diff --git a/src/scripts/test_python_packaging.py b/src/scripts/test_python_packaging.py
+new file mode 100644
+index 000000000..97ea45211
+--- /dev/null
++++ b/src/scripts/test_python_packaging.py
+@@ -0,0 +1,37 @@
++#!/usr/bin/env python3
++
++"""
++(C) 2025 Jack Lloyd
++
++Botan is released under the Simplified BSD License (see license.txt)
++"""
++
++import unittest
++import botan3 as botan # pylint: disable=wrong-import-position
++
++class BotanPythonTests(unittest.TestCase):
++    def test_version(self):
++        version_str = botan.version_string()
++        self.assertTrue(version_str.startswith('Botan '))
++        self.assertGreaterEqual(botan.version_major(), 3)
++        self.assertGreaterEqual(botan.version_minor(), 0)
++        self.assertGreaterEqual(botan.ffi_api_version(), 20180713)
++
++    def test_hash(self):
++        # small smoke test for hash operation
++        hash_input = "hash test"
++        hf = botan.HashFunction('SHA-256')
++        hf.update(hash_input.encode())
++        hash_out = hf.final().hex()
++        print(f'SHA-256("{hash_input}")={hash_out}')
++
++        # created for comparison with: echo -n "hash test" | sha256sum
++        hash_precomputed = 'cd5e9b1a6c3c37593b8b622b2921ee5320944192acb48b55155cbe8d32dc5ea1'
++
++        self.assertEqual(hash_out, hash_precomputed)
++
++def main():
++    unittest.main()
++
++if __name__ == '__main__':
++    main()

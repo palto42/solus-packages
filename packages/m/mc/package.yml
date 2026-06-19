@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : mc
-version    : 4.8.28
-release    : 20
+version    : 4.8.33
+release    : 21
 source     :
-    - https://github.com/MidnightCommander/mc/archive/refs/tags/4.8.28.tar.gz : a74b75adf2c9342a98c1eb4927711cd5b8d4fdfa67b109624d367ae2259eb518
+    - https://github.com/MidnightCommander/mc/archive/refs/tags/4.8.33.tar.gz : 092e440930fda43574739e45a8b41af384b974e6720184b6707d127b84082c51
 homepage   : https://midnight-commander.org
 license    : GPL-3.0-or-later
 component  : system.utils
@@ -18,14 +19,19 @@ description: |
 setup      : |
     # disable helpers tests because they are failing
     sed -i 's| helpers-list||' tests/src/vfs/extfs/Makefile.am
-    %patch -p1 -i $pkgfiles/checki.diff
-    %patch -p1 -i $pkgfiles/mc-python3.patch
 
+    %patch -p1 -i $pkgfiles/0001-Support-stateless-fallback-of-mc-configuration.patch
     %autogen --disable-static \
         --enable-tests
 build      : |
     %make
 install    : |
     %make_install -j1
+    %install_license COPYING
+
+    # Move config to /usr/share
+    install -dm0064 $installdir/usr/share/mc
+    cp $installdir/etc/mc/* $installdir/usr/share/mc/
+    rm -r $installdir/etc
 check      : |
     %make check

@@ -1,0 +1,25 @@
+From 6487ce447b21848f02cb4f8e08b54d5a4c3a0a92 Mon Sep 17 00:00:00 2001
+From: Clint Eschberger <clint@eschberger.info>
+Date: Mon, 20 Apr 2026 16:44:23 -0500
+Subject: [PATCH] Disable update notifications
+
+---
+ .../notifications/lib/items/update-notification.tsx             | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/app/internal_packages/notifications/lib/items/update-notification.tsx b/app/internal_packages/notifications/lib/items/update-notification.tsx
+index bed96d62e..3c3f61bee 100644
+--- a/app/internal_packages/notifications/lib/items/update-notification.tsx
++++ b/app/internal_packages/notifications/lib/items/update-notification.tsx
+@@ -34,7 +34,7 @@ export default class UpdateNotification extends React.Component<
+ 
+   getStateFromStores() {
+     const updater = require('@electron/remote').getGlobal('application').autoUpdateManager;
+-    const updateAvailable = updater.getState() === 'update-available';
++    const updateAvailable = 0 === 'update-available';
+     const info = updateAvailable ? updater.getReleaseDetails() : {};
+     return {
+       updateAvailable,
+-- 
+2.53.0
+

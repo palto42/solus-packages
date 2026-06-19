@@ -1,10 +1,10 @@
 <PISI>
     <Source>
         <Name>texinfo</Name>
-        <Homepage>http://www.gnu.org/software/texinfo</Homepage>
+        <Homepage>https://www.gnu.org/software/texinfo</Homepage>
         <Packager>
-            <Name>Muhammad Alfi Syahrin</Name>
-            <Email>malfisya.dev@hotmail.com</Email>
+            <Name>clintre</Name>
+            <Email>clint@eschberger.info</Email>
         </Packager>
         <License>GPL-3.0-or-later</License>
         <PartOf>system.devel</PartOf>
@@ -29,33 +29,44 @@
             <Path fileType="executable">/usr/bin/texi2dvi</Path>
             <Path fileType="executable">/usr/bin/texi2pdf</Path>
             <Path fileType="executable">/usr/bin/texindex</Path>
-            <Path fileType="library">/usr/lib64/texi2any/ConvertXS.so</Path>
-            <Path fileType="library">/usr/lib64/texi2any/DocumentXS.so</Path>
-            <Path fileType="library">/usr/lib64/texi2any/IndicesXS.so</Path>
-            <Path fileType="library">/usr/lib64/texi2any/MiscXS.so</Path>
-            <Path fileType="library">/usr/lib64/texi2any/Parsetexi.so</Path>
-            <Path fileType="library">/usr/lib64/texi2any/StructuringTransfoXS.so</Path>
-            <Path fileType="library">/usr/lib64/texi2any/XSParagraph.so</Path>
-            <Path fileType="library">/usr/lib64/texi2any/libtexinfo-convert.so</Path>
-            <Path fileType="library">/usr/lib64/texi2any/libtexinfo-convert.so.0</Path>
-            <Path fileType="library">/usr/lib64/texi2any/libtexinfo-convert.so.0.0.0</Path>
-            <Path fileType="library">/usr/lib64/texi2any/libtexinfo-convertxs.so</Path>
-            <Path fileType="library">/usr/lib64/texi2any/libtexinfo-convertxs.so.0</Path>
-            <Path fileType="library">/usr/lib64/texi2any/libtexinfo-convertxs.so.0.0.0</Path>
-            <Path fileType="library">/usr/lib64/texi2any/libtexinfo.so</Path>
-            <Path fileType="library">/usr/lib64/texi2any/libtexinfo.so.0</Path>
-            <Path fileType="library">/usr/lib64/texi2any/libtexinfo.so.0.0.0</Path>
-            <Path fileType="library">/usr/lib64/texi2any/libtexinfoxs.so</Path>
-            <Path fileType="library">/usr/lib64/texi2any/libtexinfoxs.so.0</Path>
-            <Path fileType="library">/usr/lib64/texi2any/libtexinfoxs.so.0.0.0</Path>
-            <Path fileType="info">/usr/share/info/info-stnd.info</Path>
-            <Path fileType="info">/usr/share/info/texi2any_api.info</Path>
-            <Path fileType="info">/usr/share/info/texi2any_internals.info</Path>
-            <Path fileType="info">/usr/share/info/texinfo.info</Path>
-            <Path fileType="info">/usr/share/info/texinfo.info-1</Path>
-            <Path fileType="info">/usr/share/info/texinfo.info-2</Path>
-            <Path fileType="info">/usr/share/info/texinfo.info-3</Path>
-            <Path fileType="info">/usr/share/info/texinfo.info-4</Path>
+            <Path fileType="library">/usr/lib64/texi2any/XS_extension/ConfigXS.so</Path>
+            <Path fileType="library">/usr/lib64/texi2any/XS_extension/ConvertToTexinfoXS.so</Path>
+            <Path fileType="library">/usr/lib64/texi2any/XS_extension/ConvertXS.so</Path>
+            <Path fileType="library">/usr/lib64/texi2any/XS_extension/DocumentXS.so</Path>
+            <Path fileType="library">/usr/lib64/texi2any/XS_extension/IndicesXS.so</Path>
+            <Path fileType="library">/usr/lib64/texi2any/XS_extension/MiscXS.so</Path>
+            <Path fileType="library">/usr/lib64/texi2any/XS_extension/Parsetexi.so</Path>
+            <Path fileType="library">/usr/lib64/texi2any/XS_extension/ReaderXS.so</Path>
+            <Path fileType="library">/usr/lib64/texi2any/XS_extension/StructuringTransfoXS.so</Path>
+            <Path fileType="library">/usr/lib64/texi2any/XS_extension/TreeElementConverterXS.so</Path>
+            <Path fileType="library">/usr/lib64/texi2any/XS_extension/TreeElementXS.so</Path>
+            <Path fileType="library">/usr/lib64/texi2any/XS_extension/XSParagraph.so</Path>
+            <Path fileType="library">/usr/lib64/texi2any/lib/libtexinfo-convert.so</Path>
+            <Path fileType="library">/usr/lib64/texi2any/lib/libtexinfo-convert.so.1</Path>
+            <Path fileType="library">/usr/lib64/texi2any/lib/libtexinfo-convert.so.1.0.0</Path>
+            <Path fileType="library">/usr/lib64/texi2any/lib/libtexinfo-convertxs.so</Path>
+            <Path fileType="library">/usr/lib64/texi2any/lib/libtexinfo-convertxs.so.1</Path>
+            <Path fileType="library">/usr/lib64/texi2any/lib/libtexinfo-convertxs.so.1.0.0</Path>
+            <Path fileType="library">/usr/lib64/texi2any/lib/libtexinfo-main.so</Path>
+            <Path fileType="library">/usr/lib64/texi2any/lib/libtexinfo-main.so.0</Path>
+            <Path fileType="library">/usr/lib64/texi2any/lib/libtexinfo-main.so.0.0.0</Path>
+            <Path fileType="library">/usr/lib64/texi2any/lib/libtexinfo.so</Path>
+            <Path fileType="library">/usr/lib64/texi2any/lib/libtexinfo.so.1</Path>
+            <Path fileType="library">/usr/lib64/texi2any/lib/libtexinfo.so.1.0.0</Path>
+            <Path fileType="library">/usr/lib64/texi2any/lib/libtexinfoxs.so</Path>
+            <Path fileType="library">/usr/lib64/texi2any/lib/libtexinfoxs.so.1</Path>
+            <Path fileType="library">/usr/lib64/texi2any/lib/libtexinfoxs.so.1.0.0</Path>
+            <Path fileType="info">/usr/share/info/info-stnd.info.zst</Path>
+            <Path fileType="info">/usr/share/info/texi2any_api.info.zst</Path>
+            <Path fileType="info">/usr/share/info/texi2any_internals.info-1.zst</Path>
+            <Path fileType="info">/usr/share/info/texi2any_internals.info-2.zst</Path>
+            <Path fileType="info">/usr/share/info/texi2any_internals.info.zst</Path>
+            <Path fileType="info">/usr/share/info/texinfo.info-1.zst</Path>
+            <Path fileType="info">/usr/share/info/texinfo.info-2.zst</Path>
+            <Path fileType="info">/usr/share/info/texinfo.info-3.zst</Path>
+            <Path fileType="info">/usr/share/info/texinfo.info-4.zst</Path>
+            <Path fileType="info">/usr/share/info/texinfo.info.zst</Path>
+            <Path fileType="data">/usr/share/licenses/texinfo/COPYING</Path>
             <Path fileType="localedata">/usr/share/locale/ca/LC_MESSAGES/texinfo.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ca/LC_MESSAGES/texinfo_document.mo</Path>
             <Path fileType="localedata">/usr/share/locale/cs/LC_MESSAGES/texinfo.mo</Path>
@@ -110,22 +121,25 @@
             <Path fileType="localedata">/usr/share/locale/vi/LC_MESSAGES/texinfo.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_CN/LC_MESSAGES/texinfo.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_TW/LC_MESSAGES/texinfo.mo</Path>
-            <Path fileType="man">/usr/share/man/man1/info.1</Path>
-            <Path fileType="man">/usr/share/man/man1/install-info.1</Path>
-            <Path fileType="man">/usr/share/man/man1/makeinfo.1</Path>
-            <Path fileType="man">/usr/share/man/man1/pdftexi2dvi.1</Path>
-            <Path fileType="man">/usr/share/man/man1/pod2texi.1</Path>
-            <Path fileType="man">/usr/share/man/man1/texi2any.1</Path>
-            <Path fileType="man">/usr/share/man/man1/texi2dvi.1</Path>
-            <Path fileType="man">/usr/share/man/man1/texi2pdf.1</Path>
-            <Path fileType="man">/usr/share/man/man1/texindex.1</Path>
-            <Path fileType="man">/usr/share/man/man5/info.5</Path>
-            <Path fileType="man">/usr/share/man/man5/texinfo.5</Path>
+            <Path fileType="man">/usr/share/man/man1/info.1.zst</Path>
+            <Path fileType="man">/usr/share/man/man1/install-info.1.zst</Path>
+            <Path fileType="man">/usr/share/man/man1/makeinfo.1.zst</Path>
+            <Path fileType="man">/usr/share/man/man1/pdftexi2dvi.1.zst</Path>
+            <Path fileType="man">/usr/share/man/man1/pod2texi.1.zst</Path>
+            <Path fileType="man">/usr/share/man/man1/texi2any.1.zst</Path>
+            <Path fileType="man">/usr/share/man/man1/texi2dvi.1.zst</Path>
+            <Path fileType="man">/usr/share/man/man1/texi2pdf.1.zst</Path>
+            <Path fileType="man">/usr/share/man/man1/texindex.1.zst</Path>
+            <Path fileType="man">/usr/share/man/man5/info.5.zst</Path>
+            <Path fileType="man">/usr/share/man/man5/texinfo.5.zst</Path>
             <Path fileType="data">/usr/share/texi2any/Pod-Simple-Texinfo/Pod/Simple/Texinfo.pm</Path>
             <Path fileType="data">/usr/share/texi2any/Texinfo/Commands.pm</Path>
             <Path fileType="data">/usr/share/texi2any/Texinfo/Commands.pod</Path>
+            <Path fileType="data">/usr/share/texi2any/Texinfo/CommandsValues.pm</Path>
+            <Path fileType="data">/usr/share/texi2any/Texinfo/CommandsValues.pod</Path>
             <Path fileType="data">/usr/share/texi2any/Texinfo/Common.pm</Path>
             <Path fileType="data">/usr/share/texi2any/Texinfo/Config.pm</Path>
+            <Path fileType="data">/usr/share/texi2any/Texinfo/ConfigXS.pm</Path>
             <Path fileType="data">/usr/share/texi2any/Texinfo/Convert/ConvertXS.pm</Path>
             <Path fileType="data">/usr/share/texi2any/Texinfo/Convert/Converter.pm</Path>
             <Path fileType="data">/usr/share/texi2any/Texinfo/Convert/DocBook.pm</Path>
@@ -139,12 +153,19 @@
             <Path fileType="data">/usr/share/texi2any/Texinfo/Convert/ParagraphNonXS.pm</Path>
             <Path fileType="data">/usr/share/texi2any/Texinfo/Convert/PlainTexinfo.pm</Path>
             <Path fileType="data">/usr/share/texi2any/Texinfo/Convert/Plaintext.pm</Path>
+            <Path fileType="data">/usr/share/texi2any/Texinfo/Convert/ReadDocBook.pm</Path>
+            <Path fileType="data">/usr/share/texi2any/Texinfo/Convert/TestReader.pm</Path>
             <Path fileType="data">/usr/share/texi2any/Texinfo/Convert/Texinfo.pm</Path>
             <Path fileType="data">/usr/share/texi2any/Texinfo/Convert/TexinfoMarkup.pm</Path>
+            <Path fileType="data">/usr/share/texi2any/Texinfo/Convert/TexinfoNonXS.pm</Path>
             <Path fileType="data">/usr/share/texi2any/Texinfo/Convert/TexinfoSXML.pm</Path>
             <Path fileType="data">/usr/share/texi2any/Texinfo/Convert/TexinfoXML.pm</Path>
+            <Path fileType="data">/usr/share/texi2any/Texinfo/Convert/TexinfoXS.pm</Path>
             <Path fileType="data">/usr/share/texi2any/Texinfo/Convert/Text.pm</Path>
             <Path fileType="data">/usr/share/texi2any/Texinfo/Convert/TextContent.pm</Path>
+            <Path fileType="data">/usr/share/texi2any/Texinfo/Convert/TreeElementConverter.pm</Path>
+            <Path fileType="data">/usr/share/texi2any/Texinfo/Convert/TreeElementConverterXS.pm</Path>
+            <Path fileType="data">/usr/share/texi2any/Texinfo/Convert/TreeElementReadDocBook.pm</Path>
             <Path fileType="data">/usr/share/texi2any/Texinfo/Convert/Unicode.pm</Path>
             <Path fileType="data">/usr/share/texi2any/Texinfo/Convert/Utils.pm</Path>
             <Path fileType="data">/usr/share/texi2any/Texinfo/DebugTree.pm</Path>
@@ -152,6 +173,7 @@
             <Path fileType="data">/usr/share/texi2any/Texinfo/DocumentXS.pm</Path>
             <Path fileType="data">/usr/share/texi2any/Texinfo/Documentlanguages.pm</Path>
             <Path fileType="data">/usr/share/texi2any/Texinfo/HTMLData.pm</Path>
+            <Path fileType="data">/usr/share/texi2any/Texinfo/HTMLDataCSS.pm</Path>
             <Path fileType="data">/usr/share/texi2any/Texinfo/Indices.pm</Path>
             <Path fileType="data">/usr/share/texi2any/Texinfo/IndicesXS.pm</Path>
             <Path fileType="data">/usr/share/texi2any/Texinfo/ManipulateTree.pm</Path>
@@ -161,14 +183,19 @@
             <Path fileType="data">/usr/share/texi2any/Texinfo/OutputUnits.pm</Path>
             <Path fileType="data">/usr/share/texi2any/Texinfo/Parser.pm</Path>
             <Path fileType="data">/usr/share/texi2any/Texinfo/ParserNonXS.pm</Path>
+            <Path fileType="data">/usr/share/texi2any/Texinfo/Reader.pm</Path>
+            <Path fileType="data">/usr/share/texi2any/Texinfo/ReaderNonXS.pm</Path>
             <Path fileType="data">/usr/share/texi2any/Texinfo/Report.pm</Path>
             <Path fileType="data">/usr/share/texi2any/Texinfo/StructTransfXS.pm</Path>
             <Path fileType="data">/usr/share/texi2any/Texinfo/Structuring.pm</Path>
             <Path fileType="data">/usr/share/texi2any/Texinfo/Tests.pm</Path>
             <Path fileType="data">/usr/share/texi2any/Texinfo/Transformations.pm</Path>
             <Path fileType="data">/usr/share/texi2any/Texinfo/Translations.pm</Path>
-            <Path fileType="data">/usr/share/texi2any/Texinfo/XS/parsetexi/Parsetexi.pm</Path>
+            <Path fileType="data">/usr/share/texi2any/Texinfo/TreeElement.pm</Path>
+            <Path fileType="data">/usr/share/texi2any/Texinfo/TreeElementNonXS.pm</Path>
+            <Path fileType="data">/usr/share/texi2any/Texinfo/UnicodeData.pm</Path>
             <Path fileType="data">/usr/share/texi2any/Texinfo/XSLoader.pm</Path>
+            <Path fileType="data">/usr/share/texi2any/XSTexinfo/Parsetexi.pm</Path>
             <Path fileType="data">/usr/share/texi2any/ext/epub3.pm</Path>
             <Path fileType="data">/usr/share/texi2any/ext/highlight_syntax.pm</Path>
             <Path fileType="data">/usr/share/texi2any/ext/latex2html.pm</Path>
@@ -586,18 +613,22 @@
             <Path fileType="data">/usr/share/texi2any/lib/libintl-perl/lib/Locale/Util.pm</Path>
             <Path fileType="data">/usr/share/texi2any/lib/libintl-perl/lib/Locale/gettext_dumb.pm</Path>
             <Path fileType="data">/usr/share/texi2any/lib/libintl-perl/lib/Locale/gettext_pp.pm</Path>
-            <Path fileType="data">/usr/share/texinfo/htmlxref.cnf</Path>
+            <Path fileType="data">/usr/share/texi2any/load_txi_modules</Path>
+            <Path fileType="data">/usr/share/texinfo/htmlxref.d/Texinfo_GNU.cnf</Path>
+            <Path fileType="data">/usr/share/texinfo/htmlxref.d/Texinfo_nonGNU.cnf</Path>
+            <Path fileType="data">/usr/share/texinfo/info-hooks/gnu-manuals-locations.dat</Path>
+            <Path fileType="data">/usr/share/texinfo/info-hooks/manual-not-found</Path>
             <Path fileType="data">/usr/share/texinfo/texindex.awk</Path>
             <Path fileType="data">/usr/share/texinfo/texinfo.dtd</Path>
         </Files>
     </Package>
     <History>
-        <Update release="21">
-            <Date>2025-01-03</Date>
-            <Version>7.2</Version>
+        <Update release="23">
+            <Date>2026-04-12</Date>
+            <Version>7.3</Version>
             <Comment>Packaging update</Comment>
-            <Name>Muhammad Alfi Syahrin</Name>
-            <Email>malfisya.dev@hotmail.com</Email>
+            <Name>clintre</Name>
+            <Email>clint@eschberger.info</Email>
         </Update>
     </History>
 </PISI>

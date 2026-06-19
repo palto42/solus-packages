@@ -4,10 +4,15 @@
         <Homepage>https://www.kde.org/workspaces/plasmadesktop/</Homepage>
         <Packager>
             <Name>Troy Harvey</Name>
-            <Email>harveydevel@gmail.com</Email>
+            <Email>harvey@getsol.us</Email>
         </Packager>
+        <License>BSD-3-Clause</License>
+        <License>CC0-1.0</License>
+        <License>GPL-2.0-only</License>
         <License>GPL-2.0-or-later</License>
+        <License>GPL-3.0-only</License>
         <License>LGPL-2.1-only</License>
+        <License>LGPL-3.0-only</License>
         <PartOf>desktop.kde.core</PartOf>
         <Summary xml:lang="en">Plasma applet for audio volume management using PulseAudio.</Summary>
         <Description xml:lang="en">Plasma applet for audio volume management using PulseAudio.
@@ -22,7 +27,7 @@
         <PartOf>desktop.kde.core</PartOf>
         <Files>
             <Path fileType="library">/usr/lib64/libplasma-volume.so.6</Path>
-            <Path fileType="library">/usr/lib64/libplasma-volume.so.6.4.5</Path>
+            <Path fileType="library">/usr/lib64/libplasma-volume.so.6.6.5</Path>
             <Path fileType="library">/usr/lib64/qt6/plugins/kf6/kded/audioshortcutsservice.so</Path>
             <Path fileType="library">/usr/lib64/qt6/plugins/plasma/applets/org.kde.plasma.volume.so</Path>
             <Path fileType="library">/usr/lib64/qt6/plugins/plasma/kcms/systemsettings/kcm_pulseaudio.so</Path>
@@ -32,6 +37,15 @@
             <Path fileType="library">/usr/lib64/qt6/qml/org/kde/plasma/private/volume/plasma-volume-declarative.qmltypes</Path>
             <Path fileType="library">/usr/lib64/qt6/qml/org/kde/plasma/private/volume/qmldir</Path>
             <Path fileType="data">/usr/share/applications/kcm_pulseaudio.desktop</Path>
+            <Path fileType="data">/usr/share/licenses/plasma-pa/BSD-3-Clause.txt</Path>
+            <Path fileType="data">/usr/share/licenses/plasma-pa/CC0-1.0.txt</Path>
+            <Path fileType="data">/usr/share/licenses/plasma-pa/GPL-2.0-only.txt</Path>
+            <Path fileType="data">/usr/share/licenses/plasma-pa/GPL-3.0-only.txt</Path>
+            <Path fileType="data">/usr/share/licenses/plasma-pa/LGPL-2.0-or-later.txt</Path>
+            <Path fileType="data">/usr/share/licenses/plasma-pa/LGPL-2.1-only.txt</Path>
+            <Path fileType="data">/usr/share/licenses/plasma-pa/LGPL-3.0-only.txt</Path>
+            <Path fileType="data">/usr/share/licenses/plasma-pa/LicenseRef-KDE-Accepted-GPL.txt</Path>
+            <Path fileType="data">/usr/share/licenses/plasma-pa/LicenseRef-KDE-Accepted-LGPL.txt</Path>
             <Path fileType="localedata">/usr/share/locale/ar/LC_MESSAGES/kcm_pulseaudio.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ar/LC_MESSAGES/plasma_applet_org.kde.plasma.volume.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ast/LC_MESSAGES/kcm_pulseaudio.mo</Path>
@@ -66,6 +80,8 @@
             <Path fileType="localedata">/usr/share/locale/fi/LC_MESSAGES/plasma_applet_org.kde.plasma.volume.mo</Path>
             <Path fileType="localedata">/usr/share/locale/fr/LC_MESSAGES/kcm_pulseaudio.mo</Path>
             <Path fileType="localedata">/usr/share/locale/fr/LC_MESSAGES/plasma_applet_org.kde.plasma.volume.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/ga/LC_MESSAGES/kcm_pulseaudio.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/ga/LC_MESSAGES/plasma_applet_org.kde.plasma.volume.mo</Path>
             <Path fileType="localedata">/usr/share/locale/gl/LC_MESSAGES/kcm_pulseaudio.mo</Path>
             <Path fileType="localedata">/usr/share/locale/gl/LC_MESSAGES/plasma_applet_org.kde.plasma.volume.mo</Path>
             <Path fileType="localedata">/usr/share/locale/he/LC_MESSAGES/kcm_pulseaudio.mo</Path>
@@ -143,12 +159,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="129">
-            <Date>2025-10-01</Date>
-            <Version>6.4.5</Version>
+        <Update release="142">
+            <Date>2026-05-12</Date>
+            <Version>6.6.5</Version>
             <Comment>Packaging update</Comment>
             <Name>Troy Harvey</Name>
-            <Email>harveydevel@gmail.com</Email>
+            <Email>harvey@getsol.us</Email>
         </Update>
     </History>
 </PISI>

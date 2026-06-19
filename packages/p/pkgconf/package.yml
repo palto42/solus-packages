@@ -1,9 +1,10 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : pkgconf
-version    : 2.3.0
-release    : 2
+version    : 2.5.1
+release    : 4
 source     :
-    - https://distfiles.ariadne.space/pkgconf/pkgconf-2.3.0.tar.xz : 3a9080ac51d03615e7c1910a0a2a8df08424892b5f13b0628a204d3fcce0ea8b
-homepage   : http://pkgconf.org/
+    - https://distfiles.ariadne.space/pkgconf/pkgconf-2.5.1.tar.xz : cd05c9589b9f86ecf044c10a2269822bc9eb001eced2582cfffd658b0a50c243
+homepage   : https://github.com/pkgconf/pkgconf
 license    :
     - ISC
 summary    : Package compiler and linker metadata toolkit
@@ -18,7 +19,7 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
-
+    %install_license COPYING
     # pkg-config compatibility
     ln -sv pkgconf $installdir/usr/bin/pkg-config
     ln -sv pkgconf.1 $installdir/usr/share/man/man1/pkg-config.1
@@ -30,8 +31,8 @@ install    : |
         install -Dm00644 $pkgfiles/$file -t $installdir/usr/share/pkgconfig/personality.d
         ln -sv pkgconf $installdir/usr/bin/${triplet}-pkg-config
     done
-# check      : |
-#     %ninja_check
+check      : |
+    %ninja_check
 replaces   :
     - pkg-config
     - dbginfo : pkg-config-dbginfo

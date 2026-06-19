@@ -1,6 +1,10 @@
 libc.so.6:__assert_fail
 libc.so.6:__errno_location
 libc.so.6:__fdelt_chk
+libc.so.6:__isoc23_strtoimax
+libc.so.6:__isoc23_strtol
+libc.so.6:__isoc23_strtoul
+libc.so.6:__isoc23_strtoumax
 libc.so.6:__memcpy_chk
 libc.so.6:__snprintf_chk
 libc.so.6:__sprintf_chk
@@ -13,6 +17,7 @@ libc.so.6:connect
 libc.so.6:fcntl64
 libc.so.6:free
 libc.so.6:freeaddrinfo
+libc.so.6:freelocale
 libc.so.6:getaddrinfo
 libc.so.6:getenv
 libc.so.6:getsockopt
@@ -22,6 +27,7 @@ libc.so.6:memchr
 libc.so.6:memcpy
 libc.so.6:memmove
 libc.so.6:mktime
+libc.so.6:newlocale
 libc.so.6:realloc
 libc.so.6:recv
 libc.so.6:select
@@ -38,5 +44,5 @@ libc.so.6:strlen
 libc.so.6:strncmp
 libc.so.6:strndup
 libc.so.6:strtod
-libc.so.6:strtol
-libc.so.6:strtoul
+libc.so.6:strtof
+libc.so.6:uselocale

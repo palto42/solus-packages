@@ -22,12 +22,12 @@ libgstaudio-1.0.so.0
 libgstpbutils-1.0.so.0
 libgstreamer-1.0.so.0
 libgsttag-1.0.so.0
-libicui18n.so.76
-libicuuc.so.76
+libicui18n.so.78
+libicuuc.so.78
 libkdsingleapplication-qt6.so.1.1
 libm.so.6
 libmtp.so.9
 libpulse.so.0
 libsqlite3.so.0
 libstdc++.so.6
-libtag.so.1
+libtag.so.2

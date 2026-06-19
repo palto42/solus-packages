@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : qt6-3d
-version    : 6.9.3
-release    : 18
+version    : 6.11.1
+release    : 23
 source     :
-    - https://download.qt.io/official_releases/qt/6.9/6.9.3/submodules/qt3d-everywhere-src-6.9.3.tar.xz : 7e8664ddf21a79d4eeaebf76dddf017ed31142a2df005cf4ac784dff10627fff
+    - https://download.qt.io/official_releases/qt/6.11/6.11.1/submodules/qt3d-everywhere-src-6.11.1.tar.xz : a66d8c8e049d1ee7a7687b34940f3555d0d7084858b6dc78d1e1cb7df40a0107
 homepage   : https://doc.qt.io/qt-6/qt3d-overview.html
 license    :
     - GFDL-1.3-or-later
@@ -28,6 +29,8 @@ optimize   :
     - speed
     - thin-lto
 setup      : |
+    %patch -p1 -i $pkgfiles/assimp-6.patch
+
     %cmake_ninja \
                  -DCMAKE_MESSAGE_LOG_LEVEL=STATUS
 build      : |

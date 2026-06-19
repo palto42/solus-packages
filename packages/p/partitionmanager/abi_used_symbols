@@ -113,6 +113,7 @@ libKF6WidgetsAddons.so.6:_ZN14KMessageWidgetC1EP7QWidget
 libKF6WidgetsAddons.so.6:_ZN15KPasswordDialog9setPromptERK7QString
 libKF6WidgetsAddons.so.6:_ZN15KPasswordDialogC1EP7QWidgetRK6QFlagsINS_19KPasswordDialogFlagEE
 libKF6WidgetsAddons.so.6:_ZN15KPasswordDialogD1Ev
+libKF6WidgetsAddons.so.6:_ZN16KStandardGuiItem4contEv
 libKF6WidgetsAddons.so.6:_ZN16KStandardGuiItem6cancelEv
 libKF6WidgetsAddons.so.6:_ZN18KNewPasswordWidget16staticMetaObjectE
 libKF6WidgetsAddons.so.6:_ZN18KNewPasswordWidget21passwordStatusChangedEv
@@ -201,7 +202,7 @@ libQt6Core.so.6:_ZN10QEventLoop4quitEv
 libQt6Core.so.6:_ZN10QEventLoopC1EP7QObject
 libQt6Core.so.6:_ZN10QEventLoopD1Ev
 libQt6Core.so.6:_ZN11QBasicMutex12lockInternalEv
-libQt6Core.so.6:_ZN11QBasicMutex14unlockInternalEv
+libQt6Core.so.6:_ZN11QBasicMutex19unlockInternalFutexEPv
 libQt6Core.so.6:_ZN11QDataStreamlsEi
 libQt6Core.so.6:_ZN11QDataStreamrsERi
 libQt6Core.so.6:_ZN11QFileDevice5closeEv
@@ -217,8 +218,6 @@ libQt6Core.so.6:_ZN11QTextStreamlsERK7QString
 libQt6Core.so.6:_ZN11QTextStreamlsEc
 libQt6Core.so.6:_ZN11QTextStreamlsEi
 libQt6Core.so.6:_ZN13QElapsedTimer5startEv
-libQt6Core.so.6:_ZN14QReadWriteLock14tryLockForReadE14QDeadlineTimer
-libQt6Core.so.6:_ZN14QReadWriteLock6unlockEv
 libQt6Core.so.6:_ZN14QTemporaryFile13setAutoRemoveEb
 libQt6Core.so.6:_ZN14QTemporaryFile15setFileTemplateERK7QString
 libQt6Core.so.6:_ZN14QTemporaryFileC1Ev
@@ -236,6 +235,8 @@ libQt6Core.so.6:_ZN18QCommandLineParserD1Ev
 libQt6Core.so.6:_ZN18QRegularExpression10setPatternERK7QString
 libQt6Core.so.6:_ZN18QRegularExpressionC1ERK7QString6QFlagsINS_13PatternOptionEE
 libQt6Core.so.6:_ZN18QRegularExpressionD1Ev
+libQt6Core.so.6:_ZN19QBasicReadWriteLock15contendedUnlockEPv
+libQt6Core.so.6:_ZN19QBasicReadWriteLock23contendedTryLockForReadE14QDeadlineTimerPv
 libQt6Core.so.6:_ZN23QRegularExpressionMatchD1Ev
 libQt6Core.so.6:_ZN2Qt16staticMetaObjectE
 libQt6Core.so.6:_ZN4QDirC1ERK7QString
@@ -260,7 +261,7 @@ libQt6Core.so.6:_ZN6QTimer5startEi
 libQt6Core.so.6:_ZN6QTimer7timeoutENS_14QPrivateSignalE
 libQt6Core.so.6:_ZN6QTimerC1EP7QObject
 libQt6Core.so.6:_ZN6QTimerD1Ev
-libQt6Core.so.6:_ZN7QLocaleC1ENS_8LanguageENS_6ScriptENS_7CountryE
+libQt6Core.so.6:_ZN7QLocale1cEv
 libQt6Core.so.6:_ZN7QLocaleC1Ev
 libQt6Core.so.6:_ZN7QLocaleD1Ev
 libQt6Core.so.6:_ZN7QLocaleaSERKS_
@@ -273,7 +274,7 @@ libQt6Core.so.6:_ZN7QObject11deleteLaterEv
 libQt6Core.so.6:_ZN7QObject11eventFilterEPS_P6QEvent
 libQt6Core.so.6:_ZN7QObject12blockSignalsEb
 libQt6Core.so.6:_ZN7QObject13connectNotifyERK11QMetaMethod
-libQt6Core.so.6:_ZN7QObject13doSetPropertyEPKcPK8QVariantPS2_
+libQt6Core.so.6:_ZN7QObject13doSetPropertyEPKcRK8QVariantPS2_
 libQt6Core.so.6:_ZN7QObject13setObjectNameE14QAnyStringView
 libQt6Core.so.6:_ZN7QObject15doSetObjectNameERK7QString
 libQt6Core.so.6:_ZN7QObject16disconnectNotifyERK11QMetaMethod
@@ -359,7 +360,6 @@ libQt6Core.so.6:_ZNK7QString8endsWithERKS_N2Qt15CaseSensitivityE
 libQt6Core.so.6:_ZNK7QThread9isRunningEv
 libQt6Core.so.6:_ZNK8QVariant11toULongLongEPb
 libQt6Core.so.6:_ZNK8QVariant5toIntEPb
-libQt6Core.so.6:_ZNK8QVariant8metaTypeEv
 libQt6Core.so.6:_ZNK8QVariant8toStringEv
 libQt6Core.so.6:_ZNK9QDateTime8toStringERK7QString
 libQt6Core.so.6:_ZNK9QFileInfo17canonicalFilePathEv

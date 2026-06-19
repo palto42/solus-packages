@@ -1,0 +1,22 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
+name       : libmysofa
+version    : 1.3.4
+release    : 1
+source     :
+    - https://github.com/hoene/libmysofa/archive/refs/tags/v1.3.4.tar.gz : 64c661f75ef39edf68bfc3a28403d2b5a0bd251d0b9f5d021ed6f7917867fb37
+homepage   : https://github.com/hoene/libmysofa
+license    : BSD-3-Clause
+component  : programming.library
+summary    : Reader for AES SOFA files to get better HRTFs 
+description: |
+    A simple set of C functions to read AES SOFA files, if they contain HRTFs stored according to the AES69-2015 standard.
+setup      : |
+    %cmake_ninja \
+      -DBUILD_TESTS=OFF \
+      -DBUILD_STATIC_LIBS=OFF
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install
+
+    %install_license LICENSE

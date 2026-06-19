@@ -1,9 +1,10 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : cherrytree
-version    : 1.6.2
-release    : 48
+version    : 1.7.0
+release    : 51
 source     :
-    - https://github.com/giuspen/cherrytree/releases/download/v1.6.2/cherrytree_1.6.2.tar.xz : 28c89a0b2512961e9d9393a5b8f7778f99331583c9bdbe682c4897b853727158
-homepage   : https://www.giuspen.com/cherrytree/
+    - https://github.com/giuspen/cherrytree/releases/download/v1.7.0/cherrytree_1.7.0.tar.xz : 5a015cb3af54a096a41795e42f9e41288f7189709046f81717f89d40a16f799b
+homepage   : https://www.giuspen.net/cherrytree/
 license    : GPL-3.0-or-later
 component  : office.notes
 summary    : A hierarchical note taking application
@@ -20,7 +21,7 @@ builddeps  :
     - pkgconfig(uchardet)
     - pkgconfig(vte-2.91)
 rundeps    :
-    - p7zip
+    - 7zip
 setup      : |
     %cmake_ninja -DBUILD_TESTING=OFF
 build      : |

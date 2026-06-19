@@ -1,24 +1,25 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : qcoro
-version    : 0.10.0
-release    : 5
+version    : 0.13.0
+release    : 8
 source     :
-    - https://github.com/danvratil/qcoro/archive/refs/tags/v0.10.0.tar.gz : b7c8f00273ad27d85814bf4ec93eb6922c75656800a61d11854d36355a4a1aec
+    - https://github.com/danvratil/qcoro/archive/refs/tags/v0.13.0.tar.gz : 4bff7513c5c8e301b66308df05795043b1792ed16381a484e5c990171b8ff19e
 homepage   : https://qcoro.dvratil.cz/
 license    : MIT
 description: |
     The QCoro library provides set of tools to make use of C++20 coroutines with Qt.
 component  :
     - programming.library
-    - qt5: programming.library
-    - qt5-devel: programming.devel
-    - qt6: programming.library
-    - qt6-devel: programming.devel
+    - qt5 : programming.library
+    - qt5-devel : programming.devel
+    - qt6 : programming.library
+    - qt6-devel : programming.devel
 summary    :
     - The QCoro library provides set of tools to make use of C++20 coroutines with Qt.
-    - qt5: C++ Coroutines for Qt5.
-    - qt5-devel: Development files for qca-qt5
-    - qt6: C++ Coroutines for Qt6.
-    - qt6-devel: Development files for qca-qt6
+    - qt5 : C++ Coroutines for Qt5.
+    - qt5-devel : Development files for qca-qt5
+    - qt6 : C++ Coroutines for Qt6.
+    - qt6-devel : Development files for qca-qt6
 builddeps  :
     - pkgconfig(Qt5Core)
     - pkgconfig(Qt5QuickControls2)
@@ -26,13 +27,12 @@ builddeps  :
     - pkgconfig(Qt6Core)
     - pkgconfig(Qt6Quick)
     - pkgconfig(Qt6WebSockets)
+    - qt6-base-private-devel
 rundeps    :
-    - qt5-devel:
+    - qt5-devel :
         - qcoro-qt5
-    - qt6-devel:
+    - qt6-devel :
         - qcoro-qt6
-#checkdeps  :
-#    - dbus-launch # useless without dbus in the chroot.
 setup      : |
     mkdir qt5 qt6
 
@@ -65,24 +65,23 @@ install    : |
     %ninja_install
     popd
 check      : |
-    # dbus tests failing due to no dbus in env
     pushd qt5
-    %ninja_check || :
+    %ninja_check
     popd
     pushd qt6
-    %ninja_check || :
+    %ninja_check
     popd
 patterns   :
-    - qt5:
+    - qt5 :
         - /usr/lib64/libQCoro5*.so.*
-    - qt6:
+    - qt6 :
         - /usr/lib64/libQCoro6*.so.*
-    - qt5-devel:
+    - qt5-devel :
         - /usr/include/qcoro5/*
         - /usr/lib64/cmake/QCoro5*
         - /usr/lib64/qt5/mkspecs
         - /usr/lib64/libQCoro5*.so
-    - qt6-devel:
+    - qt6-devel :
         - /usr/include/qcoro6/*
         - /usr/lib64/cmake/QCoro6*
         - /usr/lib64/qt6/mkspecs/

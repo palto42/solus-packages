@@ -7,7 +7,7 @@ libchamplain-gtk-0.12.so.0
 libclutter-1.0.so.0
 libclutter-gtk-1.0.so.0
 libdjvulibre.so.21
-libexiv2.so.27
+libexiv2.so.28
 libffmpegthumbnailer.so.4
 libgcc_s.so.1
 libgdk-3.so.0
@@ -27,7 +27,7 @@ libopenjp2.so.7
 libpango-1.0.so.0
 libpangocairo-1.0.so.0
 libpoppler-glib.so.8
-libraw.so.23
+libraw.so.25
 libstdc++.so.6
 libtiff.so.6
 libwebp.so.7

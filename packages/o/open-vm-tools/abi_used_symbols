@@ -581,6 +581,7 @@ libglib-2.0.so.0:g_file_test
 libglib-2.0.so.0:g_filename_from_utf8
 libglib-2.0.so.0:g_find_program_in_path
 libglib-2.0.so.0:g_fprintf
+libglib-2.0.so.0:g_free_sized
 libglib-2.0.so.0:g_get_current_dir
 libglib-2.0.so.0:g_get_current_time
 libglib-2.0.so.0:g_get_host_name
@@ -1125,10 +1126,6 @@ libudev.so.1:udev_unref
 libxml2.so.2:xmlAddID
 libxml2.so.2:xmlCheckVersion
 libxml2.so.2:xmlDocGetRootElement
-libxml2.so.2:xmlFileClose
-libxml2.so.2:xmlFileMatch
-libxml2.so.2:xmlFileOpen
-libxml2.so.2:xmlFileRead
 libxml2.so.2:xmlFree
 libxml2.so.2:xmlFreeDoc
 libxml2.so.2:xmlGetID
@@ -1138,7 +1135,6 @@ libxml2.so.2:xmlLoadCatalog
 libxml2.so.2:xmlNodeGetContent
 libxml2.so.2:xmlNodeListGetString
 libxml2.so.2:xmlReadMemory
-libxml2.so.2:xmlRegisterInputCallbacks
 libxml2.so.2:xmlSchemaFree
 libxml2.so.2:xmlSchemaFreeParserCtxt
 libxml2.so.2:xmlSchemaFreeValidCtxt
@@ -1150,7 +1146,6 @@ libxml2.so.2:xmlSchemaSetValidErrors
 libxml2.so.2:xmlSchemaValidateDoc
 libxml2.so.2:xmlSetGenericErrorFunc
 libxml2.so.2:xmlStrEqual
-libxml2.so.2:xmlURIUnescapeString
 libxmlsec1.so.1:xmlSecCheckVersionExt
 libxmlsec1.so.1:xmlSecCryptoAppDefaultKeysMngrInit
 libxmlsec1.so.1:xmlSecCryptoAppInit

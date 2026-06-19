@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : tea
-version    : 0.11.0
-release    : 7
+version    : 0.14.1
+release    : 12
 source     :
-    - https://gitea.com/gitea/tea/archive/v0.11.0.tar.gz : 278bbdf2e197f6f80a838e09574e8a950de535f0ba0f53154d26930a3adfaaa6
+    - https://gitea.com/gitea/tea/archive/v0.14.1.tar.gz : 848b6b2fafa270fa77b4e278d521bfcc16d2f721c45ac90f08f5b16dc630c3f9
 homepage   : https://gitea.com/gitea/tea
 license    : MIT
 component  : system.utils
@@ -24,3 +25,4 @@ install    : |
     install -Dm00755 tea $installdir/usr/bin/tea
     install -Dm00644 $pkgfiles/tea.bash $installdir/usr/share/bash-completion/completions/tea
     install -Dm00644 $pkgfiles/tea.zsh $installdir/usr/share/zsh/site-functions/_tea
+    %install_license LICENSE

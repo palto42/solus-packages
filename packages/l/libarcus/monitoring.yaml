@@ -1,6 +1,0 @@
-releases:
-  id: 13953
-  rss: https://github.com/Ultimaker/libArcus/tags.atom
-security:
-  # No known CPE, last checked 2024-07-12
-  cpe: ~

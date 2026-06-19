@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : scrot
-version    : '1.10'
-release    : 10
+version    : 2.0.0
+release    : 12
 source     :
-    - https://github.com/resurrecting-open-source-projects/scrot/releases/download/1.10/scrot-1.10.tar.gz : d3fb2fb962c1921030a442448afb1994d77d40192868da1b4cdeade0066bf36f
+    - https://github.com/resurrecting-open-source-projects/scrot/releases/download/2.0.0/scrot-2.0.0.tar.gz : 1b4b3acadfe07bf89234838675d1d23508a9a6810cb64584f1d9610103d6cdfa
 homepage   : https://github.com/resurrecting-open-source-projects/scrot
 license    : MIT
 component  : system.utils
@@ -10,18 +11,16 @@ summary    : scrot (SCReen shOT) is a simple commandline screen capture utility
 description: |
     scrot (SCReen shOT) is a simple commandline screen capture utility that uses imlib2 to grab and save images. Multiple image formats are supported through imlib2's dynamic saver modules.
 builddeps  :
-    - pkgconfig(harfbuzz)
     - pkgconfig(imlib2)
     - pkgconfig(libbsd)
     - pkgconfig(xcomposite)
-    - pkgconfig(xcursor)
-    - pkgconfig(xext)
-    - pkgconfig(xinerama)
+    - pkgconfig(xfixes)
+    - pkgconfig(xrandr)
     - autoconf-archive
 setup      : |
-    %autogen
+    %configure
 build      : |
     %make
 install    : |
     %make_install
-    rm -rf $installdir/usr/share/doc
+    %install_license COPYING

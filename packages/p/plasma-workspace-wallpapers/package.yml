@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : plasma-workspace-wallpapers
-version    : 6.4.5
-release    : 37
+version    : 6.6.5
+release    : 47
 source     :
-    - https://download.kde.org/stable/plasma/6.4.5/plasma-workspace-wallpapers-6.4.5.tar.xz : b43b3d317712d0c4ebb9e80016244e3782e5b07957576d6a0304907a07c08fbf
+    - https://download.kde.org/stable/plasma/6.6.5/plasma-workspace-wallpapers-6.6.5.tar.xz : 4a021dbda761da7aaf7192e8d038aa1f2305a576a57f2384f54bc8ed90731418
 homepage   : https://kde.org/plasma-desktop
 license    :
     - GPL-2.0-or-later
@@ -20,3 +21,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license COPYING COPYING.LGPL3

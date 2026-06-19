@@ -12,7 +12,7 @@ libQt6Core.so.6:_ZN10QByteArray6insertEx14QByteArrayView
 libQt6Core.so.6:_ZN10QByteArrayC1EPKcx
 libQt6Core.so.6:_ZN10QByteArrayaSERKS_
 libQt6Core.so.6:_ZN11QBasicMutex12lockInternalEv
-libQt6Core.so.6:_ZN11QBasicMutex14unlockInternalEv
+libQt6Core.so.6:_ZN11QBasicMutex19unlockInternalFutexEPv
 libQt6Core.so.6:_ZN11QDataStreamC1ERK10QByteArray
 libQt6Core.so.6:_ZN11QDataStreamD1Ev
 libQt6Core.so.6:_ZN11QDataStreamlsEi
@@ -98,6 +98,7 @@ libQt6Core.so.6:_ZN20QFutureInterfaceBaseC2ERKS_
 libQt6Core.so.6:_ZN20QFutureInterfaceBaseD2Ev
 libQt6Core.so.6:_ZN24QAbstractEventDispatcher12aboutToBlockEv
 libQt6Core.so.6:_ZN24QAbstractEventDispatcher16staticMetaObjectE
+libQt6Core.so.6:_ZN24QAbstractEventDispatcher5awakeEv
 libQt6Core.so.6:_ZN2Qt16staticMetaObjectE
 libQt6Core.so.6:_ZN4QDirC1ERK7QString
 libQt6Core.so.6:_ZN4QDirD1Ev
@@ -193,6 +194,7 @@ libQt6Core.so.6:_ZNK20QFutureInterfaceBase10queryStateENS_5StateE
 libQt6Core.so.6:_ZNK20QFutureInterfaceBase12hasExceptionEv
 libQt6Core.so.6:_ZNK20QFutureInterfaceBase15resultStoreBaseEv
 libQt6Core.so.6:_ZNK20QFutureInterfaceBase15runContinuationEv
+libQt6Core.so.6:_ZNK20QFutureInterfaceBase29isAddResultsIfCanceledEnabledEv
 libQt6Core.so.6:_ZNK20QFutureInterfaceBase4refTEv
 libQt6Core.so.6:_ZNK20QFutureInterfaceBase5mutexEv
 libQt6Core.so.6:_ZNK20QFutureInterfaceBase6derefTEv

@@ -36,6 +36,7 @@ libnghttp2.so.14:nghttp2_nv_compare_name
 libnghttp2.so.14:nghttp2_option_del
 libnghttp2.so.14:nghttp2_option_new
 libnghttp2.so.14:nghttp2_option_set_builtin_recv_extension_type
+libnghttp2.so.14:nghttp2_option_set_glitch_rate_limit
 libnghttp2.so.14:nghttp2_option_set_max_continuations
 libnghttp2.so.14:nghttp2_option_set_max_deflate_dynamic_table_size
 libnghttp2.so.14:nghttp2_option_set_max_outbound_ack
@@ -85,6 +86,7 @@ libnghttp2.so.14:nghttp2_session_callbacks_set_on_invalid_header_callback2
 libnghttp2.so.14:nghttp2_session_callbacks_set_on_stream_close_callback
 libnghttp2.so.14:nghttp2_session_callbacks_set_pack_extension_callback
 libnghttp2.so.14:nghttp2_session_callbacks_set_pack_extension_callback2
+libnghttp2.so.14:nghttp2_session_callbacks_set_rand_callback
 libnghttp2.so.14:nghttp2_session_callbacks_set_recv_callback
 libnghttp2.so.14:nghttp2_session_callbacks_set_recv_callback2
 libnghttp2.so.14:nghttp2_session_callbacks_set_select_padding_callback

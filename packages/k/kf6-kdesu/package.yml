@@ -1,13 +1,16 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kf6-kdesu
-version    : 6.19.0
-release    : 25
+version    : 6.27.0
+release    : 33
 source     :
-    - https://download.kde.org/stable/frameworks/6.19/kdesu-6.19.0.tar.xz : 02f92edf906a397b05554ff4bd671cd7f5ac6c2cef56732541a2c27cc03d209f
+    - https://download.kde.org/stable/frameworks/6.27/kdesu-6.27.0.tar.xz : a8a0c5103cb43dc62952aab76bb7e576e8643dbb31672e2ac2988279ab571700
 homepage   : https://community.kde.org/Frameworks
 license    :
+    - CC0-1.0
     - GPL-2.0-only
     - LGPL-2.0-or-later
     - LGPL-2.1-only
+    - LGPL-3.0-only
 component  : desktop.library
 summary    : User interface for running shell commands with root privileges
 description: |
@@ -28,3 +31,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*

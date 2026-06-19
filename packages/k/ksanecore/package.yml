@@ -1,10 +1,14 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : ksanecore
-version    : 25.08.2
-release    : 81
+version    : 26.04.2
+release    : 87
 source     :
-    - https://download.kde.org/stable/release-service/25.08.2/src/ksanecore-25.08.2.tar.xz : 8badb3c8a4d5d466a9229bc46eb1f4fb0a16f382008e6399903413d8fa0a98b1
+    - https://download.kde.org/stable/release-service/26.04.2/src/ksanecore-26.04.2.tar.xz : 8f84a08f984055ced7a1a2051b9a2044d15c0a9523121a56aca66bfe5ab269d9
 homepage   : https://kde.org/
 license    :
+    - BSD-2-Clause
+    - BSD-3-Clause
+    - CC0-1.0
     - LGPL-2.1-only
     - LGPL-3.0-only
 component  : desktop.library
@@ -26,3 +30,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*

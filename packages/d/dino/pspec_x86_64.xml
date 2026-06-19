@@ -3,8 +3,8 @@
         <Name>dino</Name>
         <Homepage>https://dino.im/</Homepage>
         <Packager>
-            <Name>Muhammad Alfi Syahrin</Name>
-            <Email>malfisya.dev@hotmail.com</Email>
+            <Name>Evan Maddock</Name>
+            <Email>maddock.evan@vivaldi.net</Email>
         </Packager>
         <License>GPL-3.0-or-later</License>
         <PartOf>network.im</PartOf>
@@ -38,6 +38,7 @@
             <Path fileType="data">/usr/share/dbus-1/services/im.dino.Dino.service</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/im.dino.Dino.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/symbolic/apps/im.dino.Dino-symbolic.svg</Path>
+            <Path fileType="data">/usr/share/licenses/dino/LICENSE</Path>
             <Path fileType="localedata">/usr/share/locale/ar/LC_MESSAGES/dino-omemo.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ar/LC_MESSAGES/dino-openpgp.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ar/LC_MESSAGES/dino.mo</Path>
@@ -174,7 +175,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="8">dino</Dependency>
+            <Dependency release="13">dino</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/crypto-vala.h</Path>
@@ -197,12 +198,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="8">
-            <Date>2025-04-12</Date>
-            <Version>0.5.0</Version>
+        <Update release="13">
+            <Date>2026-05-14</Date>
+            <Version>0.5.1</Version>
             <Comment>Packaging update</Comment>
-            <Name>Muhammad Alfi Syahrin</Name>
-            <Email>malfisya.dev@hotmail.com</Email>
+            <Name>Evan Maddock</Name>
+            <Email>maddock.evan@vivaldi.net</Email>
         </Update>
     </History>
 </PISI>

@@ -3,8 +3,8 @@
         <Name>tor</Name>
         <Homepage>https://www.torproject.org/</Homepage>
         <Packager>
-            <Name>Jakob Gezelius</Name>
-            <Email>jakob@knugen.nu</Email>
+            <Name>clintre</Name>
+            <Email>clint@eschberger.info</Email>
         </Packager>
         <License>BSD-3-Clause</License>
         <PartOf>security</PartOf>
@@ -34,22 +34,23 @@
             <Path fileType="doc">/usr/share/doc/tor/tor-resolve.html</Path>
             <Path fileType="doc">/usr/share/doc/tor/tor.html</Path>
             <Path fileType="doc">/usr/share/doc/tor/torify.html</Path>
-            <Path fileType="man">/usr/share/man/man1/tor-gencert.1</Path>
-            <Path fileType="man">/usr/share/man/man1/tor-print-ed-signing-cert.1</Path>
-            <Path fileType="man">/usr/share/man/man1/tor-resolve.1</Path>
-            <Path fileType="man">/usr/share/man/man1/tor.1</Path>
-            <Path fileType="man">/usr/share/man/man1/torify.1</Path>
+            <Path fileType="data">/usr/share/licenses/tor/LICENSE</Path>
+            <Path fileType="man">/usr/share/man/man1/tor-gencert.1.zst</Path>
+            <Path fileType="man">/usr/share/man/man1/tor-print-ed-signing-cert.1.zst</Path>
+            <Path fileType="man">/usr/share/man/man1/tor-resolve.1.zst</Path>
+            <Path fileType="man">/usr/share/man/man1/tor.1.zst</Path>
+            <Path fileType="man">/usr/share/man/man1/torify.1.zst</Path>
             <Path fileType="data">/usr/share/tor/geoip</Path>
             <Path fileType="data">/usr/share/tor/geoip6</Path>
         </Files>
     </Package>
     <History>
-        <Update release="45">
-            <Date>2024-10-26</Date>
-            <Version>0.4.8.13</Version>
+        <Update release="46">
+            <Date>2026-04-12</Date>
+            <Version>0.4.9.6</Version>
             <Comment>Packaging update</Comment>
-            <Name>Jakob Gezelius</Name>
-            <Email>jakob@knugen.nu</Email>
+            <Name>clintre</Name>
+            <Email>clint@eschberger.info</Email>
         </Update>
     </History>
 </PISI>

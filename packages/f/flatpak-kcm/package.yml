@@ -1,10 +1,19 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : flatpak-kcm
-version    : 6.4.5
-release    : 41
+version    : 6.6.5
+release    : 51
 source     :
-    - https://download.kde.org/stable/plasma/6.4.5/flatpak-kcm-6.4.5.tar.xz : 3f1858707124305bc23186f334bbaf63c5a2bc2d8975eaff1274d402e611b8b1
+    - https://download.kde.org/stable/plasma/6.6.5/flatpak-kcm-6.6.5.tar.xz : 061377c064c2ac06f77d2850e711867e91768c3c8333dffb8f2b0ba21803b01a
 homepage   : https://invent.kde.org/plasma/flatpak-kcm
-license    : GPL-2.0-or-later
+license    :
+    - BSD-2-Clause
+    - BSD-3-Clause
+    - CC0-1.0
+    - CC-BY-SA-4.0
+    - GPL-2.0-only
+    - GPL-2.0-or-later
+    - GPL-3.0-only
+    - LGPL-2.1-or-later
 component  : desktop.kde.core
 summary    : Flatpak Permissions Management KCM
 description: |
@@ -21,6 +30,7 @@ builddeps  :
     - kf6-kdeclarative-devel
     - kf6-ki18n-devel
     - kf6-kitemmodels-devel
+    - kf6-kservice-devel
 clang      : true
 optimize   : thin-lto
 setup      : |
@@ -30,3 +40,5 @@ build      : |
 install    : |
     %ninja_install
     install -Dm00644 $pkgfiles/flatpak-discover.svg $installdir/usr/share/icons/hicolor/scalable/apps/flatpak-discover.svg
+
+    %install_license LICENSES/*

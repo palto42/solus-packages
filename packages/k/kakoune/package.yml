@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kakoune
-version    : 2025.06.03
-release    : 17
+version    : 2026.05.21
+release    : 19
 source     :
-    - https://github.com/mawww/kakoune/archive/refs/tags/v2025.06.03.tar.gz : e065dbb715bfe6b0abdaeee775243115748bd540a346d0212fdca6c20c13d340
+    - https://github.com/mawww/kakoune/archive/refs/tags/v2026.05.21.tar.gz : 7ef778bd199e05977841e6f69aad2bee6cd58fb23b0e4bc265d012d42de17580
 homepage   : https://kakoune.org
 license    : Unlicense
 component  : editor
@@ -17,6 +18,7 @@ check      : |
     make test
 install    : |
     %make_install PREFIX='/usr'
+    %install_license UNLICENSE
 
     # Set EDITOR and VISUAL defaults should nano be removed.
     install -Dm00644 $pkgfiles/80-kakoune-is-default-EDITOR-and-VISUAL.sh $installdir/usr/share/defaults/etc/profile.d/80-kakoune-is-default-EDITOR-and-VISUAL.sh

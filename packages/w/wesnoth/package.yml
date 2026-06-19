@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : wesnoth
-version    : 1.18.5
-release    : 36
+version    : 1.18.7
+release    : 38
 source     :
-    - https://github.com/wesnoth/wesnoth/archive/refs/tags/1.18.5.tar.gz : e579e1ddadf99fa85612547dcf35b0dcc70ef27268e4ecd0983d0d1e112b051f
+    - https://github.com/wesnoth/wesnoth/archive/refs/tags/1.18.7.tar.gz : 462d2892603314e76f799ab24151473a80a33a3fcd64accdace03d8c0d0fca93
 homepage   : https://www.wesnoth.org/
 license    : GPL-2.0-or-later
 component  : games.strategy

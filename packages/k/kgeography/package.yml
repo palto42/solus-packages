@@ -1,11 +1,11 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kgeography
-version    : 25.08.2
-release    : 95
+version    : 26.04.2
+release    : 101
 source     :
-    - https://download.kde.org/stable/release-service/25.08.2/src/kgeography-25.08.2.tar.xz : 57bb04e7744fa01e2b3b9b2a332f434c79203946e0e3268db79a02f229ed223d
+    - https://download.kde.org/stable/release-service/26.04.2/src/kgeography-26.04.2.tar.xz : 3bd27fe577ece70dc63c942c5635c035c00d7743236c259e4abc92e3c29a8e8c
 homepage   : https://kde.org/applications/education/org.kde.kgeography
 license    :
-    - GFDL-1.2-or-later
     - GPL-2.0-or-later
 component  : games.learning
 summary    : KGeography is a geography learning tool
@@ -26,6 +26,7 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license COPYING
 
     #remove docs
     rm -rfv $installdir/usr/share/doc

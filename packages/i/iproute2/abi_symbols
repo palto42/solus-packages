@@ -1,3 +1,5 @@
+arpd:_IO_stdin_used
+bridge:_IO_stdin_used
 genl:_IO_stdin_used
 genl:_SL_
 genl:__bss_start
@@ -56,6 +58,8 @@ genl:get_addr_rta
 genl:get_be16
 genl:get_be32
 genl:get_be64
+genl:get_float
+genl:get_float_min_max
 genl:get_guid
 genl:get_ifname
 genl:get_ifname_rta
@@ -89,6 +93,7 @@ genl:inet_addr_match_rta
 genl:int_to_str
 genl:invarg
 genl:is_json_context
+genl:json
 genl:jsonw_bool
 genl:jsonw_bool_field
 genl:jsonw_destroy
@@ -147,7 +152,6 @@ genl:new_json_obj
 genl:new_json_obj_plain
 genl:nl_dump_ext_ack
 genl:nl_dump_ext_ack_done
-genl:nl_print_policy
 genl:nl_proto_a2n
 genl:nl_proto_n2a
 genl:nodev
@@ -275,9 +279,11 @@ genl:str_map_lookup_u16
 genl:str_map_lookup_u8
 genl:str_map_lookup_uint
 genl:str_split_by_char
+genl:str_to_bool
 genl:timestamp_short
 genl:uint_to_str
 genl:use_iec
+ifstat:_IO_stdin_used
 ip:_IO_stdin_used
 ip:_SL_
 ip:__bss_start
@@ -333,6 +339,10 @@ ip:bpf_trace_pipe
 ip:br_dump_bridge_id
 ip:bridge_link_util
 ip:bridge_parse_xstats
+ip:bridge_print_mcast_querier_state
+ip:bridge_print_vlan_flags
+ip:bridge_print_vlan_stats
+ip:bridge_print_vlan_stats_only
 ip:bridge_print_xstats
 ip:bridge_slave_link_util
 ip:brief
@@ -418,6 +428,8 @@ ip:get_be64
 ip:get_cgroup2_id
 ip:get_cgroup2_path
 ip:get_command_name
+ip:get_float
+ip:get_float_min_max
 ip:get_guid
 ip:get_ifname
 ip:get_ifname_rta
@@ -578,7 +590,6 @@ ip:new_json_obj
 ip:new_json_obj_plain
 ip:nl_dump_ext_ack
 ip:nl_dump_ext_ack_done
-ip:nl_print_policy
 ip:nl_proto_a2n
 ip:nl_proto_n2a
 ip:nlmon_link_util
@@ -735,6 +746,7 @@ ip:str_map_lookup_u16
 ip:str_map_lookup_u8
 ip:str_map_lookup_uint
 ip:str_split_by_char
+ip:str_to_bool
 ip:strxf_algotype
 ip:strxf_mask32
 ip:strxf_proto
@@ -793,6 +805,9 @@ ip:xfrm_xfrma_print
 ip:xfrm_xfrmproto_getbyname
 ip:xfrm_xfrmproto_is_ipsec
 ip:xfrm_xfrmproto_is_ro
+lnstat:_IO_stdin_used
+nstat:_IO_stdin_used
+rtacct:_IO_stdin_used
 rtmon:_IO_stdin_used
 rtmon:_SL_
 rtmon:__bss_start
@@ -850,6 +865,8 @@ rtmon:get_addr_rta
 rtmon:get_be16
 rtmon:get_be32
 rtmon:get_be64
+rtmon:get_float
+rtmon:get_float_min_max
 rtmon:get_guid
 rtmon:get_ifname
 rtmon:get_ifname_rta
@@ -941,7 +958,6 @@ rtmon:new_json_obj
 rtmon:new_json_obj_plain
 rtmon:nl_dump_ext_ack
 rtmon:nl_dump_ext_ack_done
-rtmon:nl_print_policy
 rtmon:nl_proto_a2n
 rtmon:nl_proto_n2a
 rtmon:nodev
@@ -1066,9 +1082,11 @@ rtmon:str_map_lookup_u16
 rtmon:str_map_lookup_u8
 rtmon:str_map_lookup_uint
 rtmon:str_split_by_char
+rtmon:str_to_bool
 rtmon:timestamp_short
 rtmon:uint_to_str
 rtmon:use_iec
+ss:_IO_stdin_used
 tc:_IO_stdin_used
 tc:_SL_
 tc:__bss_start
@@ -1122,6 +1140,7 @@ tc:bpf_trace_pipe
 tc:brief
 tc:bstr_alloc
 tc:bstrtoul
+tc:cake_mq_qdisc_util
 tc:cake_qdisc_util
 tc:canid_ematch_util
 tc:cbs_qdisc_util
@@ -1161,6 +1180,7 @@ tc:do_qdisc
 tc:do_tcmonitor
 tc:drop_cap
 tc:drr_qdisc_util
+tc:dualpi2_qdisc_util
 tc:duparg
 tc:duparg2
 tc:echo_request
@@ -1234,6 +1254,8 @@ tc:get_be64
 tc:get_clock_name
 tc:get_clockid
 tc:get_filter_kind
+tc:get_float
+tc:get_float_min_max
 tc:get_guid
 tc:get_ifname
 tc:get_ifname_rta
@@ -1255,6 +1277,8 @@ tc:get_rtnl_link_stats_rta
 tc:get_s32
 tc:get_s64
 tc:get_size
+tc:get_size64
+tc:get_size64_and_cell
 tc:get_size_and_cell
 tc:get_str_char_count
 tc:get_tc_classid
@@ -1365,7 +1389,6 @@ tc:new_json_obj
 tc:new_json_obj_plain
 tc:nl_dump_ext_ack
 tc:nl_dump_ext_ack_done
-tc:nl_print_policy
 tc:nl_proto_a2n
 tc:nl_proto_n2a
 tc:nodev
@@ -1565,6 +1588,7 @@ tc:str_map_lookup_u16
 tc:str_map_lookup_u8
 tc:str_map_lookup_uint
 tc:str_split_by_char
+tc:str_to_bool
 tc:taprio_qdisc_util
 tc:tbf_qdisc_util
 tc:tc_calc_rtable

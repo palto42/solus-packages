@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : ostree
-version    : '2023.6'
-release    : 24
+version    : '2026.1'
+release    : 26
 source     :
-    - https://github.com/ostreedev/ostree/releases/download/v2023.6/libostree-2023.6.tar.xz : b43c4a373799681989bae12b3a1b94f453068dece6540b8e05a23b834c1037e2
+    - https://github.com/ostreedev/ostree/releases/download/v2026.1/libostree-2026.1.tar.xz : 8e77c285dd6fa5ec5fb063130390977be727fe11107335ed8778a40385069e95
 homepage   : https://ostreedev.github.io/ostree/
 license    : LGPL-2.0-or-later
 component  : system.utils
@@ -27,6 +28,7 @@ build      : |
     %make
 install    : |
     %make_install
+    %install_license COPYING
     # Remove files only relevant to OSTree based OS images
     rm -r $installdir/etc/grub.d/
     rm -r $installdir/usr/lib

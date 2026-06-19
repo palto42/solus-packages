@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : go-task
-version    : 3.45.4
-release    : 24
+version    : 3.51.1
+release    : 30
 source     :
-    - https://github.com/go-task/task/archive/refs/tags/v3.45.4.tar.gz : bca35c6d394be1c67422bb7aae9b1fc2cb83143a8a1d28f032388f1d926d3311
+    - https://github.com/go-task/task/archive/refs/tags/v3.51.1.tar.gz : ee12bd4bd445df59de17d9b4376f8afb6a623facce34169479af8b0569220034
 license    : MIT
 component  : programming.tools
 networking : true
@@ -24,6 +25,7 @@ build      : |
     go build -v -o bin ./cmd/task
 install    : |
     install -Dm00755 bin/task $installdir/usr/bin/go-task
+    %install_license LICENSE
 
     # Completions
     install -Dm00644 completion/bash/task.bash $installdir/usr/share/bash-completion/completions/go-task
@@ -31,3 +33,4 @@ install    : |
     install -Dm00644 completion/fish/task.fish $installdir/usr/share/fish/vendor_completions.d/go-task.fish
 check      : |
     go test ./...
+

@@ -15,10 +15,11 @@ libgcc_s.so.1
 libgd.so.3
 libgmp.so.10
 libgraphite2.so.3
-libgs.so.9
+libgs.so.10
+libharfbuzz-subset.so.0
 libharfbuzz.so.0
-libicui18n.so.76
-libicuuc.so.76
+libicui18n.so.78
+libicuuc.so.78
 libm.so.6
 libmpfr.so.6
 libncursesw.so.6

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : mate-utils
 version    : 1.28.0
 release    : 28
@@ -24,7 +25,6 @@ builddeps  :
     - pkgconfig(xext)
     - itstool
 setup      : |
-    export PYTHON=/usr/bin/python3
     %configure --disable-static \
         --disable-debug \
         --disable-maintainer-flags \

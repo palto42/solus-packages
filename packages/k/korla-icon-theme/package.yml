@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : korla-icon-theme
-version    : 1.6.5
-release    : 41
+version    : 2.0.1
+release    : 43
 source     :
-    - https://github.com/bikass/kora/archive/refs/tags/v1.6.5.tar.gz : b486fc01be5b4fe28422b6a3a39ae0513085ae5845e8415bd7e8d42521d47476
+    - https://github.com/bikass/kora/archive/refs/tags/v2.0.1.tar.gz : 1c7bb098cbc15b9657dd7491dc540daca59e70e4d47b5c412733b3e778cf3f88
 homepage   : https://github.com/bikass/kora
 license    : GPL-3.0-or-later
 component  : desktop.theme
@@ -14,30 +15,19 @@ setup      : |
 install    : |
     install -dm00644 $installdir/usr/share/icons/
     cp -r kora $installdir/usr/share/icons/korla
-    cp -r kora-light $installdir/usr/share/icons/korla-light
-    cp -r kora-light-panel $installdir/usr/share/icons/korla-light-panel
     cp -r kora-pgrey $installdir/usr/share/icons/korla-pgrey
     chmod -R 00644 $installdir/usr/share/icons/*
 
     # Because name changed from korla to kora, need to fix all symbolic links
     pushd $installdir/usr/share/icons/korla
-    for theme in korla-light korla-light-panel korla-pgrey; do
-        cd ../${theme}
-        for sl in animations apps categories devices emblems emotes mimetypes status; do
-            rm -rf ${sl}
-            ln -sv ../korla/${sl} ${sl}
-        done
+
+    cd ../korla-pgrey
+    for sl in animations apps categories devices emblems emotes mimetypes status; do
+        rm -rf ${sl}
+        ln -sv ../korla/${sl} ${sl}
     done
 
     # Fix other symbolic links
-    cd ../korla-light
-    rm panel && ln -sv ../korla/panel panel
-    rm places && ln -sv ../korla/places places
-
-    cd ../korla-light-panel
-    rm actions && ln -sv ../korla/actions actions
-    rm places && ln -sv ../korla/places places
-
     cd ../korla-pgrey
     rm actions && ln -sv ../korla/actions actions
     rm panel && ln -sv ../korla/panel panel

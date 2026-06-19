@@ -1,33 +1,47 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : vala
-version    : 0.56.18
-release    : 75
+version    : 0.56.19
+release    : 76
 source     :
-    - https://download.gnome.org/sources/vala/0.56/vala-0.56.18.tar.xz : f2affe7d40ab63db8e7b9ecc3f6bdc9c2fc7e3134c84ff2d795f482fe926a382
+    - https://download.gnome.org/sources/vala/0.56/vala-0.56.19.tar.xz : 5ad7cbbfcc0de61b403d6797c9ef60455bfbebd8e162aec33b5b0b097adfb9d5
 homepage   : https://vala.dev/
 component  :
-    - programming
     - ^libvala : programming.library
     - ^libvala-devel : programming.devel
     - ^vala-docs : programming.docs
     - ^valadoc : programming.tools
     - ^valadoc-devel : programming.devel
+    - programming
 license    :
     - GPL-2.0-or-later
     - LGPL-2.1-or-later
 summary    :
-    - Vala is a programming language using modern high level abstractions without imposing additional runtime requirements and without using a different ABI compared to applications and libraries written in C.
     - ^libvala : Vala libraries
     - ^libvala-devel : Vala development files
     - ^vala-docs : Documentation for Vala
     - ^valadoc : Vala Documentation Tool
     - ^valadoc-devel : Valadoc development files
+    - Vala is a programming language using modern high level abstractions without imposing additional runtime requirements and without using a different ABI compared to applications and libraries written in C.
 description:
-    - Vala is a programming language using modern high level abstractions without imposing additional runtime requirements and without using a different ABI compared to applications and libraries written in C.
     - ^libvala : Vala libraries
     - ^libvala-devel : Vala development files
     - ^vala-docs : Documentation for Vala
     - ^valadoc : Vala Documentation Tool
     - ^valadoc-devel : Valadoc development files
+    - Vala is a programming language using modern high level abstractions without imposing additional runtime requirements and without using a different ABI compared to applications and libraries written in C.
+builddeps  :
+    - pkgconfig(libgvc)
+    - help2man
+rundeps    :
+    - ^vala-docs : vala
+    - libvala-devel
+setup      : |
+    %configure
+build      : |
+    %make
+install    : |
+    %make_install
+    %install_license COPYING
 patterns   :
     - ^libvala :
         - /usr/lib64/libvala-*.so.*
@@ -55,15 +69,3 @@ patterns   :
     - /usr/share/vala
     - /usr/share/vala-*
     - /usr/share/man/vala*
-builddeps  :
-    - pkgconfig(libgvc)
-    - help2man
-rundeps    :
-    - libvala-devel
-    - ^vala-docs : vala
-setup      : |
-    %configure
-build      : |
-    %make
-install    : |
-    %make_install

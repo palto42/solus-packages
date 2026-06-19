@@ -1,13 +1,15 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kf6-kwindowsystem
-version    : 6.19.0
-release    : 28
+version    : 6.27.0
+release    : 39
 source     :
-    - https://download.kde.org/stable/frameworks/6.19/kwindowsystem-6.19.0.tar.xz : 7ef870cc6c37fc98e4655c267cda069b28259640524d1088d4434350827e59da
+    - https://download.kde.org/stable/frameworks/6.27/kwindowsystem-6.27.0.tar.xz : 401e5700ab36530a605410464268bf726c898da42c6f7d7bf05a9db00ccfe172
 homepage   : https://community.kde.org/Frameworks
 license    :
-    - LGPL-2.0-only
+    - CC0-1.0
     - LGPL-2.1-only
     - LGPL-2.1-or-later
+    - LGPL-3.0-only
     - MIT
 component  : programming.library
 summary    : Access to the windowing system.
@@ -16,13 +18,15 @@ description: |
 builddeps  :
     - pkgconfig(Qt6Designer)
     - pkgconfig(Qt6WaylandClient)
+    - pkgconfig(wayland-protocols)
     - pkgconfig(x11)
     - pkgconfig(xcb)
     - pkgconfig(xcb-icccm)
     - pkgconfig(xcb-keysyms)
+    - pkgconfig(xfixes)
     - extra-cmake-modules
-    - qt6-base-private-devel
     - plasma-wayland-protocols-devel
+    - qt6-base-private-devel
 rundeps    :
     - devel :
         - extra-cmake-modules
@@ -36,3 +40,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*

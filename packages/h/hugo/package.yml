@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : hugo
-version    : 0.151.0
-release    : 201
+version    : 0.163.3
+release    : 225
 source     :
-    - https://github.com/gohugoio/hugo/archive/refs/tags/v0.151.0.tar.gz : b41d6e3da741c8d5637e016a1fa98f36e47dbfa9e213ff2d73ced66fb5b770ea
+    - https://github.com/gohugoio/hugo/archive/refs/tags/v0.163.3.tar.gz : e51d50afd870c601a85c9e9077e18e452d427c5e4f59856b9e83e6565de9c53e
 license    : Apache-2.0
 homepage   : https://gohugo.io
 component  : programming
@@ -26,3 +27,4 @@ build      : |
 install    : |
     cd src/github.com/gohugoio/hugo/
     install -Dm00755 hugo $installdir/usr/bin/hugo
+    %install_license LICENSE

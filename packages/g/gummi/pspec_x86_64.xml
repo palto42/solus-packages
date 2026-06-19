@@ -3,15 +3,15 @@
         <Name>gummi</Name>
         <Homepage>https://gummi.app/</Homepage>
         <Packager>
-            <Name>Algent Albrahimi</Name>
-            <Email>algent@protonmail.com</Email>
+            <Name>David Harder</Name>
+            <Email>david@davidjharder.ca</Email>
         </Packager>
         <License>MIT</License>
         <PartOf>editor</PartOf>
         <Summary xml:lang="en">Simple LaTeX editor</Summary>
         <Description xml:lang="en">The simple LaTeX editor.
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>gummi</Name>
@@ -31,6 +31,7 @@
             <Path fileType="data">/usr/share/gummi/ui/gummi.glade</Path>
             <Path fileType="data">/usr/share/gummi/ui/prefs.glade</Path>
             <Path fileType="data">/usr/share/gummi/ui/snippets.glade</Path>
+            <Path fileType="data">/usr/share/licenses/gummi/COPYING</Path>
             <Path fileType="localedata">/usr/share/locale/ar/LC_MESSAGES/gummi.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ca/LC_MESSAGES/gummi.mo</Path>
             <Path fileType="localedata">/usr/share/locale/cs/LC_MESSAGES/gummi.mo</Path>
@@ -51,17 +52,17 @@
             <Path fileType="localedata">/usr/share/locale/sv/LC_MESSAGES/gummi.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_CN/LC_MESSAGES/gummi.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_TW/LC_MESSAGES/gummi.mo</Path>
-            <Path fileType="man">/usr/share/man/man1/gummi.1</Path>
+            <Path fileType="man">/usr/share/man/man1/gummi.1.zst</Path>
             <Path fileType="data">/usr/share/pixmaps/gummi.png</Path>
         </Files>
     </Package>
     <History>
-        <Update release="4">
-            <Date>2022-10-16</Date>
+        <Update release="5">
+            <Date>2026-03-28</Date>
             <Version>0.8.3</Version>
             <Comment>Packaging update</Comment>
-            <Name>Algent Albrahimi</Name>
-            <Email>algent@protonmail.com</Email>
+            <Name>David Harder</Name>
+            <Email>david@davidjharder.ca</Email>
         </Update>
     </History>
 </PISI>

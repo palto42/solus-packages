@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : lftp
-version    : 4.9.2
-release    : 22
+version    : 4.9.3
+release    : 23
 source     :
-    - https://lftp.yar.ru/ftp/lftp-4.9.2.tar.xz : c517c4f4f9c39bd415d7313088a2b1e313b2d386867fe40b7692b83a20f0670d
+    - https://lftp.yar.ru/ftp/lftp-4.9.3.tar.xz : 96e7199d7935be33cf6b1161e955b2aab40ab77ecdf2a19cea4fc1193f457edc
 homepage   : https://lftp.yar.ru
 license    : GPL-3.0-or-later
 component  : network.clients
@@ -12,10 +13,13 @@ description: |
 builddeps  :
     - pkgconfig(gnutls)
 setup      : |
-    %configure_no_runstatedir --disable-static --with-openssl=/usr/bin/openssl
+    %configure_no_runstatedir \
+        --disable-static \
+        --with-openssl=/usr/bin/openssl
 build      : |
     %make
 install    : |
-    mkdir -p $installdir/usr/share
-    make DESTDIR=$installdir install
+    %make_install
+    %install_license COPYING
+
     rm $installdir/%libdir%/*.a

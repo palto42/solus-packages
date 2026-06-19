@@ -2,7 +2,7 @@
 Name=Museeks
 Comment=A simple and clean music player
 Exec=/usr/bin/museeks %U
-Icon=museeks
+Icon=io.museeks.app
 Type=Application
 Categories=AudioVideo;Audio;Player;
 Terminal=false

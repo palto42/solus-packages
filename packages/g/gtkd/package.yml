@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : gtkd
-version    : 3.10.0
-release    : 38
+version    : 3.11.0
+release    : 42
 source     :
-    - https://github.com/gtkd-developers/GtkD/archive/refs/tags/v3.10.0.tar.gz : 5c6edcdcfb6160ffc1524ab4996471e608c3632d81bd8ea689cf0e52ed13e953
+    - https://github.com/gtkd-developers/GtkD/archive/refs/tags/v3.11.0.tar.gz : c5de7ef0d955c06a35bc979858e2b67c17919294a7aabe36fd593b79c46e5928
 homepage   : https://gtkd.org/
 license    : LGPL-3.0-or-later
 component  : desktop.gtk
@@ -23,7 +24,7 @@ rundeps    :
     # These are dlopened
     - atkmm
     - gdk-pixbuf
-    - gstreamer-1.0-plugins-base
+    - gstreamer-plugins-base
     - libgtk-3
     - libgtksourceview4
     - libpeas
@@ -33,10 +34,13 @@ environment: |
     unset LDFLAGS
 install    : |
     sed -i 's/gtksourceview-4.0/gtksourceview-4/g' GNUmakefile
-    %make_install prefix=/usr libdir=lib%LIBSUFFIX% \
-      install-shared-gstreamer install-headers-gstreamer \
-      install-shared-gtkd install-headers-gtkd \
-      install-shared-gtkdgl install-headers-gtkdgl \
-      install-shared-gtkdsv install-headers-gtkdsv \
-      install-shared-peas install-headers-peas \
-      install-shared-vte install-headers-vte
+    %make_install \
+        prefix=/usr \
+        libdir=lib%LIBSUFFIX% \
+        install-shared-gstreamer install-headers-gstreamer \
+        install-shared-gtkd install-headers-gtkd \
+        install-shared-gtkdgl install-headers-gtkdgl \
+        install-shared-gtkdsv install-headers-gtkdsv \
+        install-shared-peas install-headers-peas \
+        install-shared-vte install-headers-vte
+    %install_license COPYING

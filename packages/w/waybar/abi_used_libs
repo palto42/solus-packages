@@ -18,7 +18,7 @@ libgtk-layer-shell.so.0
 libgtkmm-3.0.so.1
 libinput.so.10
 libjack.so.0
-libjsoncpp.so.25
+libjsoncpp.so.26
 libm.so.6
 libmpdclient.so.2
 libnl-3.so.200
@@ -28,7 +28,7 @@ libplayerctl.so.2
 libpulse.so.0
 libsigc-2.0.so.0
 libsndio.so.7
-libspdlog.so.1.15
+libspdlog.so.1.17
 libstdc++.so.6
 libudev.so.1
 libupower-glib.so.3

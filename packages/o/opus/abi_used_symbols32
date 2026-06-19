@@ -9,6 +9,7 @@ libc.so.6:memcpy
 libc.so.6:memmove
 libc.so.6:memset
 libc.so.6:stderr
+libm.so.6:acos
 libm.so.6:cos
 libm.so.6:exp
 libm.so.6:floor

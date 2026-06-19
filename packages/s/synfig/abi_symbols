@@ -882,9 +882,6 @@ libmod_magickpp.so:_ZN13magickpp_trgtD1Ev
 libmod_magickpp.so:_ZN13magickpp_trgtD2Ev
 libmod_magickpp.so:_ZN21mod_magickpp_modclassC1EPN6synfig16ProgressCallbackE
 libmod_magickpp.so:_ZN21mod_magickpp_modclassC2EPN6synfig16ProgressCallbackE
-libmod_magickpp.so:__bss_start
-libmod_magickpp.so:_edata
-libmod_magickpp.so:_end
 libmod_magickpp.so:mod_magickpp_LTX_new_instance
 libmod_noise.so:_ZN11RandomNoise8set_seedEi
 libmod_noise.so:_ZN12NoiseDistort17get_register_nameEv

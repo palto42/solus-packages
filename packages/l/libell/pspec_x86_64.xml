@@ -1,0 +1,102 @@
+<PISI>
+    <Source>
+        <Name>libell</Name>
+        <Homepage>https://git.kernel.org/pub/scm/libs/ell/ell.git/</Homepage>
+        <Packager>
+            <Name>Evan Maddock</Name>
+            <Email>maddock.evan@vivaldi.net</Email>
+        </Packager>
+        <License>LGPL-2.0-or-later</License>
+        <PartOf>programming.library</PartOf>
+        <Summary xml:lang="en">Embedded Linux Library</Summary>
+        <Description xml:lang="en">The Embedded Linux* Library (ELL) provides core, low-level functionality for system daemons. It typically has no dependencies other than the Linux kernel, C standard library, and libdl (for dynamic linking). While ELL is designed to be efficient and compact enough for use on embedded Linux platforms, it is not limited to resource-constrained systems.
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>libell</Name>
+        <Summary xml:lang="en">Embedded Linux Library</Summary>
+        <Description xml:lang="en">The Embedded Linux* Library (ELL) provides core, low-level functionality for system daemons. It typically has no dependencies other than the Linux kernel, C standard library, and libdl (for dynamic linking). While ELL is designed to be efficient and compact enough for use on embedded Linux platforms, it is not limited to resource-constrained systems.
+</Description>
+        <PartOf>programming.library</PartOf>
+        <Files>
+            <Path fileType="library">/usr/lib64/libell.so.0</Path>
+            <Path fileType="library">/usr/lib64/libell.so.0.0.2</Path>
+            <Path fileType="data">/usr/share/licenses/libell/COPYING</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>libell-devel</Name>
+        <Summary xml:lang="en">Development files for libell</Summary>
+        <Description xml:lang="en">The Embedded Linux* Library (ELL) provides core, low-level functionality for system daemons. It typically has no dependencies other than the Linux kernel, C standard library, and libdl (for dynamic linking). While ELL is designed to be efficient and compact enough for use on embedded Linux platforms, it is not limited to resource-constrained systems.
+</Description>
+        <PartOf>programming.devel</PartOf>
+        <RuntimeDependencies>
+            <Dependency release="1">libell</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include/ell/acd.h</Path>
+            <Path fileType="header">/usr/include/ell/base64.h</Path>
+            <Path fileType="header">/usr/include/ell/cert.h</Path>
+            <Path fileType="header">/usr/include/ell/checksum.h</Path>
+            <Path fileType="header">/usr/include/ell/cipher.h</Path>
+            <Path fileType="header">/usr/include/ell/cleanup.h</Path>
+            <Path fileType="header">/usr/include/ell/dbus-client.h</Path>
+            <Path fileType="header">/usr/include/ell/dbus-service.h</Path>
+            <Path fileType="header">/usr/include/ell/dbus.h</Path>
+            <Path fileType="header">/usr/include/ell/dhcp.h</Path>
+            <Path fileType="header">/usr/include/ell/dhcp6.h</Path>
+            <Path fileType="header">/usr/include/ell/dir.h</Path>
+            <Path fileType="header">/usr/include/ell/ecc.h</Path>
+            <Path fileType="header">/usr/include/ell/ecdh.h</Path>
+            <Path fileType="header">/usr/include/ell/ell.h</Path>
+            <Path fileType="header">/usr/include/ell/file.h</Path>
+            <Path fileType="header">/usr/include/ell/genl.h</Path>
+            <Path fileType="header">/usr/include/ell/gpio.h</Path>
+            <Path fileType="header">/usr/include/ell/hashmap.h</Path>
+            <Path fileType="header">/usr/include/ell/hwdb.h</Path>
+            <Path fileType="header">/usr/include/ell/icmp6.h</Path>
+            <Path fileType="header">/usr/include/ell/idle.h</Path>
+            <Path fileType="header">/usr/include/ell/io.h</Path>
+            <Path fileType="header">/usr/include/ell/key.h</Path>
+            <Path fileType="header">/usr/include/ell/log.h</Path>
+            <Path fileType="header">/usr/include/ell/main.h</Path>
+            <Path fileType="header">/usr/include/ell/minheap.h</Path>
+            <Path fileType="header">/usr/include/ell/net.h</Path>
+            <Path fileType="header">/usr/include/ell/netconfig.h</Path>
+            <Path fileType="header">/usr/include/ell/netlink.h</Path>
+            <Path fileType="header">/usr/include/ell/notifylist.h</Path>
+            <Path fileType="header">/usr/include/ell/path.h</Path>
+            <Path fileType="header">/usr/include/ell/pem.h</Path>
+            <Path fileType="header">/usr/include/ell/queue.h</Path>
+            <Path fileType="header">/usr/include/ell/random.h</Path>
+            <Path fileType="header">/usr/include/ell/ringbuf.h</Path>
+            <Path fileType="header">/usr/include/ell/rtnl.h</Path>
+            <Path fileType="header">/usr/include/ell/settings.h</Path>
+            <Path fileType="header">/usr/include/ell/signal.h</Path>
+            <Path fileType="header">/usr/include/ell/string.h</Path>
+            <Path fileType="header">/usr/include/ell/strv.h</Path>
+            <Path fileType="header">/usr/include/ell/sysctl.h</Path>
+            <Path fileType="header">/usr/include/ell/test.h</Path>
+            <Path fileType="header">/usr/include/ell/tester.h</Path>
+            <Path fileType="header">/usr/include/ell/time.h</Path>
+            <Path fileType="header">/usr/include/ell/timeout.h</Path>
+            <Path fileType="header">/usr/include/ell/tls.h</Path>
+            <Path fileType="header">/usr/include/ell/uintset.h</Path>
+            <Path fileType="header">/usr/include/ell/utf8.h</Path>
+            <Path fileType="header">/usr/include/ell/util.h</Path>
+            <Path fileType="header">/usr/include/ell/uuid.h</Path>
+            <Path fileType="library">/usr/lib64/libell.so</Path>
+            <Path fileType="data">/usr/lib64/pkgconfig/ell.pc</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2026-04-11</Date>
+            <Version>0.83</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Evan Maddock</Name>
+            <Email>maddock.evan@vivaldi.net</Email>
+        </Update>
+    </History>
+</PISI>

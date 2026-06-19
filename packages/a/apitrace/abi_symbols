@@ -618,6 +618,8 @@ egltrace.so:glDrawElementsInstancedBaseVertexBaseInstanceEXT
 egltrace.so:glDrawElementsInstancedBaseVertexEXT
 egltrace.so:glDrawElementsInstancedEXT
 egltrace.so:glDrawMeshArraysSUN
+egltrace.so:glDrawMeshTasksEXT
+egltrace.so:glDrawMeshTasksIndirectEXT
 egltrace.so:glDrawPixels
 egltrace.so:glDrawRangeElementArrayAPPLE
 egltrace.so:glDrawRangeElementArrayATI
@@ -1552,6 +1554,8 @@ egltrace.so:glMultiDrawElementsIndirectBindlessNV
 egltrace.so:glMultiDrawElementsIndirectCount
 egltrace.so:glMultiDrawElementsIndirectCountARB
 egltrace.so:glMultiDrawElementsIndirectEXT
+egltrace.so:glMultiDrawMeshTasksIndirectCountEXT
+egltrace.so:glMultiDrawMeshTasksIndirectEXT
 egltrace.so:glMultiDrawRangeElementArrayAPPLE
 egltrace.so:glMultiModeDrawArraysIBM
 egltrace.so:glMultiModeDrawElementsIBM
@@ -3571,6 +3575,8 @@ glxtrace.so:glDrawElementsInstancedBaseVertexBaseInstanceEXT
 glxtrace.so:glDrawElementsInstancedBaseVertexEXT
 glxtrace.so:glDrawElementsInstancedEXT
 glxtrace.so:glDrawMeshArraysSUN
+glxtrace.so:glDrawMeshTasksEXT
+glxtrace.so:glDrawMeshTasksIndirectEXT
 glxtrace.so:glDrawPixels
 glxtrace.so:glDrawRangeElementArrayAPPLE
 glxtrace.so:glDrawRangeElementArrayATI
@@ -4503,6 +4509,8 @@ glxtrace.so:glMultiDrawElementsIndirectBindlessNV
 glxtrace.so:glMultiDrawElementsIndirectCount
 glxtrace.so:glMultiDrawElementsIndirectCountARB
 glxtrace.so:glMultiDrawElementsIndirectEXT
+glxtrace.so:glMultiDrawMeshTasksIndirectCountEXT
+glxtrace.so:glMultiDrawMeshTasksIndirectEXT
 glxtrace.so:glMultiDrawRangeElementArrayAPPLE
 glxtrace.so:glMultiModeDrawArraysIBM
 glxtrace.so:glMultiModeDrawElementsIBM
@@ -6103,6 +6111,7 @@ glxtrace.so:glXWaitForSbcOML
 glxtrace.so:glXWaitGL
 glxtrace.so:glXWaitVideoSyncSGI
 glxtrace.so:glXWaitX
+qapitrace:_IO_stdin_used
 qapitrace:_ZGVZN9QMetaType21registerConverterImplI4QMapI7QStringS2_E9QIterableI16QMetaAssociationEEEbSt8functionIFbPKvPvEES_S_E10unregister
 qapitrace:_ZGVZN9QMetaType23registerMutableViewImplI4QMapI7QStringS2_E9QIterableI16QMetaAssociationEEEbSt8functionIFbPvS8_EES_S_E10unregister
 qapitrace:_ZZN9QMetaType21registerConverterImplI4QMapI7QStringS2_E9QIterableI16QMetaAssociationEEEbSt8functionIFbPKvPvEES_S_E10unregister

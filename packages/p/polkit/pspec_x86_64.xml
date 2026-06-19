@@ -1,7 +1,7 @@
 <PISI>
     <Source>
         <Name>polkit</Name>
-        <Homepage>http://www.freedesktop.org/wiki/Software/polkit</Homepage>
+        <Homepage>https://github.com/polkit-org/polkit</Homepage>
         <Packager>
             <Name>Joey Riches</Name>
             <Email>josephriches@gmail.com</Email>
@@ -83,7 +83,7 @@
 </Description>
         <PartOf>system.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="33">polkit</Dependency>
+            <Dependency release="35">polkit</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/polkit-1/polkit/polkit.h</Path>
@@ -188,8 +188,8 @@
         </Files>
     </Package>
     <History>
-        <Update release="33">
-            <Date>2025-09-12</Date>
+        <Update release="35">
+            <Date>2025-12-01</Date>
             <Version>126</Version>
             <Comment>Packaging update</Comment>
             <Name>Joey Riches</Name>

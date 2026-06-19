@@ -3,10 +3,10 @@
         <Name>pandoc</Name>
         <Homepage>https://pandoc.org</Homepage>
         <Packager>
-            <Name>Gavin Zhao</Name>
-            <Email>me@gzgz.dev</Email>
+            <Name>Ivan Trepakov</Name>
+            <Email>liontiger23@gmail.com</Email>
         </Packager>
-        <License>BSD-3-Clause</License>
+        <License>GPL-2.0-or-later</License>
         <PartOf>office</PartOf>
         <Summary xml:lang="en">Pandoc is a Haskell library for converting from one markup format to another, and a command-line tool that uses this library</Summary>
         <Description xml:lang="en">Pandoc is a Haskell library for converting from one markup format to another, and a command-line tool that uses this library
@@ -21,15 +21,16 @@
         <PartOf>office</PartOf>
         <Files>
             <Path fileType="executable">/usr/bin/pandoc</Path>
+            <Path fileType="data">/usr/share/licenses/pandoc/COPYING.md</Path>
         </Files>
     </Package>
     <History>
-        <Update release="9">
-            <Date>2025-03-10</Date>
-            <Version>3.6.3</Version>
+        <Update release="16">
+            <Date>2026-05-09</Date>
+            <Version>3.9.0.2</Version>
             <Comment>Packaging update</Comment>
-            <Name>Gavin Zhao</Name>
-            <Email>me@gzgz.dev</Email>
+            <Name>Ivan Trepakov</Name>
+            <Email>liontiger23@gmail.com</Email>
         </Update>
     </History>
 </PISI>

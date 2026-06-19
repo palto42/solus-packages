@@ -174,7 +174,6 @@ libQt6Core.so.6:_ZNK5QRect10normalizedEv
 libQt6Core.so.6:_ZNK5QRect8containsERK6QPointb
 libQt6Core.so.6:_ZNK5QRectanERKS_
 libQt6Core.so.6:_ZNK6QTimer8isActiveEv
-libQt6Core.so.6:_ZNK8QVariant8metaTypeEv
 libQt6Core.so.6:_ZTI7QObject
 libQt6Core.so.6:_Zls6QDebugRK5QRect
 libQt6Core.so.6:_ZlsR11QDataStreamRK5QRect
@@ -445,6 +444,7 @@ libc.so.6:memcmp
 libc.so.6:memcpy
 libc.so.6:memmove
 libc.so.6:strcmp
+libc.so.6:strlen
 libm.so.6:pow
 libqaccessibilityclient-qt6.so.0:_ZN17QAccessibleClient16AccessibleObjectC1ERKS0_
 libqaccessibilityclient-qt6.so.0:_ZN17QAccessibleClient16AccessibleObjectC1Ev

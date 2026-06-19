@@ -1,0 +1,52 @@
+<PISI>
+    <Source>
+        <Name>rhash</Name>
+        <Homepage>https://github.com/rhash/RHash</Homepage>
+        <Packager>
+            <Name>Evan Maddock</Name>
+            <Email>maddock.evan@vivaldi.net</Email>
+        </Packager>
+        <License>0BSD</License>
+        <PartOf>programming.library</PartOf>
+        <Summary xml:lang="en">Great utility for computing hash sums</Summary>
+        <Description xml:lang="en">RHash (Recursive Hasher) is a console utility for calculation and verification of magnet links and various message digests, including CRC32, CRC32C, MD4, MD5, SHA1, SHA256, SHA512, SHA3, AICH, ED2K, DC++ TTH, BitTorrent BTIH, Tiger, GOST R 34.11-94, GOST R 34.11-2012, RIPEMD-160, HAS-160, EDON-R, and Whirlpool.
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>rhash</Name>
+        <Summary xml:lang="en">Great utility for computing hash sums</Summary>
+        <Description xml:lang="en">RHash (Recursive Hasher) is a console utility for calculation and verification of magnet links and various message digests, including CRC32, CRC32C, MD4, MD5, SHA1, SHA256, SHA512, SHA3, AICH, ED2K, DC++ TTH, BitTorrent BTIH, Tiger, GOST R 34.11-94, GOST R 34.11-2012, RIPEMD-160, HAS-160, EDON-R, and Whirlpool.
+</Description>
+        <PartOf>programming.library</PartOf>
+        <Files>
+            <Path fileType="library">/usr/lib/librhash.so.1</Path>
+            <Path fileType="library">/usr/lib/librhash.so.1.4.6</Path>
+            <Path fileType="data">/usr/share/licenses/rhash/COPYING</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>rhash-devel</Name>
+        <Summary xml:lang="en">Development files for rhash</Summary>
+        <Description xml:lang="en">RHash (Recursive Hasher) is a console utility for calculation and verification of magnet links and various message digests, including CRC32, CRC32C, MD4, MD5, SHA1, SHA256, SHA512, SHA3, AICH, ED2K, DC++ TTH, BitTorrent BTIH, Tiger, GOST R 34.11-94, GOST R 34.11-2012, RIPEMD-160, HAS-160, EDON-R, and Whirlpool.
+</Description>
+        <PartOf>programming.devel</PartOf>
+        <RuntimeDependencies>
+            <Dependency release="1">rhash</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include/rhash.h</Path>
+            <Path fileType="header">/usr/include/rhash_torrent.h</Path>
+            <Path fileType="library">/usr/lib/librhash.so</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2026-04-16</Date>
+            <Version>1.4.6</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Evan Maddock</Name>
+            <Email>maddock.evan@vivaldi.net</Email>
+        </Update>
+    </History>
+</PISI>

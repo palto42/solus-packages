@@ -1,0 +1,5 @@
+0001-Add-support-for-stateless-config.patch
+0002-Fix-paths-in-systemd-service.patch
+0003-Change-default-monitor-method-to-proc.patch
+0004-Build-using-system-Python.patch
+0005-Fix-socket-locations.patch

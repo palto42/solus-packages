@@ -5,7 +5,9 @@ libc.so.6:__ctype_toupper_loc
 libc.so.6:__errno_location
 libc.so.6:__explicit_bzero_chk
 libc.so.6:__fprintf_chk
-libc.so.6:__isoc99_sscanf
+libc.so.6:__isoc23_sscanf
+libc.so.6:__isoc23_strtol
+libc.so.6:__isoc23_strtoul
 libc.so.6:__libc_start_main
 libc.so.6:__longjmp_chk
 libc.so.6:__memcpy_chk
@@ -17,11 +19,11 @@ libc.so.6:__snprintf_chk
 libc.so.6:__sprintf_chk
 libc.so.6:__stack_chk_fail
 libc.so.6:__strcat_chk
-libc.so.6:__strcpy_chk
 libc.so.6:__vfprintf_chk
 libc.so.6:__vsnprintf_chk
 libc.so.6:_setjmp
 libc.so.6:abort
+libc.so.6:access
 libc.so.6:calloc
 libc.so.6:clearerr
 libc.so.6:clock
@@ -54,6 +56,7 @@ libc.so.6:ftell
 libc.so.6:fwrite
 libc.so.6:getc
 libc.so.6:getenv
+libc.so.6:getline
 libc.so.6:getopt_long
 libc.so.6:getpass
 libc.so.6:getpid
@@ -108,11 +111,9 @@ libc.so.6:stat
 libc.so.6:stderr
 libc.so.6:stdin
 libc.so.6:stdout
-libc.so.6:stpcpy
 libc.so.6:strcasecmp
 libc.so.6:strchr
 libc.so.6:strcmp
-libc.so.6:strcpy
 libc.so.6:strcspn
 libc.so.6:strdup
 libc.so.6:strerror
@@ -127,8 +128,6 @@ libc.so.6:strrchr
 libc.so.6:strspn
 libc.so.6:strstr
 libc.so.6:strtok
-libc.so.6:strtol
-libc.so.6:strtoul
 libc.so.6:system
 libc.so.6:tcgetattr
 libc.so.6:tcsetattr
@@ -238,7 +237,7 @@ libcrypto.so.3:EVP_MAC_free
 libcrypto.so.3:EVP_MAC_init
 libcrypto.so.3:EVP_MAC_update
 libcrypto.so.3:EVP_MD_CTX_free
-libcrypto.so.3:EVP_MD_CTX_get0_md
+libcrypto.so.3:EVP_MD_CTX_get_size_ex
 libcrypto.so.3:EVP_MD_CTX_new
 libcrypto.so.3:EVP_MD_CTX_reset
 libcrypto.so.3:EVP_MD_fetch
@@ -251,7 +250,6 @@ libcrypto.so.3:EVP_PKEY_CTX_new
 libcrypto.so.3:EVP_PKEY_CTX_new_from_name
 libcrypto.so.3:EVP_PKEY_CTX_new_from_pkey
 libcrypto.so.3:EVP_PKEY_CTX_new_id
-libcrypto.so.3:EVP_PKEY_CTX_set0_rsa_oaep_label
 libcrypto.so.3:EVP_PKEY_CTX_set_rsa_keygen_bits
 libcrypto.so.3:EVP_PKEY_CTX_set_rsa_mgf1_md
 libcrypto.so.3:EVP_PKEY_CTX_set_rsa_oaep_md
@@ -266,6 +264,7 @@ libcrypto.so.3:EVP_PKEY_eq
 libcrypto.so.3:EVP_PKEY_free
 libcrypto.so.3:EVP_PKEY_fromdata
 libcrypto.so.3:EVP_PKEY_fromdata_init
+libcrypto.so.3:EVP_PKEY_get0_type_name
 libcrypto.so.3:EVP_PKEY_get_base_id
 libcrypto.so.3:EVP_PKEY_get_bits
 libcrypto.so.3:EVP_PKEY_get_bn_param
@@ -324,6 +323,7 @@ libcrypto.so.3:OSSL_DECODER_CTX_free
 libcrypto.so.3:OSSL_DECODER_CTX_new_for_pkey
 libcrypto.so.3:OSSL_DECODER_from_bio
 libcrypto.so.3:OSSL_LIB_CTX_free
+libcrypto.so.3:OSSL_LIB_CTX_load_config
 libcrypto.so.3:OSSL_LIB_CTX_new
 libcrypto.so.3:OSSL_PARAM_BLD_free
 libcrypto.so.3:OSSL_PARAM_BLD_new
@@ -347,7 +347,6 @@ libcrypto.so.3:PEM_read_bio_PrivateKey
 libcrypto.so.3:PEM_read_bio_PrivateKey_ex
 libcrypto.so.3:PEM_read_bio_X509
 libcrypto.so.3:PEM_write_X509
-libcrypto.so.3:PEM_write_bio_PUBKEY
 libcrypto.so.3:PKCS12_parse
 libcrypto.so.3:RAND_bytes
 libcrypto.so.3:RAND_seed
@@ -359,7 +358,7 @@ libcrypto.so.3:X509_NAME_get_entry
 libcrypto.so.3:X509_NAME_get_index_by_NID
 libcrypto.so.3:X509_NAME_get_text_by_NID
 libcrypto.so.3:X509_NAME_oneline
-libcrypto.so.3:X509_NAME_print
+libcrypto.so.3:X509_NAME_print_ex
 libcrypto.so.3:X509_check_purpose
 libcrypto.so.3:X509_dup
 libcrypto.so.3:X509_free
@@ -373,6 +372,7 @@ libcrypto.so.3:X509_get_serialNumber
 libcrypto.so.3:X509_get_subject_name
 libcrypto.so.3:X509_up_ref
 libcrypto.so.3:X509_verify
+libcrypto.so.3:d2i_ASN1_BIT_STRING
 libcrypto.so.3:d2i_ASN1_INTEGER
 libcrypto.so.3:d2i_ASN1_OBJECT
 libcrypto.so.3:d2i_ASN1_OCTET_STRING

@@ -1,12 +1,16 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : libkscreen
-version    : 6.4.5
-release    : 125
+version    : 6.6.5
+release    : 138
 source     :
-    - https://download.kde.org/stable/plasma/6.4.5/libkscreen-6.4.5.tar.xz : 68d26e27656b450f15a78f44784c50a22034e57c14f96a402019d52bc5b3e2b4
+    - https://download.kde.org/stable/plasma/6.6.5/libkscreen-6.6.5.tar.xz : f2fd11f2f65ff9ca4ff3b50b9953018a929b1bf3263b32ec171c4298e4662149
 homepage   : https://www.kde.org/workspaces/plasmadesktop/
 license    :
+    - CC0-1.0
+    - GPL-2.0-only
     - GPL-2.0-or-later
-    - LGPL-2.1-only
+    - GPL-3.0-only
+    - LGPL-2.1-or-later
 component  : desktop.kde.core
 summary    : KDE's screen management software
 description: |
@@ -27,3 +31,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*

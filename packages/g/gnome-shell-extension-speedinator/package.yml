@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : gnome-shell-extension-speedinator
 version    : '0.1'
-release    : 5
+release    : 7
 source     :
-    - git|https://github.com/tehsquidge/speedinator.git : 1bff1ee1af0a178f86295f042e5fb7ffc86c823c
+    - git|https://github.com/tehsquidge/speedinator.git : 98809c76c61d995aec014ee9c66249d6f73aa66f
 homepage   : https://github.com/tehsquidge/speedinator
 license    : GPL-3.0-or-later
 component  : desktop.gnome

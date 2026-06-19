@@ -1,0 +1,36 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
+name       : solseek
+version    : 1.4.11
+release    : 42
+source     :
+    - https://github.com/clintre/solseek/archive/refs/tags/v1.4.11.tar.gz : 8d878536aa0e7fb204f805b170929a8143f27ca0a104c7dd849c04be3fef5d38
+homepage   : https://github.com/clintre/solseek
+license    : GPL-3.0-or-later
+component  : system.utils
+summary    : A TUI Package Manager for Solus
+description: |
+    Solseek is a simple terminal user interface that allows you to browse, search, and manage packages from the Solus packages.
+rundeps    :
+    - appstream
+    - font-firacode-nerd
+    - fzf
+    - libayatana-appindicator
+    - packagekit
+    - python3
+    - xdg-terminal-exec
+install    : |-
+    install -Dm00755 $workdir/package/bin/solseek $installdir/usr/bin/solseek
+    install -dm00755 $installdir/usr/share
+    cp -r $workdir/package/share/solseek $installdir/usr/share/
+    chmod 00755 $installdir/usr/share/solseek/helpers/eopkg-info.py
+    chmod 00755 $installdir/usr/share/solseek/helpers/solseek-tray.py
+
+    install -Dm00644 $workdir/package/share/applications/Solseek.desktop $installdir/usr/share/applications/Solseek.desktop
+    install -Dm00644 $workdir/package/share/icons/hicolor/scalable/apps/solseek.svg $installdir/usr/share/icons/hicolor/scalable/apps/solseek.svg
+    install -Dm00644 $workdir/package/share/metainfo/solseek.metainfo.xml $installdir/usr/share/metainfo/solseek.metainfo.xml
+
+    install -Dm00644 $workdir/package/share/applications/solseek-uc.service $installdir/%libdir%/systemd/user/solseek-uc.service
+    install -Dm00644 $workdir/package/share/applications/solseek-uc.timer $installdir/%libdir%/systemd/user/solseek-uc.timer
+    install -Dm00644 $workdir/package/share/applications/60-solseek-uc.preset $installdir/%libdir%/systemd/user-preset/60-solseek-uc.preset
+
+    %install_license LICENSE

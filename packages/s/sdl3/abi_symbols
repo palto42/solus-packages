@@ -1,7 +1,9 @@
+libSDL3.so.0:JNI_OnLoad
 libSDL3.so.0:SDL_AcquireCameraFrame
 libSDL3.so.0:SDL_AcquireGPUCommandBuffer
 libSDL3.so.0:SDL_AcquireGPUSwapchainTexture
 libSDL3.so.0:SDL_AddAtomicInt
+libSDL3.so.0:SDL_AddAtomicU32
 libSDL3.so.0:SDL_AddEventWatch
 libSDL3.so.0:SDL_AddGamepadMapping
 libSDL3.so.0:SDL_AddGamepadMappingsFromFile
@@ -78,6 +80,7 @@ libSDL3.so.0:SDL_CopyGPUBufferToBuffer
 libSDL3.so.0:SDL_CopyGPUTextureToTexture
 libSDL3.so.0:SDL_CopyProperties
 libSDL3.so.0:SDL_CopyStorageFile
+libSDL3.so.0:SDL_CreateAnimatedCursor
 libSDL3.so.0:SDL_CreateAsyncIOQueue
 libSDL3.so.0:SDL_CreateAudioStream
 libSDL3.so.0:SDL_CreateColorCursor
@@ -90,6 +93,8 @@ libSDL3.so.0:SDL_CreateGPUComputePipeline
 libSDL3.so.0:SDL_CreateGPUDevice
 libSDL3.so.0:SDL_CreateGPUDeviceWithProperties
 libSDL3.so.0:SDL_CreateGPUGraphicsPipeline
+libSDL3.so.0:SDL_CreateGPURenderState
+libSDL3.so.0:SDL_CreateGPURenderer
 libSDL3.so.0:SDL_CreateGPUSampler
 libSDL3.so.0:SDL_CreateGPUShader
 libSDL3.so.0:SDL_CreateGPUTexture
@@ -134,6 +139,7 @@ libSDL3.so.0:SDL_DestroyCondition
 libSDL3.so.0:SDL_DestroyCursor
 libSDL3.so.0:SDL_DestroyEnvironment
 libSDL3.so.0:SDL_DestroyGPUDevice
+libSDL3.so.0:SDL_DestroyGPURenderState
 libSDL3.so.0:SDL_DestroyHapticEffect
 libSDL3.so.0:SDL_DestroyMutex
 libSDL3.so.0:SDL_DestroyPalette
@@ -183,7 +189,9 @@ libSDL3.so.0:SDL_FlushEvent
 libSDL3.so.0:SDL_FlushEvents
 libSDL3.so.0:SDL_FlushIO
 libSDL3.so.0:SDL_FlushRenderer
+libSDL3.so.0:SDL_GDKResumeGPU
 libSDL3.so.0:SDL_GDKSuspendComplete
+libSDL3.so.0:SDL_GDKSuspendGPU
 libSDL3.so.0:SDL_GL_CreateContext
 libSDL3.so.0:SDL_GL_DestroyContext
 libSDL3.so.0:SDL_GL_ExtensionSupported
@@ -212,6 +220,13 @@ libSDL3.so.0:SDL_GamepadHasButton
 libSDL3.so.0:SDL_GamepadHasSensor
 libSDL3.so.0:SDL_GamepadSensorEnabled
 libSDL3.so.0:SDL_GenerateMipmapsForGPUTexture
+libSDL3.so.0:SDL_GetAndroidActivity
+libSDL3.so.0:SDL_GetAndroidCachePath
+libSDL3.so.0:SDL_GetAndroidExternalStoragePath
+libSDL3.so.0:SDL_GetAndroidExternalStorageState
+libSDL3.so.0:SDL_GetAndroidInternalStoragePath
+libSDL3.so.0:SDL_GetAndroidJNIEnv
+libSDL3.so.0:SDL_GetAndroidSDKVersion
 libSDL3.so.0:SDL_GetAppMetadataProperty
 libSDL3.so.0:SDL_GetAssertionHandler
 libSDL3.so.0:SDL_GetAssertionReport
@@ -264,6 +279,7 @@ libSDL3.so.0:SDL_GetCurrentThreadID
 libSDL3.so.0:SDL_GetCurrentTime
 libSDL3.so.0:SDL_GetCurrentVideoDriver
 libSDL3.so.0:SDL_GetCursor
+libSDL3.so.0:SDL_GetDXGIOutputInfo
 libSDL3.so.0:SDL_GetDateTimeLocalePreferences
 libSDL3.so.0:SDL_GetDayOfWeek
 libSDL3.so.0:SDL_GetDayOfYear
@@ -271,7 +287,9 @@ libSDL3.so.0:SDL_GetDaysInMonth
 libSDL3.so.0:SDL_GetDefaultAssertionHandler
 libSDL3.so.0:SDL_GetDefaultCursor
 libSDL3.so.0:SDL_GetDefaultLogOutputFunction
+libSDL3.so.0:SDL_GetDefaultTextureScaleMode
 libSDL3.so.0:SDL_GetDesktopDisplayMode
+libSDL3.so.0:SDL_GetDirect3D9AdapterIndex
 libSDL3.so.0:SDL_GetDisplayBounds
 libSDL3.so.0:SDL_GetDisplayContentScale
 libSDL3.so.0:SDL_GetDisplayForPoint
@@ -285,13 +303,19 @@ libSDL3.so.0:SDL_GetEnvironment
 libSDL3.so.0:SDL_GetEnvironmentVariable
 libSDL3.so.0:SDL_GetEnvironmentVariables
 libSDL3.so.0:SDL_GetError
+libSDL3.so.0:SDL_GetEventDescription
 libSDL3.so.0:SDL_GetEventFilter
 libSDL3.so.0:SDL_GetFloatProperty
 libSDL3.so.0:SDL_GetFullscreenDisplayModes
+libSDL3.so.0:SDL_GetGDKDefaultUser
+libSDL3.so.0:SDL_GetGDKTaskQueue
 libSDL3.so.0:SDL_GetGPUDeviceDriver
+libSDL3.so.0:SDL_GetGPUDeviceProperties
 libSDL3.so.0:SDL_GetGPUDriver
+libSDL3.so.0:SDL_GetGPURendererDevice
 libSDL3.so.0:SDL_GetGPUShaderFormats
 libSDL3.so.0:SDL_GetGPUSwapchainTextureFormat
+libSDL3.so.0:SDL_GetGPUTextureFormatFromPixelFormat
 libSDL3.so.0:SDL_GetGamepadAppleSFSymbolsNameForAxis
 libSDL3.so.0:SDL_GetGamepadAppleSFSymbolsNameForButton
 libSDL3.so.0:SDL_GetGamepadAxis
@@ -420,10 +444,12 @@ libSDL3.so.0:SDL_GetNumVideoDrivers
 libSDL3.so.0:SDL_GetNumberProperty
 libSDL3.so.0:SDL_GetOriginalMemoryFunctions
 libSDL3.so.0:SDL_GetPathInfo
+libSDL3.so.0:SDL_GetPenDeviceType
 libSDL3.so.0:SDL_GetPerformanceCounter
 libSDL3.so.0:SDL_GetPerformanceFrequency
 libSDL3.so.0:SDL_GetPixelFormatDetails
 libSDL3.so.0:SDL_GetPixelFormatForMasks
+libSDL3.so.0:SDL_GetPixelFormatFromGPUTextureFormat
 libSDL3.so.0:SDL_GetPixelFormatName
 libSDL3.so.0:SDL_GetPlatform
 libSDL3.so.0:SDL_GetPointerProperty
@@ -463,6 +489,7 @@ libSDL3.so.0:SDL_GetRenderOutputSize
 libSDL3.so.0:SDL_GetRenderSafeArea
 libSDL3.so.0:SDL_GetRenderScale
 libSDL3.so.0:SDL_GetRenderTarget
+libSDL3.so.0:SDL_GetRenderTextureAddressMode
 libSDL3.so.0:SDL_GetRenderVSync
 libSDL3.so.0:SDL_GetRenderViewport
 libSDL3.so.0:SDL_GetRenderWindow
@@ -502,6 +529,7 @@ libSDL3.so.0:SDL_GetSurfaceColorspace
 libSDL3.so.0:SDL_GetSurfaceImages
 libSDL3.so.0:SDL_GetSurfacePalette
 libSDL3.so.0:SDL_GetSurfaceProperties
+libSDL3.so.0:SDL_GetSystemPageSize
 libSDL3.so.0:SDL_GetSystemRAM
 libSDL3.so.0:SDL_GetSystemTheme
 libSDL3.so.0:SDL_GetTLS
@@ -511,6 +539,7 @@ libSDL3.so.0:SDL_GetTextureAlphaModFloat
 libSDL3.so.0:SDL_GetTextureBlendMode
 libSDL3.so.0:SDL_GetTextureColorMod
 libSDL3.so.0:SDL_GetTextureColorModFloat
+libSDL3.so.0:SDL_GetTexturePalette
 libSDL3.so.0:SDL_GetTextureProperties
 libSDL3.so.0:SDL_GetTextureScaleMode
 libSDL3.so.0:SDL_GetTextureSize
@@ -554,6 +583,8 @@ libSDL3.so.0:SDL_GetWindowParent
 libSDL3.so.0:SDL_GetWindowPixelDensity
 libSDL3.so.0:SDL_GetWindowPixelFormat
 libSDL3.so.0:SDL_GetWindowPosition
+libSDL3.so.0:SDL_GetWindowProgressState
+libSDL3.so.0:SDL_GetWindowProgressValue
 libSDL3.so.0:SDL_GetWindowProperties
 libSDL3.so.0:SDL_GetWindowRelativeMouseMode
 libSDL3.so.0:SDL_GetWindowSafeArea
@@ -609,6 +640,8 @@ libSDL3.so.0:SDL_InsertGPUDebugLabel
 libSDL3.so.0:SDL_InsertTrayEntryAt
 libSDL3.so.0:SDL_IsAudioDevicePhysical
 libSDL3.so.0:SDL_IsAudioDevicePlayback
+libSDL3.so.0:SDL_IsChromebook
+libSDL3.so.0:SDL_IsDeXMode
 libSDL3.so.0:SDL_IsGamepad
 libSDL3.so.0:SDL_IsJoystickHaptic
 libSDL3.so.0:SDL_IsJoystickVirtual
@@ -626,6 +659,10 @@ libSDL3.so.0:SDL_LoadFileAsync
 libSDL3.so.0:SDL_LoadFile_IO
 libSDL3.so.0:SDL_LoadFunction
 libSDL3.so.0:SDL_LoadObject
+libSDL3.so.0:SDL_LoadPNG
+libSDL3.so.0:SDL_LoadPNG_IO
+libSDL3.so.0:SDL_LoadSurface
+libSDL3.so.0:SDL_LoadSurface_IO
 libSDL3.so.0:SDL_LoadWAV
 libSDL3.so.0:SDL_LoadWAV_IO
 libSDL3.so.0:SDL_LockAudioStream
@@ -661,6 +698,7 @@ libSDL3.so.0:SDL_Metal_DestroyView
 libSDL3.so.0:SDL_Metal_GetLayer
 libSDL3.so.0:SDL_MinimizeWindow
 libSDL3.so.0:SDL_MixAudio
+libSDL3.so.0:SDL_OnApplicationDidChangeStatusBarOrientation
 libSDL3.so.0:SDL_OnApplicationDidEnterBackground
 libSDL3.so.0:SDL_OnApplicationDidEnterForeground
 libSDL3.so.0:SDL_OnApplicationDidReceiveMemoryWarning
@@ -699,6 +737,8 @@ libSDL3.so.0:SDL_PushGPUDebugGroup
 libSDL3.so.0:SDL_PushGPUFragmentUniformData
 libSDL3.so.0:SDL_PushGPUVertexUniformData
 libSDL3.so.0:SDL_PutAudioStreamData
+libSDL3.so.0:SDL_PutAudioStreamDataNoCopy
+libSDL3.so.0:SDL_PutAudioStreamPlanarData
 libSDL3.so.0:SDL_QueryGPUFence
 libSDL3.so.0:SDL_Quit
 libSDL3.so.0:SDL_QuitSubSystem
@@ -723,6 +763,7 @@ libSDL3.so.0:SDL_ReadU32LE
 libSDL3.so.0:SDL_ReadU64BE
 libSDL3.so.0:SDL_ReadU64LE
 libSDL3.so.0:SDL_ReadU8
+libSDL3.so.0:SDL_RegisterApp
 libSDL3.so.0:SDL_RegisterEvents
 libSDL3.so.0:SDL_ReleaseCameraFrame
 libSDL3.so.0:SDL_ReleaseGPUBuffer
@@ -764,11 +805,13 @@ libSDL3.so.0:SDL_RenderRect
 libSDL3.so.0:SDL_RenderRects
 libSDL3.so.0:SDL_RenderTexture
 libSDL3.so.0:SDL_RenderTexture9Grid
+libSDL3.so.0:SDL_RenderTexture9GridTiled
 libSDL3.so.0:SDL_RenderTextureAffine
 libSDL3.so.0:SDL_RenderTextureRotated
 libSDL3.so.0:SDL_RenderTextureTiled
 libSDL3.so.0:SDL_RenderViewportSet
 libSDL3.so.0:SDL_ReportAssertion
+libSDL3.so.0:SDL_RequestAndroidPermission
 libSDL3.so.0:SDL_ResetAssertionReport
 libSDL3.so.0:SDL_ResetHint
 libSDL3.so.0:SDL_ResetHints
@@ -778,6 +821,7 @@ libSDL3.so.0:SDL_RestoreWindow
 libSDL3.so.0:SDL_ResumeAudioDevice
 libSDL3.so.0:SDL_ResumeAudioStreamDevice
 libSDL3.so.0:SDL_ResumeHaptic
+libSDL3.so.0:SDL_RotateSurface
 libSDL3.so.0:SDL_RumbleGamepad
 libSDL3.so.0:SDL_RumbleGamepadTriggers
 libSDL3.so.0:SDL_RumbleJoystick
@@ -789,10 +833,14 @@ libSDL3.so.0:SDL_SaveBMP
 libSDL3.so.0:SDL_SaveBMP_IO
 libSDL3.so.0:SDL_SaveFile
 libSDL3.so.0:SDL_SaveFile_IO
+libSDL3.so.0:SDL_SavePNG
+libSDL3.so.0:SDL_SavePNG_IO
 libSDL3.so.0:SDL_ScaleSurface
 libSDL3.so.0:SDL_ScreenKeyboardShown
 libSDL3.so.0:SDL_ScreenSaverEnabled
 libSDL3.so.0:SDL_SeekIO
+libSDL3.so.0:SDL_SendAndroidBackButton
+libSDL3.so.0:SDL_SendAndroidMessage
 libSDL3.so.0:SDL_SendGamepadEffect
 libSDL3.so.0:SDL_SendJoystickEffect
 libSDL3.so.0:SDL_SendJoystickVirtualSensorData
@@ -816,6 +864,7 @@ libSDL3.so.0:SDL_SetClipboardData
 libSDL3.so.0:SDL_SetClipboardText
 libSDL3.so.0:SDL_SetCurrentThreadPriority
 libSDL3.so.0:SDL_SetCursor
+libSDL3.so.0:SDL_SetDefaultTextureScaleMode
 libSDL3.so.0:SDL_SetEnvironmentVariable
 libSDL3.so.0:SDL_SetError
 libSDL3.so.0:SDL_SetErrorV
@@ -825,6 +874,8 @@ libSDL3.so.0:SDL_SetFloatProperty
 libSDL3.so.0:SDL_SetGPUAllowedFramesInFlight
 libSDL3.so.0:SDL_SetGPUBlendConstants
 libSDL3.so.0:SDL_SetGPUBufferName
+libSDL3.so.0:SDL_SetGPURenderState
+libSDL3.so.0:SDL_SetGPURenderStateFragmentUniforms
 libSDL3.so.0:SDL_SetGPUScissor
 libSDL3.so.0:SDL_SetGPUStencilReference
 libSDL3.so.0:SDL_SetGPUSwapchainParameters
@@ -862,6 +913,7 @@ libSDL3.so.0:SDL_SetPaletteColors
 libSDL3.so.0:SDL_SetPointerProperty
 libSDL3.so.0:SDL_SetPointerPropertyWithCleanup
 libSDL3.so.0:SDL_SetPrimarySelectionText
+libSDL3.so.0:SDL_SetRelativeMouseTransform
 libSDL3.so.0:SDL_SetRenderClipRect
 libSDL3.so.0:SDL_SetRenderColorScale
 libSDL3.so.0:SDL_SetRenderDrawBlendMode
@@ -870,6 +922,7 @@ libSDL3.so.0:SDL_SetRenderDrawColorFloat
 libSDL3.so.0:SDL_SetRenderLogicalPresentation
 libSDL3.so.0:SDL_SetRenderScale
 libSDL3.so.0:SDL_SetRenderTarget
+libSDL3.so.0:SDL_SetRenderTextureAddressMode
 libSDL3.so.0:SDL_SetRenderVSync
 libSDL3.so.0:SDL_SetRenderViewport
 libSDL3.so.0:SDL_SetScancodeName
@@ -889,6 +942,7 @@ libSDL3.so.0:SDL_SetTextureAlphaModFloat
 libSDL3.so.0:SDL_SetTextureBlendMode
 libSDL3.so.0:SDL_SetTextureColorMod
 libSDL3.so.0:SDL_SetTextureColorModFloat
+libSDL3.so.0:SDL_SetTexturePalette
 libSDL3.so.0:SDL_SetTextureScaleMode
 libSDL3.so.0:SDL_SetTrayEntryCallback
 libSDL3.so.0:SDL_SetTrayEntryChecked
@@ -899,6 +953,7 @@ libSDL3.so.0:SDL_SetTrayTooltip
 libSDL3.so.0:SDL_SetWindowAlwaysOnTop
 libSDL3.so.0:SDL_SetWindowAspectRatio
 libSDL3.so.0:SDL_SetWindowBordered
+libSDL3.so.0:SDL_SetWindowFillDocument
 libSDL3.so.0:SDL_SetWindowFocusable
 libSDL3.so.0:SDL_SetWindowFullscreen
 libSDL3.so.0:SDL_SetWindowFullscreenMode
@@ -913,15 +968,21 @@ libSDL3.so.0:SDL_SetWindowMouseRect
 libSDL3.so.0:SDL_SetWindowOpacity
 libSDL3.so.0:SDL_SetWindowParent
 libSDL3.so.0:SDL_SetWindowPosition
+libSDL3.so.0:SDL_SetWindowProgressState
+libSDL3.so.0:SDL_SetWindowProgressValue
 libSDL3.so.0:SDL_SetWindowRelativeMouseMode
 libSDL3.so.0:SDL_SetWindowResizable
 libSDL3.so.0:SDL_SetWindowShape
 libSDL3.so.0:SDL_SetWindowSize
 libSDL3.so.0:SDL_SetWindowSurfaceVSync
 libSDL3.so.0:SDL_SetWindowTitle
+libSDL3.so.0:SDL_SetWindowsMessageHook
 libSDL3.so.0:SDL_SetX11EventHook
+libSDL3.so.0:SDL_SetiOSAnimationCallback
+libSDL3.so.0:SDL_SetiOSEventPump
 libSDL3.so.0:SDL_ShouldInit
 libSDL3.so.0:SDL_ShouldQuit
+libSDL3.so.0:SDL_ShowAndroidToast
 libSDL3.so.0:SDL_ShowCursor
 libSDL3.so.0:SDL_ShowFileDialogWithProperties
 libSDL3.so.0:SDL_ShowMessageBox
@@ -974,6 +1035,7 @@ libSDL3.so.0:SDL_UnlockSpinlock
 libSDL3.so.0:SDL_UnlockSurface
 libSDL3.so.0:SDL_UnlockTexture
 libSDL3.so.0:SDL_UnmapGPUTransferBuffer
+libSDL3.so.0:SDL_UnregisterApp
 libSDL3.so.0:SDL_UnsetEnvironmentVariable
 libSDL3.so.0:SDL_UpdateGamepads
 libSDL3.so.0:SDL_UpdateHapticEffect
@@ -1080,6 +1142,7 @@ libSDL3.so.0:SDL_hid_get_indexed_string
 libSDL3.so.0:SDL_hid_get_input_report
 libSDL3.so.0:SDL_hid_get_manufacturer_string
 libSDL3.so.0:SDL_hid_get_product_string
+libSDL3.so.0:SDL_hid_get_properties
 libSDL3.so.0:SDL_hid_get_report_descriptor
 libSDL3.so.0:SDL_hid_get_serial_number_string
 libSDL3.so.0:SDL_hid_init

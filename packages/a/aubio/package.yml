@@ -1,6 +1,7 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : aubio
 version    : 0.4.9
-release    : 10
+release    : 11
 source     :
     - https://aubio.org/pub/aubio-0.4.9.tar.bz2 : d48282ae4dab83b3dc94c16cf011bcb63835c1c02b515490e1883049c3d1f3da
 homepage   : https://aubio.org/
@@ -15,7 +16,16 @@ builddeps  :
     - pkgconfig(samplerate)
     - pkgconfig(sndfile)
 setup      : |
+    #Build fixes
+    sed -i "s/'rU'/'r'/g" waflib/ConfigSet.py waflib/Context.py
+    sed -i 's/"rU"/"r"/g' waflib/ConfigSet.py waflib/Context.py
+    sed -i 's/m *= *["'"'"']rU["'"'"']/m="r"/g' waflib/Utils.py
+
+    #ffmpeg8
+    sed -i 's/AV_INPUT_BUFFER_MIN_SIZE/4096/g' src/io/source_avcodec.c
+
     %patch -p1 -i $pkgfiles/0001-Disable-creation-of-static-library.patch
+    %patch -p1 -i $pkgfiles/aubio-imp-removed.patch
     %patch -p1 -i $pkgfiles/ffmpeg-5.patch
     %patch -p1 -i $pkgfiles/ffmpeg-7-1.patch
     %patch -p1 -i $pkgfiles/ffmpeg-7-2.patch

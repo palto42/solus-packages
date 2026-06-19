@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : vc
-version    : 1.4.3
-release    : 6
+version    : 1.4.5
+release    : 7
 source     :
-    - https://github.com/VcDevel/Vc/releases/download/1.4.3/Vc-1.4.3.tar.gz : 988ea0053f3fbf17544ca776a2749c097b3139089408b0286fa4e9e8513e037f
+    - https://github.com/VcDevel/Vc/archive/refs/tags/1.4.5.tar.gz : eb734ef4827933fcd67d4c74aef54211b841c350a867c681c73003eb6d511a48
 homepage   : https://github.com/VcDevel/Vc
 license    : BSD-3-Clause
 component  : programming
@@ -21,3 +22,5 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSE
+    rm $installdir/usr/lib64/libVc.a

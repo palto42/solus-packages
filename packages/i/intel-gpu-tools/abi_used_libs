@@ -8,9 +8,10 @@ libdrm_nouveau.so.2
 libdw.so.1
 libglib-2.0.so.0
 libgsl.so.25
-libjson-c.so.5
+libjansson.so.4
 libkmod.so.2
 libm.so.6
+libpci.so.3
 libpciaccess.so.0
 libpixman-1.so.0
 libproc2.so.1

@@ -1,0 +1,40 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
+name       : asusctl
+version    : 6.3.8
+release    : 2
+source     :
+    - https://gitlab.com/asus-linux/asusctl/-/archive/6.3.8/asusctl-6.3.8.tar.gz : 7f767da78a8efd6b67632172c643c005330dee897cc380604f6ae09eba5c7e7a
+homepage   : https://asus-linux.org/
+license    : MPL-2.0
+component  : hardware.power
+summary    : Control daemon, CLI and GUI for ASUS ROG laptops
+description: |
+    asusctl is a control daemon, CLI tools, and Slint-based GUI for
+    interacting with ASUS ROG laptops on Linux. It exposes platform
+    profile, keyboard LEDs (Aura), AniMe Matrix display, battery
+    charge limit, fan curves, and GPU MUX where supported.
+clang      : true
+networking : true
+builddeps  :
+    - pkgconfig(expat)
+    - pkgconfig(fontconfig)
+    - pkgconfig(gbm)
+    - pkgconfig(libinput)
+    - pkgconfig(libpcre2-8)
+    - pkgconfig(libseat)
+    - pkgconfig(libudev)
+    - pkgconfig(libusb-1.0)
+    - pkgconfig(libzstd)
+    - pkgconfig(xkbcommon)
+    - rust
+setup      : |
+    %cargo_fetch
+build      : |
+    %make
+install    : |
+    %make_install prefix=/usr
+    install -Dm00644 ${pkgfiles}/asusd.preset ${installdir}/usr/lib/systemd/system-preset/60-asusd.preset
+    install -Dm00644 ${pkgfiles}/asusctl.tmpfiles ${installdir}/usr/lib/tmpfiles.d/asusctl.conf
+    install -dm00755 ${installdir}/usr/share/licenses/${package}
+    mv ${installdir}/usr/share/asusctl/LICENSE ${installdir}/usr/share/licenses/${package}/LICENSE
+    rmdir ${installdir}/usr/share/asusctl

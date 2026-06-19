@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : libxfce4windowing
-version    : 4.20.3
-release    : 6
+version    : 4.20.5
+release    : 9
 source     :
-    - https://archive.xfce.org/src/xfce/libxfce4windowing/4.20/libxfce4windowing-4.20.3.tar.bz2 : df2419a6bd960c0bfac3307eff593050857524642597eb35a26fb4f8261a017b
+    - https://archive.xfce.org/src/xfce/libxfce4windowing/4.20/libxfce4windowing-4.20.5.tar.bz2 : 6b4e19a66db650c9c8a88f00bbf266e9ced0070b7dbc0aaeea05be0fc6a2eb4d
 homepage   : https://gitlab.xfce.org/xfce/libxfce4windowing
 license    : LGPL-2.1-or-later
 component  : desktop.library
@@ -17,10 +18,12 @@ builddeps  :
     - pkgconfig(wayland-client)
     - pkgconfig(wayland-protocols)
     - pkgconfig(x11)
+    - vala
     - xrandr
 setup      : |
-    %meson_configure
+    %meson_configure -Dvala=enabled
 build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license COPYING

@@ -1,11 +1,13 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kf6-kcompletion
-version    : 6.19.0
-release    : 26
+version    : 6.27.0
+release    : 34
 source     :
-    - https://download.kde.org/stable/frameworks/6.19/kcompletion-6.19.0.tar.xz : 8b71d6e88b38e3aacd2591805bf2ad9c12b7bf02d7f9bde40d8af86a906edd40
+    - https://download.kde.org/stable/frameworks/6.27/kcompletion-6.27.0.tar.xz : 006864dcba5d5fc87b4ca5dcc1239538657a5d052057bae5d3bc3e71eaba0551
 homepage   : https://community.kde.org/Frameworks
 license    :
     - BSD-3-Clause
+    - CC0-1.0
     - LGPL-2.0-or-later
     - LGPL-2.1-or-later
 component  : programming.library
@@ -24,3 +26,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*

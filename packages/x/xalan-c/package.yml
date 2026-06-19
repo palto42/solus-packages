@@ -1,6 +1,7 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : xalan-c
-version    : 1.12
-release    : 1
+version    : '1.12'
+release    : 2
 source     :
     - https://downloads.apache.org/xalan/xalan-c/sources/xalan_c-1.12.tar.gz : ee7d4b0b08c5676f5e586c7154d94a5b32b299ac3cbb946e24c4375a25552da7
 homepage   : https://xalan.apache.org/
@@ -12,8 +13,12 @@ description: |
 builddeps  :
     - pkgconfig(xerces-c)
 setup      : |
+    # Fedora patches
+    %patch -p1 -i $pkgfiles/gcc_15_fixes.patch
+    %patch -p1 -i $pkgfiles/xalan-c-1.12-icu-75.patch
     %cmake_ninja
 build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSE

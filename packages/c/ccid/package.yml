@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : ccid
-version    : 1.5.4
-release    : 13
+version    : 1.7.1
+release    : 15
 source     :
-    - https://ccid.apdu.fr/files/ccid-1.5.4.tar.bz2 : 6e832adc172ecdcfdee2b56f33144684882cbe972daff1938e7a9c73a64f88bf
+    - https://ccid.apdu.fr/files/ccid-1.7.1.tar.xz : 32799ab16fe6e493c9452be3823f21810fbe80b884021a6f6f3fa69f26be5c86
 homepage   : https://ccid.apdu.fr/
 license    : LGPL-2.1-or-later
 component  : programming
@@ -13,10 +14,9 @@ builddeps  :
     - pkgconfig(libpcsclite)
     - pkgconfig(libusb-1.0)
 setup      : |
-    %patch -p1 -i $pkgfiles/0001-Add-Yubikey-devices.patch
-    %configure --enable-zlp LEXLIB=
+    %meson_configure
 build      : |
-    %make
+    %ninja_build
 install    : |
-    %make_install
+    %ninja_install
     install -Dm00644 src/92_pcscd_ccid.rules $installdir/%libdir%/udev/rules.d/92_pcscd_ccid.rules

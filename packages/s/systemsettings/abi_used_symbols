@@ -129,13 +129,18 @@ libKF6ItemViews.so.6:_ZNK32KCategorizedSortFilterProxyModel8lessThanERK11QModelI
 libKF6ItemViews.so.6:_ZTI32KCategorizedSortFilterProxyModel
 libKF6JobWidgets.so.6:_ZN26KNotificationJobUiDelegateC1E6QFlagsIN14KJobUiDelegate4FlagEE
 libKF6KCMUtils.so.6:_ZN14KCModuleLoader10loadModuleERK15KPluginMetaDataP7QWidgetRK5QListI8QVariantERKSt10shared_ptrI10QQmlEngineE
+libKF6KCMUtilsCore.so.6:_ZN12KCModuleData15relevantChangedEb
 libKF6KCMUtilsCore.so.6:_ZN12KCModuleData16staticMetaObjectE
+libKF6KCMUtilsCore.so.6:_ZN12KCModuleData22auxiliaryActionChangedEP7QAction
 libKF6KCMUtilsCore.so.6:_ZN12KCModuleData6loadedEv
+libKF6KCMUtilsCore.so.6:_ZN21KAbstractConfigModule14buttonsChangedEv
 libKF6KCMUtilsCore.so.6:_ZN21KAbstractConfigModule16needsSaveChangedEv
 libKF6KCMUtilsCore.so.6:_ZN21KAbstractConfigModule16staticMetaObjectE
 libKF6KCMUtilsCore.so.6:_ZN21KAbstractConfigModule19activationRequestedERK5QListI8QVariantE
 libKF6KCMUtilsCore.so.6:_ZN21KAbstractConfigModule25representsDefaultsChangedEv
 libKF6KCMUtilsCore.so.6:_ZN21KAbstractConfigModule28setDefaultsIndicatorsVisibleEb
+libKF6KCMUtilsCore.so.6:_ZNK12KCModuleData10isRelevantEv
+libKF6KCMUtilsCore.so.6:_ZNK12KCModuleData15auxiliaryActionEv
 libKF6KCMUtilsCore.so.6:_ZNK21KAbstractConfigModule14authActionNameEv
 libKF6KCMUtilsCore.so.6:_ZNK21KAbstractConfigModule18representsDefaultsEv
 libKF6KCMUtilsCore.so.6:_ZNK21KAbstractConfigModule7buttonsEv
@@ -218,7 +223,6 @@ libKF6WidgetsAddons.so.6:_ZN8KGuiItem6assignEP11QPushButtonRKS_
 libKF6WidgetsAddons.so.6:_ZN8KGuiItemD1Ev
 libKF6WidgetsAddons.so.6:_ZN9KPageView11setFaceTypeENS_8FaceTypeE
 libKF6WidgetsAddons.so.6:_ZNK11KPageWidget11currentPageEv
-libKF6WidgetsAddons.so.6:_ZNK12KTitleWidget10metaObjectEv
 libKF6WidgetsAddons.so.6:_ZNK15KPageWidgetItem4nameEv
 libKF6WidgetsAddons.so.6:_ZNK15KPageWidgetItem6widgetEv
 libKF6WidgetsAddons.so.6:_ZNK9KPageView10pageHeaderEv
@@ -249,7 +253,7 @@ libKF6XmlGui.so.6:_ZN9KHelpMenuC1EP7QWidget
 libKF6XmlGui.so.6:_ZNK17KActionCollection6actionERK7QString
 libKF6XmlGui.so.6:_ZNK9KHelpMenu6actionENS_6MenuIdE
 libKF6XmlGui.so.6:_ZTI11KMainWindow
-libPlasmaActivities.so.6:_ZN11KActivities16ResourceInstance14notifyAccessedERK4QUrlRK7QString
+libPlasmaActivities.so.7:_ZN11KActivities16ResourceInstance14notifyAccessedERK4QUrlRK7QString
 libQt6Core.so.6:_Z21qRegisterResourceDataiPKhS0_S0_
 libQt6Core.so.6:_Z23qUnregisterResourceDataiPKhS0_S0_
 libQt6Core.so.6:_Z25qEnvironmentVariableIsSetPKc
@@ -347,6 +351,8 @@ libQt6Core.so.6:_ZN21QSortFilterProxyModel13removeColumnsEiiRK11QModelIndex
 libQt6Core.so.6:_ZN21QSortFilterProxyModel13setFilterRoleEi
 libQt6Core.so.6:_ZN21QSortFilterProxyModel13setHeaderDataEiN2Qt11OrientationERK8QVarianti
 libQt6Core.so.6:_ZN21QSortFilterProxyModel14setSourceModelEP18QAbstractItemModel
+libQt6Core.so.6:_ZN21QSortFilterProxyModel17beginFilterChangeEv
+libQt6Core.so.6:_ZN21QSortFilterProxyModel20invalidateRowsFilterEv
 libQt6Core.so.6:_ZN21QSortFilterProxyModel24setFilterCaseSensitivityEN2Qt15CaseSensitivityE
 libQt6Core.so.6:_ZN21QSortFilterProxyModel26setFilterRegularExpressionERK7QString
 libQt6Core.so.6:_ZN21QSortFilterProxyModel7setDataERK11QModelIndexRK8QVarianti
@@ -372,7 +378,7 @@ libQt6Core.so.6:_ZN7QObject11qt_metacallEN11QMetaObject4CallEiPPv
 libQt6Core.so.6:_ZN7QObject11qt_metacastEPKc
 libQt6Core.so.6:_ZN7QObject12blockSignalsEb
 libQt6Core.so.6:_ZN7QObject13connectNotifyERK11QMetaMethod
-libQt6Core.so.6:_ZN7QObject13doSetPropertyEPKcPK8QVariantPS2_
+libQt6Core.so.6:_ZN7QObject13doSetPropertyEPKcRK8QVariantPS2_
 libQt6Core.so.6:_ZN7QObject13setObjectNameE14QAnyStringView
 libQt6Core.so.6:_ZN7QObject14disconnectImplEPKS_PPvS1_S3_PK11QMetaObject
 libQt6Core.so.6:_ZN7QObject15doSetObjectNameERK7QString
@@ -399,6 +405,7 @@ libQt6Core.so.6:_ZN8QVariantC1E9QMetaTypePKv
 libQt6Core.so.6:_ZN8QVariantC1ERK7QString
 libQt6Core.so.6:_ZN8QVariantC1Eb
 libQt6Core.so.6:_ZN8QVariantD1Ev
+libQt6Core.so.6:_ZN8QVariantaSERKS_
 libQt6Core.so.6:_ZN9QFileInfoC1ERK7QString
 libQt6Core.so.6:_ZN9QFileInfoD1Ev
 libQt6Core.so.6:_ZN9QHashSeed10globalSeedEv
@@ -509,7 +516,6 @@ libQt6Core.so.6:_ZNK7QString8endsWithE13QLatin1StringN2Qt15CaseSensitivityE
 libQt6Core.so.6:_ZNK8QVariant5toIntEPb
 libQt6Core.so.6:_ZNK8QVariant6toBoolEv
 libQt6Core.so.6:_ZNK8QVariant6toRealEPb
-libQt6Core.so.6:_ZNK8QVariant8metaTypeEv
 libQt6Core.so.6:_ZNK8QVariant8toStringEv
 libQt6Core.so.6:_ZNK9QFileInfo8fileNameEv
 libQt6Core.so.6:_ZNK9QMetaType8destructEPv
@@ -530,6 +536,7 @@ libQt6Gui.so.6:_ZN15QGuiApplication16staticMetaObjectE
 libQt6Gui.so.6:_ZN15QGuiApplication20primaryScreenChangedEP7QScreen
 libQt6Gui.so.6:_ZN16QDesktopServices7openUrlERK4QUrl
 libQt6Gui.so.6:_ZN5QFontD1Ev
+libQt6Gui.so.6:_ZN5QIcon16staticMetaObjectE
 libQt6Gui.so.6:_ZN5QIcon9fromThemeERK7QString
 libQt6Gui.so.6:_ZN5QIconC1ERKS_
 libQt6Gui.so.6:_ZN5QIconC1Ev
@@ -554,6 +561,7 @@ libQt6Gui.so.6:_ZN8QPainterD1Ev
 libQt6Gui.so.6:_ZN8QPalette8setBrushENS_10ColorGroupENS_9ColorRoleERK6QBrush
 libQt6Gui.so.6:_ZN8QPaletteC1ERKS_
 libQt6Gui.so.6:_ZN8QPaletteD1Ev
+libQt6Gui.so.6:_ZNK12QPaintDevice16devicePixelRatioEv
 libQt6Gui.so.6:_ZNK5QFont10pointSizeFEv
 libQt6Gui.so.6:_ZNK5QIcon4nameEv
 libQt6Gui.so.6:_ZNK5QIconcv8QVariantEv
@@ -570,6 +578,7 @@ libQt6Gui.so.6:_Zls6QDebugRK5QIcon
 libQt6Gui.so.6:_ZlsR11QDataStreamRK5QIcon
 libQt6Gui.so.6:_ZrsR11QDataStreamR5QIcon
 libQt6Qml.so.6:_Z17qmlRegisterModulePKcii
+libQt6Qml.so.6:_ZN10QQmlEngine11retranslateEv
 libQt6Qml.so.6:_ZN10QQmlEngine16staticMetaObjectE
 libQt6Qml.so.6:_ZN10QQmlEngineC1EP7QObject
 libQt6Qml.so.6:_ZN11QQmlContext16setContextObjectEP7QObject

@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : sox_ng
-version    : 14.6.0.4
-release    : 23
+version    : 14.8.0
+release    : 33
 source     :
-    - https://codeberg.org/sox_ng/sox_ng/releases/download/sox_ng-14.6.0.4/sox_ng-14.6.0.4.tar.gz : faf376b7054eac6da3c6c15897a42a8fd22147d5d5ea05921ff1afa1f4e7a7ab
+    - https://codeberg.org/sox_ng/sox_ng/releases/download/sox_ng-14.8.0/sox_ng-14.8.0.tar.gz : 341777dda6fd13376418d788c2e20e8c362b95c4a896ea42700d8b4566879d73
 homepage   : https://codeberg.org/sox_ng/sox_ng
 license    :
     - GPL-2.0-only
@@ -26,10 +27,11 @@ builddeps  :
     - lame-devel
     - libdolbyb-devel
 setup      : |
-    %configure --with-distro="Solus" --with-ffmpeg --disable-static
+    %configure --with-distro="Solus" --with-ffmpeg --disable-static --enable-replace
 build      : |
     %make
 install    : |
     %make_install
+    %install_license COPYING
 replaces   :
     - sox

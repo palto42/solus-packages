@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : audacity
-version    : 3.7.5
-release    : 45
+version    : 3.7.8
+release    : 51
 source     :
-    - https://github.com/audacity/audacity/releases/download/Audacity-3.7.5/audacity-sources-3.7.5.tar.gz : b33ad9f8b53e8ddf3ee0a6ba920ce9a2fd47915e329388729900ec6c0c49567f
+    - https://github.com/audacity/audacity/releases/download/Audacity-3.7.8/audacity-sources-3.7.8.tar.gz : 75f2b1d9c7d45faaaf193844d5fee796694deac7bf4932ca520563ab4fb74c27
 homepage   : https://www.audacityteam.org/
 license    :
     - CC-BY-SA-3.0
@@ -59,3 +60,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSE.txt

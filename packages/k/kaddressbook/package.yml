@@ -1,12 +1,17 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kaddressbook
-version    : 25.08.2
-release    : 89
+version    : 26.04.2
+release    : 95
 source     :
-    - https://download.kde.org/stable/release-service/25.08.2/src/kaddressbook-25.08.2.tar.xz : 45b3fc9e2539ed1fcbbccd45ce45e9c36b7501089265998209155fbce71a58d5
+    - https://download.kde.org/stable/release-service/26.04.2/src/kaddressbook-26.04.2.tar.xz : cfe623b74273f7c6ca576dcb6a59caa605aacacc100b3fc4e1ab5433fcf8ac78
 homepage   : https://kde.org/applications/office/org.kde.kaddressbook
 license    :
-    - GFDL-1.2-or-later
+    - BSD-3-Clause
+    - CC0-1.0
+    - GPL-2.0-only
     - GPL-2.0-or-later
+    - LGPL-2.0-or-later
+    - MIT
 component  : office
 summary    : KDE Contact Manager
 description: |
@@ -36,6 +41,7 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*
 
     # remove doc
     rm -rfv $installdir/usr/share/doc

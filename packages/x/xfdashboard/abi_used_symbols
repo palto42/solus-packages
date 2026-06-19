@@ -20,7 +20,6 @@ libXdamage.so.1:XDamageQueryExtension
 libXinerama.so.1:XineramaIsActive
 libXinerama.so.1:XineramaQueryScreens
 libc.so.6:__errno_location
-libc.so.6:__isoc23_strtol
 libc.so.6:__libc_start_main
 libc.so.6:__stack_chk_fail
 libc.so.6:getpid
@@ -32,6 +31,7 @@ libc.so.6:strdup
 libc.so.6:strlen
 libc.so.6:strncmp
 libc.so.6:strstr
+libc.so.6:strtol
 libcairo.so.2:cairo_arc
 libcairo.so.2:cairo_close_path
 libcairo.so.2:cairo_create
@@ -617,7 +617,7 @@ libglib-2.0.so.0:g_list_remove_link
 libglib-2.0.so.0:g_list_reverse
 libglib-2.0.so.0:g_list_sort
 libglib-2.0.so.0:g_list_sort_with_data
-libglib-2.0.so.0:g_log
+libglib-2.0.so.0:g_log_structured_standard
 libglib-2.0.so.0:g_logv
 libglib-2.0.so.0:g_main_loop_get_context
 libglib-2.0.so.0:g_main_loop_new
@@ -640,9 +640,7 @@ libglib-2.0.so.0:g_markup_parse_context_push
 libglib-2.0.so.0:g_markup_printf_escaped
 libglib-2.0.so.0:g_memdup2
 libglib-2.0.so.0:g_once_init_enter
-libglib-2.0.so.0:g_once_init_enter_pointer
 libglib-2.0.so.0:g_once_init_leave
-libglib-2.0.so.0:g_once_init_leave_pointer
 libglib-2.0.so.0:g_option_context_add_group
 libglib-2.0.so.0:g_option_context_add_main_entries
 libglib-2.0.so.0:g_option_context_free
@@ -746,7 +744,7 @@ libglib-2.0.so.0:g_strdup_vprintf
 libglib-2.0.so.0:g_strdupv
 libglib-2.0.so.0:g_strfreev
 libglib-2.0.so.0:g_string_append_len
-libglib-2.0.so.0:g_string_free_and_steal
+libglib-2.0.so.0:g_string_free
 libglib-2.0.so.0:g_string_insert_c
 libglib-2.0.so.0:g_string_insert_len
 libglib-2.0.so.0:g_string_new

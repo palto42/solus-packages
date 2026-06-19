@@ -1,10 +1,13 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kf6-kunitconversion
-version    : 6.19.0
-release    : 25
+version    : 6.27.0
+release    : 33
 source     :
-    - https://download.kde.org/stable/frameworks/6.19/kunitconversion-6.19.0.tar.xz : d4f0e39e27596c6550f3fc72fb67b0d4966acfd7d702a011a0fca420b6f9b393
+    - https://download.kde.org/stable/frameworks/6.27/kunitconversion-6.27.0.tar.xz : 404e064114c95eca0ef759b96ca4e0ba5f9b8bc563138574358270963f3f5554
 homepage   : https://community.kde.org/Frameworks
-license    : LGPL-2.0-or-later
+license    :
+    - CC0-1.0
+    - LGPL-2.0-or-later
 component  : desktop.library
 summary    : Converting physical units
 description: |
@@ -22,3 +25,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*

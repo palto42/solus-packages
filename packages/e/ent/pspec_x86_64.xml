@@ -3,11 +3,11 @@
         <Name>ent</Name>
         <Homepage>https://github.com/aerynOS/ent</Homepage>
         <Packager>
-            <Name>Joey Riches</Name>
-            <Email>josephriches@gmail.com</Email>
+            <Name>David Harder</Name>
+            <Email>david@davidjharder.ca</Email>
         </Packager>
         <License>MPL-2.0</License>
-        <PartOf>programming.utils</PartOf>
+        <PartOf>programming.tools</PartOf>
         <Summary xml:lang="en">Tree management</Summary>
         <Description xml:lang="en">ent is a tool for working with packaging recipes in git trees/monorepos. Primarily it is intended for use with Serpent OS packaging, and to a limited degree, Solus packaging.
 </Description>
@@ -18,18 +18,19 @@
         <Summary xml:lang="en">Tree management</Summary>
         <Description xml:lang="en">ent is a tool for working with packaging recipes in git trees/monorepos. Primarily it is intended for use with Serpent OS packaging, and to a limited degree, Solus packaging.
 </Description>
-        <PartOf>programming.utils</PartOf>
+        <PartOf>programming.tools</PartOf>
         <Files>
             <Path fileType="executable">/usr/bin/ent</Path>
+            <Path fileType="data">/usr/share/licenses/ent/LICENSE</Path>
         </Files>
     </Package>
     <History>
-        <Update release="2">
-            <Date>2025-03-16</Date>
+        <Update release="4">
+            <Date>2026-04-29</Date>
             <Version>0.1.0</Version>
             <Comment>Packaging update</Comment>
-            <Name>Joey Riches</Name>
-            <Email>josephriches@gmail.com</Email>
+            <Name>David Harder</Name>
+            <Email>david@davidjharder.ca</Email>
         </Update>
     </History>
 </PISI>

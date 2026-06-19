@@ -1,14 +1,14 @@
 UNKNOWN
-libIex-3_1.so.30
+libIex-3_4.so.33
 libImath-3_1.so.29
-libOpenEXR-3_1.so.30
+libOpenEXR-3_4.so.33
 libc.so.6
 libgcc_s.so.1
 libjpeg.so.8
 libjxrglue.so.0
 libopenjp2.so.7
 libpng16.so.16
-libraw.so.23
+libraw.so.25
 libstdc++.so.6
 libtiff.so.6
 libwebp.so.7

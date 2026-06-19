@@ -3,8 +3,8 @@
         <Name>most</Name>
         <Homepage>https://www.jedsoft.org/most/</Homepage>
         <Packager>
-            <Name>Algent Albrahimi</Name>
-            <Email>algent@protonmail.com</Email>
+            <Name>David Harder</Name>
+            <Email>david@davidjharder.ca</Email>
         </Packager>
         <License>GPL-2.0-or-later</License>
         <PartOf>system.utils</PartOf>
@@ -27,16 +27,18 @@
             <Path fileType="doc">/usr/share/doc/most/most-fun.txt</Path>
             <Path fileType="doc">/usr/share/doc/most/most.rc</Path>
             <Path fileType="doc">/usr/share/doc/most/most.txt</Path>
-            <Path fileType="man">/usr/share/man/man1/most.1</Path>
+            <Path fileType="data">/usr/share/licenses/most/COPYING</Path>
+            <Path fileType="data">/usr/share/licenses/most/COPYRIGHT</Path>
+            <Path fileType="man">/usr/share/man/man1/most.1.zst</Path>
         </Files>
     </Package>
     <History>
-        <Update release="4">
-            <Date>2024-03-17</Date>
+        <Update release="5">
+            <Date>2026-03-30</Date>
             <Version>5.2.0</Version>
             <Comment>Packaging update</Comment>
-            <Name>Algent Albrahimi</Name>
-            <Email>algent@protonmail.com</Email>
+            <Name>David Harder</Name>
+            <Email>david@davidjharder.ca</Email>
         </Update>
     </History>
 </PISI>

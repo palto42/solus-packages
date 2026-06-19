@@ -1,3 +1,4 @@
+hyprlock:_IO_stdin_used
 hyprlock:wl_buffer_interface
 hyprlock:wl_callback_interface
 hyprlock:wl_compositor_interface

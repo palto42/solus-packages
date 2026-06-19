@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : valkey
-version    : 8.1.4
-release    : 7
+version    : 9.0.3
+release    : 11
 source     :
-    - https://github.com/valkey-io/valkey/archive/refs/tags/8.1.4.tar.gz : 32350b017fee5e1a85f7e2d8580d581a0825ceae5cb3395075012c0970694dee
+    - https://github.com/valkey-io/valkey/archive/refs/tags/9.0.3.tar.gz : e220f4b0143292ee6ea6d705aa40d45a0c8a77759b3e94c201cb5c25dbdca42f
 homepage   : https://valkey.io/
 license    : BSD-3-Clause
 component  : database
@@ -27,6 +28,7 @@ install    : |
     # Valkey is for local development, not server use so there's no point in having valkey-sentinel
     rm -v $installdir/usr/bin/valkey-sentinel \
           $installdir/usr/bin/redis-sentinel
+    %install_license COPYING
 replaces   :
     - redis
     - dbginfo : redis-dbginfo

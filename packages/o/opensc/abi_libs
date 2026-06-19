@@ -7,8 +7,8 @@ eidenv
 gids-tool
 goid-tool
 iasecc-tool
-libopensc.so.12
-libsmm-local.so.12
+libopensc.so.13
+libsmm-local.so.13
 openpgp-tool
 opensc-explorer
 opensc-pkcs11.so

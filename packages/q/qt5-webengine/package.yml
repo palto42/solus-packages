@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : qt5-webengine
 version    : 5.15.19
-release    : 78
+release    : 84
 source     :
-    - git|https://code.qt.io/qt/qtwebengine.git : v5.15.19-lts
+    - git|https://invent.kde.org/qt/qt/qtwebengine.git : v5.15.19-lts
 homepage   : https://www.qt.io
 license    :
     - GPL-2.0-or-later
@@ -85,6 +86,8 @@ setup      : |
     %patch -p1 -i $pkgfiles/qtwebengine-5.15.15-clang16-2.patch
     %patch -p1 -i $pkgfiles/build-with-c++17.patch # icu 75
     %patch -p1 -i $pkgfiles/ftbfs-gcc-15.patch
+    %patch -p1 -i $pkgfiles/icu-78.patch
+    %patch -p1 -i $pkgfiles/qtwebengine-chromium-141-glibc-2.42-SYS_SECCOMP.patch
 
     # 3rdparty patches
     %patch -p1 -d src/3rdparty -i $pkgfiles/qt5-webengine-pipewire-0.3.patch
@@ -94,12 +97,15 @@ setup      : |
     %patch -p1 -d src/3rdparty -i $pkgfiles/qt5-webengine-ffmpeg5.patch
     # ffmpeg 7+
     %patch -p1 -d src/3rdparty/chromium -i $pkgfiles/qt5-webengine-ffmpeg7.patch
+    # ffmpeg 8+
+    sed -i 's/FF_PROFILE_/AV_PROFILE_/g' src/3rdparty/chromium/media/filters/ffmpeg_aac_bitstream_converter.cc
+    %patch -p4 -d src/3rdparty/chromium -i $pkgfiles/qt5-webengine-ffmpeg8.patch
     # ninja 1.12
     %patch -p1 -d src/3rdparty -i $pkgfiles/qt5-webengine-ninja-1.12.patch
 
     # We do patch ffmpeg for it, busted?
     # https://code.qt.io/cgit/qt/qtwebengine.git/commit/?h=v5.15.18-lts&id=855806fefdd52b29e8b15b6a02e263afc21028c8
-    git revert 855806fefdd52b29e8b15b6a02e263afc21028c8
+    #git revert 855806fefdd52b29e8b15b6a02e263afc21028c8
 
     # Some applications that need qt5-webengine seem to want all of the qt5 libs to be the same version.
     # Work around this by faking that qt5-webengine is the same version as qt5-base
@@ -120,4 +126,5 @@ build      : |
     %make
 install    : |
     %make_install INSTALL_ROOT=$installdir
+    %install_license LICENSE.*
     %qml_cache

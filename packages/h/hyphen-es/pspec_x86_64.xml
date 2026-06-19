@@ -3,8 +3,8 @@
         <Name>hyphen-es</Name>
         <Homepage>https://github.com/sbosio/rla-es/tree/master/separacion</Homepage>
         <Packager>
-            <Name>Martin Reboredo</Name>
-            <Email>yakoyoku@gmail.com</Email>
+            <Name>David Harder</Name>
+            <Email>david@davidjharder.ca</Email>
         </Packager>
         <License>GPL-3.0-or-later</License>
         <License>LGPL-3.0-or-later</License>
@@ -13,7 +13,7 @@
         <Summary xml:lang="en">Spanish hyphenation rules</Summary>
         <Description xml:lang="en">Spanish hyphenation rules.
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>hyphen-es</Name>
@@ -46,15 +46,16 @@
             <Path fileType="data">/usr/share/hyphen/hyph_es_US.dic</Path>
             <Path fileType="data">/usr/share/hyphen/hyph_es_UY.dic</Path>
             <Path fileType="data">/usr/share/hyphen/hyph_es_VE.dic</Path>
+            <Path fileType="data">/usr/share/licenses/hyphen-es/LICENSE.md</Path>
         </Files>
     </Package>
     <History>
-        <Update release="1">
-            <Date>2021-03-03</Date>
-            <Version>2.6</Version>
+        <Update release="2">
+            <Date>2026-03-22</Date>
+            <Version>2.9</Version>
             <Comment>Packaging update</Comment>
-            <Name>Martin Reboredo</Name>
-            <Email>yakoyoku@gmail.com</Email>
+            <Name>David Harder</Name>
+            <Email>david@davidjharder.ca</Email>
         </Update>
     </History>
 </PISI>

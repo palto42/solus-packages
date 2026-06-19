@@ -3,8 +3,8 @@
         <Name>rssguard</Name>
         <Homepage>https://github.com/martinrotter/rssguard</Homepage>
         <Packager>
-            <Name>Reilly Brogan</Name>
-            <Email>solus@reillybrogan.com</Email>
+            <Name>Troy Harvey</Name>
+            <Email>harvey@getsol.us</Email>
         </Packager>
         <License>GPL-3.0-or-later</License>
         <PartOf>network.news</PartOf>
@@ -21,16 +21,17 @@
         <PartOf>network.news</PartOf>
         <Files>
             <Path fileType="executable">/usr/bin/rssguard</Path>
+            <Path fileType="executable">/usr/bin/rssguard-article-extractor</Path>
             <Path fileType="library">/usr/lib64/librssguard.so</Path>
             <Path fileType="library">/usr/lib64/rssguard/librssguard-feedly.so</Path>
             <Path fileType="library">/usr/lib64/rssguard/librssguard-gmail.so</Path>
             <Path fileType="library">/usr/lib64/rssguard/librssguard-greader.so</Path>
             <Path fileType="library">/usr/lib64/rssguard/librssguard-nextcloud.so</Path>
-            <Path fileType="library">/usr/lib64/rssguard/librssguard-reddit.so</Path>
             <Path fileType="library">/usr/lib64/rssguard/librssguard-standard.so</Path>
             <Path fileType="library">/usr/lib64/rssguard/librssguard-ttrss.so</Path>
             <Path fileType="data">/usr/share/applications/io.github.martinrotter.rssguard.desktop</Path>
-            <Path fileType="data">/usr/share/icons/hicolor/256x256/apps/io.github.martinrotter.rssguard.png</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/512x512/apps/io.github.martinrotter.rssguard.png</Path>
+            <Path fileType="data">/usr/share/licenses/rssguard/LICENSE.md</Path>
             <Path fileType="data">/usr/share/metainfo/io.github.martinrotter.rssguard.metainfo.xml</Path>
         </Files>
     </Package>
@@ -41,15 +42,16 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="18">rssguard</Dependency>
+            <Dependency release="23">rssguard</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/librssguard/core/feedsmodel.h</Path>
             <Path fileType="header">/usr/include/librssguard/core/message.h</Path>
-            <Path fileType="header">/usr/include/librssguard/core/messagefilter.h</Path>
             <Path fileType="header">/usr/include/librssguard/database/databasedriver.h</Path>
             <Path fileType="header">/usr/include/librssguard/database/databasefactory.h</Path>
             <Path fileType="header">/usr/include/librssguard/database/databasequeries.h</Path>
+            <Path fileType="header">/usr/include/librssguard/database/databaseworker.h</Path>
+            <Path fileType="header">/usr/include/librssguard/database/sqlquery.h</Path>
             <Path fileType="header">/usr/include/librssguard/exceptions/applicationexception.h</Path>
             <Path fileType="header">/usr/include/librssguard/exceptions/feedfetchexception.h</Path>
             <Path fileType="header">/usr/include/librssguard/exceptions/feedrecognizedbutfailedexception.h</Path>
@@ -58,9 +60,12 @@
             <Path fileType="header">/usr/include/librssguard/exceptions/networkexception.h</Path>
             <Path fileType="header">/usr/include/librssguard/exceptions/processexception.h</Path>
             <Path fileType="header">/usr/include/librssguard/exceptions/scriptexception.h</Path>
+            <Path fileType="header">/usr/include/librssguard/exceptions/sqlexception.h</Path>
+            <Path fileType="header">/usr/include/librssguard/filtering/messagefilter.h</Path>
             <Path fileType="header">/usr/include/librssguard/gui/dialogs/filedialog.h</Path>
             <Path fileType="header">/usr/include/librssguard/gui/dialogs/formabout.h</Path>
             <Path fileType="header">/usr/include/librssguard/gui/dialogs/formmain.h</Path>
+            <Path fileType="header">/usr/include/librssguard/gui/dialogs/formprogressworker.h</Path>
             <Path fileType="header">/usr/include/librssguard/gui/dialogs/formupdate.h</Path>
             <Path fileType="header">/usr/include/librssguard/gui/feedmessageviewer.h</Path>
             <Path fileType="header">/usr/include/librssguard/gui/feedsview.h</Path>
@@ -76,11 +81,13 @@
             <Path fileType="header">/usr/include/librssguard/gui/reusable/networkproxydetails.h</Path>
             <Path fileType="header">/usr/include/librssguard/gui/reusable/plaintoolbutton.h</Path>
             <Path fileType="header">/usr/include/librssguard/gui/reusable/resizablestackedwidget.h</Path>
+            <Path fileType="header">/usr/include/librssguard/gui/reusable/texteditwithstatus.h</Path>
             <Path fileType="header">/usr/include/librssguard/gui/reusable/widgetwithstatus.h</Path>
             <Path fileType="header">/usr/include/librssguard/gui/webbrowser.h</Path>
             <Path fileType="header">/usr/include/librssguard/gui/webviewers/qtextbrowser/textbrowserviewer.h</Path>
-            <Path fileType="header">/usr/include/librssguard/gui/webviewers/webengine/webengineviewer.h</Path>
+            <Path fileType="header">/usr/include/librssguard/gui/webviewers/qtwebengine/webengineviewer.h</Path>
             <Path fileType="header">/usr/include/librssguard/miscellaneous/application.h</Path>
+            <Path fileType="header">/usr/include/librssguard/miscellaneous/domdocument.h</Path>
             <Path fileType="header">/usr/include/librssguard/miscellaneous/feedreader.h</Path>
             <Path fileType="header">/usr/include/librssguard/miscellaneous/iconfactory.h</Path>
             <Path fileType="header">/usr/include/librssguard/miscellaneous/iofactory.h</Path>
@@ -90,7 +97,9 @@
             <Path fileType="header">/usr/include/librssguard/miscellaneous/skinfactory.h</Path>
             <Path fileType="header">/usr/include/librssguard/miscellaneous/systemfactory.h</Path>
             <Path fileType="header">/usr/include/librssguard/miscellaneous/textfactory.h</Path>
-            <Path fileType="header">/usr/include/librssguard/network-web/downloadmanager.h</Path>
+            <Path fileType="header">/usr/include/librssguard/miscellaneous/thread.h</Path>
+            <Path fileType="header">/usr/include/librssguard/miscellaneous/xmlencodingdetector.h</Path>
+            <Path fileType="header">/usr/include/librssguard/network-web/downloader.h</Path>
             <Path fileType="header">/usr/include/librssguard/network-web/httpresponse.h</Path>
             <Path fileType="header">/usr/include/librssguard/network-web/networkfactory.h</Path>
             <Path fileType="header">/usr/include/librssguard/network-web/oauth2service.h</Path>
@@ -107,7 +116,6 @@
             <Path fileType="header">/usr/include/librssguard/services/abstract/gui/formaddeditprobe.h</Path>
             <Path fileType="header">/usr/include/librssguard/services/abstract/gui/formcategorydetails.h</Path>
             <Path fileType="header">/usr/include/librssguard/services/abstract/gui/formfeeddetails.h</Path>
-            <Path fileType="header">/usr/include/librssguard/services/abstract/gui/httpheadersdetails.h</Path>
             <Path fileType="header">/usr/include/librssguard/services/abstract/gui/multifeededitcheckbox.h</Path>
             <Path fileType="header">/usr/include/librssguard/services/abstract/importantnode.h</Path>
             <Path fileType="header">/usr/include/librssguard/services/abstract/label.h</Path>
@@ -122,12 +130,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="18">
-            <Date>2025-06-11</Date>
-            <Version>4.8.5</Version>
+        <Update release="23">
+            <Date>2026-05-23</Date>
+            <Version>5.1.2</Version>
             <Comment>Packaging update</Comment>
-            <Name>Reilly Brogan</Name>
-            <Email>solus@reillybrogan.com</Email>
+            <Name>Troy Harvey</Name>
+            <Email>harvey@getsol.us</Email>
         </Update>
     </History>
 </PISI>

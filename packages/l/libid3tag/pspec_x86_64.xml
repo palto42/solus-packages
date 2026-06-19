@@ -3,15 +3,15 @@
         <Name>libid3tag</Name>
         <Homepage>https://github.com/tenacityteam/libid3tag</Homepage>
         <Packager>
-            <Name>Algent Albrahimi</Name>
-            <Email>algent@protonmail.com</Email>
+            <Name>David Harder</Name>
+            <Email>david@davidjharder.ca</Email>
         </Packager>
-        <License>GPL-2.0-later</License>
+        <License>GPL-2.0-or-later</License>
         <PartOf>multimedia.library</PartOf>
         <Summary xml:lang="en">Fork of the libid3tag library for reading ID3 metadata tags from MP3 files</Summary>
         <Description xml:lang="en">libid3tag is a library for reading and (eventually) writing ID3 tags, both ID3v1 and the various versions of ID3v2.
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>libid3tag</Name>
@@ -20,7 +20,10 @@
 </Description>
         <PartOf>multimedia.library</PartOf>
         <Files>
-            <Path fileType="library">/usr/lib64/libid3tag.so.0.16.2</Path>
+            <Path fileType="library">/usr/lib64/libid3tag.so.0</Path>
+            <Path fileType="library">/usr/lib64/libid3tag.so.0.16.4</Path>
+            <Path fileType="data">/usr/share/licenses/libid3tag/COPYING</Path>
+            <Path fileType="data">/usr/share/licenses/libid3tag/COPYRIGHT</Path>
         </Files>
     </Package>
     <Package>
@@ -30,7 +33,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="6">libid3tag</Dependency>
+            <Dependency release="7">libid3tag</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/id3tag.h</Path>
@@ -43,12 +46,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="6">
-            <Date>2022-08-24</Date>
-            <Version>0.16.2</Version>
+        <Update release="7">
+            <Date>2026-03-30</Date>
+            <Version>0.16.4</Version>
             <Comment>Packaging update</Comment>
-            <Name>Algent Albrahimi</Name>
-            <Email>algent@protonmail.com</Email>
+            <Name>David Harder</Name>
+            <Email>david@davidjharder.ca</Email>
         </Update>
     </History>
 </PISI>

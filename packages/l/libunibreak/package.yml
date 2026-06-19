@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : libunibreak
-version    : '5.1'
-release    : 5
+version    : '7.0'
+release    : 6
 source     :
-    - https://github.com/adah1972/libunibreak/releases/download/libunibreak_5_1/libunibreak-5.1.tar.gz : dd1a92d4c5646aa0e457ff41d89812ec5243863be6c20bbcb5ee380f3dd78377
+    - https://github.com/adah1972/libunibreak/releases/download/libunibreak_7_0/libunibreak-7.0.tar.gz : 8c9a6e121736cd0d5c890ae3ae96f3f4010a19aa040f1dbded833a62a87717d3
 homepage   : https://github.com/adah1972/libunibreak
 license    : Zlib
 component  : programming.library
@@ -15,3 +16,4 @@ build      : |
     %make
 install    : |
     %make_install
+    %install_license LICENCE

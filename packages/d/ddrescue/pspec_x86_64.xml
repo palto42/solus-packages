@@ -3,8 +3,8 @@
         <Name>ddrescue</Name>
         <Homepage>https://www.gnu.org/software/ddrescue/</Homepage>
         <Packager>
-            <Name>Reilly Brogan</Name>
-            <Email>solus@reillybrogan.com</Email>
+            <Name>Joey Riches</Name>
+            <Email>josephriches@gmail.com</Email>
         </Packager>
         <License>GPL-2.0-or-later</License>
         <PartOf>system.utils</PartOf>
@@ -22,18 +22,18 @@
         <Files>
             <Path fileType="executable">/usr/bin/ddrescue</Path>
             <Path fileType="executable">/usr/bin/ddrescuelog</Path>
-            <Path fileType="info">/usr/share/info/ddrescue.info</Path>
-            <Path fileType="man">/usr/share/man/man1/ddrescue.1</Path>
-            <Path fileType="man">/usr/share/man/man1/ddrescuelog.1</Path>
+            <Path fileType="info">/usr/share/info/ddrescue.info.zst</Path>
+            <Path fileType="man">/usr/share/man/man1/ddrescue.1.zst</Path>
+            <Path fileType="man">/usr/share/man/man1/ddrescuelog.1.zst</Path>
         </Files>
     </Package>
     <History>
-        <Update release="10">
-            <Date>2024-01-30</Date>
-            <Version>1.28</Version>
+        <Update release="11">
+            <Date>2026-02-22</Date>
+            <Version>1.30</Version>
             <Comment>Packaging update</Comment>
-            <Name>Reilly Brogan</Name>
-            <Email>solus@reillybrogan.com</Email>
+            <Name>Joey Riches</Name>
+            <Email>josephriches@gmail.com</Email>
         </Update>
     </History>
 </PISI>

@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : xfce4-terminal
-version    : 1.1.5
-release    : 7
+version    : 1.2.0
+release    : 8
 source     :
-    - https://archive.xfce.org/src/apps/xfce4-terminal/1.1/xfce4-terminal-1.1.5.tar.xz : 3c5b1d3a01a9a113852ac0f77d1c85bf3a356b43de33ec805b21ceca7d6f0a63
+    - https://archive.xfce.org/src/apps/xfce4-terminal/1.2/xfce4-terminal-1.2.0.tar.xz : 6874c7b975cc3dc3bd636d57ffec723de7458202defe65377593d3a7e0734b94
 homepage   : https://docs.xfce.org/apps/xfce4-terminal/start
 license    : GPL-2.0-or-later
 component  : desktop.xfce
@@ -20,6 +21,7 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license COPYING
 
     # Install appstream metainfo
     install -Dm00644 $pkgfiles/org.xfce.terminal.metainfo.xml -t $installdir/usr/share/metainfo

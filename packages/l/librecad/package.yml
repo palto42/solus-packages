@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : librecad
-version    : 2.2.1.2
-release    : 17
+version    : 2.2.1.5
+release    : 20
 source     :
-    - https://github.com/LibreCAD/LibreCAD/archive/refs/tags/v2.2.1.2.tar.gz : 2b961cb916a7415d97f427f824c1830e06d4832cc376fea38b27cb456ee95a8e
+    - https://github.com/LibreCAD/LibreCAD/archive/refs/tags/v2.2.1.5.tar.gz : 703f6e6701b7ee47769b6def271fa025ef32e31ee193e2ba69a2c47fff8da459
 homepage   : https://librecad.org/
 license    : GPL-2.0-or-later
 summary    : LibreCAD is a free Open Source CAD application for Windows, Apple and Linux
@@ -37,3 +38,4 @@ install    : |
     install -Dm00644 desktop/org.librecad.librecad.appdata.xml $installdir/usr/share/metainfo/org.librecad.librecad.appdata.xml
     install -dm00644 $installdir/usr/share/librecad/
     cp -r unix/resources/{library,patterns,fonts,qm} %installroot%/usr/share/librecad/
+    %install_license licenses/*

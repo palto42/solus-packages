@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : iperf
-version    : '3.19'
-release    : 7
+version    : '3.21'
+release    : 9
 source     :
-    - https://github.com/esnet/iperf/archive/refs/tags/3.19.tar.gz : da5cff29e4945b2ee05dcf9a0c67768cc000dc1b122935bce3492c4e36f6b5e9
+    - https://github.com/esnet/iperf/archive/refs/tags/3.21.tar.gz : dd289b6700d3bc33eda7fa3ce6db217d6ca42239edbcb2e7f152bf7bf5c8a5aa
 homepage   : https://iperf.fr
 license    :
     - BSD-3-Clause
@@ -17,3 +18,4 @@ build      : |
     %make
 install    : |
     %make_install
+    %install_license LICENSE

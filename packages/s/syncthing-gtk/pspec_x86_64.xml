@@ -1,89 +1,84 @@
 <PISI>
     <Source>
         <Name>syncthing-gtk</Name>
-        <Homepage>https://syncthing.net/</Homepage>
+        <Homepage>https://github.com/syncthing-gtk/syncthing-gtk</Homepage>
         <Packager>
-            <Name>Tracey Clark</Name>
-            <Email>traceyc.dev@tlcnet.info</Email>
+            <Name>Joey Riches</Name>
+            <Email>josephriches@gmail.com</Email>
         </Packager>
         <License>GPL-2.0-or-later</License>
         <PartOf>network.download</PartOf>
-        <Summary xml:lang="en">GTK3 &amp; Python based GUI and notification area icon for Syncthing</Summary>
-        <Description xml:lang="en">GTK3 &amp; Python based GUI and notification area icon for Syncthing
+        <Summary xml:lang="en">GTK-based user interface for Syncthing</Summary>
+        <Description xml:lang="en">GTK-based user interface for Syncthing
 </Description>
         <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>syncthing-gtk</Name>
-        <Summary xml:lang="en">GTK3 &amp; Python based GUI and notification area icon for Syncthing</Summary>
-        <Description xml:lang="en">GTK3 &amp; Python based GUI and notification area icon for Syncthing
+        <Summary xml:lang="en">GTK-based user interface for Syncthing</Summary>
+        <Description xml:lang="en">GTK-based user interface for Syncthing
 </Description>
         <PartOf>network.download</PartOf>
         <Files>
             <Path fileType="executable">/usr/bin/syncthing-gtk</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/syncthing_gtk-0.9.4.5-py3.12.egg-info/PKG-INFO</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/syncthing_gtk-0.9.4.5-py3.12.egg-info/SOURCES.txt</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/syncthing_gtk-0.9.4.5-py3.12.egg-info/dependency_links.txt</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/syncthing_gtk-0.9.4.5-py3.12.egg-info/requires.txt</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/syncthing_gtk-0.9.4.5-py3.12.egg-info/top_level.txt</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/syncthing_gtk/__init__.py</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/syncthing_gtk/__pycache__/__init__.cpython-312.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/syncthing_gtk/__pycache__/aboutdialog.cpython-312.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/syncthing_gtk/__pycache__/app.cpython-312.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/syncthing_gtk/__pycache__/configuration.cpython-312.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/syncthing_gtk/__pycache__/daemon.cpython-312.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/syncthing_gtk/__pycache__/daemonoutputdialog.cpython-312.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/syncthing_gtk/__pycache__/daemonprocess.cpython-312.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/syncthing_gtk/__pycache__/daemonsettings.cpython-312.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/syncthing_gtk/__pycache__/deviceeditor.cpython-312.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/syncthing_gtk/__pycache__/editordialog.cpython-312.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/syncthing_gtk/__pycache__/fakerevealer.cpython-312.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/syncthing_gtk/__pycache__/finddaemondialog.cpython-312.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/syncthing_gtk/__pycache__/foldereditor.cpython-312.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/syncthing_gtk/__pycache__/http.cpython-312.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/syncthing_gtk/__pycache__/iddialog.cpython-312.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/syncthing_gtk/__pycache__/identicon.cpython-312.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/syncthing_gtk/__pycache__/ignoreeditor.cpython-312.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/syncthing_gtk/__pycache__/infobox.cpython-312.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/syncthing_gtk/__pycache__/nautilusplugin.cpython-312.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/syncthing_gtk/__pycache__/notifications.cpython-312.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/syncthing_gtk/__pycache__/ribar.cpython-312.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/syncthing_gtk/__pycache__/statusicon.cpython-312.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/syncthing_gtk/__pycache__/stdownloader.cpython-312.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/syncthing_gtk/__pycache__/timermanager.cpython-312.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/syncthing_gtk/__pycache__/tools.cpython-312.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/syncthing_gtk/__pycache__/uibuilder.cpython-312.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/syncthing_gtk/__pycache__/uisettingsdialog.cpython-312.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/syncthing_gtk/__pycache__/windows.cpython-312.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/syncthing_gtk/__pycache__/wizard.cpython-312.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/syncthing_gtk/aboutdialog.py</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/syncthing_gtk/app.py</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/syncthing_gtk/configuration.py</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/syncthing_gtk/daemon.py</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/syncthing_gtk/daemonoutputdialog.py</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/syncthing_gtk/daemonprocess.py</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/syncthing_gtk/daemonsettings.py</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/syncthing_gtk/deviceeditor.py</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/syncthing_gtk/editordialog.py</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/syncthing_gtk/fakerevealer.py</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/syncthing_gtk/finddaemondialog.py</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/syncthing_gtk/foldereditor.py</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/syncthing_gtk/http.py</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/syncthing_gtk/iddialog.py</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/syncthing_gtk/identicon.py</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/syncthing_gtk/ignoreeditor.py</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/syncthing_gtk/infobox.py</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/syncthing_gtk/nautilusplugin.py</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/syncthing_gtk/notifications.py</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/syncthing_gtk/ribar.py</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/syncthing_gtk/statusicon.py</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/syncthing_gtk/stdownloader.py</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/syncthing_gtk/timermanager.py</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/syncthing_gtk/tools.py</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/syncthing_gtk/uibuilder.py</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/syncthing_gtk/uisettingsdialog.py</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/syncthing_gtk/windows.py</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/syncthing_gtk/wizard.py</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/syncthing_gtk/__init__.py</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/syncthing_gtk/__pycache__/__init__.cpython-314.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/syncthing_gtk/__pycache__/aboutdialog.cpython-314.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/syncthing_gtk/__pycache__/app.cpython-314.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/syncthing_gtk/__pycache__/configuration.cpython-314.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/syncthing_gtk/__pycache__/daemon.cpython-314.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/syncthing_gtk/__pycache__/daemonoutputdialog.cpython-314.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/syncthing_gtk/__pycache__/daemonprocess.cpython-314.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/syncthing_gtk/__pycache__/daemonsettings.cpython-314.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/syncthing_gtk/__pycache__/deviceeditor.cpython-314.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/syncthing_gtk/__pycache__/editordialog.cpython-314.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/syncthing_gtk/__pycache__/fakerevealer.cpython-314.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/syncthing_gtk/__pycache__/finddaemondialog.cpython-314.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/syncthing_gtk/__pycache__/foldereditor.cpython-314.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/syncthing_gtk/__pycache__/http.cpython-314.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/syncthing_gtk/__pycache__/iddialog.cpython-314.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/syncthing_gtk/__pycache__/identicon.cpython-314.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/syncthing_gtk/__pycache__/ignoreeditor.cpython-314.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/syncthing_gtk/__pycache__/infobox.cpython-314.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/syncthing_gtk/__pycache__/nautilusplugin.cpython-314.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/syncthing_gtk/__pycache__/notifications.cpython-314.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/syncthing_gtk/__pycache__/ribar.cpython-314.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/syncthing_gtk/__pycache__/statusicon.cpython-314.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/syncthing_gtk/__pycache__/stdownloader.cpython-314.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/syncthing_gtk/__pycache__/timermanager.cpython-314.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/syncthing_gtk/__pycache__/tools.cpython-314.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/syncthing_gtk/__pycache__/uibuilder.cpython-314.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/syncthing_gtk/__pycache__/uisettingsdialog.cpython-314.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/syncthing_gtk/__pycache__/windows.cpython-314.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/syncthing_gtk/__pycache__/wizard.cpython-314.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/syncthing_gtk/aboutdialog.py</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/syncthing_gtk/app.py</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/syncthing_gtk/configuration.py</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/syncthing_gtk/daemon.py</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/syncthing_gtk/daemonoutputdialog.py</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/syncthing_gtk/daemonprocess.py</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/syncthing_gtk/daemonsettings.py</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/syncthing_gtk/deviceeditor.py</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/syncthing_gtk/editordialog.py</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/syncthing_gtk/fakerevealer.py</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/syncthing_gtk/finddaemondialog.py</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/syncthing_gtk/foldereditor.py</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/syncthing_gtk/http.py</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/syncthing_gtk/iddialog.py</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/syncthing_gtk/identicon.py</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/syncthing_gtk/ignoreeditor.py</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/syncthing_gtk/infobox.py</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/syncthing_gtk/nautilusplugin.py</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/syncthing_gtk/notifications.py</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/syncthing_gtk/ribar.py</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/syncthing_gtk/statusicon.py</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/syncthing_gtk/stdownloader.py</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/syncthing_gtk/timermanager.py</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/syncthing_gtk/tools.py</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/syncthing_gtk/uibuilder.py</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/syncthing_gtk/uisettingsdialog.py</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/syncthing_gtk/windows.py</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/syncthing_gtk/wizard.py</Path>
             <Path fileType="data">/usr/share/applications/syncthing-gtk.desktop</Path>
             <Path fileType="data">/usr/share/icons/hicolor/128x128/apps/syncthing-gtk.png</Path>
             <Path fileType="data">/usr/share/icons/hicolor/16x16/apps/syncthing-gtk.png</Path>
@@ -246,17 +241,8 @@
             <Path fileType="localedata">/usr/share/locale/sk/LC_MESSAGES/syncthing-gtk.mo</Path>
             <Path fileType="localedata">/usr/share/locale/vi/LC_MESSAGES/syncthing-gtk.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_CN/LC_MESSAGES/syncthing-gtk.mo</Path>
-            <Path fileType="man">/usr/share/man/man1/syncthing-gtk.1</Path>
-            <Path fileType="data">/usr/share/metainfo/me.kozec.syncthingtk.appdata.xml</Path>
-            <Path fileType="data">/usr/share/pixmaps/syncthing-gtk.png</Path>
-            <Path fileType="data">/usr/share/syncthing-gtk/about.glade</Path>
-            <Path fileType="data">/usr/share/syncthing-gtk/app.glade</Path>
-            <Path fileType="data">/usr/share/syncthing-gtk/daemon-output.glade</Path>
-            <Path fileType="data">/usr/share/syncthing-gtk/daemon-settings.glade</Path>
-            <Path fileType="data">/usr/share/syncthing-gtk/device-edit.glade</Path>
-            <Path fileType="data">/usr/share/syncthing-gtk/device-id.glade</Path>
-            <Path fileType="data">/usr/share/syncthing-gtk/find-daemon.glade</Path>
-            <Path fileType="data">/usr/share/syncthing-gtk/folder-edit.glade</Path>
+            <Path fileType="man">/usr/share/man/man1/syncthing-gtk.1.zst</Path>
+            <Path fileType="data">/usr/share/metainfo/org.syncthing-gtk.syncthing-gtk.appdata.xml</Path>
             <Path fileType="data">/usr/share/syncthing-gtk/icons/add_node.svg</Path>
             <Path fileType="data">/usr/share/syncthing-gtk/icons/add_repo.svg</Path>
             <Path fileType="data">/usr/share/syncthing-gtk/icons/address.svg</Path>
@@ -283,20 +269,28 @@
             <Path fileType="data">/usr/share/syncthing-gtk/icons/thumb_up.svg</Path>
             <Path fileType="data">/usr/share/syncthing-gtk/icons/up_rate.svg</Path>
             <Path fileType="data">/usr/share/syncthing-gtk/icons/version.svg</Path>
-            <Path fileType="data">/usr/share/syncthing-gtk/ignore-editor.glade</Path>
-            <Path fileType="data">/usr/share/syncthing-gtk/syncthing-plugin-caja.py</Path>
-            <Path fileType="data">/usr/share/syncthing-gtk/syncthing-plugin-nautilus.py</Path>
-            <Path fileType="data">/usr/share/syncthing-gtk/syncthing-plugin-nemo.py</Path>
-            <Path fileType="data">/usr/share/syncthing-gtk/ui-settings.glade</Path>
+            <Path fileType="data">/usr/share/syncthing-gtk/plugins/syncthing-plugin-caja.py</Path>
+            <Path fileType="data">/usr/share/syncthing-gtk/plugins/syncthing-plugin-nautilus.py</Path>
+            <Path fileType="data">/usr/share/syncthing-gtk/plugins/syncthing-plugin-nemo.py</Path>
+            <Path fileType="data">/usr/share/syncthing-gtk/ui/about.ui</Path>
+            <Path fileType="data">/usr/share/syncthing-gtk/ui/app.ui</Path>
+            <Path fileType="data">/usr/share/syncthing-gtk/ui/daemon-output.ui</Path>
+            <Path fileType="data">/usr/share/syncthing-gtk/ui/daemon-settings.ui</Path>
+            <Path fileType="data">/usr/share/syncthing-gtk/ui/device-edit.ui</Path>
+            <Path fileType="data">/usr/share/syncthing-gtk/ui/device-id.ui</Path>
+            <Path fileType="data">/usr/share/syncthing-gtk/ui/find-daemon.ui</Path>
+            <Path fileType="data">/usr/share/syncthing-gtk/ui/folder-edit.ui</Path>
+            <Path fileType="data">/usr/share/syncthing-gtk/ui/ignore-editor.ui</Path>
+            <Path fileType="data">/usr/share/syncthing-gtk/ui/ui-settings.ui</Path>
         </Files>
     </Package>
     <History>
-        <Update release="27">
-            <Date>2025-08-30</Date>
-            <Version>0.9.4.5</Version>
+        <Update release="29">
+            <Date>2026-06-08</Date>
+            <Version>0.10.0</Version>
             <Comment>Packaging update</Comment>
-            <Name>Tracey Clark</Name>
-            <Email>traceyc.dev@tlcnet.info</Email>
+            <Name>Joey Riches</Name>
+            <Email>josephriches@gmail.com</Email>
         </Update>
     </History>
 </PISI>

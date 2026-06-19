@@ -3,8 +3,8 @@
         <Name>cjson</Name>
         <Homepage>https://github.com/DaveGamble/cJSON/</Homepage>
         <Packager>
-            <Name>Reilly Brogan</Name>
-            <Email>solus@reillybrogan.com</Email>
+            <Name>Robert Gonzalez</Name>
+            <Email>uni.dos12@outlook.com</Email>
         </Packager>
         <License>MIT</License>
         <PartOf>programming.library</PartOf>
@@ -21,7 +21,8 @@
         <PartOf>programming.library</PartOf>
         <Files>
             <Path fileType="library">/usr/lib64/libcjson.so.1</Path>
-            <Path fileType="library">/usr/lib64/libcjson.so.1.7.18</Path>
+            <Path fileType="library">/usr/lib64/libcjson.so.1.7.19</Path>
+            <Path fileType="data">/usr/share/licenses/cjson/LICENSE</Path>
         </Files>
     </Package>
     <Package>
@@ -31,7 +32,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="3">cjson</Dependency>
+            <Dependency release="4">cjson</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/cjson/cJSON.h</Path>
@@ -44,12 +45,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="3">
-            <Date>2024-06-27</Date>
-            <Version>1.7.18</Version>
+        <Update release="4">
+            <Date>2026-04-07</Date>
+            <Version>1.7.19</Version>
             <Comment>Packaging update</Comment>
-            <Name>Reilly Brogan</Name>
-            <Email>solus@reillybrogan.com</Email>
+            <Name>Robert Gonzalez</Name>
+            <Email>uni.dos12@outlook.com</Email>
         </Update>
     </History>
 </PISI>

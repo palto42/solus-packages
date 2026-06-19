@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kstars
-version    : 3.7.6
-release    : 30
+version    : 3.8.3
+release    : 34
 source     :
-    - https://cdn.download.kde.org/stable/kstars/3.7.6/kstars-3.7.6.tar.xz : ea1c163260062899a574bf1e4cb433cc1b2e9a4e6d845a2a1af9b6756934269a
+    - https://cdn.download.kde.org/stable/kstars/3.8.3/kstars-3.8.3.tar.xz : c5ecfef89587710231e4c93e4d4781ae17276d0344e2da97df54fd6ed86a19d5
 homepage   : https://kstars.kde.org/
 license    : GPL-2.0-or-later
 component  : office.scientific
@@ -18,7 +19,9 @@ builddeps  :
     - pkgconfig(eigen3)
     - pkgconfig(gsl)
     - pkgconfig(libcurl)
+    - pkgconfig(libindi)
     - pkgconfig(libraw)
+    - pkgconfig(opencv4)
     - pkgconfig(stellarsolver)
     - pkgconfig(wcslib)
     - kf6-kcrash-devel
@@ -29,18 +32,18 @@ builddeps  :
     - kf6-knotifyconfig-devel
     - kf6-kplotting-devel
     - kf6-kxmlgui-devel
+    - libnova-devel
     - qtkeychain-qt6-devel
 clang      : true
 optimize   :
     - speed
     - thin-lto
 setup      : |
-    %patch -p1 -i $pkgfiles/0001-Add-missing-include.patch
     %cmake_ninja \
         -DBUILD_TESTING=OFF \
         -DDATA_INSTALL_DIR=/usr/share \
         -DOpenGL_GL_PREFERENCE=GLVND \
-        -DBUILD_QT5=OFF
+        -DBUILD_WITH_QT6=ON
 build      : |
     %ninja_build
 install    : |
@@ -48,3 +51,4 @@ install    : |
     %qml6_cache
     rm -rf $installdir/%libdir%
     rm -rf $installdir/usr/share/doc
+    %install_license LICENSES/*

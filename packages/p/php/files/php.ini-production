@@ -920,7 +920,7 @@ extension=gd
 extension=gettext
 extension=gmp
 extension=iconv
-extension=imap
+; extension=imap  ; no longer present
 extension=intl
 extension=ldap
 extension=mysqli
@@ -937,7 +937,8 @@ extension=sodium
 extension=sqlite3
 extension=tidy
 extension=zip
-zend_extension=opcache
+; OPcache is built into PHP (not a shared module), so do not load as zend_extension
+;zend_extension=opcache
 
 ;;;;;;;;;;;;;;;;;;;
 ; Module Settings ;

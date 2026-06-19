@@ -1,3 +1,4 @@
+libc.so.6:__cxa_atexit
 libc.so.6:__longjmp_chk
 libc.so.6:__stack_chk_fail
 libc.so.6:_setjmp
@@ -6,7 +7,6 @@ libc.so.6:fopen
 libc.so.6:free
 libc.so.6:malloc
 libc.so.6:memchr
-libc.so.6:memcmp
 libc.so.6:memcpy
 libc.so.6:memmove
 libc.so.6:memset
@@ -46,10 +46,10 @@ libgcc_s.so.1:__udivti3
 libgcc_s.so.1:__unordtf2
 libglib-2.0.so.0:g_error_free
 libgobject-2.0.so.0:g_object_unref
-libhyprutils.so.9:_ZN9Hyprutils5Utils11CScopeGuardC1ERKSt8functionIFvvEE
-libhyprutils.so.9:_ZN9Hyprutils5Utils11CScopeGuardD1Ev
-libhyprutils.so.9:_ZN9Hyprutils6Signal11CSignalBase12emitInternalEPv
-libhyprutils.so.9:_ZN9Hyprutils6String4trimERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
+libhyprutils.so.12:_ZN9Hyprutils5Utils11CScopeGuardC1ERKSt8functionIFvvEE
+libhyprutils.so.12:_ZN9Hyprutils5Utils11CScopeGuardD1Ev
+libhyprutils.so.12:_ZN9Hyprutils6Signal11CSignalBase12emitInternalEPv
+libhyprutils.so.12:_ZN9Hyprutils6String4trimERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE
 libjpeg.so.8:jpeg_CreateDecompress
 libjpeg.so.8:jpeg_destroy_decompress
 libjpeg.so.8:jpeg_finish_decompress
@@ -79,6 +79,7 @@ libm.so.6:frexp
 libm.so.6:frexpf
 libm.so.6:frexpl
 libm.so.6:pow
+libmagic.so.1:magic_buffer
 libmagic.so.1:magic_close
 libmagic.so.1:magic_file
 libmagic.so.1:magic_load
@@ -91,7 +92,7 @@ libpango-1.0.so.0:pango_font_description_free
 libpango-1.0.so.0:pango_font_description_from_string
 libpango-1.0.so.0:pango_font_description_set_size
 libpango-1.0.so.0:pango_layout_get_context
-libpango-1.0.so.0:pango_layout_get_size
+libpango-1.0.so.0:pango_layout_get_pixel_extents
 libpango-1.0.so.0:pango_layout_set_alignment
 libpango-1.0.so.0:pango_layout_set_attributes
 libpango-1.0.so.0:pango_layout_set_ellipsize
@@ -151,6 +152,7 @@ libstdc++.so.6:_ZNSt13runtime_errorC2EPKc
 libstdc++.so.6:_ZNSt13runtime_errorD2Ev
 libstdc++.so.6:_ZNSt14basic_ifstreamIcSt11char_traitsIcEED1Ev
 libstdc++.so.6:_ZNSt18condition_variable10notify_allEv
+libstdc++.so.6:_ZNSt18condition_variable4waitERSt11unique_lockISt5mutexE
 libstdc++.so.6:_ZNSt18condition_variableC1Ev
 libstdc++.so.6:_ZNSt18condition_variableD1Ev
 libstdc++.so.6:_ZNSt3_V215system_categoryEv

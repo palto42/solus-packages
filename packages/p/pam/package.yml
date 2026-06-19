@@ -1,9 +1,12 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : pam
-version    : 1.7.0
-release    : 38
+version    : 1.7.2
+release    : 39
 source     :
-    - https://github.com/linux-pam/linux-pam/releases/download/v1.7.0/Linux-PAM-1.7.0.tar.xz : 57dcd7a6b966ecd5bbd95e1d11173734691e16b68692fa59661cdae9b13b1697
-license    : GPL-3.0-or-later
+    - https://github.com/linux-pam/linux-pam/releases/download/v1.7.2/Linux-PAM-1.7.2.tar.xz : 3d86b6383fb5fd9eb9578d2cd47d92801191f4bf3f9bc61419bfefc8aa1e531a
+license    :
+    - BSD-3-Clause
+    - GPL-2.0-or-later
 homepage   : https://github.com/linux-pam/linux-pam
 summary    : Pluggable Authentication Modules library
 description: The Linux PAM package contains Pluggable Authentication Modules used to enable the local system administrator to choose how applications authenticate users.
@@ -33,7 +36,7 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
-
+    %install_license COPYING
     if [ -z "${EMUL32BUILD+set}" ]; then
         chmod +s $installdir/usr/sbin/unix_chkpwd
     fi

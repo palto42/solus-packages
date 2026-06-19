@@ -1,2 +1,3 @@
 libc.so.6
+libnftables.so.1
 libsystemd.so.0

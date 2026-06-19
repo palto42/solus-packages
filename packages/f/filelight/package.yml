@@ -1,12 +1,14 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : filelight
-version    : 25.08.2
-release    : 83
+version    : 26.04.2
+release    : 89
 source     :
-    - https://download.kde.org/stable/release-service/25.08.2/src/filelight-25.08.2.tar.xz : 9ca47febfadeadaa11babce65c19e035a5bc766600d0978ce4944d9e41661555
+    - https://download.kde.org/stable/release-service/26.04.2/src/filelight-26.04.2.tar.xz : e8c8f686814363d321107fc70db1d34eaed3d757bb79767c43e7976c08bd6ff8
 homepage   : https://kde.org/applications/utilities/org.kde.filelight
 license    :
     - GFDL-1.2-or-later
-    - GPL-2.0-or-later
+    - GPL-2.0-only
+    - GPL-3.0-only
 component  : desktop.kde
 summary    : Graphical representation of your filesystem
 description: |
@@ -33,6 +35,7 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*
 
     # remove docs
     rm -rfv $installdir/usr/share/doc

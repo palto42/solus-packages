@@ -1,0 +1,6 @@
+releases:
+  id: 371270
+  rss: https://github.com/omenos/mirror-qbe/releases.atom
+ # No known CPE, checked 2026-03-14
+security:
+  cpe: ~

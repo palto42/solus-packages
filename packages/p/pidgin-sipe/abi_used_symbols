@@ -1,7 +1,9 @@
 libc.so.6:__ctype_b_loc
 libc.so.6:__errno_location
 libc.so.6:__fprintf_chk
-libc.so.6:__isoc99_sscanf
+libc.so.6:__isoc23_sscanf
+libc.so.6:__isoc23_strtol
+libc.so.6:__isoc23_strtoul
 libc.so.6:__libc_start_main
 libc.so.6:__sprintf_chk
 libc.so.6:__stack_chk_fail
@@ -45,8 +47,6 @@ libc.so.6:strncpy
 libc.so.6:strpbrk
 libc.so.6:strstr
 libc.so.6:strtok
-libc.so.6:strtol
-libc.so.6:strtoul
 libc.so.6:textdomain
 libc.so.6:time
 libc.so.6:tzset
@@ -203,8 +203,8 @@ libglib-2.0.so.0:g_markup_printf_escaped
 libglib-2.0.so.0:g_memdup
 libglib-2.0.so.0:g_memdup2
 libglib-2.0.so.0:g_mkdir_with_parents
-libglib-2.0.so.0:g_once_init_enter
-libglib-2.0.so.0:g_once_init_leave
+libglib-2.0.so.0:g_once_init_enter_pointer
+libglib-2.0.so.0:g_once_init_leave_pointer
 libglib-2.0.so.0:g_parse_debug_string
 libglib-2.0.so.0:g_ptr_array_add
 libglib-2.0.so.0:g_ptr_array_free
@@ -846,7 +846,9 @@ libtelepathy-glib.so.0:tp_type_dbus_array_sasuu
 libtelepathy-glib.so.0:tp_type_dbus_hash_ua_28sasas_29
 libtelepathy-glib.so.0:tp_value_array_build
 libxml2.so.2:xmlC14NDocDumpMemory
+libxml2.so.2:xmlCtxtReadMemory
 libxml2.so.2:xmlFree
 libxml2.so.2:xmlFreeDoc
+libxml2.so.2:xmlFreeParserCtxt
+libxml2.so.2:xmlNewSAXParserCtxt
 libxml2.so.2:xmlReadMemory
-libxml2.so.2:xmlSAXUserParseMemory

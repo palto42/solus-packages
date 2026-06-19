@@ -31,6 +31,12 @@
             <Path fileType="doc">/usr/share/help/C/gnome-logs/media/gnome-logs-3-34.png</Path>
             <Path fileType="doc">/usr/share/help/C/gnome-logs/media/org.gnome.Logs.svg</Path>
             <Path fileType="doc">/usr/share/help/C/gnome-logs/permissions.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-logs/index.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-logs/introduction.page</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-logs/legal.xml</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-logs/media/gnome-logs-3-34.png</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-logs/media/org.gnome.Logs.svg</Path>
+            <Path fileType="doc">/usr/share/help/bg/gnome-logs/permissions.page</Path>
             <Path fileType="doc">/usr/share/help/ca/gnome-logs/index.page</Path>
             <Path fileType="doc">/usr/share/help/ca/gnome-logs/introduction.page</Path>
             <Path fileType="doc">/usr/share/help/ca/gnome-logs/legal.xml</Path>
@@ -109,6 +115,12 @@
             <Path fileType="doc">/usr/share/help/it/gnome-logs/media/gnome-logs-3-34.png</Path>
             <Path fileType="doc">/usr/share/help/it/gnome-logs/media/org.gnome.Logs.svg</Path>
             <Path fileType="doc">/usr/share/help/it/gnome-logs/permissions.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-logs/index.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-logs/introduction.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-logs/legal.xml</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-logs/media/gnome-logs-3-34.png</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-logs/media/org.gnome.Logs.svg</Path>
+            <Path fileType="doc">/usr/share/help/kk/gnome-logs/permissions.page</Path>
             <Path fileType="doc">/usr/share/help/ko/gnome-logs/index.page</Path>
             <Path fileType="doc">/usr/share/help/ko/gnome-logs/introduction.page</Path>
             <Path fileType="doc">/usr/share/help/ko/gnome-logs/legal.xml</Path>
@@ -145,6 +157,12 @@
             <Path fileType="doc">/usr/share/help/ru/gnome-logs/media/gnome-logs-3-34.png</Path>
             <Path fileType="doc">/usr/share/help/ru/gnome-logs/media/org.gnome.Logs.svg</Path>
             <Path fileType="doc">/usr/share/help/ru/gnome-logs/permissions.page</Path>
+            <Path fileType="doc">/usr/share/help/sl/gnome-logs/index.page</Path>
+            <Path fileType="doc">/usr/share/help/sl/gnome-logs/introduction.page</Path>
+            <Path fileType="doc">/usr/share/help/sl/gnome-logs/legal.xml</Path>
+            <Path fileType="doc">/usr/share/help/sl/gnome-logs/media/gnome-logs-3-34.png</Path>
+            <Path fileType="doc">/usr/share/help/sl/gnome-logs/media/org.gnome.Logs.svg</Path>
+            <Path fileType="doc">/usr/share/help/sl/gnome-logs/permissions.page</Path>
             <Path fileType="doc">/usr/share/help/sv/gnome-logs/index.page</Path>
             <Path fileType="doc">/usr/share/help/sv/gnome-logs/introduction.page</Path>
             <Path fileType="doc">/usr/share/help/sv/gnome-logs/legal.xml</Path>
@@ -197,8 +215,10 @@
             <Path fileType="localedata">/usr/share/locale/gd/LC_MESSAGES/gnome-logs.mo</Path>
             <Path fileType="localedata">/usr/share/locale/gl/LC_MESSAGES/gnome-logs.mo</Path>
             <Path fileType="localedata">/usr/share/locale/he/LC_MESSAGES/gnome-logs.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/hi/LC_MESSAGES/gnome-logs.mo</Path>
             <Path fileType="localedata">/usr/share/locale/hr/LC_MESSAGES/gnome-logs.mo</Path>
             <Path fileType="localedata">/usr/share/locale/hu/LC_MESSAGES/gnome-logs.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/ia/LC_MESSAGES/gnome-logs.mo</Path>
             <Path fileType="localedata">/usr/share/locale/id/LC_MESSAGES/gnome-logs.mo</Path>
             <Path fileType="localedata">/usr/share/locale/is/LC_MESSAGES/gnome-logs.mo</Path>
             <Path fileType="localedata">/usr/share/locale/it/LC_MESSAGES/gnome-logs.mo</Path>
@@ -231,18 +251,20 @@
             <Path fileType="localedata">/usr/share/locale/tg/LC_MESSAGES/gnome-logs.mo</Path>
             <Path fileType="localedata">/usr/share/locale/th/LC_MESSAGES/gnome-logs.mo</Path>
             <Path fileType="localedata">/usr/share/locale/tr/LC_MESSAGES/gnome-logs.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/ug/LC_MESSAGES/gnome-logs.mo</Path>
             <Path fileType="localedata">/usr/share/locale/uk/LC_MESSAGES/gnome-logs.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/uz/LC_MESSAGES/gnome-logs.mo</Path>
             <Path fileType="localedata">/usr/share/locale/vi/LC_MESSAGES/gnome-logs.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_CN/LC_MESSAGES/gnome-logs.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_HK/LC_MESSAGES/gnome-logs.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_TW/LC_MESSAGES/gnome-logs.mo</Path>
-            <Path fileType="data">/usr/share/metainfo/org.gnome.Logs.appdata.xml</Path>
+            <Path fileType="data">/usr/share/metainfo/org.gnome.Logs.metainfo.xml</Path>
         </Files>
     </Package>
     <History>
-        <Update release="23">
-            <Date>2024-03-26</Date>
-            <Version>45.0</Version>
+        <Update release="25">
+            <Date>2026-03-21</Date>
+            <Version>50.0</Version>
             <Comment>Packaging update</Comment>
             <Name>Joey Riches</Name>
             <Email>josephriches@gmail.com</Email>

@@ -3,8 +3,8 @@
         <Name>hyprutils</Name>
         <Homepage>https://github.com/hyprwm/hyprutils</Homepage>
         <Packager>
-            <Name>Dariusz Mencel</Name>
-            <Email>dariusz.bajon@gmail.com</Email>
+            <Name>David Harder</Name>
+            <Email>david@davidjharder.ca</Email>
         </Packager>
         <License>BSD-3-Clause</License>
         <PartOf>desktop.hyprland</PartOf>
@@ -20,8 +20,9 @@
 </Description>
         <PartOf>desktop.hyprland</PartOf>
         <Files>
-            <Path fileType="library">/usr/lib64/libhyprutils.so.0.10.0</Path>
-            <Path fileType="library">/usr/lib64/libhyprutils.so.9</Path>
+            <Path fileType="library">/usr/lib64/libhyprutils.so.0.13.1</Path>
+            <Path fileType="library">/usr/lib64/libhyprutils.so.12</Path>
+            <Path fileType="data">/usr/share/licenses/hyprutils/LICENSE</Path>
         </Files>
     </Package>
     <Package>
@@ -31,13 +32,16 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="17">hyprutils</Dependency>
+            <Dependency release="26">hyprutils</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/hyprutils/animation/AnimatedVariable.hpp</Path>
             <Path fileType="header">/usr/include/hyprutils/animation/AnimationConfig.hpp</Path>
             <Path fileType="header">/usr/include/hyprutils/animation/AnimationManager.hpp</Path>
             <Path fileType="header">/usr/include/hyprutils/animation/BezierCurve.hpp</Path>
+            <Path fileType="header">/usr/include/hyprutils/cli/ArgumentParser.hpp</Path>
+            <Path fileType="header">/usr/include/hyprutils/cli/Logger.hpp</Path>
+            <Path fileType="header">/usr/include/hyprutils/i18n/I18nEngine.hpp</Path>
             <Path fileType="header">/usr/include/hyprutils/math/Box.hpp</Path>
             <Path fileType="header">/usr/include/hyprutils/math/Edges.hpp</Path>
             <Path fileType="header">/usr/include/hyprutils/math/Mat3x3.hpp</Path>
@@ -50,26 +54,29 @@
             <Path fileType="header">/usr/include/hyprutils/memory/SharedPtr.hpp</Path>
             <Path fileType="header">/usr/include/hyprutils/memory/UniquePtr.hpp</Path>
             <Path fileType="header">/usr/include/hyprutils/memory/WeakPtr.hpp</Path>
+            <Path fileType="header">/usr/include/hyprutils/os/File.hpp</Path>
             <Path fileType="header">/usr/include/hyprutils/os/FileDescriptor.hpp</Path>
             <Path fileType="header">/usr/include/hyprutils/os/Process.hpp</Path>
             <Path fileType="header">/usr/include/hyprutils/path/Path.hpp</Path>
             <Path fileType="header">/usr/include/hyprutils/signal/Listener.hpp</Path>
             <Path fileType="header">/usr/include/hyprutils/signal/Signal.hpp</Path>
             <Path fileType="header">/usr/include/hyprutils/string/ConstVarList.hpp</Path>
+            <Path fileType="header">/usr/include/hyprutils/string/Numeric.hpp</Path>
             <Path fileType="header">/usr/include/hyprutils/string/String.hpp</Path>
             <Path fileType="header">/usr/include/hyprutils/string/VarList.hpp</Path>
+            <Path fileType="header">/usr/include/hyprutils/string/VarList2.hpp</Path>
             <Path fileType="header">/usr/include/hyprutils/utils/ScopeGuard.hpp</Path>
             <Path fileType="library">/usr/lib64/libhyprutils.so</Path>
             <Path fileType="data">/usr/lib64/pkgconfig/hyprutils.pc</Path>
         </Files>
     </Package>
     <History>
-        <Update release="17">
-            <Date>2025-10-09</Date>
-            <Version>0.10.0</Version>
+        <Update release="26">
+            <Date>2026-05-09</Date>
+            <Version>0.13.1</Version>
             <Comment>Packaging update</Comment>
-            <Name>Dariusz Mencel</Name>
-            <Email>dariusz.bajon@gmail.com</Email>
+            <Name>David Harder</Name>
+            <Email>david@davidjharder.ca</Email>
         </Update>
     </History>
 </PISI>

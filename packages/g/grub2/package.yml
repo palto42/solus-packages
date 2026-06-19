@@ -1,44 +1,69 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : grub2
-version    : '2.12'
-release    : 40
+version    : '2.14'
+release    : 41
 source     :
-    - git|https://git.savannah.gnu.org/git/grub.git : 5ca9db22e8ed0dbebb2aec53722972de0680a463
+    - git|https://git.savannah.gnu.org/git/grub.git : d38d6a1a9b79427848976f53d474392cd29c2a71
+    - git|https://git.savannah.gnu.org/git/gnulib.git : 9f48fb992a3d7e96610c4ce8be969cff2d61a01b
 homepage   : https://www.gnu.org/software/grub/
 license    :
     - GPL-3.0-or-later
     # for included terminus fonts in redistributable BDF format
     - OFL-1.1
 component  : system.boot
-networking : true # Needed for bootstrap
 summary    : GRUB Boot Loader
 description: |
     GRUB Boot Loader
 builddeps  :
     - pkgconfig(devmapper)
     - pkgconfig(freetype2)
-    - pkgconfig(fuse)
+    - pkgconfig(fuse3)
     - pkgconfig(liblz4)
     - pkgconfig(liblzma)
-strip      : false
+    - autoconf-archive
+    - wget
 rundeps    :
     - os-prober
+networking : true # Needed for bootstrap
+strip      : false
 environment: |
     unset CFLAGS
     unset CXXFLAGS
     unset LDFLAGS
 setup      : |
+    cp -a ${sources}/gnulib.git ${workdir}/gnulib
+
+    reverts=(
+        # configure: Check linker for --image-base support
+        '1a5417f39a0ccefcdd5440f2a67f84d2d2e26960'
+        # configure: Print a more helpful error if autoconf-archive is not installed
+        'ac042f3f58d33ce9cd5ff61750f06da1a1d7b0eb'
+    )
+
+    echo "Applying reverts"
+    for _c in "${reverts[@]}"; do
+        if [[ "${_c}" == *..* ]]; then _l='--reverse'; else _l='--max-count=1'; fi
+        git log --oneline "${_l}" "${_c}"
+        git revert --mainline 1 --no-commit "${_c}"
+    done
+
     %apply_patches
-    PYTHON=python3 ./bootstrap
-    %autogen --disable-efiemu \
-             --disable-werror \
-             --enable-device-mapper \
-             --enable-grub-mount \
-             --target="i386" \
-             --with-platform="pc"
+
+    PYTHON=python3 ./bootstrap \
+        --gnulib-srcdir="${workdir}/gnulib"
+
+    %autogen \
+        --disable-efiemu \
+        --disable-werror \
+        --enable-device-mapper \
+        --enable-grub-mount \
+        --target="i386" \
+        --with-platform="pc"
 build      : |
     %make
 install    : |
     %make_install
+    %install_license COPYING
     install -Dm00755 $pkgfiles/update-grub  -t $installdir/usr/sbin
     install -Dm00755 $pkgfiles/update-grub2 -t $installdir/usr/sbin
     install -Dm00644 $pkgfiles/conf/grub    -t $installdir/etc/default

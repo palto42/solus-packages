@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : xorg-xwayland
-version    : 24.1.8
-release    : 36
+version    : 24.1.12
+release    : 40
 source     :
-    - https://www.x.org/releases/individual/xserver/xwayland-24.1.8.tar.xz : c8908d57c8ed9ceb8293c16ba7ad5af522efaf1ba7e51f9e4cf3c0774d199907
+    - https://www.x.org/releases/individual/xserver/xwayland-24.1.12.tar.xz : 6df02c511b92c1b9848734d9d1b03a4c24f8375ba3cada44e9684a21b5f78e21
 license    : MIT
 component  : xorg.server
 homepage   : https://www.x.org/

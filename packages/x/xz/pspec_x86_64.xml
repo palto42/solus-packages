@@ -3,8 +3,8 @@
         <Name>xz</Name>
         <Homepage>https://tukaani.org/xz/</Homepage>
         <Packager>
-            <Name>Reilly Brogan</Name>
-            <Email>solus@reillybrogan.com</Email>
+            <Name>Evan Maddock</Name>
+            <Email>maddock.evan@vivaldi.net</Email>
         </Packager>
         <License>0BSD</License>
         <License>GPL-2.0-or-later</License>
@@ -45,7 +45,12 @@
             <Path fileType="executable">/usr/bin/xzless</Path>
             <Path fileType="executable">/usr/bin/xzmore</Path>
             <Path fileType="library">/usr/lib64/liblzma.so.5</Path>
-            <Path fileType="library">/usr/lib64/liblzma.so.5.8.1</Path>
+            <Path fileType="library">/usr/lib64/liblzma.so.5.8.3</Path>
+            <Path fileType="data">/usr/share/licenses/xz/COPYING</Path>
+            <Path fileType="data">/usr/share/licenses/xz/COPYING.0BSD</Path>
+            <Path fileType="data">/usr/share/licenses/xz/COPYING.GPLv2</Path>
+            <Path fileType="data">/usr/share/licenses/xz/COPYING.GPLv3</Path>
+            <Path fileType="data">/usr/share/licenses/xz/COPYING.LGPLv2.1</Path>
             <Path fileType="localedata">/usr/share/locale/ca/LC_MESSAGES/xz.mo</Path>
             <Path fileType="localedata">/usr/share/locale/cs/LC_MESSAGES/xz.mo</Path>
             <Path fileType="localedata">/usr/share/locale/da/LC_MESSAGES/xz.mo</Path>
@@ -71,6 +76,29 @@
             <Path fileType="localedata">/usr/share/locale/vi/LC_MESSAGES/xz.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_CN/LC_MESSAGES/xz.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_TW/LC_MESSAGES/xz.mo</Path>
+            <Path fileType="man">/usr/share/man/ar/man1/lzcat.1</Path>
+            <Path fileType="man">/usr/share/man/ar/man1/lzcmp.1</Path>
+            <Path fileType="man">/usr/share/man/ar/man1/lzdiff.1</Path>
+            <Path fileType="man">/usr/share/man/ar/man1/lzegrep.1</Path>
+            <Path fileType="man">/usr/share/man/ar/man1/lzfgrep.1</Path>
+            <Path fileType="man">/usr/share/man/ar/man1/lzgrep.1</Path>
+            <Path fileType="man">/usr/share/man/ar/man1/lzless.1</Path>
+            <Path fileType="man">/usr/share/man/ar/man1/lzma.1</Path>
+            <Path fileType="man">/usr/share/man/ar/man1/lzmadec.1</Path>
+            <Path fileType="man">/usr/share/man/ar/man1/lzmainfo.1.zst</Path>
+            <Path fileType="man">/usr/share/man/ar/man1/lzmore.1</Path>
+            <Path fileType="man">/usr/share/man/ar/man1/unlzma.1</Path>
+            <Path fileType="man">/usr/share/man/ar/man1/unxz.1</Path>
+            <Path fileType="man">/usr/share/man/ar/man1/xz.1.zst</Path>
+            <Path fileType="man">/usr/share/man/ar/man1/xzcat.1</Path>
+            <Path fileType="man">/usr/share/man/ar/man1/xzcmp.1</Path>
+            <Path fileType="man">/usr/share/man/ar/man1/xzdec.1.zst</Path>
+            <Path fileType="man">/usr/share/man/ar/man1/xzdiff.1.zst</Path>
+            <Path fileType="man">/usr/share/man/ar/man1/xzegrep.1</Path>
+            <Path fileType="man">/usr/share/man/ar/man1/xzfgrep.1</Path>
+            <Path fileType="man">/usr/share/man/ar/man1/xzgrep.1.zst</Path>
+            <Path fileType="man">/usr/share/man/ar/man1/xzless.1.zst</Path>
+            <Path fileType="man">/usr/share/man/ar/man1/xzmore.1.zst</Path>
             <Path fileType="man">/usr/share/man/de/man1/lzcat.1</Path>
             <Path fileType="man">/usr/share/man/de/man1/lzcmp.1</Path>
             <Path fileType="man">/usr/share/man/de/man1/lzdiff.1</Path>
@@ -80,31 +108,31 @@
             <Path fileType="man">/usr/share/man/de/man1/lzless.1</Path>
             <Path fileType="man">/usr/share/man/de/man1/lzma.1</Path>
             <Path fileType="man">/usr/share/man/de/man1/lzmadec.1</Path>
-            <Path fileType="man">/usr/share/man/de/man1/lzmainfo.1</Path>
+            <Path fileType="man">/usr/share/man/de/man1/lzmainfo.1.zst</Path>
             <Path fileType="man">/usr/share/man/de/man1/lzmore.1</Path>
             <Path fileType="man">/usr/share/man/de/man1/unlzma.1</Path>
             <Path fileType="man">/usr/share/man/de/man1/unxz.1</Path>
-            <Path fileType="man">/usr/share/man/de/man1/xz.1</Path>
+            <Path fileType="man">/usr/share/man/de/man1/xz.1.zst</Path>
             <Path fileType="man">/usr/share/man/de/man1/xzcat.1</Path>
             <Path fileType="man">/usr/share/man/de/man1/xzcmp.1</Path>
-            <Path fileType="man">/usr/share/man/de/man1/xzdec.1</Path>
-            <Path fileType="man">/usr/share/man/de/man1/xzdiff.1</Path>
+            <Path fileType="man">/usr/share/man/de/man1/xzdec.1.zst</Path>
+            <Path fileType="man">/usr/share/man/de/man1/xzdiff.1.zst</Path>
             <Path fileType="man">/usr/share/man/de/man1/xzegrep.1</Path>
             <Path fileType="man">/usr/share/man/de/man1/xzfgrep.1</Path>
-            <Path fileType="man">/usr/share/man/de/man1/xzgrep.1</Path>
-            <Path fileType="man">/usr/share/man/de/man1/xzless.1</Path>
-            <Path fileType="man">/usr/share/man/de/man1/xzmore.1</Path>
+            <Path fileType="man">/usr/share/man/de/man1/xzgrep.1.zst</Path>
+            <Path fileType="man">/usr/share/man/de/man1/xzless.1.zst</Path>
+            <Path fileType="man">/usr/share/man/de/man1/xzmore.1.zst</Path>
             <Path fileType="man">/usr/share/man/fr/man1/lzcat.1</Path>
             <Path fileType="man">/usr/share/man/fr/man1/lzless.1</Path>
             <Path fileType="man">/usr/share/man/fr/man1/lzma.1</Path>
             <Path fileType="man">/usr/share/man/fr/man1/lzmadec.1</Path>
-            <Path fileType="man">/usr/share/man/fr/man1/lzmainfo.1</Path>
+            <Path fileType="man">/usr/share/man/fr/man1/lzmainfo.1.zst</Path>
             <Path fileType="man">/usr/share/man/fr/man1/unlzma.1</Path>
             <Path fileType="man">/usr/share/man/fr/man1/unxz.1</Path>
-            <Path fileType="man">/usr/share/man/fr/man1/xz.1</Path>
+            <Path fileType="man">/usr/share/man/fr/man1/xz.1.zst</Path>
             <Path fileType="man">/usr/share/man/fr/man1/xzcat.1</Path>
-            <Path fileType="man">/usr/share/man/fr/man1/xzdec.1</Path>
-            <Path fileType="man">/usr/share/man/fr/man1/xzless.1</Path>
+            <Path fileType="man">/usr/share/man/fr/man1/xzdec.1.zst</Path>
+            <Path fileType="man">/usr/share/man/fr/man1/xzless.1.zst</Path>
             <Path fileType="man">/usr/share/man/it/man1/lzcat.1</Path>
             <Path fileType="man">/usr/share/man/it/man1/lzcmp.1</Path>
             <Path fileType="man">/usr/share/man/it/man1/lzdiff.1</Path>
@@ -114,20 +142,20 @@
             <Path fileType="man">/usr/share/man/it/man1/lzless.1</Path>
             <Path fileType="man">/usr/share/man/it/man1/lzma.1</Path>
             <Path fileType="man">/usr/share/man/it/man1/lzmadec.1</Path>
-            <Path fileType="man">/usr/share/man/it/man1/lzmainfo.1</Path>
+            <Path fileType="man">/usr/share/man/it/man1/lzmainfo.1.zst</Path>
             <Path fileType="man">/usr/share/man/it/man1/lzmore.1</Path>
             <Path fileType="man">/usr/share/man/it/man1/unlzma.1</Path>
             <Path fileType="man">/usr/share/man/it/man1/unxz.1</Path>
-            <Path fileType="man">/usr/share/man/it/man1/xz.1</Path>
+            <Path fileType="man">/usr/share/man/it/man1/xz.1.zst</Path>
             <Path fileType="man">/usr/share/man/it/man1/xzcat.1</Path>
             <Path fileType="man">/usr/share/man/it/man1/xzcmp.1</Path>
-            <Path fileType="man">/usr/share/man/it/man1/xzdec.1</Path>
-            <Path fileType="man">/usr/share/man/it/man1/xzdiff.1</Path>
+            <Path fileType="man">/usr/share/man/it/man1/xzdec.1.zst</Path>
+            <Path fileType="man">/usr/share/man/it/man1/xzdiff.1.zst</Path>
             <Path fileType="man">/usr/share/man/it/man1/xzegrep.1</Path>
             <Path fileType="man">/usr/share/man/it/man1/xzfgrep.1</Path>
-            <Path fileType="man">/usr/share/man/it/man1/xzgrep.1</Path>
-            <Path fileType="man">/usr/share/man/it/man1/xzless.1</Path>
-            <Path fileType="man">/usr/share/man/it/man1/xzmore.1</Path>
+            <Path fileType="man">/usr/share/man/it/man1/xzgrep.1.zst</Path>
+            <Path fileType="man">/usr/share/man/it/man1/xzless.1.zst</Path>
+            <Path fileType="man">/usr/share/man/it/man1/xzmore.1.zst</Path>
             <Path fileType="man">/usr/share/man/ko/man1/lzcat.1</Path>
             <Path fileType="man">/usr/share/man/ko/man1/lzcmp.1</Path>
             <Path fileType="man">/usr/share/man/ko/man1/lzdiff.1</Path>
@@ -137,20 +165,20 @@
             <Path fileType="man">/usr/share/man/ko/man1/lzless.1</Path>
             <Path fileType="man">/usr/share/man/ko/man1/lzma.1</Path>
             <Path fileType="man">/usr/share/man/ko/man1/lzmadec.1</Path>
-            <Path fileType="man">/usr/share/man/ko/man1/lzmainfo.1</Path>
+            <Path fileType="man">/usr/share/man/ko/man1/lzmainfo.1.zst</Path>
             <Path fileType="man">/usr/share/man/ko/man1/lzmore.1</Path>
             <Path fileType="man">/usr/share/man/ko/man1/unlzma.1</Path>
             <Path fileType="man">/usr/share/man/ko/man1/unxz.1</Path>
-            <Path fileType="man">/usr/share/man/ko/man1/xz.1</Path>
+            <Path fileType="man">/usr/share/man/ko/man1/xz.1.zst</Path>
             <Path fileType="man">/usr/share/man/ko/man1/xzcat.1</Path>
             <Path fileType="man">/usr/share/man/ko/man1/xzcmp.1</Path>
-            <Path fileType="man">/usr/share/man/ko/man1/xzdec.1</Path>
-            <Path fileType="man">/usr/share/man/ko/man1/xzdiff.1</Path>
+            <Path fileType="man">/usr/share/man/ko/man1/xzdec.1.zst</Path>
+            <Path fileType="man">/usr/share/man/ko/man1/xzdiff.1.zst</Path>
             <Path fileType="man">/usr/share/man/ko/man1/xzegrep.1</Path>
             <Path fileType="man">/usr/share/man/ko/man1/xzfgrep.1</Path>
-            <Path fileType="man">/usr/share/man/ko/man1/xzgrep.1</Path>
-            <Path fileType="man">/usr/share/man/ko/man1/xzless.1</Path>
-            <Path fileType="man">/usr/share/man/ko/man1/xzmore.1</Path>
+            <Path fileType="man">/usr/share/man/ko/man1/xzgrep.1.zst</Path>
+            <Path fileType="man">/usr/share/man/ko/man1/xzless.1.zst</Path>
+            <Path fileType="man">/usr/share/man/ko/man1/xzmore.1.zst</Path>
             <Path fileType="man">/usr/share/man/man1/lzcat.1</Path>
             <Path fileType="man">/usr/share/man/man1/lzcmp.1</Path>
             <Path fileType="man">/usr/share/man/man1/lzdiff.1</Path>
@@ -160,31 +188,31 @@
             <Path fileType="man">/usr/share/man/man1/lzless.1</Path>
             <Path fileType="man">/usr/share/man/man1/lzma.1</Path>
             <Path fileType="man">/usr/share/man/man1/lzmadec.1</Path>
-            <Path fileType="man">/usr/share/man/man1/lzmainfo.1</Path>
+            <Path fileType="man">/usr/share/man/man1/lzmainfo.1.zst</Path>
             <Path fileType="man">/usr/share/man/man1/lzmore.1</Path>
             <Path fileType="man">/usr/share/man/man1/unlzma.1</Path>
             <Path fileType="man">/usr/share/man/man1/unxz.1</Path>
-            <Path fileType="man">/usr/share/man/man1/xz.1</Path>
+            <Path fileType="man">/usr/share/man/man1/xz.1.zst</Path>
             <Path fileType="man">/usr/share/man/man1/xzcat.1</Path>
             <Path fileType="man">/usr/share/man/man1/xzcmp.1</Path>
-            <Path fileType="man">/usr/share/man/man1/xzdec.1</Path>
-            <Path fileType="man">/usr/share/man/man1/xzdiff.1</Path>
+            <Path fileType="man">/usr/share/man/man1/xzdec.1.zst</Path>
+            <Path fileType="man">/usr/share/man/man1/xzdiff.1.zst</Path>
             <Path fileType="man">/usr/share/man/man1/xzegrep.1</Path>
             <Path fileType="man">/usr/share/man/man1/xzfgrep.1</Path>
-            <Path fileType="man">/usr/share/man/man1/xzgrep.1</Path>
-            <Path fileType="man">/usr/share/man/man1/xzless.1</Path>
-            <Path fileType="man">/usr/share/man/man1/xzmore.1</Path>
+            <Path fileType="man">/usr/share/man/man1/xzgrep.1.zst</Path>
+            <Path fileType="man">/usr/share/man/man1/xzless.1.zst</Path>
+            <Path fileType="man">/usr/share/man/man1/xzmore.1.zst</Path>
             <Path fileType="man">/usr/share/man/pt_BR/man1/lzcat.1</Path>
             <Path fileType="man">/usr/share/man/pt_BR/man1/lzless.1</Path>
             <Path fileType="man">/usr/share/man/pt_BR/man1/lzma.1</Path>
             <Path fileType="man">/usr/share/man/pt_BR/man1/lzmadec.1</Path>
-            <Path fileType="man">/usr/share/man/pt_BR/man1/lzmainfo.1</Path>
+            <Path fileType="man">/usr/share/man/pt_BR/man1/lzmainfo.1.zst</Path>
             <Path fileType="man">/usr/share/man/pt_BR/man1/unlzma.1</Path>
             <Path fileType="man">/usr/share/man/pt_BR/man1/unxz.1</Path>
-            <Path fileType="man">/usr/share/man/pt_BR/man1/xz.1</Path>
+            <Path fileType="man">/usr/share/man/pt_BR/man1/xz.1.zst</Path>
             <Path fileType="man">/usr/share/man/pt_BR/man1/xzcat.1</Path>
-            <Path fileType="man">/usr/share/man/pt_BR/man1/xzdec.1</Path>
-            <Path fileType="man">/usr/share/man/pt_BR/man1/xzless.1</Path>
+            <Path fileType="man">/usr/share/man/pt_BR/man1/xzdec.1.zst</Path>
+            <Path fileType="man">/usr/share/man/pt_BR/man1/xzless.1.zst</Path>
             <Path fileType="man">/usr/share/man/ro/man1/lzcat.1</Path>
             <Path fileType="man">/usr/share/man/ro/man1/lzcmp.1</Path>
             <Path fileType="man">/usr/share/man/ro/man1/lzdiff.1</Path>
@@ -194,20 +222,20 @@
             <Path fileType="man">/usr/share/man/ro/man1/lzless.1</Path>
             <Path fileType="man">/usr/share/man/ro/man1/lzma.1</Path>
             <Path fileType="man">/usr/share/man/ro/man1/lzmadec.1</Path>
-            <Path fileType="man">/usr/share/man/ro/man1/lzmainfo.1</Path>
+            <Path fileType="man">/usr/share/man/ro/man1/lzmainfo.1.zst</Path>
             <Path fileType="man">/usr/share/man/ro/man1/lzmore.1</Path>
             <Path fileType="man">/usr/share/man/ro/man1/unlzma.1</Path>
             <Path fileType="man">/usr/share/man/ro/man1/unxz.1</Path>
-            <Path fileType="man">/usr/share/man/ro/man1/xz.1</Path>
+            <Path fileType="man">/usr/share/man/ro/man1/xz.1.zst</Path>
             <Path fileType="man">/usr/share/man/ro/man1/xzcat.1</Path>
             <Path fileType="man">/usr/share/man/ro/man1/xzcmp.1</Path>
-            <Path fileType="man">/usr/share/man/ro/man1/xzdec.1</Path>
-            <Path fileType="man">/usr/share/man/ro/man1/xzdiff.1</Path>
+            <Path fileType="man">/usr/share/man/ro/man1/xzdec.1.zst</Path>
+            <Path fileType="man">/usr/share/man/ro/man1/xzdiff.1.zst</Path>
             <Path fileType="man">/usr/share/man/ro/man1/xzegrep.1</Path>
             <Path fileType="man">/usr/share/man/ro/man1/xzfgrep.1</Path>
-            <Path fileType="man">/usr/share/man/ro/man1/xzgrep.1</Path>
-            <Path fileType="man">/usr/share/man/ro/man1/xzless.1</Path>
-            <Path fileType="man">/usr/share/man/ro/man1/xzmore.1</Path>
+            <Path fileType="man">/usr/share/man/ro/man1/xzgrep.1.zst</Path>
+            <Path fileType="man">/usr/share/man/ro/man1/xzless.1.zst</Path>
+            <Path fileType="man">/usr/share/man/ro/man1/xzmore.1.zst</Path>
             <Path fileType="man">/usr/share/man/sr/man1/lzcat.1</Path>
             <Path fileType="man">/usr/share/man/sr/man1/lzcmp.1</Path>
             <Path fileType="man">/usr/share/man/sr/man1/lzdiff.1</Path>
@@ -217,20 +245,43 @@
             <Path fileType="man">/usr/share/man/sr/man1/lzless.1</Path>
             <Path fileType="man">/usr/share/man/sr/man1/lzma.1</Path>
             <Path fileType="man">/usr/share/man/sr/man1/lzmadec.1</Path>
-            <Path fileType="man">/usr/share/man/sr/man1/lzmainfo.1</Path>
+            <Path fileType="man">/usr/share/man/sr/man1/lzmainfo.1.zst</Path>
             <Path fileType="man">/usr/share/man/sr/man1/lzmore.1</Path>
             <Path fileType="man">/usr/share/man/sr/man1/unlzma.1</Path>
             <Path fileType="man">/usr/share/man/sr/man1/unxz.1</Path>
-            <Path fileType="man">/usr/share/man/sr/man1/xz.1</Path>
+            <Path fileType="man">/usr/share/man/sr/man1/xz.1.zst</Path>
             <Path fileType="man">/usr/share/man/sr/man1/xzcat.1</Path>
             <Path fileType="man">/usr/share/man/sr/man1/xzcmp.1</Path>
-            <Path fileType="man">/usr/share/man/sr/man1/xzdec.1</Path>
-            <Path fileType="man">/usr/share/man/sr/man1/xzdiff.1</Path>
+            <Path fileType="man">/usr/share/man/sr/man1/xzdec.1.zst</Path>
+            <Path fileType="man">/usr/share/man/sr/man1/xzdiff.1.zst</Path>
             <Path fileType="man">/usr/share/man/sr/man1/xzegrep.1</Path>
             <Path fileType="man">/usr/share/man/sr/man1/xzfgrep.1</Path>
-            <Path fileType="man">/usr/share/man/sr/man1/xzgrep.1</Path>
-            <Path fileType="man">/usr/share/man/sr/man1/xzless.1</Path>
-            <Path fileType="man">/usr/share/man/sr/man1/xzmore.1</Path>
+            <Path fileType="man">/usr/share/man/sr/man1/xzgrep.1.zst</Path>
+            <Path fileType="man">/usr/share/man/sr/man1/xzless.1.zst</Path>
+            <Path fileType="man">/usr/share/man/sr/man1/xzmore.1.zst</Path>
+            <Path fileType="man">/usr/share/man/sv/man1/lzcat.1</Path>
+            <Path fileType="man">/usr/share/man/sv/man1/lzcmp.1</Path>
+            <Path fileType="man">/usr/share/man/sv/man1/lzdiff.1</Path>
+            <Path fileType="man">/usr/share/man/sv/man1/lzegrep.1</Path>
+            <Path fileType="man">/usr/share/man/sv/man1/lzfgrep.1</Path>
+            <Path fileType="man">/usr/share/man/sv/man1/lzgrep.1</Path>
+            <Path fileType="man">/usr/share/man/sv/man1/lzless.1</Path>
+            <Path fileType="man">/usr/share/man/sv/man1/lzma.1</Path>
+            <Path fileType="man">/usr/share/man/sv/man1/lzmadec.1</Path>
+            <Path fileType="man">/usr/share/man/sv/man1/lzmainfo.1.zst</Path>
+            <Path fileType="man">/usr/share/man/sv/man1/lzmore.1</Path>
+            <Path fileType="man">/usr/share/man/sv/man1/unlzma.1</Path>
+            <Path fileType="man">/usr/share/man/sv/man1/unxz.1</Path>
+            <Path fileType="man">/usr/share/man/sv/man1/xz.1.zst</Path>
+            <Path fileType="man">/usr/share/man/sv/man1/xzcat.1</Path>
+            <Path fileType="man">/usr/share/man/sv/man1/xzcmp.1</Path>
+            <Path fileType="man">/usr/share/man/sv/man1/xzdec.1.zst</Path>
+            <Path fileType="man">/usr/share/man/sv/man1/xzdiff.1.zst</Path>
+            <Path fileType="man">/usr/share/man/sv/man1/xzegrep.1</Path>
+            <Path fileType="man">/usr/share/man/sv/man1/xzfgrep.1</Path>
+            <Path fileType="man">/usr/share/man/sv/man1/xzgrep.1.zst</Path>
+            <Path fileType="man">/usr/share/man/sv/man1/xzless.1.zst</Path>
+            <Path fileType="man">/usr/share/man/sv/man1/xzmore.1.zst</Path>
             <Path fileType="man">/usr/share/man/uk/man1/lzcat.1</Path>
             <Path fileType="man">/usr/share/man/uk/man1/lzcmp.1</Path>
             <Path fileType="man">/usr/share/man/uk/man1/lzdiff.1</Path>
@@ -240,20 +291,20 @@
             <Path fileType="man">/usr/share/man/uk/man1/lzless.1</Path>
             <Path fileType="man">/usr/share/man/uk/man1/lzma.1</Path>
             <Path fileType="man">/usr/share/man/uk/man1/lzmadec.1</Path>
-            <Path fileType="man">/usr/share/man/uk/man1/lzmainfo.1</Path>
+            <Path fileType="man">/usr/share/man/uk/man1/lzmainfo.1.zst</Path>
             <Path fileType="man">/usr/share/man/uk/man1/lzmore.1</Path>
             <Path fileType="man">/usr/share/man/uk/man1/unlzma.1</Path>
             <Path fileType="man">/usr/share/man/uk/man1/unxz.1</Path>
-            <Path fileType="man">/usr/share/man/uk/man1/xz.1</Path>
+            <Path fileType="man">/usr/share/man/uk/man1/xz.1.zst</Path>
             <Path fileType="man">/usr/share/man/uk/man1/xzcat.1</Path>
             <Path fileType="man">/usr/share/man/uk/man1/xzcmp.1</Path>
-            <Path fileType="man">/usr/share/man/uk/man1/xzdec.1</Path>
-            <Path fileType="man">/usr/share/man/uk/man1/xzdiff.1</Path>
+            <Path fileType="man">/usr/share/man/uk/man1/xzdec.1.zst</Path>
+            <Path fileType="man">/usr/share/man/uk/man1/xzdiff.1.zst</Path>
             <Path fileType="man">/usr/share/man/uk/man1/xzegrep.1</Path>
             <Path fileType="man">/usr/share/man/uk/man1/xzfgrep.1</Path>
-            <Path fileType="man">/usr/share/man/uk/man1/xzgrep.1</Path>
-            <Path fileType="man">/usr/share/man/uk/man1/xzless.1</Path>
-            <Path fileType="man">/usr/share/man/uk/man1/xzmore.1</Path>
+            <Path fileType="man">/usr/share/man/uk/man1/xzgrep.1.zst</Path>
+            <Path fileType="man">/usr/share/man/uk/man1/xzless.1.zst</Path>
+            <Path fileType="man">/usr/share/man/uk/man1/xzmore.1.zst</Path>
         </Files>
     </Package>
     <Package>
@@ -263,11 +314,11 @@
 </Description>
         <PartOf>emul32</PartOf>
         <RuntimeDependencies>
-            <Dependency release="40">xz</Dependency>
+            <Dependency release="42">xz</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib32/liblzma.so.5</Path>
-            <Path fileType="library">/usr/lib32/liblzma.so.5.8.1</Path>
+            <Path fileType="library">/usr/lib32/liblzma.so.5.8.3</Path>
         </Files>
     </Package>
     <Package>
@@ -277,8 +328,8 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="40">xz-32bit</Dependency>
-            <Dependency release="40">xz-devel</Dependency>
+            <Dependency release="42">xz-devel</Dependency>
+            <Dependency release="42">xz-32bit</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib32/liblzma.so</Path>
@@ -292,7 +343,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="40">xz</Dependency>
+            <Dependency release="42">xz</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/lzma.h</Path>
@@ -342,12 +393,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="40">
-            <Date>2025-04-15</Date>
-            <Version>5.8.1</Version>
+        <Update release="42">
+            <Date>2026-03-31</Date>
+            <Version>5.8.3</Version>
             <Comment>Packaging update</Comment>
-            <Name>Reilly Brogan</Name>
-            <Email>solus@reillybrogan.com</Email>
+            <Name>Evan Maddock</Name>
+            <Email>maddock.evan@vivaldi.net</Email>
         </Update>
     </History>
 </PISI>

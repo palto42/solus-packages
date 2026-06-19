@@ -89,6 +89,7 @@ libsqlite3.so.0:sqlite3_db_name
 libsqlite3.so.0:sqlite3_db_readonly
 libsqlite3.so.0:sqlite3_db_release_memory
 libsqlite3.so.0:sqlite3_db_status
+libsqlite3.so.0:sqlite3_db_status64
 libsqlite3.so.0:sqlite3_declare_vtab
 libsqlite3.so.0:sqlite3_deserialize
 libsqlite3.so.0:sqlite3_drop_modules
@@ -197,6 +198,7 @@ libsqlite3.so.0:sqlite3_serialize
 libsqlite3.so.0:sqlite3_set_authorizer
 libsqlite3.so.0:sqlite3_set_auxdata
 libsqlite3.so.0:sqlite3_set_clientdata
+libsqlite3.so.0:sqlite3_set_errmsg
 libsqlite3.so.0:sqlite3_set_last_insert_rowid
 libsqlite3.so.0:sqlite3_setlk_timeout
 libsqlite3.so.0:sqlite3_shutdown
@@ -220,9 +222,11 @@ libsqlite3.so.0:sqlite3_str_appendchar
 libsqlite3.so.0:sqlite3_str_appendf
 libsqlite3.so.0:sqlite3_str_errcode
 libsqlite3.so.0:sqlite3_str_finish
+libsqlite3.so.0:sqlite3_str_free
 libsqlite3.so.0:sqlite3_str_length
 libsqlite3.so.0:sqlite3_str_new
 libsqlite3.so.0:sqlite3_str_reset
+libsqlite3.so.0:sqlite3_str_truncate
 libsqlite3.so.0:sqlite3_str_value
 libsqlite3.so.0:sqlite3_str_vappendf
 libsqlite3.so.0:sqlite3_strglob
@@ -289,6 +293,14 @@ libsqlite3.so.0:sqlite3_wal_hook
 libsqlite3.so.0:sqlite3changegroup_add
 libsqlite3.so.0:sqlite3changegroup_add_change
 libsqlite3.so.0:sqlite3changegroup_add_strm
+libsqlite3.so.0:sqlite3changegroup_change_begin
+libsqlite3.so.0:sqlite3changegroup_change_blob
+libsqlite3.so.0:sqlite3changegroup_change_double
+libsqlite3.so.0:sqlite3changegroup_change_finish
+libsqlite3.so.0:sqlite3changegroup_change_int64
+libsqlite3.so.0:sqlite3changegroup_change_null
+libsqlite3.so.0:sqlite3changegroup_change_text
+libsqlite3.so.0:sqlite3changegroup_config
 libsqlite3.so.0:sqlite3changegroup_delete
 libsqlite3.so.0:sqlite3changegroup_new
 libsqlite3.so.0:sqlite3changegroup_output
@@ -298,6 +310,8 @@ libsqlite3.so.0:sqlite3changeset_apply
 libsqlite3.so.0:sqlite3changeset_apply_strm
 libsqlite3.so.0:sqlite3changeset_apply_v2
 libsqlite3.so.0:sqlite3changeset_apply_v2_strm
+libsqlite3.so.0:sqlite3changeset_apply_v3
+libsqlite3.so.0:sqlite3changeset_apply_v3_strm
 libsqlite3.so.0:sqlite3changeset_concat
 libsqlite3.so.0:sqlite3changeset_concat_strm
 libsqlite3.so.0:sqlite3changeset_conflict

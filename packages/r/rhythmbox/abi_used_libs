@@ -5,7 +5,7 @@ libcairo.so.2
 libgdk-3.so.0
 libgdk_pixbuf-2.0.so.0
 libgio-2.0.so.0
-libgirepository-1.0.so.1
+libgirepository-2.0.so.0
 libglib-2.0.so.0
 libgobject-2.0.so.0
 libgrilo-0.3.so.0
@@ -23,8 +23,8 @@ libmtp.so.9
 libnotify.so.4
 libpango-1.0.so.0
 libpangocairo-1.0.so.0
-libpeas-1.0.so.0
-libpeas-gtk-1.0.so.0
+libpeas-1.0.so.1
+libpeas-gtk-1.0.so.1
 libsoup-3.0.so.0
 libtdb.so.1
 libtotem-plparser.so.18

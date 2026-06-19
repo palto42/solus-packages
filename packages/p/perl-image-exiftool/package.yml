@@ -1,10 +1,11 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : perl-image-exiftool
-version    : '12.76'
-release    : 24
+version    : '13.50'
+release    : 25
 source     :
-    - https://cpan.metacpan.org/authors/id/E/EX/EXIFTOOL/Image-ExifTool-12.76.tar.gz : 5d3430ec57aa031f7ca43170f7ed6338a66bda99ab95b9e071f1ee27555f515f
+    - https://github.com/exiftool/exiftool/archive/refs/tags/13.50.tar.gz : f392ec4f5471d0bc5d4de20ab23efe61392eb6e09e780781b9407e2eb95ad31e
 homepage   : https://exiftool.org/
-license    : Artistic-1.0-Perl
+license    : GPL-3.0-or-later
 component  : multimedia.library
 summary    : Reader and rewriter of EXIF informations that supports raw files
 description: |
@@ -21,5 +22,6 @@ build      : |
     %perl_build
 install    : |
     %perl_install
+    %install_license LICENSE
 check      : |
     %perl_build test

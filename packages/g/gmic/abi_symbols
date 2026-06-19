@@ -1,7 +1,11 @@
+gmic:.gomp_critical_user__min_max
+gmic:_IO_stdin_used
 gmic:_ZN4gmic6stdlibE
+gmic:main
 gmic:stderr
 gmic:stdin
 gmic:stdout
+gmic_gimp_qt:.gomp_critical_user__min_max
 gmic_gimp_qt:_IO_stdin_used
 gmic_gimp_qt:_Z16gmic_qt_get_typev
 gmic_gimp_qt:_Z22qInitResources_gmic_qtv
@@ -1535,7 +1539,11 @@ gmic_gimp_qt:_edata
 gmic_gimp_qt:_end
 gmic_gimp_qt:_start
 gmic_gimp_qt:main
+gmic_qt:.gomp_critical_user__min_max
+gmic_qt:_IO_stdin_used
+gmic_qt:main
 libgmic.so.1:.gomp_critical_user__correlate
+libgmic.so.1:.gomp_critical_user__min_max
 libgmic.so.1:.gomp_critical_user_abort
 libgmic.so.1:.gomp_critical_user_get_project_matrix
 libgmic.so.1:.gomp_critical_user_get_stats
@@ -1560,12 +1568,14 @@ libgmic.so.1:_ZN4gmic14get_debug_infoEPKcRjS2_
 libgmic.so.1:_ZN4gmic14selection2cimgEPKcjRKN12gmic_library9gmic_listIcEES1_b
 libgmic.so.1:_ZN4gmic16current_is_abortEv
 libgmic.so.1:_ZN4gmic17decompress_stdlibEv
-libgmic.so.1:_ZN4gmic20builtin_command_indsE
+libgmic.so.1:_ZN4gmic19builtin_command_idsE
 libgmic.so.1:_ZN4gmic20is_display_availableE
 libgmic.so.1:_ZN4gmic21_gmic_substitute_argsEPKcS1_S1_S1_
 libgmic.so.1:_ZN4gmic21builtin_command_namesE
+libgmic.so.1:_ZN4gmic23builtin_commands_boundsE
 libgmic.so.1:_ZN4gmic24command_line_to_CImgListEPKc
 libgmic.so.1:_ZN4gmic4warnEPKN12gmic_library10gmic_imageIjEEPKcz
+libgmic.so.1:_ZN4gmic4warnEPKcz
 libgmic.so.1:_ZN4gmic5debugEPKcz
 libgmic.so.1:_ZN4gmic5errorEbPKN12gmic_library10gmic_imageIjEEPKcS6_z
 libgmic.so.1:_ZN4gmic5errorEbPKcz
@@ -1593,4 +1603,4 @@ libgmic.so.1:_ZNK4gmic12get_variableEPKcPKjPKN12gmic_library9gmic_listIcEEPj
 libgmic.so.1:_ZNK4gmic16callstack2stringEPKN12gmic_library10gmic_imageIjEEb
 libgmic.so.1:_ZNK4gmic16callstack2stringERKN12gmic_library10gmic_imageIjEEb
 libgmic.so.1:_ZNK4gmic16callstack2stringEb
-libgmic.so.1:_ZNK4gmic16selection2stringERKN12gmic_library10gmic_imageIjEERKNS0_9gmic_listIcEEjRNS1_IcEE
+libgmic.so.1:_ZNK4gmic16selection2stringERKN12gmic_library10gmic_imageIjEEjRNS1_IcEE

@@ -1,12 +1,13 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : xdebug
-version    : 3.3.1
-release    : 9
+version    : 3.5.1
+release    : 10
 source     :
-    - https://github.com/xdebug/xdebug/archive/refs/tags/3.3.1.tar.gz : 76d0467154d7f2714a07f88c7c17658e24dd58fb919a9aa08ab4bc23dccce76d
-license    : Xdebug-License-1.02
-component  : programming.tools
+    - https://github.com/xdebug/xdebug/archive/refs/tags/3.5.1.tar.gz : 8fd5908d881a588688bd224c7e603212405fa700dc50513d0d366141c27cc78a
 homepage   : https://xdebug.org/
+license    : Xdebug-1.03
 summary    : Xdebug is a debugger and profiler for PHP.
+component  : programming.tools
 description: |
     Xdebug is a debugger and profiler for PHP.
 builddeps  :
@@ -23,3 +24,4 @@ build      : |
 install    : |
     install -Dm00644 modules/xdebug.so $installdir/usr/lib64/php/modules/xdebug.so
     install -Dm00644 $pkgfiles/xdebug.ini $installdir/etc/php/conf.d/xdebug.ini
+    %install_license LICENSE

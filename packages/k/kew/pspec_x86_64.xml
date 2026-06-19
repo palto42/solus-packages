@@ -1,0 +1,68 @@
+<PISI>
+    <Source>
+        <Name>kew</Name>
+        <Homepage>https://codeberg.org/ravachol/kew</Homepage>
+        <Packager>
+            <Name>Jared Cervantes</Name>
+            <Email>jared@jaredcervantes.com</Email>
+        </Packager>
+        <License>GPL-2.0-or-later</License>
+        <PartOf>multimedia.audio</PartOf>
+        <Summary xml:lang="en">Terminal music player</Summary>
+        <Description xml:lang="en">kew is a terminal music player with themes and cover-derived colors,
+lyrics support (.lrc, SYLT, Vorbis comments), MPRIS desktop integration,
+and support for MP3, FLAC, M4A/AAC, Opus, Ogg, WebM and WAV. It can search
+and browse your library with gapless playback, playlist editing, and a
+visualizer. Album art can be shown in sixel-capable terminals via Chafa.
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>kew</Name>
+        <Summary xml:lang="en">Terminal music player</Summary>
+        <Description xml:lang="en">kew is a terminal music player with themes and cover-derived colors,
+lyrics support (.lrc, SYLT, Vorbis comments), MPRIS desktop integration,
+and support for MP3, FLAC, M4A/AAC, Opus, Ogg, WebM and WAV. It can search
+and browse your library with gapless playback, playlist editing, and a
+visualizer. Album art can be shown in sixel-capable terminals via Chafa.
+</Description>
+        <PartOf>multimedia.audio</PartOf>
+        <Files>
+            <Path fileType="executable">/usr/bin/kew</Path>
+            <Path fileType="data">/usr/share/kew/themes/army.theme</Path>
+            <Path fileType="data">/usr/share/kew/themes/bunker.theme</Path>
+            <Path fileType="data">/usr/share/kew/themes/catpuccin.theme</Path>
+            <Path fileType="data">/usr/share/kew/themes/cyberpunk.theme</Path>
+            <Path fileType="data">/usr/share/kew/themes/default.theme</Path>
+            <Path fileType="data">/usr/share/kew/themes/forest.theme</Path>
+            <Path fileType="data">/usr/share/kew/themes/gruvbox.theme</Path>
+            <Path fileType="data">/usr/share/kew/themes/gruvboxlight.theme</Path>
+            <Path fileType="data">/usr/share/kew/themes/kew-theme-pack1.txt</Path>
+            <Path fileType="data">/usr/share/kew/themes/kew-theme-pack2.txt</Path>
+            <Path fileType="data">/usr/share/kew/themes/marianatrench.theme</Path>
+            <Path fileType="data">/usr/share/kew/themes/midnight.theme</Path>
+            <Path fileType="data">/usr/share/kew/themes/monochrome.theme</Path>
+            <Path fileType="data">/usr/share/kew/themes/neutral.theme</Path>
+            <Path fileType="data">/usr/share/kew/themes/paper.theme</Path>
+            <Path fileType="data">/usr/share/kew/themes/pewter.theme</Path>
+            <Path fileType="data">/usr/share/kew/themes/purple.theme</Path>
+            <Path fileType="data">/usr/share/kew/themes/ravachol.theme</Path>
+            <Path fileType="data">/usr/share/kew/themes/solarizedlight.theme</Path>
+            <Path fileType="data">/usr/share/kew/themes/synthwave.theme</Path>
+            <Path fileType="data">/usr/share/kew/themes/tokyonight.theme</Path>
+            <Path fileType="data">/usr/share/licenses/kew/LICENSE</Path>
+            <Path fileType="localedata">/usr/share/locale/ja/LC_MESSAGES/kew.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/zh_CN/LC_MESSAGES/kew.mo</Path>
+            <Path fileType="man">/usr/share/man/man1/kew.1.zst</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="2">
+            <Date>2026-04-29</Date>
+            <Version>4.0.0</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Jared Cervantes</Name>
+            <Email>jared@jaredcervantes.com</Email>
+        </Update>
+    </History>
+</PISI>

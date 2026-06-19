@@ -19,6 +19,7 @@ libc.so.6:_exit
 libc.so.6:abort
 libc.so.6:access
 libc.so.6:calloc
+libc.so.6:clock_gettime
 libc.so.6:close
 libc.so.6:closedir
 libc.so.6:connect
@@ -32,14 +33,16 @@ libc.so.6:fdatasync
 libc.so.6:fflush
 libc.so.6:fgets
 libc.so.6:fileno
+libc.so.6:flockfile
 libc.so.6:fopen
 libc.so.6:fork
 libc.so.6:free
-libc.so.6:freeaddrinfo
 libc.so.6:fstat
 libc.so.6:fsync
 libc.so.6:ftruncate
+libc.so.6:funlockfile
 libc.so.6:fwrite
+libc.so.6:fwrite_unlocked
 libc.so.6:gai_strerror
 libc.so.6:getaddrinfo
 libc.so.6:getenv
@@ -53,6 +56,7 @@ libc.so.6:inet_ntop
 libc.so.6:isatty
 libc.so.6:localtime
 libc.so.6:lseek
+libc.so.6:lstat
 libc.so.6:malloc
 libc.so.6:memchr
 libc.so.6:memcmp
@@ -77,6 +81,7 @@ libc.so.6:realloc
 libc.so.6:rename
 libc.so.6:rmdir
 libc.so.6:setlinebuf
+libc.so.6:sigaction
 libc.so.6:signal
 libc.so.6:sleep
 libc.so.6:socket
@@ -88,6 +93,7 @@ libc.so.6:strcasecmp
 libc.so.6:strchr
 libc.so.6:strcmp
 libc.so.6:strcspn
+libc.so.6:strdup
 libc.so.6:strftime
 libc.so.6:strlen
 libc.so.6:strnlen
@@ -154,6 +160,7 @@ libssl.so.3:SSL_new
 libssl.so.3:SSL_pending
 libssl.so.3:SSL_read
 libssl.so.3:SSL_set_fd
+libssl.so.3:SSL_set_options
 libssl.so.3:SSL_write
 libssl.so.3:TLS_client_method
 libz.so.1:deflate

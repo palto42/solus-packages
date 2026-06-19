@@ -1,40 +1,86 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : tlp
-version    : 1.8.0
-release    : 22
+version    : 1.9.1
+release    : 25
 source     :
-    - https://github.com/linrunner/TLP/archive/refs/tags/1.8.0.tar.gz : 65515f7652064a1be2940c031e045b762924bb1dbd94f5e58e3b765113cf5210
+    - https://github.com/linrunner/TLP/archive/refs/tags/1.9.1.tar.gz : 6f7c69a8c56706f83bc3566377caf846c2ccbd8f2621fe8e56c6d1e684d15156
 homepage   : https://linrunner.de/tlp/
 license    : GPL-2.0-only
-component  : system.utils
-summary    : Linux Advanced Power Management
-description: |
-    Linux Advanced Power Management, customized for Solus:
-    - Disabled Wi-Fi power saving mode on battery
-    - Disabled audio power saving for Intel HDA, AC97 devices
-    - Disabled  USB autosuspend feature
+component  :
+    - pd : system.utils
+    - rdw : system.utils
+    - system.utils
+summary    :
+    - pd : Linux Advanced Power Management - Power Profiles Daemon
+    - rdw : Linux Advanced Power Management - Radio Device Wizard
+    - Linux Advanced Power Management
+description:
+    - pd : Linux Advanced Power Management - Power Profiles Daemon
+    - rdw : Linux Advanced Power Management - Radio Device Wizard
+    - Linux Advanced Power Management, customized for Solus
+        - Disabled Wi-Fi power saving mode on battery
+        - Disabled audio power saving for Intel HDA, AC97 devices
+        - Disabled  USB autosuspend feature
 builddeps  :
     - hdparm
     - iw
 rundeps    :
     - linux-tools-x86_energy_perf_policy
+    - pd :
+        - python3-dbus
+        - python-gobject
+        - python-shtab
+        - tlp
+    - rdw :
+        - network-manager
+        - tlp
+
 setup      : |
     %apply_patches
 build      : |
     export TLP_LIBDIR='%libdir%'
     export TLP_SBIN='/usr/sbin'
     export TLP_ULIB='%libdir%/udev/'
+
     %make
 install    : |
+    export TLP_SDSL='%libdir%/systemd/system-sleep'
     export TLP_NO_INIT='1'
     export TLP_SYSD='%libdir%/systemd/system/'
     export TLP_ULIB='%libdir%/udev/'
     export TLP_WITH_ELOGIND='0'
+
     %make_install install-man
+    %install_license COPYING LICENSE
+
+    install -Dm00644 -t ${installdir}/%libdir%/systemd/system-preset/ ${pkgfiles}/20-tlp.preset
+
     rm -rf $installdir/var
-
-    # Enable by default, users can disable now with systemctl mask tlp
-    install -Ddm 00755 $installdir/%libdir%/systemd/system/multi-user.target.wants
-    ln -sv ../tlp.service $installdir/%libdir%/systemd/system/multi-user.target.wants
-
-    mv $installdir/usr/lib/systemd/system-sleep $installdir/usr/lib64/systemd
-    rm -rf $installdir/usr/lib
+conflicts  :
+    - pd :
+        - power-profiles-daemon
+patterns   :
+    - pd :
+        - /usr/bin/tlp-pd
+        - /usr/bin/tlpctl
+        - /usr/lib64/systemd/system/tlp-pd.service
+        - /usr/share/bash-completion/completions/tlpctl
+        - /usr/share/dbus-1/system-services/net.hadess.PowerProfiles.service
+        - /usr/share/dbus-1/system-services/org.freedesktop.UPower.PowerProfiles.service
+        - /usr/share/dbus-1/system.d/net.hadess.PowerProfiles.conf
+        - /usr/share/dbus-1/system.d/org.freedesktop.UPower.PowerProfiles.conf
+        - /usr/share/fish/vendor_completions.d/tlpctl.fish
+        - /usr/share/man/man1/tlpctl.1.*
+        - /usr/share/man/man8/tlp-pd.8.*
+        - /usr/share/man/man8/tlp-pd.service.8.*
+        - /usr/share/polkit-1/actions/tlp-pd.policy
+        - /usr/share/zsh/site-functions/_tlpctl
+    - rdw :
+        - /usr/bin/tlp-rdw
+        - /usr/lib/NetworkManager/dispatcher.d/99tlp-rdw-nm
+        - /usr/lib64/udev/rules.d/85-tlp-rdw.rules
+        - /usr/lib64/udev/tlp-rdw-udev
+        - /usr/share/bash-completion/completions/tlp-rdw
+        - /usr/share/fish/vendor_completions.d/tlp-rdw.fish
+        - /usr/share/man/man8/tlp-rdw.8.gz
+        - /usr/share/zsh/site-functions/_tlp-rdw

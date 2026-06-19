@@ -1,6 +1,7 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : farstream
 version    : 0.2.9
-release    : 6
+release    : 7
 source     :
     - https://freedesktop.org/software/farstream/releases/farstream/farstream-0.2.9.tar.gz : cb7d112433cf7c2e37a8ec918fb24f0ea5cb293cfa1002488e431de26482f47b
 homepage   : https://www.freedesktop.org/wiki/Software/Farstream/
@@ -22,3 +23,4 @@ build      : |
     %make
 install    : |
     %make_install
+    %install_license COPYING

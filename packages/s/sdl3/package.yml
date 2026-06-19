@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : sdl3
-version    : 3.2.10
-release    : 4
+version    : 3.4.10
+release    : 8
 source     :
-    - https://www.libsdl.org/release/SDL3-3.2.10.tar.gz : f87be7b4dec66db4098e9c167b2aa34e2ca10aeb5443bdde95ae03185ed513e0
+    - https://www.libsdl.org/release/SDL3-3.4.10.tar.gz : 12b34280415ec8418c864408b93d008a20a6530687ee613d60bfbd20411f2785
 homepage   : https://libsdl.org/
 license    : Zlib
 component  : multimedia.library
@@ -25,6 +26,7 @@ builddeps  :
     - pkgconfig(xkbcommon)
     - pkgconfig(xrandr)
     - pkgconfig(xscrnsaver)
+    - pkgconfig(xtst)
 clang      : true
 optimize   :
     - speed
@@ -49,3 +51,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSE.txt

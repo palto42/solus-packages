@@ -1,10 +1,10 @@
 libc.so.6
-libgedit-48.1.so
-libgedit-gtksourceview-300.so.3
-libgedit-tepl-6.so.3
+libgedit-49.so
+libgedit-gtksourceview-300.so.4
+libgedit-tepl-6.so.4
 libgio-2.0.so.0
 libglib-2.0.so.0
 libgobject-2.0.so.0
 libgtk-3.so.0
-libpeas-1.0.so.0
-libpeas-gtk-1.0.so.0
+libpeas-1.0.so.1
+libpeas-gtk-1.0.so.1

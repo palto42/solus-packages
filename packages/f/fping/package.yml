@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : fping
-version    : '5.4'
-release    : 6
+version    : '5.5'
+release    : 7
 source     :
-    - https://www.fping.org/dist/fping-5.4.tar.gz : be320771f075e47dd7e5704b485e9bdc7dd11107884345c0f7c18749357f668d
+    - https://www.fping.org/dist/fping-5.5.tar.gz : 15c4e32b6c55ff105bafe03e8c91c7ca1b2eda31bf9a7127326bb87887ee18fe
 homepage   : https://fping.org/
 license    : BSD-3-Clause
 component  : network.util
@@ -15,3 +16,4 @@ build      : |
     %make
 install    : |
     %make_install
+    %install_license COPYING

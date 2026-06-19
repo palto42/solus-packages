@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : shim-signed
-version    : '15.8'
-release    : 7
+version    : '16.1'
+release    : 8
 source     :
-    - https://kojipkgs.fedoraproject.org/packages/shim/15.8/3/x86_64/shim-x64-15.8-3.x86_64.rpm : 28958d75333c42b0341b727a2b697edf02f0cfaec18dbd25ae62c9a8164faabe
+    - https://kojipkgs.fedoraproject.org/packages/shim/16.1/7/x86_64/shim-x64-16.1-7.x86_64.rpm : 0a119f3488e5da27ca55c1864ee8e131afa5ecf27689385ba09b805eb00dd608
 homepage   : https://github.com/rhboot/shim
 license    : BSD-2-Clause
 component  : system.base
@@ -10,9 +11,9 @@ summary    : Initial UEFI bootloader that handles chaining to a trusted full boo
 description: |
     Initial UEFI bootloader that handles chaining to a trusted full bootloader under secure boot environments. This package contains the version signed by the UEFI signing service.
 install    : |
-    install -Dm00700 $workdir/boot/efi/EFI/fedora/shim.efi $installdir/%libdir%/shim/shimx64.efi
-    install -Dm00700 $workdir/boot/efi/EFI/fedora/mmx64.efi $installdir/%libdir%/shim/mmx64.efi
-    install -Dm00700 $workdir/boot/efi/EFI/BOOT/fbx64.efi $installdir/%libdir%/shim/fbx64.efi
+    install -Dm00700 $workdir/usr/lib/efi/shim/16.1-7/EFI/fedora/shim.efi $installdir/%libdir%/shim/shimx64.efi
+    install -Dm00700 $workdir/usr/lib/efi/shim/16.1-7/EFI/fedora/mmx64.efi $installdir/%libdir%/shim/mmx64.efi
+    install -Dm00700 $workdir/usr/lib/efi/shim/16.1-7/EFI/BOOT/fbx64.efi $installdir/%libdir%/shim/fbx64.efi
 
     # BOOT.CSV is a UCS-2 LE formatted CSV file. See https://github.com/rhboot/shim/blob/shim-15.5/README.fallback#L48
     install -Dm00700 $pkgfiles/boot.csv $installdir/%libdir%/shim/BOOTX64.CSV

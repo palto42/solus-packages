@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : mu
-version    : 1.12.9
-release    : 30
+version    : 1.14.0
+release    : 33
 source     :
-    - https://github.com/djcb/mu/releases/download/v1.12.9/mu-1.12.9.tar.xz : ed493ef4eab536815ca8f948848370cd00b4383bc006b6527ccdf21d38e16de5
+    - https://github.com/djcb/mu/releases/download/v1.14.0/mu-1.14.0.tar.xz : c5d338ee81664c29d18de757017942b14d01fe313d6fea82f8b7c66c6fd4354a
 license    : GPL-3.0-only
 homepage   : https://www.djcbsoftware.nl/code/mu/
 component  : editor
@@ -14,7 +15,7 @@ builddeps  :
     - pkgconfig(gmime-3.0)
     - pkgconfig(gtk+-3.0)
     - pkgconfig(guile-2.0)
-    - pkgconfig(webkit2gtk-4.0)
+    - pkgconfig(webkit2gtk-4.1)
     - pkgconfig(xapian-core)
     - emacs
 setup      : |
@@ -24,3 +25,4 @@ build      : |
     emacs --batch --eval '(byte-recompile-directory "mu4e")'
 install    : |
     %ninja_install
+    %install_license COPYING

@@ -1376,9 +1376,11 @@ libvgauth.so.0:Usercheck_CompareByName
 libvgauth.so.0:Usercheck_UsernameIsLegal
 libvgauth.so.0:Util_Assert
 libvgauth.so.0:Util_CheckExpiration
+libvgauth.so.0:Util_Utf8CaseCmp
 libvgauth.so.0:VGAuthEndImpersonationImpl
 libvgauth.so.0:VGAuthGenerateSSPIChallengeImpl
 libvgauth.so.0:VGAuthGetBoolExtraParamImpl
+libvgauth.so.0:VGAuthGetStringExtraParamImpl
 libvgauth.so.0:VGAuthImpersonateImpl
 libvgauth.so.0:VGAuthInitAuthentication
 libvgauth.so.0:VGAuthInitAuthenticationPlatform
@@ -2329,10 +2331,12 @@ libvmtools.so.0:RpcOut_stop
 libvmtools.so.0:RpcVMX_ConfigGetBool
 libvmtools.so.0:RpcVMX_ConfigGetLong
 libvmtools.so.0:RpcVMX_ConfigGetString
+libvmtools.so.0:RpcVMX_InitLogBackingBuffer
 libvmtools.so.0:RpcVMX_Log
 libvmtools.so.0:RpcVMX_LogGetPrefix
 libvmtools.so.0:RpcVMX_LogSetPrefix
 libvmtools.so.0:RpcVMX_LogV
+libvmtools.so.0:RpcVMX_LogVWithBuffer
 libvmtools.so.0:RpcVMX_ReportDriverVersion
 libvmtools.so.0:SSL_GetFd
 libvmtools.so.0:SSL_New

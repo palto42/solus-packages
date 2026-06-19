@@ -31,6 +31,7 @@
             <Path fileType="data">/usr/share/icons/hicolor/48x48/apps/org.xfce.panel.whiskermenu.png</Path>
             <Path fileType="data">/usr/share/icons/hicolor/64x64/apps/org.xfce.panel.whiskermenu.png</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.xfce.panel.whiskermenu.svg</Path>
+            <Path fileType="data">/usr/share/licenses/xfce4-whiskermenu-plugin/COPYING</Path>
             <Path fileType="localedata">/usr/share/locale/am/LC_MESSAGES/xfce4-whiskermenu-plugin.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ar/LC_MESSAGES/xfce4-whiskermenu-plugin.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ast/LC_MESSAGES/xfce4-whiskermenu-plugin.mo</Path>
@@ -69,6 +70,7 @@
             <Path fileType="localedata">/usr/share/locale/nb/LC_MESSAGES/xfce4-whiskermenu-plugin.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ne/LC_MESSAGES/xfce4-whiskermenu-plugin.mo</Path>
             <Path fileType="localedata">/usr/share/locale/nl/LC_MESSAGES/xfce4-whiskermenu-plugin.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/oc/LC_MESSAGES/xfce4-whiskermenu-plugin.mo</Path>
             <Path fileType="localedata">/usr/share/locale/pl/LC_MESSAGES/xfce4-whiskermenu-plugin.mo</Path>
             <Path fileType="localedata">/usr/share/locale/pt/LC_MESSAGES/xfce4-whiskermenu-plugin.mo</Path>
             <Path fileType="localedata">/usr/share/locale/pt_BR/LC_MESSAGES/xfce4-whiskermenu-plugin.mo</Path>
@@ -86,14 +88,14 @@
             <Path fileType="localedata">/usr/share/locale/vi/LC_MESSAGES/xfce4-whiskermenu-plugin.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_CN/LC_MESSAGES/xfce4-whiskermenu-plugin.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_TW/LC_MESSAGES/xfce4-whiskermenu-plugin.mo</Path>
-            <Path fileType="man">/usr/share/man/man1/xfce4-popup-whiskermenu.1</Path>
+            <Path fileType="man">/usr/share/man/man1/xfce4-popup-whiskermenu.1.zst</Path>
             <Path fileType="data">/usr/share/xfce4/panel/plugins/whiskermenu.desktop</Path>
         </Files>
     </Package>
     <History>
-        <Update release="7">
-            <Date>2025-05-21</Date>
-            <Version>2.10.0</Version>
+        <Update release="8">
+            <Date>2026-03-30</Date>
+            <Version>2.10.1</Version>
             <Comment>Packaging update</Comment>
             <Name>Evan Maddock</Name>
             <Email>maddock.evan@vivaldi.net</Email>

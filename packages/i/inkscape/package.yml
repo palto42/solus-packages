@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : inkscape
-version    : 1.4.2
-release    : 75
+version    : 1.4.4
+release    : 79
 source     :
-    - https://media.inkscape.org/dl/resources/file/inkscape-1.4.2.tar.xz : 2000530c7917e5260c9e8575a7154ff6926643d2006487d714e304a963f0c782
+    - https://media.inkscape.org/dl/resources/file/inkscape-1.4.4.tar.xz : bbce5753a1e08b871a5cf16c665eb060700aaab9a6a379dc63f4c4d9b3b8856e
 homepage   : https://inkscape.org/
 license    :
     - GPL-2.0-or-later
@@ -42,15 +43,16 @@ rundeps    :
     - python-tinycss2
     - scour
 setup      : |
-    %patch -p1 -i $pkgfiles/poppler-private-includes.patch
+    %patch -p1 -i ${pkgfiles}/inkscape-1.4.4-ftbfs_poppler_26.05.patch
+
     %cmake_ninja -DWITH_DBUS=ON
 build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*
     rm -rfv $installdir/usr/share/inkscape/doc
     rm -rfv $installdir/usr/share/inkscape/extensions/{README,STYLEGUIDE,TESTING}.md
-    rm -rfv $installdir/usr/share/inkscape/themes/LICENSE.txt
     rm -rfv $installdir/usr/share/inkscape/themes/README.md
 patterns   :
     - tutorials :

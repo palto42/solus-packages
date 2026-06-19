@@ -1,12 +1,15 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kf6-kjobwidgets
-version    : 6.19.0
-release    : 27
+version    : 6.27.0
+release    : 38
 source     :
-    - https://download.kde.org/stable/frameworks/6.19/kjobwidgets-6.19.0.tar.xz : dbd4936d08990cd767496922aa10e8af98aeeeba1f9233a93701564e032eac75
+    - https://download.kde.org/stable/frameworks/6.27/kjobwidgets-6.27.0.tar.xz : 3149cd07d82204c6bfa8d86c590bf0c92905e1b5b075c7b543540916a61d7a03
 homepage   : https://community.kde.org/Frameworks
 license    :
+    - CC0-1.0
     - LGPL-2.0-only
     - LGPL-2.0-or-later
+    - LGPL-3.0-only
 component  : desktop.library
 summary    : Widgets for showing progress of asynchronous jobs.
 description: |
@@ -28,3 +31,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*

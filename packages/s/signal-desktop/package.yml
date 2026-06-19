@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : signal-desktop
-version    : 7.73.0
-release    : 198
+version    : 8.12.0
+release    : 208
 source     :
-    - https://updates.signal.org/desktop/apt/pool/s/signal-desktop/signal-desktop_7.73.0_amd64.deb : 9ebeb0167f1defd61410b025521f543ff6b3bf8d3f53a5c6a4791fb50a4d21b0
+    - https://updates.signal.org/desktop/apt/pool/s/signal-desktop/signal-desktop_8.12.0_amd64.deb : 3419d24f883fcdad84357b0df8b1a19b5bc1b0fc767c17db76d0e2c4123036e4
 homepage   : https://signal.org
 license    : AGPL-3.0-or-later
 component  : network.im
@@ -19,18 +20,24 @@ builddeps  :
     - pkgconfig(libpulse)
     - pkgconfig(xscrnsaver)
 setup      : |
-    ar xf $sources/signal-desktop_${version}_amd64.deb
+    ar xf ${sources}/signal-desktop_${version}_amd64.deb
     mkdir root
     tar xf data.tar.xz -C root
 install    : |
     # This only excludes /usr/bin link which will be invalid
-    install -dm00755 $installdir/usr/bin
-    install -dm00644 $installdir/usr/share/{applications,pixmaps,signal-desktop}
-    cp -R root/usr/share/icons $installdir/usr/share/
+    install -dm00755 ${installdir}/usr/bin
+    install -dm00644 ${installdir}/usr/share/{applications,signal-desktop}
+
+    for icon_size in 16 24 32 48 64 128 256 512 1024; do
+        install -Dm00644 root/usr/share/icons/hicolor/${icon_size}x${icon_size}/apps/signal-desktop.png \
+            ${installdir}/usr/share/icons/hicolor/${icon_size}x${icon_size}/apps/signal-desktop.png
+    done
 
     # We do not use /opt for binary packages in Solus, so just use /usr/share.
-    cp -R root/opt/Signal/* $installdir/usr/share/signal-desktop/
-    ln -sv /usr/share/signal-desktop/signal-desktop $installdir/usr/bin/signal-desktop
+    cp -R root/opt/Signal/* ${installdir}/usr/share/signal-desktop/
+    ln -sv /usr/share/signal-desktop/signal-desktop ${installdir}/usr/bin/signal-desktop
 
-    install -Dm00644 root/usr/share/icons/hicolor/512x512/apps/signal-desktop.png $installdir/usr/share/pixmaps/signal-desktop.png
-    install -Dm00644 $pkgfiles/signal-desktop.desktop $installdir/usr/share/applications/signal-desktop.desktop
+    install -Dm00644 ${pkgfiles}/org.signal.Signal.desktop -t ${installdir}/usr/share/applications
+    install -Dm00644 ${pkgfiles}/org.signal.Signal.metainfo.xml -t ${installdir}/usr/share/metainfo
+
+    %install_license root/opt/Signal/LICENSE.electron.txt root/opt/Signal/LICENSES.chromium.html

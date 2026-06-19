@@ -1,0 +1,54 @@
+<PISI>
+    <Source>
+        <Name>vala-lint</Name>
+        <Homepage>https://github.com/vala-lang/vala-lint</Homepage>
+        <Packager>
+            <Name>Trevor Busk</Name>
+            <Email>trevor@tbusk.com</Email>
+        </Packager>
+        <License>GPL-2.0-or-later</License>
+        <PartOf>programming.tools</PartOf>
+        <Summary xml:lang="en">A small command line tool to check Vala code for code-style errors.</Summary>
+        <Description xml:lang="en">Vala lint is a small command line tool used to check Vala code for code-style errors.
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>vala-lint</Name>
+        <Summary xml:lang="en">A small command line tool to check Vala code for code-style errors.</Summary>
+        <Description xml:lang="en">Vala lint is a small command line tool used to check Vala code for code-style errors.
+</Description>
+        <PartOf>programming.tools</PartOf>
+        <Files>
+            <Path fileType="executable">/usr/bin/io.elementary.vala-lint</Path>
+            <Path fileType="library">/usr/lib64/libvala-linter-1.0.so.1</Path>
+            <Path fileType="library">/usr/lib64/libvala-linter-1.0.so.1.0.0</Path>
+            <Path fileType="data">/usr/share/licenses/vala-lint/COPYING</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>vala-lint-devel</Name>
+        <Summary xml:lang="en">Development files for vala-lint</Summary>
+        <Description xml:lang="en">Vala lint is a small command line tool used to check Vala code for code-style errors.
+</Description>
+        <PartOf>programming.devel</PartOf>
+        <RuntimeDependencies>
+            <Dependency release="1">vala-lint</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include/vala-linter-1.0/vala-linter.h</Path>
+            <Path fileType="library">/usr/lib64/libvala-linter-1.0.so</Path>
+            <Path fileType="data">/usr/lib64/pkgconfig/vala-linter-1.pc</Path>
+            <Path fileType="data">/usr/share/vala/vapi/vala-linter-1.vapi</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2026-02-23</Date>
+            <Version>0.1.0</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Trevor Busk</Name>
+            <Email>trevor@tbusk.com</Email>
+        </Update>
+    </History>
+</PISI>

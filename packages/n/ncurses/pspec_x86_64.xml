@@ -1,12 +1,12 @@
 <PISI>
     <Source>
         <Name>ncurses</Name>
-        <Homepage>http://www.gnu.org/software/ncurses</Homepage>
+        <Homepage>https://invisible-island.net/ncurses/announce.html</Homepage>
         <Packager>
-            <Name>Joey Riches</Name>
-            <Email>josephriches@gmail.com</Email>
+            <Name>Robert Gonzalez</Name>
+            <Email>uni.dos12@outlook.com</Email>
         </Packager>
-        <License>GPL-3.0-or-later</License>
+        <License>MIT-open-group</License>
         <PartOf>system.base</PartOf>
         <Summary xml:lang="en">The ncurses library routines are a terminal-independent method of updating character screens with reasonable optimization.</Summary>
         <Description xml:lang="en">The ncurses library routines are a terminal-independent method of updating character screens with reasonable optimization. This package contains the shared libraries necessary to run programs compiled with ncurses.
@@ -32,17 +32,18 @@
             <Path fileType="executable">/usr/bin/tset</Path>
             <Path fileType="library">/usr/lib/terminfo</Path>
             <Path fileType="library">/usr/lib64/libformw.so.6</Path>
-            <Path fileType="library">/usr/lib64/libformw.so.6.5</Path>
+            <Path fileType="library">/usr/lib64/libformw.so.6.6</Path>
             <Path fileType="library">/usr/lib64/libmenuw.so.6</Path>
-            <Path fileType="library">/usr/lib64/libmenuw.so.6.5</Path>
+            <Path fileType="library">/usr/lib64/libmenuw.so.6.6</Path>
             <Path fileType="library">/usr/lib64/libncurses++w.so.6</Path>
-            <Path fileType="library">/usr/lib64/libncurses++w.so.6.5</Path>
+            <Path fileType="library">/usr/lib64/libncurses++w.so.6.6</Path>
             <Path fileType="library">/usr/lib64/libncursesw.so.6</Path>
-            <Path fileType="library">/usr/lib64/libncursesw.so.6.5</Path>
+            <Path fileType="library">/usr/lib64/libncursesw.so.6.6</Path>
             <Path fileType="library">/usr/lib64/libpanelw.so.6</Path>
-            <Path fileType="library">/usr/lib64/libpanelw.so.6.5</Path>
+            <Path fileType="library">/usr/lib64/libpanelw.so.6.6</Path>
             <Path fileType="library">/usr/lib64/libtic.so.6</Path>
             <Path fileType="library">/usr/lib64/libtinfo.so.6</Path>
+            <Path fileType="data">/usr/share/licenses/ncurses/COPYING</Path>
             <Path fileType="man">/usr/share/man/man1/captoinfo.1m.zst</Path>
             <Path fileType="man">/usr/share/man/man1/clear.1.zst</Path>
             <Path fileType="man">/usr/share/man/man1/infocmp.1m.zst</Path>
@@ -940,6 +941,7 @@
             <Path fileType="data">/usr/share/terminfo/e/ecma+color</Path>
             <Path fileType="data">/usr/share/terminfo/e/ecma+index</Path>
             <Path fileType="data">/usr/share/terminfo/e/ecma+italics</Path>
+            <Path fileType="data">/usr/share/terminfo/e/ecma+overline</Path>
             <Path fileType="data">/usr/share/terminfo/e/ecma+sgr</Path>
             <Path fileType="data">/usr/share/terminfo/e/ecma+standout</Path>
             <Path fileType="data">/usr/share/terminfo/e/ecma+strikeout</Path>
@@ -1340,6 +1342,7 @@
             <Path fileType="data">/usr/share/terminfo/l/linux+lockeys</Path>
             <Path fileType="data">/usr/share/terminfo/l/linux+sfkeys</Path>
             <Path fileType="data">/usr/share/terminfo/l/linux-16color</Path>
+            <Path fileType="data">/usr/share/terminfo/l/linux-alt1049</Path>
             <Path fileType="data">/usr/share/terminfo/l/linux-basic</Path>
             <Path fileType="data">/usr/share/terminfo/l/linux-c</Path>
             <Path fileType="data">/usr/share/terminfo/l/linux-c-nc</Path>
@@ -1845,6 +1848,7 @@
             <Path fileType="data">/usr/share/terminfo/p/pt505-24</Path>
             <Path fileType="data">/usr/share/terminfo/p/pty</Path>
             <Path fileType="data">/usr/share/terminfo/p/putty</Path>
+            <Path fileType="data">/usr/share/terminfo/p/putty+3keys</Path>
             <Path fileType="data">/usr/share/terminfo/p/putty+cursor</Path>
             <Path fileType="data">/usr/share/terminfo/p/putty+fnkeys</Path>
             <Path fileType="data">/usr/share/terminfo/p/putty+fnkeys+esc</Path>
@@ -1856,6 +1860,8 @@
             <Path fileType="data">/usr/share/terminfo/p/putty+keypad</Path>
             <Path fileType="data">/usr/share/terminfo/p/putty+screen</Path>
             <Path fileType="data">/usr/share/terminfo/p/putty-256color</Path>
+            <Path fileType="data">/usr/share/terminfo/p/putty-direct</Path>
+            <Path fileType="data">/usr/share/terminfo/p/putty-direct16</Path>
             <Path fileType="data">/usr/share/terminfo/p/putty-m1</Path>
             <Path fileType="data">/usr/share/terminfo/p/putty-m1b</Path>
             <Path fileType="data">/usr/share/terminfo/p/putty-m2</Path>
@@ -1951,6 +1957,7 @@
             <Path fileType="data">/usr/share/terminfo/s/scoansi-new</Path>
             <Path fileType="data">/usr/share/terminfo/s/scoansi-old</Path>
             <Path fileType="data">/usr/share/terminfo/s/screen</Path>
+            <Path fileType="data">/usr/share/terminfo/s/screen+da2</Path>
             <Path fileType="data">/usr/share/terminfo/s/screen+fkeys</Path>
             <Path fileType="data">/usr/share/terminfo/s/screen+italics</Path>
             <Path fileType="data">/usr/share/terminfo/s/screen-16color</Path>
@@ -2007,7 +2014,11 @@
             <Path fileType="data">/usr/share/terminfo/s/screen2</Path>
             <Path fileType="data">/usr/share/terminfo/s/screen3</Path>
             <Path fileType="data">/usr/share/terminfo/s/screen4</Path>
+            <Path fileType="data">/usr/share/terminfo/s/screen4+da2</Path>
+            <Path fileType="data">/usr/share/terminfo/s/screen4.xterm-new</Path>
             <Path fileType="data">/usr/share/terminfo/s/screen5</Path>
+            <Path fileType="data">/usr/share/terminfo/s/screen5+da2</Path>
+            <Path fileType="data">/usr/share/terminfo/s/screen5.xterm-new</Path>
             <Path fileType="data">/usr/share/terminfo/s/screwpoint</Path>
             <Path fileType="data">/usr/share/terminfo/s/scrhp</Path>
             <Path fileType="data">/usr/share/terminfo/s/scrt</Path>
@@ -2410,12 +2421,14 @@
             <Path fileType="data">/usr/share/terminfo/v/vt100+</Path>
             <Path fileType="data">/usr/share/terminfo/v/vt100+4bsd</Path>
             <Path fileType="data">/usr/share/terminfo/v/vt100+enq</Path>
-            <Path fileType="data">/usr/share/terminfo/v/vt100+fnkeys</Path>
+            <Path fileType="data">/usr/share/terminfo/v/vt100+fnkeys-sco</Path>
             <Path fileType="data">/usr/share/terminfo/v/vt100+keypad</Path>
+            <Path fileType="data">/usr/share/terminfo/v/vt100+keypad+emul</Path>
+            <Path fileType="data">/usr/share/terminfo/v/vt100+keypad-sco</Path>
             <Path fileType="data">/usr/share/terminfo/v/vt100+noapp</Path>
             <Path fileType="data">/usr/share/terminfo/v/vt100+noapp+pc</Path>
             <Path fileType="data">/usr/share/terminfo/v/vt100+pf1-pf4</Path>
-            <Path fileType="data">/usr/share/terminfo/v/vt100+pfkeys</Path>
+            <Path fileType="data">/usr/share/terminfo/v/vt100+pfkeys-sco</Path>
             <Path fileType="data">/usr/share/terminfo/v/vt100-am</Path>
             <Path fileType="data">/usr/share/terminfo/v/vt100-bm</Path>
             <Path fileType="data">/usr/share/terminfo/v/vt100-bm-o</Path>
@@ -2514,7 +2527,10 @@
             <Path fileType="data">/usr/share/terminfo/v/vtnt</Path>
             <Path fileType="data">/usr/share/terminfo/v/vv100</Path>
             <Path fileType="data">/usr/share/terminfo/v/vwmterm</Path>
+            <Path fileType="data">/usr/share/terminfo/w/warp</Path>
             <Path fileType="data">/usr/share/terminfo/w/wezterm</Path>
+            <Path fileType="data">/usr/share/terminfo/w/wezterm-direct</Path>
+            <Path fileType="data">/usr/share/terminfo/w/wezterm-direct16</Path>
             <Path fileType="data">/usr/share/terminfo/w/winconsole</Path>
             <Path fileType="data">/usr/share/terminfo/w/wren</Path>
             <Path fileType="data">/usr/share/terminfo/w/wrenw</Path>
@@ -2829,6 +2845,7 @@
             <Path fileType="data">/usr/share/terminfo/x/xterm+256color2</Path>
             <Path fileType="data">/usr/share/terminfo/x/xterm+256setaf</Path>
             <Path fileType="data">/usr/share/terminfo/x/xterm+256setaf2</Path>
+            <Path fileType="data">/usr/share/terminfo/x/xterm+3keys</Path>
             <Path fileType="data">/usr/share/terminfo/x/xterm+88color</Path>
             <Path fileType="data">/usr/share/terminfo/x/xterm+88color2</Path>
             <Path fileType="data">/usr/share/terminfo/x/xterm+acs</Path>
@@ -2845,6 +2862,7 @@
             <Path fileType="data">/usr/share/terminfo/x/xterm+edit</Path>
             <Path fileType="data">/usr/share/terminfo/x/xterm+focus</Path>
             <Path fileType="data">/usr/share/terminfo/x/xterm+indirect</Path>
+            <Path fileType="data">/usr/share/terminfo/x/xterm+indirect16</Path>
             <Path fileType="data">/usr/share/terminfo/x/xterm+kbs</Path>
             <Path fileType="data">/usr/share/terminfo/x/xterm+keypad</Path>
             <Path fileType="data">/usr/share/terminfo/x/xterm+meta</Path>
@@ -2970,19 +2988,19 @@
 </Description>
         <PartOf>emul32</PartOf>
         <RuntimeDependencies>
-            <Dependency release="32">ncurses</Dependency>
+            <Dependency release="35">ncurses</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib32/libformw.so.6</Path>
-            <Path fileType="library">/usr/lib32/libformw.so.6.5</Path>
+            <Path fileType="library">/usr/lib32/libformw.so.6.6</Path>
             <Path fileType="library">/usr/lib32/libmenuw.so.6</Path>
-            <Path fileType="library">/usr/lib32/libmenuw.so.6.5</Path>
+            <Path fileType="library">/usr/lib32/libmenuw.so.6.6</Path>
             <Path fileType="library">/usr/lib32/libncurses++w.so.6</Path>
-            <Path fileType="library">/usr/lib32/libncurses++w.so.6.5</Path>
+            <Path fileType="library">/usr/lib32/libncurses++w.so.6.6</Path>
             <Path fileType="library">/usr/lib32/libncursesw.so.6</Path>
-            <Path fileType="library">/usr/lib32/libncursesw.so.6.5</Path>
+            <Path fileType="library">/usr/lib32/libncursesw.so.6.6</Path>
             <Path fileType="library">/usr/lib32/libpanelw.so.6</Path>
-            <Path fileType="library">/usr/lib32/libpanelw.so.6.5</Path>
+            <Path fileType="library">/usr/lib32/libpanelw.so.6.6</Path>
             <Path fileType="library">/usr/lib32/libtic.so.6</Path>
             <Path fileType="library">/usr/lib32/libtinfo.so.6</Path>
         </Files>
@@ -2994,8 +3012,8 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="32">ncurses-devel</Dependency>
-            <Dependency release="32">ncurses-32bit</Dependency>
+            <Dependency release="35">ncurses-devel</Dependency>
+            <Dependency release="35">ncurses-32bit</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib32/libcurses.so</Path>
@@ -3033,7 +3051,7 @@
 </Description>
         <PartOf>system.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="32">ncurses</Dependency>
+            <Dependency release="35">ncurses</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin/ncursesw6-config</Path>
@@ -4002,12 +4020,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="32">
-            <Date>2025-09-20</Date>
-            <Version>6.5.20250913</Version>
+        <Update release="35">
+            <Date>2026-05-04</Date>
+            <Version>6.6.20260502</Version>
             <Comment>Packaging update</Comment>
-            <Name>Joey Riches</Name>
-            <Email>josephriches@gmail.com</Email>
+            <Name>Robert Gonzalez</Name>
+            <Email>uni.dos12@outlook.com</Email>
         </Update>
     </History>
 </PISI>

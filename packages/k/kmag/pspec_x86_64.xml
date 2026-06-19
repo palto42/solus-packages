@@ -4,9 +4,11 @@
         <Homepage>https://kde.org/applications/utilities/org.kde.kmag</Homepage>
         <Packager>
             <Name>Troy Harvey</Name>
-            <Email>harveydevel@gmail.com</Email>
+            <Email>harvey@getsol.us</Email>
         </Packager>
-        <License>GFDL-1.2-or-later</License>
+        <License>BSD-3-Clause</License>
+        <License>CC0-1.0</License>
+        <License>GFDL-1.2-only</License>
         <License>GPL-2.0-or-later</License>
         <PartOf>desktop.kde</PartOf>
         <Summary xml:lang="en">KMag is a screen magnifier</Summary>
@@ -29,6 +31,10 @@
             <Path fileType="data">/usr/share/kmag/icons/hicolor/16x16/actions/followmouse.png</Path>
             <Path fileType="data">/usr/share/kmag/icons/hicolor/16x16/actions/hidemouse.png</Path>
             <Path fileType="data">/usr/share/kmag/icons/hicolor/16x16/actions/window.png</Path>
+            <Path fileType="data">/usr/share/licenses/kmag/BSD-3-Clause.txt</Path>
+            <Path fileType="data">/usr/share/licenses/kmag/CC0-1.0.txt</Path>
+            <Path fileType="data">/usr/share/licenses/kmag/GFDL-1.2-only.txt</Path>
+            <Path fileType="data">/usr/share/licenses/kmag/GPL-2.0-or-later.txt</Path>
             <Path fileType="localedata">/usr/share/locale/ar/LC_MESSAGES/kmag.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ast/LC_MESSAGES/kmag.mo</Path>
             <Path fileType="localedata">/usr/share/locale/be/LC_MESSAGES/kmag.mo</Path>
@@ -121,12 +127,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="88">
-            <Date>2025-10-10</Date>
-            <Version>25.08.2</Version>
+        <Update release="94">
+            <Date>2026-06-04</Date>
+            <Version>26.04.2</Version>
             <Comment>Packaging update</Comment>
             <Name>Troy Harvey</Name>
-            <Email>harveydevel@gmail.com</Email>
+            <Email>harvey@getsol.us</Email>
         </Update>
     </History>
 </PISI>

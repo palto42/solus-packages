@@ -1,6 +1,6 @@
 releases:
   id: 2504
-  rss: ~
+  rss: https://github.com/tuxera/ntfs-3g/tags.atom
 security:
   cpe:
   - vendor: tuxera

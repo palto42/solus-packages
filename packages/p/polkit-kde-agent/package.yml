@@ -1,10 +1,13 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : polkit-kde-agent
-version    : 6.4.5
-release    : 127
+version    : 6.6.5
+release    : 137
 source     :
-    - https://download.kde.org/stable/plasma/6.4.5/polkit-kde-agent-1-6.4.5.tar.xz : 5b5d771660f5209295a65afdcb3e117c1cc9cd7c1893d0c9b68ad0c531308301
+    - https://download.kde.org/stable/plasma/6.6.5/polkit-kde-agent-1-6.6.5.tar.xz : 91990b9cd13f205a9963f88fe605942b9e8b6ee9e9103431216bf511944ce127
 homepage   : https://www.kde.org/workspaces/plasmadesktop/
-license    : GPL-2.0-or-later
+license    :
+    - CC0-1.0
+    - GPL-2.0-or-later
 component  : desktop.kde.core
 summary    : Daemon providing a polkit authentication for KDE
 description: |
@@ -27,3 +30,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*

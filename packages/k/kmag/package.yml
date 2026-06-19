@@ -1,11 +1,14 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kmag
-version    : 25.08.2
-release    : 88
+version    : 26.04.2
+release    : 94
 source     :
-    - https://download.kde.org/stable/release-service/25.08.2/src/kmag-25.08.2.tar.xz : f3343998a6b884453fc9738e7a4f560f716e34a5328f9f0df125eeb53274c081
+    - https://download.kde.org/stable/release-service/26.04.2/src/kmag-26.04.2.tar.xz : c89c5eee844b7d471d477dfee553fc22d72843f8b4c452d9e322cce2abadcdfd
 homepage   : https://kde.org/applications/utilities/org.kde.kmag
 license    :
-    - GFDL-1.2-or-later
+    - BSD-3-Clause
+    - CC0-1.0
+    - GFDL-1.2-only
     - GPL-2.0-or-later
 component  : desktop.kde
 summary    : KMag is a screen magnifier
@@ -26,6 +29,7 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*
 
     # remove docs
     rm -rfv $installdir/usr/share/doc

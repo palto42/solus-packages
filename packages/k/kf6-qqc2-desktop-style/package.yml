@@ -1,11 +1,17 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kf6-qqc2-desktop-style
-version    : 6.19.0
-release    : 27
+version    : 6.27.0
+release    : 39
 source     :
-    - https://download.kde.org/stable/frameworks/6.19/qqc2-desktop-style-6.19.0.tar.xz : 68f9b93f6e8b0fba244f022d8367ef4735422be746e6752764ab3887e05f8535
+    - https://download.kde.org/stable/frameworks/6.27/qqc2-desktop-style-6.27.0.tar.xz : 6c005f06c5f8c4ac349238abf14999bb917215a8f7b8c51364e2fdd12e9e6355
 homepage   : https://community.kde.org/Frameworks
 license    :
+    - CC0-1.0
+    - GPL-2.0-only
+    - GPL-2.0-or-later
+    - GPL-3.0-only
     - LGPL-2.0-or-later
+    - LGPL-2.1-or-later
     - LGPL-3.0-only
 component  : desktop.theme
 summary    : QtQuickControls 2 style that integrates with the desktop
@@ -29,3 +35,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*

@@ -1,3 +1,5 @@
+free:_IO_stdin_used
+hugetop:_IO_stdin_used
 libproc2.so.1:LIBPROC_2
 libproc2.so.1:LIBPROC_2.1
 libproc2.so.1:LIBPROC_2.2
@@ -68,3 +70,15 @@ libproc2.so.1:xtra_stat_get
 libproc2.so.1:xtra_stat_val
 libproc2.so.1:xtra_vmstat_get
 libproc2.so.1:xtra_vmstat_val
+pgrep:_IO_stdin_used
+pidof:_IO_stdin_used
+pidwait:_IO_stdin_used
+pkill:_IO_stdin_used
+pmap:_IO_stdin_used
+ps:_IO_stdin_used
+slabtop:_IO_stdin_used
+tload:_IO_stdin_used
+top:_IO_stdin_used
+uptime:_IO_stdin_used
+vmstat:_IO_stdin_used
+w:_IO_stdin_used

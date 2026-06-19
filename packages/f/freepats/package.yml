@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : freepats
-version    : 1.0.2
-release    : 3
+version    : 1.0.3
+release    : 4
 source     :
-    - https://github.com/feross/freepats/archive/v1.0.2.tar.gz : 6c76670d437382cc0c247469d11c72f312c0d15b5da6a65ae0f7fad4b60b96c2
+    - https://github.com/feross/freepats/archive/v1.0.3.tar.gz : d79fa8719500880627b1b65286fde6ddb06274540a3eba21178d2058d525007e
 homepage   : https://github.com/feross/freepats/
 license    : GPL-2.0-or-later
 component  : multimedia.audio

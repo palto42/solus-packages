@@ -1,6 +1,7 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : silver-searcher
 version    : 2.2.0
-release    : 10
+release    : 11
 source     :
     - https://github.com/ggreer/the_silver_searcher/archive/2.2.0.tar.gz : 6a0a19ca5e73b2bef9481c29a508d2413ca1a0a9a5a6b1bd9bbd695a7626cbf9
 homepage   : https://geoff.greer.fm/ag/
@@ -24,3 +25,4 @@ build      : |
 install    : |
     %make_install
     mv $installdir/usr/share/the_silver_searcher $installdir/usr/share/bash-completion
+    %install_license LICENSE

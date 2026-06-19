@@ -129,6 +129,7 @@ libglib-2.0.so.0:g_filename_display_basename
 libglib-2.0.so.0:g_filename_from_uri
 libglib-2.0.so.0:g_filename_to_uri
 libglib-2.0.so.0:g_free
+libglib-2.0.so.0:g_free_sized
 libglib-2.0.so.0:g_getenv
 libglib-2.0.so.0:g_hash_table_destroy
 libglib-2.0.so.0:g_hash_table_insert
@@ -167,7 +168,9 @@ libglib-2.0.so.0:g_mutex_lock
 libglib-2.0.so.0:g_mutex_unlock
 libglib-2.0.so.0:g_once_impl
 libglib-2.0.so.0:g_once_init_enter
+libglib-2.0.so.0:g_once_init_enter_pointer
 libglib-2.0.so.0:g_once_init_leave
+libglib-2.0.so.0:g_once_init_leave_pointer
 libglib-2.0.so.0:g_path_get_dirname
 libglib-2.0.so.0:g_print
 libglib-2.0.so.0:g_propagate_error
@@ -206,7 +209,7 @@ libglib-2.0.so.0:g_strstr_len
 libglib-2.0.so.0:g_strtod
 libglib-2.0.so.0:g_strv_length
 libglib-2.0.so.0:g_thread_self
-libglib-2.0.so.0:g_time_zone_new
+libglib-2.0.so.0:g_time_zone_new_identifier
 libglib-2.0.so.0:g_time_zone_new_utc
 libglib-2.0.so.0:g_time_zone_unref
 libglib-2.0.so.0:g_uri_parse_scheme
@@ -219,6 +222,7 @@ libglib-2.0.so.0:g_utf8_validate
 libgobject-2.0.so.0:g_boxed_type_register_static
 libgobject-2.0.so.0:g_cclosure_marshal_VOID__STRING
 libgobject-2.0.so.0:g_enum_register_static
+libgobject-2.0.so.0:g_hash_table_get_type
 libgobject-2.0.so.0:g_object_class_install_property
 libgobject-2.0.so.0:g_object_new
 libgobject-2.0.so.0:g_object_ref

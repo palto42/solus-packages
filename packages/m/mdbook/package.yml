@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : mdbook
-version    : 0.4.52
-release    : 48
+version    : 0.5.3
+release    : 51
 source     :
-    - https://github.com/rust-lang/mdBook/archive/refs/tags/v0.4.52.tar.gz : d46f3b79e210eed383b6966847ea86ec441b6b505e9d9d868294bb9742130c9c
+    - https://github.com/rust-lang/mdBook/archive/refs/tags/v0.5.3.tar.gz : 7c3e2907c0482fc9721a46ac42d7954600d795ce2152bed418553999ec1ee8f1
 homepage   : https://github.com/rust-lang/mdBook
 license    : MPL-2.0
 component  : programming.tools
@@ -18,3 +19,4 @@ build      : |
     %cargo_build
 install    : |
     %cargo_install
+    %install_license LICENSE

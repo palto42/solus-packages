@@ -74,6 +74,7 @@ libc.so.6:getpass
 libc.so.6:getpid
 libc.so.6:getpwnam
 libc.so.6:getpwuid
+libc.so.6:gettimeofday
 libc.so.6:getuid
 libc.so.6:getxattr
 libc.so.6:gmtime

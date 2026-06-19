@@ -62,6 +62,7 @@ libglib-2.0.so.0:g_error_free
 libglib-2.0.so.0:g_error_matches
 libglib-2.0.so.0:g_file_test
 libglib-2.0.so.0:g_free
+libglib-2.0.so.0:g_free_sized
 libglib-2.0.so.0:g_get_user_cache_dir
 libglib-2.0.so.0:g_getenv
 libglib-2.0.so.0:g_intern_static_string

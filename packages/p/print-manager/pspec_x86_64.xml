@@ -4,9 +4,13 @@
         <Homepage>https://kde.org/</Homepage>
         <Packager>
             <Name>Troy Harvey</Name>
-            <Email>harveydevel@gmail.com</Email>
+            <Email>harvey@getsol.us</Email>
         </Packager>
+        <License>BSD-3-Clause</License>
         <License>GPL-2.0-or-later</License>
+        <License>LGPL-2.0-or-later</License>
+        <License>LGPL-2.1-only</License>
+        <License>LGPL-3.0-only</License>
         <PartOf>desktop.kde.core</PartOf>
         <Summary xml:lang="en">Tool for managing print jobs and printers</Summary>
         <Description xml:lang="en">Tool for managing print jobs and printers on the KDE Plasma desktop.
@@ -22,23 +26,31 @@
         <Files>
             <Path fileType="executable">/usr/bin/configure-printer</Path>
             <Path fileType="executable">/usr/bin/kde-print-queue</Path>
-            <Path fileType="library">/usr/lib64/libkcupslib.so</Path>
+            <Path fileType="library">/usr/lib64/libkcups.so</Path>
             <Path fileType="library">/usr/lib64/qt6/plugins/kf6/kded/printmanager.so</Path>
+            <Path fileType="library">/usr/lib64/qt6/plugins/plasma/applets/org.kde.plasma.printmanager.so</Path>
             <Path fileType="library">/usr/lib64/qt6/plugins/plasma/kcms/systemsettings/kcm_printer_manager.so</Path>
-            <Path fileType="library">/usr/lib64/qt6/qml/org/kde/plasma/printmanager/kcupslib.qmltypes</Path>
+            <Path fileType="library">/usr/lib64/qt6/qml/org/kde/plasma/printmanager/kcups.qmltypes</Path>
             <Path fileType="library">/usr/lib64/qt6/qml/org/kde/plasma/printmanager/kde-qmlmodule.version</Path>
-            <Path fileType="library">/usr/lib64/qt6/qml/org/kde/plasma/printmanager/libkcupslibplugin.so</Path>
+            <Path fileType="library">/usr/lib64/qt6/qml/org/kde/plasma/printmanager/libkcupsplugin.so</Path>
             <Path fileType="library">/usr/lib64/qt6/qml/org/kde/plasma/printmanager/qmldir</Path>
             <Path fileType="data">/usr/share/applications/kcm_printer_manager.desktop</Path>
             <Path fileType="data">/usr/share/applications/org.kde.ConfigurePrinter.desktop</Path>
             <Path fileType="data">/usr/share/applications/org.kde.PrintQueue.desktop</Path>
             <Path fileType="data">/usr/share/knotifications6/printmanager.notifyrc</Path>
+            <Path fileType="data">/usr/share/licenses/print-manager/BSD-3-Clause.txt</Path>
+            <Path fileType="data">/usr/share/licenses/print-manager/GPL-2.0-or-later.txt</Path>
+            <Path fileType="data">/usr/share/licenses/print-manager/LGPL-2.0-or-later.txt</Path>
+            <Path fileType="data">/usr/share/licenses/print-manager/LGPL-2.1-only.txt</Path>
+            <Path fileType="data">/usr/share/licenses/print-manager/LGPL-3.0-only.txt</Path>
+            <Path fileType="data">/usr/share/licenses/print-manager/LicenseRef-KDE-Accepted-LGPL.txt</Path>
             <Path fileType="localedata">/usr/share/locale/ar/LC_MESSAGES/kcm_printer_manager.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ar/LC_MESSAGES/plasma_applet_org.kde.plasma.printmanager.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ar/LC_MESSAGES/print-manager.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ast/LC_MESSAGES/kcm_printer_manager.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ast/LC_MESSAGES/plasma_applet_org.kde.plasma.printmanager.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ast/LC_MESSAGES/print-manager.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/az/LC_MESSAGES/kcm_printer_manager.mo</Path>
             <Path fileType="localedata">/usr/share/locale/az/LC_MESSAGES/plasma_applet_org.kde.plasma.printmanager.mo</Path>
             <Path fileType="localedata">/usr/share/locale/az/LC_MESSAGES/print-manager.mo</Path>
             <Path fileType="localedata">/usr/share/locale/be/LC_MESSAGES/kcm_printer_manager.mo</Path>
@@ -86,6 +98,7 @@
             <Path fileType="localedata">/usr/share/locale/fr/LC_MESSAGES/kcm_printer_manager.mo</Path>
             <Path fileType="localedata">/usr/share/locale/fr/LC_MESSAGES/plasma_applet_org.kde.plasma.printmanager.mo</Path>
             <Path fileType="localedata">/usr/share/locale/fr/LC_MESSAGES/print-manager.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/ga/LC_MESSAGES/kcm_printer_manager.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ga/LC_MESSAGES/plasma_applet_org.kde.plasma.printmanager.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ga/LC_MESSAGES/print-manager.mo</Path>
             <Path fileType="localedata">/usr/share/locale/gl/LC_MESSAGES/kcm_printer_manager.mo</Path>
@@ -129,6 +142,9 @@
             <Path fileType="localedata">/usr/share/locale/lt/LC_MESSAGES/kcm_printer_manager.mo</Path>
             <Path fileType="localedata">/usr/share/locale/lt/LC_MESSAGES/plasma_applet_org.kde.plasma.printmanager.mo</Path>
             <Path fileType="localedata">/usr/share/locale/lt/LC_MESSAGES/print-manager.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/lv/LC_MESSAGES/kcm_printer_manager.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/lv/LC_MESSAGES/plasma_applet_org.kde.plasma.printmanager.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/lv/LC_MESSAGES/print-manager.mo</Path>
             <Path fileType="localedata">/usr/share/locale/mr/LC_MESSAGES/plasma_applet_org.kde.plasma.printmanager.mo</Path>
             <Path fileType="localedata">/usr/share/locale/mr/LC_MESSAGES/print-manager.mo</Path>
             <Path fileType="localedata">/usr/share/locale/nb/LC_MESSAGES/kcm_printer_manager.mo</Path>
@@ -198,21 +214,16 @@
             <Path fileType="localedata">/usr/share/locale/zh_TW/LC_MESSAGES/plasma_applet_org.kde.plasma.printmanager.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_TW/LC_MESSAGES/print-manager.mo</Path>
             <Path fileType="data">/usr/share/metainfo/org.kde.print-manager.metainfo.xml</Path>
-            <Path fileType="data">/usr/share/plasma/plasmoids/org.kde.plasma.printmanager/contents/config/main.xml</Path>
-            <Path fileType="data">/usr/share/plasma/plasmoids/org.kde.plasma.printmanager/contents/ui/FullRepresentation.qml</Path>
-            <Path fileType="data">/usr/share/plasma/plasmoids/org.kde.plasma.printmanager/contents/ui/PrinterDelegate.qml</Path>
-            <Path fileType="data">/usr/share/plasma/plasmoids/org.kde.plasma.printmanager/contents/ui/main.qml</Path>
-            <Path fileType="data">/usr/share/plasma/plasmoids/org.kde.plasma.printmanager/metadata.json</Path>
             <Path fileType="data">/usr/share/qlogging-categories6/pmlogs.categories</Path>
         </Files>
     </Package>
     <History>
-        <Update release="113">
-            <Date>2025-10-01</Date>
-            <Version>6.4.5</Version>
+        <Update release="126">
+            <Date>2026-05-12</Date>
+            <Version>6.6.5</Version>
             <Comment>Packaging update</Comment>
             <Name>Troy Harvey</Name>
-            <Email>harveydevel@gmail.com</Email>
+            <Email>harvey@getsol.us</Email>
         </Update>
     </History>
 </PISI>

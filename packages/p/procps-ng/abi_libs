@@ -1,1 +1,15 @@
+free
+hugetop
 libproc2.so.1
+pgrep
+pidof
+pidwait
+pkill
+pmap
+ps
+slabtop
+tload
+top
+uptime
+vmstat
+w

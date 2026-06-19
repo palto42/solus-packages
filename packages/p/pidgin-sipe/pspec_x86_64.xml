@@ -3,8 +3,8 @@
         <Name>pidgin-sipe</Name>
         <Homepage>https://sourceforge.net/projects/sipe/</Homepage>
         <Packager>
-            <Name>Muhammad Alfi Syahrin</Name>
-            <Email>malfisya.dev@hotmail.com</Email>
+            <Name>Evan Maddock</Name>
+            <Email>maddock.evan@vivaldi.net</Email>
         </Packager>
         <License>GPL-2.0-or-later</License>
         <PartOf>network.im</PartOf>
@@ -29,6 +29,7 @@
             <Path fileType="data">/usr/share/empathy/icons/hicolor/32x32/apps/im-sipe.png</Path>
             <Path fileType="data">/usr/share/empathy/icons/hicolor/48x48/apps/im-sipe.png</Path>
             <Path fileType="data">/usr/share/empathy/icons/hicolor/scalable/apps/im-sipe.svg</Path>
+            <Path fileType="data">/usr/share/licenses/pidgin-sipe/COPYING</Path>
             <Path fileType="localedata">/usr/share/locale/ar/LC_MESSAGES/pidgin-sipe.mo</Path>
             <Path fileType="localedata">/usr/share/locale/cs/LC_MESSAGES/pidgin-sipe.mo</Path>
             <Path fileType="localedata">/usr/share/locale/da/LC_MESSAGES/pidgin-sipe.mo</Path>
@@ -68,12 +69,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="14">
-            <Date>2024-04-07</Date>
+        <Update release="15">
+            <Date>2026-03-17</Date>
             <Version>1.25.0</Version>
             <Comment>Packaging update</Comment>
-            <Name>Muhammad Alfi Syahrin</Name>
-            <Email>malfisya.dev@hotmail.com</Email>
+            <Name>Evan Maddock</Name>
+            <Email>maddock.evan@vivaldi.net</Email>
         </Update>
     </History>
 </PISI>

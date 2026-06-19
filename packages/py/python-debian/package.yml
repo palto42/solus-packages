@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
+name       : python-debian
+version    : 1.1.1
+release    : 4
+source     :
+    - https://ftp.debian.org/debian/pool/main/p/python-debian/python-debian_1.1.1.tar.xz : 59cc8a9a6236f6386ae622564e7d13c846e65cfa63948c9a75e02358dfeaac20
+homepage   : https://salsa.debian.org/python-debian-team/python-debian
+license    :
+    - GPL-2.0-or-later
+    - GPL-3.0-or-later
+component  : programming.python
+summary    : Modules for Debian-related data formats
+description: |
+    Modules for Debian-related data formats.
+builddeps  :
+    - python-build
+    - python-installer
+    - python-setuptools-scm
+    - python-wheel
+rundeps    :
+    - python-chardet
+    - python-six
+    - xz
+checkdeps  :
+    - dpkg
+    - python-chardet
+    - python-pytest
+build      : |
+    export SETUPTOOLS_SCM_PRETEND_VERSION=${version}
+    %python3_setup
+install    : |
+    %python3_install
+    %install_license debian/copyright
+check      : |
+    %python3_test pytest -v

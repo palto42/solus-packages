@@ -1,8 +1,8 @@
 libc.so.6
-libcamel-1.2.so.64
+libcamel-1.2.so.67
 libebackend-1.2.so.11
 libebook-1.2.so.21
-libebook-contacts-1.2.so.4
+libebook-contacts-1.2.so.5
 libecal-2.0.so.3
 libedata-book-1.2.so.27
 libedata-cal-2.0.so.2

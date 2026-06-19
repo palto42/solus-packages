@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : orc
-version    : 0.4.40
-release    : 10
+version    : 0.4.42
+release    : 11
 source     :
-    - https://gstreamer.freedesktop.org/src/orc/orc-0.4.40.tar.xz : 3fc2bee78dfb7c41fd9605061fc69138db7df007eae2f669a1f56e8bacef74ab
+    - https://gstreamer.freedesktop.org/src/orc/orc-0.4.42.tar.xz : 7ec912ab59af3cc97874c456a56a8ae1eec520c385ec447e8a102b2bd122c90c
 homepage   : https://gstreamer.freedesktop.org/modules/orc.html
 license    :
     - BSD-2-Clause
@@ -22,7 +23,7 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
-    rm -fv $installdir/%libdir%/*.a
+    %install_license COPYING
 check      : |
     %ninja_check
 patterns   :

@@ -270,7 +270,6 @@ libKF6CoreAddons.so.6:_ZN5KUserD1Ev
 libKF6CoreAddons.so.6:_ZN6KShell9splitArgsERK7QString6QFlagsINS_6OptionEEPNS_6ErrorsE
 libKF6CoreAddons.so.6:_ZN7KFormatC1ERK7QLocale
 libKF6CoreAddons.so.6:_ZN7KFormatD1Ev
-libKF6CoreAddons.so.6:_ZN8KProcess10setProgramERK7QStringRK5QListIS0_E
 libKF6CoreAddons.so.6:_ZN8KProcess13startDetachedERK7QStringRK5QListIS0_E
 libKF6CoreAddons.so.6:_ZN8KProcess15setNextOpenModeE6QFlagsIN13QIODeviceBase12OpenModeFlagEE
 libKF6CoreAddons.so.6:_ZN8KProcess20setOutputChannelModeENS_17OutputChannelModeE
@@ -322,8 +321,10 @@ libKF6I18n.so.6:_ZNK16KLocalizedString4subsExii5QChar
 libKF6I18n.so.6:_ZNK16KLocalizedString8toStringEv
 libKF6I18n.so.6:_ZNK16KLocalizedString9relaxSubsEv
 libKF6IconThemes.so.6:_ZN10KIconTheme9initThemeEv
-libKF6ItemViews.so.6:_ZN21KTreeWidgetSearchLine13addTreeWidgetEP11QTreeWidget
-libKF6ItemViews.so.6:_ZN21KTreeWidgetSearchLineC1EP7QWidgetP11QTreeWidget
+libKF6IconThemes.so.6:_ZN11KIconColors7setTextERK6QColor
+libKF6IconThemes.so.6:_ZN11KIconColorsC1Ev
+libKF6IconThemes.so.6:_ZN11KIconColorsD1Ev
+libKF6IconThemes.so.6:_ZN3KDE4iconERK7QStringRK11KIconColorsP11KIconLoader
 libKF6KIOCore.so.6:_ZN3KIO19setModificationTimeERK4QUrlRK9QDateTime
 libKF6KIOCore.so.6:_ZN3KIO26createDefaultJobUiDelegateE6QFlagsIN14KJobUiDelegate4FlagEEP7QWidget
 libKF6KIOCore.so.6:_ZN3KIO3Job11addMetaDataERK7QStringS3_
@@ -470,8 +471,6 @@ libKF6Parts.so.6:_ZTv0_n24_N6KParts8PartBaseD0Ev
 libKF6Parts.so.6:_ZTv0_n24_N6KParts8PartBaseD1Ev
 libKF6Parts.so.6:_ZTv0_n32_N6KParts10MainWindowD0Ev
 libKF6Parts.so.6:_ZTv0_n32_N6KParts10MainWindowD1Ev
-libKF6Pty.so.6:_ZN11KPtyProcess16staticMetaObjectE
-libKF6Pty.so.6:_ZN11KPtyProcessC1EP7QObject
 libKF6Purpose.so.6:_ZN7Purpose17AlternativesModel12setInputDataERK11QJsonObject
 libKF6Purpose.so.6:_ZN7Purpose17AlternativesModel13setPluginTypeERK7QString
 libKF6PurposeWidgets.so.6:_ZN7Purpose4Menu16staticMetaObjectE
@@ -770,7 +769,6 @@ libKF6XmlGui.so.6:_ZNK17KActionCollection6actionERK7QString
 libKF6XmlGui.so.6:_ZTI13KXmlGuiWindow
 libKF6XmlGui.so.6:_ZTv0_n24_N13KXmlGuiWindowD0Ev
 libKF6XmlGui.so.6:_ZTv0_n24_N13KXmlGuiWindowD1Ev
-libPlasmaActivities.so.6:_ZN11KActivities16ResourceInstance14notifyAccessedERK4QUrlRK7QString
 libQMobipocket6.so.3:_ZN10Mobipocket8DocumentC1EP9QIODevice
 libQMobipocket6.so.3:_ZNK10Mobipocket8Document10imageCountEv
 libQMobipocket6.so.3:_ZNK10Mobipocket8Document4textEi
@@ -829,8 +827,8 @@ libQt6Core.so.6:_ZN10QSemaphore7releaseEi
 libQt6Core.so.6:_ZN10QSemaphoreC1Ei
 libQt6Core.so.6:_ZN10QSemaphoreD1Ev
 libQt6Core.so.6:_ZN11QBasicMutex12lockInternalEv
-libQt6Core.so.6:_ZN11QBasicMutex14unlockInternalEv
 libQt6Core.so.6:_ZN11QBasicMutex15destroyInternalEPv
+libQt6Core.so.6:_ZN11QBasicMutex19unlockInternalFutexEPv
 libQt6Core.so.6:_ZN11QDataStream11resetStatusEv
 libQt6Core.so.6:_ZN11QDataStream9setStatusENS_6StatusE
 libQt6Core.so.6:_ZN11QDataStreamC1EP9QIODevice
@@ -1060,6 +1058,7 @@ libQt6Core.so.6:_ZN5QChar7toLowerEDi
 libQt6Core.so.6:_ZN5QChar7toUpperEDi
 libQt6Core.so.6:_ZN5QChar8categoryEDi
 libQt6Core.so.6:_ZN5QDate10fromStringE11QStringViewN2Qt10DateFormatE
+libQt6Core.so.6:_ZN5QFile14setPermissionsE6QFlagsIN11QFileDevice10PermissionEE
 libQt6Core.so.6:_ZN5QFile4copyERK7QString
 libQt6Core.so.6:_ZN5QFile4copyERK7QStringS2_
 libQt6Core.so.6:_ZN5QFile4openE6QFlagsIN13QIODeviceBase12OpenModeFlagEE
@@ -1115,7 +1114,7 @@ libQt6Core.so.6:_ZN7QObject11qt_metacastEPKc
 libQt6Core.so.6:_ZN7QObject12blockSignalsEb
 libQt6Core.so.6:_ZN7QObject12moveToThreadEP7QThreadN2Qt15Disambiguated_tE
 libQt6Core.so.6:_ZN7QObject13connectNotifyERK11QMetaMethod
-libQt6Core.so.6:_ZN7QObject13doSetPropertyEPKcPK8QVariantPS2_
+libQt6Core.so.6:_ZN7QObject13doSetPropertyEPKcRK8QVariantPS2_
 libQt6Core.so.6:_ZN7QObject13setObjectNameE14QAnyStringView
 libQt6Core.so.6:_ZN7QObject14disconnectImplEPKS_PPvS1_S3_PK11QMetaObject
 libQt6Core.so.6:_ZN7QObject15doSetObjectNameERK7QString
@@ -1274,6 +1273,7 @@ libQt6Core.so.6:_ZN9QtPrivate12equalStringsE11QStringViewS0_
 libQt6Core.so.6:_ZN9QtPrivate14compareStringsE11QStringViewS0_N2Qt15CaseSensitivityE
 libQt6Core.so.6:_ZN9QtPrivate15convertToLatin1E11QStringView
 libQt6Core.so.6:_ZN9QtPrivate16QStringList_joinEPK5QListI7QStringEPK5QCharx
+libQt6Core.so.6:_ZN9QtPrivate17expectedAllocSizeEmm
 libQt6Core.so.6:_ZN9QtPrivate18QStringList_filterEPK5QListI7QStringE11QStringViewN2Qt15CaseSensitivityE
 libQt6Core.so.6:_ZN9QtPrivate19QStringList_indexOfERK5QListI7QStringE11QStringViewxN2Qt15CaseSensitivityE
 libQt6Core.so.6:_ZN9QtPrivate20QStringList_containsEPK5QListI7QStringE11QStringViewN2Qt15CaseSensitivityE
@@ -1294,7 +1294,7 @@ libQt6Core.so.6:_ZN9QtPrivate52hasRegisteredConverterFunctionToIterableMetaSeque
 libQt6Core.so.6:_ZN9QtPrivate54hasRegisteredMutableViewFunctionToIterableMetaSequenceE9QMetaType
 libQt6Core.so.6:_ZN9QtPrivate7trimmedE11QStringView
 libQt6Core.so.6:_ZN9QtPrivate8qustrchrE11QStringViewDs
-libQt6Core.so.6:_ZNK10QByteArray11toStdStringB5cxx11Ev
+libQt6Core.so.6:_ZN9QtPrivate9sizedFreeEPvm
 libQt6Core.so.6:_ZNK10QByteArray5toHexEc
 libQt6Core.so.6:_ZNK10QByteArray8toBase64E6QFlagsINS_12Base64OptionEE
 libQt6Core.so.6:_ZNK10QJsonValue5toIntEi
@@ -1419,7 +1419,7 @@ libQt6Core.so.6:_ZNK23QRegularExpressionMatch8capturedEi
 libQt6Core.so.6:_ZNK23QRegularExpressionMatch8hasMatchEv
 libQt6Core.so.6:_ZNK31QRegularExpressionMatchIterator7hasNextEv
 libQt6Core.so.6:_ZNK4QDir16absoluteFilePathERK7QString
-libQt6Core.so.6:_ZNK4QDir6mkpathERK7QString
+libQt6Core.so.6:_ZNK4QDir6mkpathERK7QStringSt8optionalI6QFlagsIN11QFileDevice10PermissionEEE
 libQt6Core.so.6:_ZNK4QUrl10isRelativeEv
 libQt6Core.so.6:_ZNK4QUrl11hasFragmentEv
 libQt6Core.so.6:_ZNK4QUrl11isLocalFileEv
@@ -1476,6 +1476,7 @@ libQt6Core.so.6:_ZNK7QString10startsWithE13QLatin1StringN2Qt15CaseSensitivityE
 libQt6Core.so.6:_ZNK7QString10startsWithE5QCharN2Qt15CaseSensitivityE
 libQt6Core.so.6:_ZNK7QString10startsWithERKS_N2Qt15CaseSensitivityE
 libQt6Core.so.6:_ZNK7QString11lastIndexOfERKS_xN2Qt15CaseSensitivityE
+libQt6Core.so.6:_ZNK7QString11toStdStringB5cxx11Ev
 libQt6Core.so.6:_ZNK7QString13toHtmlEscapedEv
 libQt6Core.so.6:_ZNK7QString5countE5QCharN2Qt15CaseSensitivityE
 libQt6Core.so.6:_ZNK7QString5countERKS_N2Qt15CaseSensitivityE
@@ -1506,7 +1507,6 @@ libQt6Core.so.6:_ZNK8QVariant5toIntEPb
 libQt6Core.so.6:_ZNK8QVariant6equalsERKS_
 libQt6Core.so.6:_ZNK8QVariant6isNullEv
 libQt6Core.so.6:_ZNK8QVariant6toBoolEv
-libQt6Core.so.6:_ZNK8QVariant8metaTypeEv
 libQt6Core.so.6:_ZNK8QVariant8toDoubleEPb
 libQt6Core.so.6:_ZNK8QVariant8toStringEv
 libQt6Core.so.6:_ZNK9QDateTime10toTimeSpecEN2Qt8TimeSpecE
@@ -1551,7 +1551,6 @@ libQt6Core.so.6:_ZNK9QMimeType8inheritsERK7QString
 libQt6Core.so.6:_ZNK9QMimeType8suffixesEv
 libQt6Core.so.6:_ZNK9QMimeType9isDefaultEv
 libQt6Core.so.6:_ZNKR7QString3midExx
-libQt6Core.so.6:_ZNO7QString3midExx
 libQt6Core.so.6:_ZTI18QAbstractItemModel
 libQt6Core.so.6:_ZTI18QAbstractListModel
 libQt6Core.so.6:_ZTI19QAbstractProxyModel
@@ -1756,7 +1755,6 @@ libQt6Gui.so.6:_ZN15QGuiApplication16staticMetaObjectE
 libQt6Gui.so.6:_ZN15QGuiApplication17keyboardModifiersEv
 libQt6Gui.so.6:_ZN15QGuiApplication17setOverrideCursorERK7QCursor
 libQt6Gui.so.6:_ZN15QGuiApplication21restoreOverrideCursorEv
-libQt6Gui.so.6:_ZN15QGuiApplication35setHighDpiScaleFactorRoundingPolicyEN2Qt32HighDpiScaleFactorRoundingPolicyE
 libQt6Gui.so.6:_ZN15QGuiApplication7paletteEv
 libQt6Gui.so.6:_ZN15QGuiApplication7screensEv
 libQt6Gui.so.6:_ZN15QGuiApplication9clipboardEv
@@ -1809,6 +1807,7 @@ libQt6Gui.so.6:_ZN5QFontC1ERKS_
 libQt6Gui.so.6:_ZN5QFontC1Ev
 libQt6Gui.so.6:_ZN5QFontD1Ev
 libQt6Gui.so.6:_ZN5QFontaSERKS_
+libQt6Gui.so.6:_ZN5QIcon16staticMetaObjectE
 libQt6Gui.so.6:_ZN5QIcon19fallbackSearchPathsEv
 libQt6Gui.so.6:_ZN5QIcon22setFallbackSearchPathsERK5QListI7QStringE
 libQt6Gui.so.6:_ZN5QIcon9addPixmapERK7QPixmapNS_4ModeENS_5StateE
@@ -1916,6 +1915,7 @@ libQt6Gui.so.6:_ZN7QRegionC1ERK5QRectNS_10RegionTypeE
 libQt6Gui.so.6:_ZN7QRegionC1ERKS_
 libQt6Gui.so.6:_ZN7QRegionD1Ev
 libQt6Gui.so.6:_ZN7QRegionmIERKS_
+libQt6Gui.so.6:_ZN8QPainter10doSetBrushERK6QBrushPS0_
 libQt6Gui.so.6:_ZN8QPainter10drawPixmapERK6QRectFRK7QPixmapS2_
 libQt6Gui.so.6:_ZN8QPainter10drawPixmapERK7QPointFRK7QPixmap
 libQt6Gui.so.6:_ZN8QPainter10setOpacityEd
@@ -1939,19 +1939,18 @@ libQt6Gui.so.6:_ZN8QPainter5beginEP12QPaintDevice
 libQt6Gui.so.6:_ZN8QPainter5scaleEdd
 libQt6Gui.so.6:_ZN8QPainter6rotateEd
 libQt6Gui.so.6:_ZN8QPainter6setPenEN2Qt8PenStyleE
-libQt6Gui.so.6:_ZN8QPainter6setPenERK4QPen
 libQt6Gui.so.6:_ZN8QPainter6setPenERK6QColor
 libQt6Gui.so.6:_ZN8QPainter7drawArcERK6QRectFii
 libQt6Gui.so.6:_ZN8QPainter7drawPieERK6QRectFii
 libQt6Gui.so.6:_ZN8QPainter7restoreEv
 libQt6Gui.so.6:_ZN8QPainter7setFontERK5QFont
+libQt6Gui.so.6:_ZN8QPainter8doSetPenERK4QPenPS0_
 libQt6Gui.so.6:_ZN8QPainter8drawPathERK12QPainterPath
 libQt6Gui.so.6:_ZN8QPainter8drawTextERK5QRectiRK7QStringPS0_
 libQt6Gui.so.6:_ZN8QPainter8drawTextERK7QPointFRK7QString
 libQt6Gui.so.6:_ZN8QPainter8fillRectERK5QRectRK6QColor
 libQt6Gui.so.6:_ZN8QPainter8setBrushE6QColor
 libQt6Gui.so.6:_ZN8QPainter8setBrushEN2Qt10BrushStyleE
-libQt6Gui.so.6:_ZN8QPainter8setBrushERK6QBrush
 libQt6Gui.so.6:_ZN8QPainter9drawImageERK6QRectFRK6QImageS2_6QFlagsIN2Qt19ImageConversionFlagEE
 libQt6Gui.so.6:_ZN8QPainter9drawImageERK7QPointFRK6QImage
 libQt6Gui.so.6:_ZN8QPainter9drawLinesEPK5QLinei
@@ -1978,6 +1977,7 @@ libQt6Gui.so.6:_ZN9QGradient16staticMetaObjectE
 libQt6Gui.so.6:_ZN9QKeyEventC1EN6QEvent4TypeEi6QFlagsIN2Qt16KeyboardModifierEERK7QStringbt
 libQt6Gui.so.6:_ZN9QKeyEventD1Ev
 libQt6Gui.so.6:_ZN9QPageSize2idERK5QSizeNS_15SizeMatchPolicyE
+libQt6Gui.so.6:_ZN9QPageSize3keyENS_10PageSizeIdE
 libQt6Gui.so.6:_ZN9QPageSize4nameENS_10PageSizeIdE
 libQt6Gui.so.6:_ZN9QPageSizeD1Ev
 libQt6Gui.so.6:_ZNK10QClipboard17supportsSelectionEv
@@ -2045,6 +2045,7 @@ libQt6Gui.so.6:_ZNK12QFontMetrics6heightEv
 libQt6Gui.so.6:_ZNK12QImageReader11errorStringEv
 libQt6Gui.so.6:_ZNK12QImageReader14transformationEv
 libQt6Gui.so.6:_ZNK12QImageReader4sizeEv
+libQt6Gui.so.6:_ZNK12QImageReader6formatEv
 libQt6Gui.so.6:_ZNK12QImageReader7canReadEv
 libQt6Gui.so.6:_ZNK12QPaintDevice16devicePixelRatioEv
 libQt6Gui.so.6:_ZNK12QPainterPath12boundingRectEv
@@ -2074,10 +2075,12 @@ libQt6Gui.so.6:_ZNK15QGuiApplication17isSessionRestoredEv
 libQt6Gui.so.6:_ZNK15QTextCharFormat11anchorNamesEv
 libQt6Gui.so.6:_ZNK17QPagedPaintDevice10pageLayoutEv
 libQt6Gui.so.6:_ZNK4QPen5widthEv
+libQt6Gui.so.6:_ZNK4QPen6widthFEv
 libQt6Gui.so.6:_ZNK5QFont8toStringEv
 libQt6Gui.so.6:_ZNK5QFont9pointSizeEv
 libQt6Gui.so.6:_ZNK5QFontcv8QVariantEv
 libQt6Gui.so.6:_ZNK5QFontneERKS_
+libQt6Gui.so.6:_ZNK5QIcon4nameEv
 libQt6Gui.so.6:_ZNK5QIcon5paintEP8QPainterRK5QRect6QFlagsIN2Qt13AlignmentFlagEENS_4ModeENS_5StateE
 libQt6Gui.so.6:_ZNK5QIcon6isNullEv
 libQt6Gui.so.6:_ZNK5QIcon6pixmapERK5QSizeNS_4ModeENS_5StateE
@@ -2455,6 +2458,7 @@ libQt6Widgets.so.6:_ZN11QTreeWidget9sortItemsEiN2Qt9SortOrderE
 libQt6Widgets.so.6:_ZN11QTreeWidgetC1EP7QWidget
 libQt6Widgets.so.6:_ZN11QVBoxLayoutC1EP7QWidget
 libQt6Widgets.so.6:_ZN11QVBoxLayoutC1Ev
+libQt6Widgets.so.6:_ZN12QApplication15topLevelWidgetsEv
 libQt6Widgets.so.6:_ZN12QApplication17startDragDistanceEv
 libQt6Widgets.so.6:_ZN12QApplication19doubleClickIntervalEv
 libQt6Widgets.so.6:_ZN12QApplication4beepEv
@@ -2785,6 +2789,7 @@ libQt6Widgets.so.6:_ZN7QWidget13keyPressEventEP9QKeyEvent
 libQt6Widgets.so.6:_ZN7QWidget13setFixedWidthEi
 libQt6Widgets.so.6:_ZN7QWidget13setFocusProxyEPS_
 libQt6Widgets.so.6:_ZN7QWidget13setSizePolicyE11QSizePolicy
+libQt6Widgets.so.6:_ZN7QWidget14activateWindowEv
 libQt6Widgets.so.6:_ZN7QWidget14dragEnterEventEP15QDragEnterEvent
 libQt6Widgets.so.6:_ZN7QWidget14dragLeaveEventEP15QDragLeaveEvent
 libQt6Widgets.so.6:_ZN7QWidget14mouseMoveEventEP11QMouseEvent
@@ -3220,6 +3225,8 @@ libQt6Widgets.so.6:_ZNK7QWidget15layoutDirectionEv
 libQt6Widgets.so.6:_ZNK7QWidget15minimumSizeHintEv
 libQt6Widgets.so.6:_ZNK7QWidget16inputMethodQueryEN2Qt16InputMethodQueryE
 libQt6Widgets.so.6:_ZNK7QWidget17hasHeightForWidthEv
+libQt6Widgets.so.6:_ZNK7QWidget1xEv
+libQt6Widgets.so.6:_ZNK7QWidget1yEv
 libQt6Widgets.so.6:_ZNK7QWidget3posEv
 libQt6Widgets.so.6:_ZNK7QWidget5mapToEPKS_RK6QPoint
 libQt6Widgets.so.6:_ZNK7QWidget5styleEv
@@ -3328,7 +3335,6 @@ libQt6Widgets.so.6:_ZThn16_NK7QWidget11paintEngineEv
 libQt6Widgets.so.6:_ZThn16_NK7QWidget13sharedPainterEv
 libQt6Widgets.so.6:_ZThn16_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE
 libQt6Widgets.so.6:_ZThn16_NK7QWidget7devTypeEv
-libQt6Xml.so.6:_ZN11QDomElement10setTagNameERK7QString
 libQt6Xml.so.6:_ZN11QDomElement12setAttributeERK7QStringS2_
 libQt6Xml.so.6:_ZN11QDomElement12setAttributeERK7QStringx
 libQt6Xml.so.6:_ZN11QDomElement12setAttributeERK7QStringy
@@ -3387,7 +3393,6 @@ libQt6Xml.so.6:_ZNK8QDomNode4saveER11QTextStreamiNS_14EncodingPolicyE
 libQt6Xml.so.6:_ZNK8QDomNode6isNullEv
 libQt6Xml.so.6:_ZNK8QDomNode6isTextEv
 libQt6Xml.so.6:_ZNK8QDomNode6toTextEv
-libQt6Xml.so.6:_ZNK8QDomNode8nodeNameEv
 libQt6Xml.so.6:_ZNK8QDomNode9cloneNodeEb
 libQt6Xml.so.6:_ZNK8QDomNode9isElementEv
 libQt6Xml.so.6:_ZNK8QDomNode9lastChildEv
@@ -3403,6 +3408,7 @@ libc.so.6:__strncpy_chk
 libc.so.6:__vfprintf_chk
 libc.so.6:__vprintf_chk
 libc.so.6:__vsnprintf_chk
+libc.so.6:__wmemcpy_chk
 libc.so.6:abort
 libc.so.6:calloc
 libc.so.6:chmod
@@ -3443,6 +3449,7 @@ libc.so.6:strncmp
 libc.so.6:strncpy
 libc.so.6:strtod
 libc.so.6:umask
+libc.so.6:wmemcpy
 libdjvulibre.so.21:ddjvu_context_create
 libdjvulibre.so.21:ddjvu_context_release
 libdjvulibre.so.21:ddjvu_document_create_by_filename_utf8
@@ -3762,6 +3769,8 @@ libpoppler-qt6.so.3:_ZNK7Poppler12EmbeddedFile4sizeEv
 libpoppler-qt6.so.3:_ZNK7Poppler12EmbeddedFile7modDateEv
 libpoppler-qt6.so.3:_ZNK7Poppler12FontIterator7hasNextEv
 libpoppler-qt6.so.3:_ZNK7Poppler12PDFConverter10pdfOptionsEv
+libpoppler-qt6.so.3:_ZNK7Poppler12PDFConverter17lastSigningResultEv
+libpoppler-qt6.so.3:_ZNK7Poppler12PDFConverter23lastSigningErrorDetailsEv
 libpoppler-qt6.so.3:_ZNK7Poppler13BaseConverter9lastErrorEv
 libpoppler-qt6.so.3:_ZNK7Poppler13FormFieldText10isPasswordEv
 libpoppler-qt6.so.3:_ZNK7Poppler13FormFieldText10isRichTextEv
@@ -3857,6 +3866,7 @@ libpoppler-qt6.so.3:_ZNK7Poppler16WidgetAnnotation16additionalActionENS_10Annota
 libpoppler-qt6.so.3:_ZNK7Poppler18FormFieldSignature13signatureTypeEv
 libpoppler-qt6.so.3:_ZNK7Poppler18FormFieldSignature13validateAsyncENS0_15ValidateOptionsERK9QDateTime
 libpoppler-qt6.so.3:_ZNK7Poppler18FormFieldSignature14validateResultEv
+libpoppler-qt6.so.3:_ZNK7Poppler18FormFieldSignature23lastSigningErrorDetailsEv
 libpoppler-qt6.so.3:_ZNK7Poppler18FormFieldSignature4signERK7QStringRKNS_12PDFConverter16NewSignatureDataE
 libpoppler-qt6.so.3:_ZNK7Poppler19HighlightAnnotation13highlightTypeEv
 libpoppler-qt6.so.3:_ZNK7Poppler19HighlightAnnotation14highlightQuadsEv
@@ -3872,6 +3882,7 @@ libpoppler-qt6.so.3:_ZNK7Poppler19RichMediaAnnotation8Instance4typeEv
 libpoppler-qt6.so.3:_ZNK7Poppler19RichMediaAnnotation8Instance6paramsEv
 libpoppler-qt6.so.3:_ZNK7Poppler19RichMediaAnnotation8Settings10activationEv
 libpoppler-qt6.so.3:_ZNK7Poppler19RichMediaAnnotation8settingsEv
+libpoppler-qt6.so.3:_ZNK7Poppler19SignatureAnnotation23lastSigningErrorDetailsEv
 libpoppler-qt6.so.3:_ZNK7Poppler23SignatureValidationInfo10signerNameEv
 libpoppler-qt6.so.3:_ZNK7Poppler23SignatureValidationInfo11signingTimeEv
 libpoppler-qt6.so.3:_ZNK7Poppler23SignatureValidationInfo13hashAlgorithmEv
@@ -3997,10 +4008,28 @@ libspectre.so.1:spectre_render_context_set_antialias_bits
 libspectre.so.1:spectre_render_context_set_scale
 libspectre.so.1:spectre_render_context_set_use_platform_fonts
 libspectre.so.1:spectre_status_to_string
+libstdc++.so.6:_ZNKSt7__cxx118numpunctIwE11do_groupingEv
+libstdc++.so.6:_ZNKSt7__cxx118numpunctIwE11do_truenameEv
+libstdc++.so.6:_ZNKSt7__cxx118numpunctIwE12do_falsenameEv
+libstdc++.so.6:_ZNKSt7__cxx118numpunctIwE16do_thousands_sepEv
 libstdc++.so.6:_ZNKSt8__detail20_Prime_rehash_policy14_M_need_rehashEmmm
+libstdc++.so.6:_ZNSt13basic_ostreamIwSt11char_traitsIwEE9_M_insertIdEERS2_T_
+libstdc++.so.6:_ZNSt6locale5_Impl16_M_install_facetEPKNS_2idEPKNS_5facetE
+libstdc++.so.6:_ZNSt6locale5_ImplC1ERKS0_m
+libstdc++.so.6:_ZNSt6localeC1ERKS_
+libstdc++.so.6:_ZNSt6localeC1Ev
+libstdc++.so.6:_ZNSt6localeD1Ev
+libstdc++.so.6:_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE15_M_replace_coldEPwmPKwmm
+libstdc++.so.6:_ZNSt7__cxx118numpunctIwE22_M_initialize_numpunctEP15__locale_struct
+libstdc++.so.6:_ZNSt7__cxx118numpunctIwE2idE
+libstdc++.so.6:_ZNSt7__cxx118numpunctIwED2Ev
 libstdc++.so.6:_ZNSt8__detail15_List_node_base11_M_transferEPS0_S1_
 libstdc++.so.6:_ZNSt8__detail15_List_node_base7_M_hookEPS0_
 libstdc++.so.6:_ZNSt8__detail15_List_node_base9_M_unhookEv
+libstdc++.so.6:_ZNSt8ios_baseC2Ev
+libstdc++.so.6:_ZNSt8ios_baseD2Ev
+libstdc++.so.6:_ZNSt9basic_iosIwSt11char_traitsIwEE4initEPSt15basic_streambufIwS1_E
+libstdc++.so.6:_ZNSt9basic_iosIwSt11char_traitsIwEE5imbueERKSt6locale
 libstdc++.so.6:_ZSt17__throw_bad_allocv
 libstdc++.so.6:_ZSt18_Rb_tree_decrementPSt18_Rb_tree_node_base
 libstdc++.so.6:_ZSt18_Rb_tree_incrementPSt18_Rb_tree_node_base
@@ -4014,9 +4043,16 @@ libstdc++.so.6:_ZSt28__throw_bad_array_new_lengthv
 libstdc++.so.6:_ZSt29_Rb_tree_insert_and_rebalancebPSt18_Rb_tree_node_baseS0_RS_
 libstdc++.so.6:_ZSt4cerr
 libstdc++.so.6:_ZStlsIcSt11char_traitsIcESaIcEERSt13basic_ostreamIT_T0_ES7_RKNSt7__cxx1112basic_stringIS4_S5_T1_EE
+libstdc++.so.6:_ZTINSt7__cxx118numpunctIwEE
+libstdc++.so.6:_ZTTNSt7__cxx1119basic_ostringstreamIwSt11char_traitsIwESaIwEEE
 libstdc++.so.6:_ZTVN10__cxxabiv117__class_type_infoE
 libstdc++.so.6:_ZTVN10__cxxabiv120__si_class_type_infoE
 libstdc++.so.6:_ZTVN10__cxxabiv121__vmi_class_type_infoE
+libstdc++.so.6:_ZTVNSt7__cxx1115basic_stringbufIwSt11char_traitsIwESaIwEEE
+libstdc++.so.6:_ZTVNSt7__cxx1119basic_ostringstreamIwSt11char_traitsIwESaIwEEE
+libstdc++.so.6:_ZTVNSt7__cxx118numpunctIwEE
+libstdc++.so.6:_ZTVSt15basic_streambufIwSt11char_traitsIwEE
+libstdc++.so.6:_ZTVSt9basic_iosIwSt11char_traitsIwEE
 libstdc++.so.6:_ZdaPv
 libstdc++.so.6:_ZdaPvm
 libstdc++.so.6:_ZdlPv

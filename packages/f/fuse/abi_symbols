@@ -2,6 +2,8 @@ libfuse3.so.4:FUSE_3.0
 libfuse3.so.4:FUSE_3.1
 libfuse3.so.4:FUSE_3.12
 libfuse3.so.4:FUSE_3.17
+libfuse3.so.4:FUSE_3.17.3
+libfuse3.so.4:FUSE_3.18
 libfuse3.so.4:FUSE_3.2
 libfuse3.so.4:FUSE_3.3
 libfuse3.so.4:FUSE_3.4
@@ -19,6 +21,7 @@ libfuse3.so.4:fuse_buf_copy
 libfuse3.so.4:fuse_buf_size
 libfuse3.so.4:fuse_clean_cache
 libfuse3.so.4:fuse_cmdline_help
+libfuse3.so.4:fuse_convert_to_conn_want_ext
 libfuse3.so.4:fuse_daemonize
 libfuse3.so.4:fuse_destroy
 libfuse3.so.4:fuse_exit
@@ -59,6 +62,7 @@ libfuse3.so.4:fuse_fs_rename
 libfuse3.so.4:fuse_fs_rmdir
 libfuse3.so.4:fuse_fs_setxattr
 libfuse3.so.4:fuse_fs_statfs
+libfuse3.so.4:fuse_fs_statx
 libfuse3.so.4:fuse_fs_symlink
 libfuse3.so.4:fuse_fs_truncate
 libfuse3.so.4:fuse_fs_unlink
@@ -66,6 +70,7 @@ libfuse3.so.4:fuse_fs_utimens
 libfuse3.so.4:fuse_fs_write
 libfuse3.so.4:fuse_fs_write_buf
 libfuse3.so.4:fuse_get_context
+libfuse3.so.4:fuse_get_feature_flag
 libfuse3.so.4:fuse_get_session
 libfuse3.so.4:fuse_getgroups
 libfuse3.so.4:fuse_interrupted
@@ -88,6 +93,7 @@ libfuse3.so.4:fuse_loop_mt_32
 libfuse3.so.4:fuse_lowlevel_help
 libfuse3.so.4:fuse_lowlevel_notify_delete
 libfuse3.so.4:fuse_lowlevel_notify_expire_entry
+libfuse3.so.4:fuse_lowlevel_notify_increment_epoch
 libfuse3.so.4:fuse_lowlevel_notify_inval_entry
 libfuse3.so.4:fuse_lowlevel_notify_inval_inode
 libfuse3.so.4:fuse_lowlevel_notify_poll
@@ -136,12 +142,15 @@ libfuse3.so.4:fuse_reply_open
 libfuse3.so.4:fuse_reply_poll
 libfuse3.so.4:fuse_reply_readlink
 libfuse3.so.4:fuse_reply_statfs
+libfuse3.so.4:fuse_reply_statx
 libfuse3.so.4:fuse_reply_write
 libfuse3.so.4:fuse_reply_xattr
 libfuse3.so.4:fuse_req_ctx
+libfuse3.so.4:fuse_req_get_payload
 libfuse3.so.4:fuse_req_getgroups
 libfuse3.so.4:fuse_req_interrupt_func
 libfuse3.so.4:fuse_req_interrupted
+libfuse3.so.4:fuse_req_is_uring
 libfuse3.so.4:fuse_req_userdata
 libfuse3.so.4:fuse_session_custom_io
 libfuse3.so.4:fuse_session_custom_io_30
@@ -163,9 +172,11 @@ libfuse3.so.4:fuse_session_receive_buf
 libfuse3.so.4:fuse_session_reset
 libfuse3.so.4:fuse_session_unmount
 libfuse3.so.4:fuse_set_fail_signal_handlers
+libfuse3.so.4:fuse_set_feature_flag
 libfuse3.so.4:fuse_set_log_func
 libfuse3.so.4:fuse_set_signal_handlers
 libfuse3.so.4:fuse_start_cleanup_thread
 libfuse3.so.4:fuse_stop_cleanup_thread
 libfuse3.so.4:fuse_unmount
+libfuse3.so.4:fuse_unset_feature_flag
 libfuse3.so.4:fuse_version

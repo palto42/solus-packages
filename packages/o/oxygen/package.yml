@@ -1,12 +1,21 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : oxygen
-version    : 6.4.5
-release    : 122
+version    : 6.6.5
+release    : 135
 source     :
-    - https://download.kde.org/stable/plasma/6.4.5/oxygen-6.4.5.tar.xz : 9c18a33a22560bdc504bd1cdd6dd39e091838c60b547acec00c51bd8a133eb63
+    - https://download.kde.org/stable/plasma/6.6.5/oxygen-6.6.5.tar.xz : 40348c7beb911ec61cb96c4cbb5ea2e611e189faf4e4c9d2b29813bc28f72b4a
 homepage   : https://www.kde.org/workspaces/plasmadesktop/
 license    :
+    - CC0-1.0
+    - GPL-2.0-only
     - GPL-2.0-or-later
+    - GPL-3.0-only
+    - GPL-3.0-or-later
+    - LGPL-2.0-only
+    - LGPL-2.0-or-later
     - LGPL-2.1-only
+    - LGPL-3.0-only
+    - MIT
 component  :
     - desktop.theme
 summary    :
@@ -31,6 +40,7 @@ builddeps  :
     - kf6-kconfig-devel
     - kf6-kcoreaddons-devel
     - kf6-ki18n-devel
+    - kf6-kirigami-devel
     - kf6-kservice-devel
     - kf6-kwidgetsaddons-devel
     - kguiaddons-devel
@@ -58,3 +68,5 @@ install    : |
     %ninja_install -C qt5-build
 
     %ninja_install -C qt6-build
+
+    %install_license LICENSES/*

@@ -9,6 +9,7 @@ libecontactlisteditor.so
 libecontactprint.so
 libemail-engine.so
 libessmime.so
+libevcardeditor.so
 libevolution-addressbook-importers.so
 libevolution-calendar-importers.so
 libevolution-calendar.so

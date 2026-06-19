@@ -1,0 +1,55 @@
+Subject: [PATCH] patch: update path to distribute on solus
+---
+Index: daemon/service/platform/platform_linux_release.go
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/daemon/service/platform/platform_linux_release.go b/daemon/service/platform/platform_linux_release.go
+--- a/daemon/service/platform/platform_linux_release.go	(revision 9b8ee5a7c1b2fcf920772342ce0a97917f2ae669)
++++ b/daemon/service/platform/platform_linux_release.go	(date 1774369984330)
+@@ -30,7 +30,7 @@
+ )
+
+ func doOsInitForBuild() (warnings []string, errors []error, logInfo []string) {
+-	installDir := "/opt/ivpn"
++	installDir := "/usr/share/ivpn"
+
+ 	// check if we are running in snap environment
+ 	if envs := GetSnapEnvs(); envs != nil {
+@@ -42,24 +42,24 @@
+ 		logInfo = append(logInfo, "Running in SNAP environment!")
+ 	}
+
+-	firewallScript = path.Join(installDir, "etc/firewall.sh")
+-	splitTunScript = path.Join(installDir, "etc/splittun.sh")
+-	openvpnCaKeyFile = path.Join(installDir, "etc/ca.crt")
+-	openvpnTaKeyFile = path.Join(installDir, "etc/ta.key")
+-	openvpnUpScript = path.Join(installDir, "etc/client.up")
+-	openvpnDownScript = path.Join(installDir, "etc/client.down")
+-	serversFileBundled = path.Join(installDir, "etc/servers.json")
++	firewallScript = path.Join(installDir, "firewall.sh")
++	splitTunScript = path.Join(installDir, "splittun.sh")
++	openvpnCaKeyFile = path.Join(installDir, "ca.crt")
++	openvpnTaKeyFile = path.Join(installDir, "ta.key")
++	openvpnUpScript = path.Join(installDir, "client.up")
++	openvpnDownScript = path.Join(installDir, "client.down")
++	serversFileBundled = path.Join(installDir, "servers.json")
+
+ 	obfsproxyStartScript = path.Join(installDir, "obfsproxy/obfs4proxy")
+
+ 	v2rayBinaryPath = path.Join(installDir, "v2ray/v2ray")
+ 	v2rayConfigTmpFile = path.Join(tmpDir, "v2ray.json")
+
+-	wgBinaryPath = path.Join(installDir, "wireguard-tools/wg-quick")
+-	wgToolBinaryPath = path.Join(installDir, "wireguard-tools/wg")
++	wgBinaryPath = path.Join("/usr/bin", "wg-quick")
++	wgToolBinaryPath = path.Join("/usr/bin", "wg")
+
+-	dnscryptproxyBinPath = path.Join(installDir, "dnscrypt-proxy/dnscrypt-proxy")
+-	dnscryptproxyConfigTemplate = path.Join(installDir, "etc/dnscrypt-proxy-template.toml")
++	dnscryptproxyBinPath = path.Join("/usr/bin", "dnscrypt-proxy")
++	dnscryptproxyConfigTemplate = path.Join(installDir, "dnscrypt-proxy-template.toml")
+ 	dnscryptproxyConfigDir = tmpDir
+
+ 	kemHelperBinaryPath = path.Join(installDir, "kem/kem-helper")

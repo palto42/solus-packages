@@ -1,0 +1,6 @@
+releases:
+  id: 380117
+  rss: https://github.com/mjakeman/extension-manager/tags.atom
+ # No known CPE, checked 2026-03-25
+security:
+  cpe: ~

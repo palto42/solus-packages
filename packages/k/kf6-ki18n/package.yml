@@ -1,14 +1,17 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kf6-ki18n
-version    : 6.19.0
-release    : 28
+version    : 6.27.0
+release    : 39
 source     :
-    - https://download.kde.org/stable/frameworks/6.19/ki18n-6.19.0.tar.xz : 608ff2634cd19736a8091c750c71b23db0b33fd81e82fb9fc4bcce76712284a6
+    - https://download.kde.org/stable/frameworks/6.27/ki18n-6.27.0.tar.xz : cd812ae95b0e95b40e46a50b9dea6d188eec001be96b1e1a5d962730e5f9bc58
 homepage   : https://community.kde.org/Frameworks
 license    :
     - BSD-3-Clause
-    - LGPL-2.0-only
+    - CC0-1.0
     - LGPL-2.0-or-later
     - LGPL-2.1-only
+    - LGPL-3.0-only
+    - ODbL-1.0
 component  : programming.tools
 summary    : KDE Gettext-based UI text internationalization.
 description: |
@@ -29,3 +32,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*

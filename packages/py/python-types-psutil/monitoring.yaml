@@ -1,0 +1,8 @@
+---
+releases:
+  id: 221807
+  rss: https://pypi.org/rss/project/types-psutil/releases.xml
+
+# Last checked 2024-08-28
+security:
+  cpe: ~

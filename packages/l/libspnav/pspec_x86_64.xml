@@ -1,0 +1,54 @@
+<PISI>
+    <Source>
+        <Name>libspnav</Name>
+        <Homepage>https://spacenav.sourceforge.net/</Homepage>
+        <Packager>
+            <Name>David Harder</Name>
+            <Email>david@davidjharder.ca</Email>
+        </Packager>
+        <License>BSD-3-Clause</License>
+        <PartOf>programming.library</PartOf>
+        <Summary xml:lang="en">A free, compatible alternative for 3Dconnexion&apos;s 3D input device drivers and SDK.</Summary>
+        <Description xml:lang="en">The spacenav project provides a free, compatible alternative to the proprietary 3Dconnexion device driver and SDK, for their 3D input devices (called &quot;space navigator&quot;, &quot;space pilot&quot;, &quot;space traveller&quot;, &quot;space mouse&quot;, etc).
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>libspnav</Name>
+        <Summary xml:lang="en">A free, compatible alternative for 3Dconnexion&apos;s 3D input device drivers and SDK.</Summary>
+        <Description xml:lang="en">The spacenav project provides a free, compatible alternative to the proprietary 3Dconnexion device driver and SDK, for their 3D input devices (called &quot;space navigator&quot;, &quot;space pilot&quot;, &quot;space traveller&quot;, &quot;space mouse&quot;, etc).
+</Description>
+        <PartOf>programming.library</PartOf>
+        <Files>
+            <Path fileType="library">/usr/lib/libspnav.so.0</Path>
+            <Path fileType="library">/usr/lib/libspnav.so.0.4</Path>
+            <Path fileType="data">/usr/share/licenses/libspnav/LICENSE</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>libspnav-devel</Name>
+        <Summary xml:lang="en">Development files for libspnav</Summary>
+        <Description xml:lang="en">The spacenav project provides a free, compatible alternative to the proprietary 3Dconnexion device driver and SDK, for their 3D input devices (called &quot;space navigator&quot;, &quot;space pilot&quot;, &quot;space traveller&quot;, &quot;space mouse&quot;, etc).
+</Description>
+        <PartOf>programming.devel</PartOf>
+        <RuntimeDependencies>
+            <Dependency release="1">libspnav</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include/spnav.h</Path>
+            <Path fileType="header">/usr/include/spnav_config.h</Path>
+            <Path fileType="header">/usr/include/spnav_magellan.h</Path>
+            <Path fileType="library">/usr/lib/libspnav.so</Path>
+            <Path fileType="data">/usr/share/pkgconfig/spnav.pc</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2026-04-13</Date>
+            <Version>1.2</Version>
+            <Comment>Packaging update</Comment>
+            <Name>David Harder</Name>
+            <Email>david@davidjharder.ca</Email>
+        </Update>
+    </History>
+</PISI>

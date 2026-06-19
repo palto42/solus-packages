@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : drm_info
-version    : 2.7.0
-release    : 1
+version    : 2.9.0
+release    : 2
 source     :
-    - https://gitlab.freedesktop.org/emersion/drm_info/-/archive/v2.7.0/drm_info-v2.7.0.tar.bz2 : 6c503e00a6d8915e9d0c92677cf2805a96d0256b0cc364e702f8d2dd989edb4a
+    - https://gitlab.freedesktop.org/emersion/drm_info/-/archive/v2.9.0/drm_info-v2.9.0.tar.bz2 : b684773e3ae48b9f9937b2078221fc4b46590c7c4130a55aa746918a03a0a1a2
 homepage   : https://gitlab.freedesktop.org/emersion/drm_info
 license    : MIT
 component  : system.utils
@@ -11,10 +12,14 @@ description: |
     Small utility to dump info about DRM devices
 builddeps  :
     - pkgconfig(json-c)
+    - pkgconfig(libdisplay-info)
     - pkgconfig(libdrm)
+    - pkgconfig(libpci)
+    - pkgconfig(scdoc)
 setup      : |
     %meson_configure
 build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSE

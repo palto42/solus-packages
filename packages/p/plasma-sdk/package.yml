@@ -1,12 +1,17 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : plasma-sdk
-version    : 6.4.5
-release    : 110
+version    : 6.6.5
+release    : 123
 source     :
-    - https://download.kde.org/stable/plasma/6.4.5/plasma-sdk-6.4.5.tar.xz : 5632dabedc3f75106d15d3d6fa5066a5be9dacf87a224c47fafe82ac11cfdbbf
+    - https://download.kde.org/stable/plasma/6.6.5/plasma-sdk-6.6.5.tar.xz : ed540a8bda1a633881fca41f7dfe96ae17c9a654b71374a79e86cf547efcc959
 homepage   : https://www.kde.org/workspaces/plasmadesktop/
 license    :
-    - GPL-2.0
-    - LGPL-2.1
+    - BSD-2-Clause
+    - CC0-1.0
+    - GPL-2.0-only
+    - GPL-2.0-or-later
+    - LGPL-2.0-only
+    - LGPL-2.0-or-later
 component  : desktop.kde
 summary    : Applications useful for Plasma Development
 description: |
@@ -40,3 +45,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*

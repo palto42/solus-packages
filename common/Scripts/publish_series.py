@@ -11,7 +11,7 @@ import base64
 
 from datetime import datetime
 from dataclasses import dataclass
-from typing import List, Optional
+from typing import List, Optional, Tuple
 from xml.etree import ElementTree
 from urllib import request
 from email.utils import parsedate_to_datetime
@@ -79,6 +79,7 @@ class Publisher:
         self.render = render
         self.wait = wait
         self.git = Git(path)
+        self.builds = Builds().all
 
     def run(self) -> bool:
         commits = self.git.commit_refs(self.base, self.head)
@@ -86,7 +87,7 @@ class Publisher:
 
         packages = {commit: self._packages(commit) for commit in commits}
         invalid = {commit: packages for commit, packages in packages.items()
-                   if len(packages) != 1 or any(p is None for p in packages)}
+                   if not self._change_is_valid(commit, packages)}
 
         if len(invalid) > 0:
             print('Found commits with an incorrect number of packages:')
@@ -102,6 +103,10 @@ class Publisher:
             if self.render:
                 self._render(commit)
 
+            if self._skip_commit(commit):
+                print(f'Skipping commit: {self._commit_str(commit)}')
+                continue
+
             comment = f'BUILD {i+1}/{len(commits)}'
             if self.title:
                 comment = f'{self.title}\n{comment}'
@@ -112,7 +117,7 @@ class Publisher:
             if not found:
                 id = self._push_build(build)
             else:
-                print(f'Skipping build: {build}')
+                print(f'Skipping build: {self._commit_str(build.ref)}')
 
             if self.wait:
                 self._wait_for_build(id)
@@ -147,15 +152,27 @@ class Publisher:
 
         return str(os.path.join(*parts[0:3]))
 
+    def _skip_commit(self, commit: str) -> bool:
+        msg = self.git.commit_summary(commit)
+        return msg.startswith('[NFC]') or \
+            msg.startswith('common:') or \
+            msg.startswith('packages:') or\
+            msg.startswith('repo_data:') or\
+            msg.lower().endswith(': deprecate')
+
+    def _change_is_valid(self, commit: str, packages: List[str]) -> bool:
+        return self._skip_commit(commit) or \
+            len(packages) == 1 and not any(p is None for p in packages)
+
     def _git_push(self) -> None:
         print('Pushing to Git')
         if not self.noop:
             self.git.run('push')
 
     def _push_build(self, build: Build) -> int:
-        print(f'Pushing build: {build}')
+        print(f'Pushing build: {self._commit_str(build.ref)}')
         if self.noop:
-            return Builds().all[-1].id
+            return self.builds[-1].id
 
         output = self._run('ssh', 'build-controller@build.getsol.us', 'build',
                            build.source, build.tag, build.path, build.ref,
@@ -163,9 +180,9 @@ class Publisher:
 
         return int(json.loads(output)['id'])
 
-    def _build_exists(self, build: Build) -> [bool, int]:
+    def _build_exists(self, build: Build) -> Tuple[bool, int]:
         try:
-            found = next(b for b in Builds().all
+            found = next(b for b in self.builds
                          if b.tag == build.tag and b.status != 'FAILED')
             return True, found.id
         except StopIteration:
@@ -192,7 +209,7 @@ class Publisher:
     def _notify_failed(self, build: APIBuild) -> None:
         self._run('notify-send', '--expire-time=0', '--urgency=critical', '--app-name=Solus Builds',
                   f'Build for {build.tag} failed!')
-        self._run('paplay', '/usr/share/sounds/freedesktop/stereo/suspend-error.oga')
+        self._run('pw-cat', '--playback', '/usr/share/sounds/freedesktop/stereo/suspend-error.oga')
 
     def _notify_finished(self) -> None:
         self._run('notify-send', '--expire-time=0', '--app-name=Solus Builds',
@@ -208,6 +225,9 @@ class Publisher:
             f.write(res.stdout.encode('utf-8'))
             f.close()
             self._run('xdg-open', f.name)
+
+    def _commit_str(self, ref: str) -> str:
+        return f'{self.git.commit_summary(ref)} ({ref[:10]})'
 
     @staticmethod
     def _run(*args: str) -> str:

@@ -1,0 +1,22 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
+name       : vala-lint
+version    : 0.1.0
+release    : 1
+source     :
+    - https://github.com/vala-lang/vala-lint/archive/refs/tags/0.1.0.tar.gz : 1ef892e4afccc83a3540cb73e0bd5db7ce3c1e84ea8ef2b983a2a3876f686dde
+homepage   : https://github.com/vala-lang/vala-lint
+license    : GPL-2.0-or-later
+component  : programming.tools
+summary    : A small command line tool to check Vala code for code-style errors.
+description: |
+    Vala lint is a small command line tool used to check Vala code for code-style errors.
+builddeps  :
+    - pkgconfig(json-glib-1.0)
+    - vala
+rundeps    :
+    - vala
+setup      : |
+    %meson_configure
+install    : |
+    %ninja_install
+    %install_license COPYING

@@ -1,10 +1,15 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kunifiedpush
-version    : 25.08.2
-release    : 10
+version    : 26.04.2
+release    : 16
 source     :
-    - https://download.kde.org/stable/release-service/25.08.2/src/kunifiedpush-25.08.2.tar.xz : 2a5c6a1a307474ca9502b79a65fd1cf4662182e0831a47d038b0640c20578832
+    - https://download.kde.org/stable/release-service/26.04.2/src/kunifiedpush-26.04.2.tar.xz : 15b6c7c463953b0d3b0ae8dfdde9dea41ae7eac77d036ca95db6f87d1a8a8fe1
 homepage   : https://invent.kde.org/libraries/kunifiedpush
-license    : LGPL-2.0-or-later
+license    :
+    - BSD-2-Clause
+    - BSD-3-Clause
+    - CC0-1.0
+    - LGPL-2.0-or-later
 component  : programming.library
 summary    : UnifiedPush client library
 description: |
@@ -13,6 +18,7 @@ builddeps  :
     - pkgconfig(Qt6WebSockets)
     - kf6-kcmutils-devel
     - kf6-kcoreaddons-devel
+    - kf6-kcrash-devel
     - kf6-ki18n-devel
     - kf6-kservice-devel
     - kf6-solid-devel
@@ -26,3 +32,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*

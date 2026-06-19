@@ -1,0 +1,108 @@
+<PISI>
+    <Source>
+        <Name>gst-plugins-rs</Name>
+        <Homepage>https://gitlab.freedesktop.org/gstreamer/gst-plugins-rs</Homepage>
+        <Packager>
+            <Name>Evan Maddock</Name>
+            <Email>maddock.evan@vivaldi.net</Email>
+        </Packager>
+        <License>Apache-2.0</License>
+        <License>LGPL-2.1-or-later</License>
+        <License>MIT</License>
+        <License>MPL-2.0</License>
+        <PartOf>multimedia.gstreamer</PartOf>
+        <Summary xml:lang="en">GStreamer plugins written in Rust.</Summary>
+        <Description xml:lang="en">Repository containing various GStreamer plugins and elements written in the Rust programming language. The plugins build upon the GStreamer Rust bindings.</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>gst-plugins-rs</Name>
+        <Summary xml:lang="en">GStreamer plugins written in Rust.</Summary>
+        <Description xml:lang="en">Repository containing various GStreamer plugins and elements written in the Rust programming language. The plugins build upon the GStreamer Rust bindings.</Description>
+        <PartOf>multimedia.gstreamer</PartOf>
+        <Files>
+            <Path fileType="executable">/usr/bin/gst-webrtc-signalling-server</Path>
+            <Path fileType="library">/usr/lib64/gstreamer-1.0/libgstaws.so</Path>
+            <Path fileType="library">/usr/lib64/gstreamer-1.0/libgstburn.so</Path>
+            <Path fileType="library">/usr/lib64/gstreamer-1.0/libgstcdg.so</Path>
+            <Path fileType="library">/usr/lib64/gstreamer-1.0/libgstclaxon.so</Path>
+            <Path fileType="library">/usr/lib64/gstreamer-1.0/libgstdav1d.so</Path>
+            <Path fileType="library">/usr/lib64/gstreamer-1.0/libgstdebugseimetainserter.so</Path>
+            <Path fileType="library">/usr/lib64/gstreamer-1.0/libgstdeepgram.so</Path>
+            <Path fileType="library">/usr/lib64/gstreamer-1.0/libgstdemucs.so</Path>
+            <Path fileType="library">/usr/lib64/gstreamer-1.0/libgstelevenlabs.so</Path>
+            <Path fileType="library">/usr/lib64/gstreamer-1.0/libgstfallbackswitch.so</Path>
+            <Path fileType="library">/usr/lib64/gstreamer-1.0/libgstffv1.so</Path>
+            <Path fileType="library">/usr/lib64/gstreamer-1.0/libgstgif.so</Path>
+            <Path fileType="library">/usr/lib64/gstreamer-1.0/libgstgopbuffer.so</Path>
+            <Path fileType="library">/usr/lib64/gstreamer-1.0/libgsthlsmultivariantsink.so</Path>
+            <Path fileType="library">/usr/lib64/gstreamer-1.0/libgsthlssink3.so</Path>
+            <Path fileType="library">/usr/lib64/gstreamer-1.0/libgsthsv.so</Path>
+            <Path fileType="library">/usr/lib64/gstreamer-1.0/libgsticecast.so</Path>
+            <Path fileType="library">/usr/lib64/gstreamer-1.0/libgstisobmff.so</Path>
+            <Path fileType="library">/usr/lib64/gstreamer-1.0/libgstjson.so</Path>
+            <Path fileType="library">/usr/lib64/gstreamer-1.0/libgstlewton.so</Path>
+            <Path fileType="library">/usr/lib64/gstreamer-1.0/libgstlivesync.so</Path>
+            <Path fileType="library">/usr/lib64/gstreamer-1.0/libgstmpegtslive.so</Path>
+            <Path fileType="library">/usr/lib64/gstreamer-1.0/libgstndi.so</Path>
+            <Path fileType="library">/usr/lib64/gstreamer-1.0/libgstoriginalbuffer.so</Path>
+            <Path fileType="library">/usr/lib64/gstreamer-1.0/libgstquinn.so</Path>
+            <Path fileType="library">/usr/lib64/gstreamer-1.0/libgstraptorq.so</Path>
+            <Path fileType="library">/usr/lib64/gstreamer-1.0/libgstrav1e.so</Path>
+            <Path fileType="library">/usr/lib64/gstreamer-1.0/libgstregex.so</Path>
+            <Path fileType="library">/usr/lib64/gstreamer-1.0/libgstreqwest.so</Path>
+            <Path fileType="library">/usr/lib64/gstreamer-1.0/libgstrsanalytics.so</Path>
+            <Path fileType="library">/usr/lib64/gstreamer-1.0/libgstrsaudiofx.so</Path>
+            <Path fileType="library">/usr/lib64/gstreamer-1.0/libgstrsaudioparsers.so</Path>
+            <Path fileType="library">/usr/lib64/gstreamer-1.0/libgstrsclosedcaption.so</Path>
+            <Path fileType="library">/usr/lib64/gstreamer-1.0/libgstrsfile.so</Path>
+            <Path fileType="library">/usr/lib64/gstreamer-1.0/libgstrsflv.so</Path>
+            <Path fileType="library">/usr/lib64/gstreamer-1.0/libgstrsinter.so</Path>
+            <Path fileType="library">/usr/lib64/gstreamer-1.0/libgstrsonvif.so</Path>
+            <Path fileType="library">/usr/lib64/gstreamer-1.0/libgstrspng.so</Path>
+            <Path fileType="library">/usr/lib64/gstreamer-1.0/libgstrsrtp.so</Path>
+            <Path fileType="library">/usr/lib64/gstreamer-1.0/libgstrsrtsp.so</Path>
+            <Path fileType="library">/usr/lib64/gstreamer-1.0/libgstrstracers.so</Path>
+            <Path fileType="library">/usr/lib64/gstreamer-1.0/libgstrsvideofx.so</Path>
+            <Path fileType="library">/usr/lib64/gstreamer-1.0/libgstrswebp.so</Path>
+            <Path fileType="library">/usr/lib64/gstreamer-1.0/libgstrswebrtc.so</Path>
+            <Path fileType="library">/usr/lib64/gstreamer-1.0/libgstskia.so</Path>
+            <Path fileType="library">/usr/lib64/gstreamer-1.0/libgstsodium.so</Path>
+            <Path fileType="library">/usr/lib64/gstreamer-1.0/libgstspeechmatics.so</Path>
+            <Path fileType="library">/usr/lib64/gstreamer-1.0/libgstspotify.so</Path>
+            <Path fileType="library">/usr/lib64/gstreamer-1.0/libgststreamgrouper.so</Path>
+            <Path fileType="library">/usr/lib64/gstreamer-1.0/libgsttextaccumulate.so</Path>
+            <Path fileType="library">/usr/lib64/gstreamer-1.0/libgsttextahead.so</Path>
+            <Path fileType="library">/usr/lib64/gstreamer-1.0/libgsttextwrap.so</Path>
+            <Path fileType="library">/usr/lib64/gstreamer-1.0/libgstthreadshare.so</Path>
+            <Path fileType="library">/usr/lib64/gstreamer-1.0/libgsttogglerecord.so</Path>
+            <Path fileType="library">/usr/lib64/gstreamer-1.0/libgsturiplaylistbin.so</Path>
+            <Path fileType="library">/usr/lib64/gstreamer-1.0/libgstwebrtchttp.so</Path>
+            <Path fileType="library">/usr/lib64/gstreamer-1.0/libgstwhisper.so</Path>
+            <Path fileType="data">/usr/share/licenses/gst-plugins-rs/LICENSE-APACHE</Path>
+            <Path fileType="data">/usr/share/licenses/gst-plugins-rs/LICENSE-MIT</Path>
+            <Path fileType="data">/usr/share/licenses/gst-plugins-rs/LICENSE-MPL-2.0</Path>
+        </Files>
+        <Replaces>
+            <Package>gstreamer-1.0-plugins-rs</Package>
+        </Replaces>
+    </Package>
+    <Package>
+        <Name>gstreamer-plugin-gtk4</Name>
+        <Summary xml:lang="en">GStreamer GTK4 plugin</Summary>
+        <Description xml:lang="en">GStreamer GTK4 plugin</Description>
+        <PartOf>multimedia.gstreamer</PartOf>
+        <Files>
+            <Path fileType="library">/usr/lib64/gstreamer-1.0/libgstgtk4.so</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="4">
+            <Date>2026-03-16</Date>
+            <Version>1.28.1</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Evan Maddock</Name>
+            <Email>maddock.evan@vivaldi.net</Email>
+        </Update>
+    </History>
+</PISI>

@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : hunspell-uk
-version    : 6.6.1
-release    : 13
+version    : 6.8.0
+release    : 15
 source     :
-    - https://github.com/brown-uk/dict_uk/releases/download/v6.6.1/hunspell-uk_UA_6.6.1.zip : de7129b0d017e7e17444fdd680ad5177344cf49a63e91b676b950d3bd3326ee6
+    - https://github.com/brown-uk/dict_uk/releases/download/v6.8.0/hunspell-uk_UA_6.8.0.zip : bf1e25cccec616b3fd64d3509184f654c55b789931c5166c9677ca6de42b491d
 homepage   : https://github.com/brown-uk/dict_uk/
 license    :
     - GPL-2.0-or-later

@@ -1,10 +1,16 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : skanpage
-version    : 25.08.2
-release    : 23
+version    : 26.04.2
+release    : 29
 source     :
-    - https://download.kde.org/stable/release-service/25.08.2/src/skanpage-25.08.2.tar.xz : 1bddd32bafb28f5cca6ad90104552b7429a7c4dd43048ec81fb3cf53f2f20479
+    - https://download.kde.org/stable/release-service/26.04.2/src/skanpage-26.04.2.tar.xz : fd33ecdd76fda81d29398abd4892842c8d8d9a6e3677fd50dc95876f42519d69
 homepage   : https://apps.kde.org/skanpage
-license    : GPL-2.0-or-later
+license    :
+    - BSD-2-Clause
+    - BSD-3-Clause
+    - CC0-1.0
+    - GPL-2.0-only
+    - GPL-3.0-only
 component  : desktop.kde
 summary    : PDF Scanner for the KDE Plasma Desktop
 description: |
@@ -37,3 +43,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*

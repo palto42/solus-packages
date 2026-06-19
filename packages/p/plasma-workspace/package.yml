@@ -1,20 +1,33 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : plasma-workspace
-version    : 6.4.5
-release    : 188
+version    : 6.6.5
+release    : 210
 source     :
-    - https://download.kde.org/stable/plasma/6.4.5/plasma-workspace-6.4.5.tar.xz : 19999ebf3574f539145ba7074019b88d51f2ca952d121394daf6af2e632910fb
+    - https://download.kde.org/stable/plasma/6.6.5/plasma-workspace-6.6.5.tar.xz : 64d753cadcb9cde6ac09eeedf6b02ec5ccdfbd01722c5e9f2533fd0993b0d854
 homepage   : https://www.kde.org/workspaces/plasmadesktop/
 license    :
-    - GFDL-1.2
-    - GPL-2.0
-    - LGPL-2.1
-component  : desktop.kde.core
+    - BSD-2-Clause
+    - BSD-3-Clause
+    - CC0-1.0
+    - GPL-2.0-only
+    - GPL-2.0-or-later
+    - GPL-3.0-only
+    - LGPL-2.0-only
+    - LGPL-2.0-or-later
+    - LGPL-2.1-only
+    - LGPL-2.1-or-later
+    - LGPL-3.0-only
+    - LGPL-3.0-or-later
+    - MIT
+component  :
+    - desktop.kde.core
+    - ^plasma-x11 : desktop.kde
 summary    :
-    - ^sddm-wayland-experimental : Experimental support for running SDDM under Wayland
     - KDE Plasma workspace
+    - ^plasma-x11 : KDE Plasma x11 session (DEPRECATED)
 description:
-    - ^sddm-wayland-experimental : Experimental support for running SDDM under Wayland
     - This package provides the interface and basic tools for the Plasma workspace.
+    - ^plasma-x11 : KDE Plasma x11 session (DEPRECATED)
 builddeps  :
     - pkgconfig(KF6GuiAddons)
     - pkgconfig(KF6Screen)
@@ -57,6 +70,7 @@ builddeps  :
     - kf6-kglobalaccel-devel
     - kf6-kholidays-devel
     - kf6-kiconthemes-devel
+    - kf6-kidletime-devel
     - kf6-kio-devel
     - kf6-kirigami-devel
     - kf6-kitemmodels-devel
@@ -78,6 +92,7 @@ builddeps  :
     - kio-extras-devel
     - kio-fuse
     - kirigami-addons-devel
+    - knighttime-devel
     - kpipewire-devel
     - kscreenlocker-devel
     - kwin-devel
@@ -92,10 +107,9 @@ builddeps  :
     - qcoro-qt6-devel
     - qt6-base-private-devel
 rundeps    :
+    - ^plasma-x11 :
+        - kwin-x11
     # oxygen-sounds and phonon-backend-vlc should be part of branding, but we need to make sure they're installed
-    - ^sddm-wayland-experimental :
-        - maliit-keyboard
-        - plasma-workspace
     - devel :
         - kf6-kitemmodels-devel
     - accountsservice
@@ -105,25 +119,26 @@ rundeps    :
     - kio-extras
     - kio-fuse
     - kirigami-addons
-    # Temporary hack to ensure that kwin-x11 is installed
-    - kwin-x11
     - mkfontscale
     - oxygen-sounds
     - phonon-backend-vlc
     - pipewire
-    - vala-panel-appmenu
+    - plasma-keyboard
+    - udisks
     - xdg-desktop-portal-kde
     - xdg-user-dirs
     - xdg-utils
     - xprop
     - xrdb
     - xsetroot
-    - xwaylandvideobridge
 clang      : true
 optimize   :
     - speed
     - thin-lto
 setup      : |
+    # Remove (Wayland) identifier from Plasma wayland session.
+    sed -E -i 's/ ?\([^)]*\) ?//g' login-sessions/plasmawayland.desktop.cmake
+
     %apply_patches
 
     %cmake_kf6 -DGLIBC_LOCALE_GEN=OFF \
@@ -132,13 +147,16 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*
     rm -rfv $installdir/usr/share/doc
 
     # SDDM should use a Wayland session with Kwin when we have plasma-workspace installed
     install -Dm00644 $pkgfiles/sddm-wayland.conf $installdir/usr/share/sddm/sddm.conf.d/50_plasma_wayland.conf
 patterns   :
     - /usr/lib64/libkrdb.so
-    - ^sddm-wayland-experimental :
-        - /usr/share/sddm/sddm.conf.d
+    - ^plasma-x11 :
+        - /usr/bin/startplasma-x11
+        - /usr/share/xsessions/plasmax11.desktop
 replaces   :
     - plasma-workspace-wayland-session
+    - sddm-wayland-experimental

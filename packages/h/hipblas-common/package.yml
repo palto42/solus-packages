@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
+name       : hipblas-common
+version    : 7.2.0
+release    : 2
+source     :
+    - https://github.com/ROCm/rocm-libraries/archive/refs/tags/rocm-7.2.0.tar.gz : 8ad5f4a11f1ed8a7b927f2e65f24083ca6ce902a42021a66a815190a91ccb654
+homepage   : https://github.com/ROCmSoftwarePlatform/hipBLAS
+license    : MIT
+component  : programming.library
+summary    : hipBLAS-common is a header-only library that provides common files for hipBLAS and hipBLASLt
+description: |
+    hipBLAS-common is a header-only library that provides common files for hipBLAS and hipBLASLt.
+builddeps  :
+    - rocm-cmake
+setup      : |
+    %cmake_ninja -S projects/hipblas-common
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install

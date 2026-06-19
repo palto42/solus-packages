@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : localsearch
-version    : 3.9.0
-release    : 5
+version    : 3.11.1
+release    : 13
 source     :
-    - https://download.gnome.org/sources/localsearch/3.9/localsearch-3.9.0.tar.xz : d42f408dc3fb28fe54f5a9abbf5f1decf5818db9c2e9ec51c09464bdfd0c14b9
+    - https://download.gnome.org/sources/localsearch/3.11/localsearch-3.11.1.tar.xz : 7b39a6c28a8acf2b172f15b2fb5ee7c7a3764c447c2f4a14caa239b7ebe61942
 homepage   : https://tracker.gnome.org/
 license    :
     - BSD-3-Clause
@@ -16,7 +17,7 @@ builddeps  :
     - pkgconfig(dbus-glib-1)
     - pkgconfig(exempi-2.0)
     - pkgconfig(flac)
-    - pkgconfig(gexiv2)
+    - pkgconfig(gexiv2-0.16)
     - pkgconfig(gstreamer-tag-1.0)
     - pkgconfig(gupnp-dlna-gst-2.0)
     - pkgconfig(icu-io)
@@ -31,13 +32,13 @@ builddeps  :
     - pkgconfig(libtiff-4)
     - pkgconfig(libturbojpeg)
     - pkgconfig(poppler)
-    - pkgconfig(taglib)
     - pkgconfig(tinysparql-3.0)
     - pkgconfig(totem-plparser)
     - pkgconfig(upower-glib)
     - pkgconfig(vorbisfile)
     - asciidoc
     - giflib-devel
+    - python-dbusmock
     - vala
 rundeps    :
     - network-manager
@@ -47,6 +48,7 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license COPYING*
     mv $installdir/etc/xdg $installdir/usr/share/.
     rmdir $installdir/etc
 replaces   :

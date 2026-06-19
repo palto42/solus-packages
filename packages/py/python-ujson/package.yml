@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : python-ujson
-version    : 5.10.0
-release    : 14
+version    : 5.12.1
+release    : 18
 source     :
-    - https://files.pythonhosted.org/packages/source/u/ujson/ujson-5.10.0.tar.gz : b3cd8f3c5d8c7738257f1018880444f7b7d9b66232c64649f562d7ba86ad4bc1
+    - https://files.pythonhosted.org/packages/source/u/ujson/ujson-5.12.1.tar.gz : 5b7e96406c301a1366534479a7352ec40ec68bb327c0c119091635acd5925e35
 homepage   : https://github.com/ultrajson/ultrajson
 license    : BSD-3-Clause
 component  : programming.python

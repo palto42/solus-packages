@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : libgcrypt
-version    : 1.11.0
-release    : 29
+version    : 1.12.2
+release    : 32
 source     :
-    - https://gnupg.org/ftp/gcrypt/libgcrypt/libgcrypt-1.11.0.tar.bz2 : 09120c9867ce7f2081d6aaa1775386b98c2f2f246135761aae47d81f58685b9c
+    - https://gnupg.org/ftp/gcrypt/libgcrypt/libgcrypt-1.12.2.tar.bz2 : 7ce33c2492221a0436f96a8500215e9f3e3dcb5fd26a757cd415e7a843babd5e
 license    :
     - GPL-2.0-or-later
     - LGPL-2.1-or-later
@@ -26,5 +27,6 @@ build      : |
     %make
 install    : |
     %make_install
+    %install_license COPYING COPYING.LIB LICENSES
 check      : |
     %make check

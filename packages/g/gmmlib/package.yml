@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : gmmlib
-version    : 22.7.1
-release    : 23
+version    : 22.10.0
+release    : 25
 source     :
-    - https://github.com/intel/gmmlib/archive/refs/tags/intel-gmmlib-22.7.1.tar.gz : 3b84d993950069f0a9b0cc373e2f4b026b194d8fdfb2a8856490d17dadd1b5a5
+    - https://github.com/intel/gmmlib/archive/refs/tags/intel-gmmlib-22.10.0.tar.gz : 893e3c5a24b408ac312a0318b70f38f427f297646e323f31e79d3a06a92c1543
 license    : MIT
 component  : programming.library
 homepage   : https://github.com/intel/gmmlib/
@@ -17,6 +18,7 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSE.md
 
     # remove empty dirs in include
     find $installdir/usr/include/igdgmm/GmmLib -type d -empty -delete

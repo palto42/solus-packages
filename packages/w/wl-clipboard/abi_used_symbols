@@ -25,6 +25,7 @@ libc.so.6:fdopen
 libc.so.6:fflush
 libc.so.6:fgets
 libc.so.6:fileno
+libc.so.6:fnmatch
 libc.so.6:fopen64
 libc.so.6:fork
 libc.so.6:fputc
@@ -35,6 +36,7 @@ libc.so.6:getenv
 libc.so.6:getopt_long
 libc.so.6:lseek64
 libc.so.6:malloc
+libc.so.6:memcpy
 libc.so.6:mkdtemp
 libc.so.6:open64
 libc.so.6:openlog

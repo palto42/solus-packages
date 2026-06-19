@@ -3,12 +3,11 @@ libGLEW.so.2.2
 libGLU.so.1
 libGLX.so.0
 libImath-3_1.so.29
-libOpenEXR-3_1.so.30
+libOpenEXR-3_4.so.33
 libOpenGL.so.0
 libX11.so.6
-libboost_filesystem.so.1.83.0
 libc.so.6
-libexiv2.so.27
+libexiv2.so.28
 libfftw3.so.3
 libgcc_s.so.1
 libgomp.so.1

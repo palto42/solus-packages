@@ -25,4 +25,4 @@ libreadline.so.8
 libsndfile.so.1
 libstdc++.so.6
 libudev.so.1
-libyaml-cpp.so.0.7
+libyaml-cpp.so.0.9

@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : ntfs-3g
-version    : 2022.10.3
-release    : 19
+version    : 2026.2.25
+release    : 21
 source     :
-    - https://tuxera.com/opensource/ntfs-3g_ntfsprogs-2022.10.3.tgz : f20e36ee68074b845e3629e6bced4706ad053804cbaf062fbae60738f854170c
+    - https://github.com/tuxera/ntfs-3g/archive/refs/tags/2026.2.25.tar.gz : 47de1260fa3fb1aa27d239a637f1178d29a04dd6add6ddff4ea5e47b806731f8
 homepage   : https://github.com/tuxera/ntfs-3g/wiki
 license    : GPL-2.0-or-later
 component  : system.utils
@@ -15,41 +16,23 @@ builddeps  :
     - pkgconfig(libacl)
     - pkgconfig(libattr)
 setup      : |
-    %configure --disable-static \
-               --disable-ldconfig \
-               --enable-crypto \
-               --enable-extras \
-               --enable-posix-acls \
-               --enable-xattr-mappings \
-               --with-fuse=external
+    %patch -p1 -i ${pkgfiles}/build.patch
+
+    %reconfigure \
+        --disable-static \
+        --disable-ldconfig \
+        --enable-crypto \
+        --enable-extras \
+        --enable-posix-acls \
+        --enable-xattr-mappings \
+        --with-fuse=external \
+        --sbin=/usr/sbin
 build      : |
     %make
 install    : |
     %make_install rootbindir=/usr/bin rootsbindir=/usr/sbin rootlibdir=%libdir%
-    rm -rvf $installdir/usr/share/doc
+    %install_license COPYING COPYING.LIB
 
-    # Make existing symlinks relative
-    mv $installdir/sbin/* $installdir/usr/sbin/
-    rmdir -v $installdir/sbin
-    for TOP in {bin,sbin}; do
-        pushd $installdir/usr/$TOP
-        for FILE in *; do
-            if [ -L $FILE ]; then
-                target=$(readlink $FILE)
-                ln -srvf $installdir/$target $FILE
-            fi
-        done
-        popd
-    done
+    rmdir ${installdir}/sbin -v
 
     ln -srv $installdir/usr/bin/ntfs-3g $installdir/usr/sbin/mount.ntfs
-
-    # usr-merge
-    for TOP in {bin,sbin}; do
-        install -D -d -m 00755 $installdir/$TOP
-        pushd $installdir/usr/$TOP
-        for FILE in *; do
-            ln -srv $installdir/usr/$TOP/$FILE $installdir/$TOP/$FILE
-        done
-        popd
-    done

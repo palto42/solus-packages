@@ -3,22 +3,31 @@
         <Name>oranchelo-icon-theme</Name>
         <Homepage>https://github.com/OrancheloTeam/oranchelo-icon-theme</Homepage>
         <Packager>
-            <Name>Algent Albrahimi</Name>
-            <Email>algent@protonmail.com</Email>
+            <Name>David Harder</Name>
+            <Email>david@davidjharder.ca</Email>
         </Packager>
         <License>GPL-3.0-or-later</License>
         <PartOf>desktop.theme</PartOf>
         <Summary xml:lang="en">Oranchelo icon theme</Summary>
         <Description xml:lang="en">A flat-design icon theme.</Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
+    <Package>
+        <Name>oranchelo-icon-theme</Name>
+        <Summary xml:lang="en">Oranchelo icon theme</Summary>
+        <Description xml:lang="en">A flat-design icon theme.</Description>
+        <PartOf>desktop.theme</PartOf>
+        <Files>
+            <Path fileType="data">/usr/share/licenses/oranchelo-icon-theme/LICENSE</Path>
+        </Files>
+    </Package>
     <Package>
         <Name>oranchelo-Beka-icon-theme</Name>
         <Summary xml:lang="en">Oranchelo Beka icon theme</Summary>
         <Description xml:lang="en">A flat-design icon theme.</Description>
         <PartOf>desktop.theme</PartOf>
         <RuntimeDependencies>
-            <Dependency releaseFrom="5">oranchelo-icon-theme</Dependency>
+            <Dependency releaseFrom="6">oranchelo-icon-theme</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="data">/usr/share/icons/Oranchelo-Beka/index.theme</Path>
@@ -120,7 +129,7 @@
         <Description xml:lang="en">A flat-design icon theme.</Description>
         <PartOf>desktop.theme</PartOf>
         <RuntimeDependencies>
-            <Dependency releaseFrom="5">oranchelo-icon-theme</Dependency>
+            <Dependency releaseFrom="6">oranchelo-icon-theme</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="data">/usr/share/icons/Oranchelo-Classic-Folders/index.theme</Path>
@@ -197,7 +206,7 @@
         <Description xml:lang="en">A flat-design icon theme.</Description>
         <PartOf>desktop.theme</PartOf>
         <RuntimeDependencies>
-            <Dependency releaseFrom="5">oranchelo-icon-theme</Dependency>
+            <Dependency releaseFrom="6">oranchelo-icon-theme</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="data">/usr/share/icons/Oranchelo-Green/index.theme</Path>
@@ -12914,7 +12923,7 @@
         <Description xml:lang="en">A flat-design icon theme.</Description>
         <PartOf>desktop.theme</PartOf>
         <RuntimeDependencies>
-            <Dependency releaseFrom="5">oranchelo-icon-theme</Dependency>
+            <Dependency releaseFrom="6">oranchelo-icon-theme</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="data">/usr/share/icons/Oranchelo-light/index.theme</Path>
@@ -14782,12 +14791,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="5">
-            <Date>2021-09-15</Date>
+        <Update release="6">
+            <Date>2026-03-26</Date>
             <Version>0.9.0</Version>
             <Comment>Packaging update</Comment>
-            <Name>Algent Albrahimi</Name>
-            <Email>algent@protonmail.com</Email>
+            <Name>David Harder</Name>
+            <Email>david@davidjharder.ca</Email>
         </Update>
     </History>
 </PISI>

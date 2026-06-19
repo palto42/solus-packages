@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : glib2
-version    : 2.84.3
-release    : 121
+version    : 2.88.1
+release    : 128
 source     :
-    - https://download.gnome.org/sources/glib/2.84/glib-2.84.3.tar.xz : aa4f87c3225bf57ca85f320888f7484901a17934ca37023c3bd8435a72db863e
+    - https://download.gnome.org/sources/glib/2.88/glib-2.88.1.tar.xz : 51ab804c56f6eab3e5045c774d1290ac5e4c923d4f9a3d8e33123bee45c1840e
 homepage   : https://docs.gtk.org/glib/
 license    : LGPL-2.1-or-later
 summary    : Low level C library containing data structure handling and interfaces
@@ -46,6 +47,9 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license COPYING
+    %install_license LICENSES/*
+
     # Allow emul32 to work correctly.
     install -Dm00644 $pkgfiles/glibconfig.h $installdir/usr/include/glib-2.0/glibconfig.h
 patterns   :

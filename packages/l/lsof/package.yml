@@ -1,22 +1,29 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : lsof
-version    : 4.94.0
-release    : 5
+version    : 4.99.6
+release    : 6
 source     :
-    - https://github.com/lsof-org/lsof/releases/download/4.94.0/lsof_4.94.0.linux.tar.bz2 : c41709c2543ecf9de1e950795790a9786a2f225e51c3cc53d6a9a256f872472b
+    - https://github.com/lsof-org/lsof/archive/refs/tags/4.99.6.tar.gz : 2ce65158694e9c44dfc54916f5b843d887763c03128e0a1c77d62ae106537009
 homepage   : https://github.com/lsof-org/lsof
 license    : BSD-4-Clause-UC
 component  : system.utils
-summary    : lsof (for LiSt Open Files) displays information about files open to Unix
-    processes
+summary    : lsof (for LiSt Open Files) displays information about files open to Unix processes
 description: |
     lsof (for LiSt Open Files) displays information about files open to Unix processes
 builddeps  :
     - pkgconfig(libtirpc)
+    - groff
 setup      : |
-    sed -i 's|\.so \./version|.ds VN %version%|' lsof.8
-    LSOF_CC="${CC}" LSOF_CFGF="${CFLAGS}" LSOF_CFGL="${LDFLAGS}" ./Configure -n linux
+    %patch -p1 -i $pkgfiles/lsof-man-page-section.patch
+    
+    %reconfigure \
+        --prefix=/usr \
+        --enable-security \
+        --enable-no-sock-security \
+        --with-libtirpc
 build      : |
     %make
 install    : |
     install -Dm00755 lsof $installdir/usr/bin/lsof
-    install -Dm00644 lsof.8 $installdir/usr/share/man/man8/lsof.8
+    install -Dm00644 Lsof.8 $installdir/usr/share/man/man8/lsof.8
+    %install_license COPYING

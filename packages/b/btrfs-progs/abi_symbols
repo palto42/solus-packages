@@ -110,6 +110,7 @@ btrfs:btrfs_check_sectorsize
 btrfs:btrfs_check_super
 btrfs:btrfs_check_zoned_mode
 btrfs:btrfs_chunk_readonly
+btrfs:btrfs_cleanup_aborted_transaction
 btrfs:btrfs_cleanup_all_caches
 btrfs:btrfs_clear_buffer_dirty
 btrfs:btrfs_clear_free_space_cache
@@ -208,6 +209,7 @@ btrfs:btrfs_insert_dev_extent
 btrfs:btrfs_insert_dir_item
 btrfs:btrfs_insert_empty_items
 btrfs:btrfs_insert_file_extent
+btrfs:btrfs_insert_hole_extent
 btrfs:btrfs_insert_inline_extent
 btrfs:btrfs_insert_inode
 btrfs:btrfs_insert_inode_extref
@@ -302,6 +304,7 @@ btrfs:btrfs_register_one_device
 btrfs:btrfs_release_all_roots
 btrfs:btrfs_release_path
 btrfs:btrfs_remove_block_group
+btrfs:btrfs_remove_dev_extent
 btrfs:btrfs_remove_free_space_cache
 btrfs:btrfs_reserve_extent
 btrfs:btrfs_reset_chunk_zones
@@ -601,6 +604,7 @@ btrfs:get_running_kernel_version
 btrfs:get_unit_mode_from_arg
 btrfs:gfs_info
 btrfs:handle_command_group
+btrfs:has_running_replace_or_balance
 btrfs:hash_blake2b
 btrfs:hash_crc32c
 btrfs:hash_extent_data_ref
@@ -656,9 +660,9 @@ btrfs:parse_compress_type
 btrfs:parse_csum_type
 btrfs:parse_qgroupid
 btrfs:parse_qgroupid_or_path
-btrfs:parse_range
 btrfs:parse_range_strict
 btrfs:parse_range_u32
+btrfs:parse_range_u64
 btrfs:parse_tree_id
 btrfs:parse_u64
 btrfs:parse_u64_with_suffix
@@ -737,6 +741,7 @@ btrfs:remove_from_free_space_tree
 btrfs:repair_dev_item_bytes_used
 btrfs:repair_imode_common
 btrfs:repair_qgroups
+btrfs:repair_subvol_orphan_item
 btrfs:report_qgroups
 btrfs:reset_cached_block_groups
 btrfs:reset_imode
@@ -942,6 +947,7 @@ btrfs-convert:btrfs_check_sectorsize
 btrfs-convert:btrfs_check_super
 btrfs-convert:btrfs_check_zoned_mode
 btrfs-convert:btrfs_chunk_readonly
+btrfs-convert:btrfs_cleanup_aborted_transaction
 btrfs-convert:btrfs_cleanup_all_caches
 btrfs-convert:btrfs_clear_buffer_dirty
 btrfs-convert:btrfs_clear_free_space_cache
@@ -1041,6 +1047,7 @@ btrfs-convert:btrfs_insert_dev_extent
 btrfs-convert:btrfs_insert_dir_item
 btrfs-convert:btrfs_insert_empty_items
 btrfs-convert:btrfs_insert_file_extent
+btrfs-convert:btrfs_insert_hole_extent
 btrfs-convert:btrfs_insert_inline_extent
 btrfs-convert:btrfs_insert_inode
 btrfs-convert:btrfs_insert_inode_extref
@@ -1128,6 +1135,7 @@ btrfs-convert:btrfs_register_one_device
 btrfs-convert:btrfs_release_all_roots
 btrfs-convert:btrfs_release_path
 btrfs-convert:btrfs_remove_block_group
+btrfs-convert:btrfs_remove_dev_extent
 btrfs-convert:btrfs_remove_free_space_cache
 btrfs-convert:btrfs_reserve_extent
 btrfs-convert:btrfs_reserved_ranges
@@ -1360,6 +1368,7 @@ btrfs-convert:get_label_mounted
 btrfs-convert:get_label_unmounted
 btrfs-convert:get_running_kernel_version
 btrfs-convert:get_unit_mode_from_arg
+btrfs-convert:has_running_replace_or_balance
 btrfs-convert:hash_blake2b
 btrfs-convert:hash_crc32c
 btrfs-convert:hash_extent_data_ref
@@ -1411,9 +1420,9 @@ btrfs-convert:parse_compress_type
 btrfs-convert:parse_csum_type
 btrfs-convert:parse_qgroupid
 btrfs-convert:parse_qgroupid_or_path
-btrfs-convert:parse_range
 btrfs-convert:parse_range_strict
 btrfs-convert:parse_range_u32
+btrfs-convert:parse_range_u64
 btrfs-convert:parse_tree_id
 btrfs-convert:parse_u64
 btrfs-convert:parse_u64_with_suffix
@@ -1684,6 +1693,7 @@ btrfs-find-root:btrfs_check_sectorsize
 btrfs-find-root:btrfs_check_super
 btrfs-find-root:btrfs_check_zoned_mode
 btrfs-find-root:btrfs_chunk_readonly
+btrfs-find-root:btrfs_cleanup_aborted_transaction
 btrfs-find-root:btrfs_cleanup_all_caches
 btrfs-find-root:btrfs_clear_buffer_dirty
 btrfs-find-root:btrfs_clear_free_space_cache
@@ -1782,6 +1792,7 @@ btrfs-find-root:btrfs_insert_dev_extent
 btrfs-find-root:btrfs_insert_dir_item
 btrfs-find-root:btrfs_insert_empty_items
 btrfs-find-root:btrfs_insert_file_extent
+btrfs-find-root:btrfs_insert_hole_extent
 btrfs-find-root:btrfs_insert_inline_extent
 btrfs-find-root:btrfs_insert_inode
 btrfs-find-root:btrfs_insert_inode_extref
@@ -1868,6 +1879,7 @@ btrfs-find-root:btrfs_register_one_device
 btrfs-find-root:btrfs_release_all_roots
 btrfs-find-root:btrfs_release_path
 btrfs-find-root:btrfs_remove_block_group
+btrfs-find-root:btrfs_remove_dev_extent
 btrfs-find-root:btrfs_remove_free_space_cache
 btrfs-find-root:btrfs_reserve_extent
 btrfs-find-root:btrfs_reset_chunk_zones
@@ -2138,9 +2150,9 @@ btrfs-find-root:parse_compress_type
 btrfs-find-root:parse_csum_type
 btrfs-find-root:parse_qgroupid
 btrfs-find-root:parse_qgroupid_or_path
-btrfs-find-root:parse_range
 btrfs-find-root:parse_range_strict
 btrfs-find-root:parse_range_u32
+btrfs-find-root:parse_range_u64
 btrfs-find-root:parse_tree_id
 btrfs-find-root:parse_u64
 btrfs-find-root:parse_u64_with_suffix
@@ -2403,6 +2415,7 @@ btrfs-image:btrfs_check_sectorsize
 btrfs-image:btrfs_check_super
 btrfs-image:btrfs_check_zoned_mode
 btrfs-image:btrfs_chunk_readonly
+btrfs-image:btrfs_cleanup_aborted_transaction
 btrfs-image:btrfs_cleanup_all_caches
 btrfs-image:btrfs_clear_buffer_dirty
 btrfs-image:btrfs_clear_free_space_cache
@@ -2500,6 +2513,7 @@ btrfs-image:btrfs_insert_dev_extent
 btrfs-image:btrfs_insert_dir_item
 btrfs-image:btrfs_insert_empty_items
 btrfs-image:btrfs_insert_file_extent
+btrfs-image:btrfs_insert_hole_extent
 btrfs-image:btrfs_insert_inline_extent
 btrfs-image:btrfs_insert_inode
 btrfs-image:btrfs_insert_inode_extref
@@ -2586,6 +2600,7 @@ btrfs-image:btrfs_register_one_device
 btrfs-image:btrfs_release_all_roots
 btrfs-image:btrfs_release_path
 btrfs-image:btrfs_remove_block_group
+btrfs-image:btrfs_remove_dev_extent
 btrfs-image:btrfs_remove_free_space_cache
 btrfs-image:btrfs_reserve_extent
 btrfs-image:btrfs_reset_chunk_zones
@@ -2861,9 +2876,9 @@ btrfs-image:parse_compress_type
 btrfs-image:parse_csum_type
 btrfs-image:parse_qgroupid
 btrfs-image:parse_qgroupid_or_path
-btrfs-image:parse_range
 btrfs-image:parse_range_strict
 btrfs-image:parse_range_u32
+btrfs-image:parse_range_u64
 btrfs-image:parse_tree_id
 btrfs-image:parse_u64
 btrfs-image:parse_u64_with_suffix
@@ -3130,6 +3145,7 @@ btrfs-map-logical:btrfs_check_sectorsize
 btrfs-map-logical:btrfs_check_super
 btrfs-map-logical:btrfs_check_zoned_mode
 btrfs-map-logical:btrfs_chunk_readonly
+btrfs-map-logical:btrfs_cleanup_aborted_transaction
 btrfs-map-logical:btrfs_cleanup_all_caches
 btrfs-map-logical:btrfs_clear_buffer_dirty
 btrfs-map-logical:btrfs_clear_free_space_cache
@@ -3227,6 +3243,7 @@ btrfs-map-logical:btrfs_insert_dev_extent
 btrfs-map-logical:btrfs_insert_dir_item
 btrfs-map-logical:btrfs_insert_empty_items
 btrfs-map-logical:btrfs_insert_file_extent
+btrfs-map-logical:btrfs_insert_hole_extent
 btrfs-map-logical:btrfs_insert_inline_extent
 btrfs-map-logical:btrfs_insert_inode
 btrfs-map-logical:btrfs_insert_inode_extref
@@ -3313,6 +3330,7 @@ btrfs-map-logical:btrfs_register_one_device
 btrfs-map-logical:btrfs_release_all_roots
 btrfs-map-logical:btrfs_release_path
 btrfs-map-logical:btrfs_remove_block_group
+btrfs-map-logical:btrfs_remove_dev_extent
 btrfs-map-logical:btrfs_remove_free_space_cache
 btrfs-map-logical:btrfs_reserve_extent
 btrfs-map-logical:btrfs_reset_chunk_zones
@@ -3583,9 +3601,9 @@ btrfs-map-logical:parse_compress_type
 btrfs-map-logical:parse_csum_type
 btrfs-map-logical:parse_qgroupid
 btrfs-map-logical:parse_qgroupid_or_path
-btrfs-map-logical:parse_range
 btrfs-map-logical:parse_range_strict
 btrfs-map-logical:parse_range_u32
+btrfs-map-logical:parse_range_u64
 btrfs-map-logical:parse_tree_id
 btrfs-map-logical:parse_u64
 btrfs-map-logical:parse_u64_with_suffix
@@ -3848,6 +3866,7 @@ btrfs-select-super:btrfs_check_sectorsize
 btrfs-select-super:btrfs_check_super
 btrfs-select-super:btrfs_check_zoned_mode
 btrfs-select-super:btrfs_chunk_readonly
+btrfs-select-super:btrfs_cleanup_aborted_transaction
 btrfs-select-super:btrfs_cleanup_all_caches
 btrfs-select-super:btrfs_clear_buffer_dirty
 btrfs-select-super:btrfs_clear_free_space_cache
@@ -3945,6 +3964,7 @@ btrfs-select-super:btrfs_insert_dev_extent
 btrfs-select-super:btrfs_insert_dir_item
 btrfs-select-super:btrfs_insert_empty_items
 btrfs-select-super:btrfs_insert_file_extent
+btrfs-select-super:btrfs_insert_hole_extent
 btrfs-select-super:btrfs_insert_inline_extent
 btrfs-select-super:btrfs_insert_inode
 btrfs-select-super:btrfs_insert_inode_extref
@@ -4031,6 +4051,7 @@ btrfs-select-super:btrfs_register_one_device
 btrfs-select-super:btrfs_release_all_roots
 btrfs-select-super:btrfs_release_path
 btrfs-select-super:btrfs_remove_block_group
+btrfs-select-super:btrfs_remove_dev_extent
 btrfs-select-super:btrfs_remove_free_space_cache
 btrfs-select-super:btrfs_reserve_extent
 btrfs-select-super:btrfs_reset_chunk_zones
@@ -4301,9 +4322,9 @@ btrfs-select-super:parse_compress_type
 btrfs-select-super:parse_csum_type
 btrfs-select-super:parse_qgroupid
 btrfs-select-super:parse_qgroupid_or_path
-btrfs-select-super:parse_range
 btrfs-select-super:parse_range_strict
 btrfs-select-super:parse_range_u32
+btrfs-select-super:parse_range_u64
 btrfs-select-super:parse_tree_id
 btrfs-select-super:parse_u64
 btrfs-select-super:parse_u64_with_suffix
@@ -4567,6 +4588,7 @@ btrfstune:btrfs_check_sectorsize
 btrfstune:btrfs_check_super
 btrfstune:btrfs_check_zoned_mode
 btrfstune:btrfs_chunk_readonly
+btrfstune:btrfs_cleanup_aborted_transaction
 btrfstune:btrfs_cleanup_all_caches
 btrfstune:btrfs_clear_buffer_dirty
 btrfstune:btrfs_clear_free_space_cache
@@ -4665,6 +4687,7 @@ btrfstune:btrfs_insert_dev_extent
 btrfstune:btrfs_insert_dir_item
 btrfstune:btrfs_insert_empty_items
 btrfstune:btrfs_insert_file_extent
+btrfstune:btrfs_insert_hole_extent
 btrfstune:btrfs_insert_inline_extent
 btrfstune:btrfs_insert_inode
 btrfstune:btrfs_insert_inode_extref
@@ -4751,6 +4774,7 @@ btrfstune:btrfs_register_one_device
 btrfstune:btrfs_release_all_roots
 btrfstune:btrfs_release_path
 btrfstune:btrfs_remove_block_group
+btrfstune:btrfs_remove_dev_extent
 btrfstune:btrfs_remove_free_space_cache
 btrfstune:btrfs_reserve_extent
 btrfstune:btrfs_reset_chunk_zones
@@ -4903,6 +4927,7 @@ btrfstune:compare_setup_sort
 btrfstune:convert_extent_bit
 btrfstune:convert_to_bg_tree
 btrfstune:convert_to_extent_tree
+btrfstune:convert_to_remap_tree
 btrfstune:copy_extent_buffer
 btrfstune:copy_extent_buffer_full
 btrfstune:count_digits
@@ -4981,6 +5006,7 @@ btrfstune:get_label_mounted
 btrfstune:get_label_unmounted
 btrfstune:get_running_kernel_version
 btrfstune:get_unit_mode_from_arg
+btrfstune:has_running_replace_or_balance
 btrfstune:hash_blake2b
 btrfstune:hash_crc32c
 btrfstune:hash_extent_data_ref
@@ -5027,9 +5053,9 @@ btrfstune:parse_compress_type
 btrfstune:parse_csum_type
 btrfstune:parse_qgroupid
 btrfstune:parse_qgroupid_or_path
-btrfstune:parse_range
 btrfstune:parse_range_strict
 btrfstune:parse_range_u32
+btrfstune:parse_range_u64
 btrfstune:parse_tree_id
 btrfstune:parse_u64
 btrfstune:parse_u64_with_suffix
@@ -5194,6 +5220,7 @@ libbtrfs.so.0:subvol_uuid_search_init
 libbtrfsutil.so.1:LIBBTRFSUTIL_1.1
 libbtrfsutil.so.1:LIBBTRFSUTIL_1.2
 libbtrfsutil.so.1:LIBBTRFSUTIL_1.3
+libbtrfsutil.so.1:LIBBTRFSUTIL_1.4
 libbtrfsutil.so.1:btrfs_util_create_qgroup_inherit
 libbtrfsutil.so.1:btrfs_util_create_snapshot
 libbtrfsutil.so.1:btrfs_util_create_snapshot_fd
@@ -5388,6 +5415,7 @@ mkfs.btrfs:btrfs_check_sectorsize
 mkfs.btrfs:btrfs_check_super
 mkfs.btrfs:btrfs_check_zoned_mode
 mkfs.btrfs:btrfs_chunk_readonly
+mkfs.btrfs:btrfs_cleanup_aborted_transaction
 mkfs.btrfs:btrfs_cleanup_all_caches
 mkfs.btrfs:btrfs_clear_buffer_dirty
 mkfs.btrfs:btrfs_clear_free_space_cache
@@ -5485,6 +5513,7 @@ mkfs.btrfs:btrfs_insert_dev_extent
 mkfs.btrfs:btrfs_insert_dir_item
 mkfs.btrfs:btrfs_insert_empty_items
 mkfs.btrfs:btrfs_insert_file_extent
+mkfs.btrfs:btrfs_insert_hole_extent
 mkfs.btrfs:btrfs_insert_inline_extent
 mkfs.btrfs:btrfs_insert_inode
 mkfs.btrfs:btrfs_insert_inode_extref
@@ -5577,6 +5606,7 @@ mkfs.btrfs:btrfs_register_one_device
 mkfs.btrfs:btrfs_release_all_roots
 mkfs.btrfs:btrfs_release_path
 mkfs.btrfs:btrfs_remove_block_group
+mkfs.btrfs:btrfs_remove_dev_extent
 mkfs.btrfs:btrfs_remove_free_space_cache
 mkfs.btrfs:btrfs_reserve_extent
 mkfs.btrfs:btrfs_reset_chunk_zones
@@ -5848,9 +5878,9 @@ mkfs.btrfs:parse_compress_type
 mkfs.btrfs:parse_csum_type
 mkfs.btrfs:parse_qgroupid
 mkfs.btrfs:parse_qgroupid_or_path
-mkfs.btrfs:parse_range
 mkfs.btrfs:parse_range_strict
 mkfs.btrfs:parse_range_u32
+mkfs.btrfs:parse_range_u64
 mkfs.btrfs:parse_tree_id
 mkfs.btrfs:parse_u64
 mkfs.btrfs:parse_u64_with_suffix

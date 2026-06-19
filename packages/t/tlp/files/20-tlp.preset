@@ -1,0 +1,2 @@
+# Enable by default, users can disable now with systemctl mask tlp
+enable tlp.service

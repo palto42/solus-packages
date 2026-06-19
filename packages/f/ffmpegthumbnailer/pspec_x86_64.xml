@@ -3,8 +3,8 @@
         <Name>ffmpegthumbnailer</Name>
         <Homepage>https://github.com/dirkvdb/ffmpegthumbnailer</Homepage>
         <Packager>
-            <Name>Reilly Brogan</Name>
-            <Email>solus@reillybrogan.com</Email>
+            <Name>Jakob Gezelius</Name>
+            <Email>jakob@knugen.nu</Email>
         </Packager>
         <License>GPL-2.0-or-later</License>
         <PartOf>multimedia.library</PartOf>
@@ -22,8 +22,8 @@
         <Files>
             <Path fileType="executable">/usr/bin/ffmpegthumbnailer</Path>
             <Path fileType="library">/usr/lib64/libffmpegthumbnailer.so.4</Path>
-            <Path fileType="library">/usr/lib64/libffmpegthumbnailer.so.4.15.1</Path>
-            <Path fileType="man">/usr/share/man/man1/ffmpegthumbnailer.1</Path>
+            <Path fileType="library">/usr/lib64/libffmpegthumbnailer.so.4.16.1</Path>
+            <Path fileType="man">/usr/share/man/man1/ffmpegthumbnailer.1.zst</Path>
             <Path fileType="data">/usr/share/thumbnailers/ffmpegthumbnailer.thumbnailer</Path>
         </Files>
     </Package>
@@ -34,7 +34,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="12">ffmpegthumbnailer</Dependency>
+            <Dependency release="13">ffmpegthumbnailer</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/libffmpegthumbnailer/ffmpegthumbnailertypes.h</Path>
@@ -49,12 +49,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="12">
-            <Date>2024-11-14</Date>
-            <Version>2.2.2</Version>
+        <Update release="13">
+            <Date>2026-04-06</Date>
+            <Version>2.3.0</Version>
             <Comment>Packaging update</Comment>
-            <Name>Reilly Brogan</Name>
-            <Email>solus@reillybrogan.com</Email>
+            <Name>Jakob Gezelius</Name>
+            <Email>jakob@knugen.nu</Email>
         </Update>
     </History>
 </PISI>

@@ -3,21 +3,22 @@
         <Name>plasma-desktop-branding</Name>
         <Homepage>https://github.com/getsolus/plasma-desktop-branding</Homepage>
         <Packager>
-            <Name>Joey Riches</Name>
-            <Email>josephriches@gmail.com</Email>
+            <Name>Troy Harvey</Name>
+            <Email>harvey@getsol.us</Email>
         </Packager>
         <License>Apache-2.0</License>
         <License>LGPL-2.0-only</License>
+        <License>CC-BY-SA-4.0</License>
         <PartOf>desktop.kde.core</PartOf>
         <Summary xml:lang="en">Defaults for the Plasma Desktop</Summary>
-        <Description xml:lang="en">Plasma Desktop Experience Configuration
+        <Description xml:lang="en">Plasma Desktop Experience Configuration. Wallpaper red-cherry-leaves by W.carter
 </Description>
         <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>plasma-desktop-branding</Name>
         <Summary xml:lang="en">Defaults for the Plasma Desktop</Summary>
-        <Description xml:lang="en">Plasma Desktop Experience Configuration
+        <Description xml:lang="en">Plasma Desktop Experience Configuration. Wallpaper red-cherry-leaves by W.carter
 </Description>
         <PartOf>desktop.kde.core</PartOf>
         <Files>
@@ -28,6 +29,7 @@
             <Path fileType="data">/usr/share/plasma/desktoptheme/solus-dark/dialogs/background.svg</Path>
             <Path fileType="data">/usr/share/plasma/desktoptheme/solus-dark/icons/start.svg</Path>
             <Path fileType="data">/usr/share/plasma/desktoptheme/solus-dark/metadata.desktop</Path>
+            <Path fileType="data">/usr/share/plasma/desktoptheme/solus-dark/metadata.json</Path>
             <Path fileType="data">/usr/share/plasma/desktoptheme/solus-dark/opaque/dialogs/background.svg</Path>
             <Path fileType="data">/usr/share/plasma/desktoptheme/solus-dark/opaque/widgets/panel-background.svg</Path>
             <Path fileType="data">/usr/share/plasma/desktoptheme/solus-dark/opaque/widgets/tooltip.svg</Path>
@@ -49,6 +51,7 @@
             <Path fileType="data">/usr/share/plasma/desktoptheme/solus-light/dialogs/background.svg</Path>
             <Path fileType="data">/usr/share/plasma/desktoptheme/solus-light/icons/start.svg</Path>
             <Path fileType="data">/usr/share/plasma/desktoptheme/solus-light/metadata.desktop</Path>
+            <Path fileType="data">/usr/share/plasma/desktoptheme/solus-light/metadata.json</Path>
             <Path fileType="data">/usr/share/plasma/desktoptheme/solus-light/opaque/dialogs/background.svg</Path>
             <Path fileType="data">/usr/share/plasma/desktoptheme/solus-light/opaque/widgets/panel-background.svg</Path>
             <Path fileType="data">/usr/share/plasma/desktoptheme/solus-light/opaque/widgets/tooltip.svg</Path>
@@ -80,13 +83,13 @@
             <Path fileType="data">/usr/share/plasma/look-and-feel/soluslight.desktop/metadata.desktop</Path>
             <Path fileType="data">/usr/share/plasma/look-and-feel/soluslight.desktop/metadata.json</Path>
             <Path fileType="data">/usr/share/sddm/sddm.conf.d/20_plasma_config.conf</Path>
-            <Path fileType="data">/usr/share/wallpapers/SolusPlasma/contents/images/1366x768.jpg</Path>
-            <Path fileType="data">/usr/share/wallpapers/SolusPlasma/contents/images/1920x1080.jpg</Path>
-            <Path fileType="data">/usr/share/wallpapers/SolusPlasma/contents/images/2560x1440.jpg</Path>
-            <Path fileType="data">/usr/share/wallpapers/SolusPlasma/contents/images/3200x1800.jpg</Path>
-            <Path fileType="data">/usr/share/wallpapers/SolusPlasma/contents/images/3840x2160.jpg</Path>
-            <Path fileType="data">/usr/share/wallpapers/SolusPlasma/contents/images/5120x2880.jpg</Path>
-            <Path fileType="data">/usr/share/wallpapers/SolusPlasma/contents/screenshot.jpg</Path>
+            <Path fileType="data">/usr/share/wallpapers/SolusPlasma/contents/images/1366x768.jxl</Path>
+            <Path fileType="data">/usr/share/wallpapers/SolusPlasma/contents/images/1920x1080.jxl</Path>
+            <Path fileType="data">/usr/share/wallpapers/SolusPlasma/contents/images/1920x1280.jxl</Path>
+            <Path fileType="data">/usr/share/wallpapers/SolusPlasma/contents/images/2560x1440.jxl</Path>
+            <Path fileType="data">/usr/share/wallpapers/SolusPlasma/contents/images/3200x1800.jxl</Path>
+            <Path fileType="data">/usr/share/wallpapers/SolusPlasma/contents/images/3840x2160.jxl</Path>
+            <Path fileType="data">/usr/share/wallpapers/SolusPlasma/contents/screenshot.jxl</Path>
             <Path fileType="data">/usr/share/wallpapers/SolusPlasma/metadata.desktop</Path>
             <Path fileType="data">/usr/share/xdg/baloofilerc</Path>
             <Path fileType="data">/usr/share/xdg/breezerc</Path>
@@ -112,23 +115,22 @@
     <Package>
         <Name>plasma-desktop-branding-livecd</Name>
         <Summary xml:lang="en">Defaults for the Plasma Desktop</Summary>
-        <Description xml:lang="en">Plasma Desktop Experience Configuration
+        <Description xml:lang="en">Plasma Desktop Experience Configuration. Wallpaper red-cherry-leaves by W.carter
 </Description>
         <PartOf>desktop.kde</PartOf>
         <Files>
             <Path fileType="library">/usr/lib/tmpfiles.d/plasma-desktop-branding.conf</Path>
-            <Path fileType="data">/usr/share/glib-2.0/schemas/50_plasma_livecd.gschema.override</Path>
             <Path fileType="data">/usr/share/livecd/kscreenlockerrc</Path>
             <Path fileType="data">/usr/share/sddm/sddm.conf.d/99_plasma_livecd.conf</Path>
         </Files>
     </Package>
     <History>
-        <Update release="73">
-            <Date>2025-06-08</Date>
+        <Update release="77">
+            <Date>2026-03-13</Date>
             <Version>4.6.0</Version>
             <Comment>Packaging update</Comment>
-            <Name>Joey Riches</Name>
-            <Email>josephriches@gmail.com</Email>
+            <Name>Troy Harvey</Name>
+            <Email>harvey@getsol.us</Email>
         </Update>
     </History>
 </PISI>

@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : hunspell-pt
-version    : '20220621'
-release    : 3
+version    : '20251001'
+release    : 4
 source     :
-    - https://natura.di.uminho.pt/download/sources/Dictionaries/hunspell/hunspell-pt_PT-20220621.tar.gz : a310abeeb52b706febae0392f44f9541bbfb1b75f3f290c615ade25fa1ccd351
+    - https://natura.di.uminho.pt/download/sources/Dictionaries/hunspell/hunspell-pt_PT-20251001.tar.gz : 2066157087e83264484a6d564e1d85258fe2c5eddb9713a42d6f6cf06b0a2ed9
 homepage   : https://natura.di.uminho.pt/download/sources/Dictionaries/hunspell/
 license    :
     - GPL-2.0-or-later
@@ -17,3 +18,4 @@ rundeps    :
 install    : |
     install -Dm00644 pt_PT.aff $installdir/usr/share/hunspell/pt_PT.aff
     install -Dm00644 pt_PT.dic $installdir/usr/share/hunspell/pt_PT.dic
+    %install_license COPYING

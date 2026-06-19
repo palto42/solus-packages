@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : libgtk-3
-version    : 3.24.49
-release    : 120
+version    : 3.24.52
+release    : 123
 source     :
-    - https://download.gnome.org/sources/gtk/3.24/gtk-3.24.49.tar.xz : 5ea52c6a28f0e5ecf2e9a3c2facbb30d040b73871fcd5f33cd1317e9018a146e
+    - https://download.gnome.org/sources/gtk/3.24/gtk-3.24.52.tar.xz : 80931fa472a77b9a164f6740e3c0b444fac6770054632d35a7ff9d679e5e7b9f
 homepage   : https://www.gtk.org/
 license    : LGPL-2.0-or-later
 summary    :
@@ -44,6 +45,9 @@ builddeps  :
     - pkgconfig32(json-glib-1.0)
     - pkgconfig32(libcap)
     - pkgconfig32(libcrypt)
+    - pkgconfig32(libpng)
+    - pkgconfig32(libtiff-4)
+    - pkgconfig32(libturbojpeg)
     - pkgconfig32(libxml-2.0)
     - pkgconfig32(mount)
     - pkgconfig32(pango)
@@ -59,6 +63,7 @@ builddeps  :
     - pkgconfig32(zlib)
     - pkgconfig(gtk-doc)
     - pkgconfig(wayland-protocols)
+    # glycin-devel
 rundeps    :
     - gsettings-desktop-schemas
     - hicolor-icon-theme

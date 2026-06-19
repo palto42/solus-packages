@@ -106,7 +106,6 @@ libc.so.6:strcpy
 libc.so.6:strerror
 libc.so.6:strlen
 libc.so.6:strrchr
-libc.so.6:strtod
 libc.so.6:strtol
 libc.so.6:sysinfo
 libc.so.6:textdomain
@@ -340,6 +339,7 @@ libglib-2.0.so.0:g_file_test
 libglib-2.0.so.0:g_find_program_in_path
 libglib-2.0.so.0:g_format_size
 libglib-2.0.so.0:g_free
+libglib-2.0.so.0:g_free_sized
 libglib-2.0.so.0:g_get_home_dir
 libglib-2.0.so.0:g_get_language_names
 libglib-2.0.so.0:g_get_os_info
@@ -594,9 +594,9 @@ libstdc++.so.6:__cxa_guard_abort
 libstdc++.so.6:__cxa_guard_acquire
 libstdc++.so.6:__cxa_guard_release
 libstdc++.so.6:__gxx_personality_v0
-libstemmer.so.2:sb_stemmer_delete
-libstemmer.so.2:sb_stemmer_new
-libstemmer.so.2:sb_stemmer_stem
+libstemmer.so.0:sb_stemmer_delete
+libstemmer.so.0:sb_stemmer_new
+libstemmer.so.0:sb_stemmer_stem
 libsystemd.so.0:sd_device_enumerator_add_match_property
 libsystemd.so.0:sd_device_enumerator_allow_uninitialized
 libsystemd.so.0:sd_device_enumerator_get_device_first

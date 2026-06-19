@@ -1,15 +1,17 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kf6-kconfigwidgets
-version    : 6.19.0
-release    : 27
+version    : 6.27.0
+release    : 38
 source     :
-    - https://download.kde.org/stable/frameworks/6.19/kconfigwidgets-6.19.0.tar.xz : 1d785b68307c054a6133b8e4e462b569f02ec7adb8aafe1b95f49531b9a87f7c
+    - https://download.kde.org/stable/frameworks/6.27/kconfigwidgets-6.27.0.tar.xz : 404ed0606dfb13cc44c36deaf5f880eeec75018ae878125dabf83f32efeb0a7f
 homepage   : https://community.kde.org/Frameworks
 license    :
-    - BSD-3-Clause
+    - CC0-1.0
     - GPL-2.0-or-later
     - LGPL-2.0-only
     - LGPL-2.0-or-later
     - LGPL-2.1-only
+    - LGPL-3.0-only
     - MIT
 component  : desktop.library
 summary    : Widgets for configuration dialogs
@@ -42,3 +44,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*

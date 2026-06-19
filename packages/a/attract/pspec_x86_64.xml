@@ -1,10 +1,10 @@
 <PISI>
     <Source>
         <Name>attract</Name>
-        <Homepage>http://attractmode.org/</Homepage>
+        <Homepage>https://attractmode.org/</Homepage>
         <Packager>
-            <Name>Reilly Brogan</Name>
-            <Email>solus@reillybrogan.com</Email>
+            <Name>Jakob Gezelius</Name>
+            <Email>jakob@knugen.nu</Email>
         </Packager>
         <License>GPL-3.0-or-later</License>
         <PartOf>games.emulator</PartOf>
@@ -233,17 +233,18 @@
             <Path fileType="data">/usr/share/attract/shaders/default/premultiplied.frag</Path>
             <Path fileType="data">/usr/share/attract/shaders/default/screen.frag</Path>
             <Path fileType="data">/usr/share/attract/shaders/default/subtract.frag</Path>
+            <Path fileType="data">/usr/share/licenses/attract/License.txt</Path>
             <Path fileType="data">/usr/share/metainfo/attract-mode.appdata.xml</Path>
             <Path fileType="data">/usr/share/pixmaps/attract-mode.png</Path>
         </Files>
     </Package>
     <History>
-        <Update release="20">
-            <Date>2024-11-15</Date>
+        <Update release="23">
+            <Date>2026-04-11</Date>
             <Version>2.7.0</Version>
             <Comment>Packaging update</Comment>
-            <Name>Reilly Brogan</Name>
-            <Email>solus@reillybrogan.com</Email>
+            <Name>Jakob Gezelius</Name>
+            <Email>jakob@knugen.nu</Email>
         </Update>
     </History>
 </PISI>

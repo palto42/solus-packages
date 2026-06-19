@@ -3,8 +3,8 @@
         <Name>crun</Name>
         <Homepage>https://github.com/containers/crun</Homepage>
         <Packager>
-            <Name>Robert Gonzalez</Name>
-            <Email>uni.dos12@outlook.com</Email>
+            <Name>Jared Cervantes</Name>
+            <Email>jared@jaredcervantes.com</Email>
         </Packager>
         <License>GPL-2.0-only</License>
         <License>LGPL-2.1-only</License>
@@ -25,16 +25,18 @@
             <Path fileType="library">/usr/lib64/libcrun.so</Path>
             <Path fileType="library">/usr/lib64/libcrun.so.0</Path>
             <Path fileType="library">/usr/lib64/libcrun.so.0.0.0</Path>
-            <Path fileType="man">/usr/share/man/man1/crun.1</Path>
+            <Path fileType="data">/usr/share/licenses/crun/COPYING</Path>
+            <Path fileType="data">/usr/share/licenses/crun/COPYING.libcrun</Path>
+            <Path fileType="man">/usr/share/man/man1/crun.1.zst</Path>
         </Files>
     </Package>
     <History>
-        <Update release="2">
-            <Date>2025-04-11</Date>
-            <Version>1.21</Version>
+        <Update release="3">
+            <Date>2026-04-01</Date>
+            <Version>1.27</Version>
             <Comment>Packaging update</Comment>
-            <Name>Robert Gonzalez</Name>
-            <Email>uni.dos12@outlook.com</Email>
+            <Name>Jared Cervantes</Name>
+            <Email>jared@jaredcervantes.com</Email>
         </Update>
     </History>
 </PISI>

@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : nano
-version    : '8.6'
-release    : 206
+version    : '9.0'
+release    : 212
 source     :
-    - https://www.nano-editor.org/dist/v8/nano-8.6.tar.xz : f7abfbf0eed5f573ab51bd77a458f32d82f9859c55e9689f819d96fe1437a619
+    - https://www.nano-editor.org/dist/v9/nano-9.0.tar.xz : 9f384374b496110a25b73ad5a5febb384783c6e3188b37063f677ac908013fde
 homepage   : https://www.nano-editor.org
 license    : GPL-3.0-or-later
 component  : system.devel
@@ -15,18 +16,22 @@ builddeps  :
 rundeps    :
     - nano-syntax-highlighting
 setup      : |
-    %patch -p1 -i $pkgfiles/0001-Use-a-stateless-configuration.patch
+    %patch -p1 -i ${pkgfiles}/nano-9.0-stateless-configuration.patch
+
     %configure \
-               --docdir=/usr/share/doc/nano \
-               --enable-utf8
+        --docdir=/usr/share/doc/nano \
+        --enable-utf8
 build      : |
     %make
 install    : |
     %make_install
+    %install_license COPYING
+
     # Include syntax definitions
     for rcfile in $installdir/usr/share/nano/*.nanorc; do
         echo include /usr/share/nano/${rcfile##*nano/} >> $pkgfiles/nanorc
     done
+
     # Include missing definitions from scopatz's files
     for rcfile in /usr/share/nanorc/*.nanorc; do
         if ! grep -Fq ${rcfile#*highlighting/} $pkgfiles/nanorc
@@ -34,7 +39,9 @@ install    : |
             echo include "$rcfile" >> $pkgfiles/nanorc
         fi
     done
+
     install -Dm00644 $pkgfiles/nanorc $installdir/usr/share/defaults/nano/nanorc
+
     # Ensure that nano is set up as default EDITOR and VISUAL
     install -Dm00644 $pkgfiles/81-nano-is-default-EDITOR-and-VISUAL.sh $installdir/usr/share/defaults/etc/profile.d/81-nano-is-default-EDITOR-and-VISUAL.sh
     install -Dm00644 $pkgfiles/81-nano-is-default-EDITOR-and-VISUAL.fish $installdir/usr/share/defaults/etc/profile.d/81-nano-is-default-EDITOR-and-VISUAL.fish

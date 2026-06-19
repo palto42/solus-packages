@@ -1,0 +1,10 @@
+releases:
+  id: 8759
+  rss: https://github.com/peazip/PeaZip/releases.atom
+# Verify successful cpe hits by visiting https://cve.circl.lu/search?vendor=$VENDOR&product=$PRODUCT
+security:
+  cpe:
+  - vendor: peazip
+    product: peazip
+  - vendor: peazip_project
+    product: peazip

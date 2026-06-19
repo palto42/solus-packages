@@ -13,9 +13,9 @@ libQt6Widgets.so.6
 libX11.so.6
 libXext.so.6
 libXrandr.so.2
-libavcodec.so.61
-libavformat.so.61
-libavutil.so.59
+libavcodec.so.62
+libavformat.so.62
+libavutil.so.60
 libc.so.6
 libgcc_s.so.1
 libglib-2.0.so.0
@@ -32,5 +32,6 @@ libgstvideo-1.0.so.0
 libm.so.6
 libpulse.so.0
 libstdc++.so.6
-libswresample.so.5
-libswscale.so.8
+libswresample.so.6
+libswscale.so.9
+libva.so.2

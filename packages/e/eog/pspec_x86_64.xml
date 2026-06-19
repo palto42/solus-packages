@@ -3,8 +3,8 @@
         <Name>eog</Name>
         <Homepage>https://gitlab.gnome.org/GNOME/eog</Homepage>
         <Packager>
-            <Name>Lea Evers</Name>
-            <Email>lea.evers@mailbox.org</Email>
+            <Name>Joey Riches</Name>
+            <Email>josephriches@gmail.com</Email>
         </Packager>
         <License>GPL-2.0-only</License>
         <PartOf>multimedia.graphics</PartOf>
@@ -691,6 +691,44 @@
             <Path fileType="doc">/usr/share/help/ja/eog/translate.page</Path>
             <Path fileType="doc">/usr/share/help/ja/eog/view.page</Path>
             <Path fileType="doc">/usr/share/help/ja/eog/zoom.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/eog/bug-filing.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/eog/commandline.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/eog/copy-paste.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/eog/default.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/eog/desktop-background.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/eog/develop.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/eog/documentation.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/eog/edit.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/eog/figures/multiple-convert.png</Path>
+            <Path fileType="doc">/usr/share/help/kk/eog/figures/multiple-rename-count.png</Path>
+            <Path fileType="doc">/usr/share/help/kk/eog/figures/org.gnome.eog-symbolic.svg</Path>
+            <Path fileType="doc">/usr/share/help/kk/eog/figures/org.gnome.eog.svg</Path>
+            <Path fileType="doc">/usr/share/help/kk/eog/figures/plugins-all.png</Path>
+            <Path fileType="doc">/usr/share/help/kk/eog/figures/prefs-plugins.png</Path>
+            <Path fileType="doc">/usr/share/help/kk/eog/flip-rotate.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/eog/format-change.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/eog/formats-save.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/eog/formats-view.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/eog/index.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/eog/introduction.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/eog/legal.xml</Path>
+            <Path fileType="doc">/usr/share/help/kk/eog/license.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/eog/open.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/eog/plugin-exif-digital.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/eog/plugin-fullscreen-background.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/eog/plugin-fullscreen-double-click.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/eog/plugin-python-console.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/eog/plugin-send-by-mail.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/eog/plugin-slideshow-shuffle.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/eog/plugin-zoom-width.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/eog/plugins.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/eog/preferences.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/eog/print.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/eog/rename-multiple.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/eog/slideshow.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/eog/translate.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/eog/view.page</Path>
+            <Path fileType="doc">/usr/share/help/kk/eog/zoom.page</Path>
             <Path fileType="doc">/usr/share/help/ko/eog/bug-filing.page</Path>
             <Path fileType="doc">/usr/share/help/ko/eog/commandline.page</Path>
             <Path fileType="doc">/usr/share/help/ko/eog/copy-paste.page</Path>
@@ -1109,6 +1147,44 @@
             <Path fileType="doc">/usr/share/help/sl/eog/translate.page</Path>
             <Path fileType="doc">/usr/share/help/sl/eog/view.page</Path>
             <Path fileType="doc">/usr/share/help/sl/eog/zoom.page</Path>
+            <Path fileType="doc">/usr/share/help/sr/eog/bug-filing.page</Path>
+            <Path fileType="doc">/usr/share/help/sr/eog/commandline.page</Path>
+            <Path fileType="doc">/usr/share/help/sr/eog/copy-paste.page</Path>
+            <Path fileType="doc">/usr/share/help/sr/eog/default.page</Path>
+            <Path fileType="doc">/usr/share/help/sr/eog/desktop-background.page</Path>
+            <Path fileType="doc">/usr/share/help/sr/eog/develop.page</Path>
+            <Path fileType="doc">/usr/share/help/sr/eog/documentation.page</Path>
+            <Path fileType="doc">/usr/share/help/sr/eog/edit.page</Path>
+            <Path fileType="doc">/usr/share/help/sr/eog/figures/multiple-convert.png</Path>
+            <Path fileType="doc">/usr/share/help/sr/eog/figures/multiple-rename-count.png</Path>
+            <Path fileType="doc">/usr/share/help/sr/eog/figures/org.gnome.eog-symbolic.svg</Path>
+            <Path fileType="doc">/usr/share/help/sr/eog/figures/org.gnome.eog.svg</Path>
+            <Path fileType="doc">/usr/share/help/sr/eog/figures/plugins-all.png</Path>
+            <Path fileType="doc">/usr/share/help/sr/eog/figures/prefs-plugins.png</Path>
+            <Path fileType="doc">/usr/share/help/sr/eog/flip-rotate.page</Path>
+            <Path fileType="doc">/usr/share/help/sr/eog/format-change.page</Path>
+            <Path fileType="doc">/usr/share/help/sr/eog/formats-save.page</Path>
+            <Path fileType="doc">/usr/share/help/sr/eog/formats-view.page</Path>
+            <Path fileType="doc">/usr/share/help/sr/eog/index.page</Path>
+            <Path fileType="doc">/usr/share/help/sr/eog/introduction.page</Path>
+            <Path fileType="doc">/usr/share/help/sr/eog/legal.xml</Path>
+            <Path fileType="doc">/usr/share/help/sr/eog/license.page</Path>
+            <Path fileType="doc">/usr/share/help/sr/eog/open.page</Path>
+            <Path fileType="doc">/usr/share/help/sr/eog/plugin-exif-digital.page</Path>
+            <Path fileType="doc">/usr/share/help/sr/eog/plugin-fullscreen-background.page</Path>
+            <Path fileType="doc">/usr/share/help/sr/eog/plugin-fullscreen-double-click.page</Path>
+            <Path fileType="doc">/usr/share/help/sr/eog/plugin-python-console.page</Path>
+            <Path fileType="doc">/usr/share/help/sr/eog/plugin-send-by-mail.page</Path>
+            <Path fileType="doc">/usr/share/help/sr/eog/plugin-slideshow-shuffle.page</Path>
+            <Path fileType="doc">/usr/share/help/sr/eog/plugin-zoom-width.page</Path>
+            <Path fileType="doc">/usr/share/help/sr/eog/plugins.page</Path>
+            <Path fileType="doc">/usr/share/help/sr/eog/preferences.page</Path>
+            <Path fileType="doc">/usr/share/help/sr/eog/print.page</Path>
+            <Path fileType="doc">/usr/share/help/sr/eog/rename-multiple.page</Path>
+            <Path fileType="doc">/usr/share/help/sr/eog/slideshow.page</Path>
+            <Path fileType="doc">/usr/share/help/sr/eog/translate.page</Path>
+            <Path fileType="doc">/usr/share/help/sr/eog/view.page</Path>
+            <Path fileType="doc">/usr/share/help/sr/eog/zoom.page</Path>
             <Path fileType="doc">/usr/share/help/sv/eog/bug-filing.page</Path>
             <Path fileType="doc">/usr/share/help/sv/eog/commandline.page</Path>
             <Path fileType="doc">/usr/share/help/sv/eog/copy-paste.page</Path>
@@ -1486,7 +1562,7 @@
             <Path fileType="localedata">/usr/share/locale/zh_HK/LC_MESSAGES/eog.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_TW/LC_MESSAGES/eog.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zu/LC_MESSAGES/eog.mo</Path>
-            <Path fileType="data">/usr/share/metainfo/eog.appdata.xml</Path>
+            <Path fileType="data">/usr/share/metainfo/org.gnome.eog.metainfo.xml</Path>
         </Files>
     </Package>
     <Package>
@@ -1496,7 +1572,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="60">eog</Dependency>
+            <Dependency release="64">eog</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/eog-3.0/eog/eog-application-activatable.h</Path>
@@ -1527,12 +1603,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="60">
-            <Date>2024-11-04</Date>
-            <Version>47.0</Version>
+        <Update release="64">
+            <Date>2026-04-14</Date>
+            <Version>50.1</Version>
             <Comment>Packaging update</Comment>
-            <Name>Lea Evers</Name>
-            <Email>lea.evers@mailbox.org</Email>
+            <Name>Joey Riches</Name>
+            <Email>josephriches@gmail.com</Email>
         </Update>
     </History>
 </PISI>

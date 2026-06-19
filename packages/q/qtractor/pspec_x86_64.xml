@@ -4,7 +4,7 @@
         <Homepage>https://qtractor.org/</Homepage>
         <Packager>
             <Name>Muhammad Alfi Syahrin</Name>
-            <Email>malfisya.dev@hotmail.com</Email>
+            <Email>alfi@getsol.us</Email>
         </Packager>
         <License>GPL-2.0-or-later</License>
         <PartOf>multimedia.audio</PartOf>
@@ -31,8 +31,9 @@
             <Path fileType="data">/usr/share/icons/hicolor/scalable/mimetypes/org.rncbc.qtractor.application-x-qtractor-archive.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/mimetypes/org.rncbc.qtractor.application-x-qtractor-session.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/mimetypes/org.rncbc.qtractor.application-x-qtractor-template.svg</Path>
-            <Path fileType="man">/usr/share/man/fr/man1/qtractor.1</Path>
-            <Path fileType="man">/usr/share/man/man1/qtractor.1</Path>
+            <Path fileType="data">/usr/share/licenses/qtractor/LICENSE</Path>
+            <Path fileType="man">/usr/share/man/fr/man1/qtractor.1.zst</Path>
+            <Path fileType="man">/usr/share/man/man1/qtractor.1.zst</Path>
             <Path fileType="data">/usr/share/metainfo/org.rncbc.qtractor.metainfo.xml</Path>
             <Path fileType="data">/usr/share/mime/packages/org.rncbc.qtractor.xml</Path>
             <Path fileType="data">/usr/share/qtractor/audio/metro_bar.wav</Path>
@@ -49,15 +50,16 @@
             <Path fileType="data">/usr/share/qtractor/translations/qtractor_pt_BR.qm</Path>
             <Path fileType="data">/usr/share/qtractor/translations/qtractor_ru.qm</Path>
             <Path fileType="data">/usr/share/qtractor/translations/qtractor_uk.qm</Path>
+            <Path fileType="data">/usr/share/qtractor/translations/qtractor_zh_CN.qm</Path>
         </Files>
     </Package>
     <History>
-        <Update release="43">
-            <Date>2025-09-05</Date>
-            <Version>1.5.8</Version>
+        <Update release="50">
+            <Date>2026-06-17</Date>
+            <Version>1.6.1</Version>
             <Comment>Packaging update</Comment>
             <Name>Muhammad Alfi Syahrin</Name>
-            <Email>malfisya.dev@hotmail.com</Email>
+            <Email>alfi@getsol.us</Email>
         </Update>
     </History>
 </PISI>

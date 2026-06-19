@@ -1,0 +1,22 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
+name       : hyprwire
+version    : 0.3.1
+release    : 10
+source     :
+    - https://github.com/hyprwm/hyprwire/archive/refs/tags/v0.3.1.tar.gz : 92a673d40ae6a7d66fbcd0a34ec071e026e17eaeeb0040c3375e4b2a80dba737
+homepage   : https://github.com/hyprwm/hyprwire
+license    : BSD-3-Clause
+component  : desktop.hyprland
+summary    : A fast and consistent wire protocol for IPC
+description: |
+    Hyprwire is a fast and consistent wire protocol, and its implementation. This is essentially a "method" for processes to talk to each other. Hyprwire is heavily inspired by Wayland, and heavily anti-inspired by D-Bus.
+builddeps  :
+    - pkgconfig(hyprutils)
+    - pkgconfig(pugixml)
+setup      : |
+    %cmake_ninja
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install
+    %install_license LICENSE

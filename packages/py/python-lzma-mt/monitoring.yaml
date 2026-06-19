@@ -1,0 +1,5 @@
+releases:
+  id: 389924
+  rss: https://pypi.org/rss/project/python-lzma_mt/releases.xml
+security:
+  cpe: ~ # No CPE found, last checked (2026-03-21)

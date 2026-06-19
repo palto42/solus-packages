@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : gnome-power-manager
-version    : '43.0'
-release    : 13
+version    : '50.0'
+release    : 14
 source     :
-    - https://download.gnome.org/sources/gnome-power-manager/43/gnome-power-manager-43.0.tar.xz : 7daab48bbddb30e9df2aba650cb60d05e667c9f885ace6a0a1e7950e0cbdd32f
+    - https://download.gnome.org/sources/gnome-power-manager/50/gnome-power-manager-50.0.tar.xz : bf243d6389f8bfa71c958534ed2669b29965c47f55c3cbe4983b296d0f99e5d7
 homepage   : https://gitlab.gnome.org/GNOME/gnome-power-manager
 license    : GPL-2.0-or-later
 component  : desktop.gnome
@@ -10,7 +11,7 @@ summary    : A tool to view power usage
 description: |
     A tool for viewing present and historical battery usage and related statistics. Originally part of GNOME Power Manager and remained as a stand alone program after the rest was merged into gnome-settings-daemon.
 builddeps  :
-    - pkgconfig(gdk-3.0)
+    - pkgconfig(gtk4)
     - pkgconfig(upower-glib)
 setup      : |
     %meson_configure

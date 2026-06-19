@@ -1,14 +1,15 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : xfdashboard
-version    : 1.0.0
-release    : 1
+version    : 1.1.0
+release    : 2
 source     :
-    - https://archive.xfce.org/src/apps/xfdashboard/1.0/xfdashboard-1.0.0.tar.bz2 : a5284343e5ce09722f98d3b578588b36923e1ae5649754aa906980fdcdef48a5
+    - https://archive.xfce.org/src/apps/xfdashboard/1.1/xfdashboard-1.1.0.tar.xz : bd577b36f389d5463040d7095926a487cb4ae7ab30173aa269a1bc29bb6ff8d1
 homepage   : https://docs.xfce.org/apps/xfdashboard/start
 license    : GPL-2.0-or-later
 component  : desktop.xfce
 summary    : Provides a GNOME shell dashboard and macOS Mission Control (Exposé and Spaces) like interface for use with the Xfce desktop
 description: |
-    Provides a GNOME shell dashboard and macOS Mission Control (Exposé and Spaces) like interface for use with the Xfce desktop. It can be configured to run with any keyboard shortcut and when executed provides an overview of applications currently open enabling the user to switch between different applications. The search feature works like Xfce's app finder which makes it convenient to search for and start applications..
+    Provides a GNOME shell dashboard and macOS Mission Control (Exposé and Spaces) like interface for use with the Xfce desktop. It can be configured to run with any keyboard shortcut and when executed provides an overview of applications currently open enabling the user to switch between different applications. The search feature works like Xfce's app finder which makes it convenient to search for and start applications.
 builddeps  :
     - pkgconfig(clutter-1.0)
     - pkgconfig(garcon-1)
@@ -19,11 +20,12 @@ builddeps  :
     - pkgconfig(xdamage)
     - pkgconfig(xinerama)
 setup      : |
-    %configure
+    %meson_configure
 build      : |
-    %make
+    %ninja_build
 install    : |
-    %make_install
+    %ninja_install
+    %install_license COPYING
 
     # Stateless
     install -dm0755 $installdir/usr/share/xdg/autostart/

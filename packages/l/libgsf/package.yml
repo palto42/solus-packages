@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : libgsf
-version    : 1.14.53
-release    : 13
+version    : 1.14.58
+release    : 17
 source     :
-    - https://download.gnome.org/sources/libgsf/1.14/libgsf-1.14.53.tar.xz : 0eb59a86e0c50f97ac9cfe4d8cc1969f623f2ae8c5296f2414571ff0a9e8bcba
+    - https://download.gnome.org/sources/libgsf/1.14/libgsf-1.14.58.tar.xz : 06e07ea12b7a52b9e316faddfecb640b1717a4875c59f0efb3b0cec1e2ccf35a
 homepage   : https://gitlab.gnome.org/GNOME/libgsf
 license    : LGPL-2.1-only
 component  : desktop.library

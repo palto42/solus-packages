@@ -1,0 +1,76 @@
+Patch backported from Fedora to add zstd compression support for Info manuals.
+
+Modifications from the original patch for Solus compatibility:
+1. Fixed magic byte detection: Cast `data` array elements to `unsigned char` 
+to prevent signed/unsigned comparison failures on x86_64 Linux.
+
+2. Removed Windows `.exe` logic: Stripped the `#ifndef STRIP_DOT_EXE` block 
+that erroneously caused install-info to look for "zstd.exe" on Linux.
+
+3. Fixed standard output: Updated filesys.c to use `{"unzstd", "-c"}` 
+ensuring decompressed data successfully pipes into the info reader.
+
+diff -up texinfo-7.2.91/info/filesys.c.orig texinfo-7.2.91/info/filesys.c
+--- texinfo-7.2.91/info/filesys.c.orig    2026-01-22 20:46:00.000000000 +0100
++++ texinfo-7.2.91/info/filesys.c    2026-02-19 08:40:32.575857306 +0100
+@@ -54,9 +54,11 @@ static COMPRESSION_ALIST compress_suffix
+ #if STRIP_DOT_EXE
+   { ".gz", "gunzip" },
+   { ".lz", "lunzip" },
++  { ".zst", "unzstd" },
+ #else
+   { ".gz", "gzip", "-d" },
+   { ".lz", "lzip", "-d" },
++  { ".zst", "unzstd", "-c" },
+ #endif
+   { ".xz", "unxz" },
+   { ".bz2", "bunzip2" },
+diff -up texinfo-7.2.91/install-info/install-info.c.orig texinfo-7.2.91/install-info/install-info.c
+--- texinfo-7.2.91/install-info/install-info.c.orig    2026-01-25 09:53:26.000000000 +0100
++++ texinfo-7.2.91/install-info/install-info.c    2026-02-19 08:44:18.705304264 +0100
+@@ -427,6 +427,16 @@ strip_info_suffix (char *fname)
+       len -= 4;
+       ret[len] = 0;
+     }
++  else if (len > 4 && FILENAME_CMP (ret + len - 4, ".zst") == 0)
++    {
++      len -= 4;
++      ret[len] = 0;
++    }
++  else if (len > 5 && FILENAME_CMP (ret + len - 5, ".zstd") == 0)
++    {
++      len -= 5;
++      ret[len] = 0;
++    }
+ #ifdef __MSDOS__
+   else if (len > 4 && (FILENAME_CMP (ret + len - 4, ".inz") == 0
+                         || FILENAME_CMP (ret + len - 4, ".igz") == 0))
+@@ -706,6 +716,18 @@ open_possibly_compressed_file (char *fil
+      *opened_filename = concat (filename, ".lzma", "");
+      f = fopen (*opened_filename, FOPEN_RBIN);
+     }
++  if (!f)
++    {
++     free (*opened_filename);
++     *opened_filename = concat (filename, ".zst", "");
++     f = fopen (*opened_filename, FOPEN_RBIN);
++    }
++  if (!f)
++    {
++     free (*opened_filename);
++     *opened_filename = concat (filename, ".zstd", "");
++     f = fopen (*opened_filename, FOPEN_RBIN);
++    }
+ #ifdef __MSDOS__
+   if (!f)
+     {
+@@ -833,6 +855,10 @@ determine_file_type:
+     *compression_program = "lzma";
+ #endif
+ 
++  else if ((unsigned char)data[0] == 0x28 && (unsigned char)data[1] == 0xb5 
++           && (unsigned char)data[2] == 0x2f && (unsigned char)data[3] == 0xfd)
++    *compression_program = "zstd";
++
+   else
+     *compression_program = NULL;

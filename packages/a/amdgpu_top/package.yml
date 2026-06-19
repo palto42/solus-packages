@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : amdgpu_top
-version    : 0.11.0
-release    : 26
+version    : 0.11.5
+release    : 29
 source     :
-    - https://github.com/Umio-Yasuno/amdgpu_top/archive/refs/tags/v0.11.0.tar.gz : a56152d738a0bfc3757d9587aaed409ecb05ccc3ec81861cbc9e4af84aa9fd46
+    - https://github.com/Umio-Yasuno/amdgpu_top/archive/refs/tags/v0.11.5.tar.gz : e511ed15a6e0f3ea72321dfc97145ffb85999b37b6b304e9795978945f3f04cd
 homepage   : https://github.com/Umio-Yasuno/amdgpu_top
 license    :
     - CC-BY-SA-4.0 # Default icons borrowed from "Paper Icons" by Sam Hewitt
@@ -28,3 +29,4 @@ install    : |
     for i in 32 48 64 96 512; do
         install -Dm00644 $pkgfiles/utilities-system-monitor${i}.png $installdir/usr/share/icons/hicolor/${i}x${i}/apps/utilities-system-monitor.png
     done
+    %install_license LICENSE

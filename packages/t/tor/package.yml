@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : tor
-version    : 0.4.8.13
-release    : 45
+version    : 0.4.9.6
+release    : 46
 source     :
-    - https://dist.torproject.org/tor-0.4.8.13.tar.gz : 9baf26c387a2820b3942da572146e6eb77c2bc66862af6297cd02a074e6fba28
+    - https://dist.torproject.org/tor-0.4.9.6.tar.gz : a89aba97052e9963a654b40df2d46be07e8a6b6e24e5437917fd81acd90a7017
 homepage   : https://www.torproject.org/
 license    : BSD-3-Clause
 component  : security
@@ -26,3 +27,4 @@ install    : |
     install -Dm00644 $pkgfiles/tor.service $installdir/%libdir%/systemd/system/tor.service
     install -Dm00644 $pkgfiles/tor.sysusers $installdir/%libdir%/sysusers.d/tor.conf
     install -Dm00644 $pkgfiles/tor.tmpfiles $installdir/%libdir%/tmpfiles.d/tor.conf
+    %install_license LICENSE

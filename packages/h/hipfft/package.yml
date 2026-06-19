@@ -1,9 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : hipfft
-version    : 1.0.16
-release    : 5
+version    : 7.2.0
+release    : 7
 source     :
-    # tag: rocm-6.2.4
-    - git|https://github.com/ROCmSoftwarePlatform/hipFFT.git : 433b5f2d1e652a09e7b4321b4893d32308ec553b
+    - https://github.com/ROCm/rocm-libraries/archive/refs/tags/rocm-7.2.0.tar.gz : 8ad5f4a11f1ed8a7b927f2e65f24083ca6ce902a42021a66a815190a91ccb654
 homepage   : https://github.com/ROCmSoftwarePlatform/hipFFT
 license    : MIT
 component  : programming.library
@@ -14,17 +14,19 @@ builddeps  :
     - rocfft-devel
     - rocm-cmake
     - rocm-hip
+    - rocm-llvm
 environment: |
     export CXXFLAGS="${CXXFLAGS/-D_FORTIFY_SOURCE=2 -fstack-protector-strong --param=ssp-buffer-size=32/-fcf-protection=none}"
 
     export ROCM_PATH=/usr
     export HIP_CLANG_PATH=/usr/lib64/llvm-rocm/bin
-    export DEVICE_LIB_PATH=/usr/lib64/amdgcn/bitcode
+    export HIP_DEVICE_LIB_PATH=/usr/lib64/amdgcn/bitcode
 setup      : |
-    %cmake_ninja -L \
+    %cmake_ninja -S projects/hipfft -L \
+      -DCMAKE_CXX_COMPILER=$HIP_CLANG_PATH/clang++ \
       -DCMAKE_INSTALL_LIBDIR=lib%LIBSUFFIX% \
       -DROCM_SYMLINK_LIBS=OFF \
-      -DAMDGPU_TARGETS="%AMDGPU_TARGETS%"
+      -DGPU_TARGETS="%AMDGPU_TARGETS%"
 build      : |
     %ninja_build
 install    : |

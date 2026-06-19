@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : php
-version    : 8.2.28
-release    : 107
+version    : 8.5.6
+release    : 114
 source     :
-    - https://www.php.net/distributions/php-8.2.28.tar.gz : 3318300888de5023720cc84efad5e005e53f30b5f0072fae65a750dabcaf6ec3
+    - https://www.php.net/distributions/php-8.5.6.tar.xz : 826c600b7c6f956bd335558ca3bdbcab23b22126c1cc8d9348be2280a2204bb7
 license    : PHP-3.01
 component  : programming
 homepage   : https://www.php.net
@@ -32,7 +33,6 @@ builddeps  :
     - pkgconfig(tidy)
     - pkgconfig(zlib)
     - gettext-devel
-    - imap-devel
     - net-snmp-devel
 patterns   :
     - devel :
@@ -82,8 +82,6 @@ setup      : |
          --with-gettext=shared \
          --with-gmp=shared \
          --with-iconv=shared \
-         --with-imap=shared \
-         --with-imap-ssl \
          --with-ldap=shared \
          --with-ldap-sasl \
          --with-libdir=lib64 \
@@ -124,14 +122,18 @@ build      : |
 install    : |
     export EXTENSION_DIR=%libdir%/php/modules/
     make INSTALL_ROOT=%installroot% install
+    %install_license LICENSE
+
     # Cleanup
     rm -fv $installdir/etc/php/php-fpm.d/www.conf.default
     rm -rfv $installdir/usr/include/php/include
     rm -rfv %installroot%/var
+
     # Install configs
     install $pkgfiles/php.ini-production $installdir/etc/php/php.ini
     install $pkgfiles/www.conf $installdir/etc/php/php-fpm.d/www.conf
     mv $installdir/etc/php/php-fpm.conf.default $installdir/etc/php/php-fpm.conf
+
     # Setup service and tmpfiles
     sed 's:${exec_prefix}:/usr:g' -i sapi/fpm/php-fpm.service
     install -Dm00644 sapi/fpm/php-fpm.service $installdir/%libdir%/systemd/system/php-fpm.service

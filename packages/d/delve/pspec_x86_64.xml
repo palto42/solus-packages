@@ -3,8 +3,8 @@
         <Name>delve</Name>
         <Homepage>https://github.com/go-delve/delve/</Homepage>
         <Packager>
-            <Name>Algent Albrahimi</Name>
-            <Email>algent@protonmail.com</Email>
+            <Name>David Harder</Name>
+            <Email>david@davidjharder.ca</Email>
         </Packager>
         <License>MIT</License>
         <PartOf>programming.tools</PartOf>
@@ -15,7 +15,7 @@ Delve enables you to interact with your program by controlling the execution of 
 
 The goal of this tool is to provide a simple yet powerful interface for debugging Go programs.
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>delve</Name>
@@ -29,15 +29,16 @@ The goal of this tool is to provide a simple yet powerful interface for debuggin
         <PartOf>programming.tools</PartOf>
         <Files>
             <Path fileType="executable">/usr/bin/dlv</Path>
+            <Path fileType="data">/usr/share/licenses/delve/LICENSE</Path>
         </Files>
     </Package>
     <History>
-        <Update release="8">
-            <Date>2022-04-01</Date>
-            <Version>1.6.0</Version>
+        <Update release="11">
+            <Date>2026-04-28</Date>
+            <Version>1.26.3</Version>
             <Comment>Packaging update</Comment>
-            <Name>Algent Albrahimi</Name>
-            <Email>algent@protonmail.com</Email>
+            <Name>David Harder</Name>
+            <Email>david@davidjharder.ca</Email>
         </Update>
     </History>
 </PISI>

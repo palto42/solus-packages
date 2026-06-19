@@ -1,12 +1,13 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : wl-clipboard
-version    : 2.2.1
-release    : 1
+version    : 2.3.0
+release    : 2
 source     :
-    - https://github.com/bugaevc/wl-clipboard/archive/refs/tags/v2.2.1.tar.gz : 6eb8081207fb5581d1d82c4bcd9587205a31a3d47bea3ebeb7f41aa1143783eb
+    - https://github.com/bugaevc/wl-clipboard/archive/refs/tags/v2.3.0.tar.gz : b4dc560973f0cd74e02f817ffa2fd44ba645a4f1ea94b7b9614dacc9f895f402
 homepage   : https://github.com/bugaevc/wl-clipboard
 license    : GPL-3.0-or-later
 component  : system.utils
-summary    : Command-line copy/paste utilities for Wayland 
+summary    : Command-line copy/paste utilities for Wayland
 description: |
     This project implements two command-line Wayland clipboard utilities, wl-copy and wl-paste, that let you easily copy data between the clipboard and Unix pipes, sockets, files and so on.
 builddeps  :
@@ -18,3 +19,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license COPYING

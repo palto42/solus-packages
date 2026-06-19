@@ -3,8 +3,8 @@
         <Name>libcupsfilters</Name>
         <Homepage>https://github.com/OpenPrinting/libcupsfilters</Homepage>
         <Packager>
-            <Name>Jakob Gezelius</Name>
-            <Email>jakob@knugen.nu</Email>
+            <Name>Joey Riches</Name>
+            <Email>josephriches@gmail.com</Email>
         </Packager>
         <License>Apache-2.0 WITH LLVM-exception</License>
         <PartOf>desktop.core</PartOf>
@@ -45,6 +45,18 @@
             <Path fileType="data">/usr/share/cups/data/testprint</Path>
             <Path fileType="data">/usr/share/cups/data/topsecret.pdf</Path>
             <Path fileType="data">/usr/share/cups/data/unclassified.pdf</Path>
+            <Path fileType="doc">/usr/share/doc/libcupsfilters/ABOUT-NLS</Path>
+            <Path fileType="doc">/usr/share/doc/libcupsfilters/AUTHORS</Path>
+            <Path fileType="doc">/usr/share/doc/libcupsfilters/CHANGES-1.x.md</Path>
+            <Path fileType="doc">/usr/share/doc/libcupsfilters/CHANGES.md</Path>
+            <Path fileType="doc">/usr/share/doc/libcupsfilters/CONTRIBUTING.md</Path>
+            <Path fileType="doc">/usr/share/doc/libcupsfilters/COPYING</Path>
+            <Path fileType="doc">/usr/share/doc/libcupsfilters/DEVELOPING.md</Path>
+            <Path fileType="doc">/usr/share/doc/libcupsfilters/INSTALL.md</Path>
+            <Path fileType="doc">/usr/share/doc/libcupsfilters/LICENSE</Path>
+            <Path fileType="doc">/usr/share/doc/libcupsfilters/NOTICE</Path>
+            <Path fileType="doc">/usr/share/doc/libcupsfilters/README.md</Path>
+            <Path fileType="data">/usr/share/licenses/libcupsfilters/LICENSE</Path>
         </Files>
     </Package>
     <Package>
@@ -54,7 +66,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="6">libcupsfilters</Dependency>
+            <Dependency release="9">libcupsfilters</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/cupsfilters/bitmap.h</Path>
@@ -74,12 +86,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="6">
-            <Date>2025-09-28</Date>
-            <Version>2.1.0</Version>
+        <Update release="9">
+            <Date>2026-05-15</Date>
+            <Version>2.1.1</Version>
             <Comment>Packaging update</Comment>
-            <Name>Jakob Gezelius</Name>
-            <Email>jakob@knugen.nu</Email>
+            <Name>Joey Riches</Name>
+            <Email>josephriches@gmail.com</Email>
         </Update>
     </History>
 </PISI>

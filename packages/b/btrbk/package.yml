@@ -1,6 +1,7 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : btrbk
 version    : 0.32.6
-release    : 8
+release    : 9
 source     :
     - https://github.com/digint/btrbk/archive/refs/tags/v0.32.6.tar.gz : 15f3b2e23c69233941f6bc9c00064871523500705246145658525254187a6fe7
 homepage   : https://digint.ch/btrbk/
@@ -18,3 +19,5 @@ build      : |
 install    : |
     %make_install CONFDIR=/usr/share
     rm -rf $installdir/usr/share/doc
+
+    install -Dm0644 -t $installdir/%libdir%/systemd/system-preset $pkgfiles/60-btrbk.preset

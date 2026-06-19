@@ -1,9 +1,13 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : hidapi
-version    : 0.14.0
-release    : 9
+version    : 0.15.0
+release    : 10
 source     :
-    - https://github.com/libusb/hidapi/archive/refs/tags/hidapi-0.14.0.tar.gz : a5714234abe6e1f53647dd8cba7d69f65f71c558b7896ed218864ffcf405bcbd
-license    : GPL-3.0-or-later
+    - https://github.com/libusb/hidapi/archive/refs/tags/hidapi-0.15.0.tar.gz : 5d84dec684c27b97b921d2f3b73218cb773cf4ea915caee317ac8fc73cef8136
+license    :
+    - BSD-3-Clause
+    - HIDAPI
+    - GPL-3.0-or-later
 component  : programming
 homepage   : https://github.com/libusb/hidapi/
 summary    : Simple library for communicating with USB and Bluetooth HID devices
@@ -20,5 +24,5 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
-    # Remove all the doc stuff, it's just licensing
-    rm -rf $installdir/usr/share/
+    
+    %install_license LICENSE-bsd.txt LICENSE-gpl3.txt LICENSE-orig.txt

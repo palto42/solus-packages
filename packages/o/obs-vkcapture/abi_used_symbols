@@ -78,6 +78,7 @@ libobs.so.30:gs_get_linear_srgb
 libobs.so.30:gs_matrix_pop
 libobs.so.30:gs_matrix_push
 libobs.so.30:gs_matrix_translate3f
+libobs.so.30:gs_set_linear_srgb
 libobs.so.30:gs_texture_create
 libobs.so.30:gs_texture_create_from_dmabuf
 libobs.so.30:gs_texture_destroy

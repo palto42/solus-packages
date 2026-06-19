@@ -1,10 +1,10 @@
 <PISI>
     <Source>
         <Name>cherrytree</Name>
-        <Homepage>https://www.giuspen.com/cherrytree/</Homepage>
+        <Homepage>https://www.giuspen.net/cherrytree/</Homepage>
         <Packager>
-            <Name>Evan Maddock</Name>
-            <Email>maddock.evan@vivaldi.net</Email>
+            <Name>sebo505</Name>
+            <Email>sebastian.spree@web.de</Email>
         </Packager>
         <License>GPL-3.0-or-later</License>
         <PartOf>office.notes</PartOf>
@@ -397,12 +397,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="48">
-            <Date>2025-10-09</Date>
-            <Version>1.6.2</Version>
+        <Update release="51">
+            <Date>2026-06-18</Date>
+            <Version>1.7.0</Version>
             <Comment>Packaging update</Comment>
-            <Name>Evan Maddock</Name>
-            <Email>maddock.evan@vivaldi.net</Email>
+            <Name>sebo505</Name>
+            <Email>sebastian.spree@web.de</Email>
         </Update>
     </History>
 </PISI>

@@ -1,10 +1,13 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : kf6-kcrash
-version    : 6.19.0
-release    : 26
+version    : 6.27.0
+release    : 34
 source     :
-    - https://download.kde.org/stable/frameworks/6.19/kcrash-6.19.0.tar.xz : 7feb010b75a07c5125b2f36ad8989eecdb6a5d41de142c552d71e1cec43162dd
+    - https://download.kde.org/stable/frameworks/6.27/kcrash-6.27.0.tar.xz : f8e1083863dac2c07068b10614ca7d4b52c6920df0228854cfc37e0d6578d902
 homepage   : https://community.kde.org/Frameworks
-license    : LGPL-2.0-or-later
+license    :
+    - CC0-1.0
+    - LGPL-2.0-or-later
 component  : desktop.library
 summary    : Graceful handling of application crashes.
 description: |
@@ -23,3 +26,4 @@ build      : |
     %ninja_build
 install    : |
     %ninja_install
+    %install_license LICENSES/*

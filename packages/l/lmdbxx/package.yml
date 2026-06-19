@@ -1,6 +1,7 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : lmdbxx
 version    : 1.0.0
-release    : 1
+release    : 2
 source     :
     - https://github.com/hoytech/lmdbxx/archive/refs/tags/1.0.0.tar.gz : 5e12eb3aefe9050068af7df2c663edabc977ef34c9e7ba7b9d2c43e0ad47d8df
 license    : CC-PDDC
@@ -13,5 +14,6 @@ rundeps    :
     - lmdb-devel
 install    : |
     make install DESTDIR="$installdir" PREFIX="/usr"
+    %install_license UNLICENSE
 patterns   :
     - /*

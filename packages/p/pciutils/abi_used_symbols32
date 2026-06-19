@@ -5,7 +5,7 @@ libc.so.6:__h_errno_location
 libc.so.6:__isoc23_sscanf
 libc.so.6:__isoc23_strtol
 libc.so.6:__isoc23_strtoul
-libc.so.6:__isoc99_sscanf
+libc.so.6:__isoc23_strtoull
 libc.so.6:__open64_2
 libc.so.6:__open_2
 libc.so.6:__res_init
@@ -61,6 +61,7 @@ libc.so.6:rewind
 libc.so.6:snprintf
 libc.so.6:stat
 libc.so.6:stderr
+libc.so.6:stdin
 libc.so.6:stdout
 libc.so.6:strchr
 libc.so.6:strcmp
@@ -70,8 +71,6 @@ libc.so.6:strerror
 libc.so.6:strlen
 libc.so.6:strncmp
 libc.so.6:strrchr
-libc.so.6:strtol
-libc.so.6:strtoull
 libc.so.6:sysconf
 libc.so.6:unlink
 libudev.so.1:udev_hwdb_get_properties_list_entry

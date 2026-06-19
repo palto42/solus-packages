@@ -1,9 +1,10 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : libexif
-version    : 0.6.24
-release    : 7
+version    : 0.6.26
+release    : 8
 source     :
-    - https://github.com/libexif/libexif/archive/refs/tags/v0.6.24.tar.gz : e5f15eeab693028cfdc4c0d78f024e1ca78baa0e1f636dc443395e9fbb0a2b7a
-homepage   : https://sourceforge.net/projects/libexif/
+    - https://github.com/libexif/libexif/archive/refs/tags/v0.6.26.tar.gz : 32e591455339504b7d02f3e9b0a48f16f5455462a9059a7f47639980e82e4bc1
+homepage   : https://libexif.github.io/
 license    : LGPL-2.0-or-later
 component  : desktop.library
 emul32     : true

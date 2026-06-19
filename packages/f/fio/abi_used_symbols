@@ -1,5 +1,4 @@
 ld-linux-x86-64.so.2:__tls_get_addr
-libaio.so.1t64:io_cancel
 libaio.so.1t64:io_destroy
 libaio.so.1t64:io_getevents
 libaio.so.1t64:io_queue_init
@@ -39,7 +38,6 @@ libc.so.6:_exit
 libc.so.6:abort
 libc.so.6:accept
 libc.so.6:access
-libc.so.6:aio_cancel64
 libc.so.6:aio_error64
 libc.so.6:aio_fsync64
 libc.so.6:aio_read64

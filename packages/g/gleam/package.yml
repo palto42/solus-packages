@@ -1,8 +1,9 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : gleam
-version    : 1.11.1
-release    : 12
+version    : 1.17.0
+release    : 15
 source     :
-    - https://github.com/gleam-lang/gleam/archive/refs/tags/v1.11.1.tar.gz : 34dfdc397835849bc56ac01bf45e68ee9cfc3c99609fb7b3ab02910930a8c40d
+    - https://github.com/gleam-lang/gleam/archive/refs/tags/v1.17.0.tar.gz : 644db4b25596d5f27f03614ef1cc10646baaabbd559407acc278bb24c6502f8b
 homepage   : https://gleam.run
 license    : Apache-2.0
 component  : programming
@@ -24,3 +25,4 @@ build      : |
     %cargo_build
 install    : |
     %cargo_install
+    %install_license LICENCE

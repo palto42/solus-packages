@@ -5,3 +5,6 @@ libStupidAI.so
 libVCAI.so
 libvcmi.so
 libvcmiqt.so
+vcmiclient
+vcmieditor
+vcmilauncher

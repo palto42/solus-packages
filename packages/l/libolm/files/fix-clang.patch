@@ -1,0 +1,12 @@
+diff '--color=auto' -pruN a/include/olm/list.hh b/include/olm/list.hh
+--- a/include/olm/list.hh	2023-11-23 12:38:51.000000000 -0500
++++ b/include/olm/list.hh	2026-04-21 19:33:44.751709571 -0400
+@@ -99,7 +99,7 @@ public:
+             return *this;
+         }
+         T * this_pos = _data;
+-        T * const other_pos = other._data;
++        T * other_pos = other._data;
+         while (other_pos != other._end) {
+             *this_pos = *other;
+             ++this_pos;

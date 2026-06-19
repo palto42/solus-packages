@@ -3,30 +3,26 @@
         <Name>libbluray</Name>
         <Homepage>https://www.videolan.org/developers/libbluray.html</Homepage>
         <Packager>
-            <Name>Algent Albrahimi</Name>
-            <Email>algent@protonmail.com</Email>
+            <Name>Jared Cervantes</Name>
+            <Email>jared@jaredcervantes.com</Email>
         </Packager>
         <License>LGPL-2.1-or-later</License>
-        <PartOf>multimedia.codecs</PartOf>
+        <PartOf>multimedia.library</PartOf>
         <Summary xml:lang="en">Library for Blu-Ray disc playback</Summary>
         <Description xml:lang="en">libbluray is an open-source library designed for Blu-Ray Discs playback for media players, like VLC or MPlayer.
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
     </Source>
     <Package>
         <Name>libbluray</Name>
         <Summary xml:lang="en">Library for Blu-Ray disc playback</Summary>
         <Description xml:lang="en">libbluray is an open-source library designed for Blu-Ray Discs playback for media players, like VLC or MPlayer.
 </Description>
-        <PartOf>multimedia.codecs</PartOf>
+        <PartOf>multimedia.library</PartOf>
         <Files>
-            <Path fileType="executable">/usr/bin/bd_info</Path>
-            <Path fileType="executable">/usr/bin/bd_list_titles</Path>
-            <Path fileType="executable">/usr/bin/bd_splice</Path>
-            <Path fileType="library">/usr/lib64/libbluray.so.2</Path>
-            <Path fileType="library">/usr/lib64/libbluray.so.2.4.3</Path>
-            <Path fileType="data">/usr/share/java/libbluray-awt-j2se-1.3.4.jar</Path>
-            <Path fileType="data">/usr/share/java/libbluray-j2se-1.3.4.jar</Path>
+            <Path fileType="library">/usr/lib64/libbluray.so.3</Path>
+            <Path fileType="library">/usr/lib64/libbluray.so.3.0.0</Path>
+            <Path fileType="data">/usr/share/licenses/libbluray/COPYING</Path>
         </Files>
     </Package>
     <Package>
@@ -36,7 +32,7 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="13">libbluray</Dependency>
+            <Dependency release="15">libbluray</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/libbluray/bluray-version.h</Path>
@@ -52,13 +48,28 @@
             <Path fileType="data">/usr/lib64/pkgconfig/libbluray.pc</Path>
         </Files>
     </Package>
+    <Package>
+        <Name>libbluray-tools</Name>
+        <Summary xml:lang="en">Blu-Ray disc utilities</Summary>
+        <Description xml:lang="en">libbluray is an open-source library designed for Blu-Ray Discs playback for media players, like VLC or MPlayer.
+</Description>
+        <PartOf>multimedia.codecs</PartOf>
+        <RuntimeDependencies>
+            <Dependency release="15">libbluray</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/bd_info</Path>
+            <Path fileType="executable">/usr/bin/bd_list_titles</Path>
+            <Path fileType="executable">/usr/bin/bd_splice</Path>
+        </Files>
+    </Package>
     <History>
-        <Update release="13">
-            <Date>2023-09-04</Date>
-            <Version>1.3.4</Version>
+        <Update release="15">
+            <Date>2026-06-14</Date>
+            <Version>1.4.0</Version>
             <Comment>Packaging update</Comment>
-            <Name>Algent Albrahimi</Name>
-            <Email>algent@protonmail.com</Email>
+            <Name>Jared Cervantes</Name>
+            <Email>jared@jaredcervantes.com</Email>
         </Update>
     </History>
 </PISI>
