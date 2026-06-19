@@ -1,6 +1,7 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : observice
 version    : 0.7.4
-release    : 7
+release    : 8
 source     :
     - https://hp250.fritz.box/git/Python/observice/archive/v0.7.4.tar.gz : 66c24ecd69060d5cbe4f9f977db2315c93646d956deff6124a9c542ca5c5642e
 homepage   : https://hp250.fritz.box/git/Python/observice
@@ -37,6 +38,8 @@ install    : |
     echo "Upload package with:"
     PACKAGE_FILE=$package-$version-$release-1-x86_64.eopkg
     echo "curl --user <username> --upload-file $PACKAGE_FILE https://hp250.fritz.box/git/api/packages/Python/generic/$package/$version-$release-1/$PACKAGE_FILE"
+
+    %install_license LICENSE
 
 check: |
     %python3_test python3 -m pytest

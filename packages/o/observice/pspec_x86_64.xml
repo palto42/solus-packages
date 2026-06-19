@@ -21,44 +21,44 @@
         <PartOf>system.utils</PartOf>
         <Files>
             <Path fileType="executable">/usr/bin/observice</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/observice-0.7.4.dist-info/METADATA</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/observice-0.7.4.dist-info/RECORD</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/observice-0.7.4.dist-info/WHEEL</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/observice-0.7.4.dist-info/entry_points.txt</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/observice-0.7.4.dist-info/licenses/AUTHORS.md</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/observice-0.7.4.dist-info/licenses/LICENSE</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/observice/__init__.py</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/observice/__pycache__/__init__.cpython-312.opt-1.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/observice/__pycache__/__init__.cpython-312.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/observice/__pycache__/app_logs.cpython-312.opt-1.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/observice/__pycache__/app_logs.cpython-312.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/observice/__pycache__/configure.cpython-312.opt-1.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/observice/__pycache__/configure.cpython-312.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/observice/__pycache__/dbus_monitor.cpython-312.opt-1.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/observice/__pycache__/dbus_monitor.cpython-312.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/observice/__pycache__/indicator.cpython-312.opt-1.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/observice/__pycache__/indicator.cpython-312.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/observice/__pycache__/listener.cpython-312.opt-1.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/observice/__pycache__/listener.cpython-312.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/observice/__pycache__/observice.cpython-312.opt-1.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/observice/__pycache__/observice.cpython-312.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/observice/__pycache__/shutdown.cpython-312.opt-1.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/observice/__pycache__/shutdown.cpython-312.pyc</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/observice/app_logs.py</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/observice/configure.py</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/observice/dbus_monitor.py</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/observice/icons/observice_active.svg</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/observice/icons/observice_alert.svg</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/observice/icons/observice_auto.svg</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/observice/icons/observice_error.svg</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/observice/icons/observice_idle.svg</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/observice/icons/observice_info.svg</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/observice/icons/observice_ok.svg</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/observice/icons/observice_stop.svg</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/observice/indicator.py</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/observice/listener.py</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/observice/observice.py</Path>
-            <Path fileType="library">/usr/lib/python3.12/site-packages/observice/shutdown.py</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/observice-0.7.4.dist-info/METADATA</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/observice-0.7.4.dist-info/RECORD</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/observice-0.7.4.dist-info/WHEEL</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/observice-0.7.4.dist-info/entry_points.txt</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/observice-0.7.4.dist-info/licenses/AUTHORS.md</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/observice-0.7.4.dist-info/licenses/LICENSE</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/observice/__init__.py</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/observice/__pycache__/__init__.cpython-314.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/observice/__pycache__/__init__.cpython-314.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/observice/__pycache__/app_logs.cpython-314.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/observice/__pycache__/app_logs.cpython-314.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/observice/__pycache__/configure.cpython-314.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/observice/__pycache__/configure.cpython-314.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/observice/__pycache__/dbus_monitor.cpython-314.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/observice/__pycache__/dbus_monitor.cpython-314.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/observice/__pycache__/indicator.cpython-314.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/observice/__pycache__/indicator.cpython-314.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/observice/__pycache__/listener.cpython-314.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/observice/__pycache__/listener.cpython-314.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/observice/__pycache__/observice.cpython-314.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/observice/__pycache__/observice.cpython-314.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/observice/__pycache__/shutdown.cpython-314.opt-1.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/observice/__pycache__/shutdown.cpython-314.pyc</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/observice/app_logs.py</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/observice/configure.py</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/observice/dbus_monitor.py</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/observice/icons/observice_active.svg</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/observice/icons/observice_alert.svg</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/observice/icons/observice_auto.svg</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/observice/icons/observice_error.svg</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/observice/icons/observice_idle.svg</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/observice/icons/observice_info.svg</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/observice/icons/observice_ok.svg</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/observice/icons/observice_stop.svg</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/observice/indicator.py</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/observice/listener.py</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/observice/observice.py</Path>
+            <Path fileType="library">/usr/lib/python3.14/site-packages/observice/shutdown.py</Path>
             <Path fileType="data">/usr/share/applications/observice_indicator.desktop</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/observice.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/observice_active.svg</Path>
@@ -69,11 +69,12 @@
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/observice_info.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/observice_ok.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/observice_stop.svg</Path>
+            <Path fileType="data">/usr/share/licenses/observice/LICENSE</Path>
         </Files>
     </Package>
     <History>
-        <Update release="7">
-            <Date>2026-04-24</Date>
+        <Update release="8">
+            <Date>2026-06-19</Date>
             <Version>0.7.4</Version>
             <Comment>Packaging update</Comment>
             <Name>Matthias Homann</Name>
