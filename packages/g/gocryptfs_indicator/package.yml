@@ -1,6 +1,6 @@
 name       : gocryptfs-indicator
 version    : 1.0.0
-release    : 5
+release    : 6
 source     :
     - https://hp250.fritz.box/git/matthias/-/packages/pypi/gocryptfs-indicator/1.0.0/files/92 : aeb698499bf37302de4f928efc7a9178f0822c4e6397d59fc536ea42a4fcf817
 homepage   : https://hp250.fritz.box/git/matthias/gocryptfs
