@@ -1,0 +1,5 @@
+releases:
+  id: 379578
+  rss: https://github.com/webcamoid/webcamoid/releases
+security:
+  cpe: ~ # Last checked 2026-07-09
