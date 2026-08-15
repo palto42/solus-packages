@@ -20,6 +20,7 @@
 </Description>
         <PartOf>office</PartOf>
         <Files>
+            <Path fileType="library">/usr/lib64/epsonscan2-obr/libbarcoderecognizer.so</Path>
             <Path fileType="library">/usr/lib64/epsonscan2-ocr/libocr-bmpmem.so</Path>
             <Path fileType="library">/usr/lib64/epsonscan2-ocr/libocr-bmpmem.so.0</Path>
             <Path fileType="library">/usr/lib64/epsonscan2-ocr/libocr-bmpmem.so.0.0.0</Path>
@@ -110,9 +111,13 @@
             <Path fileType="library">/usr/lib64/epsonscan2/non-free-exec/libesdtr.so</Path>
             <Path fileType="library">/usr/lib64/epsonscan2/non-free-exec/libesimp2.so</Path>
             <Path fileType="library">/usr/lib64/epsonscan2/non-free-exec/libimf6.so</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/non-free-exec/libpdflib.so</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/non-free-exec/pdfplugin</Path>
             <Path fileType="doc">/usr/share/doc/epsonscan2-non-free-plugin-1.0.0.6-1/COPYING.EPSON</Path>
+            <Path fileType="doc">/usr/share/doc/epsonscan2-non-free-plugin-1.0.0.6-1/COPYING_fr.EPSON</Path>
             <Path fileType="doc">/usr/share/doc/epsonscan2-non-free-plugin-1.0.0.6-1/NEWS</Path>
             <Path fileType="doc">/usr/share/doc/epsonscan2-non-free-plugin-1.0.0.6-1/copyright</Path>
+            <Path fileType="doc">/usr/share/doc/epsonscan2-non-free-plugin-1.0.0.6-1/copyright_fr</Path>
             <Path fileType="data">/usr/share/epsonscan2-ocr/ocr/dic/Rotate.ptn</Path>
             <Path fileType="data">/usr/share/epsonscan2-ocr/ocr/dic/YdrecEN.flt</Path>
             <Path fileType="data">/usr/share/epsonscan2-ocr/ocr/dic/YdrecEN.ptn</Path>
@@ -130,7 +135,7 @@
         </Files>
     </Package>
     <History>
-        <Update release="3">
+        <Update release="4">
             <Date>2026-08-15</Date>
             <Version>1.0.0.6</Version>
             <Comment>Packaging update</Comment>

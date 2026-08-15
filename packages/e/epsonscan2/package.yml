@@ -1,8 +1,8 @@
 name       : epsonscan2
-version    : 6.7.80
-release    : 6
+version    : 6.7.91
+release    : 7
 source     :
-    - https://download3.ebz.epson.net/dsc/f/03/00/17/08/06/1babf9876ebb16956420a601b92ee28b57cd7db7/epsonscan2-6.7.80.0-1.src.tar.gz : f8d617892e75fb43404824e627a4c5894f7e1283bb9840d7cdecfbcef24b2097
+    - https://download-center.epson.com/f/module/b35a1723-196e-44d9-b272-6cfd3e0e6349/epsonscan2-6.7.91.1-1.src.tar.gz : b26e75aa1fe56213891a15e4b9b00d750135c59daad4567aa0233560a3797f09
 homepage   : https://support.epson.net/linux/en/epsonscan2.php
 license    : GPL-2.1-or-later
 component  : office
@@ -22,15 +22,15 @@ builddeps  :
     - libboost-devel
     - libjpeg-turbo-devel
 setup      : |
-    # ls -l
-
     # Patch CMakeLists
     sed -i 's|/lib/udev|${CMAKE_INSTALL_PREFIX}/lib/udev|' "CMakeLists.txt"
     sed -i '1 i #include "zlib.h"' "src/CommonUtility/DbgLog.cpp"
     sed -i '/zlib/d' "src/Controller/CMakeLists.txt"
 
-    # Stability improvements from Flatpak maintainers
+    # Stability improvements from Flatpak maintainers (2, 3, 5)
     # https://github.com/flathub/net.epson.epsonscan2
+    # Fix a bug when detecting a scanner that does not report its serial number (6, 7)
+    # https://github.com/duck7000/aur_epsonscan2/blob/main/0005-Fix-crash-no-serial-number.patch
     %apply_patches
 
     # Remove Boost setting in CMake config that crashes the package build
@@ -47,17 +47,40 @@ setup      : |
             "src/$file"
     done
 
+    # Map arch to solus folder structure
+    # $srcdir/$pkgname-$_pkgver/src => src
+
+    # Remove support for older versions of CMake in the configuration scripts
+    # (needed to build the package)
+    for dir in . \
+                src \
+                src/Standalone \
+                src/ScanSDK \
+                src/ScanSDK/Src/SDK/SCANSDKsample_C++ \
+                src/DetectAlert
+    do
+        sed -Ei '/cmake_minimum_required/ s/2\.([0-9]+|\.)+/4.0/' \
+                "$dir/CMakeLists.txt"
+    done
+
     # Fix compilation failure caused by GCC 15
     sed -i '/SET.*FLAGS/ s/")/ -Wno-template-body")/' \
             "src/ES2Command/Linux/CMakeLists.txt"
-    sed -i '/#include/ i #include <cmath>' \
-            "src/Controller/Src/Filter/GrayToMono.hpp"
+
+    # Change directory references from "/usr/libexec" to "/usr/lib" in the source code
+    for file in Controller/Src/Scanner/Engine.cpp \
+                Controller/Src/Filter/GetOrientation.cpp
+    do
+        sed -i 's/libexec/lib/' \
+            "src/$file"
+    done
 
     %cmake_ninja \
         -DCMAKE_BUILD_TYPE=Release \
         -DCMAKE_INSTALL_PREFIX=/usr \
-        -DQT_VERSION_MAJOR=5 \
-        -DCMAKE_POLICY_VERSION_MINIMUM=3.5
+        -DEPSON_OCR_INSTALL_PATH="/usr/share/epsonscan2-ocr" \
+        -DQT_VERSION_MAJOR=5
+    # -DCMAKE_POLICY_VERSION_MINIMUM=3.5
 build      : |
     %ninja_build
 install    : |

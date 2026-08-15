@@ -1,0 +1,28 @@
+diff -ura epsonscan2.orig/src/Controller/Src/Finder/UsbFinder.cpp epsonscan2.new/src/Controller/Src/Finder/UsbFinder.cpp
+--- epsonscan2.orig/src/Controller/Src/Finder/UsbFinder.cpp	2026-02-20 05:52:24.000000000 -0300
++++ epsonscan2.new/src/Controller/Src/Finder/UsbFinder.cpp	2026-06-11 04:39:18.311624653 -0300
+@@ -142,6 +142,24 @@
+                                     isValidDeviceInfo = true;
+                                     
+                                 }
++                                else if (dd.idProduct == 0x13E)
++                                {
++                                    sprintf(const_cast<char*>(devInfo.displayName), "%s", "Perfection V19II");
++                                    isValidDeviceInfo = true;
++                                    
++                                }
++                                else if (dd.idProduct == 0x13F)
++                                {
++                                    sprintf(const_cast<char*>(devInfo.displayName), "%s", "Perfection V39II");
++                                    isValidDeviceInfo = true;
++                                    
++                                }
++                                else if (dd.idProduct == 0x153)
++                                {
++                                    sprintf(const_cast<char*>(devInfo.displayName), "%s", "GT-X830");
++                                    isValidDeviceInfo = true;
++                                    
++                                }
+                                 else
+                                 {
+                                 sprintf((char*)strDescWithAddress, "%s:%s", strDesc, serialNumber);

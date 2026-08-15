@@ -34,7 +34,7 @@
             <Path fileType="library">/usr/lib64/epsonscan2/Resources/Icons/btn_preview_close.png</Path>
             <Path fileType="library">/usr/lib64/epsonscan2/Resources/Icons/btn_preview_mark_height.png</Path>
             <Path fileType="library">/usr/lib64/epsonscan2/Resources/Icons/btn_preview_mark_width.png</Path>
-            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Icons/escan2_app.ico</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Icons/escan2_app.png</Path>
             <Path fileType="library">/usr/lib64/epsonscan2/Resources/Icons/indicator_focus_adjusted@2x.png</Path>
             <Path fileType="library">/usr/lib64/epsonscan2/Resources/Icons/update4.png</Path>
             <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES003F/ConvertTable.json</Path>
@@ -1257,6 +1257,83 @@
             <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02A9/ALL/ES02A9.json</Path>
             <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02A9/ConvertTable.json</Path>
             <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02A9/ES02A9.dti</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02AA/ConvertTable.json</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02AA/ES02AA.dti</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02AA/JP/ES02AA.json</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02AA/US/ES02AA.json</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02AA/WW/ES02AA.json</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02AB/ConvertTable.json</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02AB/ES02AB.dti</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02AB/JP/ES02AB.json</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02AB/US/ES02AB.json</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02AB/WW/ES02AB.json</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02AC/ConvertTable.json</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02AC/ES02AC.dti</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02AC/US/ES02AC.json</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02AC/WW/ES02AC.json</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02AD/ALL/ES02AD.json</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02AD/ConvertTable.json</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02AD/ES02AD.dti</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02AE/ConvertTable.json</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02AE/ES02AE.dti</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02AE/JP/ES02AE.json</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02AE/WW/ES02AE.json</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02AF/ALL/ES02AF.json</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02AF/ConvertTable.json</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02AF/ES02AF.dti</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02B0/ALL/ES02B0.json</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02B0/ConvertTable.json</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02B0/ES02B0.dti</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02B1/ALL/ES02B1.json</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02B1/ConvertTable.json</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02B1/ES02B1.dti</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02B2/ALL/ES02B2.json</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02B2/ConvertTable.json</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02B2/ES02B2.dti</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02B3/ALL/ES02B3.json</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02B3/ConvertTable.json</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02B3/ES02B3.dti</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02B4/ConvertTable.json</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02B4/ES02B4.dti</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02B4/JP/ES02B4.json</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02B4/WW/ES02B4.json</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02B5/ALL/ES02B5.json</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02B5/ConvertTable.json</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02B5/ES02B5.dti</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02B6/ALL/ES02B6.json</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02B6/ConvertTable.json</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02B6/ES02B6.dti</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02B7/ALL/ES02B7.json</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02B7/ConvertTable.json</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02B7/ES02B7.dti</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02B8/ConvertTable.json</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02B8/ES02B8.dti</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02B8/JP/ES02B8.json</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02B8/WW/ES02B8.json</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02B9/ALL/ES02B9.json</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02B9/ConvertTable.json</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02B9/ES02B9.dti</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02BF/ALL/ES02BF.json</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02BF/ConvertTable.json</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02BF/ES02BF.dti</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02C0/ALL/ES02C0.json</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02C0/ConvertTable.json</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02C0/ES02C0.dti</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02C1/ALL/ES02C1.json</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02C1/ConvertTable.json</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02C1/ES02C1.dti</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02C2/ALL/ES02C2.json</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02C2/ConvertTable.json</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02C2/ES02C2.dti</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02C3/ALL/ES02C3.json</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02C3/ConvertTable.json</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02C3/ES02C3.dti</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02C4/ALL/ES02C4.json</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02C4/ConvertTable.json</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02C4/ES02C4.dti</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02C5/ALL/ES02C5.json</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02C5/ConvertTable.json</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ES02C5/ES02C5.dti</Path>
             <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ESA001/ALL/ESA001.json</Path>
             <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ESA001/ConvertTable.json</Path>
             <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ESA001/ESA001.dti</Path>
@@ -1265,6 +1342,8 @@
             <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ESA002/ESA002.dti</Path>
             <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/ModelInfo.json</Path>
             <Path fileType="library">/usr/lib64/epsonscan2/Resources/Models/epsonscan2.rules</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/PDF_A/EW-GRAY22</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/PDF_A/EW-sRGB</Path>
             <Path fileType="library">/usr/lib64/epsonscan2/Resources/Tables/ClipConst/ESClipConst0000.json</Path>
             <Path fileType="library">/usr/lib64/epsonscan2/Resources/Tables/ClipConst/ESClipConst0001.json</Path>
             <Path fileType="library">/usr/lib64/epsonscan2/Resources/Tables/ClipConst/ESClipConst0002.json</Path>
@@ -1302,6 +1381,10 @@
             <Path fileType="library">/usr/lib64/epsonscan2/Resources/Tables/FilterSequence/ESFilterSequence0601.json</Path>
             <Path fileType="library">/usr/lib64/epsonscan2/Resources/Tables/FilterSequence/ESFilterSequence0602.json</Path>
             <Path fileType="library">/usr/lib64/epsonscan2/Resources/Tables/FilterSequence/ESFilterSequence0603.json</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Tables/FilterSequence/ESFilterSequence0700.json</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Tables/FilterSequence/ESFilterSequence0701.json</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Tables/FilterSequence/ESFilterSequence0702.json</Path>
+            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Tables/FilterSequence/ESFilterSequence0703.json</Path>
             <Path fileType="library">/usr/lib64/epsonscan2/Resources/Tables/Focus/ESFocus0000.json</Path>
             <Path fileType="library">/usr/lib64/epsonscan2/Resources/Tables/Focus/ESFocus0001.json</Path>
             <Path fileType="library">/usr/lib64/epsonscan2/Resources/Tables/JpegQuality/ESJpegQuality0000.json</Path>
@@ -1539,7 +1622,6 @@
             <Path fileType="library">/usr/lib64/epsonscan2/Resources/Tables/Profile/ESProfile0104.json</Path>
             <Path fileType="library">/usr/lib64/epsonscan2/Resources/Tables/Profile/ESProfile0105.json</Path>
             <Path fileType="library">/usr/lib64/epsonscan2/Resources/Tables/Profile/ESProfile0106.json</Path>
-            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Tables/Profile/ESProfile0107.json</Path>
             <Path fileType="library">/usr/lib64/epsonscan2/Resources/Tables/Profile/ESProfile1000.json</Path>
             <Path fileType="library">/usr/lib64/epsonscan2/Resources/Tables/Profile/ESProfile1001.json</Path>
             <Path fileType="library">/usr/lib64/epsonscan2/Resources/Tables/Profile/ESProfile1002.json</Path>
@@ -1615,7 +1697,6 @@
             <Path fileType="library">/usr/lib64/epsonscan2/Resources/Tables/Profile/ESProfile1072.json</Path>
             <Path fileType="library">/usr/lib64/epsonscan2/Resources/Tables/Profile/ESProfile1073.json</Path>
             <Path fileType="library">/usr/lib64/epsonscan2/Resources/Tables/Profile/ESProfile1074.json</Path>
-            <Path fileType="library">/usr/lib64/epsonscan2/Resources/Tables/Profile/ESProfile1075.json</Path>
             <Path fileType="library">/usr/lib64/epsonscan2/Resources/Tables/Reduction/ESReduction0000.json</Path>
             <Path fileType="library">/usr/lib64/epsonscan2/Resources/Tables/Reduction/ESReduction0001.json</Path>
             <Path fileType="library">/usr/lib64/epsonscan2/Resources/Tables/Reduction/ESReduction0002.json</Path>
@@ -1886,19 +1967,20 @@
             <Path fileType="library">/usr/lib64/epsonscan2/libsane-epsonscan2.so</Path>
             <Path fileType="library">/usr/lib64/sane/libsane-epsonscan2.so</Path>
             <Path fileType="data">/usr/share/applications/epsonscan2.desktop</Path>
-            <Path fileType="doc">/usr/share/doc/epsonscan2-6.7.80-1/AUTHORS</Path>
-            <Path fileType="doc">/usr/share/doc/epsonscan2-6.7.80-1/COPYING</Path>
-            <Path fileType="doc">/usr/share/doc/epsonscan2-6.7.80-1/LICENSE</Path>
-            <Path fileType="doc">/usr/share/doc/epsonscan2-6.7.80-1/NEWS</Path>
-            <Path fileType="doc">/usr/share/doc/epsonscan2-6.7.80-1/README</Path>
+            <Path fileType="doc">/usr/share/doc/epsonscan2-6.7.91-1/AUTHORS</Path>
+            <Path fileType="doc">/usr/share/doc/epsonscan2-6.7.91-1/COPYING</Path>
+            <Path fileType="doc">/usr/share/doc/epsonscan2-6.7.91-1/LICENSE</Path>
+            <Path fileType="doc">/usr/share/doc/epsonscan2-6.7.91-1/NEWS</Path>
+            <Path fileType="doc">/usr/share/doc/epsonscan2-6.7.91-1/README</Path>
+            <Path fileType="doc">/usr/share/doc/epsonscan2-6.7.91-1/README_fr</Path>
             <Path fileType="data">/usr/share/licenses/epsonscan2/LICENSE</Path>
             <Path fileType="data">/usr/share/metainfo/net.epson.epsonscan2.metainfo.xml</Path>
         </Files>
     </Package>
     <History>
-        <Update release="6">
+        <Update release="7">
             <Date>2026-08-15</Date>
-            <Version>6.7.80</Version>
+            <Version>6.7.91</Version>
             <Comment>Packaging update</Comment>
             <Name>Matthias Homann</Name>
             <Email>palto@mailbox.org</Email>

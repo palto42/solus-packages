@@ -1,4 +1,5 @@
 0002-Fix-crash.patch
 0003-Use-XDG-open-to-open-the-directory.patch
-0004-Fix-a-crash-on-an-OOB-container-access.patch
 0005-Fix-folder-creation-crash.patch
+0006-Fix-crash-no-serial-number.patch
+0007-Detect-scanners-that-need-firmware.patch

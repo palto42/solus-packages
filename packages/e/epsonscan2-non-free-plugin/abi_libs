@@ -1,3 +1,4 @@
+libbarcoderecognizer.so
 libcnx-esci-es0282.so.0
 libcnx-esci-gt-s650.so.0
 libdde6.so
@@ -28,3 +29,4 @@ libocr-ydprof.so.0
 libocr-ydrecxx.so.0
 libocr-ydstyle.so.0
 libocr-ydtable.so.0
+libpdflib.so
