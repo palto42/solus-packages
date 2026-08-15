@@ -1,6 +1,6 @@
 name       : epsonscan2
 version    : 6.7.80
-release    : 5
+release    : 6
 source     :
     - https://download3.ebz.epson.net/dsc/f/03/00/17/08/06/1babf9876ebb16956420a601b92ee28b57cd7db7/epsonscan2-6.7.80.0-1.src.tar.gz : f8d617892e75fb43404824e627a4c5894f7e1283bb9840d7cdecfbcef24b2097
 homepage   : https://support.epson.net/linux/en/epsonscan2.php
@@ -56,7 +56,8 @@ setup      : |
     %cmake_ninja \
         -DCMAKE_BUILD_TYPE=Release \
         -DCMAKE_INSTALL_PREFIX=/usr \
-        -DQT_VERSION_MAJOR=5
+        -DQT_VERSION_MAJOR=5 \
+        -DCMAKE_POLICY_VERSION_MINIMUM=3.5
 build      : |
     %ninja_build
 install    : |
@@ -79,3 +80,5 @@ install    : |
 
     # Remove unwanted files
     rm "$installdir/usr/share/doc/epsonscan2-${version}-1/changelog.Debian"
+
+    %install_license LICENSE

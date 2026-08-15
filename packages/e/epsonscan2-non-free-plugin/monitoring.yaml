@@ -1,0 +1,5 @@
+releases:
+  id: -1
+  rss: https://support.epson.net/linux/en/epsonscan2.php
+security:
+  cpe: ~ # Last checked 2025-02-26

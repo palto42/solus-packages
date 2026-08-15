@@ -1891,12 +1891,13 @@
             <Path fileType="doc">/usr/share/doc/epsonscan2-6.7.80-1/LICENSE</Path>
             <Path fileType="doc">/usr/share/doc/epsonscan2-6.7.80-1/NEWS</Path>
             <Path fileType="doc">/usr/share/doc/epsonscan2-6.7.80-1/README</Path>
+            <Path fileType="data">/usr/share/licenses/epsonscan2/LICENSE</Path>
             <Path fileType="data">/usr/share/metainfo/net.epson.epsonscan2.metainfo.xml</Path>
         </Files>
     </Package>
     <History>
-        <Update release="5">
-            <Date>2025-10-12</Date>
+        <Update release="6">
+            <Date>2026-08-15</Date>
             <Version>6.7.80</Version>
             <Comment>Packaging update</Comment>
             <Name>Matthias Homann</Name>
