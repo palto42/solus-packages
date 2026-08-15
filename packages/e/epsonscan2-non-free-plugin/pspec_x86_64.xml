@@ -116,6 +116,7 @@
             <Path fileType="doc">/usr/share/doc/epsonscan2-non-free-plugin-1.0.0.6-1/COPYING.EPSON</Path>
             <Path fileType="doc">/usr/share/doc/epsonscan2-non-free-plugin-1.0.0.6-1/COPYING_fr.EPSON</Path>
             <Path fileType="doc">/usr/share/doc/epsonscan2-non-free-plugin-1.0.0.6-1/NEWS</Path>
+            <Path fileType="doc">/usr/share/doc/epsonscan2-non-free-plugin-1.0.0.6-1/changelog.Debian</Path>
             <Path fileType="doc">/usr/share/doc/epsonscan2-non-free-plugin-1.0.0.6-1/copyright</Path>
             <Path fileType="doc">/usr/share/doc/epsonscan2-non-free-plugin-1.0.0.6-1/copyright_fr</Path>
             <Path fileType="data">/usr/share/epsonscan2-ocr/ocr/dic/Rotate.ptn</Path>
@@ -131,11 +132,12 @@
             <Path fileType="data">/usr/share/epsonscan2/esfwad.bin</Path>
             <Path fileType="data">/usr/share/epsonscan2/esfwdd.bin</Path>
             <Path fileType="data">/usr/share/epsonscan2/esfweb.bin</Path>
-            <Path fileType="data">/usr/share/licenses/epsonscan2-non-free-plugin/LICENSE</Path>
+            <Path fileType="data">/usr/share/licenses/epsonscan2-non-free-plugin/COPYING.EPSON</Path>
+            <Path fileType="data">/usr/share/licenses/epsonscan2-non-free-plugin/copyright</Path>
         </Files>
     </Package>
     <History>
-        <Update release="4">
+        <Update release="5">
             <Date>2026-08-15</Date>
             <Version>1.0.0.6</Version>
             <Comment>Packaging update</Comment>

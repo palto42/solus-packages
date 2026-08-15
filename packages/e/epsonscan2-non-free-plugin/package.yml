@@ -1,6 +1,6 @@
 name       : epsonscan2-non-free-plugin
 version    : 1.0.0.6
-release    : 4
+release    : 5
 source     :
     - https://download-center.epson.com/f/module/ee3a3a45-95aa-4c80-b14d-ad4cff5f7428/epsonscan2-bundle-6.7.90.0.x86_64.deb.tar.gz : 4073188052dcad04dcd768bb6742a3fa68cbf5bdf0ffb3096c628e62b7131708
 homepage   : https://support.epson.net/linux/en/epsonscan2.php
@@ -15,14 +15,25 @@ setup      : |
     cd plugins
     ar x epsonscan2-non-free-plugin*.deb
     tar -xJf data.tar.xz 
+
+    # The “es2intif” program looks for libraries in the default Debian directory:
+    # /usr/lib/x86_64-linux-gnu/epsonscan2/
+    # This command updates to the path used in this package:
+    # /usr/lib/epsonscan2/
+    cd usr/lib/x86_64-linux-gnu/epsonscan2/non-free-exec
+    # bbe -e "s|x86_64-linux-gnu/epsonscan2/|epsonscan2/\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00|" es2intif > es2intif.alt
+    # mv es2intif.alt es2intif
+    # chmod +x es2intif
+    python3 -c 'from pathlib import Path; p=Path("es2intif"); b=p.read_bytes(); b=b.replace(b"x86_64-linux-gnu/epsonscan2/", b"epsonscan2/"+b"\0"*17); p.write_bytes(b)'
+    cd -
+
 install    : |
     install -dm755 "${installdir}/usr/lib64/"
     cd "plugins/usr"
-    mv lib/*/epsonscan2* "${installdir}/usr/lib64/"
+    cp -lr lib/*/epsonscan2* "${installdir}/usr/lib64"
+    rm -r lib/*/epsonscan2*
     mv libexec/epsonscan2-ocr/ocr-engine-getrotate "${installdir}/usr/lib64/epsonscan2-ocr"
-    mv share "$installdir/usr"
-    install -Dm644 "$installdir/usr/share/doc/epsonscan2-non-free-plugin-%version%-1/copyright" \
-                    "$installdir/usr/share/licenses/epsonscan2-non-free-plugin/LICENSE"
-
-    # Remove unwanted files
-    rm "$installdir/usr/share/doc/epsonscan2-non-free-plugin-1.0.0.6-1/changelog.Debian"
+    cp -lr share "$installdir/usr"
+    %install_license share/doc/epsonscan2-non-free-plugin-%version%-1/copyright
+    %install_license share/doc/epsonscan2-non-free-plugin-%version%-1/COPYING.EPSON
+    rm -r share

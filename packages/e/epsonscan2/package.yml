@@ -87,9 +87,14 @@ install    : |
     %ninja_install
 
     install -d $installdir/usr/lib64/sane
-    install -Dm644 "$installdir/usr/lib64/epsonscan2/libsane-epsonscan2.so" \
-        "$installdir/usr/lib64/sane/libsane-epsonscan2.so"
-
+    # install -Dm644 "$installdir/usr/lib64/epsonscan2/libsane-epsonscan2.so" \
+    #     "$installdir/usr/lib64/sane/libsane-epsonscan2.so"
+    cd $installdir/usr/lib64/sane
+    ln -s ../epsonscan2/libsane-epsonscan2.so libsane-epsonscan2.so
+    ln -s ../epsonscan2/libsane-epsonscan2.so libsane-epsonscan2.so.1
+    ln -s ../epsonscan2/libsane-epsonscan2.so libsane-epsonscan2.so.1.0.0
+    cd -
+    
     # Add desktop file
     install -Dm644 "$workdir/desktop/rpm/i686/epsonscan2.desktop" \
         "$installdir/usr/share/applications/epsonscan2.desktop"

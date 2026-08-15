@@ -1966,6 +1966,8 @@
             <Path fileType="library">/usr/lib64/epsonscan2/libes2fileformat.so</Path>
             <Path fileType="library">/usr/lib64/epsonscan2/libsane-epsonscan2.so</Path>
             <Path fileType="library">/usr/lib64/sane/libsane-epsonscan2.so</Path>
+            <Path fileType="library">/usr/lib64/sane/libsane-epsonscan2.so.1</Path>
+            <Path fileType="library">/usr/lib64/sane/libsane-epsonscan2.so.1.0.0</Path>
             <Path fileType="data">/usr/share/applications/epsonscan2.desktop</Path>
             <Path fileType="doc">/usr/share/doc/epsonscan2-6.7.91-1/AUTHORS</Path>
             <Path fileType="doc">/usr/share/doc/epsonscan2-6.7.91-1/COPYING</Path>
