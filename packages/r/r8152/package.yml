@@ -1,0 +1,88 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
+
+name : r8152
+version : 2.21.4.20260427
+release : 1
+
+source :
+    - https://github.com/wget/realtek-r8152-linux/archive/refs/tags/v2.21.4.20260427.tar.gz : 7e9c0b81d8791711c9930674c7fbbb17b2b96e1a4c4b64a22668bec16db4daed
+
+homepage : https://github.com/wget/realtek-r8152-linux
+# source https://www.realtek.com/Download/List?cate_id=585
+license : GPL-2.0-only
+
+summary :
+    - Realtek RTL8152/RTL8153/RTL8154/RTL8156 USB Ethernet driver
+    - common : Common components for r8152 drivers
+    - current : r8152 for linux-current kernel
+    - lts : r8152 for linux-lts kernel
+
+description: |
+    Linux kernel driver for Realtek RTL8152, RTL8153, RTL8154
+    and RTL8156 based USB Ethernet adapters.
+
+component :
+    - kernel.drivers
+    - current : kernel.drivers
+    - lts : kernel.drivers
+
+builddeps  :
+    - linux-current
+    - linux-current-headers
+    - linux-lts
+    - linux-lts-headers
+
+rundeps :
+    - current :
+        - r8152-common
+        - linux-current
+    - lts :
+        - r8152-common
+        - linux-lts
+permanent :
+    - /lib64/modules
+    - /usr/lib64/modules
+
+patterns :
+    - common :
+        - /usr/lib/udev/rules.d
+        - /usr/share/licenses/r8152
+    - current :
+        - /usr/lib64/modules/*.current
+    - lts :
+        - /usr/lib64/modules/*.lts
+
+build : |
+    %make -C /usr/lib64/modules/%kernel_version_current%/build \
+        M=$workdir \
+        modules
+
+    cp $workdir/r8152.ko \
+        $workdir/r8152-current.ko
+
+    %make -C /usr/lib64/modules/%kernel_version_lts%/build \
+        M=$workdir \
+        modules
+
+    cp $workdir/r8152.ko \
+        $workdir/r8152-lts.ko
+
+install : |
+    install -Dm0644 \
+        $workdir/r8152-current.ko \
+        $installdir/usr/lib64/modules/%kernel_version_current%/extra/drivers/net/usb/r8152.ko
+
+    install -Dm0644 \
+        $workdir/r8152-lts.ko \
+        $installdir/usr/lib64/modules/%kernel_version_lts%/extra/drivers/net/usb/r8152.ko
+
+    install -Dm0644 \
+        $workdir/50-usb-realtek-net.rules \
+        $installdir/usr/lib/udev/rules.d/50-usb-realtek-net.rules
+
+    find "$installdir" -name '*.ko' \
+        -exec strip --strip-debug {} \; \
+        -exec zstd {} \; \
+        -exec rm -f {} \;
+
+    %install_license LICENSE

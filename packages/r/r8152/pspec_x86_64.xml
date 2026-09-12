@@ -1,0 +1,64 @@
+<PISI>
+    <Source>
+        <Name>r8152</Name>
+        <Homepage>https://github.com/wget/realtek-r8152-linux</Homepage>
+        <Packager>
+            <Name>Matthias Homann</Name>
+            <Email>palto@mailbox.org</Email>
+        </Packager>
+        <License>GPL-2.0-only</License>
+        <Summary xml:lang="en">Realtek RTL8152/RTL8153/RTL8154/RTL8156 USB Ethernet driver</Summary>
+        <Description xml:lang="en">Linux kernel driver for Realtek RTL8152, RTL8153, RTL8154
+and RTL8156 based USB Ethernet adapters.
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://sources.getsol.us/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>r8152-common</Name>
+        <Summary xml:lang="en">Common components for r8152 drivers</Summary>
+        <Description xml:lang="en">Linux kernel driver for Realtek RTL8152, RTL8153, RTL8154
+and RTL8156 based USB Ethernet adapters.
+</Description>
+        <Files>
+            <Path fileType="library">/usr/lib/udev/rules.d/50-usb-realtek-net.rules</Path>
+            <Path fileType="data">/usr/share/licenses/r8152/LICENSE</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>r8152-current</Name>
+        <Summary xml:lang="en">r8152 for linux-current kernel</Summary>
+        <Description xml:lang="en">Linux kernel driver for Realtek RTL8152, RTL8153, RTL8154
+and RTL8156 based USB Ethernet adapters.
+</Description>
+        <PartOf>kernel.drivers</PartOf>
+        <RuntimeDependencies>
+            <Dependency releaseFrom="1">r8152-common</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib64/modules/7.1.12-357.current/extra/drivers/net/usb/r8152.ko.zst</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>r8152-lts</Name>
+        <Summary xml:lang="en">r8152 for linux-lts kernel</Summary>
+        <Description xml:lang="en">Linux kernel driver for Realtek RTL8152, RTL8153, RTL8154
+and RTL8156 based USB Ethernet adapters.
+</Description>
+        <PartOf>kernel.drivers</PartOf>
+        <RuntimeDependencies>
+            <Dependency releaseFrom="1">r8152-common</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib64/modules/6.18.48-307.lts/extra/drivers/net/usb/r8152.ko.zst</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2026-09-12</Date>
+            <Version>2.21.4.20260427</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Matthias Homann</Name>
+            <Email>palto@mailbox.org</Email>
+        </Update>
+    </History>
+</PISI>
