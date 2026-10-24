@@ -1,0 +1,12 @@
+releases:
+  id: ~ # Check https://release-monitoring.org/projects/search/
+  rss: https://github.com/sde1000/python-xkbcommon/tags.atom
+# Verify successful cpe hits by visiting https://cve.circl.lu/search?vendor=$VENDOR&product=$PRODUCT
+security:
+  cpe:
+  - vendor: xkbcommon_project
+    product: xkbcommon
+  - vendor: xkbcommon
+    product: libxkbcommon
+  - vendor: xkbcommon
+    product: xkbcommon
