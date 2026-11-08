@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
+name       : cargo-zigbuild
+version    : 0.24.1
+release    : 1
+source     :
+    - https://github.com/rust-cross/cargo-zigbuild/archive/refs/tags/v0.24.1.tar.gz : eb2f3b363a110844d5a85005cb83b2cb83f7dc38fafd02ee4de20fd32a5f4884
+license    : MIT
+component  : programming.devel
+homepage   : https://github.com/rust-cross/cargo-zigbuild
+summary    : Cargo plugin for generating a license listing for all dependencies of a crate
+description: |
+    Cargo plugin for generating a license listing for all dependencies of a crate
+builddeps  :
+    - rust
+rundeps:
+    - rust
+    - zig
+networking : true
+setup      : |
+    %cargo_fetch
+build      : |
+    %cargo_build --bin cargo-zigbuild
+install    : |
+    %cargo_install
+    %install_license LICENSE
+check      : |
+    %cargo_test
