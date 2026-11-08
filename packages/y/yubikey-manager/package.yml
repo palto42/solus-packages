@@ -1,9 +1,10 @@
 # yaml-language-server: $schema=/usr/share/ypkg/schema/schema.json
 name       : yubikey-manager
-version    : 5.8.0
-release    : 48
+version    : 6.0.0
+release    : 49
 source     :
-    - https://github.com/Yubico/yubikey-manager/releases/download/5.8.0/yubikey_manager-5.8.0.tar.gz : 3af0da65e1fdd46763c94ee74e2da55a4b6e7771da776c197f5f4b4581738560
+    - https://github.com/Yubico/yubikey-manager/archive/refs/tags/6.0.0-beta.0.tar.gz : 114e854b0745b596cf308bc00a287b48a5ceff9c7e9daa81b8010e3f510ada45
+    # - https://github.com/Yubico/yubikey-manager/archive/refs/tags/5.9.2.tar.gz : 393fcd34b3b2215ad4b546e7086028881752713bcdcb730b057a9f523f87acff
 homepage   : https://developers.yubico.com/yubikey-manager/
 license    : BSD-2-Clause
 component  : security
@@ -12,40 +13,45 @@ description: |
     Python library and command line tool for configuring any YubiKey over all USB transports.
 networking : true
 builddeps  :
+    # - pkgconfig(python3)
+    # - python-build
+    # - python-fido2
+    # - python-installer
+    # - python-poetry
+    # - python-pyscard
+    # - python-pskc
+    - rust
+    - pkgconfig(libpcsclite)
+    # - pkgconfig(gudev-1.0)
+    # - pkgconfig(dbus-1)
+    # - zig
+    # - cargo-zigbuild
     - pkgconfig(python3)
-    - pcsc-lite
-    - python-build
-    - python-fido2
     - python-installer
-    - python-poetry
-    - python-pyscard
+    - python-maturin
+    - uv
 rundeps    :
     - ccid
-    - python-click
+    - pcsc-lite
     - python-cryptography
-    - python-fido2
-    - python-keyring
-    - python-openssl
-    - python-pyscard
-build      : |
-    %pyproject_build
-
-    # Create shell completions
-    python -m venv --system-site-packages completion-env
-    completion-env/bin/python -m installer dist/*.whl
-    _YKMAN_COMPLETE=bash_source completion-env/bin/ykman > ykman.bash
-    _YKMAN_COMPLETE=zsh_source completion-env/bin/ykman > _ykman
+# build      : |
+#     # Create shell completions - not working in 6.0.0-beta.0
+#     python -m venv --system-site-packages completion-env
+#     completion-env/bin/python -m installer dist/*.whl
+#     _YKMAN_COMPLETE=bash_source completion-env/bin/ykman > ykman.bash
+#     _YKMAN_COMPLETE=zsh_source completion-env/bin/ykman > _ykman
 install    : |
-    %pyproject_install
+    uv pip install --prefix "${installdir}/usr" --no-deps --no-build-isolation packages/ykman packages/yubikit
 
+    # Preset to enable pcscd.socket
     install -Dm00644 -t ${installdir}/%libdir%/systemd/service-preset/ ${pkgfiles}/20-yubikey-manager.preset
 
     # Manpages
     install -Dm00644 man/ykman.1 -t "$installdir/usr/share/man/man1/"
 
-    # Install completions
-    install -Dm0644 ykman.bash -t "$installdir/usr/share/bash-completion/completions/"
-    install -Dm0644 _ykman -t "$installdir/usr/share/zsh/site-functions/"
+    # # Install completions
+    # install -Dm0644 ykman.bash -t "$installdir/usr/share/bash-completion/completions/"
+    # install -Dm0644 _ykman -t "$installdir/usr/share/zsh/site-functions/"
 
     # Include copyright notice as required by the license
-    %install_license COPYING
+    %install_license LICENSE
